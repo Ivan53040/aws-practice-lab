@@ -13,7 +13,19 @@
     "isMultiAnswer": false,
     "explanation": "CodePipeline orchestrates source, build, approval, and deployment stages.\nThe other choices provide DNS, encryption keys, or file storage.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "生產團隊需要一個管道來建置工件、運行測試並在批准後進行部署。哪個服務應該協調各個階段？",
+        "options": {
+          "A": "Amazon EFS",
+          "B": "AWS CodePipeline",
+          "C": "Amazon Route 53",
+          "D": "AWS KMS"
+        },
+        "explanation": "CodePipeline 協調來源、建置、核准和部署階段。\n其他選項提供 DNS、加密金鑰或檔案儲存。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-002",
@@ -29,7 +41,19 @@
     "isMultiAnswer": false,
     "explanation": "CodeBuild runs managed build commands and can publish artifacts.\nThe other choices discover data, filter web requests, or provide graph storage.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "多帳戶平台團隊必須在託管建置環境中編譯原始程式碼並產生版本化工件。適合哪種服務？",
+        "options": {
+          "A": "AWS WAF",
+          "B": "Amazon Neptune",
+          "C": "AWS CodeBuild",
+          "D": "Amazon Macie"
+        },
+        "explanation": "CodeBuild 運行託管建置命令並且可以發布工件。\n其他選擇發現資料、過濾 Web 請求或提供圖形儲存。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-003",
@@ -45,7 +69,19 @@
     "isMultiAnswer": false,
     "explanation": "Canary and blue-green strategies reduce release risk by validating a new version before full traffic shift.\nThe other choices do not implement controlled application rollout.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "受監管的公司需要在全面部署之前將新的應用程式版本部署到執行個體子集。哪種策略適合？",
+        "options": {
+          "A": "完全替換，無需健康檢查",
+          "B": "公共儲存桶策略",
+          "C": "DNS TXT 記錄",
+          "D": "金絲雀或藍綠部署"
+        },
+        "explanation": "金絲雀和藍綠色策略透過在流量完全轉移之前驗證新版本來降低發布風險。\n其他選擇不實施受控應用程式推出。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-004",
@@ -61,7 +97,19 @@
     "isMultiAnswer": false,
     "explanation": "Approval gates and automated quality checks prevent unvalidated artifacts from promotion.\nThe other choices weaken release safety and traceability.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備增加流量的新創公司必須防止未經測試的工件推廣到生產環境。哪種控制合適？",
+        "options": {
+          "A": "基於測試結果的管道批准或品質門",
+          "B": "停用所有測試",
+          "C": "使用未版本控制的工件名稱",
+          "D": "將憑證儲存在來源中"
+        },
+        "explanation": "審批門和自動品質檢查可防止未經驗證的工件得到推廣。\n其他選擇削弱了發布安全性和可追溯性。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-005",
@@ -77,7 +125,19 @@
     "isMultiAnswer": false,
     "explanation": "Amazon Q Developer can assist with code, reviews, tests, and development workflows.\nThe other choices provide archival storage, networking, or relational databases.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "支援關鍵工作負載的營運團隊需要使用 AWS 編碼助理產生發行說明並測試建議。哪些服務是相關的？",
+        "options": {
+          "A": "Amazon RDS",
+          "B": "Amazon Q Developer",
+          "C": "Amazon S3 Glacier",
+          "D": "AWS Transit Gateway"
+        },
+        "explanation": "Amazon Q Developer 可以協助完成程式碼、審查、測試和開發工作流程。\n其他選擇提供檔案儲存、網路或關聯式資料庫。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-006",
@@ -93,7 +153,19 @@
     "isMultiAnswer": false,
     "explanation": "CodePipeline orchestrates source, build, approval, and deployment stages.\nThe other choices provide DNS, encryption keys, or file storage.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "資料平台團隊需要一個管道來建置工件、運行測試並在批准後進行部署。哪個服務應該協調各個階段？",
+        "options": {
+          "A": "AWS KMS",
+          "B": "Amazon EFS",
+          "C": "AWS CodePipeline",
+          "D": "Amazon Route 53"
+        },
+        "explanation": "CodePipeline 協調來源、建置、核准和部署階段。\n其他選項提供 DNS、加密金鑰或檔案儲存。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-007",
@@ -109,7 +181,19 @@
     "isMultiAnswer": false,
     "explanation": "CodeBuild runs managed build commands and can publish artifacts.\nThe other choices discover data, filter web requests, or provide graph storage.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有安全意識的工程團隊必須在託管建置環境中編譯原始程式碼並產生版本化工件。適合哪種服務？",
+        "options": {
+          "A": "Amazon Macie",
+          "B": "AWS WAF",
+          "C": "Amazon Neptune",
+          "D": "AWS CodeBuild"
+        },
+        "explanation": "CodeBuild 運行託管建置命令並且可以發布工件。\n其他選擇發現資料、過濾 Web 請求或提供圖形儲存。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-008",
@@ -125,7 +209,19 @@
     "isMultiAnswer": false,
     "explanation": "Canary and blue-green strategies reduce release risk by validating a new version before full traffic shift.\nThe other choices do not implement controlled application rollout.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "遷移現有工作負載的公司需要在全面部署之前將新的應用程式版本部署到執行個體子集。哪種策略適合？",
+        "options": {
+          "A": "金絲雀或藍綠部署",
+          "B": "完全替換，無需健康檢查",
+          "C": "公共儲存桶策略",
+          "D": "DNS TXT 記錄"
+        },
+        "explanation": "金絲雀和藍綠色策略透過在流量完全轉移之前驗證新版本來降低發布風險。\n其他選擇不實施受控應用程式推出。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-009",
@@ -141,7 +237,19 @@
     "isMultiAnswer": false,
     "explanation": "Approval gates and automated quality checks prevent unvalidated artifacts from promotion.\nThe other choices weaken release safety and traceability.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有嚴格恢復目標的團隊必須防止未經測試的工件提升到生產環境。哪種控制合適？",
+        "options": {
+          "A": "將憑證儲存在來源中",
+          "B": "基於測試結果的管道批准或品質門",
+          "C": "停用所有測試",
+          "D": "使用未版本控制的工件名稱"
+        },
+        "explanation": "審批門和自動品質檢查可防止未經驗證的工件得到推廣。\n其他選擇削弱了發布安全性和可追溯性。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-010",
@@ -157,7 +265,19 @@
     "isMultiAnswer": false,
     "explanation": "Amazon Q Developer can assist with code, reviews, tests, and development workflows.\nThe other choices provide archival storage, networking, or relational databases.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備發布的開發團隊需要使用 AWS 編碼助手產生發布說明並測試建議。哪些服務是相關的？",
+        "options": {
+          "A": "AWS Transit Gateway",
+          "B": "Amazon RDS",
+          "C": "Amazon Q Developer",
+          "D": "Amazon S3 Glacier"
+        },
+        "explanation": "Amazon Q Developer 可以協助完成程式碼、審查、測試和開發工作流程。\n其他選擇提供檔案儲存、網路或關聯式資料庫。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-011",
@@ -173,7 +293,19 @@
     "isMultiAnswer": false,
     "explanation": "CodePipeline orchestrates source, build, approval, and deployment stages.\nThe other choices provide DNS, encryption keys, or file storage.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "擁有多個 AWS 區域的企業需要一個管道來建置工件、運行測試並在批准後進行部署。哪個服務應該協調各個階段？",
+        "options": {
+          "A": "Amazon Route 53",
+          "B": "AWS KMS",
+          "C": "Amazon EFS",
+          "D": "AWS CodePipeline"
+        },
+        "explanation": "CodePipeline 協調來源、建置、核准和部署階段。\n其他選項提供 DNS、加密金鑰或檔案儲存。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-012",
@@ -189,7 +321,19 @@
     "isMultiAnswer": false,
     "explanation": "CodeBuild runs managed build commands and can publish artifacts.\nThe other choices discover data, filter web requests, or provide graph storage.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "審查事件的服務擁有者必須編譯原始程式碼並在託管建置環境中產生版本化工件。適合哪種服務？",
+        "options": {
+          "A": "AWS CodeBuild",
+          "B": "Amazon Macie",
+          "C": "AWS WAF",
+          "D": "Amazon Neptune"
+        },
+        "explanation": "CodeBuild 運行託管建置命令並且可以發布工件。\n其他選擇發現資料、過濾 Web 請求或提供圖形儲存。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-013",
@@ -205,7 +349,19 @@
     "isMultiAnswer": false,
     "explanation": "Canary and blue-green strategies reduce release risk by validating a new version before full traffic shift.\nThe other choices do not implement controlled application rollout.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "優化現有實施的團隊需要在全面部署之前將新的應用程式版本部署到執行個體子集。哪種策略適合？",
+        "options": {
+          "A": "DNS TXT 記錄",
+          "B": "金絲雀或藍綠部署",
+          "C": "完全替換，無需健康檢查",
+          "D": "公共儲存桶策略"
+        },
+        "explanation": "金絲雀和藍綠色策略透過在流量完全轉移之前驗證新版本來降低發布風險。\n其他選擇不實施受控應用程式推出。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-014",
@@ -221,7 +377,19 @@
     "isMultiAnswer": false,
     "explanation": "Approval gates and automated quality checks prevent unvalidated artifacts from promotion.\nThe other choices weaken release safety and traceability.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "引入自動化工作流程的公司必須防止未經測試的工件提升到生產環境。哪種控制合適？",
+        "options": {
+          "A": "使用未版本控制的工件名稱",
+          "B": "將憑證儲存在來源中",
+          "C": "基於測試結果的管道批准或品質門",
+          "D": "停用所有測試"
+        },
+        "explanation": "審批門和自動品質檢查可防止未經驗證的工件得到推廣。\n其他選擇削弱了發布安全性和可追溯性。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-015",
@@ -237,7 +405,19 @@
     "isMultiAnswer": false,
     "explanation": "Amazon Q Developer can assist with code, reviews, tests, and development workflows.\nThe other choices provide archival storage, networking, or relational databases.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "在共用環境中工作的 AWS 管理員需要使用 AWS 編碼助理產生發行說明和測試建議。哪些服務是相關的？",
+        "options": {
+          "A": "Amazon S3 Glacier",
+          "B": "AWS Transit Gateway",
+          "C": "Amazon RDS",
+          "D": "Amazon Q Developer"
+        },
+        "explanation": "Amazon Q Developer 可以協助完成程式碼、審查、測試和開發工作流程。\n其他選擇提供檔案儲存、網路或關聯式資料庫。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-016",
@@ -253,7 +433,19 @@
     "isMultiAnswer": false,
     "explanation": "CodePipeline orchestrates source, build, approval, and deployment stages.\nThe other choices provide DNS, encryption keys, or file storage.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "面向客戶的應用程式團隊需要一個管道來建置工件、運行測試並在批准後進行部署。哪個服務應該協調各個階段？",
+        "options": {
+          "A": "AWS CodePipeline",
+          "B": "Amazon Route 53",
+          "C": "AWS KMS",
+          "D": "Amazon EFS"
+        },
+        "explanation": "CodePipeline 協調來源、建置、核准和部署階段。\n其他選項提供 DNS、加密金鑰或檔案儲存。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-017",
@@ -269,7 +461,19 @@
     "isMultiAnswer": false,
     "explanation": "CodeBuild runs managed build commands and can publish artifacts.\nThe other choices discover data, filter web requests, or provide graph storage.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "標準化其 AWS 部署的平台團隊必須編譯原始程式碼並在託管建置環境中產生版本化工件。適合哪種服務？",
+        "options": {
+          "A": "Amazon Neptune",
+          "B": "AWS CodeBuild",
+          "C": "Amazon Macie",
+          "D": "AWS WAF"
+        },
+        "explanation": "CodeBuild 運行託管建置命令並且可以發布工件。\n其他選擇發現資料、過濾 Web 請求或提供圖形儲存。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-018",
@@ -285,7 +489,19 @@
     "isMultiAnswer": false,
     "explanation": "Canary and blue-green strategies reduce release risk by validating a new version before full traffic shift.\nThe other choices do not implement controlled application rollout.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備審計證據的團隊需要在全面部署之前將新的應用程式版本部署到執行個體子集。哪種策略適合？",
+        "options": {
+          "A": "公共儲存桶策略",
+          "B": "DNS TXT 記錄",
+          "C": "金絲雀或藍綠部署",
+          "D": "完全替換，無需健康檢查"
+        },
+        "explanation": "金絲雀和藍綠色策略透過在流量完全轉移之前驗證新版本來降低發布風險。\n其他選擇不實施受控應用程式推出。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-019",
@@ -301,7 +517,19 @@
     "isMultiAnswer": false,
     "explanation": "Approval gates and automated quality checks prevent unvalidated artifacts from promotion.\nThe other choices weaken release safety and traceability.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "替換手動流程的企業必須防止未經測試的工件升級到生產。哪種控制合適？",
+        "options": {
+          "A": "停用所有測試",
+          "B": "使用未版本控制的工件名稱",
+          "C": "將憑證儲存在來源中",
+          "D": "基於測試結果的管道批准或品質門"
+        },
+        "explanation": "審批門和自動品質檢查可防止未經驗證的工件得到推廣。\n其他選擇削弱了發布安全性和可追溯性。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-020",
@@ -317,7 +545,19 @@
     "isMultiAnswer": false,
     "explanation": "Amazon Q Developer can assist with code, reviews, tests, and development workflows.\nThe other choices provide archival storage, networking, or relational databases.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "根據考試指南驗證設計的團隊需要使用 AWS 編碼助理產生發行說明和測試建議。哪些服務是相關的？",
+        "options": {
+          "A": "Amazon Q Developer",
+          "B": "Amazon S3 Glacier",
+          "C": "AWS Transit Gateway",
+          "D": "Amazon RDS"
+        },
+        "explanation": "Amazon Q Developer 可以協助完成程式碼、審查、測試和開發工作流程。\n其他選擇提供檔案儲存、網路或關聯式資料庫。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-021",
@@ -333,7 +573,19 @@
     "isMultiAnswer": false,
     "explanation": "CodePipeline orchestrates source, build, approval, and deployment stages.\nThe other choices provide DNS, encryption keys, or file storage.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "生產團隊需要一個管道來建置工件、運行測試並在批准後進行部署。哪個服務應該協調各個階段？",
+        "options": {
+          "A": "Amazon EFS",
+          "B": "AWS CodePipeline",
+          "C": "Amazon Route 53",
+          "D": "AWS KMS"
+        },
+        "explanation": "CodePipeline 協調來源、建置、核准和部署階段。\n其他選項提供 DNS、加密金鑰或檔案儲存。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-022",
@@ -349,7 +601,19 @@
     "isMultiAnswer": false,
     "explanation": "CodeBuild runs managed build commands and can publish artifacts.\nThe other choices discover data, filter web requests, or provide graph storage.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "多帳戶平台團隊必須在託管建置環境中編譯原始程式碼並產生版本化工件。適合哪種服務？",
+        "options": {
+          "A": "AWS WAF",
+          "B": "Amazon Neptune",
+          "C": "AWS CodeBuild",
+          "D": "Amazon Macie"
+        },
+        "explanation": "CodeBuild 運行託管建置命令並且可以發布工件。\n其他選擇發現資料、過濾 Web 請求或提供圖形儲存。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-023",
@@ -365,7 +629,19 @@
     "isMultiAnswer": false,
     "explanation": "Canary and blue-green strategies reduce release risk by validating a new version before full traffic shift.\nThe other choices do not implement controlled application rollout.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "受監管的公司需要在全面部署之前將新的應用程式版本部署到執行個體子集。哪種策略適合？",
+        "options": {
+          "A": "完全替換，無需健康檢查",
+          "B": "公共儲存桶策略",
+          "C": "DNS TXT 記錄",
+          "D": "金絲雀或藍綠部署"
+        },
+        "explanation": "金絲雀和藍綠色策略透過在流量完全轉移之前驗證新版本來降低發布風險。\n其他選擇不實施受控應用程式推出。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-024",
@@ -381,7 +657,19 @@
     "isMultiAnswer": false,
     "explanation": "Approval gates and automated quality checks prevent unvalidated artifacts from promotion.\nThe other choices weaken release safety and traceability.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備增加流量的新創公司必須防止未經測試的工件推廣到生產環境。哪種控制合適？",
+        "options": {
+          "A": "基於測試結果的管道批准或品質門",
+          "B": "停用所有測試",
+          "C": "使用未版本控制的工件名稱",
+          "D": "將憑證儲存在來源中"
+        },
+        "explanation": "審批門和自動品質檢查可防止未經驗證的工件得到推廣。\n其他選擇削弱了發布安全性和可追溯性。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-025",
@@ -397,7 +685,19 @@
     "isMultiAnswer": false,
     "explanation": "Amazon Q Developer can assist with code, reviews, tests, and development workflows.\nThe other choices provide archival storage, networking, or relational databases.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "支援關鍵工作負載的營運團隊需要使用 AWS 編碼助理產生發行說明並測試建議。哪些服務是相關的？",
+        "options": {
+          "A": "Amazon RDS",
+          "B": "Amazon Q Developer",
+          "C": "Amazon S3 Glacier",
+          "D": "AWS Transit Gateway"
+        },
+        "explanation": "Amazon Q Developer 可以協助完成程式碼、審查、測試和開發工作流程。\n其他選擇提供檔案儲存、網路或關聯式資料庫。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-026",
@@ -413,7 +713,19 @@
     "isMultiAnswer": false,
     "explanation": "CodePipeline orchestrates source, build, approval, and deployment stages.\nThe other choices provide DNS, encryption keys, or file storage.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "資料平台團隊需要一個管道來建置工件、運行測試並在批准後進行部署。哪個服務應該協調各個階段？",
+        "options": {
+          "A": "AWS KMS",
+          "B": "Amazon EFS",
+          "C": "AWS CodePipeline",
+          "D": "Amazon Route 53"
+        },
+        "explanation": "CodePipeline 協調來源、建置、核准和部署階段。\n其他選項提供 DNS、加密金鑰或檔案儲存。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-027",
@@ -429,7 +741,19 @@
     "isMultiAnswer": false,
     "explanation": "CodeBuild runs managed build commands and can publish artifacts.\nThe other choices discover data, filter web requests, or provide graph storage.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有安全意識的工程團隊必須在託管建置環境中編譯原始程式碼並產生版本化工件。適合哪種服務？",
+        "options": {
+          "A": "Amazon Macie",
+          "B": "AWS WAF",
+          "C": "Amazon Neptune",
+          "D": "AWS CodeBuild"
+        },
+        "explanation": "CodeBuild 運行託管建置命令並且可以發布工件。\n其他選擇發現資料、過濾 Web 請求或提供圖形儲存。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-028",
@@ -445,7 +769,19 @@
     "isMultiAnswer": false,
     "explanation": "Canary and blue-green strategies reduce release risk by validating a new version before full traffic shift.\nThe other choices do not implement controlled application rollout.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "遷移現有工作負載的公司需要在全面部署之前將新的應用程式版本部署到執行個體子集。哪種策略適合？",
+        "options": {
+          "A": "金絲雀或藍綠部署",
+          "B": "完全替換，無需健康檢查",
+          "C": "公共儲存桶策略",
+          "D": "DNS TXT 記錄"
+        },
+        "explanation": "金絲雀和藍綠色策略透過在流量完全轉移之前驗證新版本來降低發布風險。\n其他選擇不實施受控應用程式推出。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-029",
@@ -461,7 +797,19 @@
     "isMultiAnswer": false,
     "explanation": "Approval gates and automated quality checks prevent unvalidated artifacts from promotion.\nThe other choices weaken release safety and traceability.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有嚴格恢復目標的團隊必須防止未經測試的工件提升到生產環境。哪種控制合適？",
+        "options": {
+          "A": "將憑證儲存在來源中",
+          "B": "基於測試結果的管道批准或品質門",
+          "C": "停用所有測試",
+          "D": "使用未版本控制的工件名稱"
+        },
+        "explanation": "審批門和自動品質檢查可防止未經驗證的工件得到推廣。\n其他選擇削弱了發布安全性和可追溯性。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-030",
@@ -477,7 +825,19 @@
     "isMultiAnswer": false,
     "explanation": "Amazon Q Developer can assist with code, reviews, tests, and development workflows.\nThe other choices provide archival storage, networking, or relational databases.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備發布的開發團隊需要使用 AWS 編碼助手產生發布說明並測試建議。哪些服務是相關的？",
+        "options": {
+          "A": "AWS Transit Gateway",
+          "B": "Amazon RDS",
+          "C": "Amazon Q Developer",
+          "D": "Amazon S3 Glacier"
+        },
+        "explanation": "Amazon Q Developer 可以協助完成程式碼、審查、測試和開發工作流程。\n其他選擇提供檔案儲存、網路或關聯式資料庫。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-031",
@@ -493,7 +853,19 @@
     "isMultiAnswer": false,
     "explanation": "CodePipeline orchestrates source, build, approval, and deployment stages.\nThe other choices provide DNS, encryption keys, or file storage.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "擁有多個 AWS 區域的企業需要一個管道來建置工件、運行測試並在批准後進行部署。哪個服務應該協調各個階段？",
+        "options": {
+          "A": "Amazon Route 53",
+          "B": "AWS KMS",
+          "C": "Amazon EFS",
+          "D": "AWS CodePipeline"
+        },
+        "explanation": "CodePipeline 協調來源、建置、核准和部署階段。\n其他選項提供 DNS、加密金鑰或檔案儲存。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-032",
@@ -509,7 +881,19 @@
     "isMultiAnswer": false,
     "explanation": "CodeBuild runs managed build commands and can publish artifacts.\nThe other choices discover data, filter web requests, or provide graph storage.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "審查事件的服務擁有者必須編譯原始程式碼並在託管建置環境中產生版本化工件。適合哪種服務？",
+        "options": {
+          "A": "AWS CodeBuild",
+          "B": "Amazon Macie",
+          "C": "AWS WAF",
+          "D": "Amazon Neptune"
+        },
+        "explanation": "CodeBuild 運行託管建置命令並且可以發布工件。\n其他選擇發現資料、過濾 Web 請求或提供圖形儲存。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-033",
@@ -525,7 +909,19 @@
     "isMultiAnswer": false,
     "explanation": "Canary and blue-green strategies reduce release risk by validating a new version before full traffic shift.\nThe other choices do not implement controlled application rollout.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "優化現有實施的團隊需要在全面部署之前將新的應用程式版本部署到執行個體子集。哪種策略適合？",
+        "options": {
+          "A": "DNS TXT 記錄",
+          "B": "金絲雀或藍綠部署",
+          "C": "完全替換，無需健康檢查",
+          "D": "公共儲存桶策略"
+        },
+        "explanation": "金絲雀和藍綠色策略透過在流量完全轉移之前驗證新版本來降低發布風險。\n其他選擇不實施受控應用程式推出。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-034",
@@ -541,7 +937,19 @@
     "isMultiAnswer": false,
     "explanation": "Approval gates and automated quality checks prevent unvalidated artifacts from promotion.\nThe other choices weaken release safety and traceability.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "引入自動化工作流程的公司必須防止未經測試的工件提升到生產環境。哪種控制合適？",
+        "options": {
+          "A": "使用未版本控制的工件名稱",
+          "B": "將憑證儲存在來源中",
+          "C": "基於測試結果的管道批准或品質門",
+          "D": "停用所有測試"
+        },
+        "explanation": "審批門和自動品質檢查可防止未經驗證的工件得到推廣。\n其他選擇削弱了發布安全性和可追溯性。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-035",
@@ -557,7 +965,19 @@
     "isMultiAnswer": false,
     "explanation": "Amazon Q Developer can assist with code, reviews, tests, and development workflows.\nThe other choices provide archival storage, networking, or relational databases.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "在共用環境中工作的 AWS 管理員需要使用 AWS 編碼助理產生發行說明和測試建議。哪些服務是相關的？",
+        "options": {
+          "A": "Amazon S3 Glacier",
+          "B": "AWS Transit Gateway",
+          "C": "Amazon RDS",
+          "D": "Amazon Q Developer"
+        },
+        "explanation": "Amazon Q Developer 可以協助完成程式碼、審查、測試和開發工作流程。\n其他選擇提供檔案儲存、網路或關聯式資料庫。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-036",
@@ -573,7 +993,19 @@
     "isMultiAnswer": false,
     "explanation": "CodePipeline orchestrates source, build, approval, and deployment stages.\nThe other choices provide DNS, encryption keys, or file storage.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "面向客戶的應用程式團隊需要一個管道來建置工件、運行測試並在批准後進行部署。哪個服務應該協調各個階段？",
+        "options": {
+          "A": "AWS CodePipeline",
+          "B": "Amazon Route 53",
+          "C": "AWS KMS",
+          "D": "Amazon EFS"
+        },
+        "explanation": "CodePipeline 協調來源、建置、核准和部署階段。\n其他選項提供 DNS、加密金鑰或檔案儲存。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-037",
@@ -589,7 +1021,19 @@
     "isMultiAnswer": false,
     "explanation": "CodeBuild runs managed build commands and can publish artifacts.\nThe other choices discover data, filter web requests, or provide graph storage.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "標準化其 AWS 部署的平台團隊必須編譯原始程式碼並在託管建置環境中產生版本化工件。適合哪種服務？",
+        "options": {
+          "A": "Amazon Neptune",
+          "B": "AWS CodeBuild",
+          "C": "Amazon Macie",
+          "D": "AWS WAF"
+        },
+        "explanation": "CodeBuild 運行託管建置命令並且可以發布工件。\n其他選擇發現資料、過濾 Web 請求或提供圖形儲存。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-038",
@@ -605,7 +1049,19 @@
     "isMultiAnswer": false,
     "explanation": "Canary and blue-green strategies reduce release risk by validating a new version before full traffic shift.\nThe other choices do not implement controlled application rollout.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備審計證據的團隊需要在全面部署之前將新的應用程式版本部署到執行個體子集。哪種策略適合？",
+        "options": {
+          "A": "公共儲存桶策略",
+          "B": "DNS TXT 記錄",
+          "C": "金絲雀或藍綠部署",
+          "D": "完全替換，無需健康檢查"
+        },
+        "explanation": "金絲雀和藍綠色策略透過在流量完全轉移之前驗證新版本來降低發布風險。\n其他選擇不實施受控應用程式推出。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-039",
@@ -621,7 +1077,19 @@
     "isMultiAnswer": false,
     "explanation": "Approval gates and automated quality checks prevent unvalidated artifacts from promotion.\nThe other choices weaken release safety and traceability.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "替換手動流程的企業必須防止未經測試的工件升級到生產。哪種控制合適？",
+        "options": {
+          "A": "停用所有測試",
+          "B": "使用未版本控制的工件名稱",
+          "C": "將憑證儲存在來源中",
+          "D": "基於測試結果的管道批准或品質門"
+        },
+        "explanation": "審批門和自動品質檢查可防止未經驗證的工件得到推廣。\n其他選擇削弱了發布安全性和可追溯性。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-040",
@@ -637,7 +1105,19 @@
     "isMultiAnswer": false,
     "explanation": "Amazon Q Developer can assist with code, reviews, tests, and development workflows.\nThe other choices provide archival storage, networking, or relational databases.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "根據考試指南驗證設計的團隊需要使用 AWS 編碼助理產生發行說明和測試建議。哪些服務是相關的？",
+        "options": {
+          "A": "Amazon Q Developer",
+          "B": "Amazon S3 Glacier",
+          "C": "AWS Transit Gateway",
+          "D": "Amazon RDS"
+        },
+        "explanation": "Amazon Q Developer 可以協助完成程式碼、審查、測試和開發工作流程。\n其他選擇提供檔案儲存、網路或關聯式資料庫。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-041",
@@ -653,7 +1133,19 @@
     "isMultiAnswer": false,
     "explanation": "CodePipeline orchestrates source, build, approval, and deployment stages.\nThe other choices provide DNS, encryption keys, or file storage.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "生產團隊需要一個管道來建置工件、運行測試並在批准後進行部署。哪個服務應該協調各個階段？",
+        "options": {
+          "A": "Amazon EFS",
+          "B": "AWS CodePipeline",
+          "C": "Amazon Route 53",
+          "D": "AWS KMS"
+        },
+        "explanation": "CodePipeline 協調來源、建置、核准和部署階段。\n其他選項提供 DNS、加密金鑰或檔案儲存。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-042",
@@ -669,7 +1161,19 @@
     "isMultiAnswer": false,
     "explanation": "CodeBuild runs managed build commands and can publish artifacts.\nThe other choices discover data, filter web requests, or provide graph storage.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "多帳戶平台團隊必須在託管建置環境中編譯原始程式碼並產生版本化工件。適合哪種服務？",
+        "options": {
+          "A": "AWS WAF",
+          "B": "Amazon Neptune",
+          "C": "AWS CodeBuild",
+          "D": "Amazon Macie"
+        },
+        "explanation": "CodeBuild 運行託管建置命令並且可以發布工件。\n其他選擇發現資料、過濾 Web 請求或提供圖形儲存。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-043",
@@ -685,7 +1189,19 @@
     "isMultiAnswer": false,
     "explanation": "Canary and blue-green strategies reduce release risk by validating a new version before full traffic shift.\nThe other choices do not implement controlled application rollout.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "受監管的公司需要在全面部署之前將新的應用程式版本部署到執行個體子集。哪種策略適合？",
+        "options": {
+          "A": "完全替換，無需健康檢查",
+          "B": "公共儲存桶策略",
+          "C": "DNS TXT 記錄",
+          "D": "金絲雀或藍綠部署"
+        },
+        "explanation": "金絲雀和藍綠色策略透過在流量完全轉移之前驗證新版本來降低發布風險。\n其他選擇不實施受控應用程式推出。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-044",
@@ -701,7 +1217,19 @@
     "isMultiAnswer": false,
     "explanation": "Approval gates and automated quality checks prevent unvalidated artifacts from promotion.\nThe other choices weaken release safety and traceability.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備增加流量的新創公司必須防止未經測試的工件推廣到生產環境。哪種控制合適？",
+        "options": {
+          "A": "基於測試結果的管道批准或品質門",
+          "B": "停用所有測試",
+          "C": "使用未版本控制的工件名稱",
+          "D": "將憑證儲存在來源中"
+        },
+        "explanation": "審批門和自動品質檢查可防止未經驗證的工件得到推廣。\n其他選擇削弱了發布安全性和可追溯性。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-045",
@@ -717,7 +1245,19 @@
     "isMultiAnswer": false,
     "explanation": "Amazon Q Developer can assist with code, reviews, tests, and development workflows.\nThe other choices provide archival storage, networking, or relational databases.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "支援關鍵工作負載的營運團隊需要使用 AWS 編碼助理產生發行說明並測試建議。哪些服務是相關的？",
+        "options": {
+          "A": "Amazon RDS",
+          "B": "Amazon Q Developer",
+          "C": "Amazon S3 Glacier",
+          "D": "AWS Transit Gateway"
+        },
+        "explanation": "Amazon Q Developer 可以協助完成程式碼、審查、測試和開發工作流程。\n其他選擇提供檔案儲存、網路或關聯式資料庫。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-046",
@@ -733,7 +1273,19 @@
     "isMultiAnswer": false,
     "explanation": "CodePipeline orchestrates source, build, approval, and deployment stages.\nThe other choices provide DNS, encryption keys, or file storage.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "資料平台團隊需要一個管道來建置工件、運行測試並在批准後進行部署。哪個服務應該協調各個階段？",
+        "options": {
+          "A": "AWS KMS",
+          "B": "Amazon EFS",
+          "C": "AWS CodePipeline",
+          "D": "Amazon Route 53"
+        },
+        "explanation": "CodePipeline 協調來源、建置、核准和部署階段。\n其他選項提供 DNS、加密金鑰或檔案儲存。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-047",
@@ -749,7 +1301,19 @@
     "isMultiAnswer": false,
     "explanation": "CodeBuild runs managed build commands and can publish artifacts.\nThe other choices discover data, filter web requests, or provide graph storage.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有安全意識的工程團隊必須在託管建置環境中編譯原始程式碼並產生版本化工件。適合哪種服務？",
+        "options": {
+          "A": "Amazon Macie",
+          "B": "AWS WAF",
+          "C": "Amazon Neptune",
+          "D": "AWS CodeBuild"
+        },
+        "explanation": "CodeBuild 運行託管建置命令並且可以發布工件。\n其他選擇發現資料、過濾 Web 請求或提供圖形儲存。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-048",
@@ -765,7 +1329,19 @@
     "isMultiAnswer": false,
     "explanation": "Canary and blue-green strategies reduce release risk by validating a new version before full traffic shift.\nThe other choices do not implement controlled application rollout.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "遷移現有工作負載的公司需要在全面部署之前將新的應用程式版本部署到執行個體子集。哪種策略適合？",
+        "options": {
+          "A": "金絲雀或藍綠部署",
+          "B": "完全替換，無需健康檢查",
+          "C": "公共儲存桶策略",
+          "D": "DNS TXT 記錄"
+        },
+        "explanation": "金絲雀和藍綠色策略透過在流量完全轉移之前驗證新版本來降低發布風險。\n其他選擇不實施受控應用程式推出。"
+      }
+    }
   },
   {
     "id": "dop-c02-d1-049",
@@ -781,6 +1357,18 @@
     "isMultiAnswer": false,
     "explanation": "Approval gates and automated quality checks prevent unvalidated artifacts from promotion.\nThe other choices weaken release safety and traceability.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有嚴格恢復目標的團隊必須防止未經測試的工件提升到生產環境。哪種控制合適？",
+        "options": {
+          "A": "將憑證儲存在來源中",
+          "B": "基於測試結果的管道批准或品質門",
+          "C": "停用所有測試",
+          "D": "使用未版本控制的工件名稱"
+        },
+        "explanation": "審批門和自動品質檢查可防止未經驗證的工件得到推廣。\n其他選擇削弱了發布安全性和可追溯性。"
+      }
+    }
   }
 ]

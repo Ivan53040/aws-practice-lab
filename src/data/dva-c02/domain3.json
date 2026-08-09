@@ -13,7 +13,19 @@
     "isMultiAnswer": false,
     "explanation": "Lambda deployment packages or container images bundle code and runtime dependencies.\nThe other choices do not package executable application code.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "生產團隊需要一個用於 Lambda 函數及其相依性的可重複性套件。應該使用哪個選項？",
+        "options": {
+          "A": "Route 53 託管區域",
+          "B": "僅安全群組",
+          "C": "CloudTrail 路徑",
+          "D": "部署包或 Lambda 容器映像"
+        },
+        "explanation": "Lambda 部署套件或容器映像捆綁程式碼和執行時間相依性。\n其他選擇不打包可執行應用程式程式碼。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-002",
@@ -29,7 +41,19 @@
     "isMultiAnswer": false,
     "explanation": "Infrastructure as code can create repeatable test and production environments with controlled parameters.\nThe other choices do not deploy isolated application environments.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "多帳戶平台團隊希望在生產之前將功能部署到測試階段。哪種服務組合適合？",
+        "options": {
+          "A": "具有單獨環境的 AWS SAM 或 CloudFormation",
+          "B": "僅公共 S3 儲存桶",
+          "C": "KMS 別名",
+          "D": "VPC 流日誌"
+        },
+        "explanation": "基礎設施即程式碼可以建立具有受控參數的可重複測試和生產環境。\n其他選擇不部署隔離的應用程式環境。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-003",
@@ -45,7 +69,19 @@
     "isMultiAnswer": false,
     "explanation": "Lambda aliases can route a percentage of traffic to a new version for a controlled rollout.\nThe other choices do not control Lambda version traffic.",
     "taskStatement": "3.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "受監管的公司必須逐步將生產流量轉移到新的 Lambda 版本。哪種機制合適？",
+        "options": {
+          "A": "IAM 密碼原則",
+          "B": "帶有加權金絲雀部署的 Lambda 別名",
+          "C": "全資料庫掃描",
+          "D": "S3 生命週期過渡"
+        },
+        "explanation": "Lambda 別名可以將一定比例的流量路由到新版本以進行受控部署。\n其他選項不控制 Lambda 版本流量。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-004",
@@ -61,7 +97,19 @@
     "isMultiAnswer": false,
     "explanation": "CodePipeline orchestrates source, build, test, and deployment actions.\nThe other choices provide graph storage, DDoS protection, or file storage.",
     "taskStatement": "3.4",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備增加流量的新創公司需要提交程式碼來觸發建置、測試和部署階段。哪個服務應該協調管道？",
+        "options": {
+          "A": "AWS Shield",
+          "B": "Amazon EFS",
+          "C": "AWS CodePipeline",
+          "D": "Amazon Neptune"
+        },
+        "explanation": "CodePipeline 協調原始碼、建置、測試和部署作業。\n其他選擇提供圖形儲存、DDoS 保護或檔案儲存。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-005",
@@ -77,7 +125,19 @@
     "isMultiAnswer": false,
     "explanation": "Deployment services can use health checks and alarms to stop or roll back an unhealthy release.\nThe other choices do not coordinate application release rollback.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "支援關鍵工作負載的營運團隊必須在運行狀況檢查失敗後回滾應用程式。哪種部署能力有用？",
+        "options": {
+          "A": "公共儲存桶ACL",
+          "B": "DNS TXT 記錄",
+          "C": "僅 EBS 磁碟區快照",
+          "D": "自動回滾的部署策略"
+        },
+        "explanation": "部署服務可以使用健康檢查和警報來停止或回滾不健康的版本。\n其他選擇不協調應用程式版本回滾。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-006",
@@ -93,7 +153,19 @@
     "isMultiAnswer": false,
     "explanation": "Lambda deployment packages or container images bundle code and runtime dependencies.\nThe other choices do not package executable application code.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "資料平台團隊需要一個用於 Lambda 函數及其相依性的可重複套件。應該使用哪個選項？",
+        "options": {
+          "A": "部署包或 Lambda 容器映像",
+          "B": "Route 53 託管區域",
+          "C": "僅安全群組",
+          "D": "CloudTrail 路徑"
+        },
+        "explanation": "Lambda 部署套件或容器映像捆綁程式碼和執行時間相依性。\n其他選擇不打包可執行應用程式程式碼。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-007",
@@ -109,7 +181,19 @@
     "isMultiAnswer": false,
     "explanation": "Infrastructure as code can create repeatable test and production environments with controlled parameters.\nThe other choices do not deploy isolated application environments.",
     "taskStatement": "3.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有安全意識的工程團隊希望在生產之前將功能部署到測試階段。哪種服務組合適合？",
+        "options": {
+          "A": "VPC 流日誌",
+          "B": "具有單獨環境的 AWS SAM 或 CloudFormation",
+          "C": "僅公共 S3 儲存桶",
+          "D": "KMS 別名"
+        },
+        "explanation": "基礎設施即程式碼可以建立具有受控參數的可重複測試和生產環境。\n其他選擇不部署隔離的應用程式環境。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-008",
@@ -125,7 +209,19 @@
     "isMultiAnswer": false,
     "explanation": "Lambda aliases can route a percentage of traffic to a new version for a controlled rollout.\nThe other choices do not control Lambda version traffic.",
     "taskStatement": "3.4",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "遷移現有工作負載的公司必須逐步將生產流量轉移到新的 Lambda 版本。哪種機制合適？",
+        "options": {
+          "A": "S3 生命週期過渡",
+          "B": "IAM 密碼原則",
+          "C": "帶有加權金絲雀部署的 Lambda 別名",
+          "D": "全資料庫掃描"
+        },
+        "explanation": "Lambda 別名可以將一定比例的流量路由到新版本以進行受控部署。\n其他選項不控制 Lambda 版本流量。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-009",
@@ -141,7 +237,19 @@
     "isMultiAnswer": false,
     "explanation": "CodePipeline orchestrates source, build, test, and deployment actions.\nThe other choices provide graph storage, DDoS protection, or file storage.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有嚴格復原目標的團隊需要提交程式碼來觸發建置、測試和部署階段。哪個服務應該協調管道？",
+        "options": {
+          "A": "Amazon Neptune",
+          "B": "AWS Shield",
+          "C": "Amazon EFS",
+          "D": "AWS CodePipeline"
+        },
+        "explanation": "CodePipeline 協調原始碼、建置、測試和部署作業。\n其他選擇提供圖形儲存、DDoS 保護或檔案儲存。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-010",
@@ -157,7 +265,19 @@
     "isMultiAnswer": false,
     "explanation": "Deployment services can use health checks and alarms to stop or roll back an unhealthy release.\nThe other choices do not coordinate application release rollback.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備發布的開發團隊必須在運行狀況檢查失敗後回滾應用程式。哪種部署能力有用？",
+        "options": {
+          "A": "自動回滾的部署策略",
+          "B": "公共儲存桶ACL",
+          "C": "DNS TXT 記錄",
+          "D": "僅 EBS 磁碟區快照"
+        },
+        "explanation": "部署服務可以使用健康檢查和警報來停止或回滾不健康的版本。\n其他選擇不協調應用程式版本回滾。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-011",
@@ -173,7 +293,19 @@
     "isMultiAnswer": false,
     "explanation": "Lambda deployment packages or container images bundle code and runtime dependencies.\nThe other choices do not package executable application code.",
     "taskStatement": "3.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "擁有多個 AWS 區域的企業需要一個用於 Lambda 函數及其相依性的可重複套件。應該使用哪個選項？",
+        "options": {
+          "A": "CloudTrail 路徑",
+          "B": "部署包或 Lambda 容器映像",
+          "C": "Route 53 託管區域",
+          "D": "僅安全群組"
+        },
+        "explanation": "Lambda 部署套件或容器映像捆綁程式碼和執行時間相依性。\n其他選擇不打包可執行應用程式程式碼。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-012",
@@ -189,7 +321,19 @@
     "isMultiAnswer": false,
     "explanation": "Infrastructure as code can create repeatable test and production environments with controlled parameters.\nThe other choices do not deploy isolated application environments.",
     "taskStatement": "3.4",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "審查事件的服務所有者希望在生產之前將功能部署到測試階段。哪種服務組合適合？",
+        "options": {
+          "A": "KMS 別名",
+          "B": "VPC 流日誌",
+          "C": "具有單獨環境的 AWS SAM 或 CloudFormation",
+          "D": "僅公共 S3 儲存桶"
+        },
+        "explanation": "基礎設施即程式碼可以建立具有受控參數的可重複測試和生產環境。\n其他選擇不部署隔離的應用程式環境。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-013",
@@ -205,7 +349,19 @@
     "isMultiAnswer": false,
     "explanation": "Lambda aliases can route a percentage of traffic to a new version for a controlled rollout.\nThe other choices do not control Lambda version traffic.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "優化現有實施的團隊必須逐步將生產流量轉移到新的 Lambda 版本。哪種機制合適？",
+        "options": {
+          "A": "全資料庫掃描",
+          "B": "S3 生命週期過渡",
+          "C": "IAM 密碼原則",
+          "D": "帶有加權金絲雀部署的 Lambda 別名"
+        },
+        "explanation": "Lambda 別名可以將一定比例的流量路由到新版本以進行受控部署。\n其他選項不控制 Lambda 版本流量。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-014",
@@ -221,7 +377,19 @@
     "isMultiAnswer": false,
     "explanation": "CodePipeline orchestrates source, build, test, and deployment actions.\nThe other choices provide graph storage, DDoS protection, or file storage.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "引入自動化工作流程的公司需要提交程式碼來觸發建置、測試和部署階段。哪個服務應該協調管道？",
+        "options": {
+          "A": "AWS CodePipeline",
+          "B": "Amazon Neptune",
+          "C": "AWS Shield",
+          "D": "Amazon EFS"
+        },
+        "explanation": "CodePipeline 協調來源、建置、測試和部署作業。\n其他選擇提供圖形儲存、DDoS 保護或檔案儲存。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-015",
@@ -237,7 +405,19 @@
     "isMultiAnswer": false,
     "explanation": "Deployment services can use health checks and alarms to stop or roll back an unhealthy release.\nThe other choices do not coordinate application release rollback.",
     "taskStatement": "3.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "在共用環境中工作的 AWS 管理員必須在執行狀況檢查失敗後回滾應用程式。哪種部署能力有用？",
+        "options": {
+          "A": "僅 EBS 磁碟區快照",
+          "B": "自動回滾的部署策略",
+          "C": "公共儲存桶ACL",
+          "D": "DNS TXT 記錄"
+        },
+        "explanation": "部署服務可以使用健康檢查和警報來停止或回滾不健康的版本。\n其他選擇不協調應用程式版本回滾。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-016",
@@ -253,7 +433,19 @@
     "isMultiAnswer": false,
     "explanation": "Lambda deployment packages or container images bundle code and runtime dependencies.\nThe other choices do not package executable application code.",
     "taskStatement": "3.4",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "以客戶為導向的應用程式團隊需要一個用於 Lambda 函數及其相依性的可重複套件。應該使用哪個選項？",
+        "options": {
+          "A": "僅安全群組",
+          "B": "CloudTrail 路徑",
+          "C": "部署包或 Lambda 容器映像",
+          "D": "Route 53 託管區域"
+        },
+        "explanation": "Lambda 部署套件或容器映像捆綁程式碼和執行時間相依性。\n其他選擇不打包可執行應用程式程式碼。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-017",
@@ -269,7 +461,19 @@
     "isMultiAnswer": false,
     "explanation": "Infrastructure as code can create repeatable test and production environments with controlled parameters.\nThe other choices do not deploy isolated application environments.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "標準化其 AWS 部署的平台團隊希望在生產之前將功能部署到測試階段。哪種服務組合適合？",
+        "options": {
+          "A": "僅公共 S3 儲存桶",
+          "B": "KMS 別名",
+          "C": "VPC 流日誌",
+          "D": "具有單獨環境的 AWS SAM 或 CloudFormation"
+        },
+        "explanation": "基礎設施即程式碼可以建立具有受控參數的可重複測試和生產環境。\n其他選擇不部署隔離的應用程式環境。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-018",
@@ -285,7 +489,19 @@
     "isMultiAnswer": false,
     "explanation": "Lambda aliases can route a percentage of traffic to a new version for a controlled rollout.\nThe other choices do not control Lambda version traffic.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備審計證據的團隊必須逐漸將生產流量轉移到新的 Lambda 版本。哪種機制合適？",
+        "options": {
+          "A": "帶有加權金絲雀部署的 Lambda 別名",
+          "B": "全資料庫掃描",
+          "C": "S3 生命週期過渡",
+          "D": "IAM 密碼原則"
+        },
+        "explanation": "Lambda 別名可以將一定比例的流量路由到新版本以進行受控部署。\n其他選項不控制 Lambda 版本流量。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-019",
@@ -301,7 +517,19 @@
     "isMultiAnswer": false,
     "explanation": "CodePipeline orchestrates source, build, test, and deployment actions.\nThe other choices provide graph storage, DDoS protection, or file storage.",
     "taskStatement": "3.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "替換手動流程的企業需要提交程式碼來觸發建置、測試和部署階段。哪個服務應該協調管道？",
+        "options": {
+          "A": "Amazon EFS",
+          "B": "AWS CodePipeline",
+          "C": "Amazon Neptune",
+          "D": "AWS Shield"
+        },
+        "explanation": "CodePipeline 協調原始碼、建置、測試和部署作業。\n其他選擇提供圖形儲存、DDoS 保護或檔案儲存。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-020",
@@ -317,7 +545,19 @@
     "isMultiAnswer": false,
     "explanation": "Deployment services can use health checks and alarms to stop or roll back an unhealthy release.\nThe other choices do not coordinate application release rollback.",
     "taskStatement": "3.4",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "根據考試指南驗證設計的團隊必須在運行狀況檢查失敗後回滾應用程式。哪種部署能力有用？",
+        "options": {
+          "A": "DNS TXT 記錄",
+          "B": "僅 EBS 磁碟區快照",
+          "C": "自動回滾的部署策略",
+          "D": "公共儲存桶ACL"
+        },
+        "explanation": "部署服務可以使用健康檢查和警報來停止或回滾不健康的版本。\n其他選擇不協調應用程式版本回滾。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-021",
@@ -333,7 +573,19 @@
     "isMultiAnswer": false,
     "explanation": "Lambda deployment packages or container images bundle code and runtime dependencies.\nThe other choices do not package executable application code.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "生產團隊需要一個用於 Lambda 函數及其相依性的可重複性套件。應該使用哪個選項？",
+        "options": {
+          "A": "Route 53 託管區域",
+          "B": "僅安全群組",
+          "C": "CloudTrail 路徑",
+          "D": "部署包或 Lambda 容器映像"
+        },
+        "explanation": "Lambda 部署套件或容器映像捆綁程式碼和執行時間相依性。\n其他選擇不打包可執行應用程式程式碼。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-022",
@@ -349,7 +601,19 @@
     "isMultiAnswer": false,
     "explanation": "Infrastructure as code can create repeatable test and production environments with controlled parameters.\nThe other choices do not deploy isolated application environments.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "多帳戶平台團隊希望在生產之前將功能部署到測試階段。哪種服務組合適合？",
+        "options": {
+          "A": "具有單獨環境的 AWS SAM 或 CloudFormation",
+          "B": "僅公共 S3 儲存桶",
+          "C": "KMS 別名",
+          "D": "VPC 流日誌"
+        },
+        "explanation": "基礎設施即程式碼可以建立具有受控參數的可重複測試和生產環境。\n其他選擇不部署隔離的應用程式環境。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-023",
@@ -365,7 +629,19 @@
     "isMultiAnswer": false,
     "explanation": "Lambda aliases can route a percentage of traffic to a new version for a controlled rollout.\nThe other choices do not control Lambda version traffic.",
     "taskStatement": "3.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "受監管的公司必須逐步將生產流量轉移到新的 Lambda 版本。哪種機制合適？",
+        "options": {
+          "A": "IAM 密碼原則",
+          "B": "帶有加權金絲雀部署的 Lambda 別名",
+          "C": "全資料庫掃描",
+          "D": "S3 生命週期過渡"
+        },
+        "explanation": "Lambda 別名可以將一定比例的流量路由到新版本以進行受控部署。\n其他選項不控制 Lambda 版本流量。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-024",
@@ -381,7 +657,19 @@
     "isMultiAnswer": false,
     "explanation": "CodePipeline orchestrates source, build, test, and deployment actions.\nThe other choices provide graph storage, DDoS protection, or file storage.",
     "taskStatement": "3.4",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備增加流量的新創公司需要提交程式碼來觸發建置、測試和部署階段。哪個服務應該協調管道？",
+        "options": {
+          "A": "AWS Shield",
+          "B": "Amazon EFS",
+          "C": "AWS CodePipeline",
+          "D": "Amazon Neptune"
+        },
+        "explanation": "CodePipeline 協調來源、建置、測試和部署作業。\n其他選擇提供圖形儲存、DDoS 保護或檔案儲存。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-025",
@@ -397,7 +685,19 @@
     "isMultiAnswer": false,
     "explanation": "Deployment services can use health checks and alarms to stop or roll back an unhealthy release.\nThe other choices do not coordinate application release rollback.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "支援關鍵工作負載的營運團隊必須在運行狀況檢查失敗後回滾應用程式。哪種部署能力有用？",
+        "options": {
+          "A": "公共儲存桶ACL",
+          "B": "DNS TXT 記錄",
+          "C": "僅 EBS 磁碟區快照",
+          "D": "自動回滾的部署策略"
+        },
+        "explanation": "部署服務可以使用健康檢查和警報來停止或回滾不健康的版本。\n其他選擇不協調應用程式版本回滾。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-026",
@@ -413,7 +713,19 @@
     "isMultiAnswer": false,
     "explanation": "Lambda deployment packages or container images bundle code and runtime dependencies.\nThe other choices do not package executable application code.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "資料平台團隊需要一個用於 Lambda 函數及其相依性的可重複套件。應該使用哪個選項？",
+        "options": {
+          "A": "部署包或 Lambda 容器映像",
+          "B": "Route 53 託管區域",
+          "C": "僅安全群組",
+          "D": "CloudTrail 路徑"
+        },
+        "explanation": "Lambda 部署套件或容器映像捆綁程式碼和執行時間相依性。\n其他選擇不打包可執行應用程式程式碼。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-027",
@@ -429,7 +741,19 @@
     "isMultiAnswer": false,
     "explanation": "Infrastructure as code can create repeatable test and production environments with controlled parameters.\nThe other choices do not deploy isolated application environments.",
     "taskStatement": "3.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有安全意識的工程團隊希望在生產之前將功能部署到測試階段。哪種服務組合適合？",
+        "options": {
+          "A": "VPC 流日誌",
+          "B": "具有單獨環境的 AWS SAM 或 CloudFormation",
+          "C": "僅公共 S3 儲存桶",
+          "D": "KMS 別名"
+        },
+        "explanation": "基礎設施即程式碼可以建立具有受控參數的可重複測試和生產環境。\n其他選擇不部署隔離的應用程式環境。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-028",
@@ -445,7 +769,19 @@
     "isMultiAnswer": false,
     "explanation": "Lambda aliases can route a percentage of traffic to a new version for a controlled rollout.\nThe other choices do not control Lambda version traffic.",
     "taskStatement": "3.4",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "遷移現有工作負載的公司必須逐步將生產流量轉移到新的 Lambda 版本。哪種機制合適？",
+        "options": {
+          "A": "S3 生命週期過渡",
+          "B": "IAM 密碼原則",
+          "C": "帶有加權金絲雀部署的 Lambda 別名",
+          "D": "全資料庫掃描"
+        },
+        "explanation": "Lambda 別名可以將一定比例的流量路由到新版本以進行受控部署。\n其他選項不控制 Lambda 版本流量。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-029",
@@ -461,7 +797,19 @@
     "isMultiAnswer": false,
     "explanation": "CodePipeline orchestrates source, build, test, and deployment actions.\nThe other choices provide graph storage, DDoS protection, or file storage.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有嚴格復原目標的團隊需要提交程式碼來觸發建置、測試和部署階段。哪個服務應該協調管道？",
+        "options": {
+          "A": "Amazon Neptune",
+          "B": "AWS Shield",
+          "C": "Amazon EFS",
+          "D": "AWS CodePipeline"
+        },
+        "explanation": "CodePipeline 協調來源、建置、測試和部署作業。\n其他選擇提供圖形儲存、DDoS 保護或檔案儲存。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-030",
@@ -477,7 +825,19 @@
     "isMultiAnswer": false,
     "explanation": "Deployment services can use health checks and alarms to stop or roll back an unhealthy release.\nThe other choices do not coordinate application release rollback.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備發布的開發團隊必須在運行狀況檢查失敗後回滾應用程式。哪種部署能力有用？",
+        "options": {
+          "A": "自動回滾的部署策略",
+          "B": "公共儲存桶ACL",
+          "C": "DNS TXT 記錄",
+          "D": "僅 EBS 磁碟區快照"
+        },
+        "explanation": "部署服務可以使用健康檢查和警報來停止或回滾不健康的版本。\n其他選擇不協調應用程式版本回滾。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-031",
@@ -493,7 +853,19 @@
     "isMultiAnswer": false,
     "explanation": "Lambda deployment packages or container images bundle code and runtime dependencies.\nThe other choices do not package executable application code.",
     "taskStatement": "3.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "擁有多個 AWS 區域的企業需要一個用於 Lambda 函數及其相依性的可重複套件。應該使用哪個選項？",
+        "options": {
+          "A": "CloudTrail 路徑",
+          "B": "部署包或 Lambda 容器映像",
+          "C": "Route 53 託管區域",
+          "D": "僅安全群組"
+        },
+        "explanation": "Lambda 部署套件或容器映像捆綁程式碼和執行時間相依性。\n其他選擇不打包可執行應用程式程式碼。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-032",
@@ -509,7 +881,19 @@
     "isMultiAnswer": false,
     "explanation": "Infrastructure as code can create repeatable test and production environments with controlled parameters.\nThe other choices do not deploy isolated application environments.",
     "taskStatement": "3.4",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "審查事件的服務所有者希望在生產之前將功能部署到測試階段。哪種服務組合適合？",
+        "options": {
+          "A": "KMS 別名",
+          "B": "VPC 流日誌",
+          "C": "具有單獨環境的 AWS SAM 或 CloudFormation",
+          "D": "僅公共 S3 儲存桶"
+        },
+        "explanation": "基礎設施即程式碼可以建立具有受控參數的可重複測試和生產環境。\n其他選擇不部署隔離的應用程式環境。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-033",
@@ -525,7 +909,19 @@
     "isMultiAnswer": false,
     "explanation": "Lambda aliases can route a percentage of traffic to a new version for a controlled rollout.\nThe other choices do not control Lambda version traffic.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "優化現有實施的團隊必須逐步將生產流量轉移到新的 Lambda 版本。哪種機制合適？",
+        "options": {
+          "A": "全資料庫掃描",
+          "B": "S3 生命週期過渡",
+          "C": "IAM 密碼原則",
+          "D": "帶有加權金絲雀部署的 Lambda 別名"
+        },
+        "explanation": "Lambda 別名可以將一定比例的流量路由到新版本以進行受控部署。\n其他選項不控制 Lambda 版本流量。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-034",
@@ -541,7 +937,19 @@
     "isMultiAnswer": false,
     "explanation": "CodePipeline orchestrates source, build, test, and deployment actions.\nThe other choices provide graph storage, DDoS protection, or file storage.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "引入自動化工作流程的公司需要提交程式碼來觸發建置、測試和部署階段。哪個服務應該協調管道？",
+        "options": {
+          "A": "AWS CodePipeline",
+          "B": "Amazon Neptune",
+          "C": "AWS Shield",
+          "D": "Amazon EFS"
+        },
+        "explanation": "CodePipeline 協調來源、建置、測試和部署作業。\n其他選擇提供圖形儲存、DDoS 保護或檔案儲存。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-035",
@@ -557,7 +965,19 @@
     "isMultiAnswer": false,
     "explanation": "Deployment services can use health checks and alarms to stop or roll back an unhealthy release.\nThe other choices do not coordinate application release rollback.",
     "taskStatement": "3.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "在共用環境中工作的 AWS 管理員必須在執行狀況檢查失敗後回滾應用程式。哪種部署能力有用？",
+        "options": {
+          "A": "僅 EBS 磁碟區快照",
+          "B": "自動回滾的部署策略",
+          "C": "公共儲存桶ACL",
+          "D": "DNS TXT 記錄"
+        },
+        "explanation": "部署服務可以使用健康檢查和警報來停止或回滾不健康的版本。\n其他選擇不協調應用程式版本回滾。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-036",
@@ -573,7 +993,19 @@
     "isMultiAnswer": false,
     "explanation": "Lambda deployment packages or container images bundle code and runtime dependencies.\nThe other choices do not package executable application code.",
     "taskStatement": "3.4",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "以客戶為導向的應用程式團隊需要一個用於 Lambda 函數及其相依性的可重複套件。應該使用哪個選項？",
+        "options": {
+          "A": "僅安全群組",
+          "B": "CloudTrail 路徑",
+          "C": "部署包或 Lambda 容器映像",
+          "D": "Route 53 託管區域"
+        },
+        "explanation": "Lambda 部署套件或容器映像捆綁程式碼和執行時間相依性。\n其他選擇不打包可執行應用程式程式碼。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-037",
@@ -589,7 +1021,19 @@
     "isMultiAnswer": false,
     "explanation": "Infrastructure as code can create repeatable test and production environments with controlled parameters.\nThe other choices do not deploy isolated application environments.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "標準化其 AWS 部署的平台團隊希望在生產之前將功能部署到測試階段。哪種服務組合適合？",
+        "options": {
+          "A": "僅公共 S3 儲存桶",
+          "B": "KMS 別名",
+          "C": "VPC 流日誌",
+          "D": "具有單獨環境的 AWS SAM 或 CloudFormation"
+        },
+        "explanation": "基礎設施即程式碼可以建立具有受控參數的可重複測試和生產環境。\n其他選擇不部署隔離的應用程式環境。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-038",
@@ -605,7 +1049,19 @@
     "isMultiAnswer": false,
     "explanation": "Lambda aliases can route a percentage of traffic to a new version for a controlled rollout.\nThe other choices do not control Lambda version traffic.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備審計證據的團隊必須逐漸將生產流量轉移到新的 Lambda 版本。哪種機制合適？",
+        "options": {
+          "A": "帶有加權金絲雀部署的 Lambda 別名",
+          "B": "全資料庫掃描",
+          "C": "S3 生命週期過渡",
+          "D": "IAM 密碼原則"
+        },
+        "explanation": "Lambda 別名可以將一定比例的流量路由到新版本以進行受控部署。\n其他選項不控制 Lambda 版本流量。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-039",
@@ -621,7 +1077,19 @@
     "isMultiAnswer": false,
     "explanation": "CodePipeline orchestrates source, build, test, and deployment actions.\nThe other choices provide graph storage, DDoS protection, or file storage.",
     "taskStatement": "3.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "替換手動流程的企業需要提交程式碼來觸發建置、測試和部署階段。哪個服務應該協調管道？",
+        "options": {
+          "A": "Amazon EFS",
+          "B": "AWS CodePipeline",
+          "C": "Amazon Neptune",
+          "D": "AWS Shield"
+        },
+        "explanation": "CodePipeline 協調來源、建置、測試和部署作業。\n其他選擇提供圖形儲存、DDoS 保護或檔案儲存。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-040",
@@ -637,7 +1105,19 @@
     "isMultiAnswer": false,
     "explanation": "Deployment services can use health checks and alarms to stop or roll back an unhealthy release.\nThe other choices do not coordinate application release rollback.",
     "taskStatement": "3.4",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "根據考試指南驗證設計的團隊必須在運行狀況檢查失敗後回滾應用程式。哪種部署能力有用？",
+        "options": {
+          "A": "DNS TXT 記錄",
+          "B": "僅 EBS 磁碟區快照",
+          "C": "自動回滾的部署策略",
+          "D": "公共儲存桶ACL"
+        },
+        "explanation": "部署服務可以使用健康檢查和警報來停止或回滾不健康的版本。\n其他選擇不協調應用程式版本回滾。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-041",
@@ -653,7 +1133,19 @@
     "isMultiAnswer": false,
     "explanation": "Lambda deployment packages or container images bundle code and runtime dependencies.\nThe other choices do not package executable application code.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "生產團隊需要一個用於 Lambda 函數及其相依性的可重複性套件。應該使用哪個選項？",
+        "options": {
+          "A": "Route 53 託管區域",
+          "B": "僅安全群組",
+          "C": "CloudTrail 路徑",
+          "D": "部署包或 Lambda 容器映像"
+        },
+        "explanation": "Lambda 部署套件或容器映像捆綁程式碼和執行時間相依性。\n其他選擇不打包可執行應用程式程式碼。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-042",
@@ -669,7 +1161,19 @@
     "isMultiAnswer": false,
     "explanation": "Infrastructure as code can create repeatable test and production environments with controlled parameters.\nThe other choices do not deploy isolated application environments.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "多帳戶平台團隊希望在生產之前將功能部署到測試階段。哪種服務組合適合？",
+        "options": {
+          "A": "具有單獨環境的 AWS SAM 或 CloudFormation",
+          "B": "僅公共 S3 儲存桶",
+          "C": "KMS 別名",
+          "D": "VPC 流日誌"
+        },
+        "explanation": "基礎設施即程式碼可以建立具有受控參數的可重複測試和生產環境。\n其他選擇不部署隔離的應用程式環境。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-043",
@@ -685,7 +1189,19 @@
     "isMultiAnswer": false,
     "explanation": "Lambda aliases can route a percentage of traffic to a new version for a controlled rollout.\nThe other choices do not control Lambda version traffic.",
     "taskStatement": "3.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "受監管的公司必須逐步將生產流量轉移到新的 Lambda 版本。哪種機制合適？",
+        "options": {
+          "A": "IAM 密碼原則",
+          "B": "帶有加權金絲雀部署的 Lambda 別名",
+          "C": "全資料庫掃描",
+          "D": "S3 生命週期過渡"
+        },
+        "explanation": "Lambda 別名可以將一定比例的流量路由到新版本以進行受控部署。\n其他選項不控制 Lambda 版本流量。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-044",
@@ -701,7 +1217,19 @@
     "isMultiAnswer": false,
     "explanation": "CodePipeline orchestrates source, build, test, and deployment actions.\nThe other choices provide graph storage, DDoS protection, or file storage.",
     "taskStatement": "3.4",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備增加流量的新創公司需要提交程式碼來觸發建置、測試和部署階段。哪個服務應該協調管道？",
+        "options": {
+          "A": "AWS Shield",
+          "B": "Amazon EFS",
+          "C": "AWS CodePipeline",
+          "D": "Amazon Neptune"
+        },
+        "explanation": "CodePipeline 協調來源、建置、測試和部署作業。\n其他選擇提供圖形儲存、DDoS 保護或檔案儲存。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-045",
@@ -717,7 +1245,19 @@
     "isMultiAnswer": false,
     "explanation": "Deployment services can use health checks and alarms to stop or roll back an unhealthy release.\nThe other choices do not coordinate application release rollback.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "支援關鍵工作負載的營運團隊必須在運行狀況檢查失敗後回滾應用程式。哪種部署能力有用？",
+        "options": {
+          "A": "公共儲存桶ACL",
+          "B": "DNS TXT 記錄",
+          "C": "僅 EBS 磁碟區快照",
+          "D": "自動回滾的部署策略"
+        },
+        "explanation": "部署服務可以使用健康檢查和警報來停止或回滾不健康的版本。\n其他選擇不協調應用程式版本回滾。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-046",
@@ -733,7 +1273,19 @@
     "isMultiAnswer": false,
     "explanation": "Lambda deployment packages or container images bundle code and runtime dependencies.\nThe other choices do not package executable application code.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "資料平台團隊需要一個用於 Lambda 函數及其相依性的可重複套件。應該使用哪個選項？",
+        "options": {
+          "A": "部署包或 Lambda 容器映像",
+          "B": "Route 53 託管區域",
+          "C": "僅安全群組",
+          "D": "CloudTrail 路徑"
+        },
+        "explanation": "Lambda 部署套件或容器映像捆綁程式碼和執行時間相依性。\n其他選擇不打包可執行應用程式程式碼。"
+      }
+    }
   },
   {
     "id": "dva-c02-d3-047",
@@ -749,6 +1301,18 @@
     "isMultiAnswer": false,
     "explanation": "Infrastructure as code can create repeatable test and production environments with controlled parameters.\nThe other choices do not deploy isolated application environments.",
     "taskStatement": "3.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有安全意識的工程團隊希望在生產之前將功能部署到測試階段。哪種服務組合適合？",
+        "options": {
+          "A": "VPC 流日誌",
+          "B": "具有單獨環境的 AWS SAM 或 CloudFormation",
+          "C": "僅公共 S3 儲存桶",
+          "D": "KMS 別名"
+        },
+        "explanation": "基礎設施即程式碼可以建立具有受控參數的可重複測試和生產環境。\n其他選擇不部署隔離的應用程式環境。"
+      }
+    }
   }
 ]

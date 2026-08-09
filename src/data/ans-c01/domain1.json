@@ -13,7 +13,19 @@
     "isMultiAnswer": false,
     "explanation": "Transit Gateway provides scalable centralized routing for many network attachments.\nPublic IP meshes and security groups do not provide centralized private routing.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "生產團隊需要在數十個 VPC 和本地網路之間進行集中路由。哪種設計適合？",
+        "options": {
+          "A": "單一安全群組",
+          "B": "AWS Transit Gateway 與路由域",
+          "C": "完整的公共 IP 網狀網路",
+          "D": "S3 網站"
+        },
+        "explanation": "Transit Gateway 為許多網路附件提供可擴展的集中式路由。\n公用 IP 網格和安全群組不提供集中式私有路由。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-002",
@@ -29,7 +41,19 @@
     "isMultiAnswer": false,
     "explanation": "Direct Connect provides a dedicated connection from an on-premises location to AWS.\nThe other choices provide delivery, identity, or web filtering.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "多帳戶平台團隊必須使用可預測的專用頻寬將資料中心連接到 AWS。應該評估哪些服務？",
+        "options": {
+          "A": "Amazon Cognito",
+          "B": "AWS WAF",
+          "C": "AWS Direct Connect",
+          "D": "Amazon CloudFront"
+        },
+        "explanation": "Direct Connect 提供從本機位置到 AWS 的專用連線。\n其他選項提供傳送、身分或網路過濾。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-003",
@@ -45,7 +69,19 @@
     "isMultiAnswer": false,
     "explanation": "Global Accelerator provides static anycast addresses and health-aware routing over the AWS network.\nThe other choices do not provide global application routing.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "受監管的公司需要低延遲全球路由到具有靜態位址的健康區域端點。適合哪種服務？",
+        "options": {
+          "A": "Route 53 僅 TXT 記錄",
+          "B": "S3 Transfer Acceleration",
+          "C": "EBS 卷",
+          "D": "AWS Global Accelerator"
+        },
+        "explanation": "Global Accelerator 透過 AWS 網路提供靜態任播位址和健康感知路由。\n其他選擇不提供全域應用程式路由。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-004",
@@ -61,7 +97,19 @@
     "isMultiAnswer": false,
     "explanation": "An egress-only internet gateway supports outbound IPv6 traffic while blocking unsolicited inbound connections.\nPublic addresses and buckets do not provide the required IPv6 egress boundary.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備增加流量的新創公司必須設計私有子網路的 IPv6 出口，而不允許入站網路啟動。哪個組件合適？",
+        "options": {
+          "A": "僅出口網路網關",
+          "B": "每台主機上都有一個公用 IPv4 位址",
+          "C": "公共 S3 儲存桶",
+          "D": "Route 53 TXT 記錄"
+        },
+        "explanation": "僅出口 Internet 閘道支援出站 IPv6 流量，同時阻止未經請求的入站連線。\n公共位址和儲存桶不提供所需的 IPv6 出口邊界。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-005",
@@ -77,7 +125,19 @@
     "isMultiAnswer": false,
     "explanation": "PrivateLink exposes a service through endpoint interfaces without routing consumer VPCs together.\nPeering and public load balancers create different connectivity and isolation tradeoffs.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "支援關鍵工作負載的營運團隊需要一種架構，使提供者和消費者 VPC 位址空間保持獨立。應該評估哪些服務？",
+        "options": {
+          "A": "一個NAT gateway",
+          "B": "AWS PrivateLink",
+          "C": "僅 VPC 對等互連",
+          "D": "公共負載平衡器"
+        },
+        "explanation": "PrivateLink 透過端點介面公開服務，而不將消費者 VPC 路由在一起。\n對等和公共負載平衡器創建不同的連接和隔離權衡。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-006",
@@ -93,7 +153,19 @@
     "isMultiAnswer": false,
     "explanation": "Transit Gateway provides scalable centralized routing for many network attachments.\nPublic IP meshes and security groups do not provide centralized private routing.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "資料平台團隊需要在數十個 VPC 和本地網路之間進行集中路由。哪種設計適合？",
+        "options": {
+          "A": "S3 網站",
+          "B": "單一安全群組",
+          "C": "AWS Transit Gateway 與路由域",
+          "D": "完整的公共 IP 網狀網路"
+        },
+        "explanation": "Transit Gateway 為許多網路附件提供可擴展的集中式路由。\n公用 IP 網格和安全群組不提供集中式私有路由。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-007",
@@ -109,7 +181,19 @@
     "isMultiAnswer": false,
     "explanation": "Direct Connect provides a dedicated connection from an on-premises location to AWS.\nThe other choices provide delivery, identity, or web filtering.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有安全意識的工程團隊必須使用可預測的專用頻寬將資料中心連接到 AWS。應該評估哪些服務？",
+        "options": {
+          "A": "Amazon CloudFront",
+          "B": "Amazon Cognito",
+          "C": "AWS WAF",
+          "D": "AWS Direct Connect"
+        },
+        "explanation": "Direct Connect 提供從本機位置到 AWS 的專用連線。\n其他選項提供傳送、身分或網路過濾。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-008",
@@ -125,7 +209,19 @@
     "isMultiAnswer": false,
     "explanation": "Global Accelerator provides static anycast addresses and health-aware routing over the AWS network.\nThe other choices do not provide global application routing.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "遷移現有工作負載的公司需要低延遲全域路由到具有靜態位址的健康區域端點。適合哪種服務？",
+        "options": {
+          "A": "AWS Global Accelerator",
+          "B": "Route 53 僅 TXT 記錄",
+          "C": "S3 Transfer Acceleration",
+          "D": "EBS 卷"
+        },
+        "explanation": "Global Accelerator 透過 AWS 網路提供靜態任播位址和健康感知路由。\n其他選擇不提供全域應用程式路由。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-009",
@@ -141,7 +237,19 @@
     "isMultiAnswer": false,
     "explanation": "An egress-only internet gateway supports outbound IPv6 traffic while blocking unsolicited inbound connections.\nPublic addresses and buckets do not provide the required IPv6 egress boundary.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有嚴格恢復目標的團隊必須設計私有子網路的 IPv6 出口，而不允許入站網際網路啟動。哪個組件合適？",
+        "options": {
+          "A": "Route 53 TXT 記錄",
+          "B": "僅出口網路網關",
+          "C": "每台主機上都有一個公用 IPv4 位址",
+          "D": "公共 S3 儲存桶"
+        },
+        "explanation": "僅出口 Internet 閘道支援出站 IPv6 流量，同時阻止未經請求的入站連線。\n公共位址和儲存桶不提供所需的 IPv6 出口邊界。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-010",
@@ -157,7 +265,19 @@
     "isMultiAnswer": false,
     "explanation": "PrivateLink exposes a service through endpoint interfaces without routing consumer VPCs together.\nPeering and public load balancers create different connectivity and isolation tradeoffs.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備發布的開發團隊需要一種架構，使提供者和消費者 VPC 地址空間保持獨立。應該評估哪些服務？",
+        "options": {
+          "A": "公共負載平衡器",
+          "B": "一個NAT gateway",
+          "C": "AWS PrivateLink",
+          "D": "僅 VPC 對等互連"
+        },
+        "explanation": "PrivateLink 透過端點介面公開服務，而不將消費者 VPC 路由在一起。\n對等和公共負載平衡器創建不同的連接和隔離權衡。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-011",
@@ -173,7 +293,19 @@
     "isMultiAnswer": false,
     "explanation": "Transit Gateway provides scalable centralized routing for many network attachments.\nPublic IP meshes and security groups do not provide centralized private routing.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "擁有多個 AWS Regions 的企業需要在數十個 VPC 和本地網路之間進行集中路由。哪種設計適合？",
+        "options": {
+          "A": "完整的公共 IP 網狀網路",
+          "B": "S3 網站",
+          "C": "單一安全群組",
+          "D": "AWS Transit Gateway 與路由域"
+        },
+        "explanation": "Transit Gateway 為許多網路附件提供可擴展的集中式路由。\n公用 IP 網格和安全群組不提供集中式私有路由。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-012",
@@ -189,7 +321,19 @@
     "isMultiAnswer": false,
     "explanation": "Direct Connect provides a dedicated connection from an on-premises location to AWS.\nThe other choices provide delivery, identity, or web filtering.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "審查事件的服務擁有者必須使用可預測的專用頻寬將資料中心連接到 AWS。應該評估哪些服務？",
+        "options": {
+          "A": "AWS Direct Connect",
+          "B": "Amazon CloudFront",
+          "C": "Amazon Cognito",
+          "D": "AWS WAF"
+        },
+        "explanation": "Direct Connect 提供從本機位置到 AWS 的專用連線。\n其他選項提供傳送、身分或網路過濾。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-013",
@@ -205,7 +349,19 @@
     "isMultiAnswer": false,
     "explanation": "Global Accelerator provides static anycast addresses and health-aware routing over the AWS network.\nThe other choices do not provide global application routing.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "優化現有實施的團隊需要低延遲全域路由到具有靜態位址的健康區域端點。適合哪種服務？",
+        "options": {
+          "A": "EBS 卷",
+          "B": "AWS Global Accelerator",
+          "C": "Route 53 僅 TXT 記錄",
+          "D": "S3 Transfer Acceleration"
+        },
+        "explanation": "Global Accelerator 透過 AWS 網路提供靜態任播位址和健康感知路由。\n其他選擇不提供全域應用程式路由。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-014",
@@ -221,7 +377,19 @@
     "isMultiAnswer": false,
     "explanation": "An egress-only internet gateway supports outbound IPv6 traffic while blocking unsolicited inbound connections.\nPublic addresses and buckets do not provide the required IPv6 egress boundary.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "引進自動化工作流程的公司必須設計私有子網路的 IPv6 出口，而不允許啟動入站網際網路。哪個組件合適？",
+        "options": {
+          "A": "公共 S3 儲存桶",
+          "B": "Route 53 TXT 記錄",
+          "C": "僅出口網路網關",
+          "D": "每台主機上都有一個公用 IPv4 位址"
+        },
+        "explanation": "僅出口 Internet 閘道支援出站 IPv6 流量，同時阻止未經請求的入站連線。\n公共位址和儲存桶不提供所需的 IPv6 出口邊界。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-015",
@@ -237,7 +405,19 @@
     "isMultiAnswer": false,
     "explanation": "PrivateLink exposes a service through endpoint interfaces without routing consumer VPCs together.\nPeering and public load balancers create different connectivity and isolation tradeoffs.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "在共享環境中工作的 AWS 管理員需要一種架構，使提供者和消費者 VPC 位址空間保持獨立。應該評估哪些服務？",
+        "options": {
+          "A": "僅 VPC 對等互連",
+          "B": "公共負載平衡器",
+          "C": "一個NAT gateway",
+          "D": "AWS PrivateLink"
+        },
+        "explanation": "PrivateLink 透過端點介面公開服務，而不將消費者 VPC 路由在一起。\n對等和公共負載平衡器創建不同的連接和隔離權衡。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-016",
@@ -253,7 +433,19 @@
     "isMultiAnswer": false,
     "explanation": "Transit Gateway provides scalable centralized routing for many network attachments.\nPublic IP meshes and security groups do not provide centralized private routing.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "面向客戶的應用程式團隊需要在數十個 VPC 和本地網路之間進行集中路由。哪種設計適合？",
+        "options": {
+          "A": "AWS Transit Gateway 與路由域",
+          "B": "完整的公共 IP 網狀網路",
+          "C": "S3 網站",
+          "D": "單一安全群組"
+        },
+        "explanation": "Transit Gateway 為許多網路附件提供可擴展的集中式路由。\n公用 IP 網格和安全群組不提供集中式私有路由。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-017",
@@ -269,7 +461,19 @@
     "isMultiAnswer": false,
     "explanation": "Direct Connect provides a dedicated connection from an on-premises location to AWS.\nThe other choices provide delivery, identity, or web filtering.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "標準化其 AWS 部署的平台團隊必須使用可預測的專用頻寬將資料中心連接到 AWS。應該評估哪些服務？",
+        "options": {
+          "A": "AWS WAF",
+          "B": "AWS Direct Connect",
+          "C": "Amazon CloudFront",
+          "D": "Amazon Cognito"
+        },
+        "explanation": "Direct Connect 提供從本機位置到 AWS 的專用連線。\n其他選項提供傳送、身分或網路過濾。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-018",
@@ -285,7 +489,19 @@
     "isMultiAnswer": false,
     "explanation": "Global Accelerator provides static anycast addresses and health-aware routing over the AWS network.\nThe other choices do not provide global application routing.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "為審計準備證據的團隊需要低延遲全域路由到具有靜態位址的健康區域端點。適合哪種服務？",
+        "options": {
+          "A": "S3 Transfer Acceleration",
+          "B": "EBS 卷",
+          "C": "AWS Global Accelerator",
+          "D": "Route 53 僅 TXT 記錄"
+        },
+        "explanation": "Global Accelerator 透過 AWS 網路提供靜態任播位址和健康感知路由。\n其他選擇不提供全域應用程式路由。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-019",
@@ -301,7 +517,19 @@
     "isMultiAnswer": false,
     "explanation": "An egress-only internet gateway supports outbound IPv6 traffic while blocking unsolicited inbound connections.\nPublic addresses and buckets do not provide the required IPv6 egress boundary.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "取代手動流程的企業必須設計私有子網路的 IPv6 出口，而不允許啟動入站網際網路。哪個組件合適？",
+        "options": {
+          "A": "每台主機上都有一個公用 IPv4 位址",
+          "B": "公共 S3 儲存桶",
+          "C": "Route 53 TXT 記錄",
+          "D": "僅出口網路網關"
+        },
+        "explanation": "僅出口 Internet 閘道支援出站 IPv6 流量，同時阻止未經請求的入站連線。\n公共位址和儲存桶不提供所需的 IPv6 出口邊界。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-020",
@@ -317,7 +545,19 @@
     "isMultiAnswer": false,
     "explanation": "PrivateLink exposes a service through endpoint interfaces without routing consumer VPCs together.\nPeering and public load balancers create different connectivity and isolation tradeoffs.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "根據考試指南驗證設計的團隊需要一個能夠保持提供者和消費者 VPC 地址空間獨立的架構。應該評估哪些服務？",
+        "options": {
+          "A": "AWS PrivateLink",
+          "B": "僅 VPC 對等互連",
+          "C": "公共負載平衡器",
+          "D": "一個NAT gateway"
+        },
+        "explanation": "PrivateLink 透過端點介面公開服務，而不將消費者 VPC 路由在一起。\n對等和公共負載平衡器創建不同的連接和隔離權衡。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-021",
@@ -333,7 +573,19 @@
     "isMultiAnswer": false,
     "explanation": "Transit Gateway provides scalable centralized routing for many network attachments.\nPublic IP meshes and security groups do not provide centralized private routing.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "生產團隊需要在數十個 VPC 和本地網路之間進行集中路由。哪種設計適合？",
+        "options": {
+          "A": "單一安全群組",
+          "B": "AWS Transit Gateway 與路由域",
+          "C": "完整的公共 IP 網狀網路",
+          "D": "S3 網站"
+        },
+        "explanation": "Transit Gateway 為許多網路附件提供可擴展的集中式路由。\n公用 IP 網格和安全群組不提供集中式私有路由。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-022",
@@ -349,7 +601,19 @@
     "isMultiAnswer": false,
     "explanation": "Direct Connect provides a dedicated connection from an on-premises location to AWS.\nThe other choices provide delivery, identity, or web filtering.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "多帳戶平台團隊必須使用可預測的專用頻寬將資料中心連接到 AWS。應該評估哪些服務？",
+        "options": {
+          "A": "Amazon Cognito",
+          "B": "AWS WAF",
+          "C": "AWS Direct Connect",
+          "D": "Amazon CloudFront"
+        },
+        "explanation": "Direct Connect 提供從本機位置到 AWS 的專用連線。\n其他選項提供傳送、身分或網路過濾。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-023",
@@ -365,7 +629,19 @@
     "isMultiAnswer": false,
     "explanation": "Global Accelerator provides static anycast addresses and health-aware routing over the AWS network.\nThe other choices do not provide global application routing.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "受監管的公司需要低延遲全球路由到具有靜態位址的健康區域端點。適合哪種服務？",
+        "options": {
+          "A": "Route 53 僅 TXT 記錄",
+          "B": "S3 Transfer Acceleration",
+          "C": "EBS 卷",
+          "D": "AWS Global Accelerator"
+        },
+        "explanation": "Global Accelerator 透過 AWS 網路提供靜態任播位址和健康感知路由。\n其他選擇不提供全域應用程式路由。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-024",
@@ -381,7 +657,19 @@
     "isMultiAnswer": false,
     "explanation": "An egress-only internet gateway supports outbound IPv6 traffic while blocking unsolicited inbound connections.\nPublic addresses and buckets do not provide the required IPv6 egress boundary.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備增加流量的新創公司必須設計私有子網路的 IPv6 出口，而不允許入站網路啟動。哪個組件合適？",
+        "options": {
+          "A": "僅出口網路網關",
+          "B": "每台主機上都有一個公用 IPv4 位址",
+          "C": "公共 S3 儲存桶",
+          "D": "Route 53 TXT 記錄"
+        },
+        "explanation": "僅出口 Internet 閘道支援出站 IPv6 流量，同時阻止未經請求的入站連線。\n公共位址和儲存桶不提供所需的 IPv6 出口邊界。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-025",
@@ -397,7 +685,19 @@
     "isMultiAnswer": false,
     "explanation": "PrivateLink exposes a service through endpoint interfaces without routing consumer VPCs together.\nPeering and public load balancers create different connectivity and isolation tradeoffs.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "支援關鍵工作負載的營運團隊需要一種架構，使提供者和消費者 VPC 位址空間保持獨立。應該評估哪些服務？",
+        "options": {
+          "A": "一個NAT gateway",
+          "B": "AWS PrivateLink",
+          "C": "僅 VPC 對等互連",
+          "D": "公共負載平衡器"
+        },
+        "explanation": "PrivateLink 透過端點介面公開服務，而不將消費者 VPC 路由在一起。\n對等和公共負載平衡器創建不同的連接和隔離權衡。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-026",
@@ -413,7 +713,19 @@
     "isMultiAnswer": false,
     "explanation": "Transit Gateway provides scalable centralized routing for many network attachments.\nPublic IP meshes and security groups do not provide centralized private routing.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "資料平台團隊需要在數十個 VPC 和本地網路之間進行集中路由。哪種設計適合？",
+        "options": {
+          "A": "S3 網站",
+          "B": "單一安全群組",
+          "C": "AWS Transit Gateway 與路由域",
+          "D": "完整的公共 IP 網狀網路"
+        },
+        "explanation": "Transit Gateway 為許多網路附件提供可擴展的集中式路由。\n公用 IP 網格和安全群組不提供集中式私有路由。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-027",
@@ -429,7 +741,19 @@
     "isMultiAnswer": false,
     "explanation": "Direct Connect provides a dedicated connection from an on-premises location to AWS.\nThe other choices provide delivery, identity, or web filtering.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有安全意識的工程團隊必須使用可預測的專用頻寬將資料中心連接到 AWS。應該評估哪些服務？",
+        "options": {
+          "A": "Amazon CloudFront",
+          "B": "Amazon Cognito",
+          "C": "AWS WAF",
+          "D": "AWS Direct Connect"
+        },
+        "explanation": "Direct Connect 提供從本機位置到 AWS 的專用連線。\n其他選項提供傳送、身分或網路過濾。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-028",
@@ -445,7 +769,19 @@
     "isMultiAnswer": false,
     "explanation": "Global Accelerator provides static anycast addresses and health-aware routing over the AWS network.\nThe other choices do not provide global application routing.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "遷移現有工作負載的公司需要低延遲全域路由到具有靜態位址的健康區域端點。適合哪種服務？",
+        "options": {
+          "A": "AWS Global Accelerator",
+          "B": "Route 53 僅 TXT 記錄",
+          "C": "S3 Transfer Acceleration",
+          "D": "EBS 卷"
+        },
+        "explanation": "Global Accelerator 透過 AWS 網路提供靜態任播位址和健康感知路由。\n其他選擇不提供全域應用程式路由。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-029",
@@ -461,7 +797,19 @@
     "isMultiAnswer": false,
     "explanation": "An egress-only internet gateway supports outbound IPv6 traffic while blocking unsolicited inbound connections.\nPublic addresses and buckets do not provide the required IPv6 egress boundary.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有嚴格恢復目標的團隊必須設計私有子網路的 IPv6 出口，而不允許入站網際網路啟動。哪個組件合適？",
+        "options": {
+          "A": "Route 53 TXT 記錄",
+          "B": "僅出口網路網關",
+          "C": "每台主機上都有一個公用 IPv4 位址",
+          "D": "公共 S3 儲存桶"
+        },
+        "explanation": "僅出口 Internet 閘道支援出站 IPv6 流量，同時阻止未經請求的入站連線。\n公共位址和儲存桶不提供所需的 IPv6 出口邊界。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-030",
@@ -477,7 +825,19 @@
     "isMultiAnswer": false,
     "explanation": "PrivateLink exposes a service through endpoint interfaces without routing consumer VPCs together.\nPeering and public load balancers create different connectivity and isolation tradeoffs.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備發布的開發團隊需要一種架構，使提供者和消費者 VPC 地址空間保持獨立。應該評估哪些服務？",
+        "options": {
+          "A": "公共負載平衡器",
+          "B": "一個NAT gateway",
+          "C": "AWS PrivateLink",
+          "D": "僅 VPC 對等互連"
+        },
+        "explanation": "PrivateLink 透過端點介面公開服務，而不將消費者 VPC 路由在一起。\n對等和公共負載平衡器創建不同的連接和隔離權衡。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-031",
@@ -493,7 +853,19 @@
     "isMultiAnswer": false,
     "explanation": "Transit Gateway provides scalable centralized routing for many network attachments.\nPublic IP meshes and security groups do not provide centralized private routing.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "擁有多個 AWS Regions 的企業需要在數十個 VPC 和本地網路之間進行集中路由。哪種設計適合？",
+        "options": {
+          "A": "完整的公共 IP 網狀網路",
+          "B": "S3 網站",
+          "C": "單一安全群組",
+          "D": "AWS Transit Gateway 與路由域"
+        },
+        "explanation": "Transit Gateway 為許多網路附件提供可擴展的集中式路由。\n公用 IP 網格和安全群組不提供集中式私有路由。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-032",
@@ -509,7 +881,19 @@
     "isMultiAnswer": false,
     "explanation": "Direct Connect provides a dedicated connection from an on-premises location to AWS.\nThe other choices provide delivery, identity, or web filtering.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "審查事件的服務擁有者必須使用可預測的專用頻寬將資料中心連接到 AWS。應該評估哪些服務？",
+        "options": {
+          "A": "AWS Direct Connect",
+          "B": "Amazon CloudFront",
+          "C": "Amazon Cognito",
+          "D": "AWS WAF"
+        },
+        "explanation": "Direct Connect 提供從本機位置到 AWS 的專用連線。\n其他選項提供傳送、身分或網路過濾。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-033",
@@ -525,7 +909,19 @@
     "isMultiAnswer": false,
     "explanation": "Global Accelerator provides static anycast addresses and health-aware routing over the AWS network.\nThe other choices do not provide global application routing.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "優化現有實施的團隊需要低延遲全域路由到具有靜態位址的健康區域端點。適合哪種服務？",
+        "options": {
+          "A": "EBS 卷",
+          "B": "AWS Global Accelerator",
+          "C": "Route 53 僅 TXT 記錄",
+          "D": "S3 Transfer Acceleration"
+        },
+        "explanation": "Global Accelerator 透過 AWS 網路提供靜態任播位址和健康感知路由。\n其他選擇不提供全域應用程式路由。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-034",
@@ -541,7 +937,19 @@
     "isMultiAnswer": false,
     "explanation": "An egress-only internet gateway supports outbound IPv6 traffic while blocking unsolicited inbound connections.\nPublic addresses and buckets do not provide the required IPv6 egress boundary.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "引進自動化工作流程的公司必須設計私有子網路的 IPv6 出口，而不允許啟動入站網際網路。哪個組件合適？",
+        "options": {
+          "A": "公共 S3 儲存桶",
+          "B": "Route 53 TXT 記錄",
+          "C": "僅出口網路網關",
+          "D": "每台主機上都有一個公用 IPv4 位址"
+        },
+        "explanation": "僅出口 Internet 閘道支援出站 IPv6 流量，同時阻止未經請求的入站連線。\n公共位址和儲存桶不提供所需的 IPv6 出口邊界。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-035",
@@ -557,7 +965,19 @@
     "isMultiAnswer": false,
     "explanation": "PrivateLink exposes a service through endpoint interfaces without routing consumer VPCs together.\nPeering and public load balancers create different connectivity and isolation tradeoffs.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "在共享環境中工作的 AWS 管理員需要一種架構，使提供者和消費者 VPC 位址空間保持獨立。應該評估哪些服務？",
+        "options": {
+          "A": "僅 VPC 對等互連",
+          "B": "公共負載平衡器",
+          "C": "一個NAT gateway",
+          "D": "AWS PrivateLink"
+        },
+        "explanation": "PrivateLink 透過端點介面公開服務，而不將消費者 VPC 路由在一起。\n對等和公共負載平衡器創建不同的連接和隔離權衡。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-036",
@@ -573,7 +993,19 @@
     "isMultiAnswer": false,
     "explanation": "Transit Gateway provides scalable centralized routing for many network attachments.\nPublic IP meshes and security groups do not provide centralized private routing.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "面向客戶的應用程式團隊需要在數十個 VPC 和本地網路之間進行集中路由。哪種設計適合？",
+        "options": {
+          "A": "AWS Transit Gateway 與路由域",
+          "B": "完整的公共 IP 網狀網路",
+          "C": "S3 網站",
+          "D": "單一安全群組"
+        },
+        "explanation": "Transit Gateway 為許多網路附件提供可擴展的集中式路由。\n公用 IP 網格和安全群組不提供集中式私有路由。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-037",
@@ -589,7 +1021,19 @@
     "isMultiAnswer": false,
     "explanation": "Direct Connect provides a dedicated connection from an on-premises location to AWS.\nThe other choices provide delivery, identity, or web filtering.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "標準化其 AWS 部署的平台團隊必須使用可預測的專用頻寬將資料中心連接到 AWS。應該評估哪些服務？",
+        "options": {
+          "A": "AWS WAF",
+          "B": "AWS Direct Connect",
+          "C": "Amazon CloudFront",
+          "D": "Amazon Cognito"
+        },
+        "explanation": "Direct Connect 提供從本機位置到 AWS 的專用連線。\n其他選項提供傳送、身分或網路過濾。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-038",
@@ -605,7 +1049,19 @@
     "isMultiAnswer": false,
     "explanation": "Global Accelerator provides static anycast addresses and health-aware routing over the AWS network.\nThe other choices do not provide global application routing.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "為審計準備證據的團隊需要低延遲全域路由到具有靜態位址的健康區域端點。適合哪種服務？",
+        "options": {
+          "A": "S3 Transfer Acceleration",
+          "B": "EBS 卷",
+          "C": "AWS Global Accelerator",
+          "D": "Route 53 僅 TXT 記錄"
+        },
+        "explanation": "Global Accelerator 透過 AWS 網路提供靜態任播位址和健康感知路由。\n其他選擇不提供全域應用程式路由。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-039",
@@ -621,7 +1077,19 @@
     "isMultiAnswer": false,
     "explanation": "An egress-only internet gateway supports outbound IPv6 traffic while blocking unsolicited inbound connections.\nPublic addresses and buckets do not provide the required IPv6 egress boundary.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "取代手動流程的企業必須設計私有子網路的 IPv6 出口，而不允許啟動入站網際網路。哪個組件合適？",
+        "options": {
+          "A": "每台主機上都有一個公用 IPv4 位址",
+          "B": "公共 S3 儲存桶",
+          "C": "Route 53 TXT 記錄",
+          "D": "僅出口網路網關"
+        },
+        "explanation": "僅出口 Internet 閘道支援出站 IPv6 流量，同時阻止未經請求的入站連線。\n公共位址和儲存桶不提供所需的 IPv6 出口邊界。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-040",
@@ -637,7 +1105,19 @@
     "isMultiAnswer": false,
     "explanation": "PrivateLink exposes a service through endpoint interfaces without routing consumer VPCs together.\nPeering and public load balancers create different connectivity and isolation tradeoffs.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "根據考試指南驗證設計的團隊需要一個能夠保持提供者和消費者 VPC 地址空間獨立的架構。應該評估哪些服務？",
+        "options": {
+          "A": "AWS PrivateLink",
+          "B": "僅 VPC 對等互連",
+          "C": "公共負載平衡器",
+          "D": "一個NAT gateway"
+        },
+        "explanation": "PrivateLink 透過端點介面公開服務，而不將消費者 VPC 路由在一起。\n對等和公共負載平衡器創建不同的連接和隔離權衡。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-041",
@@ -653,7 +1133,19 @@
     "isMultiAnswer": false,
     "explanation": "Transit Gateway provides scalable centralized routing for many network attachments.\nPublic IP meshes and security groups do not provide centralized private routing.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "生產團隊需要在數十個 VPC 和本地網路之間進行集中路由。哪種設計適合？",
+        "options": {
+          "A": "單一安全群組",
+          "B": "AWS Transit Gateway 與路由域",
+          "C": "完整的公共 IP 網狀網路",
+          "D": "S3 網站"
+        },
+        "explanation": "Transit Gateway 為許多網路附件提供可擴展的集中式路由。\n公用 IP 網格和安全群組不提供集中式私有路由。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-042",
@@ -669,7 +1161,19 @@
     "isMultiAnswer": false,
     "explanation": "Direct Connect provides a dedicated connection from an on-premises location to AWS.\nThe other choices provide delivery, identity, or web filtering.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "多帳戶平台團隊必須使用可預測的專用頻寬將資料中心連接到 AWS。應該評估哪些服務？",
+        "options": {
+          "A": "Amazon Cognito",
+          "B": "AWS WAF",
+          "C": "AWS Direct Connect",
+          "D": "Amazon CloudFront"
+        },
+        "explanation": "Direct Connect 提供從本機位置到 AWS 的專用連線。\n其他選項提供傳送、身分或網路過濾。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-043",
@@ -685,7 +1189,19 @@
     "isMultiAnswer": false,
     "explanation": "Global Accelerator provides static anycast addresses and health-aware routing over the AWS network.\nThe other choices do not provide global application routing.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "受監管的公司需要低延遲全球路由到具有靜態位址的健康區域端點。適合哪種服務？",
+        "options": {
+          "A": "Route 53 僅 TXT 記錄",
+          "B": "S3 Transfer Acceleration",
+          "C": "EBS 卷",
+          "D": "AWS Global Accelerator"
+        },
+        "explanation": "Global Accelerator 透過 AWS 網路提供靜態任播位址和健康感知路由。\n其他選擇不提供全域應用程式路由。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-044",
@@ -701,7 +1217,19 @@
     "isMultiAnswer": false,
     "explanation": "An egress-only internet gateway supports outbound IPv6 traffic while blocking unsolicited inbound connections.\nPublic addresses and buckets do not provide the required IPv6 egress boundary.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備增加流量的新創公司必須設計私有子網路的 IPv6 出口，而不允許入站網路啟動。哪個組件合適？",
+        "options": {
+          "A": "僅出口網路網關",
+          "B": "每台主機上都有一個公用 IPv4 位址",
+          "C": "公共 S3 儲存桶",
+          "D": "Route 53 TXT 記錄"
+        },
+        "explanation": "僅出口 Internet 閘道支援出站 IPv6 流量，同時阻止未經請求的入站連線。\n公共位址和儲存桶不提供所需的 IPv6 出口邊界。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-045",
@@ -717,7 +1245,19 @@
     "isMultiAnswer": false,
     "explanation": "PrivateLink exposes a service through endpoint interfaces without routing consumer VPCs together.\nPeering and public load balancers create different connectivity and isolation tradeoffs.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "支援關鍵工作負載的營運團隊需要一種架構，使提供者和消費者 VPC 位址空間保持獨立。應該評估哪些服務？",
+        "options": {
+          "A": "一個NAT gateway",
+          "B": "AWS PrivateLink",
+          "C": "僅 VPC 對等互連",
+          "D": "公共負載平衡器"
+        },
+        "explanation": "PrivateLink 透過端點介面公開服務，而不將消費者 VPC 路由在一起。\n對等和公共負載平衡器創建不同的連接和隔離權衡。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-046",
@@ -733,7 +1273,19 @@
     "isMultiAnswer": false,
     "explanation": "Transit Gateway provides scalable centralized routing for many network attachments.\nPublic IP meshes and security groups do not provide centralized private routing.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "資料平台團隊需要在數十個 VPC 和本地網路之間進行集中路由。哪種設計適合？",
+        "options": {
+          "A": "S3 網站",
+          "B": "單一安全群組",
+          "C": "AWS Transit Gateway 與路由域",
+          "D": "完整的公共 IP 網狀網路"
+        },
+        "explanation": "Transit Gateway 為許多網路附件提供可擴展的集中式路由。\n公用 IP 網格和安全群組不提供集中式私有路由。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-047",
@@ -749,7 +1301,19 @@
     "isMultiAnswer": false,
     "explanation": "Direct Connect provides a dedicated connection from an on-premises location to AWS.\nThe other choices provide delivery, identity, or web filtering.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有安全意識的工程團隊必須使用可預測的專用頻寬將資料中心連接到 AWS。應該評估哪些服務？",
+        "options": {
+          "A": "Amazon CloudFront",
+          "B": "Amazon Cognito",
+          "C": "AWS WAF",
+          "D": "AWS Direct Connect"
+        },
+        "explanation": "Direct Connect 提供從本機位置到 AWS 的專用連線。\n其他選項提供傳送、身分或網路過濾。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-048",
@@ -765,7 +1329,19 @@
     "isMultiAnswer": false,
     "explanation": "Global Accelerator provides static anycast addresses and health-aware routing over the AWS network.\nThe other choices do not provide global application routing.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "遷移現有工作負載的公司需要低延遲全域路由到具有靜態位址的健康區域端點。適合哪種服務？",
+        "options": {
+          "A": "AWS Global Accelerator",
+          "B": "Route 53 僅 TXT 記錄",
+          "C": "S3 Transfer Acceleration",
+          "D": "EBS 卷"
+        },
+        "explanation": "Global Accelerator 透過 AWS 網路提供靜態任播位址和健康感知路由。\n其他選擇不提供全域應用程式路由。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-049",
@@ -781,7 +1357,19 @@
     "isMultiAnswer": false,
     "explanation": "An egress-only internet gateway supports outbound IPv6 traffic while blocking unsolicited inbound connections.\nPublic addresses and buckets do not provide the required IPv6 egress boundary.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有嚴格恢復目標的團隊必須設計私有子網路的 IPv6 出口，而不允許入站網際網路啟動。哪個組件合適？",
+        "options": {
+          "A": "Route 53 TXT 記錄",
+          "B": "僅出口網路網關",
+          "C": "每台主機上都有一個公用 IPv4 位址",
+          "D": "公共 S3 儲存桶"
+        },
+        "explanation": "僅出口 Internet 閘道支援出站 IPv6 流量，同時阻止未經請求的入站連線。\n公共位址和儲存桶不提供所需的 IPv6 出口邊界。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-050",
@@ -797,7 +1385,19 @@
     "isMultiAnswer": false,
     "explanation": "PrivateLink exposes a service through endpoint interfaces without routing consumer VPCs together.\nPeering and public load balancers create different connectivity and isolation tradeoffs.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備發布的開發團隊需要一種架構，使提供者和消費者 VPC 地址空間保持獨立。應該評估哪些服務？",
+        "options": {
+          "A": "公共負載平衡器",
+          "B": "一個NAT gateway",
+          "C": "AWS PrivateLink",
+          "D": "僅 VPC 對等互連"
+        },
+        "explanation": "PrivateLink 透過端點介面公開服務，而不將消費者 VPC 路由在一起。\n對等和公共負載平衡器創建不同的連接和隔離權衡。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-051",
@@ -813,7 +1413,19 @@
     "isMultiAnswer": false,
     "explanation": "Transit Gateway provides scalable centralized routing for many network attachments.\nPublic IP meshes and security groups do not provide centralized private routing.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "擁有多個 AWS Regions 的企業需要在數十個 VPC 和本地網路之間進行集中路由。哪種設計適合？",
+        "options": {
+          "A": "完整的公共 IP 網狀網路",
+          "B": "S3 網站",
+          "C": "單一安全群組",
+          "D": "AWS Transit Gateway 與路由域"
+        },
+        "explanation": "Transit Gateway 為許多網路附件提供可擴展的集中式路由。\n公用 IP 網格和安全群組不提供集中式私有路由。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-052",
@@ -829,7 +1441,19 @@
     "isMultiAnswer": false,
     "explanation": "Direct Connect provides a dedicated connection from an on-premises location to AWS.\nThe other choices provide delivery, identity, or web filtering.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "審查事件的服務擁有者必須使用可預測的專用頻寬將資料中心連接到 AWS。應該評估哪些服務？",
+        "options": {
+          "A": "AWS Direct Connect",
+          "B": "Amazon CloudFront",
+          "C": "Amazon Cognito",
+          "D": "AWS WAF"
+        },
+        "explanation": "Direct Connect 提供從本機位置到 AWS 的專用連線。\n其他選項提供傳送、身分或網路過濾。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-053",
@@ -845,7 +1469,19 @@
     "isMultiAnswer": false,
     "explanation": "Global Accelerator provides static anycast addresses and health-aware routing over the AWS network.\nThe other choices do not provide global application routing.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "優化現有實施的團隊需要低延遲全域路由到具有靜態位址的健康區域端點。適合哪種服務？",
+        "options": {
+          "A": "EBS 卷",
+          "B": "AWS Global Accelerator",
+          "C": "Route 53 僅 TXT 記錄",
+          "D": "S3 Transfer Acceleration"
+        },
+        "explanation": "Global Accelerator 透過 AWS 網路提供靜態任播位址和健康感知路由。\n其他選擇不提供全域應用程式路由。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-054",
@@ -861,7 +1497,19 @@
     "isMultiAnswer": false,
     "explanation": "An egress-only internet gateway supports outbound IPv6 traffic while blocking unsolicited inbound connections.\nPublic addresses and buckets do not provide the required IPv6 egress boundary.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "引進自動化工作流程的公司必須設計私有子網路的 IPv6 出口，而不允許啟動入站網際網路。哪個組件合適？",
+        "options": {
+          "A": "公共 S3 儲存桶",
+          "B": "Route 53 TXT 記錄",
+          "C": "僅出口網路網關",
+          "D": "每台主機上都有一個公用 IPv4 位址"
+        },
+        "explanation": "僅出口 Internet 閘道支援出站 IPv6 流量，同時阻止未經請求的入站連線。\n公共位址和儲存桶不提供所需的 IPv6 出口邊界。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-055",
@@ -877,7 +1525,19 @@
     "isMultiAnswer": false,
     "explanation": "PrivateLink exposes a service through endpoint interfaces without routing consumer VPCs together.\nPeering and public load balancers create different connectivity and isolation tradeoffs.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "在共享環境中工作的 AWS 管理員需要一種架構，使提供者和消費者 VPC 位址空間保持獨立。應該評估哪些服務？",
+        "options": {
+          "A": "僅 VPC 對等互連",
+          "B": "公共負載平衡器",
+          "C": "一個NAT gateway",
+          "D": "AWS PrivateLink"
+        },
+        "explanation": "PrivateLink 透過端點介面公開服務，而不將消費者 VPC 路由在一起。\n對等和公共負載平衡器創建不同的連接和隔離權衡。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-056",
@@ -893,7 +1553,19 @@
     "isMultiAnswer": false,
     "explanation": "Transit Gateway provides scalable centralized routing for many network attachments.\nPublic IP meshes and security groups do not provide centralized private routing.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "面向客戶的應用程式團隊需要在數十個 VPC 和本地網路之間進行集中路由。哪種設計適合？",
+        "options": {
+          "A": "AWS Transit Gateway 與路由域",
+          "B": "完整的公共 IP 網狀網路",
+          "C": "S3 網站",
+          "D": "單一安全群組"
+        },
+        "explanation": "Transit Gateway 為許多網路附件提供可擴展的集中式路由。\n公用 IP 網格和安全群組不提供集中式私有路由。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-057",
@@ -909,7 +1581,19 @@
     "isMultiAnswer": false,
     "explanation": "Direct Connect provides a dedicated connection from an on-premises location to AWS.\nThe other choices provide delivery, identity, or web filtering.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "標準化其 AWS 部署的平台團隊必須使用可預測的專用頻寬將資料中心連接到 AWS。應該評估哪些服務？",
+        "options": {
+          "A": "AWS WAF",
+          "B": "AWS Direct Connect",
+          "C": "Amazon CloudFront",
+          "D": "Amazon Cognito"
+        },
+        "explanation": "Direct Connect 提供從本機位置到 AWS 的專用連線。\n其他選項提供傳送、身分或網路過濾。"
+      }
+    }
   },
   {
     "id": "ans-c01-d1-058",
@@ -925,6 +1609,18 @@
     "isMultiAnswer": false,
     "explanation": "Global Accelerator provides static anycast addresses and health-aware routing over the AWS network.\nThe other choices do not provide global application routing.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "為審計準備證據的團隊需要低延遲全域路由到具有靜態位址的健康區域端點。適合哪種服務？",
+        "options": {
+          "A": "S3 Transfer Acceleration",
+          "B": "EBS 卷",
+          "C": "AWS Global Accelerator",
+          "D": "Route 53 僅 TXT 記錄"
+        },
+        "explanation": "Global Accelerator 透過 AWS 網路提供靜態任播位址和健康感知路由。\n其他選擇不提供全域應用程式路由。"
+      }
+    }
   }
 ]

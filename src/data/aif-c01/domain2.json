@@ -13,7 +13,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "出版商需要使用大型語言模型 (LLM) 將長篇研究報告轉化為簡短的摘要，以抓住其要點。哪種解決方案可以滿足這個要求？",
+        "options": {
+          "A": "建構推薦引擎",
+          "B": "開發摘要聊天機器人",
+          "C": "建構命名實體識別系統",
+          "D": "創建多語言翻譯系統"
+        },
+        "explanation": "摘要聊天機器人使用法學碩士來閱讀長文件並產生保留要點的較短版本，這正是將研究報告濃縮為摘要所需要的。\n建議引擎根據使用者行為建議相關項目，並且不會壓縮文件。命名實體識別系統僅提取名稱、日期和地點等實體，而不是產生連貫的摘要。多語言翻譯系統可以在不同語言之間轉換文本，而無需縮短或提煉內容。"
+      }
+    }
   },
   {
     "id": "aif-q010",
@@ -29,7 +41,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "智慧家庭設備製造商希望其設備能夠在設備本身上運行語言模型推理，並盡可能降低延遲。哪種解決方案可以滿足這個要求？",
+        "options": {
+          "A": "在邊緣設備上部署最佳化的大語言模型 (LLM)",
+          "B": "在邊緣設備上部署最佳化的小語言模型 (SLM)",
+          "C": "從邊緣設備非同步呼叫集中式小語言模型 (SLM) API",
+          "D": "從邊緣設備非同步呼叫集中式大語言模型 (LLM) API"
+        },
+        "explanation": "在邊緣裝置上部署最佳化的小語言模型 (SLM) 可以保持推理本地化並避免網路往返，從而實現盡可能低的延遲，並且 SLM 足夠緊湊，可以在受限的邊緣硬體上運行。\n在邊緣設備上部署 LLM 是不切實際的，因為它們的大小和計算需求超出了典型的邊緣硬體，並且會增加延遲。呼叫集中式 SLM 或 LLM API 需要網路通信，非同步往返會增加延遲而不是最小化延遲。"
+      }
+    }
   },
   {
     "id": "aif-q012",
@@ -47,7 +71,19 @@
     "lastVerified": "2026-06-02",
     "services": [
       "Amazon Q"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "金融科技工程團隊計畫採用 Amazon Q Developer 更快地發布功能。 Amazon Q Developer 可以為團隊提供什麼幫助？",
+        "options": {
+          "A": "無需配置或管理伺服器即可運行應用程式",
+          "B": "使用 ML 模型將音訊文件轉換為文字文檔",
+          "C": "生成程式碼片段並提供參考追蹤和開源許可證跟踪",
+          "D": "啟用語音命令進行編碼和自然語言搜索"
+        },
+        "explanation": "Amazon Q Developer 透過產生程式碼片段並提供參考追蹤和開源許可證追蹤來提高開發人員的工作效率。\n在不配置或管理伺服器的情況下執行應用程式描述了無伺服器運算，例如 AWS Lambda。將音訊檔案轉換為文字描述了 Amazon Transcribe。啟用語音指令進行編碼不是 Amazon Q Developer 的功能。"
+      }
+    }
   },
   {
     "id": "aif-q018",
@@ -63,7 +99,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "電子商務團隊正在建立視覺搜索，該搜索接受輸入的短語和產品照片作為查詢。哪種基礎模型 (FM) 應該為其提供動力？",
+        "options": {
+          "A": "文字嵌入模型",
+          "B": "多模態嵌入模型",
+          "C": "影像生成模型",
+          "D": "多模態生成模型"
+        },
+        "explanation": "多模態嵌入模型將文字和圖像編碼到共享向量空間中，因此可以比較和匹配任一類型的查詢，這正是處理文字和圖像查詢的搜尋應用程式所需要的。\n文字嵌入模型僅處理文字。圖像生成模型根據提示建立圖像，而不是編碼搜尋查詢。多模態生成模型跨模態產生新內容，而不是相似性搜尋所需的嵌入。"
+      }
+    }
   },
   {
     "id": "aif-q022",
@@ -79,7 +127,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家行銷機構正在探索生成式人工智慧。下列哪些任務是生成式 AI 用例？",
+        "options": {
+          "A": "使用入侵偵測系統提高網路安全",
+          "B": "從歷史財務資料預測股市趨勢",
+          "C": "根據行銷活動的文字描述產生逼真的圖像",
+          "D": "透過優化索引加速資料庫查詢"
+        },
+        "explanation": "生成式人工智慧創造新內容，從行銷活動的文字描述生成逼真的圖像就是內容生成，這是一個經典的生成式人工智慧用例。\n入侵偵測是一項安全和分類任務。根據歷史資料預測股票趨勢是預測分析。優化資料庫索引就是效能調優。這些都不會創建新內容，因此它們不是生成式人工智慧用例。"
+      }
+    }
   },
   {
     "id": "aif-q023",
@@ -95,7 +155,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "在 Amazon Bedrock 上選擇基礎模型 (FM) 時，研究團隊需要知道它可以將多少文字打包到單一提示中。哪個模型屬性告訴他們這一點？",
+        "options": {
+          "A": "溫度",
+          "B": "型號尺寸",
+          "C": "上下文視窗",
+          "D": "批量大小"
+        },
+        "explanation": "上下文視窗定義了基礎模型一次可以接受多少個標記，因此它決定了單一提示中適合多少資訊。\n溫度控制輸出隨機性，而不是輸入容量。模型大小與參數數量和整體能力有關，而不是提示長度。批次大小涉及一起處理多少輸入，而不是一個提示可以容納多少個文字。"
+      }
+    }
   },
   {
     "id": "aif-q032",
@@ -113,7 +185,19 @@
     "lastVerified": "2026-06-02",
     "services": [
       "Amazon Bedrock"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家小型工作室希望在預算緊張的情況下在 Amazon Bedrock 上製作原型並避免任何長期承諾。哪一種 Amazon Bedrock 定價模型適合？",
+        "options": {
+          "A": "預置吞吐量",
+          "B": "型號客製",
+          "C": "點播",
+          "D": "現貨執行個體"
+        },
+        "explanation": "按需定價模式僅對使用的內容收費，無需預先或長期承諾，這適合需要靈活性的有限預算。\n預置吞吐量要求隨著時間的推移承諾並支付固定的容量水準。模型客製化是一項微調活動，而不是靈活的定價選項。 Spot 執行個體是 Amazon EC2 定價概念，而不是 Amazon Bedrock 定價模型。"
+      }
+    }
   },
   {
     "id": "aif-q033",
@@ -134,7 +218,19 @@
       "Amazon Personalize",
       "Amazon Bedrock",
       "Amazon SageMaker AI"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "資料科學團隊希望在自己的 VPC 內快速建立基礎模型 (FM)。哪些 AWS 服務或功能可以讓團隊做到這一點？",
+        "options": {
+          "A": "Amazon Personalize",
+          "B": "PartyRock，Amazon Bedrock Playground",
+          "C": "Amazon SageMaker JumpStart",
+          "D": "Amazon SageMaker AI 端點"
+        },
+        "explanation": "Amazon SageMaker JumpStart 提供預先建置的基礎模型，團隊可以在自己的 VPC 內快速部署並立即開始使用，這符合要求。\nAmazon Personalize 是一項建議服務，而非 FM 部署功能。 PartyRock 是一個用於試驗應用程式的公共遊樂場，而不是用於在 VPC 中部署 FM。 Amazon SageMaker AI 端點託管用於推理的模型，但它們不提供預先建置基礎模型的精選目錄，只需點擊幾下即可部署，而這正是 JumpStart 所新增的價值。"
+      }
+    }
   },
   {
     "id": "aif-q035",
@@ -150,7 +246,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家零售公司在資料庫中保存大量銷售資料。它希望有一個應用程式能夠讓非技術人員輸入簡單語言問題並自動將其轉換為 SQL 查詢。哪種類型的模型最適合為該應用提供動力？",
+        "options": {
+          "A": "殘差神經網路（ResNet）",
+          "B": "支援向量機（SVM）",
+          "C": "波網",
+          "D": "生成式預訓練 Transformer (GPT)"
+        },
+        "explanation": "生成式預訓練轉換器是經過訓練可產生文字的大型語言模型，它們可以將自然語言請求轉換為結構化 SQL 查詢，從而使非技術人員無需自己編寫 SQL 即可檢索資料，完全按照需求描述。\n殘差神經網路 (ResNet) 是一種為影像辨識和電腦視覺而不是語言生成而建構的深層架構。支援向量機 (SVM) 是一種經典的分類或迴歸監督演算法，無法從文字產生 SQL。 WaveNet 是一種用於生成真實音訊和語音的生成模型，因此將文字轉換為查詢的方式是錯誤的。"
+      }
+    }
   },
   {
     "id": "aif-q050",
@@ -169,7 +277,19 @@
     "services": [
       "Amazon Bedrock",
       "Amazon SageMaker AI"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家公司使用 Amazon Bedrock 基本模型匯總合同，現在已經訓練了自定義模型以提高品質。公司必須做什麼才能使用 Amazon Bedrock 中的自訂模型？",
+        "options": {
+          "A": "將自訂模型部署到 Amazon SageMaker AI 端點以進行即時推理",
+          "B": "在 Amazon SageMaker Model Registry 中註冊模型",
+          "C": "請求對 Amazon Bedrock 中的自訂模型進行模型存取",
+          "D": "購買自訂模型的預配置吞吐量"
+        },
+        "explanation": "要在 Amazon Bedrock 中執行自訂（微調）模型，公司必須為該模型購買預置吞吐量，這會分配服務自訂模型所需的專用容量 Bedrock。\n部署到 SageMaker AI 端點或在 SageMaker 模型登錄中註冊是 Amazon SageMaker 工作流程，而不是 Bedrock 服務自訂模型的方式。請求模型存取權限適用於 Bedrock 基本模型，不適用於使用您自己的自訂模型。"
+      }
+    }
   },
   {
     "id": "aif-q055",
@@ -185,7 +305,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家公司正在建立一個應用程式，該應用程式必須根據其現有資料生成合成資料。公司可以使用哪種類型的模型來滿足此要求？",
+        "options": {
+          "A": "XGBoost",
+          "B": "波網",
+          "C": "生成對抗網路（GAN）",
+          "D": "殘差神經網路"
+        },
+        "explanation": "生成對抗網路 (GAN) 由兩個相互競爭的神經網路建構而成，一個生成器創建類似於真實資料的合成樣本，一個鑑別器試圖區分真實資料和生成資料，透過這種競爭，它學會根據現有資料集生成真實的合成資料，這正是公司所需要的。\nXGBoost 是一種用於監督分類和迴歸的梯度增強演算法，而不是用於產生新資料。殘差神經網路（ResNet）是一種深度卷積架構，主要用於影像辨識和分類。 WaveNet 是一種生成模型，但它專門用於合成原始音訊（例如語音），而不是從任何現有資料集生成一般合成資料。"
+      }
+    }
   },
   {
     "id": "aif-q063",
@@ -201,7 +333,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "在人工智慧和自然語言處理 (NLP) 中，用於幫助模型更好地理解文本的現實世界物件和概念的數字表示的術語是什麼？",
+        "options": {
+          "A": "代幣",
+          "B": "參數",
+          "C": "嵌入",
+          "D": "型號"
+        },
+        "explanation": "嵌入是物件和概念（例如單字或短語）的數值向量表示；透過將相似的項目緊密地放置在向量空間中，它們可以捕獲關係和含義，這有助於 AI 和 NLP 模型更有效地理解和處理文字。\n標記是文字在處理之前被分割成的單個單元，例如單字或子單詞，而不是含義的表示。模型是經過訓練的系統，可以進行預測，而不是概念的表示。參數是模型在訓練過程中學習的內在權重，並不代表現實世界的物件或概念。"
+      }
+    }
   },
   {
     "id": "aif-q074",
@@ -219,7 +363,19 @@
     "lastVerified": "2026-06-02",
     "services": [
       "Amazon Q"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "零售分析師希望自動產生去年按商店列出的頂級產品銷售圖表。哪種 AWS 解決方案適合這種需求？",
+        "options": {
+          "A": "Amazon Q Developer",
+          "B": "Amazon Q 在 Amazon QuickSight",
+          "C": "Amazon Q 在 AWS Chatbot",
+          "D": "Amazon Q 在 Amazon EC2"
+        },
+        "explanation": "Amazon QuickSight 中的 Amazon Q 允許使用者以自然語言提出問題，並自動建立圖表和視覺化效果，例如滿足要求的頂級產品的總銷售額。\nAmazon Q Developer 協助編碼任務。 AWS Chatbot 中的 Amazon Q 可協助透過聊天管道操作 AWS 資源。 Amazon EC2 中的 Amazon Q 提供了 EC2 指導。這些都不會產生業務資料視覺化。"
+      }
+    }
   },
   {
     "id": "aif-q080",
@@ -237,7 +393,19 @@
     "lastVerified": "2026-06-02",
     "services": [
       "Amazon Bedrock"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家旅遊公司每天都會收到大量預訂問題，並計劃使用代理 Amazon Bedrock 來跟上。使用這些代理的主要好處是什麼？",
+        "options": {
+          "A": "產生自訂基礎模型 (FM) 來預測客戶需求",
+          "B": "根據預先定義的標準和指標選擇基礎模型 (FM)",
+          "C": "自動執行重複性任務並編排複雜的多步驟工作流程",
+          "D": "一次呼叫多個基礎模型 (FM) 並合併它們的結果"
+        },
+        "explanation": "Amazon Bedrock 代理程式會自動執行重複任務並編排複雜的多步驟工作流程，使公司能夠更快、更有效率地處理大量查詢。\n代理不會產生自訂基礎模型，它們不會根據預先定義的標準選擇模型，其目的也不是呼叫多個模型並合併結果。它們的價值在於任務自動化和工作流程編排。"
+      }
+    }
   },
   {
     "id": "aif-q083",
@@ -255,7 +423,19 @@
     "lastVerified": "2026-06-02",
     "services": [
       "Amazon Bedrock"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家新創公司正在為 Amazon Bedrock 上的生成式 AI 應用程式製定預算，並希望了解大型語言模型 (LLM) 的每次推理成本的驅動因素。是哪個因素呢？",
+        "options": {
+          "A": "用於產生的溫度值",
+          "B": "用於訓練 LLM 的資料量",
+          "C": "消耗的代幣數量",
+          "D": "培訓 LLM 所花費的總時間"
+        },
+        "explanation": "推理成本由消耗的令牌數量決定，因為 LLM 定價對每個請求處理的輸入和輸出令牌進行收費。\n溫度值僅影響輸出隨機性，對成本沒有影響。訓練資料量和總訓練時間影響建構模型的一次性成本，而不是運行推理的成本。"
+      }
+    }
   },
   {
     "id": "aif-q085",
@@ -274,7 +454,19 @@
     "services": [
       "Amazon S3",
       "Amazon Bedrock"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家公司客製化了 Amazon Bedrock 基礎模型 (FM)，現在需要上傳 Bedrock 的資料集來驗證模型的答案。哪個 AWS 服務應該保存該資料集？",
+        "options": {
+          "A": "Amazon Elastic Block Store (Amazon EBS)",
+          "B": "AWS Snowcone",
+          "C": "Amazon S3",
+          "D": "Amazon Elastic File System (Amazon EFS)"
+        },
+        "explanation": "Amazon S3 是與 Amazon Bedrock 整合的可擴展物件儲存服務，因此它是上傳和儲存驗證資料集以供 Bedrock 使用的正確位置。\nAmazon EBS 為 EC2 卷提供塊存儲，Amazon EFS 為執行個體提供共享文件存儲，AWS Snowcone 是邊緣資料傳輸設備。這些都不是 Bedrock 從中讀取資料集的儲存服務。"
+      }
+    }
   },
   {
     "id": "aif-q099",
@@ -295,7 +487,19 @@
       "AWS Config",
       "Amazon Personalize",
       "Amazon Comprehend"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家物流公司的分析師幾乎沒有編碼經驗，但需要在 AWS Glue 中建立資料整合作業。哪些 AWS 服務可以幫助他們？",
+        "options": {
+          "A": "AWS Config",
+          "B": "Amazon Comprehend",
+          "C": "Amazon Q Developer",
+          "D": "Amazon Personalize"
+        },
+        "explanation": "Amazon Q Developer 是一款生成式 AI 編碼助手，可以產生和解釋程式碼，幫助程式設計經驗有限的使用者建立和使用 AWS Glue 作業。\nAWS Config 追蹤資源配置和合規性。 Amazon Personalize 提供建議。 Amazon Comprehend 執行 NLP 任務，例如情緒和實體分析。這些都無法幫助編寫或簡化 AWS Glue 程式碼。"
+      }
+    }
   },
   {
     "id": "aif-q105",
@@ -311,7 +515,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "開發團隊需要一個大型語言模型 (LLM) 來根據簡單語言註解編寫程式碼。這依賴於哪種LLM能力？",
+        "options": {
+          "A": "文字摘要",
+          "B": "文字分類",
+          "C": "文字生成",
+          "D": "文字補全"
+        },
+        "explanation": "文本生成是法學碩士的功能，可以根據給定的輸入（例如自然語言註釋）生成新文本（在本例中為代碼），這正是需求所需要的。\n文本摘要濃縮現有文本。文字分類為文字分配標籤。文字完成僅繼續給定的片段，而不是從描述性註釋產生完整的程式碼。"
+      }
+    }
   },
   {
     "id": "aif-q112",
@@ -332,7 +548,19 @@
       "Amazon Personalize",
       "Amazon Comprehend",
       "Amazon Rekognition"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家藥房連鎖店希望根據客戶評論對每種新藥進行簡短概述。哪種解決方案可以滿足這個要求？",
+        "options": {
+          "A": "使用 Amazon Personalize 建立時間序列預測模型來分析評論",
+          "B": "建立一個分類模型，將藥物依 Amazon Comprehend 分組",
+          "C": "使用 Amazon Bedrock 大語言模型 (LLM) 產生藥物審查摘要",
+          "D": "使用 Amazon Rekognition 產生藥物審查摘要"
+        },
+        "explanation": "Amazon Bedrock 提供了非常適合摘要的大型語言模型，因此使用 Bedrock 法學碩士產生簡明的藥物評論摘要可以滿足要求。\n使用 Amazon Personalize 的時間序列預測模型預測未來值，而不是用於匯總文字。使用 Amazon Comprehend 的分類模型將項目分類，而不是產生書面概述。 Amazon Rekognition 分析圖像和視頻，而不是文字評論。"
+      }
+    }
   },
   {
     "id": "aif-q129",
@@ -353,7 +581,19 @@
       "Amazon Q Developer",
       "Amazon Kendra",
       "Amazon Comprehend"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "開發人員想要一項能夠提供用於建立和擴展生成式 AI 應用程式的基礎模型 (FM) 的服務。哪個 AWS 服務提供此功能？",
+        "options": {
+          "A": "Amazon Q Developer",
+          "B": "Amazon Kendra",
+          "C": "Amazon Bedrock",
+          "D": "Amazon Comprehend"
+        },
+        "explanation": "Amazon Bedrock 允許透過託管服務存取來自 AWS 和第三方的基礎模型，因此使用者可以建立和擴展生成式 AI 應用程式，而無需管理基礎設施。\nAmazon Q Developer 是一位編碼助手。 Amazon Kendra 是一項智慧企業搜尋服務。 Amazon Comprehend 是一項 NLP 服務。這些都沒有為建立生成式人工智慧應用程式提供基礎模型。"
+      }
+    }
   },
   {
     "id": "aif-q134",
@@ -369,7 +609,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家訂閱盒公司運行一個生成式人工智慧支援聊天機器人，並希望衡量其對營運的財務影響。公司應該追蹤哪個指標？",
+        "options": {
+          "A": "處理的客戶查詢數量",
+          "B": "每次客戶對話成本",
+          "C": "平均處理時間 (AHT)",
+          "D": "訓練人工智慧模型的成本"
+        },
+        "explanation": "每個客戶對話的成本直接量化使用聊天機器人的營運費用，因此公司可以衡量其財務效果並將其與人工代理等替代方案進行比較。\n處理的查詢數量衡量的是數量，而不是成本。平均處理時間衡量效率和速度。訓練模型的成本是一次性建構成本，而不是對話的持續營運成本。"
+      }
+    }
   },
   {
     "id": "aif-q137",
@@ -385,7 +637,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "Amazon Bedrock 上保險公司的支援聊天機器人需要多次輪流才能解決索賠。大語言模型 (LLM) 如何使用客戶早期訊息中的內容？",
+        "options": {
+          "A": "開啟模型呼叫日誌記錄以收集訊息",
+          "B": "使用 Amazon Personalize 儲存對話記錄",
+          "C": "在模型提示中包含先前的訊息",
+          "D": "使用 LLM 的預設定吞吐量"
+        },
+        "explanation": "在模型提示中包含先前的訊息可以為 LLM 提供所需的對話歷史記錄，因此它可以保持不同回合的上下文並做出連貫的回應。\n模型呼叫日誌記錄監控請求，但不會將歷史記錄回饋到模型中。 Amazon Personalize 是一種推薦服務，而不是提供提示情境的方法。預配置吞吐量設定容量，但不新增對話上下文。"
+      }
+    }
   },
   {
     "id": "aif-q138",
@@ -406,7 +670,19 @@
       "Amazon Macie",
       "Amazon Transcribe",
       "Amazon Textract"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "呼叫中心團隊手動向客戶提供基於位置的產品提示，並希望基礎模型 (FM) 自動化。哪種 AWS 服務可以滿足此需求？",
+        "options": {
+          "A": "Amazon Macie",
+          "B": "Amazon Bedrock",
+          "C": "Amazon Textract",
+          "D": "Amazon Transcribe"
+        },
+        "explanation": "Amazon Bedrock 允許公司使用基礎模型來產生產品描述和基於位置的建議，而無需管理基礎設施，從而自動執行任務。\nAmazon Macie 發現並保護敏感資料。 Amazon Textract 從文件中擷取文字。 Amazon Transcribe 將語音轉換為文字。這些都沒有提供產生建議的基礎模型。"
+      }
+    }
   },
   {
     "id": "aif-q152",
@@ -422,7 +698,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家投資公司在其營運中使用機器學習。下列哪一個是生成式人工智慧用例？",
+        "options": {
+          "A": "依產品用途對客戶進行分類",
+          "B": "預測某些產品的收入",
+          "C": "總結客戶投訴",
+          "D": "按投資類型細分客戶"
+        },
+        "explanation": "總結客戶投訴會根據較長的輸入產生新的壓縮文本，這是一項通常由大型語言模型處理的生成式人工智慧任務。\n依產品使用情況對客戶進行分類並預測收入是預測任務，按投資類型對客戶進行細分是聚類。這些是傳統的機器學習任務，不會產生新內容。"
+      }
+    }
   },
   {
     "id": "aif-q158",
@@ -438,7 +726,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "哪一句話描述了基於 Transformer 的語言模型的定義特徵？",
+        "options": {
+          "A": "他們使用卷積層在輸入中應用濾波器並捕獲局部模式",
+          "B": "他們使用自註意力機制來捕捉情境關係",
+          "C": "他們只能處理文字資料",
+          "D": "他們以重複的循環一次處理一個元素"
+        },
+        "explanation": "基於 Transformer 的模型使用自註意力機制來權衡每個標記相對於其他標記的重要性，這使它們能夠捕捉整個輸入中的上下文關係。\n卷積層是 CNN 的特徵，而不是 Transformer 的特徵。變壓器不限於文本，並且可以是多模式的。循環中一次處理一個元素描述的是循環網路（RNN），而不是 Transformer 的並行自註意力。"
+      }
+    }
   },
   {
     "id": "aif-q168",
@@ -458,7 +758,19 @@
       "Amazon Bedrock",
       "Amazon EC2",
       "Amazon SageMaker JumpStart"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家新聞編輯室正在試用生成式人工智慧寫作助理。 Pilot流量輕，效能不成問題，未來使用情況無法預測；新聞編輯室希望成本最低。哪種解決方案滿足這些要求？",
+        "options": {
+          "A": "使用 GPU 驅動的 Amazon EC2 執行個體",
+          "B": "使用 Amazon Bedrock 按需定價",
+          "C": "使用 Amazon Bedrock 和預先配置吞吐量",
+          "D": "使用Amazon SageMaker JumpStart"
+        },
+        "explanation": "Amazon Bedrock 按需定價僅對實際進行的推理調用收費，沒有容量承諾，因此它可以在小型試點期間保持較低的成本，並根據不可預測的未來需求進行彈性擴展。\n無論是否使用，GPU 驅動的 EC2 執行個體都會產生持續成本。預配置吞吐量需要為承諾容量付費，而低且不可預測的使用量會浪費這種容量。 Amazon SageMaker JumpStart 仍然需要配置和管理託管容量，這對於這種情況來說並不是最具成本效益的。"
+      }
+    }
   },
   {
     "id": "aif-q174",
@@ -479,7 +791,19 @@
       "Amazon EC2",
       "Amazon S3",
       "AWS Lambda"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家公司對 Amazon Bedrock 的自訂大語言模型 (LLM) 進行了微調，並將在生產中提供穩定、可預測數量的每分鐘請求。哪種選擇最具成本效益？",
+        "options": {
+          "A": "在 Amazon EC2 計算最佳化執行個體上部署模型",
+          "B": "在 Amazon Bedrock 上購買模型的預先配置吞吐量",
+          "C": "在 Amazon Bedrock 上使用具有按需吞吐量的模型",
+          "D": "將模型儲存在 Amazon S3 中並使用 AWS Lambda 託管"
+        },
+        "explanation": "為了獲得穩定、可預測的請求量，Amazon Bedrock 上的預置吞吐量透過承諾固定的吞吐量水準來降低每個請求的成本，使其成為服務自訂模型的最具成本效益的方式。\nEC2 運算最佳化執行個體意味著自我管理基礎設施，而不是 Bedrock 服務自訂模型的方式。在穩定的高容量下，按需吞吐量的每個請求成本更高。不支援將模型儲存在 Amazon S3 中並使用 AWS Lambda 託管來提供 Bedrock 自訂模型。"
+      }
+    }
   },
   {
     "id": "aif-q375",
@@ -500,7 +824,19 @@
       "Amazon Q Developer",
       "Amazon Polly",
       "Amazon Rekognition"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家醫療診所需要一種具有語音轉文字功能的生成式人工智慧工具，幫助醫生聽寫和建立臨床記錄。哪種 AWS 服務符合此要求？",
+        "options": {
+          "A": "Amazon Q Developer",
+          "B": "Amazon Polly",
+          "C": "AWS HealthScribe",
+          "D": "Amazon Rekognition"
+        },
+        "explanation": "AWS HealthScribe 專為醫療保健而設計，將語音識別與生成式 AI 相結合，以轉錄臨床對話並產生結構化的臨床記錄，從而滿足診所的需求。\nAmazon Q Developer 是一位編碼助手。 Amazon Polly 執行文字轉語音，方向相反。 Amazon Rekognition 分析影像和視頻，而不是臨床語音。"
+      }
+    }
   },
   {
     "id": "aif-q184",
@@ -516,7 +852,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "在大型語言模型 (LLM) 中，向量嵌入可以實現什麼？",
+        "options": {
+          "A": "將文字拆分為可管理的資料區塊",
+          "B": "以數學方式比較文本",
+          "C": "將一組字元分組為一個單元",
+          "D": "計算輸入中的每個單字"
+        },
+        "explanation": "向量嵌入將文字轉換為捕獲含義的數值向量，因此可以透過測量距離或相似性對文字進行數學比較，這支援檢索和聚類等任務。\n將文字分割成可管理的片段描述了分塊。將字元分組為單一單元描述了標記化。計算每個單字是一個簡單的詞頻計數，而不是嵌入。"
+      }
+    }
   },
   {
     "id": "aif-q197",
@@ -532,7 +880,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家教育科技公司正在開發一個應用程式，學生可以在其中輸入問題或拍攝問題的照片，然後該應用程式會返回帶有解釋的書面答案。哪種類型的模型應該為應用程式提供支援？",
+        "options": {
+          "A": "電腦視覺模型",
+          "B": "擴散模型",
+          "C": "大型多模態語言模型",
+          "D": "文字轉語音模型"
+        },
+        "explanation": "大型多模態語言模型可以將文字和圖像作為輸入並產生文字輸出，因此它可以接受打字或拍照的問題並返回帶有解釋的書面答案。\n電腦視覺模型分析圖像，但不會產生解釋性文字答案。擴散模型產生圖像，而不是文字答案。文字轉語音模型將文字轉換為音頻，不會從混合輸入中產生書面答案。"
+      }
+    }
   },
   {
     "id": "aif-q199",
@@ -548,7 +908,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "哪一種說法正確地描述了生成人工智慧中的嵌入？",
+        "options": {
+          "A": "嵌入搜尋資料以查找回答自然語言問題最有用的資訊",
+          "B": "嵌入透過使用不太精確的資料類型進行權重和啟動來降低硬體要求",
+          "C": "嵌入將資料表示為捕獲語義關係的高維向量",
+          "D": "嵌入儲存和檢索產生人工智慧應用的資料"
+        },
+        "explanation": "嵌入將單字或文件等輸入映射到高維向量中，其中語義相似性對應於向量空間中的接近度，讓模型推理含義和關係。\n搜尋資料以查找有用資訊描述了檢索，如 RAG 中所示。使用不太精確的資料類型來減少硬體需求描述了量化。儲存和檢索資料描述了資料庫或向量存儲，而不是嵌入本身。"
+      }
+    }
   },
   {
     "id": "aif-q201",
@@ -564,7 +936,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "公司需要為必須即時回答使用者的應用程式產生人工智慧模型。哪個模型特徵最重要？",
+        "options": {
+          "A": "模型複雜度",
+          "B": "推理速度",
+          "C": "培訓時間",
+          "D": "創新速度"
+        },
+        "explanation": "推理速度決定了模型產生回應的速度，因此對於使用者需要低延遲答案的即時應用程式來說，推理速度是關鍵特徵。\n模型複雜性影響能力和成本，但不直接影響即時要求。訓練時間是一次性建造問題。創新速度描述了模型系列的發展速度，而這些速度都無法控制即時響應延遲。"
+      }
+    }
   },
   {
     "id": "aif-q202",
@@ -580,7 +964,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "您為基礎模型 (FM) 提供的幫助其返回更準確答案的指令的術語是什麼？",
+        "options": {
+          "A": "方向",
+          "B": "對話",
+          "C": "提示",
+          "D": "翻譯"
+        },
+        "explanation": "提示是提供給基礎模型的輸入指令或查詢，指導它應該做什麼，幫助它產生更準確的回應。\n方向和對話不是模型輸入指令的術語。翻譯是一種任務類型，而不是指令本身。"
+      }
+    }
   },
   {
     "id": "aif-q242",
@@ -601,7 +997,19 @@
       "Amazon Rekognition",
       "Amazon Textract",
       "Amazon Lex"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家公司想要一個人工智慧助手，讓員工可以提出有關公司內部資料的問題。哪種 AWS 服務可以滿足此需求？",
+        "options": {
+          "A": "Amazon Rekognition",
+          "B": "Amazon Textract",
+          "C": "Amazon Q Business",
+          "D": "Amazon Lex"
+        },
+        "explanation": "Amazon Q Business 建立連接到內部資料來源的生成式 AI 助手，以便員工可以提出問題並獲得答案，這滿足了要求。\nAmazon Rekognition 分析影像和影片。 Amazon Textract 從文件中擷取文字。 Amazon Lex 建構對話式聊天機器人，但並非設計為公司內部資料的企業助理。"
+      }
+    }
   },
   {
     "id": "aif-q250",
@@ -621,7 +1029,19 @@
       "Amazon Bedrock",
       "Amazon Q",
       "Amazon SageMaker JumpStart"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "團隊想要一種低成本的實踐方式來試驗和了解生成式人工智慧應用。哪種解決方案最具成本效益？",
+        "options": {
+          "A": "Amazon Q Developer",
+          "B": "Amazon Bedrock PartyRock",
+          "C": "Amazon SageMaker JumpStart",
+          "D": "Amazon Q Business"
+        },
+        "explanation": "Amazon Bedrock PartyRock 提供了一個低成本的實踐平台，用於構建和試驗生成式 AI 應用程式，適合在實驗環境中經濟高效地學習。\nAmazon Q Developer 是一位編碼助手。 Amazon SageMaker JumpStart 需要設定和管理模型託管。 Amazon Q Business 是公司資料的企業助理。這些都不是學習生成式人工智慧應用的低成本實驗場所。"
+      }
+    }
   },
   {
     "id": "aif-q275",
@@ -639,7 +1059,19 @@
     "lastVerified": "2026-06-02",
     "services": [
       "Amazon Bedrock"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家製作影片內容的工作室希望使用生成式人工智慧來創建新剪輯並縮短製作時間。哪種解決方案最有效地滿足這些要求？",
+        "options": {
+          "A": "使用 Amazon Bedrock 上的 Amazon Titan Image Generator 模型建立中間影像，然後使用視頻編輯軟體組裝視頻",
+          "B": "在 Amazon Bedrock 上使用 Amazon Nova Reel 模型產生視頻",
+          "C": "使用 Amazon Bedrock 上的 Amazon Nova Canvas 模型建立中間影像，然後使用視頻編輯軟體組裝視頻",
+          "D": "在 Amazon Bedrock 上使用 Amazon Nova Pro 模型產生視頻"
+        },
+        "explanation": "Amazon Bedrock 上的 Amazon Nova Reel 模型專為生成視頻創建而構建，因此它可以讓公司直接生成新的視頻內容，並以最高效的方式減少製作時間。\n使用 Amazon Titan Image Generator 或 Amazon Nova Canvas 僅生成靜態圖像，然後需要手動編輯為視頻，這會增加步驟。 Amazon Nova Pro 是通用的多模式模型，不是專門建構的視訊產生選項。"
+      }
+    }
   },
   {
     "id": "aif-q278",
@@ -655,7 +1087,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "合規團隊希望從冗長的政策文件中提取關鍵見解，以便員工更快地工作。哪種生成式人工智慧策略可以滿足這項要求？",
+        "options": {
+          "A": "回歸",
+          "B": "總結",
+          "C": "聚類",
+          "D": "分類"
+        },
+        "explanation": "總結將大型文件濃縮為關鍵見解，以便員工可以快速掌握重要資訊並採取行動。\n迴歸預測數值，聚類將相似的項目分組，分類分配標籤。這些都沒有從文件中提取和濃縮關鍵見解。"
+      }
+    }
   },
   {
     "id": "aif-q282",
@@ -671,7 +1115,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家線上商店使用 Amazon Bedrock 上的生成式 AI 助理來推薦產品，並希望衡量其對銷售的直接影響。哪個指標符合這個要求？",
+        "options": {
+          "A": "客戶與人工智慧助理互動的次數",
+          "B": "互動後客戶回饋的情感分析分數",
+          "C": "客戶與AI助理互動後購買轉換率",
+          "D": "自然語言理解準確率"
+        },
+        "explanation": "轉換率，即與助理互動後購買的客戶比例，將助理的參與度直接與銷售結果聯繫起來，因此它衡量對銷售的直接影響。\n交互次數衡量的是使用量，而不是銷售量。情緒分數衡量顧客的情緒。自然語言理解準確性衡量技術品質。這些都沒有直接衡量銷售影響。"
+      }
+    }
   },
   {
     "id": "aif-q284",
@@ -687,7 +1143,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "哪一種場景是生成式人工智慧的實際用例？",
+        "options": {
+          "A": "使用機器學習模型預測產品需求",
+          "B": "使用分析儀表板追蹤網站流量和使用者行為",
+          "C": "使用聊天機器人對客戶的查詢提供類似人類的即時回應",
+          "D": "使用基於規則的推薦引擎來推薦產品"
+        },
+        "explanation": "即時對客戶查詢做出類似人類回應的聊天機器人使用生成模型來創建相關的自然語言答案，這是一個實用的生成人工智慧用例。\n使用機器學習模型預測產品需求是預測分析。分析儀表板追蹤指標。基於規則的推薦引擎遵循固定的規則。這些都不會產生新內容。"
+      }
+    }
   },
   {
     "id": "aif-q293",
@@ -703,7 +1171,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "判別式人工智慧模型和生成式人工智慧模型有什麼不同？",
+        "options": {
+          "A": "判別模型比生成模型更快",
+          "B": "判別模型比生成模型更準確",
+          "C": "判別模型進行分類或預測，而產生模型則建立新內容",
+          "D": "判別模型比生成模型需要更多資料"
+        },
+        "explanation": "判別模型學習對輸入進行分類或預測結果，而生成模型學習創建與其訓練資料類似的新內容；這是兩者之間的核心差異。\n關於判別模型本質上更快、更準確或需要更多資料的說法並不是決定性的差異，而且通常並不正確；真正的區別在於每種類型的模型產生的結果。"
+      }
+    }
   },
   {
     "id": "aif-q295",
@@ -721,7 +1201,19 @@
     "lastVerified": "2026-06-02",
     "services": [
       "Amazon Q"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "Amazon Q Business 的主要目的是什麼？",
+        "options": {
+          "A": "訓練自訂 ML 模型",
+          "B": "儲存大型資料集",
+          "C": "透過公司資料提供人工智慧驅動的業務幫助",
+          "D": "監控基礎設施"
+        },
+        "explanation": "Amazon Q Business是企業的生成式人工智慧助理；其主要目的是為公司的內部資料提供人工智慧支援、回答問題、生成內容和總結訊息，同時尊重存取控制。\n訓練自訂 ML 模型是 Amazon SageMaker AI 的角色。儲存大型資料集是 Amazon S3 等服務的作用。監控基礎設施是 Amazon CloudWatch 等服務的角色。這些都不是 Amazon Q Business 的目的。"
+      }
+    }
   },
   {
     "id": "aif-q298",
@@ -739,7 +1231,19 @@
     "lastVerified": "2026-06-02",
     "services": [
       "Amazon Bedrock"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家公司正在比較 Amazon Bedrock 上的 Amazon Nova 模型，並且需要支援多種語言的多模式模型。哪種 Nova 型號最經濟高效地滿足這些要求？",
+        "options": {
+          "A": "諾瓦專業版",
+          "B": "新星精簡版",
+          "C": "新星畫布",
+          "D": "新星捲軸"
+        },
+        "explanation": "Amazon Nova Lite是一種低成本的多模式模型，支援多種語言，因此它滿足多模式和多語言的要求，是最具成本效益的Nova選項。\nAmazon Nova Pro 也是多模式的，但是一種成本更高、能力更強的模式。 Amazon Nova Canvas 產生影像，Amazon Nova Reel 產生視頻，因此這些單一用途的生成模型不是具有成本效益的多語言多模式選擇。"
+      }
+    }
   },
   {
     "id": "aif-q303",
@@ -760,7 +1264,19 @@
       "Amazon Polly",
       "Amazon Rekognition",
       "Amazon Q Business"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家教育科技公司正在開發一個閱讀應用程式，讓學生可以為他們的故事添加插圖。哪種解決方案可以滿足這個要求？",
+        "options": {
+          "A": "使用 Amazon Polly 從故事文本建立有聲書",
+          "B": "使用 Amazon Rekognition 分析影像內容並偵測文字屬性",
+          "C": "使用 Amazon Bedrock Stable Diffusion 3.5 Large 從文字輸入產生影像",
+          "D": "建立標準提示範本並使用 Amazon Q Business 來說明故事"
+        },
+        "explanation": "Amazon Bedrock Stable Diffusion 3.5 Large 根據文字提示產生圖像，因此學生可以根據描述為他們的故事創建插圖，從而支持視覺閱讀理解。\nAmazon Polly 將文字轉換為語音，產生音訊而不是插圖。 Amazon Rekognition 分析現有影像而不是產生新影像。 Amazon Q Business 是公司資料的企業助手，不會產生故事插圖。"
+      }
+    }
   },
   {
     "id": "aif-q309",
@@ -778,7 +1294,19 @@
     "lastVerified": "2026-06-02",
     "services": [
       "Amazon Q"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "開發人員希望以最少的努力快速為某些程式碼建立測試案例和文件。哪種解決方案可以滿足這個要求？",
+        "options": {
+          "A": "將代碼上傳到線上編碼助手",
+          "B": "在整合開發環境 (IDE) 中使用 Amazon Q Developer",
+          "C": "建立使用基礎模型 (FM) 的應用程式",
+          "D": "手動研究並編寫測試案例，然後添加文檔"
+        },
+        "explanation": "IDE中的Amazon Q Developer可以自動產生程式碼的測試案例和文檔，以最少的努力滿足需求。\n將程式碼上傳到線上編碼助理會增加手動步驟和資料處理問題。在基礎模型上建立自訂應用程式要花費更多的精力。手工研究和編寫所有內容是最費力的。"
+      }
+    }
   },
   {
     "id": "aif-q310",
@@ -794,7 +1322,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "電子商務公司每天需要產生數千個獨特的產品描述，以具有一致風格和語氣的段落形式編寫。哪種類型的生成模型滿足這些要求？",
+        "options": {
+          "A": "變分自動編碼器 (VAE) 模型",
+          "B": "擴散模型",
+          "C": "基於變壓器的模型",
+          "D": "生成對抗網路（GAN）模型"
+        },
+        "explanation": "基於 Transformer 的模型（例如大型語言模型）可以產生具有一致風格、語氣和規模的連貫文字段落，從而產生數千個符合要求的獨特描述。\n變分自動編碼器和生成對抗網路主要用於生成圖像或其他資料，而不是流暢的長格式文字。擴散模型產生圖像，因此這些模型都不適合大規模生成樣式化的產品描述文字。"
+      }
+    }
   },
   {
     "id": "aif-q334",
@@ -810,7 +1350,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "在生成人工智慧的背景下，代幣是什麼？",
+        "options": {
+          "A": "安全功能",
+          "B": "神經網路的一種",
+          "C": "模型處理的文字單元",
+          "D": "模型評估指標"
+        },
+        "explanation": "標記是模型處理和生成的文本的基本單位，例如單字或子詞，這就是該術語所指的內容。\n代幣不是一種安全功能，不是一種神經網路，也不是一種模型評估指標；這些描述了不相關的概念。"
+      }
+    }
   },
   {
     "id": "aif-q336",
@@ -826,7 +1378,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "生成式人工智慧的適應性的主要優勢是什麼？",
+        "options": {
+          "A": "它只能處理結構化資料",
+          "B": "它總是能產生完美的結果",
+          "C": "它可以處理廣泛的任務和領域",
+          "D": "它消除了任何人為監督的需要"
+        },
+        "explanation": "適應性意味著生成模型可以應用於廣泛的任務和領域，這是它的關鍵優勢。\n生成式人工智慧並不局限於結構化資料，它並不總是能產生完美的結果，也不能消除人類監督的需要；這些說法錯誤地描述了其能力。"
+      }
+    }
   },
   {
     "id": "aif-q338",
@@ -847,7 +1411,19 @@
       "Amazon EC2",
       "Amazon S3",
       "Amazon RDS"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "哪項 AWS 服務是專門為開發生成式 AI 應用程式而設計的？",
+        "options": {
+          "A": "Amazon EC2",
+          "B": "Amazon Bedrock",
+          "C": "Amazon S3",
+          "D": "Amazon RDS"
+        },
+        "explanation": "Amazon Bedrock 專為生成式 AI 而構建，提供對基礎模型和工具的存取，以構建和擴展生成式 AI 應用程式。\nAmazon EC2 提供通用運算，Amazon S3 提供物件存儲，Amazon RDS 提供託管關聯式資料庫；沒有一個是專門為開發生成式人工智慧應用程式而設計的。"
+      }
+    }
   },
   {
     "id": "aif-q339",
@@ -863,7 +1439,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "什麼是產生人工智慧的基礎模型？",
+        "options": {
+          "A": "只能生成文字的模型",
+          "B": "專為圖像生成而設計的模型",
+          "C": "一個大型的、預先訓練的模型，可以適應許多任務",
+          "D": "不需要訓練資料的模型"
+        },
+        "explanation": "基礎模型是在大量資料上預先訓練的大型模型，可以針對許多下游任務（例如文字生成、摘要和問答）進行調整或微調。\n基礎模型不僅限於文本，也不僅為圖像生成而構建，而且它是在大量資料上進行訓練的，因此它不需要訓練資料的說法是不正確的。"
+      }
+    }
   },
   {
     "id": "aif-q341",
@@ -879,7 +1467,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.3",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "使用 AWS 生成式 AI 服務建立應用程式的主要優勢是什麼？",
+        "options": {
+          "A": "他們總是免費的",
+          "B": "他們保證 100% 的準確性",
+          "C": "他們降低了進入門檻",
+          "D": "它們消除了任何編碼的需要"
+        },
+        "explanation": "AWS 生成式 AI 服務提供託管基礎架構、預先訓練的基礎模型和 API，無需從頭開始建置和訓練大型模型，從而降低了進入門檻。\n這些服務並不總是免費的，它們不能保證完美的準確性，而且它們不能消除任何編碼的需要；這些陳述誇大了所提供的服務。"
+      }
+    }
   },
   {
     "id": "aif-q082",
@@ -895,7 +1495,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "在生成人工智慧中，什麼是代幣？",
+        "options": {
+          "A": "單字或概念的向量表示",
+          "B": "輸入和輸出的基本單位，例如單字或子單字",
+          "C": "給模型的說明或提示",
+          "D": "神經網路的隱藏層"
+        },
+        "explanation": "標記是生成模型讀取和生成的最小單位，例如單字、子詞或字符，構成其輸入和輸出的基礎。\n向量表示描述嵌入，提示是給模型的指令，隱藏層是模型架構的一部分；這些都沒有定義令牌。"
+      }
+    }
   },
   {
     "id": "aif-q193",
@@ -915,7 +1527,20 @@
     "isMultiAnswer": true,
     "taskStatement": "2.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "關於模型潛在空間的哪兩種敘述是正確的？",
+        "options": {
+          "A": "它必須儲存在特定類型的資料庫中",
+          "B": "它捕捉模型對概念之間關係的內部理解",
+          "C": "它僅適用於圖像資料",
+          "D": "它可以計算不同輸入之間的語義相似度",
+          "E": "這是一個人類可讀的查找表"
+        },
+        "explanation": "模型的潛在空間是組織概念的內部表示，因此它既捕捉模型學到的關係，又讓它計算不同輸入之間的語義相似性。\n潛在空間不限於影像，不需要特定的資料庫類型，也不是人類可讀的查找表。"
+      }
+    }
   },
   {
     "id": "aif-q198",
@@ -931,7 +1556,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "在生成式 AI 模型生命週期中，哪個階段執行測試來檢查模型的準確性？",
+        "options": {
+          "A": "預訓練",
+          "B": "微調",
+          "C": "評價",
+          "D": "部署"
+        },
+        "explanation": "評估階段在進行部署之前，使用準確性等指標根據驗證或保留資料對模型進行測試。\n預訓練建立基本模型，微調使其適應任務，部署將完成的模型投入生產；這些都不是進行準確性測試的地方。"
+      }
+    }
   },
   {
     "id": "aif-q289",
@@ -949,7 +1586,19 @@
     "lastVerified": "2026-06-02",
     "services": [
       "Amazon SageMaker JumpStart"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "Amazon SageMaker JumpStart 的主要好處是什麼？",
+        "options": {
+          "A": "它降低了推理成本",
+          "B": "它提供對預先訓練的模型和解決方案的存取",
+          "C": "它會自動調整模型超參數",
+          "D": "它透過人力管理資料標籤"
+        },
+        "explanation": "Amazon SageMaker JumpStart 提供對預訓練模型、內建演算法和端到端解決方案的存取，從而加快機器學習和生成式 AI 專案的啟動速度。\n降低推理成本、超參數調整和託管人工標籤由其他功能處理，例如 SageMaker 自動模型調整和 SageMaker Ground Truth Plus。"
+      }
+    }
   },
   {
     "id": "aif-q340",
@@ -965,7 +1614,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "下列哪一項不是基礎模型 (FM) 生命週期的階段？",
+        "options": {
+          "A": "微調",
+          "B": "行銷",
+          "C": "預訓練",
+          "D": "部署"
+        },
+        "explanation": "行銷是一項業務活動，不屬於技術FM生命週期的一部分，FM生命週期涵蓋資料選擇、預訓練、微調、評估和部署等階段。\n微調、預先訓練和部署都是真正的生命週期階段，因此它們都不是「不是階段」的正確答案。"
+      }
+    }
   },
   {
     "id": "aif-q342",
@@ -981,7 +1642,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "在生成人工智慧中，什麼是即時工程？",
+        "options": {
+          "A": "一種壓縮模型以使其運行速度更快的方法",
+          "B": "制定有效輸入提示來指導模型輸出的過程",
+          "C": "一種設計模型神經網路架構的技術",
+          "D": "監督學習的訓練資料標記過程"
+        },
+        "explanation": "提示工程是設計和完善輸入提示的實踐，例如透過添加上下文、約束或範例來指導生成模型來獲得準確、相關的輸出。\n它不是模型壓縮，不是神經網路架構的設計，也不是訓練資料的標記。"
+      }
+    }
   },
   {
     "id": "aif-q077",
@@ -997,7 +1670,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "人工智慧從業人員使用大型語言模型來編寫行銷文案。輸出聽起來合理且真實，但實際上是不正確的。模型表現出哪個問題？",
+        "options": {
+          "A": "資料外洩",
+          "B": "幻覺",
+          "C": "過擬合",
+          "D": "欠擬合"
+        },
+        "explanation": "幻覺是指大型語言模型產生的內容聽起來合理且真實，但實際上是不正確或捏造的，與所描述的營銷文案相匹配。\n資料外洩是指資訊的無意暴露，過度擬合是指模型記憶訓練資料且泛化能力較差，而欠擬合是指模型過於簡單而無法捕捉模式。這些都沒有描述自信地陳述但錯誤的輸出。"
+      }
+    }
   },
   {
     "id": "aif-q180",
@@ -1013,7 +1698,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家公司有一個應用程式，可以從公共來源獲取消費者投訴，並使用複雜的硬編碼規則對其進行處理。該公司希望將這種邏輯擴展到新的市場和產品線。生成式人工智慧模型的哪些優勢適用於這種場景？",
+        "options": {
+          "A": "可預測的產出",
+          "B": "適應性",
+          "C": "對輸入變化的敏感度降低",
+          "D": "可解釋性"
+        },
+        "explanation": "適應性是適用於此的生成式人工智慧優勢：模型可以將學習的模式推廣到新市場和產品線，而無需手動重新配置，從而無需重寫複雜的硬編碼規則。\n可預測的輸出和對輸入變化的敏感度降低並不是生成式人工智慧的優勢，生成式人工智慧具有不確定性並且對輸入措辭敏感。可解釋性與擴展投訴處理邏輯無關。"
+      }
+    }
   },
   {
     "id": "aif-q302",
@@ -1029,7 +1726,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "人工智慧從業者註意到，大型語言模型每次收到相同的輸入時都會返回不同的回應。這描述了人工智慧的哪些風險？",
+        "options": {
+          "A": "幻覺",
+          "B": "非決定論",
+          "C": "準確度",
+          "D": "多模態"
+        },
+        "explanation": "不確定性是大型語言模型可以對同一輸入返回不同回應的屬性，因為它生成文字的方式具有隨機性，與觀察到的行為相符。\n幻覺是捏造的，但似乎是可信的輸出，準確性涉及正確性，多模態是跨文字和圖像等資料類型工作的能力。這些都沒有描述對相同輸入的不同響應。"
+      }
+    }
   },
   {
     "id": "aif-q337",
@@ -1045,7 +1754,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "在生成人工智慧的背景下，什麼是幻覺？",
+        "options": {
+          "A": "模型產生的視覺輸出",
+          "B": "一種模型架構",
+          "C": "作為事實呈現的不正確或捏造的輸出",
+          "D": "一種訓練模型的方法"
+        },
+        "explanation": "幻覺是不正確或捏造的輸出，但模型將其呈現為真實的。\n幻覺不是一種視覺輸出、一種模型架構或一種訓練模型的方法。這些選項描述了不相關的概念。"
+      }
+    }
   },
   {
     "id": "aif-q343",
@@ -1061,7 +1782,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "下列哪一項是生成式人工智慧解決方案的潛在缺點？",
+        "options": {
+          "A": "適應性",
+          "B": "反應能力",
+          "C": "不準確",
+          "D": "簡單性"
+        },
+        "explanation": "不準確是生成式人工智慧的已知缺點，它可能會產生不正確、有偏見或捏造的訊息，需要驗證和人工監督。\n適應性和反應能力是生成式人工智慧的優勢，而簡單性並不是劣勢。這些都不是生成式人工智慧解決方案的缺點。"
+      }
+    }
   },
   {
     "id": "aif-q353",
@@ -1082,7 +1815,19 @@
       "Amazon Rekognition",
       "Amazon Comprehend",
       "Amazon Polly"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家媒體公司希望使用 AWS 開發的基礎模型來產生行銷文案和圖像。哪些 AWS 服務提供由 Amazon 建構的第一方基礎模型？",
+        "options": {
+          "A": "Amazon Rekognition",
+          "B": "Amazon Nova",
+          "C": "Amazon Comprehend",
+          "D": "Amazon Polly"
+        },
+        "explanation": "Amazon Nova 是 AWS 開發的一系列基礎模型，可以產生文字、圖像和其他內容，當公司想要使用第一方 Amazon 建立的基礎模型進行內容生成時，它是合適的選擇。\nAmazon Rekognition 分析影像和影片以進行物件偵測和臉部識別，但不產生內容。 Amazon Comprehend 從文本中提取情緒和實體等見解。 Amazon Polly 將文字轉換為語音。這些都不是亞馬遜建構的生成基礎模型。"
+      }
+    }
   },
   {
     "id": "aif-q376",
@@ -1098,7 +1843,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.1",
     "lastVerified": "2026-06-03",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "開發團隊正在 Amazon Bedrock 上建立客戶支援助理。助理必須記住對話早期的帳戶詳細資訊，參考相關幫助文章，並遵循公司指南。哪個概念描述了管理輸入到基礎模型的所有這些資訊？",
+        "options": {
+          "A": "及時工程",
+          "B": "情境工程",
+          "C": "模型蒸餾",
+          "D": "持續預訓練"
+        },
+        "explanation": "上下文工程是管理在推理時提供給基礎模型的全套資訊的實踐，包括對話歷史記錄、檢索到的文檔、系統指令和任何其他相關資料，以便模型生成準確、基礎的響應，並考慮所有必要的上下文。\n即時工程特別著重於製作指令或查詢文字本身，而情境工程則包含更廣泛的策略，即組裝模型所需的所有相關資訊。模型蒸餾將較大的模型壓縮為較小的模型以提高效率。持續預訓練透過隨著時間的推移對新資料進行訓練來更新模型的知識，而不是透過管理運行時情境。"
+      }
+    }
   },
   {
     "id": "aif-q377",
@@ -1114,7 +1871,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.1",
     "lastVerified": "2026-06-03",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "律師事務所的 Amazon Bedrock 上的 AI 助理必須將從知識庫中檢索到的使用者問題、相關合約條款、公司的合規規則和對話歷史記錄合併到單一模型呼叫中。哪種實踐決定了這些元素的組裝方式和優先順序？",
+        "options": {
+          "A": "微調",
+          "B": "超參數調整",
+          "C": "情境工程",
+          "D": "特徵工程"
+        },
+        "explanation": "情境工程控制所有資訊元素（例如檢索的文件、系統規則、使用者輸入和對話歷史記錄）在傳遞給模型之前如何進行組裝、優先排序和結構化，以確保它具有正確的上下文來準確回答。\n微調使用新的訓練資料更新模型權重，且不控制推理時傳遞的內容。超參數調整調整訓練配置設置，例如學習率和批量大小。特徵工程在 ML 訓練管道期間（而不是在基礎模型的推理時間）將原始資料轉換為模型輸入。"
+      }
+    }
   },
   {
     "id": "aif-q378",
@@ -1130,7 +1899,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.1",
     "lastVerified": "2026-06-03",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "模型上下文協定 (MCP) 在代理 AI 系統中的作用是什麼？",
+        "options": {
+          "A": "它壓縮模型以減少推理延遲",
+          "B": "它提供了一個標準接口，用於將人工智慧代理連接到外部工具和資料來源",
+          "C": "它在訓練期間加密模型權重",
+          "D": "它測量基準資料集上的模型準確性"
+        },
+        "explanation": "模型上下文協定 (MCP) 提供了一個標準化接口，允許 AI 代理以一致的方式連接到外部工具、API 和資料來源，使它們能夠跨不同系統檢索資訊並採取操作，而無需為每個系統進行自訂整合。\n用於減少延遲的模型壓縮描述了量化或蒸餾等技術。加密模型權重是一種由 AWS KMS 等服務處理的安全實務。衡量基準的準確性是模型評估。這些都沒有描述代理到工具連接的協定。"
+      }
+    }
   },
   {
     "id": "aif-q379",
@@ -1146,7 +1927,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.1",
     "lastVerified": "2026-06-03",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家金融服務公司希望多個專業人工智慧代理商就複雜的客戶請求進行協作。一名代理處理帳戶查詢，另一名代理處理交易，第三名檢查合規性。該架構代表了哪種代理人工智慧概念？",
+        "options": {
+          "A": "單一代理強化學習",
+          "B": "多Agent系統模式",
+          "C": "監督分類管道",
+          "D": "批量推理工作流程"
+        },
+        "explanation": "多代理系統模式使用多個專門的 AI 代理進行通訊和協作以處理複雜的任務，每個代理負責特定的功能，例如帳戶查詢、交易或合規性檢查，這與所描述的架構相符。\n單智能體強化學習透過環境獎勵來訓練一個智能體，無需多個智能體之間的協作。監督分類管道為輸入分配標籤，且不涉及代理協作。批量推理工作流程離線批量處理資料，並且沒有多個代理協同工作的概念。"
+      }
+    }
   },
   {
     "id": "aif-q380",
@@ -1162,7 +1955,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.1",
     "lastVerified": "2026-06-03",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "人工智慧代理商在幾天內的多個會話中協助醫療保健研究人員。代理需要回憶先前會話的結果以避免重複工作。哪種代理人工智慧功能可以實現這一點？",
+        "options": {
+          "A": "工具使用",
+          "B": "記憶體管理",
+          "C": "工作流程編排",
+          "D": "模型預訓練"
+        },
+        "explanation": "代理人工智慧中的記憶體管理允許代理跨會話保存和檢索資訊，因此它可以回憶以前的發現，避免冗餘工作，並隨著時間的推移以過去的交互為基礎。\n工具的使用使代理程式能夠呼叫外部 API 和服務，但不處理儲存和檢索過去的互動歷史記錄。工作流程編排協調代理人採取的步驟順序，但不解決長期記憶問題。模型預訓練在初始訓練期間建立基礎模型的知識，而不是記住單一使用者會話的能力。"
+      }
+    }
   },
   {
     "id": "aif-q381",
@@ -1183,7 +1988,19 @@
       "Amazon Personalize",
       "Amazon Comprehend",
       "Amazon Lex"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家新創公司希望使用開源 Python SDK 建立自訂 AI 代理，該 SDK 支援工具使用、多代理編排以及與多個模型提供者的整合。哪種 AWS 服務符合此要求？",
+        "options": {
+          "A": "Amazon Personalize",
+          "B": "Amazon Comprehend",
+          "C": "股線代理商",
+          "D": "Amazon Lex"
+        },
+        "explanation": "Strands Agents 是 AWS 的開源 Python SDK，讓開發人員能夠透過工具使用、多代理編排以及與不同模型供應商合作的靈活性來建立 AI 代理，這符合新創公司的需求。\nAmazon Personalize 根據使用者行為資料產生建議。 Amazon Comprehend 執行情緒分析等自然語言處理任務。 Amazon Lex 建立對話式聊天機器人和語音介面。這些都沒有提供開源 SDK 用於建立具有多代理編排的自訂 AI 代理程式。"
+      }
+    }
   },
   {
     "id": "aif-q382",
@@ -1204,7 +2021,19 @@
       "Amazon SageMaker Canvas",
       "Amazon Kendra",
       "Amazon Polly"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "企業希望託管基礎設施能夠在生產中部署、擴展和監控其 AI 代理，而無需處理底層運算和網路。哪種 AWS 服務符合此要求？",
+        "options": {
+          "A": "Amazon Bedrock AgentCore",
+          "B": "Amazon SageMaker Canvas",
+          "C": "Amazon Kendra",
+          "D": "Amazon Polly"
+        },
+        "explanation": "Amazon Bedrock AgentCore 提供託管基礎設施，用於在生產中部署、擴展和監控 AI 代理，處理運算、網路和營運問題，以便企業可以專注於代理邏輯而不是基礎設施管理。\nAmazon SageMaker Canvas 是用於建構 ML 模型的無程式碼介面。 Amazon Kendra 提供智慧企業搜尋。 Amazon Polly 將文字轉換為語音。這些都沒有提供專門用於在生產中運行人工智慧代理的託管基礎設施。"
+      }
+    }
   },
   {
     "id": "aif-q383",
@@ -1220,7 +2049,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.1",
     "lastVerified": "2026-06-03",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家旅行社建立了一個 AI 代理，可以透過呼叫航空公司的 API 來搜尋航班可用性、預訂機票並處理付款。哪種代理人工智慧功能允許代理與這些外部系統互動？",
+        "options": {
+          "A": "記憶體管理",
+          "B": "工具使用",
+          "C": "模型微調",
+          "D": "提示快取"
+        },
+        "explanation": "工具使用是代理人工智慧功能，允許代理調用外部 API、服務和系統來檢索資訊或採取操作，這就是旅行社透過航空公司的 API 搜尋航班、預訂機票和處理付款的方式。\n記憶體管理在互動過程中儲存和檢索訊息，但不呼叫外部系統。模型微調在訓練期間更新模型權重，而不是啟用運行時 API 呼叫。提示快取儲存常用的提示以提高效率，但不與外部系統互動。"
+      }
+    }
   },
   {
     "id": "aif-q437",
@@ -1238,7 +2079,19 @@
     "lastVerified": "2026-06-03",
     "services": [
       "Amazon Bedrock"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家公司使用 Amazon Bedrock 作為客戶支援聊天機器人，並注意到成本增加。團隊發現每個提示中都包含完整的對話歷史記錄。基於代幣的定價模型的哪個方面解釋了這一點？",
+        "options": {
+          "A": "成本基於 API 呼叫次數，無論內容為何",
+          "B": "成本隨著每個請求處理的輸入和輸出令牌總數的增加而增加",
+          "C": "成本由模型處理每個請求所花費的時間決定",
+          "D": "成本取決於同時使用者數"
+        },
+        "explanation": "基於令牌的定價對每個請求中處理的輸入和輸出令牌總數進行收費，因此包含長對話歷史記錄會增加每次呼叫的輸入令牌數量，並直接提高成本。\nAmazon Bedrock 無論內容為何，都不對每次 API 呼叫收取固定費用。定價不基於處理時間或並髮使用者數；它基於代幣數量。"
+      }
+    }
   },
   {
     "id": "aif-q438",
@@ -1254,7 +2107,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.1",
     "lastVerified": "2026-06-03",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "使用基礎模型時，降低最大輸出代幣限制如何影響成本和效能？",
+        "options": {
+          "A": "它增加了成本，但對回應時間沒有影響",
+          "B": "它降低了成本並可以縮短響應時間",
+          "C": "它對成本或回應時間沒有影響",
+          "D": "它增加了響應時間但降低了成本"
+        },
+        "explanation": "減少最大輸出令牌限制意味著每個請求產生的令牌更少，這直接降低了基於令牌的定價下的成本，並且還可以減少回應時間，因為模型產生的輸出更少。\n輸出代幣越少意味著支付的費用就越少，因此成本不會增加。輸出代幣直接影響計費和生成時間，因此有效果。產生更少的代幣會更快，而不是更慢。"
+      }
+    }
   },
   {
     "id": "aif-q439",
@@ -1272,7 +2137,19 @@
     "lastVerified": "2026-06-03",
     "services": [
       "Amazon Bedrock"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家沒有機器學習基礎架構的新創公司希望快速推出生成式人工智慧功能。使用 AWS GenAI 服務（例如 Amazon Bedrock）的哪些優點最相關？",
+        "options": {
+          "A": "新創公司必須從頭開始訓練自己的基礎模型",
+          "B": "AWS GenAI 服務透過提供預先訓練的基礎模型的託管存取權來降低進入門檻",
+          "C": "AWS GenAI 服務需要啟動來管理 GPU 集群",
+          "D": "AWS GenAI服務僅適用於企業客戶"
+        },
+        "explanation": "AWS GenAI 等服務透過 API 提供對預先訓練的基礎模型的託管存取，無需訓練模型、管理基礎設施或採購 GPU，從而降低了進入門檻，讓新創公司能夠快速啟動。\n新創公司不需要訓練自己的模型，因為可以使用預先訓練的模型。 AWS 管理基礎設施，因此新創公司無需管理 GPU 叢集。這些服務適用於所有客戶，而不僅僅是企業。"
+      }
+    }
   },
   {
     "id": "aif-q440",
@@ -1288,7 +2165,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.3",
     "lastVerified": "2026-06-03",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家醫療保健公司正在評估是否在 AWS 上建立其生成式 AI 應用程式。對於這個受監管的產業來說，AWS 基礎架構的哪些優勢最重要？",
+        "options": {
+          "A": "AWS 在全球範圍內提供盡可能最低的推理延遲",
+          "B": "AWS 基礎架構提供內建安全性、合規性認證和資料保護控制",
+          "C": "AWS 保證 AI 模型永遠不會產生錯誤的輸出",
+          "D": "AWS 無需任何資料治理策略"
+        },
+        "explanation": "AWS 基礎設施提供安全控制、合規性認證（例如 HIPAA 資格）和資料保護功能，醫療保健等受監管行業需要這些功能來負責任地部署 AI 應用程式並履行法律義務。\n沒有提供者能夠保證在所有情況下全球最低延遲。沒有人工智慧系統可以保證它永遠不會產生錯誤的輸出。 AWS 並沒有消除資料治理的需要；組織仍必須執行自己的政策。"
+      }
+    }
   },
   {
     "id": "aif-q441",
@@ -1304,7 +2193,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.2",
     "lastVerified": "2026-06-03",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家零售公司六個月前部署了生成式人工智慧聊天機器人，並希望衡量其商業價值。哪個指標最能顯示聊天機器人對收入的影響？",
+        "options": {
+          "A": "模型參數個數",
+          "B": "每個使用者的平均收入",
+          "C": "訓練紀元數",
+          "D": "推理延遲"
+        },
+        "explanation": "每個使用者的平均收入衡量每個客戶產生的財務價值，因此追蹤部署聊天機器人後是否增加可以直接表明聊天機器人的收入影響。\n模型參數計數描述了模型大小。訓練紀元數是訓練配置細節。推理延遲衡量反應速度。這些都沒有反映收入影響。"
+      }
+    }
   },
   {
     "id": "aif-q442",
@@ -1320,7 +2221,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.2",
     "lastVerified": "2026-06-03",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家公司使用生成式人工智慧助理來幫助其支援團隊，並希望衡量營運效率的提升。它應該追蹤哪個指標？",
+        "options": {
+          "A": "胭脂分數",
+          "B": "效率以每個案件的平均處理時間的減少來衡量",
+          "C": "BERT評分",
+          "D": "模型困惑度"
+        },
+        "explanation": "每個案例平均處理時間的減少直接衡量代理商在 AI 助理的幫助下解決問題的速度有多快，這是 GenAI 應用程式的營運效率增益和商業價值指標。\nROUGE 和 BERTScore 根據參考來衡量產生的文本品質。模型困惑度衡量語言建模的契合度。這些都無法體現營運效率。"
+      }
+    }
   },
   {
     "id": "aif-q443",
@@ -1336,7 +2249,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.1",
     "lastVerified": "2026-06-03",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "基礎模型生命週期的哪個階段涉及選擇正確的資料來源並在任何模型訓練開始之前準備它們？",
+        "options": {
+          "A": "部署",
+          "B": "評價",
+          "C": "資料選擇",
+          "D": "回饋意見"
+        },
+        "explanation": "資料選擇是基礎模型生命週期的第一階段，在預訓練開始之前識別和管理適當的資料來源。所選資料的品質和廣度直接決定模型的學習內容。\n部署是後期階段，訓練後的模型可用於推理。評估評估訓練後的模型表現。回饋是使用者互動告知改進的最後階段。"
+      }
+    }
   },
   {
     "id": "aif-q450",
@@ -1352,7 +2277,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.2",
     "lastVerified": "2026-06-03",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家公司投資了生成式人工智慧解決方案來自動編寫報告。哪個指標最能衡量這項投資是否帶來了財務價值？",
+        "options": {
+          "A": "投資報酬率（ROI）",
+          "B": "模型精度",
+          "C": "模型參數數量",
+          "D": "訓練資料量"
+        },
+        "explanation": "投資回報率（ROI）衡量人工智慧解決方案的經濟效益（例如節省勞動力和更快的產出）是否超過建立和運行該解決方案的成本，這直接表明投資是否帶來了財務價值。\n模型準確性衡量的是預測質量，而不是財務回報。參數數量和訓練資料量是與商業價值無關的技術細節。"
+      }
+    }
   },
   {
     "id": "aif-q459",
@@ -1374,7 +2311,19 @@
     "isMultiAnswer": false,
     "taskStatement": "2.3",
     "lastVerified": "2026-06-13",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一個團隊正在 AWS 上建立檢索增強生成 (RAG) 應用程式，以在其內部文件中建立基礎模型。從頭到尾安排準備和查詢知識庫的步驟。",
+        "options": {
+          "A": "使用嵌入模型將每個文字區塊轉換為數值向量嵌入",
+          "B": "檢索與使用者問題最相關的區塊並將其傳遞給基礎模型以產生有根據的答案",
+          "C": "從資料儲存中提取來源文件並將其分割成更小的文字區塊",
+          "D": "將嵌入儲存在向量資料庫中，以便可以透過相似性搜尋它們"
+        },
+        "explanation": "RAG 首先攝取來源文件並將其分割成更小的區塊，然後將每個區塊轉換為向量嵌入，然後將這些嵌入儲存在支援相似性搜尋的向量資料庫中。只有在知識庫被索引之後，應用程式才能在查詢時檢索與使用者問題最相關的區塊，並將它們提供給基礎模型以產生有根據的答案。\n關鍵思想是索引預先發生一次，而檢索發生在每個查詢上，因此儲存嵌入必須在任何搜尋之前進行。一個誘人的錯誤是在嵌入和儲存之前進行檢索，但是在區塊被嵌入和索引之前您無法透過相似性進行搜尋。"
+      }
+    }
   },
   {
     "id": "aif-q460",
@@ -1406,6 +2355,24 @@
       "Amazon Bedrock",
       "Amazon SageMaker JumpStart",
       "Amazon Q Business"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "將每個 AWS 生成式 AI 產品與其設計的主要目的相匹配。將左側的每項服務與右側的正確描述配對。",
+        "options": {
+          "A": "Amazon Bedrock",
+          "B": "Amazon SageMaker JumpStart",
+          "C": "Amazon Q Business",
+          "D": "派對搖滾"
+        },
+        "explanation": "Amazon Bedrock 提供對來自多個提供者的基礎模型的無伺服器 API 存取，SageMaker JumpStart 是預構建模型和解決方案模板的中心，可供從業者部署和微調，Amazon Q Business 是一個管理助理，可供從業者部署和微調，Amazon Q Business 是一個管理助理，用於對連接性企業的推理\n將每個名稱與其用途相匹配可以確定其運行的級別，從原始模型 API 到成品助手。一個常見的錯誤是將 Bedrock 和 SageMaker JumpStart 視為可互換的，但 Bedrock 是對託管模型的 API 優先存取，而 JumpStart 針對的是想要自行部署和自定義模型的 ML 模型的 API 優先存取，而 JumpStart 針對的是想要自行部署和自定義模型的 ML 模型。",
+        "targets": {
+          "1": "一個無程式碼遊樂場，用於建立和共享小型生成式 AI 應用程式，無需 AWS 帳戶",
+          "2": "對來自多個提供者的基礎模型進行統一 API 存取，用於建立生成式 AI 應用程式",
+          "3": "託管產生人工智慧助手，可回答有關公司互聯企業資料和文件的問題",
+          "4": "機器學習從業者可以部署和微調的預先建置基礎模型和解決方案範本的中心"
+        }
+      }
+    }
   }
 ]

@@ -13,7 +13,19 @@
     "isMultiAnswer": false,
     "explanation": "SNS provides a managed publish and subscribe fanout pattern for application events.\nThe other choices do not deliver application messages to independent subscribers.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "生產團隊需要應用程式程式碼中鬆散耦合的通知扇出模式。 SDK應該呼叫哪個服務？",
+        "options": {
+          "A": "輪換 KMS 金鑰",
+          "B": "將活動發佈到 Amazon SNS 主題",
+          "C": "直接寫入隨機 EC2 磁碟",
+          "D": "建立 Route 53 運轉狀況檢查"
+        },
+        "explanation": "SNS 為應用程式事件提供託管的發布和訂閱扇出模式。\n其他選擇不會將應用程式訊息傳遞給獨立訂閱者。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-002",
@@ -29,7 +41,19 @@
     "isMultiAnswer": false,
     "explanation": "Asynchronous invocation returns control to the caller and Lambda manages retries and destinations.\nThe other choices do not provide asynchronous Lambda processing.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "多帳戶平台團隊需要非同步呼叫 Lambda 函數並在不阻塞呼叫者的情況下處理故障。適合哪種呼叫方式？",
+        "options": {
+          "A": "DNS 查詢",
+          "B": "S3 生命週期過渡",
+          "C": "異步 Lambda 調用",
+          "D": "等待完成的同步調用"
+        },
+        "explanation": "非同步呼叫將控制權傳回給呼叫者，Lambda 管理重試和目標。\n其他選擇不提供非同步 Lambda 處理。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-003",
@@ -45,7 +69,19 @@
     "isMultiAnswer": false,
     "explanation": "DynamoDB Query uses a partition key to read matching items efficiently.\nScan reads every item and the other APIs target unrelated services.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "受監管的公司需要一個僅讀取一個分區鍵的項目的 DynamoDB 查詢。程式碼應該使用哪個操作？",
+        "options": {
+          "A": "掃描",
+          "B": "描述執行個體",
+          "C": "列表桶",
+          "D": "查詢"
+        },
+        "explanation": "DynamoDB 查詢使用分區鍵來有效讀取符合的項目。\nScan 讀取每個項目，其他 API 則針對不相關的服務。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-004",
@@ -61,7 +97,19 @@
     "isMultiAnswer": false,
     "explanation": "ElastiCache provides managed in-memory caching for suitable application data.\nThe other choices provide compliance reports, email, or configuration evaluation.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備增加流量的新創公司必須以低延遲快取頻繁讀取的應用程式資料。程式碼應該整合哪些服務？",
+        "options": {
+          "A": "Amazon ElastiCache",
+          "B": "AWS Artifact",
+          "C": "Amazon SES",
+          "D": "AWS Config"
+        },
+        "explanation": "ElastiCache 為合適的應用程式資料提供託管記憶體快取。\n其他選項提供合規性報告、電子郵件或設定評估。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-005",
@@ -77,7 +125,19 @@
     "isMultiAnswer": false,
     "explanation": "Roles and temporary credentials avoid long-lived secrets in application code and images.\nEmbedding keys or using public access creates security risk.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "支援關鍵工作負載的營運團隊需要呼叫 AWS API，而無需在應用程式程式碼中儲存長期金鑰。哪種方法最好？",
+        "options": {
+          "A": "將憑證放入容器鏡像中",
+          "B": "透過 SDK 使用 IAM Roles和臨時憑證",
+          "C": "嵌入根存取密鑰",
+          "D": "公開API"
+        },
+        "explanation": "角色和臨時憑證避免了應用程式程式碼和圖像中長期存在的秘密。\n嵌入金鑰或使用公共存取會產生安全風險。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-006",
@@ -93,7 +153,19 @@
     "isMultiAnswer": false,
     "explanation": "SNS provides a managed publish and subscribe fanout pattern for application events.\nThe other choices do not deliver application messages to independent subscribers.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "資料平台團隊需要應用程式程式碼中鬆散耦合的通知扇出模式。 SDK應該呼叫哪個服務？",
+        "options": {
+          "A": "建立 Route 53 運轉狀況檢查",
+          "B": "輪換 KMS 金鑰",
+          "C": "將活動發佈到 Amazon SNS 主題",
+          "D": "直接寫入隨機 EC2 磁碟"
+        },
+        "explanation": "SNS 為應用程式事件提供託管的發布和訂閱扇出模式。\n其他選擇不會將應用程式訊息傳遞給獨立訂閱者。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-007",
@@ -109,7 +181,19 @@
     "isMultiAnswer": false,
     "explanation": "Asynchronous invocation returns control to the caller and Lambda manages retries and destinations.\nThe other choices do not provide asynchronous Lambda processing.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有安全意識的工程團隊需要非同步呼叫 Lambda 函數並在不阻止呼叫者的情況下處理故障。適合哪種呼叫方式？",
+        "options": {
+          "A": "等待完成的同步調用",
+          "B": "DNS 查詢",
+          "C": "S3 生命週期過渡",
+          "D": "異步 Lambda 調用"
+        },
+        "explanation": "非同步呼叫將控制權傳回給呼叫者，Lambda 管理重試和目標。\n其他選擇不提供非同步 Lambda 處理。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-008",
@@ -125,7 +209,19 @@
     "isMultiAnswer": false,
     "explanation": "DynamoDB Query uses a partition key to read matching items efficiently.\nScan reads every item and the other APIs target unrelated services.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "遷移現有工作負載的公司需要一個僅讀取一個分區鍵的項目的 DynamoDB 查詢。程式碼應該使用哪個操作？",
+        "options": {
+          "A": "查詢",
+          "B": "掃描",
+          "C": "描述執行個體",
+          "D": "列表桶"
+        },
+        "explanation": "DynamoDB 查詢使用分區鍵來有效讀取符合的項目。\nScan 讀取每個項目，其他 API 則針對不相關的服務。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-009",
@@ -141,7 +237,19 @@
     "isMultiAnswer": false,
     "explanation": "ElastiCache provides managed in-memory caching for suitable application data.\nThe other choices provide compliance reports, email, or configuration evaluation.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有嚴格恢復目標的團隊必須以低延遲快取頻繁讀取的應用程式資料。程式碼應該整合哪些服務？",
+        "options": {
+          "A": "AWS Config",
+          "B": "Amazon ElastiCache",
+          "C": "AWS Artifact",
+          "D": "Amazon SES"
+        },
+        "explanation": "ElastiCache 為合適的應用程式資料提供託管記憶體快取。\n其他選項提供合規性報告、電子郵件或設定評估。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-010",
@@ -157,7 +265,19 @@
     "isMultiAnswer": false,
     "explanation": "Roles and temporary credentials avoid long-lived secrets in application code and images.\nEmbedding keys or using public access creates security risk.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備發布的開發團隊需要呼叫 AWS API，而無需在應用程式程式碼中儲存長期金鑰。哪種方法最好？",
+        "options": {
+          "A": "公開API",
+          "B": "將憑證放入容器鏡像中",
+          "C": "透過 SDK 使用 IAM Roles和臨時憑證",
+          "D": "嵌入根存取密鑰"
+        },
+        "explanation": "角色和臨時憑證避免了應用程式程式碼和圖像中長期存在的秘密。\n嵌入金鑰或使用公共存取會產生安全風險。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-011",
@@ -173,7 +293,19 @@
     "isMultiAnswer": false,
     "explanation": "SNS provides a managed publish and subscribe fanout pattern for application events.\nThe other choices do not deliver application messages to independent subscribers.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "擁有多個 AWS 區域的企業需要來自應用程式程式碼的鬆散耦合的通知扇出模式。 SDK應該呼叫哪個服務？",
+        "options": {
+          "A": "直接寫入隨機 EC2 磁碟",
+          "B": "建立 Route 53 運轉狀況檢查",
+          "C": "輪換 KMS 金鑰",
+          "D": "將活動發佈到 Amazon SNS 主題"
+        },
+        "explanation": "SNS 為應用程式事件提供託管的發布和訂閱扇出模式。\n其他選擇不會將應用程式訊息傳遞給獨立訂閱者。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-012",
@@ -189,7 +321,19 @@
     "isMultiAnswer": false,
     "explanation": "Asynchronous invocation returns control to the caller and Lambda manages retries and destinations.\nThe other choices do not provide asynchronous Lambda processing.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "審查事件的服務擁有者需要非同步呼叫 Lambda 函數並在不阻止呼叫者的情況下處理故障。適合哪種呼叫方式？",
+        "options": {
+          "A": "異步 Lambda 調用",
+          "B": "等待完成的同步調用",
+          "C": "DNS 查詢",
+          "D": "S3 生命週期過渡"
+        },
+        "explanation": "非同步呼叫將控制權傳回給呼叫者，Lambda 管理重試和目標。\n其他選擇不提供非同步 Lambda 處理。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-013",
@@ -205,7 +349,19 @@
     "isMultiAnswer": false,
     "explanation": "DynamoDB Query uses a partition key to read matching items efficiently.\nScan reads every item and the other APIs target unrelated services.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "優化現有實作的團隊需要一個只讀取一個分割區鍵的專案的 DynamoDB 查詢。程式碼應該使用哪個操作？",
+        "options": {
+          "A": "列表桶",
+          "B": "查詢",
+          "C": "掃描",
+          "D": "描述執行個體"
+        },
+        "explanation": "DynamoDB 查詢使用分區鍵來有效讀取符合的項目。\nScan 讀取每個項目，其他 API 則針對不相關的服務。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-014",
@@ -221,7 +377,19 @@
     "isMultiAnswer": false,
     "explanation": "ElastiCache provides managed in-memory caching for suitable application data.\nThe other choices provide compliance reports, email, or configuration evaluation.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "引入自動化工作流程的公司必須以低延遲快取頻繁讀取的應用程式資料。程式碼應該整合哪些服務？",
+        "options": {
+          "A": "Amazon SES",
+          "B": "AWS Config",
+          "C": "Amazon ElastiCache",
+          "D": "AWS Artifact"
+        },
+        "explanation": "ElastiCache 為合適的應用程式資料提供託管記憶體快取。\n其他選項提供合規性報告、電子郵件或設定評估。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-015",
@@ -237,7 +405,19 @@
     "isMultiAnswer": false,
     "explanation": "Roles and temporary credentials avoid long-lived secrets in application code and images.\nEmbedding keys or using public access creates security risk.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "在共享環境中工作的 AWS 管理員需要呼叫 AWS API，而無需在應用程式程式碼中儲存長期金鑰。哪種方法最好？",
+        "options": {
+          "A": "嵌入根存取密鑰",
+          "B": "公開 API",
+          "C": "將憑證放入容器鏡像中",
+          "D": "透過 SDK 使用 IAM Roles和臨時憑證"
+        },
+        "explanation": "角色和臨時憑證避免了應用程式程式碼和圖像中長期存在的秘密。\n嵌入金鑰或使用公共存取會產生安全風險。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-016",
@@ -253,7 +433,19 @@
     "isMultiAnswer": false,
     "explanation": "SNS provides a managed publish and subscribe fanout pattern for application events.\nThe other choices do not deliver application messages to independent subscribers.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "面向客戶的應用程式團隊需要應用程式程式碼中鬆散耦合的通知扇出模式。 SDK應該呼叫哪個服務？",
+        "options": {
+          "A": "將活動發佈到 Amazon SNS 主題",
+          "B": "直接寫入隨機 EC2 磁碟",
+          "C": "建立 Route 53 運轉狀況檢查",
+          "D": "輪換 KMS 金鑰"
+        },
+        "explanation": "SNS 為應用程式事件提供託管的發布和訂閱扇出模式。\n其他選擇不會將應用程式訊息傳遞給獨立訂閱者。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-017",
@@ -269,7 +461,19 @@
     "isMultiAnswer": false,
     "explanation": "Asynchronous invocation returns control to the caller and Lambda manages retries and destinations.\nThe other choices do not provide asynchronous Lambda processing.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "標準化其 AWS 部署的平台團隊需要非同步呼叫 Lambda 函數並在不阻止呼叫者的情況下處理故障。適合哪種呼叫方式？",
+        "options": {
+          "A": "S3 生命週期過渡",
+          "B": "異步 Lambda 調用",
+          "C": "等待完成的同步調用",
+          "D": "DNS 查詢"
+        },
+        "explanation": "非同步呼叫將控制權傳回給呼叫者，Lambda 管理重試和目標。\n其他選擇不提供非同步 Lambda 處理。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-018",
@@ -285,7 +489,19 @@
     "isMultiAnswer": false,
     "explanation": "DynamoDB Query uses a partition key to read matching items efficiently.\nScan reads every item and the other APIs target unrelated services.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "為審計準備證據的團隊需要一個僅讀取一個分區鍵的項目的 DynamoDB 查詢。程式碼應該使用哪個操作？",
+        "options": {
+          "A": "描述執行個體",
+          "B": "列表桶",
+          "C": "查詢",
+          "D": "掃描"
+        },
+        "explanation": "DynamoDB 查詢使用分區鍵來有效讀取符合的項目。\nScan 讀取每個項目，其他 API 則針對不相關的服務。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-019",
@@ -301,7 +517,19 @@
     "isMultiAnswer": false,
     "explanation": "ElastiCache provides managed in-memory caching for suitable application data.\nThe other choices provide compliance reports, email, or configuration evaluation.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "取代手動流程的企業必須以低延遲快取頻繁讀取的應用程式資料。程式碼應該整合哪些服務？",
+        "options": {
+          "A": "AWS Artifact",
+          "B": "Amazon SES",
+          "C": "AWS Config",
+          "D": "Amazon ElastiCache"
+        },
+        "explanation": "ElastiCache 為合適的應用程式資料提供託管記憶體快取。\n其他選項提供合規性報告、電子郵件或設定評估。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-020",
@@ -317,7 +545,19 @@
     "isMultiAnswer": false,
     "explanation": "Roles and temporary credentials avoid long-lived secrets in application code and images.\nEmbedding keys or using public access creates security risk.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "根據考試指南驗證設計的團隊需要呼叫 AWS API，而無需在應用程式程式碼中儲存長期金鑰。哪種方法最好？",
+        "options": {
+          "A": "透過 SDK 使用 IAM Roles和臨時憑證",
+          "B": "嵌入根存取密鑰",
+          "C": "公開API",
+          "D": "將憑證放入容器鏡像中"
+        },
+        "explanation": "角色和臨時憑證避免了應用程式程式碼和圖像中長期存在的秘密。\n嵌入金鑰或使用公共存取會產生安全風險。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-021",
@@ -333,7 +573,19 @@
     "isMultiAnswer": false,
     "explanation": "SNS provides a managed publish and subscribe fanout pattern for application events.\nThe other choices do not deliver application messages to independent subscribers.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "生產團隊需要應用程式程式碼中鬆散耦合的通知扇出模式。 SDK應該呼叫哪個服務？",
+        "options": {
+          "A": "輪換 KMS 金鑰",
+          "B": "將活動發佈到 Amazon SNS 主題",
+          "C": "直接寫入隨機 EC2 磁碟",
+          "D": "建立 Route 53 運轉狀況檢查"
+        },
+        "explanation": "SNS 為應用程式事件提供託管的發布和訂閱扇出模式。\n其他選擇不會將應用程式訊息傳遞給獨立訂閱者。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-022",
@@ -349,7 +601,19 @@
     "isMultiAnswer": false,
     "explanation": "Asynchronous invocation returns control to the caller and Lambda manages retries and destinations.\nThe other choices do not provide asynchronous Lambda processing.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "多帳戶平台團隊需要非同步呼叫 Lambda 函數並在不阻塞呼叫者的情況下處理故障。適合哪種呼叫方式？",
+        "options": {
+          "A": "DNS 查詢",
+          "B": "S3 生命週期過渡",
+          "C": "異步 Lambda 調用",
+          "D": "等待完成的同步調用"
+        },
+        "explanation": "非同步呼叫將控制權傳回給呼叫者，Lambda 管理重試和目標。\n其他選擇不提供非同步 Lambda 處理。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-023",
@@ -365,7 +629,19 @@
     "isMultiAnswer": false,
     "explanation": "DynamoDB Query uses a partition key to read matching items efficiently.\nScan reads every item and the other APIs target unrelated services.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "受監管的公司需要一個僅讀取一個分區鍵的項目的 DynamoDB 查詢。程式碼應該使用哪個操作？",
+        "options": {
+          "A": "掃描",
+          "B": "描述執行個體",
+          "C": "列表桶",
+          "D": "查詢"
+        },
+        "explanation": "DynamoDB 查詢使用分區鍵來有效讀取符合的項目。\nScan 讀取每個項目，其他 API 則針對不相關的服務。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-024",
@@ -381,7 +657,19 @@
     "isMultiAnswer": false,
     "explanation": "ElastiCache provides managed in-memory caching for suitable application data.\nThe other choices provide compliance reports, email, or configuration evaluation.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備增加流量的新創公司必須以低延遲快取頻繁讀取的應用程式資料。程式碼應該整合哪些服務？",
+        "options": {
+          "A": "Amazon ElastiCache",
+          "B": "AWS Artifact",
+          "C": "Amazon SES",
+          "D": "AWS Config"
+        },
+        "explanation": "ElastiCache 為合適的應用程式資料提供託管記憶體快取。\n其他選項提供合規性報告、電子郵件或設定評估。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-025",
@@ -397,7 +685,19 @@
     "isMultiAnswer": false,
     "explanation": "Roles and temporary credentials avoid long-lived secrets in application code and images.\nEmbedding keys or using public access creates security risk.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "支援關鍵工作負載的營運團隊需要呼叫 AWS API，而無需在應用程式程式碼中儲存長期金鑰。哪種方法最好？",
+        "options": {
+          "A": "將憑證放入容器鏡像中",
+          "B": "透過 SDK 使用 IAM Roles和臨時憑證",
+          "C": "嵌入根存取密鑰",
+          "D": "公開API"
+        },
+        "explanation": "角色和臨時憑證避免了應用程式程式碼和圖像中長期存在的秘密。\n嵌入金鑰或使用公共存取會產生安全風險。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-026",
@@ -413,7 +713,19 @@
     "isMultiAnswer": false,
     "explanation": "SNS provides a managed publish and subscribe fanout pattern for application events.\nThe other choices do not deliver application messages to independent subscribers.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "資料平台團隊需要應用程式程式碼中鬆散耦合的通知扇出模式。 SDK應該呼叫哪個服務？",
+        "options": {
+          "A": "建立 Route 53 運轉狀況檢查",
+          "B": "輪換 KMS 金鑰",
+          "C": "將活動發佈到 Amazon SNS 主題",
+          "D": "直接寫入隨機 EC2 磁碟"
+        },
+        "explanation": "SNS 為應用程式事件提供託管的發布和訂閱扇出模式。\n其他選擇不會將應用程式訊息傳遞給獨立訂閱者。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-027",
@@ -429,7 +741,19 @@
     "isMultiAnswer": false,
     "explanation": "Asynchronous invocation returns control to the caller and Lambda manages retries and destinations.\nThe other choices do not provide asynchronous Lambda processing.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有安全意識的工程團隊需要非同步呼叫 Lambda 函數並在不阻止呼叫者的情況下處理故障。適合哪種呼叫方式？",
+        "options": {
+          "A": "等待完成的同步調用",
+          "B": "DNS 查詢",
+          "C": "S3 生命週期過渡",
+          "D": "異步 Lambda 調用"
+        },
+        "explanation": "非同步呼叫將控制權傳回給呼叫者，Lambda 管理重試和目標。\n其他選擇不提供非同步 Lambda 處理。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-028",
@@ -445,7 +769,19 @@
     "isMultiAnswer": false,
     "explanation": "DynamoDB Query uses a partition key to read matching items efficiently.\nScan reads every item and the other APIs target unrelated services.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "遷移現有工作負載的公司需要一個僅讀取一個分區鍵的項目的 DynamoDB 查詢。程式碼應該使用哪個操作？",
+        "options": {
+          "A": "查詢",
+          "B": "掃描",
+          "C": "描述執行個體",
+          "D": "列表桶"
+        },
+        "explanation": "DynamoDB 查詢使用分區鍵來有效讀取符合的項目。\nScan 讀取每個項目，其他 API 則針對不相關的服務。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-029",
@@ -461,7 +797,19 @@
     "isMultiAnswer": false,
     "explanation": "ElastiCache provides managed in-memory caching for suitable application data.\nThe other choices provide compliance reports, email, or configuration evaluation.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有嚴格恢復目標的團隊必須以低延遲快取頻繁讀取的應用程式資料。程式碼應該整合哪些服務？",
+        "options": {
+          "A": "AWS Config",
+          "B": "Amazon ElastiCache",
+          "C": "AWS Artifact",
+          "D": "Amazon SES"
+        },
+        "explanation": "ElastiCache 為合適的應用程式資料提供託管記憶體快取。\n其他選項提供合規性報告、電子郵件或設定評估。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-030",
@@ -477,7 +825,19 @@
     "isMultiAnswer": false,
     "explanation": "Roles and temporary credentials avoid long-lived secrets in application code and images.\nEmbedding keys or using public access creates security risk.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備發布的開發團隊需要呼叫 AWS API，而無需在應用程式程式碼中儲存長期金鑰。哪種方法最好？",
+        "options": {
+          "A": "公開API",
+          "B": "將憑證放入容器鏡像中",
+          "C": "透過 SDK 使用 IAM Roles和臨時憑證",
+          "D": "嵌入根存取密鑰"
+        },
+        "explanation": "角色和臨時憑證避免了應用程式程式碼和圖像中長期存在的秘密。\n嵌入金鑰或使用公共存取會產生安全風險。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-031",
@@ -493,7 +853,19 @@
     "isMultiAnswer": false,
     "explanation": "SNS provides a managed publish and subscribe fanout pattern for application events.\nThe other choices do not deliver application messages to independent subscribers.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "擁有多個 AWS 區域的企業需要來自應用程式程式碼的鬆散耦合的通知扇出模式。 SDK應該呼叫哪個服務？",
+        "options": {
+          "A": "直接寫入隨機 EC2 磁碟",
+          "B": "建立 Route 53 運轉狀況檢查",
+          "C": "輪換 KMS 金鑰",
+          "D": "將活動發佈到 Amazon SNS 主題"
+        },
+        "explanation": "SNS 為應用程式事件提供託管的發布和訂閱扇出模式。\n其他選擇不會將應用程式訊息傳遞給獨立訂閱者。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-032",
@@ -509,7 +881,19 @@
     "isMultiAnswer": false,
     "explanation": "Asynchronous invocation returns control to the caller and Lambda manages retries and destinations.\nThe other choices do not provide asynchronous Lambda processing.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "審查事件的服務擁有者需要非同步呼叫 Lambda 函數並在不阻止呼叫者的情況下處理故障。適合哪種呼叫方式？",
+        "options": {
+          "A": "異步 Lambda 調用",
+          "B": "等待完成的同步調用",
+          "C": "DNS 查詢",
+          "D": "S3 生命週期過渡"
+        },
+        "explanation": "非同步呼叫將控制權傳回給呼叫者，Lambda 管理重試和目標。\n其他選擇不提供非同步 Lambda 處理。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-033",
@@ -525,7 +909,19 @@
     "isMultiAnswer": false,
     "explanation": "DynamoDB Query uses a partition key to read matching items efficiently.\nScan reads every item and the other APIs target unrelated services.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "優化現有實作的團隊需要一個只讀取一個分割區鍵的專案的 DynamoDB 查詢。程式碼應該使用哪個操作？",
+        "options": {
+          "A": "列表桶",
+          "B": "查詢",
+          "C": "掃描",
+          "D": "描述執行個體"
+        },
+        "explanation": "DynamoDB 查詢使用分區鍵來有效讀取符合的項目。\nScan 讀取每個項目，其他 API 則針對不相關的服務。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-034",
@@ -541,7 +937,19 @@
     "isMultiAnswer": false,
     "explanation": "ElastiCache provides managed in-memory caching for suitable application data.\nThe other choices provide compliance reports, email, or configuration evaluation.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "引入自動化工作流程的公司必須以低延遲快取頻繁讀取的應用程式資料。程式碼應該整合哪些服務？",
+        "options": {
+          "A": "Amazon SES",
+          "B": "AWS Config",
+          "C": "Amazon ElastiCache",
+          "D": "AWS Artifact"
+        },
+        "explanation": "ElastiCache 為合適的應用程式資料提供託管記憶體快取。\n其他選項提供合規性報告、電子郵件或設定評估。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-035",
@@ -557,7 +965,19 @@
     "isMultiAnswer": false,
     "explanation": "Roles and temporary credentials avoid long-lived secrets in application code and images.\nEmbedding keys or using public access creates security risk.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "在共享環境中工作的 AWS 管理員需要呼叫 AWS API，而無需在應用程式程式碼中儲存長期金鑰。哪種方法最好？",
+        "options": {
+          "A": "嵌入根存取密鑰",
+          "B": "公開API",
+          "C": "將憑證放入容器鏡像中",
+          "D": "透過 SDK 使用 IAM Roles和臨時憑證"
+        },
+        "explanation": "角色和臨時憑證避免了應用程式程式碼和圖像中長期存在的秘密。\n嵌入金鑰或使用公共存取會產生安全風險。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-036",
@@ -573,7 +993,19 @@
     "isMultiAnswer": false,
     "explanation": "SNS provides a managed publish and subscribe fanout pattern for application events.\nThe other choices do not deliver application messages to independent subscribers.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "面向客戶的應用程式團隊需要應用程式程式碼中鬆散耦合的通知扇出模式。 SDK應該呼叫哪個服務？",
+        "options": {
+          "A": "將活動發佈到 Amazon SNS 主題",
+          "B": "直接寫入隨機 EC2 磁碟",
+          "C": "建立 Route 53 運轉狀況檢查",
+          "D": "輪換 KMS 金鑰"
+        },
+        "explanation": "SNS 為應用程式事件提供託管的發布和訂閱扇出模式。\n其他選擇不會將應用程式訊息傳遞給獨立訂閱者。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-037",
@@ -589,7 +1021,19 @@
     "isMultiAnswer": false,
     "explanation": "Asynchronous invocation returns control to the caller and Lambda manages retries and destinations.\nThe other choices do not provide asynchronous Lambda processing.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "標準化其 AWS 部署的平台團隊需要非同步呼叫 Lambda 函數並在不阻止呼叫者的情況下處理故障。適合哪種呼叫方式？",
+        "options": {
+          "A": "S3 生命週期過渡",
+          "B": "異步 Lambda 調用",
+          "C": "等待完成的同步調用",
+          "D": "DNS 查詢"
+        },
+        "explanation": "非同步呼叫將控制權傳回給呼叫者，Lambda 管理重試和目標。\n其他選擇不提供非同步 Lambda 處理。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-038",
@@ -605,7 +1049,19 @@
     "isMultiAnswer": false,
     "explanation": "DynamoDB Query uses a partition key to read matching items efficiently.\nScan reads every item and the other APIs target unrelated services.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "為審計準備證據的團隊需要一個僅讀取一個分區鍵的項目的 DynamoDB 查詢。程式碼應該使用哪個操作？",
+        "options": {
+          "A": "描述執行個體",
+          "B": "列表桶",
+          "C": "查詢",
+          "D": "掃描"
+        },
+        "explanation": "DynamoDB 查詢使用分區鍵來有效讀取符合的項目。\nScan 讀取每個項目，其他 API 則針對不相關的服務。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-039",
@@ -621,7 +1077,19 @@
     "isMultiAnswer": false,
     "explanation": "ElastiCache provides managed in-memory caching for suitable application data.\nThe other choices provide compliance reports, email, or configuration evaluation.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "取代手動流程的企業必須以低延遲快取頻繁讀取的應用程式資料。程式碼應該整合哪些服務？",
+        "options": {
+          "A": "AWS Artifact",
+          "B": "Amazon SES",
+          "C": "AWS Config",
+          "D": "Amazon ElastiCache"
+        },
+        "explanation": "ElastiCache 為合適的應用程式資料提供託管記憶體快取。\n其他選項提供合規性報告、電子郵件或設定評估。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-040",
@@ -637,7 +1105,19 @@
     "isMultiAnswer": false,
     "explanation": "Roles and temporary credentials avoid long-lived secrets in application code and images.\nEmbedding keys or using public access creates security risk.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "根據考試指南驗證設計的團隊需要呼叫 AWS API，而無需在應用程式程式碼中儲存長期金鑰。哪種方法最好？",
+        "options": {
+          "A": "透過 SDK 使用 IAM Roles和臨時憑證",
+          "B": "嵌入根存取密鑰",
+          "C": "公開API",
+          "D": "將憑證放入容器鏡像中"
+        },
+        "explanation": "角色和臨時憑證避免了應用程式程式碼和圖像中長期存在的秘密。\n嵌入金鑰或使用公共存取會產生安全風險。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-041",
@@ -653,7 +1133,19 @@
     "isMultiAnswer": false,
     "explanation": "SNS provides a managed publish and subscribe fanout pattern for application events.\nThe other choices do not deliver application messages to independent subscribers.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "生產團隊需要應用程式程式碼中鬆散耦合的通知扇出模式。 SDK應該呼叫哪個服務？",
+        "options": {
+          "A": "輪換 KMS 金鑰",
+          "B": "將活動發佈到 Amazon SNS 主題",
+          "C": "直接寫入隨機 EC2 磁碟",
+          "D": "建立 Route 53 運轉狀況檢查"
+        },
+        "explanation": "SNS 為應用程式事件提供託管的發布和訂閱扇出模式。\n其他選擇不會將應用程式訊息傳遞給獨立訂閱者。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-042",
@@ -669,7 +1161,19 @@
     "isMultiAnswer": false,
     "explanation": "Asynchronous invocation returns control to the caller and Lambda manages retries and destinations.\nThe other choices do not provide asynchronous Lambda processing.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "多帳戶平台團隊需要非同步呼叫 Lambda 函數並在不阻塞呼叫者的情況下處理故障。適合哪種呼叫方式？",
+        "options": {
+          "A": "DNS 查詢",
+          "B": "S3 生命週期過渡",
+          "C": "異步 Lambda 調用",
+          "D": "等待完成的同步調用"
+        },
+        "explanation": "非同步呼叫將控制權傳回給呼叫者，Lambda 管理重試和目標。\n其他選擇不提供非同步 Lambda 處理。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-043",
@@ -685,7 +1189,19 @@
     "isMultiAnswer": false,
     "explanation": "DynamoDB Query uses a partition key to read matching items efficiently.\nScan reads every item and the other APIs target unrelated services.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "受監管的公司需要一個僅讀取一個分區鍵的項目的 DynamoDB 查詢。程式碼應該使用哪個操作？",
+        "options": {
+          "A": "掃描",
+          "B": "描述執行個體",
+          "C": "列表桶",
+          "D": "查詢"
+        },
+        "explanation": "DynamoDB 查詢使用分區鍵來有效讀取符合的項目。\nScan 讀取每個項目，其他 API 則針對不相關的服務。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-044",
@@ -701,7 +1217,19 @@
     "isMultiAnswer": false,
     "explanation": "ElastiCache provides managed in-memory caching for suitable application data.\nThe other choices provide compliance reports, email, or configuration evaluation.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備增加流量的新創公司必須以低延遲快取頻繁讀取的應用程式資料。程式碼應該整合哪些服務？",
+        "options": {
+          "A": "Amazon ElastiCache",
+          "B": "AWS Artifact",
+          "C": "Amazon SES",
+          "D": "AWS Config"
+        },
+        "explanation": "ElastiCache 為合適的應用程式資料提供託管記憶體快取。\n其他選項提供合規性報告、電子郵件或設定評估。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-045",
@@ -717,7 +1245,19 @@
     "isMultiAnswer": false,
     "explanation": "Roles and temporary credentials avoid long-lived secrets in application code and images.\nEmbedding keys or using public access creates security risk.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "支援關鍵工作負載的營運團隊需要呼叫 AWS API，而無需在應用程式程式碼中儲存長期金鑰。哪種方法最好？",
+        "options": {
+          "A": "將憑證放入容器鏡像中",
+          "B": "透過 SDK 使用 IAM Roles和臨時憑證",
+          "C": "嵌入根存取密鑰",
+          "D": "公開API"
+        },
+        "explanation": "角色和臨時憑證避免了應用程式程式碼和圖像中長期存在的秘密。\n嵌入金鑰或使用公共存取會產生安全風險。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-046",
@@ -733,7 +1273,19 @@
     "isMultiAnswer": false,
     "explanation": "SNS provides a managed publish and subscribe fanout pattern for application events.\nThe other choices do not deliver application messages to independent subscribers.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "資料平台團隊需要應用程式程式碼中鬆散耦合的通知扇出模式。 SDK應該呼叫哪個服務？",
+        "options": {
+          "A": "建立 Route 53 運轉狀況檢查",
+          "B": "輪換 KMS 金鑰",
+          "C": "將活動發佈到 Amazon SNS 主題",
+          "D": "直接寫入隨機 EC2 磁碟"
+        },
+        "explanation": "SNS 為應用程式事件提供託管的發布和訂閱扇出模式。\n其他選擇不會將應用程式訊息傳遞給獨立訂閱者。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-047",
@@ -749,7 +1301,19 @@
     "isMultiAnswer": false,
     "explanation": "Asynchronous invocation returns control to the caller and Lambda manages retries and destinations.\nThe other choices do not provide asynchronous Lambda processing.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有安全意識的工程團隊需要非同步呼叫 Lambda 函數並在不阻止呼叫者的情況下處理故障。適合哪種呼叫方式？",
+        "options": {
+          "A": "等待完成的同步調用",
+          "B": "DNS 查詢",
+          "C": "S3 生命週期過渡",
+          "D": "異步 Lambda 調用"
+        },
+        "explanation": "非同步呼叫將控制權傳回給呼叫者，Lambda 管理重試和目標。\n其他選擇不提供非同步 Lambda 處理。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-048",
@@ -765,7 +1329,19 @@
     "isMultiAnswer": false,
     "explanation": "DynamoDB Query uses a partition key to read matching items efficiently.\nScan reads every item and the other APIs target unrelated services.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "遷移現有工作負載的公司需要一個僅讀取一個分區鍵的項目的 DynamoDB 查詢。程式碼應該使用哪個操作？",
+        "options": {
+          "A": "查詢",
+          "B": "掃描",
+          "C": "描述執行個體",
+          "D": "列表桶"
+        },
+        "explanation": "DynamoDB 查詢使用分區鍵來有效讀取符合的項目。\nScan 讀取每個項目，其他 API 則針對不相關的服務。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-049",
@@ -781,7 +1357,19 @@
     "isMultiAnswer": false,
     "explanation": "ElastiCache provides managed in-memory caching for suitable application data.\nThe other choices provide compliance reports, email, or configuration evaluation.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有嚴格恢復目標的團隊必須以低延遲快取頻繁讀取的應用程式資料。程式碼應該整合哪些服務？",
+        "options": {
+          "A": "AWS Config",
+          "B": "Amazon ElastiCache",
+          "C": "AWS Artifact",
+          "D": "Amazon SES"
+        },
+        "explanation": "ElastiCache 為合適的應用程式資料提供託管記憶體快取。\n其他選項提供合規性報告、電子郵件或設定評估。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-050",
@@ -797,7 +1385,19 @@
     "isMultiAnswer": false,
     "explanation": "Roles and temporary credentials avoid long-lived secrets in application code and images.\nEmbedding keys or using public access creates security risk.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備發布的開發團隊需要呼叫 AWS API，而無需在應用程式程式碼中儲存長期金鑰。哪種方法最好？",
+        "options": {
+          "A": "公開API",
+          "B": "將憑證放入容器鏡像中",
+          "C": "透過 SDK 使用 IAM Roles和臨時憑證",
+          "D": "嵌入根存取密鑰"
+        },
+        "explanation": "角色和臨時憑證避免了應用程式程式碼和圖像中長期存在的秘密。\n嵌入金鑰或使用公共存取會產生安全風險。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-051",
@@ -813,7 +1413,19 @@
     "isMultiAnswer": false,
     "explanation": "SNS provides a managed publish and subscribe fanout pattern for application events.\nThe other choices do not deliver application messages to independent subscribers.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "擁有多個 AWS 區域的企業需要來自應用程式程式碼的鬆散耦合的通知扇出模式。 SDK應該呼叫哪個服務？",
+        "options": {
+          "A": "直接寫入隨機 EC2 磁碟",
+          "B": "建立 Route 53 運轉狀況檢查",
+          "C": "輪換 KMS 金鑰",
+          "D": "將活動發佈到 Amazon SNS 主題"
+        },
+        "explanation": "SNS 為應用程式事件提供託管的發布和訂閱扇出模式。\n其他選擇不會將應用程式訊息傳遞給獨立訂閱者。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-052",
@@ -829,7 +1441,19 @@
     "isMultiAnswer": false,
     "explanation": "Asynchronous invocation returns control to the caller and Lambda manages retries and destinations.\nThe other choices do not provide asynchronous Lambda processing.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "審查事件的服務擁有者需要非同步呼叫 Lambda 函數並在不阻止呼叫者的情況下處理故障。適合哪種呼叫方式？",
+        "options": {
+          "A": "異步 Lambda 調用",
+          "B": "等待完成的同步調用",
+          "C": "DNS 查詢",
+          "D": "S3 生命週期過渡"
+        },
+        "explanation": "非同步呼叫將控制權傳回給呼叫者，Lambda 管理重試和目標。\n其他選擇不提供非同步 Lambda 處理。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-053",
@@ -845,7 +1469,19 @@
     "isMultiAnswer": false,
     "explanation": "DynamoDB Query uses a partition key to read matching items efficiently.\nScan reads every item and the other APIs target unrelated services.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "優化現有實作的團隊需要一個只讀取一個分割區鍵的專案的 DynamoDB 查詢。程式碼應該使用哪個操作？",
+        "options": {
+          "A": "列表桶",
+          "B": "查詢",
+          "C": "掃描",
+          "D": "描述執行個體"
+        },
+        "explanation": "DynamoDB 查詢使用分區鍵來有效讀取符合的項目。\nScan 讀取每個項目，其他 API 則針對不相關的服務。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-054",
@@ -861,7 +1497,19 @@
     "isMultiAnswer": false,
     "explanation": "ElastiCache provides managed in-memory caching for suitable application data.\nThe other choices provide compliance reports, email, or configuration evaluation.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "引入自動化工作流程的公司必須以低延遲快取頻繁讀取的應用程式資料。程式碼應該整合哪些服務？",
+        "options": {
+          "A": "Amazon SES",
+          "B": "AWS Config",
+          "C": "Amazon ElastiCache",
+          "D": "AWS Artifact"
+        },
+        "explanation": "ElastiCache 為合適的應用程式資料提供託管記憶體快取。\n其他選項提供合規性報告、電子郵件或設定評估。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-055",
@@ -877,7 +1525,19 @@
     "isMultiAnswer": false,
     "explanation": "Roles and temporary credentials avoid long-lived secrets in application code and images.\nEmbedding keys or using public access creates security risk.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "在共享環境中工作的 AWS 管理員需要呼叫 AWS API，而無需在應用程式程式碼中儲存長期金鑰。哪種方法最好？",
+        "options": {
+          "A": "嵌入根存取密鑰",
+          "B": "公開API",
+          "C": "將憑證放入容器鏡像中",
+          "D": "透過 SDK 使用 IAM Roles和臨時憑證"
+        },
+        "explanation": "角色和臨時憑證避免了應用程式程式碼和圖像中長期存在的秘密。\n嵌入金鑰或使用公共存取會產生安全風險。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-056",
@@ -893,7 +1553,19 @@
     "isMultiAnswer": false,
     "explanation": "SNS provides a managed publish and subscribe fanout pattern for application events.\nThe other choices do not deliver application messages to independent subscribers.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "面向客戶的應用程式團隊需要應用程式程式碼中鬆散耦合的通知扇出模式。 SDK應該呼叫哪個服務？",
+        "options": {
+          "A": "將活動發佈到 Amazon SNS 主題",
+          "B": "直接寫入隨機 EC2 磁碟",
+          "C": "建立 Route 53 運轉狀況檢查",
+          "D": "輪換 KMS 金鑰"
+        },
+        "explanation": "SNS 為應用程式事件提供託管的發布和訂閱扇出模式。\n其他選擇不會將應用程式訊息傳遞給獨立訂閱者。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-057",
@@ -909,7 +1581,19 @@
     "isMultiAnswer": false,
     "explanation": "Asynchronous invocation returns control to the caller and Lambda manages retries and destinations.\nThe other choices do not provide asynchronous Lambda processing.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "標準化其 AWS 部署的平台團隊需要非同步呼叫 Lambda 函數並在不阻止呼叫者的情況下處理故障。適合哪種呼叫方式？",
+        "options": {
+          "A": "S3 生命週期過渡",
+          "B": "異步 Lambda 調用",
+          "C": "等待完成的同步調用",
+          "D": "DNS 查詢"
+        },
+        "explanation": "非同步呼叫將控制權傳回給呼叫者，Lambda 管理重試和目標。\n其他選擇不提供非同步 Lambda 處理。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-058",
@@ -925,7 +1609,19 @@
     "isMultiAnswer": false,
     "explanation": "DynamoDB Query uses a partition key to read matching items efficiently.\nScan reads every item and the other APIs target unrelated services.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "為審計準備證據的團隊需要一個僅讀取一個分區鍵的項目的 DynamoDB 查詢。程式碼應該使用哪個操作？",
+        "options": {
+          "A": "描述執行個體",
+          "B": "列表桶",
+          "C": "查詢",
+          "D": "掃描"
+        },
+        "explanation": "DynamoDB 查詢使用分區鍵來有效讀取符合的項目。\nScan 讀取每個項目，其他 API 則針對不相關的服務。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-059",
@@ -941,7 +1637,19 @@
     "isMultiAnswer": false,
     "explanation": "ElastiCache provides managed in-memory caching for suitable application data.\nThe other choices provide compliance reports, email, or configuration evaluation.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "取代手動流程的企業必須以低延遲快取頻繁讀取的應用程式資料。程式碼應該整合哪些服務？",
+        "options": {
+          "A": "AWS Artifact",
+          "B": "Amazon SES",
+          "C": "AWS Config",
+          "D": "Amazon ElastiCache"
+        },
+        "explanation": "ElastiCache 為合適的應用程式資料提供託管記憶體快取。\n其他選項提供合規性報告、電子郵件或設定評估。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-060",
@@ -957,7 +1665,19 @@
     "isMultiAnswer": false,
     "explanation": "Roles and temporary credentials avoid long-lived secrets in application code and images.\nEmbedding keys or using public access creates security risk.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "根據考試指南驗證設計的團隊需要呼叫 AWS API，而無需在應用程式程式碼中儲存長期金鑰。哪種方法最好？",
+        "options": {
+          "A": "透過 SDK 使用 IAM Roles和臨時憑證",
+          "B": "嵌入根存取密鑰",
+          "C": "公開API",
+          "D": "將憑證放入容器鏡像中"
+        },
+        "explanation": "角色和臨時憑證避免了應用程式程式碼和圖像中長期存在的秘密。\n嵌入金鑰或使用公共存取會產生安全風險。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-061",
@@ -973,7 +1693,19 @@
     "isMultiAnswer": false,
     "explanation": "SNS provides a managed publish and subscribe fanout pattern for application events.\nThe other choices do not deliver application messages to independent subscribers.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "生產團隊需要應用程式程式碼中鬆散耦合的通知扇出模式。 SDK應該呼叫哪個服務？",
+        "options": {
+          "A": "輪換 KMS 金鑰",
+          "B": "將活動發佈到 Amazon SNS 主題",
+          "C": "直接寫入隨機 EC2 磁碟",
+          "D": "建立 Route 53 運轉狀況檢查"
+        },
+        "explanation": "SNS 為應用程式事件提供託管的發布和訂閱扇出模式。\n其他選擇不會將應用程式訊息傳遞給獨立訂閱者。"
+      }
+    }
   },
   {
     "id": "dva-c02-d1-062",
@@ -989,6 +1721,18 @@
     "isMultiAnswer": false,
     "explanation": "Asynchronous invocation returns control to the caller and Lambda manages retries and destinations.\nThe other choices do not provide asynchronous Lambda processing.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "多帳戶平台團隊需要非同步呼叫 Lambda 函數並在不阻塞呼叫者的情況下處理故障。適合哪種呼叫方式？",
+        "options": {
+          "A": "DNS 查詢",
+          "B": "S3 生命週期過渡",
+          "C": "異步 Lambda 調用",
+          "D": "等待完成的同步調用"
+        },
+        "explanation": "非同步呼叫將控制權傳回給呼叫者，Lambda 管理重試和目標。\n其他選擇不提供非同步 Lambda 處理。"
+      }
+    }
   }
 ]

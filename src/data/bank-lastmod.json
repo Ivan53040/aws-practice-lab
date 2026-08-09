@@ -2,51 +2,51 @@
   "_comment": "Freshness ledger for the question banks. Each entry pins a cert bank (src/data/<cert>/domainN.json) to { contentHash, lastmod }, where lastmod is the date that bank content last changed. The production build READS lastmod (sitemap <lastmod>, Course.dateModified, the visible \"Last updated\" stamp) and NEVER mutates this file, so freshness reflects real content change, not deploy time. Maintainer workflow: after editing a bank run `npm run bank:lastmod` and commit this file. `npm run validate` warns and the unit suite fails if it drifts.",
   "certs": {
     "aif-c01": {
-      "contentHash": "0e4a81c8d362b0aef5126c58d0aaf802df8b8f8cb47a6ff1ed1c6843de8c7e42",
-      "lastmod": "2026-07-04"
+      "contentHash": "971f58b87bf7b2d2d65dd91d2ebfc30bc015c739f3437f4af53ee41e87159235",
+      "lastmod": "2026-08-09"
     },
     "aip-c01": {
-      "contentHash": "10903773304f2c804199423a6dd02cbf3726b240dd05545b42989cfd8c24ca32",
+      "contentHash": "9b2e133b277190a03fc749a5b208cdfd43c6480c22f80801618700162855fc6f",
       "lastmod": "2026-08-09"
     },
     "ans-c01": {
-      "contentHash": "dade5687b7fdd4a2f91ece2b84e2dac5bbdaef686f31595736fefecc809a529f",
+      "contentHash": "528f90da6eec59ad0362dce406799afed261f4871e07431095303c17a84253c7",
       "lastmod": "2026-08-09"
     },
     "clf-c02": {
-      "contentHash": "e29c822cfe48a94af594f60c157bc5dd846db151cb8b3180e70f91d278b3dc45",
-      "lastmod": "2026-07-05"
+      "contentHash": "3dda5dc4168123fdaa8b701efa7410086d9eb3eb7039ebd95ac6d6fbe277e8eb",
+      "lastmod": "2026-08-09"
     },
     "dea-c01": {
-      "contentHash": "47d4334eccdc647d6e476237dec1e152a4dacc47b1680731570c44c24e85c077",
+      "contentHash": "9ba3eb725831aad2518868308e273c3157e4a24a220c1d2c78fc23c2c19e010b",
       "lastmod": "2026-08-09"
     },
     "dop-c02": {
-      "contentHash": "86aad569438fddbb31559aaf20414d31898316f76742d38ad7d9777133b419ea",
+      "contentHash": "142f3f793ca8ac24c0df89b3d68520e43818491c0949317b58e797bc98a70d02",
       "lastmod": "2026-08-09"
     },
     "dva-c02": {
-      "contentHash": "532ef5f2f9d368a28880c520d10b37773d22a95eb302374a75121ac8616004c5",
+      "contentHash": "7faf8c6724bd0703cb5f52ae0a5439faeca8b8572db7ede8656f81b9faeed0c0",
       "lastmod": "2026-08-09"
     },
     "mla-c01": {
-      "contentHash": "cd329e273564f9aa9581f164e4e9dbe675ca43f763c19583110cc15921f30fe7",
+      "contentHash": "081d20822f93c41168ceb2c2553cfe25b7aa276db99fd446eb60c7767eb9892c",
       "lastmod": "2026-08-09"
     },
     "saa-c03": {
-      "contentHash": "68e216a6f1272f2d01e383808ea3db769678b1f8b3f3627ea7faff760ef6ea69",
+      "contentHash": "b9c8fe5a87aee91daaa8c7bf08fdf6131d1267b8e373ff572e25d08c3d53a9d4",
       "lastmod": "2026-08-09"
     },
     "sap-c02": {
-      "contentHash": "b9494bc096f271836f2b4362a268434a34d09e392bca2b767c3b0cdbda75abf8",
+      "contentHash": "fa8edb4a33d164453fde99c7c7b30e1cab5ebbe44782d21dc7813c045faaa31c",
       "lastmod": "2026-08-09"
     },
     "scs-c03": {
-      "contentHash": "cc8e1f9938e18aae3f9b60a384ef6653c25d94039f399ee6da49d9989beaa4c4",
+      "contentHash": "23d732fd4241c0da8acdc84329f1df0228b21978b629edc7cc2db981156c76a0",
       "lastmod": "2026-08-09"
     },
     "soa-c03": {
-      "contentHash": "19a138e14fe53981525d1bb33460dccdd6f71630e6882e2e85e0faa27c677832",
+      "contentHash": "757fc90080ad9b71f9e7e0283ef10e5e1b1fe801181e1ea1caced1b2e782d041",
       "lastmod": "2026-08-09"
     }
   }

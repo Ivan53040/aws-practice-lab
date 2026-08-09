@@ -13,7 +13,19 @@
     "isMultiAnswer": false,
     "explanation": "Cleaning and validation improve training data quality before feature creation and model fitting.\nThe other choices operate networking, deployment, or encryption naming.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "生產團隊需要在訓練之前刪除重複記錄並填入缺失值。哪個管道階段應該執行此操作？",
+        "options": {
+          "A": "KMS 別名",
+          "B": "資料清理和驗證",
+          "C": "模型端點自動縮放",
+          "D": "Route 53 運轉狀況檢查"
+        },
+        "explanation": "在創建特徵和模型擬合之前，清理和驗證可以提高訓練資料的品質。\n其他選擇操作網路、部署或加密命名。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-002",
@@ -29,7 +41,19 @@
     "isMultiAnswer": false,
     "explanation": "SageMaker Processing runs managed data processing jobs for ML preparation.\nThe other choices provide content delivery, identity, or DDoS protection.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "多帳戶平台團隊需要透過託管處理將原始 S3 資料轉換為表格功能集。應該評估哪些服務？",
+        "options": {
+          "A": "Amazon Cognito",
+          "B": "AWS Shield",
+          "C": "Amazon SageMaker Processing",
+          "D": "Amazon CloudFront"
+        },
+        "explanation": "SageMaker Processing 執行託管資料處理作業以進行 ML 準備。\n其他選擇提供內容交付、身分或 DDoS 保護。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-003",
@@ -45,7 +69,19 @@
     "isMultiAnswer": false,
     "explanation": "A leakage-safe split gives a more realistic estimate of model generalization.\nThe other choices produce inflated or invalid evaluation results.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "受監管的公司必須將標記資料拆分為訓練集、驗證集和測試集，且不得洩漏。哪種做法合適？",
+        "options": {
+          "A": "每組使用相同的記錄",
+          "B": "獨立打亂標籤",
+          "C": "僅在訓練資料上進行測試",
+          "D": "使用可重複的分割策略來防止相關記錄交叉集"
+        },
+        "explanation": "洩漏安全分割給出了對模型泛化的更現實的估計。\n其他選擇會產生誇大或無效的評估結果。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-004",
@@ -61,7 +97,19 @@
     "isMultiAnswer": false,
     "explanation": "Feature Store centralizes and serves consistent features for training and inference.\nThe other choices do not manage ML feature definitions.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備增加流量的新創公司需要透過訓練和推理共享可重複使用的數字特徵定義。應該使用哪種能力？",
+        "options": {
+          "A": "Amazon SageMaker Feature Store",
+          "B": "S3 網站端點",
+          "C": "IAM 密碼原則",
+          "D": "CloudFront 失效"
+        },
+        "explanation": "特徵儲存集中並提供一致的特徵以進行訓練和推理。\n其他選項不管理 ML 特徵定義。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-005",
@@ -77,7 +125,19 @@
     "isMultiAnswer": false,
     "explanation": "Encryption and least-privilege policies protect training artifacts at rest.\nPublic access and plaintext storage expose sensitive data.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "支援關鍵工作負載的營運團隊必須保護儲存在 S3 中的訓練資料。哪種控制合適？",
+        "options": {
+          "A": "未加密的 EBS 卷",
+          "B": "使用 KMS 金鑰和最低權限存取的 S3 伺服器端加密",
+          "C": "公共讀取權限",
+          "D": "DNS 別名"
+        },
+        "explanation": "加密和最低權限策略可以保護靜態的訓練工件。\n公共存取和明文儲存會暴露敏感資料。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-006",
@@ -93,7 +153,19 @@
     "isMultiAnswer": false,
     "explanation": "Cleaning and validation improve training data quality before feature creation and model fitting.\nThe other choices operate networking, deployment, or encryption naming.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "資料平台團隊需要在訓練之前刪除重複記錄並填入缺失值。哪個管道階段應該執行此操作？",
+        "options": {
+          "A": "Route 53 運轉狀況檢查",
+          "B": "KMS 別名",
+          "C": "資料清理和驗證",
+          "D": "模型端點自動縮放"
+        },
+        "explanation": "在創建特徵和模型擬合之前，清理和驗證可以提高訓練資料的品質。\n其他選擇操作網路、部署或加密命名。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-007",
@@ -109,7 +181,19 @@
     "isMultiAnswer": false,
     "explanation": "SageMaker Processing runs managed data processing jobs for ML preparation.\nThe other choices provide content delivery, identity, or DDoS protection.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有安全意識的工程團隊需要將原始 S3 資料轉換為具有託管處理功能的表格功能集。應該評估哪些服務？",
+        "options": {
+          "A": "Amazon CloudFront",
+          "B": "Amazon Cognito",
+          "C": "AWS Shield",
+          "D": "Amazon SageMaker Processing"
+        },
+        "explanation": "SageMaker Processing 執行託管資料處理作業以進行 ML 準備。\n其他選擇提供內容交付、身分或 DDoS 保護。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-008",
@@ -125,7 +209,19 @@
     "isMultiAnswer": false,
     "explanation": "A leakage-safe split gives a more realistic estimate of model generalization.\nThe other choices produce inflated or invalid evaluation results.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "遷移現有工作負載的公司必須將標記資料拆分為訓練集、驗證集和測試集，且不得洩漏。哪種做法合適？",
+        "options": {
+          "A": "使用可重複的分割策略來防止相關記錄交叉集",
+          "B": "每組使用相同的記錄",
+          "C": "獨立打亂標籤",
+          "D": "僅在訓練資料上進行測試"
+        },
+        "explanation": "洩漏安全分割給出了對模型泛化的更現實的估計。\n其他選擇會產生誇大或無效的評估結果。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-009",
@@ -141,7 +237,19 @@
     "isMultiAnswer": false,
     "explanation": "Feature Store centralizes and serves consistent features for training and inference.\nThe other choices do not manage ML feature definitions.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有嚴格恢復目標的團隊需要由訓練和推理共享的可重複使用的數值特徵定義。應該使用哪種能力？",
+        "options": {
+          "A": "CloudFront 失效",
+          "B": "Amazon SageMaker Feature Store",
+          "C": "S3 網站端點",
+          "D": "IAM 密碼原則"
+        },
+        "explanation": "特徵儲存集中並提供一致的特徵以進行訓練和推理。\n其他選項不管理 ML 特徵定義。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-010",
@@ -157,7 +265,19 @@
     "isMultiAnswer": false,
     "explanation": "Encryption and least-privilege policies protect training artifacts at rest.\nPublic access and plaintext storage expose sensitive data.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備發布的開發團隊必須保護儲存在 S3 中的訓練資料。哪種控制合適？",
+        "options": {
+          "A": "DNS 別名",
+          "B": "未加密的 EBS 卷",
+          "C": "使用 KMS 金鑰和最低權限存取的 S3 伺服器端加密",
+          "D": "公共讀取權限"
+        },
+        "explanation": "加密和最低權限策略可以保護靜態的訓練工件。\n公共存取和明文儲存會暴露敏感資料。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-011",
@@ -173,7 +293,19 @@
     "isMultiAnswer": false,
     "explanation": "Cleaning and validation improve training data quality before feature creation and model fitting.\nThe other choices operate networking, deployment, or encryption naming.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "擁有多個 AWS 區域的企業需要在訓練之前刪除重複記錄並填入缺失值。哪個管道階段應該執行此操作？",
+        "options": {
+          "A": "模型端點自動縮放",
+          "B": "Route 53 運轉狀況檢查",
+          "C": "KMS 別名",
+          "D": "資料清理和驗證"
+        },
+        "explanation": "在創建特徵和模型擬合之前，清理和驗證可以提高訓練資料的品質。\n其他選擇操作網路、部署或加密命名。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-012",
@@ -189,7 +321,19 @@
     "isMultiAnswer": false,
     "explanation": "SageMaker Processing runs managed data processing jobs for ML preparation.\nThe other choices provide content delivery, identity, or DDoS protection.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "審查事件的服務擁有者需要將原始 S3 資料轉換為具有託管處理的表格功能集。應該評估哪些服務？",
+        "options": {
+          "A": "Amazon SageMaker Processing",
+          "B": "Amazon CloudFront",
+          "C": "Amazon Cognito",
+          "D": "AWS Shield"
+        },
+        "explanation": "SageMaker Processing 執行託管資料處理作業以進行 ML 準備。\n其他選擇提供內容交付、身分或 DDoS 保護。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-013",
@@ -205,7 +349,19 @@
     "isMultiAnswer": false,
     "explanation": "A leakage-safe split gives a more realistic estimate of model generalization.\nThe other choices produce inflated or invalid evaluation results.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "優化現有實施的團隊必須將標記資料拆分為訓練集、驗證集和測試集，而不會洩漏。哪種做法合適？",
+        "options": {
+          "A": "僅在訓練資料上進行測試",
+          "B": "使用可重複的分割策略來防止相關記錄交叉集",
+          "C": "每組使用相同的記錄",
+          "D": "獨立打亂標籤"
+        },
+        "explanation": "洩漏安全分割給出了對模型泛化的更現實的估計。\n其他選擇會產生誇大或無效的評估結果。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-014",
@@ -221,7 +377,19 @@
     "isMultiAnswer": false,
     "explanation": "Feature Store centralizes and serves consistent features for training and inference.\nThe other choices do not manage ML feature definitions.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "引入自動化工作流程的公司需要透過訓練和推理共享可重複使用的數字特徵定義。應該使用哪種能力？",
+        "options": {
+          "A": "IAM 密碼原則",
+          "B": "CloudFront 失效",
+          "C": "Amazon SageMaker Feature Store",
+          "D": "S3 網站端點"
+        },
+        "explanation": "特徵儲存集中並提供一致的特徵以進行訓練和推理。\n其他選項不管理 ML 特徵定義。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-015",
@@ -237,7 +405,19 @@
     "isMultiAnswer": false,
     "explanation": "Encryption and least-privilege policies protect training artifacts at rest.\nPublic access and plaintext storage expose sensitive data.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "在共用環境中工作的 AWS 管理員必須保護儲存在 S3 中的訓練資料。哪種控制合適？",
+        "options": {
+          "A": "公共讀取權限",
+          "B": "DNS 別名",
+          "C": "未加密的 EBS 卷",
+          "D": "使用 KMS 金鑰和最低權限存取的 S3 伺服器端加密"
+        },
+        "explanation": "加密和最低權限策略可以保護靜態的訓練工件。\n公共存取和明文儲存會暴露敏感資料。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-016",
@@ -253,7 +433,19 @@
     "isMultiAnswer": false,
     "explanation": "Cleaning and validation improve training data quality before feature creation and model fitting.\nThe other choices operate networking, deployment, or encryption naming.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "面向客戶的應用程式團隊需要在培訓之前刪除重複記錄並填入缺失值。哪個管道階段應該執行此操作？",
+        "options": {
+          "A": "資料清理和驗證",
+          "B": "模型端點自動縮放",
+          "C": "Route 53 運轉狀況檢查",
+          "D": "KMS 別名"
+        },
+        "explanation": "在創建特徵和模型擬合之前，清理和驗證可以提高訓練資料的品質。\n其他選擇操作網路、部署或加密命名。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-017",
@@ -269,7 +461,19 @@
     "isMultiAnswer": false,
     "explanation": "SageMaker Processing runs managed data processing jobs for ML preparation.\nThe other choices provide content delivery, identity, or DDoS protection.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "標準化其 AWS 部署的平台團隊需要將原始 S3 資料轉換為具有託管處理功能的表格功能集。應該評估哪些服務？",
+        "options": {
+          "A": "AWS Shield",
+          "B": "Amazon SageMaker Processing",
+          "C": "Amazon CloudFront",
+          "D": "Amazon Cognito"
+        },
+        "explanation": "SageMaker Processing 執行託管資料處理作業以進行 ML 準備。\n其他選擇提供內容交付、身分或 DDoS 保護。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-018",
@@ -285,7 +489,19 @@
     "isMultiAnswer": false,
     "explanation": "A leakage-safe split gives a more realistic estimate of model generalization.\nThe other choices produce inflated or invalid evaluation results.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "為審計準備證據的團隊必須將標記資料拆分為訓練集、驗證集和測試集，且不得洩漏。哪種做法合適？",
+        "options": {
+          "A": "獨立打亂標籤",
+          "B": "僅在訓練資料上進行測試",
+          "C": "使用可重複的分割策略來防止相關記錄交叉集",
+          "D": "每組使用相同的記錄"
+        },
+        "explanation": "洩漏安全分割給出了對模型泛化的更現實的估計。\n其他選擇會產生誇大或無效的評估結果。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-019",
@@ -301,7 +517,19 @@
     "isMultiAnswer": false,
     "explanation": "Feature Store centralizes and serves consistent features for training and inference.\nThe other choices do not manage ML feature definitions.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "取代手動流程的業務需要由訓練和推理共享的可重複使用的數字特徵定義。應該使用哪種能力？",
+        "options": {
+          "A": "S3 網站端點",
+          "B": "IAM 密碼原則",
+          "C": "CloudFront 失效",
+          "D": "Amazon SageMaker Feature Store"
+        },
+        "explanation": "特徵儲存集中並提供一致的特徵以進行訓練和推理。\n其他選項不管理 ML 特徵定義。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-020",
@@ -317,7 +545,19 @@
     "isMultiAnswer": false,
     "explanation": "Encryption and least-privilege policies protect training artifacts at rest.\nPublic access and plaintext storage expose sensitive data.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "根據考試指南驗證設計的團隊必須保護儲存在 S3 中的訓練資料。哪種控制合適？",
+        "options": {
+          "A": "使用 KMS 金鑰和最低權限存取的 S3 伺服器端加密",
+          "B": "公共讀取權限",
+          "C": "DNS 別名",
+          "D": "未加密的 EBS 卷"
+        },
+        "explanation": "加密和最低權限策略可以保護靜態的訓練工件。\n公共存取和明文儲存會暴露敏感資料。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-021",
@@ -333,7 +573,19 @@
     "isMultiAnswer": false,
     "explanation": "Cleaning and validation improve training data quality before feature creation and model fitting.\nThe other choices operate networking, deployment, or encryption naming.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "生產團隊需要在訓練之前刪除重複記錄並填入缺失值。哪個管道階段應該執行此操作？",
+        "options": {
+          "A": "KMS 別名",
+          "B": "資料清理和驗證",
+          "C": "模型端點自動縮放",
+          "D": "Route 53 運轉狀況檢查"
+        },
+        "explanation": "在創建特徵和模型擬合之前，清理和驗證可以提高訓練資料的品質。\n其他選擇操作網路、部署或加密命名。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-022",
@@ -349,7 +601,19 @@
     "isMultiAnswer": false,
     "explanation": "SageMaker Processing runs managed data processing jobs for ML preparation.\nThe other choices provide content delivery, identity, or DDoS protection.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "多帳戶平台團隊需要透過託管處理將原始 S3 資料轉換為表格功能集。應該評估哪些服務？",
+        "options": {
+          "A": "Amazon Cognito",
+          "B": "AWS Shield",
+          "C": "Amazon SageMaker Processing",
+          "D": "Amazon CloudFront"
+        },
+        "explanation": "SageMaker Processing 執行託管資料處理作業以進行 ML 準備。\n其他選擇提供內容交付、身分或 DDoS 保護。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-023",
@@ -365,7 +629,19 @@
     "isMultiAnswer": false,
     "explanation": "A leakage-safe split gives a more realistic estimate of model generalization.\nThe other choices produce inflated or invalid evaluation results.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "受監管的公司必須將標記資料拆分為訓練集、驗證集和測試集，且不得洩漏。哪種做法合適？",
+        "options": {
+          "A": "每組使用相同的記錄",
+          "B": "獨立打亂標籤",
+          "C": "僅在訓練資料上進行測試",
+          "D": "使用可重複的分割策略來防止相關記錄交叉集"
+        },
+        "explanation": "洩漏安全分割給出了對模型泛化的更現實的估計。\n其他選擇會產生誇大或無效的評估結果。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-024",
@@ -381,7 +657,19 @@
     "isMultiAnswer": false,
     "explanation": "Feature Store centralizes and serves consistent features for training and inference.\nThe other choices do not manage ML feature definitions.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備增加流量的新創公司需要透過訓練和推理共享可重複使用的數字特徵定義。應該使用哪種能力？",
+        "options": {
+          "A": "Amazon SageMaker Feature Store",
+          "B": "S3 網站端點",
+          "C": "IAM 密碼原則",
+          "D": "CloudFront 失效"
+        },
+        "explanation": "特徵儲存集中並提供一致的特徵以進行訓練和推理。\n其他選項不管理 ML 特徵定義。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-025",
@@ -397,7 +685,19 @@
     "isMultiAnswer": false,
     "explanation": "Encryption and least-privilege policies protect training artifacts at rest.\nPublic access and plaintext storage expose sensitive data.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "支援關鍵工作負載的營運團隊必須保護儲存在 S3 中的訓練資料。哪種控制合適？",
+        "options": {
+          "A": "未加密的 EBS 卷",
+          "B": "使用 KMS 金鑰和最低權限存取的 S3 伺服器端加密",
+          "C": "公共讀取權限",
+          "D": "DNS 別名"
+        },
+        "explanation": "加密和最低權限策略可以保護靜態的訓練工件。\n公共存取和明文儲存會暴露敏感資料。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-026",
@@ -413,7 +713,19 @@
     "isMultiAnswer": false,
     "explanation": "Cleaning and validation improve training data quality before feature creation and model fitting.\nThe other choices operate networking, deployment, or encryption naming.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "資料平台團隊需要在訓練之前刪除重複記錄並填入缺失值。哪個管道階段應該執行此操作？",
+        "options": {
+          "A": "Route 53 運轉狀況檢查",
+          "B": "KMS 別名",
+          "C": "資料清理和驗證",
+          "D": "模型端點自動縮放"
+        },
+        "explanation": "在創建特徵和模型擬合之前，清理和驗證可以提高訓練資料的品質。\n其他選擇操作網路、部署或加密命名。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-027",
@@ -429,7 +741,19 @@
     "isMultiAnswer": false,
     "explanation": "SageMaker Processing runs managed data processing jobs for ML preparation.\nThe other choices provide content delivery, identity, or DDoS protection.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有安全意識的工程團隊需要將原始 S3 資料轉換為具有託管處理功能的表格功能集。應該評估哪些服務？",
+        "options": {
+          "A": "Amazon CloudFront",
+          "B": "Amazon Cognito",
+          "C": "AWS Shield",
+          "D": "Amazon SageMaker Processing"
+        },
+        "explanation": "SageMaker Processing 執行託管資料處理作業以進行 ML 準備。\n其他選擇提供內容交付、身分或 DDoS 保護。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-028",
@@ -445,7 +769,19 @@
     "isMultiAnswer": false,
     "explanation": "A leakage-safe split gives a more realistic estimate of model generalization.\nThe other choices produce inflated or invalid evaluation results.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "遷移現有工作負載的公司必須將標記資料拆分為訓練集、驗證集和測試集，且不得洩漏。哪種做法合適？",
+        "options": {
+          "A": "使用可重複的分割策略來防止相關記錄交叉集",
+          "B": "每組使用相同的記錄",
+          "C": "獨立打亂標籤",
+          "D": "僅在訓練資料上進行測試"
+        },
+        "explanation": "洩漏安全分割給出了對模型泛化的更現實的估計。\n其他選擇會產生誇大或無效的評估結果。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-029",
@@ -461,7 +797,19 @@
     "isMultiAnswer": false,
     "explanation": "Feature Store centralizes and serves consistent features for training and inference.\nThe other choices do not manage ML feature definitions.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有嚴格恢復目標的團隊需要由訓練和推理共享的可重複使用的數值特徵定義。應該使用哪種能力？",
+        "options": {
+          "A": "CloudFront 失效",
+          "B": "Amazon SageMaker Feature Store",
+          "C": "S3 網站端點",
+          "D": "IAM 密碼原則"
+        },
+        "explanation": "特徵儲存集中並提供一致的特徵以進行訓練和推理。\n其他選項不管理 ML 特徵定義。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-030",
@@ -477,7 +825,19 @@
     "isMultiAnswer": false,
     "explanation": "Encryption and least-privilege policies protect training artifacts at rest.\nPublic access and plaintext storage expose sensitive data.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備發布的開發團隊必須保護儲存在 S3 中的訓練資料。哪種控制合適？",
+        "options": {
+          "A": "DNS 別名",
+          "B": "未加密的 EBS 卷",
+          "C": "使用 KMS 金鑰和最低權限存取的 S3 伺服器端加密",
+          "D": "公共讀取權限"
+        },
+        "explanation": "加密和最低權限策略可以保護靜態的訓練工件。\n公共存取和明文儲存會暴露敏感資料。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-031",
@@ -493,7 +853,19 @@
     "isMultiAnswer": false,
     "explanation": "Cleaning and validation improve training data quality before feature creation and model fitting.\nThe other choices operate networking, deployment, or encryption naming.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "擁有多個 AWS 區域的企業需要在訓練之前刪除重複記錄並填入缺失值。哪個管道階段應該執行此操作？",
+        "options": {
+          "A": "模型端點自動縮放",
+          "B": "Route 53 運轉狀況檢查",
+          "C": "KMS 別名",
+          "D": "資料清理和驗證"
+        },
+        "explanation": "在創建特徵和模型擬合之前，清理和驗證可以提高訓練資料的品質。\n其他選擇操作網路、部署或加密命名。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-032",
@@ -509,7 +881,19 @@
     "isMultiAnswer": false,
     "explanation": "SageMaker Processing runs managed data processing jobs for ML preparation.\nThe other choices provide content delivery, identity, or DDoS protection.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "審查事件的服務擁有者需要將原始 S3 資料轉換為具有託管處理的表格功能集。應該評估哪些服務？",
+        "options": {
+          "A": "Amazon SageMaker Processing",
+          "B": "Amazon CloudFront",
+          "C": "Amazon Cognito",
+          "D": "AWS Shield"
+        },
+        "explanation": "SageMaker Processing 執行託管資料處理作業以進行 ML 準備。\n其他選擇提供內容交付、身分或 DDoS 保護。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-033",
@@ -525,7 +909,19 @@
     "isMultiAnswer": false,
     "explanation": "A leakage-safe split gives a more realistic estimate of model generalization.\nThe other choices produce inflated or invalid evaluation results.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "優化現有實施的團隊必須將標記資料拆分為訓練集、驗證集和測試集，而不會洩漏。哪種做法合適？",
+        "options": {
+          "A": "僅在訓練資料上進行測試",
+          "B": "使用可重複的分割策略來防止相關記錄交叉集",
+          "C": "每組使用相同的記錄",
+          "D": "獨立打亂標籤"
+        },
+        "explanation": "洩漏安全分割給出了對模型泛化的更現實的估計。\n其他選擇會產生誇大或無效的評估結果。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-034",
@@ -541,7 +937,19 @@
     "isMultiAnswer": false,
     "explanation": "Feature Store centralizes and serves consistent features for training and inference.\nThe other choices do not manage ML feature definitions.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "引入自動化工作流程的公司需要透過訓練和推理共享可重複使用的數字特徵定義。應該使用哪種能力？",
+        "options": {
+          "A": "IAM 密碼原則",
+          "B": "CloudFront 失效",
+          "C": "Amazon SageMaker Feature Store",
+          "D": "S3 網站端點"
+        },
+        "explanation": "特徵儲存集中並提供一致的特徵以進行訓練和推理。\n其他選項不管理 ML 特徵定義。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-035",
@@ -557,7 +965,19 @@
     "isMultiAnswer": false,
     "explanation": "Encryption and least-privilege policies protect training artifacts at rest.\nPublic access and plaintext storage expose sensitive data.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "在共用環境中工作的 AWS 管理員必須保護儲存在 S3 中的訓練資料。哪種控制合適？",
+        "options": {
+          "A": "公共讀取權限",
+          "B": "DNS 別名",
+          "C": "未加密的 EBS 卷",
+          "D": "使用 KMS 金鑰和最低權限存取的 S3 伺服器端加密"
+        },
+        "explanation": "加密和最低權限策略可以保護靜態的訓練工件。\n公共存取和明文儲存會暴露敏感資料。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-036",
@@ -573,7 +993,19 @@
     "isMultiAnswer": false,
     "explanation": "Cleaning and validation improve training data quality before feature creation and model fitting.\nThe other choices operate networking, deployment, or encryption naming.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "面向客戶的應用程式團隊需要在培訓之前刪除重複記錄並填入缺失值。哪個管道階段應該執行此操作？",
+        "options": {
+          "A": "資料清理和驗證",
+          "B": "模型端點自動縮放",
+          "C": "Route 53 運轉狀況檢查",
+          "D": "KMS 別名"
+        },
+        "explanation": "在創建特徵和模型擬合之前，清理和驗證可以提高訓練資料的品質。\n其他選擇操作網路、部署或加密命名。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-037",
@@ -589,7 +1021,19 @@
     "isMultiAnswer": false,
     "explanation": "SageMaker Processing runs managed data processing jobs for ML preparation.\nThe other choices provide content delivery, identity, or DDoS protection.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "標準化其 AWS 部署的平台團隊需要將原始 S3 資料轉換為具有託管處理功能的表格功能集。應該評估哪些服務？",
+        "options": {
+          "A": "AWS Shield",
+          "B": "Amazon SageMaker Processing",
+          "C": "Amazon CloudFront",
+          "D": "Amazon Cognito"
+        },
+        "explanation": "SageMaker Processing 執行託管資料處理作業以進行 ML 準備。\n其他選擇提供內容交付、身分或 DDoS 保護。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-038",
@@ -605,7 +1049,19 @@
     "isMultiAnswer": false,
     "explanation": "A leakage-safe split gives a more realistic estimate of model generalization.\nThe other choices produce inflated or invalid evaluation results.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "為審計準備證據的團隊必須將標記資料拆分為訓練集、驗證集和測試集，且不得洩漏。哪種做法合適？",
+        "options": {
+          "A": "獨立打亂標籤",
+          "B": "僅在訓練資料上進行測試",
+          "C": "使用可重複的分割策略來防止相關記錄交叉集",
+          "D": "每組使用相同的記錄"
+        },
+        "explanation": "洩漏安全分割給出了對模型泛化的更現實的估計。\n其他選擇會產生誇大或無效的評估結果。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-039",
@@ -621,7 +1077,19 @@
     "isMultiAnswer": false,
     "explanation": "Feature Store centralizes and serves consistent features for training and inference.\nThe other choices do not manage ML feature definitions.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "取代手動流程的業務需要由訓練和推理共享的可重複使用的數字特徵定義。應該使用哪種能力？",
+        "options": {
+          "A": "S3 網站端點",
+          "B": "IAM 密碼原則",
+          "C": "CloudFront 失效",
+          "D": "Amazon SageMaker Feature Store"
+        },
+        "explanation": "特徵儲存集中並提供一致的特徵以進行訓練和推理。\n其他選項不管理 ML 特徵定義。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-040",
@@ -637,7 +1105,19 @@
     "isMultiAnswer": false,
     "explanation": "Encryption and least-privilege policies protect training artifacts at rest.\nPublic access and plaintext storage expose sensitive data.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "根據考試指南驗證設計的團隊必須保護儲存在 S3 中的訓練資料。哪種控制合適？",
+        "options": {
+          "A": "使用 KMS 金鑰和最低權限存取的 S3 伺服器端加密",
+          "B": "公共讀取權限",
+          "C": "DNS 別名",
+          "D": "未加密的 EBS 卷"
+        },
+        "explanation": "加密和最低權限策略可以保護靜態的訓練工件。\n公共存取和明文儲存會暴露敏感資料。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-041",
@@ -653,7 +1133,19 @@
     "isMultiAnswer": false,
     "explanation": "Cleaning and validation improve training data quality before feature creation and model fitting.\nThe other choices operate networking, deployment, or encryption naming.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "生產團隊需要在訓練之前刪除重複記錄並填入缺失值。哪個管道階段應該執行此操作？",
+        "options": {
+          "A": "KMS 別名",
+          "B": "資料清理和驗證",
+          "C": "模型端點自動縮放",
+          "D": "Route 53 運轉狀況檢查"
+        },
+        "explanation": "在創建特徵和模型擬合之前，清理和驗證可以提高訓練資料的品質。\n其他選擇操作網路、部署或加密命名。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-042",
@@ -669,7 +1161,19 @@
     "isMultiAnswer": false,
     "explanation": "SageMaker Processing runs managed data processing jobs for ML preparation.\nThe other choices provide content delivery, identity, or DDoS protection.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "多帳戶平台團隊需要透過託管處理將原始 S3 資料轉換為表格功能集。應該評估哪些服務？",
+        "options": {
+          "A": "Amazon Cognito",
+          "B": "AWS Shield",
+          "C": "Amazon SageMaker Processing",
+          "D": "Amazon CloudFront"
+        },
+        "explanation": "SageMaker Processing 執行託管資料處理作業以進行 ML 準備。\n其他選擇提供內容交付、身分或 DDoS 保護。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-043",
@@ -685,7 +1189,19 @@
     "isMultiAnswer": false,
     "explanation": "A leakage-safe split gives a more realistic estimate of model generalization.\nThe other choices produce inflated or invalid evaluation results.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "受監管的公司必須將標記資料拆分為訓練集、驗證集和測試集，且不得洩漏。哪種做法合適？",
+        "options": {
+          "A": "每組使用相同的記錄",
+          "B": "獨立打亂標籤",
+          "C": "僅在訓練資料上進行測試",
+          "D": "使用可重複的分割策略來防止相關記錄交叉集"
+        },
+        "explanation": "洩漏安全分割給出了對模型泛化的更現實的估計。\n其他選擇會產生誇大或無效的評估結果。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-044",
@@ -701,7 +1217,19 @@
     "isMultiAnswer": false,
     "explanation": "Feature Store centralizes and serves consistent features for training and inference.\nThe other choices do not manage ML feature definitions.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備增加流量的新創公司需要透過訓練和推理共享可重複使用的數字特徵定義。應該使用哪種能力？",
+        "options": {
+          "A": "Amazon SageMaker Feature Store",
+          "B": "S3 網站端點",
+          "C": "IAM 密碼原則",
+          "D": "CloudFront 失效"
+        },
+        "explanation": "特徵儲存集中並提供一致的特徵以進行訓練和推理。\n其他選項不管理 ML 特徵定義。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-045",
@@ -717,7 +1245,19 @@
     "isMultiAnswer": false,
     "explanation": "Encryption and least-privilege policies protect training artifacts at rest.\nPublic access and plaintext storage expose sensitive data.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "支援關鍵工作負載的營運團隊必須保護儲存在 S3 中的訓練資料。哪種控制合適？",
+        "options": {
+          "A": "未加密的 EBS 卷",
+          "B": "使用 KMS 金鑰和最低權限存取的 S3 伺服器端加密",
+          "C": "公共讀取權限",
+          "D": "DNS 別名"
+        },
+        "explanation": "加密和最低權限策略可以保護靜態的訓練工件。\n公共存取和明文儲存會暴露敏感資料。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-046",
@@ -733,7 +1273,19 @@
     "isMultiAnswer": false,
     "explanation": "Cleaning and validation improve training data quality before feature creation and model fitting.\nThe other choices operate networking, deployment, or encryption naming.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "資料平台團隊需要在訓練之前刪除重複記錄並填入缺失值。哪個管道階段應該執行此操作？",
+        "options": {
+          "A": "Route 53 運轉狀況檢查",
+          "B": "KMS 別名",
+          "C": "資料清理和驗證",
+          "D": "模型端點自動縮放"
+        },
+        "explanation": "在創建特徵和模型擬合之前，清理和驗證可以提高訓練資料的品質。\n其他選擇操作網路、部署或加密命名。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-047",
@@ -749,7 +1301,19 @@
     "isMultiAnswer": false,
     "explanation": "SageMaker Processing runs managed data processing jobs for ML preparation.\nThe other choices provide content delivery, identity, or DDoS protection.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有安全意識的工程團隊需要將原始 S3 資料轉換為具有託管處理功能的表格功能集。應該評估哪些服務？",
+        "options": {
+          "A": "Amazon CloudFront",
+          "B": "Amazon Cognito",
+          "C": "AWS Shield",
+          "D": "Amazon SageMaker Processing"
+        },
+        "explanation": "SageMaker Processing 執行託管資料處理作業以進行 ML 準備。\n其他選擇提供內容交付、身分或 DDoS 保護。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-048",
@@ -765,7 +1329,19 @@
     "isMultiAnswer": false,
     "explanation": "A leakage-safe split gives a more realistic estimate of model generalization.\nThe other choices produce inflated or invalid evaluation results.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "遷移現有工作負載的公司必須將標記資料拆分為訓練集、驗證集和測試集，且不得洩漏。哪種做法合適？",
+        "options": {
+          "A": "使用可重複的分割策略來防止相關記錄交叉集",
+          "B": "每組使用相同的記錄",
+          "C": "獨立打亂標籤",
+          "D": "僅在訓練資料上進行測試"
+        },
+        "explanation": "洩漏安全分割給出了對模型泛化的更現實的估計。\n其他選擇會產生誇大或無效的評估結果。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-049",
@@ -781,7 +1357,19 @@
     "isMultiAnswer": false,
     "explanation": "Feature Store centralizes and serves consistent features for training and inference.\nThe other choices do not manage ML feature definitions.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有嚴格恢復目標的團隊需要由訓練和推理共享的可重複使用的數值特徵定義。應該使用哪種能力？",
+        "options": {
+          "A": "CloudFront 失效",
+          "B": "Amazon SageMaker Feature Store",
+          "C": "S3 網站端點",
+          "D": "IAM 密碼原則"
+        },
+        "explanation": "特徵儲存集中並提供一致的特徵以進行訓練和推理。\n其他選項不管理 ML 特徵定義。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-050",
@@ -797,7 +1385,19 @@
     "isMultiAnswer": false,
     "explanation": "Encryption and least-privilege policies protect training artifacts at rest.\nPublic access and plaintext storage expose sensitive data.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備發布的開發團隊必須保護儲存在 S3 中的訓練資料。哪種控制合適？",
+        "options": {
+          "A": "DNS 別名",
+          "B": "未加密的 EBS 卷",
+          "C": "使用 KMS 金鑰和最低權限存取的 S3 伺服器端加密",
+          "D": "公共讀取權限"
+        },
+        "explanation": "加密和最低權限策略可以保護靜態的訓練工件。\n公共存取和明文儲存會暴露敏感資料。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-051",
@@ -813,7 +1413,19 @@
     "isMultiAnswer": false,
     "explanation": "Cleaning and validation improve training data quality before feature creation and model fitting.\nThe other choices operate networking, deployment, or encryption naming.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "擁有多個 AWS 區域的企業需要在訓練之前刪除重複記錄並填入缺失值。哪個管道階段應該執行此操作？",
+        "options": {
+          "A": "模型端點自動縮放",
+          "B": "Route 53 運轉狀況檢查",
+          "C": "KMS 別名",
+          "D": "資料清理和驗證"
+        },
+        "explanation": "在創建特徵和模型擬合之前，清理和驗證可以提高訓練資料的品質。\n其他選擇操作網路、部署或加密命名。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-052",
@@ -829,7 +1441,19 @@
     "isMultiAnswer": false,
     "explanation": "SageMaker Processing runs managed data processing jobs for ML preparation.\nThe other choices provide content delivery, identity, or DDoS protection.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "審查事件的服務擁有者需要將原始 S3 資料轉換為具有託管處理的表格功能集。應該評估哪些服務？",
+        "options": {
+          "A": "Amazon SageMaker Processing",
+          "B": "Amazon CloudFront",
+          "C": "Amazon Cognito",
+          "D": "AWS Shield"
+        },
+        "explanation": "SageMaker Processing 執行託管資料處理作業以進行 ML 準備。\n其他選擇提供內容交付、身分或 DDoS 保護。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-053",
@@ -845,7 +1469,19 @@
     "isMultiAnswer": false,
     "explanation": "A leakage-safe split gives a more realistic estimate of model generalization.\nThe other choices produce inflated or invalid evaluation results.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "優化現有實施的團隊必須將標記資料拆分為訓練集、驗證集和測試集，而不會洩漏。哪種做法合適？",
+        "options": {
+          "A": "僅在訓練資料上進行測試",
+          "B": "使用可重複的分割策略來防止相關記錄交叉集",
+          "C": "每組使用相同的記錄",
+          "D": "獨立打亂標籤"
+        },
+        "explanation": "洩漏安全分割給出了對模型泛化的更現實的估計。\n其他選擇會產生誇大或無效的評估結果。"
+      }
+    }
   },
   {
     "id": "mla-c01-d1-054",
@@ -861,6 +1497,18 @@
     "isMultiAnswer": false,
     "explanation": "Feature Store centralizes and serves consistent features for training and inference.\nThe other choices do not manage ML feature definitions.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "引入自動化工作流程的公司需要透過訓練和推理共享可重複使用的數字特徵定義。應該使用哪種能力？",
+        "options": {
+          "A": "IAM 密碼原則",
+          "B": "CloudFront 失效",
+          "C": "Amazon SageMaker Feature Store",
+          "D": "S3 網站端點"
+        },
+        "explanation": "特徵儲存集中並提供一致的特徵以進行訓練和推理。\n其他選項不管理 ML 特徵定義。"
+      }
+    }
   }
 ]

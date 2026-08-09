@@ -13,7 +13,19 @@
     "isMultiAnswer": false,
     "explanation": "CloudWatch custom metrics let applications publish business and operational measurements for alarms and dashboards.\nThe other choices manage DNS, storage transitions, or encryption permissions.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "生產團隊需要一個非 AWS 服務發出的自訂應用程式值的指標。哪個功能最適合？",
+        "options": {
+          "A": "KMS 補助金",
+          "B": "CloudWatch 自訂指標",
+          "C": "53 號公路記錄",
+          "D": "S3 生命週期規則"
+        },
+        "explanation": "CloudWatch 自訂指標可讓應用程式發布警報和儀表板的業務和營運測量結果。\n其他選項管理 DNS、儲存轉換或加密權限。"
+      }
+    }
   },
   {
     "id": "soa-c03-d1-002",
@@ -29,7 +41,19 @@
     "isMultiAnswer": false,
     "explanation": "The CloudWatch agent collects operating system logs and metrics and sends them to CloudWatch.\nThe other choices do not collect EC2 operating system telemetry.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "多帳戶平台團隊必須從 EC2 執行個體收集作業系統日誌。應該配置哪個工具？",
+        "options": {
+          "A": "CloudFront 來源群組",
+          "B": "VPC對等路由",
+          "C": "CloudWatch 代理",
+          "D": "S3 儲存桶 ACL"
+        },
+        "explanation": "CloudWatch 代理程式收集作業系統日誌和指標並將其傳送至 CloudWatch。\n其他選擇不收集 EC2 作業系統遙測資料。"
+      }
+    }
   },
   {
     "id": "soa-c03-d1-003",
@@ -45,7 +69,19 @@
     "isMultiAnswer": false,
     "explanation": "A composite alarm combines the states of other alarms and can reduce noisy or premature remediation.\nThe other choices do not combine CloudWatch alarm states.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "受監管的公司需要一個僅當兩個底層警報都處於警報狀態時才調用操作的警報。應該使用哪個功能？",
+        "options": {
+          "A": "S3 事件通知",
+          "B": "Route 53 加權記錄",
+          "C": "IAM Permissions邊界",
+          "D": "CloudWatch 複合警報"
+        },
+        "explanation": "複合警報結合了其他警報的狀態，可以減少噪音或過早的補救。\n其他選擇不組合 CloudWatch 警報狀態。"
+      }
+    }
   },
   {
     "id": "soa-c03-d1-004",
@@ -61,7 +97,19 @@
     "isMultiAnswer": false,
     "explanation": "EventBridge can receive alarm state events and invoke a Lambda target for automated remediation.\nThe other choices do not route CloudWatch events to code.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "一家準備增加流量的新創公司希望將 CloudWatch 警報事件路由到 Lambda 修復函數。哪種整合合適？",
+        "options": {
+          "A": "針對 Lambda 的 EventBridge",
+          "B": "EBS Snapshot策略",
+          "C": "安全群組規則",
+          "D": "S3 儲存類別"
+        },
+        "explanation": "EventBridge 可以接收警報狀態事件並呼叫 Lambda 目標進行自動修復。\n其他選擇不會將 CloudWatch 事件路由到程式碼。"
+      }
+    }
   },
   {
     "id": "soa-c03-d1-005",
@@ -77,7 +125,19 @@
     "isMultiAnswer": false,
     "explanation": "Performance Insights exposes database load and helps identify query and wait-event bottlenecks.\nThe other choices provide object reports, compliance documents, or application identity.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "支援關鍵工作負載的營運團隊需要使用資料庫級效能資訊來調查緩慢的 RDS 查詢。應該啟用哪個功能？",
+        "options": {
+          "A": "Amazon Cognito",
+          "B": "Amazon RDS Performance Insights",
+          "C": "S3 Inventory",
+          "D": "AWS Artifact"
+        },
+        "explanation": "Performance Insights 揭示資料庫負載並協助識別查詢和等待事件瓶頸。\n其他選擇提供物件報告、合規性文件或應用程式身分。"
+      }
+    }
   },
   {
     "id": "soa-c03-d1-006",
@@ -93,7 +153,19 @@
     "isMultiAnswer": false,
     "explanation": "CloudWatch custom metrics let applications publish business and operational measurements for alarms and dashboards.\nThe other choices manage DNS, storage transitions, or encryption permissions.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "資料平台團隊需要一個非 AWS 服務發出的自訂應用程式值的指標。哪個功能最適合？",
+        "options": {
+          "A": "S3 生命週期規則",
+          "B": "KMS 補助金",
+          "C": "CloudWatch 自訂指標",
+          "D": "53 號公路記錄"
+        },
+        "explanation": "CloudWatch 自訂指標可讓應用程式發布警報和儀表板的業務和營運測量結果。\n其他選項管理 DNS、儲存轉換或加密權限。"
+      }
+    }
   },
   {
     "id": "soa-c03-d1-007",
@@ -109,7 +181,19 @@
     "isMultiAnswer": false,
     "explanation": "The CloudWatch agent collects operating system logs and metrics and sends them to CloudWatch.\nThe other choices do not collect EC2 operating system telemetry.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有安全意識的工程團隊必須從 EC2 執行個體收集作業系統日誌。應該配置哪個工具？",
+        "options": {
+          "A": "S3 儲存桶 ACL",
+          "B": "CloudFront 來源群組",
+          "C": "VPC對等路由",
+          "D": "CloudWatch 代理"
+        },
+        "explanation": "CloudWatch 代理程式收集作業系統日誌和指標並將其傳送至 CloudWatch。\n其他選擇不收集 EC2 作業系統遙測資料。"
+      }
+    }
   },
   {
     "id": "soa-c03-d1-008",
@@ -125,7 +209,19 @@
     "isMultiAnswer": false,
     "explanation": "A composite alarm combines the states of other alarms and can reduce noisy or premature remediation.\nThe other choices do not combine CloudWatch alarm states.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "遷移現有工作負載的公司需要一個警報，只有當兩個底層警報都處於警報狀態時才呼叫操作。應該使用哪個功能？",
+        "options": {
+          "A": "CloudWatch 複合警報",
+          "B": "S3 事件通知",
+          "C": "Route 53 加權記錄",
+          "D": "IAM Permissions邊界"
+        },
+        "explanation": "複合警報結合了其他警報的狀態，可以減少噪音或過早的補救。\n其他選擇不組合 CloudWatch 警報狀態。"
+      }
+    }
   },
   {
     "id": "soa-c03-d1-009",
@@ -141,7 +237,19 @@
     "isMultiAnswer": false,
     "explanation": "EventBridge can receive alarm state events and invoke a Lambda target for automated remediation.\nThe other choices do not route CloudWatch events to code.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有嚴格復原目標的團隊希望將 CloudWatch 警報事件路由到 Lambda 修復函數。哪種整合合適？",
+        "options": {
+          "A": "S3 儲存類別",
+          "B": "針對 Lambda 的 EventBridge",
+          "C": "EBS Snapshot策略",
+          "D": "安全群組規則"
+        },
+        "explanation": "EventBridge 可以接收警報狀態事件並呼叫 Lambda 目標進行自動修復。\n其他選擇不會將 CloudWatch 事件路由到程式碼。"
+      }
+    }
   },
   {
     "id": "soa-c03-d1-010",
@@ -157,7 +265,19 @@
     "isMultiAnswer": false,
     "explanation": "Performance Insights exposes database load and helps identify query and wait-event bottlenecks.\nThe other choices provide object reports, compliance documents, or application identity.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備發布的開發團隊需要使用資料庫級效能資訊來調查緩慢的 RDS 查詢。應該啟用哪個功能？",
+        "options": {
+          "A": "AWS Artifact",
+          "B": "Amazon Cognito",
+          "C": "Amazon RDS Performance Insights",
+          "D": "S3 Inventory"
+        },
+        "explanation": "Performance Insights 揭示資料庫負載並協助識別查詢和等待事件瓶頸。\n其他選擇提供物件報告、合規性文件或應用程式身分。"
+      }
+    }
   },
   {
     "id": "soa-c03-d1-011",
@@ -173,7 +293,19 @@
     "isMultiAnswer": false,
     "explanation": "CloudWatch custom metrics let applications publish business and operational measurements for alarms and dashboards.\nThe other choices manage DNS, storage transitions, or encryption permissions.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "擁有多個 AWS 區域的企業需要一個非 AWS 服務發出的自訂應用程式值的指標。哪個功能最適合？",
+        "options": {
+          "A": "53 號公路記錄",
+          "B": "S3 生命週期規則",
+          "C": "KMS 補助金",
+          "D": "CloudWatch 自訂指標"
+        },
+        "explanation": "CloudWatch 自訂指標可讓應用程式發布警報和儀表板的業務和營運測量結果。\n其他選項管理 DNS、儲存轉換或加密權限。"
+      }
+    }
   },
   {
     "id": "soa-c03-d1-012",
@@ -189,7 +321,19 @@
     "isMultiAnswer": false,
     "explanation": "The CloudWatch agent collects operating system logs and metrics and sends them to CloudWatch.\nThe other choices do not collect EC2 operating system telemetry.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "審查事件的服務擁有者必須從 EC2 執行個體收集作業系統日誌。應該配置哪個工具？",
+        "options": {
+          "A": "CloudWatch 代理",
+          "B": "S3 儲存桶 ACL",
+          "C": "CloudFront 來源群組",
+          "D": "VPC對等路由"
+        },
+        "explanation": "CloudWatch 代理程式收集作業系統日誌和指標並將其傳送至 CloudWatch。\n其他選擇不收集 EC2 作業系統遙測資料。"
+      }
+    }
   },
   {
     "id": "soa-c03-d1-013",
@@ -205,7 +349,19 @@
     "isMultiAnswer": false,
     "explanation": "A composite alarm combines the states of other alarms and can reduce noisy or premature remediation.\nThe other choices do not combine CloudWatch alarm states.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "優化現有實施的團隊需要一個警報，僅當兩個底層警報都處於警報狀態時才呼叫操作。應該使用哪個功能？",
+        "options": {
+          "A": "IAM Permissions邊界",
+          "B": "CloudWatch 複合警報",
+          "C": "S3 事件通知",
+          "D": "Route 53 加權記錄"
+        },
+        "explanation": "複合警報結合了其他警報的狀態，可以減少噪音或過早的補救。\n其他選擇不組合 CloudWatch 警報狀態。"
+      }
+    }
   },
   {
     "id": "soa-c03-d1-014",
@@ -221,7 +377,19 @@
     "isMultiAnswer": false,
     "explanation": "EventBridge can receive alarm state events and invoke a Lambda target for automated remediation.\nThe other choices do not route CloudWatch events to code.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "一家引入自動化工作流程的公司希望將 CloudWatch 警報事件路由到 Lambda 修復功能。哪種整合合適？",
+        "options": {
+          "A": "安全群組規則",
+          "B": "S3 儲存類別",
+          "C": "針對 Lambda 的 EventBridge",
+          "D": "EBS Snapshot策略"
+        },
+        "explanation": "EventBridge 可以接收警報狀態事件並呼叫 Lambda 目標進行自動修復。\n其他選擇不會將 CloudWatch 事件路由到程式碼。"
+      }
+    }
   },
   {
     "id": "soa-c03-d1-015",
@@ -237,7 +405,19 @@
     "isMultiAnswer": false,
     "explanation": "Performance Insights exposes database load and helps identify query and wait-event bottlenecks.\nThe other choices provide object reports, compliance documents, or application identity.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "在共享環境中工作的 AWS 管理員需要使用資料庫級效能資訊來調查緩慢的 RDS 查詢。應該啟用哪個功能？",
+        "options": {
+          "A": "S3 Inventory",
+          "B": "AWS Artifact",
+          "C": "Amazon Cognito",
+          "D": "Amazon RDS Performance Insights"
+        },
+        "explanation": "Performance Insights 揭示資料庫負載並協助識別查詢和等待事件瓶頸。\n其他選擇提供物件報告、合規性文件或應用程式身分。"
+      }
+    }
   },
   {
     "id": "soa-c03-d1-016",
@@ -253,7 +433,19 @@
     "isMultiAnswer": false,
     "explanation": "CloudWatch custom metrics let applications publish business and operational measurements for alarms and dashboards.\nThe other choices manage DNS, storage transitions, or encryption permissions.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "面向客戶的應用程式團隊需要一個非 AWS 服務發出的自訂應用程式值的指標。哪個功能最適合？",
+        "options": {
+          "A": "CloudWatch 自訂指標",
+          "B": "53 號公路記錄",
+          "C": "S3 生命週期規則",
+          "D": "KMS 補助金"
+        },
+        "explanation": "CloudWatch 自訂指標可讓應用程式發布警報和儀表板的業務和營運測量結果。\n其他選項管理 DNS、儲存轉換或加密權限。"
+      }
+    }
   },
   {
     "id": "soa-c03-d1-017",
@@ -269,7 +461,19 @@
     "isMultiAnswer": false,
     "explanation": "The CloudWatch agent collects operating system logs and metrics and sends them to CloudWatch.\nThe other choices do not collect EC2 operating system telemetry.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "標準化其 AWS 部署的平台團隊必須從 EC2 執行個體收集作業系統日誌。應該配置哪個工具？",
+        "options": {
+          "A": "VPC對等路由",
+          "B": "CloudWatch 代理",
+          "C": "S3 儲存桶 ACL",
+          "D": "CloudFront 來源群組"
+        },
+        "explanation": "CloudWatch 代理程式收集作業系統日誌和指標並將其傳送至 CloudWatch。\n其他選擇不收集 EC2 作業系統遙測資料。"
+      }
+    }
   },
   {
     "id": "soa-c03-d1-018",
@@ -285,7 +489,19 @@
     "isMultiAnswer": false,
     "explanation": "A composite alarm combines the states of other alarms and can reduce noisy or premature remediation.\nThe other choices do not combine CloudWatch alarm states.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "為審計準備證據的團隊需要一個警報，該警報僅當兩個基礎警報都處於警報狀態時才調用操作。應該使用哪個功能？",
+        "options": {
+          "A": "Route 53 加權記錄",
+          "B": "IAM Permissions邊界",
+          "C": "CloudWatch 複合警報",
+          "D": "S3 事件通知"
+        },
+        "explanation": "複合警報結合了其他警報的狀態，可以減少噪音或過早的補救。\n其他選擇不組合 CloudWatch 警報狀態。"
+      }
+    }
   },
   {
     "id": "soa-c03-d1-019",
@@ -301,7 +517,19 @@
     "isMultiAnswer": false,
     "explanation": "EventBridge can receive alarm state events and invoke a Lambda target for automated remediation.\nThe other choices do not route CloudWatch events to code.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "替代手動流程的企業希望將 CloudWatch 警報事件路由到 Lambda 修復函數。哪種整合合適？",
+        "options": {
+          "A": "EBS Snapshot策略",
+          "B": "安全群組規則",
+          "C": "S3 儲存類別",
+          "D": "針對 Lambda 的 EventBridge"
+        },
+        "explanation": "EventBridge 可以接收警報狀態事件並呼叫 Lambda 目標進行自動修復。\n其他選擇不會將 CloudWatch 事件路由到程式碼。"
+      }
+    }
   },
   {
     "id": "soa-c03-d1-020",
@@ -317,7 +545,19 @@
     "isMultiAnswer": false,
     "explanation": "Performance Insights exposes database load and helps identify query and wait-event bottlenecks.\nThe other choices provide object reports, compliance documents, or application identity.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "根據考試指南驗證設計的團隊需要使用資料庫層級效能資訊來調查緩慢的 RDS 查詢。應該啟用哪個功能？",
+        "options": {
+          "A": "Amazon RDS Performance Insights",
+          "B": "S3 Inventory",
+          "C": "AWS Artifact",
+          "D": "Amazon Cognito"
+        },
+        "explanation": "Performance Insights 揭示資料庫負載並協助識別查詢和等待事件瓶頸。\n其他選擇提供物件報告、合規性文件或應用程式身分。"
+      }
+    }
   },
   {
     "id": "soa-c03-d1-021",
@@ -333,7 +573,19 @@
     "isMultiAnswer": false,
     "explanation": "CloudWatch custom metrics let applications publish business and operational measurements for alarms and dashboards.\nThe other choices manage DNS, storage transitions, or encryption permissions.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "生產團隊需要一個非 AWS 服務發出的自訂應用程式值的指標。哪個功能最適合？",
+        "options": {
+          "A": "KMS 補助金",
+          "B": "CloudWatch 自訂指標",
+          "C": "53 號公路記錄",
+          "D": "S3 生命週期規則"
+        },
+        "explanation": "CloudWatch 自訂指標可讓應用程式發布警報和儀表板的業務和營運測量結果。\n其他選項管理 DNS、儲存轉換或加密權限。"
+      }
+    }
   },
   {
     "id": "soa-c03-d1-022",
@@ -349,7 +601,19 @@
     "isMultiAnswer": false,
     "explanation": "The CloudWatch agent collects operating system logs and metrics and sends them to CloudWatch.\nThe other choices do not collect EC2 operating system telemetry.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "多帳戶平台團隊必須從 EC2 執行個體收集作業系統日誌。應該配置哪個工具？",
+        "options": {
+          "A": "CloudFront 來源群組",
+          "B": "VPC對等路由",
+          "C": "CloudWatch 代理",
+          "D": "S3 儲存桶 ACL"
+        },
+        "explanation": "CloudWatch 代理程式收集作業系統日誌和指標並將其傳送至 CloudWatch。\n其他選擇不收集 EC2 作業系統遙測資料。"
+      }
+    }
   },
   {
     "id": "soa-c03-d1-023",
@@ -365,7 +629,19 @@
     "isMultiAnswer": false,
     "explanation": "A composite alarm combines the states of other alarms and can reduce noisy or premature remediation.\nThe other choices do not combine CloudWatch alarm states.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "受監管的公司需要一個僅當兩個底層警報都處於警報狀態時才調用操作的警報。應該使用哪個功能？",
+        "options": {
+          "A": "S3 事件通知",
+          "B": "Route 53 加權記錄",
+          "C": "IAM Permissions邊界",
+          "D": "CloudWatch 複合警報"
+        },
+        "explanation": "複合警報結合了其他警報的狀態，可以減少噪音或過早的補救。\n其他選擇不組合 CloudWatch 警報狀態。"
+      }
+    }
   },
   {
     "id": "soa-c03-d1-024",
@@ -381,7 +657,19 @@
     "isMultiAnswer": false,
     "explanation": "EventBridge can receive alarm state events and invoke a Lambda target for automated remediation.\nThe other choices do not route CloudWatch events to code.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "一家準備增加流量的新創公司希望將 CloudWatch 警報事件路由到 Lambda 修復函數。哪種整合合適？",
+        "options": {
+          "A": "針對 Lambda 的 EventBridge",
+          "B": "EBS Snapshot策略",
+          "C": "安全群組規則",
+          "D": "S3 儲存類別"
+        },
+        "explanation": "EventBridge 可以接收警報狀態事件並呼叫 Lambda 目標進行自動修復。\n其他選擇不會將 CloudWatch 事件路由到程式碼。"
+      }
+    }
   },
   {
     "id": "soa-c03-d1-025",
@@ -397,7 +685,19 @@
     "isMultiAnswer": false,
     "explanation": "Performance Insights exposes database load and helps identify query and wait-event bottlenecks.\nThe other choices provide object reports, compliance documents, or application identity.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "支援關鍵工作負載的營運團隊需要使用資料庫級效能資訊來調查緩慢的 RDS 查詢。應該啟用哪個功能？",
+        "options": {
+          "A": "Amazon Cognito",
+          "B": "Amazon RDS Performance Insights",
+          "C": "S3 Inventory",
+          "D": "AWS Artifact"
+        },
+        "explanation": "Performance Insights 揭示資料庫負載並協助識別查詢和等待事件瓶頸。\n其他選擇提供物件報告、合規性文件或應用程式身分。"
+      }
+    }
   },
   {
     "id": "soa-c03-d1-026",
@@ -413,7 +713,19 @@
     "isMultiAnswer": false,
     "explanation": "CloudWatch custom metrics let applications publish business and operational measurements for alarms and dashboards.\nThe other choices manage DNS, storage transitions, or encryption permissions.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "資料平台團隊需要一個非 AWS 服務發出的自訂應用程式值的指標。哪個功能最適合？",
+        "options": {
+          "A": "S3 生命週期規則",
+          "B": "KMS 補助金",
+          "C": "CloudWatch 自訂指標",
+          "D": "53 號公路記錄"
+        },
+        "explanation": "CloudWatch 自訂指標可讓應用程式發布警報和儀表板的業務和營運測量結果。\n其他選項管理 DNS、儲存轉換或加密權限。"
+      }
+    }
   },
   {
     "id": "soa-c03-d1-027",
@@ -429,7 +741,19 @@
     "isMultiAnswer": false,
     "explanation": "The CloudWatch agent collects operating system logs and metrics and sends them to CloudWatch.\nThe other choices do not collect EC2 operating system telemetry.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有安全意識的工程團隊必須從 EC2 執行個體收集作業系統日誌。應該配置哪個工具？",
+        "options": {
+          "A": "S3 儲存桶 ACL",
+          "B": "CloudFront 來源群組",
+          "C": "VPC對等路由",
+          "D": "CloudWatch 代理"
+        },
+        "explanation": "CloudWatch 代理程式收集作業系統日誌和指標並將其傳送至 CloudWatch。\n其他選擇不收集 EC2 作業系統遙測資料。"
+      }
+    }
   },
   {
     "id": "soa-c03-d1-028",
@@ -445,7 +769,19 @@
     "isMultiAnswer": false,
     "explanation": "A composite alarm combines the states of other alarms and can reduce noisy or premature remediation.\nThe other choices do not combine CloudWatch alarm states.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "遷移現有工作負載的公司需要一個警報，只有當兩個底層警報都處於警報狀態時才呼叫操作。應該使用哪個功能？",
+        "options": {
+          "A": "CloudWatch 複合警報",
+          "B": "S3 事件通知",
+          "C": "Route 53 加權記錄",
+          "D": "IAM Permissions邊界"
+        },
+        "explanation": "複合警報結合了其他警報的狀態，可以減少噪音或過早的補救。\n其他選擇不組合 CloudWatch 警報狀態。"
+      }
+    }
   },
   {
     "id": "soa-c03-d1-029",
@@ -461,7 +797,19 @@
     "isMultiAnswer": false,
     "explanation": "EventBridge can receive alarm state events and invoke a Lambda target for automated remediation.\nThe other choices do not route CloudWatch events to code.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有嚴格復原目標的團隊希望將 CloudWatch 警報事件路由到 Lambda 修復函數。哪種整合合適？",
+        "options": {
+          "A": "S3 儲存類別",
+          "B": "針對 Lambda 的 EventBridge",
+          "C": "EBS Snapshot策略",
+          "D": "安全群組規則"
+        },
+        "explanation": "EventBridge 可以接收警報狀態事件並呼叫 Lambda 目標進行自動修復。\n其他選擇不會將 CloudWatch 事件路由到程式碼。"
+      }
+    }
   },
   {
     "id": "soa-c03-d1-030",
@@ -477,7 +825,19 @@
     "isMultiAnswer": false,
     "explanation": "Performance Insights exposes database load and helps identify query and wait-event bottlenecks.\nThe other choices provide object reports, compliance documents, or application identity.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備發布的開發團隊需要使用資料庫級效能資訊來調查緩慢的 RDS 查詢。應該啟用哪個功能？",
+        "options": {
+          "A": "AWS Artifact",
+          "B": "Amazon Cognito",
+          "C": "Amazon RDS Performance Insights",
+          "D": "S3 Inventory"
+        },
+        "explanation": "Performance Insights 揭示資料庫負載並協助識別查詢和等待事件瓶頸。\n其他選擇提供物件報告、合規性文件或應用程式身分。"
+      }
+    }
   },
   {
     "id": "soa-c03-d1-031",
@@ -493,7 +853,19 @@
     "isMultiAnswer": false,
     "explanation": "CloudWatch custom metrics let applications publish business and operational measurements for alarms and dashboards.\nThe other choices manage DNS, storage transitions, or encryption permissions.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "擁有多個 AWS 區域的企業需要一個非 AWS 服務發出的自訂應用程式值的指標。哪個功能最適合？",
+        "options": {
+          "A": "53 號公路記錄",
+          "B": "S3 生命週期規則",
+          "C": "KMS 補助金",
+          "D": "CloudWatch 自訂指標"
+        },
+        "explanation": "CloudWatch 自訂指標可讓應用程式發布警報和儀表板的業務和營運測量結果。\n其他選項管理 DNS、儲存轉換或加密權限。"
+      }
+    }
   },
   {
     "id": "soa-c03-d1-032",
@@ -509,7 +881,19 @@
     "isMultiAnswer": false,
     "explanation": "The CloudWatch agent collects operating system logs and metrics and sends them to CloudWatch.\nThe other choices do not collect EC2 operating system telemetry.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "審查事件的服務擁有者必須從 EC2 執行個體收集作業系統日誌。應該配置哪個工具？",
+        "options": {
+          "A": "CloudWatch 代理",
+          "B": "S3 儲存桶 ACL",
+          "C": "CloudFront 來源群組",
+          "D": "VPC對等路由"
+        },
+        "explanation": "CloudWatch 代理程式收集作業系統日誌和指標並將其傳送至 CloudWatch。\n其他選擇不收集 EC2 作業系統遙測資料。"
+      }
+    }
   },
   {
     "id": "soa-c03-d1-033",
@@ -525,7 +909,19 @@
     "isMultiAnswer": false,
     "explanation": "A composite alarm combines the states of other alarms and can reduce noisy or premature remediation.\nThe other choices do not combine CloudWatch alarm states.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "優化現有實施的團隊需要一個警報，僅當兩個底層警報都處於警報狀態時才呼叫操作。應該使用哪個功能？",
+        "options": {
+          "A": "IAM Permissions邊界",
+          "B": "CloudWatch 複合警報",
+          "C": "S3 事件通知",
+          "D": "Route 53 加權記錄"
+        },
+        "explanation": "複合警報結合了其他警報的狀態，可以減少噪音或過早的補救。\n其他選擇不組合 CloudWatch 警報狀態。"
+      }
+    }
   },
   {
     "id": "soa-c03-d1-034",
@@ -541,7 +937,19 @@
     "isMultiAnswer": false,
     "explanation": "EventBridge can receive alarm state events and invoke a Lambda target for automated remediation.\nThe other choices do not route CloudWatch events to code.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "一家引入自動化工作流程的公司希望將 CloudWatch 警報事件路由到 Lambda 修復功能。哪種整合合適？",
+        "options": {
+          "A": "安全群組規則",
+          "B": "S3 儲存類別",
+          "C": "針對 Lambda 的 EventBridge",
+          "D": "EBS Snapshot策略"
+        },
+        "explanation": "EventBridge 可以接收警報狀態事件並呼叫 Lambda 目標進行自動修復。\n其他選擇不會將 CloudWatch 事件路由到程式碼。"
+      }
+    }
   },
   {
     "id": "soa-c03-d1-035",
@@ -557,7 +965,19 @@
     "isMultiAnswer": false,
     "explanation": "Performance Insights exposes database load and helps identify query and wait-event bottlenecks.\nThe other choices provide object reports, compliance documents, or application identity.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "在共享環境中工作的 AWS 管理員需要使用資料庫級效能資訊來調查緩慢的 RDS 查詢。應該啟用哪個功能？",
+        "options": {
+          "A": "S3 Inventory",
+          "B": "AWS Artifact",
+          "C": "Amazon Cognito",
+          "D": "Amazon RDS Performance Insights"
+        },
+        "explanation": "Performance Insights 揭示資料庫負載並協助識別查詢和等待事件瓶頸。\n其他選擇提供物件報告、合規性文件或應用程式身分。"
+      }
+    }
   },
   {
     "id": "soa-c03-d1-036",
@@ -573,7 +993,19 @@
     "isMultiAnswer": false,
     "explanation": "CloudWatch custom metrics let applications publish business and operational measurements for alarms and dashboards.\nThe other choices manage DNS, storage transitions, or encryption permissions.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "面向客戶的應用程式團隊需要一個非 AWS 服務發出的自訂應用程式值的指標。哪個功能最適合？",
+        "options": {
+          "A": "CloudWatch 自訂指標",
+          "B": "53 號公路記錄",
+          "C": "S3 生命週期規則",
+          "D": "KMS 補助金"
+        },
+        "explanation": "CloudWatch 自訂指標可讓應用程式發布警報和儀表板的業務和營運測量結果。\n其他選項管理 DNS、儲存轉換或加密權限。"
+      }
+    }
   },
   {
     "id": "soa-c03-d1-037",
@@ -589,7 +1021,19 @@
     "isMultiAnswer": false,
     "explanation": "The CloudWatch agent collects operating system logs and metrics and sends them to CloudWatch.\nThe other choices do not collect EC2 operating system telemetry.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "標準化其 AWS 部署的平台團隊必須從 EC2 執行個體收集作業系統日誌。應該配置哪個工具？",
+        "options": {
+          "A": "VPC對等路由",
+          "B": "CloudWatch 代理",
+          "C": "S3 儲存桶 ACL",
+          "D": "CloudFront 來源群組"
+        },
+        "explanation": "CloudWatch 代理程式收集作業系統日誌和指標並將其傳送至 CloudWatch。\n其他選擇不收集 EC2 作業系統遙測資料。"
+      }
+    }
   },
   {
     "id": "soa-c03-d1-038",
@@ -605,7 +1049,19 @@
     "isMultiAnswer": false,
     "explanation": "A composite alarm combines the states of other alarms and can reduce noisy or premature remediation.\nThe other choices do not combine CloudWatch alarm states.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "為審計準備證據的團隊需要一個警報，該警報僅當兩個基礎警報都處於警報狀態時才調用操作。應該使用哪個功能？",
+        "options": {
+          "A": "Route 53 加權記錄",
+          "B": "IAM Permissions邊界",
+          "C": "CloudWatch 複合警報",
+          "D": "S3 事件通知"
+        },
+        "explanation": "複合警報結合了其他警報的狀態，可以減少噪音或過早的補救。\n其他選擇不組合 CloudWatch 警報狀態。"
+      }
+    }
   },
   {
     "id": "soa-c03-d1-039",
@@ -621,7 +1077,19 @@
     "isMultiAnswer": false,
     "explanation": "EventBridge can receive alarm state events and invoke a Lambda target for automated remediation.\nThe other choices do not route CloudWatch events to code.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "替代手動流程的企業希望將 CloudWatch 警報事件路由到 Lambda 修復函數。哪種整合合適？",
+        "options": {
+          "A": "EBS Snapshot策略",
+          "B": "安全群組規則",
+          "C": "S3 儲存類別",
+          "D": "針對 Lambda 的 EventBridge"
+        },
+        "explanation": "EventBridge 可以接收警報狀態事件並呼叫 Lambda 目標進行自動修復。\n其他選擇不會將 CloudWatch 事件路由到程式碼。"
+      }
+    }
   },
   {
     "id": "soa-c03-d1-040",
@@ -637,7 +1105,19 @@
     "isMultiAnswer": false,
     "explanation": "Performance Insights exposes database load and helps identify query and wait-event bottlenecks.\nThe other choices provide object reports, compliance documents, or application identity.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "根據考試指南驗證設計的團隊需要使用資料庫層級效能資訊來調查緩慢的 RDS 查詢。應該啟用哪個功能？",
+        "options": {
+          "A": "Amazon RDS Performance Insights",
+          "B": "S3 Inventory",
+          "C": "AWS Artifact",
+          "D": "Amazon Cognito"
+        },
+        "explanation": "Performance Insights 揭示資料庫負載並協助識別查詢和等待事件瓶頸。\n其他選擇提供物件報告、合規性文件或應用程式身分。"
+      }
+    }
   },
   {
     "id": "soa-c03-d1-041",
@@ -653,7 +1133,19 @@
     "isMultiAnswer": false,
     "explanation": "CloudWatch custom metrics let applications publish business and operational measurements for alarms and dashboards.\nThe other choices manage DNS, storage transitions, or encryption permissions.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "生產團隊需要一個非 AWS 服務發出的自訂應用程式值的指標。哪個功能最適合？",
+        "options": {
+          "A": "KMS 補助金",
+          "B": "CloudWatch 自訂指標",
+          "C": "53 號公路記錄",
+          "D": "S3 生命週期規則"
+        },
+        "explanation": "CloudWatch 自訂指標可讓應用程式發布警報和儀表板的業務和營運測量結果。\n其他選項管理 DNS、儲存轉換或加密權限。"
+      }
+    }
   },
   {
     "id": "soa-c03-d1-042",
@@ -669,7 +1161,19 @@
     "isMultiAnswer": false,
     "explanation": "The CloudWatch agent collects operating system logs and metrics and sends them to CloudWatch.\nThe other choices do not collect EC2 operating system telemetry.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "多帳戶平台團隊必須從 EC2 執行個體收集作業系統日誌。應該配置哪個工具？",
+        "options": {
+          "A": "CloudFront 來源群組",
+          "B": "VPC對等路由",
+          "C": "CloudWatch 代理",
+          "D": "S3 儲存桶 ACL"
+        },
+        "explanation": "CloudWatch 代理程式收集作業系統日誌和指標並將其傳送至 CloudWatch。\n其他選擇不收集 EC2 作業系統遙測資料。"
+      }
+    }
   },
   {
     "id": "soa-c03-d1-043",
@@ -685,6 +1189,18 @@
     "isMultiAnswer": false,
     "explanation": "A composite alarm combines the states of other alarms and can reduce noisy or premature remediation.\nThe other choices do not combine CloudWatch alarm states.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "受監管的公司需要一個僅當兩個底層警報都處於警報狀態時才調用操作的警報。應該使用哪個功能？",
+        "options": {
+          "A": "S3 事件通知",
+          "B": "Route 53 加權記錄",
+          "C": "IAM Permissions邊界",
+          "D": "CloudWatch 複合警報"
+        },
+        "explanation": "複合警報結合了其他警報的狀態，可以減少噪音或過早的補救。\n其他選擇不組合 CloudWatch 警報狀態。"
+      }
+    }
   }
 ]

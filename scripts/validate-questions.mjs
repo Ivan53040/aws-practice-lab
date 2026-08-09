@@ -64,6 +64,9 @@ function validateQuestion(q, certCode, domainNum, idx, seenIds, regEntry) {
     return
   }
   const optionKeys = Object.keys(q.options).filter(k => q.options[k] !== undefined && q.options[k] !== '')
+  const visibleTargetKeys = q.targets && typeof q.targets === 'object'
+    ? Object.keys(q.targets).filter(k => q.targets[k] !== undefined && q.targets[k] !== '')
+    : []
   if (optionKeys.length < 2) {
     err(`${where} (${q.id}): fewer than 2 non-empty options`)
   }
@@ -170,6 +173,33 @@ function validateQuestion(q, certCode, domainNum, idx, seenIds, regEntry) {
     warn(`${where} (${q.id}): missing or empty explanation`)
   }
 
+  // Every active offline bank is bilingual. English remains canonical for
+  // authoring and scoring; Traditional Chinese must cover every visible field.
+  const liveBank = regEntry?.status === 'active' && !regEntry?.beta
+  const zh = q.translations?.zh
+  if (liveBank && (typeof zh !== 'object' || zh === null)) {
+    err(`${where} (${q.id}): missing translations.zh for active bilingual bank`)
+  } else if (zh) {
+    if (!isNonEmptyString(zh.question)) err(`${where} (${q.id}): missing translations.zh.question`)
+    if (!isNonEmptyString(zh.explanation)) err(`${where} (${q.id}): missing translations.zh.explanation`)
+    if (typeof zh.options !== 'object' || zh.options === null) {
+      err(`${where} (${q.id}): missing translations.zh.options`)
+    } else {
+      for (const key of optionKeys) {
+        if (!isNonEmptyString(zh.options[key])) err(`${where} (${q.id}): missing translations.zh.options.${key}`)
+      }
+    }
+    if (visibleTargetKeys.length > 0) {
+      if (typeof zh.targets !== 'object' || zh.targets === null) {
+        err(`${where} (${q.id}): missing translations.zh.targets for matching question`)
+      } else {
+        for (const key of visibleTargetKeys) {
+          if (!isNonEmptyString(zh.targets[key])) err(`${where} (${q.id}): missing translations.zh.targets.${key}`)
+        }
+      }
+    }
+  }
+
   // Em-dash discipline: warn (not error) so existing data isn't blocked
   // until contributors clean it up. Matching `targets` text is scanned too.
   const fields = [
@@ -177,6 +207,7 @@ function validateQuestion(q, certCode, domainNum, idx, seenIds, regEntry) {
     q.explanation,
     ...Object.values(q.options),
     ...(q.targets && typeof q.targets === 'object' ? Object.values(q.targets) : []),
+    ...(zh ? [zh.question, zh.explanation, ...Object.values(zh.options ?? {}), ...Object.values(zh.targets ?? {})] : []),
   ]
   for (const f of fields) {
     if (typeof f === 'string' && /[\u2013\u2014]/.test(f)) {
@@ -192,12 +223,17 @@ function validateQuestion(q, certCode, domainNum, idx, seenIds, regEntry) {
   // 2026-06-13. Error for live (active, non-beta) banks so it cannot
   // regress; warn for coming-soon/beta placeholder banks (same convention as
   // the count-drift check).
-  const liveBank = regEntry?.status === 'active' && !regEntry?.beta
   const formatIssue = liveBank ? err : warn
   if (typeof q.explanation === 'string' && q.explanation.trim().length > 0) {
     const newlines = (q.explanation.match(/\n/g) || []).length
     if (newlines !== 1) {
       formatIssue(`${where} (${q.id}): explanation must have exactly one \\n (two paragraphs), found ${newlines}`)
+    }
+  }
+  if (typeof zh?.explanation === 'string' && zh.explanation.trim().length > 0) {
+    const newlines = (zh.explanation.match(/\n/g) || []).length
+    if (newlines !== 1) {
+      formatIssue(`${where} (${q.id}): translations.zh.explanation must have exactly one \\n (two paragraphs), found ${newlines}`)
     }
   }
 
@@ -392,7 +428,7 @@ try {
     if (generated === undefined) {
       err(`generated/question-counts.ts: active cert "${code}" missing (registry total ${registryTotal}). Re-run \`npm run prebuild\`.`)
     } else if (generated !== registryTotal) {
-      err(`generated/question-counts.ts: "${code}" = ${generated} but registry domain sum = ${registryTotal}. Stale generated file — re-run \`npm run prebuild\`.`)
+        err(`generated/question-counts.ts: "${code}" = ${generated} but registry domain sum = ${registryTotal}. Stale generated file - re-run \`npm run prebuild\`.`)
     }
   }
 } catch (e) {

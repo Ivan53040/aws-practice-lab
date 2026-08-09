@@ -13,7 +13,19 @@
     "isMultiAnswer": false,
     "explanation": "A narrowly scoped identity or bucket policy limits the role to required prefixes and actions.\nPublic or administrator access is broader than needed, and security groups do not authorize S3 objects.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "生產團隊必須授予 ETL 角色僅存取指定 S3 前綴的權限。哪種控制合適？",
+        "options": {
+          "A": "範圍為該前綴的最低權限 IAM 策略",
+          "B": "公共儲存桶策略",
+          "C": "管理員策略",
+          "D": "安全群組規則"
+        },
+        "explanation": "範圍狹窄的身份或儲存桶策略將角色限制為所需的前綴和操作。\n公用或管理員存取權限超出了所需範圍，且安全性群組不授權 S3 物件。"
+      }
+    }
   },
   {
     "id": "dea-c01-d4-002",
@@ -29,7 +41,19 @@
     "isMultiAnswer": false,
     "explanation": "SSE-KMS with a customer managed key provides key policy control and KMS audit events.\nThe other choices do not provide the required customer key governance.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "多帳戶平台團隊需要使用客戶控制的金鑰對 S3 中的資料進行加密並審核金鑰的使用。哪個選項適合？",
+        "options": {
+          "A": "CloudFront 快取策略",
+          "B": "具有客戶管理的 KMS 金鑰的 SSE-KMS",
+          "C": "沒有審計追蹤的 SSE-S3",
+          "D": "明文物件"
+        },
+        "explanation": "具有客戶管理金鑰的 SSE-KMS 提供金鑰策略控制和 KMS 審核事件。\n其他選擇不提供所需的客戶金鑰治理。"
+      }
+    }
   },
   {
     "id": "dea-c01-d4-003",
@@ -45,7 +69,19 @@
     "isMultiAnswer": false,
     "explanation": "Macie discovers sensitive data such as PII in S3 and reports findings for investigation.\nInspector scans workloads, WAF filters web traffic, and Route 53 provides DNS.",
     "taskStatement": "4.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "受監管的公司必須發現資料湖中的個人識別資訊。應該評估哪些服務？",
+        "options": {
+          "A": "AWS WAF",
+          "B": "Amazon Route 53",
+          "C": "Amazon Macie",
+          "D": "Amazon Inspector"
+        },
+        "explanation": "Macie 在 S3 中發現敏感資料（例如 PII）並報告調查結果。\nInspector 掃描工作負載，WAF 過濾 Web 流量，Route 53 提供 DNS。"
+      }
+    }
   },
   {
     "id": "dea-c01-d4-004",
@@ -61,7 +97,19 @@
     "isMultiAnswer": false,
     "explanation": "CloudTrail records AWS API activity and can deliver logs to a protected S3 bucket.\nThe other choices provide caching, batch compute, or file storage.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備增加流量的新創公司需要資料管道 API 活動的中央審核記錄。應該配置哪個服務？",
+        "options": {
+          "A": "Amazon ElastiCache",
+          "B": "AWS Batch",
+          "C": "Amazon EFS",
+          "D": "AWS CloudTrail"
+        },
+        "explanation": "CloudTrail 記錄 AWS API 活動並且可以將日誌傳送到受保護的 S3 儲存桶。\n其他選擇提供快取、批次計算或文件儲存。"
+      }
+    }
   },
   {
     "id": "dea-c01-d4-005",
@@ -77,7 +125,19 @@
     "isMultiAnswer": false,
     "explanation": "KMS key policies and conditions constrain which principals and contexts can use the key.\nThe other choices do not authorize cryptographic operations.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "支援關鍵工作負載的營運團隊必須防止管道角色解密已核准帳戶以外的資料。哪一種機制應該約束密鑰？",
+        "options": {
+          "A": "KMS 金鑰策略和加密上下文條件",
+          "B": "公共 DNS 記錄",
+          "C": "S3 生命週期規則",
+          "D": "CloudFront 來源群組"
+        },
+        "explanation": "KMS 金鑰策略和條件限制哪些主體和上下文可以使用金鑰。\n其他選項不授權加密操作。"
+      }
+    }
   },
   {
     "id": "dea-c01-d4-006",
@@ -93,7 +153,19 @@
     "isMultiAnswer": false,
     "explanation": "A narrowly scoped identity or bucket policy limits the role to required prefixes and actions.\nPublic or administrator access is broader than needed, and security groups do not authorize S3 objects.",
     "taskStatement": "4.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "資料平台團隊必須僅向 ETL 角色授予對精選 S3 前綴的存取權限。哪種控制合適？",
+        "options": {
+          "A": "安全群組規則",
+          "B": "範圍為該前綴的最低權限 IAM 策略",
+          "C": "公共儲存桶策略",
+          "D": "管理員策略"
+        },
+        "explanation": "範圍狹窄的身份或儲存桶策略將角色限制為所需的前綴和操作。\n公用或管理員存取權限超出了所需範圍，且安全性群組不授權 S3 物件。"
+      }
+    }
   },
   {
     "id": "dea-c01-d4-007",
@@ -109,7 +181,19 @@
     "isMultiAnswer": false,
     "explanation": "SSE-KMS with a customer managed key provides key policy control and KMS audit events.\nThe other choices do not provide the required customer key governance.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有安全意識的工程團隊需要使用客戶控制的金鑰來加密 S3 中的資料並審核金鑰的使用。哪個選項適合？",
+        "options": {
+          "A": "明文物件",
+          "B": "CloudFront 快取策略",
+          "C": "具有客戶管理的 KMS 金鑰的 SSE-KMS",
+          "D": "沒有審計追蹤的 SSE-S3"
+        },
+        "explanation": "具有客戶管理金鑰的 SSE-KMS 提供金鑰策略控制和 KMS 審核事件。\n其他選擇不提供所需的客戶金鑰管理。"
+      }
+    }
   },
   {
     "id": "dea-c01-d4-008",
@@ -125,7 +209,19 @@
     "isMultiAnswer": false,
     "explanation": "Macie discovers sensitive data such as PII in S3 and reports findings for investigation.\nInspector scans workloads, WAF filters web traffic, and Route 53 provides DNS.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "遷移現有工作負載的公司必須在資料湖中發現個人識別資訊。應該評估哪些服務？",
+        "options": {
+          "A": "Amazon Inspector",
+          "B": "AWS WAF",
+          "C": "Amazon Route 53",
+          "D": "Amazon Macie"
+        },
+        "explanation": "Macie 在 S3 中發現敏感資料（例如 PII）並報告調查結果。\nInspector 掃描工作負載，WAF 過濾 Web 流量，Route 53 提供 DNS。"
+      }
+    }
   },
   {
     "id": "dea-c01-d4-009",
@@ -141,7 +237,19 @@
     "isMultiAnswer": false,
     "explanation": "CloudTrail records AWS API activity and can deliver logs to a protected S3 bucket.\nThe other choices provide caching, batch compute, or file storage.",
     "taskStatement": "4.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有嚴格恢復目標的團隊需要資料管道 API 活動的中央審核記錄。應該配置哪個服務？",
+        "options": {
+          "A": "AWS CloudTrail",
+          "B": "Amazon ElastiCache",
+          "C": "AWS Batch",
+          "D": "Amazon EFS"
+        },
+        "explanation": "CloudTrail 記錄 AWS API 活動並且可以將日誌傳送到受保護的 S3 儲存桶。\n其他選擇提供快取、批次計算或文件儲存。"
+      }
+    }
   },
   {
     "id": "dea-c01-d4-010",
@@ -157,7 +265,19 @@
     "isMultiAnswer": false,
     "explanation": "KMS key policies and conditions constrain which principals and contexts can use the key.\nThe other choices do not authorize cryptographic operations.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備發布的開發團隊必須防止管道角色解密已批准帳戶之外的資料。哪一種機制應該約束密鑰？",
+        "options": {
+          "A": "CloudFront 來源群組",
+          "B": "KMS 金鑰策略和加密上下文條件",
+          "C": "公共 DNS 記錄",
+          "D": "S3 生命週期規則"
+        },
+        "explanation": "KMS 金鑰策略和條件限制哪些主體和上下文可以使用金鑰。\n其他選項不授權加密操作。"
+      }
+    }
   },
   {
     "id": "dea-c01-d4-011",
@@ -173,7 +293,19 @@
     "isMultiAnswer": false,
     "explanation": "A narrowly scoped identity or bucket policy limits the role to required prefixes and actions.\nPublic or administrator access is broader than needed, and security groups do not authorize S3 objects.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "擁有多個 AWS 區域的企業必須僅向 ETL 角色授予對指定 S3 前綴的存取權限。哪種控制合適？",
+        "options": {
+          "A": "管理員策略",
+          "B": "安全群組規則",
+          "C": "範圍為該前綴的最低權限 IAM 策略",
+          "D": "公共儲存桶策略"
+        },
+        "explanation": "範圍狹窄的身份或儲存桶策略將角色限制為所需的前綴和操作。\n公用或管理員存取權限超出了所需範圍，且安全性群組不授權 S3 物件。"
+      }
+    }
   },
   {
     "id": "dea-c01-d4-012",
@@ -189,7 +321,19 @@
     "isMultiAnswer": false,
     "explanation": "SSE-KMS with a customer managed key provides key policy control and KMS audit events.\nThe other choices do not provide the required customer key governance.",
     "taskStatement": "4.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "審查事件的服務擁有者需要使用客戶控制的金鑰對 S3 中的資料進行加密並審核金鑰的使用。哪個選項適合？",
+        "options": {
+          "A": "沒有審計追蹤的 SSE-S3",
+          "B": "明文物件",
+          "C": "CloudFront 快取策略",
+          "D": "具有客戶管理的 KMS 金鑰的 SSE-KMS"
+        },
+        "explanation": "具有客戶管理金鑰的 SSE-KMS 提供金鑰策略控制和 KMS 審核事件。\n其他選擇不提供所需的客戶金鑰管理。"
+      }
+    }
   },
   {
     "id": "dea-c01-d4-013",
@@ -205,7 +349,19 @@
     "isMultiAnswer": false,
     "explanation": "Macie discovers sensitive data such as PII in S3 and reports findings for investigation.\nInspector scans workloads, WAF filters web traffic, and Route 53 provides DNS.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "優化現有實施的團隊必須在資料湖中發現個人識別資訊。應該評估哪些服務？",
+        "options": {
+          "A": "Amazon Macie",
+          "B": "Amazon Inspector",
+          "C": "AWS WAF",
+          "D": "Amazon Route 53"
+        },
+        "explanation": "Macie 在 S3 中發現敏感資料（例如 PII）並報告調查結果。\nInspector 掃描工作負載，WAF 過濾 Web 流量，Route 53 提供 DNS。"
+      }
+    }
   },
   {
     "id": "dea-c01-d4-014",
@@ -221,7 +377,19 @@
     "isMultiAnswer": false,
     "explanation": "CloudTrail records AWS API activity and can deliver logs to a protected S3 bucket.\nThe other choices provide caching, batch compute, or file storage.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "引入自動化工作流程的公司需要資料管道 API 活動的中央審計記錄。應該配置哪個服務？",
+        "options": {
+          "A": "Amazon EFS",
+          "B": "AWS CloudTrail",
+          "C": "Amazon ElastiCache",
+          "D": "AWS Batch"
+        },
+        "explanation": "CloudTrail 記錄 AWS API 活動並且可以將日誌傳送到受保護的 S3 儲存桶。\n其他選擇提供快取、批次計算或文件儲存。"
+      }
+    }
   },
   {
     "id": "dea-c01-d4-015",
@@ -237,7 +405,19 @@
     "isMultiAnswer": false,
     "explanation": "KMS key policies and conditions constrain which principals and contexts can use the key.\nThe other choices do not authorize cryptographic operations.",
     "taskStatement": "4.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "在共用環境中工作的 AWS 管理員必須防止管道角色解密已核准帳戶之外的資料。哪一種機制應該約束密鑰？",
+        "options": {
+          "A": "S3 生命週期規則",
+          "B": "CloudFront 來源群組",
+          "C": "KMS 金鑰策略和加密上下文條件",
+          "D": "公共 DNS 記錄"
+        },
+        "explanation": "KMS 金鑰策略和條件限制哪些主體和上下文可以使用金鑰。\n其他選項不授權加密操作。"
+      }
+    }
   },
   {
     "id": "dea-c01-d4-016",
@@ -253,7 +433,19 @@
     "isMultiAnswer": false,
     "explanation": "A narrowly scoped identity or bucket policy limits the role to required prefixes and actions.\nPublic or administrator access is broader than needed, and security groups do not authorize S3 objects.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "面向客戶的應用程式團隊必須僅向 ETL 角色授予精選 S3 前綴的存取權限。哪種控制合適？",
+        "options": {
+          "A": "公共儲存桶策略",
+          "B": "管理員策略",
+          "C": "安全群組規則",
+          "D": "範圍為該前綴的最低權限 IAM 策略"
+        },
+        "explanation": "範圍狹窄的身份或儲存桶策略將角色限制為所需的前綴和操作。\n公用或管理員存取權限超出了所需範圍，且安全性群組不授權 S3 物件。"
+      }
+    }
   },
   {
     "id": "dea-c01-d4-017",
@@ -269,7 +461,19 @@
     "isMultiAnswer": false,
     "explanation": "SSE-KMS with a customer managed key provides key policy control and KMS audit events.\nThe other choices do not provide the required customer key governance.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "標準化其 AWS 部署的平台團隊需要使用客戶控制的金鑰來加密 S3 中的資料並審核金鑰的使用。哪個選項適合？",
+        "options": {
+          "A": "具有客戶管理的 KMS 金鑰的 SSE-KMS",
+          "B": "沒有審計追蹤的 SSE-S3",
+          "C": "明文物件",
+          "D": "CloudFront 快取策略"
+        },
+        "explanation": "具有客戶管理金鑰的 SSE-KMS 提供金鑰策略控制和 KMS 審核事件。\n其他選擇不提供所需的客戶金鑰治理。"
+      }
+    }
   },
   {
     "id": "dea-c01-d4-018",
@@ -285,7 +489,19 @@
     "isMultiAnswer": false,
     "explanation": "Macie discovers sensitive data such as PII in S3 and reports findings for investigation.\nInspector scans workloads, WAF filters web traffic, and Route 53 provides DNS.",
     "taskStatement": "4.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備審計證據的團隊必須在資料湖中發現個人識別資訊。應該評估哪些服務？",
+        "options": {
+          "A": "Amazon Route 53",
+          "B": "Amazon Macie",
+          "C": "Amazon Inspector",
+          "D": "AWS WAF"
+        },
+        "explanation": "Macie 在 S3 中發現敏感資料（例如 PII）並報告調查結果。\nInspector 掃描工作負載，WAF 過濾 Web 流量，Route 53 提供 DNS。"
+      }
+    }
   },
   {
     "id": "dea-c01-d4-019",
@@ -301,7 +517,19 @@
     "isMultiAnswer": false,
     "explanation": "CloudTrail records AWS API activity and can deliver logs to a protected S3 bucket.\nThe other choices provide caching, batch compute, or file storage.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "替代手動流程的企業需要資料管道 API 活動的中央審核記錄。應該配置哪個服務？",
+        "options": {
+          "A": "AWS Batch",
+          "B": "Amazon EFS",
+          "C": "AWS CloudTrail",
+          "D": "Amazon ElastiCache"
+        },
+        "explanation": "CloudTrail 記錄 AWS API 活動並且可以將日誌傳送到受保護的 S3 儲存桶。\n其他選擇提供快取、批次計算或文件儲存。"
+      }
+    }
   },
   {
     "id": "dea-c01-d4-020",
@@ -317,7 +545,19 @@
     "isMultiAnswer": false,
     "explanation": "KMS key policies and conditions constrain which principals and contexts can use the key.\nThe other choices do not authorize cryptographic operations.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "根據考試指南驗證設計的團隊必須防止管道角色解密已批准帳戶以外的資料。哪一種機制應該約束密鑰？",
+        "options": {
+          "A": "公共 DNS 記錄",
+          "B": "S3 生命週期規則",
+          "C": "CloudFront 來源群組",
+          "D": "KMS 金鑰策略和加密上下文條件"
+        },
+        "explanation": "KMS 金鑰策略和條件限制哪些主體和上下文可以使用金鑰。\n其他選項不授權加密操作。"
+      }
+    }
   },
   {
     "id": "dea-c01-d4-021",
@@ -333,7 +573,19 @@
     "isMultiAnswer": false,
     "explanation": "A narrowly scoped identity or bucket policy limits the role to required prefixes and actions.\nPublic or administrator access is broader than needed, and security groups do not authorize S3 objects.",
     "taskStatement": "4.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "生產團隊必須授予 ETL 角色僅存取指定 S3 前綴的權限。哪種控制合適？",
+        "options": {
+          "A": "範圍為該前綴的最低權限 IAM 策略",
+          "B": "公共儲存桶策略",
+          "C": "管理員策略",
+          "D": "安全群組規則"
+        },
+        "explanation": "範圍狹窄的身份或儲存桶策略將角色限制為所需的前綴和操作。\n公用或管理員存取權限超出了所需範圍，且安全性群組不授權 S3 物件。"
+      }
+    }
   },
   {
     "id": "dea-c01-d4-022",
@@ -349,7 +601,19 @@
     "isMultiAnswer": false,
     "explanation": "SSE-KMS with a customer managed key provides key policy control and KMS audit events.\nThe other choices do not provide the required customer key governance.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "多帳戶平台團隊需要使用客戶控制的金鑰對 S3 中的資料進行加密並審核金鑰的使用。哪個選項適合？",
+        "options": {
+          "A": "CloudFront 快取策略",
+          "B": "具有客戶管理的 KMS 金鑰的 SSE-KMS",
+          "C": "沒有審計追蹤的 SSE-S3",
+          "D": "明文物件"
+        },
+        "explanation": "具有客戶管理金鑰的 SSE-KMS 提供金鑰策略控制和 KMS 審核事件。\n其他選擇不提供所需的客戶金鑰管理。"
+      }
+    }
   },
   {
     "id": "dea-c01-d4-023",
@@ -365,7 +629,19 @@
     "isMultiAnswer": false,
     "explanation": "Macie discovers sensitive data such as PII in S3 and reports findings for investigation.\nInspector scans workloads, WAF filters web traffic, and Route 53 provides DNS.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "受監管的公司必須發現資料湖中的個人識別資訊。應該評估哪些服務？",
+        "options": {
+          "A": "AWS WAF",
+          "B": "Amazon Route 53",
+          "C": "Amazon Macie",
+          "D": "Amazon Inspector"
+        },
+        "explanation": "Macie 在 S3 中發現敏感資料（例如 PII）並報告調查結果。\nInspector 掃描工作負載，WAF 過濾 Web 流量，Route 53 提供 DNS。"
+      }
+    }
   },
   {
     "id": "dea-c01-d4-024",
@@ -381,7 +657,19 @@
     "isMultiAnswer": false,
     "explanation": "CloudTrail records AWS API activity and can deliver logs to a protected S3 bucket.\nThe other choices provide caching, batch compute, or file storage.",
     "taskStatement": "4.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備增加流量的新創公司需要資料管道 API 活動的中央審核記錄。應該配置哪個服務？",
+        "options": {
+          "A": "Amazon ElastiCache",
+          "B": "AWS Batch",
+          "C": "Amazon EFS",
+          "D": "AWS CloudTrail"
+        },
+        "explanation": "CloudTrail 記錄 AWS API 活動並且可以將日誌傳送到受保護的 S3 儲存桶。\n其他選擇提供快取、批次計算或文件儲存。"
+      }
+    }
   },
   {
     "id": "dea-c01-d4-025",
@@ -397,7 +685,19 @@
     "isMultiAnswer": false,
     "explanation": "KMS key policies and conditions constrain which principals and contexts can use the key.\nThe other choices do not authorize cryptographic operations.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "支援關鍵工作負載的營運團隊必須防止管道角色解密已核准帳戶以外的資料。哪一種機制應該約束密鑰？",
+        "options": {
+          "A": "KMS 金鑰策略和加密上下文條件",
+          "B": "公共 DNS 記錄",
+          "C": "S3 生命週期規則",
+          "D": "CloudFront 來源群組"
+        },
+        "explanation": "KMS 金鑰策略和條件限制哪些主體和上下文可以使用金鑰。\n其他選項不授權加密操作。"
+      }
+    }
   },
   {
     "id": "dea-c01-d4-026",
@@ -413,7 +713,19 @@
     "isMultiAnswer": false,
     "explanation": "A narrowly scoped identity or bucket policy limits the role to required prefixes and actions.\nPublic or administrator access is broader than needed, and security groups do not authorize S3 objects.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "資料平台團隊必須僅向 ETL 角色授予對精選 S3 前綴的存取權限。哪種控制合適？",
+        "options": {
+          "A": "安全群組規則",
+          "B": "範圍為該前綴的最低權限 IAM 策略",
+          "C": "公共儲存桶策略",
+          "D": "管理員策略"
+        },
+        "explanation": "範圍狹窄的身份或儲存桶策略將角色限制為所需的前綴和操作。\n公用或管理員存取權限超出了所需範圍，且安全性群組不授權 S3 物件。"
+      }
+    }
   },
   {
     "id": "dea-c01-d4-027",
@@ -429,7 +741,19 @@
     "isMultiAnswer": false,
     "explanation": "SSE-KMS with a customer managed key provides key policy control and KMS audit events.\nThe other choices do not provide the required customer key governance.",
     "taskStatement": "4.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有安全意識的工程團隊需要使用客戶控制的金鑰來加密 S3 中的資料並審核金鑰的使用。哪個選項適合？",
+        "options": {
+          "A": "明文物件",
+          "B": "CloudFront 快取策略",
+          "C": "具有客戶管理的 KMS 金鑰的 SSE-KMS",
+          "D": "沒有審計追蹤的 SSE-S3"
+        },
+        "explanation": "具有客戶管理金鑰的 SSE-KMS 提供金鑰策略控制和 KMS 審核事件。\n其他選擇不提供所需的客戶金鑰管理。"
+      }
+    }
   },
   {
     "id": "dea-c01-d4-028",
@@ -445,7 +769,19 @@
     "isMultiAnswer": false,
     "explanation": "Macie discovers sensitive data such as PII in S3 and reports findings for investigation.\nInspector scans workloads, WAF filters web traffic, and Route 53 provides DNS.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "遷移現有工作負載的公司必須在資料湖中發現個人識別資訊。應該評估哪些服務？",
+        "options": {
+          "A": "Amazon Inspector",
+          "B": "AWS WAF",
+          "C": "Amazon Route 53",
+          "D": "Amazon Macie"
+        },
+        "explanation": "Macie 在 S3 中發現敏感資料（例如 PII）並報告調查結果。\nInspector 掃描工作負載，WAF 過濾 Web 流量，Route 53 提供 DNS。"
+      }
+    }
   },
   {
     "id": "dea-c01-d4-029",
@@ -461,7 +797,19 @@
     "isMultiAnswer": false,
     "explanation": "CloudTrail records AWS API activity and can deliver logs to a protected S3 bucket.\nThe other choices provide caching, batch compute, or file storage.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有嚴格恢復目標的團隊需要資料管道 API 活動的中央審核記錄。應該配置哪個服務？",
+        "options": {
+          "A": "AWS CloudTrail",
+          "B": "Amazon ElastiCache",
+          "C": "AWS Batch",
+          "D": "Amazon EFS"
+        },
+        "explanation": "CloudTrail 記錄 AWS API 活動並且可以將日誌傳送到受保護的 S3 儲存桶。\n其他選擇提供快取、批次計算或文件儲存。"
+      }
+    }
   },
   {
     "id": "dea-c01-d4-030",
@@ -477,7 +825,19 @@
     "isMultiAnswer": false,
     "explanation": "KMS key policies and conditions constrain which principals and contexts can use the key.\nThe other choices do not authorize cryptographic operations.",
     "taskStatement": "4.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備發布的開發團隊必須防止管道角色解密已批准帳戶之外的資料。哪一種機制應該約束密鑰？",
+        "options": {
+          "A": "CloudFront 來源群組",
+          "B": "KMS 金鑰策略和加密上下文條件",
+          "C": "公共 DNS 記錄",
+          "D": "S3 生命週期規則"
+        },
+        "explanation": "KMS 金鑰策略和條件限制哪些主體和上下文可以使用金鑰。\n其他選項不授權加密操作。"
+      }
+    }
   },
   {
     "id": "dea-c01-d4-031",
@@ -493,7 +853,19 @@
     "isMultiAnswer": false,
     "explanation": "A narrowly scoped identity or bucket policy limits the role to required prefixes and actions.\nPublic or administrator access is broader than needed, and security groups do not authorize S3 objects.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "擁有多個 AWS 區域的企業必須僅向 ETL 角色授予對指定 S3 前綴的存取權限。哪種控制合適？",
+        "options": {
+          "A": "管理員策略",
+          "B": "安全群組規則",
+          "C": "範圍為該前綴的最低權限 IAM 策略",
+          "D": "公共儲存桶策略"
+        },
+        "explanation": "範圍狹窄的身份或儲存桶策略將角色限制為所需的前綴和操作。\n公用或管理員存取權限超出了所需範圍，且安全性群組不授權 S3 物件。"
+      }
+    }
   },
   {
     "id": "dea-c01-d4-032",
@@ -509,7 +881,19 @@
     "isMultiAnswer": false,
     "explanation": "SSE-KMS with a customer managed key provides key policy control and KMS audit events.\nThe other choices do not provide the required customer key governance.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "審查事件的服務擁有者需要使用客戶控制的金鑰對 S3 中的資料進行加密並審核金鑰的使用。哪個選項適合？",
+        "options": {
+          "A": "沒有審計追蹤的 SSE-S3",
+          "B": "明文物件",
+          "C": "CloudFront 快取策略",
+          "D": "具有客戶管理的 KMS 金鑰的 SSE-KMS"
+        },
+        "explanation": "具有客戶管理金鑰的 SSE-KMS 提供金鑰策略控制和 KMS 審核事件。\n其他選擇不提供所需的客戶金鑰管理。"
+      }
+    }
   },
   {
     "id": "dea-c01-d4-033",
@@ -525,7 +909,19 @@
     "isMultiAnswer": false,
     "explanation": "Macie discovers sensitive data such as PII in S3 and reports findings for investigation.\nInspector scans workloads, WAF filters web traffic, and Route 53 provides DNS.",
     "taskStatement": "4.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "優化現有實施的團隊必須在資料湖中發現個人識別資訊。應該評估哪些服務？",
+        "options": {
+          "A": "Amazon Macie",
+          "B": "Amazon Inspector",
+          "C": "AWS WAF",
+          "D": "Amazon Route 53"
+        },
+        "explanation": "Macie 在 S3 中發現敏感資料（例如 PII）並報告調查結果。\nInspector 掃描工作負載，WAF 過濾 Web 流量，Route 53 提供 DNS。"
+      }
+    }
   },
   {
     "id": "dea-c01-d4-034",
@@ -541,7 +937,19 @@
     "isMultiAnswer": false,
     "explanation": "CloudTrail records AWS API activity and can deliver logs to a protected S3 bucket.\nThe other choices provide caching, batch compute, or file storage.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "引入自動化工作流程的公司需要資料管道 API 活動的中央審計記錄。應該配置哪個服務？",
+        "options": {
+          "A": "Amazon EFS",
+          "B": "AWS CloudTrail",
+          "C": "Amazon ElastiCache",
+          "D": "AWS Batch"
+        },
+        "explanation": "CloudTrail 記錄 AWS API 活動並且可以將日誌傳送到受保護的 S3 儲存桶。\n其他選擇提供快取、批次計算或文件儲存。"
+      }
+    }
   },
   {
     "id": "dea-c01-d4-035",
@@ -557,6 +965,18 @@
     "isMultiAnswer": false,
     "explanation": "KMS key policies and conditions constrain which principals and contexts can use the key.\nThe other choices do not authorize cryptographic operations.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "在共用環境中工作的 AWS 管理員必須防止管道角色解密已核准帳戶之外的資料。哪一種機制應該約束密鑰？",
+        "options": {
+          "A": "S3 生命週期規則",
+          "B": "CloudFront 來源群組",
+          "C": "KMS 金鑰策略和加密上下文條件",
+          "D": "公共 DNS 記錄"
+        },
+        "explanation": "KMS 金鑰策略和條件限制哪些主體和上下文可以使用金鑰。\n其他選項不授權加密操作。"
+      }
+    }
   }
 ]

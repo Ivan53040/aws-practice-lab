@@ -11,6 +11,13 @@
  */
 export type QuestionType = 'single' | 'multi' | 'ordering' | 'matching'
 
+export interface LocalizedQuestionContent {
+  question: string
+  options: Partial<Record<OptionKey, string>>
+  explanation: string
+  targets?: Record<string, string>
+}
+
 export interface Question {
   id: string
   domainId: DomainId
@@ -65,6 +72,14 @@ export interface Question {
    * service-scoped practice mode.
    */
   services?: string[]
+  /**
+   * Static learner-facing translations. English remains the canonical text
+   * used by authoring and scoring. The bank validator requires Traditional
+   * Chinese content for every active offline exam.
+   */
+  translations?: {
+    zh: LocalizedQuestionContent
+  }
 }
 
 export type OptionKey = 'A' | 'B' | 'C' | 'D' | 'E'

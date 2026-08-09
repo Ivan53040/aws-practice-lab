@@ -13,7 +13,19 @@
     "isMultiAnswer": false,
     "explanation": "Organizations and SCPs provide account boundaries and guardrails while teams retain delegated control.\nA shared account and public credentials weaken isolation.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "生產團隊需要集中治理，同時允許應用程式團隊在單獨的帳戶中進行部署。哪種設計適合？",
+        "options": {
+          "A": "每個工作負載都有一個 VPC",
+          "B": "具有委派管理和 SCP 護欄的 AWS Organizations",
+          "C": "一個共享 root 帳戶",
+          "D": "公共憑證"
+        },
+        "explanation": "組織和 SCP 提供帳戶邊界和護欄，而團隊則保留委派控制權。\n共享帳戶和公共憑證削弱了孤立性。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-002",
@@ -29,7 +41,19 @@
     "isMultiAnswer": false,
     "explanation": "Transit Gateway centralizes routing and supports many attachments.\nThe other choices do not provide private transitive network connectivity.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "多帳戶平台團隊必須透過中央樞紐連接許多 VPC 和本地網路。應該評估哪些服務？",
+        "options": {
+          "A": "S3 網站",
+          "B": "CloudFront 快取",
+          "C": "AWS Transit Gateway",
+          "D": "完整的公共 IP 網狀網路"
+        },
+        "explanation": "Transit Gateway 集中路由並支援許多附件。\n其他選擇不提供專用傳遞網路連線。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-003",
@@ -45,7 +69,19 @@
     "isMultiAnswer": false,
     "explanation": "RAM shares supported resources with specific principals and organizational scopes.\nPublic or shared administrator access is broader than necessary.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "受監管的公司需要跨帳戶共享選定的資源，而不授予廣泛的帳戶存取權限。適合哪種能力？",
+        "options": {
+          "A": "共享根憑證",
+          "B": "公開資源",
+          "C": "隨處使用一種管理員角色",
+          "D": "具有範圍內資源共用的 AWS Resource Access Manager"
+        },
+        "explanation": "RAM 與特定主體和組織範圍共享支援的資源。\n公共或共用管理員存取權限超出了必要範圍。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-004",
@@ -61,7 +97,19 @@
     "isMultiAnswer": false,
     "explanation": "Control Tower automates account setup and preventive or detective guardrails.\nThe other choices do not govern account baselines.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備增加流量的新創公司必須在新帳戶之間實施共同的安全基線。哪個服務應該提供協助？",
+        "options": {
+          "A": "AWS Control Tower 護欄和帳戶工廠",
+          "B": "本地電子表格",
+          "C": "S3 生命週期規則",
+          "D": "Route 53 別名"
+        },
+        "explanation": "Control Tower 可自動執行帳戶設定和預防性或偵測性護欄。\n其他選擇不管理帳戶基線。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-005",
@@ -77,7 +125,19 @@
     "isMultiAnswer": false,
     "explanation": "IAM Identity Center provides workforce access and permission sets across accounts.\nCognito targets application users and the other choices are not workforce identity systems.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "支援關鍵工作負載的營運團隊需要為多個帳戶的員工使用者提供中央身分體驗。應該使用哪種服務？",
+        "options": {
+          "A": "VPC 路由表",
+          "B": "IAM Identity Center",
+          "C": "僅限 Cognito 使用者池",
+          "D": "S3 儲存桶策略"
+        },
+        "explanation": "IAM Identity Center 提供跨帳戶的員工存取和權限集。\nCognito 的目標是應用程式使用者，其他選擇不是勞動力身分系統。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-006",
@@ -93,7 +153,19 @@
     "isMultiAnswer": false,
     "explanation": "Organizations and SCPs provide account boundaries and guardrails while teams retain delegated control.\nA shared account and public credentials weaken isolation.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "資料平台團隊需要集中治理，同時允許應用程式團隊在單獨的帳戶中進行部署。哪種設計適合？",
+        "options": {
+          "A": "公共憑證",
+          "B": "每個工作負載都有一個 VPC",
+          "C": "具有委派管理和 SCP 護欄的 AWS Organizations",
+          "D": "一個共享 root 帳戶"
+        },
+        "explanation": "組織和 SCP 提供帳戶邊界和護欄，而團隊則保留委派控制權。\n共享帳戶和公共憑證削弱了孤立性。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-007",
@@ -109,7 +181,19 @@
     "isMultiAnswer": false,
     "explanation": "Transit Gateway centralizes routing and supports many attachments.\nThe other choices do not provide private transitive network connectivity.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有安全意識的工程團隊必須透過中央集線器連接許多 VPC 和本地網路。應該評估哪些服務？",
+        "options": {
+          "A": "完整的公共 IP 網狀網路",
+          "B": "S3 網站",
+          "C": "CloudFront 快取",
+          "D": "AWS Transit Gateway"
+        },
+        "explanation": "Transit Gateway 集中路由並支援許多附件。\n其他選擇不提供專用傳遞網路連線。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-008",
@@ -125,7 +209,19 @@
     "isMultiAnswer": false,
     "explanation": "RAM shares supported resources with specific principals and organizational scopes.\nPublic or shared administrator access is broader than necessary.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "遷移現有工作負載的公司需要跨帳戶共享選定的資源，而不授予廣泛的帳戶存取權限。適合哪種能力？",
+        "options": {
+          "A": "具有範圍內資源共用的 AWS Resource Access Manager",
+          "B": "共享根憑證",
+          "C": "公開資源",
+          "D": "隨處使用一種管理員角色"
+        },
+        "explanation": "RAM 與特定主體和組織範圍共享支援的資源。\n公共或共用管理員存取權限超出了必要範圍。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-009",
@@ -141,7 +237,19 @@
     "isMultiAnswer": false,
     "explanation": "Control Tower automates account setup and preventive or detective guardrails.\nThe other choices do not govern account baselines.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有嚴格恢復目標的團隊必須在新帳戶之間實施共同的安全基準。哪個服務應該提供協助？",
+        "options": {
+          "A": "Route 53 別名",
+          "B": "AWS Control Tower 護欄和帳戶工廠",
+          "C": "本地電子表格",
+          "D": "S3 生命週期規則"
+        },
+        "explanation": "Control Tower 可自動執行帳戶設定和預防性或偵測性護欄。\n其他選擇不管理帳戶基線。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-010",
@@ -157,7 +265,19 @@
     "isMultiAnswer": false,
     "explanation": "IAM Identity Center provides workforce access and permission sets across accounts.\nCognito targets application users and the other choices are not workforce identity systems.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備發布的開發團隊需要為多個帳戶的員工使用者提供集中的身份體驗。應該使用哪種服務？",
+        "options": {
+          "A": "S3 儲存桶策略",
+          "B": "VPC 路由表",
+          "C": "IAM Identity Center",
+          "D": "僅限 Cognito 使用者池"
+        },
+        "explanation": "IAM Identity Center 提供跨帳戶的員工存取和權限集。\nCognito 的目標是應用程式使用者，其他選擇不是勞動力身分系統。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-011",
@@ -173,7 +293,19 @@
     "isMultiAnswer": false,
     "explanation": "Organizations and SCPs provide account boundaries and guardrails while teams retain delegated control.\nA shared account and public credentials weaken isolation.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "擁有多個 AWS 區域的企業需要集中治理，同時允許應用程式團隊在單獨的帳戶中進行部署。哪種設計適合？",
+        "options": {
+          "A": "一個共享 root 帳戶",
+          "B": "公共憑證",
+          "C": "每個工作負載都有一個 VPC",
+          "D": "具有委派管理和 SCP 護欄的 AWS Organizations"
+        },
+        "explanation": "組織和 SCP 提供帳戶邊界和護欄，而團隊則保留委派控制權。\n共享帳戶和公共憑證削弱了孤立性。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-012",
@@ -189,7 +321,19 @@
     "isMultiAnswer": false,
     "explanation": "Transit Gateway centralizes routing and supports many attachments.\nThe other choices do not provide private transitive network connectivity.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "審查事件的服務所有者必須透過中央集線器連接許多 VPC 和本地網路。應該評估哪些服務？",
+        "options": {
+          "A": "AWS Transit Gateway",
+          "B": "完整的公共 IP 網狀網路",
+          "C": "S3 網站",
+          "D": "CloudFront 快取"
+        },
+        "explanation": "Transit Gateway 集中路由並支援許多附件。\n其他選擇不提供專用傳遞網路連線。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-013",
@@ -205,7 +349,19 @@
     "isMultiAnswer": false,
     "explanation": "RAM shares supported resources with specific principals and organizational scopes.\nPublic or shared administrator access is broader than necessary.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "優化現有實施的團隊需要跨帳戶共享選定的資源，而不授予廣泛的帳戶存取權。適合哪種能力？",
+        "options": {
+          "A": "隨處使用一種管理員角色",
+          "B": "具有範圍資源共用的 AWS Resource Access Manager",
+          "C": "共享根憑證",
+          "D": "公開資源"
+        },
+        "explanation": "RAM 與特定主體和組織範圍共享支援的資源。\n公共或共用管理員存取權限超出了必要範圍。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-014",
@@ -221,7 +377,19 @@
     "isMultiAnswer": false,
     "explanation": "Control Tower automates account setup and preventive or detective guardrails.\nThe other choices do not govern account baselines.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "引入自動化工作流程的公司必須在新帳戶之間實施共同的安全基準。哪個服務應該提供協助？",
+        "options": {
+          "A": "S3 生命週期規則",
+          "B": "Route 53 別名",
+          "C": "AWS Control Tower 護欄和帳戶工廠",
+          "D": "本地電子表格"
+        },
+        "explanation": "Control Tower 可自動執行帳戶設定和預防性或偵測性護欄。\n其他選擇不管理帳戶基線。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-015",
@@ -237,7 +405,19 @@
     "isMultiAnswer": false,
     "explanation": "IAM Identity Center provides workforce access and permission sets across accounts.\nCognito targets application users and the other choices are not workforce identity systems.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "在共用環境中工作的 AWS 管理員需要為多個帳戶中的員工使用者提供集中身分體驗。應該使用哪種服務？",
+        "options": {
+          "A": "僅限 Cognito 使用者池",
+          "B": "S3 儲存桶策略",
+          "C": "VPC 路由表",
+          "D": "IAM Identity Center"
+        },
+        "explanation": "IAM Identity Center 提供跨帳戶的員工存取和權限集。\nCognito 的目標是應用程式使用者，其他選擇不是勞動力身分系統。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-016",
@@ -253,7 +433,19 @@
     "isMultiAnswer": false,
     "explanation": "Organizations and SCPs provide account boundaries and guardrails while teams retain delegated control.\nA shared account and public credentials weaken isolation.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "面向客戶的應用程式團隊需要集中治理，同時允許應用程式團隊在單獨的帳戶中進行部署。哪種設計適合？",
+        "options": {
+          "A": "具有委派管理和 SCP 護欄的 AWS Organizations",
+          "B": "一個共享 root 帳戶",
+          "C": "公共憑證",
+          "D": "每個工作負載都有一個 VPC"
+        },
+        "explanation": "組織和 SCP 提供帳戶邊界和護欄，而團隊則保留委派控制權。\n共享帳戶和公共憑證削弱了孤立性。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-017",
@@ -269,7 +461,19 @@
     "isMultiAnswer": false,
     "explanation": "Transit Gateway centralizes routing and supports many attachments.\nThe other choices do not provide private transitive network connectivity.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "標準化其 AWS 部署的平台團隊必須透過中央樞紐連接許多 VPC 和本地網路。應該評估哪些服務？",
+        "options": {
+          "A": "CloudFront 快取",
+          "B": "AWS Transit Gateway",
+          "C": "完整的公共 IP 網狀網路",
+          "D": "S3 網站"
+        },
+        "explanation": "Transit Gateway 集中路由並支援許多附件。\n其他選擇不提供專用傳遞網路連線。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-018",
@@ -285,7 +489,19 @@
     "isMultiAnswer": false,
     "explanation": "RAM shares supported resources with specific principals and organizational scopes.\nPublic or shared administrator access is broader than necessary.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "為審計準備證據的團隊需要跨帳戶共享選定的資源，而不授予廣泛的帳戶存取權限。適合哪種能力？",
+        "options": {
+          "A": "公開資源",
+          "B": "隨處使用一種管理員角色",
+          "C": "具有範圍內資源共用的 AWS Resource Access Manager",
+          "D": "共享根憑證"
+        },
+        "explanation": "RAM 與特定主體和組織範圍共享支援的資源。\n公共或共用管理員存取權限超出了必要範圍。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-019",
@@ -301,7 +517,19 @@
     "isMultiAnswer": false,
     "explanation": "Control Tower automates account setup and preventive or detective guardrails.\nThe other choices do not govern account baselines.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "取代手動流程的企業必須在新帳戶之間強制執行通用的安全性基準。哪個服務應該提供協助？",
+        "options": {
+          "A": "本地電子表格",
+          "B": "S3 生命週期規則",
+          "C": "Route 53 別名",
+          "D": "AWS Control Tower 護欄和帳戶工廠"
+        },
+        "explanation": "Control Tower 可自動執行帳戶設定和預防性或偵測性護欄。\n其他選擇不管理帳戶基線。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-020",
@@ -317,7 +545,19 @@
     "isMultiAnswer": false,
     "explanation": "IAM Identity Center provides workforce access and permission sets across accounts.\nCognito targets application users and the other choices are not workforce identity systems.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "根據考試指南驗證設計的團隊需要為多個帳戶的員工使用者提供集中的身份體驗。應該使用哪種服務？",
+        "options": {
+          "A": "IAM Identity Center",
+          "B": "僅限 Cognito 使用者池",
+          "C": "S3 儲存桶策略",
+          "D": "VPC 路由表"
+        },
+        "explanation": "IAM Identity Center 提供跨帳戶的員工存取和權限集。\nCognito 的目標是應用程式使用者，其他選擇不是勞動力身分系統。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-021",
@@ -333,7 +573,19 @@
     "isMultiAnswer": false,
     "explanation": "Organizations and SCPs provide account boundaries and guardrails while teams retain delegated control.\nA shared account and public credentials weaken isolation.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "生產團隊需要集中治理，同時允許應用程式團隊在單獨的帳戶中進行部署。哪種設計適合？",
+        "options": {
+          "A": "每個工作負載都有一個 VPC",
+          "B": "具有委派管理和 SCP 護欄的 AWS Organizations",
+          "C": "一個共享 root 帳戶",
+          "D": "公共憑證"
+        },
+        "explanation": "組織和 SCP 提供帳戶邊界和護欄，而團隊則保留委派控制權。\n共享帳戶和公共憑證削弱了孤立性。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-022",
@@ -349,7 +601,19 @@
     "isMultiAnswer": false,
     "explanation": "Transit Gateway centralizes routing and supports many attachments.\nThe other choices do not provide private transitive network connectivity.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "多帳戶平台團隊必須透過中央樞紐連接許多 VPC 和本地網路。應該評估哪些服務？",
+        "options": {
+          "A": "S3 網站",
+          "B": "CloudFront 快取",
+          "C": "AWS Transit Gateway",
+          "D": "完整的公共 IP 網狀網路"
+        },
+        "explanation": "Transit Gateway 集中路由並支援許多附件。\n其他選擇不提供專用傳遞網路連線。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-023",
@@ -365,7 +629,19 @@
     "isMultiAnswer": false,
     "explanation": "RAM shares supported resources with specific principals and organizational scopes.\nPublic or shared administrator access is broader than necessary.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "受監管的公司需要跨帳戶共享選定的資源，而不授予廣泛的帳戶存取權限。適合哪種能力？",
+        "options": {
+          "A": "共享根憑證",
+          "B": "公開資源",
+          "C": "隨處使用一種管理員角色",
+          "D": "具有範圍內資源共用的 AWS Resource Access Manager"
+        },
+        "explanation": "RAM 與特定主體和組織範圍共享支援的資源。\n公共或共用管理員存取權限超出了必要範圍。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-024",
@@ -381,7 +657,19 @@
     "isMultiAnswer": false,
     "explanation": "Control Tower automates account setup and preventive or detective guardrails.\nThe other choices do not govern account baselines.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備增加流量的新創公司必須在新帳戶之間實施共同的安全基線。哪個服務應該提供協助？",
+        "options": {
+          "A": "AWS Control Tower 護欄和帳戶工廠",
+          "B": "本地電子表格",
+          "C": "S3 生命週期規則",
+          "D": "Route 53 別名"
+        },
+        "explanation": "Control Tower 可自動執行帳戶設定和預防性或偵測性護欄。\n其他選擇不管理帳戶基線。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-025",
@@ -397,7 +685,19 @@
     "isMultiAnswer": false,
     "explanation": "IAM Identity Center provides workforce access and permission sets across accounts.\nCognito targets application users and the other choices are not workforce identity systems.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "支援關鍵工作負載的營運團隊需要為多個帳戶的員工使用者提供中央身分體驗。應該使用哪種服務？",
+        "options": {
+          "A": "VPC 路由表",
+          "B": "IAM Identity Center",
+          "C": "僅限 Cognito 使用者池",
+          "D": "S3 儲存桶策略"
+        },
+        "explanation": "IAM Identity Center 提供跨帳戶的員工存取和權限集。\nCognito 的目標是應用程式使用者，其他選擇不是勞動力身分系統。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-026",
@@ -413,7 +713,19 @@
     "isMultiAnswer": false,
     "explanation": "Organizations and SCPs provide account boundaries and guardrails while teams retain delegated control.\nA shared account and public credentials weaken isolation.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "資料平台團隊需要集中治理，同時允許應用程式團隊在單獨的帳戶中進行部署。哪種設計適合？",
+        "options": {
+          "A": "公共憑證",
+          "B": "每個工作負載都有一個 VPC",
+          "C": "具有委派管理和 SCP 護欄的 AWS Organizations",
+          "D": "一個共享 root 帳戶"
+        },
+        "explanation": "組織和 SCP 提供帳戶邊界和護欄，而團隊則保留委派控制權。\n共享帳戶和公共憑證削弱了孤立性。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-027",
@@ -429,7 +741,19 @@
     "isMultiAnswer": false,
     "explanation": "Transit Gateway centralizes routing and supports many attachments.\nThe other choices do not provide private transitive network connectivity.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有安全意識的工程團隊必須透過中央集線器連接許多 VPC 和本地網路。應該評估哪些服務？",
+        "options": {
+          "A": "完整的公共 IP 網狀網路",
+          "B": "S3 網站",
+          "C": "CloudFront 快取",
+          "D": "AWS Transit Gateway"
+        },
+        "explanation": "Transit Gateway 集中路由並支援許多附件。\n其他選擇不提供專用傳遞網路連線。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-028",
@@ -445,7 +769,19 @@
     "isMultiAnswer": false,
     "explanation": "RAM shares supported resources with specific principals and organizational scopes.\nPublic or shared administrator access is broader than necessary.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "遷移現有工作負載的公司需要跨帳戶共享選定的資源，而不授予廣泛的帳戶存取權限。適合哪種能力？",
+        "options": {
+          "A": "具有範圍內資源共用的 AWS Resource Access Manager",
+          "B": "共享根憑證",
+          "C": "公開資源",
+          "D": "隨處使用一種管理員角色"
+        },
+        "explanation": "RAM 與特定主體和組織範圍共享支援的資源。\n公共或共用管理員存取權限超出了必要範圍。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-029",
@@ -461,7 +797,19 @@
     "isMultiAnswer": false,
     "explanation": "Control Tower automates account setup and preventive or detective guardrails.\nThe other choices do not govern account baselines.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有嚴格恢復目標的團隊必須在新帳戶之間實施共同的安全基準。哪個服務應該提供協助？",
+        "options": {
+          "A": "Route 53 別名",
+          "B": "AWS Control Tower 護欄和帳戶工廠",
+          "C": "本地電子表格",
+          "D": "S3 生命週期規則"
+        },
+        "explanation": "Control Tower 可自動執行帳戶設定和預防性或偵測性護欄。\n其他選擇不管理帳戶基線。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-030",
@@ -477,7 +825,19 @@
     "isMultiAnswer": false,
     "explanation": "IAM Identity Center provides workforce access and permission sets across accounts.\nCognito targets application users and the other choices are not workforce identity systems.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備發布的開發團隊需要為多個帳戶的員工使用者提供集中的身份體驗。應該使用哪種服務？",
+        "options": {
+          "A": "S3 儲存桶策略",
+          "B": "VPC 路由表",
+          "C": "IAM Identity Center",
+          "D": "僅限 Cognito 使用者池"
+        },
+        "explanation": "IAM Identity Center 提供跨帳戶的員工存取和權限集。\nCognito 的目標是應用程式使用者，其他選擇不是勞動力身分系統。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-031",
@@ -493,7 +853,19 @@
     "isMultiAnswer": false,
     "explanation": "Organizations and SCPs provide account boundaries and guardrails while teams retain delegated control.\nA shared account and public credentials weaken isolation.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "擁有多個 AWS 區域的企業需要集中治理，同時允許應用程式團隊在單獨的帳戶中進行部署。哪種設計適合？",
+        "options": {
+          "A": "一個共享 root 帳戶",
+          "B": "公共憑證",
+          "C": "每個工作負載都有一個 VPC",
+          "D": "具有委派管理和 SCP 護欄的 AWS Organizations"
+        },
+        "explanation": "組織和 SCP 提供帳戶邊界和護欄，而團隊則保留委派控制權。\n共享帳戶和公共憑證削弱了孤立性。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-032",
@@ -509,7 +881,19 @@
     "isMultiAnswer": false,
     "explanation": "Transit Gateway centralizes routing and supports many attachments.\nThe other choices do not provide private transitive network connectivity.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "審查事件的服務所有者必須透過中央集線器連接許多 VPC 和本地網路。應該評估哪些服務？",
+        "options": {
+          "A": "AWS Transit Gateway",
+          "B": "完整的公共 IP 網狀網路",
+          "C": "S3 網站",
+          "D": "CloudFront 快取"
+        },
+        "explanation": "Transit Gateway 集中路由並支援許多附件。\n其他選擇不提供專用傳遞網路連線。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-033",
@@ -525,7 +909,19 @@
     "isMultiAnswer": false,
     "explanation": "RAM shares supported resources with specific principals and organizational scopes.\nPublic or shared administrator access is broader than necessary.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "優化現有實施的團隊需要跨帳戶共享選定的資源，而不授予廣泛的帳戶存取權。適合哪種能力？",
+        "options": {
+          "A": "隨處使用一種管理員角色",
+          "B": "具有範圍內資源共用的 AWS Resource Access Manager",
+          "C": "共享根憑證",
+          "D": "公開資源"
+        },
+        "explanation": "RAM 與特定主體和組織範圍共享支援的資源。\n公共或共用管理員存取權限超出了必要範圍。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-034",
@@ -541,7 +937,19 @@
     "isMultiAnswer": false,
     "explanation": "Control Tower automates account setup and preventive or detective guardrails.\nThe other choices do not govern account baselines.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "引入自動化工作流程的公司必須在新帳戶之間實施共同的安全基準。哪個服務應該提供協助？",
+        "options": {
+          "A": "S3 生命週期規則",
+          "B": "Route 53 別名",
+          "C": "AWS Control Tower 護欄和帳戶工廠",
+          "D": "本地電子表格"
+        },
+        "explanation": "Control Tower 可自動執行帳戶設定和預防性或偵測性護欄。\n其他選擇不管理帳戶基線。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-035",
@@ -557,7 +965,19 @@
     "isMultiAnswer": false,
     "explanation": "IAM Identity Center provides workforce access and permission sets across accounts.\nCognito targets application users and the other choices are not workforce identity systems.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "在共用環境中工作的 AWS 管理員需要為多個帳戶中的員工使用者提供集中身分體驗。應該使用哪種服務？",
+        "options": {
+          "A": "僅限 Cognito 使用者池",
+          "B": "S3 儲存桶策略",
+          "C": "VPC 路由表",
+          "D": "IAM Identity Center"
+        },
+        "explanation": "IAM Identity Center 提供跨帳戶的員工存取和權限集。\nCognito 的目標是應用程式使用者，其他選擇不是勞動力身分系統。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-036",
@@ -573,7 +993,19 @@
     "isMultiAnswer": false,
     "explanation": "Organizations and SCPs provide account boundaries and guardrails while teams retain delegated control.\nA shared account and public credentials weaken isolation.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "面向客戶的應用程式團隊需要集中治理，同時允許應用程式團隊在單獨的帳戶中進行部署。哪種設計適合？",
+        "options": {
+          "A": "具有委派管理和 SCP 護欄的 AWS Organizations",
+          "B": "一個共享 root 帳戶",
+          "C": "公共憑證",
+          "D": "每個工作負載都有一個 VPC"
+        },
+        "explanation": "組織和 SCP 提供帳戶邊界和護欄，而團隊則保留委派控制權。\n共享帳戶和公共憑證削弱了孤立性。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-037",
@@ -589,7 +1021,19 @@
     "isMultiAnswer": false,
     "explanation": "Transit Gateway centralizes routing and supports many attachments.\nThe other choices do not provide private transitive network connectivity.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "標準化其 AWS 部署的平台團隊必須透過中央樞紐連接許多 VPC 和本地網路。應該評估哪些服務？",
+        "options": {
+          "A": "CloudFront 快取",
+          "B": "AWS Transit Gateway",
+          "C": "完整的公共 IP 網狀網路",
+          "D": "S3 網站"
+        },
+        "explanation": "Transit Gateway 集中路由並支援許多附件。\n其他選擇不提供專用傳遞網路連線。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-038",
@@ -605,7 +1049,19 @@
     "isMultiAnswer": false,
     "explanation": "RAM shares supported resources with specific principals and organizational scopes.\nPublic or shared administrator access is broader than necessary.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "為審計準備證據的團隊需要跨帳戶共享選定的資源，而不授予廣泛的帳戶存取權限。適合哪種能力？",
+        "options": {
+          "A": "公開資源",
+          "B": "隨處使用一種管理員角色",
+          "C": "具有範圍內資源共用的 AWS Resource Access Manager",
+          "D": "共享根憑證"
+        },
+        "explanation": "RAM 與特定主體和組織範圍共享支援的資源。\n公共或共用管理員存取權限超出了必要範圍。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-039",
@@ -621,7 +1077,19 @@
     "isMultiAnswer": false,
     "explanation": "Control Tower automates account setup and preventive or detective guardrails.\nThe other choices do not govern account baselines.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "取代手動流程的企業必須在新帳戶之間強制執行通用的安全性基準。哪個服務應該提供協助？",
+        "options": {
+          "A": "本地電子表格",
+          "B": "S3 生命週期規則",
+          "C": "Route 53 別名",
+          "D": "AWS Control Tower 護欄和帳戶工廠"
+        },
+        "explanation": "Control Tower 可自動執行帳戶設定和預防性或偵測性護欄。\n其他選擇不管理帳戶基線。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-040",
@@ -637,7 +1105,19 @@
     "isMultiAnswer": false,
     "explanation": "IAM Identity Center provides workforce access and permission sets across accounts.\nCognito targets application users and the other choices are not workforce identity systems.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "根據考試指南驗證設計的團隊需要為多個帳戶的員工使用者提供集中的身份體驗。應該使用哪種服務？",
+        "options": {
+          "A": "IAM Identity Center",
+          "B": "僅限 Cognito 使用者池",
+          "C": "S3 儲存桶策略",
+          "D": "VPC 路由表"
+        },
+        "explanation": "IAM Identity Center 提供跨帳戶的員工存取和權限集。\nCognito 的目標是應用程式使用者，其他選擇不是勞動力身分系統。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-041",
@@ -653,7 +1133,19 @@
     "isMultiAnswer": false,
     "explanation": "Organizations and SCPs provide account boundaries and guardrails while teams retain delegated control.\nA shared account and public credentials weaken isolation.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "生產團隊需要集中治理，同時允許應用程式團隊在單獨的帳戶中進行部署。哪種設計適合？",
+        "options": {
+          "A": "每個工作負載都有一個 VPC",
+          "B": "具有委派管理和 SCP 護欄的 AWS Organizations",
+          "C": "一個共享 root 帳戶",
+          "D": "公共憑證"
+        },
+        "explanation": "組織和 SCP 提供帳戶邊界和護欄，而團隊則保留委派控制權。\n共享帳戶和公共憑證削弱了孤立性。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-042",
@@ -669,7 +1161,19 @@
     "isMultiAnswer": false,
     "explanation": "Transit Gateway centralizes routing and supports many attachments.\nThe other choices do not provide private transitive network connectivity.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "多帳戶平台團隊必須透過中央樞紐連接許多 VPC 和本地網路。應該評估哪些服務？",
+        "options": {
+          "A": "S3 網站",
+          "B": "CloudFront 快取",
+          "C": "AWS Transit Gateway",
+          "D": "完整的公共 IP 網狀網路"
+        },
+        "explanation": "Transit Gateway 集中路由並支援許多附件。\n其他選擇不提供專用傳遞網路連線。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-043",
@@ -685,7 +1189,19 @@
     "isMultiAnswer": false,
     "explanation": "RAM shares supported resources with specific principals and organizational scopes.\nPublic or shared administrator access is broader than necessary.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "受監管的公司需要跨帳戶共享選定的資源，而不授予廣泛的帳戶存取權限。適合哪種能力？",
+        "options": {
+          "A": "共享根憑證",
+          "B": "公開資源",
+          "C": "隨處使用一種管理員角色",
+          "D": "具有範圍內資源共用的 AWS Resource Access Manager"
+        },
+        "explanation": "RAM 與特定主體和組織範圍共享支援的資源。\n公共或共用管理員存取權限超出了必要範圍。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-044",
@@ -701,7 +1217,19 @@
     "isMultiAnswer": false,
     "explanation": "Control Tower automates account setup and preventive or detective guardrails.\nThe other choices do not govern account baselines.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備增加流量的新創公司必須在新帳戶之間實施共同的安全基線。哪個服務應該提供協助？",
+        "options": {
+          "A": "AWS Control Tower 護欄和帳戶工廠",
+          "B": "本地電子表格",
+          "C": "S3 生命週期規則",
+          "D": "Route 53 別名"
+        },
+        "explanation": "Control Tower 可自動執行帳戶設定和預防性或偵測性護欄。\n其他選擇不管理帳戶基線。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-045",
@@ -717,7 +1245,19 @@
     "isMultiAnswer": false,
     "explanation": "IAM Identity Center provides workforce access and permission sets across accounts.\nCognito targets application users and the other choices are not workforce identity systems.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "支援關鍵工作負載的營運團隊需要為多個帳戶的員工使用者提供中央身分體驗。應該使用哪種服務？",
+        "options": {
+          "A": "VPC 路由表",
+          "B": "IAM Identity Center",
+          "C": "僅限 Cognito 使用者池",
+          "D": "S3 儲存桶策略"
+        },
+        "explanation": "IAM Identity Center 提供跨帳戶的員工存取和權限集。\nCognito 的目標是應用程式使用者，其他選擇不是勞動力身分系統。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-046",
@@ -733,7 +1273,19 @@
     "isMultiAnswer": false,
     "explanation": "Organizations and SCPs provide account boundaries and guardrails while teams retain delegated control.\nA shared account and public credentials weaken isolation.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "資料平台團隊需要集中治理，同時允許應用程式團隊在單獨的帳戶中進行部署。哪種設計適合？",
+        "options": {
+          "A": "公共憑證",
+          "B": "每個工作負載都有一個 VPC",
+          "C": "具有委派管理和 SCP 護欄的 AWS Organizations",
+          "D": "一個共享 root 帳戶"
+        },
+        "explanation": "組織和 SCP 提供帳戶邊界和護欄，而團隊則保留委派控制權。\n共享帳戶和公共憑證削弱了孤立性。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-047",
@@ -749,7 +1301,19 @@
     "isMultiAnswer": false,
     "explanation": "Transit Gateway centralizes routing and supports many attachments.\nThe other choices do not provide private transitive network connectivity.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有安全意識的工程團隊必須透過中央集線器連接許多 VPC 和本地網路。應該評估哪些服務？",
+        "options": {
+          "A": "完整的公共 IP 網狀網路",
+          "B": "S3 網站",
+          "C": "CloudFront 快取",
+          "D": "AWS Transit Gateway"
+        },
+        "explanation": "Transit Gateway 集中路由並支援許多附件。\n其他選擇不提供專用傳遞網路連線。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-048",
@@ -765,7 +1329,19 @@
     "isMultiAnswer": false,
     "explanation": "RAM shares supported resources with specific principals and organizational scopes.\nPublic or shared administrator access is broader than necessary.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "遷移現有工作負載的公司需要跨帳戶共享選定的資源，而不授予廣泛的帳戶存取權限。適合哪種能力？",
+        "options": {
+          "A": "具有範圍內資源共用的 AWS Resource Access Manager",
+          "B": "共享根憑證",
+          "C": "公開資源",
+          "D": "隨處使用一種管理員角色"
+        },
+        "explanation": "RAM 與特定主體和組織範圍共享支援的資源。\n公共或共用管理員存取權限超出了必要範圍。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-049",
@@ -781,7 +1357,19 @@
     "isMultiAnswer": false,
     "explanation": "Control Tower automates account setup and preventive or detective guardrails.\nThe other choices do not govern account baselines.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有嚴格恢復目標的團隊必須在新帳戶之間實施共同的安全基準。哪個服務應該提供協助？",
+        "options": {
+          "A": "Route 53 別名",
+          "B": "AWS Control Tower 護欄和帳戶工廠",
+          "C": "本地電子表格",
+          "D": "S3 生命週期規則"
+        },
+        "explanation": "Control Tower 可自動執行帳戶設定和預防性或偵測性護欄。\n其他選擇不管理帳戶基線。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-050",
@@ -797,7 +1385,19 @@
     "isMultiAnswer": false,
     "explanation": "IAM Identity Center provides workforce access and permission sets across accounts.\nCognito targets application users and the other choices are not workforce identity systems.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備發布的開發團隊需要為多個帳戶的員工使用者提供集中的身份體驗。應該使用哪種服務？",
+        "options": {
+          "A": "S3 儲存桶策略",
+          "B": "VPC 路由表",
+          "C": "IAM Identity Center",
+          "D": "僅限 Cognito 使用者池"
+        },
+        "explanation": "IAM Identity Center 提供跨帳戶的員工存取和權限集。\nCognito 的目標是應用程式使用者，其他選擇不是勞動力身分系統。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-051",
@@ -813,7 +1413,19 @@
     "isMultiAnswer": false,
     "explanation": "Organizations and SCPs provide account boundaries and guardrails while teams retain delegated control.\nA shared account and public credentials weaken isolation.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "擁有多個 AWS 區域的企業需要集中治理，同時允許應用程式團隊在單獨的帳戶中進行部署。哪種設計適合？",
+        "options": {
+          "A": "一個共享 root 帳戶",
+          "B": "公共憑證",
+          "C": "每個工作負載都有一個 VPC",
+          "D": "具有委派管理和 SCP 護欄的 AWS Organizations"
+        },
+        "explanation": "組織和 SCP 提供帳戶邊界和護欄，而團隊則保留委派控制權。\n共享帳戶和公共憑證削弱了孤立性。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-052",
@@ -829,7 +1441,19 @@
     "isMultiAnswer": false,
     "explanation": "Transit Gateway centralizes routing and supports many attachments.\nThe other choices do not provide private transitive network connectivity.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "審查事件的服務所有者必須透過中央集線器連接許多 VPC 和本地網路。應該評估哪些服務？",
+        "options": {
+          "A": "AWS Transit Gateway",
+          "B": "完整的公共 IP 網狀網路",
+          "C": "S3 網站",
+          "D": "CloudFront 快取"
+        },
+        "explanation": "Transit Gateway 集中路由並支援許多附件。\n其他選擇不提供專用傳遞網路連線。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-053",
@@ -845,7 +1469,19 @@
     "isMultiAnswer": false,
     "explanation": "RAM shares supported resources with specific principals and organizational scopes.\nPublic or shared administrator access is broader than necessary.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "優化現有實施的團隊需要跨帳戶共享選定的資源，而不授予廣泛的帳戶存取權。適合哪種能力？",
+        "options": {
+          "A": "隨處使用一種管理員角色",
+          "B": "具有範圍內資源共用的 AWS Resource Access Manager",
+          "C": "共享根憑證",
+          "D": "公開資源"
+        },
+        "explanation": "RAM 與特定主體和組織範圍共享支援的資源。\n公共或共用管理員存取權限超出了必要範圍。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-054",
@@ -861,7 +1497,19 @@
     "isMultiAnswer": false,
     "explanation": "Control Tower automates account setup and preventive or detective guardrails.\nThe other choices do not govern account baselines.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "引入自動化工作流程的公司必須在新帳戶之間實施共同的安全基準。哪個服務應該提供協助？",
+        "options": {
+          "A": "S3 生命週期規則",
+          "B": "Route 53 別名",
+          "C": "AWS Control Tower 護欄和帳戶工廠",
+          "D": "本地電子表格"
+        },
+        "explanation": "Control Tower 可自動執行帳戶設定和預防性或偵測性護欄。\n其他選擇不管理帳戶基線。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-055",
@@ -877,7 +1525,19 @@
     "isMultiAnswer": false,
     "explanation": "IAM Identity Center provides workforce access and permission sets across accounts.\nCognito targets application users and the other choices are not workforce identity systems.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "在共用環境中工作的 AWS 管理員需要為多個帳戶中的員工使用者提供集中身分體驗。應該使用哪種服務？",
+        "options": {
+          "A": "僅限 Cognito 使用者池",
+          "B": "S3 儲存桶策略",
+          "C": "VPC 路由表",
+          "D": "IAM Identity Center"
+        },
+        "explanation": "IAM Identity Center 提供跨帳戶的員工存取和權限集。\nCognito 的目標是應用程式使用者，其他選擇不是勞動力身分系統。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-056",
@@ -893,7 +1553,19 @@
     "isMultiAnswer": false,
     "explanation": "Organizations and SCPs provide account boundaries and guardrails while teams retain delegated control.\nA shared account and public credentials weaken isolation.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "面向客戶的應用程式團隊需要集中治理，同時允許應用程式團隊在單獨的帳戶中進行部署。哪種設計適合？",
+        "options": {
+          "A": "具有委派管理和 SCP 護欄的 AWS Organizations",
+          "B": "一個共享 root 帳戶",
+          "C": "公共憑證",
+          "D": "每個工作負載都有一個 VPC"
+        },
+        "explanation": "組織和 SCP 提供帳戶邊界和護欄，而團隊則保留委派控制權。\n共享帳戶和公共憑證削弱了孤立性。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-057",
@@ -909,7 +1581,19 @@
     "isMultiAnswer": false,
     "explanation": "Transit Gateway centralizes routing and supports many attachments.\nThe other choices do not provide private transitive network connectivity.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "標準化其 AWS 部署的平台團隊必須透過中央樞紐連接許多 VPC 和本地網路。應該評估哪些服務？",
+        "options": {
+          "A": "CloudFront 快取",
+          "B": "AWS Transit Gateway",
+          "C": "完整的公共 IP 網狀網路",
+          "D": "S3 網站"
+        },
+        "explanation": "Transit Gateway 集中路由並支援許多附件。\n其他選擇不提供專用傳遞網路連線。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-058",
@@ -925,7 +1609,19 @@
     "isMultiAnswer": false,
     "explanation": "RAM shares supported resources with specific principals and organizational scopes.\nPublic or shared administrator access is broader than necessary.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "為審計準備證據的團隊需要跨帳戶共享選定的資源，而不授予廣泛的帳戶存取權限。適合哪種能力？",
+        "options": {
+          "A": "公開資源",
+          "B": "隨處使用一種管理員角色",
+          "C": "具有範圍內資源共用的 AWS Resource Access Manager",
+          "D": "共享根憑證"
+        },
+        "explanation": "RAM 與特定主體和組織範圍共享支援的資源。\n公共或共用管理員存取權限超出了必要範圍。"
+      }
+    }
   },
   {
     "id": "sap-c02-d1-059",
@@ -941,6 +1637,18 @@
     "isMultiAnswer": false,
     "explanation": "Control Tower automates account setup and preventive or detective guardrails.\nThe other choices do not govern account baselines.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "取代手動流程的企業必須在新帳戶之間強制執行通用的安全性基準。哪個服務應該提供協助？",
+        "options": {
+          "A": "本地電子表格",
+          "B": "S3 生命週期規則",
+          "C": "Route 53 別名",
+          "D": "AWS Control Tower 護欄和帳戶工廠"
+        },
+        "explanation": "Control Tower 可自動執行帳戶設定和預防性或偵測性護欄。\n其他選擇不管理帳戶基線。"
+      }
+    }
   }
 ]

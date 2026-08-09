@@ -13,7 +13,19 @@
     "isMultiAnswer": false,
     "explanation": "Isolation limits further access while evidence is preserved for investigation.\nThe other choices destroy evidence or increase exposure.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "生產團隊必須隔離受損的 EC2 執行個體，同時保留證據。哪個第一個行動才是適當的？",
+        "options": {
+          "A": "打開所有連接埠",
+          "B": "刪除CloudTrail",
+          "C": "限制其網路存取並保留快照和日誌",
+          "D": "沒有證據就終止"
+        },
+        "explanation": "隔離限制了進一步的接觸，同時保留了證據以供調查。\n其他選擇會破壞證據或增加曝光。"
+      }
+    }
   },
   {
     "id": "scs-c03-d2-002",
@@ -29,7 +41,19 @@
     "isMultiAnswer": false,
     "explanation": "Automation runbooks can execute controlled response actions for findings.\nThe other choices do not provide incident response procedures.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "多帳戶平台團隊需要對 GuardDuty 調查結果做出可重複的回應。哪個服務應該運行該流程？",
+        "options": {
+          "A": "Amazon CloudFront",
+          "B": "AWS Route 53",
+          "C": "僅限Amazon Athena",
+          "D": "Systems Manager Automation"
+        },
+        "explanation": "自動化操作手冊可以針對結果執行受控回應操作。\n其他選擇不提供事件回應程序。"
+      }
+    }
   },
   {
     "id": "scs-c03-d2-003",
@@ -45,7 +69,19 @@
     "isMultiAnswer": false,
     "explanation": "A durable workflow can pause for approval and record the decision.\nThe other choices do not coordinate an auditable approval.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "受監管的公司必須在事件期間禁用生產角色之前協調人員批准。適合哪種工作流程？",
+        "options": {
+          "A": "具有審批步驟的 Step Functions 工作流程",
+          "B": "不受控制的 Lambda 循環",
+          "C": "公共 S3 物件",
+          "D": "DNS TXT 記錄"
+        },
+        "explanation": "持久的工作流程可以暫停以等待批准並記錄決策。\n其他選擇不協調可審核的批准。"
+      }
+    }
   },
   {
     "id": "scs-c03-d2-004",
@@ -61,7 +97,19 @@
     "isMultiAnswer": false,
     "explanation": "A protected central archive supports investigation and retention requirements.\nLocal, ephemeral, or public storage is not an incident archive.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備應對流量增加的新創公司需要將事件日誌保留在防篡改存檔中。應該使用哪種設計？",
+        "options": {
+          "A": "一個公共桶",
+          "B": "具有受限存取和保留控制的專用加密 S3 日誌儲存桶",
+          "C": "開發者筆記型電腦",
+          "D": "執行個體儲存卷"
+        },
+        "explanation": "受保護的中央檔案支援調查和保留要求。\n本地、臨時或公共儲存不是事件存檔。"
+      }
+    }
   },
   {
     "id": "scs-c03-d2-005",
@@ -77,7 +125,19 @@
     "isMultiAnswer": false,
     "explanation": "Correlated API, identity, and resource logs establish who did what and when.\nThe other choices do not provide an incident timeline.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "支援關鍵工作負載的營運團隊必須確定未經授權的 API 呼叫的時間表。哪些證據最有用？",
+        "options": {
+          "A": "Route 53 TTL",
+          "B": "S3 儲存類別",
+          "C": "與身分和資源日誌相關的 CloudTrail 事件",
+          "D": "僅CPU利用率"
+        },
+        "explanation": "相關的 API、身分和資源日誌可以確定誰在何時做了什麼。\n其他選擇不提供事件時間表。"
+      }
+    }
   },
   {
     "id": "scs-c03-d2-006",
@@ -93,7 +153,19 @@
     "isMultiAnswer": false,
     "explanation": "Isolation limits further access while evidence is preserved for investigation.\nThe other choices destroy evidence or increase exposure.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "資料平台團隊必須隔離受損的 EC2 執行個體，同時保留證據。哪個第一個行動才是適當的？",
+        "options": {
+          "A": "沒有證據就終止",
+          "B": "打開所有連接埠",
+          "C": "刪除CloudTrail",
+          "D": "限制其網路存取並保留快照和日誌"
+        },
+        "explanation": "隔離限制了進一步的接觸，同時保留了證據以供調查。\n其他選擇會破壞證據或增加曝光。"
+      }
+    }
   },
   {
     "id": "scs-c03-d2-007",
@@ -109,7 +181,19 @@
     "isMultiAnswer": false,
     "explanation": "Automation runbooks can execute controlled response actions for findings.\nThe other choices do not provide incident response procedures.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有安全意識的工程團隊需要對 GuardDuty 發現的結果進行可重複的回應。哪個服務應該運行該流程？",
+        "options": {
+          "A": "Systems Manager Automation",
+          "B": "Amazon CloudFront",
+          "C": "AWS Route 53",
+          "D": "僅限Amazon Athena"
+        },
+        "explanation": "自動化操作手冊可以針對結果執行受控回應操作。\n其他選擇不提供事件回應程序。"
+      }
+    }
   },
   {
     "id": "scs-c03-d2-008",
@@ -125,7 +209,19 @@
     "isMultiAnswer": false,
     "explanation": "A durable workflow can pause for approval and record the decision.\nThe other choices do not coordinate an auditable approval.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "遷移現有工作負載的公司必須在事件期間停用生產角色之前協調人工審批。適合哪種工作流程？",
+        "options": {
+          "A": "DNS TXT 記錄",
+          "B": "具有審批步驟的 Step Functions 工作流程",
+          "C": "不受控制的 Lambda 循環",
+          "D": "公共 S3 物件"
+        },
+        "explanation": "持久的工作流程可以暫停以等待批准並記錄決策。\n其他選擇不協調可審核的批准。"
+      }
+    }
   },
   {
     "id": "scs-c03-d2-009",
@@ -141,7 +237,19 @@
     "isMultiAnswer": false,
     "explanation": "A protected central archive supports investigation and retention requirements.\nLocal, ephemeral, or public storage is not an incident archive.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有嚴格復原目標的團隊需要將事件日誌保留在防篡改存檔中。應該使用哪種設計？",
+        "options": {
+          "A": "執行個體儲存卷",
+          "B": "一個公共桶",
+          "C": "具有受限存取和保留控制的專用加密 S3 日誌儲存桶",
+          "D": "開發者筆記型電腦"
+        },
+        "explanation": "受保護的中央檔案支援調查和保留要求。\n本地、臨時或公共儲存不是事件存檔。"
+      }
+    }
   },
   {
     "id": "scs-c03-d2-010",
@@ -157,7 +265,19 @@
     "isMultiAnswer": false,
     "explanation": "Correlated API, identity, and resource logs establish who did what and when.\nThe other choices do not provide an incident timeline.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備發布的開發團隊必須確定未經授權的 API 呼叫的時間表。哪些證據最有用？",
+        "options": {
+          "A": "僅CPU利用率",
+          "B": "Route 53 TTL",
+          "C": "S3 儲存類別",
+          "D": "與身分和資源日誌相關的 CloudTrail 事件"
+        },
+        "explanation": "相關的 API、身分和資源日誌可以確定誰在何時做了什麼。\n其他選擇不提供事件時間表。"
+      }
+    }
   },
   {
     "id": "scs-c03-d2-011",
@@ -173,7 +293,19 @@
     "isMultiAnswer": false,
     "explanation": "Isolation limits further access while evidence is preserved for investigation.\nThe other choices destroy evidence or increase exposure.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "擁有多個 AWS 區域的企業必須隔離受感染的 EC2 執行個體，同時保留證據。哪個第一個行動才是適當的？",
+        "options": {
+          "A": "限制其網路存取並保留快照和日誌",
+          "B": "沒有證據就終止",
+          "C": "打開所有連接埠",
+          "D": "刪除CloudTrail"
+        },
+        "explanation": "隔離限制了進一步的接觸，同時保留了證據以供調查。\n其他選擇會破壞證據或增加曝光。"
+      }
+    }
   },
   {
     "id": "scs-c03-d2-012",
@@ -189,7 +321,19 @@
     "isMultiAnswer": false,
     "explanation": "Automation runbooks can execute controlled response actions for findings.\nThe other choices do not provide incident response procedures.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "審查事件的服務所有者需要對 GuardDuty 調查結果做出可重複的回應。哪個服務應該運行該流程？",
+        "options": {
+          "A": "僅限Amazon Athena",
+          "B": "Systems Manager Automation",
+          "C": "Amazon CloudFront",
+          "D": "AWS Route 53"
+        },
+        "explanation": "自動化操作手冊可以針對結果執行受控回應操作。\n其他選擇不提供事件回應程序。"
+      }
+    }
   },
   {
     "id": "scs-c03-d2-013",
@@ -205,7 +349,19 @@
     "isMultiAnswer": false,
     "explanation": "A durable workflow can pause for approval and record the decision.\nThe other choices do not coordinate an auditable approval.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "優化現有實施的團隊必須在事件期間停用生產角色之前協調人工審批。適合哪種工作流程？",
+        "options": {
+          "A": "公共 S3 物件",
+          "B": "DNS TXT 記錄",
+          "C": "具有審批步驟的 Step Functions 工作流程",
+          "D": "不受控制的 Lambda 循環"
+        },
+        "explanation": "持久的工作流程可以暫停以等待批准並記錄決策。\n其他選擇不協調可審核的批准。"
+      }
+    }
   },
   {
     "id": "scs-c03-d2-014",
@@ -221,7 +377,19 @@
     "isMultiAnswer": false,
     "explanation": "A protected central archive supports investigation and retention requirements.\nLocal, ephemeral, or public storage is not an incident archive.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "引入自動化工作流程的公司需要將事件日誌保留在防篡改存檔中。應該使用哪種設計？",
+        "options": {
+          "A": "開發者筆記型電腦",
+          "B": "執行個體儲存卷",
+          "C": "一個公共桶",
+          "D": "具有受限存取和保留控制的專用加密 S3 日誌儲存桶"
+        },
+        "explanation": "受保護的中央檔案支援調查和保留要求。\n本地、臨時或公共儲存不是事件存檔。"
+      }
+    }
   },
   {
     "id": "scs-c03-d2-015",
@@ -237,7 +405,19 @@
     "isMultiAnswer": false,
     "explanation": "Correlated API, identity, and resource logs establish who did what and when.\nThe other choices do not provide an incident timeline.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "在共用環境中工作的 AWS 管理員必須確定未經授權的 API 呼叫的時間表。哪些證據最有用？",
+        "options": {
+          "A": "與身分和資源日誌相關的 CloudTrail 事件",
+          "B": "僅CPU利用率",
+          "C": "Route 53 TTL",
+          "D": "S3 儲存類別"
+        },
+        "explanation": "相關的 API、身分和資源日誌可以確定誰在何時做了什麼。\n其他選擇不提供事件時間表。"
+      }
+    }
   },
   {
     "id": "scs-c03-d2-016",
@@ -253,7 +433,19 @@
     "isMultiAnswer": false,
     "explanation": "Isolation limits further access while evidence is preserved for investigation.\nThe other choices destroy evidence or increase exposure.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "面向客戶的應用程式團隊必須隔離受損的 EC2 執行個體，同時保留證據。哪個第一個行動才是適當的？",
+        "options": {
+          "A": "刪除CloudTrail",
+          "B": "限制其網路存取並保留快照和日誌",
+          "C": "沒有證據就終止",
+          "D": "打開所有連接埠"
+        },
+        "explanation": "隔離限制了進一步的接觸，同時保留了證據以供調查。\n其他選擇會破壞證據或增加曝光。"
+      }
+    }
   },
   {
     "id": "scs-c03-d2-017",
@@ -269,7 +461,19 @@
     "isMultiAnswer": false,
     "explanation": "Automation runbooks can execute controlled response actions for findings.\nThe other choices do not provide incident response procedures.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "標準化其 AWS 部署的平台團隊需要對 GuardDuty 調查結果做出可重複的回應。哪個服務應該運行該流程？",
+        "options": {
+          "A": "AWS Route 53",
+          "B": "僅限Amazon Athena",
+          "C": "Systems Manager Automation",
+          "D": "Amazon CloudFront"
+        },
+        "explanation": "自動化操作手冊可以針對結果執行受控回應操作。\n其他選擇不提供事件回應程序。"
+      }
+    }
   },
   {
     "id": "scs-c03-d2-018",
@@ -285,7 +489,19 @@
     "isMultiAnswer": false,
     "explanation": "A durable workflow can pause for approval and record the decision.\nThe other choices do not coordinate an auditable approval.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "為審計準備證據的團隊必須在事件期間禁用生產角色之前協調人工批准。適合哪種工作流程？",
+        "options": {
+          "A": "不受控制的 Lambda 循環",
+          "B": "公共 S3 物件",
+          "C": "DNS TXT 記錄",
+          "D": "具有審批步驟的 Step Functions 工作流程"
+        },
+        "explanation": "持久的工作流程可以暫停以等待批准並記錄決策。\n其他選擇不協調可審核的批准。"
+      }
+    }
   },
   {
     "id": "scs-c03-d2-019",
@@ -301,7 +517,19 @@
     "isMultiAnswer": false,
     "explanation": "A protected central archive supports investigation and retention requirements.\nLocal, ephemeral, or public storage is not an incident archive.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "取代手動流程的企業需要將事件日誌保留在防篡改存檔中。應該使用哪種設計？",
+        "options": {
+          "A": "具有受限存取和保留控制的專用加密 S3 日誌儲存桶",
+          "B": "開發者筆記型電腦",
+          "C": "執行個體儲存卷",
+          "D": "一個公共桶"
+        },
+        "explanation": "受保護的中央檔案支援調查和保留要求。\n本地、臨時或公共儲存不是事件存檔。"
+      }
+    }
   },
   {
     "id": "scs-c03-d2-020",
@@ -317,7 +545,19 @@
     "isMultiAnswer": false,
     "explanation": "Correlated API, identity, and resource logs establish who did what and when.\nThe other choices do not provide an incident timeline.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "根據考試指南驗證設計的團隊必須確定未經授權的 API 呼叫的時間表。哪些證據最有用？",
+        "options": {
+          "A": "S3 儲存類別",
+          "B": "與身分和資源日誌相關的 CloudTrail 事件",
+          "C": "僅CPU利用率",
+          "D": "Route 53 TTL"
+        },
+        "explanation": "相關的 API、身分和資源日誌可以確定誰在何時做了什麼。\n其他選擇不提供事件時間表。"
+      }
+    }
   },
   {
     "id": "scs-c03-d2-021",
@@ -333,7 +573,19 @@
     "isMultiAnswer": false,
     "explanation": "Isolation limits further access while evidence is preserved for investigation.\nThe other choices destroy evidence or increase exposure.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "生產團隊必須隔離受損的 EC2 執行個體，同時保留證據。哪個第一個行動才是適當的？",
+        "options": {
+          "A": "打開所有連接埠",
+          "B": "刪除CloudTrail",
+          "C": "限制其網路存取並保留快照和日誌",
+          "D": "沒有證據就終止"
+        },
+        "explanation": "隔離限制了進一步的接觸，同時保留了證據以供調查。\n其他選擇會破壞證據或增加曝光。"
+      }
+    }
   },
   {
     "id": "scs-c03-d2-022",
@@ -349,7 +601,19 @@
     "isMultiAnswer": false,
     "explanation": "Automation runbooks can execute controlled response actions for findings.\nThe other choices do not provide incident response procedures.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "多帳戶平台團隊需要對 GuardDuty 調查結果做出可重複的回應。哪個服務應該運行該流程？",
+        "options": {
+          "A": "Amazon CloudFront",
+          "B": "AWS Route 53",
+          "C": "僅限Amazon Athena",
+          "D": "Systems Manager Automation"
+        },
+        "explanation": "自動化操作手冊可以針對結果執行受控回應操作。\n其他選擇不提供事件回應程序。"
+      }
+    }
   },
   {
     "id": "scs-c03-d2-023",
@@ -365,7 +629,19 @@
     "isMultiAnswer": false,
     "explanation": "A durable workflow can pause for approval and record the decision.\nThe other choices do not coordinate an auditable approval.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "受監管的公司必須在事件期間禁用生產角色之前協調人員批准。適合哪種工作流程？",
+        "options": {
+          "A": "具有審批步驟的 Step Functions 工作流程",
+          "B": "不受控制的 Lambda 循環",
+          "C": "公共 S3 物件",
+          "D": "DNS TXT 記錄"
+        },
+        "explanation": "持久的工作流程可以暫停以等待批准並記錄決策。\n其他選擇不協調可審核的批准。"
+      }
+    }
   },
   {
     "id": "scs-c03-d2-024",
@@ -381,7 +657,19 @@
     "isMultiAnswer": false,
     "explanation": "A protected central archive supports investigation and retention requirements.\nLocal, ephemeral, or public storage is not an incident archive.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備應對流量增加的新創公司需要將事件日誌保留在防篡改存檔中。應該使用哪種設計？",
+        "options": {
+          "A": "一個公共桶",
+          "B": "具有受限存取和保留控制的專用加密 S3 日誌儲存桶",
+          "C": "開發者筆記型電腦",
+          "D": "執行個體儲存卷"
+        },
+        "explanation": "受保護的中央檔案支援調查和保留要求。\n本地、臨時或公共儲存不是事件存檔。"
+      }
+    }
   },
   {
     "id": "scs-c03-d2-025",
@@ -397,7 +685,19 @@
     "isMultiAnswer": false,
     "explanation": "Correlated API, identity, and resource logs establish who did what and when.\nThe other choices do not provide an incident timeline.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "支援關鍵工作負載的營運團隊必須確定未經授權的 API 呼叫的時間表。哪些證據最有用？",
+        "options": {
+          "A": "Route 53 TTL",
+          "B": "S3 儲存類別",
+          "C": "與身分和資源日誌相關的 CloudTrail 事件",
+          "D": "僅CPU利用率"
+        },
+        "explanation": "相關的 API、身分和資源日誌可以確定誰在何時做了什麼。\n其他選擇不提供事件時間表。"
+      }
+    }
   },
   {
     "id": "scs-c03-d2-026",
@@ -413,7 +713,19 @@
     "isMultiAnswer": false,
     "explanation": "Isolation limits further access while evidence is preserved for investigation.\nThe other choices destroy evidence or increase exposure.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "資料平台團隊必須隔離受損的 EC2 執行個體，同時保留證據。哪個第一個行動才是適當的？",
+        "options": {
+          "A": "沒有證據就終止",
+          "B": "打開所有連接埠",
+          "C": "刪除CloudTrail",
+          "D": "限制其網路存取並保留快照和日誌"
+        },
+        "explanation": "隔離限制了進一步的接觸，同時保留了證據以供調查。\n其他選擇會破壞證據或增加曝光。"
+      }
+    }
   },
   {
     "id": "scs-c03-d2-027",
@@ -429,7 +741,19 @@
     "isMultiAnswer": false,
     "explanation": "Automation runbooks can execute controlled response actions for findings.\nThe other choices do not provide incident response procedures.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有安全意識的工程團隊需要對 GuardDuty 發現的結果進行可重複的回應。哪個服務應該運行該流程？",
+        "options": {
+          "A": "Systems Manager Automation",
+          "B": "Amazon CloudFront",
+          "C": "AWS Route 53",
+          "D": "僅限Amazon Athena"
+        },
+        "explanation": "自動化操作手冊可以針對結果執行受控回應操作。\n其他選擇不提供事件回應程序。"
+      }
+    }
   },
   {
     "id": "scs-c03-d2-028",
@@ -445,6 +769,18 @@
     "isMultiAnswer": false,
     "explanation": "A durable workflow can pause for approval and record the decision.\nThe other choices do not coordinate an auditable approval.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "遷移現有工作負載的公司必須在事件期間停用生產角色之前協調人工審批。適合哪種工作流程？",
+        "options": {
+          "A": "DNS TXT 記錄",
+          "B": "具有審批步驟的 Step Functions 工作流程",
+          "C": "不受控制的 Lambda 循環",
+          "D": "公共 S3 物件"
+        },
+        "explanation": "持久的工作流程可以暫停以等待批准並記錄決策。\n其他選擇不協調可審核的批准。"
+      }
+    }
   }
 ]

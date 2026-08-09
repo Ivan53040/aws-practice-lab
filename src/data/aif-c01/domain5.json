@@ -16,7 +16,19 @@
     "services": [
       "Amazon Bedrock",
       "Amazon S3"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家新創公司運行一個基於 Amazon Bedrock 基礎模型 (FM) 構建的聊天機器人。聊天機器人需要讀取受 Amazon S3 託管金鑰 (SSE-S3) 保護的 Amazon S3 儲存桶中的文件，但每次嘗試讀取它們都會失敗。什麼將解決這個問題？",
+        "options": {
+          "A": "使用提示工程告訴模型在哪裡找到 Amazon S3 中的資料",
+          "B": "從 S3 資料中刪除所有敏感詳細資訊",
+          "C": "授予 IAM Roles，使 Amazon Bedrock 承擔使用正確加密金鑰解密資料的權限",
+          "D": "更新 S3 儲存桶策略以允許公共 Internet 存取資料"
+        },
+        "explanation": "讀取失敗是一個權限問題：必須允許 Amazon Bedrock 假定的 IAM Roles存取和解密加密物件，因此授予其使用正確密鑰解密資料的權限可以解決存取失敗問題。\n即時工程無法授予加密資料的存取權限。刪除敏感資料並不能解決缺少解密權限的問題，並且違背了使用資料的目的。將儲存桶開放到公共網路是一種不安全的更改，仍然不會授予角色解密權限。"
+      }
+    }
   },
   {
     "id": "aif-q013",
@@ -36,7 +48,19 @@
       "AWS PrivateLink",
       "Amazon Macie",
       "Amazon CloudFront"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家銀行正在 Amazon Bedrock 上建立人工智慧應用程式。該應用程式位於 VPC 中，為了滿足監管機構的要求，必須切斷所有網路流量。哪些 AWS 服務或功能符合這些要求？",
+        "options": {
+          "A": "網際網路閘關",
+          "B": "Amazon Macie",
+          "C": "AWS PrivateLink",
+          "D": "Amazon CloudFront"
+        },
+        "explanation": "AWS PrivateLink 在 VPC 和 AWS 服務（例如 Amazon Bedrock 之間建立私有連接，因此流量保留在 AWS 網路上，永遠不會到達公共互聯網，這滿足了無互聯網合規性要求。\n網際網路閘道的功能與所要求的相反，為 VPC 提供一條通往公共網際網路的路徑。 Amazon Macie 發現並保護 Amazon S3 中的敏感資料，並且不提供專用連接。 Amazon CloudFront 是一個透過網路提供內容的內容傳遞網路。"
+      }
+    }
   },
   {
     "id": "aif-q026",
@@ -57,7 +81,19 @@
       "AWS Trusted Advisor",
       "Amazon Inspector",
       "AWS Audit Manager"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家安全公司在 Amazon Bedrock 上呼叫基礎模型 (FM)，並希望僅限於經過批准的使用者使用。在稍後收緊其 IAM Roles和策略之前，它首先需要發現任何未經授權存取模型的嘗試。應使用哪種 AWS 服務？",
+        "options": {
+          "A": "AWS Trusted Advisor",
+          "B": "Amazon Inspector",
+          "C": "AWS CloudTrail",
+          "D": "AWS Audit Manager"
+        },
+        "explanation": "AWS CloudTrail 記錄跨 AWS 服務的 API 活動，因此它可以捕獲誰嘗試調用 Amazon Bedrock 以及何時調用，從而讓公司識別未經授權的存取嘗試並完善其 IAM Roles和策略。\nAWS Trusted Advisor 提供有關成本、效能和安全性的最佳實務建議，但不記錄單獨的存取嘗試。 Amazon Inspector 掃描工作負載是否有軟體漏洞。 AWS Audit Manager 自動收集審計證據，而不是追蹤誰試圖存取服務。"
+      }
+    }
   },
   {
     "id": "aif-q028",
@@ -78,7 +114,19 @@
       "AWS Data Exchange",
       "AWS Trusted Advisor",
       "AWS Audit Manager"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家公司定期與獨立軟體供應商 (ISV) 一起審核其運營，並希望每次發布新的 ISV 合規性報告時都收到電子郵件提醒。哪種 AWS 服務符合此要求？",
+        "options": {
+          "A": "AWS Data Exchange",
+          "B": "AWS Trusted Advisor",
+          "C": "AWS Artifact",
+          "D": "AWS Audit Manager"
+        },
+        "explanation": "AWS Artifact 提供對合規性報告和協議（包括第三方報告）的按需存取，並可以在新報告可用時通知公司。\nAWS Data Exchange 是第三方資料集而非合規性報告的市場。 AWS Trusted Advisor 提供最佳實務檢查。 AWS Audit Manager 自動收集公司自身審計的證據，而不是分發 ISV 報告。"
+      }
+    }
   },
   {
     "id": "aif-q030",
@@ -94,7 +142,19 @@
     "isMultiAnswer": false,
     "taskStatement": "5.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家保險公司正在將其生成式人工智慧專案映射到生成式人工智慧安全範圍矩陣上。哪個範圍讓保險公司承擔最大的安全責任？",
+        "options": {
+          "A": "使用公司擁有的資料從頭開始建立和訓練生成式人工智慧模型",
+          "B": "使用公司自己的資料微調現有的第三方基礎模型 (FM)",
+          "C": "在現有第三方基礎模型 (FM) 之上建立應用程式",
+          "D": "使用內建生成式人工智慧功能的第三方企業應用程式"
+        },
+        "explanation": "利用公司擁有的資料從頭開始建立和訓練模型，使公司能夠完全控制資料、訓練、部署和保護，因此承擔最大的安全責任。\n微調第三方 FM、在第三方 FM 上建立應用程式以及使用具有嵌入式生成式 AI 的供應商應用程式，都會將越來越多的責任轉移給提供商，因此他們授予公司的所有權較少。"
+      }
+    }
   },
   {
     "id": "aif-q061",
@@ -115,7 +175,19 @@
       "AWS CloudTrail",
       "AWS Audit Manager",
       "Amazon EventBridge"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "AI 從業者依靠 Amazon Bedrock 基本模型來總結支援聊天，並希望記錄模型中進出的內容以進行監控。實踐者應該採取哪一種方法？",
+        "options": {
+          "A": "將 AWS CloudTrail 設定為模型的日誌目標",
+          "B": "在 Amazon EventBridge 中設定模型呼叫日誌記錄",
+          "C": "在 Amazon Bedrock 中開啟模型呼叫日誌記錄",
+          "D": "將 AWS Audit Manager 設定為模型的日誌目標"
+        },
+        "explanation": "在 Amazon Bedrock 中開啟模型呼叫日誌記錄可擷取並儲存模型的輸入和輸出資料，這正是從業者監控呼叫所需的資料。\nAWS CloudTrail 記錄管理 API 調用，但不記錄模型的提示和回應負載。 Amazon EventBridge 在服務之間路由事件，並且不是啟用 Bedrock 呼叫日誌記錄的位置。 AWS Audit Manager 收集審核證據而不是呼叫資料。"
+      }
+    }
   },
   {
     "id": "aif-q066",
@@ -135,7 +207,19 @@
       "Amazon Bedrock",
       "AWS Identity and Access Management (IAM)",
       "Amazon S3"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家公司計劃使用 Amazon Bedrock 使用 Amazon S3 中保存的客戶資料來建立大型語言模型 (LLM) 應用程式。它的政策規定，每個團隊只能存取自己客戶的記錄。哪種解決方案滿足這些要求？",
+        "options": {
+          "A": "建立具有完整 Amazon S3 存取權限的單一 Amazon Bedrock 服務角色，然後為每個團隊建立範圍為每個團隊的客戶資料夾的 IAM Roles",
+          "B": "為每個團隊建立一個 Amazon Bedrock 自訂服務角色，僅授予對該團隊客戶資料的存取權限",
+          "C": "建立一個具有 Amazon S3 存取權限的服務角色，並要求團隊在每個 Amazon Bedrock 請求中指定客戶名稱",
+          "D": "編輯 Amazon S3 中的個人資料並更新儲存桶策略以允許團隊存取客戶資料"
+        },
+        "explanation": "為每個團隊建立單獨的 Amazon Bedrock 自訂服務角色，範圍僅限於該團隊的客戶資料，透過最低權限存取強制執行策略，並防止團隊存取其他團隊的資料。\n具有完整 Amazon S3 存取權限的單一角色加上每個團隊 IAM Roles仍會授予共享 Bedrock 角色廣泛的存取權限，從而存在暴露風險。依賴團隊命名客戶的單一角色依賴合作而不是強制控制。編輯資料和開啟儲存桶策略不會隔離團隊的存取。"
+      }
+    }
   },
   {
     "id": "aif-q078",
@@ -155,7 +239,19 @@
       "Amazon Bedrock",
       "Amazon SageMaker AI",
       "AWS Key Management Service (AWS KMS)"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一位人工智慧從業者使用包含機密記錄的資料集在 Amazon Bedrock 上微調了自訂模型。從業者必須保證模型的推理回應永遠不會基於機密資料。練習者該做什麼？",
+        "options": {
+          "A": "使用動態資料屏蔽來屏蔽推理回應中的機密資料",
+          "B": "使用 Amazon SageMaker AI 加密推理回應中的機密資料",
+          "C": "刪除自訂模型，從訓練資料集中刪除機密資料，然後重新訓練模型",
+          "D": "使用 AWS Key Management Service (AWS KMS) 加密自訂模型中的機密資料"
+        },
+        "explanation": "由於機密資料是訓練集的一部分，因此唯一可靠的解決方法是刪除自訂模型，從資料集中刪除機密資料，然後重新訓練，以便模型永遠不會從該資料中學習模式。\n動態資料屏蔽和加密回應在模型已經從機密資料中學習之後起作用，因此這些資訊仍然可以影響輸出。使用 AWS KMS 加密模型中的資料可以保護靜態資料，但不會阻止模型基於它產生回應。"
+      }
+    }
   },
   {
     "id": "aif-q084",
@@ -176,7 +272,19 @@
       "Amazon S3",
       "Amazon Macie",
       "Amazon Inspector"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "團隊在 Amazon SageMaker Studio 筆記本中建立和訓練 ML 模型，並將其資料保存在 Amazon S3 儲存桶中。它需要控制資料在 Amazon S3 和筆記本之間移動的方式。哪種解決方案可以滿足這個要求？",
+        "options": {
+          "A": "使用 Amazon Macie 監控 SageMaker Studio",
+          "B": "配置 SageMaker 以將 VPC 與 Amazon S3 端點一起使用",
+          "C": "使用 Amazon Inspector 監控 SageMaker Studio",
+          "D": "配置 SageMaker 以使用 S3 Glacier Deep Archive"
+        },
+        "explanation": "將 Amazon SageMaker 設定為將 VPC 與 Amazon S3 端點一起使用，將為資料在 Amazon S3 和 Studio 筆記本之間流動建立一個託管專用 Internet。\nAmazon Macie 和 Amazon Inspector 分別監視敏感資料和漏洞，但都不管理服務之間的資料路徑。 Amazon S3 Glacier Deep Archive 是一種低成本歸檔儲存類，無法控制資料流。"
+      }
+    }
   },
   {
     "id": "aif-q087",
@@ -192,7 +300,19 @@
     "isMultiAnswer": false,
     "taskStatement": "5.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家公司即將採用 Amazon Bedrock，並且需要了解在 AWS 共擔責任模型下該公司應承擔哪些安全職責。哪一項職責屬於公司？",
+        "options": {
+          "A": "保護託管 Amazon Bedrock 的基礎設施",
+          "B": "修補與更新 Amazon Bedrock 的版本",
+          "C": "在公司網路內設定 Amazon Bedrock",
+          "D": "保護公司傳輸和靜態資料的安全"
+        },
+        "explanation": "在 AWS 共擔責任模型下，AWS 保護雲端基礎架構和託管服務（例如 Amazon Bedrock），而客戶則負責雲端中的安全，包括保護自己的傳輸中和靜態資料。\n修補 Amazon Bedrock 版本和保護託管基礎架構是 AWS 對託管服務的責任。在公司網路內設定 Amazon Bedrock 不是存取託管服務的方式，也不是客戶的安全責任。"
+      }
+    }
   },
   {
     "id": "aif-q090",
@@ -211,7 +331,19 @@
     "services": [
       "Amazon SageMaker AI",
       "AWS Identity and Access Management (IAM)"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "為了滿足監管機構的要求，公司必須在沒有網路連線的密封環境中運作 Amazon SageMaker AI 來訓練和推理。哪種解決方案可以滿足這些要求？",
+        "options": {
+          "A": "將適當的 IAM Roles與 SageMaker AI 作業關聯",
+          "B": "使用 SageMaker 地理空間功能加密來加密靜態資料",
+          "C": "透過網路隔離運行 SageMaker AI 訓練和推理作業",
+          "D": "使用 SageMaker 實驗運行 SageMaker AI 訓練與推理作業"
+        },
+        "explanation": "透過網路隔離運作 Amazon SageMaker AI 訓練和推理作業會刪除這些作業的 Internet 存取權限，從而將它們保持在法規要求的隔離環境中。\n關聯 IAM Roles可控制權限，但不會刪除 Internet 連線。地理空間功能加密可保護靜態資料，並且 SageMaker 實驗追蹤訓練運行；兩者都沒有將工作與互聯網隔離。"
+      }
+    }
   },
   {
     "id": "aif-q104",
@@ -232,7 +364,19 @@
       "Amazon Macie",
       "AWS Secrets Manager",
       "Amazon Inspector"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家公司在 Amazon Bedrock 上運行產生 AI 應用程式的自訂模型，並希望在自訂作業期間產生的模型工件使用公司控制的金鑰進行加密。哪種 AWS 服務符合這些要求？",
+        "options": {
+          "A": "Amazon Macie",
+          "B": "AWS Secrets Manager",
+          "C": "AWS Key Management Service (AWS KMS)",
+          "D": "Amazon Inspector"
+        },
+        "explanation": "AWS Key Management Service (AWS KMS) 允許公司建立和控制自己的加密金鑰，並使用它來加密 Amazon Bedrock 自訂作業產生的模型工件。\nAmazon Macie 發現敏感資料，Amazon Inspector 掃描漏洞，兩者都不管理客戶加密金鑰。 AWS Secrets Manager 儲存憑證和秘密，而不是用於保護模型工件的加密金鑰。"
+      }
+    }
   },
   {
     "id": "aif-q124",
@@ -257,7 +401,20 @@
       "Amazon CloudWatch",
       "AWS Audit Manager",
       "Amazon S3"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "公司必須記錄對其 Amazon Bedrock API 的每次呼叫，並以盡可能便宜的方式安全保存這些記錄五年。應結合哪兩種選擇（一種 AWS 服務和一種 S3 儲存類別）來滿足這些要求？",
+        "options": {
+          "A": "Amazon CloudWatch",
+          "B": "AWS CloudTrail",
+          "C": "Amazon S3 Intelligent-Tiering",
+          "D": "AWS Audit Manager",
+          "E": "Amazon S3 Standard"
+        },
+        "explanation": "AWS CloudTrail 旨在記錄對 AWS 服務發出的 API 請求，包括 Amazon Bedrock，並且 Amazon S3 Intelligent-Tiering 自動在存取層之間移動存儲的日誌以保持較低的長期保留成本，因此它們一起滿足記錄和五年的低成本保留要求。\nAmazon CloudWatch 專注於指標和操作監控，而不是記錄 API 調用，AWS Audit Manager 收集審計證據，而不是記錄每個 API 請求。對於長期保留期間內很少存取的資料，Amazon S3 Standard 的成本高於智慧分層。"
+      }
+    }
   },
   {
     "id": "aif-q126",
@@ -273,7 +430,19 @@
     "isMultiAnswer": false,
     "taskStatement": "5.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家醫院正在建立人工智慧系統，幫助醫生根據病患檔案和醫學影像診斷疾病。根據法律規定，敏感的患者資料必須保留在其所在國家/地區。哪種資料治理策略可以確保合規性並保護隱私？",
+        "options": {
+          "A": "資料品質",
+          "B": "資料豐富",
+          "C": "資料駐留",
+          "D": "資料可發現性"
+        },
+        "explanation": "資料駐留確保資料僅在特定地理位置內儲存和處理，直接滿足病患資料永不出境的要求，保護病患隱私。\n資料品質涉及資料的準確性和完整性，資料充實為現有記錄添加資訊，資料可發現性幫助使用者查找資料；這些都不能控制資料的物理存儲位置。"
+      }
+    }
   },
   {
     "id": "aif-q139",
@@ -293,7 +462,19 @@
       "Amazon Macie",
       "Amazon SageMaker AI",
       "Amazon S3"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "本公司將把客戶服務電子郵件移至 Amazon S3 以用於分析應用程式。由於某些電子郵件包含敏感資料，因此該公司希望在此類資料出現時發出警報。哪種解決方案能夠以最少的開發工作完全實現此檢測的自動化？",
+        "options": {
+          "A": "建立多個自訂正規表示式模式並在自訂應用程式中運行它們以檢測敏感資料",
+          "B": "配置 Amazon Macie 以檢測上傳到 Amazon S3 的文檔中的敏感資訊",
+          "C": "在 Amazon SageMaker 端點上部署大型語言模型 (LLM) 以編輯敏感資料",
+          "D": "請客戶不要在電子郵件中分享敏感訊息"
+        },
+        "explanation": "Amazon Macie 是一項託管服務，它使用機器學習自動發現 Amazon S3 中的 PII 等敏感資料，並在發現時發出警報，以最少的開發工作滿足要求。\n在自訂應用程式中建立自訂正規表示式模式以及在 Amazon SageMaker 端點上部署 LLM 都需要大量的開發和維護。要求客戶不要共享敏感資訊不會偵測到任何事情或發出警報。"
+      }
+    }
   },
   {
     "id": "aif-q145",
@@ -319,7 +500,20 @@
       "Amazon Inspector",
       "Amazon CloudWatch",
       "AWS CloudTrail"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家全球銀行創建了一個機器學習應用程式，可以分析市場資料以揭示趨勢。在整個開發過程中，該銀行希望持續檢查其政策和行業法規是否得到遵守。哪兩項 AWS 服務可協助銀行評估合規性？",
+        "options": {
+          "A": "Amazon CloudWatch",
+          "B": "AWS Config",
+          "C": "AWS CloudTrail",
+          "D": "AWS Audit Manager",
+          "E": "Amazon Inspector"
+        },
+        "explanation": "AWS Audit Manager 不斷收集證據並將其映射到監管框架以評估合規性，AWS Config 根據規則追蹤配置更改，以便銀行可以確認其資源在整個開發過程中保持在政策範圍內。\nAmazon CloudWatch 監控指標和日誌，AWS CloudTrail 記錄 API 活動，Amazon Inspector 掃描軟體漏洞；這些支援安全性和運營，但不是評估政策和法規合規性的主要服務。"
+      }
+    }
   },
   {
     "id": "aif-q151",
@@ -340,7 +534,19 @@
       "Amazon SageMaker Model Monitor",
       "Amazon SageMaker JumpStart",
       "Amazon SageMaker Model Registry"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "哪些 AWS 功能提供了一致的方式來記錄 ML 模型的詳細資訊以進行治理和報告？",
+        "options": {
+          "A": "Amazon SageMaker Model Monitor",
+          "B": "Amazon SageMaker JumpStart",
+          "C": "Amazon SageMaker Model Cards",
+          "D": "Amazon SageMaker Model Registry"
+        },
+        "explanation": "Amazon SageMaker Model Cards 提供模型預期用途、訓練資料、評估結果和合規性詳細資訊的標準化記錄，支援整個模型生命週期的治理和報告。\nAmazon SageMaker Model Monitor 監視已部署的漂移模型，Amazon SageMaker JumpStart 提供預先建置的模型和解決方案，Amazon SageMaker Model Registry 儲存和版本模型；這些都不是用於治理和報告的標準化檔案記錄。"
+      }
+    }
   },
   {
     "id": "aif-q179",
@@ -356,7 +562,19 @@
     "isMultiAnswer": false,
     "taskStatement": "5.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "當模型在 AWS 上進行訓練時，哪種機器學習技術有助於維持底層訓練資料的隱私和合規性？",
+        "options": {
+          "A": "遷移學習",
+          "B": "無監督學習",
+          "C": "聯邦學習",
+          "D": "強化學習"
+        },
+        "explanation": "聯邦學習可以跨多個資料持有者訓練共享模型，而無需將原始資料移動到中央位置，因此每個參與者都可以保留其私有資料，這有助於保護隱私並滿足合規性要求。\n遷移學習、無監督學習和強化學習是根據模型如何從資料中學習定義的方法，而不是旨在保持訓練資料隱私和合規性的技術。"
+      }
+    }
   },
   {
     "id": "aif-q185",
@@ -378,7 +596,19 @@
     "services": [
       "Amazon Bedrock",
       "AWS PrivateLink"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家醫院希望利用 AWS 服務微調基礎模型 (FM)，同時保持其資料的隱私性並保留在儲存資料的 AWS Region 內。哪兩個步驟最經濟有效地實現這個目標？",
+        "options": {
+          "A": "使用 AWS Outposts 在本機託管模型",
+          "B": "將 AWS PrivateLink 與 VPC 一起使用",
+          "C": "在本機託管 Amazon Bedrock API",
+          "D": "使用 Amazon Bedrock API"
+        },
+        "explanation": "呼叫 Amazon Bedrock API 可以在同一 AWS Region 中的託管服務內進行微調，並使用 AWS PrivateLink 透過 VPC 路由此流量，使其保持在額外的隱私網路要求\n使用 AWS Outposts 在本地託管模型以及在本地託管 Amazon Bedrock API 都會增加硬體和營運成本，並且不是託管 Amazon Bedrock 服務的消費方式。"
+      }
+    }
   },
   {
     "id": "aif-q186",
@@ -399,7 +629,19 @@
       "AWS Config",
       "Amazon Macie",
       "AWS Secrets Manager"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "在 AWS 上執行生成式 AI 模型的銀行必須產生報告，證明其符合處理敏感客戶資料的國際規則。哪種 AWS 服務符合這些要求？",
+        "options": {
+          "A": "AWS Config",
+          "B": "Amazon Macie",
+          "C": "AWS Artifact",
+          "D": "AWS Secrets Manager"
+        },
+        "explanation": "AWS Artifact 提供對 AWS 合規性報告和認證（例如 ISO 和 SOC）的按需存取，銀行可以使用這些報告來證明其工作負載和資料處理符合國際監管要求。\nAWS Config 追蹤資源配置，Amazon Macie 發現敏感資料，AWS Secrets Manager 儲存憑證；這些都不會產生證明遵守法規所需的合規報告。"
+      }
+    }
   },
   {
     "id": "aif-q208",
@@ -419,7 +661,19 @@
       "AWS Identity and Access Management (IAM)",
       "Amazon Bedrock",
       "Amazon Inspector"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "擁有 Amazon Bedrock 存取權限的公司希望控制允許特定員工使用哪些模型。哪種解決方案滿足這些要求？",
+        "options": {
+          "A": "使用 AWS Identity and Access Management (IAM) 服務角色來限制模型訂閱",
+          "B": "使用 AWS Identity and Access Management (IAM) 策略來限制模型存取",
+          "C": "使用 Amazon Inspector 監控模型存取",
+          "D": "使用 AWS Security Token Service (AWS STS) 產生供模型使用的暫存憑證"
+        },
+        "explanation": "AWS Identity and Access Management (IAM) 策略可以允許或拒絕針對特定模型資源的 Amazon Bedrock API 操作，因此公司可以限制允許每個員工呼叫哪些模型。\nIAM 服務角色授予服務權限，而不是限制使用者可以訂閱哪些模型，AWS STS 頒發臨時憑證，但本身並不會限制模型存取，並且 Amazon Inspector 掃描漏洞而不是控製存取。"
+      }
+    }
   },
   {
     "id": "aif-q215",
@@ -437,7 +691,19 @@
     "lastVerified": "2026-06-02",
     "services": [
       "Amazon Bedrock"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家公司在 Amazon Bedrock 上使用第三方模型分析機密文檔，並擔心資料隱私。哪一句話解釋了 Amazon Bedrock 如何保持該資料的私密性？",
+        "options": {
+          "A": "使用者輸入保密，但模型輸出與第三方模型提供者共享",
+          "B": "使用者輸入和模型輸出是匿名的，然後與第三方模型提供者共享",
+          "C": "使用者輸入和模型輸出不與任何第三方模型提供者共享",
+          "D": "使用者輸入和模型輸出在與第三方模型提供者共享之前經過編輯"
+        },
+        "explanation": "Amazon Bedrock 在 AWS 環境中處理資料，並且不與第三方模型提供者共用使用者輸入或模型輸出，因此公司的機密文件保持私密。\n聲明輸出是共享的、輸入和輸出是匿名和共享的、或者資料在共享之前經過編輯的選項都是不正確的，因為 Amazon Bedrock 根本不會將輸入或輸出發送到模型提供者。"
+      }
+    }
   },
   {
     "id": "aif-q229",
@@ -458,7 +724,19 @@
       "AWS Config",
       "AWS Audit Manager",
       "Amazon Inspector"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "出於監管原因，銀行需要其生成式人工智慧聊天機器人來保持事實。哪種解決方案有助於阻止底層基礎模型 (FM) 產生幻覺答案？",
+        "options": {
+          "A": "使用 AWS Config 使用自然語言查詢合規性元資料",
+          "B": "使用 AWS Audit Manager 準備 IT 稽核和合規報告",
+          "C": "設定 Amazon Bedrock Guardrails 以評估使用者輸入和模型回應",
+          "D": "使用 Amazon Inspector 掃描工作負載中的漏洞"
+        },
+        "explanation": "Amazon Bedrock Guardrails 讓銀行定義評估使用者輸入和模型回應的策略，包括上下文基礎檢查，幫助保持聊天機器人的答案真實並減少幻覺內容以確保合規性。\nAWS Config 追蹤資源配置，AWS Audit Manager 準備審核和合規性報告，Amazon Inspector 掃描工作負載是否有漏洞；這些都不會限制模型產生的回應。"
+      }
+    }
   },
   {
     "id": "aif-q235",
@@ -479,7 +757,19 @@
       "Amazon Bedrock",
       "AWS Identity and Access Management (IAM)",
       "AWS Key Management Service (AWS KMS)"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家醫療保健公司計劃使用其 VPC 內的私有資料庫中保存的敏感資料來微調 Amazon Bedrock 上的模型。資料絕不能離開公司的專用網路。哪種解決方案可以滿足這個要求？",
+        "options": {
+          "A": "使用 AWS Identity and Access Management (IAM) 策略限制對 Amazon Bedrock 的存取",
+          "B": "使用 AWS PrivateLink 連線 VPC 和 Amazon Bedrock",
+          "C": "使用 AWS Key Management Service (AWS KMS) 金鑰加密資料",
+          "D": "透過 VPC 中的網際網路閘道將流量路由到 Amazon Bedrock"
+        },
+        "explanation": "AWS PrivateLink 在 VPC 和 Amazon Bedrock 之間建立私有連接，因此流量透過 AWS 專用網路而不是公共互聯網傳輸，從而在微調期間將敏感資料保留在公司的專用網路內。\nIAM 策略控制誰可以呼叫 Amazon Bedrock，但不會阻止網路流量與公共網際網路連線。 AWS KMS 將靜態資料加密，並且不會變更資料所採用的網路路徑。互聯網網關將 VPC 流量路由到公共互聯網，這與將資料保留在專用網路上相反。"
+      }
+    }
   },
   {
     "id": "aif-q248",
@@ -500,7 +790,19 @@
       "Amazon Q",
       "AWS CloudTrail",
       "Amazon CloudFront"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家在世界各地設有辦事處的公司要求其生成式 AI 應用程式和基礎模型 (FM) 之間的每個 API 呼叫都避開公共互聯網。應使用哪種 AWS 服務？",
+        "options": {
+          "A": "Amazon Q",
+          "B": "AWS CloudTrail",
+          "C": "AWS PrivateLink",
+          "D": "Amazon CloudFront"
+        },
+        "explanation": "AWS PrivateLink 在 VPC 和 AWS 服務之間提供私有連接，因此生成式 AI 應用程式和基礎模型之間的 API 呼叫保留在 AWS 網路上，而不是公共網際網路。\nAmazon Q 是一個生成式 AI 助手，AWS CloudTrail 記錄 API 活動，Amazon CloudFront 是一個透過網路提供流量的內容傳遞網路；這些都無法阻止 API 流量遠離公共網路。"
+      }
+    }
   },
   {
     "id": "aif-q269",
@@ -522,7 +824,19 @@
       "AWS Glue",
       "Amazon CloudFront",
       "AWS Lake Formation"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家公司希望從其 AWS 帳戶內私下存取 Amazon Bedrock APIs，同時將資料遠離公共網路。哪種解決方案滿足這些要求？",
+        "options": {
+          "A": "使用 AWS Glue 在公司資料目錄中設定資料加密",
+          "B": "使用 AWS PrivateLink 設定公司 VPC 和 Amazon Bedrock 之間的專用連接",
+          "C": "使用 Amazon CloudFront 限制對公司私人內容的存取",
+          "D": "使用 AWS Lake Formation 管理集中式資料治理與跨帳戶資料共享"
+        },
+        "explanation": "AWS PrivateLink 在公司的 VPC 和 Amazon Bedrock APIs 之間配置私有連接，因此呼叫和資料傳輸保留在 AWS 網路內，不會暴露在公共互聯網上。\nAWS Glue 處理資料整合和編目，Amazon CloudFront 透過網際網路限制和交付內容，AWS Lake Formation 管理資料治理與共用；這些都不會被建立到 Amazon Bedrock 的專用網路連線。"
+      }
+    }
   },
   {
     "id": "aif-q305",
@@ -538,7 +852,19 @@
     "isMultiAnswer": false,
     "taskStatement": "5.2",
     "lastVerified": "2026-06-01",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家公司獲得國際標準化組織 (ISO) 認證，以管理人工智慧風險並負責任地使用人工智慧。該認證反映了該公司的什麼？",
+        "options": {
+          "A": "本公司所有成員均獲得 ISO 認證。",
+          "B": "本公司使用的所有人工智慧系統均經過 ISO 認證。",
+          "C": "所有人工智慧應用團隊成員均獲得 ISO 認證。",
+          "D": "本公司的開發框架已通過 ISO 認證。"
+        },
+        "explanation": "ISO認證證明該公司管理人工智慧的開發框架、流程和控制符合相關ISO標準的要求，反映出該組織在結構層面展現了負責任和具有風險意識的人工智慧治理實踐。\n公司的所有成員都獲得 ISO 認證是不正確的，因為組織認證不會自動對每位員工進行認證；個人 ISO 認證是個人獨立進行的單獨流程。所有經過 ISO 認證的人工智慧系統都是不正確的，因為認證適用於用於開發和管理人工智慧的框架和流程，而不是其中產生的單一系統或模型。基於同樣的原因，所有人工智慧應用團隊成員都獲得 ISO 認證是不正確的，因為個別員工需要單獨的認證，並且不會自動獲得獲得認證的組織的認證。"
+      }
+    }
   },
   {
     "id": "aif-q307",
@@ -554,7 +880,19 @@
     "isMultiAnswer": false,
     "taskStatement": "5.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "公司製定規則來規定資訊的儲存時間以及何時應刪除資訊。這描述了哪種資料治理策略？",
+        "options": {
+          "A": "資料品質標準",
+          "B": "資料保留",
+          "C": "日誌儲存",
+          "D": "資料去識別化"
+        },
+        "explanation": "資料保留是一組定義資料儲存時間以及何時必須刪除資料的策略，而這正是該公司指南所描述的。\n資料品質標準控制準確性和完整性、保存日誌的日誌儲存問題以及資料去標識化刪除識別細節；這些都沒有定義儲存持續時間和刪除時間。"
+      }
+    }
   },
   {
     "id": "aif-q040",
@@ -576,7 +914,20 @@
     "lastVerified": "2026-06-02",
     "services": [
       "Amazon SageMaker JumpStart"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "基於微調的 Amazon SageMaker JumpStart 模型建構的聊天機器人必須滿足多個監管框架。哪兩項能力有助於公司證明合規性？",
+        "options": {
+          "A": "成本最佳化",
+          "B": "資料保護",
+          "C": "彈性自動伸縮",
+          "D": "威脅偵測",
+          "E": "更快的上市時間"
+        },
+        "explanation": "資料保護（保護敏感資料）和威脅偵測（識別安全風險）是監管機構期望的安全控制，因此它們直接支援證明合規性。\n成本優化、彈性自動擴展和更快的上市時間是效能和業務問題，但並未建立法規遵循。"
+      }
+    }
   },
   {
     "id": "aif-q213",
@@ -595,7 +946,19 @@
     "services": [
       "Amazon Bedrock Guardrails",
       "Amazon Bedrock"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "銀行針對貸款問題對 Amazon Bedrock 上的法學碩士進行微調，並且必須確保模型永遠不會洩露私人客戶資料。哪種解決方案適合？",
+        "options": {
+          "A": "增加Top K參數",
+          "B": "使用Amazon Bedrock Guardrails",
+          "C": "在微調之前從資料中刪除個人識別資訊 (PII)",
+          "D": "在微調之前加密 Amazon S3 中的資料"
+        },
+        "explanation": "在微調之前刪除 PII 可以防止模型獲取私人詳細資訊，因此以後無法重現它們，這是最可靠的保護措施。\n對 Amazon S3 中的資料進行加密可以在靜態時保護它，但模型仍然會學習 PII，Amazon Bedrock Guardrails 在資料被攝取後過濾輸出，並且 Top K 僅影響令牌採樣。"
+      }
+    }
   },
   {
     "id": "aif-q218",
@@ -613,7 +976,19 @@
     "lastVerified": "2026-06-02",
     "services": [
       "Amazon SageMaker JumpStart"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家公司希望控制其員工可以存取哪些公開可用的基礎模型 (FM)。哪種解決方案適合？",
+        "options": {
+          "A": "分析 AWS Cost Explorer 中的使用情況",
+          "B": "配置 Amazon SageMaker JumpStart 以限制可發現的 FM",
+          "C": "從 AWS Artifact 下載合規性報告",
+          "D": "查看 AWS Trusted Advisor 中的建議"
+        },
+        "explanation": "Amazon SageMaker JumpStart 允許管理員管理模型目錄，因此將其配置為限制可發現的 FM 來控制員工可以存取的模型。\nAWS Cost Explorer 分析支出，AWS Artifact 提供合規文件，AWS Trusted Advisor 提供最佳實務建議；沒有人規定員工可以存取哪些模型。"
+      }
+    }
   },
   {
     "id": "aif-q299",
@@ -631,7 +1006,19 @@
     "lastVerified": "2026-06-02",
     "services": [
       "Amazon Bedrock Guardrails"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "Amazon Bedrock 基礎模型 (FM) 上的生成式 AI 聊天機器人容易受到提示注入的攻擊。公司如何以最少的努力確保其安全？",
+        "options": {
+          "A": "微調 FM 以避免有害響應",
+          "B": "應用 Amazon Bedrock Guardrails 內容過濾器和拒絕的主題",
+          "C": "切換到不同的基礎模型",
+          "D": "在提示中添加更多少量範例"
+        },
+        "explanation": "Amazon Bedrock Guardrails 內容過濾器和拒絕主題無需重新訓練即可配置，以阻止不安全的提示和響應，從而以最少的努力緩解提示注入。\n微調需要資料和訓練運行，切換 FM 並不能本質上停止注入，添加少量樣本並不能防禦惡意提示。"
+      }
+    }
   },
   {
     "id": "aif-q034",
@@ -652,7 +1039,19 @@
       "Amazon Bedrock",
       "AWS Audit Manager",
       "Amazon CloudWatch"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "公司如何在 Amazon Bedrock 上安全地使用大型語言模型？",
+        "options": {
+          "A": "根據最小權限配置 IAM Roles和策略",
+          "B": "啟用 AWS Audit Manager 以執行自動模型評估作業",
+          "C": "啟用 Amazon Bedrock 自動模型評估作業",
+          "D": "使用 Amazon CloudWatch Logs 使模型可解釋並監控偏差"
+        },
+        "explanation": "基於最小權限配置 IAM Roles和策略會限制哪些使用者和應用程式可以存取 Amazon Bedrock 模型和操作，這是安全使用大型語言模型的基本方法。\nAWS Audit Manager 收集合規性證據，並且不執行模型評估作業。 Amazon Bedrock 模型評估評估模型效能而不是保護存取。 Amazon CloudWatch Logs 記錄活動，但不會使模型可解釋或偵測偏差。"
+      }
+    }
   },
   {
     "id": "aif-q133",
@@ -668,7 +1067,19 @@
     "isMultiAnswer": false,
     "taskStatement": "5.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "哪個選項描述了有助於建立信任和部署以人為中心的人工智慧的人工智慧治理框架的特徵？",
+        "options": {
+          "A": "跨業務部門擴展人工智慧計劃，以實現長期價值最大化",
+          "B": "使人工智慧專案與收入目標和利害關係人期望保持一致",
+          "C": "透過人工智慧推動業務轉型和競爭成長",
+          "D": "制定資料、透明度、負責任的人工智慧和合規性政策和指南"
+        },
+        "explanation": "人工智慧治理框架的特點是製定涵蓋資料、透明度、負責任的人工智慧和合規性的政策和指南，從而建立信任並支持以人為本的人工智慧。\n跨業務部門擴展計劃、與收入目標和利益相關者期望保持一致以及推動業務轉型是一般業務目標，而不是定義人工智慧治理框架的特徵。"
+      }
+    }
   },
   {
     "id": "aif-q159",
@@ -684,7 +1095,19 @@
     "isMultiAnswer": false,
     "taskStatement": "5.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家公司在貸款申請過程中使用人工智慧產生客戶信用評分，並計劃擴展到新的地理市場。為了在那裡開展業務，公司應該審查哪種類型的合規法律？",
+        "options": {
+          "A": "當地健康資料保護法",
+          "B": "當地支付卡資料保護法",
+          "C": "本地演算法責任法",
+          "D": "當地教育隱私法"
+        },
+        "explanation": "由於自動信用評分做出的是關於個人的決策，因此公司必須審查當地的演算法問責法，這些法律負責管理新市場中自動決策的公平性、透明度和影響。\n當地健康資料、支付卡和教育隱私法適用於其他類型的資料和用例，不適用於自動信用評分決策的責任。"
+      }
+    }
   },
   {
     "id": "aif-q191",
@@ -700,7 +1123,19 @@
     "isMultiAnswer": false,
     "taskStatement": "5.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家電子商務公司在其網站上運行人工智慧聊天機器人，讓客戶可以全天候提交訂單。在啟動聊天機器人之前，公司應該要解決哪些輸入漏洞？",
+        "options": {
+          "A": "資料外洩",
+          "B": "及時注射",
+          "C": "大語言模型（LLM）幻覺",
+          "D": "概念漂移"
+        },
+        "explanation": "提示注入是一種輸入漏洞，使用者可以在其中製作惡意輸入來覆蓋或操縱聊天機器人的指令，因此公司必須在啟動之前清理和限制輸入。\n資料外洩是敏感資訊的暴露，大語言模型幻覺是捏造的輸出，概念漂移是資料模式隨時間的逐漸變化。這些都不是對聊天機器人指令的輸入級攻擊。"
+      }
+    }
   },
   {
     "id": "aif-q254",
@@ -716,7 +1151,19 @@
     "isMultiAnswer": false,
     "taskStatement": "5.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家公司希望確保其人工智慧系統公平且可解釋，並決定要求對其人工智慧開發團隊進行培訓。哪些培訓符合這個要求？",
+        "options": {
+          "A": "高階編碼技能培訓",
+          "B": "資料隱私和加密協議培訓",
+          "C": "偏見意識和負責任的人工智慧培訓",
+          "D": "進階 ML 演算法培訓"
+        },
+        "explanation": "對人工智慧開發團隊進行偏見意識和負責任的人工智慧培訓，為團隊提供建立公平且可解釋的系統所需的知識和實踐，從而滿足要求。\n高級編碼技能、高級機器學習演算法或資料隱私和加密協議的培訓可以培養其他有價值的技能，但不能直接解決公平性和可解釋性問題。"
+      }
+    }
   },
   {
     "id": "aif-q393",
@@ -737,7 +1184,19 @@
       "AWS Secrets Manager",
       "Amazon Macie",
       "AWS CloudTrail"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家公司正在 Amazon Bedrock 上部署 AI 代理，需要代表使用者存取多個後端系統。該公司希望每個代理商都使用自己的身份進行身份驗證，而不是共享一組憑證。哪個 AWS 功能符合此要求？",
+        "options": {
+          "A": "AWS Secrets Manager",
+          "B": "Amazon Bedrock AgentCore Identity",
+          "C": "Amazon Macie",
+          "D": "AWS CloudTrail"
+        },
+        "explanation": "Amazon Bedrock AgentCore Identity 为 AI 代理提供身份管理，允许每个代理在访问后端系统时使用自己独特的身份进行身份验证，这支持最小权限原则并避免共享凭证。\nAWS Secrets Manager 儲存和輪換憑證，但不提供每個代理程式的身份管理。 Amazon Macie 發現 Amazon S3 中的敏感資料。 AWS CloudTrail 記錄 API 活動以供審核。這些都沒有將個人身分分配給人工智慧代理。"
+      }
+    }
   },
   {
     "id": "aif-q394",
@@ -753,7 +1212,19 @@
     "isMultiAnswer": false,
     "taskStatement": "5.1",
     "lastVerified": "2026-06-03",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家製藥公司的合規團隊使用生成式人工智慧助理來回答有關藥物交互作用的問題。為了降低模型產生錯誤醫療資訊的風險，團隊希望根據核准的參考文件驗證每個答案。哪種技術可以滿足這個要求？",
+        "options": {
+          "A": "增加模型的溫度參數",
+          "B": "使用核准的參考文件應用 RAG 接地",
+          "C": "根據更一般的醫療資料微調模型",
+          "D": "使用更大的基礎模型"
+        },
+        "explanation": "RAG 接地在查詢時從核准的參考文件中檢索相關段落，並使用它們來驗證和錨定模型的回應，確保答案可追溯到權威來源，並降低產生幻覺醫療資訊的風險。\n升高溫度會增加隨機性，並使產生幻覺的可能性更大，而不是更少。對更一般的醫療資料進行微調並不能保證答案是基於特定的批准文件。使用更大的模型可以提高一般能力，但不能根據權威參考來驗證輸出。"
+      }
+    }
   },
   {
     "id": "aif-q395",
@@ -773,7 +1244,20 @@
     "isMultiAnswer": true,
     "taskStatement": "5.1",
     "lastVerified": "2026-06-03",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "哪兩種技術可以透過在潛在的幻覺到達使用者之前檢測到它們來幫助提高生成人工智慧模型輸出的準確性？",
+        "options": {
+          "A": "針對來源文檔的輸出驗證",
+          "B": "增加模型的訓練資料量",
+          "C": "標記低確定性反應的置信度評分",
+          "D": "減少模型參數的數量",
+          "E": "在推理過程中加入更多 GPU 計算"
+        },
+        "explanation": "輸出驗證根據來源文件檢查模型回應以確認事實準確性，置信度評分為每個回應分配確定性度量，因此可以標記低置信度輸出以供審核或拒絕使用者查看。這些技術共同在潛在的幻覺到達最終使用者之前捕獲它們。\n增加訓練資料量可能會提高整體模型質量，但無法即時檢測幻覺。減少模型參數可以簡化模型，但不會加入運行時驗證。增加更多 GPU 運算可加快推理速度，但無法提供偵測或防止不準確輸出的機制。"
+      }
+    }
   },
   {
     "id": "aif-q396",
@@ -789,7 +1273,19 @@
     "isMultiAnswer": false,
     "taskStatement": "5.1",
     "lastVerified": "2026-06-03",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家金融機構使用來自多個內部系統的資料來訓練機器學習模型。監管機構要求機構追蹤每個培訓資料的原始來源，並證明資料的收集和處理符合政策。哪種做法符合這個要求？",
+        "options": {
+          "A": "資料增強",
+          "B": "資料沿襲追蹤",
+          "C": "資料標準化",
+          "D": "資料平衡"
+        },
+        "explanation": "資料沿襲追蹤記錄了資料在其整個生命週期中的起源、移動和轉換，因此機構可以追蹤每個培訓資料的來源，並證明其處理符合政策，滿足監管要求。\n資料增強創建額外的訓練範例以提高模型效能。資料標準化將特徵重新調整到公共範圍。資料平衡調整類別分佈以減少偏差。這些都無法提供用於監管目的的資料來源和轉換的可追溯記錄。"
+      }
+    }
   },
   {
     "id": "aif-q397",
@@ -810,7 +1306,19 @@
       "Amazon SageMaker Data Wrangler",
       "Amazon SageMaker Feature Store",
       "Amazon SageMaker Autopilot"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家公司希望記錄其部署的每個 ML 模型的訓練資料來源、處理步驟和預期用途，以便審核員可以驗證資料來源。哪個 AWS 功能提供了記錄此資訊的標準化方法？",
+        "options": {
+          "A": "Amazon SageMaker Model Cards",
+          "B": "Amazon SageMaker Data Wrangler",
+          "C": "Amazon SageMaker Feature Store",
+          "D": "Amazon SageMaker Autopilot"
+        },
+        "explanation": "Amazon SageMaker Model Cards 提供一個標準化框架，用於記錄模型詳細資訊，包括訓練資料來源、處理步驟、評估結果和預期用途，為審核員提供資料來源和模型沿襲的一致記錄。\nAmazon SageMaker Data Wrangler 準備和轉換資料，但不產生可供審計的模型文件。 Amazon SageMaker Feature Store 管理並提供 ML 模型的功能。 Amazon SageMaker Autopilot 自動建立模型。這些都無法建立資料來源審計所需的標準化文件記錄。"
+      }
+    }
   },
   {
     "id": "aif-q451",
@@ -826,7 +1334,19 @@
     "isMultiAnswer": false,
     "taskStatement": "5.2",
     "lastVerified": "2026-06-03",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家公司使用根據客戶資料進行訓練的人工智慧模型，需要定義訓練資料集的保存時間、存檔時間以及必須刪除時間的規則。這描述了哪種資料治理策略？",
+        "options": {
+          "A": "資料駐留",
+          "B": "資料生命週期管理",
+          "C": "資料記錄",
+          "D": "資料監控"
+        },
+        "explanation": "資料生命週期管理定義瞭如何隨著時間的推移創建、儲存、存檔和刪除資料的規則，這就是為訓練資料集設定保留和刪除計劃所描述的內容。\n資料駐留控制資料的地理儲存位置。資料記錄記錄事件以供審計。資料監控即時觀察品質和使用情況。這些都沒有設定歸檔和刪除時間表。"
+      }
+    }
   },
   {
     "id": "aif-q452",
@@ -842,7 +1362,19 @@
     "isMultiAnswer": false,
     "taskStatement": "5.2",
     "lastVerified": "2026-06-03",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "該公司的資料治理團隊希望持續觀察整個組織如何存取和使用人工智慧訓練資料，以偵測未經授權的使用模式。這描述了哪種資料治理策略？",
+        "options": {
+          "A": "資料保留",
+          "B": "資料駐留",
+          "C": "資料觀察與監控",
+          "D": "資料記錄"
+        },
+        "explanation": "資料觀察和監控涉及持續觀察資料的存取和使用方式，以檢測異常和未經授權的模式，這是滿足團隊監督人工智慧訓練資料使用需求的治理策略。\n資料保留定義了資料的儲存時間。資料駐留控制地理位置。資料記錄記錄單獨的存取事件，但不提供監控所提供的持續監視和模式偵測。"
+      }
+    }
   },
   {
     "id": "aif-q453",
@@ -863,7 +1395,19 @@
       "AWS Config",
       "AWS Trusted Advisor",
       "Amazon Inspector"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家在 AWS 上建立 AI 系統的公司希望記錄對其訓練資料集的每次存取，以進行審計。哪個 AWS 服務提供此日誌記錄功能？",
+        "options": {
+          "A": "AWS Config",
+          "B": "AWS CloudTrail",
+          "C": "AWS Trusted Advisor",
+          "D": "Amazon Inspector"
+        },
+        "explanation": "AWS CloudTrail 記錄對 AWS 服務進行的 API 調用，包括 Amazon S3 等服務的資料存取事件，建立稽核追蹤來記錄誰存取了訓練資料、何時存取以及他們做了什麼。\nAWS Config 追蹤資源配置更改，而不是資料存取事件。 AWS Trusted Advisor 提供最佳實務建議。 Amazon Inspector 掃描漏洞。這些都不會記錄單一資料存取事件以供審核。"
+      }
+    }
   },
   {
     "id": "aif-q456",
@@ -879,7 +1423,19 @@
     "isMultiAnswer": false,
     "taskStatement": "5.1",
     "lastVerified": "2026-06-03",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家金融機構使用來自多個系統的資料訓練機器學習模型。監管機構要求機構追蹤每一條培訓資料的來源。哪種做法符合這個要求？",
+        "options": {
+          "A": "資料增強",
+          "B": "資料沿襲追蹤",
+          "C": "資料標準化",
+          "D": "資料平衡"
+        },
+        "explanation": "資料沿襲追蹤記錄了資料在其整個生命週期中的起源、移動和轉換，因此機構可以將每個培訓資料追溯到其來源並演示合規處理。\n資料增強創建了額外的訓練範例。資料標準化重新調整特徵。資料平衡調整類別分佈。沒有一個提供可追溯的資料來源記錄。"
+      }
+    }
   },
   {
     "id": "aif-q465",
@@ -903,7 +1459,20 @@
     "isMultiAnswer": false,
     "taskStatement": "5.2",
     "lastVerified": "2026-06-13",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一個團隊正在為 AWS AI 工作負載背後的資料集建立安全的資料治理生命週期。從第一個到最後一個階段排列以下階段，以反映資料治理生命週期的正確順序。",
+        "options": {
+          "A": "透過將最低權限 IAM 策略附加到需要資料的角色和使用者來限制誰可以使用資料",
+          "B": "在將資料集用於訓練或推理之前，對靜態資料集進行加密並在傳輸過程中強制加密",
+          "C": "發現資料並對其進行分類，以識別哪些記錄包含敏感或受監管資訊",
+          "D": "持續監控並記錄對資料的存取，以便偵測到異常或未經授權的活動",
+          "E": "根據合規性要求審核收集的日誌和控制措施，並為審核者提供證據"
+        },
+        "explanation": "您首先發現資料並對資料進行分類，以便了解哪些資料是敏感的以及必須如何保護資料，然後對其進行靜態和傳輸中的加密以保護資料本身，然後使用最低權限 IAM 限制存取，以便只有正確的身份才能使用它，然後持續監控和記錄該存取以檢測濫用情況，最後根據合規性要求提供這些證據以審核證據。每個階段都取決於前一個階段：分類驅動正確的加密和存取決策，並且在進行任何有意義的審計之前必須存在存取控制和日誌記錄。\n一個誘人的錯誤是首先放置最低權限的 IAM 存取控制，但在對資料進行分類並透過加密對其進行保護之前，您無法正確確定存取範圍，並且審核必須放在最後，因為它會評估早期階段實施的控制和日誌。"
+      }
+    }
   },
   {
     "id": "aif-q466",
@@ -936,6 +1505,24 @@
       "AWS KMS",
       "Amazon Macie",
       "AWS CloudTrail"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "將每個 AWS 安全性和治理服務與其在保護 AI 或機器學習工作負載時所扮演的角色相匹配。將左側的每項服務與右側其用途的正確描述配對。",
+        "options": {
+          "A": "AWS IAM",
+          "B": "AWS KMS",
+          "C": "Amazon Macie",
+          "D": "AWS CloudTrail"
+        },
+        "explanation": "AWS IAM 透過管理哪些身分可以對哪些資源執行哪些操作來實施最低權限存取控制，AWS KMS 建立和管理保護靜態資料的加密金鑰，Amazon Macie 使用機器學習來發現並管理保護靜態資料的加密金鑰，Amazon Macie 使用機器學習來發現和分類敏感資料，例如 [[[AWSTERM_00001]]記錄帳戶 API 活動，以提供有關誰在何時執行什麼操作的審計追蹤。每個服務都對應到不同的治理功能：身分和存取、金鑰管理、敏感資料發現和 API 審核。\n一個常見的錯誤是將 CloudTrail 與 Macie 或 KMS 混淆，但 CloudTrail 記錄 API 呼叫而不是掃描資料內容或管理，[[AWSTERM_0000]]] 記錄 API 呼叫而不是掃描資料內容或管理，而 [[01]MSTER_00]中的資料本身並KMS 僅處理加密金鑰，因此每個配對都是唯一且明確的。",
+        "targets": {
+          "1": "使用機器學習來發現和分類敏感資料，例如儲存在 Amazon S3 中的個人識別資訊",
+          "2": "記錄帳戶 API 活動，以提供有關 AWS 服務中誰做了什麼、何時做了什麼的審計跟踪",
+          "3": "透過定義哪些身分可以對哪些資源執行哪些操作來強制執行最低權限存取控制",
+          "4": "建立、儲存和管理用於保護靜態資料的加密金鑰"
+        }
+      }
+    }
   }
 ]

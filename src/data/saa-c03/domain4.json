@@ -13,7 +13,19 @@
     "isMultiAnswer": false,
     "type": "single",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "一家公司希望降低可容忍中斷的工作負載的 EC2 成本。他們應該使用哪種購買選項？",
+        "options": {
+          "A": "按需執行個體",
+          "B": "預留執行個體",
+          "C": "現貨執行個體",
+          "D": "專用主機"
+        },
+        "explanation": "Spot 執行個體提供高達 90% 的折扣，但可以中斷。按需沒有折扣。預留執行個體需要承諾。專用主機提供實體伺服器隔離。\n替代選擇不能直接或完全滿足規定的 SAA-C03 要求。"
+      }
+    }
   },
   {
     "id": "saa-d4-002",
@@ -29,7 +41,19 @@
     "isMultiAnswer": false,
     "type": "single",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "哪些 AWS 服務可協助識別未充分利用的資源並提供成本優化建議？",
+        "options": {
+          "A": "AWS Budgets",
+          "B": "AWS Trusted Advisor",
+          "C": "AWS Cost Explorer",
+          "D": "AWS Pricing Calculator"
+        },
+        "explanation": "Trusted Advisor 檢查您的 AWS 環境並提供成本優化、安全性、效能和容錯能力的建議。 Cost Explorer 將成本視覺化。預算設定警報。定價計算器估算成本。\n替代選擇不能直接或完全滿足規定的 SAA-C03 要求。"
+      }
+    }
   },
   {
     "id": "saa-d4-003",
@@ -45,7 +69,19 @@
     "isMultiAnswer": false,
     "type": "single",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "一家公司運行一個僅在工作時間使用的開發環境。哪種方法可以最大限度地降低成本？",
+        "options": {
+          "A": "使用預留執行個體",
+          "B": "使用按需執行個體並在下班後停止它們",
+          "C": "使用 Spot 執行個體",
+          "D": "使用專用主機"
+        },
+        "explanation": "在不使用時停止按需執行個體可以消除運算費用（僅保留儲存成本）。預留執行個體適用於穩態工作負載。 Spot 執行個體可以被中斷。專用主機價格昂貴。\n替代選擇不能直接或完全滿足規定的 SAA-C03 要求。"
+      }
+    }
   },
   {
     "id": "saa-d4-004",
@@ -61,7 +97,19 @@
     "isMultiAnswer": false,
     "type": "single",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "哪個 S3 功能可以根據存取模式自動將物件移至更便宜的儲存類別？",
+        "options": {
+          "A": "S3 Versioning",
+          "B": "S3 生命週期策略",
+          "C": "S3 Replication",
+          "D": "S3 Object Lock"
+        },
+        "explanation": "S3 生命週期策略會自動在儲存類別之間轉換物件或根據規則使物件過期。版本控制保留物件版本。複製跨儲存桶複製物件。物件鎖定防止刪除。\n替代選擇不能直接或完全滿足規定的 SAA-C03 要求。"
+      }
+    }
   },
   {
     "id": "saa-d4-005",
@@ -77,7 +125,19 @@
     "isMultiAnswer": false,
     "type": "single",
     "taskStatement": "4.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "解決方案架構師需要在 Amazon RDS 和 Amazon DynamoDB 之間進行選擇。哪個因素最有利於 DynamoDB？",
+        "options": {
+          "A": "具有連接的複雜 SQL 查詢",
+          "B": "任何規模下一致的個位數毫秒延遲",
+          "C": "跨多個表格的 ACID 事務",
+          "D": "模式執行和引用完整性"
+        },
+        "explanation": "DynamoDB 在任何規模下都能提供一致的個位數毫秒效能。 RDS 更適合複雜的 SQL 查詢、多表 ACID 事務和架構強制。\n替代選擇不能直接或完全滿足規定的 SAA-C03 要求。"
+      }
+    }
   },
   {
     "id": "saa-d4-006",
@@ -93,7 +153,19 @@
     "isMultiAnswer": false,
     "explanation": "S3 Intelligent-Tiering automatically moves objects between access tiers based on changing access patterns.\nS3 Standard does not automatically optimize tier placement. One Zone-IA and Deep Archive require the workload to accept their availability or retrieval characteristics.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "資料集具有不可預測的存取模式，並且應該自動轉移到成本較低的 S3 層，而無需團隊進行效能分析。哪種儲存類別合適？",
+        "options": {
+          "A": "S3 Intelligent-Tiering",
+          "B": "僅限 S3 Standard",
+          "C": "S3 單區 - 僅 IA",
+          "D": "僅限 S3 Glacier 深度存檔"
+        },
+        "explanation": "S3 智慧分層會根據不斷變化的存取模式自動在存取層之間移動物件。\nS3 Standard不會自動優化層放置。 One Zone-IA 和 Deep Archive 要求工作負載接受其可用性或檢索特徵。"
+      }
+    }
   },
   {
     "id": "saa-d4-007",
@@ -109,7 +181,19 @@
     "isMultiAnswer": false,
     "explanation": "S3 Glacier Deep Archive is designed for long-term archival data with very infrequent access and longer retrieval times.\nS3 Standard and Standard-IA are intended for more frequent access. EFS is managed file storage and is not an archival tier.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "合規性存檔很少被存取，並且可以容忍需要幾個小時的檢索。哪一種選擇通常成本最低？",
+        "options": {
+          "A": "S3 Standard",
+          "B": "S3 Standard-IA",
+          "C": "S3 Glacier Deep Archive",
+          "D": "Amazon EFS Standard"
+        },
+        "explanation": "S3 Glacier Deep Archive 專為存取頻率極低且檢索時間較長的長期存檔資料而設計。\nS3 Standard和標準-IA 旨在實現更頻繁的存取。 EFS 是託管文件存儲，而不是歸檔層。"
+      }
+    }
   },
   {
     "id": "saa-d4-008",
@@ -125,7 +209,19 @@
     "isMultiAnswer": false,
     "explanation": "Savings Plans provide discounted rates in exchange for a consistent usage commitment and can fit predictable long-running workloads.\nSpot Instances can be interrupted and are not a substitute for a guaranteed three-year baseline. Dedicated Hosts add isolation cost. On-Demand has no commitment discount.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "工作負載以可預測的計算使用量連續運轉三年。與按需定價相比，哪種購買選項可以降低運算成本？",
+        "options": {
+          "A": "儲蓄計劃",
+          "B": "僅限 Spot 執行個體",
+          "C": "每個執行個體的專用主機",
+          "D": "無需承諾的按需執行個體"
+        },
+        "explanation": "Savings Plans 提供折扣費率，以換取一致的使用承諾，並且可以適應可預測的長期運行工作負載。\nSpot 執行個體可以中斷，且無法取代保證的三年基準。專用主機增加了隔離成本。按需服務沒有承諾折扣。"
+      }
+    }
   },
   {
     "id": "saa-d4-009",
@@ -141,7 +237,19 @@
     "isMultiAnswer": false,
     "explanation": "Spot Instances use spare EC2 capacity at a discount and are appropriate when interruption can be handled by checkpointing or retrying.\nDedicated Hosts and long commitments cost more than needed for interruptible work. On-Demand is more expensive when interruptions are acceptable.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "容錯批次作業可以從檢查點重新啟動，並且應該以盡可能低的 EC2 成本運行。哪個選項最適合？",
+        "options": {
+          "A": "現貨執行個體",
+          "B": "專用主機",
+          "C": "僅按需執行個體",
+          "D": "每項任務都有一個為期三年的預留執行個體"
+        },
+        "explanation": "Spot 執行個體以折扣價使用備用 EC2 容量，適用於可以透過檢查點或重試來處理中斷的情況。\n專用主機和長期承諾的成本超出了可中斷工作所需的成本。當可以接受中斷時，點播的費用會更高。"
+      }
+    }
   },
   {
     "id": "saa-d4-010",
@@ -157,7 +265,19 @@
     "isMultiAnswer": false,
     "explanation": "Trusted Advisor provides recommendations that can include underutilized resources and cost optimization opportunities.\nRoute 53 manages DNS, Certificate Manager manages certificates, and Cognito manages application identities.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "團隊希望找到空閒的 EC2 執行個體並獲得降低成本的建議。他們應該審查哪些服務？",
+        "options": {
+          "A": "AWS Trusted Advisor",
+          "B": "Amazon Route 53",
+          "C": "AWS Certificate Manager",
+          "D": "Amazon Cognito"
+        },
+        "explanation": "Trusted Advisor 提供的建議可能包括未充分利用的資源和成本優化機會。\nRoute 53 管理 DNS，Certificate Manager 管理證書，Cognito 管理應用程式身分。"
+      }
+    }
   },
   {
     "id": "saa-d4-011",
@@ -173,7 +293,19 @@
     "isMultiAnswer": false,
     "explanation": "DynamoDB on-demand capacity automatically handles variable request rates without a provisioned read and write capacity setting.\nA fixed RDS instance and a Dedicated Host continue to incur provisioned infrastructure cost. An EBS volume alone is not a database service.",
     "taskStatement": "4.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "無伺服器應用程式具有高度可變的資料庫流量和較長的空閒期。哪種資料庫選項可以避免在閒置時為預配置容量付費？",
+        "options": {
+          "A": "DynamoDB 按需容量",
+          "B": "固定大小的RDS執行個體",
+          "C": "RDS Dedicated Host",
+          "D": "沒有資料庫的 EBS 卷"
+        },
+        "explanation": "DynamoDB 按需容量可自動處理可變請求率，無需預先讀取和寫入容量設定。\n固定 RDS 執行個體和專用主機繼續產生預先配置基礎架構成本。單獨的 EBS 磁碟區並不是資料庫服務。"
+      }
+    }
   },
   {
     "id": "saa-d4-012",
@@ -189,7 +321,19 @@
     "isMultiAnswer": false,
     "explanation": "Aurora Serverless can automatically adjust Aurora capacity for variable workloads within configured limits.\nA fixed database instance does not automatically scale capacity. S3 notifications and CloudFront policies do not provide relational database scaling.",
     "taskStatement": "4.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "關係工作負載具有間歇性流量，並且必須在配置的限制內自動擴展資料庫容量。應該評估哪個選項？",
+        "options": {
+          "A": "Aurora Serverless",
+          "B": "運行 MySQL 的固定 EC2 執行個體",
+          "C": "S3 儲存桶通知",
+          "D": "CloudFront 快取策略"
+        },
+        "explanation": "Aurora Serverless 可以在設定的限制內自動調整可變工作負載的 Aurora 容量。\n固定資料庫執行個體不會自動擴展容量。 S3 通知和 CloudFront 策略不提供關聯式資料庫擴充。"
+      }
+    }
   },
   {
     "id": "saa-d4-013",
@@ -205,7 +349,19 @@
     "isMultiAnswer": false,
     "explanation": "An S3 gateway VPC endpoint provides a private route to S3 and can avoid NAT gateway processing for that traffic.\nAdding more NAT capacity does not remove processing charges. Public addresses create exposure and are not a cost optimization. NAT gateways are managed services, not instances to resize.",
     "taskStatement": "4.4",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "私有應用程式經常呼叫 Amazon S3，目前透過 NAT 網關發送這些呼叫。哪些改變可以降低經常性的網路處理成本？",
+        "options": {
+          "A": "新增 S3 網關 VPC 終端節點",
+          "B": "在同一可用區中新增第二個 NAT 網關",
+          "C": "為所有執行個體分配公用位址",
+          "D": "使用更大的 NAT 網關執行個體"
+        },
+        "explanation": "S3 閘道 VPC 終端節點提供到 S3 的私人路由，並且可以避免對該流量進行 NAT 閘道處理。\n增加更多 NAT 容量並不會消除處理費用。公共地址會增加曝光度，但不是成本優化。 NAT 閘道是託管服務，而不是需要調整大小的執行個體。"
+      }
+    }
   },
   {
     "id": "saa-d4-014",
@@ -221,7 +377,19 @@
     "isMultiAnswer": false,
     "explanation": "CloudFront caches content near users, reducing repeated origin transfers and improving latency for globally distributed viewers.\nA single EC2 origin must serve every request across long distances. Direct Connect is for private connectivity, not public internet users. EBS is attached block storage, not a global distribution layer.",
     "taskStatement": "4.4",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "全球網站向多個區域的使用者提供大型靜態檔案。哪種設計可以減少原始資料傳輸並提高交付成本？",
+        "options": {
+          "A": "在邊緣站點使用 CloudFront 緩存",
+          "B": "將每個請求直接傳送到一個區域中的 EC2 執行個體",
+          "C": "為每個網際網路使用者使用 Direct Connect",
+          "D": "將每個物件儲存在附加到一個執行個體的 EBS 磁碟區上"
+        },
+        "explanation": "CloudFront 在使用者附近快取內容，減少重複的來源傳輸並改善全球分佈的檢視者的延遲。\n單一 EC2 來源必須滿足長距離的每個請求。 Direct Connect 適用於私人連接，不適用於公共網路使用者。 EBS 是附加區塊存儲，而不是全域分佈層。"
+      }
+    }
   },
   {
     "id": "saa-d4-015",
@@ -241,7 +409,20 @@
     "isMultiAnswer": true,
     "explanation": "Cost allocation tags provide resource-level attribution, and separate accounts can create clear billing boundaries and consolidated billing views.\nCloudTrail is unrelated to cost allocation. Security groups are network controls, not billing labels. An EC2 instance is not a reliable billing data system.",
     "taskStatement": "4.4",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "哪兩種做法可以幫助組織將 AWS 成本分配給團隊和應用程式？選擇兩個。",
+        "options": {
+          "A": "將成本分配標籤應用於資源",
+          "B": "使用單獨的 AWS 帳戶或組織計費邊界",
+          "C": "在所有帳戶中停用 CloudTrail",
+          "D": "使用安全群組作為計費標籤",
+          "E": "僅將帳單資料儲存在 EC2 執行個體上"
+        },
+        "explanation": "成本分配標籤提供資源等級歸屬，單獨的帳戶可以建立清晰的計費邊界和整合的計費視圖。\nCloudTrail 與成本分配無關。安全群組是網路控制，而不是計費標籤。 EC2 執行個體不是可靠的計費資料系統。"
+      }
+    }
   },
   {
     "id": "saa-d4-016",
@@ -257,7 +438,19 @@
     "isMultiAnswer": false,
     "explanation": "Lifecycle rules can transition objects to lower-cost storage classes as their access pattern changes.\nKeeping objects in Standard costs more for infrequently accessed data. Instance store is ephemeral, and security groups do not control storage pricing.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "物件在 30 天內被頻繁存取，然後很少被存取。哪一種設計可以自動降低儲存成本，同時保留 S3 生命週期管理？",
+        "options": {
+          "A": "將物件轉換到 Standard-IA 或 Glacier 層的生命週期規則",
+          "B": "永久保留 S3 Standard中的每個物件",
+          "C": "將物件儲存在 EC2 執行個體儲存磁碟區上",
+          "D": "使用安全群組更改儲存價格"
+        },
+        "explanation": "當物件的存取模式發生變化時，生命週期規則可以將物件轉換為成本較低的儲存類別。\n對於不經常存取的資料，將物件保留在標準中會花費更多。執行個體儲存是短暫的，安全性群組不控制儲存定價。"
+      }
+    }
   },
   {
     "id": "saa-d4-017",
@@ -273,7 +466,19 @@
     "isMultiAnswer": false,
     "explanation": "S3 Intelligent-Tiering monitors access patterns and moves objects between access tiers automatically.\nStandard does not optimize tier placement, while One Zone-IA and Deep Archive require the workload to accept fixed availability and retrieval characteristics.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "資料集具有未知且不斷變化的存取模式。團隊希望 S3 透過最少的分析自動在存取層之間移動物件。他們應該選擇哪個班級？",
+        "options": {
+          "A": "S3 Intelligent-Tiering",
+          "B": "僅限 S3 Standard",
+          "C": "S3 單區 - 僅 IA",
+          "D": "僅限 S3 Glacier 深度存檔"
+        },
+        "explanation": "S3 智慧分層可監控存取模式並自動在存取層之間移動物件。\n標準不會優化層放置，而 One Zone-IA 和 Deep Archive 要求工作負載接受固定的可用性和檢索特徵。"
+      }
+    }
   },
   {
     "id": "saa-d4-018",
@@ -289,7 +494,19 @@
     "isMultiAnswer": false,
     "explanation": "S3 Glacier Deep Archive is designed for long-term retention with very infrequent access and the lowest storage cost among suitable S3 archival classes.\nS3 Standard and Standard-IA are intended for more frequent access. EFS is a file system rather than an archival storage class.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "合規性檔案每隔幾年存取一次，並且可以承受數小時的檢索時間。哪種儲存類別通常成本最優化？",
+        "options": {
+          "A": "S3 Glacier Deep Archive",
+          "B": "S3 Standard",
+          "C": "S3 Standard-IA",
+          "D": "Amazon EFS Standard"
+        },
+        "explanation": "S3 Glacier Deep Archive 專為長期保留而設計，存取頻率極低，並且在合適的 S3 歸檔類別中儲存成本最低。\nS3 Standard和標準-IA 旨在實現更頻繁的存取。 EFS 是一個檔案系統而不是歸檔儲存類別。"
+      }
+    }
   },
   {
     "id": "saa-d4-019",
@@ -305,7 +522,19 @@
     "isMultiAnswer": false,
     "explanation": "EFS lifecycle management can move files to an Infrequent Access storage class based on access age.\nNetwork routing, EBS attachment, and CloudFront caching do not change EFS file storage class.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "共享文件工作負載具有熱工作集和大型冷資料集。哪個 EFS 功能可以降低不經常存取的檔案的成本？",
+        "options": {
+          "A": "對不頻繁存取儲存類別的 EFS 生命週期管理",
+          "B": "網際網路閘關",
+          "C": "EBS Multi-Attach",
+          "D": "CloudFront 快取策略"
+        },
+        "explanation": "EFS 生命週期管理可以根據存取期限將檔案移至不頻繁存取儲存類別。\n網路路由、EBS 附件和 CloudFront 快取不會變更 EFS 檔案儲存類別。"
+      }
+    }
   },
   {
     "id": "saa-d4-020",
@@ -321,7 +550,19 @@
     "isMultiAnswer": false,
     "explanation": "gp3 provides configurable IOPS and throughput and can be more cost effective than provisioned-IOPS volumes for general workloads.\nInstance store is ephemeral, sc1 is cold HDD storage, and an S3 website is not persistent block storage.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "通用應用程式需要持久性區塊存儲，並希望避免支付超出其需要的 IOPS。在 io2 之前應該評估哪個選擇？",
+        "options": {
+          "A": "具有明確配置的 IOPS 和吞吐量的 gp3",
+          "B": "僅執行個體存儲",
+          "C": "sc1 用於延遲敏感資料庫",
+          "D": "公共 S3 網站"
+        },
+        "explanation": "gp3 提供可設定的 IOPS 和吞吐量，並且比一般工作負載的預先配置 IOPS 磁碟區更具成本效益。\n執行個體存儲是短暫的，sc1 是冷 HDD 存儲，S3 網站不是持久性塊存儲。"
+      }
+    }
   },
   {
     "id": "saa-d4-021",
@@ -337,7 +578,19 @@
     "isMultiAnswer": false,
     "explanation": "S3 One Zone-IA can reduce cost for data that can be recreated and does not require multi-AZ storage resilience.\nStandard-IA provides multi-AZ storage and costs more. Deep Archive has long retrieval times, and EBS is block storage.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "可以重建可重現的資料集，且不需要多可用區儲存彈性。哪個 S3 類別可以為該資料提供更低的儲存成本？",
+        "options": {
+          "A": "S3 Standard-IA",
+          "B": "S3 One Zone-IA",
+          "C": "僅限 S3 Glacier 深度存檔",
+          "D": "亞馬遜 EBS io2"
+        },
+        "explanation": "S3 One Zone-IA 可以降低可重新建立的資料的成本，並且不需要多可用區儲存彈性。\nStandard-IA提供多可用區存儲，但成本較高。 Deep Archive 檢索時間長，EBS 是區塊儲存。"
+      }
+    }
   },
   {
     "id": "saa-d4-022",
@@ -353,7 +606,19 @@
     "isMultiAnswer": false,
     "explanation": "Compute Savings Plans provide discounted rates for a consistent compute spend and are flexible across eligible instance types and Regions.\nSpot capacity can be interrupted, On-Demand has no commitment discount, and Dedicated Hosts add isolation cost.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "一家公司可以預測三年的運算使用情況，並希望獲得可跨執行個體係列和區域應用的靈活承諾。它應該評估哪個選項？",
+        "options": {
+          "A": "計算儲蓄計劃",
+          "B": "僅限 Spot 執行個體",
+          "C": "按需定價，無需承諾",
+          "D": "適用於每個工作負載的專用主機"
+        },
+        "explanation": "計算節省計劃為一致的計算支出提供折扣率，並且在符合條件的執行個體類型和區域中具有靈活性。\n現貨容量可以中斷，按需沒有承諾折扣，專用主機會增加隔離成本。"
+      }
+    }
   },
   {
     "id": "saa-d4-023",
@@ -369,7 +634,19 @@
     "isMultiAnswer": false,
     "explanation": "A Reserved Instance commitment can provide a discount for predictable usage when the instance attributes and Region are known.\nIP addresses, NAT gateway sizing, and cache invalidation do not provide EC2 commitment discounts.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "工作負載在一個區域中的已知 EC2 執行個體系列上持續運行，團隊可以致力於特定的配置。哪個選項可以提供比按需更大的折扣？",
+        "options": {
+          "A": "區域性預留執行個體",
+          "B": "公有IP位址",
+          "C": "更大的 NAT 網關",
+          "D": "CloudFront 失效"
+        },
+        "explanation": "當執行個體屬性和區域已知時，預留執行個體承諾可以為可預測的使用提供折扣。\nIP 位址、NAT 閘道大小和快取失效不提供 EC2 承諾折扣。"
+      }
+    }
   },
   {
     "id": "saa-d4-024",
@@ -385,7 +662,19 @@
     "isMultiAnswer": false,
     "explanation": "Spot Instances use spare EC2 capacity at a discount and fit workloads that tolerate interruption through checkpointing and retry.\nDedicated and On-Demand options cost more when interruption is acceptable.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "容錯批次工作負載可以檢查進度並在中斷後重試。哪種容量類型通常成本最低？",
+        "options": {
+          "A": "EC2 Spot Instances",
+          "B": "專用主機",
+          "C": "僅按需執行個體",
+          "D": "三年專用執行個體承諾"
+        },
+        "explanation": "Spot 執行個體以折扣價使用備用 EC2 容量，並適合透過檢查點和重試容忍中斷的工作負載。\n當可以接受中斷時，專用和按需選項的成本更高。"
+      }
+    }
   },
   {
     "id": "saa-d4-025",
@@ -401,7 +690,19 @@
     "isMultiAnswer": false,
     "explanation": "Graviton-based instances can provide a lower price-performance profile for compatible ARM64 workloads.\nDedicated Hosts and oversized x86 instances do not target price-performance optimization. S3 lifecycle rules manage objects.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "團隊希望降低運算成本，同時保持應用程式行為不變，並且工作負載可以在 ARM64 上運行。應該測試哪個選項？",
+        "options": {
+          "A": "基於 AWS Graviton 的執行個體",
+          "B": "僅限專用主機",
+          "C": "更大的 x86 執行個體，無論利用率如何",
+          "D": "S3 生命週期規則"
+        },
+        "explanation": "基於 Graviton 的執行個體可以為相容的 ARM64 工作負載提供較低的性價比。\n專用主機和超大 x86 執行個體不以性價比最佳化為目標。 S3 生命週期規則管理物件。"
+      }
+    }
   },
   {
     "id": "saa-d4-026",
@@ -417,7 +718,19 @@
     "isMultiAnswer": false,
     "explanation": "Compute Optimizer analyzes utilization and provides rightsizing recommendations for supported compute resources.\nMacie discovers sensitive data, Certificate Manager handles TLS certificates, and Route 53 provides DNS.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "一家公司希望根據利用率資料提供建議，以調整未充分利用的 EC2 執行個體的規模。應該審查哪些服務？",
+        "options": {
+          "A": "AWS Compute Optimizer",
+          "B": "Amazon Macie",
+          "C": "AWS Certificate Manager",
+          "D": "Amazon Route 53"
+        },
+        "explanation": "Compute Optimizer 會分析利用率並為受支援的運算資源提供調整大小建議。\nMacie 發現敏感資料，證書管理器處理 TLS 證書，Route 53 提供 DNS。"
+      }
+    }
   },
   {
     "id": "saa-d4-027",
@@ -433,7 +746,19 @@
     "isMultiAnswer": false,
     "explanation": "Lambda charges for invocations and execution duration, which can avoid paying for idle server capacity for sporadic jobs.\nContinuously running EC2, Dedicated Hosts, and RDS instances incur provisioned capacity costs even when idle.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "作業運行幾秒鐘以回應偶發事件，不需要持續運行的伺服器。哪一種計算選項可以降低閒置成本？",
+        "options": {
+          "A": "AWS Lambda",
+          "B": "持續運作的專用 EC2 執行個體",
+          "C": "專用主機",
+          "D": "始終在線的 RDS 執行個體"
+        },
+        "explanation": "Lambda 會依照呼叫和執行持續時間收費，這可以避免為零星作業支付閒置伺服器容量的費用。\n即使在閒置時，持續運作的 EC2、專用主機和 RDS 執行個體也會產生預先配置容量成本。"
+      }
+    }
   },
   {
     "id": "saa-d4-028",
@@ -449,7 +774,19 @@
     "isMultiAnswer": false,
     "explanation": "Fargate removes instance management and service autoscaling can add or remove task capacity with demand.\nFixed or dedicated capacity can remain idle. EBS snapshots back up volumes and do not run containers.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "容器化服務的流量無法預測，無需主機級自訂。哪個選項可以降低營運和閒置運算成本？",
+        "options": {
+          "A": "Fargate 上的 ECS 具有服務自動縮放功能",
+          "B": "固定的超大 EC2 執行個體佇列",
+          "C": "每項任務的專用主機",
+          "D": "EBS Snapshot計劃"
+        },
+        "explanation": "Fargate 消除了執行個體管理，服務自動縮放可以根據需要新增或刪除任務容量。\n固定或專用容量可保持閒置。 EBS快照備份磁碟區且不執行容器。"
+      }
+    }
   },
   {
     "id": "saa-d4-029",
@@ -465,7 +802,19 @@
     "isMultiAnswer": false,
     "explanation": "DynamoDB on-demand capacity charges for requests and automatically handles variable traffic without pre-provisioned read and write units.\nFixed provisioned capacity and an RDS instance can cost money during idle periods. EBS alone is not a database.",
     "taskStatement": "4.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "無伺服器 API 的 DynamoDB Streams量無法預測，且長時間沒有請求。哪種容量模式可以避免提前配置讀寫單元？",
+        "options": {
+          "A": "DynamoDB 按需容量",
+          "B": "具有較大固定限制的預配置容量",
+          "C": "固定RDS執行個體",
+          "D": "沒有資料庫的 EBS 卷"
+        },
+        "explanation": "DynamoDB 會依照要求按需容量收費，並自動處理可變流量，無需預先設定讀取和寫入單元。\n固定預先配置容量和 RDS 執行個體在空閒期間可能會產生費用。單獨的 EBS 並不是一個資料庫。"
+      }
+    }
   },
   {
     "id": "saa-d4-030",
@@ -481,7 +830,19 @@
     "isMultiAnswer": false,
     "explanation": "Aurora Serverless can scale Aurora capacity within configured limits for variable relational workloads.\nA fixed instance or host does not automatically scale capacity, and S3 notifications do not run a relational database.",
     "taskStatement": "4.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "關係型工作負載具有較長的空閒期和可變的使用。哪個 Aurora 選項可以根據不斷變化的需求自動調整資料庫容量？",
+        "options": {
+          "A": "Aurora Serverless",
+          "B": "固定大小的RDS執行個體",
+          "C": "附有 MySQL 的專用 EC2 主機",
+          "D": "S3 儲存桶通知"
+        },
+        "explanation": "Aurora Serverless 可以在可變關係工作負載的配置限制內擴展 Aurora 容量。\n固定執行個體或主機不會自動擴展容量，且 S3 通知不會執行關聯式資料庫。"
+      }
+    }
   },
   {
     "id": "saa-d4-031",
@@ -497,7 +858,19 @@
     "isMultiAnswer": false,
     "explanation": "RDS Reserved Instances reduce the hourly rate for predictable database usage in exchange for a commitment.\nOn-Demand has no commitment discount. Spot is not the standard choice for a durable database writer, and Glacier is archival storage.",
     "taskStatement": "4.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "生產資料庫以可預測的利用率持續運行，並且公司可以承諾一個期限。應考慮哪種 RDS 定價選項？",
+        "options": {
+          "A": "RDS Reserved Instances",
+          "B": "RDS 按需服務，無需任何承諾",
+          "C": "資料庫編寫器的 Spot 執行個體",
+          "D": "S3 Glacier"
+        },
+        "explanation": "RDS Reserved Instances降低了可預測資料庫使用的每小時費率，以換取承諾。\n按需服務沒有承諾折扣。 Spot 不是持久性資料庫編寫器的標準選擇，而 Glacier 是歸檔儲存。"
+      }
+    }
   },
   {
     "id": "saa-d4-032",
@@ -513,7 +886,19 @@
     "isMultiAnswer": false,
     "explanation": "Redshift Serverless supplies warehouse capacity on demand for workloads that do not need a continuously provisioned cluster.\nA permanently large cluster can remain idle. EBS and Cognito do not provide serverless data warehousing.",
     "taskStatement": "4.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "資料倉儲工作負載的使用情況不可預測，應避免為始終運行的叢集付費。應該評估哪個選項？",
+        "options": {
+          "A": "Amazon Redshift Serverless",
+          "B": "永久配置的大型集群",
+          "C": "掛載到執行個體的 EBS 卷",
+          "D": "Amazon Cognito"
+        },
+        "explanation": "Redshift Serverless 可為不需要持續配置叢集的工作負載按需提供倉庫容量。\n永久大型叢集可以保持空閒狀態。 EBS 和 Cognito 不提供無伺服器資料倉儲。"
+      }
+    }
   },
   {
     "id": "saa-d4-033",
@@ -529,7 +914,19 @@
     "isMultiAnswer": false,
     "explanation": "Rightsizing cache nodes and replicas to observed demand reduces cost while preserving the cache role for the workload.\nAdding capacity without evidence increases cost. Public S3 is not a cache replacement, and database resizing does not optimize unused cache capacity.",
     "taskStatement": "4.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "快取叢集始終未充分利用，並且可以從資料庫重建其資料。哪個行動是最直接的成本最佳化？",
+        "options": {
+          "A": "調整 ElastiCache 節點類型和副本數量",
+          "B": "增加更多副本而不測量使用情況",
+          "C": "將快取資料儲存在公共 S3 儲存桶中",
+          "D": "自動增加資料庫執行個體大小"
+        },
+        "explanation": "根據觀察到的需求調整快取節點和副本的大小可以降低成本，同時保留工作負載的快取角色。\n在沒有證據的情況下增加容量會增加成本。公共 S3 不是快取替代品，資料庫大小調整不會優化未使用的快取容量。"
+      }
+    }
   },
   {
     "id": "saa-d4-034",
@@ -545,7 +942,19 @@
     "isMultiAnswer": false,
     "explanation": "An S3 gateway endpoint routes supported S3 traffic privately and avoids NAT gateway processing for that path.\nAdditional NAT capacity does not remove processing charges. Public addresses increase exposure, and timeout settings do not change data processing cost.",
     "taskStatement": "4.4",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "私有子網路執行個體透過 NAT 閘道傳送大量 S3 流量。哪些變更可以降低 NAT 資料處理費用？",
+        "options": {
+          "A": "使用 S3 網關 VPC 終端節點",
+          "B": "在同一可用區中新增第二個 NAT 網關",
+          "C": "為每個執行個體分配公用位址",
+          "D": "增加 NAT 網關空閒逾時"
+        },
+        "explanation": "S3 閘道端點私下路由支援的 S3 流量，並避免對此路徑進行 NAT 閘道處理。\n額外的 NAT 容量不會消除處理費用。公共位址增加了曝光度，超時設定不會改變資料處理成本。"
+      }
+    }
   },
   {
     "id": "saa-d4-035",
@@ -561,7 +970,19 @@
     "isMultiAnswer": false,
     "explanation": "CloudFront serves cached objects at edge locations, reducing repeated origin requests and associated transfer from the origin Region.\nDirect Connect is for private network connectivity, and bypassing caching increases origin load and transfer.",
     "taskStatement": "4.4",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "全球站點重複服務相同的大型物件。哪種架構可以減少來源請求和區域資料傳輸成本？",
+        "options": {
+          "A": "使用適當的快取策略進行 CloudFront 快取",
+          "B": "將每個請求傳送到原始 EC2 執行個體",
+          "C": "為每個公用使用者使用 Direct Connect",
+          "D": "禁用快取並增加原始大小"
+        },
+        "explanation": "CloudFront 在邊緣位置提供快取物件，從而減少重複的來源請求以及來自來源區域的相關傳輸。\nDirect Connect 用於專用網路連接，繞過快取會增加來源負載和傳輸。"
+      }
+    }
   },
   {
     "id": "saa-d4-036",
@@ -577,7 +998,19 @@
     "isMultiAnswer": false,
     "explanation": "Transit Gateway provides a central routing hub that can reduce the number of pairwise network connections and simplify operations.\nA full mesh grows complex. Internet gateways and CloudFront do not provide private internal routing for VPCs.",
     "taskStatement": "4.4",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "組織擁有許多需要共享連接的 VPC，並且希望避免維護完整的對等連接網格。哪種架構可以簡化網路運作？",
+        "options": {
+          "A": "帶有集中附件的傳輸網關",
+          "B": "每個 VPC 對都有單獨的對等連接",
+          "C": "每個 VPC 的公共互聯網網關",
+          "D": "私人資料庫的 CloudFront 發行版"
+        },
+        "explanation": "Transit Gateway 提供中央路由集線器，可減少成對網路連接的數量並簡化操作。\n完整的網格變得複雜。 Internet 閘道和 CloudFront 並未為 VPC 提供私人內部路由。"
+      }
+    }
   },
   {
     "id": "saa-d4-037",
@@ -593,7 +1026,19 @@
     "isMultiAnswer": false,
     "explanation": "Keeping chatty resources in the same AZ can reduce cross-AZ data transfer, provided the design still meets availability and failure requirements.\nMoving instances across AZs and routing through NAT or CloudFront adds unnecessary network paths and cost.",
     "taskStatement": "4.4",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "同一可用區中的兩個 EC2 執行個體交換大量資料。哪一種設計可以減少不必要的跨區資料傳輸成本？",
+        "options": {
+          "A": "在可用性要求允許的情況下，將通訊執行個體放置在同一可用區中",
+          "B": "將每個執行個體移動到不同的可用區",
+          "C": "透過 NAT 網關路由流量",
+          "D": "透過 CloudFront 發送資料"
+        },
+        "explanation": "如果設計仍然符合可用性和故障要求，則將常用資源保留在同一可用區中可以減少跨可用區資料傳輸。\n跨可用區移動執行個體以及透過 NAT 或 CloudFront 進行路由會增加不必要的網路路徑和成本。"
+      }
+    }
   },
   {
     "id": "saa-d4-038",
@@ -609,6 +1054,18 @@
     "isMultiAnswer": false,
     "explanation": "An interface VPC endpoint provides private service access and can avoid NAT processing for supported API traffic, subject to endpoint pricing and usage.\nPublic addresses reduce network isolation. A larger NAT gateway does not remove per-byte processing, and snapshots are not an API access method.",
     "taskStatement": "4.4",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "私有應用程式經常呼叫支援介面終端節點的 AWS 服務，且目前每次呼叫都使用 NAT 閘道。應該評估哪些成本優化？",
+        "options": {
+          "A": "為服務建立介面 VPC 終端節點",
+          "B": "為每個私有執行個體新增公用IP",
+          "C": "僅使用更大的 NAT 網關",
+          "D": "將 API 回應儲存在 EBS Snapshot中"
+        },
+        "explanation": "介面 VPC 終端節點提供私人服務存取，並且可以避免對支援的 API 流量進行 NAT 處理，具體取決於終端節點定價和使用情況。\n公共位址減少了網路隔離。較大的 NAT 閘道不會刪除每位元組處理，且快照不是 API 存取方法。"
+      }
+    }
   }
 ]

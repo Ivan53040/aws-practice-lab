@@ -139,6 +139,23 @@ export function shuffleQuestionOptions(question: Question): { question: Question
 
   const shuffled: Question = { ...question, options: newOptions, answer: newAnswer }
 
+  // Keep translated option content behind the same display key as its English
+  // source. Answers continue to use language-independent option keys.
+  if (question.translations?.zh) {
+    const translatedOptions: Partial<Record<OptionKey, string>> = {}
+    originalKeys.forEach((displayKey, i) => {
+      const sourceKey = shuffledSlots[i].key
+      const translated = question.translations?.zh.options[sourceKey]
+      if (translated) translatedOptions[displayKey] = translated
+    })
+    shuffled.translations = {
+      zh: {
+        ...question.translations.zh,
+        options: translatedOptions,
+      },
+    }
+  }
+
   // Ordering: the correct sequence is a list of option keys -> remap each.
   if (question.correctOrder) {
     shuffled.correctOrder = question.correctOrder.map(remap)

@@ -13,7 +13,19 @@
     "isMultiAnswer": false,
     "explanation": "RAG retrieves relevant content and supplies it as context to a foundation model.\nTemperature does not retrieve facts, logs are not a knowledge base, and disabled access controls are unsafe.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "生產團隊需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。適合哪種模式？",
+        "options": {
+          "A": "禁用存取控制",
+          "B": "具有知識庫的檢索增強生成",
+          "C": "隨機升高溫度",
+          "D": "僅將文件儲存在日誌中"
+        },
+        "explanation": "RAG 檢索相關內容並將其作為基礎模型的上下文提供。\n溫度不檢索事實，日誌不是知識庫，禁用的存取控制是不安全的。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-002",
@@ -29,7 +41,19 @@
     "isMultiAnswer": false,
     "explanation": "Vector indexes support nearest-neighbor retrieval for semantic search and RAG.\nThe other choices do not store or search embeddings.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "多帳戶平台團隊必須儲存向量嵌入以進行語義相似性搜尋。哪種能力合適？",
+        "options": {
+          "A": "EBS 啟動日誌",
+          "B": "IAM 密碼原則",
+          "C": "已核准的向量儲存中的向量索引",
+          "D": "DNS 記錄"
+        },
+        "explanation": "向量索引支援語義搜尋和 RAG 的最近鄰檢索。\n其他選項不儲存或搜尋嵌入。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-003",
@@ -45,7 +69,19 @@
     "isMultiAnswer": false,
     "explanation": "Network, encryption, and identity controls protect data and reduce unnecessary access.\nThe other choices expose data or weaken authorization.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "受監管的公司需要在呼叫託管基礎模型時保持客戶資料的隱私。應考慮哪種控制？",
+        "options": {
+          "A": "將資料傳送到公共貼上站點",
+          "B": "禁用日誌記錄控制",
+          "C": "共享一把管理員金鑰",
+          "D": "私有連線、加密與最低權限 IAM"
+        },
+        "explanation": "網路、加密和身分控制可保護資料並減少不必要的存取。\n其他選擇會暴露資料或削弱授權。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-004",
@@ -61,7 +97,19 @@
     "isMultiAnswer": false,
     "explanation": "A fixed evaluation set makes quality comparisons reproducible across model versions.\nThe other choices cannot show reliable model changes.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備增加流量的新創公司必須根據一組固定的業務提示和預期回應來評估模型。哪種做法合適？",
+        "options": {
+          "A": "可重複的模型評估資料集和評分過程",
+          "B": "僅評估一個快樂路徑提示",
+          "C": "每次測試後更改提示",
+          "D": "跳過記錄結果"
+        },
+        "explanation": "固定的評估集使得品質比較可以在模型版本之間重現。\n其他選擇無法顯示可靠的模型變更。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-005",
@@ -77,7 +125,19 @@
     "isMultiAnswer": false,
     "explanation": "IAM can restrict model invocation actions and resources for a production role.\nThe other choices do not authorize model selection.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "支援關鍵工作負載的營運團隊需要控制生產角色可以呼叫哪個模型。應該使用哪種機制？",
+        "options": {
+          "A": "S3 生命週期規則",
+          "B": "IAM 策略範圍為已核准的 Bedrock 模型資源",
+          "C": "公共模型端點",
+          "D": "一筆 Route 53 記錄"
+        },
+        "explanation": "IAM 可以限制生產角色的模型呼叫操作和資源。\n其他選擇不授權模型選擇。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-006",
@@ -93,7 +153,19 @@
     "isMultiAnswer": false,
     "explanation": "RAG retrieves relevant content and supplies it as context to a foundation model.\nTemperature does not retrieve facts, logs are not a knowledge base, and disabled access controls are unsafe.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "資料平台團隊需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。適合哪種模式？",
+        "options": {
+          "A": "僅將文件儲存在日誌中",
+          "B": "禁用存取控制",
+          "C": "具有知識庫的檢索增強生成",
+          "D": "隨機升高溫度"
+        },
+        "explanation": "RAG 檢索相關內容並將其作為基礎模型的上下文提供。\n溫度不檢索事實，日誌不是知識庫，禁用的存取控制是不安全的。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-007",
@@ -109,7 +181,19 @@
     "isMultiAnswer": false,
     "explanation": "Vector indexes support nearest-neighbor retrieval for semantic search and RAG.\nThe other choices do not store or search embeddings.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有安全意識的工程團隊必須儲存向量嵌入以進行語義相似性搜尋。哪種能力合適？",
+        "options": {
+          "A": "DNS 記錄",
+          "B": "EBS 啟動日誌",
+          "C": "IAM 密碼原則",
+          "D": "已核准的向量儲存中的向量索引"
+        },
+        "explanation": "向量索引支援語義搜尋和 RAG 的最近鄰檢索。\n其他選項不儲存或搜尋嵌入。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-008",
@@ -125,7 +209,19 @@
     "isMultiAnswer": false,
     "explanation": "Network, encryption, and identity controls protect data and reduce unnecessary access.\nThe other choices expose data or weaken authorization.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "遷移現有工作負載的公司需要在呼叫託管基礎模型時保持客戶資料的隱私。應考慮哪種控制？",
+        "options": {
+          "A": "私有連線、加密與最低權限 IAM",
+          "B": "將資料傳送到公共貼上站點",
+          "C": "禁用日誌記錄控制",
+          "D": "共享一把管理員金鑰"
+        },
+        "explanation": "網路、加密和身分控制可保護資料並減少不必要的存取。\n其他選擇會暴露資料或削弱授權。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-009",
@@ -141,7 +237,19 @@
     "isMultiAnswer": false,
     "explanation": "A fixed evaluation set makes quality comparisons reproducible across model versions.\nThe other choices cannot show reliable model changes.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有嚴格恢復目標的團隊必須根據一組固定的業務提示和預期回應來評估模型。哪種做法合適？",
+        "options": {
+          "A": "跳過記錄結果",
+          "B": "可重複的模型評估資料集和評分過程",
+          "C": "僅評估一個快樂路徑提示",
+          "D": "每次測試後更改提示"
+        },
+        "explanation": "固定的評估集使得品質比較可以在模型版本之間重現。\n其他選擇無法顯示可靠的模型變更。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-010",
@@ -157,7 +265,19 @@
     "isMultiAnswer": false,
     "explanation": "IAM can restrict model invocation actions and resources for a production role.\nThe other choices do not authorize model selection.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備發布的開發團隊需要控制生產角色可以呼叫哪個模型。應該使用哪種機制？",
+        "options": {
+          "A": "一筆 Route 53 記錄",
+          "B": "S3 生命週期規則",
+          "C": "IAM 策略範圍為已核准的 Bedrock 模型資源",
+          "D": "公共模型端點"
+        },
+        "explanation": "IAM 可以限制生產角色的模型呼叫操作和資源。\n其他選擇不授權模型選擇。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-011",
@@ -173,7 +293,19 @@
     "isMultiAnswer": false,
     "explanation": "RAG retrieves relevant content and supplies it as context to a foundation model.\nTemperature does not retrieve facts, logs are not a knowledge base, and disabled access controls are unsafe.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "擁有多個 AWS Regions 的企業需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。適合哪種模式？",
+        "options": {
+          "A": "隨機升高溫度",
+          "B": "僅將文件儲存在日誌中",
+          "C": "禁用存取控制",
+          "D": "具有知識庫的檢索增強生成"
+        },
+        "explanation": "RAG 檢索相關內容並將其作為基礎模型的上下文提供。\n溫度不檢索事實，日誌不是知識庫，禁用的存取控制是不安全的。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-012",
@@ -189,7 +321,19 @@
     "isMultiAnswer": false,
     "explanation": "Vector indexes support nearest-neighbor retrieval for semantic search and RAG.\nThe other choices do not store or search embeddings.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "審查事件的服務擁有者必須儲存向量嵌入以進行語義相似性搜尋。哪種能力合適？",
+        "options": {
+          "A": "已核准的向量儲存中的向量索引",
+          "B": "DNS 記錄",
+          "C": "EBS 啟動日誌",
+          "D": "IAM 密碼原則"
+        },
+        "explanation": "向量索引支援語義搜尋和 RAG 的最近鄰檢索。\n其他選項不儲存或搜尋嵌入。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-013",
@@ -205,7 +349,19 @@
     "isMultiAnswer": false,
     "explanation": "Network, encryption, and identity controls protect data and reduce unnecessary access.\nThe other choices expose data or weaken authorization.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "優化現有實施的團隊需要在呼叫託管基礎模型時保持客戶資料的隱私。應考慮哪種控制？",
+        "options": {
+          "A": "共享一把管理員金鑰",
+          "B": "私有連線、加密與最低權限 IAM",
+          "C": "將資料傳送到公共貼上站點",
+          "D": "禁用日誌記錄控制"
+        },
+        "explanation": "網路、加密和身分控制可保護資料並減少不必要的存取。\n其他選擇會暴露資料或削弱授權。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-014",
@@ -221,7 +377,19 @@
     "isMultiAnswer": false,
     "explanation": "A fixed evaluation set makes quality comparisons reproducible across model versions.\nThe other choices cannot show reliable model changes.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "引入自動化工作流程的公司必須根據一組固定的業務提示和預期回應來評估模型。哪種做法合適？",
+        "options": {
+          "A": "每次測試後更改提示",
+          "B": "跳過記錄結果",
+          "C": "可重複的模型評估資料集和評分過程",
+          "D": "僅評估一個快樂路徑提示"
+        },
+        "explanation": "固定的評估集使得品質比較可以在模型版本之間重現。\n其他選擇無法顯示可靠的模型變更。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-015",
@@ -237,7 +405,19 @@
     "isMultiAnswer": false,
     "explanation": "IAM can restrict model invocation actions and resources for a production role.\nThe other choices do not authorize model selection.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "在共享環境中工作的 AWS 管理員需要控制生產角色可以呼叫哪個模型。應該使用哪種機制？",
+        "options": {
+          "A": "公共模型端點",
+          "B": "一筆 Route 53 記錄",
+          "C": "S3 生命週期規則",
+          "D": "IAM 策略範圍為已核准的 Bedrock 模型資源"
+        },
+        "explanation": "IAM 可以限制生產角色的模型呼叫操作和資源。\n其他選擇不授權模型選擇。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-016",
@@ -253,7 +433,19 @@
     "isMultiAnswer": false,
     "explanation": "RAG retrieves relevant content and supplies it as context to a foundation model.\nTemperature does not retrieve facts, logs are not a knowledge base, and disabled access controls are unsafe.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "面向客戶的應用程式團隊需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。適合哪種模式？",
+        "options": {
+          "A": "具有知識庫的檢索增強生成",
+          "B": "隨機升高溫度",
+          "C": "僅將文件儲存在日誌中",
+          "D": "禁用存取控制"
+        },
+        "explanation": "RAG 檢索相關內容並將其作為基礎模型的上下文提供。\n溫度不檢索事實，日誌不是知識庫，禁用的存取控制是不安全的。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-017",
@@ -269,7 +461,19 @@
     "isMultiAnswer": false,
     "explanation": "Vector indexes support nearest-neighbor retrieval for semantic search and RAG.\nThe other choices do not store or search embeddings.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "標準化其 AWS 部署的平台團隊必須儲存用於語義相似性搜尋的向量嵌入。哪種能力合適？",
+        "options": {
+          "A": "IAM 密碼原則",
+          "B": "已核准的向量儲存中的向量索引",
+          "C": "DNS 記錄",
+          "D": "EBS 啟動日誌"
+        },
+        "explanation": "向量索引支援語義搜尋和 RAG 的最近鄰檢索。\n其他選項不儲存或搜尋嵌入。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-018",
@@ -285,7 +489,19 @@
     "isMultiAnswer": false,
     "explanation": "Network, encryption, and identity controls protect data and reduce unnecessary access.\nThe other choices expose data or weaken authorization.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備審計證據的團隊需要在呼叫託管基礎模型時保持客戶資料的隱私。應考慮哪種控制？",
+        "options": {
+          "A": "禁用日誌記錄控制",
+          "B": "共享一把管理員金鑰",
+          "C": "私有連線、加密與最低權限 IAM",
+          "D": "將資料傳送到公共貼上站點"
+        },
+        "explanation": "網路、加密和身分控制可保護資料並減少不必要的存取。\n其他選擇會暴露資料或削弱授權。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-019",
@@ -301,7 +517,19 @@
     "isMultiAnswer": false,
     "explanation": "A fixed evaluation set makes quality comparisons reproducible across model versions.\nThe other choices cannot show reliable model changes.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "取代手動流程的企業必須根據一組固定的業務提示和預期回應來評估模型。哪種做法合適？",
+        "options": {
+          "A": "僅評估一個快樂路徑提示",
+          "B": "每次測試後更改提示",
+          "C": "跳過記錄結果",
+          "D": "可重複的模型評估資料集和評分過程"
+        },
+        "explanation": "固定的評估集使得品質比較可以在模型版本之間重現。\n其他選擇無法顯示可靠的模型變更。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-020",
@@ -317,7 +545,19 @@
     "isMultiAnswer": false,
     "explanation": "IAM can restrict model invocation actions and resources for a production role.\nThe other choices do not authorize model selection.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "根據考試指南驗證設計的團隊需要控制生產角色可以呼叫哪個模型。應該使用哪種機制？",
+        "options": {
+          "A": "IAM 策略範圍為已核准的 Bedrock 模型資源",
+          "B": "公共模型端點",
+          "C": "一筆 Route 53 記錄",
+          "D": "S3 生命週期規則"
+        },
+        "explanation": "IAM 可以限制生產角色的模型呼叫操作和資源。\n其他選擇不授權模型選擇。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-021",
@@ -333,7 +573,19 @@
     "isMultiAnswer": false,
     "explanation": "RAG retrieves relevant content and supplies it as context to a foundation model.\nTemperature does not retrieve facts, logs are not a knowledge base, and disabled access controls are unsafe.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "生產團隊需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。適合哪種模式？",
+        "options": {
+          "A": "禁用存取控制",
+          "B": "具有知識庫的檢索增強生成",
+          "C": "隨機升高溫度",
+          "D": "僅將文件儲存在日誌中"
+        },
+        "explanation": "RAG 檢索相關內容並將其作為基礎模型的上下文提供。\n溫度不檢索事實，日誌不是知識庫，禁用的存取控制是不安全的。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-022",
@@ -349,7 +601,19 @@
     "isMultiAnswer": false,
     "explanation": "Vector indexes support nearest-neighbor retrieval for semantic search and RAG.\nThe other choices do not store or search embeddings.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "多帳戶平台團隊必須儲存向量嵌入以進行語義相似性搜尋。哪種能力合適？",
+        "options": {
+          "A": "EBS 啟動日誌",
+          "B": "IAM 密碼原則",
+          "C": "已核准的向量儲存中的向量索引",
+          "D": "DNS 記錄"
+        },
+        "explanation": "向量索引支援語義搜尋和 RAG 的最近鄰檢索。\n其他選項不儲存或搜尋嵌入。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-023",
@@ -365,7 +629,19 @@
     "isMultiAnswer": false,
     "explanation": "Network, encryption, and identity controls protect data and reduce unnecessary access.\nThe other choices expose data or weaken authorization.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "受監管的公司需要在呼叫託管基礎模型時保持客戶資料的隱私。應考慮哪種控制？",
+        "options": {
+          "A": "將資料傳送到公共貼上站點",
+          "B": "禁用日誌記錄控制",
+          "C": "共享一把管理員金鑰",
+          "D": "私有連線、加密與最低權限 IAM"
+        },
+        "explanation": "網路、加密和身分控制可保護資料並減少不必要的存取。\n其他選擇會暴露資料或削弱授權。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-024",
@@ -381,7 +657,19 @@
     "isMultiAnswer": false,
     "explanation": "A fixed evaluation set makes quality comparisons reproducible across model versions.\nThe other choices cannot show reliable model changes.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備增加流量的新創公司必須根據一組固定的業務提示和預期回應來評估模型。哪種做法合適？",
+        "options": {
+          "A": "可重複的模型評估資料集和評分過程",
+          "B": "僅評估一個快樂路徑提示",
+          "C": "每次測試後更改提示",
+          "D": "跳過記錄結果"
+        },
+        "explanation": "固定的評估集使得品質比較可以在模型版本之間重現。\n其他選擇無法顯示可靠的模型變更。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-025",
@@ -397,7 +685,19 @@
     "isMultiAnswer": false,
     "explanation": "IAM can restrict model invocation actions and resources for a production role.\nThe other choices do not authorize model selection.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "支援關鍵工作負載的營運團隊需要控制生產角色可以呼叫哪個模型。應該使用哪種機制？",
+        "options": {
+          "A": "S3 生命週期規則",
+          "B": "IAM 策略範圍為已核准的 Bedrock 模型資源",
+          "C": "公共模型端點",
+          "D": "一筆 Route 53 記錄"
+        },
+        "explanation": "IAM 可以限制生產角色的模型呼叫操作和資源。\n其他選擇不授權模型選擇。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-026",
@@ -413,7 +713,19 @@
     "isMultiAnswer": false,
     "explanation": "RAG retrieves relevant content and supplies it as context to a foundation model.\nTemperature does not retrieve facts, logs are not a knowledge base, and disabled access controls are unsafe.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "資料平台團隊需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。適合哪種模式？",
+        "options": {
+          "A": "僅將文件儲存在日誌中",
+          "B": "禁用存取控制",
+          "C": "具有知識庫的檢索增強生成",
+          "D": "隨機升高溫度"
+        },
+        "explanation": "RAG 檢索相關內容並將其作為基礎模型的上下文提供。\n溫度不檢索事實，日誌不是知識庫，禁用的存取控制是不安全的。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-027",
@@ -429,7 +741,19 @@
     "isMultiAnswer": false,
     "explanation": "Vector indexes support nearest-neighbor retrieval for semantic search and RAG.\nThe other choices do not store or search embeddings.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有安全意識的工程團隊必須儲存向量嵌入以進行語義相似性搜尋。哪種能力合適？",
+        "options": {
+          "A": "DNS 記錄",
+          "B": "EBS 啟動日誌",
+          "C": "IAM 密碼原則",
+          "D": "已核准的向量儲存中的向量索引"
+        },
+        "explanation": "向量索引支援語義搜尋和 RAG 的最近鄰檢索。\n其他選項不儲存或搜尋嵌入。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-028",
@@ -445,7 +769,19 @@
     "isMultiAnswer": false,
     "explanation": "Network, encryption, and identity controls protect data and reduce unnecessary access.\nThe other choices expose data or weaken authorization.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "遷移現有工作負載的公司需要在呼叫託管基礎模型時保持客戶資料的隱私。應考慮哪種控制？",
+        "options": {
+          "A": "私有連線、加密與最低權限 IAM",
+          "B": "將資料傳送到公共貼上站點",
+          "C": "禁用日誌記錄控制",
+          "D": "共享一把管理員金鑰"
+        },
+        "explanation": "網路、加密和身分控制可保護資料並減少不必要的存取。\n其他選擇會暴露資料或削弱授權。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-029",
@@ -461,7 +797,19 @@
     "isMultiAnswer": false,
     "explanation": "A fixed evaluation set makes quality comparisons reproducible across model versions.\nThe other choices cannot show reliable model changes.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有嚴格恢復目標的團隊必須根據一組固定的業務提示和預期回應來評估模型。哪種做法合適？",
+        "options": {
+          "A": "跳過記錄結果",
+          "B": "可重複的模型評估資料集和評分過程",
+          "C": "僅評估一個快樂路徑提示",
+          "D": "每次測試後更改提示"
+        },
+        "explanation": "固定的評估集使得品質比較可以在模型版本之間重現。\n其他選擇無法顯示可靠的模型變更。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-030",
@@ -477,7 +825,19 @@
     "isMultiAnswer": false,
     "explanation": "IAM can restrict model invocation actions and resources for a production role.\nThe other choices do not authorize model selection.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備發布的開發團隊需要控制生產角色可以呼叫哪個模型。應該使用哪種機制？",
+        "options": {
+          "A": "一筆 Route 53 記錄",
+          "B": "S3 生命週期規則",
+          "C": "IAM 策略範圍為已核准的 Bedrock 模型資源",
+          "D": "公共模型端點"
+        },
+        "explanation": "IAM 可以限制生產角色的模型呼叫操作和資源。\n其他選擇不授權模型選擇。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-031",
@@ -493,7 +853,19 @@
     "isMultiAnswer": false,
     "explanation": "RAG retrieves relevant content and supplies it as context to a foundation model.\nTemperature does not retrieve facts, logs are not a knowledge base, and disabled access controls are unsafe.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "擁有多個 AWS Regions 的企業需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。適合哪種模式？",
+        "options": {
+          "A": "隨機升高溫度",
+          "B": "僅將文件儲存在日誌中",
+          "C": "禁用存取控制",
+          "D": "具有知識庫的檢索增強生成"
+        },
+        "explanation": "RAG 檢索相關內容並將其作為基礎模型的上下文提供。\n溫度不檢索事實，日誌不是知識庫，禁用的存取控制是不安全的。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-032",
@@ -509,7 +881,19 @@
     "isMultiAnswer": false,
     "explanation": "Vector indexes support nearest-neighbor retrieval for semantic search and RAG.\nThe other choices do not store or search embeddings.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "審查事件的服務擁有者必須儲存向量嵌入以進行語義相似性搜尋。哪種能力合適？",
+        "options": {
+          "A": "已核准的向量儲存中的向量索引",
+          "B": "DNS 記錄",
+          "C": "EBS 啟動日誌",
+          "D": "IAM 密碼原則"
+        },
+        "explanation": "向量索引支援語義搜尋和 RAG 的最近鄰檢索。\n其他選項不儲存或搜尋嵌入。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-033",
@@ -525,7 +909,19 @@
     "isMultiAnswer": false,
     "explanation": "Network, encryption, and identity controls protect data and reduce unnecessary access.\nThe other choices expose data or weaken authorization.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "優化現有實施的團隊需要在呼叫託管基礎模型時保持客戶資料的隱私。應考慮哪種控制？",
+        "options": {
+          "A": "共享一把管理員金鑰",
+          "B": "私有連線、加密與最低權限 IAM",
+          "C": "將資料傳送到公共貼上站點",
+          "D": "禁用日誌記錄控制"
+        },
+        "explanation": "網路、加密和身分控制可保護資料並減少不必要的存取。\n其他選擇會暴露資料或削弱授權。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-034",
@@ -541,7 +937,19 @@
     "isMultiAnswer": false,
     "explanation": "A fixed evaluation set makes quality comparisons reproducible across model versions.\nThe other choices cannot show reliable model changes.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "引入自動化工作流程的公司必須根據一組固定的業務提示和預期回應來評估模型。哪種做法合適？",
+        "options": {
+          "A": "每次測試後更改提示",
+          "B": "跳過記錄結果",
+          "C": "可重複的模型評估資料集和評分過程",
+          "D": "僅評估一個快樂路徑提示"
+        },
+        "explanation": "固定的評估集使得品質比較可以在模型版本之間重現。\n其他選擇無法顯示可靠的模型變更。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-035",
@@ -557,7 +965,19 @@
     "isMultiAnswer": false,
     "explanation": "IAM can restrict model invocation actions and resources for a production role.\nThe other choices do not authorize model selection.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "在共享環境中工作的 AWS 管理員需要控制生產角色可以呼叫哪個模型。應該使用哪種機制？",
+        "options": {
+          "A": "公共模型端點",
+          "B": "一筆 Route 53 記錄",
+          "C": "S3 生命週期規則",
+          "D": "IAM 策略範圍為已核准的 Bedrock 模型資源"
+        },
+        "explanation": "IAM 可以限制生產角色的模型呼叫操作和資源。\n其他選擇不授權模型選擇。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-036",
@@ -573,7 +993,19 @@
     "isMultiAnswer": false,
     "explanation": "RAG retrieves relevant content and supplies it as context to a foundation model.\nTemperature does not retrieve facts, logs are not a knowledge base, and disabled access controls are unsafe.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "面向客戶的應用程式團隊需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。適合哪種模式？",
+        "options": {
+          "A": "具有知識庫的檢索增強生成",
+          "B": "隨機升高溫度",
+          "C": "僅將文件儲存在日誌中",
+          "D": "禁用存取控制"
+        },
+        "explanation": "RAG 檢索相關內容並將其作為基礎模型的上下文提供。\n溫度不檢索事實，日誌不是知識庫，禁用的存取控制是不安全的。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-037",
@@ -589,7 +1021,19 @@
     "isMultiAnswer": false,
     "explanation": "Vector indexes support nearest-neighbor retrieval for semantic search and RAG.\nThe other choices do not store or search embeddings.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "標準化其 AWS 部署的平台團隊必須儲存用於語義相似性搜尋的向量嵌入。哪種能力合適？",
+        "options": {
+          "A": "IAM 密碼原則",
+          "B": "已核准的向量儲存中的向量索引",
+          "C": "DNS 記錄",
+          "D": "EBS 啟動日誌"
+        },
+        "explanation": "向量索引支援語義搜尋和 RAG 的最近鄰檢索。\n其他選項不儲存或搜尋嵌入。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-038",
@@ -605,7 +1049,19 @@
     "isMultiAnswer": false,
     "explanation": "Network, encryption, and identity controls protect data and reduce unnecessary access.\nThe other choices expose data or weaken authorization.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備審計證據的團隊需要在呼叫託管基礎模型時保持客戶資料的隱私。應考慮哪種控制？",
+        "options": {
+          "A": "禁用日誌記錄控制",
+          "B": "共享一把管理員金鑰",
+          "C": "私有連線、加密與最低權限 IAM",
+          "D": "將資料傳送到公共貼上站點"
+        },
+        "explanation": "網路、加密和身分控制可保護資料並減少不必要的存取。\n其他選擇會暴露資料或削弱授權。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-039",
@@ -621,7 +1077,19 @@
     "isMultiAnswer": false,
     "explanation": "A fixed evaluation set makes quality comparisons reproducible across model versions.\nThe other choices cannot show reliable model changes.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "取代手動流程的企業必須根據一組固定的業務提示和預期回應來評估模型。哪種做法合適？",
+        "options": {
+          "A": "僅評估一個快樂路徑提示",
+          "B": "每次測試後更改提示",
+          "C": "跳過記錄結果",
+          "D": "可重複的模型評估資料集和評分過程"
+        },
+        "explanation": "固定的評估集使得品質比較可以在模型版本之間重現。\n其他選擇無法顯示可靠的模型變更。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-040",
@@ -637,7 +1105,19 @@
     "isMultiAnswer": false,
     "explanation": "IAM can restrict model invocation actions and resources for a production role.\nThe other choices do not authorize model selection.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "根據考試指南驗證設計的團隊需要控制生產角色可以呼叫哪個模型。應該使用哪種機制？",
+        "options": {
+          "A": "IAM 策略範圍為已核准的 Bedrock 模型資源",
+          "B": "公共模型端點",
+          "C": "一筆 Route 53 記錄",
+          "D": "S3 生命週期規則"
+        },
+        "explanation": "IAM 可以限制生產角色的模型呼叫操作和資源。\n其他選擇不授權模型選擇。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-041",
@@ -653,7 +1133,19 @@
     "isMultiAnswer": false,
     "explanation": "RAG retrieves relevant content and supplies it as context to a foundation model.\nTemperature does not retrieve facts, logs are not a knowledge base, and disabled access controls are unsafe.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "生產團隊需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。適合哪種模式？",
+        "options": {
+          "A": "禁用存取控制",
+          "B": "具有知識庫的檢索增強生成",
+          "C": "隨機升高溫度",
+          "D": "僅將文件儲存在日誌中"
+        },
+        "explanation": "RAG 檢索相關內容並將其作為基礎模型的上下文提供。\n溫度不檢索事實，日誌不是知識庫，禁用的存取控制是不安全的。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-042",
@@ -669,7 +1161,19 @@
     "isMultiAnswer": false,
     "explanation": "Vector indexes support nearest-neighbor retrieval for semantic search and RAG.\nThe other choices do not store or search embeddings.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "多帳戶平台團隊必須儲存向量嵌入以進行語義相似性搜尋。哪種能力合適？",
+        "options": {
+          "A": "EBS 啟動日誌",
+          "B": "IAM 密碼原則",
+          "C": "已核准的向量儲存中的向量索引",
+          "D": "DNS 記錄"
+        },
+        "explanation": "向量索引支援語義搜尋和 RAG 的最近鄰檢索。\n其他選項不儲存或搜尋嵌入。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-043",
@@ -685,7 +1189,19 @@
     "isMultiAnswer": false,
     "explanation": "Network, encryption, and identity controls protect data and reduce unnecessary access.\nThe other choices expose data or weaken authorization.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "受監管的公司需要在呼叫託管基礎模型時保持客戶資料的隱私。應考慮哪種控制？",
+        "options": {
+          "A": "將資料傳送到公共貼上站點",
+          "B": "禁用日誌記錄控制",
+          "C": "共享一把管理員金鑰",
+          "D": "私有連線、加密與最低權限 IAM"
+        },
+        "explanation": "網路、加密和身分控制可保護資料並減少不必要的存取。\n其他選擇會暴露資料或削弱授權。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-044",
@@ -701,7 +1217,19 @@
     "isMultiAnswer": false,
     "explanation": "A fixed evaluation set makes quality comparisons reproducible across model versions.\nThe other choices cannot show reliable model changes.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備增加流量的新創公司必須根據一組固定的業務提示和預期回應來評估模型。哪種做法合適？",
+        "options": {
+          "A": "可重複的模型評估資料集和評分過程",
+          "B": "僅評估一個快樂路徑提示",
+          "C": "每次測試後更改提示",
+          "D": "跳過記錄結果"
+        },
+        "explanation": "固定的評估集使得品質比較可以在模型版本之間重現。\n其他選擇無法顯示可靠的模型變更。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-045",
@@ -717,7 +1245,19 @@
     "isMultiAnswer": false,
     "explanation": "IAM can restrict model invocation actions and resources for a production role.\nThe other choices do not authorize model selection.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "支援關鍵工作負載的營運團隊需要控制生產角色可以呼叫哪個模型。應該使用哪種機制？",
+        "options": {
+          "A": "S3 生命週期規則",
+          "B": "IAM 策略範圍為已核准的 Bedrock 模型資源",
+          "C": "公共模型端點",
+          "D": "一筆 Route 53 記錄"
+        },
+        "explanation": "IAM 可以限制生產角色的模型呼叫操作和資源。\n其他選擇不授權模型選擇。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-046",
@@ -733,7 +1273,19 @@
     "isMultiAnswer": false,
     "explanation": "RAG retrieves relevant content and supplies it as context to a foundation model.\nTemperature does not retrieve facts, logs are not a knowledge base, and disabled access controls are unsafe.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "資料平台團隊需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。適合哪種模式？",
+        "options": {
+          "A": "僅將文件儲存在日誌中",
+          "B": "禁用存取控制",
+          "C": "具有知識庫的檢索增強生成",
+          "D": "隨機升高溫度"
+        },
+        "explanation": "RAG 檢索相關內容並將其作為基礎模型的上下文提供。\n溫度不檢索事實，日誌不是知識庫，禁用的存取控制是不安全的。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-047",
@@ -749,7 +1301,19 @@
     "isMultiAnswer": false,
     "explanation": "Vector indexes support nearest-neighbor retrieval for semantic search and RAG.\nThe other choices do not store or search embeddings.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有安全意識的工程團隊必須儲存向量嵌入以進行語義相似性搜尋。哪種能力合適？",
+        "options": {
+          "A": "DNS 記錄",
+          "B": "EBS 啟動日誌",
+          "C": "IAM 密碼原則",
+          "D": "已核准的向量儲存中的向量索引"
+        },
+        "explanation": "向量索引支援語義搜尋和 RAG 的最近鄰檢索。\n其他選項不儲存或搜尋嵌入。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-048",
@@ -765,7 +1329,19 @@
     "isMultiAnswer": false,
     "explanation": "Network, encryption, and identity controls protect data and reduce unnecessary access.\nThe other choices expose data or weaken authorization.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "遷移現有工作負載的公司需要在呼叫託管基礎模型時保持客戶資料的隱私。應考慮哪種控制？",
+        "options": {
+          "A": "私有連線、加密與最低權限 IAM",
+          "B": "將資料傳送到公共貼上站點",
+          "C": "禁用日誌記錄控制",
+          "D": "共享一把管理員金鑰"
+        },
+        "explanation": "網路、加密和身分控制可保護資料並減少不必要的存取。\n其他選擇會暴露資料或削弱授權。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-049",
@@ -781,7 +1357,19 @@
     "isMultiAnswer": false,
     "explanation": "A fixed evaluation set makes quality comparisons reproducible across model versions.\nThe other choices cannot show reliable model changes.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有嚴格恢復目標的團隊必須根據一組固定的業務提示和預期回應來評估模型。哪種做法合適？",
+        "options": {
+          "A": "跳過記錄結果",
+          "B": "可重複的模型評估資料集和評分過程",
+          "C": "僅評估一個快樂路徑提示",
+          "D": "每次測試後更改提示"
+        },
+        "explanation": "固定的評估集使得品質比較可以在模型版本之間重現。\n其他選擇無法顯示可靠的模型變更。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-050",
@@ -797,7 +1385,19 @@
     "isMultiAnswer": false,
     "explanation": "IAM can restrict model invocation actions and resources for a production role.\nThe other choices do not authorize model selection.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備發布的開發團隊需要控制生產角色可以呼叫哪個模型。應該使用哪種機制？",
+        "options": {
+          "A": "一筆 Route 53 記錄",
+          "B": "S3 生命週期規則",
+          "C": "IAM 策略範圍為已核准的 Bedrock 模型資源",
+          "D": "公共模型端點"
+        },
+        "explanation": "IAM 可以限制生產角色的模型呼叫操作和資源。\n其他選擇不授權模型選擇。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-051",
@@ -813,7 +1413,19 @@
     "isMultiAnswer": false,
     "explanation": "RAG retrieves relevant content and supplies it as context to a foundation model.\nTemperature does not retrieve facts, logs are not a knowledge base, and disabled access controls are unsafe.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "擁有多個 AWS Regions 的企業需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。適合哪種模式？",
+        "options": {
+          "A": "隨機升高溫度",
+          "B": "僅將文件儲存在日誌中",
+          "C": "禁用存取控制",
+          "D": "具有知識庫的檢索增強生成"
+        },
+        "explanation": "RAG 檢索相關內容並將其作為基礎模型的上下文提供。\n溫度不檢索事實，日誌不是知識庫，禁用的存取控制是不安全的。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-052",
@@ -829,7 +1441,19 @@
     "isMultiAnswer": false,
     "explanation": "Vector indexes support nearest-neighbor retrieval for semantic search and RAG.\nThe other choices do not store or search embeddings.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "審查事件的服務擁有者必須儲存向量嵌入以進行語義相似性搜尋。哪種能力合適？",
+        "options": {
+          "A": "已核准的向量儲存中的向量索引",
+          "B": "DNS 記錄",
+          "C": "EBS 啟動日誌",
+          "D": "IAM 密碼原則"
+        },
+        "explanation": "向量索引支援語義搜尋和 RAG 的最近鄰檢索。\n其他選項不儲存或搜尋嵌入。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-053",
@@ -845,7 +1469,19 @@
     "isMultiAnswer": false,
     "explanation": "Network, encryption, and identity controls protect data and reduce unnecessary access.\nThe other choices expose data or weaken authorization.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "優化現有實施的團隊需要在呼叫託管基礎模型時保持客戶資料的隱私。應考慮哪種控制？",
+        "options": {
+          "A": "共享一把管理員金鑰",
+          "B": "私有連線、加密與最低權限 IAM",
+          "C": "將資料傳送到公共貼上站點",
+          "D": "禁用日誌記錄控制"
+        },
+        "explanation": "網路、加密和身分控制可保護資料並減少不必要的存取。\n其他選擇會暴露資料或削弱授權。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-054",
@@ -861,7 +1497,19 @@
     "isMultiAnswer": false,
     "explanation": "A fixed evaluation set makes quality comparisons reproducible across model versions.\nThe other choices cannot show reliable model changes.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "引入自動化工作流程的公司必須根據一組固定的業務提示和預期回應來評估模型。哪種做法合適？",
+        "options": {
+          "A": "每次測試後更改提示",
+          "B": "跳過記錄結果",
+          "C": "可重複的模型評估資料集和評分過程",
+          "D": "僅評估一個快樂路徑提示"
+        },
+        "explanation": "固定的評估集使得品質比較可以在模型版本之間重現。\n其他選擇無法顯示可靠的模型變更。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-055",
@@ -877,7 +1525,19 @@
     "isMultiAnswer": false,
     "explanation": "IAM can restrict model invocation actions and resources for a production role.\nThe other choices do not authorize model selection.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "在共享環境中工作的 AWS 管理員需要控制生產角色可以呼叫哪個模型。應該使用哪種機制？",
+        "options": {
+          "A": "公共模型端點",
+          "B": "一筆 Route 53 記錄",
+          "C": "S3 生命週期規則",
+          "D": "IAM 策略範圍為已核准的 Bedrock 模型資源"
+        },
+        "explanation": "IAM 可以限制生產角色的模型呼叫操作和資源。\n其他選擇不授權模型選擇。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-056",
@@ -893,7 +1553,19 @@
     "isMultiAnswer": false,
     "explanation": "RAG retrieves relevant content and supplies it as context to a foundation model.\nTemperature does not retrieve facts, logs are not a knowledge base, and disabled access controls are unsafe.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "面向客戶的應用程式團隊需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。適合哪種模式？",
+        "options": {
+          "A": "具有知識庫的檢索增強生成",
+          "B": "隨機升高溫度",
+          "C": "僅將文件儲存在日誌中",
+          "D": "禁用存取控制"
+        },
+        "explanation": "RAG 檢索相關內容並將其作為基礎模型的上下文提供。\n溫度不檢索事實，日誌不是知識庫，禁用的存取控制是不安全的。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-057",
@@ -909,7 +1581,19 @@
     "isMultiAnswer": false,
     "explanation": "Vector indexes support nearest-neighbor retrieval for semantic search and RAG.\nThe other choices do not store or search embeddings.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "標準化其 AWS 部署的平台團隊必須儲存用於語義相似性搜尋的向量嵌入。哪種能力合適？",
+        "options": {
+          "A": "IAM 密碼原則",
+          "B": "已核准的向量儲存中的向量索引",
+          "C": "DNS 記錄",
+          "D": "EBS 啟動日誌"
+        },
+        "explanation": "向量索引支援語義搜尋和 RAG 的最近鄰檢索。\n其他選項不儲存或搜尋嵌入。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-058",
@@ -925,7 +1609,19 @@
     "isMultiAnswer": false,
     "explanation": "Network, encryption, and identity controls protect data and reduce unnecessary access.\nThe other choices expose data or weaken authorization.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備審計證據的團隊需要在呼叫託管基礎模型時保持客戶資料的隱私。應考慮哪種控制？",
+        "options": {
+          "A": "禁用日誌記錄控制",
+          "B": "共享一把管理員金鑰",
+          "C": "私有連線、加密與最低權限 IAM",
+          "D": "將資料傳送到公共貼上站點"
+        },
+        "explanation": "網路、加密和身分控制可保護資料並減少不必要的存取。\n其他選擇會暴露資料或削弱授權。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-059",
@@ -941,7 +1637,19 @@
     "isMultiAnswer": false,
     "explanation": "A fixed evaluation set makes quality comparisons reproducible across model versions.\nThe other choices cannot show reliable model changes.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "取代手動流程的企業必須根據一組固定的業務提示和預期回應來評估模型。哪種做法合適？",
+        "options": {
+          "A": "僅評估一個快樂路徑提示",
+          "B": "每次測試後更改提示",
+          "C": "跳過記錄結果",
+          "D": "可重複的模型評估資料集和評分過程"
+        },
+        "explanation": "固定的評估集使得品質比較可以在模型版本之間重現。\n其他選擇無法顯示可靠的模型變更。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-060",
@@ -957,7 +1665,19 @@
     "isMultiAnswer": false,
     "explanation": "IAM can restrict model invocation actions and resources for a production role.\nThe other choices do not authorize model selection.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "根據考試指南驗證設計的團隊需要控制生產角色可以呼叫哪個模型。應該使用哪種機制？",
+        "options": {
+          "A": "IAM 策略範圍為已核准的 Bedrock 模型資源",
+          "B": "公共模型端點",
+          "C": "一筆 Route 53 記錄",
+          "D": "S3 生命週期規則"
+        },
+        "explanation": "IAM 可以限制生產角色的模型呼叫操作和資源。\n其他選擇不授權模型選擇。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-061",
@@ -973,7 +1693,19 @@
     "isMultiAnswer": false,
     "explanation": "RAG retrieves relevant content and supplies it as context to a foundation model.\nTemperature does not retrieve facts, logs are not a knowledge base, and disabled access controls are unsafe.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "生產團隊需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。適合哪種模式？",
+        "options": {
+          "A": "禁用存取控制",
+          "B": "具有知識庫的檢索增強生成",
+          "C": "隨機升高溫度",
+          "D": "僅將文件儲存在日誌中"
+        },
+        "explanation": "RAG 檢索相關內容並將其作為基礎模型的上下文提供。\n溫度不檢索事實，日誌不是知識庫，禁用的存取控制是不安全的。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-062",
@@ -989,7 +1721,19 @@
     "isMultiAnswer": false,
     "explanation": "Vector indexes support nearest-neighbor retrieval for semantic search and RAG.\nThe other choices do not store or search embeddings.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "多帳戶平台團隊必須儲存向量嵌入以進行語義相似性搜尋。哪種能力合適？",
+        "options": {
+          "A": "EBS 啟動日誌",
+          "B": "IAM 密碼原則",
+          "C": "已核准的向量儲存中的向量索引",
+          "D": "DNS 記錄"
+        },
+        "explanation": "向量索引支援語義搜尋和 RAG 的最近鄰檢索。\n其他選項不儲存或搜尋嵌入。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-063",
@@ -1005,7 +1749,19 @@
     "isMultiAnswer": false,
     "explanation": "Network, encryption, and identity controls protect data and reduce unnecessary access.\nThe other choices expose data or weaken authorization.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "受監管的公司需要在呼叫託管基礎模型時保持客戶資料的隱私。應考慮哪種控制？",
+        "options": {
+          "A": "將資料傳送到公共貼上站點",
+          "B": "禁用日誌記錄控制",
+          "C": "共享一把管理員金鑰",
+          "D": "私有連線、加密與最低權限 IAM"
+        },
+        "explanation": "網路、加密和身分控制可保護資料並減少不必要的存取。\n其他選擇會暴露資料或削弱授權。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-064",
@@ -1021,7 +1777,19 @@
     "isMultiAnswer": false,
     "explanation": "A fixed evaluation set makes quality comparisons reproducible across model versions.\nThe other choices cannot show reliable model changes.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備增加流量的新創公司必須根據一組固定的業務提示和預期回應來評估模型。哪種做法合適？",
+        "options": {
+          "A": "可重複的模型評估資料集和評分過程",
+          "B": "僅評估一個快樂路徑提示",
+          "C": "每次測試後更改提示",
+          "D": "跳過記錄結果"
+        },
+        "explanation": "固定的評估集使得品質比較可以在模型版本之間重現。\n其他選擇無法顯示可靠的模型變更。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-065",
@@ -1037,7 +1805,19 @@
     "isMultiAnswer": false,
     "explanation": "IAM can restrict model invocation actions and resources for a production role.\nThe other choices do not authorize model selection.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "支援關鍵工作負載的營運團隊需要控制生產角色可以呼叫哪個模型。應該使用哪種機制？",
+        "options": {
+          "A": "S3 生命週期規則",
+          "B": "IAM 策略範圍為已核准的 Bedrock 模型資源",
+          "C": "公共模型端點",
+          "D": "一筆 Route 53 記錄"
+        },
+        "explanation": "IAM 可以限制生產角色的模型呼叫操作和資源。\n其他選擇不授權模型選擇。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-066",
@@ -1053,7 +1833,19 @@
     "isMultiAnswer": false,
     "explanation": "RAG retrieves relevant content and supplies it as context to a foundation model.\nTemperature does not retrieve facts, logs are not a knowledge base, and disabled access controls are unsafe.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "資料平台團隊需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。適合哪種模式？",
+        "options": {
+          "A": "僅將文件儲存在日誌中",
+          "B": "禁用存取控制",
+          "C": "具有知識庫的檢索增強生成",
+          "D": "隨機升高溫度"
+        },
+        "explanation": "RAG 檢索相關內容並將其作為基礎模型的上下文提供。\n溫度不檢索事實，日誌不是知識庫，禁用的存取控制是不安全的。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-067",
@@ -1069,7 +1861,19 @@
     "isMultiAnswer": false,
     "explanation": "Vector indexes support nearest-neighbor retrieval for semantic search and RAG.\nThe other choices do not store or search embeddings.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有安全意識的工程團隊必須儲存向量嵌入以進行語義相似性搜尋。哪種能力合適？",
+        "options": {
+          "A": "DNS 記錄",
+          "B": "EBS 啟動日誌",
+          "C": "IAM 密碼原則",
+          "D": "已核准的向量儲存中的向量索引"
+        },
+        "explanation": "向量索引支援語義搜尋和 RAG 的最近鄰檢索。\n其他選項不儲存或搜尋嵌入。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-068",
@@ -1085,7 +1889,19 @@
     "isMultiAnswer": false,
     "explanation": "Network, encryption, and identity controls protect data and reduce unnecessary access.\nThe other choices expose data or weaken authorization.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "遷移現有工作負載的公司需要在呼叫託管基礎模型時保持客戶資料的隱私。應考慮哪種控制？",
+        "options": {
+          "A": "私有連線、加密與最低權限 IAM",
+          "B": "將資料傳送到公共貼上站點",
+          "C": "禁用日誌記錄控制",
+          "D": "共享一把管理員金鑰"
+        },
+        "explanation": "網路、加密和身分控制可保護資料並減少不必要的存取。\n其他選擇會暴露資料或削弱授權。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-069",
@@ -1101,7 +1917,19 @@
     "isMultiAnswer": false,
     "explanation": "A fixed evaluation set makes quality comparisons reproducible across model versions.\nThe other choices cannot show reliable model changes.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有嚴格恢復目標的團隊必須根據一組固定的業務提示和預期回應來評估模型。哪種做法合適？",
+        "options": {
+          "A": "跳過記錄結果",
+          "B": "可重複的模型評估資料集和評分過程",
+          "C": "僅評估一個快樂路徑提示",
+          "D": "每次測試後更改提示"
+        },
+        "explanation": "固定的評估集使得品質比較可以在模型版本之間重現。\n其他選擇無法顯示可靠的模型變更。"
+      }
+    }
   },
   {
     "id": "aip-c01-d1-070",
@@ -1117,6 +1945,18 @@
     "isMultiAnswer": false,
     "explanation": "IAM can restrict model invocation actions and resources for a production role.\nThe other choices do not authorize model selection.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備發布的開發團隊需要控制生產角色可以呼叫哪個模型。應該使用哪種機制？",
+        "options": {
+          "A": "一筆 Route 53 記錄",
+          "B": "S3 生命週期規則",
+          "C": "IAM 策略範圍為已核准的 Bedrock 模型資源",
+          "D": "公共模型端點"
+        },
+        "explanation": "IAM 可以限制生產角色的模型呼叫操作和資源。\n其他選擇不授權模型選擇。"
+      }
+    }
   }
 ]

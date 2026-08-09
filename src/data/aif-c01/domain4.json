@@ -13,7 +13,19 @@
     "isMultiAnswer": false,
     "taskStatement": "4.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家物流公司使用機器學習模型來預測每季的需求。分析師正在準備一份報告，幫助利害關係人了解經過訓練的模型如何達到他們的預測。分析師應該包括哪些內容來滿足透明度和可解釋性需求？",
+        "options": {
+          "A": "用於訓練的樣本資料",
+          "B": "模型收斂表",
+          "C": "部分相關圖 (PDP)",
+          "D": "用於訓練模型的原始碼"
+        },
+        "explanation": "部分依賴圖 (PDP) 顯示一個或多個輸入特徵如何與模型的預測輸出相關，這使得它們成為解釋特徵影響的有效方法，並使利害關係人能夠清楚地了解經過訓練的模型如何達到其預測。\n用於訓練模型和樣本訓練資料的原始程式碼揭示了實現和輸入，但沒有解釋各個特徵如何驅動預測。模型收斂表描述了訓練如何朝著解決方案進展，而不是最終模型的行為方式，因此它們不符合可解釋性要求。"
+      }
+    }
   },
   {
     "id": "aif-q003",
@@ -29,7 +41,19 @@
     "isMultiAnswer": false,
     "taskStatement": "4.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "研究實驗室需要根據基因樣本的特徵將其分為 20 類。該團隊需要一種演算法，其內部決策邏輯可以清晰地記錄下來，以顯示它如何產生每個輸出。哪種演算法適合這個需求？",
+        "options": {
+          "A": "邏輯迴歸",
+          "B": "決策樹",
+          "C": "神經網路",
+          "D": "線性迴歸"
+        },
+        "explanation": "決策樹透過一系列可讀的分割規則使其內部邏輯變得明確，因此團隊可以準確記錄模型如何從輸入特徵轉移到 20 個輸出類別之一。這種可解釋性就是決策樹滿足要求的原因。\n神經網路高度不透明，因此其內部機制難以記錄。線性迴歸預測連續值而不是分配離散類別，這與 20 類問題不符。邏輯迴歸可以透過其係數進行解釋，但與決策樹相比，它在清楚記錄跨多個類別的決策路徑方面不太自然。"
+      }
+    }
   },
   {
     "id": "aif-q047",
@@ -45,7 +69,19 @@
     "isMultiAnswer": false,
     "taskStatement": "4.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一個媒體平台計劃使用大型語言模型進行內容審核，並希望檢查其輸出是否存在對特定群體的偏見和不公平待遇。哪個資料來源允許以最少的管理工作進行此評估？",
+        "options": {
+          "A": "審核日誌",
+          "B": "使用者產生的內容",
+          "C": "基準資料集",
+          "D": "內部內容審核指南"
+        },
+        "explanation": "基準資料集是專門為評估模型的偏差和公平性而創建的標準化、精心策劃的資料集，因此它們使平台能夠以很少的管理工作一致地評估模型的輸出。\n使用者產生的內容和審核日誌需要大量的手動標記和審查，並且不能提供一致的公平基準。內部內容審核指南是政策文件，而不是可用於衡量輸出偏差的資料集。"
+      }
+    }
   },
   {
     "id": "aif-q049",
@@ -65,7 +101,20 @@
     "isMultiAnswer": true,
     "taskStatement": "4.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家貸方正在建立一個生成式人工智慧解決方案，該解決方案根據業務規則向新申請人提供折扣。為了負責任地使用模型並限制可能傷害某些客戶的偏見，公司應該採取哪兩項行動？",
+        "options": {
+          "A": "檢查資料是否有組間不平衡或差異",
+          "B": "盡可能頻繁地運行模型",
+          "C": "評估模型的行為，以便公司可以向利害關係人提供透明度",
+          "D": "使用 ROUGE 指標來衡量生成文字的品質",
+          "E": "將模型的推理時間保持在可接受的範圍內"
+        },
+        "explanation": "檢查資料是否存在不平衡或差異有助於發現和減少可能對某些申請人產生不公平影響的偏見，而評估模型的行為可以讓公司解釋其決策並向利害關係人提供透明度。兩者都是限制偏見的核心負責任的人工智慧實踐。\n頻繁運行模型並將推理時間保持在限制範圍內是無法解決偏差的操作問題。 ROUGE 指標測量生成文本與參考文本的重疊以提高摘要質量，並且不檢測偏差。"
+      }
+    }
   },
   {
     "id": "aif-q052",
@@ -81,7 +130,19 @@
     "isMultiAnswer": false,
     "taskStatement": "4.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "學生透過複製生成式人工智慧工具產生的文本來提交論文，無需註明出處。這說明了哪種負責任的人工智慧挑戰？",
+        "options": {
+          "A": "毒性",
+          "B": "幻覺",
+          "C": "隱私",
+          "D": "抄襲"
+        },
+        "explanation": "在沒有歸屬的情況下將生成式人工智慧輸出重複用作自己的作品是抄襲，這是公認的負責任的人工智慧和智慧財產權問題。\n毒性是指有害或令人反感的內容，幻覺是捏造的，但聽起來似乎有道理的輸出，而隱私則涉及個人資料的處理。這些都沒有描述複製生成的文本並將其呈現為原創作品。"
+      }
+    }
   },
   {
     "id": "aif-q057",
@@ -97,7 +158,19 @@
     "isMultiAnswer": false,
     "taskStatement": "4.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家商店安裝了攝像頭，並使用機器學習模型來檢查錄影是否可能被盜。此模型標記某一族裔的人數遠多於其他族裔。哪種類型的偏差正在影響模型的輸出？",
+        "options": {
+          "A": "測量偏差",
+          "B": "抽樣偏差",
+          "C": "確認偏誤",
+          "D": "觀察者偏見"
+        },
+        "explanation": "當訓練資料不能代表全部人口時，就會出現抽樣偏差，這可能會導致模型更頻繁地標記一個種族群體。傾斜的標記表示訓練資料未能充分代表某些群體。\n測量偏差來自資料記錄方式的系統誤差。確認偏誤和觀察者偏誤與人們如何解釋或標記結果有關，而不是與訓練樣本的代表性有關。"
+      }
+    }
   },
   {
     "id": "aif-q067",
@@ -119,7 +192,19 @@
       "Amazon Macie",
       "AWS CloudTrail",
       "Amazon SageMaker Model Monitor"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一間醫院在 Amazon Bedrock 上投入使用疾病檢測模型。為了尊重隱私規則，模型絕不能在回復中暴露患者的個人詳細資訊，並且無論何時發生這種情況都必須通知工作人員。哪種解決方案滿足這些要求？",
+        "options": {
+          "A": "使用 Amazon Macie 掃描模型輸出中的敏感資料並設定潛在暴露警報",
+          "B": "使用 Amazon Bedrock Guardrails 過濾內容並配置 Amazon CloudWatch 通知警報",
+          "C": "設定 AWS CloudTrail 以監控模型的回應並為任何偵測到的個人資料建立警報",
+          "D": "使用 Amazon SageMaker Model Monitor 檢測資料漂移並在模型品質下降時發出警報"
+        },
+        "explanation": "Amazon Bedrock Guardrails 可以過濾模型的輸出，因此不會返回個人患者訊息，並且 Amazon CloudWatch 警報可以在發生策略違規時通知工作人員。\nAmazon Macie 發現 Amazon S3 中的敏感資料，但不會過濾模型的即時響應。 AWS CloudTrail 記錄 API 呼叫而不是檢查回應內容。 Amazon SageMaker Model Monitor 檢測資料偏差和品質問題，而不是個人資訊外洩。"
+      }
+    }
   },
   {
     "id": "aif-q071",
@@ -139,7 +224,20 @@
     "isMultiAnswer": true,
     "taskStatement": "4.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家保險公司計劃部署大型語言模型來自動化文件處理，並希望負責任地行事以避免傷害。公司應該採取哪兩項行動？",
+        "options": {
+          "A": "評估模型時包括公平性指標",
+          "B": "調整模型的溫度參數",
+          "C": "修改訓練資料以減少偏差",
+          "D": "避免訓練資料過度擬合",
+          "E": "應用及時的工程技術"
+        },
+        "explanation": "在評估模型時納入公平性指標有助於確認模型公平對待案例，並修改訓練資料以減少偏差，從根源解決偏差。兩者都直接支持負責任的使用並減少潛在的危險。\n調整溫度參數並應用及時的工程技術可以調整輸出樣式和質量，但不能解決公平性或偏差問題。避免過度擬合可以提高泛化能力，但它是一般模型品質目標，而不是限制偏見或有害結果的措施。"
+      }
+    }
   },
   {
     "id": "aif-q091",
@@ -157,7 +255,19 @@
     "lastVerified": "2026-06-02",
     "services": [
       "Amazon SageMaker Model Cards"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "研究團隊建立自訂 ML 模型並與其他團隊共用模型工件，同時保留訓練程式碼和資料。該團隊需要一種標準化的方法來記錄並隨後審核其發布的每個模型。團隊應該使用哪種解決方案？",
+        "options": {
+          "A": "將詳細資訊寫入文件並將其儲存在 Amazon S3 中",
+          "B": "將模型訓練腳本提交至 Git 儲存庫",
+          "C": "建立 Amazon SageMaker Model Cards 來捕獲預期用途以及訓練和推理詳細資訊",
+          "D": "使用 AWS AI Service Cards 來描述模型"
+        },
+        "explanation": "Amazon SageMaker Model Cards 提供一個標準化的位置來記錄模型的預期用途及其訓練和推理詳細資訊，為團隊提供一致、可共享的記錄，供其他團隊稍後審核。\n在 Amazon S3 中儲存的文件中寫入詳細資訊是非結構化且不標準化的。將訓練腳本提交到 Git 儲存庫版本程式碼而不是模型元資料。 AWS AI Service Cards 描述 AWS 自己的託管 AI 服務，而不是團隊建立的自訂模型。"
+      }
+    }
   },
   {
     "id": "aif-q094",
@@ -173,7 +283,19 @@
     "isMultiAnswer": false,
     "taskStatement": "4.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家銀行希望建立一個機器學習系統來幫助其風險團隊決定不同人口群體的貸款分配。銀行應該怎麼做才能建立公正的模式？",
+        "options": {
+          "A": "減少訓練資料集的大小",
+          "B": "確保模型的預測與歷史結果匹配",
+          "C": "為每個人口群體建立單獨的模型",
+          "D": "測量訓練資料中的類別不平衡並相應地調整訓練過程"
+        },
+        "explanation": "測量訓練資料中的類別不平衡並調整訓練過程（例如透過重採樣或類別權重）有助於模型公平對待代表性不足的群體並減少有偏見的預測。\n減小資料集大小會刪除資訊並可能加劇偏差。強制預測與歷史結果相符可以將過去的歧視帶入模型中。為每個人口群體建立單獨的模型可能會加劇差異，並且無法解決資料中的不平衡。"
+      }
+    }
   },
   {
     "id": "aif-q100",
@@ -189,7 +311,19 @@
     "isMultiAnswer": false,
     "taskStatement": "4.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家公司正在開發一款行動應用程式，使用手機相機來評估昆蟲叮咬。為了訓練其圖像分類模型，該公司收集了不同性別、種族和地區的各種咬合照片。這體現了哪種負責任的人工智慧原則？",
+        "options": {
+          "A": "可解釋性",
+          "B": "透明度",
+          "C": "公平性",
+          "D": "治理"
+        },
+        "explanation": "收集不同性別、種族和地區的咬合照片，旨在防止模型對某些群體的效果優於其他群體，這體現了負責任的人工智慧的公平原則。\n可解釋性和透明度涉及揭示模型如何實現其輸出，治理涉及政策和監督。這些都沒有描述組裝具有代表性的、平衡的資料集以避免有偏見的結果的行為。"
+      }
+    }
   },
   {
     "id": "aif-q101",
@@ -209,7 +343,19 @@
       "Amazon SageMaker Clarify",
       "Amazon SageMaker Data Wrangler",
       "Amazon SageMaker Model Cards"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家公司正在開發用於貸款審批的機器學習模型。它需要檢測模型中的偏差並解釋模型的預測。哪種解決方案滿足這些要求？",
+        "options": {
+          "A": "Amazon SageMaker Data Wrangler",
+          "B": "Amazon SageMaker Clarify",
+          "C": "Amazon SageMaker Model Cards",
+          "D": "AWS AI Service Cards"
+        },
+        "explanation": "Amazon SageMaker Clarify 都可以檢測資料和模型預測中的偏差，並為這些預測提供可解釋性，其中涵蓋了貸款審批模型的兩個要求。\nAmazon SageMaker Data Wrangler 準備和轉換資料。 Amazon SageMaker Model Cards 記錄模型詳細資訊以提高透明度，但不執行偏差分析。 AWS AI Service Cards 描述 AWS 託管的 AI 服務，而不是客戶自己的模型。"
+      }
+    }
   },
   {
     "id": "aif-q111",
@@ -225,7 +371,19 @@
     "isMultiAnswer": false,
     "taskStatement": "4.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家銀行正在基礎模型上建立貸款決策解決方案。為了審計和監督，銀行需要模型的決策是可解釋的。哪一個因素對這些決策的可解釋性影響最大？",
+        "options": {
+          "A": "培訓時間",
+          "B": "模型複雜度",
+          "C": "超參數數量",
+          "D": "部署時間"
+        },
+        "explanation": "模型複雜度對可解釋性影響最大：線性模型或決策樹等簡單模型較容易解釋，而深度神經網路等高度複雜的模型則表現為黑盒子，其決策很難出於審計目的進行解釋。\n訓練時間、超參數數量和部署時間與模型的建置和操作方式有關，但它們並不能決定其決策的可解釋性。"
+      }
+    }
   },
   {
     "id": "aif-q113",
@@ -241,7 +399,19 @@
     "isMultiAnswer": false,
     "taskStatement": "4.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家公司想要一個潛在客戶評分應用程式，讓員工可以根據自己的領域專業知識查看並調整每個輸入變數的權重。哪種類型的 ML 模型支援此要求？",
+        "options": {
+          "A": "K 最近鄰 (k-NN) 模型",
+          "B": "邏輯迴歸模型",
+          "C": "基於主成分所建構的深度學習模型",
+          "D": "神經網路"
+        },
+        "explanation": "邏輯迴歸模型為每個輸入變數分配一個明確的權重（係數），因此員工可以了解每個功能的貢獻，並利用他們的領域專業知識調整這些權重。這種可解釋性符合要求。\nK 最近鄰根據相鄰資料點進行預測，且無需調整每個特徵的權重。基於主成分建構的神經網路和深度學習模型是不透明的，並且不公開簡單的、可調整的特徵權重。"
+      }
+    }
   },
   {
     "id": "aif-q122",
@@ -257,7 +427,19 @@
     "isMultiAnswer": false,
     "taskStatement": "4.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "在機器學習生命週期的後處理階段，公司可以使用哪種技術來減少生成人工智慧應用程式中的偏差和毒性？",
+        "options": {
+          "A": "資料增強",
+          "B": "人在迴路",
+          "C": "特徵工程",
+          "D": "對抗性訓練"
+        },
+        "explanation": "人機互動在後處理階段增加了人工審查，以便在有偏見或有毒的輸出到達使用者之前可以捕獲並糾正它們，從而減少生成人工智慧應用中的偏見和毒性。\n資料增強和特徵工程在訓練之前或訓練期間對資料起作用，而對抗訓練在訓練期間強化模型。這些都不能作為產生輸出的後處理保障。"
+      }
+    }
   },
   {
     "id": "aif-q141",
@@ -275,7 +457,19 @@
     "lastVerified": "2026-06-02",
     "services": [
       "Amazon SageMaker Model Cards"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "使用 Amazon SageMaker Model Cards 記錄 AI 模型有什麼好處？",
+        "options": {
+          "A": "降低模型的總體計算要求",
+          "B": "標準化有關模型的目的、性能和局限性的資訊",
+          "C": "提供模型功能的視覺吸引力摘要",
+          "D": "出於存檔目的實體儲存模型"
+        },
+        "explanation": "Amazon SageMaker Model Cards 標準化模型的目的、效能和限制的文檔，從而支援透明度、治理以及更輕鬆地追蹤模型。\n減少運算要求和實體儲存模型以供存檔不是模型卡的功能。提供視覺上吸引人的摘要是一種簡報細節，而不是標準化文件的核心優勢。"
+      }
+    }
   },
   {
     "id": "aif-q144",
@@ -291,7 +485,19 @@
     "isMultiAnswer": false,
     "taskStatement": "4.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家公司建立了一個人工智慧履歷篩選系統，該系統在不代表所有人口群體的大型履歷資料集上進行訓練。這種情況涉及負責任的人工智慧的哪個核心維度？",
+        "options": {
+          "A": "透明度",
+          "B": "公平性",
+          "C": "隱私和安全",
+          "D": "可解釋性"
+        },
+        "explanation": "對不代表所有人口群體的資料集進行訓練可能會導致預測偏差，這是一個公平問題。公平是負責任的人工智慧維度，專注於跨群體的公平結果。\n透明度和可解釋性涉及揭示模型如何做出決策，隱私和安全性涉及保護資料。這些都沒有描述不具代表性的訓練資料集所引入的偏差。"
+      }
+    }
   },
   {
     "id": "aif-q149",
@@ -309,7 +515,19 @@
     "lastVerified": "2026-06-02",
     "services": [
       "Amazon SageMaker Model Cards"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家公司在 AWS 上部署 AI/ML 模型，並希望提供模型如何做出決策並為其輸出提供解釋的透明度。哪些 AWS 服務或功能符合這些要求？",
+        "options": {
+          "A": "Amazon Lex",
+          "B": "Amazon Rekognition",
+          "C": "Amazon SageMaker Model Cards",
+          "D": "Amazon Comprehend"
+        },
+        "explanation": "Amazon SageMaker Model Cards 記錄關鍵細節，例如模型的目的、訓練資料、效能和限制，這使利害關係人能夠透明地了解模型如何做出決策並幫助解釋其輸出。\nAmazon Lex 建立對話介面，Amazon Rekognition 分析影像和視頻，Amazon Comprehend 執行自然語言處理。這些都不是為了記錄模型的透明度和可解釋性而設計的。"
+      }
+    }
   },
   {
     "id": "aif-q165",
@@ -327,7 +545,19 @@
     "lastVerified": "2026-06-02",
     "services": [
       "Amazon SageMaker Model Cards"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家公司正在與多家研究機構合作開發人工智慧模型。它需要標準化文件來追蹤模型版本並記錄模型的開發方式。哪種解決方案滿足這些要求？",
+        "options": {
+          "A": "使用 Git 儲存庫追蹤模型更改",
+          "B": "使用 Amazon Comprehend 追蹤模型更改",
+          "C": "使用 Amazon SageMaker Model Cards 追蹤模型更改",
+          "D": "使用 Amazon S3 追蹤模型更改"
+        },
+        "explanation": "Amazon SageMaker Model Cards 提供了一個標準化框架，用於記錄模型詳細資訊和版本以及模型開發方式的記錄，滿足協作者之間共享、可審核文件的需求。\nGit 儲存庫版本程式碼而不是標準化模型文件。 Amazon Comprehend 執行自然語言處理，Amazon S3 儲存沒有任何模型文檔結構的物件。"
+      }
+    }
   },
   {
     "id": "aif-q172",
@@ -343,7 +573,19 @@
     "isMultiAnswer": false,
     "taskStatement": "4.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家醫院建立了一個人工智慧系統，為患者提供個人化的治療建議。該系統必須解釋每項建議背後的原因，並使醫生和患者都能獲得這些見解。這體現了哪一種以人為本的設計原則？",
+        "options": {
+          "A": "資料治理",
+          "B": "隱私和安全",
+          "C": "可解釋性",
+          "D": "公平性"
+        },
+        "explanation": "解釋每項治療建議背後的原因，並讓醫生和患者能夠理解這些見解，體現了可解釋性，這是一種以人為本的設計原則，重點是讓人工智慧決策易於理解。\n隱私和安全關注保護患者資料，公平關注跨群體的公平結果，資料治理關注管理資料的政策。這些都沒有描述揭示系統建議背後的基本原理。"
+      }
+    }
   },
   {
     "id": "aif-q187",
@@ -361,7 +603,19 @@
     "lastVerified": "2026-06-02",
     "services": [
       "Amazon Bedrock Guardrails"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家醫療保健公司希望使用生成式人工智慧來回答病患的醫療問題。應使用哪種 AWS 服務來支援應用程式的負責任的 AI？",
+        "options": {
+          "A": "Amazon Inspector",
+          "B": "Amazon Bedrock Guardrails",
+          "C": "Amazon Rekognition",
+          "D": "AWS Trusted Advisor"
+        },
+        "explanation": "Amazon Bedrock Guardrails 讓公司定義並強制執行生成式 AI 回應的安全性、內容和偏見控制，這支援負責任的 AI 用於回答病患醫療問題的應用程式。\nAmazon Inspector 掃描軟體漏洞，Amazon Rekognition 分析影像和視頻，AWS Trusted Advisor 根據最佳實踐檢查帳戶。這些都沒有對產生的內容強制執行負責任的人工智慧控制。"
+      }
+    }
   },
   {
     "id": "aif-q203",
@@ -377,7 +631,19 @@
     "isMultiAnswer": false,
     "taskStatement": "4.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家零售公司希望使用負責任的實踐來建立產品推薦模型。在收集資料以減少模型偏差時應採用哪種做法？",
+        "options": {
+          "A": "僅使用公司最活躍客戶的資料",
+          "B": "從單一高價值客戶群收集資料",
+          "C": "確保資料代表公司的整個客戶群",
+          "D": "使用最小的資料集讓模型快速訓練"
+        },
+        "explanation": "收集代表公司整個客戶群的資料可以減少對任何單一群體的偏差，並有助於推薦模型公平對待所有客戶，這是限制偏差的負責任的做法。\n僅使用最活躍客戶或來自單一高價值細分市場的資料會產生傾斜的資料集，從而增加偏差。使用快速訓練的最小資料集可能會導致群體代表性不足，並且無法解決公平問題。"
+      }
+    }
   },
   {
     "id": "aif-q207",
@@ -398,7 +664,19 @@
       "Amazon SageMaker Clarify",
       "Amazon SageMaker Model Cards",
       "Amazon SageMaker Feature Store"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家公司部署了用於客戶細分的生成式人工智慧模型，並且該模型已經在生產中運行了很長時間。該團隊現在註意到不一致的反應，並希望評估模型的偏差和漂移。哪些 AWS 服務或功能符合此要求？",
+        "options": {
+          "A": "Amazon SageMaker Feature Store",
+          "B": "Amazon SageMaker Clarify",
+          "C": "Amazon SageMaker Model Monitor",
+          "D": "Amazon SageMaker Model Cards"
+        },
+        "explanation": "Amazon SageMaker Model Monitor 持續從已部署的模型中收集資料，並檢測資料漂移、概念漂移和偏差隨時間的變化，因此它可以揭示長期運行的分割模型中出現的不一致情況。\nAmazon SageMaker Clarify 衡量某個時間點的偏差和可解釋性，而不是持續監控生產。 Amazon SageMaker Feature Store 管理功能，以及 Amazon SageMaker Model Cards 文件模型詳細資訊；兩者都沒有監控模型的漂移。"
+      }
+    }
   },
   {
     "id": "aif-q222",
@@ -418,7 +696,20 @@
     "isMultiAnswer": true,
     "taskStatement": "4.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家公司正在將人工智慧添加到其招聘和聘用流程中，並希望減少偏見風險並保持招聘決策的公平性。公司應該關注負責任人工智慧的哪兩個核心維度？",
+        "options": {
+          "A": "公平性",
+          "B": "靈活性",
+          "C": "公差",
+          "D": "開源",
+          "E": "透明度"
+        },
+        "explanation": "公平性使招募結果在各個人口群體中保持公平，從而直接減少偏見，而透明度使人工智慧的決策清晰，以便可以對其進行解釋和審計。兩者都是負責任的人工智慧的核心維度。\n靈活性、寬容和開源並不是確保公平、負責任的招募決策的核心負責任的人工智慧維度。"
+      }
+    }
   },
   {
     "id": "aif-q225",
@@ -434,7 +725,19 @@
     "isMultiAnswer": false,
     "taskStatement": "4.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家食品公司正在收集資料集來預測客戶的食物偏好，並希望資料中代表所有人口群體的偏好。這描述了哪個資料集特徵？",
+        "options": {
+          "A": "準確度",
+          "B": "多樣性",
+          "C": "近因偏差",
+          "D": "可靠性"
+        },
+        "explanation": "確保資料集代表所有人口統計群體，以解決其多樣性問題，以便模型可以從廣泛的客戶偏好中學習。\n準確性和可靠性涉及資料的正確性和一致性，而不是資料代表群體的廣泛程度。新近度偏差是一種缺陷，其中最近的資料被過度加權，這並不是包括所有人口統計資料所描述的。"
+      }
+    }
   },
   {
     "id": "aif-q231",
@@ -450,7 +753,19 @@
     "isMultiAnswer": false,
     "taskStatement": "4.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一位人工智慧從業者正在建立機器學習模型，並希望為利益相關者提供其預測的透明度和可解釋性。哪種解決方案可以滿足這個要求？",
+        "options": {
+          "A": "呈現模型的 Shapley 值",
+          "B": "提供模型的準確度測量",
+          "C": "提供模型的混淆矩陣",
+          "D": "提供安全的模型推理端點"
+        },
+        "explanation": "Shapley 值量化了每個特徵對單一預測的貢獻程度，這為利害關係人提供了模型產生給定產出的透明度和可解釋性。\n準確性和混淆矩陣衡量模型的整體性能，但不能解釋單一預測。安全推理端點關注的是如何部署和存取模型，而不是如何解釋其預測。"
+      }
+    }
   },
   {
     "id": "aif-q252",
@@ -466,7 +781,19 @@
     "isMultiAnswer": false,
     "taskStatement": "4.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家銀行正在建立一個用於貸款審批決策的生成式人工智慧應用程式，並需要輸出負責任且公平。哪種解決方案滿足這些要求？",
+        "options": {
+          "A": "使用具有許多隱藏層的深度學習模型",
+          "B": "檢查訓練資料是否有偏差，並包括來自所有人口群體的資料",
+          "C": "保持模型決策過程的秘密以保護專有演算法",
+          "D": "持續監控單一靜態測試資料集上的模型"
+        },
+        "explanation": "審查培訓資料是否存在偏見，並納入所有人口群體的資料，可以從源頭減少有偏見的結果，這對於負責任和公平的貸款審批申請至關重要。\n使用具有許多隱藏層的深度學習模型會降低可解釋性，並且不能解決公平性問題。決策過程保密會破壞透明度。對單一靜態測試資料集的監控無法偵測或修正資料中的偏差。"
+      }
+    }
   },
   {
     "id": "aif-q255",
@@ -482,7 +809,19 @@
     "isMultiAnswer": false,
     "taskStatement": "4.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家公司擁有 ML 模型，並希望了解模型如何得出預測。哪個術語描述了理解模型的預測？",
+        "options": {
+          "A": "模型可解釋性",
+          "B": "模型訓練",
+          "C": "型號性能",
+          "D": "模型互通性"
+        },
+        "explanation": "模型可解釋性是指理解模型如何得出預測，而這正是公司想要的。\n模型訓練是將模型與資料擬合的過程，模型效能衡量其預測效果，模型互通性涉及跨系統工作。這些術語都沒有描述理解預測背後的推理。"
+      }
+    }
   },
   {
     "id": "aif-q262",
@@ -498,7 +837,19 @@
     "isMultiAnswer": false,
     "taskStatement": "4.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家銀行使用生成式人工智慧模型為新客戶設定信用限額，並希望使該模型的決策過程對這些客戶更加透明。哪種解決方案可以滿足這個要求？",
+        "options": {
+          "A": "用基於規則的系統取代機器學習模型",
+          "B": "應用可解釋的人工智慧技術來顯示哪些因素會影響模型的決策",
+          "C": "建立互動式 UI，為客戶提供系統的詳細技術說明",
+          "D": "提高模型的準確性以減少對透明度的需求"
+        },
+        "explanation": "應用可解釋的人工智慧技術可以揭示影響每個信用限額決策的具體因素，從而使生成式人工智慧模型的推理對客戶透明。\n用基於規則的系統取代模型會改變方法，而不是解釋模型。帶有詳細技術解釋的互動式使用者介面並不一定能揭示哪些因素推動了決策。提高準確度可以改善預測，但不會使決策過程透明化。"
+      }
+    }
   },
   {
     "id": "aif-q267",
@@ -516,7 +867,19 @@
     "lastVerified": "2026-06-02",
     "services": [
       "Amazon SageMaker Clarify"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "人工智慧從業者希望評估機器學習模型並向客戶和利害關係人提供其預測的解釋。哪些 AWS 服務或功能符合此要求？",
+        "options": {
+          "A": "Amazon Quick",
+          "B": "Amazon Comprehend",
+          "C": "AWS Trusted Advisor",
+          "D": "Amazon SageMaker Clarify"
+        },
+        "explanation": "Amazon SageMaker Clarify 為模型預測提供特徵歸因解釋，因此從業者可以產生並與客戶和利害關係人分享可解釋性報告。\nAmazon Quick 是一項商業智慧服務，Amazon Comprehend 執行自然語言處理，AWS Trusted Advisor 根據最佳實務檢查帳戶。這些都無法解釋機器學習模型的預測。"
+      }
+    }
   },
   {
     "id": "aif-q279",
@@ -534,7 +897,19 @@
     "lastVerified": "2026-06-02",
     "services": [
       "Amazon SageMaker Clarify"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家公司使用 Amazon SageMaker 部署一個模型來偵測社群媒體貼文是否包含某些主題。公司需要展示不同的輸入特徵如何影響模型的行為。哪一個 SageMaker 功能滿足此要求？",
+        "options": {
+          "A": "SageMaker Ground Truth",
+          "B": "SageMaker Clarify",
+          "C": "SageMaker Feature Store",
+          "D": "SageMaker Canvas"
+        },
+        "explanation": "Amazon SageMaker Clarify 提供模型可解釋性，包括特徵歸因，因此它可以顯示不同的輸入特徵如何影響已部署模型的行為。\nSageMaker Ground Truth 標記資料，SageMaker Feature Store 管理特徵，SageMaker Canvas 無需程式碼即可建立模型。這些都沒有解釋輸入特徵如何驅動模型行為。"
+      }
+    }
   },
   {
     "id": "aif-q287",
@@ -552,7 +927,19 @@
     "lastVerified": "2026-06-02",
     "services": [
       "Amazon SageMaker Model Cards"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家公司建立了一個用於批准或拒絕貸款申請的機器學習模型。為了滿足監管要求，其決策必須透明且可解釋，並且公司必須記錄審核流程。哪種解決方案滿足這些要求？",
+        "options": {
+          "A": "Amazon Textract",
+          "B": "Amazon SageMaker Model Cards",
+          "C": "AWS CloudFormation",
+          "D": "Amazon Comprehend"
+        },
+        "explanation": "Amazon SageMaker Model Cards 記錄模型的預期用途、性能和決策詳細資訊，提供貸款模型出於監管目的必須滿足的透明度、可解釋性和審計記錄。\nAmazon Textract 從文件中提取文本，AWS CloudFormation 提供基礎設施，Amazon Comprehend 執行自然語言處理。這些都沒有記錄模型的透明度和審計決策。"
+      }
+    }
   },
   {
     "id": "aif-q292",
@@ -575,7 +962,20 @@
     "services": [
       "Amazon Bedrock",
       "Amazon Bedrock Guardrails"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "哪兩項 Amazon Bedrock 功能有助於內容過濾和安全？",
+        "options": {
+          "A": "過濾內容的護欄",
+          "B": "模型自訂選項",
+          "C": "及時的管理能力",
+          "D": "AI 生成內容的浮水印偵測",
+          "E": "知識庫整合"
+        },
+        "explanation": "Amazon Bedrock Guardrails 過濾提示和回應中的有害或不必要的內容，水印檢測可識別 AI 產生的內容，這支持透明度並有助於防止濫用。這兩個功能共同解決內容過濾和安全性問題。\n模型客製化、提示管理和知識庫整合提高了模型的能力、重用性和相關性，但它們都不能過濾內容或提供安全控制。"
+      }
+    }
   },
   {
     "id": "aif-q053",
@@ -593,7 +993,19 @@
     "lastVerified": "2026-06-02",
     "services": [
       "Amazon EC2"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家製藥公司將在私人資料上訓練自己的大型語言模型 (LLM)，並希望限制訓練的碳足跡。哪一種 Amazon EC2 執行個體類型對訓練 LLM 的環境影響最小？",
+        "options": {
+          "A": "Amazon EC2 P 系列",
+          "B": "Amazon EC2 Trn 系列",
+          "C": "Amazon EC2 G 系列",
+          "D": "Amazon EC2 C 系列"
+        },
+        "explanation": "Amazon EC2 Trn 系列執行個體由 AWS Trainium 提供支持，該執行個體專為大型模型的節能訓練而構建，因此它對所列選項的環境影響最小。\nC 系列是通用且運算最佳化的 CPU 執行個體，並非專門用於高效的 LLM 訓練。 G 和 P 系列是針對效能而非能源效率進行最佳化的 GPU 執行個體，因此它們對此工作負載具有更大的環境足跡。"
+      }
+    }
   },
   {
     "id": "aif-q160",
@@ -614,7 +1026,19 @@
     "lastVerified": "2026-06-02",
     "services": [
       "Amazon Bedrock"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "遊戲社群平台使用 Amazon Bedrock Guardrails 來篩選有害的使用者輸入和模型輸出。護欄可以過濾哪兩個內容類別？",
+        "options": {
+          "A": "政治",
+          "B": "討厭",
+          "C": "賭博",
+          "D": "暴力"
+        },
+        "explanation": "Amazon Bedrock Guardrails 包含針對仇恨和暴力等有害類別的可設定內容過濾器，可應用於使用者輸入和模型輸出。\n政治和賭博不是標準的 Bedrock Guardrails 內容過濾類別，因此 Guardrails 不會按它們進行過濾。"
+      }
+    }
   },
   {
     "id": "aif-q192",
@@ -632,7 +1056,19 @@
     "lastVerified": "2026-06-02",
     "services": [
       "Amazon Bedrock"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "論壇運營商希望阻止使用者發布歧視性內容併計劃使用 Amazon Bedrock。操作員如何使用Amazon Bedrock來滿足這個要求？",
+        "options": {
+          "A": "將使用者對話限制為一組預先定義主題",
+          "B": "阻止與預定義禁止主題相關的交互",
+          "C": "讓使用者依照個人喜好進行互動",
+          "D": "提供一系列回覆供使用者選擇"
+        },
+        "explanation": "Amazon Bedrock Guardrails 讓操作員定義不允許的主題或類別，例如歧視性或仇恨內容，並自動阻止屬於這些主題或類別的輸入和輸出，從而防止發布該內容。\n將對話限制為預先定義的允許主題是一種不同的控制，並且會限制正常使用而不是阻止特定的有害內容。讓使用者根據偏好進行互動並提供一系列回應對於過濾歧視性內容毫無幫助。"
+      }
+    }
   },
   {
     "id": "aif-q037",
@@ -648,7 +1084,19 @@
     "isMultiAnswer": false,
     "taskStatement": "4.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一個團隊訓練了一個模型，可以產生各種工作人員的圖像，但不平衡的資料會扭曲某些屬性並引入偏差。哪種技術可以解決這個問題？",
+        "options": {
+          "A": "部署後監控類別分佈",
+          "B": "擴充資料以平衡代表性不足的類別",
+          "C": "在現有不平衡資料上訓練更多紀元",
+          "D": "對生成的圖像應用更強的輸出過濾"
+        },
+        "explanation": "增加資料以平衡代表性不足的類別可以減少導致偏差的偏差，並從源頭解決問題。\n監控僅檢測不平衡，對相同不平衡資料訓練更多紀元會強化偏差，並且輸出過濾螢幕結果而不修復底層資料集。"
+      }
+    }
   },
   {
     "id": "aif-q054",
@@ -667,7 +1115,19 @@
     "services": [
       "Amazon Bedrock Guardrails",
       "Agents for Amazon Bedrock"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家公司開發了一個使用 Amazon Bedrock 創建兒童故事的應用程式，並且必須確保內容適合年輕使用者。適合哪個功能？",
+        "options": {
+          "A": "Amazon Bedrock 的代理",
+          "B": "Amazon Bedrock Guardrails",
+          "C": "Amazon Bedrock Prompt Management",
+          "D": "Amazon Bedrock 遊樂場"
+        },
+        "explanation": "Amazon Bedrock Guardrails 將內容過濾器和主題限制應用於模型輸出，使產生的故事適合兒童。\n代理編排任務，提示管理版本提示，遊樂場是實驗控制台；沒有一個強制執行內容安全。"
+      }
+    }
   },
   {
     "id": "aif-q123",
@@ -685,7 +1145,19 @@
     "lastVerified": "2026-06-02",
     "services": [
       "Amazon Bedrock Guardrails"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一項審計發現，銀行經過微調的貸款審批模式有利於某一族群。最具成本效益的修復是什麼？",
+        "options": {
+          "A": "將檢索增強生成 (RAG) 與微調模型結合使用",
+          "B": "增加更多樣化、代表性的訓練資料並再次微調",
+          "C": "在更多樣化的資料上預先訓練全新模型",
+          "D": "應用 Amazon Bedrock Guardrails 阻止有偏差的輸出"
+        },
+        "explanation": "添加更多樣化的、代表性的資料並對現有模型進行微調，再次教導它公平對待群體，這是最具成本效益的解決方案。\nRAG 增加了外部背景，但不能糾正習得偏差，預訓練新模型的成本要高得多，而 Guardrails 會過濾不安全的內容，而不是解決決策中的人口統計偏差。"
+      }
+    }
   },
   {
     "id": "aif-q169",
@@ -703,7 +1175,19 @@
     "lastVerified": "2026-06-02",
     "services": [
       "Amazon Bedrock Guardrails"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "Amazon Bedrock 上的檢索增強一代 (RAG) 時事通訊應用程式正在呈現帶有政治傾向的內容。哪一個 Amazon Bedrock Guardrails 功能可以過濾此內容？",
+        "options": {
+          "A": "詞過濾器",
+          "B": "內容過濾器",
+          "C": "被拒絕的話題",
+          "D": "敏感資訊過濾器"
+        },
+        "explanation": "拒絕的主題可讓您定義模型必須避免的主題，例如政治，並且 Amazon Bedrock 在生成過程中強制執行此操作，以過濾掉政治傾向的內容。\n單字過濾器僅阻止特定術語，內容過濾器針對仇恨或暴力等類別，敏感資訊過濾器會編輯 PII 等資料。"
+      }
+    }
   },
   {
     "id": "aif-q249",
@@ -721,7 +1205,19 @@
     "lastVerified": "2026-06-02",
     "services": [
       "Amazon Bedrock Guardrails"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "線上商店的聊天機器人必須過濾使用者提示及其回應中的有害內容。哪個 Amazon Bedrock 功能適合？",
+        "options": {
+          "A": "Amazon Bedrock Agents",
+          "B": "Amazon Bedrock Guardrails",
+          "C": "Amazon Bedrock Knowledge Bases",
+          "D": "Amazon Bedrock 自訂模型"
+        },
+        "explanation": "Amazon Bedrock Guardrails 過濾輸入提示和模型回應中的有害或不當內容，提供聊天機器人所需的保護措施。\nAmazon Bedrock Agents 編排任務，知識庫檢索上下文，自訂模型自訂行為；沒有一個過濾有害內容。"
+      }
+    }
   },
   {
     "id": "aif-q297",
@@ -740,7 +1236,19 @@
     "services": [
       "Amazon Bedrock Guardrails",
       "Amazon SageMaker Clarify"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家公司使用大型語言模型 (LLM) 來輔導應用程式，並且需要可配置的保護措施來以最少的努力執行標準安全規則。哪種解決方案適合？",
+        "options": {
+          "A": "Amazon SageMaker Clarify",
+          "B": "Amazon Bedrock Guardrails",
+          "C": "Amazon Bedrock Model Evaluation",
+          "D": "Amazon SageMaker JumpStart"
+        },
+        "explanation": "Amazon Bedrock Guardrails 提供可設定的保護措施，只需很少的設定工作即可對 LLM 輸入和輸出強制執行安全規則。\nSageMaker Clarify 檢測偏差，Amazon Bedrock Model Evaluation 對模型進行評分，SageMaker JumpStart 提供預先訓練的模型；沒有一個強制執行可設定的安全規則。"
+      }
+    }
   },
   {
     "id": "aif-q311",
@@ -756,7 +1264,19 @@
     "isMultiAnswer": false,
     "taskStatement": "4.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "模型在訓練資料上表現良好，但在評估資料上表現不佳。最可能的原因是什麼？",
+        "options": {
+          "A": "模型欠擬合",
+          "B": "模型過擬合",
+          "C": "訓練集和測試集之間存在資料洩漏",
+          "D": "模型需要更多的訓練週期"
+        },
+        "explanation": "當模型過於緊密地學習訓練資料（包括雜訊）時，就會發生過度擬合，因此它在訓練資料上表現良好，但無法推廣到看不見的評估資料。\n欠擬合模型即使在訓練資料上也表現不佳，資料外洩往往會誇大而不是降低測試性能，並且添加更多的紀元會加劇過度擬合而不是解釋它。"
+      }
+    }
   },
   {
     "id": "aif-q039",
@@ -777,7 +1297,19 @@
       "Amazon Inspector",
       "Amazon Macie",
       "Amazon Rekognition"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家銀行正在採用基礎模型 (FM) 來支持其貸款決策。監管機構要求模型透明且可解釋。哪種解決方案可以滿足這些要求？",
+        "options": {
+          "A": "設定安全性和合規性 Amazon Inspector",
+          "B": "使用 Amazon Macie 保護和加密訓練資料",
+          "C": "使用 Amazon SageMaker Clarify 產生指標、報告和範例說明",
+          "D": "使用 Amazon Rekognition 收集更多資料並新增自訂標籤"
+        },
+        "explanation": "Amazon SageMaker Clarify 透過產生指標、報告和範例說明來支援透明度和可解釋性，這些指標、報告和範例說明顯示模型如何做出決策，這有助於滿足監管要求。\nAmazon Inspector 掃描軟體漏洞，Amazon Macie 保護敏感資料，兩者都無法解釋模型行為。收集更多資料並使用 Amazon Rekognition 新增標籤可解決影像標籤問題，而非模型可解釋性問題。"
+      }
+    }
   },
   {
     "id": "aif-q060",
@@ -793,7 +1325,19 @@
     "isMultiAnswer": false,
     "taskStatement": "4.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家公司建立了一個聊天機器人，可以透過返回圖像來回答自然語言問題。它希望確保聊天機器人永遠不會返回不適當或不需要的圖像。哪種解決方案可以滿足這個要求？",
+        "options": {
+          "A": "在大型公共資料集上重新訓練模型",
+          "B": "自動收集使用者回饋",
+          "C": "整合內容審核 API",
+          "D": "進行模型驗證"
+        },
+        "explanation": "內容審核 API 會自動掃描聊天機器人傳回的影像，然後在不適當、不安全或不需要的內容到達使用者之前偵測並阻止這些內容，因此直接整合它們會強制要求聊天機器人永遠不會提供此類影像。\n在大型公共資料集上重新訓練模型不會添加過濾，甚至可能引入更多不需要的內容。執行模型驗證會檢查模型在開發過程中的行為是否符合預期，但在執行時不會篩選單獨的回應。自動收集使用者回饋會收集輸入以隨著時間的推移改進系統，但不會在提供不適當的影像時阻止它們。"
+      }
+    }
   },
   {
     "id": "aif-q171",
@@ -809,7 +1353,19 @@
     "isMultiAnswer": false,
     "taskStatement": "4.2",
     "lastVerified": "2026-06-01",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家電子零售商建構了一個人工智慧助手，可以使用其產品手冊回答客戶的問題。哪一種方法最有可能增加客戶對助理答案的信任？",
+        "options": {
+          "A": "顯示每個答案的模型置信度得分",
+          "B": "為助手提供螢幕上的機器人頭像",
+          "C": "連結到支援每個答案的產品手冊部分",
+          "D": "調整助手以配合品牌的語氣"
+        },
+        "explanation": "透過連結到支援每個答案的特定產品手冊部分，客戶可以自行驗證訊息，從而透過將回應基於可引用的權威來源而不是僅依賴模型的輸出來建立信任。\n顯示模型的置信度分數暴露了客戶無法解釋的內部價值，錯誤答案的高分會誤導而不是讓人放心。在螢幕上為助手提供機器人化身是一種演示選擇，表明該代理不是人類，但沒有說明其答案的準確性。調整助手以配合品牌的語氣可以提高一致性和風格，但客戶無法確認訊息本身是否正確。"
+      }
+    }
   },
   {
     "id": "aif-q389",
@@ -825,7 +1381,19 @@
     "isMultiAnswer": false,
     "taskStatement": "4.1",
     "lastVerified": "2026-06-03",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家出版公司使用生成式人工智慧模型為其書籍創建插圖。該公司發現一些生成的圖像與其他出版商的受版權保護的藝術品非常相似。這代表了哪個負責任的人工智慧問題？",
+        "options": {
+          "A": "模型幻覺",
+          "B": "智慧財產權侵權",
+          "C": "資料漂移",
+          "D": "過擬合"
+        },
+        "explanation": "當生成式人工智慧模型產生與受版權保護的作品非常相似的輸出時，就會增加知識產權侵權的風險，這是使用生成式人工智慧的法律風險，公司必須透過適當的資料管理和輸出審查來解決。\n模型幻覺是指產生看似合理但實際上不正確的內容，而不是複製現有的受版權保護的資料。資料漂移描述了輸入資料模式隨時間的變化。過度擬合是指模型對訓練資料記憶過於緊密，泛化能力較差，這與智慧財產權侵權是不同的技術問題。"
+      }
+    }
   },
   {
     "id": "aif-q390",
@@ -841,7 +1409,19 @@
     "isMultiAnswer": false,
     "taskStatement": "4.1",
     "lastVerified": "2026-06-03",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家銀行部署了一個生成式人工智慧聊天機器人，該機器人向多名客戶提供了不正確的財務指導，導致投訴和負面新聞報告。銀行面臨哪些生成式人工智慧的法律風險？",
+        "options": {
+          "A": "訓練資料中的抽樣偏差",
+          "B": "失去客戶信任",
+          "C": "模型欠擬合",
+          "D": "推理延遲增加"
+        },
+        "explanation": "失去客戶信任是部署生成式人工智慧的公認的法律風險，不準確或有害的輸出會削弱對組織的信心，導致客戶投訴，並可能導致聲譽受損和監管審查。\n抽樣偏差是一個資料品質問題，可能導致不公平的預測，但不是這裡遇到的法律風險。模型欠擬合是指模型太簡單，無法學習模式，這是技術訓練問題。推理延遲增加是與客戶信任或法律風險無關的績效問題。"
+      }
+    }
   },
   {
     "id": "aif-q391",
@@ -862,7 +1442,19 @@
       "Amazon SageMaker Clarify",
       "Amazon SageMaker Model Monitor",
       "Amazon Bedrock Guardrails"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一個醫療保健組織使用 ML 模型來標記異常的實驗室結果。為了確保負責任的人工智慧實踐，它希望醫療專業人員在將結果發送給患者之前審查模型不確定的任何預測。哪種 AWS 服務符合此要求？",
+        "options": {
+          "A": "Amazon SageMaker Clarify",
+          "B": "Amazon Augmented AI (Amazon A2I)",
+          "C": "Amazon SageMaker Model Monitor",
+          "D": "Amazon Bedrock Guardrails"
+        },
+        "explanation": "Amazon Augmented AI (Amazon A2I) 支持人工審核工作流程，其中低於置信閾值的預測將被發送給合格的審核人員，因此醫療專業人員可以在不確定的結果到達患者之前對其進行驗證，從而通過人工監督支持負責任的 AI。\nAmazon SageMaker Clarify 檢測偏差並解釋預測，但不會將不確定的預測發送給人類審查者。 Amazon SageMaker Model Monitor 可偵測已部署模型中的偏差，而不是對單一預測進行人工審查。 Amazon Bedrock Guardrails 過濾生成式 AI 模型中的內容，但不會為傳統 ML 預測建立人工審核循環。"
+      }
+    }
   },
   {
     "id": "aif-q392",
@@ -878,7 +1470,19 @@
     "isMultiAnswer": false,
     "taskStatement": "4.1",
     "lastVerified": "2026-06-03",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "組織在向客戶部署生成式人工智慧應用程式時應考慮下列哪些法律風險？",
+        "options": {
+          "A": "減少模型訓練時間",
+          "B": "提高硬體利用率",
+          "C": "不準確或有偏見的輸出對最終使用者造成潛在危害",
+          "D": "降低雲端運算成本"
+        },
+        "explanation": "不準確或有偏見的產出對最終使用者的潛在損害是組織必須考慮的法律風險，因為收到不正確的建議、有偏見的決定或有害內容的客戶可能會遭受真正的後果，導致責任、監管處罰和訴訟。\n減少模型訓練時間、提高硬體使用率和降低雲端運算成本是營運效益或指標，但不代表最終使用者的法律風險。"
+      }
+    }
   },
   {
     "id": "aif-q454",
@@ -894,7 +1498,19 @@
     "isMultiAnswer": false,
     "taskStatement": "4.1",
     "lastVerified": "2026-06-03",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家公司正在多種基礎模型之間進行選擇，並希望最大限度地減少人工智慧工作負載對環境的影響。哪種負責任的人工智慧實踐應該指導這個決定？",
+        "options": {
+          "A": "選擇可用的最大模型以最大限度地提高準確性",
+          "B": "選擇適合任務大小的模型，以減少不必要的計算和能源消耗",
+          "C": "始終使用最昂貴的型號以確保質量",
+          "D": "連續運行推理以使端點保持溫暖"
+        },
+        "explanation": "選擇適合任務大小的模型可以避免在不必要的容量上浪費運算資源和能源，這直接減少了人工智慧工作負載的環境足跡，並反映了注重永續性的負責任的模型選擇實踐。\n當較小的模型就足夠時，選擇最大的模型會浪費資源。使用最昂貴的模型本身並不會減少對環境的影響。當需求間歇性時，運作推理會持續浪費能量。"
+      }
+    }
   },
   {
     "id": "aif-q455",
@@ -910,7 +1526,19 @@
     "isMultiAnswer": false,
     "taskStatement": "4.2",
     "lastVerified": "2026-06-03",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家公司正在針對面向客戶的應用程式在深度神經網路和決策樹之間做出選擇。深度神經網路更準確，但公司需要向監管機構解釋每一個決定。這代表哪種權衡？",
+        "options": {
+          "A": "成本與延遲",
+          "B": "可解釋性與性能",
+          "C": "訓練時間與準確性",
+          "D": "資料量與模型大小"
+        },
+        "explanation": "可解釋性與效能的權衡意味著更複雜的模型（如深度神經網路）通常可以獲得更高的準確性，但更難解釋，而更簡單的模型（如決策樹）很容易解釋，但可能會犧牲一些效能，這正是公司面臨的壓力。\n成本與延遲、訓練時間與準確性以及資料量與模型大小是不同的權衡，無法描述解釋能力和預測準確性之間的緊張關係。"
+      }
+    }
   },
   {
     "id": "aif-q463",
@@ -934,7 +1562,20 @@
     "isMultiAnswer": false,
     "taskStatement": "4.1",
     "lastVerified": "2026-06-13",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "機器學習團隊正在貸款審批模型上線前後對其進行負責任的人工智慧偏差和公平性評估。依照從頭到尾的正確順序排列以下活動。",
+        "options": {
+          "A": "訓練模型的預測運行偏差指標，以比較受保護群體的結果",
+          "B": "檢查訓練資料集的類別不平衡和受保護群體的代表性不足",
+          "C": "定義公平標準並選擇哪些屬性（例如年齡或性別）被視為敏感",
+          "D": "在模型卡中記錄預期用途、評估結果和殘餘風險，供審閱者使用",
+          "E": "監控已部署端點隨時間的偏差和特徵歸因漂移"
+        },
+        "explanation": "您必須先定義公平標準並識別敏感屬性，因為以後的每個測量都取決於了解您正在比較哪些組以及公平性對於該用例意味著什麼。解決後，您可以分析訓練資料的不平衡性（訓練前偏差），然後測量經過訓練的模型在各組中的預測（訓練後偏差），在模型卡中記錄預期用途和結果，最後監視實時端點的漂移，該漂移僅在模型投入生產後才存在。\n學習者應該將順序錨定到生命週期：標準和定義出現在任何資料分析之前，資料偏差在模型偏差之前進行檢查，治理文件在發布之前捕獲結果，生產監控必須是最後的。一個誘人的錯誤是首先分析訓練資料，但如果沒有商定的公平標準和一組定義的敏感屬性，您將不知道哪些不平衡實際上很重要。"
+      }
+    }
   },
   {
     "id": "aif-q464",
@@ -967,6 +1608,24 @@
       "Amazon SageMaker Model Monitor",
       "Amazon Augmented AI (Amazon A2I)",
       "Amazon SageMaker Model Cards"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "將每個 AWS 負責任的 AI 功能與其服務的目的相符。將左側的每個功能與右側的單一最佳描述配對。",
+        "options": {
+          "A": "Amazon SageMaker Clarify",
+          "B": "Amazon SageMaker Model Monitor",
+          "C": "Amazon Augmented AI (Amazon A2I)",
+          "D": "Amazon SageMaker Model Cards"
+        },
+        "explanation": "SageMaker Clarify 計算資料集和訓練模型的偏差指標，並產生 SHAP 特徵歸因來解釋預測，因此它對應到目標 2。模型監視器持續檢查即時端點並針對漂移發出警報，包括映射到目標 4 的特徵歸因漂移； Amazon A2I 向人工審閱者發送低置信度預測，映射到目標 1；模型卡記錄預期用途、結果和治理風險評級，映射到目標 3。\n內部化的區別在於每個工具何時起作用：澄清和模型卡主要在部署之前應用，以實現可解釋性和文件記錄，A2I 在推理時將人員插入循環中，模型監視器在部署後運行以捕獲偏差。一個常見的錯誤是將漂移偵測分配給 Clarify； Clarify 衡量某個時間點作業的偏差和可解釋性，而 Model Monitor 則追蹤這些訊號在生產中的變化。",
+        "targets": {
+          "1": "將低於置信閾值的預測路由給人工審核人員以做出最終決定",
+          "2": "檢測資料和模型中的偏差，並使用 SHAP 值等特徵屬性解釋預測",
+          "3": "將模型的預期用途、評估結果和風險評級記錄在一處以進行治理",
+          "4": "監視已部署的端點並就資料品質問題和功能屬性隨時間變化發出警報"
+        }
+      }
+    }
   }
 ]

@@ -13,7 +13,19 @@
     "isMultiAnswer": false,
     "explanation": "The shared responsibility model separates cloud infrastructure duties from customer configuration and data duties.\nThe other choices misunderstand the model.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "生產團隊必須使安全控制與 AWS 責任共擔模型保持一致。哪一種做法是正確的？",
+        "options": {
+          "A": "假設客戶修補託管服務硬體",
+          "B": "禁用所有控件",
+          "C": "分別確定 AWS 管理的責任和客戶雲端配置的責任",
+          "D": "假設 AWS 保護每個客戶設定的安全"
+        },
+        "explanation": "共享責任模型將雲端基礎設施職責與客戶配置和資料職責分開。\n其他選擇誤解了模型。"
+      }
+    }
   },
   {
     "id": "scs-c03-d6-002",
@@ -29,7 +41,19 @@
     "isMultiAnswer": false,
     "explanation": "Conformance packs bundle Config rules and remediation guidance for a baseline.\nThe other choices do not evaluate resource compliance.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "多帳戶平台團隊需要持續的證據來證明資源符合基準。應該使用哪種服務？",
+        "options": {
+          "A": "Amazon CloudFront",
+          "B": "Amazon EFS",
+          "C": "Amazon SES",
+          "D": "AWS Config 一致性套件"
+        },
+        "explanation": "一致性包捆綁了基準的配置規則和修復指南。\n其他選擇不評估資源合規性。"
+      }
+    }
   },
   {
     "id": "scs-c03-d6-003",
@@ -45,7 +69,19 @@
     "isMultiAnswer": false,
     "explanation": "Security Hub centralizes findings and provides standards and prioritization.\nThe other choices monitor cost, DNS, or messages.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "受監管的公司必須集中安全發現並優先處理高風險問題。應該評估哪些服務？",
+        "options": {
+          "A": "AWS Security Hub",
+          "B": "AWS Budgets",
+          "C": "Amazon Route 53",
+          "D": "Amazon SQS"
+        },
+        "explanation": "Security Hub 集中發現結果並提供標準和優先順序。\n其他選擇監控成本、DNS 或訊息。"
+      }
+    }
   },
   {
     "id": "scs-c03-d6-004",
@@ -61,7 +97,19 @@
     "isMultiAnswer": false,
     "explanation": "Artifact provides on-demand access to AWS compliance documents and agreements.\nThe other choices detect threats, filter web requests, or host databases.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備增加流量的新創公司需要一份正式的 AWS 合規性認證和證明報告。哪項服務提供 AWS 報告？",
+        "options": {
+          "A": "Amazon RDS",
+          "B": "AWS Artifact",
+          "C": "Amazon GuardDuty",
+          "D": "AWS WAF"
+        },
+        "explanation": "Artifact 提供對 AWS 合規性文件和協議的按需存取。\n其他選擇偵測威脅、過濾 Web 要求或託管資料庫。"
+      }
+    }
   },
   {
     "id": "scs-c03-d6-005",
@@ -77,7 +125,19 @@
     "isMultiAnswer": false,
     "explanation": "Root-use restrictions and MFA reduce the highest-impact credential risk.\nRoutine root use and shared keys increase risk.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "支援關鍵工作負載的營運團隊必須保護組織根使用者免於日常濫用。哪種做法合適？",
+        "options": {
+          "A": "與開發人員分享根金鑰",
+          "B": "停用所有審核日誌記錄",
+          "C": "僅在需要時使用 root 使用者並啟用 MFA",
+          "D": "使用root進行日常工作"
+        },
+        "explanation": "根使用限制和 MFA 降低了影響最大的憑證風險。\n常規 root 使用和共用金鑰會增加風險。"
+      }
+    }
   },
   {
     "id": "scs-c03-d6-006",
@@ -93,7 +153,19 @@
     "isMultiAnswer": false,
     "explanation": "The shared responsibility model separates cloud infrastructure duties from customer configuration and data duties.\nThe other choices misunderstand the model.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "資料平台團隊必須使安全控制與 AWS 責任共擔模型保持一致。哪一種做法是正確的？",
+        "options": {
+          "A": "假設 AWS 保護每個客戶設定的安全",
+          "B": "假設客戶修補託管服務硬體",
+          "C": "禁用所有控件",
+          "D": "分別確定 AWS 管理的責任和客戶雲端配置的責任"
+        },
+        "explanation": "共享責任模型將雲端基礎設施職責與客戶配置和資料職責分開。\n其他選擇誤解了模型。"
+      }
+    }
   },
   {
     "id": "scs-c03-d6-007",
@@ -109,7 +181,19 @@
     "isMultiAnswer": false,
     "explanation": "Conformance packs bundle Config rules and remediation guidance for a baseline.\nThe other choices do not evaluate resource compliance.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有安全意識的工程團隊需要持續的證據來證明資源符合基準。應該使用哪種服務？",
+        "options": {
+          "A": "AWS Config 一致性套件",
+          "B": "Amazon CloudFront",
+          "C": "Amazon EFS",
+          "D": "Amazon SES"
+        },
+        "explanation": "一致性包捆綁了基準的配置規則和修復指南。\n其他選擇不評估資源合規性。"
+      }
+    }
   },
   {
     "id": "scs-c03-d6-008",
@@ -125,7 +209,19 @@
     "isMultiAnswer": false,
     "explanation": "Security Hub centralizes findings and provides standards and prioritization.\nThe other choices monitor cost, DNS, or messages.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "遷移現有工作負載的公司必須集中安全發現並優先考慮高風險問題。應該評估哪些服務？",
+        "options": {
+          "A": "Amazon SQS",
+          "B": "AWS Security Hub",
+          "C": "AWS Budgets",
+          "D": "Amazon Route 53"
+        },
+        "explanation": "Security Hub 集中發現結果並提供標準和優先順序。\n其他選擇監控成本、DNS 或訊息。"
+      }
+    }
   },
   {
     "id": "scs-c03-d6-009",
@@ -141,7 +237,19 @@
     "isMultiAnswer": false,
     "explanation": "Artifact provides on-demand access to AWS compliance documents and agreements.\nThe other choices detect threats, filter web requests, or host databases.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有嚴格恢復目標的團隊需要一份正式的 AWS 合規性認證和證明報告。哪項服務提供 AWS 報告？",
+        "options": {
+          "A": "AWS WAF",
+          "B": "Amazon RDS",
+          "C": "AWS Artifact",
+          "D": "Amazon GuardDuty"
+        },
+        "explanation": "Artifact 提供對 AWS 合規性文件和協議的按需存取。\n其他選擇偵測威脅、過濾 Web 要求或託管資料庫。"
+      }
+    }
   },
   {
     "id": "scs-c03-d6-010",
@@ -157,7 +265,19 @@
     "isMultiAnswer": false,
     "explanation": "Root-use restrictions and MFA reduce the highest-impact credential risk.\nRoutine root use and shared keys increase risk.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備發布的開發團隊必須保護組織根使用者免受日常濫用。哪種做法合適？",
+        "options": {
+          "A": "使用root進行日常工作",
+          "B": "與開發人員分享根金鑰",
+          "C": "停用所有審核日誌記錄",
+          "D": "僅在需要時使用 root 使用者並啟用 MFA"
+        },
+        "explanation": "根使用限制和 MFA 降低了影響最大的憑證風險。\n常規 root 使用和共用金鑰會增加風險。"
+      }
+    }
   },
   {
     "id": "scs-c03-d6-011",
@@ -173,7 +293,19 @@
     "isMultiAnswer": false,
     "explanation": "The shared responsibility model separates cloud infrastructure duties from customer configuration and data duties.\nThe other choices misunderstand the model.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "擁有多個 AWS 區域的企業必須使安全控制與 AWS 責任共擔模型保持一致。哪一種做法是正確的？",
+        "options": {
+          "A": "分別確定 AWS 管理的責任和客戶雲端配置的責任",
+          "B": "假設 AWS 保護每個客戶設定的安全",
+          "C": "假設客戶修補託管服務硬體",
+          "D": "禁用所有控件"
+        },
+        "explanation": "共享責任模型將雲端基礎設施職責與客戶配置和資料職責分開。\n其他選擇誤解了模型。"
+      }
+    }
   },
   {
     "id": "scs-c03-d6-012",
@@ -189,7 +321,19 @@
     "isMultiAnswer": false,
     "explanation": "Conformance packs bundle Config rules and remediation guidance for a baseline.\nThe other choices do not evaluate resource compliance.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "審查事件的服務所有者需要持續的證據來證明資源符合基準。應該使用哪種服務？",
+        "options": {
+          "A": "Amazon SES",
+          "B": "AWS Config 一致性套件",
+          "C": "Amazon CloudFront",
+          "D": "Amazon EFS"
+        },
+        "explanation": "一致性包捆綁了基準的配置規則和修復指南。\n其他選擇不評估資源合規性。"
+      }
+    }
   },
   {
     "id": "scs-c03-d6-013",
@@ -205,7 +349,19 @@
     "isMultiAnswer": false,
     "explanation": "Security Hub centralizes findings and provides standards and prioritization.\nThe other choices monitor cost, DNS, or messages.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "優化現有實施的團隊必須集中安全發現並優先考慮高風險問題。應該評估哪些服務？",
+        "options": {
+          "A": "Amazon Route 53",
+          "B": "Amazon SQS",
+          "C": "AWS Security Hub",
+          "D": "AWS Budgets"
+        },
+        "explanation": "Security Hub 集中發現結果並提供標準和優先順序。\n其他選擇監控成本、DNS 或訊息。"
+      }
+    }
   },
   {
     "id": "scs-c03-d6-014",
@@ -221,7 +377,19 @@
     "isMultiAnswer": false,
     "explanation": "Artifact provides on-demand access to AWS compliance documents and agreements.\nThe other choices detect threats, filter web requests, or host databases.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "引進自動化工作流程的公司需要一份正式的 AWS 合規性認證和證明報告。哪項服務提供 AWS 報告？",
+        "options": {
+          "A": "Amazon GuardDuty",
+          "B": "AWS WAF",
+          "C": "Amazon RDS",
+          "D": "AWS Artifact"
+        },
+        "explanation": "Artifact 提供對 AWS 合規性文件和協議的按需存取。\n其他選擇偵測威脅、過濾 Web 要求或託管資料庫。"
+      }
+    }
   },
   {
     "id": "scs-c03-d6-015",
@@ -237,7 +405,19 @@
     "isMultiAnswer": false,
     "explanation": "Root-use restrictions and MFA reduce the highest-impact credential risk.\nRoutine root use and shared keys increase risk.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "在共享環境中工作的 AWS 管理員必須保護組織根使用者免於日常濫用。哪種做法合適？",
+        "options": {
+          "A": "僅在需要時使用 root 使用者並啟用 MFA",
+          "B": "使用root進行日常工作",
+          "C": "與開發人員分享根金鑰",
+          "D": "停用所有審核日誌記錄"
+        },
+        "explanation": "根使用限制和 MFA 降低了影響最大的憑證風險。\n常規 root 使用和共用金鑰會增加風險。"
+      }
+    }
   },
   {
     "id": "scs-c03-d6-016",
@@ -253,7 +433,19 @@
     "isMultiAnswer": false,
     "explanation": "The shared responsibility model separates cloud infrastructure duties from customer configuration and data duties.\nThe other choices misunderstand the model.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "面向客戶的應用程式團隊必須使安全控制與 AWS 責任共擔模型保持一致。哪一種做法是正確的？",
+        "options": {
+          "A": "禁用所有控件",
+          "B": "分別確定 AWS 管理的責任和客戶雲端配置的責任",
+          "C": "假設 AWS 保護每個客戶設定的安全",
+          "D": "假設客戶修補託管服務硬體"
+        },
+        "explanation": "共享責任模型將雲端基礎設施職責與客戶配置和資料職責分開。\n其他選擇誤解了模型。"
+      }
+    }
   },
   {
     "id": "scs-c03-d6-017",
@@ -269,7 +461,19 @@
     "isMultiAnswer": false,
     "explanation": "Conformance packs bundle Config rules and remediation guidance for a baseline.\nThe other choices do not evaluate resource compliance.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "標準化其 AWS 部署的平台團隊需要持續的證據來證明資源符合基準。應該使用哪種服務？",
+        "options": {
+          "A": "Amazon EFS",
+          "B": "Amazon SES",
+          "C": "AWS Config 一致性套件",
+          "D": "Amazon CloudFront"
+        },
+        "explanation": "一致性包捆綁了基準的配置規則和修復指南。\n其他選擇不評估資源合規性。"
+      }
+    }
   },
   {
     "id": "scs-c03-d6-018",
@@ -285,7 +489,19 @@
     "isMultiAnswer": false,
     "explanation": "Security Hub centralizes findings and provides standards and prioritization.\nThe other choices monitor cost, DNS, or messages.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備審計證據的團隊必須集中安全發現並優先考慮高風險問題。應該評估哪些服務？",
+        "options": {
+          "A": "AWS Budgets",
+          "B": "Amazon Route 53",
+          "C": "Amazon SQS",
+          "D": "AWS Security Hub"
+        },
+        "explanation": "Security Hub 集中發現結果並提供標準和優先順序。\n其他選擇監控成本、DNS 或訊息。"
+      }
+    }
   },
   {
     "id": "scs-c03-d6-019",
@@ -301,7 +517,19 @@
     "isMultiAnswer": false,
     "explanation": "Artifact provides on-demand access to AWS compliance documents and agreements.\nThe other choices detect threats, filter web requests, or host databases.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "替代手動流程的企業需要一份正式的 AWS 合規性認證和證明報告。哪項服務提供 AWS 報告？",
+        "options": {
+          "A": "AWS Artifact",
+          "B": "Amazon GuardDuty",
+          "C": "AWS WAF",
+          "D": "Amazon RDS"
+        },
+        "explanation": "Artifact 提供對 AWS 合規性文件和協議的按需存取。\n其他選擇偵測威脅、過濾 Web 要求或託管資料庫。"
+      }
+    }
   },
   {
     "id": "scs-c03-d6-020",
@@ -317,7 +545,19 @@
     "isMultiAnswer": false,
     "explanation": "Root-use restrictions and MFA reduce the highest-impact credential risk.\nRoutine root use and shared keys increase risk.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "根據考試指南驗證設計的團隊必須保護組織根使用者免受日常濫用。哪種做法合適？",
+        "options": {
+          "A": "停用所有審核日誌記錄",
+          "B": "僅在需要時使用 root 使用者並啟用 MFA",
+          "C": "使用root進行日常工作",
+          "D": "與開發人員分享根金鑰"
+        },
+        "explanation": "根使用限制和 MFA 降低了影響最大的憑證風險。\n常規 root 使用和共用金鑰會增加風險。"
+      }
+    }
   },
   {
     "id": "scs-c03-d6-021",
@@ -333,7 +573,19 @@
     "isMultiAnswer": false,
     "explanation": "The shared responsibility model separates cloud infrastructure duties from customer configuration and data duties.\nThe other choices misunderstand the model.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "生產團隊必須使安全控制與 AWS 責任共擔模型保持一致。哪一種做法是正確的？",
+        "options": {
+          "A": "假設客戶修補託管服務硬體",
+          "B": "禁用所有控件",
+          "C": "分別確定 AWS 管理的責任和客戶雲端配置的責任",
+          "D": "假設 AWS 保護每個客戶設定的安全"
+        },
+        "explanation": "共享責任模型將雲端基礎設施職責與客戶配置和資料職責分開。\n其他選擇誤解了模型。"
+      }
+    }
   },
   {
     "id": "scs-c03-d6-022",
@@ -349,7 +601,19 @@
     "isMultiAnswer": false,
     "explanation": "Conformance packs bundle Config rules and remediation guidance for a baseline.\nThe other choices do not evaluate resource compliance.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "多帳戶平台團隊需要持續的證據來證明資源符合基準。應該使用哪種服務？",
+        "options": {
+          "A": "Amazon CloudFront",
+          "B": "Amazon EFS",
+          "C": "Amazon SES",
+          "D": "AWS Config 一致性套件"
+        },
+        "explanation": "一致性包捆綁了基準的配置規則和修復指南。\n其他選擇不評估資源合規性。"
+      }
+    }
   },
   {
     "id": "scs-c03-d6-023",
@@ -365,7 +629,19 @@
     "isMultiAnswer": false,
     "explanation": "Security Hub centralizes findings and provides standards and prioritization.\nThe other choices monitor cost, DNS, or messages.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "受監管的公司必須集中安全發現並優先處理高風險問題。應該評估哪些服務？",
+        "options": {
+          "A": "AWS Security Hub",
+          "B": "AWS Budgets",
+          "C": "Amazon Route 53",
+          "D": "Amazon SQS"
+        },
+        "explanation": "Security Hub 集中發現結果並提供標準和優先順序。\n其他選擇監控成本、DNS 或訊息。"
+      }
+    }
   },
   {
     "id": "scs-c03-d6-024",
@@ -381,7 +657,19 @@
     "isMultiAnswer": false,
     "explanation": "Artifact provides on-demand access to AWS compliance documents and agreements.\nThe other choices detect threats, filter web requests, or host databases.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備增加流量的新創公司需要一份正式的 AWS 合規性認證和證明報告。哪項服務提供 AWS 報告？",
+        "options": {
+          "A": "Amazon RDS",
+          "B": "AWS Artifact",
+          "C": "Amazon GuardDuty",
+          "D": "AWS WAF"
+        },
+        "explanation": "Artifact 提供對 AWS 合規性文件和協議的按需存取。\n其他選擇偵測威脅、過濾 Web 要求或託管資料庫。"
+      }
+    }
   },
   {
     "id": "scs-c03-d6-025",
@@ -397,7 +685,19 @@
     "isMultiAnswer": false,
     "explanation": "Root-use restrictions and MFA reduce the highest-impact credential risk.\nRoutine root use and shared keys increase risk.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "支援關鍵工作負載的營運團隊必須保護組織根使用者免於日常濫用。哪種做法合適？",
+        "options": {
+          "A": "與開發人員分享根金鑰",
+          "B": "停用所有審核日誌記錄",
+          "C": "僅在需要時使用 root 使用者並啟用 MFA",
+          "D": "使用root進行日常工作"
+        },
+        "explanation": "根使用限制和 MFA 降低了影響最大的憑證風險。\n常規 root 使用和共用金鑰會增加風險。"
+      }
+    }
   },
   {
     "id": "scs-c03-d6-026",
@@ -413,7 +713,19 @@
     "isMultiAnswer": false,
     "explanation": "The shared responsibility model separates cloud infrastructure duties from customer configuration and data duties.\nThe other choices misunderstand the model.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "資料平台團隊必須使安全控制與 AWS 責任共擔模型保持一致。哪一種做法是正確的？",
+        "options": {
+          "A": "假設 AWS 保護每個客戶設定的安全",
+          "B": "假設客戶修補託管服務硬體",
+          "C": "禁用所有控件",
+          "D": "分別確定 AWS 管理的責任和客戶雲端配置的責任"
+        },
+        "explanation": "共享責任模型將雲端基礎設施職責與客戶配置和資料職責分開。\n其他選擇誤解了模型。"
+      }
+    }
   },
   {
     "id": "scs-c03-d6-027",
@@ -429,6 +741,18 @@
     "isMultiAnswer": false,
     "explanation": "Conformance packs bundle Config rules and remediation guidance for a baseline.\nThe other choices do not evaluate resource compliance.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有安全意識的工程團隊需要持續的證據來證明資源符合基準。應該使用哪種服務？",
+        "options": {
+          "A": "AWS Config 一致性套件",
+          "B": "Amazon CloudFront",
+          "C": "Amazon EFS",
+          "D": "Amazon SES"
+        },
+        "explanation": "一致性包捆綁了基準的配置規則和修復指南。\n其他選擇不評估資源合規性。"
+      }
+    }
   }
 ]

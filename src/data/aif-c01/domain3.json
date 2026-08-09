@@ -13,7 +13,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家旅遊公司使用預先訓練的大語言模型 (LLM) 來支援預訂助理。公司需要助理的回覆簡短並以特定語言書寫。哪一種方法最能使法學碩士的產出與這些期望一致？",
+        "options": {
+          "A": "選擇不同規模的LLM",
+          "B": "增加溫度值",
+          "C": "細化提示",
+          "D": "增加Top K值"
+        },
+        "explanation": "透過細化提示，公司可以直接說明所需的回應長度和目標語言，因此模型會以所選語言傳回簡短的答案。\n選擇不同的模型大小會改變模型的容量和成本，而不是強制長度或語言。提高溫度會增加隨機性，使輸出更難以控制。增加 Top K 值會擴大候選標記池，這也不會控制反應長度或語言。"
+      }
+    }
   },
   {
     "id": "aif-q008",
@@ -34,7 +46,19 @@
       "Amazon Rekognition",
       "Amazon SageMaker Ground Truth",
       "Amazon Bedrock"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "製造商需要用於缺陷檢測模型的高精度標記影像資料集，並希望將錯誤標記的範例保持在最低限度。哪一種方法最能滿足這些要求？",
+        "options": {
+          "A": "使用 Amazon Rekognition Custom Labels 自動註釋",
+          "B": "使用 Amazon SageMaker Ground Truth Plus 進行人機互動驗證",
+          "C": "使用 Amazon Bedrock 基礎模型產生合成影像",
+          "D": "使用 Amazon SageMaker Ground Truth 自動主動學習標籤"
+        },
+        "explanation": "使用 Amazon SageMaker Ground Truth Plus 進行的人機互動驗證將標籤透過專家審查者進行驗證和更正，從而以最少的錯誤產生最高精度的註釋。\nAmazon Rekognition Custom Labels 自動標記，但如果沒有人工審核，可能會傳播錯誤；使用 Amazon Bedrock 模型生成合成圖像會創建資料，但不會驗證標籤； SageMaker Ground Truth 的自動主動學習標籤減少了工作量，但增加了錯誤的可能性。"
+      }
+    }
   },
   {
     "id": "aif-q019",
@@ -52,7 +76,19 @@
     "lastVerified": "2026-06-02",
     "services": [
       "Amazon Bedrock"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家公司使用 Amazon Bedrock 的基礎模型 (FM) 作為搜尋工具。該公司希望根據自己的資料對 FM 進行微調，使該工具更加準確。哪一種方法可以正確微調模型？",
+        "options": {
+          "A": "購買 Amazon Bedrock 的預先設定吞吐量",
+          "B": "提供標籤的範例，每個範例包含一個提示欄位和一個完成字段",
+          "C": "將資料集準備為包含多行 .csv 內容的 .txt 檔案",
+          "D": "在期刊和教科書中訓練模型"
+        },
+        "explanation": "在 Amazon Bedrock 上微調模型需要一個帶有標籤的資料集，其中每個記錄將輸入提示與預期完成配對，以便模型從公司資料中學習所需的輸入到輸出行為。\n預配置吞吐量是用於推理的容量和定價選項，而不是微調方法。包含 .csv 行的 .txt 檔案不是所需的微調格式。期刊和教科書上的培訓是非結構化內容，缺乏微調所需的提示和完成對。"
+      }
+    }
   },
   {
     "id": "aif-q021",
@@ -70,7 +106,19 @@
     "lastVerified": "2026-06-02",
     "services": [
       "Amazon OpenSearch Service"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "工程團隊希望使用 Amazon OpenSearch Service 作為向量搜尋應用程式的骨幹。哪種能力使這成為可能？",
+        "options": {
+          "A": "全文關鍵字（BM25）搜尋及排名",
+          "B": "地理空間索引和查詢",
+          "C": "高維向量上的 k-NN 最近鄰搜索",
+          "D": "用於災難復原的跨集群複製"
+        },
+        "explanation": "k-NN 最近鄰搜尋讓 Amazon OpenSearch Service 索引嵌入並傳回與查詢最相似的向量，這是語義搜尋等向量資料庫應用程式的核心。\nBM25全文檢索符合關鍵字而非語意向量；地理空間索引處理位置資料；跨叢集複製支援可用性和災難復原。沒有一個提供向量相似性搜尋。"
+      }
+    }
   },
   {
     "id": "aif-q024",
@@ -86,7 +134,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家公司正在基礎模型 (FM) 上建立自助服務支援聊天機器人。聊天機器人的回應必須符合公司的品牌基調。哪種解決方案可以滿足這個要求？",
+        "options": {
+          "A": "迭代並完善提示，直到 FM 產生所需風格的回應",
+          "B": "設定 FM 可以產生的代幣數量下限",
+          "C": "使用批量推理產生詳細回應",
+          "D": "設定更高的溫度值"
+        },
+        "explanation": "迭代地完善提示可以引導基礎模型做出與公司品牌基調相符的反應，因為提示說明和範例塑造了輸出的風格。\n限制輸出令牌只會縮短回應時間。批量推理會改變請求的處理方式，而不是語氣。升高溫度會增加隨機性，這會使音調變得不那麼一致，而不是更一致。"
+      }
+    }
   },
   {
     "id": "aif-q025",
@@ -102,7 +162,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家公司希望在 Amazon Bedrock 上使用大型語言模型 (LLM) 將文本段落標記為正面或負面。哪一種即時工程策略可以滿足這項要求？",
+        "options": {
+          "A": "在提示中添加情感分析以及法學碩士如何工作的詳細說明",
+          "B": "僅提供要分類的新段落，沒有範例或其他上下文",
+          "C": "在提示中包含一些範例段落，每個段落都標記為正面或負面",
+          "D": "包括新的段落以及一些不相關任務的範例，例如摘要或翻譯"
+        },
+        "explanation": "包括一些範例段落，每個段落都標記為正面或負面，這是少量提示，它向模型顯示輸入到標籤的模式，並提高新段落的分類準確性。\n添加情緒分析或法學碩士如何運作的解釋提供了理論，但沒有可供學習的範例。僅提供沒有範例的段落是零樣本，並且給模型的指導較少。不相關任務的範例（例如摘要或翻譯）使模型遠離情感分類。"
+      }
+    }
   },
   {
     "id": "aif-q029",
@@ -118,7 +190,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家新創公司正在推出一款由 LLM 驅動的虛擬代理，並希望阻止使用者誘使其進行不安全的操作或洩露其隱藏指令。哪一種行動最直接降低這種風險？",
+        "options": {
+          "A": "提高模型的溫度，使響應變化更大",
+          "B": "提高 Top P 值以擴大令牌抽樣範圍",
+          "C": "在提示範本中加入系統指令，教導模型辨識和拒絕操縱嘗試",
+          "D": "減少每個請求的最大輸出長度"
+        },
+        "explanation": "帶有系統指令的提示範本可以教導模型發現和拒絕操縱模式，這是一種提示工程保障措施，可以直接降低提示注入和指令洩漏的風險。\n提高溫度或 Top P 僅改變採樣的隨機性，縮短最大輸出長度只會截斷響應；這些計數器都不會提示操縱。"
+      }
+    }
   },
   {
     "id": "aif-q038",
@@ -137,7 +221,19 @@
     "services": [
       "Amazon Bedrock",
       "Amazon Bedrock Knowledge Bases"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家物流公司在 Amazon Bedrock 上運行 Amazon Titan 模型，並希望該模型的答案能夠利用其內部運輸單據。哪個解決方案添加了這個私有上下文？",
+        "options": {
+          "A": "在內部文件上微調FM",
+          "B": "基於內部文件建立 Amazon Bedrock 知識庫",
+          "C": "降低溫度值",
+          "D": "切換到更大的基礎模型"
+        },
+        "explanation": "Amazon Bedrock 知識庫對內部文件進行索引，並在查詢時 (RAG) 檢索相關段落，因此 Titan 模型無需任何訓練即可將其答案建立在公司的私有資料中。\n微調可以嵌入知識，但成本較高且靜態，因此不是用常用文件補充答案的有針對性的方式；降低溫度只會降低隨機性；切換到更大的模型會增加功能，但仍然無法存取私有文件。"
+      }
+    }
   },
   {
     "id": "aif-q046",
@@ -156,7 +252,19 @@
     "services": [
       "Amazon Bedrock",
       "Amazon Bedrock Knowledge Bases"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家電器製造商希望以最低的成本在 Amazon Bedrock 上使用大型語言模型 (LLM) 為其 PDF 產品手冊提供聊天介面。哪種方法最適合？",
+        "options": {
+          "A": "將所有手冊新增至每個提示作為上下文",
+          "B": "將手冊上傳至 Amazon Bedrock 知識庫並僅檢索每個查詢的相關段落",
+          "C": "在手冊上微調模型並服務微調後的模型",
+          "D": "根據手冊內容持續預訓練基礎模型"
+        },
+        "explanation": "知識庫僅檢索與每個問題相關的段落，因此模型可以廉價地獲得正確的上下文，而無需每次都付費發送整個手冊或訓練模型。\n將所有手冊貼到每個提示中會增加令牌成本；微調會增加訓練成本，並且手冊更改時必須重做；對語料庫進行持續預訓練是最昂貴的選擇，對於問答介面來說是不必要的。"
+      }
+    }
   },
   {
     "id": "aif-q064",
@@ -172,7 +280,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.3",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家生技公司的聊天機器人回答了密集的臨床研究論文中的問題，但即使經過幾次及時調整，該模型也無法很好地處理專業術語。什麼最能改善它？",
+        "options": {
+          "A": "使用範例問答對進行幾次提示",
+          "B": "在專業語料庫上應用領域適應微調",
+          "C": "在論文上加入檢索增強產生 (RAG) 步驟",
+          "D": "降低溫度讓答案更有針對性"
+        },
+        "explanation": "領域適應微調在專門的語料庫上訓練模型，使其實際上學習臨床術語，從而解決了對密集領域語言的理解不佳的問題。\n少量提示和較低溫度會形成反應，但不會教授新詞彙； RAG 步驟檢索相關段落，但模型仍難以解釋它尚未學習的專業術語。"
+      }
+    }
   },
   {
     "id": "aif-q069",
@@ -188,7 +308,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家線上學習公司運行一個問答助手，並希望答案風格與每個學習者的年齡範圍相匹配，該應用程式已將其傳遞給模型。哪種方法需要最少的努力？",
+        "options": {
+          "A": "為每個年齡組訓練單獨的微調模型",
+          "B": "建構特定年齡內容的檢索增強生成 (RAG) 管道",
+          "C": "使用第二個模型對每個回應進行後處理以調整語氣",
+          "D": "將角色和受眾說明加入提示中，說明使用者的年齡範圍"
+        },
+        "explanation": "在提示中添加角色和觀眾指令是一個簡單的提示工程更改，可以將風格引導到指定的年齡範圍，幾乎不需要額外的工作。\n根據年齡範圍微調模型、建立特定年齡內容的 RAG 管道以及運行第二個模型來重寫語氣，所有這些都會增加大量資料、基礎設施或處理工作。"
+      }
+    }
   },
   {
     "id": "aif-q076",
@@ -204,7 +336,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "團隊每天向 Amazon Bedrock 上的基本模型發送包含 10 個範例的少量提示。該模型表現良好，但團隊希望削減每月成本。哪個改變有幫助？",
+        "options": {
+          "A": "購買模型的預配置吞吐量",
+          "B": "減少提示中範例和標記的數量",
+          "C": "微調模型，以便提示中不再需要範例",
+          "D": "將工作負載轉移到更大、更強大的模型"
+        },
+        "explanation": "由於成本隨著處理的令牌而變化，因此減少提示中的範例和令牌的數量可以降低費用，同時模型保持良好的效能。\n預置吞吐量意味著高、穩定的容量，並且對於每天一次的工作來說成本更高；微調刪除了提示範例，但增加了培訓成本；轉向更大的模型會增加每次呼叫的成本。"
+      }
+    }
   },
   {
     "id": "aif-q079",
@@ -220,7 +364,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.4",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家旅遊公司透過法學碩士將其幫助文章本地化為多種語言，並根據人工參考對每個機器翻譯進行評分。哪一個指標是專門為機器翻譯而建構的？",
+        "options": {
+          "A": "BERT評分",
+          "B": "面向回憶的 Gisting 評估研究 (ROUGE)",
+          "C": "雙語評量學生（BLEU）",
+          "D": "字錯誤率"
+        },
+        "explanation": "BLEU 專為機器翻譯而設計，測量候選翻譯與一個或多個人類參考之間的 n-gram 重疊，這正是所描述的比較。\nROUGE 的目標是摘要召回； BERTcore 衡量一般語義相似性，而不是作為標準翻譯指標；單字錯誤率評估語音轉錄。"
+      }
+    }
   },
   {
     "id": "aif-q081",
@@ -236,7 +392,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.3",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "持續預訓練基礎模型 (FM) 有什麼好處？",
+        "options": {
+          "A": "它將模型適應特定的標記任務資料集",
+          "B": "隨著時間的推移，它透過對新資料進行進一步訓練來不斷改進模型的知識",
+          "C": "它壓縮模型以縮小其尺寸並加速推理",
+          "D": "它消除了評估步驟的需要"
+        },
+        "explanation": "持續的預訓練使 FM 持續接觸新鮮的、大部分未標記的資料，因此其知識保持最新，並且其性能隨著時間的推移而提高。\n適應標記的任務資料集描述了微調；縮小和加速模型描述了蒸餾或量化；並且沒有任何訓練方法可以消除評估模型的需要。"
+      }
+    }
   },
   {
     "id": "aif-q086",
@@ -252,7 +420,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "哪種基於提示的攻擊專門針對揭示模型的隱藏系統指令？",
+        "options": {
+          "A": "越獄",
+          "B": "及時注射",
+          "C": "提取提示模板",
+          "D": "提示角色切換"
+        },
+        "explanation": "提取（洩漏）提示模板會誘使模型公開其底層系統提示，直接暴露配置其行為的隱藏指令。\n越獄繞過安全控制，即時注入插入對抗性指令來劫持行為，角色切換將模型推入不同的角色；這些都不是為了轉儲系統指令本身。"
+      }
+    }
   },
   {
     "id": "aif-q088",
@@ -268,7 +448,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.4",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一個社交平台想要將 Amazon SageMaker JumpStart 的幾個候選 LLM 的輸出毒性與最少的操作工作量進行比較。哪種評估方法適合？",
+        "options": {
+          "A": "由人工審核人員進行模型評估",
+          "B": "使用內建毒性指標自動評估模型",
+          "C": "眾包人工評級",
+          "D": "與真實使用者一起對模型進行 A/B 測試"
+        },
+        "explanation": "自動模型評估使用內建的毒性指標對輸出進行評分，無需人員招募或協調，從而將營運工作量降至最低。\n人力評估和眾包評級都需要管理審核人員，而對現場使用者進行 A/B 測試會增加暴露風險和協調開銷。"
+      }
+    }
   },
   {
     "id": "aif-q095",
@@ -284,7 +476,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "使用哪種提示方法來強化模型以抵禦提示注入攻擊？",
+        "options": {
+          "A": "思路鏈提示",
+          "B": "少鏡頭提示",
+          "C": "對抗性提示",
+          "D": "零射擊提示"
+        },
+        "explanation": "對抗性提示故意設計和測試敵對輸入，以便可以檢測和抵消注入嘗試，從而強化針對它們的模型。\n思想鏈、少樣本和零樣本提示決定了模型如何推理或從範例中學習，但無法防禦惡意提示。"
+      }
+    }
   },
   {
     "id": "aif-q096",
@@ -300,7 +504,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.4",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "IT 支援團隊對 LLM 進行了微調以回答幫助台問題，並希望確認微調提高了其準確性。應該使用哪個指標？",
+        "options": {
+          "A": "精確度",
+          "B": "F1成績",
+          "C": "第一個令牌的時間",
+          "D": "困惑"
+        },
+        "explanation": "F1 分數將精確度和召回率平衡在一個數字中，因此它反映了模型答案的準確程度和完整程度，使其成為衡量微調增益的正確方法。\n僅精度會忽略錯過的正確答案；第一個令牌的時間衡量延遲；困惑度衡量的是語言建模的契合度，而不是任務的準確性。"
+      }
+    }
   },
   {
     "id": "aif-q097",
@@ -316,7 +532,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家公司使用檢索增強生成 (RAG) 和 Amazon Bedrock 和穩定擴散來創建產品圖像，但結果是隨機的，並且會錯過請求的詳細資訊。團隊希望影像能夠更嚴格地遵循提示。哪個改變有幫助？",
+        "options": {
+          "A": "增加生成步驟數",
+          "B": "增加無分類器引導（CFG）規模",
+          "C": "設定固定的隨機種子",
+          "D": "增加負面提示權重"
+        },
+        "explanation": "CFG 比例控制模型遵循文字提示的程度，因此提高它可以使生成的圖像更緊密地遵循所要求的細節。\n更多的生成步驟主要是細化去雜訊品質；固定的種子只能使結果具有可重複性；增加負面提示權重會加強要避免的內容，而不是影像與主要提示的匹配程度。"
+      }
+    }
   },
   {
     "id": "aif-q098",
@@ -332,7 +560,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家電信公司想要一個 LLM 聊天機器人，能夠以最低的成本為支援代理提供基於內部政策文件的即時答案。哪種方法最適合？",
+        "options": {
+          "A": "對政策文件上的LLM進行微調",
+          "B": "在政策文件上實施檢索增強生成（RAG）",
+          "C": "在政策語料庫上從頭開始預訓練新模型",
+          "D": "將所有策略文件作為上下文貼到每個提示中"
+        },
+        "explanation": "RAG 在查詢時檢索相關政策段落，並將聊天機器人的答案作為基礎，無需培訓即可以低廉的成本提供準確的回應。\n微調會增加培訓成本，並且隨著政策的變化必須重複進行；從頭開始預訓練是迄今為止最昂貴的選擇；將所有文件貼到每個提示中會增加令牌成本。"
+      }
+    }
   },
   {
     "id": "aif-q102",
@@ -348,7 +588,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.4",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家公司在 Amazon Bedrock 上建立了文字摘要解決方案，並將使用 Amazon Bedrock Model Evaluation。應該使用哪個指標來衡量摘要品質？",
+        "options": {
+          "A": "ROC 曲線下面積 (AUC)",
+          "B": "BERT評分",
+          "C": "均方誤差 (MSE)",
+          "D": "困惑"
+        },
+        "explanation": "BERTScore 使用上下文嵌入將產生的摘要與參考文本進行比較，捕獲語義相似性，這使其適合衡量摘要品質。\nAUC 衡量二元分類排名，MSE 衡量迴歸誤差，困惑度衡量語言建模適合度；這些都沒有將摘要與參考文獻進行品質比較。"
+      }
+    }
   },
   {
     "id": "aif-q106",
@@ -364,7 +616,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.4",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "語言學習應用程式調用法學碩士來更清晰地重寫文本，並提供改進版本的參考範例。它希望模型的輸出類似於這些範例。應該使用哪個指標？",
+        "options": {
+          "A": "產生文字的困惑度",
+          "B": "面向回憶的 Gisting 評估研究 (ROUGE)",
+          "C": "語意穩健性得分",
+          "D": "平均反應延遲"
+        },
+        "explanation": "ROUGE 測量模型輸出和參考範例之間的 n 元語法和序列重疊，因此它可以直接捕捉輸出與那些改進版本的相似程度。\n困惑度反映了語言建模的契合度，語義魯棒性衡量了輸入變化下的穩定性，延遲衡量了速度； none 將輸出與參考範例進行比較。"
+      }
+    }
   },
   {
     "id": "aif-q107",
@@ -380,7 +644,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家公司的圖像生成模型不斷產生與提示無關的圖片，該團隊希望調整其提示以減少這些圖片。哪種技術有幫助？",
+        "options": {
+          "A": "添加少量範例影像",
+          "B": "使用否定提示來說明要排除的內容",
+          "C": "使用零樣本提示",
+          "D": "讓提示更加開放"
+        },
+        "explanation": "負面提示明確告訴模型要遺漏什麼，限制生成，從而減少出現的偏離主題的元素。\n添加範例圖像或使用零樣本提示並沒有說明要避免什麼，並且使提示更加開放會增加而不是減少漂移。"
+      }
+    }
   },
   {
     "id": "aif-q108",
@@ -396,7 +672,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家電子產品零售商希望法學碩士撰寫簡短的、以功能為中心的產品描述。哪一種即時工程方法最有效？",
+        "options": {
+          "A": "為所有產品編寫一個通用提示並手動編輯每個輸出",
+          "B": "建立特定於類別的提示，突出顯示關鍵功能並指定輸出格式和長度",
+          "C": "在單一提示中列出每個產品屬性並要求提供描述",
+          "D": "向模型詢問它所能產生的最具創意的描述，然後對其進行修剪"
+        },
+        "explanation": "特定於類別的提示可以調出關鍵功能並設定格式和長度，從而引導模型獲得一致、簡潔、以功能為中心的描述，而無需返工。\n單一通用提示需要大量手動編輯；列出每個屬性會產生長的、沒有重點的文本；要求最大的創造力和修飾會浪費精力並且偏離所需的風格。"
+      }
+    }
   },
   {
     "id": "aif-q119",
@@ -417,7 +705,19 @@
       "Amazon Bedrock Knowledge Bases",
       "Amazon Fraud Detector",
       "Amazon SageMaker AI"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家保險公司需要一個人工智慧應用程式，讓員工能夠找到未結索賠、檢索特定索賠的詳細資訊並提取索賠文件。哪種解決方案最適合？",
+        "options": {
+          "A": "將代理用於 Amazon Bedrock 和 Amazon Fraud Detector",
+          "B": "將代理用於 Amazon Bedrock 和 Amazon Bedrock Knowledge Bases",
+          "C": "單獨使用 Amazon Bedrock 知識庫，無需代理",
+          "D": "使用 Amazon SageMaker AI 訓練新的 ML 模型"
+        },
+        "explanation": "Amazon Bedrock 的代理執行多步驟操作（查找索賠、提取詳細資訊、獲取文件）並調用 Amazon Bedrock 知識庫來檢索索賠資料，這共同滿足了所有三個需求。\n將代理程式與 Amazon Fraud Detector 配對會增加詐欺評分而不是文件檢索；僅知識庫可以檢索內容，但無法協調查找和操作；使用 Amazon SageMaker AI 訓練新模型的工作量遠遠超過所需的工作量。"
+      }
+    }
   },
   {
     "id": "aif-q128",
@@ -433,7 +733,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "分析師在 Amazon Bedrock 的提示中添加了一條指令，要求模型在解決數學問題時展示其工作並解釋每個步驟。正在使用哪種即時工程技術？",
+        "options": {
+          "A": "少鏡頭提示",
+          "B": "思想樹提示",
+          "C": "思路鏈提示",
+          "D": "零射擊提示"
+        },
+        "explanation": "思維鏈提示要求模型逐步展示其中間推理，這正是指示它展示其工作的作用，從而提高數學問題的準確性。\n很少有鏡頭提示的供應品有效的例子；思想樹並行探索多個推理分支；零樣本提示僅提供指令，沒有推理支架。"
+      }
+    }
   },
   {
     "id": "aif-q131",
@@ -449,7 +761,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "對於需要詳細、逐步推理的複雜問題，公司需要大型語言模型 (LLM) 提供更高品質的答案。哪種即時工程技術適合？",
+        "options": {
+          "A": "定向刺激提示",
+          "B": "提示連結",
+          "C": "從最少到最多的提示",
+          "D": "思路鏈提示"
+        },
+        "explanation": "思維鏈提示引導模型將其推理作為回應中的一系列邏輯步驟來產生，從而提高了複雜問題的答案品質。\n定向刺激提示透過提示或關鍵字引導輸出；提示連結依序傳送多個單獨的提示；從最少到最多的提示將任務分解為有序的子問題，但與產生內聯推理鍊是一種不同的技術。"
+      }
+    }
   },
   {
     "id": "aif-q143",
@@ -465,7 +789,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家零售商運行人工智慧助手，幫助代理商回答常見問題，但問題不斷變化。客服人員輸入問題後需要以最低的成本產生最新的答案。哪種方法適合？",
+        "options": {
+          "A": "使用檢索增強生成 (RAG) 進行快速工程",
+          "B": "按定期規劃微調模型",
+          "C": "根據常見問題解答資料預訓練模型並進行基準測試",
+          "D": "將完整的常見問題集嵌入系統提示中"
+        },
+        "explanation": "RAG 在查詢時檢索最相關的當前資訊，並及時進行工程設計以形成響應，因此助手可以在問題發生變化時保持準確，而無需重複培訓成本。\n預定的微調和預訓練都需要反覆進行、昂貴的訓練；將完整的常見問題集嵌入到每個提示中會增加代幣成本，並且不會隨著常見問題解答的增長而擴展。"
+      }
+    }
   },
   {
     "id": "aif-q146",
@@ -481,7 +817,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家公司希望從 Amazon Bedrock 上的生成式 AI 應用程式獲得更準確的答案，並希望以最便宜的方式獲得這些答案。哪種方法適合？",
+        "options": {
+          "A": "微調 FM",
+          "B": "使用提示工程",
+          "C": "從頭開始重新訓練 FM",
+          "D": "將模型蒸餾應用於 FM"
+        },
+        "explanation": "即時工程透過完善說明和上下文來提高準確性，無需培訓成本，使其成為最便宜的選擇。\n微調增加了訓練成本和資料準備，模型蒸餾需要單獨的訓練過程來建立更小的模型，而從頭開始重新訓練是最昂貴的方法。"
+      }
+    }
   },
   {
     "id": "aif-q155",
@@ -497,7 +845,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一個應用程式總結了不同長度的書籍，但在某些較長的書籍上失敗了。最可能的原因是什麼？",
+        "options": {
+          "A": "溫度設定太高",
+          "B": "輸入超出模型的最大上下文視窗",
+          "C": "最大輸出長度設定太低",
+          "D": "此模型不支援few-shot提示"
+        },
+        "explanation": "模型只能處理有限數量的輸入標記，因此長度超過最大上下文視窗的書無法一次性處理，這解釋了為什麼只有較長的書才會失敗。\n高溫改變的是隨機性，而不是容量；較低的最大輸出長度會縮短每個摘要，而不是在選定的書籍上失敗；而少樣本支持與總結一個長輸入無關。"
+      }
+    }
   },
   {
     "id": "aif-q156",
@@ -516,7 +876,19 @@
     "services": [
       "Amazon Bedrock",
       "Amazon SageMaker JumpStart"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家航空公司需要一個用於航班時刻表、預訂和支付的文字聊天機器人，該機器人基於大型語言模型 (LLM) 和知識庫，且開發工作量最少。哪種解決方案適合？",
+        "options": {
+          "A": "使用 Amazon SageMaker Autopilot 訓練模型",
+          "B": "在 Amazon SageMaker JumpStart 上微調模型",
+          "C": "使用 Amazon Bedrock 建立檢索增強產生 (RAG) 代理",
+          "D": "使用 AWS Lambda 和自架模型建立自訂編排服務"
+        },
+        "explanation": "Amazon Bedrock 讓團隊使用 RAG 將法學碩士與知識庫結合起來，以最少的開發工作提供準確、最新的答案。\nSageMaker Autopilot 根據表格資料訓練傳統的 ML 模型； SageMaker JumpStart 上的微調需要資料準備和訓練運行；在自託管模型上建立自訂 Lambda 編排層是最繁重的工作。"
+      }
+    }
   },
   {
     "id": "aif-q161",
@@ -532,7 +904,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "哪一項陳述描述了產生人工智慧模型的即時工程的真正風險或限制？",
+        "options": {
+          "A": "及時的工程保證了確定性的輸出，因此無需驗證",
+          "B": "即時工程可以暴露模型以進行即時注入攻擊",
+          "C": "提示工程會在每次提示時永久更新模型的權重",
+          "D": "及時的工程消除了資料中毒和模型劫持的所有風險"
+        },
+        "explanation": "提示工程的真正限制是，精心設計的輸入仍然可以透過提示注入來利用，攻擊者操縱提示來改變模型的行為。\n即時工程不會使輸出具有確定性或消除驗證的需要，它不會更新模型的權重（即微調），也無法消除資料中毒或模型劫持等風險。"
+      }
+    }
   },
   {
     "id": "aif-q162",
@@ -552,7 +936,20 @@
     "isMultiAnswer": true,
     "taskStatement": "3.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "出版商的檢索增強生成 (RAG) 應用程式必須感覺接近即時，同時每天都會發布新文章。哪兩個管道步驟可以作為離線批次作業運作？",
+        "options": {
+          "A": "為每個傳入的使用者查詢產生嵌入",
+          "B": "為發佈的內容產生嵌入",
+          "C": "對使用者的查詢進行排名並傳回結果",
+          "D": "建立或更新向量搜尋索引",
+          "E": "偵測每個使用者查詢的語言"
+        },
+        "explanation": "生成內容嵌入以及建立或更新搜尋索引僅取決於文檔，因此它們可以在新文章到達時定期批量運行，脫離即時路徑。\n為使用者查詢產生嵌入、排名和傳回結果以及偵測查詢的語言都根據請求發生，並且必須即時運行。"
+      }
+    }
   },
   {
     "id": "aif-q163",
@@ -568,7 +965,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "哪種技術將複雜的任務分解為較小的子任務，這些子任務會依序傳送到大型語言模型 (LLM)，每個子任務都建立在最後一個任務的基礎上？",
+        "options": {
+          "A": "思想之樹",
+          "B": "思路鏈提示",
+          "C": "提示連結",
+          "D": "少鏡頭提示"
+        },
+        "explanation": "提示連結將一項複雜的任務分解為較小的子任務，並將它們一個接一個地輸入到 LLM，每個步驟都使用前一個步驟的輸出。\n在單一回應中逐步進行思維鏈推理；思想樹探索多個推理分支；少量提示提供範例，而不是對子任務進行排序。"
+      }
+    }
   },
   {
     "id": "aif-q164",
@@ -584,7 +993,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "人工智慧從業者必須提高依賴快速變化的庫存資料的文字生成模型的準確性。哪種技術最有幫助？",
+        "options": {
+          "A": "根據歷史庫存資料微調模型",
+          "B": "檢索增強生成 (RAG)",
+          "C": "遷移學習",
+          "D": "庫存快照的持續預訓練"
+        },
+        "explanation": "RAG 在推理時獲取當前庫存資料並在其上產生條件，因此輸出反映最新資訊並保持準確，無需重新訓練。\n對歷史資料的微調、遷移學習以及對快照的持續預訓練都會在訓練時烘焙資料，因此隨著庫存的不斷變化，它們會變得陳舊。"
+      }
+    }
   },
   {
     "id": "aif-q167",
@@ -600,7 +1021,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "在檢索增強生成 (RAG) 工作流程中，對文件進行分塊的主要目的是什麼？",
+        "options": {
+          "A": "降低儲存文件的成本",
+          "B": "提高從向量索引檢索到的段落的相關性",
+          "C": "加快模型訓練速度",
+          "D": "避免為文件產生嵌入"
+        },
+        "explanation": "將文件分割成更小的、語意一致的區塊，讓檢索器只傳回與查詢最相關的片段，從而提高傳遞給模型的上下文的相關性。\n分塊並不是為了降低儲存成本，它不會加速模型訓練，分塊文字仍然是嵌入的，因此它並不能避免生成嵌入。"
+      }
+    }
   },
   {
     "id": "aif-q173",
@@ -616,7 +1049,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "哪句話描述了檢索增強生成 (RAG) 對於自然語言處理 (NLP) 任務的優點？",
+        "options": {
+          "A": "它加速了底層語言模型的訓練",
+          "B": "它減少了模型的參數數量以節省內存",
+          "C": "它利用外部知識源來產生更準確、資訊豐富的回應",
+          "D": "它保證確定性、可重複的輸出"
+        },
+        "explanation": "RAG 在推理時檢索相關外部文件並產生條件，從而利用最新的特定領域知識豐富回應，而無需重新訓練模型。\nRAG 不會加速訓練或減少模型的參數數量，並且不會使生成模型的輸出具有確定性。"
+      }
+    }
   },
   {
     "id": "aif-q175",
@@ -632,7 +1077,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.3",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "哪種技術在標記資料集上訓練人工智慧模型，使其適應特定行業的術語和要求？",
+        "options": {
+          "A": "持續預訓練",
+          "B": "情境學習",
+          "C": "微調",
+          "D": "模型蒸餾"
+        },
+        "explanation": "微調繼續在標籤的特定領域資料集上訓練預先訓練的模型，以便它直接從該資料中學習行業術語和任務要求。\n持續預訓練依賴大量未標記資料；上下文學習無需訓練即可在推理時添加範例；模型蒸餾將知識轉移到較小的模型中，而不是使其適應標記的領域資料集。"
+      }
+    }
   },
   {
     "id": "aif-q176",
@@ -651,7 +1108,19 @@
     "services": [
       "Agents for Amazon Bedrock",
       "Amazon Bedrock Knowledge Bases"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一個團隊使用 Amazon Bedrock Agents 建立了一個代理，並希望透過提供一些具體範例來提高其準確性。哪種方法適合？",
+        "options": {
+          "A": "在範例上微調底層模型",
+          "B": "將範例新增至代理程式的進階提示中",
+          "C": "將範例新增至 Amazon Bedrock 知識庫",
+          "D": "建立包含範例的護欄"
+        },
+        "explanation": "將特定的輸入輸出範例新增至代理程式的進階提示是少量提示，它可以引導代理程式採取更準確的行為，而無需重新訓練或額外服務。\n對於少數例子來說，模型的微調要繁重得多；知識庫提供檢索到的上下文而不是行為範例；護欄強制執行安全策略，而不是範例驅動的準確性。"
+      }
+    }
   },
   {
     "id": "aif-q178",
@@ -667,7 +1136,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.3",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "公司將使用基於指令的微調來使基礎模型 (FM) 適應其領域。應該如何準備訓練資料？",
+        "options": {
+          "A": "組裝一個大型的未標記領域語料庫並繼續預訓練",
+          "B": "為域創建指令和回應（問題和答案）對",
+          "C": "建立文檔的向量索引以供檢索",
+          "D": "收集模型輸出的人類偏好排名"
+        },
+        "explanation": "基於指令的微調需要指令回應範例，因此策劃特定領域的問答對可以教導模型如何解釋領域查詢並產生正確的答案。\n無標籤語料庫用於持續預訓練；向量索引支援 RAG 而不是訓練；人類偏好排名是用於 RLHF 的資料，而不是指令調整。"
+      }
+    }
   },
   {
     "id": "aif-q188",
@@ -683,7 +1164,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.4",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "哪一個指標通常用於評估基礎模型 (FM) 在文本摘要方面的表現？",
+        "options": {
+          "A": "F1成績",
+          "B": "均方誤差 (MSE)",
+          "C": "面向回憶的 Gisting 評估研究 (ROUGE)",
+          "D": "雙語評量學生 (BLEU) 分數"
+        },
+        "explanation": "ROUGE 測量產生的摘要和參考摘要之間的重疊，這使其成為摘要品質的標準指標。\nF1是分類指標，MSE衡量迴歸誤差，BLEU是為機器翻譯而建構的；沒有目標總結。"
+      }
+    }
   },
   {
     "id": "aif-q189",
@@ -699,7 +1192,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.3",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "微調基礎模型 (FM) 有什麼好處？",
+        "options": {
+          "A": "它讓模型在推理時提取外部資料",
+          "B": "它透過對任務資料進行進一步訓練來提高模型在特定任務上的表現",
+          "C": "它壓縮模型以減小尺寸並加快推理速度",
+          "D": "它透過對新資料進行預訓練來刷新模型的常識"
+        },
+        "explanation": "微調使用任務相關資料更新模型的權重，從而提高其與特定任務的準確性和相關性。\n在推理時拉入外部資料描述了 RAG；壓縮模型描述了蒸餾；用更新的預訓練刷新一般知識描述了持續的預訓練。"
+      }
+    }
   },
   {
     "id": "aif-q194",
@@ -721,7 +1226,20 @@
     "lastVerified": "2026-06-02",
     "services": [
       "Amazon OpenSearch Service"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "在向量資料庫（例如 Amazon OpenSearch Service 中儲存嵌入的兩個主要用例是什麼？",
+        "options": {
+          "A": "精確的關鍵字字串匹配",
+          "B": "對文件進行語義搜尋",
+          "C": "計劃的批量 ETL 作業",
+          "D": "基於相似性的推薦",
+          "E": "事務性主鍵查找"
+        },
+        "explanation": "語意搜尋和基於相似性的推薦都依賴於嵌入的最近鄰比較，這正是向量資料庫所提供的。\n精確的關鍵字匹配是詞彙上的而不是語義上的，主鍵查找和計劃批量 ETL 是不使用向量相似性的標準資料庫操作。"
+      }
+    }
   },
   {
     "id": "aif-q196",
@@ -743,7 +1261,20 @@
     "lastVerified": "2026-06-01",
     "services": [
       "Amazon Aurora"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "對於 AI 應用程式，帶有 pgvector 擴展的 Amazon Aurora 哪兩項功能最重要？",
+        "options": {
+          "A": "標準SQL操作",
+          "B": "向量相似度搜尋",
+          "C": "虛擬主機",
+          "D": "將向量與結構化資料結合",
+          "E": "電子郵件處理"
+        },
+        "explanation": "向量相似性搜尋使應用程式可以找到語義上最相關的內容，這是 RAG 等任務中的核心檢索步驟，而將向量與結構化資料相結合的能力意味著這些搜尋可以與同一資料庫中的現有關係記錄一起運行，因此這兩種功能一起使 Aurora 和 pgvector 對 AI 工作負載有價值。\n標準 SQL 操作是通用資料庫功能，並非特定於 AI 應用程式。網頁寄存和電子郵件處理根本不是 Amazon Aurora 的功能，並且與向量儲存或 AI 工作負載無關。"
+      }
+    }
   },
   {
     "id": "aif-q212",
@@ -759,7 +1290,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家公司想要一個大型語言模型 (LLM) 來編寫產品描述，並計劃在提示中包含幾個遵循固定格式的範例描述。這使用了哪種即時工程技術？",
+        "options": {
+          "A": "零射擊提示",
+          "B": "一鍵提示",
+          "C": "少鏡頭提示",
+          "D": "角色提示"
+        },
+        "explanation": "少鏡頭提示在提示中放置了幾個範例，因此模型可以學習模式和格式，並以相同的風格產生新的描述，而無需任何訓練。\n零樣本提示不提供範例，一次性提示僅提供單一範例，角色提示指派角色但不提供格式化範例。"
+      }
+    }
   },
   {
     "id": "aif-q214",
@@ -775,7 +1318,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "雜貨連鎖店需要一個聊天機器人來檢查即時庫存並告訴購物者產品在商店中的位置。應該使用哪種即時工程技術？",
+        "options": {
+          "A": "少鏡頭提示",
+          "B": "思路鏈提示",
+          "C": "推理與行動 (ReAct) 提示",
+          "D": "零射擊提示"
+        },
+        "explanation": "ReAct 提示將模型的推理與明確操作交織在一起，例如呼叫即時庫存 API，然後使用返回的資料進行回答，這是即時檢查庫存和報告產品位置所需的。\n少樣本、思維鍊和零樣本提示形狀推理或提供範例，但不提供調用外部系統獲取即時資料的機制。"
+      }
+    }
   },
   {
     "id": "aif-q219",
@@ -791,7 +1346,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.4",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家公司透過將工具的輸出與相同文件的人工翻譯進行比較來衡量其翻譯工具。應該使用哪種評量策略？",
+        "options": {
+          "A": "使用ROUGE估計兩種方法的絕對翻譯質量",
+          "B": "使用雙語評估研究 (BLEU) 分數來估計兩種方法的相對翻譯質量",
+          "C": "使用雙語評估研究（BLEU）分數來估計兩種方法的絕對翻譯質量",
+          "D": "使用ROUGE估計兩種方法的相對翻譯質量"
+        },
+        "explanation": "BLEU 測量 n-gram 與參考翻譯的重疊，因此將其應用於同一文件上的工具輸出和人工輸出，可以給出可比較的分數，以判斷哪種方法相對更好。\nBLEU 產生相對比較，而不是絕對品質測量，因此絕對 BLEU 選項是錯誤的； ROUGE 是為摘要而構建的，因此它成為比較翻譯的錯誤指標。"
+      }
+    }
   },
   {
     "id": "aif-q224",
@@ -810,7 +1377,19 @@
     "services": [
       "Amazon Bedrock Knowledge Bases",
       "Agents for Amazon Bedrock"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家公司的生成式 AI 應用程式在 Amazon Bedrock 上使用預先訓練的基礎模型 (FM)，並希望其答案以最低的成本包含公司自己的資訊。哪種解決方案適合？",
+        "options": {
+          "A": "使用Amazon Bedrock Knowledge Bases",
+          "B": "在 Amazon Bedrock 上部署自訂模型",
+          "C": "根據公司資訊微調FM",
+          "D": "使用Amazon Bedrock Agents"
+        },
+        "explanation": "Amazon Bedrock Knowledge Bases 在推理時索引和檢索公司文檔，並將相關上下文注入提示 (RAG)，無需培訓即可廉價添加資訊。\n部署自訂模型和微調 FM 都會增加訓練成本； Amazon Bedrock Agents 編排任務，但本身不提供文件上下文。"
+      }
+    }
   },
   {
     "id": "aif-q226",
@@ -826,7 +1405,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家公司正在使用大量數位文件在大型語言模型 (LLM) 上建立 HR 政策聊天機器人，並希望優化其答案的品質。哪種技術最適合？",
+        "options": {
+          "A": "將溫度設定為 1",
+          "B": "使用檢索增強產生 (RAG)",
+          "C": "在政策文件上微調模型",
+          "D": "減小令牌大小"
+        },
+        "explanation": "RAG 在查詢時從政策文件中檢索精確的當前段落，並將聊天機器人的答案納入其中，從而在不超載上下文視窗的情況下優化準確性。\n將溫度設定為 1 只會增加隨機性；微調成本高昂，並且隨著政策的變化而變得陳舊；減少令牌大小會降低模型所需的上下文。"
+      }
+    }
   },
   {
     "id": "aif-q227",
@@ -842,7 +1433,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.4",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家教育公司為青少年培訓客製化大語言模型 (LLM)，並希望輸出符合他們的風格，包括創意拼字和速記。應該使用哪個指標來根據參考範例評估輸出？",
+        "options": {
+          "A": "BERT評分",
+          "B": "雙語評量學生 (BLEU) 分數",
+          "C": "困惑",
+          "D": "F1成績"
+        },
+        "explanation": "BLEU 測量模型輸出和參考文本之間的表面級 n 元語法重疊，因此它適合檢查模型準確再現青少年風格的拼字和速記的程度。\nBERTcore 衡量語意相似度而不是表面形式；困惑度衡量語言建模的契合度； F1 是一個分類指標。"
+      }
+    }
   },
   {
     "id": "aif-q234",
@@ -858,7 +1461,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家銀行正在建立一個聊天機器人，透過快速工程，使用 Amazon Bedrock 上的公共銀行文件來回答開戶問題。適合哪種技術？",
+        "options": {
+          "A": "定向刺激提示",
+          "B": "零射擊提示",
+          "C": "少鏡頭提示",
+          "D": "一鍵提示"
+        },
+        "explanation": "少量提示提供了從銀行文件中提取的幾個範例問題和答案，指導模型無需訓練即可產生準確、格式良好的回應。\n定向刺激提示透過提示引導輸出，零樣本提示不提供範例，單樣本提示僅提供單一範例。"
+      }
+    }
   },
   {
     "id": "aif-q237",
@@ -878,7 +1493,19 @@
       "Amazon Bedrock Knowledge Bases",
       "Amazon Q Business",
       "Amazon SageMaker AI"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家公司想要一個聊天機器人來解答員工政策問題；政策經常變化，答案必須反映近乎即時的更新。哪種解決方案適合？",
+        "options": {
+          "A": "使用 Amazon SageMaker AI 對策略文本微調大型語言模型 (LLM)",
+          "B": "使用 Amazon Bedrock Knowledge Bases 建立檢索增強產生 (RAG) 工作流程",
+          "C": "持續對法學碩士進行政策文件的預培訓",
+          "D": "使用 Amazon Q Business 建立自訂應用程式"
+        },
+        "explanation": "使用 Amazon Bedrock Knowledge Bases 的 RAG 工作流程在查詢時檢索最新的保單文檔，因此聊天機器人可以近乎即時地反映更新，而無需重新訓練。\n當政策改變時，必須重新進行微調和持續的預訓練；自訂 Amazon Q Business 應用程式需要更多的開發工作，並不是保持答案最新的有針對性的方法。"
+      }
+    }
   },
   {
     "id": "aif-q238",
@@ -894,7 +1521,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.3",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家公司使用監督學習在小型標記資料集上訓練模型以執行特定任務。這是基礎模型 (FM) 生命週期的哪一步？",
+        "options": {
+          "A": "預訓練",
+          "B": "持續預訓練",
+          "C": "微調",
+          "D": "部署"
+        },
+        "explanation": "微調繼續在目標任務的小型標記資料集上訓練預訓練模型，這正是所描述的監督步驟。\n預訓練和連續預訓練使用大量且大部分未標記的資料；部署將完成的模型投入生產。這些都不是有監督的、針對特定任務的訓練步驟。"
+      }
+    }
   },
   {
     "id": "aif-q258",
@@ -914,7 +1553,19 @@
       "Amazon SageMaker Ground Truth Plus",
       "Amazon SageMaker Data Wrangler",
       "Amazon SageMaker Clarify"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家公司希望利用人類回饋來標記訓練資料，以微調基礎模型 (FM)，但不想建立標記工具或管理員工隊伍。哪種 AWS 服務或功能適合？",
+        "options": {
+          "A": "Amazon SageMaker Data Wrangler",
+          "B": "Amazon SageMaker Clarify",
+          "C": "Amazon SageMaker Autopilot",
+          "D": "Amazon SageMaker Ground Truth Plus"
+        },
+        "explanation": "Amazon SageMaker Ground Truth Plus 是一項完全託管的標籤服務，使用人力，因此公司無需建立標籤工具或管理標籤機即可取得人工標籤資料。\nSageMaker Data Wrangler 準備和轉換資料，SageMaker Clarify 檢測偏差並解釋預測，SageMaker Autopilot 自動建立模型。這些都沒有提供受管理的人類標籤。"
+      }
+    }
   },
   {
     "id": "aif-q259",
@@ -932,7 +1583,19 @@
     "lastVerified": "2026-06-02",
     "services": [
       "Amazon OpenSearch Service"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家媒體串流公司希望在向量資料庫的支援下進行具有相似性和最近鄰查詢的自然語言圖像搜尋。哪種 AWS 服務適合？",
+        "options": {
+          "A": "Amazon DynamoDB",
+          "B": "Amazon OpenSearch Service",
+          "C": "Amazon Personalize",
+          "D": "Amazon RDS for MySQL"
+        },
+        "explanation": "Amazon OpenSearch Service 支援具有相似性（最近鄰）搜尋的向量存儲，這是自然語言影像搜尋和過濾所需要的。\nMySQL（關係）的 Amazon DynamoDB （鍵值）和 Amazon RDS 缺乏本機向量相似性搜索，並且 Amazon Personalize 產生推薦而不是充當通用向量存儲。"
+      }
+    }
   },
   {
     "id": "aif-q265",
@@ -948,7 +1611,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.4",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家公司正在比較幾種用於文字摘要的大型語言模型 (LLM)，並且需要一個摘要品質指標。哪個指標適合？",
+        "options": {
+          "A": "雙語評量學生 (BLEU) 分數",
+          "B": "ROC 曲線下面積 (AUC)",
+          "C": "困惑",
+          "D": "面向回憶的 Gisting 評估研究 (ROUGE)"
+        },
+        "explanation": "ROUGE 測量產生的摘要和參考摘要之間的重疊，使其成為摘要品質的標準指標。\nBLEU 是為翻譯而建構的，AUC 是一種分類指標，而困惑度則衡量語言建模的契合度；沒有一個是為摘要品質而設計的。"
+      }
+    }
   },
   {
     "id": "aif-q271",
@@ -964,7 +1639,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家公司需要一個 AI 解決方案，可以為產品目錄產生圖像和文字描述，並透過每個模型支援的輸出類型來比較基礎模型 (FM)。它正在評估哪個 FM 特性？",
+        "options": {
+          "A": "延遲",
+          "B": "上下文視窗長度",
+          "C": "模態",
+          "D": "多語言支援"
+        },
+        "explanation": "模態描述了 FM 支援的輸入和輸出類型，例如文字或圖像，因此評估模型是否可以同時輸出圖像和文字描述就是對模態的評估。\n延遲是反應速度，上下文視窗長度是輸入和輸出適合多少，多語言支援涉及語言； none 描述了模型可以產生的輸出類型。"
+      }
+    }
   },
   {
     "id": "aif-q272",
@@ -980,7 +1667,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.4",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家線上零售商想要評估一個模型，將每個客戶評論標記為正面、負面或中立。哪種模型評估任務類型符合此要求？",
+        "options": {
+          "A": "開放式文本生成",
+          "B": "文字摘要",
+          "C": "分類",
+          "D": "問題與解答"
+        },
+        "explanation": "分類將每個輸入分配給一組固定的預定義類別之一，因此將每個客戶評論分類為三個情緒標籤（正面、負面或中性）之一是一項分類任務，並使用分類指標進行評估。\n開放式文本產生根據提示產生自由格式的文本，並且沒有固定的輸出標籤集。文字摘要將較長的文字壓縮為較短的版本，而不是將其分配給一個類別。問答傳回對所提出問題的回應，而不是將輸入放入預先定義的情緒類別中。"
+      }
+    }
   },
   {
     "id": "aif-q283",
@@ -998,7 +1697,19 @@
     "lastVerified": "2026-06-02",
     "services": [
       "Amazon OpenSearch Service"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "哪種 AWS 服務將嵌入儲存在向量資料庫中以與基礎模型 (FM) 和檢索增強生成 (RAG) 一起使用？",
+        "options": {
+          "A": "Amazon S3",
+          "B": "Amazon OpenSearch Service",
+          "C": "Amazon DynamoDB",
+          "D": "Amazon Redshift"
+        },
+        "explanation": "Amazon OpenSearch Service 提供了一個用於儲存和搜尋嵌入的向量資料庫，這為 RAG 工作流程以及與基礎模型的整合提供了動力。\nAmazon S3 是物件存儲，Amazon DynamoDB 是鍵值資料庫，Amazon Redshift 是資料倉儲；沒有一個提供基於嵌入的本機向量搜尋。"
+      }
+    }
   },
   {
     "id": "aif-q285",
@@ -1016,7 +1727,19 @@
     "lastVerified": "2026-06-02",
     "services": [
       "Amazon OpenSearch Service"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家公司正在 Amazon Bedrock 上建立生成式 AI 解決方案，並且需要提供向量資料庫儲存和向量搜尋的服務。哪種 AWS 服務適合？",
+        "options": {
+          "A": "Amazon DynamoDB",
+          "B": "Amazon ElastiCache",
+          "C": "Amazon OpenSearch Service",
+          "D": "Amazon Redshift"
+        },
+        "explanation": "Amazon OpenSearch Service 支援向量儲存和嵌入的相似性搜索，因此它可以支援 Amazon Bedrock 上的生成式 AI 解決方案。\nAmazon DynamoDB 是鍵值資料庫，Amazon ElastiCache 是記憶體緩存，Amazon Redshift 是資料倉儲；沒有一個提供本機向量資料庫和搜尋功能。"
+      }
+    }
   },
   {
     "id": "aif-q288",
@@ -1036,7 +1759,20 @@
     "isMultiAnswer": true,
     "taskStatement": "3.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "在設計生成式人工智慧模型的提示時，哪兩種做法很重要？",
+        "options": {
+          "A": "無論相關性如何，最大化提示長度",
+          "B": "提供清晰的背景和說明",
+          "C": "使用模稜兩可的措辭來鼓勵創造力",
+          "D": "包括有幫助的相關範例",
+          "E": "省略說明並依賴模型預設值"
+        },
+        "explanation": "清晰的上下文和指令告訴模型預期的內容，相關範例（少量提示）引導模型達到所需的輸出格式和風格，因此兩者都提高了提示品質。\n無論相關性如何，最大化長度、使用模棱兩可的措辭以及省略指令都會增加噪音或歧義並降低模型的響應。"
+      }
+    }
   },
   {
     "id": "aif-q294",
@@ -1056,7 +1792,20 @@
     "isMultiAnswer": true,
     "taskStatement": "3.4",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "哪兩個指標通常用於評估生成式人工智慧模型的輸出品質？",
+        "options": {
+          "A": "GPU 記憶體使用情況",
+          "B": "翻譯品質雙語評估學生 (BLEU) 分數",
+          "C": "請求吞吐量（每秒請求數）",
+          "D": "以回憶為主的 Gisting 評估（ROUGE）摘要品質評分",
+          "E": "模型參數個數"
+        },
+        "explanation": "BLEU 評估翻譯質量，ROUGE 透過將生成文字與參考文本進行比較來評估摘要質量，因此兩者都衡量生成輸出的品質。\nGPU 記憶體使用量、請求吞吐量和模型參數計數是基礎設施和模型大小指標，與輸出品質無關。"
+      }
+    }
   },
   {
     "id": "aif-q296",
@@ -1078,7 +1827,20 @@
     "lastVerified": "2026-06-02",
     "services": [
       "Amazon OpenSearch Service"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "Amazon OpenSearch Service 的哪兩項功能與 AI/ML 工作負載最相關？",
+        "options": {
+          "A": "全文BM25關鍵字搜索",
+          "B": "向量上的 k-NN 最近鄰搜索",
+          "C": "地理空間距離查詢",
+          "D": "將嵌入儲存和索引為向量資料庫",
+          "E": "自動化模型訓練"
+        },
+        "explanation": "k-NN 最近鄰搜尋以及儲存和索引嵌入作為向量資料庫支援語義搜尋和 RAG 等 AI/ML 任務。\nBM25 關鍵字搜索是詞彙搜索而不是語義搜索，地理空間查詢處理位置資料，並且 OpenSearch 不執行模型訓練。"
+      }
+    }
   },
   {
     "id": "aif-q301",
@@ -1098,7 +1860,19 @@
       "Agents for Amazon Bedrock",
       "Amazon Bedrock Knowledge Bases",
       "Amazon Bedrock Model Evaluation"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家公司想要一個人工智慧助理能夠評估特定的資料來源，呼叫外部 API，然後產生、比較回應選項並確定優先順序。哪個 Amazon Bedrock 功能適合？",
+        "options": {
+          "A": "及時管理",
+          "B": "知識庫",
+          "C": "代理商",
+          "D": "Amazon Bedrock Model Evaluation"
+        },
+        "explanation": "Amazon Bedrock Agents 編排多步驟任務，包括呼叫外部 API 以及產生、比較和優先考慮滿足所有規定需求的回應選項。\n提示管理版本提示，知識庫提供檢索到的上下文，以及 Amazon Bedrock Model Evaluation 評分模型；沒有一個能夠自行協調 API 呼叫和決策。"
+      }
+    }
   },
   {
     "id": "aif-q344",
@@ -1114,7 +1888,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "在生成人工智慧中，零樣本提示、單樣本提示和少樣本提示有何不同？",
+        "options": {
+          "A": "使用的模型架構",
+          "B": "提示中提供的範例數量",
+          "C": "模型採取的推理步驟數",
+          "D": "用於微調模型的資料量"
+        },
+        "explanation": "這些術語描述了提示中放置了多少個範例：零樣本沒有給出任何樣本，單樣本給出一個樣本，少樣本給出一小部分樣本，所有這些都無需重新訓練模型。\n它們不涉及模型架構、推理步驟數量或微調資料量，這些資料與提供多少即時範例無關。"
+      }
+    }
   },
   {
     "id": "aif-q041",
@@ -1130,7 +1916,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.3",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "ML 團隊正在訓練基礎模型 (FM)，並希望將其準確性提高到所需的閾值。團隊該做什麼？",
+        "options": {
+          "A": "減少紀元數",
+          "B": "減小批量大小",
+          "C": "增加紀元數",
+          "D": "增加溫度參數"
+        },
+        "explanation": "增加紀元數量可以讓模型訓練更多遍的資料，這通常會提高準確性，直到達到目標水準。\n減少紀元會減少模型的訓練，並且往往會降低準確性。減小批量大小主要影響訓練動態和記憶體使用，而不是可靠地提高目標的準確性。溫度是控制輸出隨機性的推理參數，對訓練精度沒有影響。"
+      }
+    }
   },
   {
     "id": "aif-q048",
@@ -1146,7 +1944,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "化妝品品牌想要一個預先訓練的生成人工智慧模型來編寫適合其品牌聲音和訊息的行銷文案。團隊該做什麼？",
+        "options": {
+          "A": "在模型架構中添加更多層以增加其複雜性",
+          "B": "製作清晰、結構良好的提示，提供說明和上下文來引導模型的輸出",
+          "C": "調整模型的架構和超參數以提高其整體性能",
+          "D": "收集大型、多樣化的資料集並從頭開始預訓練新的生成模型"
+        },
+        "explanation": "透過說明和上下文製作清晰的提示可以引導預先訓練的模型產生與品牌聲音相匹配的內容，而無需修改模型本身。\n添加層或調整架構和超參數意味著重新設計或重新訓練模型，這是不必要且昂貴的。從頭開始預先訓練新模型更加耗費資源，並且不需要使輸出與品牌聲音保持一致。"
+      }
+    }
   },
   {
     "id": "aif-q051",
@@ -1165,7 +1975,19 @@
     "services": [
       "Amazon Bedrock",
       "Amazon CloudWatch"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "顧問公司必須選擇一個 Amazon Bedrock 模型供內部使用，並且其分析師關心答案的寫作風格。企業該如何選擇模型？",
+        "options": {
+          "A": "使用內建提示資料集評估模型",
+          "B": "根據公開模型排行榜選擇模型",
+          "C": "使用自訂提示資料集與人力一起評估模型",
+          "D": "使用 Amazon CloudWatch 中的 InitationLatency 執行時間指標來比較模型"
+        },
+        "explanation": "使用人工根據自訂提示資料集評估模型可以捕獲自動評分遺漏的主觀風格偏好，因此它可以最好地識別其回應與員工偏好相符的模型。\n內建提示資料集和公共排行榜衡量整體表現，而不是公司特定的風格偏好。 Amazon CloudWatch 中的 InitationLatency 指標衡量反應速度，而不是反應風格。"
+      }
+    }
   },
   {
     "id": "aif-q065",
@@ -1181,7 +2003,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "新聞應用程式在 Amazon Bedrock 上使用大型語言模型 (LLM) 運行情緒分析，並希望相同的輸入產生更穩定的結果。應該改變哪個推理參數？",
+        "options": {
+          "A": "增加溫度值",
+          "B": "增加最大生成長度",
+          "C": "降低溫度值",
+          "D": "減少輸出令牌的最大數量"
+        },
+        "explanation": "降低溫度可以減少標記選擇的隨機性，使模型對於相同輸入的輸出更具確定性和一致性。\n升高溫度會增加隨機性和可變性。更改最大生成長度或減少輸出令牌的數量只會影響回應長度，而不會影響回應的一致性。"
+      }
+    }
   },
   {
     "id": "aif-q070",
@@ -1197,7 +2031,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.4",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "團隊需要檢查其影像分類基礎模型 (FM) 的執行準確度。團隊應該使用哪種策略？",
+        "options": {
+          "A": "計算模型神經網路的層數",
+          "B": "計算模型所使用的資源的總成本",
+          "C": "檢查模型處理的影像的色彩準確性",
+          "D": "在預先定義的基準資料集上測量模型的準確性"
+        },
+        "explanation": "根據預先定義的基準資料集測量模型的準確性是評估分類準確性的標準方法，因為效能是與已知的正確標籤進行比較的。\n計算神經網路層數描述的是架構，而不是準確度。計算總資源成本衡量費用。檢查處理影像的色彩準確性與分類正確性無關。"
+      }
+    }
   },
   {
     "id": "aif-q075",
@@ -1213,7 +2059,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家電信公司的聊天機器人在 Amazon Bedrock 上使用大型語言模型 (LLM) 進行意圖檢測，該團隊希望透過幾次學習來提高準確性。團隊需要什麼資料？",
+        "options": {
+          "A": "成對的使用者訊息及其正確的使用者意圖",
+          "B": "成對的使用者訊息及其正確的聊天機器人回應",
+          "C": "成對的聊天機器人回應及其正確的使用者意圖",
+          "D": "成對的使用者意圖及其正確的聊天機器人回應"
+        },
+        "explanation": "少樣本學習為模型提供了任務的範例輸入輸出對，意圖檢測將使用者訊息映射到意圖，因此公司需要使用者訊息對及其正確的使用者意圖。\n涉及聊天機器人回應的對，無論是訊息到回應、回應到意圖還是意圖到回應，都會訓練錯誤的映射，並且不會示範如何從訊息中偵測使用者意圖。"
+      }
+    }
   },
   {
     "id": "aif-q089",
@@ -1229,7 +2087,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "在基礎模型 (FM) 的紅隊測試中，工程師試圖通過其安全過濾器，因此會產生有害文字。這種技術叫什麼？",
+        "options": {
+          "A": "模糊訓練資料以發現漏洞",
+          "B": "越獄",
+          "C": "授權滲透測試",
+          "D": "拒絕服務 (DoS) 攻擊"
+        },
+        "explanation": "越獄是試圖規避或停用模型內建安全控制，從而產生受限或有害的內容，這正是工程師正在做的事情。\n透過在開發過程中提供格式錯誤的輸入而不是繞過安全過濾器來模糊訓練資料探針的漏洞。授權滲透測試是一種經過批准的安全評估。拒絕服務攻擊的目標是可用性，而不是破壞內容防護措施。"
+      }
+    }
   },
   {
     "id": "aif-q110",
@@ -1250,7 +2120,19 @@
       "Amazon Athena",
       "Amazon Redshift",
       "Amazon EMR"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一個團隊正在建立對話式搜尋功能，需要一個可以將生成式 AI 嵌入儲存為向量並對其運行相似性查詢的資料庫。哪種 AWS 服務符合此要求？",
+        "options": {
+          "A": "Amazon Athena",
+          "B": "Amazon Redshift",
+          "C": "Amazon Aurora PostgreSQL",
+          "D": "Amazon EMR"
+        },
+        "explanation": "Amazon Aurora PostgreSQL 支援 pgvector 擴展，該擴展可對向量嵌入進行儲存、索引和運行相似性查詢，使其適合將嵌入作為向量進行儲存和查詢。\nAmazon Athena 是針對 Amazon S3 中資料的無伺服器查詢服務。 Amazon Redshift 是一個用於分析的資料倉儲。 Amazon EMR 運行大資料處理框架。這些都不是為了儲存和查詢向量嵌入以進行相似性搜尋而設計的。"
+      }
+    }
   },
   {
     "id": "aif-q114",
@@ -1266,7 +2148,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.4",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "團隊如何確定基礎模型 (FM) 是否有效滿足其業務目標？",
+        "options": {
+          "A": "評估模型在基準資料集上的效能",
+          "B": "評估模型與其必須支援的特定用例的一致性",
+          "C": "分析模型的架構和超參數",
+          "D": "測量模型部署所需的運算資源"
+        },
+        "explanation": "評估模型與它必須支援的特定用例的一致性程度可以顯示其輸出是否解決了真正的業務問題，這就是您判斷它是否滿足業務目標的方法。\n基準性能衡量整體準確性，而不是業務適合度。分析架構和超參數是與業務價值無關的技術細節。衡量計算資源涉及成本和可行性，而不是目標是否實現。"
+      }
+    }
   },
   {
     "id": "aif-q132",
@@ -1282,7 +2176,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.3",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家公司希望透過定期使用最新資料進行重新訓練來保持其基礎模型 (FM) 的最新狀態。哪種培訓策略可以滿足這項要求？",
+        "options": {
+          "A": "大量學習",
+          "B": "靜態訓練",
+          "C": "潛伏訓練",
+          "D": "持續預訓練"
+        },
+        "explanation": "持續預訓練會定期攝取最新資料並更新模型的權重，因此基礎模型保持最新狀態，而無需每次從頭開始重新訓練。\n大量學習以固定批次處理資料，但不是持續模型刷新的策略。靜態訓練會產生一個不更新的一次性固定模型。潛在訓練並不是公認的訓練策略。"
+      }
+    }
   },
   {
     "id": "aif-q136",
@@ -1298,7 +2204,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "某公司的大語言模型（LLM）不斷產生幻覺。哪些改變可以減少它們？",
+        "options": {
+          "A": "減少模型的溫度推論參數",
+          "B": "使用 Amazon Bedrock 代理來監督模型的訓練",
+          "C": "預處理資料以刪除任何導致幻覺的資料",
+          "D": "切換到經過訓練不會產生幻覺的基礎模型 (FM)"
+        },
+        "explanation": "降低溫度參數會降低模型選擇令牌的隨機性，因此它依賴更高機率的輸出，並且不太可能產生幻覺內容。\nAmazon Bedrock 的代理協調任務並且不監督訓練。您無法透過預處理可靠地識別和刪除導致幻覺的特定資料。沒有任何基礎模型可以保證永遠不會出現幻覺，因此切換模型並不能解決問題。"
+      }
+    }
   },
   {
     "id": "aif-q140",
@@ -1314,7 +2232,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "top-p（核）採樣與基於溫度的採樣有何不同？",
+        "options": {
+          "A": "它從盡可能小的標記集中進行採樣",
+          "B": "它總是產生確定性的輸出",
+          "C": "它僅從機率總計為 p 的標記集中進行採樣",
+          "D": "它僅適用於特定的模型架構"
+        },
+        "explanation": "Top-p（核）採樣動態地將候選標記限制為累積機率達到 p 的最小集合，然後從該集合中進行採樣，從而使標記的選擇適應每一步的機率分佈。\n無論機率如何，它都不會將令牌集固定為盡可能小的大小。它不會產生確定性輸出，因為它仍然被取樣。它不限於特定的模型架構。"
+      }
+    }
   },
   {
     "id": "aif-q190",
@@ -1334,7 +2264,19 @@
       "Amazon Bedrock",
       "Amazon Personalize",
       "Amazon SageMaker AI"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家零售商有 100 次高品質的代理商與客戶對話，並希望其聊天機器人的回應符合公司的語氣。哪種解決方案可以滿足這個要求？",
+        "options": {
+          "A": "使用 Amazon Personalize 產生回應",
+          "B": "建立 Amazon Bedrock 微調作業",
+          "C": "建立 Amazon SageMaker HyperPod 預訓練作業",
+          "D": "在 Amazon SageMaker AI 上託管模型並應用 TensorRT 來優化 LLM 推理"
+        },
+        "explanation": "Amazon Bedrock 微調工作根據公司自己的範例對話調整基礎模型，教導它公司的語氣，以便聊天機器人在回應中反映它。\nAmazon Personalize 是一項建議服務，而不是設定聊天機器人文字樣式的方法。 SageMaker HyperPod 預訓練作業用於從頭開始進行大規模預訓練，這對於 100 個範例來說是大材小用。託管模型並套用 TensorRT 可最佳化推理速度，而不是反應語調。"
+      }
+    }
   },
   {
     "id": "aif-q195",
@@ -1350,7 +2292,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一位人工智慧從業者正在將 top-p（核）採樣與基於溫度的採樣進行比較。 top-p 採樣有什麼差別？",
+        "options": {
+          "A": "它僅適用於某些模型架構",
+          "B": "對於給定的提示，它總是會傳回相同的輸出",
+          "C": "它將每一步的取樣限制為一個令牌",
+          "D": "它從機率總和為 p 的最小頂級標記集中進行採樣"
+        },
+        "explanation": "Top-p（核心）取樣選擇累積機率達到 p 的最高機率令牌的最小集合，並從該集合中進行樣本，使候選池適應每一步的分佈，而不是使用固定的截止值。\n它不限於特定的模型架構。它仍然採樣，因此不會每次都返回相同的輸出。它不限制對單一標記的選擇。"
+      }
+    }
   },
   {
     "id": "aif-q200",
@@ -1366,7 +2320,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家公司正在其應用程式中添加大型語言模型 (LLM)，並且需要盡可能確定性和穩定的回應。哪種解決方案可以滿足這個要求？",
+        "options": {
+          "A": "在發送之前將“使您的回應具有確定性”添加到提示末尾",
+          "B": "提交提示時將溫度參數設定為1",
+          "C": "提交提示時將溫度參數設定為0",
+          "D": "在發送之前將“使您的回應具有確定性”添加到提示的開頭"
+        },
+        "explanation": "將溫度設為 0 會強制進行貪婪解碼，因此模型每次都會選擇最有可能的下一個標記，並產生確定性、穩定的輸出。\n將溫度設定為 1 可保持完全隨機性，這與確定性相反。在提示的開始或結束處添加諸如使響應具有確定性之類的指令不會控制採樣過程，也不會可靠地使輸出具有確定性。"
+      }
+    }
   },
   {
     "id": "aif-q210",
@@ -1382,7 +2348,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "哪個大型語言模型 (LLM) 參數設定模型在每個生成步驟中考慮多少個候選下一個標記？",
+        "options": {
+          "A": "最大代幣數",
+          "B": "溫度",
+          "C": "前K",
+          "D": "批量大小"
+        },
+        "explanation": "Top K 參數將每一步的取樣限制為 K 個最可能的下一個標記，因此它直接控制模型在產生每個標記時考慮多少個候選標記。\n最大令牌限制了輸出的總長度，而不是每個步驟的候選池。溫度調整的是分佈的隨機性，而不是候選者的數量。批次大小涉及一起處理多少輸入，而不是令牌選擇。"
+      }
+    }
   },
   {
     "id": "aif-q220",
@@ -1398,7 +2376,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "人工智慧從業者想要一個大型語言模型（LLM）來產生更多樣化和創造性的輸出。實踐者應該如何調整推理參數？",
+        "options": {
+          "A": "降低Top K值",
+          "B": "增加響應長度",
+          "C": "增加溫度值",
+          "D": "減少提示長度"
+        },
+        "explanation": "升高溫度會使模型的機率分佈變得平坦，並增加選擇不太可能的標記的機會，從而產生更多樣化和創造性的反應。\n降低 Top K 值會縮小候選標記的範圍，並使輸出更加集中，而不是更加多樣化。增加響應長度只會使輸出更長。縮短提示長度會減少上下文，並且不會增加創造力。"
+      }
+    }
   },
   {
     "id": "aif-q239",
@@ -1416,7 +2406,19 @@
     "lastVerified": "2026-06-02",
     "services": [
       "Amazon Bedrock"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家公司將在 Amazon Bedrock 上微調大型語言模型 (LLM)，以改善其應用程式輸出訊息的風格。公司需要哪種類型的資料？",
+        "options": {
+          "A": "僅輸入訊息的範例",
+          "B": "輸入訊息及其對應輸出訊息的配對樣本",
+          "C": "僅輸出訊息的範例",
+          "D": "輸入訊息和輸出訊息的單獨的、不成對的樣本"
+        },
+        "explanation": "微調以完善輸出樣式需要輸入訊息及其對應輸出訊息的配對範例，以便模型學習從輸入到所需樣式輸出的對應。\n僅輸入訊息或僅輸出訊息的樣本缺乏模型必須學習的輸入到輸出關係。單獨的、未配對的樣本不會顯示哪個輸出與哪個輸入對應，因此模型無法學習樣式。"
+      }
+    }
   },
   {
     "id": "aif-q246",
@@ -1436,7 +2438,20 @@
     "isMultiAnswer": true,
     "taskStatement": "3.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "哪兩個參數通常用來控制產生人工智慧模型輸出的多樣性？",
+        "options": {
+          "A": "型號尺寸",
+          "B": "Top-k 採樣",
+          "C": "訓練資料集大小",
+          "D": "Top-p（核）採樣",
+          "E": "硬體配置"
+        },
+        "explanation": "Top-k 採樣將選擇限制為 k 個最有可能的下一個標記，而 Top-p（核心）採樣從概率總和為 p 的最小標記集中進行選擇；兩者都調整候選池以平衡生成文本的多樣性和質量。\n模型大小、訓練資料集大小和硬體配置會影響模型的能力、成本或速度，但它們不是控制輸出多樣性的運行時參數。"
+      }
+    }
   },
   {
     "id": "aif-q247",
@@ -1452,7 +2467,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.1",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "設計團隊在 Amazon Bedrock 上使用影像產生基礎模型 (FM)，並希望控制每個生成影像的詳細或抽象程度。他們應該調整哪個模型參數？",
+        "options": {
+          "A": "模型檢查點",
+          "B": "生成步驟",
+          "C": "批量大小",
+          "D": "令牌長度"
+        },
+        "explanation": "生成步驟參數設定模型在創建圖像時運行多少個細化步驟；更多的步驟產生更詳細的圖像，更少的步驟產生更抽象的圖像，因此它控制細節的水平。\n模型檢查點選擇模型的保存版本，而不是單一影像的細節。批次大小設定一次產生多少圖像。令牌長度適用於文字生成，不適用於影像細節。"
+      }
+    }
   },
   {
     "id": "aif-q257",
@@ -1468,7 +2495,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.2",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "團隊使用 Amazon Nova Canvas 模型產生影像，並且需要將特定項目排除在結果之外。哪種解決方案可以滿足這個要求？",
+        "options": {
+          "A": "使用更高的溫度值",
+          "B": "使用否定提示",
+          "C": "使用更詳細的提示",
+          "D": "切換到另一個基礎模型（FM）"
+        },
+        "explanation": "否定提示指定模型應避免的項目或特徵，因此它將不需要的項目排除在生成的圖像之外。\n更高的溫度只會增加隨機性。更詳細的提示描述了要包含的內容，但不能可靠地排除特定項目。切換到另一個基礎模型不提供排除項目的機制。"
+      }
+    }
   },
   {
     "id": "aif-q260",
@@ -1484,7 +2523,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.3",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家公司正在建立生成式 AI 工具，並將利用其內部文件自訂基礎模型 (FM)。哪一種方法可以滿足這個要求？",
+        "options": {
+          "A": "分類",
+          "B": "蒸餾",
+          "C": "繼續預訓練",
+          "D": "回歸"
+        },
+        "explanation": "持續的預訓練進一步在公司內部文件上訓練基礎模型，使模型適應公司的領域和內容。\n分類和回歸是有監督的 ML 任務，而不是在文件上自訂 FM 的方法。蒸餾將知識從較大的模型轉移到較小的模型，而不是使模型適應內部文件。"
+      }
+    }
   },
   {
     "id": "aif-q266",
@@ -1505,7 +2556,19 @@
       "Amazon Personalize",
       "Amazon Rekognition",
       "Amazon Comprehend"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一個研究小組希望幾位科學家手動比較不同生成式人工智慧模型的輸出，以獲得明確的提示。哪種解決方案可以滿足這個要求？",
+        "options": {
+          "A": "對 Amazon Personalize 使用自動評估",
+          "B": "對 Amazon Bedrock 使用模型評估",
+          "C": "對 Amazon Rekognition 使用內容審核",
+          "D": "對 Amazon Comprehend 使用情緒分析"
+        },
+        "explanation": "Amazon Bedrock 模型評估支援基於人的評估，因此科學家團隊可以根據小組的提示和標準審查和比較模型的輸出。\nAmazon Personalize 提供建議。 Amazon Rekognition 進行影像和視訊內容審核。 Amazon Comprehend 執行情緒分析等 NLP 任務。這些都不能提供對生成模型輸出的人類評估。"
+      }
+    }
   },
   {
     "id": "aif-q042",
@@ -1521,7 +2584,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.4",
     "lastVerified": "2026-06-02",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "支援中心推出了大型語言模型 (LLM) 聊天機器人，以減少客服人員在回答客戶問題時採取的步驟。哪個業務指標最能顯示聊天機器人是否發揮了作用？",
+        "options": {
+          "A": "企業社會責任",
+          "B": "監理合規性",
+          "C": "平均通話時長",
+          "D": "網站參與率"
+        },
+        "explanation": "平均通話時間直接反映了聊天機器人減少了客服人員解決問題的步驟的程度，因此追蹤它可以衡量聊天機器人的業務影響。\n企業社會責任和法規遵循是組織關注的問題，與客服人員解決客戶問題的速度無關。網站參與率衡量的是線上訪客的行為，而不是呼叫中心的效率。"
+      }
+    }
   },
   {
     "id": "aif-q244",
@@ -1539,7 +2614,19 @@
     "lastVerified": "2026-06-02",
     "services": [
       "Amazon Aurora"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "對於 AI 工作負載，將 Amazon Aurora 與 pgvector 擴充配對的主要好處是什麼？",
+        "options": {
+          "A": "自動生成AI模型",
+          "B": "它提供預先訓練的語言模型",
+          "C": "它支援在關聯式資料庫內進行向量相似性搜尋",
+          "D": "它提供無伺服器運算能力"
+        },
+        "explanation": "具有 pgvector 擴展的 Amazon Aurora 可以在關聯式資料庫內進行向量相似性搜索，因此嵌入可以與結構化資料一起儲存並使用 SQL 進行查詢，同時保留關係特徵。\nAurora 不會自動產生 AI 模型或提供預先訓練的語言模型。無伺服器容量是一種部署選項，但並不是 pgvector 對於 AI 應用程式的主要優勢。"
+      }
+    }
   },
   {
     "id": "aif-q384",
@@ -1557,7 +2644,19 @@
     "lastVerified": "2026-06-03",
     "services": [
       "Amazon Bedrock"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家公司在 Amazon Bedrock 上運行多個生成式 AI 應用程式，並希望對其提示進行版本控制、比較不同的提示變體，並在質量下降時回滾到之前的版本。哪一個 Amazon Bedrock 功能滿足這些要求？",
+        "options": {
+          "A": "Amazon Bedrock Knowledge Bases",
+          "B": "Amazon Bedrock Guardrails",
+          "C": "Amazon Bedrock Prompt Management",
+          "D": "Amazon Bedrock Model Evaluation"
+        },
+        "explanation": "Amazon Bedrock Prompt Management 允許團隊建立、版本化和管理提示範本、比較變體以及回滾到早期版本，從而提供公司維持其應用程式中的提示品質所需的生命週期控制。\nAmazon Bedrock Knowledge Bases 索引和檢索 RAG 工作流程的文件。 Amazon Bedrock Guardrails 過濾有害或不需要的內容。 Amazon Bedrock Model Evaluation 評分並比較模型表現。這些都不管理提示版本或支援回滾。"
+      }
+    }
   },
   {
     "id": "aif-q385",
@@ -1573,7 +2672,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.4",
     "lastVerified": "2026-06-03",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家公司在 Amazon Bedrock 上部署了人工智慧助理來處理客戶服務請求。它希望衡量助理在不升級的情況下解決客戶問題的效率。哪個指標最能反映這一點？",
+        "options": {
+          "A": "BLEU 分數",
+          "B": "任務完成率",
+          "C": "困惑",
+          "D": "模型參數個數"
+        },
+        "explanation": "任務完成率衡量助理在無需人工升級的情況下完全解決的客戶請求的百分比，直接反映其如何有效地滿足自主處理服務請求的業務目標。\nBLEU 分數透過將產生的文本與參考文獻進行比較來衡量翻譯品質。困惑度衡量語言模型預測文本的能力。模型參數計數描述了模型大小。這些都無法衡量助理是否成功完成客戶任務。"
+      }
+    }
   },
   {
     "id": "aif-q386",
@@ -1593,7 +2704,20 @@
     "isMultiAnswer": true,
     "taskStatement": "3.4",
     "lastVerified": "2026-06-03",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "哪兩個指標是用於評估人工智慧應用程式的業務一致性指標的範例？",
+        "options": {
+          "A": "使用者滿意度",
+          "B": "BERT評分",
+          "C": "每次互動成本",
+          "D": "胭脂分數",
+          "E": "模型訓練時間"
+        },
+        "explanation": "使用者滿意度衡量人工智慧應用程式滿足最終使用者期望的程度，每次互動成本衡量每次使用者參與的營運費用，這兩者都與業務目標直接相關，並被定義為人工智慧應用程式的業務一致性指標。\nBERTcore 和 ROUGE 分數是根據參考而非業務成果來衡量產生文字品質的技術指標。模型訓練時間是一個關於訓練需要多長時間的操作指標，並沒有說明應用程式是否實現其業務目標。"
+      }
+    }
   },
   {
     "id": "aif-q387",
@@ -1614,7 +2738,19 @@
       "Amazon DynamoDB",
       "Amazon Redshift",
       "Amazon ElastiCache"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家公司正在建立一個知識圖，該知識圖還需要儲存向量嵌入並在圖遍歷的同時對其進行相似性搜尋。哪一種 AWS 資料庫服務同時支援圖形查詢和向量搜尋？",
+        "options": {
+          "A": "Amazon DynamoDB",
+          "B": "Amazon Neptune",
+          "C": "Amazon Redshift",
+          "D": "Amazon ElastiCache"
+        },
+        "explanation": "Amazon Neptune 是一個圖形資料庫，還支援向量相似性搜索，允許公司將嵌入與知識圖關係一起存儲，並在同一資料庫中運行圖遍歷和最近鄰查詢。\nAmazon DynamoDB 是一個鍵值和文件資料庫，沒有本機圖形或向量搜尋功能。 Amazon Redshift 是一個用於分析的資料倉儲。 Amazon ElastiCache 是一項記憶體快取服務。這些都沒有將圖查詢與向量相似性搜尋結合。"
+      }
+    }
   },
   {
     "id": "aif-q388",
@@ -1630,7 +2766,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.4",
     "lastVerified": "2026-06-03",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家公司使用基礎模型產生長篇行銷內容，並希望在不依賴人工審核員的情況下大規模評估品質。哪種評估方法使用另一個大型語言模型來對輸出進行評分？",
+        "options": {
+          "A": "BLEU 評分",
+          "B": "法學碩士法官",
+          "C": "基準資料集比較",
+          "D": "與真實使用者進行 A/B 測試"
+        },
+        "explanation": "LLM-as-a-judge 使用單獨的大型語言模型根據定義的標準對另一個模型的輸出進行評估和評分，提供可擴展的品質評估，而無需對每個輸出進行人工審核。\nBLEU 評分使用 n 元語法重疊將產生的文字與參考翻譯進行比較，並且需要預先編寫的參考。基準資料集比較根據已知答案的固定測試集進行評估。 A/B 測試需要即時使用者比較變體。這些都沒有使用另一個法學碩士來判斷輸出品質。"
+      }
+    }
   },
   {
     "id": "aif-q436",
@@ -1648,7 +2796,19 @@
     "lastVerified": "2026-06-03",
     "services": [
       "Amazon Bedrock"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家公司部署了基於 RAG 的客戶支援助理，並希望評估檢索元件是否傳回使用者查詢的相關文件。團隊應該使用哪種方法？",
+        "options": {
+          "A": "測量模型在保留資料集上的困惑度",
+          "B": "將檢索到的段落與已知正確的來源文件進行比較，以進行一組測試查詢",
+          "C": "計算對 Amazon Bedrock 進行的 API 呼叫總數",
+          "D": "測量模型輸出的 BLEU 分數"
+        },
+        "explanation": "評估 RAG 應用程式需要評估檢索組件是否返回相關文檔，這是透過將測試查詢的檢索段落與已知正確的來源文檔進行比較並測量檢索精度和召回率來完成的。\n困惑度評估語言模型的質量，而不是檢索相關性。對 API 呼叫進行計數可以衡量使用量。 BLEU 分數評估翻譯品質。這些都沒有評估檢索管道。"
+      }
+    }
   },
   {
     "id": "aif-q444",
@@ -1664,7 +2824,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.1",
     "lastVerified": "2026-06-03",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家公司每天發送數千次相同的冗長系統提示，只有使用者查詢發生變化，並且它希望減少延遲和成本。哪一個 FM 選擇標準最相關？",
+        "options": {
+          "A": "多語言支援",
+          "B": "提示快取",
+          "C": "模型複雜度",
+          "D": "擴散能力"
+        },
+        "explanation": "提示快取儲存重複系統提示的處理表示，因此模型不會在每個請求上重新處理它，從而在重複發送相同前綴而僅使用者查詢發生變化時減少延遲和成本。\n多語言支援涉及語言覆蓋範圍。模型複雜度與推理能力有關。擴散能力適用於影像生成模型。這些都沒有解決處理重複提示前綴的成本。"
+      }
+    }
   },
   {
     "id": "aif-q445",
@@ -1680,7 +2852,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.1",
     "lastVerified": "2026-06-03",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "公司需要一個可以接受文字和圖像作為輸入並產生文字輸出的基礎模型。哪個 FM 選擇標準決定模型是否支援此功能？",
+        "options": {
+          "A": "溫度範圍",
+          "B": "模態",
+          "C": "上下文視窗大小",
+          "D": "訓練資料集大小"
+        },
+        "explanation": "模態描述模型支援的輸入和輸出類型，例如文字、圖像、音訊或視訊。模型必須支援多模式輸入（文字和圖像）才能接受這兩種類型並產生文字輸出。\n溫度範圍控制輸出隨機性。上下文視窗大小決定單一提示中可以容納多少資訊。訓練資料集大小會影響模型知識，但不會決定支援的輸入類型。"
+      }
+    }
   },
   {
     "id": "aif-q446",
@@ -1698,7 +2882,19 @@
     "lastVerified": "2026-06-03",
     "services": [
       "Amazon Bedrock"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一家公司在 Amazon Bedrock 上運行大型基礎模型，但發現推理成本太高。它想要一種更小、更便宜的型號，同時保留大型型號的大部分品質。哪種客製化方法可以滿足此要求？",
+        "options": {
+          "A": "檢索增強生成 (RAG)",
+          "B": "模型蒸餾",
+          "C": "持續預訓練",
+          "D": "情境學習"
+        },
+        "explanation": "模型蒸餾訓練較小的學生模型來複製較大教師模型的行為，從而產生一個緊湊的模型，該模型以較低的推理成本保留了大部分原始質量。\nRAG 在查詢時檢索外部文檔，但不會減少模型大小或成本。持續的預訓練會更新知識，但不會縮小模型。上下文學習在提示中添加了範例，這實際上增加了令牌成本。"
+      }
+    }
   },
   {
     "id": "aif-q447",
@@ -1714,7 +2910,19 @@
     "isMultiAnswer": false,
     "taskStatement": "3.1",
     "lastVerified": "2026-06-03",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一家旅遊公司想要一個人工智慧系統，可以搜尋航班可用性、比較各航空公司的價格、預訂機票並發送確認電子郵件，所有這些都可以根據單一客戶的請求進行。哪種解決方案可以滿足這個要求？",
+        "options": {
+          "A": "文字摘要模型",
+          "B": "使用工具呼叫編排多步驟任務的 AI 代理",
+          "C": "將請求路由到部門的分類模型",
+          "D": "推薦熱門航班的推薦引擎"
+        },
+        "explanation": "人工智慧代理可以將客戶的請求分解為多個步驟（搜尋航班、比較價格、預訂和發送確認），並透過呼叫適當的工具和 API 來執行每個步驟，這是代理複雜業務工作流程的定義能力。\n摘要模型會壓縮文本，但無法執行操作。分類模型路由請求，但無法執行多步驟任務。推薦引擎可以推薦商品，但無法預訂航班或發送電子郵件。"
+      }
+    }
   },
   {
     "id": "aif-q448",
@@ -1734,7 +2942,20 @@
     "isMultiAnswer": true,
     "taskStatement": "3.2",
     "lastVerified": "2026-06-03",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "哪兩種實踐可以透過即時工程來提高基礎模型的回應品質？",
+        "options": {
+          "A": "說明具體而簡潔",
+          "B": "使用模糊的語言來允許創作自由",
+          "C": "嘗試不同的提示結構並迭代",
+          "D": "始終使用提示的最大令牌限制",
+          "E": "避免提供任何上下文以使提示簡短"
+        },
+        "explanation": "具體和簡潔可以明確地告訴模型預期的內容，並且嘗試不同的提示結構和迭代有助於發現最適合每個任務的方法，這兩者都是提示工程最佳實踐。\n含糊的語言會產生歧義，從而降低迴應品質。使用最大令牌限制會在不相關的內容上浪費令牌。避免上下文會剝奪模型準確回應所需的資訊。"
+      }
+    }
   },
   {
     "id": "aif-q449",
@@ -1752,7 +2973,19 @@
     "lastVerified": "2026-06-03",
     "services": [
       "Amazon Bedrock"
-    ]
+    ],
+    "translations": {
+      "zh": {
+        "question": "一個團隊管理多個生成式 AI 應用程式中的數十個提示，並希望追蹤變更、比較變體，並在品質下降時恢復到先前的版本。哪一個 Amazon Bedrock 功能滿足此要求？",
+        "options": {
+          "A": "Amazon Bedrock Knowledge Bases",
+          "B": "Amazon Bedrock Guardrails",
+          "C": "Amazon Bedrock Prompt Management",
+          "D": "Amazon Bedrock Model Evaluation"
+        },
+        "explanation": "Amazon Bedrock Prompt Management 提供提示版本控制、變體比較和回滾功能，使團隊能夠跨多個應用程式對其提示進行生命週期控制。\n知識庫索引和檢索 RAG 文件。護欄過濾內容以確保安全。模型評估對模型性能進行評分。這些都不管理提示版本。"
+      }
+    }
   },
   {
     "id": "aif-q461",
@@ -1776,7 +3009,20 @@
     "isMultiAnswer": false,
     "taskStatement": "3.3",
     "lastVerified": "2026-06-13",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "一個團隊正在使用 Amazon Bedrock 使用自己的標記資料自訂基礎模型，以便它在特定於網域的支援任務上表現更好。從頭到尾安排微調工作流程的步驟。",
+        "options": {
+          "A": "執行微調作業，調整提供的範例的模型權重",
+          "B": "選擇支援目標任務定制的基礎模型",
+          "C": "為生成的自訂模型配置吞吐量並將其部署用於推理",
+          "D": "以所需格式準備並上傳標籤的訓練資料集至 Amazon S3",
+          "E": "根據保留的驗證集評估調整後的模型，以確認其已改進"
+        },
+        "explanation": "您必須先選擇支援自訂的基礎模型，然後準備標記資料集並將其上傳到S3，因為訓練作業在開始之前需要目標模型和格式化資料。執行微調作業會調整權重，然後在保留的集合上評估調整後的模型，並且只有在通過後，才配置吞吐量來部署它。\n一個常見的錯誤是在訓練之前進行評估或在評估之前進行部署，但是您無法測量尚不存在的調整後的模型，並且交付未評估的模型存在回歸風險。資料準備也先於作業本身，因為微調會消耗標記的範例而不是產生它們。"
+      }
+    }
   },
   {
     "id": "aif-q462",
@@ -1804,6 +3050,24 @@
     "isMultiAnswer": false,
     "taskStatement": "3.4",
     "lastVerified": "2026-06-13",
-    "services": []
+    "services": [],
+    "translations": {
+      "zh": {
+        "question": "將每個基礎模型評估指標與其主要衡量的內容相匹配。將左側的每個指標與右側的正確描述配對。",
+        "options": {
+          "A": "胭脂",
+          "B": "藍線",
+          "C": "BERT評分",
+          "D": "困惑"
+        },
+        "explanation": "ROUGE 是以召回為導向的，是摘要的標準選擇，而 BLEU 則強調針對參考文獻的 n-gram 精度，是經典的機器翻譯指標，因此如果您只記得兩者都使用 n-gram 重疊，那麼這兩者很容易互換。 BERTScore 透過比較上下文嵌入來捕捉語義相似性，超越了精確的標記匹配，而困惑度是模型預測下一個標記的信心程度的內在衡量標準，其中越低越好。\n關鍵區別是基於重疊的度量（ROUGE 和 BLEU）與基於嵌入的度量（BERTScore）與內在機率測量（困惑度）。一個誘人的錯誤是假設較高的困惑度表示更好的模型，但困惑度反映了不確定性，因此較低的值表示更強的下一個令牌預測。",
+        "targets": {
+          "1": "生成文本和參考文獻之間的 n 元語法重疊精度，主要用於對機器翻譯品質進行評分",
+          "2": "語言模型預測樣本的效果如何，以它對下一個標記的不確定性來衡量，其中值越低越好",
+          "3": "生成文字和參考文本之間 n 元語法的面向回憶的重疊，主要用於對摘要品質進行評分",
+          "4": "生成文本和參考文本之間的語義相似性是根據上下文嵌入而不是精確的標記匹配計算得出的"
+        }
+      }
+    }
   }
 ]

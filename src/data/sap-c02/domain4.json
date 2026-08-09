@@ -13,7 +13,19 @@
     "isMultiAnswer": false,
     "explanation": "Application Discovery collects utilization and dependency information for migration planning.\nThe other choices provide delivery, filtering, or application identity.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "生產團隊需要在遷移之前發現本地應用程式的依賴關係。應該評估哪些服務？",
+        "options": {
+          "A": "AWS Application Discovery Service",
+          "B": "Amazon CloudFront",
+          "C": "AWS WAF",
+          "D": "Amazon Cognito"
+        },
+        "explanation": "Application Discovery 收集利用率和依賴性資訊以進行遷移規劃。\n其他選擇提供交付、過濾或應用程式身分。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-002",
@@ -29,7 +41,19 @@
     "isMultiAnswer": false,
     "explanation": "Application Migration Service replicates servers for lift-and-shift migration.\nThe other choices provide ETL, DNS, or file storage.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "多帳戶平台團隊必須在後期現代化之前將伺服器遷移到 AWS，並進行最小程度的變更。哪種服務適合？",
+        "options": {
+          "A": "僅限 Amazon EFS",
+          "B": "AWS Application Migration Service",
+          "C": "AWS Glue",
+          "D": "Amazon Route 53"
+        },
+        "explanation": "應用程式遷移服務複製伺服器以進行直接遷移。\n其他選擇提供 ETL、DNS 或檔案儲存。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-003",
@@ -45,7 +69,19 @@
     "isMultiAnswer": false,
     "explanation": "Incremental decomposition limits migration risk and permits controlled validation.\nA big-bang rewrite and missing telemetry increase risk.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "受監管的公司需要逐步將單體現代化為事件驅動的元件。哪種方法是明智的？",
+        "options": {
+          "A": "共享根憑證",
+          "B": "禁用可觀察性",
+          "C": "使用 API 和事件進行 Strangler 式增量分解",
+          "D": "測試前重寫所有內容"
+        },
+        "explanation": "增量分解限制了遷移風險並允許受控驗證。\n大爆炸重寫和缺失遙測會增加風險。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-004",
@@ -61,7 +97,19 @@
     "isMultiAnswer": false,
     "explanation": "Snowball Edge supports offline bulk data transfer when network upload is impractical.\nThe other choices do not transfer offline archives.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "當網路頻寬受到限制時，準備增加流量的新創公司必須將大型檔案移至 S3。適合哪種服務？",
+        "options": {
+          "A": "Amazon Cognito",
+          "B": "AWS WAF",
+          "C": "Amazon API Gateway",
+          "D": "AWS Snowball Edge"
+        },
+        "explanation": "當網路上傳不可行時，Snowball Edge 支援離線批次資料傳輸。\n其他選項不傳輸離線檔案。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-005",
@@ -77,7 +125,19 @@
     "isMultiAnswer": false,
     "explanation": "Phased migration with reconciliation and decommission criteria reduces operational and data risk.\nThe other choices create permanent drift or data loss.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "支援關鍵工作負載的營運團隊需要在準備託管資料庫遷移時暫時執行舊資料庫。適用哪一項原則？",
+        "options": {
+          "A": "分離遷移階段並定義明確的退役計劃",
+          "B": "永遠運行兩個系統而無需協調",
+          "C": "立即刪除來源",
+          "D": "忽略資料驗證"
+        },
+        "explanation": "具有協調和退役標準的分階段遷移可降低營運和資料風險。\n其他選擇會造成永久性漂移或資料遺失。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-006",
@@ -93,7 +153,19 @@
     "isMultiAnswer": false,
     "explanation": "Application Discovery collects utilization and dependency information for migration planning.\nThe other choices provide delivery, filtering, or application identity.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "資料平台團隊需要在遷移之前發現本地應用程式依賴關係。應該評估哪些服務？",
+        "options": {
+          "A": "Amazon Cognito",
+          "B": "AWS Application Discovery Service",
+          "C": "Amazon CloudFront",
+          "D": "AWS WAF"
+        },
+        "explanation": "Application Discovery 收集利用率和依賴性資訊以進行遷移規劃。\n其他選擇提供交付、過濾或應用程式身分。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-007",
@@ -109,7 +181,19 @@
     "isMultiAnswer": false,
     "explanation": "Application Migration Service replicates servers for lift-and-shift migration.\nThe other choices provide ETL, DNS, or file storage.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有安全意識的工程團隊必須在以後的現代化之前以最小的更改將伺服器遷移到 AWS。哪種服務適合？",
+        "options": {
+          "A": "Amazon Route 53",
+          "B": "僅限 Amazon EFS",
+          "C": "AWS Application Migration Service",
+          "D": "AWS Glue"
+        },
+        "explanation": "應用程式遷移服務複製伺服器以進行直接遷移。\n其他選擇提供 ETL、DNS 或檔案儲存。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-008",
@@ -125,7 +209,19 @@
     "isMultiAnswer": false,
     "explanation": "Incremental decomposition limits migration risk and permits controlled validation.\nA big-bang rewrite and missing telemetry increase risk.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "遷移現有工作負載的公司需要逐漸將單體現代化為事件驅動的元件。哪種方法是明智的？",
+        "options": {
+          "A": "測試前重寫所有內容",
+          "B": "共享根憑證",
+          "C": "禁用可觀察性",
+          "D": "使用 API 和事件進行 Strangler 式增量分解"
+        },
+        "explanation": "增量分解限制了遷移風險並允許受控驗證。\n大爆炸重寫和缺失遙測會增加風險。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-009",
@@ -141,7 +237,19 @@
     "isMultiAnswer": false,
     "explanation": "Snowball Edge supports offline bulk data transfer when network upload is impractical.\nThe other choices do not transfer offline archives.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "當網路頻寬受限時，具有嚴格恢復目標的團隊必須將大型檔案移至 S3。適合哪種服務？",
+        "options": {
+          "A": "AWS Snowball Edge",
+          "B": "Amazon Cognito",
+          "C": "AWS WAF",
+          "D": "Amazon API Gateway"
+        },
+        "explanation": "當網路上傳不可行時，Snowball Edge 支援離線批次資料傳輸。\n其他選項不傳輸離線檔案。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-010",
@@ -157,7 +265,19 @@
     "isMultiAnswer": false,
     "explanation": "Phased migration with reconciliation and decommission criteria reduces operational and data risk.\nThe other choices create permanent drift or data loss.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備發布的開發團隊需要在準備託管資料庫遷移時暫時執行舊資料庫。適用哪一項原則？",
+        "options": {
+          "A": "忽略資料驗證",
+          "B": "分離遷移階段並定義明確的退役計劃",
+          "C": "永遠運行兩個系統而無需協調",
+          "D": "立即刪除來源"
+        },
+        "explanation": "具有協調和退役標準的分階段遷移可降低營運和資料風險。\n其他選擇會造成永久性漂移或資料遺失。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-011",
@@ -173,7 +293,19 @@
     "isMultiAnswer": false,
     "explanation": "Application Discovery collects utilization and dependency information for migration planning.\nThe other choices provide delivery, filtering, or application identity.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "擁有多個 AWS 區域的企業需要在遷移之前發現本機應用程式依賴關係。應該評估哪些服務？",
+        "options": {
+          "A": "AWS WAF",
+          "B": "Amazon Cognito",
+          "C": "AWS Application Discovery Service",
+          "D": "Amazon CloudFront"
+        },
+        "explanation": "Application Discovery 收集利用率和依賴性資訊以進行遷移規劃。\n其他選擇提供交付、過濾或應用程式身分。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-012",
@@ -189,7 +321,19 @@
     "isMultiAnswer": false,
     "explanation": "Application Migration Service replicates servers for lift-and-shift migration.\nThe other choices provide ETL, DNS, or file storage.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "審查事件的服務擁有者必須在以後的現代化之前將伺服器遷移到 AWS，並進行最少的變更。哪種服務適合？",
+        "options": {
+          "A": "AWS Glue",
+          "B": "Amazon Route 53",
+          "C": "僅限 Amazon EFS",
+          "D": "AWS Application Migration Service"
+        },
+        "explanation": "應用程式遷移服務複製伺服器以進行直接遷移。\n其他選擇提供 ETL、DNS 或檔案儲存。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-013",
@@ -205,7 +349,19 @@
     "isMultiAnswer": false,
     "explanation": "Incremental decomposition limits migration risk and permits controlled validation.\nA big-bang rewrite and missing telemetry increase risk.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "優化現有實現的團隊需要逐漸將單體現代化為事件驅動的元件。哪種方法是明智的？",
+        "options": {
+          "A": "使用 API 和事件進行 Strangler 式增量分解",
+          "B": "測試前重寫所有內容",
+          "C": "共享根憑證",
+          "D": "禁用可觀察性"
+        },
+        "explanation": "增量分解限制了遷移風險並允許受控驗證。\n大爆炸重寫和缺失遙測會增加風險。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-014",
@@ -221,7 +377,19 @@
     "isMultiAnswer": false,
     "explanation": "Snowball Edge supports offline bulk data transfer when network upload is impractical.\nThe other choices do not transfer offline archives.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "當網路頻寬受限時，引入自動化工作流程的公司必須將大型檔案移至 S3。適合哪種服務？",
+        "options": {
+          "A": "Amazon API Gateway",
+          "B": "AWS Snowball Edge",
+          "C": "Amazon Cognito",
+          "D": "AWS WAF"
+        },
+        "explanation": "當網路上傳不可行時，Snowball Edge 支援離線批次資料傳輸。\n其他選項不傳輸離線檔案。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-015",
@@ -237,7 +405,19 @@
     "isMultiAnswer": false,
     "explanation": "Phased migration with reconciliation and decommission criteria reduces operational and data risk.\nThe other choices create permanent drift or data loss.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "在共用環境中工作的 AWS 管理員需要在準備託管資料庫遷移時暫時執行舊資料庫。適用哪一項原則？",
+        "options": {
+          "A": "立即刪除來源",
+          "B": "忽略資料驗證",
+          "C": "分離遷移階段並定義明確的退役計劃",
+          "D": "永遠運行兩個系統而無需協調"
+        },
+        "explanation": "具有協調和退役標準的分階段遷移可降低營運和資料風險。\n其他選擇會造成永久性漂移或資料遺失。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-016",
@@ -253,7 +433,19 @@
     "isMultiAnswer": false,
     "explanation": "Application Discovery collects utilization and dependency information for migration planning.\nThe other choices provide delivery, filtering, or application identity.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "面向客戶的應用程式團隊需要在遷移之前發現本機應用程式依賴項。應該評估哪些服務？",
+        "options": {
+          "A": "Amazon CloudFront",
+          "B": "AWS WAF",
+          "C": "Amazon Cognito",
+          "D": "AWS Application Discovery Service"
+        },
+        "explanation": "Application Discovery 收集利用率和依賴性資訊以進行遷移規劃。\n其他選擇提供交付、過濾或應用程式身分。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-017",
@@ -269,7 +461,19 @@
     "isMultiAnswer": false,
     "explanation": "Application Migration Service replicates servers for lift-and-shift migration.\nThe other choices provide ETL, DNS, or file storage.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "標準化其 AWS 部署的平台團隊必須在以後的現代化之前將伺服器遷移到 AWS，並進行最少的更改。哪種服務適合？",
+        "options": {
+          "A": "AWS Application Migration Service",
+          "B": "AWS Glue",
+          "C": "Amazon Route 53",
+          "D": "僅限 Amazon EFS"
+        },
+        "explanation": "應用程式遷移服務複製伺服器以進行直接遷移。\n其他選擇提供 ETL、DNS 或檔案儲存。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-018",
@@ -285,7 +489,19 @@
     "isMultiAnswer": false,
     "explanation": "Incremental decomposition limits migration risk and permits controlled validation.\nA big-bang rewrite and missing telemetry increase risk.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "為審計準備證據的團隊需要逐漸將整體現代化為事件驅動的組件。哪種方法是明智的？",
+        "options": {
+          "A": "禁用可觀察性",
+          "B": "使用 API 和事件進行 Strangler 式增量分解",
+          "C": "測試前重寫所有內容",
+          "D": "共享根憑證"
+        },
+        "explanation": "增量分解限制了遷移風險並允許受控驗證。\n大爆炸重寫和缺失遙測會增加風險。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-019",
@@ -301,7 +517,19 @@
     "isMultiAnswer": false,
     "explanation": "Snowball Edge supports offline bulk data transfer when network upload is impractical.\nThe other choices do not transfer offline archives.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "當網路頻寬受到限制時，取代手動流程的企業必須將大型檔案移至 S3。適合哪種服務？",
+        "options": {
+          "A": "AWS WAF",
+          "B": "Amazon API Gateway",
+          "C": "AWS Snowball Edge",
+          "D": "Amazon Cognito"
+        },
+        "explanation": "當網路上傳不可行時，Snowball Edge 支援離線批次資料傳輸。\n其他選項不傳輸離線檔案。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-020",
@@ -317,7 +545,19 @@
     "isMultiAnswer": false,
     "explanation": "Phased migration with reconciliation and decommission criteria reduces operational and data risk.\nThe other choices create permanent drift or data loss.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "根據考試指南驗證設計的團隊需要在準備託管資料庫遷移時暫時執行舊資料庫。適用哪一項原則？",
+        "options": {
+          "A": "永遠運行兩個系統而無需協調",
+          "B": "立即刪除來源",
+          "C": "忽略資料驗證",
+          "D": "分離遷移階段並定義明確的退役計劃"
+        },
+        "explanation": "具有協調和退役標準的分階段遷移可降低營運和資料風險。\n其他選擇會造成永久性漂移或資料遺失。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-021",
@@ -333,7 +573,19 @@
     "isMultiAnswer": false,
     "explanation": "Application Discovery collects utilization and dependency information for migration planning.\nThe other choices provide delivery, filtering, or application identity.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "生產團隊需要在遷移之前發現本地應用程式的依賴關係。應該評估哪些服務？",
+        "options": {
+          "A": "AWS Application Discovery Service",
+          "B": "Amazon CloudFront",
+          "C": "AWS WAF",
+          "D": "Amazon Cognito"
+        },
+        "explanation": "Application Discovery 收集利用率和依賴性資訊以進行遷移規劃。\n其他選擇提供交付、過濾或應用程式身分。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-022",
@@ -349,7 +601,19 @@
     "isMultiAnswer": false,
     "explanation": "Application Migration Service replicates servers for lift-and-shift migration.\nThe other choices provide ETL, DNS, or file storage.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "多帳戶平台團隊必須在後期現代化之前將伺服器遷移到 AWS，並進行最小程度的變更。哪種服務適合？",
+        "options": {
+          "A": "僅限 Amazon EFS",
+          "B": "AWS Application Migration Service",
+          "C": "AWS Glue",
+          "D": "Amazon Route 53"
+        },
+        "explanation": "應用程式遷移服務複製伺服器以進行直接遷移。\n其他選擇提供 ETL、DNS 或檔案儲存。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-023",
@@ -365,7 +629,19 @@
     "isMultiAnswer": false,
     "explanation": "Incremental decomposition limits migration risk and permits controlled validation.\nA big-bang rewrite and missing telemetry increase risk.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "受監管的公司需要逐步將單體現代化為事件驅動的元件。哪種方法是明智的？",
+        "options": {
+          "A": "共享根憑證",
+          "B": "禁用可觀察性",
+          "C": "使用 API 和事件進行 Strangler 式增量分解",
+          "D": "測試前重寫所有內容"
+        },
+        "explanation": "增量分解限制了遷移風險並允許受控驗證。\n大爆炸重寫和缺失遙測會增加風險。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-024",
@@ -381,7 +657,19 @@
     "isMultiAnswer": false,
     "explanation": "Snowball Edge supports offline bulk data transfer when network upload is impractical.\nThe other choices do not transfer offline archives.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "當網路頻寬受到限制時，準備增加流量的新創公司必須將大型檔案移至 S3。適合哪種服務？",
+        "options": {
+          "A": "Amazon Cognito",
+          "B": "AWS WAF",
+          "C": "Amazon API Gateway",
+          "D": "AWS Snowball Edge"
+        },
+        "explanation": "當網路上傳不可行時，Snowball Edge 支援離線批次資料傳輸。\n其他選項不傳輸離線檔案。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-025",
@@ -397,7 +685,19 @@
     "isMultiAnswer": false,
     "explanation": "Phased migration with reconciliation and decommission criteria reduces operational and data risk.\nThe other choices create permanent drift or data loss.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "支援關鍵工作負載的營運團隊需要在準備託管資料庫遷移時暫時執行舊資料庫。適用哪一項原則？",
+        "options": {
+          "A": "分離遷移階段並定義明確的退役計劃",
+          "B": "永遠運行兩個系統而無需協調",
+          "C": "立即刪除來源",
+          "D": "忽略資料驗證"
+        },
+        "explanation": "具有協調和退役標準的分階段遷移可降低營運和資料風險。\n其他選擇會造成永久性漂移或資料遺失。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-026",
@@ -413,7 +713,19 @@
     "isMultiAnswer": false,
     "explanation": "Application Discovery collects utilization and dependency information for migration planning.\nThe other choices provide delivery, filtering, or application identity.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "資料平台團隊需要在遷移之前發現本地應用程式依賴關係。應該評估哪些服務？",
+        "options": {
+          "A": "Amazon Cognito",
+          "B": "AWS Application Discovery Service",
+          "C": "Amazon CloudFront",
+          "D": "AWS WAF"
+        },
+        "explanation": "Application Discovery 收集利用率和依賴性資訊以進行遷移規劃。\n其他選擇提供交付、過濾或應用程式身分。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-027",
@@ -429,7 +741,19 @@
     "isMultiAnswer": false,
     "explanation": "Application Migration Service replicates servers for lift-and-shift migration.\nThe other choices provide ETL, DNS, or file storage.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有安全意識的工程團隊必須在以後的現代化之前以最小的更改將伺服器遷移到 AWS。哪種服務適合？",
+        "options": {
+          "A": "Amazon Route 53",
+          "B": "僅限 Amazon EFS",
+          "C": "AWS Application Migration Service",
+          "D": "AWS Glue"
+        },
+        "explanation": "應用程式遷移服務複製伺服器以進行直接遷移。\n其他選擇提供 ETL、DNS 或檔案儲存。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-028",
@@ -445,7 +769,19 @@
     "isMultiAnswer": false,
     "explanation": "Incremental decomposition limits migration risk and permits controlled validation.\nA big-bang rewrite and missing telemetry increase risk.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "遷移現有工作負載的公司需要逐漸將單體現代化為事件驅動的元件。哪種方法是明智的？",
+        "options": {
+          "A": "測試前重寫所有內容",
+          "B": "共享根憑證",
+          "C": "禁用可觀察性",
+          "D": "使用 API 和事件進行 Strangler 式增量分解"
+        },
+        "explanation": "增量分解限制了遷移風險並允許受控驗證。\n大爆炸重寫和缺失遙測會增加風險。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-029",
@@ -461,7 +797,19 @@
     "isMultiAnswer": false,
     "explanation": "Snowball Edge supports offline bulk data transfer when network upload is impractical.\nThe other choices do not transfer offline archives.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "當網路頻寬受限時，具有嚴格恢復目標的團隊必須將大型檔案移至 S3。適合哪種服務？",
+        "options": {
+          "A": "AWS Snowball Edge",
+          "B": "Amazon Cognito",
+          "C": "AWS WAF",
+          "D": "Amazon API Gateway"
+        },
+        "explanation": "當網路上傳不可行時，Snowball Edge 支援離線批次資料傳輸。\n其他選項不傳輸離線檔案。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-030",
@@ -477,7 +825,19 @@
     "isMultiAnswer": false,
     "explanation": "Phased migration with reconciliation and decommission criteria reduces operational and data risk.\nThe other choices create permanent drift or data loss.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備發布的開發團隊需要在準備託管資料庫遷移時暫時執行舊資料庫。適用哪一項原則？",
+        "options": {
+          "A": "忽略資料驗證",
+          "B": "分離遷移階段並定義明確的退役計劃",
+          "C": "永遠運行兩個系統而無需協調",
+          "D": "立即刪除來源"
+        },
+        "explanation": "具有協調和退役標準的分階段遷移可降低營運和資料風險。\n其他選擇會造成永久性漂移或資料遺失。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-031",
@@ -493,7 +853,19 @@
     "isMultiAnswer": false,
     "explanation": "Application Discovery collects utilization and dependency information for migration planning.\nThe other choices provide delivery, filtering, or application identity.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "擁有多個 AWS 區域的企業需要在遷移之前發現本機應用程式依賴關係。應該評估哪些服務？",
+        "options": {
+          "A": "AWS WAF",
+          "B": "Amazon Cognito",
+          "C": "AWS Application Discovery Service",
+          "D": "Amazon CloudFront"
+        },
+        "explanation": "Application Discovery 收集利用率和依賴性資訊以進行遷移規劃。\n其他選擇提供交付、過濾或應用程式身分。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-032",
@@ -509,7 +881,19 @@
     "isMultiAnswer": false,
     "explanation": "Application Migration Service replicates servers for lift-and-shift migration.\nThe other choices provide ETL, DNS, or file storage.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "審查事件的服務擁有者必須在以後的現代化之前將伺服器遷移到 AWS，並進行最少的變更。哪種服務適合？",
+        "options": {
+          "A": "AWS Glue",
+          "B": "Amazon Route 53",
+          "C": "僅限 Amazon EFS",
+          "D": "AWS Application Migration Service"
+        },
+        "explanation": "應用程式遷移服務複製伺服器以進行直接遷移。\n其他選擇提供 ETL、DNS 或檔案儲存。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-033",
@@ -525,7 +909,19 @@
     "isMultiAnswer": false,
     "explanation": "Incremental decomposition limits migration risk and permits controlled validation.\nA big-bang rewrite and missing telemetry increase risk.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "優化現有實現的團隊需要逐漸將單體現代化為事件驅動的元件。哪種方法是明智的？",
+        "options": {
+          "A": "使用 API 和事件進行 Strangler 式增量分解",
+          "B": "測試前重寫所有內容",
+          "C": "共享根憑證",
+          "D": "禁用可觀察性"
+        },
+        "explanation": "增量分解限制了遷移風險並允許受控驗證。\n大爆炸重寫和缺失遙測會增加風險。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-034",
@@ -541,7 +937,19 @@
     "isMultiAnswer": false,
     "explanation": "Snowball Edge supports offline bulk data transfer when network upload is impractical.\nThe other choices do not transfer offline archives.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "當網路頻寬受限時，引入自動化工作流程的公司必須將大型檔案移至 S3。適合哪種服務？",
+        "options": {
+          "A": "Amazon API Gateway",
+          "B": "AWS Snowball Edge",
+          "C": "Amazon Cognito",
+          "D": "AWS WAF"
+        },
+        "explanation": "當網路上傳不可行時，Snowball Edge 支援離線批次資料傳輸。\n其他選項不傳輸離線檔案。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-035",
@@ -557,7 +965,19 @@
     "isMultiAnswer": false,
     "explanation": "Phased migration with reconciliation and decommission criteria reduces operational and data risk.\nThe other choices create permanent drift or data loss.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "在共用環境中工作的 AWS 管理員需要在準備託管資料庫遷移時暫時執行舊資料庫。適用哪一項原則？",
+        "options": {
+          "A": "立即刪除來源",
+          "B": "忽略資料驗證",
+          "C": "分離遷移階段並定義明確的退役計劃",
+          "D": "永遠運行兩個系統而無需協調"
+        },
+        "explanation": "具有協調和退役標準的分階段遷移可降低營運和資料風險。\n其他選擇會造成永久性漂移或資料遺失。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-036",
@@ -573,7 +993,19 @@
     "isMultiAnswer": false,
     "explanation": "Application Discovery collects utilization and dependency information for migration planning.\nThe other choices provide delivery, filtering, or application identity.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "面向客戶的應用程式團隊需要在遷移之前發現本機應用程式依賴項。應該評估哪些服務？",
+        "options": {
+          "A": "Amazon CloudFront",
+          "B": "AWS WAF",
+          "C": "Amazon Cognito",
+          "D": "AWS Application Discovery Service"
+        },
+        "explanation": "Application Discovery 收集利用率和依賴性資訊以進行遷移規劃。\n其他選擇提供交付、過濾或應用程式身分。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-037",
@@ -589,7 +1021,19 @@
     "isMultiAnswer": false,
     "explanation": "Application Migration Service replicates servers for lift-and-shift migration.\nThe other choices provide ETL, DNS, or file storage.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "標準化其 AWS 部署的平台團隊必須在以後的現代化之前將伺服器遷移到 AWS，並進行最少的更改。哪種服務適合？",
+        "options": {
+          "A": "AWS Application Migration Service",
+          "B": "AWS Glue",
+          "C": "Amazon Route 53",
+          "D": "僅限 Amazon EFS"
+        },
+        "explanation": "應用程式遷移服務複製伺服器以進行直接遷移。\n其他選擇提供 ETL、DNS 或檔案儲存。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-038",
@@ -605,7 +1049,19 @@
     "isMultiAnswer": false,
     "explanation": "Incremental decomposition limits migration risk and permits controlled validation.\nA big-bang rewrite and missing telemetry increase risk.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "為審計準備證據的團隊需要逐漸將整體現代化為事件驅動的組件。哪種方法是明智的？",
+        "options": {
+          "A": "禁用可觀察性",
+          "B": "使用 API 和事件進行 Strangler 式增量分解",
+          "C": "測試前重寫所有內容",
+          "D": "共享根憑證"
+        },
+        "explanation": "增量分解限制了遷移風險並允許受控驗證。\n大爆炸重寫和缺失遙測會增加風險。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-039",
@@ -621,7 +1077,19 @@
     "isMultiAnswer": false,
     "explanation": "Snowball Edge supports offline bulk data transfer when network upload is impractical.\nThe other choices do not transfer offline archives.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "當網路頻寬受到限制時，取代手動流程的企業必須將大型檔案移至 S3。適合哪種服務？",
+        "options": {
+          "A": "AWS WAF",
+          "B": "Amazon API Gateway",
+          "C": "AWS Snowball Edge",
+          "D": "Amazon Cognito"
+        },
+        "explanation": "當網路上傳不可行時，Snowball Edge 支援離線批次資料傳輸。\n其他選項不傳輸離線檔案。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-040",
@@ -637,7 +1105,19 @@
     "isMultiAnswer": false,
     "explanation": "Phased migration with reconciliation and decommission criteria reduces operational and data risk.\nThe other choices create permanent drift or data loss.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "根據考試指南驗證設計的團隊需要在準備託管資料庫遷移時暫時執行舊資料庫。適用哪一項原則？",
+        "options": {
+          "A": "永遠運行兩個系統而無需協調",
+          "B": "立即刪除來源",
+          "C": "忽略資料驗證",
+          "D": "分離遷移階段並定義明確的退役計劃"
+        },
+        "explanation": "具有協調和退役標準的分階段遷移可降低營運和資料風險。\n其他選擇會造成永久性漂移或資料遺失。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-041",
@@ -653,7 +1133,19 @@
     "isMultiAnswer": false,
     "explanation": "Application Discovery collects utilization and dependency information for migration planning.\nThe other choices provide delivery, filtering, or application identity.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "生產團隊需要在遷移之前發現本地應用程式的依賴關係。應該評估哪些服務？",
+        "options": {
+          "A": "AWS Application Discovery Service",
+          "B": "Amazon CloudFront",
+          "C": "AWS WAF",
+          "D": "Amazon Cognito"
+        },
+        "explanation": "Application Discovery 收集利用率和依賴性資訊以進行遷移規劃。\n其他選擇提供交付、過濾或應用程式身分。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-042",
@@ -669,7 +1161,19 @@
     "isMultiAnswer": false,
     "explanation": "Application Migration Service replicates servers for lift-and-shift migration.\nThe other choices provide ETL, DNS, or file storage.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "多帳戶平台團隊必須在後期現代化之前將伺服器遷移到 AWS，並進行最小程度的變更。哪種服務適合？",
+        "options": {
+          "A": "僅限 Amazon EFS",
+          "B": "AWS Application Migration Service",
+          "C": "AWS Glue",
+          "D": "Amazon Route 53"
+        },
+        "explanation": "應用程式遷移服務複製伺服器以進行直接遷移。\n其他選擇提供 ETL、DNS 或檔案儲存。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-043",
@@ -685,7 +1189,19 @@
     "isMultiAnswer": false,
     "explanation": "Incremental decomposition limits migration risk and permits controlled validation.\nA big-bang rewrite and missing telemetry increase risk.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "受監管的公司需要逐步將單體現代化為事件驅動的元件。哪種方法是明智的？",
+        "options": {
+          "A": "共享根憑證",
+          "B": "禁用可觀察性",
+          "C": "使用 API 和事件進行 Strangler 式增量分解",
+          "D": "測試前重寫所有內容"
+        },
+        "explanation": "增量分解限制了遷移風險並允許受控驗證。\n大爆炸重寫和缺失遙測會增加風險。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-044",
@@ -701,7 +1217,19 @@
     "isMultiAnswer": false,
     "explanation": "Snowball Edge supports offline bulk data transfer when network upload is impractical.\nThe other choices do not transfer offline archives.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "當網路頻寬受到限制時，準備增加流量的新創公司必須將大型檔案移至 S3。適合哪種服務？",
+        "options": {
+          "A": "Amazon Cognito",
+          "B": "AWS WAF",
+          "C": "Amazon API Gateway",
+          "D": "AWS Snowball Edge"
+        },
+        "explanation": "當網路上傳不可行時，Snowball Edge 支援離線批次資料傳輸。\n其他選項不傳輸離線檔案。"
+      }
+    }
   },
   {
     "id": "sap-c02-d4-045",
@@ -717,6 +1245,18 @@
     "isMultiAnswer": false,
     "explanation": "Phased migration with reconciliation and decommission criteria reduces operational and data risk.\nThe other choices create permanent drift or data loss.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "支援關鍵工作負載的營運團隊需要在準備託管資料庫遷移時暫時執行舊資料庫。適用哪一項原則？",
+        "options": {
+          "A": "分離遷移階段並定義明確的退役計劃",
+          "B": "永遠運行兩個系統而無需協調",
+          "C": "立即刪除來源",
+          "D": "忽略資料驗證"
+        },
+        "explanation": "具有協調和退役標準的分階段遷移可降低營運和資料風險。\n其他選擇會造成永久性漂移或資料遺失。"
+      }
+    }
   }
 ]

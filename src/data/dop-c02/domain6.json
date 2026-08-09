@@ -13,7 +13,19 @@
     "isMultiAnswer": false,
     "explanation": "A bucket policy can explicitly deny uploads that do not include the required encryption headers.\nThe other choices do not enforce object encryption.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "製作團隊需要對所有新 S3 物件強制加密。應該配置哪個控制項？",
+        "options": {
+          "A": "Route 53 運轉狀況檢查",
+          "B": "CloudFront 快取",
+          "C": "拒絕未加密的 PutObject 請求的 S3 儲存桶策略",
+          "D": "公共儲存桶ACL"
+        },
+        "explanation": "儲存桶策略可以明確拒絕不包含所需加密標頭的上傳。\n其他選擇不強制物件加密。"
+      }
+    }
   },
   {
     "id": "dop-c02-d6-002",
@@ -29,7 +41,19 @@
     "isMultiAnswer": false,
     "explanation": "IAM Access Analyzer identifies unintended external access in resource policies.\nThe other choices provide content delivery, compute, or file storage.",
     "taskStatement": "6.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "多帳戶平台團隊必須識別資源策略授予的外部存取權限。哪種工具合適？",
+        "options": {
+          "A": "Amazon CloudFront",
+          "B": "AWS Batch",
+          "C": "Amazon EFS",
+          "D": "IAM Access Analyzer"
+        },
+        "explanation": "IAM Access Analyzer可識別資源政策中的意外外部存取。\n其他選擇提供內容交付、計算或文件儲存。"
+      }
+    }
   },
   {
     "id": "dop-c02-d6-003",
@@ -45,7 +69,19 @@
     "isMultiAnswer": false,
     "explanation": "Secrets Manager supports runtime retrieval and rotation of database credentials.\nThe other choices do not rotate application secrets.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "受監管的公司需要輪換資料庫憑證而不重建應用程式。適合哪種服務？",
+        "options": {
+          "A": "AWS Secrets Manager",
+          "B": "一個安全群組",
+          "C": "EBS Snapshot",
+          "D": "Route 53 別名"
+        },
+        "explanation": "Secrets Manager 支援資料庫憑證的執行時間檢索和輪調。\n其他選擇不會輪換應用程式機密。"
+      }
+    }
   },
   {
     "id": "dop-c02-d6-004",
@@ -61,7 +97,19 @@
     "isMultiAnswer": false,
     "explanation": "CloudTrail records API events for security investigations and compliance.\nThe other choices provide caching, web filtering, or email.",
     "taskStatement": "6.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備增加流量的新創公司必須審核生產帳戶中的每個 API 操作。應該啟用哪個服務？",
+        "options": {
+          "A": "Amazon SES",
+          "B": "AWS CloudTrail",
+          "C": "Amazon ElastiCache",
+          "D": "僅限 AWS WAF"
+        },
+        "explanation": "CloudTrail 記錄 API 事件以進行安全調查和合規性。\n其他選項提供快取、網路過濾或電子郵件。"
+      }
+    }
   },
   {
     "id": "dop-c02-d6-005",
@@ -77,7 +125,19 @@
     "isMultiAnswer": false,
     "explanation": "Inspector assesses supported container images and workloads for vulnerabilities.\nThe other choices provide identity, ETL, or DNS.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "支援關鍵工作負載的營運團隊需要託管服務來在部署之前檢測容器映像中的漏洞。應該評估哪些服務？",
+        "options": {
+          "A": "AWS Glue",
+          "B": "Amazon Route 53",
+          "C": "Amazon Inspector",
+          "D": "Amazon Cognito"
+        },
+        "explanation": "Inspector 評估支援的容器映像和工作負載是否有漏洞。\n其他選項提供身分、ETL 或 DNS。"
+      }
+    }
   },
   {
     "id": "dop-c02-d6-006",
@@ -93,7 +153,19 @@
     "isMultiAnswer": false,
     "explanation": "A bucket policy can explicitly deny uploads that do not include the required encryption headers.\nThe other choices do not enforce object encryption.",
     "taskStatement": "6.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "資料平台團隊需要對所有新的 S3 物件強制加密。應該配置哪個控制項？",
+        "options": {
+          "A": "公共儲存桶ACL",
+          "B": "Route 53 運轉狀況檢查",
+          "C": "CloudFront 快取",
+          "D": "拒絕未加密的 PutObject 請求的 S3 儲存桶策略"
+        },
+        "explanation": "儲存桶策略可以明確拒絕不包含所需加密標頭的上傳。\n其他選擇不強制物件加密。"
+      }
+    }
   },
   {
     "id": "dop-c02-d6-007",
@@ -109,7 +181,19 @@
     "isMultiAnswer": false,
     "explanation": "IAM Access Analyzer identifies unintended external access in resource policies.\nThe other choices provide content delivery, compute, or file storage.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有安全意識的工程團隊必須識別資源策略授予的外部存取權限。哪種工具合適？",
+        "options": {
+          "A": "IAM Access Analyzer",
+          "B": "Amazon CloudFront",
+          "C": "AWS Batch",
+          "D": "Amazon EFS"
+        },
+        "explanation": "IAM Access Analyzer可識別資源政策中的意外外部存取。\n其他選擇提供內容交付、計算或文件儲存。"
+      }
+    }
   },
   {
     "id": "dop-c02-d6-008",
@@ -125,7 +209,19 @@
     "isMultiAnswer": false,
     "explanation": "Secrets Manager supports runtime retrieval and rotation of database credentials.\nThe other choices do not rotate application secrets.",
     "taskStatement": "6.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "遷移現有工作負載的公司需要輪換資料庫憑證而不重建應用程式。適合哪種服務？",
+        "options": {
+          "A": "Route 53 別名",
+          "B": "AWS Secrets Manager",
+          "C": "一個安全群組",
+          "D": "EBS Snapshot"
+        },
+        "explanation": "Secrets Manager 支援資料庫憑證的執行時間檢索和輪調。\n其他選擇不會輪換應用程式機密。"
+      }
+    }
   },
   {
     "id": "dop-c02-d6-009",
@@ -141,7 +237,19 @@
     "isMultiAnswer": false,
     "explanation": "CloudTrail records API events for security investigations and compliance.\nThe other choices provide caching, web filtering, or email.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有嚴格恢復目標的團隊必須審核生產帳戶中的每個 API 操作。應該啟用哪個服務？",
+        "options": {
+          "A": "僅限 AWS WAF",
+          "B": "Amazon SES",
+          "C": "AWS CloudTrail",
+          "D": "Amazon ElastiCache"
+        },
+        "explanation": "CloudTrail 記錄 API 事件以進行安全調查和合規性。\n其他選項提供快取、網路過濾或電子郵件。"
+      }
+    }
   },
   {
     "id": "dop-c02-d6-010",
@@ -157,7 +265,19 @@
     "isMultiAnswer": false,
     "explanation": "Inspector assesses supported container images and workloads for vulnerabilities.\nThe other choices provide identity, ETL, or DNS.",
     "taskStatement": "6.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備發布的開發團隊需要託管服務來在部署之前檢測容器映像中的漏洞。應該評估哪些服務？",
+        "options": {
+          "A": "Amazon Cognito",
+          "B": "AWS Glue",
+          "C": "Amazon Route 53",
+          "D": "Amazon Inspector"
+        },
+        "explanation": "Inspector 評估支援的容器映像和工作負載是否有漏洞。\n其他選項提供身分、ETL 或 DNS。"
+      }
+    }
   },
   {
     "id": "dop-c02-d6-011",
@@ -173,7 +293,19 @@
     "isMultiAnswer": false,
     "explanation": "A bucket policy can explicitly deny uploads that do not include the required encryption headers.\nThe other choices do not enforce object encryption.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "擁有多個 AWS 區域的企業需要對所有新 S3 物件強制加密。應該配置哪個控制項？",
+        "options": {
+          "A": "拒絕未加密的 PutObject 請求的 S3 儲存桶策略",
+          "B": "公共儲存桶ACL",
+          "C": "Route 53 運轉狀況檢查",
+          "D": "CloudFront 快取"
+        },
+        "explanation": "儲存桶策略可以明確拒絕不包含所需加密標頭的上傳。\n其他選擇不強制物件加密。"
+      }
+    }
   },
   {
     "id": "dop-c02-d6-012",
@@ -189,7 +321,19 @@
     "isMultiAnswer": false,
     "explanation": "IAM Access Analyzer identifies unintended external access in resource policies.\nThe other choices provide content delivery, compute, or file storage.",
     "taskStatement": "6.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "審查事件的服務擁有者必須識別資源策略授予的外部存取權限。哪種工具合適？",
+        "options": {
+          "A": "Amazon EFS",
+          "B": "IAM Access Analyzer",
+          "C": "Amazon CloudFront",
+          "D": "AWS Batch"
+        },
+        "explanation": "IAM Access Analyzer可識別資源政策中的意外外部存取。\n其他選擇提供內容交付、計算或文件儲存。"
+      }
+    }
   },
   {
     "id": "dop-c02-d6-013",
@@ -205,7 +349,19 @@
     "isMultiAnswer": false,
     "explanation": "Secrets Manager supports runtime retrieval and rotation of database credentials.\nThe other choices do not rotate application secrets.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "優化現有實施的團隊需要輪換資料庫憑證而不重建應用程式。適合哪種服務？",
+        "options": {
+          "A": "EBS Snapshot",
+          "B": "Route 53 別名",
+          "C": "AWS Secrets Manager",
+          "D": "一個安全群組"
+        },
+        "explanation": "Secrets Manager 支援資料庫憑證的執行時間檢索和輪調。\n其他選擇不會輪換應用程式機密。"
+      }
+    }
   },
   {
     "id": "dop-c02-d6-014",
@@ -221,7 +377,19 @@
     "isMultiAnswer": false,
     "explanation": "CloudTrail records API events for security investigations and compliance.\nThe other choices provide caching, web filtering, or email.",
     "taskStatement": "6.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "引入自動化工作流程的公司必須審核生產帳戶中的每個 API 操作。應該啟用哪個服務？",
+        "options": {
+          "A": "Amazon ElastiCache",
+          "B": "僅限 AWS WAF",
+          "C": "Amazon SES",
+          "D": "AWS CloudTrail"
+        },
+        "explanation": "CloudTrail 記錄 API 事件以進行安全調查和合規性。\n其他選項提供快取、網路過濾或電子郵件。"
+      }
+    }
   },
   {
     "id": "dop-c02-d6-015",
@@ -237,7 +405,19 @@
     "isMultiAnswer": false,
     "explanation": "Inspector assesses supported container images and workloads for vulnerabilities.\nThe other choices provide identity, ETL, or DNS.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "在共用環境中工作的 AWS 管理員需要託管服務來在部署之前偵測容器映像中的漏洞。應該評估哪些服務？",
+        "options": {
+          "A": "Amazon Inspector",
+          "B": "Amazon Cognito",
+          "C": "AWS Glue",
+          "D": "Amazon Route 53"
+        },
+        "explanation": "Inspector 評估支援的容器映像和工作負載是否有漏洞。\n其他選項提供身分、ETL 或 DNS。"
+      }
+    }
   },
   {
     "id": "dop-c02-d6-016",
@@ -253,7 +433,19 @@
     "isMultiAnswer": false,
     "explanation": "A bucket policy can explicitly deny uploads that do not include the required encryption headers.\nThe other choices do not enforce object encryption.",
     "taskStatement": "6.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "面向客戶的應用程式團隊需要對所有新 S3 物件強制加密。應該配置哪個控制項？",
+        "options": {
+          "A": "CloudFront 快取",
+          "B": "拒絕未加密的 PutObject 請求的 S3 儲存桶策略",
+          "C": "公共儲存桶ACL",
+          "D": "Route 53 運轉狀況檢查"
+        },
+        "explanation": "儲存桶策略可以明確拒絕不包含所需加密標頭的上傳。\n其他選擇不強制物件加密。"
+      }
+    }
   },
   {
     "id": "dop-c02-d6-017",
@@ -269,7 +461,19 @@
     "isMultiAnswer": false,
     "explanation": "IAM Access Analyzer identifies unintended external access in resource policies.\nThe other choices provide content delivery, compute, or file storage.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "標準化其 AWS 部署的平台團隊必須識別資源策略授予的外部存取權限。哪種工具合適？",
+        "options": {
+          "A": "AWS Batch",
+          "B": "Amazon EFS",
+          "C": "IAM Access Analyzer",
+          "D": "Amazon CloudFront"
+        },
+        "explanation": "IAM Access Analyzer可識別資源政策中的意外外部存取。\n其他選擇提供內容交付、計算或文件儲存。"
+      }
+    }
   },
   {
     "id": "dop-c02-d6-018",
@@ -285,7 +489,19 @@
     "isMultiAnswer": false,
     "explanation": "Secrets Manager supports runtime retrieval and rotation of database credentials.\nThe other choices do not rotate application secrets.",
     "taskStatement": "6.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備審計證據的團隊需要輪換資料庫憑證而不重建應用程式。適合哪種服務？",
+        "options": {
+          "A": "一個安全群組",
+          "B": "EBS Snapshot",
+          "C": "Route 53 別名",
+          "D": "AWS Secrets Manager"
+        },
+        "explanation": "Secrets Manager 支援資料庫憑證的執行時間檢索和輪調。\n其他選擇不會輪換應用程式機密。"
+      }
+    }
   },
   {
     "id": "dop-c02-d6-019",
@@ -301,7 +517,19 @@
     "isMultiAnswer": false,
     "explanation": "CloudTrail records API events for security investigations and compliance.\nThe other choices provide caching, web filtering, or email.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "替換手動流程的企業必須審核生產帳戶中的每個 API 操作。應該啟用哪個服務？",
+        "options": {
+          "A": "AWS CloudTrail",
+          "B": "Amazon ElastiCache",
+          "C": "僅限 AWS WAF",
+          "D": "Amazon SES"
+        },
+        "explanation": "CloudTrail 記錄 API 事件以進行安全調查和合規性。\n其他選項提供快取、網路過濾或電子郵件。"
+      }
+    }
   },
   {
     "id": "dop-c02-d6-020",
@@ -317,7 +545,19 @@
     "isMultiAnswer": false,
     "explanation": "Inspector assesses supported container images and workloads for vulnerabilities.\nThe other choices provide identity, ETL, or DNS.",
     "taskStatement": "6.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "根據考試指南驗證設計的團隊需要託管服務來在部署之前檢測容器映像中的漏洞。應該評估哪些服務？",
+        "options": {
+          "A": "Amazon Route 53",
+          "B": "Amazon Inspector",
+          "C": "Amazon Cognito",
+          "D": "AWS Glue"
+        },
+        "explanation": "Inspector 評估支援的容器映像和工作負載是否有漏洞。\n其他選項提供身分、ETL 或 DNS。"
+      }
+    }
   },
   {
     "id": "dop-c02-d6-021",
@@ -333,7 +573,19 @@
     "isMultiAnswer": false,
     "explanation": "A bucket policy can explicitly deny uploads that do not include the required encryption headers.\nThe other choices do not enforce object encryption.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "製作團隊需要對所有新 S3 物件強制加密。應該配置哪個控制項？",
+        "options": {
+          "A": "Route 53 運轉狀況檢查",
+          "B": "CloudFront 快取",
+          "C": "拒絕未加密的 PutObject 請求的 S3 儲存桶策略",
+          "D": "公共儲存桶ACL"
+        },
+        "explanation": "儲存桶策略可以明確拒絕不包含所需加密標頭的上傳。\n其他選擇不強制物件加密。"
+      }
+    }
   },
   {
     "id": "dop-c02-d6-022",
@@ -349,7 +601,19 @@
     "isMultiAnswer": false,
     "explanation": "IAM Access Analyzer identifies unintended external access in resource policies.\nThe other choices provide content delivery, compute, or file storage.",
     "taskStatement": "6.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "多帳戶平台團隊必須識別資源策略授予的外部存取權限。哪種工具合適？",
+        "options": {
+          "A": "Amazon CloudFront",
+          "B": "AWS Batch",
+          "C": "Amazon EFS",
+          "D": "IAM Access Analyzer"
+        },
+        "explanation": "IAM Access Analyzer可識別資源政策中的意外外部存取。\n其他選擇提供內容交付、計算或文件儲存。"
+      }
+    }
   },
   {
     "id": "dop-c02-d6-023",
@@ -365,7 +629,19 @@
     "isMultiAnswer": false,
     "explanation": "Secrets Manager supports runtime retrieval and rotation of database credentials.\nThe other choices do not rotate application secrets.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "受監管的公司需要輪換資料庫憑證而不重建應用程式。適合哪種服務？",
+        "options": {
+          "A": "AWS Secrets Manager",
+          "B": "一個安全群組",
+          "C": "EBS Snapshot",
+          "D": "Route 53 別名"
+        },
+        "explanation": "Secrets Manager 支援資料庫憑證的執行時間檢索和輪調。\n其他選擇不會輪換應用程式機密。"
+      }
+    }
   },
   {
     "id": "dop-c02-d6-024",
@@ -381,7 +657,19 @@
     "isMultiAnswer": false,
     "explanation": "CloudTrail records API events for security investigations and compliance.\nThe other choices provide caching, web filtering, or email.",
     "taskStatement": "6.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備增加流量的新創公司必須審核生產帳戶中的每個 API 操作。應該啟用哪個服務？",
+        "options": {
+          "A": "Amazon SES",
+          "B": "AWS CloudTrail",
+          "C": "Amazon ElastiCache",
+          "D": "僅限 AWS WAF"
+        },
+        "explanation": "CloudTrail 記錄 API 事件以進行安全調查和合規性。\n其他選項提供快取、網路過濾或電子郵件。"
+      }
+    }
   },
   {
     "id": "dop-c02-d6-025",
@@ -397,7 +685,19 @@
     "isMultiAnswer": false,
     "explanation": "Inspector assesses supported container images and workloads for vulnerabilities.\nThe other choices provide identity, ETL, or DNS.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "支援關鍵工作負載的營運團隊需要託管服務來在部署之前檢測容器映像中的漏洞。應該評估哪些服務？",
+        "options": {
+          "A": "AWS Glue",
+          "B": "Amazon Route 53",
+          "C": "Amazon Inspector",
+          "D": "Amazon Cognito"
+        },
+        "explanation": "Inspector 評估支援的容器映像和工作負載是否有漏洞。\n其他選項提供身分、ETL 或 DNS。"
+      }
+    }
   },
   {
     "id": "dop-c02-d6-026",
@@ -413,7 +713,19 @@
     "isMultiAnswer": false,
     "explanation": "A bucket policy can explicitly deny uploads that do not include the required encryption headers.\nThe other choices do not enforce object encryption.",
     "taskStatement": "6.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "資料平台團隊需要對所有新的 S3 物件強制加密。應該配置哪個控制項？",
+        "options": {
+          "A": "公共儲存桶ACL",
+          "B": "Route 53 運轉狀況檢查",
+          "C": "CloudFront 快取",
+          "D": "拒絕未加密的 PutObject 請求的 S3 儲存桶策略"
+        },
+        "explanation": "儲存桶策略可以明確拒絕不包含所需加密標頭的上傳。\n其他選擇不強制物件加密。"
+      }
+    }
   },
   {
     "id": "dop-c02-d6-027",
@@ -429,7 +741,19 @@
     "isMultiAnswer": false,
     "explanation": "IAM Access Analyzer identifies unintended external access in resource policies.\nThe other choices provide content delivery, compute, or file storage.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有安全意識的工程團隊必須識別資源策略授予的外部存取權限。哪種工具合適？",
+        "options": {
+          "A": "IAM Access Analyzer",
+          "B": "Amazon CloudFront",
+          "C": "AWS Batch",
+          "D": "Amazon EFS"
+        },
+        "explanation": "IAM Access Analyzer可識別資源政策中的意外外部存取。\n其他選擇提供內容交付、計算或文件儲存。"
+      }
+    }
   },
   {
     "id": "dop-c02-d6-028",
@@ -445,7 +769,19 @@
     "isMultiAnswer": false,
     "explanation": "Secrets Manager supports runtime retrieval and rotation of database credentials.\nThe other choices do not rotate application secrets.",
     "taskStatement": "6.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "遷移現有工作負載的公司需要輪換資料庫憑證而不重建應用程式。適合哪種服務？",
+        "options": {
+          "A": "Route 53 別名",
+          "B": "AWS Secrets Manager",
+          "C": "一個安全群組",
+          "D": "EBS Snapshot"
+        },
+        "explanation": "Secrets Manager 支援資料庫憑證的執行時間檢索和輪調。\n其他選擇不會輪換應用程式機密。"
+      }
+    }
   },
   {
     "id": "dop-c02-d6-029",
@@ -461,7 +797,19 @@
     "isMultiAnswer": false,
     "explanation": "CloudTrail records API events for security investigations and compliance.\nThe other choices provide caching, web filtering, or email.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有嚴格恢復目標的團隊必須審核生產帳戶中的每個 API 操作。應該啟用哪個服務？",
+        "options": {
+          "A": "僅限 AWS WAF",
+          "B": "Amazon SES",
+          "C": "AWS CloudTrail",
+          "D": "Amazon ElastiCache"
+        },
+        "explanation": "CloudTrail 記錄 API 事件以進行安全調查和合規性。\n其他選項提供快取、網路過濾或電子郵件。"
+      }
+    }
   },
   {
     "id": "dop-c02-d6-030",
@@ -477,7 +825,19 @@
     "isMultiAnswer": false,
     "explanation": "Inspector assesses supported container images and workloads for vulnerabilities.\nThe other choices provide identity, ETL, or DNS.",
     "taskStatement": "6.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備發布的開發團隊需要託管服務來在部署之前檢測容器映像中的漏洞。應該評估哪些服務？",
+        "options": {
+          "A": "Amazon Cognito",
+          "B": "AWS Glue",
+          "C": "Amazon Route 53",
+          "D": "Amazon Inspector"
+        },
+        "explanation": "Inspector 評估支援的容器映像和工作負載是否有漏洞。\n其他選項提供身分、ETL 或 DNS。"
+      }
+    }
   },
   {
     "id": "dop-c02-d6-031",
@@ -493,7 +853,19 @@
     "isMultiAnswer": false,
     "explanation": "A bucket policy can explicitly deny uploads that do not include the required encryption headers.\nThe other choices do not enforce object encryption.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "擁有多個 AWS 區域的企業需要對所有新 S3 物件強制加密。應該配置哪個控制項？",
+        "options": {
+          "A": "拒絕未加密的 PutObject 請求的 S3 儲存桶策略",
+          "B": "公共儲存桶ACL",
+          "C": "Route 53 運轉狀況檢查",
+          "D": "CloudFront 快取"
+        },
+        "explanation": "儲存桶策略可以明確拒絕不包含所需加密標頭的上傳。\n其他選擇不強制物件加密。"
+      }
+    }
   },
   {
     "id": "dop-c02-d6-032",
@@ -509,7 +881,19 @@
     "isMultiAnswer": false,
     "explanation": "IAM Access Analyzer identifies unintended external access in resource policies.\nThe other choices provide content delivery, compute, or file storage.",
     "taskStatement": "6.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "審查事件的服務擁有者必須識別資源策略授予的外部存取權限。哪種工具合適？",
+        "options": {
+          "A": "Amazon EFS",
+          "B": "IAM Access Analyzer",
+          "C": "Amazon CloudFront",
+          "D": "AWS Batch"
+        },
+        "explanation": "IAM Access Analyzer可識別資源政策中的意外外部存取。\n其他選擇提供內容交付、計算或文件儲存。"
+      }
+    }
   },
   {
     "id": "dop-c02-d6-033",
@@ -525,7 +909,19 @@
     "isMultiAnswer": false,
     "explanation": "Secrets Manager supports runtime retrieval and rotation of database credentials.\nThe other choices do not rotate application secrets.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "優化現有實施的團隊需要輪換資料庫憑證而不重建應用程式。適合哪種服務？",
+        "options": {
+          "A": "EBS Snapshot",
+          "B": "Route 53 別名",
+          "C": "AWS Secrets Manager",
+          "D": "一個安全群組"
+        },
+        "explanation": "Secrets Manager 支援資料庫憑證的執行時間檢索和輪調。\n其他選擇不會輪換應用程式機密。"
+      }
+    }
   },
   {
     "id": "dop-c02-d6-034",
@@ -541,7 +937,19 @@
     "isMultiAnswer": false,
     "explanation": "CloudTrail records API events for security investigations and compliance.\nThe other choices provide caching, web filtering, or email.",
     "taskStatement": "6.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "引入自動化工作流程的公司必須審核生產帳戶中的每個 API 操作。應該啟用哪個服務？",
+        "options": {
+          "A": "Amazon ElastiCache",
+          "B": "僅限 AWS WAF",
+          "C": "Amazon SES",
+          "D": "AWS CloudTrail"
+        },
+        "explanation": "CloudTrail 記錄 API 事件以進行安全調查和合規性。\n其他選項提供快取、網路過濾或電子郵件。"
+      }
+    }
   },
   {
     "id": "dop-c02-d6-035",
@@ -557,7 +965,19 @@
     "isMultiAnswer": false,
     "explanation": "Inspector assesses supported container images and workloads for vulnerabilities.\nThe other choices provide identity, ETL, or DNS.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "在共用環境中工作的 AWS 管理員需要託管服務來在部署之前偵測容器映像中的漏洞。應該評估哪些服務？",
+        "options": {
+          "A": "Amazon Inspector",
+          "B": "Amazon Cognito",
+          "C": "AWS Glue",
+          "D": "Amazon Route 53"
+        },
+        "explanation": "Inspector 評估支援的容器映像和工作負載是否有漏洞。\n其他選項提供身分、ETL 或 DNS。"
+      }
+    }
   },
   {
     "id": "dop-c02-d6-036",
@@ -573,7 +993,19 @@
     "isMultiAnswer": false,
     "explanation": "A bucket policy can explicitly deny uploads that do not include the required encryption headers.\nThe other choices do not enforce object encryption.",
     "taskStatement": "6.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "面向客戶的應用程式團隊需要對所有新 S3 物件強制加密。應該配置哪個控制項？",
+        "options": {
+          "A": "CloudFront 快取",
+          "B": "拒絕未加密的 PutObject 請求的 S3 儲存桶策略",
+          "C": "公共儲存桶ACL",
+          "D": "Route 53 運轉狀況檢查"
+        },
+        "explanation": "儲存桶策略可以明確拒絕不包含所需加密標頭的上傳。\n其他選擇不強制物件加密。"
+      }
+    }
   },
   {
     "id": "dop-c02-d6-037",
@@ -589,7 +1021,19 @@
     "isMultiAnswer": false,
     "explanation": "IAM Access Analyzer identifies unintended external access in resource policies.\nThe other choices provide content delivery, compute, or file storage.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "標準化其 AWS 部署的平台團隊必須識別資源策略授予的外部存取權限。哪種工具合適？",
+        "options": {
+          "A": "AWS Batch",
+          "B": "Amazon EFS",
+          "C": "IAM Access Analyzer",
+          "D": "Amazon CloudFront"
+        },
+        "explanation": "IAM Access Analyzer可識別資源政策中的意外外部存取。\n其他選擇提供內容交付、計算或文件儲存。"
+      }
+    }
   },
   {
     "id": "dop-c02-d6-038",
@@ -605,6 +1049,18 @@
     "isMultiAnswer": false,
     "explanation": "Secrets Manager supports runtime retrieval and rotation of database credentials.\nThe other choices do not rotate application secrets.",
     "taskStatement": "6.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備審計證據的團隊需要輪換資料庫憑證而不重建應用程式。適合哪種服務？",
+        "options": {
+          "A": "一個安全群組",
+          "B": "EBS Snapshot",
+          "C": "Route 53 別名",
+          "D": "AWS Secrets Manager"
+        },
+        "explanation": "Secrets Manager 支援資料庫憑證的執行時間檢索和輪調。\n其他選擇不會輪換應用程式機密。"
+      }
+    }
   }
 ]

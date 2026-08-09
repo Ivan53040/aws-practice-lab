@@ -13,7 +13,19 @@
     "isMultiAnswer": false,
     "explanation": "A real-time endpoint serves requests and autoscaling adjusts instances to demand.\nBatch transform is offline, Glacier is archival, and DNS text records do not host models.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "生產團隊需要一個即時預測端點，可以根據請求量自動添加執行個體。哪種設計適合？",
+        "options": {
+          "A": "僅批量轉換作業",
+          "B": "S3 冰川拱頂",
+          "C": "Route 53 TXT 記錄",
+          "D": "具有自動縮放功能的 SageMaker 即時端點"
+        },
+        "explanation": "即時端點服務請求，自動縮放根據需求調整執行個體。\n批次轉換是離線的，Glacier 是存檔的，DNS 文字記錄不託管模型。"
+      }
+    }
   },
   {
     "id": "mla-c01-d3-002",
@@ -29,7 +41,19 @@
     "isMultiAnswer": false,
     "explanation": "Batch Transform processes a data set offline without maintaining a real-time endpoint.\nThe other choices add unnecessary request infrastructure or do not run predictions.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "多帳戶平台團隊需要對大型資料集進行預測，而不需要低延遲請求。哪個選項合適？",
+        "options": {
+          "A": "SageMaker 批次轉換作業",
+          "B": "每行的公共 Lambda URL",
+          "C": "CloudFront 發行版",
+          "D": "IAM Groups"
+        },
+        "explanation": "批量轉換離線處理資料集，無需維護即時端點。\n其他選擇添加不必要的請求基礎設施或不運行預測。"
+      }
+    }
   },
   {
     "id": "mla-c01-d3-003",
@@ -45,7 +69,19 @@
     "isMultiAnswer": false,
     "explanation": "SageMaker Pipelines represents repeatable ML workflow steps and conditions.\nThe other choices do not orchestrate ML lifecycle steps.",
     "taskStatement": "3.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "受監管的公司必須精心安排預處理、培訓、評估和註冊。哪個服務應該定義工作流程？",
+        "options": {
+          "A": "Amazon Route 53",
+          "B": "SageMaker Pipelines",
+          "C": "AWS WAF",
+          "D": "Amazon EFS"
+        },
+        "explanation": "SageMaker Pipelines 代表可重複的 ML 工作流程步驟和條件。\n其他選擇不編排 ML 生命週期步驟。"
+      }
+    }
   },
   {
     "id": "mla-c01-d3-004",
@@ -61,7 +97,19 @@
     "isMultiAnswer": false,
     "explanation": "Shadow or canary deployments reduce release risk by comparing a new version before full traffic shift.\nDeleting the old model and disabling metrics removes safety controls.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備增加流量的新創公司需要在與現有版本進行比較的同時逐步部署新的模型版本。哪種策略合適？",
+        "options": {
+          "A": "禁用指標",
+          "B": "使用公共 S3 儲存桶",
+          "C": "具有受監控流量的影子或金絲雀部署",
+          "D": "首先刪除現有端點"
+        },
+        "explanation": "影子或金絲雀部署透過在完全流量轉移之前比較新版本來降低發布風險。\n刪除舊模型並停用指標會刪除安全控制。"
+      }
+    }
   },
   {
     "id": "mla-c01-d3-005",
@@ -77,7 +125,19 @@
     "isMultiAnswer": false,
     "explanation": "Versioned artifacts make ML execution environments repeatable across stages.\nNetwork and billing metadata do not package runtime dependencies.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "支援關鍵工作負載的營運團隊必須一致地打包預處理程式碼和依賴項，以進行訓練和推理。哪款神器合適？",
+        "options": {
+          "A": "DNS 記錄",
+          "B": "安全群組描述",
+          "C": "僅計費標籤",
+          "D": "版本化的容器鏡像或可複製的來源包"
+        },
+        "explanation": "版本化工件使 ML 執行環境可跨階段重複。\n網路和計費元資料不打包運行時依賴項。"
+      }
+    }
   },
   {
     "id": "mla-c01-d3-006",
@@ -93,7 +153,19 @@
     "isMultiAnswer": false,
     "explanation": "A real-time endpoint serves requests and autoscaling adjusts instances to demand.\nBatch transform is offline, Glacier is archival, and DNS text records do not host models.",
     "taskStatement": "3.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "資料平台團隊需要一個即時預測端點，可以自動新增具有請求量的執行個體。哪種設計適合？",
+        "options": {
+          "A": "具有自動縮放功能的 SageMaker 即時端點",
+          "B": "僅批量轉換作業",
+          "C": "S3 冰川拱頂",
+          "D": "Route 53 TXT 記錄"
+        },
+        "explanation": "即時端點服務請求，自動縮放根據需求調整執行個體。\n批次轉換是離線的，Glacier 是存檔的，DNS 文字記錄不託管模型。"
+      }
+    }
   },
   {
     "id": "mla-c01-d3-007",
@@ -109,7 +181,19 @@
     "isMultiAnswer": false,
     "explanation": "Batch Transform processes a data set offline without maintaining a real-time endpoint.\nThe other choices add unnecessary request infrastructure or do not run predictions.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有安全意識的工程團隊需要在沒有低延遲請求要求的情況下對大型資料集進行預測。哪個選項合適？",
+        "options": {
+          "A": "IAM Groups",
+          "B": "SageMaker 批次轉換作業",
+          "C": "每行的公共 Lambda URL",
+          "D": "CloudFront 發行版"
+        },
+        "explanation": "批量轉換離線處理資料集，無需維護即時端點。\n其他選擇添加不必要的請求基礎設施或不運行預測。"
+      }
+    }
   },
   {
     "id": "mla-c01-d3-008",
@@ -125,7 +209,19 @@
     "isMultiAnswer": false,
     "explanation": "SageMaker Pipelines represents repeatable ML workflow steps and conditions.\nThe other choices do not orchestrate ML lifecycle steps.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "遷移現有工作負載的公司必須協調預處理、培訓、評估和註冊。哪個服務應該定義工作流程？",
+        "options": {
+          "A": "Amazon EFS",
+          "B": "Amazon Route 53",
+          "C": "SageMaker Pipelines",
+          "D": "AWS WAF"
+        },
+        "explanation": "SageMaker Pipelines 代表可重複的 ML 工作流程步驟和條件。\n其他選擇不編排 ML 生命週期步驟。"
+      }
+    }
   },
   {
     "id": "mla-c01-d3-009",
@@ -141,7 +237,19 @@
     "isMultiAnswer": false,
     "explanation": "Shadow or canary deployments reduce release risk by comparing a new version before full traffic shift.\nDeleting the old model and disabling metrics removes safety controls.",
     "taskStatement": "3.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有嚴格復原目標的團隊需要在與現有版本進行比較的同時逐步部署新的模型版本。哪種策略合適？",
+        "options": {
+          "A": "首先刪除現有端點",
+          "B": "禁用指標",
+          "C": "使用公共 S3 儲存桶",
+          "D": "具有受監控流量的影子或金絲雀部署"
+        },
+        "explanation": "影子或金絲雀部署透過在完全流量轉移之前比較新版本來降低發布風險。\n刪除舊模型並停用指標會刪除安全控制。"
+      }
+    }
   },
   {
     "id": "mla-c01-d3-010",
@@ -157,7 +265,19 @@
     "isMultiAnswer": false,
     "explanation": "Versioned artifacts make ML execution environments repeatable across stages.\nNetwork and billing metadata do not package runtime dependencies.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備發布的開發團隊必須一致地打包預處理程式碼和依賴項，以進行訓練和推理。哪款神器合適？",
+        "options": {
+          "A": "版本化的容器鏡像或可複製的來源包",
+          "B": "DNS 記錄",
+          "C": "安全群組描述",
+          "D": "僅計費標籤"
+        },
+        "explanation": "版本化工件使 ML 執行環境可跨階段重複。\n網路和計費元資料不打包運行時依賴項。"
+      }
+    }
   },
   {
     "id": "mla-c01-d3-011",
@@ -173,7 +293,19 @@
     "isMultiAnswer": false,
     "explanation": "A real-time endpoint serves requests and autoscaling adjusts instances to demand.\nBatch transform is offline, Glacier is archival, and DNS text records do not host models.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "擁有多個 AWS 區域的企業需要一個即時預測終端節點，可以根據請求量自動新增執行個體。哪種設計適合？",
+        "options": {
+          "A": "Route 53 TXT 記錄",
+          "B": "具有自動縮放功能的 SageMaker 即時端點",
+          "C": "僅批量轉換作業",
+          "D": "S3 冰川拱頂"
+        },
+        "explanation": "即時端點服務請求，自動縮放根據需求調整執行個體。\n批次轉換是離線的，Glacier 是存檔的，DNS 文字記錄不託管模型。"
+      }
+    }
   },
   {
     "id": "mla-c01-d3-012",
@@ -189,7 +321,19 @@
     "isMultiAnswer": false,
     "explanation": "Batch Transform processes a data set offline without maintaining a real-time endpoint.\nThe other choices add unnecessary request infrastructure or do not run predictions.",
     "taskStatement": "3.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "審查事件的服務擁有者需要對大型資料集進行預測，而不需要低延遲請求。哪個選項合適？",
+        "options": {
+          "A": "CloudFront 發行版",
+          "B": "IAM Groups",
+          "C": "SageMaker 批次轉換作業",
+          "D": "每行的公共 Lambda URL"
+        },
+        "explanation": "批量轉換離線處理資料集，無需維護即時端點。\n其他選擇添加不必要的請求基礎設施或不運行預測。"
+      }
+    }
   },
   {
     "id": "mla-c01-d3-013",
@@ -205,7 +349,19 @@
     "isMultiAnswer": false,
     "explanation": "SageMaker Pipelines represents repeatable ML workflow steps and conditions.\nThe other choices do not orchestrate ML lifecycle steps.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "優化現有實施的團隊必須協調預處理、培訓、評估和註冊。哪個服務應該定義工作流程？",
+        "options": {
+          "A": "AWS WAF",
+          "B": "Amazon EFS",
+          "C": "Amazon Route 53",
+          "D": "SageMaker Pipelines"
+        },
+        "explanation": "SageMaker Pipelines 代表可重複的 ML 工作流程步驟和條件。\n其他選擇不編排 ML 生命週期步驟。"
+      }
+    }
   },
   {
     "id": "mla-c01-d3-014",
@@ -221,7 +377,19 @@
     "isMultiAnswer": false,
     "explanation": "Shadow or canary deployments reduce release risk by comparing a new version before full traffic shift.\nDeleting the old model and disabling metrics removes safety controls.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "引入自動化工作流程的公司需要逐步部署新的模型版本，同時與現有版本進行比較。哪種策略合適？",
+        "options": {
+          "A": "具有受監控流量的影子或金絲雀部署",
+          "B": "首先刪除現有端點",
+          "C": "禁用指標",
+          "D": "使用公共 S3 儲存桶"
+        },
+        "explanation": "影子或金絲雀部署透過在完全流量轉移之前比較新版本來降低發布風險。\n刪除舊模型並停用指標會刪除安全控制。"
+      }
+    }
   },
   {
     "id": "mla-c01-d3-015",
@@ -237,7 +405,19 @@
     "isMultiAnswer": false,
     "explanation": "Versioned artifacts make ML execution environments repeatable across stages.\nNetwork and billing metadata do not package runtime dependencies.",
     "taskStatement": "3.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "在共享環境中工作的 AWS 管理員必須一致地打包預處理程式碼和相依項，以進行訓練和推理。哪款神器合適？",
+        "options": {
+          "A": "僅計費標籤",
+          "B": "版本化的容器鏡像或可複製的來源包",
+          "C": "DNS 記錄",
+          "D": "安全群組描述"
+        },
+        "explanation": "版本化工件使 ML 執行環境可跨階段重複。\n網路和計費元資料不打包運行時依賴項。"
+      }
+    }
   },
   {
     "id": "mla-c01-d3-016",
@@ -253,7 +433,19 @@
     "isMultiAnswer": false,
     "explanation": "A real-time endpoint serves requests and autoscaling adjusts instances to demand.\nBatch transform is offline, Glacier is archival, and DNS text records do not host models.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "面向客戶的應用程式團隊需要一個即時預測端點，該端點可以自動添加具有請求量的執行個體。哪種設計適合？",
+        "options": {
+          "A": "S3 冰川拱頂",
+          "B": "Route 53 TXT 記錄",
+          "C": "具有自動縮放功能的 SageMaker 即時端點",
+          "D": "僅批量轉換作業"
+        },
+        "explanation": "即時端點服務請求，自動縮放根據需求調整執行個體。\n批次轉換是離線的，Glacier 是存檔的，DNS 文字記錄不託管模型。"
+      }
+    }
   },
   {
     "id": "mla-c01-d3-017",
@@ -269,7 +461,19 @@
     "isMultiAnswer": false,
     "explanation": "Batch Transform processes a data set offline without maintaining a real-time endpoint.\nThe other choices add unnecessary request infrastructure or do not run predictions.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "標準化其 AWS 部署的平台團隊需要對大型資料集進行預測，而不需要低延遲請求。哪個選項合適？",
+        "options": {
+          "A": "每行的公共 Lambda URL",
+          "B": "CloudFront 發行版",
+          "C": "IAM Groups",
+          "D": "SageMaker 批次轉換作業"
+        },
+        "explanation": "批量轉換離線處理資料集，無需維護即時端點。\n其他選擇添加不必要的請求基礎設施或不運行預測。"
+      }
+    }
   },
   {
     "id": "mla-c01-d3-018",
@@ -285,7 +489,19 @@
     "isMultiAnswer": false,
     "explanation": "SageMaker Pipelines represents repeatable ML workflow steps and conditions.\nThe other choices do not orchestrate ML lifecycle steps.",
     "taskStatement": "3.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備審計證據的團隊必須協調預處理、訓練、評估和註冊。哪個服務應該定義工作流程？",
+        "options": {
+          "A": "SageMaker Pipelines",
+          "B": "AWS WAF",
+          "C": "Amazon EFS",
+          "D": "Amazon Route 53"
+        },
+        "explanation": "SageMaker Pipelines 代表可重複的 ML 工作流程步驟和條件。\n其他選擇不編排 ML 生命週期步驟。"
+      }
+    }
   },
   {
     "id": "mla-c01-d3-019",
@@ -301,7 +517,19 @@
     "isMultiAnswer": false,
     "explanation": "Shadow or canary deployments reduce release risk by comparing a new version before full traffic shift.\nDeleting the old model and disabling metrics removes safety controls.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "替代手動流程的業務需要逐步部署新的模型版本，同時與現有版本進行比較。哪種策略合適？",
+        "options": {
+          "A": "使用公共 S3 儲存桶",
+          "B": "具有受監控流量的影子或金絲雀部署",
+          "C": "首先刪除現有端點",
+          "D": "禁用指標"
+        },
+        "explanation": "影子或金絲雀部署透過在完全流量轉移之前比較新版本來降低發布風險。\n刪除舊模型並停用指標會刪除安全控制。"
+      }
+    }
   },
   {
     "id": "mla-c01-d3-020",
@@ -317,7 +545,19 @@
     "isMultiAnswer": false,
     "explanation": "Versioned artifacts make ML execution environments repeatable across stages.\nNetwork and billing metadata do not package runtime dependencies.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "根據考試指南驗證設計的團隊必須一致地打包預處理程式碼和依賴項，以進行訓練和推理。哪款神器合適？",
+        "options": {
+          "A": "安全群組描述",
+          "B": "僅計費標籤",
+          "C": "版本化的容器鏡像或可複製的來源包",
+          "D": "DNS 記錄"
+        },
+        "explanation": "版本化工件使 ML 執行環境可跨階段重複。\n網路和計費元資料不打包運行時依賴項。"
+      }
+    }
   },
   {
     "id": "mla-c01-d3-021",
@@ -333,7 +573,19 @@
     "isMultiAnswer": false,
     "explanation": "A real-time endpoint serves requests and autoscaling adjusts instances to demand.\nBatch transform is offline, Glacier is archival, and DNS text records do not host models.",
     "taskStatement": "3.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "生產團隊需要一個即時預測端點，可以根據請求量自動添加執行個體。哪種設計適合？",
+        "options": {
+          "A": "僅批量轉換作業",
+          "B": "S3 冰川拱頂",
+          "C": "Route 53 TXT 記錄",
+          "D": "具有自動縮放功能的 SageMaker 即時端點"
+        },
+        "explanation": "即時端點服務請求，自動縮放根據需求調整執行個體。\n批次轉換是離線的，Glacier 是存檔的，DNS 文字記錄不託管模型。"
+      }
+    }
   },
   {
     "id": "mla-c01-d3-022",
@@ -349,7 +601,19 @@
     "isMultiAnswer": false,
     "explanation": "Batch Transform processes a data set offline without maintaining a real-time endpoint.\nThe other choices add unnecessary request infrastructure or do not run predictions.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "多帳戶平台團隊需要對大型資料集進行預測，而不需要低延遲請求。哪個選項合適？",
+        "options": {
+          "A": "SageMaker 批次轉換作業",
+          "B": "每行的公共 Lambda URL",
+          "C": "CloudFront 發行版",
+          "D": "IAM Groups"
+        },
+        "explanation": "批量轉換離線處理資料集，無需維護即時端點。\n其他選擇添加不必要的請求基礎設施或不運行預測。"
+      }
+    }
   },
   {
     "id": "mla-c01-d3-023",
@@ -365,7 +629,19 @@
     "isMultiAnswer": false,
     "explanation": "SageMaker Pipelines represents repeatable ML workflow steps and conditions.\nThe other choices do not orchestrate ML lifecycle steps.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "受監管的公司必須精心安排預處理、培訓、評估和註冊。哪個服務應該定義工作流程？",
+        "options": {
+          "A": "Amazon Route 53",
+          "B": "SageMaker Pipelines",
+          "C": "AWS WAF",
+          "D": "Amazon EFS"
+        },
+        "explanation": "SageMaker Pipelines 代表可重複的 ML 工作流程步驟和條件。\n其他選擇不編排 ML 生命週期步驟。"
+      }
+    }
   },
   {
     "id": "mla-c01-d3-024",
@@ -381,7 +657,19 @@
     "isMultiAnswer": false,
     "explanation": "Shadow or canary deployments reduce release risk by comparing a new version before full traffic shift.\nDeleting the old model and disabling metrics removes safety controls.",
     "taskStatement": "3.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備增加流量的新創公司需要在與現有版本進行比較的同時逐步部署新的模型版本。哪種策略合適？",
+        "options": {
+          "A": "禁用指標",
+          "B": "使用公共 S3 儲存桶",
+          "C": "具有受監控流量的影子或金絲雀部署",
+          "D": "首先刪除現有端點"
+        },
+        "explanation": "影子或金絲雀部署透過在完全流量轉移之前比較新版本來降低發布風險。\n刪除舊模型並停用指標會刪除安全控制。"
+      }
+    }
   },
   {
     "id": "mla-c01-d3-025",
@@ -397,7 +685,19 @@
     "isMultiAnswer": false,
     "explanation": "Versioned artifacts make ML execution environments repeatable across stages.\nNetwork and billing metadata do not package runtime dependencies.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "支援關鍵工作負載的營運團隊必須一致地打包預處理程式碼和依賴項，以進行訓練和推理。哪款神器合適？",
+        "options": {
+          "A": "DNS 記錄",
+          "B": "安全群組描述",
+          "C": "僅計費標籤",
+          "D": "版本化的容器鏡像或可複製的來源包"
+        },
+        "explanation": "版本化工件使 ML 執行環境可跨階段重複。\n網路和計費元資料不打包運行時依賴項。"
+      }
+    }
   },
   {
     "id": "mla-c01-d3-026",
@@ -413,7 +713,19 @@
     "isMultiAnswer": false,
     "explanation": "A real-time endpoint serves requests and autoscaling adjusts instances to demand.\nBatch transform is offline, Glacier is archival, and DNS text records do not host models.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "資料平台團隊需要一個即時預測端點，可以自動新增具有請求量的執行個體。哪種設計適合？",
+        "options": {
+          "A": "具有自動縮放功能的 SageMaker 即時端點",
+          "B": "僅批量轉換作業",
+          "C": "S3 冰川拱頂",
+          "D": "Route 53 TXT 記錄"
+        },
+        "explanation": "即時端點服務請求，自動縮放根據需求調整執行個體。\n批次轉換是離線的，Glacier 是存檔的，DNS 文字記錄不託管模型。"
+      }
+    }
   },
   {
     "id": "mla-c01-d3-027",
@@ -429,7 +741,19 @@
     "isMultiAnswer": false,
     "explanation": "Batch Transform processes a data set offline without maintaining a real-time endpoint.\nThe other choices add unnecessary request infrastructure or do not run predictions.",
     "taskStatement": "3.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有安全意識的工程團隊需要在沒有低延遲請求要求的情況下對大型資料集進行預測。哪個選項合適？",
+        "options": {
+          "A": "IAM Groups",
+          "B": "SageMaker 批次轉換作業",
+          "C": "每行的公共 Lambda URL",
+          "D": "CloudFront 發行版"
+        },
+        "explanation": "批量轉換離線處理資料集，無需維護即時端點。\n其他選擇添加不必要的請求基礎設施或不運行預測。"
+      }
+    }
   },
   {
     "id": "mla-c01-d3-028",
@@ -445,7 +769,19 @@
     "isMultiAnswer": false,
     "explanation": "SageMaker Pipelines represents repeatable ML workflow steps and conditions.\nThe other choices do not orchestrate ML lifecycle steps.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "遷移現有工作負載的公司必須協調預處理、培訓、評估和註冊。哪個服務應該定義工作流程？",
+        "options": {
+          "A": "Amazon EFS",
+          "B": "Amazon Route 53",
+          "C": "SageMaker Pipelines",
+          "D": "AWS WAF"
+        },
+        "explanation": "SageMaker Pipelines 代表可重複的 ML 工作流程步驟和條件。\n其他選擇不編排 ML 生命週期步驟。"
+      }
+    }
   },
   {
     "id": "mla-c01-d3-029",
@@ -461,7 +797,19 @@
     "isMultiAnswer": false,
     "explanation": "Shadow or canary deployments reduce release risk by comparing a new version before full traffic shift.\nDeleting the old model and disabling metrics removes safety controls.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "具有嚴格復原目標的團隊需要在與現有版本進行比較的同時逐步部署新的模型版本。哪種策略合適？",
+        "options": {
+          "A": "首先刪除現有端點",
+          "B": "禁用指標",
+          "C": "使用公共 S3 儲存桶",
+          "D": "具有受監控流量的影子或金絲雀部署"
+        },
+        "explanation": "影子或金絲雀部署透過在完全流量轉移之前比較新版本來降低發布風險。\n刪除舊模型並停用指標會刪除安全控制。"
+      }
+    }
   },
   {
     "id": "mla-c01-d3-030",
@@ -477,7 +825,19 @@
     "isMultiAnswer": false,
     "explanation": "Versioned artifacts make ML execution environments repeatable across stages.\nNetwork and billing metadata do not package runtime dependencies.",
     "taskStatement": "3.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備發布的開發團隊必須一致地打包預處理程式碼和依賴項，以進行訓練和推理。哪款神器合適？",
+        "options": {
+          "A": "版本化的容器鏡像或可複製的來源包",
+          "B": "DNS 記錄",
+          "C": "安全群組描述",
+          "D": "僅計費標籤"
+        },
+        "explanation": "版本化工件使 ML 執行環境可跨階段重複。\n網路和計費元資料不打包運行時依賴項。"
+      }
+    }
   },
   {
     "id": "mla-c01-d3-031",
@@ -493,7 +853,19 @@
     "isMultiAnswer": false,
     "explanation": "A real-time endpoint serves requests and autoscaling adjusts instances to demand.\nBatch transform is offline, Glacier is archival, and DNS text records do not host models.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "擁有多個 AWS 區域的企業需要一個即時預測終端節點，可以根據請求量自動新增執行個體。哪種設計適合？",
+        "options": {
+          "A": "Route 53 TXT 記錄",
+          "B": "具有自動縮放功能的 SageMaker 即時端點",
+          "C": "僅批量轉換作業",
+          "D": "S3 冰川拱頂"
+        },
+        "explanation": "即時端點服務請求，自動縮放根據需求調整執行個體。\n批次轉換是離線的，Glacier 是存檔的，DNS 文字記錄不託管模型。"
+      }
+    }
   },
   {
     "id": "mla-c01-d3-032",
@@ -509,7 +881,19 @@
     "isMultiAnswer": false,
     "explanation": "Batch Transform processes a data set offline without maintaining a real-time endpoint.\nThe other choices add unnecessary request infrastructure or do not run predictions.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "審查事件的服務擁有者需要對大型資料集進行預測，而不需要低延遲請求。哪個選項合適？",
+        "options": {
+          "A": "CloudFront 發行版",
+          "B": "IAM Groups",
+          "C": "SageMaker 批次轉換作業",
+          "D": "每行的公共 Lambda URL"
+        },
+        "explanation": "批量轉換離線處理資料集，無需維護即時端點。\n其他選擇添加不必要的請求基礎設施或不運行預測。"
+      }
+    }
   },
   {
     "id": "mla-c01-d3-033",
@@ -525,7 +909,19 @@
     "isMultiAnswer": false,
     "explanation": "SageMaker Pipelines represents repeatable ML workflow steps and conditions.\nThe other choices do not orchestrate ML lifecycle steps.",
     "taskStatement": "3.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "優化現有實施的團隊必須協調預處理、培訓、評估和註冊。哪個服務應該定義工作流程？",
+        "options": {
+          "A": "AWS WAF",
+          "B": "Amazon EFS",
+          "C": "Amazon Route 53",
+          "D": "SageMaker Pipelines"
+        },
+        "explanation": "SageMaker Pipelines 代表可重複的 ML 工作流程步驟和條件。\n其他選擇不編排 ML 生命週期步驟。"
+      }
+    }
   },
   {
     "id": "mla-c01-d3-034",
@@ -541,7 +937,19 @@
     "isMultiAnswer": false,
     "explanation": "Shadow or canary deployments reduce release risk by comparing a new version before full traffic shift.\nDeleting the old model and disabling metrics removes safety controls.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "引入自動化工作流程的公司需要逐步部署新的模型版本，同時與現有版本進行比較。哪種策略合適？",
+        "options": {
+          "A": "具有受監控流量的影子或金絲雀部署",
+          "B": "首先刪除現有端點",
+          "C": "禁用指標",
+          "D": "使用公共 S3 儲存桶"
+        },
+        "explanation": "影子或金絲雀部署透過在完全流量轉移之前比較新版本來降低發布風險。\n刪除舊模型並停用指標會刪除安全控制。"
+      }
+    }
   },
   {
     "id": "mla-c01-d3-035",
@@ -557,7 +965,19 @@
     "isMultiAnswer": false,
     "explanation": "Versioned artifacts make ML execution environments repeatable across stages.\nNetwork and billing metadata do not package runtime dependencies.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "在共享環境中工作的 AWS 管理員必須一致地打包預處理程式碼和相依項，以進行訓練和推理。哪款神器合適？",
+        "options": {
+          "A": "僅計費標籤",
+          "B": "版本化的容器鏡像或可複製的來源包",
+          "C": "DNS 記錄",
+          "D": "安全群組描述"
+        },
+        "explanation": "版本化工件使 ML 執行環境可跨階段重複。\n網路和計費元資料不打包運行時依賴項。"
+      }
+    }
   },
   {
     "id": "mla-c01-d3-036",
@@ -573,7 +993,19 @@
     "isMultiAnswer": false,
     "explanation": "A real-time endpoint serves requests and autoscaling adjusts instances to demand.\nBatch transform is offline, Glacier is archival, and DNS text records do not host models.",
     "taskStatement": "3.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "面向客戶的應用程式團隊需要一個即時預測端點，該端點可以自動添加具有請求量的執行個體。哪種設計適合？",
+        "options": {
+          "A": "S3 冰川拱頂",
+          "B": "Route 53 TXT 記錄",
+          "C": "具有自動縮放功能的 SageMaker 即時端點",
+          "D": "僅批量轉換作業"
+        },
+        "explanation": "即時端點服務請求，自動縮放根據需求調整執行個體。\n批次轉換是離線的，Glacier 是存檔的，DNS 文字記錄不託管模型。"
+      }
+    }
   },
   {
     "id": "mla-c01-d3-037",
@@ -589,7 +1021,19 @@
     "isMultiAnswer": false,
     "explanation": "Batch Transform processes a data set offline without maintaining a real-time endpoint.\nThe other choices add unnecessary request infrastructure or do not run predictions.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "標準化其 AWS 部署的平台團隊需要對大型資料集進行預測，而不需要低延遲請求。哪個選項合適？",
+        "options": {
+          "A": "每行的公共 Lambda URL",
+          "B": "CloudFront 發行版",
+          "C": "IAM Groups",
+          "D": "SageMaker 批次轉換作業"
+        },
+        "explanation": "批量轉換離線處理資料集，無需維護即時端點。\n其他選擇添加不必要的請求基礎設施或不運行預測。"
+      }
+    }
   },
   {
     "id": "mla-c01-d3-038",
@@ -605,7 +1049,19 @@
     "isMultiAnswer": false,
     "explanation": "SageMaker Pipelines represents repeatable ML workflow steps and conditions.\nThe other choices do not orchestrate ML lifecycle steps.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "準備審計證據的團隊必須協調預處理、訓練、評估和註冊。哪個服務應該定義工作流程？",
+        "options": {
+          "A": "SageMaker Pipelines",
+          "B": "AWS WAF",
+          "C": "Amazon EFS",
+          "D": "Amazon Route 53"
+        },
+        "explanation": "SageMaker Pipelines 代表可重複的 ML 工作流程步驟和條件。\n其他選擇不編排 ML 生命週期步驟。"
+      }
+    }
   },
   {
     "id": "mla-c01-d3-039",
@@ -621,7 +1077,19 @@
     "isMultiAnswer": false,
     "explanation": "Shadow or canary deployments reduce release risk by comparing a new version before full traffic shift.\nDeleting the old model and disabling metrics removes safety controls.",
     "taskStatement": "3.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "替代手動流程的業務需要逐步部署新的模型版本，同時與現有版本進行比較。哪種策略合適？",
+        "options": {
+          "A": "使用公共 S3 儲存桶",
+          "B": "具有受監控流量的影子或金絲雀部署",
+          "C": "首先刪除現有端點",
+          "D": "禁用指標"
+        },
+        "explanation": "影子或金絲雀部署透過在完全流量轉移之前比較新版本來降低發布風險。\n刪除舊模型並停用指標會刪除安全控制。"
+      }
+    }
   },
   {
     "id": "mla-c01-d3-040",
@@ -637,7 +1105,19 @@
     "isMultiAnswer": false,
     "explanation": "Versioned artifacts make ML execution environments repeatable across stages.\nNetwork and billing metadata do not package runtime dependencies.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "根據考試指南驗證設計的團隊必須一致地打包預處理程式碼和依賴項，以進行訓練和推理。哪款神器合適？",
+        "options": {
+          "A": "安全群組描述",
+          "B": "僅計費標籤",
+          "C": "版本化的容器鏡像或可複製的來源包",
+          "D": "DNS 記錄"
+        },
+        "explanation": "版本化工件使 ML 執行環境可跨階段重複。\n網路和計費元資料不打包運行時依賴項。"
+      }
+    }
   },
   {
     "id": "mla-c01-d3-041",
@@ -653,7 +1133,19 @@
     "isMultiAnswer": false,
     "explanation": "A real-time endpoint serves requests and autoscaling adjusts instances to demand.\nBatch transform is offline, Glacier is archival, and DNS text records do not host models.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "生產團隊需要一個即時預測端點，可以根據請求量自動添加執行個體。哪種設計適合？",
+        "options": {
+          "A": "僅批量轉換作業",
+          "B": "S3 冰川拱頂",
+          "C": "Route 53 TXT 記錄",
+          "D": "具有自動縮放功能的 SageMaker 即時端點"
+        },
+        "explanation": "即時端點服務請求，自動縮放根據需求調整執行個體。\n批次轉換是離線的，Glacier 是存檔的，DNS 文字記錄不託管模型。"
+      }
+    }
   },
   {
     "id": "mla-c01-d3-042",
@@ -669,7 +1161,19 @@
     "isMultiAnswer": false,
     "explanation": "Batch Transform processes a data set offline without maintaining a real-time endpoint.\nThe other choices add unnecessary request infrastructure or do not run predictions.",
     "taskStatement": "3.3",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "多帳戶平台團隊需要對大型資料集進行預測，而不需要低延遲請求。哪個選項合適？",
+        "options": {
+          "A": "SageMaker 批次轉換作業",
+          "B": "每行的公共 Lambda URL",
+          "C": "CloudFront 發行版",
+          "D": "IAM Groups"
+        },
+        "explanation": "批量轉換離線處理資料集，無需維護即時端點。\n其他選擇添加不必要的請求基礎設施或不運行預測。"
+      }
+    }
   },
   {
     "id": "mla-c01-d3-043",
@@ -685,6 +1189,18 @@
     "isMultiAnswer": false,
     "explanation": "SageMaker Pipelines represents repeatable ML workflow steps and conditions.\nThe other choices do not orchestrate ML lifecycle steps.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09"
+    "lastVerified": "2026-08-09",
+    "translations": {
+      "zh": {
+        "question": "受監管的公司必須精心安排預處理、培訓、評估和註冊。哪個服務應該定義工作流程？",
+        "options": {
+          "A": "Amazon Route 53",
+          "B": "SageMaker Pipelines",
+          "C": "AWS WAF",
+          "D": "Amazon EFS"
+        },
+        "explanation": "SageMaker Pipelines 代表可重複的 ML 工作流程步驟和條件。\n其他選擇不編排 ML 生命週期步驟。"
+      }
+    }
   }
 ]

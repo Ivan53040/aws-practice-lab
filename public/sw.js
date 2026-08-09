@@ -1,4 +1,4 @@
-const CACHE_NAME = 'aws-practice-lab-v3'
+const CACHE_NAME = 'aws-practice-lab-v4'
 const APP_SHELL = [
   '/',
   '/manifest.json',

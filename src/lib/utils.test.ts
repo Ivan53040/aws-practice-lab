@@ -109,6 +109,28 @@ describe('shuffleQuestionOptions', () => {
     expect(baseQuestion.options[originalKey as keyof typeof baseQuestion.options]).toBe('banana')
   })
 
+  it('moves Chinese option text with the corresponding English option', () => {
+    const bilingual: Question = {
+      ...baseQuestion,
+      translations: {
+        zh: {
+          question: '範例',
+          options: { A: '蘋果', B: '香蕉', C: '櫻桃', D: '棗' },
+          explanation: '解析',
+        },
+      },
+    }
+    const { question } = shuffleQuestionOptions(bilingual)
+    const pairs = Object.keys(question.options).map(key => [
+      question.options[key as keyof typeof question.options],
+      question.translations?.zh.options[key as keyof typeof question.options],
+    ])
+    expect(pairs).toContainEqual(['apple', '蘋果'])
+    expect(pairs).toContainEqual(['banana', '香蕉'])
+    expect(pairs).toContainEqual(['cherry', '櫻桃'])
+    expect(pairs).toContainEqual(['date', '棗'])
+  })
+
   it('handles multi-answer questions', () => {
     const multi: Question = {
       ...baseQuestion,
