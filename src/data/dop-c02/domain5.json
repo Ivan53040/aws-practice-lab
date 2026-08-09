@@ -1,0 +1,514 @@
+[
+  {
+    "id": "dop-c02-d5-001",
+    "type": "single",
+    "question": "A production team must invoke a remediation runbook when a security finding appears. Which pattern is appropriate?",
+    "options": {
+      "A": "An S3 lifecycle rule",
+      "B": "EventBridge finding event to Systems Manager Automation",
+      "C": "A manual spreadsheet only",
+      "D": "A Route 53 TXT record"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge can route findings to an automated Systems Manager runbook.\nThe other choices do not automate incident remediation.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d5-002",
+    "type": "single",
+    "question": "A multi-account platform team needs a central queue for operational alerts so responders can acknowledge them in order. Which service fits?",
+    "options": {
+      "A": "AWS KMS",
+      "B": "Amazon EFS",
+      "C": "Amazon SQS",
+      "D": "Amazon CloudFront"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "SQS provides durable queueing for alert workflows and consumer acknowledgement.\nThe other choices provide content delivery, encryption, or file storage.",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d5-003",
+    "type": "single",
+    "question": "A regulated company must preserve an event stream for later replay after an incident. Which capability should be configured?",
+    "options": {
+      "A": "An EBS deletion",
+      "B": "A public S3 bucket",
+      "C": "A security group",
+      "D": "An EventBridge archive and replay"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge archives can retain matching events and replay them after a fix.\nThe other choices do not preserve event bus traffic for replay.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d5-004",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs to isolate a compromised EC2 instance quickly while retaining evidence. Which first action is appropriate?",
+    "options": {
+      "A": "Apply a restrictive security group and preserve logs and snapshots",
+      "B": "Terminate it immediately without evidence",
+      "C": "Open all ports",
+      "D": "Delete CloudTrail"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Isolation limits further access while snapshots and logs preserve investigation evidence.\nImmediate deletion destroys evidence, and opening ports or deleting logs worsens the incident.",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d5-005",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must document a repeatable response to a common alarm. Which service should store the procedure?",
+    "options": {
+      "A": "A Route 53 weighted record",
+      "B": "Systems Manager Automation runbook",
+      "C": "A CloudFront cache policy",
+      "D": "An S3 storage class"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Automation runbooks encode repeatable operational response steps.\nThe other choices do not represent incident procedures.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d5-006",
+    "type": "single",
+    "question": "A data platform team must invoke a remediation runbook when a security finding appears. Which pattern is appropriate?",
+    "options": {
+      "A": "A Route 53 TXT record",
+      "B": "An S3 lifecycle rule",
+      "C": "EventBridge finding event to Systems Manager Automation",
+      "D": "A manual spreadsheet only"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge can route findings to an automated Systems Manager runbook.\nThe other choices do not automate incident remediation.",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d5-007",
+    "type": "single",
+    "question": "A security-conscious engineering team needs a central queue for operational alerts so responders can acknowledge them in order. Which service fits?",
+    "options": {
+      "A": "Amazon CloudFront",
+      "B": "AWS KMS",
+      "C": "Amazon EFS",
+      "D": "Amazon SQS"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "SQS provides durable queueing for alert workflows and consumer acknowledgement.\nThe other choices provide content delivery, encryption, or file storage.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d5-008",
+    "type": "single",
+    "question": "A company migrating an existing workload must preserve an event stream for later replay after an incident. Which capability should be configured?",
+    "options": {
+      "A": "An EventBridge archive and replay",
+      "B": "An EBS deletion",
+      "C": "A public S3 bucket",
+      "D": "A security group"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge archives can retain matching events and replay them after a fix.\nThe other choices do not preserve event bus traffic for replay.",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d5-009",
+    "type": "single",
+    "question": "A team with strict recovery objectives needs to isolate a compromised EC2 instance quickly while retaining evidence. Which first action is appropriate?",
+    "options": {
+      "A": "Delete CloudTrail",
+      "B": "Apply a restrictive security group and preserve logs and snapshots",
+      "C": "Terminate it immediately without evidence",
+      "D": "Open all ports"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Isolation limits further access while snapshots and logs preserve investigation evidence.\nImmediate deletion destroys evidence, and opening ports or deleting logs worsens the incident.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d5-010",
+    "type": "single",
+    "question": "A developer team preparing a release must document a repeatable response to a common alarm. Which service should store the procedure?",
+    "options": {
+      "A": "An S3 storage class",
+      "B": "A Route 53 weighted record",
+      "C": "Systems Manager Automation runbook",
+      "D": "A CloudFront cache policy"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Automation runbooks encode repeatable operational response steps.\nThe other choices do not represent incident procedures.",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d5-011",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions must invoke a remediation runbook when a security finding appears. Which pattern is appropriate?",
+    "options": {
+      "A": "A manual spreadsheet only",
+      "B": "A Route 53 TXT record",
+      "C": "An S3 lifecycle rule",
+      "D": "EventBridge finding event to Systems Manager Automation"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge can route findings to an automated Systems Manager runbook.\nThe other choices do not automate incident remediation.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d5-012",
+    "type": "single",
+    "question": "A service owner reviewing an incident needs a central queue for operational alerts so responders can acknowledge them in order. Which service fits?",
+    "options": {
+      "A": "Amazon SQS",
+      "B": "Amazon CloudFront",
+      "C": "AWS KMS",
+      "D": "Amazon EFS"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "SQS provides durable queueing for alert workflows and consumer acknowledgement.\nThe other choices provide content delivery, encryption, or file storage.",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d5-013",
+    "type": "single",
+    "question": "A team optimizing an existing implementation must preserve an event stream for later replay after an incident. Which capability should be configured?",
+    "options": {
+      "A": "A security group",
+      "B": "An EventBridge archive and replay",
+      "C": "An EBS deletion",
+      "D": "A public S3 bucket"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge archives can retain matching events and replay them after a fix.\nThe other choices do not preserve event bus traffic for replay.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d5-014",
+    "type": "single",
+    "question": "A company introducing an automated workflow needs to isolate a compromised EC2 instance quickly while retaining evidence. Which first action is appropriate?",
+    "options": {
+      "A": "Open all ports",
+      "B": "Delete CloudTrail",
+      "C": "Apply a restrictive security group and preserve logs and snapshots",
+      "D": "Terminate it immediately without evidence"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Isolation limits further access while snapshots and logs preserve investigation evidence.\nImmediate deletion destroys evidence, and opening ports or deleting logs worsens the incident.",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d5-015",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment must document a repeatable response to a common alarm. Which service should store the procedure?",
+    "options": {
+      "A": "A CloudFront cache policy",
+      "B": "An S3 storage class",
+      "C": "A Route 53 weighted record",
+      "D": "Systems Manager Automation runbook"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Automation runbooks encode repeatable operational response steps.\nThe other choices do not represent incident procedures.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d5-016",
+    "type": "single",
+    "question": "A customer-facing application team must invoke a remediation runbook when a security finding appears. Which pattern is appropriate?",
+    "options": {
+      "A": "EventBridge finding event to Systems Manager Automation",
+      "B": "A manual spreadsheet only",
+      "C": "A Route 53 TXT record",
+      "D": "An S3 lifecycle rule"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge can route findings to an automated Systems Manager runbook.\nThe other choices do not automate incident remediation.",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d5-017",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments needs a central queue for operational alerts so responders can acknowledge them in order. Which service fits?",
+    "options": {
+      "A": "Amazon EFS",
+      "B": "Amazon SQS",
+      "C": "Amazon CloudFront",
+      "D": "AWS KMS"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "SQS provides durable queueing for alert workflows and consumer acknowledgement.\nThe other choices provide content delivery, encryption, or file storage.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d5-018",
+    "type": "single",
+    "question": "A team preparing evidence for an audit must preserve an event stream for later replay after an incident. Which capability should be configured?",
+    "options": {
+      "A": "A public S3 bucket",
+      "B": "A security group",
+      "C": "An EventBridge archive and replay",
+      "D": "An EBS deletion"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge archives can retain matching events and replay them after a fix.\nThe other choices do not preserve event bus traffic for replay.",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d5-019",
+    "type": "single",
+    "question": "A business replacing a manual process needs to isolate a compromised EC2 instance quickly while retaining evidence. Which first action is appropriate?",
+    "options": {
+      "A": "Terminate it immediately without evidence",
+      "B": "Open all ports",
+      "C": "Delete CloudTrail",
+      "D": "Apply a restrictive security group and preserve logs and snapshots"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Isolation limits further access while snapshots and logs preserve investigation evidence.\nImmediate deletion destroys evidence, and opening ports or deleting logs worsens the incident.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d5-020",
+    "type": "single",
+    "question": "A team validating a design against the exam guide must document a repeatable response to a common alarm. Which service should store the procedure?",
+    "options": {
+      "A": "Systems Manager Automation runbook",
+      "B": "A CloudFront cache policy",
+      "C": "An S3 storage class",
+      "D": "A Route 53 weighted record"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Automation runbooks encode repeatable operational response steps.\nThe other choices do not represent incident procedures.",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d5-021",
+    "type": "single",
+    "question": "A production team must invoke a remediation runbook when a security finding appears. Which pattern is appropriate?",
+    "options": {
+      "A": "An S3 lifecycle rule",
+      "B": "EventBridge finding event to Systems Manager Automation",
+      "C": "A manual spreadsheet only",
+      "D": "A Route 53 TXT record"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge can route findings to an automated Systems Manager runbook.\nThe other choices do not automate incident remediation.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d5-022",
+    "type": "single",
+    "question": "A multi-account platform team needs a central queue for operational alerts so responders can acknowledge them in order. Which service fits?",
+    "options": {
+      "A": "AWS KMS",
+      "B": "Amazon EFS",
+      "C": "Amazon SQS",
+      "D": "Amazon CloudFront"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "SQS provides durable queueing for alert workflows and consumer acknowledgement.\nThe other choices provide content delivery, encryption, or file storage.",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d5-023",
+    "type": "single",
+    "question": "A regulated company must preserve an event stream for later replay after an incident. Which capability should be configured?",
+    "options": {
+      "A": "An EBS deletion",
+      "B": "A public S3 bucket",
+      "C": "A security group",
+      "D": "An EventBridge archive and replay"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge archives can retain matching events and replay them after a fix.\nThe other choices do not preserve event bus traffic for replay.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d5-024",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs to isolate a compromised EC2 instance quickly while retaining evidence. Which first action is appropriate?",
+    "options": {
+      "A": "Apply a restrictive security group and preserve logs and snapshots",
+      "B": "Terminate it immediately without evidence",
+      "C": "Open all ports",
+      "D": "Delete CloudTrail"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Isolation limits further access while snapshots and logs preserve investigation evidence.\nImmediate deletion destroys evidence, and opening ports or deleting logs worsens the incident.",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d5-025",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must document a repeatable response to a common alarm. Which service should store the procedure?",
+    "options": {
+      "A": "A Route 53 weighted record",
+      "B": "Systems Manager Automation runbook",
+      "C": "A CloudFront cache policy",
+      "D": "An S3 storage class"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Automation runbooks encode repeatable operational response steps.\nThe other choices do not represent incident procedures.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d5-026",
+    "type": "single",
+    "question": "A data platform team must invoke a remediation runbook when a security finding appears. Which pattern is appropriate?",
+    "options": {
+      "A": "A Route 53 TXT record",
+      "B": "An S3 lifecycle rule",
+      "C": "EventBridge finding event to Systems Manager Automation",
+      "D": "A manual spreadsheet only"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge can route findings to an automated Systems Manager runbook.\nThe other choices do not automate incident remediation.",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d5-027",
+    "type": "single",
+    "question": "A security-conscious engineering team needs a central queue for operational alerts so responders can acknowledge them in order. Which service fits?",
+    "options": {
+      "A": "Amazon CloudFront",
+      "B": "AWS KMS",
+      "C": "Amazon EFS",
+      "D": "Amazon SQS"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "SQS provides durable queueing for alert workflows and consumer acknowledgement.\nThe other choices provide content delivery, encryption, or file storage.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d5-028",
+    "type": "single",
+    "question": "A company migrating an existing workload must preserve an event stream for later replay after an incident. Which capability should be configured?",
+    "options": {
+      "A": "An EventBridge archive and replay",
+      "B": "An EBS deletion",
+      "C": "A public S3 bucket",
+      "D": "A security group"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge archives can retain matching events and replay them after a fix.\nThe other choices do not preserve event bus traffic for replay.",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d5-029",
+    "type": "single",
+    "question": "A team with strict recovery objectives needs to isolate a compromised EC2 instance quickly while retaining evidence. Which first action is appropriate?",
+    "options": {
+      "A": "Delete CloudTrail",
+      "B": "Apply a restrictive security group and preserve logs and snapshots",
+      "C": "Terminate it immediately without evidence",
+      "D": "Open all ports"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Isolation limits further access while snapshots and logs preserve investigation evidence.\nImmediate deletion destroys evidence, and opening ports or deleting logs worsens the incident.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d5-030",
+    "type": "single",
+    "question": "A developer team preparing a release must document a repeatable response to a common alarm. Which service should store the procedure?",
+    "options": {
+      "A": "An S3 storage class",
+      "B": "A Route 53 weighted record",
+      "C": "Systems Manager Automation runbook",
+      "D": "A CloudFront cache policy"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Automation runbooks encode repeatable operational response steps.\nThe other choices do not represent incident procedures.",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d5-031",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions must invoke a remediation runbook when a security finding appears. Which pattern is appropriate?",
+    "options": {
+      "A": "A manual spreadsheet only",
+      "B": "A Route 53 TXT record",
+      "C": "An S3 lifecycle rule",
+      "D": "EventBridge finding event to Systems Manager Automation"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge can route findings to an automated Systems Manager runbook.\nThe other choices do not automate incident remediation.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d5-032",
+    "type": "single",
+    "question": "A service owner reviewing an incident needs a central queue for operational alerts so responders can acknowledge them in order. Which service fits?",
+    "options": {
+      "A": "Amazon SQS",
+      "B": "Amazon CloudFront",
+      "C": "AWS KMS",
+      "D": "Amazon EFS"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "SQS provides durable queueing for alert workflows and consumer acknowledgement.\nThe other choices provide content delivery, encryption, or file storage.",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-09"
+  }
+]

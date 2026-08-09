@@ -1,0 +1,754 @@
+[
+  {
+    "id": "dva-c02-d3-001",
+    "type": "single",
+    "question": "A production team needs a repeatable package for a Lambda function and its dependencies. Which option should be used?",
+    "options": {
+      "A": "A Route 53 hosted zone",
+      "B": "A security group only",
+      "C": "A CloudTrail trail",
+      "D": "A deployment package or Lambda container image"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Lambda deployment packages or container images bundle code and runtime dependencies.\nThe other choices do not package executable application code.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-002",
+    "type": "single",
+    "question": "A multi-account platform team wants to deploy a function to a test stage before production. Which service combination fits?",
+    "options": {
+      "A": "AWS SAM or CloudFormation with separate environments",
+      "B": "A public S3 bucket only",
+      "C": "A KMS alias",
+      "D": "A VPC flow log"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Infrastructure as code can create repeatable test and production environments with controlled parameters.\nThe other choices do not deploy isolated application environments.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-003",
+    "type": "single",
+    "question": "A regulated company must shift production traffic gradually to a new Lambda version. Which mechanism is appropriate?",
+    "options": {
+      "A": "An IAM password policy",
+      "B": "Lambda aliases with a weighted canary deployment",
+      "C": "A full database scan",
+      "D": "An S3 lifecycle transition"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Lambda aliases can route a percentage of traffic to a new version for a controlled rollout.\nThe other choices do not control Lambda version traffic.",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-004",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs a code commit to trigger build, test, and deployment stages. Which service should orchestrate the pipeline?",
+    "options": {
+      "A": "AWS Shield",
+      "B": "Amazon EFS",
+      "C": "AWS CodePipeline",
+      "D": "Amazon Neptune"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "CodePipeline orchestrates source, build, test, and deployment actions.\nThe other choices provide graph storage, DDoS protection, or file storage.",
+    "taskStatement": "3.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-005",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must roll back an application after failed health checks. Which deployment capability is useful?",
+    "options": {
+      "A": "A public bucket ACL",
+      "B": "A DNS TXT record",
+      "C": "An EBS volume snapshot only",
+      "D": "A deployment strategy with automatic rollback"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Deployment services can use health checks and alarms to stop or roll back an unhealthy release.\nThe other choices do not coordinate application release rollback.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-006",
+    "type": "single",
+    "question": "A data platform team needs a repeatable package for a Lambda function and its dependencies. Which option should be used?",
+    "options": {
+      "A": "A deployment package or Lambda container image",
+      "B": "A Route 53 hosted zone",
+      "C": "A security group only",
+      "D": "A CloudTrail trail"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Lambda deployment packages or container images bundle code and runtime dependencies.\nThe other choices do not package executable application code.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-007",
+    "type": "single",
+    "question": "A security-conscious engineering team wants to deploy a function to a test stage before production. Which service combination fits?",
+    "options": {
+      "A": "A VPC flow log",
+      "B": "AWS SAM or CloudFormation with separate environments",
+      "C": "A public S3 bucket only",
+      "D": "A KMS alias"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Infrastructure as code can create repeatable test and production environments with controlled parameters.\nThe other choices do not deploy isolated application environments.",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-008",
+    "type": "single",
+    "question": "A company migrating an existing workload must shift production traffic gradually to a new Lambda version. Which mechanism is appropriate?",
+    "options": {
+      "A": "An S3 lifecycle transition",
+      "B": "An IAM password policy",
+      "C": "Lambda aliases with a weighted canary deployment",
+      "D": "A full database scan"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Lambda aliases can route a percentage of traffic to a new version for a controlled rollout.\nThe other choices do not control Lambda version traffic.",
+    "taskStatement": "3.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-009",
+    "type": "single",
+    "question": "A team with strict recovery objectives needs a code commit to trigger build, test, and deployment stages. Which service should orchestrate the pipeline?",
+    "options": {
+      "A": "Amazon Neptune",
+      "B": "AWS Shield",
+      "C": "Amazon EFS",
+      "D": "AWS CodePipeline"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CodePipeline orchestrates source, build, test, and deployment actions.\nThe other choices provide graph storage, DDoS protection, or file storage.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-010",
+    "type": "single",
+    "question": "A developer team preparing a release must roll back an application after failed health checks. Which deployment capability is useful?",
+    "options": {
+      "A": "A deployment strategy with automatic rollback",
+      "B": "A public bucket ACL",
+      "C": "A DNS TXT record",
+      "D": "An EBS volume snapshot only"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Deployment services can use health checks and alarms to stop or roll back an unhealthy release.\nThe other choices do not coordinate application release rollback.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-011",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs a repeatable package for a Lambda function and its dependencies. Which option should be used?",
+    "options": {
+      "A": "A CloudTrail trail",
+      "B": "A deployment package or Lambda container image",
+      "C": "A Route 53 hosted zone",
+      "D": "A security group only"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Lambda deployment packages or container images bundle code and runtime dependencies.\nThe other choices do not package executable application code.",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-012",
+    "type": "single",
+    "question": "A service owner reviewing an incident wants to deploy a function to a test stage before production. Which service combination fits?",
+    "options": {
+      "A": "A KMS alias",
+      "B": "A VPC flow log",
+      "C": "AWS SAM or CloudFormation with separate environments",
+      "D": "A public S3 bucket only"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Infrastructure as code can create repeatable test and production environments with controlled parameters.\nThe other choices do not deploy isolated application environments.",
+    "taskStatement": "3.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-013",
+    "type": "single",
+    "question": "A team optimizing an existing implementation must shift production traffic gradually to a new Lambda version. Which mechanism is appropriate?",
+    "options": {
+      "A": "A full database scan",
+      "B": "An S3 lifecycle transition",
+      "C": "An IAM password policy",
+      "D": "Lambda aliases with a weighted canary deployment"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Lambda aliases can route a percentage of traffic to a new version for a controlled rollout.\nThe other choices do not control Lambda version traffic.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-014",
+    "type": "single",
+    "question": "A company introducing an automated workflow needs a code commit to trigger build, test, and deployment stages. Which service should orchestrate the pipeline?",
+    "options": {
+      "A": "AWS CodePipeline",
+      "B": "Amazon Neptune",
+      "C": "AWS Shield",
+      "D": "Amazon EFS"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "CodePipeline orchestrates source, build, test, and deployment actions.\nThe other choices provide graph storage, DDoS protection, or file storage.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-015",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment must roll back an application after failed health checks. Which deployment capability is useful?",
+    "options": {
+      "A": "An EBS volume snapshot only",
+      "B": "A deployment strategy with automatic rollback",
+      "C": "A public bucket ACL",
+      "D": "A DNS TXT record"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Deployment services can use health checks and alarms to stop or roll back an unhealthy release.\nThe other choices do not coordinate application release rollback.",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-016",
+    "type": "single",
+    "question": "A customer-facing application team needs a repeatable package for a Lambda function and its dependencies. Which option should be used?",
+    "options": {
+      "A": "A security group only",
+      "B": "A CloudTrail trail",
+      "C": "A deployment package or Lambda container image",
+      "D": "A Route 53 hosted zone"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Lambda deployment packages or container images bundle code and runtime dependencies.\nThe other choices do not package executable application code.",
+    "taskStatement": "3.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-017",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments wants to deploy a function to a test stage before production. Which service combination fits?",
+    "options": {
+      "A": "A public S3 bucket only",
+      "B": "A KMS alias",
+      "C": "A VPC flow log",
+      "D": "AWS SAM or CloudFormation with separate environments"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Infrastructure as code can create repeatable test and production environments with controlled parameters.\nThe other choices do not deploy isolated application environments.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-018",
+    "type": "single",
+    "question": "A team preparing evidence for an audit must shift production traffic gradually to a new Lambda version. Which mechanism is appropriate?",
+    "options": {
+      "A": "Lambda aliases with a weighted canary deployment",
+      "B": "A full database scan",
+      "C": "An S3 lifecycle transition",
+      "D": "An IAM password policy"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Lambda aliases can route a percentage of traffic to a new version for a controlled rollout.\nThe other choices do not control Lambda version traffic.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-019",
+    "type": "single",
+    "question": "A business replacing a manual process needs a code commit to trigger build, test, and deployment stages. Which service should orchestrate the pipeline?",
+    "options": {
+      "A": "Amazon EFS",
+      "B": "AWS CodePipeline",
+      "C": "Amazon Neptune",
+      "D": "AWS Shield"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CodePipeline orchestrates source, build, test, and deployment actions.\nThe other choices provide graph storage, DDoS protection, or file storage.",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-020",
+    "type": "single",
+    "question": "A team validating a design against the exam guide must roll back an application after failed health checks. Which deployment capability is useful?",
+    "options": {
+      "A": "A DNS TXT record",
+      "B": "An EBS volume snapshot only",
+      "C": "A deployment strategy with automatic rollback",
+      "D": "A public bucket ACL"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Deployment services can use health checks and alarms to stop or roll back an unhealthy release.\nThe other choices do not coordinate application release rollback.",
+    "taskStatement": "3.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-021",
+    "type": "single",
+    "question": "A production team needs a repeatable package for a Lambda function and its dependencies. Which option should be used?",
+    "options": {
+      "A": "A Route 53 hosted zone",
+      "B": "A security group only",
+      "C": "A CloudTrail trail",
+      "D": "A deployment package or Lambda container image"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Lambda deployment packages or container images bundle code and runtime dependencies.\nThe other choices do not package executable application code.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-022",
+    "type": "single",
+    "question": "A multi-account platform team wants to deploy a function to a test stage before production. Which service combination fits?",
+    "options": {
+      "A": "AWS SAM or CloudFormation with separate environments",
+      "B": "A public S3 bucket only",
+      "C": "A KMS alias",
+      "D": "A VPC flow log"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Infrastructure as code can create repeatable test and production environments with controlled parameters.\nThe other choices do not deploy isolated application environments.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-023",
+    "type": "single",
+    "question": "A regulated company must shift production traffic gradually to a new Lambda version. Which mechanism is appropriate?",
+    "options": {
+      "A": "An IAM password policy",
+      "B": "Lambda aliases with a weighted canary deployment",
+      "C": "A full database scan",
+      "D": "An S3 lifecycle transition"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Lambda aliases can route a percentage of traffic to a new version for a controlled rollout.\nThe other choices do not control Lambda version traffic.",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-024",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs a code commit to trigger build, test, and deployment stages. Which service should orchestrate the pipeline?",
+    "options": {
+      "A": "AWS Shield",
+      "B": "Amazon EFS",
+      "C": "AWS CodePipeline",
+      "D": "Amazon Neptune"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "CodePipeline orchestrates source, build, test, and deployment actions.\nThe other choices provide graph storage, DDoS protection, or file storage.",
+    "taskStatement": "3.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-025",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must roll back an application after failed health checks. Which deployment capability is useful?",
+    "options": {
+      "A": "A public bucket ACL",
+      "B": "A DNS TXT record",
+      "C": "An EBS volume snapshot only",
+      "D": "A deployment strategy with automatic rollback"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Deployment services can use health checks and alarms to stop or roll back an unhealthy release.\nThe other choices do not coordinate application release rollback.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-026",
+    "type": "single",
+    "question": "A data platform team needs a repeatable package for a Lambda function and its dependencies. Which option should be used?",
+    "options": {
+      "A": "A deployment package or Lambda container image",
+      "B": "A Route 53 hosted zone",
+      "C": "A security group only",
+      "D": "A CloudTrail trail"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Lambda deployment packages or container images bundle code and runtime dependencies.\nThe other choices do not package executable application code.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-027",
+    "type": "single",
+    "question": "A security-conscious engineering team wants to deploy a function to a test stage before production. Which service combination fits?",
+    "options": {
+      "A": "A VPC flow log",
+      "B": "AWS SAM or CloudFormation with separate environments",
+      "C": "A public S3 bucket only",
+      "D": "A KMS alias"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Infrastructure as code can create repeatable test and production environments with controlled parameters.\nThe other choices do not deploy isolated application environments.",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-028",
+    "type": "single",
+    "question": "A company migrating an existing workload must shift production traffic gradually to a new Lambda version. Which mechanism is appropriate?",
+    "options": {
+      "A": "An S3 lifecycle transition",
+      "B": "An IAM password policy",
+      "C": "Lambda aliases with a weighted canary deployment",
+      "D": "A full database scan"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Lambda aliases can route a percentage of traffic to a new version for a controlled rollout.\nThe other choices do not control Lambda version traffic.",
+    "taskStatement": "3.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-029",
+    "type": "single",
+    "question": "A team with strict recovery objectives needs a code commit to trigger build, test, and deployment stages. Which service should orchestrate the pipeline?",
+    "options": {
+      "A": "Amazon Neptune",
+      "B": "AWS Shield",
+      "C": "Amazon EFS",
+      "D": "AWS CodePipeline"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CodePipeline orchestrates source, build, test, and deployment actions.\nThe other choices provide graph storage, DDoS protection, or file storage.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-030",
+    "type": "single",
+    "question": "A developer team preparing a release must roll back an application after failed health checks. Which deployment capability is useful?",
+    "options": {
+      "A": "A deployment strategy with automatic rollback",
+      "B": "A public bucket ACL",
+      "C": "A DNS TXT record",
+      "D": "An EBS volume snapshot only"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Deployment services can use health checks and alarms to stop or roll back an unhealthy release.\nThe other choices do not coordinate application release rollback.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-031",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs a repeatable package for a Lambda function and its dependencies. Which option should be used?",
+    "options": {
+      "A": "A CloudTrail trail",
+      "B": "A deployment package or Lambda container image",
+      "C": "A Route 53 hosted zone",
+      "D": "A security group only"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Lambda deployment packages or container images bundle code and runtime dependencies.\nThe other choices do not package executable application code.",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-032",
+    "type": "single",
+    "question": "A service owner reviewing an incident wants to deploy a function to a test stage before production. Which service combination fits?",
+    "options": {
+      "A": "A KMS alias",
+      "B": "A VPC flow log",
+      "C": "AWS SAM or CloudFormation with separate environments",
+      "D": "A public S3 bucket only"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Infrastructure as code can create repeatable test and production environments with controlled parameters.\nThe other choices do not deploy isolated application environments.",
+    "taskStatement": "3.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-033",
+    "type": "single",
+    "question": "A team optimizing an existing implementation must shift production traffic gradually to a new Lambda version. Which mechanism is appropriate?",
+    "options": {
+      "A": "A full database scan",
+      "B": "An S3 lifecycle transition",
+      "C": "An IAM password policy",
+      "D": "Lambda aliases with a weighted canary deployment"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Lambda aliases can route a percentage of traffic to a new version for a controlled rollout.\nThe other choices do not control Lambda version traffic.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-034",
+    "type": "single",
+    "question": "A company introducing an automated workflow needs a code commit to trigger build, test, and deployment stages. Which service should orchestrate the pipeline?",
+    "options": {
+      "A": "AWS CodePipeline",
+      "B": "Amazon Neptune",
+      "C": "AWS Shield",
+      "D": "Amazon EFS"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "CodePipeline orchestrates source, build, test, and deployment actions.\nThe other choices provide graph storage, DDoS protection, or file storage.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-035",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment must roll back an application after failed health checks. Which deployment capability is useful?",
+    "options": {
+      "A": "An EBS volume snapshot only",
+      "B": "A deployment strategy with automatic rollback",
+      "C": "A public bucket ACL",
+      "D": "A DNS TXT record"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Deployment services can use health checks and alarms to stop or roll back an unhealthy release.\nThe other choices do not coordinate application release rollback.",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-036",
+    "type": "single",
+    "question": "A customer-facing application team needs a repeatable package for a Lambda function and its dependencies. Which option should be used?",
+    "options": {
+      "A": "A security group only",
+      "B": "A CloudTrail trail",
+      "C": "A deployment package or Lambda container image",
+      "D": "A Route 53 hosted zone"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Lambda deployment packages or container images bundle code and runtime dependencies.\nThe other choices do not package executable application code.",
+    "taskStatement": "3.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-037",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments wants to deploy a function to a test stage before production. Which service combination fits?",
+    "options": {
+      "A": "A public S3 bucket only",
+      "B": "A KMS alias",
+      "C": "A VPC flow log",
+      "D": "AWS SAM or CloudFormation with separate environments"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Infrastructure as code can create repeatable test and production environments with controlled parameters.\nThe other choices do not deploy isolated application environments.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-038",
+    "type": "single",
+    "question": "A team preparing evidence for an audit must shift production traffic gradually to a new Lambda version. Which mechanism is appropriate?",
+    "options": {
+      "A": "Lambda aliases with a weighted canary deployment",
+      "B": "A full database scan",
+      "C": "An S3 lifecycle transition",
+      "D": "An IAM password policy"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Lambda aliases can route a percentage of traffic to a new version for a controlled rollout.\nThe other choices do not control Lambda version traffic.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-039",
+    "type": "single",
+    "question": "A business replacing a manual process needs a code commit to trigger build, test, and deployment stages. Which service should orchestrate the pipeline?",
+    "options": {
+      "A": "Amazon EFS",
+      "B": "AWS CodePipeline",
+      "C": "Amazon Neptune",
+      "D": "AWS Shield"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CodePipeline orchestrates source, build, test, and deployment actions.\nThe other choices provide graph storage, DDoS protection, or file storage.",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-040",
+    "type": "single",
+    "question": "A team validating a design against the exam guide must roll back an application after failed health checks. Which deployment capability is useful?",
+    "options": {
+      "A": "A DNS TXT record",
+      "B": "An EBS volume snapshot only",
+      "C": "A deployment strategy with automatic rollback",
+      "D": "A public bucket ACL"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Deployment services can use health checks and alarms to stop or roll back an unhealthy release.\nThe other choices do not coordinate application release rollback.",
+    "taskStatement": "3.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-041",
+    "type": "single",
+    "question": "A production team needs a repeatable package for a Lambda function and its dependencies. Which option should be used?",
+    "options": {
+      "A": "A Route 53 hosted zone",
+      "B": "A security group only",
+      "C": "A CloudTrail trail",
+      "D": "A deployment package or Lambda container image"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Lambda deployment packages or container images bundle code and runtime dependencies.\nThe other choices do not package executable application code.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-042",
+    "type": "single",
+    "question": "A multi-account platform team wants to deploy a function to a test stage before production. Which service combination fits?",
+    "options": {
+      "A": "AWS SAM or CloudFormation with separate environments",
+      "B": "A public S3 bucket only",
+      "C": "A KMS alias",
+      "D": "A VPC flow log"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Infrastructure as code can create repeatable test and production environments with controlled parameters.\nThe other choices do not deploy isolated application environments.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-043",
+    "type": "single",
+    "question": "A regulated company must shift production traffic gradually to a new Lambda version. Which mechanism is appropriate?",
+    "options": {
+      "A": "An IAM password policy",
+      "B": "Lambda aliases with a weighted canary deployment",
+      "C": "A full database scan",
+      "D": "An S3 lifecycle transition"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Lambda aliases can route a percentage of traffic to a new version for a controlled rollout.\nThe other choices do not control Lambda version traffic.",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-044",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs a code commit to trigger build, test, and deployment stages. Which service should orchestrate the pipeline?",
+    "options": {
+      "A": "AWS Shield",
+      "B": "Amazon EFS",
+      "C": "AWS CodePipeline",
+      "D": "Amazon Neptune"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "CodePipeline orchestrates source, build, test, and deployment actions.\nThe other choices provide graph storage, DDoS protection, or file storage.",
+    "taskStatement": "3.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-045",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must roll back an application after failed health checks. Which deployment capability is useful?",
+    "options": {
+      "A": "A public bucket ACL",
+      "B": "A DNS TXT record",
+      "C": "An EBS volume snapshot only",
+      "D": "A deployment strategy with automatic rollback"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Deployment services can use health checks and alarms to stop or roll back an unhealthy release.\nThe other choices do not coordinate application release rollback.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-046",
+    "type": "single",
+    "question": "A data platform team needs a repeatable package for a Lambda function and its dependencies. Which option should be used?",
+    "options": {
+      "A": "A deployment package or Lambda container image",
+      "B": "A Route 53 hosted zone",
+      "C": "A security group only",
+      "D": "A CloudTrail trail"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Lambda deployment packages or container images bundle code and runtime dependencies.\nThe other choices do not package executable application code.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d3-047",
+    "type": "single",
+    "question": "A security-conscious engineering team wants to deploy a function to a test stage before production. Which service combination fits?",
+    "options": {
+      "A": "A VPC flow log",
+      "B": "AWS SAM or CloudFormation with separate environments",
+      "C": "A public S3 bucket only",
+      "D": "A KMS alias"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Infrastructure as code can create repeatable test and production environments with controlled parameters.\nThe other choices do not deploy isolated application environments.",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
+  }
+]

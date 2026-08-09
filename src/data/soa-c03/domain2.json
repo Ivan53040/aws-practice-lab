@@ -1,0 +1,690 @@
+[
+  {
+    "id": "soa-c03-d2-001",
+    "type": "single",
+    "question": "A production team needs to add EC2 capacity when a queue backlog grows. Which scaling signal is most relevant?",
+    "options": {
+      "A": "The KMS key rotation date",
+      "B": "The Route 53 hosted zone ID",
+      "C": "SQS ApproximateNumberOfMessagesVisible",
+      "D": "The S3 bucket name"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Queue depth is a direct measure of work waiting for workers and can drive Auto Scaling.\nThe other values do not measure pending work.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d2-002",
+    "type": "single",
+    "question": "A multi-account platform team must route traffic only to healthy targets after a deployment. Which capability should be configured?",
+    "options": {
+      "A": "S3 Object Lock",
+      "B": "A KMS alias",
+      "C": "An IAM user password policy",
+      "D": "Load balancer target health checks"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Load balancer health checks remove unhealthy targets from routing.\nThe other choices protect objects, name keys, or govern IAM passwords.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d2-003",
+    "type": "single",
+    "question": "A regulated company needs a database restore to a specific second before an accidental deletion. Which RDS capability fits?",
+    "options": {
+      "A": "Point-in-time restore",
+      "B": "A read replica endpoint",
+      "C": "A security group reference",
+      "D": "A CloudFront invalidation"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "RDS point-in-time restore uses automated backups and transaction logs to create a new database at a selected time.\nRead replicas, security groups, and cache invalidations do not restore a database to a selected time.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d2-004",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase wants automated backup policies across supported AWS resources. Which service should manage the plans?",
+    "options": {
+      "A": "AWS Certificate Manager",
+      "B": "AWS Backup",
+      "C": "AWS WAF",
+      "D": "Amazon Route 53"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "AWS Backup centralizes schedules, retention, and vault policies for supported resources.\nThe other choices protect web traffic, provide DNS, or manage certificates.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d2-005",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must keep only core recovery components running in a secondary Region and create the rest during a disaster. Which strategy is this?",
+    "options": {
+      "A": "Warm standby",
+      "B": "A single-AZ deployment",
+      "C": "Pilot light",
+      "D": "Active-active"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Pilot light keeps the core components available while the remaining environment is provisioned during recovery.\nActive-active and warm standby keep more recovery capacity running. A single AZ is not a Regional recovery strategy.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d2-006",
+    "type": "single",
+    "question": "A data platform team needs to add EC2 capacity when a queue backlog grows. Which scaling signal is most relevant?",
+    "options": {
+      "A": "The S3 bucket name",
+      "B": "The KMS key rotation date",
+      "C": "The Route 53 hosted zone ID",
+      "D": "SQS ApproximateNumberOfMessagesVisible"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Queue depth is a direct measure of work waiting for workers and can drive Auto Scaling.\nThe other values do not measure pending work.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d2-007",
+    "type": "single",
+    "question": "A security-conscious engineering team must route traffic only to healthy targets after a deployment. Which capability should be configured?",
+    "options": {
+      "A": "Load balancer target health checks",
+      "B": "S3 Object Lock",
+      "C": "A KMS alias",
+      "D": "An IAM user password policy"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Load balancer health checks remove unhealthy targets from routing.\nThe other choices protect objects, name keys, or govern IAM passwords.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d2-008",
+    "type": "single",
+    "question": "A company migrating an existing workload needs a database restore to a specific second before an accidental deletion. Which RDS capability fits?",
+    "options": {
+      "A": "A CloudFront invalidation",
+      "B": "Point-in-time restore",
+      "C": "A read replica endpoint",
+      "D": "A security group reference"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "RDS point-in-time restore uses automated backups and transaction logs to create a new database at a selected time.\nRead replicas, security groups, and cache invalidations do not restore a database to a selected time.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d2-009",
+    "type": "single",
+    "question": "A team with strict recovery objectives wants automated backup policies across supported AWS resources. Which service should manage the plans?",
+    "options": {
+      "A": "Amazon Route 53",
+      "B": "AWS Certificate Manager",
+      "C": "AWS Backup",
+      "D": "AWS WAF"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "AWS Backup centralizes schedules, retention, and vault policies for supported resources.\nThe other choices protect web traffic, provide DNS, or manage certificates.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d2-010",
+    "type": "single",
+    "question": "A developer team preparing a release must keep only core recovery components running in a secondary Region and create the rest during a disaster. Which strategy is this?",
+    "options": {
+      "A": "Active-active",
+      "B": "Warm standby",
+      "C": "A single-AZ deployment",
+      "D": "Pilot light"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Pilot light keeps the core components available while the remaining environment is provisioned during recovery.\nActive-active and warm standby keep more recovery capacity running. A single AZ is not a Regional recovery strategy.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d2-011",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs to add EC2 capacity when a queue backlog grows. Which scaling signal is most relevant?",
+    "options": {
+      "A": "SQS ApproximateNumberOfMessagesVisible",
+      "B": "The S3 bucket name",
+      "C": "The KMS key rotation date",
+      "D": "The Route 53 hosted zone ID"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Queue depth is a direct measure of work waiting for workers and can drive Auto Scaling.\nThe other values do not measure pending work.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d2-012",
+    "type": "single",
+    "question": "A service owner reviewing an incident must route traffic only to healthy targets after a deployment. Which capability should be configured?",
+    "options": {
+      "A": "An IAM user password policy",
+      "B": "Load balancer target health checks",
+      "C": "S3 Object Lock",
+      "D": "A KMS alias"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Load balancer health checks remove unhealthy targets from routing.\nThe other choices protect objects, name keys, or govern IAM passwords.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d2-013",
+    "type": "single",
+    "question": "A team optimizing an existing implementation needs a database restore to a specific second before an accidental deletion. Which RDS capability fits?",
+    "options": {
+      "A": "A security group reference",
+      "B": "A CloudFront invalidation",
+      "C": "Point-in-time restore",
+      "D": "A read replica endpoint"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "RDS point-in-time restore uses automated backups and transaction logs to create a new database at a selected time.\nRead replicas, security groups, and cache invalidations do not restore a database to a selected time.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d2-014",
+    "type": "single",
+    "question": "A company introducing an automated workflow wants automated backup policies across supported AWS resources. Which service should manage the plans?",
+    "options": {
+      "A": "AWS WAF",
+      "B": "Amazon Route 53",
+      "C": "AWS Certificate Manager",
+      "D": "AWS Backup"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "AWS Backup centralizes schedules, retention, and vault policies for supported resources.\nThe other choices protect web traffic, provide DNS, or manage certificates.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d2-015",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment must keep only core recovery components running in a secondary Region and create the rest during a disaster. Which strategy is this?",
+    "options": {
+      "A": "Pilot light",
+      "B": "Active-active",
+      "C": "Warm standby",
+      "D": "A single-AZ deployment"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Pilot light keeps the core components available while the remaining environment is provisioned during recovery.\nActive-active and warm standby keep more recovery capacity running. A single AZ is not a Regional recovery strategy.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d2-016",
+    "type": "single",
+    "question": "A customer-facing application team needs to add EC2 capacity when a queue backlog grows. Which scaling signal is most relevant?",
+    "options": {
+      "A": "The Route 53 hosted zone ID",
+      "B": "SQS ApproximateNumberOfMessagesVisible",
+      "C": "The S3 bucket name",
+      "D": "The KMS key rotation date"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Queue depth is a direct measure of work waiting for workers and can drive Auto Scaling.\nThe other values do not measure pending work.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d2-017",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments must route traffic only to healthy targets after a deployment. Which capability should be configured?",
+    "options": {
+      "A": "A KMS alias",
+      "B": "An IAM user password policy",
+      "C": "Load balancer target health checks",
+      "D": "S3 Object Lock"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Load balancer health checks remove unhealthy targets from routing.\nThe other choices protect objects, name keys, or govern IAM passwords.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d2-018",
+    "type": "single",
+    "question": "A team preparing evidence for an audit needs a database restore to a specific second before an accidental deletion. Which RDS capability fits?",
+    "options": {
+      "A": "A read replica endpoint",
+      "B": "A security group reference",
+      "C": "A CloudFront invalidation",
+      "D": "Point-in-time restore"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "RDS point-in-time restore uses automated backups and transaction logs to create a new database at a selected time.\nRead replicas, security groups, and cache invalidations do not restore a database to a selected time.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d2-019",
+    "type": "single",
+    "question": "A business replacing a manual process wants automated backup policies across supported AWS resources. Which service should manage the plans?",
+    "options": {
+      "A": "AWS Backup",
+      "B": "AWS WAF",
+      "C": "Amazon Route 53",
+      "D": "AWS Certificate Manager"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "AWS Backup centralizes schedules, retention, and vault policies for supported resources.\nThe other choices protect web traffic, provide DNS, or manage certificates.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d2-020",
+    "type": "single",
+    "question": "A team validating a design against the exam guide must keep only core recovery components running in a secondary Region and create the rest during a disaster. Which strategy is this?",
+    "options": {
+      "A": "A single-AZ deployment",
+      "B": "Pilot light",
+      "C": "Active-active",
+      "D": "Warm standby"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Pilot light keeps the core components available while the remaining environment is provisioned during recovery.\nActive-active and warm standby keep more recovery capacity running. A single AZ is not a Regional recovery strategy.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d2-021",
+    "type": "single",
+    "question": "A production team needs to add EC2 capacity when a queue backlog grows. Which scaling signal is most relevant?",
+    "options": {
+      "A": "The KMS key rotation date",
+      "B": "The Route 53 hosted zone ID",
+      "C": "SQS ApproximateNumberOfMessagesVisible",
+      "D": "The S3 bucket name"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Queue depth is a direct measure of work waiting for workers and can drive Auto Scaling.\nThe other values do not measure pending work.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d2-022",
+    "type": "single",
+    "question": "A multi-account platform team must route traffic only to healthy targets after a deployment. Which capability should be configured?",
+    "options": {
+      "A": "S3 Object Lock",
+      "B": "A KMS alias",
+      "C": "An IAM user password policy",
+      "D": "Load balancer target health checks"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Load balancer health checks remove unhealthy targets from routing.\nThe other choices protect objects, name keys, or govern IAM passwords.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d2-023",
+    "type": "single",
+    "question": "A regulated company needs a database restore to a specific second before an accidental deletion. Which RDS capability fits?",
+    "options": {
+      "A": "Point-in-time restore",
+      "B": "A read replica endpoint",
+      "C": "A security group reference",
+      "D": "A CloudFront invalidation"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "RDS point-in-time restore uses automated backups and transaction logs to create a new database at a selected time.\nRead replicas, security groups, and cache invalidations do not restore a database to a selected time.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d2-024",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase wants automated backup policies across supported AWS resources. Which service should manage the plans?",
+    "options": {
+      "A": "AWS Certificate Manager",
+      "B": "AWS Backup",
+      "C": "AWS WAF",
+      "D": "Amazon Route 53"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "AWS Backup centralizes schedules, retention, and vault policies for supported resources.\nThe other choices protect web traffic, provide DNS, or manage certificates.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d2-025",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must keep only core recovery components running in a secondary Region and create the rest during a disaster. Which strategy is this?",
+    "options": {
+      "A": "Warm standby",
+      "B": "A single-AZ deployment",
+      "C": "Pilot light",
+      "D": "Active-active"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Pilot light keeps the core components available while the remaining environment is provisioned during recovery.\nActive-active and warm standby keep more recovery capacity running. A single AZ is not a Regional recovery strategy.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d2-026",
+    "type": "single",
+    "question": "A data platform team needs to add EC2 capacity when a queue backlog grows. Which scaling signal is most relevant?",
+    "options": {
+      "A": "The S3 bucket name",
+      "B": "The KMS key rotation date",
+      "C": "The Route 53 hosted zone ID",
+      "D": "SQS ApproximateNumberOfMessagesVisible"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Queue depth is a direct measure of work waiting for workers and can drive Auto Scaling.\nThe other values do not measure pending work.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d2-027",
+    "type": "single",
+    "question": "A security-conscious engineering team must route traffic only to healthy targets after a deployment. Which capability should be configured?",
+    "options": {
+      "A": "Load balancer target health checks",
+      "B": "S3 Object Lock",
+      "C": "A KMS alias",
+      "D": "An IAM user password policy"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Load balancer health checks remove unhealthy targets from routing.\nThe other choices protect objects, name keys, or govern IAM passwords.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d2-028",
+    "type": "single",
+    "question": "A company migrating an existing workload needs a database restore to a specific second before an accidental deletion. Which RDS capability fits?",
+    "options": {
+      "A": "A CloudFront invalidation",
+      "B": "Point-in-time restore",
+      "C": "A read replica endpoint",
+      "D": "A security group reference"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "RDS point-in-time restore uses automated backups and transaction logs to create a new database at a selected time.\nRead replicas, security groups, and cache invalidations do not restore a database to a selected time.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d2-029",
+    "type": "single",
+    "question": "A team with strict recovery objectives wants automated backup policies across supported AWS resources. Which service should manage the plans?",
+    "options": {
+      "A": "Amazon Route 53",
+      "B": "AWS Certificate Manager",
+      "C": "AWS Backup",
+      "D": "AWS WAF"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "AWS Backup centralizes schedules, retention, and vault policies for supported resources.\nThe other choices protect web traffic, provide DNS, or manage certificates.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d2-030",
+    "type": "single",
+    "question": "A developer team preparing a release must keep only core recovery components running in a secondary Region and create the rest during a disaster. Which strategy is this?",
+    "options": {
+      "A": "Active-active",
+      "B": "Warm standby",
+      "C": "A single-AZ deployment",
+      "D": "Pilot light"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Pilot light keeps the core components available while the remaining environment is provisioned during recovery.\nActive-active and warm standby keep more recovery capacity running. A single AZ is not a Regional recovery strategy.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d2-031",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs to add EC2 capacity when a queue backlog grows. Which scaling signal is most relevant?",
+    "options": {
+      "A": "SQS ApproximateNumberOfMessagesVisible",
+      "B": "The S3 bucket name",
+      "C": "The KMS key rotation date",
+      "D": "The Route 53 hosted zone ID"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Queue depth is a direct measure of work waiting for workers and can drive Auto Scaling.\nThe other values do not measure pending work.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d2-032",
+    "type": "single",
+    "question": "A service owner reviewing an incident must route traffic only to healthy targets after a deployment. Which capability should be configured?",
+    "options": {
+      "A": "An IAM user password policy",
+      "B": "Load balancer target health checks",
+      "C": "S3 Object Lock",
+      "D": "A KMS alias"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Load balancer health checks remove unhealthy targets from routing.\nThe other choices protect objects, name keys, or govern IAM passwords.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d2-033",
+    "type": "single",
+    "question": "A team optimizing an existing implementation needs a database restore to a specific second before an accidental deletion. Which RDS capability fits?",
+    "options": {
+      "A": "A security group reference",
+      "B": "A CloudFront invalidation",
+      "C": "Point-in-time restore",
+      "D": "A read replica endpoint"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "RDS point-in-time restore uses automated backups and transaction logs to create a new database at a selected time.\nRead replicas, security groups, and cache invalidations do not restore a database to a selected time.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d2-034",
+    "type": "single",
+    "question": "A company introducing an automated workflow wants automated backup policies across supported AWS resources. Which service should manage the plans?",
+    "options": {
+      "A": "AWS WAF",
+      "B": "Amazon Route 53",
+      "C": "AWS Certificate Manager",
+      "D": "AWS Backup"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "AWS Backup centralizes schedules, retention, and vault policies for supported resources.\nThe other choices protect web traffic, provide DNS, or manage certificates.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d2-035",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment must keep only core recovery components running in a secondary Region and create the rest during a disaster. Which strategy is this?",
+    "options": {
+      "A": "Pilot light",
+      "B": "Active-active",
+      "C": "Warm standby",
+      "D": "A single-AZ deployment"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Pilot light keeps the core components available while the remaining environment is provisioned during recovery.\nActive-active and warm standby keep more recovery capacity running. A single AZ is not a Regional recovery strategy.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d2-036",
+    "type": "single",
+    "question": "A customer-facing application team needs to add EC2 capacity when a queue backlog grows. Which scaling signal is most relevant?",
+    "options": {
+      "A": "The Route 53 hosted zone ID",
+      "B": "SQS ApproximateNumberOfMessagesVisible",
+      "C": "The S3 bucket name",
+      "D": "The KMS key rotation date"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Queue depth is a direct measure of work waiting for workers and can drive Auto Scaling.\nThe other values do not measure pending work.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d2-037",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments must route traffic only to healthy targets after a deployment. Which capability should be configured?",
+    "options": {
+      "A": "A KMS alias",
+      "B": "An IAM user password policy",
+      "C": "Load balancer target health checks",
+      "D": "S3 Object Lock"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Load balancer health checks remove unhealthy targets from routing.\nThe other choices protect objects, name keys, or govern IAM passwords.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d2-038",
+    "type": "single",
+    "question": "A team preparing evidence for an audit needs a database restore to a specific second before an accidental deletion. Which RDS capability fits?",
+    "options": {
+      "A": "A read replica endpoint",
+      "B": "A security group reference",
+      "C": "A CloudFront invalidation",
+      "D": "Point-in-time restore"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "RDS point-in-time restore uses automated backups and transaction logs to create a new database at a selected time.\nRead replicas, security groups, and cache invalidations do not restore a database to a selected time.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d2-039",
+    "type": "single",
+    "question": "A business replacing a manual process wants automated backup policies across supported AWS resources. Which service should manage the plans?",
+    "options": {
+      "A": "AWS Backup",
+      "B": "AWS WAF",
+      "C": "Amazon Route 53",
+      "D": "AWS Certificate Manager"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "AWS Backup centralizes schedules, retention, and vault policies for supported resources.\nThe other choices protect web traffic, provide DNS, or manage certificates.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d2-040",
+    "type": "single",
+    "question": "A team validating a design against the exam guide must keep only core recovery components running in a secondary Region and create the rest during a disaster. Which strategy is this?",
+    "options": {
+      "A": "A single-AZ deployment",
+      "B": "Pilot light",
+      "C": "Active-active",
+      "D": "Warm standby"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Pilot light keeps the core components available while the remaining environment is provisioned during recovery.\nActive-active and warm standby keep more recovery capacity running. A single AZ is not a Regional recovery strategy.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d2-041",
+    "type": "single",
+    "question": "A production team needs to add EC2 capacity when a queue backlog grows. Which scaling signal is most relevant?",
+    "options": {
+      "A": "The KMS key rotation date",
+      "B": "The Route 53 hosted zone ID",
+      "C": "SQS ApproximateNumberOfMessagesVisible",
+      "D": "The S3 bucket name"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Queue depth is a direct measure of work waiting for workers and can drive Auto Scaling.\nThe other values do not measure pending work.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d2-042",
+    "type": "single",
+    "question": "A multi-account platform team must route traffic only to healthy targets after a deployment. Which capability should be configured?",
+    "options": {
+      "A": "S3 Object Lock",
+      "B": "A KMS alias",
+      "C": "An IAM user password policy",
+      "D": "Load balancer target health checks"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Load balancer health checks remove unhealthy targets from routing.\nThe other choices protect objects, name keys, or govern IAM passwords.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d2-043",
+    "type": "single",
+    "question": "A regulated company needs a database restore to a specific second before an accidental deletion. Which RDS capability fits?",
+    "options": {
+      "A": "Point-in-time restore",
+      "B": "A read replica endpoint",
+      "C": "A security group reference",
+      "D": "A CloudFront invalidation"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "RDS point-in-time restore uses automated backups and transaction logs to create a new database at a selected time.\nRead replicas, security groups, and cache invalidations do not restore a database to a selected time.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  }
+]

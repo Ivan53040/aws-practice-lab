@@ -1,0 +1,994 @@
+[
+  {
+    "id": "dva-c02-d1-001",
+    "type": "single",
+    "question": "A production team needs a loosely coupled notification fanout pattern from application code. Which service should the SDK call?",
+    "options": {
+      "A": "Rotate a KMS key",
+      "B": "Publish an event to an Amazon SNS topic",
+      "C": "Write directly to a random EC2 disk",
+      "D": "Create a Route 53 health check"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "SNS provides a managed publish and subscribe fanout pattern for application events.\nThe other choices do not deliver application messages to independent subscribers.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-002",
+    "type": "single",
+    "question": "A multi-account platform team needs to invoke a Lambda function asynchronously and handle failures without blocking the caller. Which invocation mode fits?",
+    "options": {
+      "A": "A DNS query",
+      "B": "An S3 lifecycle transition",
+      "C": "An asynchronous Lambda invocation",
+      "D": "A synchronous invocation that waits for completion"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Asynchronous invocation returns control to the caller and Lambda manages retries and destinations.\nThe other choices do not provide asynchronous Lambda processing.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-003",
+    "type": "single",
+    "question": "A regulated company needs a DynamoDB query that reads only items for one partition key. Which operation should the code use?",
+    "options": {
+      "A": "Scan",
+      "B": "DescribeInstances",
+      "C": "ListBuckets",
+      "D": "Query"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "DynamoDB Query uses a partition key to read matching items efficiently.\nScan reads every item and the other APIs target unrelated services.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-004",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase must cache frequently read application data with low latency. Which service should the code integrate?",
+    "options": {
+      "A": "Amazon ElastiCache",
+      "B": "AWS Artifact",
+      "C": "Amazon SES",
+      "D": "AWS Config"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "ElastiCache provides managed in-memory caching for suitable application data.\nThe other choices provide compliance reports, email, or configuration evaluation.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-005",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs to call AWS APIs without storing long-lived keys in application code. Which approach is best?",
+    "options": {
+      "A": "Put credentials in a container image",
+      "B": "Use an IAM role and temporary credentials through the SDK",
+      "C": "Embed a root access key",
+      "D": "Make the API public"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Roles and temporary credentials avoid long-lived secrets in application code and images.\nEmbedding keys or using public access creates security risk.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-006",
+    "type": "single",
+    "question": "A data platform team needs a loosely coupled notification fanout pattern from application code. Which service should the SDK call?",
+    "options": {
+      "A": "Create a Route 53 health check",
+      "B": "Rotate a KMS key",
+      "C": "Publish an event to an Amazon SNS topic",
+      "D": "Write directly to a random EC2 disk"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "SNS provides a managed publish and subscribe fanout pattern for application events.\nThe other choices do not deliver application messages to independent subscribers.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-007",
+    "type": "single",
+    "question": "A security-conscious engineering team needs to invoke a Lambda function asynchronously and handle failures without blocking the caller. Which invocation mode fits?",
+    "options": {
+      "A": "A synchronous invocation that waits for completion",
+      "B": "A DNS query",
+      "C": "An S3 lifecycle transition",
+      "D": "An asynchronous Lambda invocation"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Asynchronous invocation returns control to the caller and Lambda manages retries and destinations.\nThe other choices do not provide asynchronous Lambda processing.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-008",
+    "type": "single",
+    "question": "A company migrating an existing workload needs a DynamoDB query that reads only items for one partition key. Which operation should the code use?",
+    "options": {
+      "A": "Query",
+      "B": "Scan",
+      "C": "DescribeInstances",
+      "D": "ListBuckets"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "DynamoDB Query uses a partition key to read matching items efficiently.\nScan reads every item and the other APIs target unrelated services.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-009",
+    "type": "single",
+    "question": "A team with strict recovery objectives must cache frequently read application data with low latency. Which service should the code integrate?",
+    "options": {
+      "A": "AWS Config",
+      "B": "Amazon ElastiCache",
+      "C": "AWS Artifact",
+      "D": "Amazon SES"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "ElastiCache provides managed in-memory caching for suitable application data.\nThe other choices provide compliance reports, email, or configuration evaluation.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-010",
+    "type": "single",
+    "question": "A developer team preparing a release needs to call AWS APIs without storing long-lived keys in application code. Which approach is best?",
+    "options": {
+      "A": "Make the API public",
+      "B": "Put credentials in a container image",
+      "C": "Use an IAM role and temporary credentials through the SDK",
+      "D": "Embed a root access key"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Roles and temporary credentials avoid long-lived secrets in application code and images.\nEmbedding keys or using public access creates security risk.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-011",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs a loosely coupled notification fanout pattern from application code. Which service should the SDK call?",
+    "options": {
+      "A": "Write directly to a random EC2 disk",
+      "B": "Create a Route 53 health check",
+      "C": "Rotate a KMS key",
+      "D": "Publish an event to an Amazon SNS topic"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "SNS provides a managed publish and subscribe fanout pattern for application events.\nThe other choices do not deliver application messages to independent subscribers.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-012",
+    "type": "single",
+    "question": "A service owner reviewing an incident needs to invoke a Lambda function asynchronously and handle failures without blocking the caller. Which invocation mode fits?",
+    "options": {
+      "A": "An asynchronous Lambda invocation",
+      "B": "A synchronous invocation that waits for completion",
+      "C": "A DNS query",
+      "D": "An S3 lifecycle transition"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Asynchronous invocation returns control to the caller and Lambda manages retries and destinations.\nThe other choices do not provide asynchronous Lambda processing.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-013",
+    "type": "single",
+    "question": "A team optimizing an existing implementation needs a DynamoDB query that reads only items for one partition key. Which operation should the code use?",
+    "options": {
+      "A": "ListBuckets",
+      "B": "Query",
+      "C": "Scan",
+      "D": "DescribeInstances"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "DynamoDB Query uses a partition key to read matching items efficiently.\nScan reads every item and the other APIs target unrelated services.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-014",
+    "type": "single",
+    "question": "A company introducing an automated workflow must cache frequently read application data with low latency. Which service should the code integrate?",
+    "options": {
+      "A": "Amazon SES",
+      "B": "AWS Config",
+      "C": "Amazon ElastiCache",
+      "D": "AWS Artifact"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "ElastiCache provides managed in-memory caching for suitable application data.\nThe other choices provide compliance reports, email, or configuration evaluation.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-015",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment needs to call AWS APIs without storing long-lived keys in application code. Which approach is best?",
+    "options": {
+      "A": "Embed a root access key",
+      "B": "Make the API public",
+      "C": "Put credentials in a container image",
+      "D": "Use an IAM role and temporary credentials through the SDK"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Roles and temporary credentials avoid long-lived secrets in application code and images.\nEmbedding keys or using public access creates security risk.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-016",
+    "type": "single",
+    "question": "A customer-facing application team needs a loosely coupled notification fanout pattern from application code. Which service should the SDK call?",
+    "options": {
+      "A": "Publish an event to an Amazon SNS topic",
+      "B": "Write directly to a random EC2 disk",
+      "C": "Create a Route 53 health check",
+      "D": "Rotate a KMS key"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "SNS provides a managed publish and subscribe fanout pattern for application events.\nThe other choices do not deliver application messages to independent subscribers.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-017",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments needs to invoke a Lambda function asynchronously and handle failures without blocking the caller. Which invocation mode fits?",
+    "options": {
+      "A": "An S3 lifecycle transition",
+      "B": "An asynchronous Lambda invocation",
+      "C": "A synchronous invocation that waits for completion",
+      "D": "A DNS query"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Asynchronous invocation returns control to the caller and Lambda manages retries and destinations.\nThe other choices do not provide asynchronous Lambda processing.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-018",
+    "type": "single",
+    "question": "A team preparing evidence for an audit needs a DynamoDB query that reads only items for one partition key. Which operation should the code use?",
+    "options": {
+      "A": "DescribeInstances",
+      "B": "ListBuckets",
+      "C": "Query",
+      "D": "Scan"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "DynamoDB Query uses a partition key to read matching items efficiently.\nScan reads every item and the other APIs target unrelated services.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-019",
+    "type": "single",
+    "question": "A business replacing a manual process must cache frequently read application data with low latency. Which service should the code integrate?",
+    "options": {
+      "A": "AWS Artifact",
+      "B": "Amazon SES",
+      "C": "AWS Config",
+      "D": "Amazon ElastiCache"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "ElastiCache provides managed in-memory caching for suitable application data.\nThe other choices provide compliance reports, email, or configuration evaluation.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-020",
+    "type": "single",
+    "question": "A team validating a design against the exam guide needs to call AWS APIs without storing long-lived keys in application code. Which approach is best?",
+    "options": {
+      "A": "Use an IAM role and temporary credentials through the SDK",
+      "B": "Embed a root access key",
+      "C": "Make the API public",
+      "D": "Put credentials in a container image"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Roles and temporary credentials avoid long-lived secrets in application code and images.\nEmbedding keys or using public access creates security risk.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-021",
+    "type": "single",
+    "question": "A production team needs a loosely coupled notification fanout pattern from application code. Which service should the SDK call?",
+    "options": {
+      "A": "Rotate a KMS key",
+      "B": "Publish an event to an Amazon SNS topic",
+      "C": "Write directly to a random EC2 disk",
+      "D": "Create a Route 53 health check"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "SNS provides a managed publish and subscribe fanout pattern for application events.\nThe other choices do not deliver application messages to independent subscribers.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-022",
+    "type": "single",
+    "question": "A multi-account platform team needs to invoke a Lambda function asynchronously and handle failures without blocking the caller. Which invocation mode fits?",
+    "options": {
+      "A": "A DNS query",
+      "B": "An S3 lifecycle transition",
+      "C": "An asynchronous Lambda invocation",
+      "D": "A synchronous invocation that waits for completion"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Asynchronous invocation returns control to the caller and Lambda manages retries and destinations.\nThe other choices do not provide asynchronous Lambda processing.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-023",
+    "type": "single",
+    "question": "A regulated company needs a DynamoDB query that reads only items for one partition key. Which operation should the code use?",
+    "options": {
+      "A": "Scan",
+      "B": "DescribeInstances",
+      "C": "ListBuckets",
+      "D": "Query"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "DynamoDB Query uses a partition key to read matching items efficiently.\nScan reads every item and the other APIs target unrelated services.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-024",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase must cache frequently read application data with low latency. Which service should the code integrate?",
+    "options": {
+      "A": "Amazon ElastiCache",
+      "B": "AWS Artifact",
+      "C": "Amazon SES",
+      "D": "AWS Config"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "ElastiCache provides managed in-memory caching for suitable application data.\nThe other choices provide compliance reports, email, or configuration evaluation.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-025",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs to call AWS APIs without storing long-lived keys in application code. Which approach is best?",
+    "options": {
+      "A": "Put credentials in a container image",
+      "B": "Use an IAM role and temporary credentials through the SDK",
+      "C": "Embed a root access key",
+      "D": "Make the API public"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Roles and temporary credentials avoid long-lived secrets in application code and images.\nEmbedding keys or using public access creates security risk.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-026",
+    "type": "single",
+    "question": "A data platform team needs a loosely coupled notification fanout pattern from application code. Which service should the SDK call?",
+    "options": {
+      "A": "Create a Route 53 health check",
+      "B": "Rotate a KMS key",
+      "C": "Publish an event to an Amazon SNS topic",
+      "D": "Write directly to a random EC2 disk"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "SNS provides a managed publish and subscribe fanout pattern for application events.\nThe other choices do not deliver application messages to independent subscribers.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-027",
+    "type": "single",
+    "question": "A security-conscious engineering team needs to invoke a Lambda function asynchronously and handle failures without blocking the caller. Which invocation mode fits?",
+    "options": {
+      "A": "A synchronous invocation that waits for completion",
+      "B": "A DNS query",
+      "C": "An S3 lifecycle transition",
+      "D": "An asynchronous Lambda invocation"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Asynchronous invocation returns control to the caller and Lambda manages retries and destinations.\nThe other choices do not provide asynchronous Lambda processing.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-028",
+    "type": "single",
+    "question": "A company migrating an existing workload needs a DynamoDB query that reads only items for one partition key. Which operation should the code use?",
+    "options": {
+      "A": "Query",
+      "B": "Scan",
+      "C": "DescribeInstances",
+      "D": "ListBuckets"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "DynamoDB Query uses a partition key to read matching items efficiently.\nScan reads every item and the other APIs target unrelated services.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-029",
+    "type": "single",
+    "question": "A team with strict recovery objectives must cache frequently read application data with low latency. Which service should the code integrate?",
+    "options": {
+      "A": "AWS Config",
+      "B": "Amazon ElastiCache",
+      "C": "AWS Artifact",
+      "D": "Amazon SES"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "ElastiCache provides managed in-memory caching for suitable application data.\nThe other choices provide compliance reports, email, or configuration evaluation.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-030",
+    "type": "single",
+    "question": "A developer team preparing a release needs to call AWS APIs without storing long-lived keys in application code. Which approach is best?",
+    "options": {
+      "A": "Make the API public",
+      "B": "Put credentials in a container image",
+      "C": "Use an IAM role and temporary credentials through the SDK",
+      "D": "Embed a root access key"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Roles and temporary credentials avoid long-lived secrets in application code and images.\nEmbedding keys or using public access creates security risk.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-031",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs a loosely coupled notification fanout pattern from application code. Which service should the SDK call?",
+    "options": {
+      "A": "Write directly to a random EC2 disk",
+      "B": "Create a Route 53 health check",
+      "C": "Rotate a KMS key",
+      "D": "Publish an event to an Amazon SNS topic"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "SNS provides a managed publish and subscribe fanout pattern for application events.\nThe other choices do not deliver application messages to independent subscribers.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-032",
+    "type": "single",
+    "question": "A service owner reviewing an incident needs to invoke a Lambda function asynchronously and handle failures without blocking the caller. Which invocation mode fits?",
+    "options": {
+      "A": "An asynchronous Lambda invocation",
+      "B": "A synchronous invocation that waits for completion",
+      "C": "A DNS query",
+      "D": "An S3 lifecycle transition"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Asynchronous invocation returns control to the caller and Lambda manages retries and destinations.\nThe other choices do not provide asynchronous Lambda processing.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-033",
+    "type": "single",
+    "question": "A team optimizing an existing implementation needs a DynamoDB query that reads only items for one partition key. Which operation should the code use?",
+    "options": {
+      "A": "ListBuckets",
+      "B": "Query",
+      "C": "Scan",
+      "D": "DescribeInstances"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "DynamoDB Query uses a partition key to read matching items efficiently.\nScan reads every item and the other APIs target unrelated services.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-034",
+    "type": "single",
+    "question": "A company introducing an automated workflow must cache frequently read application data with low latency. Which service should the code integrate?",
+    "options": {
+      "A": "Amazon SES",
+      "B": "AWS Config",
+      "C": "Amazon ElastiCache",
+      "D": "AWS Artifact"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "ElastiCache provides managed in-memory caching for suitable application data.\nThe other choices provide compliance reports, email, or configuration evaluation.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-035",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment needs to call AWS APIs without storing long-lived keys in application code. Which approach is best?",
+    "options": {
+      "A": "Embed a root access key",
+      "B": "Make the API public",
+      "C": "Put credentials in a container image",
+      "D": "Use an IAM role and temporary credentials through the SDK"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Roles and temporary credentials avoid long-lived secrets in application code and images.\nEmbedding keys or using public access creates security risk.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-036",
+    "type": "single",
+    "question": "A customer-facing application team needs a loosely coupled notification fanout pattern from application code. Which service should the SDK call?",
+    "options": {
+      "A": "Publish an event to an Amazon SNS topic",
+      "B": "Write directly to a random EC2 disk",
+      "C": "Create a Route 53 health check",
+      "D": "Rotate a KMS key"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "SNS provides a managed publish and subscribe fanout pattern for application events.\nThe other choices do not deliver application messages to independent subscribers.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-037",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments needs to invoke a Lambda function asynchronously and handle failures without blocking the caller. Which invocation mode fits?",
+    "options": {
+      "A": "An S3 lifecycle transition",
+      "B": "An asynchronous Lambda invocation",
+      "C": "A synchronous invocation that waits for completion",
+      "D": "A DNS query"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Asynchronous invocation returns control to the caller and Lambda manages retries and destinations.\nThe other choices do not provide asynchronous Lambda processing.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-038",
+    "type": "single",
+    "question": "A team preparing evidence for an audit needs a DynamoDB query that reads only items for one partition key. Which operation should the code use?",
+    "options": {
+      "A": "DescribeInstances",
+      "B": "ListBuckets",
+      "C": "Query",
+      "D": "Scan"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "DynamoDB Query uses a partition key to read matching items efficiently.\nScan reads every item and the other APIs target unrelated services.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-039",
+    "type": "single",
+    "question": "A business replacing a manual process must cache frequently read application data with low latency. Which service should the code integrate?",
+    "options": {
+      "A": "AWS Artifact",
+      "B": "Amazon SES",
+      "C": "AWS Config",
+      "D": "Amazon ElastiCache"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "ElastiCache provides managed in-memory caching for suitable application data.\nThe other choices provide compliance reports, email, or configuration evaluation.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-040",
+    "type": "single",
+    "question": "A team validating a design against the exam guide needs to call AWS APIs without storing long-lived keys in application code. Which approach is best?",
+    "options": {
+      "A": "Use an IAM role and temporary credentials through the SDK",
+      "B": "Embed a root access key",
+      "C": "Make the API public",
+      "D": "Put credentials in a container image"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Roles and temporary credentials avoid long-lived secrets in application code and images.\nEmbedding keys or using public access creates security risk.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-041",
+    "type": "single",
+    "question": "A production team needs a loosely coupled notification fanout pattern from application code. Which service should the SDK call?",
+    "options": {
+      "A": "Rotate a KMS key",
+      "B": "Publish an event to an Amazon SNS topic",
+      "C": "Write directly to a random EC2 disk",
+      "D": "Create a Route 53 health check"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "SNS provides a managed publish and subscribe fanout pattern for application events.\nThe other choices do not deliver application messages to independent subscribers.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-042",
+    "type": "single",
+    "question": "A multi-account platform team needs to invoke a Lambda function asynchronously and handle failures without blocking the caller. Which invocation mode fits?",
+    "options": {
+      "A": "A DNS query",
+      "B": "An S3 lifecycle transition",
+      "C": "An asynchronous Lambda invocation",
+      "D": "A synchronous invocation that waits for completion"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Asynchronous invocation returns control to the caller and Lambda manages retries and destinations.\nThe other choices do not provide asynchronous Lambda processing.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-043",
+    "type": "single",
+    "question": "A regulated company needs a DynamoDB query that reads only items for one partition key. Which operation should the code use?",
+    "options": {
+      "A": "Scan",
+      "B": "DescribeInstances",
+      "C": "ListBuckets",
+      "D": "Query"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "DynamoDB Query uses a partition key to read matching items efficiently.\nScan reads every item and the other APIs target unrelated services.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-044",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase must cache frequently read application data with low latency. Which service should the code integrate?",
+    "options": {
+      "A": "Amazon ElastiCache",
+      "B": "AWS Artifact",
+      "C": "Amazon SES",
+      "D": "AWS Config"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "ElastiCache provides managed in-memory caching for suitable application data.\nThe other choices provide compliance reports, email, or configuration evaluation.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-045",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs to call AWS APIs without storing long-lived keys in application code. Which approach is best?",
+    "options": {
+      "A": "Put credentials in a container image",
+      "B": "Use an IAM role and temporary credentials through the SDK",
+      "C": "Embed a root access key",
+      "D": "Make the API public"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Roles and temporary credentials avoid long-lived secrets in application code and images.\nEmbedding keys or using public access creates security risk.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-046",
+    "type": "single",
+    "question": "A data platform team needs a loosely coupled notification fanout pattern from application code. Which service should the SDK call?",
+    "options": {
+      "A": "Create a Route 53 health check",
+      "B": "Rotate a KMS key",
+      "C": "Publish an event to an Amazon SNS topic",
+      "D": "Write directly to a random EC2 disk"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "SNS provides a managed publish and subscribe fanout pattern for application events.\nThe other choices do not deliver application messages to independent subscribers.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-047",
+    "type": "single",
+    "question": "A security-conscious engineering team needs to invoke a Lambda function asynchronously and handle failures without blocking the caller. Which invocation mode fits?",
+    "options": {
+      "A": "A synchronous invocation that waits for completion",
+      "B": "A DNS query",
+      "C": "An S3 lifecycle transition",
+      "D": "An asynchronous Lambda invocation"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Asynchronous invocation returns control to the caller and Lambda manages retries and destinations.\nThe other choices do not provide asynchronous Lambda processing.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-048",
+    "type": "single",
+    "question": "A company migrating an existing workload needs a DynamoDB query that reads only items for one partition key. Which operation should the code use?",
+    "options": {
+      "A": "Query",
+      "B": "Scan",
+      "C": "DescribeInstances",
+      "D": "ListBuckets"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "DynamoDB Query uses a partition key to read matching items efficiently.\nScan reads every item and the other APIs target unrelated services.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-049",
+    "type": "single",
+    "question": "A team with strict recovery objectives must cache frequently read application data with low latency. Which service should the code integrate?",
+    "options": {
+      "A": "AWS Config",
+      "B": "Amazon ElastiCache",
+      "C": "AWS Artifact",
+      "D": "Amazon SES"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "ElastiCache provides managed in-memory caching for suitable application data.\nThe other choices provide compliance reports, email, or configuration evaluation.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-050",
+    "type": "single",
+    "question": "A developer team preparing a release needs to call AWS APIs without storing long-lived keys in application code. Which approach is best?",
+    "options": {
+      "A": "Make the API public",
+      "B": "Put credentials in a container image",
+      "C": "Use an IAM role and temporary credentials through the SDK",
+      "D": "Embed a root access key"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Roles and temporary credentials avoid long-lived secrets in application code and images.\nEmbedding keys or using public access creates security risk.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-051",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs a loosely coupled notification fanout pattern from application code. Which service should the SDK call?",
+    "options": {
+      "A": "Write directly to a random EC2 disk",
+      "B": "Create a Route 53 health check",
+      "C": "Rotate a KMS key",
+      "D": "Publish an event to an Amazon SNS topic"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "SNS provides a managed publish and subscribe fanout pattern for application events.\nThe other choices do not deliver application messages to independent subscribers.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-052",
+    "type": "single",
+    "question": "A service owner reviewing an incident needs to invoke a Lambda function asynchronously and handle failures without blocking the caller. Which invocation mode fits?",
+    "options": {
+      "A": "An asynchronous Lambda invocation",
+      "B": "A synchronous invocation that waits for completion",
+      "C": "A DNS query",
+      "D": "An S3 lifecycle transition"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Asynchronous invocation returns control to the caller and Lambda manages retries and destinations.\nThe other choices do not provide asynchronous Lambda processing.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-053",
+    "type": "single",
+    "question": "A team optimizing an existing implementation needs a DynamoDB query that reads only items for one partition key. Which operation should the code use?",
+    "options": {
+      "A": "ListBuckets",
+      "B": "Query",
+      "C": "Scan",
+      "D": "DescribeInstances"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "DynamoDB Query uses a partition key to read matching items efficiently.\nScan reads every item and the other APIs target unrelated services.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-054",
+    "type": "single",
+    "question": "A company introducing an automated workflow must cache frequently read application data with low latency. Which service should the code integrate?",
+    "options": {
+      "A": "Amazon SES",
+      "B": "AWS Config",
+      "C": "Amazon ElastiCache",
+      "D": "AWS Artifact"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "ElastiCache provides managed in-memory caching for suitable application data.\nThe other choices provide compliance reports, email, or configuration evaluation.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-055",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment needs to call AWS APIs without storing long-lived keys in application code. Which approach is best?",
+    "options": {
+      "A": "Embed a root access key",
+      "B": "Make the API public",
+      "C": "Put credentials in a container image",
+      "D": "Use an IAM role and temporary credentials through the SDK"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Roles and temporary credentials avoid long-lived secrets in application code and images.\nEmbedding keys or using public access creates security risk.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-056",
+    "type": "single",
+    "question": "A customer-facing application team needs a loosely coupled notification fanout pattern from application code. Which service should the SDK call?",
+    "options": {
+      "A": "Publish an event to an Amazon SNS topic",
+      "B": "Write directly to a random EC2 disk",
+      "C": "Create a Route 53 health check",
+      "D": "Rotate a KMS key"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "SNS provides a managed publish and subscribe fanout pattern for application events.\nThe other choices do not deliver application messages to independent subscribers.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-057",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments needs to invoke a Lambda function asynchronously and handle failures without blocking the caller. Which invocation mode fits?",
+    "options": {
+      "A": "An S3 lifecycle transition",
+      "B": "An asynchronous Lambda invocation",
+      "C": "A synchronous invocation that waits for completion",
+      "D": "A DNS query"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Asynchronous invocation returns control to the caller and Lambda manages retries and destinations.\nThe other choices do not provide asynchronous Lambda processing.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-058",
+    "type": "single",
+    "question": "A team preparing evidence for an audit needs a DynamoDB query that reads only items for one partition key. Which operation should the code use?",
+    "options": {
+      "A": "DescribeInstances",
+      "B": "ListBuckets",
+      "C": "Query",
+      "D": "Scan"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "DynamoDB Query uses a partition key to read matching items efficiently.\nScan reads every item and the other APIs target unrelated services.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-059",
+    "type": "single",
+    "question": "A business replacing a manual process must cache frequently read application data with low latency. Which service should the code integrate?",
+    "options": {
+      "A": "AWS Artifact",
+      "B": "Amazon SES",
+      "C": "AWS Config",
+      "D": "Amazon ElastiCache"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "ElastiCache provides managed in-memory caching for suitable application data.\nThe other choices provide compliance reports, email, or configuration evaluation.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-060",
+    "type": "single",
+    "question": "A team validating a design against the exam guide needs to call AWS APIs without storing long-lived keys in application code. Which approach is best?",
+    "options": {
+      "A": "Use an IAM role and temporary credentials through the SDK",
+      "B": "Embed a root access key",
+      "C": "Make the API public",
+      "D": "Put credentials in a container image"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Roles and temporary credentials avoid long-lived secrets in application code and images.\nEmbedding keys or using public access creates security risk.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-061",
+    "type": "single",
+    "question": "A production team needs a loosely coupled notification fanout pattern from application code. Which service should the SDK call?",
+    "options": {
+      "A": "Rotate a KMS key",
+      "B": "Publish an event to an Amazon SNS topic",
+      "C": "Write directly to a random EC2 disk",
+      "D": "Create a Route 53 health check"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "SNS provides a managed publish and subscribe fanout pattern for application events.\nThe other choices do not deliver application messages to independent subscribers.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d1-062",
+    "type": "single",
+    "question": "A multi-account platform team needs to invoke a Lambda function asynchronously and handle failures without blocking the caller. Which invocation mode fits?",
+    "options": {
+      "A": "A DNS query",
+      "B": "An S3 lifecycle transition",
+      "C": "An asynchronous Lambda invocation",
+      "D": "A synchronous invocation that waits for completion"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Asynchronous invocation returns control to the caller and Lambda manages retries and destinations.\nThe other choices do not provide asynchronous Lambda processing.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  }
+]

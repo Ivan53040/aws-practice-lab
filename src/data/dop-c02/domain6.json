@@ -1,0 +1,610 @@
+[
+  {
+    "id": "dop-c02-d6-001",
+    "type": "single",
+    "question": "A production team needs to enforce encryption on all new S3 objects. Which control should be configured?",
+    "options": {
+      "A": "A Route 53 health check",
+      "B": "A CloudFront cache",
+      "C": "An S3 bucket policy that denies unencrypted PutObject requests",
+      "D": "A public bucket ACL"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "A bucket policy can explicitly deny uploads that do not include the required encryption headers.\nThe other choices do not enforce object encryption.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d6-002",
+    "type": "single",
+    "question": "A multi-account platform team must identify external access granted by resource policies. Which tool is appropriate?",
+    "options": {
+      "A": "Amazon CloudFront",
+      "B": "AWS Batch",
+      "C": "Amazon EFS",
+      "D": "IAM Access Analyzer"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "IAM Access Analyzer identifies unintended external access in resource policies.\nThe other choices provide content delivery, compute, or file storage.",
+    "taskStatement": "6.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d6-003",
+    "type": "single",
+    "question": "A regulated company needs to rotate database credentials without rebuilding applications. Which service fits?",
+    "options": {
+      "A": "AWS Secrets Manager",
+      "B": "A security group",
+      "C": "An EBS snapshot",
+      "D": "A Route 53 alias"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Secrets Manager supports runtime retrieval and rotation of database credentials.\nThe other choices do not rotate application secrets.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d6-004",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase must audit every API action in a production account. Which service should be enabled?",
+    "options": {
+      "A": "Amazon SES",
+      "B": "AWS CloudTrail",
+      "C": "Amazon ElastiCache",
+      "D": "AWS WAF only"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudTrail records API events for security investigations and compliance.\nThe other choices provide caching, web filtering, or email.",
+    "taskStatement": "6.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d6-005",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs a managed service to detect vulnerabilities in container images before deployment. Which service should be evaluated?",
+    "options": {
+      "A": "AWS Glue",
+      "B": "Amazon Route 53",
+      "C": "Amazon Inspector",
+      "D": "Amazon Cognito"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Inspector assesses supported container images and workloads for vulnerabilities.\nThe other choices provide identity, ETL, or DNS.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d6-006",
+    "type": "single",
+    "question": "A data platform team needs to enforce encryption on all new S3 objects. Which control should be configured?",
+    "options": {
+      "A": "A public bucket ACL",
+      "B": "A Route 53 health check",
+      "C": "A CloudFront cache",
+      "D": "An S3 bucket policy that denies unencrypted PutObject requests"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "A bucket policy can explicitly deny uploads that do not include the required encryption headers.\nThe other choices do not enforce object encryption.",
+    "taskStatement": "6.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d6-007",
+    "type": "single",
+    "question": "A security-conscious engineering team must identify external access granted by resource policies. Which tool is appropriate?",
+    "options": {
+      "A": "IAM Access Analyzer",
+      "B": "Amazon CloudFront",
+      "C": "AWS Batch",
+      "D": "Amazon EFS"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "IAM Access Analyzer identifies unintended external access in resource policies.\nThe other choices provide content delivery, compute, or file storage.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d6-008",
+    "type": "single",
+    "question": "A company migrating an existing workload needs to rotate database credentials without rebuilding applications. Which service fits?",
+    "options": {
+      "A": "A Route 53 alias",
+      "B": "AWS Secrets Manager",
+      "C": "A security group",
+      "D": "An EBS snapshot"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Secrets Manager supports runtime retrieval and rotation of database credentials.\nThe other choices do not rotate application secrets.",
+    "taskStatement": "6.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d6-009",
+    "type": "single",
+    "question": "A team with strict recovery objectives must audit every API action in a production account. Which service should be enabled?",
+    "options": {
+      "A": "AWS WAF only",
+      "B": "Amazon SES",
+      "C": "AWS CloudTrail",
+      "D": "Amazon ElastiCache"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "CloudTrail records API events for security investigations and compliance.\nThe other choices provide caching, web filtering, or email.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d6-010",
+    "type": "single",
+    "question": "A developer team preparing a release needs a managed service to detect vulnerabilities in container images before deployment. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon Cognito",
+      "B": "AWS Glue",
+      "C": "Amazon Route 53",
+      "D": "Amazon Inspector"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Inspector assesses supported container images and workloads for vulnerabilities.\nThe other choices provide identity, ETL, or DNS.",
+    "taskStatement": "6.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d6-011",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs to enforce encryption on all new S3 objects. Which control should be configured?",
+    "options": {
+      "A": "An S3 bucket policy that denies unencrypted PutObject requests",
+      "B": "A public bucket ACL",
+      "C": "A Route 53 health check",
+      "D": "A CloudFront cache"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "A bucket policy can explicitly deny uploads that do not include the required encryption headers.\nThe other choices do not enforce object encryption.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d6-012",
+    "type": "single",
+    "question": "A service owner reviewing an incident must identify external access granted by resource policies. Which tool is appropriate?",
+    "options": {
+      "A": "Amazon EFS",
+      "B": "IAM Access Analyzer",
+      "C": "Amazon CloudFront",
+      "D": "AWS Batch"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "IAM Access Analyzer identifies unintended external access in resource policies.\nThe other choices provide content delivery, compute, or file storage.",
+    "taskStatement": "6.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d6-013",
+    "type": "single",
+    "question": "A team optimizing an existing implementation needs to rotate database credentials without rebuilding applications. Which service fits?",
+    "options": {
+      "A": "An EBS snapshot",
+      "B": "A Route 53 alias",
+      "C": "AWS Secrets Manager",
+      "D": "A security group"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Secrets Manager supports runtime retrieval and rotation of database credentials.\nThe other choices do not rotate application secrets.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d6-014",
+    "type": "single",
+    "question": "A company introducing an automated workflow must audit every API action in a production account. Which service should be enabled?",
+    "options": {
+      "A": "Amazon ElastiCache",
+      "B": "AWS WAF only",
+      "C": "Amazon SES",
+      "D": "AWS CloudTrail"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudTrail records API events for security investigations and compliance.\nThe other choices provide caching, web filtering, or email.",
+    "taskStatement": "6.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d6-015",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment needs a managed service to detect vulnerabilities in container images before deployment. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon Inspector",
+      "B": "Amazon Cognito",
+      "C": "AWS Glue",
+      "D": "Amazon Route 53"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Inspector assesses supported container images and workloads for vulnerabilities.\nThe other choices provide identity, ETL, or DNS.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d6-016",
+    "type": "single",
+    "question": "A customer-facing application team needs to enforce encryption on all new S3 objects. Which control should be configured?",
+    "options": {
+      "A": "A CloudFront cache",
+      "B": "An S3 bucket policy that denies unencrypted PutObject requests",
+      "C": "A public bucket ACL",
+      "D": "A Route 53 health check"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "A bucket policy can explicitly deny uploads that do not include the required encryption headers.\nThe other choices do not enforce object encryption.",
+    "taskStatement": "6.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d6-017",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments must identify external access granted by resource policies. Which tool is appropriate?",
+    "options": {
+      "A": "AWS Batch",
+      "B": "Amazon EFS",
+      "C": "IAM Access Analyzer",
+      "D": "Amazon CloudFront"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "IAM Access Analyzer identifies unintended external access in resource policies.\nThe other choices provide content delivery, compute, or file storage.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d6-018",
+    "type": "single",
+    "question": "A team preparing evidence for an audit needs to rotate database credentials without rebuilding applications. Which service fits?",
+    "options": {
+      "A": "A security group",
+      "B": "An EBS snapshot",
+      "C": "A Route 53 alias",
+      "D": "AWS Secrets Manager"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Secrets Manager supports runtime retrieval and rotation of database credentials.\nThe other choices do not rotate application secrets.",
+    "taskStatement": "6.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d6-019",
+    "type": "single",
+    "question": "A business replacing a manual process must audit every API action in a production account. Which service should be enabled?",
+    "options": {
+      "A": "AWS CloudTrail",
+      "B": "Amazon ElastiCache",
+      "C": "AWS WAF only",
+      "D": "Amazon SES"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "CloudTrail records API events for security investigations and compliance.\nThe other choices provide caching, web filtering, or email.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d6-020",
+    "type": "single",
+    "question": "A team validating a design against the exam guide needs a managed service to detect vulnerabilities in container images before deployment. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon Route 53",
+      "B": "Amazon Inspector",
+      "C": "Amazon Cognito",
+      "D": "AWS Glue"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Inspector assesses supported container images and workloads for vulnerabilities.\nThe other choices provide identity, ETL, or DNS.",
+    "taskStatement": "6.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d6-021",
+    "type": "single",
+    "question": "A production team needs to enforce encryption on all new S3 objects. Which control should be configured?",
+    "options": {
+      "A": "A Route 53 health check",
+      "B": "A CloudFront cache",
+      "C": "An S3 bucket policy that denies unencrypted PutObject requests",
+      "D": "A public bucket ACL"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "A bucket policy can explicitly deny uploads that do not include the required encryption headers.\nThe other choices do not enforce object encryption.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d6-022",
+    "type": "single",
+    "question": "A multi-account platform team must identify external access granted by resource policies. Which tool is appropriate?",
+    "options": {
+      "A": "Amazon CloudFront",
+      "B": "AWS Batch",
+      "C": "Amazon EFS",
+      "D": "IAM Access Analyzer"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "IAM Access Analyzer identifies unintended external access in resource policies.\nThe other choices provide content delivery, compute, or file storage.",
+    "taskStatement": "6.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d6-023",
+    "type": "single",
+    "question": "A regulated company needs to rotate database credentials without rebuilding applications. Which service fits?",
+    "options": {
+      "A": "AWS Secrets Manager",
+      "B": "A security group",
+      "C": "An EBS snapshot",
+      "D": "A Route 53 alias"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Secrets Manager supports runtime retrieval and rotation of database credentials.\nThe other choices do not rotate application secrets.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d6-024",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase must audit every API action in a production account. Which service should be enabled?",
+    "options": {
+      "A": "Amazon SES",
+      "B": "AWS CloudTrail",
+      "C": "Amazon ElastiCache",
+      "D": "AWS WAF only"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudTrail records API events for security investigations and compliance.\nThe other choices provide caching, web filtering, or email.",
+    "taskStatement": "6.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d6-025",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs a managed service to detect vulnerabilities in container images before deployment. Which service should be evaluated?",
+    "options": {
+      "A": "AWS Glue",
+      "B": "Amazon Route 53",
+      "C": "Amazon Inspector",
+      "D": "Amazon Cognito"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Inspector assesses supported container images and workloads for vulnerabilities.\nThe other choices provide identity, ETL, or DNS.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d6-026",
+    "type": "single",
+    "question": "A data platform team needs to enforce encryption on all new S3 objects. Which control should be configured?",
+    "options": {
+      "A": "A public bucket ACL",
+      "B": "A Route 53 health check",
+      "C": "A CloudFront cache",
+      "D": "An S3 bucket policy that denies unencrypted PutObject requests"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "A bucket policy can explicitly deny uploads that do not include the required encryption headers.\nThe other choices do not enforce object encryption.",
+    "taskStatement": "6.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d6-027",
+    "type": "single",
+    "question": "A security-conscious engineering team must identify external access granted by resource policies. Which tool is appropriate?",
+    "options": {
+      "A": "IAM Access Analyzer",
+      "B": "Amazon CloudFront",
+      "C": "AWS Batch",
+      "D": "Amazon EFS"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "IAM Access Analyzer identifies unintended external access in resource policies.\nThe other choices provide content delivery, compute, or file storage.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d6-028",
+    "type": "single",
+    "question": "A company migrating an existing workload needs to rotate database credentials without rebuilding applications. Which service fits?",
+    "options": {
+      "A": "A Route 53 alias",
+      "B": "AWS Secrets Manager",
+      "C": "A security group",
+      "D": "An EBS snapshot"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Secrets Manager supports runtime retrieval and rotation of database credentials.\nThe other choices do not rotate application secrets.",
+    "taskStatement": "6.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d6-029",
+    "type": "single",
+    "question": "A team with strict recovery objectives must audit every API action in a production account. Which service should be enabled?",
+    "options": {
+      "A": "AWS WAF only",
+      "B": "Amazon SES",
+      "C": "AWS CloudTrail",
+      "D": "Amazon ElastiCache"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "CloudTrail records API events for security investigations and compliance.\nThe other choices provide caching, web filtering, or email.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d6-030",
+    "type": "single",
+    "question": "A developer team preparing a release needs a managed service to detect vulnerabilities in container images before deployment. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon Cognito",
+      "B": "AWS Glue",
+      "C": "Amazon Route 53",
+      "D": "Amazon Inspector"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Inspector assesses supported container images and workloads for vulnerabilities.\nThe other choices provide identity, ETL, or DNS.",
+    "taskStatement": "6.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d6-031",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs to enforce encryption on all new S3 objects. Which control should be configured?",
+    "options": {
+      "A": "An S3 bucket policy that denies unencrypted PutObject requests",
+      "B": "A public bucket ACL",
+      "C": "A Route 53 health check",
+      "D": "A CloudFront cache"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "A bucket policy can explicitly deny uploads that do not include the required encryption headers.\nThe other choices do not enforce object encryption.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d6-032",
+    "type": "single",
+    "question": "A service owner reviewing an incident must identify external access granted by resource policies. Which tool is appropriate?",
+    "options": {
+      "A": "Amazon EFS",
+      "B": "IAM Access Analyzer",
+      "C": "Amazon CloudFront",
+      "D": "AWS Batch"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "IAM Access Analyzer identifies unintended external access in resource policies.\nThe other choices provide content delivery, compute, or file storage.",
+    "taskStatement": "6.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d6-033",
+    "type": "single",
+    "question": "A team optimizing an existing implementation needs to rotate database credentials without rebuilding applications. Which service fits?",
+    "options": {
+      "A": "An EBS snapshot",
+      "B": "A Route 53 alias",
+      "C": "AWS Secrets Manager",
+      "D": "A security group"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Secrets Manager supports runtime retrieval and rotation of database credentials.\nThe other choices do not rotate application secrets.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d6-034",
+    "type": "single",
+    "question": "A company introducing an automated workflow must audit every API action in a production account. Which service should be enabled?",
+    "options": {
+      "A": "Amazon ElastiCache",
+      "B": "AWS WAF only",
+      "C": "Amazon SES",
+      "D": "AWS CloudTrail"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudTrail records API events for security investigations and compliance.\nThe other choices provide caching, web filtering, or email.",
+    "taskStatement": "6.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d6-035",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment needs a managed service to detect vulnerabilities in container images before deployment. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon Inspector",
+      "B": "Amazon Cognito",
+      "C": "AWS Glue",
+      "D": "Amazon Route 53"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Inspector assesses supported container images and workloads for vulnerabilities.\nThe other choices provide identity, ETL, or DNS.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d6-036",
+    "type": "single",
+    "question": "A customer-facing application team needs to enforce encryption on all new S3 objects. Which control should be configured?",
+    "options": {
+      "A": "A CloudFront cache",
+      "B": "An S3 bucket policy that denies unencrypted PutObject requests",
+      "C": "A public bucket ACL",
+      "D": "A Route 53 health check"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "A bucket policy can explicitly deny uploads that do not include the required encryption headers.\nThe other choices do not enforce object encryption.",
+    "taskStatement": "6.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d6-037",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments must identify external access granted by resource policies. Which tool is appropriate?",
+    "options": {
+      "A": "AWS Batch",
+      "B": "Amazon EFS",
+      "C": "IAM Access Analyzer",
+      "D": "Amazon CloudFront"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "IAM Access Analyzer identifies unintended external access in resource policies.\nThe other choices provide content delivery, compute, or file storage.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d6-038",
+    "type": "single",
+    "question": "A team preparing evidence for an audit needs to rotate database credentials without rebuilding applications. Which service fits?",
+    "options": {
+      "A": "A security group",
+      "B": "An EBS snapshot",
+      "C": "A Route 53 alias",
+      "D": "AWS Secrets Manager"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Secrets Manager supports runtime retrieval and rotation of database credentials.\nThe other choices do not rotate application secrets.",
+    "taskStatement": "6.2",
+    "lastVerified": "2026-08-09"
+  }
+]

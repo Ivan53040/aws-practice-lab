@@ -1,0 +1,562 @@
+[
+  {
+    "id": "dva-c02-d4-001",
+    "type": "single",
+    "question": "A production team needs end-to-end traces across API Gateway, Lambda, and downstream services. Which service should be configured?",
+    "options": {
+      "A": "AWS X-Ray",
+      "B": "Amazon S3 Inventory",
+      "C": "AWS Budgets",
+      "D": "Amazon Route 53"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "X-Ray traces requests across supported service boundaries and helps identify latency and errors.\nThe other choices provide object reports, cost monitoring, or DNS.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d4-002",
+    "type": "single",
+    "question": "A multi-account platform team must find application errors in structured logs using a query language. Which feature is suitable?",
+    "options": {
+      "A": "A VPC route table",
+      "B": "CloudWatch Logs Insights",
+      "C": "An IAM role trust policy",
+      "D": "An S3 lifecycle rule"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Logs Insights queries centralized log events and supports operational troubleshooting.\nThe other choices do not query application log records.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d4-003",
+    "type": "single",
+    "question": "A regulated company needs to reduce Lambda cold-start latency for a predictable request rate. Which feature should be evaluated?",
+    "options": {
+      "A": "A larger Route 53 TTL",
+      "B": "A KMS alias",
+      "C": "Provisioned Concurrency",
+      "D": "An S3 bucket policy"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Provisioned Concurrency keeps execution environments initialized for lower startup latency.\nThe other choices do not control Lambda initialization.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d4-004",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase must reduce repeated reads from a slow downstream service. Which application pattern is appropriate?",
+    "options": {
+      "A": "Retry every request immediately forever",
+      "B": "Disable timeouts",
+      "C": "Write credentials to logs",
+      "D": "Cache responses with an expiration policy"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Application-level caching can reduce repeated downstream calls and improve response latency.\nUnbounded retries and disabled timeouts can worsen outages, and logging credentials is unsafe.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d4-005",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs a custom application metric for failed business transactions. Which approach fits?",
+    "options": {
+      "A": "Publish a CloudWatch custom metric and alarm on it",
+      "B": "Use a public DNS record",
+      "C": "Create an EBS snapshot",
+      "D": "Change an IAM username"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Custom metrics expose business failures to CloudWatch dashboards and alarms.\nThe other choices do not provide application observability.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d4-006",
+    "type": "single",
+    "question": "A data platform team needs end-to-end traces across API Gateway, Lambda, and downstream services. Which service should be configured?",
+    "options": {
+      "A": "Amazon Route 53",
+      "B": "AWS X-Ray",
+      "C": "Amazon S3 Inventory",
+      "D": "AWS Budgets"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "X-Ray traces requests across supported service boundaries and helps identify latency and errors.\nThe other choices provide object reports, cost monitoring, or DNS.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d4-007",
+    "type": "single",
+    "question": "A security-conscious engineering team must find application errors in structured logs using a query language. Which feature is suitable?",
+    "options": {
+      "A": "An S3 lifecycle rule",
+      "B": "A VPC route table",
+      "C": "CloudWatch Logs Insights",
+      "D": "An IAM role trust policy"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Logs Insights queries centralized log events and supports operational troubleshooting.\nThe other choices do not query application log records.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d4-008",
+    "type": "single",
+    "question": "A company migrating an existing workload needs to reduce Lambda cold-start latency for a predictable request rate. Which feature should be evaluated?",
+    "options": {
+      "A": "An S3 bucket policy",
+      "B": "A larger Route 53 TTL",
+      "C": "A KMS alias",
+      "D": "Provisioned Concurrency"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Provisioned Concurrency keeps execution environments initialized for lower startup latency.\nThe other choices do not control Lambda initialization.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d4-009",
+    "type": "single",
+    "question": "A team with strict recovery objectives must reduce repeated reads from a slow downstream service. Which application pattern is appropriate?",
+    "options": {
+      "A": "Cache responses with an expiration policy",
+      "B": "Retry every request immediately forever",
+      "C": "Disable timeouts",
+      "D": "Write credentials to logs"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Application-level caching can reduce repeated downstream calls and improve response latency.\nUnbounded retries and disabled timeouts can worsen outages, and logging credentials is unsafe.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d4-010",
+    "type": "single",
+    "question": "A developer team preparing a release needs a custom application metric for failed business transactions. Which approach fits?",
+    "options": {
+      "A": "Change an IAM username",
+      "B": "Publish a CloudWatch custom metric and alarm on it",
+      "C": "Use a public DNS record",
+      "D": "Create an EBS snapshot"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Custom metrics expose business failures to CloudWatch dashboards and alarms.\nThe other choices do not provide application observability.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d4-011",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs end-to-end traces across API Gateway, Lambda, and downstream services. Which service should be configured?",
+    "options": {
+      "A": "AWS Budgets",
+      "B": "Amazon Route 53",
+      "C": "AWS X-Ray",
+      "D": "Amazon S3 Inventory"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "X-Ray traces requests across supported service boundaries and helps identify latency and errors.\nThe other choices provide object reports, cost monitoring, or DNS.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d4-012",
+    "type": "single",
+    "question": "A service owner reviewing an incident must find application errors in structured logs using a query language. Which feature is suitable?",
+    "options": {
+      "A": "An IAM role trust policy",
+      "B": "An S3 lifecycle rule",
+      "C": "A VPC route table",
+      "D": "CloudWatch Logs Insights"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Logs Insights queries centralized log events and supports operational troubleshooting.\nThe other choices do not query application log records.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d4-013",
+    "type": "single",
+    "question": "A team optimizing an existing implementation needs to reduce Lambda cold-start latency for a predictable request rate. Which feature should be evaluated?",
+    "options": {
+      "A": "Provisioned Concurrency",
+      "B": "An S3 bucket policy",
+      "C": "A larger Route 53 TTL",
+      "D": "A KMS alias"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Provisioned Concurrency keeps execution environments initialized for lower startup latency.\nThe other choices do not control Lambda initialization.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d4-014",
+    "type": "single",
+    "question": "A company introducing an automated workflow must reduce repeated reads from a slow downstream service. Which application pattern is appropriate?",
+    "options": {
+      "A": "Write credentials to logs",
+      "B": "Cache responses with an expiration policy",
+      "C": "Retry every request immediately forever",
+      "D": "Disable timeouts"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Application-level caching can reduce repeated downstream calls and improve response latency.\nUnbounded retries and disabled timeouts can worsen outages, and logging credentials is unsafe.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d4-015",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment needs a custom application metric for failed business transactions. Which approach fits?",
+    "options": {
+      "A": "Create an EBS snapshot",
+      "B": "Change an IAM username",
+      "C": "Publish a CloudWatch custom metric and alarm on it",
+      "D": "Use a public DNS record"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Custom metrics expose business failures to CloudWatch dashboards and alarms.\nThe other choices do not provide application observability.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d4-016",
+    "type": "single",
+    "question": "A customer-facing application team needs end-to-end traces across API Gateway, Lambda, and downstream services. Which service should be configured?",
+    "options": {
+      "A": "Amazon S3 Inventory",
+      "B": "AWS Budgets",
+      "C": "Amazon Route 53",
+      "D": "AWS X-Ray"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "X-Ray traces requests across supported service boundaries and helps identify latency and errors.\nThe other choices provide object reports, cost monitoring, or DNS.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d4-017",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments must find application errors in structured logs using a query language. Which feature is suitable?",
+    "options": {
+      "A": "CloudWatch Logs Insights",
+      "B": "An IAM role trust policy",
+      "C": "An S3 lifecycle rule",
+      "D": "A VPC route table"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Logs Insights queries centralized log events and supports operational troubleshooting.\nThe other choices do not query application log records.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d4-018",
+    "type": "single",
+    "question": "A team preparing evidence for an audit needs to reduce Lambda cold-start latency for a predictable request rate. Which feature should be evaluated?",
+    "options": {
+      "A": "A KMS alias",
+      "B": "Provisioned Concurrency",
+      "C": "An S3 bucket policy",
+      "D": "A larger Route 53 TTL"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Provisioned Concurrency keeps execution environments initialized for lower startup latency.\nThe other choices do not control Lambda initialization.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d4-019",
+    "type": "single",
+    "question": "A business replacing a manual process must reduce repeated reads from a slow downstream service. Which application pattern is appropriate?",
+    "options": {
+      "A": "Disable timeouts",
+      "B": "Write credentials to logs",
+      "C": "Cache responses with an expiration policy",
+      "D": "Retry every request immediately forever"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Application-level caching can reduce repeated downstream calls and improve response latency.\nUnbounded retries and disabled timeouts can worsen outages, and logging credentials is unsafe.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d4-020",
+    "type": "single",
+    "question": "A team validating a design against the exam guide needs a custom application metric for failed business transactions. Which approach fits?",
+    "options": {
+      "A": "Use a public DNS record",
+      "B": "Create an EBS snapshot",
+      "C": "Change an IAM username",
+      "D": "Publish a CloudWatch custom metric and alarm on it"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Custom metrics expose business failures to CloudWatch dashboards and alarms.\nThe other choices do not provide application observability.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d4-021",
+    "type": "single",
+    "question": "A production team needs end-to-end traces across API Gateway, Lambda, and downstream services. Which service should be configured?",
+    "options": {
+      "A": "AWS X-Ray",
+      "B": "Amazon S3 Inventory",
+      "C": "AWS Budgets",
+      "D": "Amazon Route 53"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "X-Ray traces requests across supported service boundaries and helps identify latency and errors.\nThe other choices provide object reports, cost monitoring, or DNS.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d4-022",
+    "type": "single",
+    "question": "A multi-account platform team must find application errors in structured logs using a query language. Which feature is suitable?",
+    "options": {
+      "A": "A VPC route table",
+      "B": "CloudWatch Logs Insights",
+      "C": "An IAM role trust policy",
+      "D": "An S3 lifecycle rule"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Logs Insights queries centralized log events and supports operational troubleshooting.\nThe other choices do not query application log records.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d4-023",
+    "type": "single",
+    "question": "A regulated company needs to reduce Lambda cold-start latency for a predictable request rate. Which feature should be evaluated?",
+    "options": {
+      "A": "A larger Route 53 TTL",
+      "B": "A KMS alias",
+      "C": "Provisioned Concurrency",
+      "D": "An S3 bucket policy"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Provisioned Concurrency keeps execution environments initialized for lower startup latency.\nThe other choices do not control Lambda initialization.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d4-024",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase must reduce repeated reads from a slow downstream service. Which application pattern is appropriate?",
+    "options": {
+      "A": "Retry every request immediately forever",
+      "B": "Disable timeouts",
+      "C": "Write credentials to logs",
+      "D": "Cache responses with an expiration policy"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Application-level caching can reduce repeated downstream calls and improve response latency.\nUnbounded retries and disabled timeouts can worsen outages, and logging credentials is unsafe.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d4-025",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs a custom application metric for failed business transactions. Which approach fits?",
+    "options": {
+      "A": "Publish a CloudWatch custom metric and alarm on it",
+      "B": "Use a public DNS record",
+      "C": "Create an EBS snapshot",
+      "D": "Change an IAM username"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Custom metrics expose business failures to CloudWatch dashboards and alarms.\nThe other choices do not provide application observability.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d4-026",
+    "type": "single",
+    "question": "A data platform team needs end-to-end traces across API Gateway, Lambda, and downstream services. Which service should be configured?",
+    "options": {
+      "A": "Amazon Route 53",
+      "B": "AWS X-Ray",
+      "C": "Amazon S3 Inventory",
+      "D": "AWS Budgets"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "X-Ray traces requests across supported service boundaries and helps identify latency and errors.\nThe other choices provide object reports, cost monitoring, or DNS.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d4-027",
+    "type": "single",
+    "question": "A security-conscious engineering team must find application errors in structured logs using a query language. Which feature is suitable?",
+    "options": {
+      "A": "An S3 lifecycle rule",
+      "B": "A VPC route table",
+      "C": "CloudWatch Logs Insights",
+      "D": "An IAM role trust policy"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Logs Insights queries centralized log events and supports operational troubleshooting.\nThe other choices do not query application log records.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d4-028",
+    "type": "single",
+    "question": "A company migrating an existing workload needs to reduce Lambda cold-start latency for a predictable request rate. Which feature should be evaluated?",
+    "options": {
+      "A": "An S3 bucket policy",
+      "B": "A larger Route 53 TTL",
+      "C": "A KMS alias",
+      "D": "Provisioned Concurrency"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Provisioned Concurrency keeps execution environments initialized for lower startup latency.\nThe other choices do not control Lambda initialization.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d4-029",
+    "type": "single",
+    "question": "A team with strict recovery objectives must reduce repeated reads from a slow downstream service. Which application pattern is appropriate?",
+    "options": {
+      "A": "Cache responses with an expiration policy",
+      "B": "Retry every request immediately forever",
+      "C": "Disable timeouts",
+      "D": "Write credentials to logs"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Application-level caching can reduce repeated downstream calls and improve response latency.\nUnbounded retries and disabled timeouts can worsen outages, and logging credentials is unsafe.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d4-030",
+    "type": "single",
+    "question": "A developer team preparing a release needs a custom application metric for failed business transactions. Which approach fits?",
+    "options": {
+      "A": "Change an IAM username",
+      "B": "Publish a CloudWatch custom metric and alarm on it",
+      "C": "Use a public DNS record",
+      "D": "Create an EBS snapshot"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Custom metrics expose business failures to CloudWatch dashboards and alarms.\nThe other choices do not provide application observability.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d4-031",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs end-to-end traces across API Gateway, Lambda, and downstream services. Which service should be configured?",
+    "options": {
+      "A": "AWS Budgets",
+      "B": "Amazon Route 53",
+      "C": "AWS X-Ray",
+      "D": "Amazon S3 Inventory"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "X-Ray traces requests across supported service boundaries and helps identify latency and errors.\nThe other choices provide object reports, cost monitoring, or DNS.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d4-032",
+    "type": "single",
+    "question": "A service owner reviewing an incident must find application errors in structured logs using a query language. Which feature is suitable?",
+    "options": {
+      "A": "An IAM role trust policy",
+      "B": "An S3 lifecycle rule",
+      "C": "A VPC route table",
+      "D": "CloudWatch Logs Insights"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Logs Insights queries centralized log events and supports operational troubleshooting.\nThe other choices do not query application log records.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d4-033",
+    "type": "single",
+    "question": "A team optimizing an existing implementation needs to reduce Lambda cold-start latency for a predictable request rate. Which feature should be evaluated?",
+    "options": {
+      "A": "Provisioned Concurrency",
+      "B": "An S3 bucket policy",
+      "C": "A larger Route 53 TTL",
+      "D": "A KMS alias"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Provisioned Concurrency keeps execution environments initialized for lower startup latency.\nThe other choices do not control Lambda initialization.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d4-034",
+    "type": "single",
+    "question": "A company introducing an automated workflow must reduce repeated reads from a slow downstream service. Which application pattern is appropriate?",
+    "options": {
+      "A": "Write credentials to logs",
+      "B": "Cache responses with an expiration policy",
+      "C": "Retry every request immediately forever",
+      "D": "Disable timeouts"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Application-level caching can reduce repeated downstream calls and improve response latency.\nUnbounded retries and disabled timeouts can worsen outages, and logging credentials is unsafe.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d4-035",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment needs a custom application metric for failed business transactions. Which approach fits?",
+    "options": {
+      "A": "Create an EBS snapshot",
+      "B": "Change an IAM username",
+      "C": "Publish a CloudWatch custom metric and alarm on it",
+      "D": "Use a public DNS record"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Custom metrics expose business failures to CloudWatch dashboards and alarms.\nThe other choices do not provide application observability.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  }
+]

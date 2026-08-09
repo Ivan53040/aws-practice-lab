@@ -45,6 +45,97 @@
 - [Design Cost-Optimized Architectures](https://www.cloudcertprep.io/aws/saa-c03/design-cost-optimized-architectures): Design Cost-Optimized Architectures free practice questions with explanations
 - Question Bank: 195 questions across 4 domains (Design Secure Architectures, Design Resilient Architectures, Design High-Performing Architectures, Design Cost-Optimized Architectures)
 
+**AWS Certified CloudOps Engineer - Associate (SOA-C03)**
+- [Certification Home](https://www.cloudcertprep.io/aws/soa-c03): 65 questions, 130 minutes, scaled scoring (720/1000 to pass)
+- Why practice here: realistic exam simulation, detailed explanations for every question, aligned to the current SOA-C03 exam guide.
+- [Monitoring, Logging, Analysis, Remediation, and Performance Optimization](https://www.cloudcertprep.io/aws/soa-c03/monitoring-logging-analysis-remediation-and-performance-optimization): Monitoring, Logging, Analysis, Remediation, and Performance Optimization free practice questions with explanations
+- [Reliability and Business Continuity](https://www.cloudcertprep.io/aws/soa-c03/reliability-and-business-continuity): Reliability and Business Continuity free practice questions with explanations
+- [Deployment, Provisioning, and Automation](https://www.cloudcertprep.io/aws/soa-c03/deployment-provisioning-and-automation): Deployment, Provisioning, and Automation free practice questions with explanations
+- [Security and Compliance](https://www.cloudcertprep.io/aws/soa-c03/security-and-compliance): Security and Compliance free practice questions with explanations
+- [Networking and Content Delivery](https://www.cloudcertprep.io/aws/soa-c03/networking-and-content-delivery): Networking and Content Delivery free practice questions with explanations
+- Question Bank: 195 questions across 5 domains (Monitoring, Logging, Analysis, Remediation, and Performance Optimization, Reliability and Business Continuity, Deployment, Provisioning, and Automation, Security and Compliance, Networking and Content Delivery)
+
+**AWS Certified Data Engineer - Associate (DEA-C01)**
+- [Certification Home](https://www.cloudcertprep.io/aws/dea-c01): 65 questions, 130 minutes, scaled scoring (720/1000 to pass)
+- Why practice here: realistic exam simulation, detailed explanations for every question, aligned to the current DEA-C01 exam guide.
+- [Data Ingestion and Transformation](https://www.cloudcertprep.io/aws/dea-c01/data-ingestion-and-transformation): Data Ingestion and Transformation free practice questions with explanations
+- [Data Store Management](https://www.cloudcertprep.io/aws/dea-c01/data-store-management): Data Store Management free practice questions with explanations
+- [Data Operations and Support](https://www.cloudcertprep.io/aws/dea-c01/data-operations-and-support): Data Operations and Support free practice questions with explanations
+- [Data Security and Governance](https://www.cloudcertprep.io/aws/dea-c01/data-security-and-governance): Data Security and Governance free practice questions with explanations
+- Question Bank: 195 questions across 4 domains (Data Ingestion and Transformation, Data Store Management, Data Operations and Support, Data Security and Governance)
+
+**AWS Certified Developer - Associate (DVA-C02)**
+- [Certification Home](https://www.cloudcertprep.io/aws/dva-c02): 65 questions, 130 minutes, scaled scoring (720/1000 to pass)
+- Why practice here: realistic exam simulation, detailed explanations for every question, aligned to the current DVA-C02 exam guide.
+- [Development with AWS Services](https://www.cloudcertprep.io/aws/dva-c02/development-with-aws-services): Development with AWS Services free practice questions with explanations
+- [Security](https://www.cloudcertprep.io/aws/dva-c02/security): Security free practice questions with explanations
+- [Deployment](https://www.cloudcertprep.io/aws/dva-c02/deployment): Deployment free practice questions with explanations
+- [Refactoring](https://www.cloudcertprep.io/aws/dva-c02/refactoring): Refactoring free practice questions with explanations
+- Question Bank: 195 questions across 4 domains (Development with AWS Services, Security, Deployment, Refactoring)
+
+**AWS Certified Machine Learning Engineer - Associate (MLA-C01)**
+- [Certification Home](https://www.cloudcertprep.io/aws/mla-c01): 65 questions, 130 minutes, scaled scoring (720/1000 to pass)
+- Why practice here: realistic exam simulation, detailed explanations for every question, aligned to the current MLA-C01 exam guide.
+- [Data Preparation for Machine Learning](https://www.cloudcertprep.io/aws/mla-c01/data-preparation-for-machine-learning): Data Preparation for Machine Learning free practice questions with explanations
+- [ML Model Development](https://www.cloudcertprep.io/aws/mla-c01/ml-model-development): ML Model Development free practice questions with explanations
+- [Deployment and Orchestration of ML Workflows](https://www.cloudcertprep.io/aws/mla-c01/deployment-and-orchestration-of-ml-workflows): Deployment and Orchestration of ML Workflows free practice questions with explanations
+- [Monitoring, Maintenance, and Security of ML Solutions](https://www.cloudcertprep.io/aws/mla-c01/monitoring-maintenance-and-security-of-ml-solutions): Monitoring, Maintenance, and Security of ML Solutions free practice questions with explanations
+- Question Bank: 195 questions across 4 domains (Data Preparation for Machine Learning, ML Model Development, Deployment and Orchestration of ML Workflows, Monitoring, Maintenance, and Security of ML Solutions)
+
+### Professional Level
+
+**AWS Certified DevOps Engineer - Professional (DOP-C02)**
+- [Certification Home](https://www.cloudcertprep.io/aws/dop-c02): 75 questions, 180 minutes, scaled scoring (750/1000 to pass)
+- Why practice here: realistic exam simulation, detailed explanations for every question, aligned to the current DOP-C02 exam guide.
+- [SDLC Automation](https://www.cloudcertprep.io/aws/dop-c02/sdlc-automation): SDLC Automation free practice questions with explanations
+- [Configuration Management and IaC](https://www.cloudcertprep.io/aws/dop-c02/configuration-management-and-iac): Configuration Management and IaC free practice questions with explanations
+- [Resilient Cloud Solutions](https://www.cloudcertprep.io/aws/dop-c02/resilient-cloud-solutions): Resilient Cloud Solutions free practice questions with explanations
+- [Monitoring and Logging](https://www.cloudcertprep.io/aws/dop-c02/monitoring-and-logging): Monitoring and Logging free practice questions with explanations
+- [Incident and Event Response](https://www.cloudcertprep.io/aws/dop-c02/incident-and-event-response): Incident and Event Response free practice questions with explanations
+- [Security and Compliance](https://www.cloudcertprep.io/aws/dop-c02/security-and-compliance): Security and Compliance free practice questions with explanations
+- Question Bank: 225 questions across 6 domains (SDLC Automation, Configuration Management and IaC, Resilient Cloud Solutions, Monitoring and Logging, Incident and Event Response, Security and Compliance)
+
+**AWS Certified Generative AI Developer - Professional (AIP-C01)**
+- [Certification Home](https://www.cloudcertprep.io/aws/aip-c01): 75 questions, 180 minutes, scaled scoring (750/1000 to pass)
+- Why practice here: realistic exam simulation, detailed explanations for every question, aligned to the current AIP-C01 exam guide.
+- [Foundation Model Integration, Data Management, and Compliance](https://www.cloudcertprep.io/aws/aip-c01/foundation-model-integration-data-management-and-compliance): Foundation Model Integration, Data Management, and Compliance free practice questions with explanations
+- [Implementation and Integration](https://www.cloudcertprep.io/aws/aip-c01/implementation-and-integration): Implementation and Integration free practice questions with explanations
+- [AI Safety, Security, and Governance](https://www.cloudcertprep.io/aws/aip-c01/ai-safety-security-and-governance): AI Safety, Security, and Governance free practice questions with explanations
+- [Operational Efficiency and Optimization for GenAI Applications](https://www.cloudcertprep.io/aws/aip-c01/operational-efficiency-and-optimization-for-genai-applications): Operational Efficiency and Optimization for GenAI Applications free practice questions with explanations
+- [Testing, Validation, and Troubleshooting](https://www.cloudcertprep.io/aws/aip-c01/testing-validation-and-troubleshooting): Testing, Validation, and Troubleshooting free practice questions with explanations
+- Question Bank: 225 questions across 5 domains (Foundation Model Integration, Data Management, and Compliance, Implementation and Integration, AI Safety, Security, and Governance, Operational Efficiency and Optimization for GenAI Applications, Testing, Validation, and Troubleshooting)
+
+**AWS Certified Solutions Architect - Professional (SAP-C02)**
+- [Certification Home](https://www.cloudcertprep.io/aws/sap-c02): 75 questions, 180 minutes, scaled scoring (750/1000 to pass)
+- Why practice here: realistic exam simulation, detailed explanations for every question, aligned to the current SAP-C02 exam guide.
+- [Design Solutions for Organizational Complexity](https://www.cloudcertprep.io/aws/sap-c02/design-solutions-for-organizational-complexity): Design Solutions for Organizational Complexity free practice questions with explanations
+- [Design for New Solutions](https://www.cloudcertprep.io/aws/sap-c02/design-for-new-solutions): Design for New Solutions free practice questions with explanations
+- [Continuous Improvement for Existing Solutions](https://www.cloudcertprep.io/aws/sap-c02/continuous-improvement-for-existing-solutions): Continuous Improvement for Existing Solutions free practice questions with explanations
+- [Accelerate Workload Migration and Modernization](https://www.cloudcertprep.io/aws/sap-c02/accelerate-workload-migration-and-modernization): Accelerate Workload Migration and Modernization free practice questions with explanations
+- Question Bank: 225 questions across 4 domains (Design Solutions for Organizational Complexity, Design for New Solutions, Continuous Improvement for Existing Solutions, Accelerate Workload Migration and Modernization)
+
+### Specialty Level
+
+**AWS Certified Advanced Networking - Specialty (ANS-C01)**
+- [Certification Home](https://www.cloudcertprep.io/aws/ans-c01): 65 questions, 170 minutes, scaled scoring (700/1000 to pass)
+- Why practice here: realistic exam simulation, detailed explanations for every question, aligned to the current ANS-C01 exam guide.
+- [Network Design](https://www.cloudcertprep.io/aws/ans-c01/network-design): Network Design free practice questions with explanations
+- [Network Implementation](https://www.cloudcertprep.io/aws/ans-c01/network-implementation): Network Implementation free practice questions with explanations
+- [Network Management and Operation](https://www.cloudcertprep.io/aws/ans-c01/network-management-and-operation): Network Management and Operation free practice questions with explanations
+- [Network Security, Compliance, and Governance](https://www.cloudcertprep.io/aws/ans-c01/network-security-compliance-and-governance): Network Security, Compliance, and Governance free practice questions with explanations
+- Question Bank: 195 questions across 4 domains (Network Design, Network Implementation, Network Management and Operation, Network Security, Compliance, and Governance)
+
+**AWS Certified Security - Specialty (SCS-C03)**
+- [Certification Home](https://www.cloudcertprep.io/aws/scs-c03): 65 questions, 170 minutes, scaled scoring (750/1000 to pass)
+- Why practice here: realistic exam simulation, detailed explanations for every question, aligned to the current SCS-C03 exam guide.
+- [Detection](https://www.cloudcertprep.io/aws/scs-c03/detection): Detection free practice questions with explanations
+- [Incident Response](https://www.cloudcertprep.io/aws/scs-c03/incident-response): Incident Response free practice questions with explanations
+- [Infrastructure Security](https://www.cloudcertprep.io/aws/scs-c03/infrastructure-security): Infrastructure Security free practice questions with explanations
+- [Identity and Access Management](https://www.cloudcertprep.io/aws/scs-c03/identity-and-access-management): Identity and Access Management free practice questions with explanations
+- [Data Protection](https://www.cloudcertprep.io/aws/scs-c03/data-protection): Data Protection free practice questions with explanations
+- [Security Foundations and Governance](https://www.cloudcertprep.io/aws/scs-c03/security-foundations-and-governance): Security Foundations and Governance free practice questions with explanations
+- Question Bank: 195 questions across 6 domains (Detection, Incident Response, Infrastructure Security, Identity and Access Management, Data Protection, Security Foundations and Governance)
+
 ## FAQ
 
 ### Is CloudCertPrep really free?

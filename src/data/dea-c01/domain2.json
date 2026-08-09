@@ -1,0 +1,818 @@
+[
+  {
+    "id": "dea-c01-d2-001",
+    "type": "single",
+    "question": "A production team needs SQL analytics over large columnar tables with a managed warehouse. Which service fits?",
+    "options": {
+      "A": "Amazon SQS",
+      "B": "Amazon Cognito",
+      "C": "Amazon Redshift",
+      "D": "Amazon EFS"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Redshift is a managed analytical data warehouse optimized for columnar scans and parallel queries.\nThe other choices provide file storage, queues, or identity.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-002",
+    "type": "single",
+    "question": "A multi-account platform team needs a technical catalog of table schemas discovered from S3 data. Which feature should be used?",
+    "options": {
+      "A": "A Route 53 hosted zone",
+      "B": "An EC2 security group",
+      "C": "A CloudFront cache policy",
+      "D": "AWS Glue Data Catalog with a crawler"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "A Glue crawler discovers schemas and stores table metadata in the Glue Data Catalog.\nThe other choices do not catalog data schemas.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-003",
+    "type": "single",
+    "question": "A regulated company needs to remove old objects automatically after a retention period. Which feature should be configured?",
+    "options": {
+      "A": "An S3 Lifecycle rule",
+      "B": "An IAM permission boundary",
+      "C": "A VPC endpoint",
+      "D": "An SNS subscription"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "S3 Lifecycle rules transition or expire objects based on age and storage requirements.\nThe other choices manage IAM, private connectivity, or notifications.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-004",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs flexible schema evolution for semi-structured records. Which design is appropriate?",
+    "options": {
+      "A": "Disable validation",
+      "B": "Use a schema registry or catalog with versioned compatible schemas",
+      "C": "Require every consumer to share an immutable table forever",
+      "D": "Use a security group as a schema"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Versioned schemas let producers and consumers evolve without breaking compatible readers.\nThe other choices do not manage data schema compatibility.",
+    "taskStatement": "2.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-005",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs a key-value store with predictable single-digit millisecond access at scale. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon EFS",
+      "B": "Amazon SES",
+      "C": "Amazon DynamoDB",
+      "D": "Amazon CloudFront"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "DynamoDB is a managed key-value and document database designed for low-latency access at scale.\nThe other choices deliver content, store files, or send email.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-006",
+    "type": "single",
+    "question": "A data platform team needs SQL analytics over large columnar tables with a managed warehouse. Which service fits?",
+    "options": {
+      "A": "Amazon EFS",
+      "B": "Amazon SQS",
+      "C": "Amazon Cognito",
+      "D": "Amazon Redshift"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Redshift is a managed analytical data warehouse optimized for columnar scans and parallel queries.\nThe other choices provide file storage, queues, or identity.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-007",
+    "type": "single",
+    "question": "A security-conscious engineering team needs a technical catalog of table schemas discovered from S3 data. Which feature should be used?",
+    "options": {
+      "A": "AWS Glue Data Catalog with a crawler",
+      "B": "A Route 53 hosted zone",
+      "C": "An EC2 security group",
+      "D": "A CloudFront cache policy"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "A Glue crawler discovers schemas and stores table metadata in the Glue Data Catalog.\nThe other choices do not catalog data schemas.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-008",
+    "type": "single",
+    "question": "A company migrating an existing workload needs to remove old objects automatically after a retention period. Which feature should be configured?",
+    "options": {
+      "A": "An SNS subscription",
+      "B": "An S3 Lifecycle rule",
+      "C": "An IAM permission boundary",
+      "D": "A VPC endpoint"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "S3 Lifecycle rules transition or expire objects based on age and storage requirements.\nThe other choices manage IAM, private connectivity, or notifications.",
+    "taskStatement": "2.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-009",
+    "type": "single",
+    "question": "A team with strict recovery objectives needs flexible schema evolution for semi-structured records. Which design is appropriate?",
+    "options": {
+      "A": "Use a security group as a schema",
+      "B": "Disable validation",
+      "C": "Use a schema registry or catalog with versioned compatible schemas",
+      "D": "Require every consumer to share an immutable table forever"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Versioned schemas let producers and consumers evolve without breaking compatible readers.\nThe other choices do not manage data schema compatibility.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-010",
+    "type": "single",
+    "question": "A developer team preparing a release needs a key-value store with predictable single-digit millisecond access at scale. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon CloudFront",
+      "B": "Amazon EFS",
+      "C": "Amazon SES",
+      "D": "Amazon DynamoDB"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "DynamoDB is a managed key-value and document database designed for low-latency access at scale.\nThe other choices deliver content, store files, or send email.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-011",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs SQL analytics over large columnar tables with a managed warehouse. Which service fits?",
+    "options": {
+      "A": "Amazon Redshift",
+      "B": "Amazon EFS",
+      "C": "Amazon SQS",
+      "D": "Amazon Cognito"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Redshift is a managed analytical data warehouse optimized for columnar scans and parallel queries.\nThe other choices provide file storage, queues, or identity.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-012",
+    "type": "single",
+    "question": "A service owner reviewing an incident needs a technical catalog of table schemas discovered from S3 data. Which feature should be used?",
+    "options": {
+      "A": "A CloudFront cache policy",
+      "B": "AWS Glue Data Catalog with a crawler",
+      "C": "A Route 53 hosted zone",
+      "D": "An EC2 security group"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "A Glue crawler discovers schemas and stores table metadata in the Glue Data Catalog.\nThe other choices do not catalog data schemas.",
+    "taskStatement": "2.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-013",
+    "type": "single",
+    "question": "A team optimizing an existing implementation needs to remove old objects automatically after a retention period. Which feature should be configured?",
+    "options": {
+      "A": "A VPC endpoint",
+      "B": "An SNS subscription",
+      "C": "An S3 Lifecycle rule",
+      "D": "An IAM permission boundary"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "S3 Lifecycle rules transition or expire objects based on age and storage requirements.\nThe other choices manage IAM, private connectivity, or notifications.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-014",
+    "type": "single",
+    "question": "A company introducing an automated workflow needs flexible schema evolution for semi-structured records. Which design is appropriate?",
+    "options": {
+      "A": "Require every consumer to share an immutable table forever",
+      "B": "Use a security group as a schema",
+      "C": "Disable validation",
+      "D": "Use a schema registry or catalog with versioned compatible schemas"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Versioned schemas let producers and consumers evolve without breaking compatible readers.\nThe other choices do not manage data schema compatibility.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-015",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment needs a key-value store with predictable single-digit millisecond access at scale. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon DynamoDB",
+      "B": "Amazon CloudFront",
+      "C": "Amazon EFS",
+      "D": "Amazon SES"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "DynamoDB is a managed key-value and document database designed for low-latency access at scale.\nThe other choices deliver content, store files, or send email.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-016",
+    "type": "single",
+    "question": "A customer-facing application team needs SQL analytics over large columnar tables with a managed warehouse. Which service fits?",
+    "options": {
+      "A": "Amazon Cognito",
+      "B": "Amazon Redshift",
+      "C": "Amazon EFS",
+      "D": "Amazon SQS"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Redshift is a managed analytical data warehouse optimized for columnar scans and parallel queries.\nThe other choices provide file storage, queues, or identity.",
+    "taskStatement": "2.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-017",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments needs a technical catalog of table schemas discovered from S3 data. Which feature should be used?",
+    "options": {
+      "A": "An EC2 security group",
+      "B": "A CloudFront cache policy",
+      "C": "AWS Glue Data Catalog with a crawler",
+      "D": "A Route 53 hosted zone"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "A Glue crawler discovers schemas and stores table metadata in the Glue Data Catalog.\nThe other choices do not catalog data schemas.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-018",
+    "type": "single",
+    "question": "A team preparing evidence for an audit needs to remove old objects automatically after a retention period. Which feature should be configured?",
+    "options": {
+      "A": "An IAM permission boundary",
+      "B": "A VPC endpoint",
+      "C": "An SNS subscription",
+      "D": "An S3 Lifecycle rule"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "S3 Lifecycle rules transition or expire objects based on age and storage requirements.\nThe other choices manage IAM, private connectivity, or notifications.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-019",
+    "type": "single",
+    "question": "A business replacing a manual process needs flexible schema evolution for semi-structured records. Which design is appropriate?",
+    "options": {
+      "A": "Use a schema registry or catalog with versioned compatible schemas",
+      "B": "Require every consumer to share an immutable table forever",
+      "C": "Use a security group as a schema",
+      "D": "Disable validation"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Versioned schemas let producers and consumers evolve without breaking compatible readers.\nThe other choices do not manage data schema compatibility.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-020",
+    "type": "single",
+    "question": "A team validating a design against the exam guide needs a key-value store with predictable single-digit millisecond access at scale. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon SES",
+      "B": "Amazon DynamoDB",
+      "C": "Amazon CloudFront",
+      "D": "Amazon EFS"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "DynamoDB is a managed key-value and document database designed for low-latency access at scale.\nThe other choices deliver content, store files, or send email.",
+    "taskStatement": "2.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-021",
+    "type": "single",
+    "question": "A production team needs SQL analytics over large columnar tables with a managed warehouse. Which service fits?",
+    "options": {
+      "A": "Amazon SQS",
+      "B": "Amazon Cognito",
+      "C": "Amazon Redshift",
+      "D": "Amazon EFS"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Redshift is a managed analytical data warehouse optimized for columnar scans and parallel queries.\nThe other choices provide file storage, queues, or identity.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-022",
+    "type": "single",
+    "question": "A multi-account platform team needs a technical catalog of table schemas discovered from S3 data. Which feature should be used?",
+    "options": {
+      "A": "A Route 53 hosted zone",
+      "B": "An EC2 security group",
+      "C": "A CloudFront cache policy",
+      "D": "AWS Glue Data Catalog with a crawler"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "A Glue crawler discovers schemas and stores table metadata in the Glue Data Catalog.\nThe other choices do not catalog data schemas.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-023",
+    "type": "single",
+    "question": "A regulated company needs to remove old objects automatically after a retention period. Which feature should be configured?",
+    "options": {
+      "A": "An S3 Lifecycle rule",
+      "B": "An IAM permission boundary",
+      "C": "A VPC endpoint",
+      "D": "An SNS subscription"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "S3 Lifecycle rules transition or expire objects based on age and storage requirements.\nThe other choices manage IAM, private connectivity, or notifications.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-024",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs flexible schema evolution for semi-structured records. Which design is appropriate?",
+    "options": {
+      "A": "Disable validation",
+      "B": "Use a schema registry or catalog with versioned compatible schemas",
+      "C": "Require every consumer to share an immutable table forever",
+      "D": "Use a security group as a schema"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Versioned schemas let producers and consumers evolve without breaking compatible readers.\nThe other choices do not manage data schema compatibility.",
+    "taskStatement": "2.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-025",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs a key-value store with predictable single-digit millisecond access at scale. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon EFS",
+      "B": "Amazon SES",
+      "C": "Amazon DynamoDB",
+      "D": "Amazon CloudFront"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "DynamoDB is a managed key-value and document database designed for low-latency access at scale.\nThe other choices deliver content, store files, or send email.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-026",
+    "type": "single",
+    "question": "A data platform team needs SQL analytics over large columnar tables with a managed warehouse. Which service fits?",
+    "options": {
+      "A": "Amazon EFS",
+      "B": "Amazon SQS",
+      "C": "Amazon Cognito",
+      "D": "Amazon Redshift"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Redshift is a managed analytical data warehouse optimized for columnar scans and parallel queries.\nThe other choices provide file storage, queues, or identity.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-027",
+    "type": "single",
+    "question": "A security-conscious engineering team needs a technical catalog of table schemas discovered from S3 data. Which feature should be used?",
+    "options": {
+      "A": "AWS Glue Data Catalog with a crawler",
+      "B": "A Route 53 hosted zone",
+      "C": "An EC2 security group",
+      "D": "A CloudFront cache policy"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "A Glue crawler discovers schemas and stores table metadata in the Glue Data Catalog.\nThe other choices do not catalog data schemas.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-028",
+    "type": "single",
+    "question": "A company migrating an existing workload needs to remove old objects automatically after a retention period. Which feature should be configured?",
+    "options": {
+      "A": "An SNS subscription",
+      "B": "An S3 Lifecycle rule",
+      "C": "An IAM permission boundary",
+      "D": "A VPC endpoint"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "S3 Lifecycle rules transition or expire objects based on age and storage requirements.\nThe other choices manage IAM, private connectivity, or notifications.",
+    "taskStatement": "2.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-029",
+    "type": "single",
+    "question": "A team with strict recovery objectives needs flexible schema evolution for semi-structured records. Which design is appropriate?",
+    "options": {
+      "A": "Use a security group as a schema",
+      "B": "Disable validation",
+      "C": "Use a schema registry or catalog with versioned compatible schemas",
+      "D": "Require every consumer to share an immutable table forever"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Versioned schemas let producers and consumers evolve without breaking compatible readers.\nThe other choices do not manage data schema compatibility.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-030",
+    "type": "single",
+    "question": "A developer team preparing a release needs a key-value store with predictable single-digit millisecond access at scale. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon CloudFront",
+      "B": "Amazon EFS",
+      "C": "Amazon SES",
+      "D": "Amazon DynamoDB"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "DynamoDB is a managed key-value and document database designed for low-latency access at scale.\nThe other choices deliver content, store files, or send email.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-031",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs SQL analytics over large columnar tables with a managed warehouse. Which service fits?",
+    "options": {
+      "A": "Amazon Redshift",
+      "B": "Amazon EFS",
+      "C": "Amazon SQS",
+      "D": "Amazon Cognito"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Redshift is a managed analytical data warehouse optimized for columnar scans and parallel queries.\nThe other choices provide file storage, queues, or identity.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-032",
+    "type": "single",
+    "question": "A service owner reviewing an incident needs a technical catalog of table schemas discovered from S3 data. Which feature should be used?",
+    "options": {
+      "A": "A CloudFront cache policy",
+      "B": "AWS Glue Data Catalog with a crawler",
+      "C": "A Route 53 hosted zone",
+      "D": "An EC2 security group"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "A Glue crawler discovers schemas and stores table metadata in the Glue Data Catalog.\nThe other choices do not catalog data schemas.",
+    "taskStatement": "2.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-033",
+    "type": "single",
+    "question": "A team optimizing an existing implementation needs to remove old objects automatically after a retention period. Which feature should be configured?",
+    "options": {
+      "A": "A VPC endpoint",
+      "B": "An SNS subscription",
+      "C": "An S3 Lifecycle rule",
+      "D": "An IAM permission boundary"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "S3 Lifecycle rules transition or expire objects based on age and storage requirements.\nThe other choices manage IAM, private connectivity, or notifications.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-034",
+    "type": "single",
+    "question": "A company introducing an automated workflow needs flexible schema evolution for semi-structured records. Which design is appropriate?",
+    "options": {
+      "A": "Require every consumer to share an immutable table forever",
+      "B": "Use a security group as a schema",
+      "C": "Disable validation",
+      "D": "Use a schema registry or catalog with versioned compatible schemas"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Versioned schemas let producers and consumers evolve without breaking compatible readers.\nThe other choices do not manage data schema compatibility.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-035",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment needs a key-value store with predictable single-digit millisecond access at scale. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon DynamoDB",
+      "B": "Amazon CloudFront",
+      "C": "Amazon EFS",
+      "D": "Amazon SES"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "DynamoDB is a managed key-value and document database designed for low-latency access at scale.\nThe other choices deliver content, store files, or send email.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-036",
+    "type": "single",
+    "question": "A customer-facing application team needs SQL analytics over large columnar tables with a managed warehouse. Which service fits?",
+    "options": {
+      "A": "Amazon Cognito",
+      "B": "Amazon Redshift",
+      "C": "Amazon EFS",
+      "D": "Amazon SQS"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Redshift is a managed analytical data warehouse optimized for columnar scans and parallel queries.\nThe other choices provide file storage, queues, or identity.",
+    "taskStatement": "2.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-037",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments needs a technical catalog of table schemas discovered from S3 data. Which feature should be used?",
+    "options": {
+      "A": "An EC2 security group",
+      "B": "A CloudFront cache policy",
+      "C": "AWS Glue Data Catalog with a crawler",
+      "D": "A Route 53 hosted zone"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "A Glue crawler discovers schemas and stores table metadata in the Glue Data Catalog.\nThe other choices do not catalog data schemas.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-038",
+    "type": "single",
+    "question": "A team preparing evidence for an audit needs to remove old objects automatically after a retention period. Which feature should be configured?",
+    "options": {
+      "A": "An IAM permission boundary",
+      "B": "A VPC endpoint",
+      "C": "An SNS subscription",
+      "D": "An S3 Lifecycle rule"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "S3 Lifecycle rules transition or expire objects based on age and storage requirements.\nThe other choices manage IAM, private connectivity, or notifications.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-039",
+    "type": "single",
+    "question": "A business replacing a manual process needs flexible schema evolution for semi-structured records. Which design is appropriate?",
+    "options": {
+      "A": "Use a schema registry or catalog with versioned compatible schemas",
+      "B": "Require every consumer to share an immutable table forever",
+      "C": "Use a security group as a schema",
+      "D": "Disable validation"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Versioned schemas let producers and consumers evolve without breaking compatible readers.\nThe other choices do not manage data schema compatibility.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-040",
+    "type": "single",
+    "question": "A team validating a design against the exam guide needs a key-value store with predictable single-digit millisecond access at scale. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon SES",
+      "B": "Amazon DynamoDB",
+      "C": "Amazon CloudFront",
+      "D": "Amazon EFS"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "DynamoDB is a managed key-value and document database designed for low-latency access at scale.\nThe other choices deliver content, store files, or send email.",
+    "taskStatement": "2.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-041",
+    "type": "single",
+    "question": "A production team needs SQL analytics over large columnar tables with a managed warehouse. Which service fits?",
+    "options": {
+      "A": "Amazon SQS",
+      "B": "Amazon Cognito",
+      "C": "Amazon Redshift",
+      "D": "Amazon EFS"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Redshift is a managed analytical data warehouse optimized for columnar scans and parallel queries.\nThe other choices provide file storage, queues, or identity.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-042",
+    "type": "single",
+    "question": "A multi-account platform team needs a technical catalog of table schemas discovered from S3 data. Which feature should be used?",
+    "options": {
+      "A": "A Route 53 hosted zone",
+      "B": "An EC2 security group",
+      "C": "A CloudFront cache policy",
+      "D": "AWS Glue Data Catalog with a crawler"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "A Glue crawler discovers schemas and stores table metadata in the Glue Data Catalog.\nThe other choices do not catalog data schemas.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-043",
+    "type": "single",
+    "question": "A regulated company needs to remove old objects automatically after a retention period. Which feature should be configured?",
+    "options": {
+      "A": "An S3 Lifecycle rule",
+      "B": "An IAM permission boundary",
+      "C": "A VPC endpoint",
+      "D": "An SNS subscription"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "S3 Lifecycle rules transition or expire objects based on age and storage requirements.\nThe other choices manage IAM, private connectivity, or notifications.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-044",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs flexible schema evolution for semi-structured records. Which design is appropriate?",
+    "options": {
+      "A": "Disable validation",
+      "B": "Use a schema registry or catalog with versioned compatible schemas",
+      "C": "Require every consumer to share an immutable table forever",
+      "D": "Use a security group as a schema"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Versioned schemas let producers and consumers evolve without breaking compatible readers.\nThe other choices do not manage data schema compatibility.",
+    "taskStatement": "2.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-045",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs a key-value store with predictable single-digit millisecond access at scale. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon EFS",
+      "B": "Amazon SES",
+      "C": "Amazon DynamoDB",
+      "D": "Amazon CloudFront"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "DynamoDB is a managed key-value and document database designed for low-latency access at scale.\nThe other choices deliver content, store files, or send email.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-046",
+    "type": "single",
+    "question": "A data platform team needs SQL analytics over large columnar tables with a managed warehouse. Which service fits?",
+    "options": {
+      "A": "Amazon EFS",
+      "B": "Amazon SQS",
+      "C": "Amazon Cognito",
+      "D": "Amazon Redshift"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Redshift is a managed analytical data warehouse optimized for columnar scans and parallel queries.\nThe other choices provide file storage, queues, or identity.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-047",
+    "type": "single",
+    "question": "A security-conscious engineering team needs a technical catalog of table schemas discovered from S3 data. Which feature should be used?",
+    "options": {
+      "A": "AWS Glue Data Catalog with a crawler",
+      "B": "A Route 53 hosted zone",
+      "C": "An EC2 security group",
+      "D": "A CloudFront cache policy"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "A Glue crawler discovers schemas and stores table metadata in the Glue Data Catalog.\nThe other choices do not catalog data schemas.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-048",
+    "type": "single",
+    "question": "A company migrating an existing workload needs to remove old objects automatically after a retention period. Which feature should be configured?",
+    "options": {
+      "A": "An SNS subscription",
+      "B": "An S3 Lifecycle rule",
+      "C": "An IAM permission boundary",
+      "D": "A VPC endpoint"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "S3 Lifecycle rules transition or expire objects based on age and storage requirements.\nThe other choices manage IAM, private connectivity, or notifications.",
+    "taskStatement": "2.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-049",
+    "type": "single",
+    "question": "A team with strict recovery objectives needs flexible schema evolution for semi-structured records. Which design is appropriate?",
+    "options": {
+      "A": "Use a security group as a schema",
+      "B": "Disable validation",
+      "C": "Use a schema registry or catalog with versioned compatible schemas",
+      "D": "Require every consumer to share an immutable table forever"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Versioned schemas let producers and consumers evolve without breaking compatible readers.\nThe other choices do not manage data schema compatibility.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-050",
+    "type": "single",
+    "question": "A developer team preparing a release needs a key-value store with predictable single-digit millisecond access at scale. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon CloudFront",
+      "B": "Amazon EFS",
+      "C": "Amazon SES",
+      "D": "Amazon DynamoDB"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "DynamoDB is a managed key-value and document database designed for low-latency access at scale.\nThe other choices deliver content, store files, or send email.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d2-051",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs SQL analytics over large columnar tables with a managed warehouse. Which service fits?",
+    "options": {
+      "A": "Amazon Redshift",
+      "B": "Amazon EFS",
+      "C": "Amazon SQS",
+      "D": "Amazon Cognito"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Redshift is a managed analytical data warehouse optimized for columnar scans and parallel queries.\nThe other choices provide file storage, queues, or identity.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  }
+]

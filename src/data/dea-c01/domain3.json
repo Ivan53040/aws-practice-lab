@@ -1,0 +1,690 @@
+[
+  {
+    "id": "dea-c01-d3-001",
+    "type": "single",
+    "question": "A production team needs to alert when a pipeline job fails or exceeds its duration objective. Which capability should be configured?",
+    "options": {
+      "A": "An S3 public access point",
+      "B": "A KMS alias",
+      "C": "A Route 53 TXT record",
+      "D": "CloudWatch metrics and alarms for the pipeline"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch metrics and alarms provide operational visibility and notifications for data workflows.\nThe other choices manage storage access, key names, or DNS text records.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d3-002",
+    "type": "single",
+    "question": "A multi-account platform team must check that required columns are non-null before loading a curated table. What should the pipeline include?",
+    "options": {
+      "A": "A data quality validation step",
+      "B": "A CloudFront distribution",
+      "C": "An IAM group only",
+      "D": "An EBS placement group"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "A validation step detects missing or invalid values before publishing data to downstream consumers.\nThe other choices do not assess record quality.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d3-003",
+    "type": "single",
+    "question": "A regulated company needs to query historical pipeline logs efficiently. Which destination is suitable?",
+    "options": {
+      "A": "An S3 website endpoint",
+      "B": "A centralized CloudWatch Logs group with Logs Insights queries",
+      "C": "An EC2 instance store volume",
+      "D": "A security group rule"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch Logs and Logs Insights support centralized retention and queryable operational logs.\nThe other choices do not provide managed log search.",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d3-004",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase wants to reduce the cost of repeated queries over unchanged source data. Which approach is appropriate?",
+    "options": {
+      "A": "Disable all partitioning",
+      "B": "Duplicate data into random Regions",
+      "C": "Materialize or cache the result when the access pattern justifies it",
+      "D": "Run a full source scan for every request"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Materialized views, result caching, and partition pruning can reduce repeated processing and cost.\nRepeated full scans and unplanned duplication increase cost.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d3-005",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must replay data after correcting a transformation bug. Which ingestion design helps?",
+    "options": {
+      "A": "Delete source data immediately",
+      "B": "Store only a final aggregate",
+      "C": "Disable versioning",
+      "D": "Retain source records or a replayable stream for a defined period"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Retained source or stream data lets the pipeline rerun a corrected transformation.\nDeleting source data or retaining only aggregates removes replayability.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d3-006",
+    "type": "single",
+    "question": "A data platform team needs to alert when a pipeline job fails or exceeds its duration objective. Which capability should be configured?",
+    "options": {
+      "A": "CloudWatch metrics and alarms for the pipeline",
+      "B": "An S3 public access point",
+      "C": "A KMS alias",
+      "D": "A Route 53 TXT record"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch metrics and alarms provide operational visibility and notifications for data workflows.\nThe other choices manage storage access, key names, or DNS text records.",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d3-007",
+    "type": "single",
+    "question": "A security-conscious engineering team must check that required columns are non-null before loading a curated table. What should the pipeline include?",
+    "options": {
+      "A": "An EBS placement group",
+      "B": "A data quality validation step",
+      "C": "A CloudFront distribution",
+      "D": "An IAM group only"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "A validation step detects missing or invalid values before publishing data to downstream consumers.\nThe other choices do not assess record quality.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d3-008",
+    "type": "single",
+    "question": "A company migrating an existing workload needs to query historical pipeline logs efficiently. Which destination is suitable?",
+    "options": {
+      "A": "A security group rule",
+      "B": "An S3 website endpoint",
+      "C": "A centralized CloudWatch Logs group with Logs Insights queries",
+      "D": "An EC2 instance store volume"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch Logs and Logs Insights support centralized retention and queryable operational logs.\nThe other choices do not provide managed log search.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d3-009",
+    "type": "single",
+    "question": "A team with strict recovery objectives wants to reduce the cost of repeated queries over unchanged source data. Which approach is appropriate?",
+    "options": {
+      "A": "Run a full source scan for every request",
+      "B": "Disable all partitioning",
+      "C": "Duplicate data into random Regions",
+      "D": "Materialize or cache the result when the access pattern justifies it"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Materialized views, result caching, and partition pruning can reduce repeated processing and cost.\nRepeated full scans and unplanned duplication increase cost.",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d3-010",
+    "type": "single",
+    "question": "A developer team preparing a release must replay data after correcting a transformation bug. Which ingestion design helps?",
+    "options": {
+      "A": "Retain source records or a replayable stream for a defined period",
+      "B": "Delete source data immediately",
+      "C": "Store only a final aggregate",
+      "D": "Disable versioning"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Retained source or stream data lets the pipeline rerun a corrected transformation.\nDeleting source data or retaining only aggregates removes replayability.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d3-011",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs to alert when a pipeline job fails or exceeds its duration objective. Which capability should be configured?",
+    "options": {
+      "A": "A Route 53 TXT record",
+      "B": "CloudWatch metrics and alarms for the pipeline",
+      "C": "An S3 public access point",
+      "D": "A KMS alias"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch metrics and alarms provide operational visibility and notifications for data workflows.\nThe other choices manage storage access, key names, or DNS text records.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d3-012",
+    "type": "single",
+    "question": "A service owner reviewing an incident must check that required columns are non-null before loading a curated table. What should the pipeline include?",
+    "options": {
+      "A": "An IAM group only",
+      "B": "An EBS placement group",
+      "C": "A data quality validation step",
+      "D": "A CloudFront distribution"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "A validation step detects missing or invalid values before publishing data to downstream consumers.\nThe other choices do not assess record quality.",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d3-013",
+    "type": "single",
+    "question": "A team optimizing an existing implementation needs to query historical pipeline logs efficiently. Which destination is suitable?",
+    "options": {
+      "A": "An EC2 instance store volume",
+      "B": "A security group rule",
+      "C": "An S3 website endpoint",
+      "D": "A centralized CloudWatch Logs group with Logs Insights queries"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch Logs and Logs Insights support centralized retention and queryable operational logs.\nThe other choices do not provide managed log search.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d3-014",
+    "type": "single",
+    "question": "A company introducing an automated workflow wants to reduce the cost of repeated queries over unchanged source data. Which approach is appropriate?",
+    "options": {
+      "A": "Materialize or cache the result when the access pattern justifies it",
+      "B": "Run a full source scan for every request",
+      "C": "Disable all partitioning",
+      "D": "Duplicate data into random Regions"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Materialized views, result caching, and partition pruning can reduce repeated processing and cost.\nRepeated full scans and unplanned duplication increase cost.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d3-015",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment must replay data after correcting a transformation bug. Which ingestion design helps?",
+    "options": {
+      "A": "Disable versioning",
+      "B": "Retain source records or a replayable stream for a defined period",
+      "C": "Delete source data immediately",
+      "D": "Store only a final aggregate"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Retained source or stream data lets the pipeline rerun a corrected transformation.\nDeleting source data or retaining only aggregates removes replayability.",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d3-016",
+    "type": "single",
+    "question": "A customer-facing application team needs to alert when a pipeline job fails or exceeds its duration objective. Which capability should be configured?",
+    "options": {
+      "A": "A KMS alias",
+      "B": "A Route 53 TXT record",
+      "C": "CloudWatch metrics and alarms for the pipeline",
+      "D": "An S3 public access point"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch metrics and alarms provide operational visibility and notifications for data workflows.\nThe other choices manage storage access, key names, or DNS text records.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d3-017",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments must check that required columns are non-null before loading a curated table. What should the pipeline include?",
+    "options": {
+      "A": "A CloudFront distribution",
+      "B": "An IAM group only",
+      "C": "An EBS placement group",
+      "D": "A data quality validation step"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "A validation step detects missing or invalid values before publishing data to downstream consumers.\nThe other choices do not assess record quality.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d3-018",
+    "type": "single",
+    "question": "A team preparing evidence for an audit needs to query historical pipeline logs efficiently. Which destination is suitable?",
+    "options": {
+      "A": "A centralized CloudWatch Logs group with Logs Insights queries",
+      "B": "An EC2 instance store volume",
+      "C": "A security group rule",
+      "D": "An S3 website endpoint"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch Logs and Logs Insights support centralized retention and queryable operational logs.\nThe other choices do not provide managed log search.",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d3-019",
+    "type": "single",
+    "question": "A business replacing a manual process wants to reduce the cost of repeated queries over unchanged source data. Which approach is appropriate?",
+    "options": {
+      "A": "Duplicate data into random Regions",
+      "B": "Materialize or cache the result when the access pattern justifies it",
+      "C": "Run a full source scan for every request",
+      "D": "Disable all partitioning"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Materialized views, result caching, and partition pruning can reduce repeated processing and cost.\nRepeated full scans and unplanned duplication increase cost.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d3-020",
+    "type": "single",
+    "question": "A team validating a design against the exam guide must replay data after correcting a transformation bug. Which ingestion design helps?",
+    "options": {
+      "A": "Store only a final aggregate",
+      "B": "Disable versioning",
+      "C": "Retain source records or a replayable stream for a defined period",
+      "D": "Delete source data immediately"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Retained source or stream data lets the pipeline rerun a corrected transformation.\nDeleting source data or retaining only aggregates removes replayability.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d3-021",
+    "type": "single",
+    "question": "A production team needs to alert when a pipeline job fails or exceeds its duration objective. Which capability should be configured?",
+    "options": {
+      "A": "An S3 public access point",
+      "B": "A KMS alias",
+      "C": "A Route 53 TXT record",
+      "D": "CloudWatch metrics and alarms for the pipeline"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch metrics and alarms provide operational visibility and notifications for data workflows.\nThe other choices manage storage access, key names, or DNS text records.",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d3-022",
+    "type": "single",
+    "question": "A multi-account platform team must check that required columns are non-null before loading a curated table. What should the pipeline include?",
+    "options": {
+      "A": "A data quality validation step",
+      "B": "A CloudFront distribution",
+      "C": "An IAM group only",
+      "D": "An EBS placement group"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "A validation step detects missing or invalid values before publishing data to downstream consumers.\nThe other choices do not assess record quality.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d3-023",
+    "type": "single",
+    "question": "A regulated company needs to query historical pipeline logs efficiently. Which destination is suitable?",
+    "options": {
+      "A": "An S3 website endpoint",
+      "B": "A centralized CloudWatch Logs group with Logs Insights queries",
+      "C": "An EC2 instance store volume",
+      "D": "A security group rule"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch Logs and Logs Insights support centralized retention and queryable operational logs.\nThe other choices do not provide managed log search.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d3-024",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase wants to reduce the cost of repeated queries over unchanged source data. Which approach is appropriate?",
+    "options": {
+      "A": "Disable all partitioning",
+      "B": "Duplicate data into random Regions",
+      "C": "Materialize or cache the result when the access pattern justifies it",
+      "D": "Run a full source scan for every request"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Materialized views, result caching, and partition pruning can reduce repeated processing and cost.\nRepeated full scans and unplanned duplication increase cost.",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d3-025",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must replay data after correcting a transformation bug. Which ingestion design helps?",
+    "options": {
+      "A": "Delete source data immediately",
+      "B": "Store only a final aggregate",
+      "C": "Disable versioning",
+      "D": "Retain source records or a replayable stream for a defined period"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Retained source or stream data lets the pipeline rerun a corrected transformation.\nDeleting source data or retaining only aggregates removes replayability.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d3-026",
+    "type": "single",
+    "question": "A data platform team needs to alert when a pipeline job fails or exceeds its duration objective. Which capability should be configured?",
+    "options": {
+      "A": "CloudWatch metrics and alarms for the pipeline",
+      "B": "An S3 public access point",
+      "C": "A KMS alias",
+      "D": "A Route 53 TXT record"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch metrics and alarms provide operational visibility and notifications for data workflows.\nThe other choices manage storage access, key names, or DNS text records.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d3-027",
+    "type": "single",
+    "question": "A security-conscious engineering team must check that required columns are non-null before loading a curated table. What should the pipeline include?",
+    "options": {
+      "A": "An EBS placement group",
+      "B": "A data quality validation step",
+      "C": "A CloudFront distribution",
+      "D": "An IAM group only"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "A validation step detects missing or invalid values before publishing data to downstream consumers.\nThe other choices do not assess record quality.",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d3-028",
+    "type": "single",
+    "question": "A company migrating an existing workload needs to query historical pipeline logs efficiently. Which destination is suitable?",
+    "options": {
+      "A": "A security group rule",
+      "B": "An S3 website endpoint",
+      "C": "A centralized CloudWatch Logs group with Logs Insights queries",
+      "D": "An EC2 instance store volume"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch Logs and Logs Insights support centralized retention and queryable operational logs.\nThe other choices do not provide managed log search.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d3-029",
+    "type": "single",
+    "question": "A team with strict recovery objectives wants to reduce the cost of repeated queries over unchanged source data. Which approach is appropriate?",
+    "options": {
+      "A": "Run a full source scan for every request",
+      "B": "Disable all partitioning",
+      "C": "Duplicate data into random Regions",
+      "D": "Materialize or cache the result when the access pattern justifies it"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Materialized views, result caching, and partition pruning can reduce repeated processing and cost.\nRepeated full scans and unplanned duplication increase cost.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d3-030",
+    "type": "single",
+    "question": "A developer team preparing a release must replay data after correcting a transformation bug. Which ingestion design helps?",
+    "options": {
+      "A": "Retain source records or a replayable stream for a defined period",
+      "B": "Delete source data immediately",
+      "C": "Store only a final aggregate",
+      "D": "Disable versioning"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Retained source or stream data lets the pipeline rerun a corrected transformation.\nDeleting source data or retaining only aggregates removes replayability.",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d3-031",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs to alert when a pipeline job fails or exceeds its duration objective. Which capability should be configured?",
+    "options": {
+      "A": "A Route 53 TXT record",
+      "B": "CloudWatch metrics and alarms for the pipeline",
+      "C": "An S3 public access point",
+      "D": "A KMS alias"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch metrics and alarms provide operational visibility and notifications for data workflows.\nThe other choices manage storage access, key names, or DNS text records.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d3-032",
+    "type": "single",
+    "question": "A service owner reviewing an incident must check that required columns are non-null before loading a curated table. What should the pipeline include?",
+    "options": {
+      "A": "An IAM group only",
+      "B": "An EBS placement group",
+      "C": "A data quality validation step",
+      "D": "A CloudFront distribution"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "A validation step detects missing or invalid values before publishing data to downstream consumers.\nThe other choices do not assess record quality.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d3-033",
+    "type": "single",
+    "question": "A team optimizing an existing implementation needs to query historical pipeline logs efficiently. Which destination is suitable?",
+    "options": {
+      "A": "An EC2 instance store volume",
+      "B": "A security group rule",
+      "C": "An S3 website endpoint",
+      "D": "A centralized CloudWatch Logs group with Logs Insights queries"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch Logs and Logs Insights support centralized retention and queryable operational logs.\nThe other choices do not provide managed log search.",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d3-034",
+    "type": "single",
+    "question": "A company introducing an automated workflow wants to reduce the cost of repeated queries over unchanged source data. Which approach is appropriate?",
+    "options": {
+      "A": "Materialize or cache the result when the access pattern justifies it",
+      "B": "Run a full source scan for every request",
+      "C": "Disable all partitioning",
+      "D": "Duplicate data into random Regions"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Materialized views, result caching, and partition pruning can reduce repeated processing and cost.\nRepeated full scans and unplanned duplication increase cost.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d3-035",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment must replay data after correcting a transformation bug. Which ingestion design helps?",
+    "options": {
+      "A": "Disable versioning",
+      "B": "Retain source records or a replayable stream for a defined period",
+      "C": "Delete source data immediately",
+      "D": "Store only a final aggregate"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Retained source or stream data lets the pipeline rerun a corrected transformation.\nDeleting source data or retaining only aggregates removes replayability.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d3-036",
+    "type": "single",
+    "question": "A customer-facing application team needs to alert when a pipeline job fails or exceeds its duration objective. Which capability should be configured?",
+    "options": {
+      "A": "A KMS alias",
+      "B": "A Route 53 TXT record",
+      "C": "CloudWatch metrics and alarms for the pipeline",
+      "D": "An S3 public access point"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch metrics and alarms provide operational visibility and notifications for data workflows.\nThe other choices manage storage access, key names, or DNS text records.",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d3-037",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments must check that required columns are non-null before loading a curated table. What should the pipeline include?",
+    "options": {
+      "A": "A CloudFront distribution",
+      "B": "An IAM group only",
+      "C": "An EBS placement group",
+      "D": "A data quality validation step"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "A validation step detects missing or invalid values before publishing data to downstream consumers.\nThe other choices do not assess record quality.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d3-038",
+    "type": "single",
+    "question": "A team preparing evidence for an audit needs to query historical pipeline logs efficiently. Which destination is suitable?",
+    "options": {
+      "A": "A centralized CloudWatch Logs group with Logs Insights queries",
+      "B": "An EC2 instance store volume",
+      "C": "A security group rule",
+      "D": "An S3 website endpoint"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch Logs and Logs Insights support centralized retention and queryable operational logs.\nThe other choices do not provide managed log search.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d3-039",
+    "type": "single",
+    "question": "A business replacing a manual process wants to reduce the cost of repeated queries over unchanged source data. Which approach is appropriate?",
+    "options": {
+      "A": "Duplicate data into random Regions",
+      "B": "Materialize or cache the result when the access pattern justifies it",
+      "C": "Run a full source scan for every request",
+      "D": "Disable all partitioning"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Materialized views, result caching, and partition pruning can reduce repeated processing and cost.\nRepeated full scans and unplanned duplication increase cost.",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d3-040",
+    "type": "single",
+    "question": "A team validating a design against the exam guide must replay data after correcting a transformation bug. Which ingestion design helps?",
+    "options": {
+      "A": "Store only a final aggregate",
+      "B": "Disable versioning",
+      "C": "Retain source records or a replayable stream for a defined period",
+      "D": "Delete source data immediately"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Retained source or stream data lets the pipeline rerun a corrected transformation.\nDeleting source data or retaining only aggregates removes replayability.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d3-041",
+    "type": "single",
+    "question": "A production team needs to alert when a pipeline job fails or exceeds its duration objective. Which capability should be configured?",
+    "options": {
+      "A": "An S3 public access point",
+      "B": "A KMS alias",
+      "C": "A Route 53 TXT record",
+      "D": "CloudWatch metrics and alarms for the pipeline"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch metrics and alarms provide operational visibility and notifications for data workflows.\nThe other choices manage storage access, key names, or DNS text records.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d3-042",
+    "type": "single",
+    "question": "A multi-account platform team must check that required columns are non-null before loading a curated table. What should the pipeline include?",
+    "options": {
+      "A": "A data quality validation step",
+      "B": "A CloudFront distribution",
+      "C": "An IAM group only",
+      "D": "An EBS placement group"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "A validation step detects missing or invalid values before publishing data to downstream consumers.\nThe other choices do not assess record quality.",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d3-043",
+    "type": "single",
+    "question": "A regulated company needs to query historical pipeline logs efficiently. Which destination is suitable?",
+    "options": {
+      "A": "An S3 website endpoint",
+      "B": "A centralized CloudWatch Logs group with Logs Insights queries",
+      "C": "An EC2 instance store volume",
+      "D": "A security group rule"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch Logs and Logs Insights support centralized retention and queryable operational logs.\nThe other choices do not provide managed log search.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  }
+]

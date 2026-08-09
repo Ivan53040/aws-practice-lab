@@ -1,0 +1,434 @@
+[
+  {
+    "id": "aip-c01-d4-001",
+    "type": "single",
+    "question": "A production team needs to reduce inference cost for repeated identical requests. Which optimization should be evaluated?",
+    "options": {
+      "A": "Cache safe, deterministic responses with an expiration policy",
+      "B": "Send every request to the most expensive model",
+      "C": "Disable all caching",
+      "D": "Include the full conversation forever"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Response caching can reduce repeated model calls when freshness and privacy requirements permit it.\nThe other choices increase token use or inference cost.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d4-002",
+    "type": "single",
+    "question": "A multi-account platform team must choose a lower-cost model for simple classification while reserving a larger model for complex reasoning. Which design fits?",
+    "options": {
+      "A": "Disable evaluation",
+      "B": "Route requests by complexity and quality requirements",
+      "C": "Use the largest model for every request",
+      "D": "Randomly choose a model"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Model routing aligns cost and latency with the task while preserving quality where needed.\nUsing the largest model for every request is usually less cost optimized.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d4-003",
+    "type": "single",
+    "question": "A regulated company needs to control token costs from long conversation history. Which practice is appropriate?",
+    "options": {
+      "A": "Duplicate every message",
+      "B": "Ignore token metrics",
+      "C": "Summarize or window conversation context while preserving needed facts",
+      "D": "Send the entire history indefinitely"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Context windows and summaries reduce input tokens while retaining relevant state.\nUnbounded history increases cost and latency.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d4-004",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase must monitor production GenAI latency and token usage. Which service should collect operational metrics?",
+    "options": {
+      "A": "Amazon EFS",
+      "B": "AWS Certificate Manager",
+      "C": "Amazon Route 53",
+      "D": "Amazon CloudWatch"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch dashboards and alarms can track latency, errors, and usage metrics.\nThe other choices do not provide GenAI operational monitoring.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d4-005",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs to keep a workload responsive during model-provider throttling. Which pattern helps?",
+    "options": {
+      "A": "Exponential backoff, bounded retries, and a fallback path",
+      "B": "Retry without limit",
+      "C": "Open every request concurrently",
+      "D": "Remove timeouts"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Bounded retries and fallback behavior protect user experience during throttling or transient failures.\nUnbounded retries and no timeouts can amplify an outage.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d4-006",
+    "type": "single",
+    "question": "A data platform team needs to reduce inference cost for repeated identical requests. Which optimization should be evaluated?",
+    "options": {
+      "A": "Include the full conversation forever",
+      "B": "Cache safe, deterministic responses with an expiration policy",
+      "C": "Send every request to the most expensive model",
+      "D": "Disable all caching"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Response caching can reduce repeated model calls when freshness and privacy requirements permit it.\nThe other choices increase token use or inference cost.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d4-007",
+    "type": "single",
+    "question": "A security-conscious engineering team must choose a lower-cost model for simple classification while reserving a larger model for complex reasoning. Which design fits?",
+    "options": {
+      "A": "Randomly choose a model",
+      "B": "Disable evaluation",
+      "C": "Route requests by complexity and quality requirements",
+      "D": "Use the largest model for every request"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Model routing aligns cost and latency with the task while preserving quality where needed.\nUsing the largest model for every request is usually less cost optimized.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d4-008",
+    "type": "single",
+    "question": "A company migrating an existing workload needs to control token costs from long conversation history. Which practice is appropriate?",
+    "options": {
+      "A": "Send the entire history indefinitely",
+      "B": "Duplicate every message",
+      "C": "Ignore token metrics",
+      "D": "Summarize or window conversation context while preserving needed facts"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Context windows and summaries reduce input tokens while retaining relevant state.\nUnbounded history increases cost and latency.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d4-009",
+    "type": "single",
+    "question": "A team with strict recovery objectives must monitor production GenAI latency and token usage. Which service should collect operational metrics?",
+    "options": {
+      "A": "Amazon CloudWatch",
+      "B": "Amazon EFS",
+      "C": "AWS Certificate Manager",
+      "D": "Amazon Route 53"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch dashboards and alarms can track latency, errors, and usage metrics.\nThe other choices do not provide GenAI operational monitoring.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d4-010",
+    "type": "single",
+    "question": "A developer team preparing a release needs to keep a workload responsive during model-provider throttling. Which pattern helps?",
+    "options": {
+      "A": "Remove timeouts",
+      "B": "Exponential backoff, bounded retries, and a fallback path",
+      "C": "Retry without limit",
+      "D": "Open every request concurrently"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Bounded retries and fallback behavior protect user experience during throttling or transient failures.\nUnbounded retries and no timeouts can amplify an outage.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d4-011",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs to reduce inference cost for repeated identical requests. Which optimization should be evaluated?",
+    "options": {
+      "A": "Disable all caching",
+      "B": "Include the full conversation forever",
+      "C": "Cache safe, deterministic responses with an expiration policy",
+      "D": "Send every request to the most expensive model"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Response caching can reduce repeated model calls when freshness and privacy requirements permit it.\nThe other choices increase token use or inference cost.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d4-012",
+    "type": "single",
+    "question": "A service owner reviewing an incident must choose a lower-cost model for simple classification while reserving a larger model for complex reasoning. Which design fits?",
+    "options": {
+      "A": "Use the largest model for every request",
+      "B": "Randomly choose a model",
+      "C": "Disable evaluation",
+      "D": "Route requests by complexity and quality requirements"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Model routing aligns cost and latency with the task while preserving quality where needed.\nUsing the largest model for every request is usually less cost optimized.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d4-013",
+    "type": "single",
+    "question": "A team optimizing an existing implementation needs to control token costs from long conversation history. Which practice is appropriate?",
+    "options": {
+      "A": "Summarize or window conversation context while preserving needed facts",
+      "B": "Send the entire history indefinitely",
+      "C": "Duplicate every message",
+      "D": "Ignore token metrics"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Context windows and summaries reduce input tokens while retaining relevant state.\nUnbounded history increases cost and latency.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d4-014",
+    "type": "single",
+    "question": "A company introducing an automated workflow must monitor production GenAI latency and token usage. Which service should collect operational metrics?",
+    "options": {
+      "A": "Amazon Route 53",
+      "B": "Amazon CloudWatch",
+      "C": "Amazon EFS",
+      "D": "AWS Certificate Manager"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch dashboards and alarms can track latency, errors, and usage metrics.\nThe other choices do not provide GenAI operational monitoring.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d4-015",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment needs to keep a workload responsive during model-provider throttling. Which pattern helps?",
+    "options": {
+      "A": "Open every request concurrently",
+      "B": "Remove timeouts",
+      "C": "Exponential backoff, bounded retries, and a fallback path",
+      "D": "Retry without limit"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Bounded retries and fallback behavior protect user experience during throttling or transient failures.\nUnbounded retries and no timeouts can amplify an outage.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d4-016",
+    "type": "single",
+    "question": "A customer-facing application team needs to reduce inference cost for repeated identical requests. Which optimization should be evaluated?",
+    "options": {
+      "A": "Send every request to the most expensive model",
+      "B": "Disable all caching",
+      "C": "Include the full conversation forever",
+      "D": "Cache safe, deterministic responses with an expiration policy"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Response caching can reduce repeated model calls when freshness and privacy requirements permit it.\nThe other choices increase token use or inference cost.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d4-017",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments must choose a lower-cost model for simple classification while reserving a larger model for complex reasoning. Which design fits?",
+    "options": {
+      "A": "Route requests by complexity and quality requirements",
+      "B": "Use the largest model for every request",
+      "C": "Randomly choose a model",
+      "D": "Disable evaluation"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Model routing aligns cost and latency with the task while preserving quality where needed.\nUsing the largest model for every request is usually less cost optimized.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d4-018",
+    "type": "single",
+    "question": "A team preparing evidence for an audit needs to control token costs from long conversation history. Which practice is appropriate?",
+    "options": {
+      "A": "Ignore token metrics",
+      "B": "Summarize or window conversation context while preserving needed facts",
+      "C": "Send the entire history indefinitely",
+      "D": "Duplicate every message"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Context windows and summaries reduce input tokens while retaining relevant state.\nUnbounded history increases cost and latency.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d4-019",
+    "type": "single",
+    "question": "A business replacing a manual process must monitor production GenAI latency and token usage. Which service should collect operational metrics?",
+    "options": {
+      "A": "AWS Certificate Manager",
+      "B": "Amazon Route 53",
+      "C": "Amazon CloudWatch",
+      "D": "Amazon EFS"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch dashboards and alarms can track latency, errors, and usage metrics.\nThe other choices do not provide GenAI operational monitoring.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d4-020",
+    "type": "single",
+    "question": "A team validating a design against the exam guide needs to keep a workload responsive during model-provider throttling. Which pattern helps?",
+    "options": {
+      "A": "Retry without limit",
+      "B": "Open every request concurrently",
+      "C": "Remove timeouts",
+      "D": "Exponential backoff, bounded retries, and a fallback path"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Bounded retries and fallback behavior protect user experience during throttling or transient failures.\nUnbounded retries and no timeouts can amplify an outage.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d4-021",
+    "type": "single",
+    "question": "A production team needs to reduce inference cost for repeated identical requests. Which optimization should be evaluated?",
+    "options": {
+      "A": "Cache safe, deterministic responses with an expiration policy",
+      "B": "Send every request to the most expensive model",
+      "C": "Disable all caching",
+      "D": "Include the full conversation forever"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Response caching can reduce repeated model calls when freshness and privacy requirements permit it.\nThe other choices increase token use or inference cost.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d4-022",
+    "type": "single",
+    "question": "A multi-account platform team must choose a lower-cost model for simple classification while reserving a larger model for complex reasoning. Which design fits?",
+    "options": {
+      "A": "Disable evaluation",
+      "B": "Route requests by complexity and quality requirements",
+      "C": "Use the largest model for every request",
+      "D": "Randomly choose a model"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Model routing aligns cost and latency with the task while preserving quality where needed.\nUsing the largest model for every request is usually less cost optimized.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d4-023",
+    "type": "single",
+    "question": "A regulated company needs to control token costs from long conversation history. Which practice is appropriate?",
+    "options": {
+      "A": "Duplicate every message",
+      "B": "Ignore token metrics",
+      "C": "Summarize or window conversation context while preserving needed facts",
+      "D": "Send the entire history indefinitely"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Context windows and summaries reduce input tokens while retaining relevant state.\nUnbounded history increases cost and latency.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d4-024",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase must monitor production GenAI latency and token usage. Which service should collect operational metrics?",
+    "options": {
+      "A": "Amazon EFS",
+      "B": "AWS Certificate Manager",
+      "C": "Amazon Route 53",
+      "D": "Amazon CloudWatch"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch dashboards and alarms can track latency, errors, and usage metrics.\nThe other choices do not provide GenAI operational monitoring.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d4-025",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs to keep a workload responsive during model-provider throttling. Which pattern helps?",
+    "options": {
+      "A": "Exponential backoff, bounded retries, and a fallback path",
+      "B": "Retry without limit",
+      "C": "Open every request concurrently",
+      "D": "Remove timeouts"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Bounded retries and fallback behavior protect user experience during throttling or transient failures.\nUnbounded retries and no timeouts can amplify an outage.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d4-026",
+    "type": "single",
+    "question": "A data platform team needs to reduce inference cost for repeated identical requests. Which optimization should be evaluated?",
+    "options": {
+      "A": "Include the full conversation forever",
+      "B": "Cache safe, deterministic responses with an expiration policy",
+      "C": "Send every request to the most expensive model",
+      "D": "Disable all caching"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Response caching can reduce repeated model calls when freshness and privacy requirements permit it.\nThe other choices increase token use or inference cost.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d4-027",
+    "type": "single",
+    "question": "A security-conscious engineering team must choose a lower-cost model for simple classification while reserving a larger model for complex reasoning. Which design fits?",
+    "options": {
+      "A": "Randomly choose a model",
+      "B": "Disable evaluation",
+      "C": "Route requests by complexity and quality requirements",
+      "D": "Use the largest model for every request"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Model routing aligns cost and latency with the task while preserving quality where needed.\nUsing the largest model for every request is usually less cost optimized.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  }
+]

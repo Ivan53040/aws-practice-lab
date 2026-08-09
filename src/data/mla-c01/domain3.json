@@ -1,0 +1,690 @@
+[
+  {
+    "id": "mla-c01-d3-001",
+    "type": "single",
+    "question": "A production team needs a real-time prediction endpoint that automatically adds instances with request volume. Which design fits?",
+    "options": {
+      "A": "A batch transform job only",
+      "B": "An S3 Glacier vault",
+      "C": "A Route 53 TXT record",
+      "D": "A SageMaker real-time endpoint with autoscaling"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "A real-time endpoint serves requests and autoscaling adjusts instances to demand.\nBatch transform is offline, Glacier is archival, and DNS text records do not host models.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d3-002",
+    "type": "single",
+    "question": "A multi-account platform team needs predictions for a large data set without a low-latency request requirement. Which option is appropriate?",
+    "options": {
+      "A": "A SageMaker batch transform job",
+      "B": "A public Lambda URL for every row",
+      "C": "A CloudFront distribution",
+      "D": "An IAM group"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Batch Transform processes a data set offline without maintaining a real-time endpoint.\nThe other choices add unnecessary request infrastructure or do not run predictions.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d3-003",
+    "type": "single",
+    "question": "A regulated company must orchestrate preprocessing, training, evaluation, and registration. Which service should define the workflow?",
+    "options": {
+      "A": "Amazon Route 53",
+      "B": "SageMaker Pipelines",
+      "C": "AWS WAF",
+      "D": "Amazon EFS"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "SageMaker Pipelines represents repeatable ML workflow steps and conditions.\nThe other choices do not orchestrate ML lifecycle steps.",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d3-004",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs to deploy a new model version gradually while comparing it with the existing version. Which strategy is appropriate?",
+    "options": {
+      "A": "Disable metrics",
+      "B": "Use a public S3 bucket",
+      "C": "A shadow or canary deployment with monitored traffic",
+      "D": "Delete the existing endpoint first"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Shadow or canary deployments reduce release risk by comparing a new version before full traffic shift.\nDeleting the old model and disabling metrics removes safety controls.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d3-005",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must package preprocessing code and dependencies consistently for training and inference. Which artifact is suitable?",
+    "options": {
+      "A": "A DNS record",
+      "B": "A security group description",
+      "C": "A billing tag only",
+      "D": "A versioned container image or reproducible source package"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Versioned artifacts make ML execution environments repeatable across stages.\nNetwork and billing metadata do not package runtime dependencies.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d3-006",
+    "type": "single",
+    "question": "A data platform team needs a real-time prediction endpoint that automatically adds instances with request volume. Which design fits?",
+    "options": {
+      "A": "A SageMaker real-time endpoint with autoscaling",
+      "B": "A batch transform job only",
+      "C": "An S3 Glacier vault",
+      "D": "A Route 53 TXT record"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "A real-time endpoint serves requests and autoscaling adjusts instances to demand.\nBatch transform is offline, Glacier is archival, and DNS text records do not host models.",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d3-007",
+    "type": "single",
+    "question": "A security-conscious engineering team needs predictions for a large data set without a low-latency request requirement. Which option is appropriate?",
+    "options": {
+      "A": "An IAM group",
+      "B": "A SageMaker batch transform job",
+      "C": "A public Lambda URL for every row",
+      "D": "A CloudFront distribution"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Batch Transform processes a data set offline without maintaining a real-time endpoint.\nThe other choices add unnecessary request infrastructure or do not run predictions.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d3-008",
+    "type": "single",
+    "question": "A company migrating an existing workload must orchestrate preprocessing, training, evaluation, and registration. Which service should define the workflow?",
+    "options": {
+      "A": "Amazon EFS",
+      "B": "Amazon Route 53",
+      "C": "SageMaker Pipelines",
+      "D": "AWS WAF"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "SageMaker Pipelines represents repeatable ML workflow steps and conditions.\nThe other choices do not orchestrate ML lifecycle steps.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d3-009",
+    "type": "single",
+    "question": "A team with strict recovery objectives needs to deploy a new model version gradually while comparing it with the existing version. Which strategy is appropriate?",
+    "options": {
+      "A": "Delete the existing endpoint first",
+      "B": "Disable metrics",
+      "C": "Use a public S3 bucket",
+      "D": "A shadow or canary deployment with monitored traffic"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Shadow or canary deployments reduce release risk by comparing a new version before full traffic shift.\nDeleting the old model and disabling metrics removes safety controls.",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d3-010",
+    "type": "single",
+    "question": "A developer team preparing a release must package preprocessing code and dependencies consistently for training and inference. Which artifact is suitable?",
+    "options": {
+      "A": "A versioned container image or reproducible source package",
+      "B": "A DNS record",
+      "C": "A security group description",
+      "D": "A billing tag only"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Versioned artifacts make ML execution environments repeatable across stages.\nNetwork and billing metadata do not package runtime dependencies.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d3-011",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs a real-time prediction endpoint that automatically adds instances with request volume. Which design fits?",
+    "options": {
+      "A": "A Route 53 TXT record",
+      "B": "A SageMaker real-time endpoint with autoscaling",
+      "C": "A batch transform job only",
+      "D": "An S3 Glacier vault"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "A real-time endpoint serves requests and autoscaling adjusts instances to demand.\nBatch transform is offline, Glacier is archival, and DNS text records do not host models.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d3-012",
+    "type": "single",
+    "question": "A service owner reviewing an incident needs predictions for a large data set without a low-latency request requirement. Which option is appropriate?",
+    "options": {
+      "A": "A CloudFront distribution",
+      "B": "An IAM group",
+      "C": "A SageMaker batch transform job",
+      "D": "A public Lambda URL for every row"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Batch Transform processes a data set offline without maintaining a real-time endpoint.\nThe other choices add unnecessary request infrastructure or do not run predictions.",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d3-013",
+    "type": "single",
+    "question": "A team optimizing an existing implementation must orchestrate preprocessing, training, evaluation, and registration. Which service should define the workflow?",
+    "options": {
+      "A": "AWS WAF",
+      "B": "Amazon EFS",
+      "C": "Amazon Route 53",
+      "D": "SageMaker Pipelines"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "SageMaker Pipelines represents repeatable ML workflow steps and conditions.\nThe other choices do not orchestrate ML lifecycle steps.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d3-014",
+    "type": "single",
+    "question": "A company introducing an automated workflow needs to deploy a new model version gradually while comparing it with the existing version. Which strategy is appropriate?",
+    "options": {
+      "A": "A shadow or canary deployment with monitored traffic",
+      "B": "Delete the existing endpoint first",
+      "C": "Disable metrics",
+      "D": "Use a public S3 bucket"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Shadow or canary deployments reduce release risk by comparing a new version before full traffic shift.\nDeleting the old model and disabling metrics removes safety controls.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d3-015",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment must package preprocessing code and dependencies consistently for training and inference. Which artifact is suitable?",
+    "options": {
+      "A": "A billing tag only",
+      "B": "A versioned container image or reproducible source package",
+      "C": "A DNS record",
+      "D": "A security group description"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Versioned artifacts make ML execution environments repeatable across stages.\nNetwork and billing metadata do not package runtime dependencies.",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d3-016",
+    "type": "single",
+    "question": "A customer-facing application team needs a real-time prediction endpoint that automatically adds instances with request volume. Which design fits?",
+    "options": {
+      "A": "An S3 Glacier vault",
+      "B": "A Route 53 TXT record",
+      "C": "A SageMaker real-time endpoint with autoscaling",
+      "D": "A batch transform job only"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "A real-time endpoint serves requests and autoscaling adjusts instances to demand.\nBatch transform is offline, Glacier is archival, and DNS text records do not host models.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d3-017",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments needs predictions for a large data set without a low-latency request requirement. Which option is appropriate?",
+    "options": {
+      "A": "A public Lambda URL for every row",
+      "B": "A CloudFront distribution",
+      "C": "An IAM group",
+      "D": "A SageMaker batch transform job"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Batch Transform processes a data set offline without maintaining a real-time endpoint.\nThe other choices add unnecessary request infrastructure or do not run predictions.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d3-018",
+    "type": "single",
+    "question": "A team preparing evidence for an audit must orchestrate preprocessing, training, evaluation, and registration. Which service should define the workflow?",
+    "options": {
+      "A": "SageMaker Pipelines",
+      "B": "AWS WAF",
+      "C": "Amazon EFS",
+      "D": "Amazon Route 53"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "SageMaker Pipelines represents repeatable ML workflow steps and conditions.\nThe other choices do not orchestrate ML lifecycle steps.",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d3-019",
+    "type": "single",
+    "question": "A business replacing a manual process needs to deploy a new model version gradually while comparing it with the existing version. Which strategy is appropriate?",
+    "options": {
+      "A": "Use a public S3 bucket",
+      "B": "A shadow or canary deployment with monitored traffic",
+      "C": "Delete the existing endpoint first",
+      "D": "Disable metrics"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Shadow or canary deployments reduce release risk by comparing a new version before full traffic shift.\nDeleting the old model and disabling metrics removes safety controls.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d3-020",
+    "type": "single",
+    "question": "A team validating a design against the exam guide must package preprocessing code and dependencies consistently for training and inference. Which artifact is suitable?",
+    "options": {
+      "A": "A security group description",
+      "B": "A billing tag only",
+      "C": "A versioned container image or reproducible source package",
+      "D": "A DNS record"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Versioned artifacts make ML execution environments repeatable across stages.\nNetwork and billing metadata do not package runtime dependencies.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d3-021",
+    "type": "single",
+    "question": "A production team needs a real-time prediction endpoint that automatically adds instances with request volume. Which design fits?",
+    "options": {
+      "A": "A batch transform job only",
+      "B": "An S3 Glacier vault",
+      "C": "A Route 53 TXT record",
+      "D": "A SageMaker real-time endpoint with autoscaling"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "A real-time endpoint serves requests and autoscaling adjusts instances to demand.\nBatch transform is offline, Glacier is archival, and DNS text records do not host models.",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d3-022",
+    "type": "single",
+    "question": "A multi-account platform team needs predictions for a large data set without a low-latency request requirement. Which option is appropriate?",
+    "options": {
+      "A": "A SageMaker batch transform job",
+      "B": "A public Lambda URL for every row",
+      "C": "A CloudFront distribution",
+      "D": "An IAM group"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Batch Transform processes a data set offline without maintaining a real-time endpoint.\nThe other choices add unnecessary request infrastructure or do not run predictions.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d3-023",
+    "type": "single",
+    "question": "A regulated company must orchestrate preprocessing, training, evaluation, and registration. Which service should define the workflow?",
+    "options": {
+      "A": "Amazon Route 53",
+      "B": "SageMaker Pipelines",
+      "C": "AWS WAF",
+      "D": "Amazon EFS"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "SageMaker Pipelines represents repeatable ML workflow steps and conditions.\nThe other choices do not orchestrate ML lifecycle steps.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d3-024",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs to deploy a new model version gradually while comparing it with the existing version. Which strategy is appropriate?",
+    "options": {
+      "A": "Disable metrics",
+      "B": "Use a public S3 bucket",
+      "C": "A shadow or canary deployment with monitored traffic",
+      "D": "Delete the existing endpoint first"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Shadow or canary deployments reduce release risk by comparing a new version before full traffic shift.\nDeleting the old model and disabling metrics removes safety controls.",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d3-025",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must package preprocessing code and dependencies consistently for training and inference. Which artifact is suitable?",
+    "options": {
+      "A": "A DNS record",
+      "B": "A security group description",
+      "C": "A billing tag only",
+      "D": "A versioned container image or reproducible source package"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Versioned artifacts make ML execution environments repeatable across stages.\nNetwork and billing metadata do not package runtime dependencies.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d3-026",
+    "type": "single",
+    "question": "A data platform team needs a real-time prediction endpoint that automatically adds instances with request volume. Which design fits?",
+    "options": {
+      "A": "A SageMaker real-time endpoint with autoscaling",
+      "B": "A batch transform job only",
+      "C": "An S3 Glacier vault",
+      "D": "A Route 53 TXT record"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "A real-time endpoint serves requests and autoscaling adjusts instances to demand.\nBatch transform is offline, Glacier is archival, and DNS text records do not host models.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d3-027",
+    "type": "single",
+    "question": "A security-conscious engineering team needs predictions for a large data set without a low-latency request requirement. Which option is appropriate?",
+    "options": {
+      "A": "An IAM group",
+      "B": "A SageMaker batch transform job",
+      "C": "A public Lambda URL for every row",
+      "D": "A CloudFront distribution"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Batch Transform processes a data set offline without maintaining a real-time endpoint.\nThe other choices add unnecessary request infrastructure or do not run predictions.",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d3-028",
+    "type": "single",
+    "question": "A company migrating an existing workload must orchestrate preprocessing, training, evaluation, and registration. Which service should define the workflow?",
+    "options": {
+      "A": "Amazon EFS",
+      "B": "Amazon Route 53",
+      "C": "SageMaker Pipelines",
+      "D": "AWS WAF"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "SageMaker Pipelines represents repeatable ML workflow steps and conditions.\nThe other choices do not orchestrate ML lifecycle steps.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d3-029",
+    "type": "single",
+    "question": "A team with strict recovery objectives needs to deploy a new model version gradually while comparing it with the existing version. Which strategy is appropriate?",
+    "options": {
+      "A": "Delete the existing endpoint first",
+      "B": "Disable metrics",
+      "C": "Use a public S3 bucket",
+      "D": "A shadow or canary deployment with monitored traffic"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Shadow or canary deployments reduce release risk by comparing a new version before full traffic shift.\nDeleting the old model and disabling metrics removes safety controls.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d3-030",
+    "type": "single",
+    "question": "A developer team preparing a release must package preprocessing code and dependencies consistently for training and inference. Which artifact is suitable?",
+    "options": {
+      "A": "A versioned container image or reproducible source package",
+      "B": "A DNS record",
+      "C": "A security group description",
+      "D": "A billing tag only"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Versioned artifacts make ML execution environments repeatable across stages.\nNetwork and billing metadata do not package runtime dependencies.",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d3-031",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs a real-time prediction endpoint that automatically adds instances with request volume. Which design fits?",
+    "options": {
+      "A": "A Route 53 TXT record",
+      "B": "A SageMaker real-time endpoint with autoscaling",
+      "C": "A batch transform job only",
+      "D": "An S3 Glacier vault"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "A real-time endpoint serves requests and autoscaling adjusts instances to demand.\nBatch transform is offline, Glacier is archival, and DNS text records do not host models.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d3-032",
+    "type": "single",
+    "question": "A service owner reviewing an incident needs predictions for a large data set without a low-latency request requirement. Which option is appropriate?",
+    "options": {
+      "A": "A CloudFront distribution",
+      "B": "An IAM group",
+      "C": "A SageMaker batch transform job",
+      "D": "A public Lambda URL for every row"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Batch Transform processes a data set offline without maintaining a real-time endpoint.\nThe other choices add unnecessary request infrastructure or do not run predictions.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d3-033",
+    "type": "single",
+    "question": "A team optimizing an existing implementation must orchestrate preprocessing, training, evaluation, and registration. Which service should define the workflow?",
+    "options": {
+      "A": "AWS WAF",
+      "B": "Amazon EFS",
+      "C": "Amazon Route 53",
+      "D": "SageMaker Pipelines"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "SageMaker Pipelines represents repeatable ML workflow steps and conditions.\nThe other choices do not orchestrate ML lifecycle steps.",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d3-034",
+    "type": "single",
+    "question": "A company introducing an automated workflow needs to deploy a new model version gradually while comparing it with the existing version. Which strategy is appropriate?",
+    "options": {
+      "A": "A shadow or canary deployment with monitored traffic",
+      "B": "Delete the existing endpoint first",
+      "C": "Disable metrics",
+      "D": "Use a public S3 bucket"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Shadow or canary deployments reduce release risk by comparing a new version before full traffic shift.\nDeleting the old model and disabling metrics removes safety controls.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d3-035",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment must package preprocessing code and dependencies consistently for training and inference. Which artifact is suitable?",
+    "options": {
+      "A": "A billing tag only",
+      "B": "A versioned container image or reproducible source package",
+      "C": "A DNS record",
+      "D": "A security group description"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Versioned artifacts make ML execution environments repeatable across stages.\nNetwork and billing metadata do not package runtime dependencies.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d3-036",
+    "type": "single",
+    "question": "A customer-facing application team needs a real-time prediction endpoint that automatically adds instances with request volume. Which design fits?",
+    "options": {
+      "A": "An S3 Glacier vault",
+      "B": "A Route 53 TXT record",
+      "C": "A SageMaker real-time endpoint with autoscaling",
+      "D": "A batch transform job only"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "A real-time endpoint serves requests and autoscaling adjusts instances to demand.\nBatch transform is offline, Glacier is archival, and DNS text records do not host models.",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d3-037",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments needs predictions for a large data set without a low-latency request requirement. Which option is appropriate?",
+    "options": {
+      "A": "A public Lambda URL for every row",
+      "B": "A CloudFront distribution",
+      "C": "An IAM group",
+      "D": "A SageMaker batch transform job"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Batch Transform processes a data set offline without maintaining a real-time endpoint.\nThe other choices add unnecessary request infrastructure or do not run predictions.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d3-038",
+    "type": "single",
+    "question": "A team preparing evidence for an audit must orchestrate preprocessing, training, evaluation, and registration. Which service should define the workflow?",
+    "options": {
+      "A": "SageMaker Pipelines",
+      "B": "AWS WAF",
+      "C": "Amazon EFS",
+      "D": "Amazon Route 53"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "SageMaker Pipelines represents repeatable ML workflow steps and conditions.\nThe other choices do not orchestrate ML lifecycle steps.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d3-039",
+    "type": "single",
+    "question": "A business replacing a manual process needs to deploy a new model version gradually while comparing it with the existing version. Which strategy is appropriate?",
+    "options": {
+      "A": "Use a public S3 bucket",
+      "B": "A shadow or canary deployment with monitored traffic",
+      "C": "Delete the existing endpoint first",
+      "D": "Disable metrics"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Shadow or canary deployments reduce release risk by comparing a new version before full traffic shift.\nDeleting the old model and disabling metrics removes safety controls.",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d3-040",
+    "type": "single",
+    "question": "A team validating a design against the exam guide must package preprocessing code and dependencies consistently for training and inference. Which artifact is suitable?",
+    "options": {
+      "A": "A security group description",
+      "B": "A billing tag only",
+      "C": "A versioned container image or reproducible source package",
+      "D": "A DNS record"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Versioned artifacts make ML execution environments repeatable across stages.\nNetwork and billing metadata do not package runtime dependencies.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d3-041",
+    "type": "single",
+    "question": "A production team needs a real-time prediction endpoint that automatically adds instances with request volume. Which design fits?",
+    "options": {
+      "A": "A batch transform job only",
+      "B": "An S3 Glacier vault",
+      "C": "A Route 53 TXT record",
+      "D": "A SageMaker real-time endpoint with autoscaling"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "A real-time endpoint serves requests and autoscaling adjusts instances to demand.\nBatch transform is offline, Glacier is archival, and DNS text records do not host models.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d3-042",
+    "type": "single",
+    "question": "A multi-account platform team needs predictions for a large data set without a low-latency request requirement. Which option is appropriate?",
+    "options": {
+      "A": "A SageMaker batch transform job",
+      "B": "A public Lambda URL for every row",
+      "C": "A CloudFront distribution",
+      "D": "An IAM group"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Batch Transform processes a data set offline without maintaining a real-time endpoint.\nThe other choices add unnecessary request infrastructure or do not run predictions.",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d3-043",
+    "type": "single",
+    "question": "A regulated company must orchestrate preprocessing, training, evaluation, and registration. Which service should define the workflow?",
+    "options": {
+      "A": "Amazon Route 53",
+      "B": "SageMaker Pipelines",
+      "C": "AWS WAF",
+      "D": "Amazon EFS"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "SageMaker Pipelines represents repeatable ML workflow steps and conditions.\nThe other choices do not orchestrate ML lifecycle steps.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  }
+]

@@ -1,0 +1,434 @@
+[
+  {
+    "id": "scs-c03-d6-001",
+    "type": "single",
+    "question": "A production team must align security controls with the AWS shared responsibility model. Which practice is correct?",
+    "options": {
+      "A": "Assume the customer patches managed service hardware",
+      "B": "Disable all controls",
+      "C": "Identify AWS-managed responsibilities and customer cloud-configuration responsibilities separately",
+      "D": "Assume AWS secures every customer setting"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "The shared responsibility model separates cloud infrastructure duties from customer configuration and data duties.\nThe other choices misunderstand the model.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d6-002",
+    "type": "single",
+    "question": "A multi-account platform team needs continuous evidence that resources comply with a baseline. Which service should be used?",
+    "options": {
+      "A": "Amazon CloudFront",
+      "B": "Amazon EFS",
+      "C": "Amazon SES",
+      "D": "AWS Config conformance packs"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Conformance packs bundle Config rules and remediation guidance for a baseline.\nThe other choices do not evaluate resource compliance.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d6-003",
+    "type": "single",
+    "question": "A regulated company must centralize security findings and prioritize high-risk issues. Which service should be evaluated?",
+    "options": {
+      "A": "AWS Security Hub",
+      "B": "AWS Budgets",
+      "C": "Amazon Route 53",
+      "D": "Amazon SQS"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Security Hub centralizes findings and provides standards and prioritization.\nThe other choices monitor cost, DNS, or messages.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d6-004",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs a formal report of AWS compliance certifications and attestations. Which service provides AWS reports?",
+    "options": {
+      "A": "Amazon RDS",
+      "B": "AWS Artifact",
+      "C": "Amazon GuardDuty",
+      "D": "AWS WAF"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Artifact provides on-demand access to AWS compliance documents and agreements.\nThe other choices detect threats, filter web requests, or host databases.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d6-005",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must protect the organization root user from routine misuse. Which practice is appropriate?",
+    "options": {
+      "A": "Share root keys with developers",
+      "B": "Disable all audit logging",
+      "C": "Use the root user only when required and enable MFA",
+      "D": "Use root for daily work"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Root-use restrictions and MFA reduce the highest-impact credential risk.\nRoutine root use and shared keys increase risk.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d6-006",
+    "type": "single",
+    "question": "A data platform team must align security controls with the AWS shared responsibility model. Which practice is correct?",
+    "options": {
+      "A": "Assume AWS secures every customer setting",
+      "B": "Assume the customer patches managed service hardware",
+      "C": "Disable all controls",
+      "D": "Identify AWS-managed responsibilities and customer cloud-configuration responsibilities separately"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "The shared responsibility model separates cloud infrastructure duties from customer configuration and data duties.\nThe other choices misunderstand the model.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d6-007",
+    "type": "single",
+    "question": "A security-conscious engineering team needs continuous evidence that resources comply with a baseline. Which service should be used?",
+    "options": {
+      "A": "AWS Config conformance packs",
+      "B": "Amazon CloudFront",
+      "C": "Amazon EFS",
+      "D": "Amazon SES"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Conformance packs bundle Config rules and remediation guidance for a baseline.\nThe other choices do not evaluate resource compliance.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d6-008",
+    "type": "single",
+    "question": "A company migrating an existing workload must centralize security findings and prioritize high-risk issues. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon SQS",
+      "B": "AWS Security Hub",
+      "C": "AWS Budgets",
+      "D": "Amazon Route 53"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Security Hub centralizes findings and provides standards and prioritization.\nThe other choices monitor cost, DNS, or messages.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d6-009",
+    "type": "single",
+    "question": "A team with strict recovery objectives needs a formal report of AWS compliance certifications and attestations. Which service provides AWS reports?",
+    "options": {
+      "A": "AWS WAF",
+      "B": "Amazon RDS",
+      "C": "AWS Artifact",
+      "D": "Amazon GuardDuty"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Artifact provides on-demand access to AWS compliance documents and agreements.\nThe other choices detect threats, filter web requests, or host databases.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d6-010",
+    "type": "single",
+    "question": "A developer team preparing a release must protect the organization root user from routine misuse. Which practice is appropriate?",
+    "options": {
+      "A": "Use root for daily work",
+      "B": "Share root keys with developers",
+      "C": "Disable all audit logging",
+      "D": "Use the root user only when required and enable MFA"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Root-use restrictions and MFA reduce the highest-impact credential risk.\nRoutine root use and shared keys increase risk.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d6-011",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions must align security controls with the AWS shared responsibility model. Which practice is correct?",
+    "options": {
+      "A": "Identify AWS-managed responsibilities and customer cloud-configuration responsibilities separately",
+      "B": "Assume AWS secures every customer setting",
+      "C": "Assume the customer patches managed service hardware",
+      "D": "Disable all controls"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "The shared responsibility model separates cloud infrastructure duties from customer configuration and data duties.\nThe other choices misunderstand the model.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d6-012",
+    "type": "single",
+    "question": "A service owner reviewing an incident needs continuous evidence that resources comply with a baseline. Which service should be used?",
+    "options": {
+      "A": "Amazon SES",
+      "B": "AWS Config conformance packs",
+      "C": "Amazon CloudFront",
+      "D": "Amazon EFS"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Conformance packs bundle Config rules and remediation guidance for a baseline.\nThe other choices do not evaluate resource compliance.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d6-013",
+    "type": "single",
+    "question": "A team optimizing an existing implementation must centralize security findings and prioritize high-risk issues. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon Route 53",
+      "B": "Amazon SQS",
+      "C": "AWS Security Hub",
+      "D": "AWS Budgets"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Security Hub centralizes findings and provides standards and prioritization.\nThe other choices monitor cost, DNS, or messages.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d6-014",
+    "type": "single",
+    "question": "A company introducing an automated workflow needs a formal report of AWS compliance certifications and attestations. Which service provides AWS reports?",
+    "options": {
+      "A": "Amazon GuardDuty",
+      "B": "AWS WAF",
+      "C": "Amazon RDS",
+      "D": "AWS Artifact"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Artifact provides on-demand access to AWS compliance documents and agreements.\nThe other choices detect threats, filter web requests, or host databases.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d6-015",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment must protect the organization root user from routine misuse. Which practice is appropriate?",
+    "options": {
+      "A": "Use the root user only when required and enable MFA",
+      "B": "Use root for daily work",
+      "C": "Share root keys with developers",
+      "D": "Disable all audit logging"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Root-use restrictions and MFA reduce the highest-impact credential risk.\nRoutine root use and shared keys increase risk.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d6-016",
+    "type": "single",
+    "question": "A customer-facing application team must align security controls with the AWS shared responsibility model. Which practice is correct?",
+    "options": {
+      "A": "Disable all controls",
+      "B": "Identify AWS-managed responsibilities and customer cloud-configuration responsibilities separately",
+      "C": "Assume AWS secures every customer setting",
+      "D": "Assume the customer patches managed service hardware"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "The shared responsibility model separates cloud infrastructure duties from customer configuration and data duties.\nThe other choices misunderstand the model.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d6-017",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments needs continuous evidence that resources comply with a baseline. Which service should be used?",
+    "options": {
+      "A": "Amazon EFS",
+      "B": "Amazon SES",
+      "C": "AWS Config conformance packs",
+      "D": "Amazon CloudFront"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Conformance packs bundle Config rules and remediation guidance for a baseline.\nThe other choices do not evaluate resource compliance.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d6-018",
+    "type": "single",
+    "question": "A team preparing evidence for an audit must centralize security findings and prioritize high-risk issues. Which service should be evaluated?",
+    "options": {
+      "A": "AWS Budgets",
+      "B": "Amazon Route 53",
+      "C": "Amazon SQS",
+      "D": "AWS Security Hub"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Security Hub centralizes findings and provides standards and prioritization.\nThe other choices monitor cost, DNS, or messages.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d6-019",
+    "type": "single",
+    "question": "A business replacing a manual process needs a formal report of AWS compliance certifications and attestations. Which service provides AWS reports?",
+    "options": {
+      "A": "AWS Artifact",
+      "B": "Amazon GuardDuty",
+      "C": "AWS WAF",
+      "D": "Amazon RDS"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Artifact provides on-demand access to AWS compliance documents and agreements.\nThe other choices detect threats, filter web requests, or host databases.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d6-020",
+    "type": "single",
+    "question": "A team validating a design against the exam guide must protect the organization root user from routine misuse. Which practice is appropriate?",
+    "options": {
+      "A": "Disable all audit logging",
+      "B": "Use the root user only when required and enable MFA",
+      "C": "Use root for daily work",
+      "D": "Share root keys with developers"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Root-use restrictions and MFA reduce the highest-impact credential risk.\nRoutine root use and shared keys increase risk.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d6-021",
+    "type": "single",
+    "question": "A production team must align security controls with the AWS shared responsibility model. Which practice is correct?",
+    "options": {
+      "A": "Assume the customer patches managed service hardware",
+      "B": "Disable all controls",
+      "C": "Identify AWS-managed responsibilities and customer cloud-configuration responsibilities separately",
+      "D": "Assume AWS secures every customer setting"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "The shared responsibility model separates cloud infrastructure duties from customer configuration and data duties.\nThe other choices misunderstand the model.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d6-022",
+    "type": "single",
+    "question": "A multi-account platform team needs continuous evidence that resources comply with a baseline. Which service should be used?",
+    "options": {
+      "A": "Amazon CloudFront",
+      "B": "Amazon EFS",
+      "C": "Amazon SES",
+      "D": "AWS Config conformance packs"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Conformance packs bundle Config rules and remediation guidance for a baseline.\nThe other choices do not evaluate resource compliance.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d6-023",
+    "type": "single",
+    "question": "A regulated company must centralize security findings and prioritize high-risk issues. Which service should be evaluated?",
+    "options": {
+      "A": "AWS Security Hub",
+      "B": "AWS Budgets",
+      "C": "Amazon Route 53",
+      "D": "Amazon SQS"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Security Hub centralizes findings and provides standards and prioritization.\nThe other choices monitor cost, DNS, or messages.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d6-024",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs a formal report of AWS compliance certifications and attestations. Which service provides AWS reports?",
+    "options": {
+      "A": "Amazon RDS",
+      "B": "AWS Artifact",
+      "C": "Amazon GuardDuty",
+      "D": "AWS WAF"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Artifact provides on-demand access to AWS compliance documents and agreements.\nThe other choices detect threats, filter web requests, or host databases.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d6-025",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must protect the organization root user from routine misuse. Which practice is appropriate?",
+    "options": {
+      "A": "Share root keys with developers",
+      "B": "Disable all audit logging",
+      "C": "Use the root user only when required and enable MFA",
+      "D": "Use root for daily work"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Root-use restrictions and MFA reduce the highest-impact credential risk.\nRoutine root use and shared keys increase risk.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d6-026",
+    "type": "single",
+    "question": "A data platform team must align security controls with the AWS shared responsibility model. Which practice is correct?",
+    "options": {
+      "A": "Assume AWS secures every customer setting",
+      "B": "Assume the customer patches managed service hardware",
+      "C": "Disable all controls",
+      "D": "Identify AWS-managed responsibilities and customer cloud-configuration responsibilities separately"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "The shared responsibility model separates cloud infrastructure duties from customer configuration and data duties.\nThe other choices misunderstand the model.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d6-027",
+    "type": "single",
+    "question": "A security-conscious engineering team needs continuous evidence that resources comply with a baseline. Which service should be used?",
+    "options": {
+      "A": "AWS Config conformance packs",
+      "B": "Amazon CloudFront",
+      "C": "Amazon EFS",
+      "D": "Amazon SES"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Conformance packs bundle Config rules and remediation guidance for a baseline.\nThe other choices do not evaluate resource compliance.",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-09"
+  }
+]

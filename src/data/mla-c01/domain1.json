@@ -1,0 +1,866 @@
+[
+  {
+    "id": "mla-c01-d1-001",
+    "type": "single",
+    "question": "A production team needs to remove duplicate records and fill missing values before training. Which pipeline stage should perform this?",
+    "options": {
+      "A": "A KMS alias",
+      "B": "Data cleaning and validation",
+      "C": "Model endpoint autoscaling",
+      "D": "A Route 53 health check"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Cleaning and validation improve training data quality before feature creation and model fitting.\nThe other choices operate networking, deployment, or encryption naming.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-002",
+    "type": "single",
+    "question": "A multi-account platform team needs to transform raw S3 data into a tabular feature set with managed processing. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon Cognito",
+      "B": "AWS Shield",
+      "C": "Amazon SageMaker Processing",
+      "D": "Amazon CloudFront"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "SageMaker Processing runs managed data processing jobs for ML preparation.\nThe other choices provide content delivery, identity, or DDoS protection.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-003",
+    "type": "single",
+    "question": "A regulated company must split labeled data into training, validation, and test sets without leakage. Which practice is appropriate?",
+    "options": {
+      "A": "Use the same record in every set",
+      "B": "Shuffle labels independently",
+      "C": "Test only on training data",
+      "D": "Use a reproducible split strategy that prevents related records crossing sets"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "A leakage-safe split gives a more realistic estimate of model generalization.\nThe other choices produce inflated or invalid evaluation results.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-004",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs a reusable numerical feature definition shared by training and inference. Which capability should be used?",
+    "options": {
+      "A": "Amazon SageMaker Feature Store",
+      "B": "An S3 website endpoint",
+      "C": "An IAM password policy",
+      "D": "A CloudFront invalidation"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Feature Store centralizes and serves consistent features for training and inference.\nThe other choices do not manage ML feature definitions.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-005",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must protect training data while it is stored in S3. Which control is appropriate?",
+    "options": {
+      "A": "An unencrypted EBS volume",
+      "B": "S3 server-side encryption with a KMS key and least-privilege access",
+      "C": "Public read access",
+      "D": "A DNS alias"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Encryption and least-privilege policies protect training artifacts at rest.\nPublic access and plaintext storage expose sensitive data.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-006",
+    "type": "single",
+    "question": "A data platform team needs to remove duplicate records and fill missing values before training. Which pipeline stage should perform this?",
+    "options": {
+      "A": "A Route 53 health check",
+      "B": "A KMS alias",
+      "C": "Data cleaning and validation",
+      "D": "Model endpoint autoscaling"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Cleaning and validation improve training data quality before feature creation and model fitting.\nThe other choices operate networking, deployment, or encryption naming.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-007",
+    "type": "single",
+    "question": "A security-conscious engineering team needs to transform raw S3 data into a tabular feature set with managed processing. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon CloudFront",
+      "B": "Amazon Cognito",
+      "C": "AWS Shield",
+      "D": "Amazon SageMaker Processing"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "SageMaker Processing runs managed data processing jobs for ML preparation.\nThe other choices provide content delivery, identity, or DDoS protection.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-008",
+    "type": "single",
+    "question": "A company migrating an existing workload must split labeled data into training, validation, and test sets without leakage. Which practice is appropriate?",
+    "options": {
+      "A": "Use a reproducible split strategy that prevents related records crossing sets",
+      "B": "Use the same record in every set",
+      "C": "Shuffle labels independently",
+      "D": "Test only on training data"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "A leakage-safe split gives a more realistic estimate of model generalization.\nThe other choices produce inflated or invalid evaluation results.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-009",
+    "type": "single",
+    "question": "A team with strict recovery objectives needs a reusable numerical feature definition shared by training and inference. Which capability should be used?",
+    "options": {
+      "A": "A CloudFront invalidation",
+      "B": "Amazon SageMaker Feature Store",
+      "C": "An S3 website endpoint",
+      "D": "An IAM password policy"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Feature Store centralizes and serves consistent features for training and inference.\nThe other choices do not manage ML feature definitions.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-010",
+    "type": "single",
+    "question": "A developer team preparing a release must protect training data while it is stored in S3. Which control is appropriate?",
+    "options": {
+      "A": "A DNS alias",
+      "B": "An unencrypted EBS volume",
+      "C": "S3 server-side encryption with a KMS key and least-privilege access",
+      "D": "Public read access"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Encryption and least-privilege policies protect training artifacts at rest.\nPublic access and plaintext storage expose sensitive data.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-011",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs to remove duplicate records and fill missing values before training. Which pipeline stage should perform this?",
+    "options": {
+      "A": "Model endpoint autoscaling",
+      "B": "A Route 53 health check",
+      "C": "A KMS alias",
+      "D": "Data cleaning and validation"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Cleaning and validation improve training data quality before feature creation and model fitting.\nThe other choices operate networking, deployment, or encryption naming.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-012",
+    "type": "single",
+    "question": "A service owner reviewing an incident needs to transform raw S3 data into a tabular feature set with managed processing. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon SageMaker Processing",
+      "B": "Amazon CloudFront",
+      "C": "Amazon Cognito",
+      "D": "AWS Shield"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "SageMaker Processing runs managed data processing jobs for ML preparation.\nThe other choices provide content delivery, identity, or DDoS protection.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-013",
+    "type": "single",
+    "question": "A team optimizing an existing implementation must split labeled data into training, validation, and test sets without leakage. Which practice is appropriate?",
+    "options": {
+      "A": "Test only on training data",
+      "B": "Use a reproducible split strategy that prevents related records crossing sets",
+      "C": "Use the same record in every set",
+      "D": "Shuffle labels independently"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "A leakage-safe split gives a more realistic estimate of model generalization.\nThe other choices produce inflated or invalid evaluation results.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-014",
+    "type": "single",
+    "question": "A company introducing an automated workflow needs a reusable numerical feature definition shared by training and inference. Which capability should be used?",
+    "options": {
+      "A": "An IAM password policy",
+      "B": "A CloudFront invalidation",
+      "C": "Amazon SageMaker Feature Store",
+      "D": "An S3 website endpoint"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Feature Store centralizes and serves consistent features for training and inference.\nThe other choices do not manage ML feature definitions.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-015",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment must protect training data while it is stored in S3. Which control is appropriate?",
+    "options": {
+      "A": "Public read access",
+      "B": "A DNS alias",
+      "C": "An unencrypted EBS volume",
+      "D": "S3 server-side encryption with a KMS key and least-privilege access"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Encryption and least-privilege policies protect training artifacts at rest.\nPublic access and plaintext storage expose sensitive data.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-016",
+    "type": "single",
+    "question": "A customer-facing application team needs to remove duplicate records and fill missing values before training. Which pipeline stage should perform this?",
+    "options": {
+      "A": "Data cleaning and validation",
+      "B": "Model endpoint autoscaling",
+      "C": "A Route 53 health check",
+      "D": "A KMS alias"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Cleaning and validation improve training data quality before feature creation and model fitting.\nThe other choices operate networking, deployment, or encryption naming.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-017",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments needs to transform raw S3 data into a tabular feature set with managed processing. Which service should be evaluated?",
+    "options": {
+      "A": "AWS Shield",
+      "B": "Amazon SageMaker Processing",
+      "C": "Amazon CloudFront",
+      "D": "Amazon Cognito"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "SageMaker Processing runs managed data processing jobs for ML preparation.\nThe other choices provide content delivery, identity, or DDoS protection.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-018",
+    "type": "single",
+    "question": "A team preparing evidence for an audit must split labeled data into training, validation, and test sets without leakage. Which practice is appropriate?",
+    "options": {
+      "A": "Shuffle labels independently",
+      "B": "Test only on training data",
+      "C": "Use a reproducible split strategy that prevents related records crossing sets",
+      "D": "Use the same record in every set"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "A leakage-safe split gives a more realistic estimate of model generalization.\nThe other choices produce inflated or invalid evaluation results.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-019",
+    "type": "single",
+    "question": "A business replacing a manual process needs a reusable numerical feature definition shared by training and inference. Which capability should be used?",
+    "options": {
+      "A": "An S3 website endpoint",
+      "B": "An IAM password policy",
+      "C": "A CloudFront invalidation",
+      "D": "Amazon SageMaker Feature Store"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Feature Store centralizes and serves consistent features for training and inference.\nThe other choices do not manage ML feature definitions.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-020",
+    "type": "single",
+    "question": "A team validating a design against the exam guide must protect training data while it is stored in S3. Which control is appropriate?",
+    "options": {
+      "A": "S3 server-side encryption with a KMS key and least-privilege access",
+      "B": "Public read access",
+      "C": "A DNS alias",
+      "D": "An unencrypted EBS volume"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Encryption and least-privilege policies protect training artifacts at rest.\nPublic access and plaintext storage expose sensitive data.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-021",
+    "type": "single",
+    "question": "A production team needs to remove duplicate records and fill missing values before training. Which pipeline stage should perform this?",
+    "options": {
+      "A": "A KMS alias",
+      "B": "Data cleaning and validation",
+      "C": "Model endpoint autoscaling",
+      "D": "A Route 53 health check"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Cleaning and validation improve training data quality before feature creation and model fitting.\nThe other choices operate networking, deployment, or encryption naming.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-022",
+    "type": "single",
+    "question": "A multi-account platform team needs to transform raw S3 data into a tabular feature set with managed processing. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon Cognito",
+      "B": "AWS Shield",
+      "C": "Amazon SageMaker Processing",
+      "D": "Amazon CloudFront"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "SageMaker Processing runs managed data processing jobs for ML preparation.\nThe other choices provide content delivery, identity, or DDoS protection.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-023",
+    "type": "single",
+    "question": "A regulated company must split labeled data into training, validation, and test sets without leakage. Which practice is appropriate?",
+    "options": {
+      "A": "Use the same record in every set",
+      "B": "Shuffle labels independently",
+      "C": "Test only on training data",
+      "D": "Use a reproducible split strategy that prevents related records crossing sets"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "A leakage-safe split gives a more realistic estimate of model generalization.\nThe other choices produce inflated or invalid evaluation results.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-024",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs a reusable numerical feature definition shared by training and inference. Which capability should be used?",
+    "options": {
+      "A": "Amazon SageMaker Feature Store",
+      "B": "An S3 website endpoint",
+      "C": "An IAM password policy",
+      "D": "A CloudFront invalidation"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Feature Store centralizes and serves consistent features for training and inference.\nThe other choices do not manage ML feature definitions.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-025",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must protect training data while it is stored in S3. Which control is appropriate?",
+    "options": {
+      "A": "An unencrypted EBS volume",
+      "B": "S3 server-side encryption with a KMS key and least-privilege access",
+      "C": "Public read access",
+      "D": "A DNS alias"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Encryption and least-privilege policies protect training artifacts at rest.\nPublic access and plaintext storage expose sensitive data.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-026",
+    "type": "single",
+    "question": "A data platform team needs to remove duplicate records and fill missing values before training. Which pipeline stage should perform this?",
+    "options": {
+      "A": "A Route 53 health check",
+      "B": "A KMS alias",
+      "C": "Data cleaning and validation",
+      "D": "Model endpoint autoscaling"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Cleaning and validation improve training data quality before feature creation and model fitting.\nThe other choices operate networking, deployment, or encryption naming.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-027",
+    "type": "single",
+    "question": "A security-conscious engineering team needs to transform raw S3 data into a tabular feature set with managed processing. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon CloudFront",
+      "B": "Amazon Cognito",
+      "C": "AWS Shield",
+      "D": "Amazon SageMaker Processing"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "SageMaker Processing runs managed data processing jobs for ML preparation.\nThe other choices provide content delivery, identity, or DDoS protection.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-028",
+    "type": "single",
+    "question": "A company migrating an existing workload must split labeled data into training, validation, and test sets without leakage. Which practice is appropriate?",
+    "options": {
+      "A": "Use a reproducible split strategy that prevents related records crossing sets",
+      "B": "Use the same record in every set",
+      "C": "Shuffle labels independently",
+      "D": "Test only on training data"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "A leakage-safe split gives a more realistic estimate of model generalization.\nThe other choices produce inflated or invalid evaluation results.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-029",
+    "type": "single",
+    "question": "A team with strict recovery objectives needs a reusable numerical feature definition shared by training and inference. Which capability should be used?",
+    "options": {
+      "A": "A CloudFront invalidation",
+      "B": "Amazon SageMaker Feature Store",
+      "C": "An S3 website endpoint",
+      "D": "An IAM password policy"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Feature Store centralizes and serves consistent features for training and inference.\nThe other choices do not manage ML feature definitions.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-030",
+    "type": "single",
+    "question": "A developer team preparing a release must protect training data while it is stored in S3. Which control is appropriate?",
+    "options": {
+      "A": "A DNS alias",
+      "B": "An unencrypted EBS volume",
+      "C": "S3 server-side encryption with a KMS key and least-privilege access",
+      "D": "Public read access"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Encryption and least-privilege policies protect training artifacts at rest.\nPublic access and plaintext storage expose sensitive data.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-031",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs to remove duplicate records and fill missing values before training. Which pipeline stage should perform this?",
+    "options": {
+      "A": "Model endpoint autoscaling",
+      "B": "A Route 53 health check",
+      "C": "A KMS alias",
+      "D": "Data cleaning and validation"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Cleaning and validation improve training data quality before feature creation and model fitting.\nThe other choices operate networking, deployment, or encryption naming.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-032",
+    "type": "single",
+    "question": "A service owner reviewing an incident needs to transform raw S3 data into a tabular feature set with managed processing. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon SageMaker Processing",
+      "B": "Amazon CloudFront",
+      "C": "Amazon Cognito",
+      "D": "AWS Shield"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "SageMaker Processing runs managed data processing jobs for ML preparation.\nThe other choices provide content delivery, identity, or DDoS protection.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-033",
+    "type": "single",
+    "question": "A team optimizing an existing implementation must split labeled data into training, validation, and test sets without leakage. Which practice is appropriate?",
+    "options": {
+      "A": "Test only on training data",
+      "B": "Use a reproducible split strategy that prevents related records crossing sets",
+      "C": "Use the same record in every set",
+      "D": "Shuffle labels independently"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "A leakage-safe split gives a more realistic estimate of model generalization.\nThe other choices produce inflated or invalid evaluation results.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-034",
+    "type": "single",
+    "question": "A company introducing an automated workflow needs a reusable numerical feature definition shared by training and inference. Which capability should be used?",
+    "options": {
+      "A": "An IAM password policy",
+      "B": "A CloudFront invalidation",
+      "C": "Amazon SageMaker Feature Store",
+      "D": "An S3 website endpoint"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Feature Store centralizes and serves consistent features for training and inference.\nThe other choices do not manage ML feature definitions.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-035",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment must protect training data while it is stored in S3. Which control is appropriate?",
+    "options": {
+      "A": "Public read access",
+      "B": "A DNS alias",
+      "C": "An unencrypted EBS volume",
+      "D": "S3 server-side encryption with a KMS key and least-privilege access"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Encryption and least-privilege policies protect training artifacts at rest.\nPublic access and plaintext storage expose sensitive data.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-036",
+    "type": "single",
+    "question": "A customer-facing application team needs to remove duplicate records and fill missing values before training. Which pipeline stage should perform this?",
+    "options": {
+      "A": "Data cleaning and validation",
+      "B": "Model endpoint autoscaling",
+      "C": "A Route 53 health check",
+      "D": "A KMS alias"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Cleaning and validation improve training data quality before feature creation and model fitting.\nThe other choices operate networking, deployment, or encryption naming.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-037",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments needs to transform raw S3 data into a tabular feature set with managed processing. Which service should be evaluated?",
+    "options": {
+      "A": "AWS Shield",
+      "B": "Amazon SageMaker Processing",
+      "C": "Amazon CloudFront",
+      "D": "Amazon Cognito"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "SageMaker Processing runs managed data processing jobs for ML preparation.\nThe other choices provide content delivery, identity, or DDoS protection.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-038",
+    "type": "single",
+    "question": "A team preparing evidence for an audit must split labeled data into training, validation, and test sets without leakage. Which practice is appropriate?",
+    "options": {
+      "A": "Shuffle labels independently",
+      "B": "Test only on training data",
+      "C": "Use a reproducible split strategy that prevents related records crossing sets",
+      "D": "Use the same record in every set"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "A leakage-safe split gives a more realistic estimate of model generalization.\nThe other choices produce inflated or invalid evaluation results.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-039",
+    "type": "single",
+    "question": "A business replacing a manual process needs a reusable numerical feature definition shared by training and inference. Which capability should be used?",
+    "options": {
+      "A": "An S3 website endpoint",
+      "B": "An IAM password policy",
+      "C": "A CloudFront invalidation",
+      "D": "Amazon SageMaker Feature Store"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Feature Store centralizes and serves consistent features for training and inference.\nThe other choices do not manage ML feature definitions.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-040",
+    "type": "single",
+    "question": "A team validating a design against the exam guide must protect training data while it is stored in S3. Which control is appropriate?",
+    "options": {
+      "A": "S3 server-side encryption with a KMS key and least-privilege access",
+      "B": "Public read access",
+      "C": "A DNS alias",
+      "D": "An unencrypted EBS volume"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Encryption and least-privilege policies protect training artifacts at rest.\nPublic access and plaintext storage expose sensitive data.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-041",
+    "type": "single",
+    "question": "A production team needs to remove duplicate records and fill missing values before training. Which pipeline stage should perform this?",
+    "options": {
+      "A": "A KMS alias",
+      "B": "Data cleaning and validation",
+      "C": "Model endpoint autoscaling",
+      "D": "A Route 53 health check"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Cleaning and validation improve training data quality before feature creation and model fitting.\nThe other choices operate networking, deployment, or encryption naming.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-042",
+    "type": "single",
+    "question": "A multi-account platform team needs to transform raw S3 data into a tabular feature set with managed processing. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon Cognito",
+      "B": "AWS Shield",
+      "C": "Amazon SageMaker Processing",
+      "D": "Amazon CloudFront"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "SageMaker Processing runs managed data processing jobs for ML preparation.\nThe other choices provide content delivery, identity, or DDoS protection.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-043",
+    "type": "single",
+    "question": "A regulated company must split labeled data into training, validation, and test sets without leakage. Which practice is appropriate?",
+    "options": {
+      "A": "Use the same record in every set",
+      "B": "Shuffle labels independently",
+      "C": "Test only on training data",
+      "D": "Use a reproducible split strategy that prevents related records crossing sets"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "A leakage-safe split gives a more realistic estimate of model generalization.\nThe other choices produce inflated or invalid evaluation results.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-044",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs a reusable numerical feature definition shared by training and inference. Which capability should be used?",
+    "options": {
+      "A": "Amazon SageMaker Feature Store",
+      "B": "An S3 website endpoint",
+      "C": "An IAM password policy",
+      "D": "A CloudFront invalidation"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Feature Store centralizes and serves consistent features for training and inference.\nThe other choices do not manage ML feature definitions.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-045",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must protect training data while it is stored in S3. Which control is appropriate?",
+    "options": {
+      "A": "An unencrypted EBS volume",
+      "B": "S3 server-side encryption with a KMS key and least-privilege access",
+      "C": "Public read access",
+      "D": "A DNS alias"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Encryption and least-privilege policies protect training artifacts at rest.\nPublic access and plaintext storage expose sensitive data.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-046",
+    "type": "single",
+    "question": "A data platform team needs to remove duplicate records and fill missing values before training. Which pipeline stage should perform this?",
+    "options": {
+      "A": "A Route 53 health check",
+      "B": "A KMS alias",
+      "C": "Data cleaning and validation",
+      "D": "Model endpoint autoscaling"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Cleaning and validation improve training data quality before feature creation and model fitting.\nThe other choices operate networking, deployment, or encryption naming.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-047",
+    "type": "single",
+    "question": "A security-conscious engineering team needs to transform raw S3 data into a tabular feature set with managed processing. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon CloudFront",
+      "B": "Amazon Cognito",
+      "C": "AWS Shield",
+      "D": "Amazon SageMaker Processing"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "SageMaker Processing runs managed data processing jobs for ML preparation.\nThe other choices provide content delivery, identity, or DDoS protection.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-048",
+    "type": "single",
+    "question": "A company migrating an existing workload must split labeled data into training, validation, and test sets without leakage. Which practice is appropriate?",
+    "options": {
+      "A": "Use a reproducible split strategy that prevents related records crossing sets",
+      "B": "Use the same record in every set",
+      "C": "Shuffle labels independently",
+      "D": "Test only on training data"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "A leakage-safe split gives a more realistic estimate of model generalization.\nThe other choices produce inflated or invalid evaluation results.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-049",
+    "type": "single",
+    "question": "A team with strict recovery objectives needs a reusable numerical feature definition shared by training and inference. Which capability should be used?",
+    "options": {
+      "A": "A CloudFront invalidation",
+      "B": "Amazon SageMaker Feature Store",
+      "C": "An S3 website endpoint",
+      "D": "An IAM password policy"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Feature Store centralizes and serves consistent features for training and inference.\nThe other choices do not manage ML feature definitions.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-050",
+    "type": "single",
+    "question": "A developer team preparing a release must protect training data while it is stored in S3. Which control is appropriate?",
+    "options": {
+      "A": "A DNS alias",
+      "B": "An unencrypted EBS volume",
+      "C": "S3 server-side encryption with a KMS key and least-privilege access",
+      "D": "Public read access"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Encryption and least-privilege policies protect training artifacts at rest.\nPublic access and plaintext storage expose sensitive data.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-051",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs to remove duplicate records and fill missing values before training. Which pipeline stage should perform this?",
+    "options": {
+      "A": "Model endpoint autoscaling",
+      "B": "A Route 53 health check",
+      "C": "A KMS alias",
+      "D": "Data cleaning and validation"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Cleaning and validation improve training data quality before feature creation and model fitting.\nThe other choices operate networking, deployment, or encryption naming.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-052",
+    "type": "single",
+    "question": "A service owner reviewing an incident needs to transform raw S3 data into a tabular feature set with managed processing. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon SageMaker Processing",
+      "B": "Amazon CloudFront",
+      "C": "Amazon Cognito",
+      "D": "AWS Shield"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "SageMaker Processing runs managed data processing jobs for ML preparation.\nThe other choices provide content delivery, identity, or DDoS protection.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-053",
+    "type": "single",
+    "question": "A team optimizing an existing implementation must split labeled data into training, validation, and test sets without leakage. Which practice is appropriate?",
+    "options": {
+      "A": "Test only on training data",
+      "B": "Use a reproducible split strategy that prevents related records crossing sets",
+      "C": "Use the same record in every set",
+      "D": "Shuffle labels independently"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "A leakage-safe split gives a more realistic estimate of model generalization.\nThe other choices produce inflated or invalid evaluation results.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d1-054",
+    "type": "single",
+    "question": "A company introducing an automated workflow needs a reusable numerical feature definition shared by training and inference. Which capability should be used?",
+    "options": {
+      "A": "An IAM password policy",
+      "B": "A CloudFront invalidation",
+      "C": "Amazon SageMaker Feature Store",
+      "D": "An S3 website endpoint"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Feature Store centralizes and serves consistent features for training and inference.\nThe other choices do not manage ML feature definitions.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  }
+]

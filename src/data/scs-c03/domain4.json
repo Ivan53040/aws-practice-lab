@@ -1,0 +1,626 @@
+[
+  {
+    "id": "scs-c03-d4-001",
+    "type": "single",
+    "question": "A production team must grant an application only the S3 actions it needs. Which principle should guide the policy?",
+    "options": {
+      "A": "Least privilege with resource and condition scoping",
+      "B": "AdministratorAccess for convenience",
+      "C": "Public access",
+      "D": "A shared root key"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Least privilege limits actions, resources, and conditions to the application requirement.\nBroad or shared credentials increase blast radius.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d4-002",
+    "type": "single",
+    "question": "A multi-account platform team needs workforce users to access several AWS accounts with centrally managed assignments. Which service fits?",
+    "options": {
+      "A": "A VPC route table",
+      "B": "IAM Identity Center",
+      "C": "Cognito user pools only",
+      "D": "An S3 ACL"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "IAM Identity Center manages workforce identity and permission sets across accounts.\nThe other choices do not provide centralized workforce access.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d4-003",
+    "type": "single",
+    "question": "A regulated company must detect resource policies that allow access outside the organization. Which tool should be used?",
+    "options": {
+      "A": "AWS Batch",
+      "B": "AWS Backup",
+      "C": "IAM Access Analyzer",
+      "D": "Amazon CloudFront"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Access Analyzer identifies unintended external access in supported resource policies.\nThe other choices provide delivery, compute, or backup.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d4-004",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs temporary credentials for an EC2 application. Which configuration is preferred?",
+    "options": {
+      "A": "A long-lived access key in the AMI",
+      "B": "A root key in user data",
+      "C": "A public bucket",
+      "D": "An IAM role attached through an instance profile"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Instance profiles provide temporary role credentials without embedding long-lived keys.\nEmbedded or public credentials are unsafe.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d4-005",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must restrict a delegated administrator from granting permissions beyond an approved set. Which feature fits?",
+    "options": {
+      "A": "An IAM permission boundary",
+      "B": "An S3 lifecycle rule",
+      "C": "A CloudFront cache",
+      "D": "A Route 53 health check"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Permission boundaries cap the maximum permissions an identity can receive.\nThe other choices do not constrain IAM delegation.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d4-006",
+    "type": "single",
+    "question": "A data platform team must grant an application only the S3 actions it needs. Which principle should guide the policy?",
+    "options": {
+      "A": "A shared root key",
+      "B": "Least privilege with resource and condition scoping",
+      "C": "AdministratorAccess for convenience",
+      "D": "Public access"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Least privilege limits actions, resources, and conditions to the application requirement.\nBroad or shared credentials increase blast radius.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d4-007",
+    "type": "single",
+    "question": "A security-conscious engineering team needs workforce users to access several AWS accounts with centrally managed assignments. Which service fits?",
+    "options": {
+      "A": "An S3 ACL",
+      "B": "A VPC route table",
+      "C": "IAM Identity Center",
+      "D": "Cognito user pools only"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "IAM Identity Center manages workforce identity and permission sets across accounts.\nThe other choices do not provide centralized workforce access.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d4-008",
+    "type": "single",
+    "question": "A company migrating an existing workload must detect resource policies that allow access outside the organization. Which tool should be used?",
+    "options": {
+      "A": "Amazon CloudFront",
+      "B": "AWS Batch",
+      "C": "AWS Backup",
+      "D": "IAM Access Analyzer"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Access Analyzer identifies unintended external access in supported resource policies.\nThe other choices provide delivery, compute, or backup.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d4-009",
+    "type": "single",
+    "question": "A team with strict recovery objectives needs temporary credentials for an EC2 application. Which configuration is preferred?",
+    "options": {
+      "A": "An IAM role attached through an instance profile",
+      "B": "A long-lived access key in the AMI",
+      "C": "A root key in user data",
+      "D": "A public bucket"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Instance profiles provide temporary role credentials without embedding long-lived keys.\nEmbedded or public credentials are unsafe.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d4-010",
+    "type": "single",
+    "question": "A developer team preparing a release must restrict a delegated administrator from granting permissions beyond an approved set. Which feature fits?",
+    "options": {
+      "A": "A Route 53 health check",
+      "B": "An IAM permission boundary",
+      "C": "An S3 lifecycle rule",
+      "D": "A CloudFront cache"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Permission boundaries cap the maximum permissions an identity can receive.\nThe other choices do not constrain IAM delegation.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d4-011",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions must grant an application only the S3 actions it needs. Which principle should guide the policy?",
+    "options": {
+      "A": "Public access",
+      "B": "A shared root key",
+      "C": "Least privilege with resource and condition scoping",
+      "D": "AdministratorAccess for convenience"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Least privilege limits actions, resources, and conditions to the application requirement.\nBroad or shared credentials increase blast radius.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d4-012",
+    "type": "single",
+    "question": "A service owner reviewing an incident needs workforce users to access several AWS accounts with centrally managed assignments. Which service fits?",
+    "options": {
+      "A": "Cognito user pools only",
+      "B": "An S3 ACL",
+      "C": "A VPC route table",
+      "D": "IAM Identity Center"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "IAM Identity Center manages workforce identity and permission sets across accounts.\nThe other choices do not provide centralized workforce access.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d4-013",
+    "type": "single",
+    "question": "A team optimizing an existing implementation must detect resource policies that allow access outside the organization. Which tool should be used?",
+    "options": {
+      "A": "IAM Access Analyzer",
+      "B": "Amazon CloudFront",
+      "C": "AWS Batch",
+      "D": "AWS Backup"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Access Analyzer identifies unintended external access in supported resource policies.\nThe other choices provide delivery, compute, or backup.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d4-014",
+    "type": "single",
+    "question": "A company introducing an automated workflow needs temporary credentials for an EC2 application. Which configuration is preferred?",
+    "options": {
+      "A": "A public bucket",
+      "B": "An IAM role attached through an instance profile",
+      "C": "A long-lived access key in the AMI",
+      "D": "A root key in user data"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Instance profiles provide temporary role credentials without embedding long-lived keys.\nEmbedded or public credentials are unsafe.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d4-015",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment must restrict a delegated administrator from granting permissions beyond an approved set. Which feature fits?",
+    "options": {
+      "A": "A CloudFront cache",
+      "B": "A Route 53 health check",
+      "C": "An IAM permission boundary",
+      "D": "An S3 lifecycle rule"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Permission boundaries cap the maximum permissions an identity can receive.\nThe other choices do not constrain IAM delegation.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d4-016",
+    "type": "single",
+    "question": "A customer-facing application team must grant an application only the S3 actions it needs. Which principle should guide the policy?",
+    "options": {
+      "A": "AdministratorAccess for convenience",
+      "B": "Public access",
+      "C": "A shared root key",
+      "D": "Least privilege with resource and condition scoping"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Least privilege limits actions, resources, and conditions to the application requirement.\nBroad or shared credentials increase blast radius.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d4-017",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments needs workforce users to access several AWS accounts with centrally managed assignments. Which service fits?",
+    "options": {
+      "A": "IAM Identity Center",
+      "B": "Cognito user pools only",
+      "C": "An S3 ACL",
+      "D": "A VPC route table"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "IAM Identity Center manages workforce identity and permission sets across accounts.\nThe other choices do not provide centralized workforce access.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d4-018",
+    "type": "single",
+    "question": "A team preparing evidence for an audit must detect resource policies that allow access outside the organization. Which tool should be used?",
+    "options": {
+      "A": "AWS Backup",
+      "B": "IAM Access Analyzer",
+      "C": "Amazon CloudFront",
+      "D": "AWS Batch"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Access Analyzer identifies unintended external access in supported resource policies.\nThe other choices provide delivery, compute, or backup.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d4-019",
+    "type": "single",
+    "question": "A business replacing a manual process needs temporary credentials for an EC2 application. Which configuration is preferred?",
+    "options": {
+      "A": "A root key in user data",
+      "B": "A public bucket",
+      "C": "An IAM role attached through an instance profile",
+      "D": "A long-lived access key in the AMI"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Instance profiles provide temporary role credentials without embedding long-lived keys.\nEmbedded or public credentials are unsafe.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d4-020",
+    "type": "single",
+    "question": "A team validating a design against the exam guide must restrict a delegated administrator from granting permissions beyond an approved set. Which feature fits?",
+    "options": {
+      "A": "An S3 lifecycle rule",
+      "B": "A CloudFront cache",
+      "C": "A Route 53 health check",
+      "D": "An IAM permission boundary"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Permission boundaries cap the maximum permissions an identity can receive.\nThe other choices do not constrain IAM delegation.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d4-021",
+    "type": "single",
+    "question": "A production team must grant an application only the S3 actions it needs. Which principle should guide the policy?",
+    "options": {
+      "A": "Least privilege with resource and condition scoping",
+      "B": "AdministratorAccess for convenience",
+      "C": "Public access",
+      "D": "A shared root key"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Least privilege limits actions, resources, and conditions to the application requirement.\nBroad or shared credentials increase blast radius.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d4-022",
+    "type": "single",
+    "question": "A multi-account platform team needs workforce users to access several AWS accounts with centrally managed assignments. Which service fits?",
+    "options": {
+      "A": "A VPC route table",
+      "B": "IAM Identity Center",
+      "C": "Cognito user pools only",
+      "D": "An S3 ACL"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "IAM Identity Center manages workforce identity and permission sets across accounts.\nThe other choices do not provide centralized workforce access.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d4-023",
+    "type": "single",
+    "question": "A regulated company must detect resource policies that allow access outside the organization. Which tool should be used?",
+    "options": {
+      "A": "AWS Batch",
+      "B": "AWS Backup",
+      "C": "IAM Access Analyzer",
+      "D": "Amazon CloudFront"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Access Analyzer identifies unintended external access in supported resource policies.\nThe other choices provide delivery, compute, or backup.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d4-024",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs temporary credentials for an EC2 application. Which configuration is preferred?",
+    "options": {
+      "A": "A long-lived access key in the AMI",
+      "B": "A root key in user data",
+      "C": "A public bucket",
+      "D": "An IAM role attached through an instance profile"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Instance profiles provide temporary role credentials without embedding long-lived keys.\nEmbedded or public credentials are unsafe.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d4-025",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must restrict a delegated administrator from granting permissions beyond an approved set. Which feature fits?",
+    "options": {
+      "A": "An IAM permission boundary",
+      "B": "An S3 lifecycle rule",
+      "C": "A CloudFront cache",
+      "D": "A Route 53 health check"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Permission boundaries cap the maximum permissions an identity can receive.\nThe other choices do not constrain IAM delegation.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d4-026",
+    "type": "single",
+    "question": "A data platform team must grant an application only the S3 actions it needs. Which principle should guide the policy?",
+    "options": {
+      "A": "A shared root key",
+      "B": "Least privilege with resource and condition scoping",
+      "C": "AdministratorAccess for convenience",
+      "D": "Public access"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Least privilege limits actions, resources, and conditions to the application requirement.\nBroad or shared credentials increase blast radius.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d4-027",
+    "type": "single",
+    "question": "A security-conscious engineering team needs workforce users to access several AWS accounts with centrally managed assignments. Which service fits?",
+    "options": {
+      "A": "An S3 ACL",
+      "B": "A VPC route table",
+      "C": "IAM Identity Center",
+      "D": "Cognito user pools only"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "IAM Identity Center manages workforce identity and permission sets across accounts.\nThe other choices do not provide centralized workforce access.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d4-028",
+    "type": "single",
+    "question": "A company migrating an existing workload must detect resource policies that allow access outside the organization. Which tool should be used?",
+    "options": {
+      "A": "Amazon CloudFront",
+      "B": "AWS Batch",
+      "C": "AWS Backup",
+      "D": "IAM Access Analyzer"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Access Analyzer identifies unintended external access in supported resource policies.\nThe other choices provide delivery, compute, or backup.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d4-029",
+    "type": "single",
+    "question": "A team with strict recovery objectives needs temporary credentials for an EC2 application. Which configuration is preferred?",
+    "options": {
+      "A": "An IAM role attached through an instance profile",
+      "B": "A long-lived access key in the AMI",
+      "C": "A root key in user data",
+      "D": "A public bucket"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Instance profiles provide temporary role credentials without embedding long-lived keys.\nEmbedded or public credentials are unsafe.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d4-030",
+    "type": "single",
+    "question": "A developer team preparing a release must restrict a delegated administrator from granting permissions beyond an approved set. Which feature fits?",
+    "options": {
+      "A": "A Route 53 health check",
+      "B": "An IAM permission boundary",
+      "C": "An S3 lifecycle rule",
+      "D": "A CloudFront cache"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Permission boundaries cap the maximum permissions an identity can receive.\nThe other choices do not constrain IAM delegation.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d4-031",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions must grant an application only the S3 actions it needs. Which principle should guide the policy?",
+    "options": {
+      "A": "Public access",
+      "B": "A shared root key",
+      "C": "Least privilege with resource and condition scoping",
+      "D": "AdministratorAccess for convenience"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Least privilege limits actions, resources, and conditions to the application requirement.\nBroad or shared credentials increase blast radius.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d4-032",
+    "type": "single",
+    "question": "A service owner reviewing an incident needs workforce users to access several AWS accounts with centrally managed assignments. Which service fits?",
+    "options": {
+      "A": "Cognito user pools only",
+      "B": "An S3 ACL",
+      "C": "A VPC route table",
+      "D": "IAM Identity Center"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "IAM Identity Center manages workforce identity and permission sets across accounts.\nThe other choices do not provide centralized workforce access.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d4-033",
+    "type": "single",
+    "question": "A team optimizing an existing implementation must detect resource policies that allow access outside the organization. Which tool should be used?",
+    "options": {
+      "A": "IAM Access Analyzer",
+      "B": "Amazon CloudFront",
+      "C": "AWS Batch",
+      "D": "AWS Backup"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Access Analyzer identifies unintended external access in supported resource policies.\nThe other choices provide delivery, compute, or backup.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d4-034",
+    "type": "single",
+    "question": "A company introducing an automated workflow needs temporary credentials for an EC2 application. Which configuration is preferred?",
+    "options": {
+      "A": "A public bucket",
+      "B": "An IAM role attached through an instance profile",
+      "C": "A long-lived access key in the AMI",
+      "D": "A root key in user data"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Instance profiles provide temporary role credentials without embedding long-lived keys.\nEmbedded or public credentials are unsafe.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d4-035",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment must restrict a delegated administrator from granting permissions beyond an approved set. Which feature fits?",
+    "options": {
+      "A": "A CloudFront cache",
+      "B": "A Route 53 health check",
+      "C": "An IAM permission boundary",
+      "D": "An S3 lifecycle rule"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Permission boundaries cap the maximum permissions an identity can receive.\nThe other choices do not constrain IAM delegation.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d4-036",
+    "type": "single",
+    "question": "A customer-facing application team must grant an application only the S3 actions it needs. Which principle should guide the policy?",
+    "options": {
+      "A": "AdministratorAccess for convenience",
+      "B": "Public access",
+      "C": "A shared root key",
+      "D": "Least privilege with resource and condition scoping"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Least privilege limits actions, resources, and conditions to the application requirement.\nBroad or shared credentials increase blast radius.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d4-037",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments needs workforce users to access several AWS accounts with centrally managed assignments. Which service fits?",
+    "options": {
+      "A": "IAM Identity Center",
+      "B": "Cognito user pools only",
+      "C": "An S3 ACL",
+      "D": "A VPC route table"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "IAM Identity Center manages workforce identity and permission sets across accounts.\nThe other choices do not provide centralized workforce access.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d4-038",
+    "type": "single",
+    "question": "A team preparing evidence for an audit must detect resource policies that allow access outside the organization. Which tool should be used?",
+    "options": {
+      "A": "AWS Backup",
+      "B": "IAM Access Analyzer",
+      "C": "Amazon CloudFront",
+      "D": "AWS Batch"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Access Analyzer identifies unintended external access in supported resource policies.\nThe other choices provide delivery, compute, or backup.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d4-039",
+    "type": "single",
+    "question": "A business replacing a manual process needs temporary credentials for an EC2 application. Which configuration is preferred?",
+    "options": {
+      "A": "A root key in user data",
+      "B": "A public bucket",
+      "C": "An IAM role attached through an instance profile",
+      "D": "A long-lived access key in the AMI"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Instance profiles provide temporary role credentials without embedding long-lived keys.\nEmbedded or public credentials are unsafe.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  }
+]

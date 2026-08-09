@@ -1,0 +1,562 @@
+[
+  {
+    "id": "soa-c03-d5-001",
+    "type": "single",
+    "question": "A production team needs private access from a VPC to an AWS service without using the public internet. Which feature fits?",
+    "options": {
+      "A": "An IAM permission boundary",
+      "B": "A VPC endpoint",
+      "C": "A public S3 website",
+      "D": "A CloudFront invalidation"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "VPC endpoints provide private connectivity to supported AWS services.\nThe other choices do not provide private service connectivity.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d5-002",
+    "type": "single",
+    "question": "A multi-account platform team must route users to the closest healthy Regional endpoint. Which Route 53 policy should be considered?",
+    "options": {
+      "A": "An S3 lifecycle rule",
+      "B": "An EBS snapshot",
+      "C": "Latency-based routing with health checks",
+      "D": "Simple routing only"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Latency routing selects by measured network latency and health checks can exclude failed endpoints.\nThe other choices do not perform latency-aware DNS failover.",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d5-003",
+    "type": "single",
+    "question": "A regulated company needs a static anycast entry point that routes to healthy regional resources over the AWS global network. Which service fits?",
+    "options": {
+      "A": "Amazon EFS",
+      "B": "AWS Glue",
+      "C": "Amazon RDS Proxy",
+      "D": "AWS Global Accelerator"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Global Accelerator provides static anycast IPs and routes traffic to healthy regional endpoints.\nThe other choices provide file storage, ETL, or database connection pooling.",
+    "taskStatement": "5.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d5-004",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase must identify whether a subnet route or security group is blocking a connection. Which logs are useful?",
+    "options": {
+      "A": "VPC Flow Logs",
+      "B": "S3 Inventory",
+      "C": "CloudTrail digest files only",
+      "D": "AWS Budgets reports"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "VPC Flow Logs provide metadata about accepted and rejected traffic for network troubleshooting.\nThe other choices do not capture subnet traffic metadata.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d5-005",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs to cache static and dynamic content near users. Which service should be placed in front of the origin?",
+    "options": {
+      "A": "Amazon Neptune",
+      "B": "Amazon CloudFront",
+      "C": "Amazon SQS",
+      "D": "AWS Backup"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudFront caches and serves content from edge locations close to viewers.\nThe other choices queue messages, back up resources, or provide graph storage.",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d5-006",
+    "type": "single",
+    "question": "A data platform team needs private access from a VPC to an AWS service without using the public internet. Which feature fits?",
+    "options": {
+      "A": "A CloudFront invalidation",
+      "B": "An IAM permission boundary",
+      "C": "A VPC endpoint",
+      "D": "A public S3 website"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "VPC endpoints provide private connectivity to supported AWS services.\nThe other choices do not provide private service connectivity.",
+    "taskStatement": "5.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d5-007",
+    "type": "single",
+    "question": "A security-conscious engineering team must route users to the closest healthy Regional endpoint. Which Route 53 policy should be considered?",
+    "options": {
+      "A": "Simple routing only",
+      "B": "An S3 lifecycle rule",
+      "C": "An EBS snapshot",
+      "D": "Latency-based routing with health checks"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Latency routing selects by measured network latency and health checks can exclude failed endpoints.\nThe other choices do not perform latency-aware DNS failover.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d5-008",
+    "type": "single",
+    "question": "A company migrating an existing workload needs a static anycast entry point that routes to healthy regional resources over the AWS global network. Which service fits?",
+    "options": {
+      "A": "AWS Global Accelerator",
+      "B": "Amazon EFS",
+      "C": "AWS Glue",
+      "D": "Amazon RDS Proxy"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Global Accelerator provides static anycast IPs and routes traffic to healthy regional endpoints.\nThe other choices provide file storage, ETL, or database connection pooling.",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d5-009",
+    "type": "single",
+    "question": "A team with strict recovery objectives must identify whether a subnet route or security group is blocking a connection. Which logs are useful?",
+    "options": {
+      "A": "AWS Budgets reports",
+      "B": "VPC Flow Logs",
+      "C": "S3 Inventory",
+      "D": "CloudTrail digest files only"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "VPC Flow Logs provide metadata about accepted and rejected traffic for network troubleshooting.\nThe other choices do not capture subnet traffic metadata.",
+    "taskStatement": "5.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d5-010",
+    "type": "single",
+    "question": "A developer team preparing a release needs to cache static and dynamic content near users. Which service should be placed in front of the origin?",
+    "options": {
+      "A": "AWS Backup",
+      "B": "Amazon Neptune",
+      "C": "Amazon CloudFront",
+      "D": "Amazon SQS"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "CloudFront caches and serves content from edge locations close to viewers.\nThe other choices queue messages, back up resources, or provide graph storage.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d5-011",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs private access from a VPC to an AWS service without using the public internet. Which feature fits?",
+    "options": {
+      "A": "A public S3 website",
+      "B": "A CloudFront invalidation",
+      "C": "An IAM permission boundary",
+      "D": "A VPC endpoint"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "VPC endpoints provide private connectivity to supported AWS services.\nThe other choices do not provide private service connectivity.",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d5-012",
+    "type": "single",
+    "question": "A service owner reviewing an incident must route users to the closest healthy Regional endpoint. Which Route 53 policy should be considered?",
+    "options": {
+      "A": "Latency-based routing with health checks",
+      "B": "Simple routing only",
+      "C": "An S3 lifecycle rule",
+      "D": "An EBS snapshot"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Latency routing selects by measured network latency and health checks can exclude failed endpoints.\nThe other choices do not perform latency-aware DNS failover.",
+    "taskStatement": "5.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d5-013",
+    "type": "single",
+    "question": "A team optimizing an existing implementation needs a static anycast entry point that routes to healthy regional resources over the AWS global network. Which service fits?",
+    "options": {
+      "A": "Amazon RDS Proxy",
+      "B": "AWS Global Accelerator",
+      "C": "Amazon EFS",
+      "D": "AWS Glue"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Global Accelerator provides static anycast IPs and routes traffic to healthy regional endpoints.\nThe other choices provide file storage, ETL, or database connection pooling.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d5-014",
+    "type": "single",
+    "question": "A company introducing an automated workflow must identify whether a subnet route or security group is blocking a connection. Which logs are useful?",
+    "options": {
+      "A": "CloudTrail digest files only",
+      "B": "AWS Budgets reports",
+      "C": "VPC Flow Logs",
+      "D": "S3 Inventory"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "VPC Flow Logs provide metadata about accepted and rejected traffic for network troubleshooting.\nThe other choices do not capture subnet traffic metadata.",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d5-015",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment needs to cache static and dynamic content near users. Which service should be placed in front of the origin?",
+    "options": {
+      "A": "Amazon SQS",
+      "B": "AWS Backup",
+      "C": "Amazon Neptune",
+      "D": "Amazon CloudFront"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudFront caches and serves content from edge locations close to viewers.\nThe other choices queue messages, back up resources, or provide graph storage.",
+    "taskStatement": "5.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d5-016",
+    "type": "single",
+    "question": "A customer-facing application team needs private access from a VPC to an AWS service without using the public internet. Which feature fits?",
+    "options": {
+      "A": "A VPC endpoint",
+      "B": "A public S3 website",
+      "C": "A CloudFront invalidation",
+      "D": "An IAM permission boundary"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "VPC endpoints provide private connectivity to supported AWS services.\nThe other choices do not provide private service connectivity.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d5-017",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments must route users to the closest healthy Regional endpoint. Which Route 53 policy should be considered?",
+    "options": {
+      "A": "An EBS snapshot",
+      "B": "Latency-based routing with health checks",
+      "C": "Simple routing only",
+      "D": "An S3 lifecycle rule"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Latency routing selects by measured network latency and health checks can exclude failed endpoints.\nThe other choices do not perform latency-aware DNS failover.",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d5-018",
+    "type": "single",
+    "question": "A team preparing evidence for an audit needs a static anycast entry point that routes to healthy regional resources over the AWS global network. Which service fits?",
+    "options": {
+      "A": "AWS Glue",
+      "B": "Amazon RDS Proxy",
+      "C": "AWS Global Accelerator",
+      "D": "Amazon EFS"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Global Accelerator provides static anycast IPs and routes traffic to healthy regional endpoints.\nThe other choices provide file storage, ETL, or database connection pooling.",
+    "taskStatement": "5.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d5-019",
+    "type": "single",
+    "question": "A business replacing a manual process must identify whether a subnet route or security group is blocking a connection. Which logs are useful?",
+    "options": {
+      "A": "S3 Inventory",
+      "B": "CloudTrail digest files only",
+      "C": "AWS Budgets reports",
+      "D": "VPC Flow Logs"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "VPC Flow Logs provide metadata about accepted and rejected traffic for network troubleshooting.\nThe other choices do not capture subnet traffic metadata.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d5-020",
+    "type": "single",
+    "question": "A team validating a design against the exam guide needs to cache static and dynamic content near users. Which service should be placed in front of the origin?",
+    "options": {
+      "A": "Amazon CloudFront",
+      "B": "Amazon SQS",
+      "C": "AWS Backup",
+      "D": "Amazon Neptune"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "CloudFront caches and serves content from edge locations close to viewers.\nThe other choices queue messages, back up resources, or provide graph storage.",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d5-021",
+    "type": "single",
+    "question": "A production team needs private access from a VPC to an AWS service without using the public internet. Which feature fits?",
+    "options": {
+      "A": "An IAM permission boundary",
+      "B": "A VPC endpoint",
+      "C": "A public S3 website",
+      "D": "A CloudFront invalidation"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "VPC endpoints provide private connectivity to supported AWS services.\nThe other choices do not provide private service connectivity.",
+    "taskStatement": "5.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d5-022",
+    "type": "single",
+    "question": "A multi-account platform team must route users to the closest healthy Regional endpoint. Which Route 53 policy should be considered?",
+    "options": {
+      "A": "An S3 lifecycle rule",
+      "B": "An EBS snapshot",
+      "C": "Latency-based routing with health checks",
+      "D": "Simple routing only"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Latency routing selects by measured network latency and health checks can exclude failed endpoints.\nThe other choices do not perform latency-aware DNS failover.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d5-023",
+    "type": "single",
+    "question": "A regulated company needs a static anycast entry point that routes to healthy regional resources over the AWS global network. Which service fits?",
+    "options": {
+      "A": "Amazon EFS",
+      "B": "AWS Glue",
+      "C": "Amazon RDS Proxy",
+      "D": "AWS Global Accelerator"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Global Accelerator provides static anycast IPs and routes traffic to healthy regional endpoints.\nThe other choices provide file storage, ETL, or database connection pooling.",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d5-024",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase must identify whether a subnet route or security group is blocking a connection. Which logs are useful?",
+    "options": {
+      "A": "VPC Flow Logs",
+      "B": "S3 Inventory",
+      "C": "CloudTrail digest files only",
+      "D": "AWS Budgets reports"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "VPC Flow Logs provide metadata about accepted and rejected traffic for network troubleshooting.\nThe other choices do not capture subnet traffic metadata.",
+    "taskStatement": "5.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d5-025",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs to cache static and dynamic content near users. Which service should be placed in front of the origin?",
+    "options": {
+      "A": "Amazon Neptune",
+      "B": "Amazon CloudFront",
+      "C": "Amazon SQS",
+      "D": "AWS Backup"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudFront caches and serves content from edge locations close to viewers.\nThe other choices queue messages, back up resources, or provide graph storage.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d5-026",
+    "type": "single",
+    "question": "A data platform team needs private access from a VPC to an AWS service without using the public internet. Which feature fits?",
+    "options": {
+      "A": "A CloudFront invalidation",
+      "B": "An IAM permission boundary",
+      "C": "A VPC endpoint",
+      "D": "A public S3 website"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "VPC endpoints provide private connectivity to supported AWS services.\nThe other choices do not provide private service connectivity.",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d5-027",
+    "type": "single",
+    "question": "A security-conscious engineering team must route users to the closest healthy Regional endpoint. Which Route 53 policy should be considered?",
+    "options": {
+      "A": "Simple routing only",
+      "B": "An S3 lifecycle rule",
+      "C": "An EBS snapshot",
+      "D": "Latency-based routing with health checks"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Latency routing selects by measured network latency and health checks can exclude failed endpoints.\nThe other choices do not perform latency-aware DNS failover.",
+    "taskStatement": "5.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d5-028",
+    "type": "single",
+    "question": "A company migrating an existing workload needs a static anycast entry point that routes to healthy regional resources over the AWS global network. Which service fits?",
+    "options": {
+      "A": "AWS Global Accelerator",
+      "B": "Amazon EFS",
+      "C": "AWS Glue",
+      "D": "Amazon RDS Proxy"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Global Accelerator provides static anycast IPs and routes traffic to healthy regional endpoints.\nThe other choices provide file storage, ETL, or database connection pooling.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d5-029",
+    "type": "single",
+    "question": "A team with strict recovery objectives must identify whether a subnet route or security group is blocking a connection. Which logs are useful?",
+    "options": {
+      "A": "AWS Budgets reports",
+      "B": "VPC Flow Logs",
+      "C": "S3 Inventory",
+      "D": "CloudTrail digest files only"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "VPC Flow Logs provide metadata about accepted and rejected traffic for network troubleshooting.\nThe other choices do not capture subnet traffic metadata.",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d5-030",
+    "type": "single",
+    "question": "A developer team preparing a release needs to cache static and dynamic content near users. Which service should be placed in front of the origin?",
+    "options": {
+      "A": "AWS Backup",
+      "B": "Amazon Neptune",
+      "C": "Amazon CloudFront",
+      "D": "Amazon SQS"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "CloudFront caches and serves content from edge locations close to viewers.\nThe other choices queue messages, back up resources, or provide graph storage.",
+    "taskStatement": "5.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d5-031",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs private access from a VPC to an AWS service without using the public internet. Which feature fits?",
+    "options": {
+      "A": "A public S3 website",
+      "B": "A CloudFront invalidation",
+      "C": "An IAM permission boundary",
+      "D": "A VPC endpoint"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "VPC endpoints provide private connectivity to supported AWS services.\nThe other choices do not provide private service connectivity.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d5-032",
+    "type": "single",
+    "question": "A service owner reviewing an incident must route users to the closest healthy Regional endpoint. Which Route 53 policy should be considered?",
+    "options": {
+      "A": "Latency-based routing with health checks",
+      "B": "Simple routing only",
+      "C": "An S3 lifecycle rule",
+      "D": "An EBS snapshot"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Latency routing selects by measured network latency and health checks can exclude failed endpoints.\nThe other choices do not perform latency-aware DNS failover.",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d5-033",
+    "type": "single",
+    "question": "A team optimizing an existing implementation needs a static anycast entry point that routes to healthy regional resources over the AWS global network. Which service fits?",
+    "options": {
+      "A": "Amazon RDS Proxy",
+      "B": "AWS Global Accelerator",
+      "C": "Amazon EFS",
+      "D": "AWS Glue"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Global Accelerator provides static anycast IPs and routes traffic to healthy regional endpoints.\nThe other choices provide file storage, ETL, or database connection pooling.",
+    "taskStatement": "5.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d5-034",
+    "type": "single",
+    "question": "A company introducing an automated workflow must identify whether a subnet route or security group is blocking a connection. Which logs are useful?",
+    "options": {
+      "A": "CloudTrail digest files only",
+      "B": "AWS Budgets reports",
+      "C": "VPC Flow Logs",
+      "D": "S3 Inventory"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "VPC Flow Logs provide metadata about accepted and rejected traffic for network troubleshooting.\nThe other choices do not capture subnet traffic metadata.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d5-035",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment needs to cache static and dynamic content near users. Which service should be placed in front of the origin?",
+    "options": {
+      "A": "Amazon SQS",
+      "B": "AWS Backup",
+      "C": "Amazon Neptune",
+      "D": "Amazon CloudFront"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudFront caches and serves content from edge locations close to viewers.\nThe other choices queue messages, back up resources, or provide graph storage.",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-09"
+  }
+]

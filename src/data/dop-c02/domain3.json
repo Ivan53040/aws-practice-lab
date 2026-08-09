@@ -1,0 +1,546 @@
+[
+  {
+    "id": "dop-c02-d3-001",
+    "type": "single",
+    "question": "A production team must replace unhealthy instances automatically and spread capacity across Availability Zones. Which design fits?",
+    "options": {
+      "A": "One fixed instance",
+      "B": "An S3 bucket website",
+      "C": "A KMS alias",
+      "D": "A multi-AZ Auto Scaling group with health checks"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Auto Scaling health checks replace failed instances and multiple subnets spread capacity.\nThe other choices do not provide self-healing compute.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d3-002",
+    "type": "single",
+    "question": "A multi-account platform team needs to decouple a producer from workers when the worker fleet is temporarily unavailable. Which service should buffer work?",
+    "options": {
+      "A": "Amazon SQS",
+      "B": "Amazon Route 53",
+      "C": "AWS Certificate Manager",
+      "D": "Amazon EBS"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "SQS durably buffers messages until workers can process them.\nThe other choices provide DNS, certificates, or block storage.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d3-003",
+    "type": "single",
+    "question": "A regulated company must send requests to healthy application targets in multiple Availability Zones. Which service fits?",
+    "options": {
+      "A": "An IAM group",
+      "B": "An Application Load Balancer with target health checks",
+      "C": "A single EC2 public IP",
+      "D": "An S3 lifecycle rule"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "An ALB routes to healthy targets across configured subnets.\nThe other choices do not perform application load balancing.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d3-004",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs a database failover target without changing the application connection endpoint. Which deployment should be used?",
+    "options": {
+      "A": "An S3 bucket policy",
+      "B": "An EBS snapshot only",
+      "C": "RDS Multi-AZ",
+      "D": "A single-AZ RDS instance"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "RDS Multi-AZ maintains a standby and updates the managed endpoint during failover.\nThe other choices do not provide managed database failover.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d3-005",
+    "type": "single",
+    "question": "An operations team supporting a critical workload wants an event to trigger an automated recovery workflow. Which integration is suitable?",
+    "options": {
+      "A": "A public DNS record",
+      "B": "A security group only",
+      "C": "An S3 storage class",
+      "D": "EventBridge invoking Step Functions"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge and Step Functions can route events into durable, retryable recovery workflows.\nThe other choices do not orchestrate recovery steps.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d3-006",
+    "type": "single",
+    "question": "A data platform team must replace unhealthy instances automatically and spread capacity across Availability Zones. Which design fits?",
+    "options": {
+      "A": "A multi-AZ Auto Scaling group with health checks",
+      "B": "One fixed instance",
+      "C": "An S3 bucket website",
+      "D": "A KMS alias"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Auto Scaling health checks replace failed instances and multiple subnets spread capacity.\nThe other choices do not provide self-healing compute.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d3-007",
+    "type": "single",
+    "question": "A security-conscious engineering team needs to decouple a producer from workers when the worker fleet is temporarily unavailable. Which service should buffer work?",
+    "options": {
+      "A": "Amazon EBS",
+      "B": "Amazon SQS",
+      "C": "Amazon Route 53",
+      "D": "AWS Certificate Manager"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "SQS durably buffers messages until workers can process them.\nThe other choices provide DNS, certificates, or block storage.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d3-008",
+    "type": "single",
+    "question": "A company migrating an existing workload must send requests to healthy application targets in multiple Availability Zones. Which service fits?",
+    "options": {
+      "A": "An S3 lifecycle rule",
+      "B": "An IAM group",
+      "C": "An Application Load Balancer with target health checks",
+      "D": "A single EC2 public IP"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "An ALB routes to healthy targets across configured subnets.\nThe other choices do not perform application load balancing.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d3-009",
+    "type": "single",
+    "question": "A team with strict recovery objectives needs a database failover target without changing the application connection endpoint. Which deployment should be used?",
+    "options": {
+      "A": "A single-AZ RDS instance",
+      "B": "An S3 bucket policy",
+      "C": "An EBS snapshot only",
+      "D": "RDS Multi-AZ"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "RDS Multi-AZ maintains a standby and updates the managed endpoint during failover.\nThe other choices do not provide managed database failover.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d3-010",
+    "type": "single",
+    "question": "A developer team preparing a release wants an event to trigger an automated recovery workflow. Which integration is suitable?",
+    "options": {
+      "A": "EventBridge invoking Step Functions",
+      "B": "A public DNS record",
+      "C": "A security group only",
+      "D": "An S3 storage class"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge and Step Functions can route events into durable, retryable recovery workflows.\nThe other choices do not orchestrate recovery steps.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d3-011",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions must replace unhealthy instances automatically and spread capacity across Availability Zones. Which design fits?",
+    "options": {
+      "A": "A KMS alias",
+      "B": "A multi-AZ Auto Scaling group with health checks",
+      "C": "One fixed instance",
+      "D": "An S3 bucket website"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Auto Scaling health checks replace failed instances and multiple subnets spread capacity.\nThe other choices do not provide self-healing compute.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d3-012",
+    "type": "single",
+    "question": "A service owner reviewing an incident needs to decouple a producer from workers when the worker fleet is temporarily unavailable. Which service should buffer work?",
+    "options": {
+      "A": "AWS Certificate Manager",
+      "B": "Amazon EBS",
+      "C": "Amazon SQS",
+      "D": "Amazon Route 53"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "SQS durably buffers messages until workers can process them.\nThe other choices provide DNS, certificates, or block storage.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d3-013",
+    "type": "single",
+    "question": "A team optimizing an existing implementation must send requests to healthy application targets in multiple Availability Zones. Which service fits?",
+    "options": {
+      "A": "A single EC2 public IP",
+      "B": "An S3 lifecycle rule",
+      "C": "An IAM group",
+      "D": "An Application Load Balancer with target health checks"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "An ALB routes to healthy targets across configured subnets.\nThe other choices do not perform application load balancing.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d3-014",
+    "type": "single",
+    "question": "A company introducing an automated workflow needs a database failover target without changing the application connection endpoint. Which deployment should be used?",
+    "options": {
+      "A": "RDS Multi-AZ",
+      "B": "A single-AZ RDS instance",
+      "C": "An S3 bucket policy",
+      "D": "An EBS snapshot only"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "RDS Multi-AZ maintains a standby and updates the managed endpoint during failover.\nThe other choices do not provide managed database failover.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d3-015",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment wants an event to trigger an automated recovery workflow. Which integration is suitable?",
+    "options": {
+      "A": "An S3 storage class",
+      "B": "EventBridge invoking Step Functions",
+      "C": "A public DNS record",
+      "D": "A security group only"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge and Step Functions can route events into durable, retryable recovery workflows.\nThe other choices do not orchestrate recovery steps.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d3-016",
+    "type": "single",
+    "question": "A customer-facing application team must replace unhealthy instances automatically and spread capacity across Availability Zones. Which design fits?",
+    "options": {
+      "A": "An S3 bucket website",
+      "B": "A KMS alias",
+      "C": "A multi-AZ Auto Scaling group with health checks",
+      "D": "One fixed instance"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Auto Scaling health checks replace failed instances and multiple subnets spread capacity.\nThe other choices do not provide self-healing compute.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d3-017",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments needs to decouple a producer from workers when the worker fleet is temporarily unavailable. Which service should buffer work?",
+    "options": {
+      "A": "Amazon Route 53",
+      "B": "AWS Certificate Manager",
+      "C": "Amazon EBS",
+      "D": "Amazon SQS"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "SQS durably buffers messages until workers can process them.\nThe other choices provide DNS, certificates, or block storage.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d3-018",
+    "type": "single",
+    "question": "A team preparing evidence for an audit must send requests to healthy application targets in multiple Availability Zones. Which service fits?",
+    "options": {
+      "A": "An Application Load Balancer with target health checks",
+      "B": "A single EC2 public IP",
+      "C": "An S3 lifecycle rule",
+      "D": "An IAM group"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "An ALB routes to healthy targets across configured subnets.\nThe other choices do not perform application load balancing.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d3-019",
+    "type": "single",
+    "question": "A business replacing a manual process needs a database failover target without changing the application connection endpoint. Which deployment should be used?",
+    "options": {
+      "A": "An EBS snapshot only",
+      "B": "RDS Multi-AZ",
+      "C": "A single-AZ RDS instance",
+      "D": "An S3 bucket policy"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "RDS Multi-AZ maintains a standby and updates the managed endpoint during failover.\nThe other choices do not provide managed database failover.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d3-020",
+    "type": "single",
+    "question": "A team validating a design against the exam guide wants an event to trigger an automated recovery workflow. Which integration is suitable?",
+    "options": {
+      "A": "A security group only",
+      "B": "An S3 storage class",
+      "C": "EventBridge invoking Step Functions",
+      "D": "A public DNS record"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge and Step Functions can route events into durable, retryable recovery workflows.\nThe other choices do not orchestrate recovery steps.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d3-021",
+    "type": "single",
+    "question": "A production team must replace unhealthy instances automatically and spread capacity across Availability Zones. Which design fits?",
+    "options": {
+      "A": "One fixed instance",
+      "B": "An S3 bucket website",
+      "C": "A KMS alias",
+      "D": "A multi-AZ Auto Scaling group with health checks"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Auto Scaling health checks replace failed instances and multiple subnets spread capacity.\nThe other choices do not provide self-healing compute.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d3-022",
+    "type": "single",
+    "question": "A multi-account platform team needs to decouple a producer from workers when the worker fleet is temporarily unavailable. Which service should buffer work?",
+    "options": {
+      "A": "Amazon SQS",
+      "B": "Amazon Route 53",
+      "C": "AWS Certificate Manager",
+      "D": "Amazon EBS"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "SQS durably buffers messages until workers can process them.\nThe other choices provide DNS, certificates, or block storage.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d3-023",
+    "type": "single",
+    "question": "A regulated company must send requests to healthy application targets in multiple Availability Zones. Which service fits?",
+    "options": {
+      "A": "An IAM group",
+      "B": "An Application Load Balancer with target health checks",
+      "C": "A single EC2 public IP",
+      "D": "An S3 lifecycle rule"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "An ALB routes to healthy targets across configured subnets.\nThe other choices do not perform application load balancing.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d3-024",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs a database failover target without changing the application connection endpoint. Which deployment should be used?",
+    "options": {
+      "A": "An S3 bucket policy",
+      "B": "An EBS snapshot only",
+      "C": "RDS Multi-AZ",
+      "D": "A single-AZ RDS instance"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "RDS Multi-AZ maintains a standby and updates the managed endpoint during failover.\nThe other choices do not provide managed database failover.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d3-025",
+    "type": "single",
+    "question": "An operations team supporting a critical workload wants an event to trigger an automated recovery workflow. Which integration is suitable?",
+    "options": {
+      "A": "A public DNS record",
+      "B": "A security group only",
+      "C": "An S3 storage class",
+      "D": "EventBridge invoking Step Functions"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge and Step Functions can route events into durable, retryable recovery workflows.\nThe other choices do not orchestrate recovery steps.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d3-026",
+    "type": "single",
+    "question": "A data platform team must replace unhealthy instances automatically and spread capacity across Availability Zones. Which design fits?",
+    "options": {
+      "A": "A multi-AZ Auto Scaling group with health checks",
+      "B": "One fixed instance",
+      "C": "An S3 bucket website",
+      "D": "A KMS alias"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Auto Scaling health checks replace failed instances and multiple subnets spread capacity.\nThe other choices do not provide self-healing compute.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d3-027",
+    "type": "single",
+    "question": "A security-conscious engineering team needs to decouple a producer from workers when the worker fleet is temporarily unavailable. Which service should buffer work?",
+    "options": {
+      "A": "Amazon EBS",
+      "B": "Amazon SQS",
+      "C": "Amazon Route 53",
+      "D": "AWS Certificate Manager"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "SQS durably buffers messages until workers can process them.\nThe other choices provide DNS, certificates, or block storage.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d3-028",
+    "type": "single",
+    "question": "A company migrating an existing workload must send requests to healthy application targets in multiple Availability Zones. Which service fits?",
+    "options": {
+      "A": "An S3 lifecycle rule",
+      "B": "An IAM group",
+      "C": "An Application Load Balancer with target health checks",
+      "D": "A single EC2 public IP"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "An ALB routes to healthy targets across configured subnets.\nThe other choices do not perform application load balancing.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d3-029",
+    "type": "single",
+    "question": "A team with strict recovery objectives needs a database failover target without changing the application connection endpoint. Which deployment should be used?",
+    "options": {
+      "A": "A single-AZ RDS instance",
+      "B": "An S3 bucket policy",
+      "C": "An EBS snapshot only",
+      "D": "RDS Multi-AZ"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "RDS Multi-AZ maintains a standby and updates the managed endpoint during failover.\nThe other choices do not provide managed database failover.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d3-030",
+    "type": "single",
+    "question": "A developer team preparing a release wants an event to trigger an automated recovery workflow. Which integration is suitable?",
+    "options": {
+      "A": "EventBridge invoking Step Functions",
+      "B": "A public DNS record",
+      "C": "A security group only",
+      "D": "An S3 storage class"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge and Step Functions can route events into durable, retryable recovery workflows.\nThe other choices do not orchestrate recovery steps.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d3-031",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions must replace unhealthy instances automatically and spread capacity across Availability Zones. Which design fits?",
+    "options": {
+      "A": "A KMS alias",
+      "B": "A multi-AZ Auto Scaling group with health checks",
+      "C": "One fixed instance",
+      "D": "An S3 bucket website"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Auto Scaling health checks replace failed instances and multiple subnets spread capacity.\nThe other choices do not provide self-healing compute.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d3-032",
+    "type": "single",
+    "question": "A service owner reviewing an incident needs to decouple a producer from workers when the worker fleet is temporarily unavailable. Which service should buffer work?",
+    "options": {
+      "A": "AWS Certificate Manager",
+      "B": "Amazon EBS",
+      "C": "Amazon SQS",
+      "D": "Amazon Route 53"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "SQS durably buffers messages until workers can process them.\nThe other choices provide DNS, certificates, or block storage.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d3-033",
+    "type": "single",
+    "question": "A team optimizing an existing implementation must send requests to healthy application targets in multiple Availability Zones. Which service fits?",
+    "options": {
+      "A": "A single EC2 public IP",
+      "B": "An S3 lifecycle rule",
+      "C": "An IAM group",
+      "D": "An Application Load Balancer with target health checks"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "An ALB routes to healthy targets across configured subnets.\nThe other choices do not perform application load balancing.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d3-034",
+    "type": "single",
+    "question": "A company introducing an automated workflow needs a database failover target without changing the application connection endpoint. Which deployment should be used?",
+    "options": {
+      "A": "RDS Multi-AZ",
+      "B": "A single-AZ RDS instance",
+      "C": "An S3 bucket policy",
+      "D": "An EBS snapshot only"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "RDS Multi-AZ maintains a standby and updates the managed endpoint during failover.\nThe other choices do not provide managed database failover.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  }
+]

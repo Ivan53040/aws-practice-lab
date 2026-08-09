@@ -5,6 +5,15 @@ export const QUESTION_COUNTS: Record<string, number> = {
   'clf-c02': 1050,
   'saa-c03': 195,
   'aif-c01': 419,
+  'soa-c03': 195,
+  'dea-c01': 195,
+  'dva-c02': 195,
+  'mla-c01': 195,
+  'dop-c02': 225,
+  'aip-c01': 225,
+  'sap-c02': 225,
+  'ans-c01': 195,
+  'scs-c03': 195,
 }
 
-export const TOTAL_ACTIVE_QUESTIONS = 1664
+export const TOTAL_ACTIVE_QUESTIONS = 3509

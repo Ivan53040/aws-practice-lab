@@ -1,0 +1,754 @@
+[
+  {
+    "id": "mla-c01-d4-001",
+    "type": "single",
+    "question": "A production team needs to detect that live feature distributions differ from training data. Which control should be considered?",
+    "options": {
+      "A": "Model Monitor data quality or drift monitoring",
+      "B": "An S3 lifecycle rule",
+      "C": "A Route 53 alias",
+      "D": "A KMS key alias"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Model Monitor can detect changes in data quality and distribution that affect model behavior.\nThe other choices do not monitor ML input drift.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-002",
+    "type": "single",
+    "question": "A multi-account platform team needs to protect a SageMaker endpoint from unauthorized invocation. Which control is most important?",
+    "options": {
+      "A": "An S3 storage class",
+      "B": "A least-privilege IAM policy on the invoking role",
+      "C": "A public endpoint with no authentication",
+      "D": "A CloudFront cache policy"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "IAM authorization restricts who can invoke the endpoint and which model resources they can access.\nPublic access and storage or cache settings do not authorize model invocation.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-003",
+    "type": "single",
+    "question": "A regulated company must monitor endpoint latency, errors, and invocation count. Which service should collect the operational metrics?",
+    "options": {
+      "A": "AWS Artifact",
+      "B": "Amazon EBS",
+      "C": "Amazon CloudWatch",
+      "D": "Amazon Macie"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch provides endpoint metrics, alarms, dashboards, and logs for SageMaker operations.\nThe other choices discover data, provide compliance documents, or store blocks.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-004",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs explainability and bias analysis before promoting a model. Which SageMaker capability fits?",
+    "options": {
+      "A": "Amazon Route 53",
+      "B": "AWS Batch only",
+      "C": "S3 Transfer Acceleration",
+      "D": "SageMaker Clarify"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "SageMaker Clarify provides bias detection and explainability features for ML workflows.\nThe other choices provide DNS, batch compute, or transfer acceleration.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-005",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must ensure model artifacts are encrypted and access is auditable. Which combination is appropriate?",
+    "options": {
+      "A": "KMS encryption, least-privilege IAM, and CloudTrail logging",
+      "B": "Public artifact access and no logs",
+      "C": "A security group only",
+      "D": "A DNS health check"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Encryption, authorization, and audit logging provide layered protection for model artifacts.\nThe other choices do not provide ML artifact confidentiality and accountability.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-006",
+    "type": "single",
+    "question": "A data platform team needs to detect that live feature distributions differ from training data. Which control should be considered?",
+    "options": {
+      "A": "A KMS key alias",
+      "B": "Model Monitor data quality or drift monitoring",
+      "C": "An S3 lifecycle rule",
+      "D": "A Route 53 alias"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Model Monitor can detect changes in data quality and distribution that affect model behavior.\nThe other choices do not monitor ML input drift.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-007",
+    "type": "single",
+    "question": "A security-conscious engineering team needs to protect a SageMaker endpoint from unauthorized invocation. Which control is most important?",
+    "options": {
+      "A": "A CloudFront cache policy",
+      "B": "An S3 storage class",
+      "C": "A least-privilege IAM policy on the invoking role",
+      "D": "A public endpoint with no authentication"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "IAM authorization restricts who can invoke the endpoint and which model resources they can access.\nPublic access and storage or cache settings do not authorize model invocation.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-008",
+    "type": "single",
+    "question": "A company migrating an existing workload must monitor endpoint latency, errors, and invocation count. Which service should collect the operational metrics?",
+    "options": {
+      "A": "Amazon Macie",
+      "B": "AWS Artifact",
+      "C": "Amazon EBS",
+      "D": "Amazon CloudWatch"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch provides endpoint metrics, alarms, dashboards, and logs for SageMaker operations.\nThe other choices discover data, provide compliance documents, or store blocks.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-009",
+    "type": "single",
+    "question": "A team with strict recovery objectives needs explainability and bias analysis before promoting a model. Which SageMaker capability fits?",
+    "options": {
+      "A": "SageMaker Clarify",
+      "B": "Amazon Route 53",
+      "C": "AWS Batch only",
+      "D": "S3 Transfer Acceleration"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "SageMaker Clarify provides bias detection and explainability features for ML workflows.\nThe other choices provide DNS, batch compute, or transfer acceleration.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-010",
+    "type": "single",
+    "question": "A developer team preparing a release must ensure model artifacts are encrypted and access is auditable. Which combination is appropriate?",
+    "options": {
+      "A": "A DNS health check",
+      "B": "KMS encryption, least-privilege IAM, and CloudTrail logging",
+      "C": "Public artifact access and no logs",
+      "D": "A security group only"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Encryption, authorization, and audit logging provide layered protection for model artifacts.\nThe other choices do not provide ML artifact confidentiality and accountability.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-011",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs to detect that live feature distributions differ from training data. Which control should be considered?",
+    "options": {
+      "A": "A Route 53 alias",
+      "B": "A KMS key alias",
+      "C": "Model Monitor data quality or drift monitoring",
+      "D": "An S3 lifecycle rule"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Model Monitor can detect changes in data quality and distribution that affect model behavior.\nThe other choices do not monitor ML input drift.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-012",
+    "type": "single",
+    "question": "A service owner reviewing an incident needs to protect a SageMaker endpoint from unauthorized invocation. Which control is most important?",
+    "options": {
+      "A": "A public endpoint with no authentication",
+      "B": "A CloudFront cache policy",
+      "C": "An S3 storage class",
+      "D": "A least-privilege IAM policy on the invoking role"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "IAM authorization restricts who can invoke the endpoint and which model resources they can access.\nPublic access and storage or cache settings do not authorize model invocation.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-013",
+    "type": "single",
+    "question": "A team optimizing an existing implementation must monitor endpoint latency, errors, and invocation count. Which service should collect the operational metrics?",
+    "options": {
+      "A": "Amazon CloudWatch",
+      "B": "Amazon Macie",
+      "C": "AWS Artifact",
+      "D": "Amazon EBS"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch provides endpoint metrics, alarms, dashboards, and logs for SageMaker operations.\nThe other choices discover data, provide compliance documents, or store blocks.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-014",
+    "type": "single",
+    "question": "A company introducing an automated workflow needs explainability and bias analysis before promoting a model. Which SageMaker capability fits?",
+    "options": {
+      "A": "S3 Transfer Acceleration",
+      "B": "SageMaker Clarify",
+      "C": "Amazon Route 53",
+      "D": "AWS Batch only"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "SageMaker Clarify provides bias detection and explainability features for ML workflows.\nThe other choices provide DNS, batch compute, or transfer acceleration.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-015",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment must ensure model artifacts are encrypted and access is auditable. Which combination is appropriate?",
+    "options": {
+      "A": "A security group only",
+      "B": "A DNS health check",
+      "C": "KMS encryption, least-privilege IAM, and CloudTrail logging",
+      "D": "Public artifact access and no logs"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Encryption, authorization, and audit logging provide layered protection for model artifacts.\nThe other choices do not provide ML artifact confidentiality and accountability.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-016",
+    "type": "single",
+    "question": "A customer-facing application team needs to detect that live feature distributions differ from training data. Which control should be considered?",
+    "options": {
+      "A": "An S3 lifecycle rule",
+      "B": "A Route 53 alias",
+      "C": "A KMS key alias",
+      "D": "Model Monitor data quality or drift monitoring"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Model Monitor can detect changes in data quality and distribution that affect model behavior.\nThe other choices do not monitor ML input drift.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-017",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments needs to protect a SageMaker endpoint from unauthorized invocation. Which control is most important?",
+    "options": {
+      "A": "A least-privilege IAM policy on the invoking role",
+      "B": "A public endpoint with no authentication",
+      "C": "A CloudFront cache policy",
+      "D": "An S3 storage class"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "IAM authorization restricts who can invoke the endpoint and which model resources they can access.\nPublic access and storage or cache settings do not authorize model invocation.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-018",
+    "type": "single",
+    "question": "A team preparing evidence for an audit must monitor endpoint latency, errors, and invocation count. Which service should collect the operational metrics?",
+    "options": {
+      "A": "Amazon EBS",
+      "B": "Amazon CloudWatch",
+      "C": "Amazon Macie",
+      "D": "AWS Artifact"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch provides endpoint metrics, alarms, dashboards, and logs for SageMaker operations.\nThe other choices discover data, provide compliance documents, or store blocks.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-019",
+    "type": "single",
+    "question": "A business replacing a manual process needs explainability and bias analysis before promoting a model. Which SageMaker capability fits?",
+    "options": {
+      "A": "AWS Batch only",
+      "B": "S3 Transfer Acceleration",
+      "C": "SageMaker Clarify",
+      "D": "Amazon Route 53"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "SageMaker Clarify provides bias detection and explainability features for ML workflows.\nThe other choices provide DNS, batch compute, or transfer acceleration.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-020",
+    "type": "single",
+    "question": "A team validating a design against the exam guide must ensure model artifacts are encrypted and access is auditable. Which combination is appropriate?",
+    "options": {
+      "A": "Public artifact access and no logs",
+      "B": "A security group only",
+      "C": "A DNS health check",
+      "D": "KMS encryption, least-privilege IAM, and CloudTrail logging"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Encryption, authorization, and audit logging provide layered protection for model artifacts.\nThe other choices do not provide ML artifact confidentiality and accountability.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-021",
+    "type": "single",
+    "question": "A production team needs to detect that live feature distributions differ from training data. Which control should be considered?",
+    "options": {
+      "A": "Model Monitor data quality or drift monitoring",
+      "B": "An S3 lifecycle rule",
+      "C": "A Route 53 alias",
+      "D": "A KMS key alias"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Model Monitor can detect changes in data quality and distribution that affect model behavior.\nThe other choices do not monitor ML input drift.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-022",
+    "type": "single",
+    "question": "A multi-account platform team needs to protect a SageMaker endpoint from unauthorized invocation. Which control is most important?",
+    "options": {
+      "A": "An S3 storage class",
+      "B": "A least-privilege IAM policy on the invoking role",
+      "C": "A public endpoint with no authentication",
+      "D": "A CloudFront cache policy"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "IAM authorization restricts who can invoke the endpoint and which model resources they can access.\nPublic access and storage or cache settings do not authorize model invocation.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-023",
+    "type": "single",
+    "question": "A regulated company must monitor endpoint latency, errors, and invocation count. Which service should collect the operational metrics?",
+    "options": {
+      "A": "AWS Artifact",
+      "B": "Amazon EBS",
+      "C": "Amazon CloudWatch",
+      "D": "Amazon Macie"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch provides endpoint metrics, alarms, dashboards, and logs for SageMaker operations.\nThe other choices discover data, provide compliance documents, or store blocks.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-024",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs explainability and bias analysis before promoting a model. Which SageMaker capability fits?",
+    "options": {
+      "A": "Amazon Route 53",
+      "B": "AWS Batch only",
+      "C": "S3 Transfer Acceleration",
+      "D": "SageMaker Clarify"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "SageMaker Clarify provides bias detection and explainability features for ML workflows.\nThe other choices provide DNS, batch compute, or transfer acceleration.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-025",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must ensure model artifacts are encrypted and access is auditable. Which combination is appropriate?",
+    "options": {
+      "A": "KMS encryption, least-privilege IAM, and CloudTrail logging",
+      "B": "Public artifact access and no logs",
+      "C": "A security group only",
+      "D": "A DNS health check"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Encryption, authorization, and audit logging provide layered protection for model artifacts.\nThe other choices do not provide ML artifact confidentiality and accountability.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-026",
+    "type": "single",
+    "question": "A data platform team needs to detect that live feature distributions differ from training data. Which control should be considered?",
+    "options": {
+      "A": "A KMS key alias",
+      "B": "Model Monitor data quality or drift monitoring",
+      "C": "An S3 lifecycle rule",
+      "D": "A Route 53 alias"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Model Monitor can detect changes in data quality and distribution that affect model behavior.\nThe other choices do not monitor ML input drift.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-027",
+    "type": "single",
+    "question": "A security-conscious engineering team needs to protect a SageMaker endpoint from unauthorized invocation. Which control is most important?",
+    "options": {
+      "A": "A CloudFront cache policy",
+      "B": "An S3 storage class",
+      "C": "A least-privilege IAM policy on the invoking role",
+      "D": "A public endpoint with no authentication"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "IAM authorization restricts who can invoke the endpoint and which model resources they can access.\nPublic access and storage or cache settings do not authorize model invocation.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-028",
+    "type": "single",
+    "question": "A company migrating an existing workload must monitor endpoint latency, errors, and invocation count. Which service should collect the operational metrics?",
+    "options": {
+      "A": "Amazon Macie",
+      "B": "AWS Artifact",
+      "C": "Amazon EBS",
+      "D": "Amazon CloudWatch"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch provides endpoint metrics, alarms, dashboards, and logs for SageMaker operations.\nThe other choices discover data, provide compliance documents, or store blocks.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-029",
+    "type": "single",
+    "question": "A team with strict recovery objectives needs explainability and bias analysis before promoting a model. Which SageMaker capability fits?",
+    "options": {
+      "A": "SageMaker Clarify",
+      "B": "Amazon Route 53",
+      "C": "AWS Batch only",
+      "D": "S3 Transfer Acceleration"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "SageMaker Clarify provides bias detection and explainability features for ML workflows.\nThe other choices provide DNS, batch compute, or transfer acceleration.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-030",
+    "type": "single",
+    "question": "A developer team preparing a release must ensure model artifacts are encrypted and access is auditable. Which combination is appropriate?",
+    "options": {
+      "A": "A DNS health check",
+      "B": "KMS encryption, least-privilege IAM, and CloudTrail logging",
+      "C": "Public artifact access and no logs",
+      "D": "A security group only"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Encryption, authorization, and audit logging provide layered protection for model artifacts.\nThe other choices do not provide ML artifact confidentiality and accountability.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-031",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs to detect that live feature distributions differ from training data. Which control should be considered?",
+    "options": {
+      "A": "A Route 53 alias",
+      "B": "A KMS key alias",
+      "C": "Model Monitor data quality or drift monitoring",
+      "D": "An S3 lifecycle rule"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Model Monitor can detect changes in data quality and distribution that affect model behavior.\nThe other choices do not monitor ML input drift.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-032",
+    "type": "single",
+    "question": "A service owner reviewing an incident needs to protect a SageMaker endpoint from unauthorized invocation. Which control is most important?",
+    "options": {
+      "A": "A public endpoint with no authentication",
+      "B": "A CloudFront cache policy",
+      "C": "An S3 storage class",
+      "D": "A least-privilege IAM policy on the invoking role"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "IAM authorization restricts who can invoke the endpoint and which model resources they can access.\nPublic access and storage or cache settings do not authorize model invocation.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-033",
+    "type": "single",
+    "question": "A team optimizing an existing implementation must monitor endpoint latency, errors, and invocation count. Which service should collect the operational metrics?",
+    "options": {
+      "A": "Amazon CloudWatch",
+      "B": "Amazon Macie",
+      "C": "AWS Artifact",
+      "D": "Amazon EBS"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch provides endpoint metrics, alarms, dashboards, and logs for SageMaker operations.\nThe other choices discover data, provide compliance documents, or store blocks.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-034",
+    "type": "single",
+    "question": "A company introducing an automated workflow needs explainability and bias analysis before promoting a model. Which SageMaker capability fits?",
+    "options": {
+      "A": "S3 Transfer Acceleration",
+      "B": "SageMaker Clarify",
+      "C": "Amazon Route 53",
+      "D": "AWS Batch only"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "SageMaker Clarify provides bias detection and explainability features for ML workflows.\nThe other choices provide DNS, batch compute, or transfer acceleration.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-035",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment must ensure model artifacts are encrypted and access is auditable. Which combination is appropriate?",
+    "options": {
+      "A": "A security group only",
+      "B": "A DNS health check",
+      "C": "KMS encryption, least-privilege IAM, and CloudTrail logging",
+      "D": "Public artifact access and no logs"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Encryption, authorization, and audit logging provide layered protection for model artifacts.\nThe other choices do not provide ML artifact confidentiality and accountability.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-036",
+    "type": "single",
+    "question": "A customer-facing application team needs to detect that live feature distributions differ from training data. Which control should be considered?",
+    "options": {
+      "A": "An S3 lifecycle rule",
+      "B": "A Route 53 alias",
+      "C": "A KMS key alias",
+      "D": "Model Monitor data quality or drift monitoring"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Model Monitor can detect changes in data quality and distribution that affect model behavior.\nThe other choices do not monitor ML input drift.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-037",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments needs to protect a SageMaker endpoint from unauthorized invocation. Which control is most important?",
+    "options": {
+      "A": "A least-privilege IAM policy on the invoking role",
+      "B": "A public endpoint with no authentication",
+      "C": "A CloudFront cache policy",
+      "D": "An S3 storage class"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "IAM authorization restricts who can invoke the endpoint and which model resources they can access.\nPublic access and storage or cache settings do not authorize model invocation.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-038",
+    "type": "single",
+    "question": "A team preparing evidence for an audit must monitor endpoint latency, errors, and invocation count. Which service should collect the operational metrics?",
+    "options": {
+      "A": "Amazon EBS",
+      "B": "Amazon CloudWatch",
+      "C": "Amazon Macie",
+      "D": "AWS Artifact"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch provides endpoint metrics, alarms, dashboards, and logs for SageMaker operations.\nThe other choices discover data, provide compliance documents, or store blocks.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-039",
+    "type": "single",
+    "question": "A business replacing a manual process needs explainability and bias analysis before promoting a model. Which SageMaker capability fits?",
+    "options": {
+      "A": "AWS Batch only",
+      "B": "S3 Transfer Acceleration",
+      "C": "SageMaker Clarify",
+      "D": "Amazon Route 53"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "SageMaker Clarify provides bias detection and explainability features for ML workflows.\nThe other choices provide DNS, batch compute, or transfer acceleration.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-040",
+    "type": "single",
+    "question": "A team validating a design against the exam guide must ensure model artifacts are encrypted and access is auditable. Which combination is appropriate?",
+    "options": {
+      "A": "Public artifact access and no logs",
+      "B": "A security group only",
+      "C": "A DNS health check",
+      "D": "KMS encryption, least-privilege IAM, and CloudTrail logging"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Encryption, authorization, and audit logging provide layered protection for model artifacts.\nThe other choices do not provide ML artifact confidentiality and accountability.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-041",
+    "type": "single",
+    "question": "A production team needs to detect that live feature distributions differ from training data. Which control should be considered?",
+    "options": {
+      "A": "Model Monitor data quality or drift monitoring",
+      "B": "An S3 lifecycle rule",
+      "C": "A Route 53 alias",
+      "D": "A KMS key alias"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Model Monitor can detect changes in data quality and distribution that affect model behavior.\nThe other choices do not monitor ML input drift.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-042",
+    "type": "single",
+    "question": "A multi-account platform team needs to protect a SageMaker endpoint from unauthorized invocation. Which control is most important?",
+    "options": {
+      "A": "An S3 storage class",
+      "B": "A least-privilege IAM policy on the invoking role",
+      "C": "A public endpoint with no authentication",
+      "D": "A CloudFront cache policy"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "IAM authorization restricts who can invoke the endpoint and which model resources they can access.\nPublic access and storage or cache settings do not authorize model invocation.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-043",
+    "type": "single",
+    "question": "A regulated company must monitor endpoint latency, errors, and invocation count. Which service should collect the operational metrics?",
+    "options": {
+      "A": "AWS Artifact",
+      "B": "Amazon EBS",
+      "C": "Amazon CloudWatch",
+      "D": "Amazon Macie"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch provides endpoint metrics, alarms, dashboards, and logs for SageMaker operations.\nThe other choices discover data, provide compliance documents, or store blocks.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-044",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs explainability and bias analysis before promoting a model. Which SageMaker capability fits?",
+    "options": {
+      "A": "Amazon Route 53",
+      "B": "AWS Batch only",
+      "C": "S3 Transfer Acceleration",
+      "D": "SageMaker Clarify"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "SageMaker Clarify provides bias detection and explainability features for ML workflows.\nThe other choices provide DNS, batch compute, or transfer acceleration.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-045",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must ensure model artifacts are encrypted and access is auditable. Which combination is appropriate?",
+    "options": {
+      "A": "KMS encryption, least-privilege IAM, and CloudTrail logging",
+      "B": "Public artifact access and no logs",
+      "C": "A security group only",
+      "D": "A DNS health check"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Encryption, authorization, and audit logging provide layered protection for model artifacts.\nThe other choices do not provide ML artifact confidentiality and accountability.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-046",
+    "type": "single",
+    "question": "A data platform team needs to detect that live feature distributions differ from training data. Which control should be considered?",
+    "options": {
+      "A": "A KMS key alias",
+      "B": "Model Monitor data quality or drift monitoring",
+      "C": "An S3 lifecycle rule",
+      "D": "A Route 53 alias"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Model Monitor can detect changes in data quality and distribution that affect model behavior.\nThe other choices do not monitor ML input drift.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "mla-c01-d4-047",
+    "type": "single",
+    "question": "A security-conscious engineering team needs to protect a SageMaker endpoint from unauthorized invocation. Which control is most important?",
+    "options": {
+      "A": "A CloudFront cache policy",
+      "B": "An S3 storage class",
+      "C": "A least-privilege IAM policy on the invoking role",
+      "D": "A public endpoint with no authentication"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "IAM authorization restricts who can invoke the endpoint and which model resources they can access.\nPublic access and storage or cache settings do not authorize model invocation.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  }
+]

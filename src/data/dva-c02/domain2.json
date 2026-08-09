@@ -1,0 +1,818 @@
+[
+  {
+    "id": "dva-c02-d2-001",
+    "type": "single",
+    "question": "A production team needs users to sign in to a mobile application and receive tokens. Which service should be used?",
+    "options": {
+      "A": "Amazon CloudWatch",
+      "B": "AWS Transit Gateway",
+      "C": "Amazon Cognito user pools",
+      "D": "AWS Organizations"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Cognito user pools provide managed application user directories and tokens.\nThe other choices provide governance, monitoring, or networking.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-002",
+    "type": "single",
+    "question": "A multi-account platform team needs an application to call a private AWS service without exposing data to the public internet. Which feature should be configured?",
+    "options": {
+      "A": "A public IP on every instance",
+      "B": "An S3 website endpoint",
+      "C": "An internet-facing load balancer only",
+      "D": "A VPC interface endpoint"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "An interface endpoint provides private access to supported AWS service APIs.\nPublic addresses and internet-facing endpoints do not meet private access requirements.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-003",
+    "type": "single",
+    "question": "A regulated company must encrypt a secret used by a Lambda function and rotate it without source changes. Which service fits?",
+    "options": {
+      "A": "AWS Secrets Manager with a KMS key",
+      "B": "An S3 public object",
+      "C": "A CloudFront cache",
+      "D": "A Route 53 record"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Secrets Manager stores and rotates secrets and can use KMS for encryption at rest.\nThe other choices do not securely manage rotating application secrets.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-004",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs to prevent an application from logging sensitive user data. Which control should be added?",
+    "options": {
+      "A": "Use a larger EC2 instance",
+      "B": "Input validation and log redaction before emitting records",
+      "C": "Log every request body in plaintext",
+      "D": "Disable all authorization"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Sanitization and redaction prevent sensitive fields from entering application logs.\nPlaintext logging increases exposure and the other choices do not protect logged data.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-005",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must encrypt data in transit between a client and an API. Which configuration should be used?",
+    "options": {
+      "A": "An S3 lifecycle rule",
+      "B": "A DynamoDB scan",
+      "C": "HTTPS with a managed TLS certificate",
+      "D": "HTTP only"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "HTTPS protects application traffic in transit and a managed certificate provides server identity.\nThe other choices do not provide transport encryption.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-006",
+    "type": "single",
+    "question": "A data platform team needs users to sign in to a mobile application and receive tokens. Which service should be used?",
+    "options": {
+      "A": "AWS Organizations",
+      "B": "Amazon CloudWatch",
+      "C": "AWS Transit Gateway",
+      "D": "Amazon Cognito user pools"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Cognito user pools provide managed application user directories and tokens.\nThe other choices provide governance, monitoring, or networking.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-007",
+    "type": "single",
+    "question": "A security-conscious engineering team needs an application to call a private AWS service without exposing data to the public internet. Which feature should be configured?",
+    "options": {
+      "A": "A VPC interface endpoint",
+      "B": "A public IP on every instance",
+      "C": "An S3 website endpoint",
+      "D": "An internet-facing load balancer only"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "An interface endpoint provides private access to supported AWS service APIs.\nPublic addresses and internet-facing endpoints do not meet private access requirements.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-008",
+    "type": "single",
+    "question": "A company migrating an existing workload must encrypt a secret used by a Lambda function and rotate it without source changes. Which service fits?",
+    "options": {
+      "A": "A Route 53 record",
+      "B": "AWS Secrets Manager with a KMS key",
+      "C": "An S3 public object",
+      "D": "A CloudFront cache"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Secrets Manager stores and rotates secrets and can use KMS for encryption at rest.\nThe other choices do not securely manage rotating application secrets.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-009",
+    "type": "single",
+    "question": "A team with strict recovery objectives needs to prevent an application from logging sensitive user data. Which control should be added?",
+    "options": {
+      "A": "Disable all authorization",
+      "B": "Use a larger EC2 instance",
+      "C": "Input validation and log redaction before emitting records",
+      "D": "Log every request body in plaintext"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Sanitization and redaction prevent sensitive fields from entering application logs.\nPlaintext logging increases exposure and the other choices do not protect logged data.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-010",
+    "type": "single",
+    "question": "A developer team preparing a release must encrypt data in transit between a client and an API. Which configuration should be used?",
+    "options": {
+      "A": "HTTP only",
+      "B": "An S3 lifecycle rule",
+      "C": "A DynamoDB scan",
+      "D": "HTTPS with a managed TLS certificate"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "HTTPS protects application traffic in transit and a managed certificate provides server identity.\nThe other choices do not provide transport encryption.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-011",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs users to sign in to a mobile application and receive tokens. Which service should be used?",
+    "options": {
+      "A": "Amazon Cognito user pools",
+      "B": "AWS Organizations",
+      "C": "Amazon CloudWatch",
+      "D": "AWS Transit Gateway"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Cognito user pools provide managed application user directories and tokens.\nThe other choices provide governance, monitoring, or networking.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-012",
+    "type": "single",
+    "question": "A service owner reviewing an incident needs an application to call a private AWS service without exposing data to the public internet. Which feature should be configured?",
+    "options": {
+      "A": "An internet-facing load balancer only",
+      "B": "A VPC interface endpoint",
+      "C": "A public IP on every instance",
+      "D": "An S3 website endpoint"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "An interface endpoint provides private access to supported AWS service APIs.\nPublic addresses and internet-facing endpoints do not meet private access requirements.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-013",
+    "type": "single",
+    "question": "A team optimizing an existing implementation must encrypt a secret used by a Lambda function and rotate it without source changes. Which service fits?",
+    "options": {
+      "A": "A CloudFront cache",
+      "B": "A Route 53 record",
+      "C": "AWS Secrets Manager with a KMS key",
+      "D": "An S3 public object"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Secrets Manager stores and rotates secrets and can use KMS for encryption at rest.\nThe other choices do not securely manage rotating application secrets.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-014",
+    "type": "single",
+    "question": "A company introducing an automated workflow needs to prevent an application from logging sensitive user data. Which control should be added?",
+    "options": {
+      "A": "Log every request body in plaintext",
+      "B": "Disable all authorization",
+      "C": "Use a larger EC2 instance",
+      "D": "Input validation and log redaction before emitting records"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Sanitization and redaction prevent sensitive fields from entering application logs.\nPlaintext logging increases exposure and the other choices do not protect logged data.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-015",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment must encrypt data in transit between a client and an API. Which configuration should be used?",
+    "options": {
+      "A": "HTTPS with a managed TLS certificate",
+      "B": "HTTP only",
+      "C": "An S3 lifecycle rule",
+      "D": "A DynamoDB scan"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "HTTPS protects application traffic in transit and a managed certificate provides server identity.\nThe other choices do not provide transport encryption.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-016",
+    "type": "single",
+    "question": "A customer-facing application team needs users to sign in to a mobile application and receive tokens. Which service should be used?",
+    "options": {
+      "A": "AWS Transit Gateway",
+      "B": "Amazon Cognito user pools",
+      "C": "AWS Organizations",
+      "D": "Amazon CloudWatch"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Cognito user pools provide managed application user directories and tokens.\nThe other choices provide governance, monitoring, or networking.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-017",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments needs an application to call a private AWS service without exposing data to the public internet. Which feature should be configured?",
+    "options": {
+      "A": "An S3 website endpoint",
+      "B": "An internet-facing load balancer only",
+      "C": "A VPC interface endpoint",
+      "D": "A public IP on every instance"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "An interface endpoint provides private access to supported AWS service APIs.\nPublic addresses and internet-facing endpoints do not meet private access requirements.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-018",
+    "type": "single",
+    "question": "A team preparing evidence for an audit must encrypt a secret used by a Lambda function and rotate it without source changes. Which service fits?",
+    "options": {
+      "A": "An S3 public object",
+      "B": "A CloudFront cache",
+      "C": "A Route 53 record",
+      "D": "AWS Secrets Manager with a KMS key"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Secrets Manager stores and rotates secrets and can use KMS for encryption at rest.\nThe other choices do not securely manage rotating application secrets.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-019",
+    "type": "single",
+    "question": "A business replacing a manual process needs to prevent an application from logging sensitive user data. Which control should be added?",
+    "options": {
+      "A": "Input validation and log redaction before emitting records",
+      "B": "Log every request body in plaintext",
+      "C": "Disable all authorization",
+      "D": "Use a larger EC2 instance"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Sanitization and redaction prevent sensitive fields from entering application logs.\nPlaintext logging increases exposure and the other choices do not protect logged data.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-020",
+    "type": "single",
+    "question": "A team validating a design against the exam guide must encrypt data in transit between a client and an API. Which configuration should be used?",
+    "options": {
+      "A": "A DynamoDB scan",
+      "B": "HTTPS with a managed TLS certificate",
+      "C": "HTTP only",
+      "D": "An S3 lifecycle rule"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "HTTPS protects application traffic in transit and a managed certificate provides server identity.\nThe other choices do not provide transport encryption.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-021",
+    "type": "single",
+    "question": "A production team needs users to sign in to a mobile application and receive tokens. Which service should be used?",
+    "options": {
+      "A": "Amazon CloudWatch",
+      "B": "AWS Transit Gateway",
+      "C": "Amazon Cognito user pools",
+      "D": "AWS Organizations"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Cognito user pools provide managed application user directories and tokens.\nThe other choices provide governance, monitoring, or networking.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-022",
+    "type": "single",
+    "question": "A multi-account platform team needs an application to call a private AWS service without exposing data to the public internet. Which feature should be configured?",
+    "options": {
+      "A": "A public IP on every instance",
+      "B": "An S3 website endpoint",
+      "C": "An internet-facing load balancer only",
+      "D": "A VPC interface endpoint"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "An interface endpoint provides private access to supported AWS service APIs.\nPublic addresses and internet-facing endpoints do not meet private access requirements.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-023",
+    "type": "single",
+    "question": "A regulated company must encrypt a secret used by a Lambda function and rotate it without source changes. Which service fits?",
+    "options": {
+      "A": "AWS Secrets Manager with a KMS key",
+      "B": "An S3 public object",
+      "C": "A CloudFront cache",
+      "D": "A Route 53 record"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Secrets Manager stores and rotates secrets and can use KMS for encryption at rest.\nThe other choices do not securely manage rotating application secrets.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-024",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs to prevent an application from logging sensitive user data. Which control should be added?",
+    "options": {
+      "A": "Use a larger EC2 instance",
+      "B": "Input validation and log redaction before emitting records",
+      "C": "Log every request body in plaintext",
+      "D": "Disable all authorization"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Sanitization and redaction prevent sensitive fields from entering application logs.\nPlaintext logging increases exposure and the other choices do not protect logged data.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-025",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must encrypt data in transit between a client and an API. Which configuration should be used?",
+    "options": {
+      "A": "An S3 lifecycle rule",
+      "B": "A DynamoDB scan",
+      "C": "HTTPS with a managed TLS certificate",
+      "D": "HTTP only"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "HTTPS protects application traffic in transit and a managed certificate provides server identity.\nThe other choices do not provide transport encryption.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-026",
+    "type": "single",
+    "question": "A data platform team needs users to sign in to a mobile application and receive tokens. Which service should be used?",
+    "options": {
+      "A": "AWS Organizations",
+      "B": "Amazon CloudWatch",
+      "C": "AWS Transit Gateway",
+      "D": "Amazon Cognito user pools"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Cognito user pools provide managed application user directories and tokens.\nThe other choices provide governance, monitoring, or networking.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-027",
+    "type": "single",
+    "question": "A security-conscious engineering team needs an application to call a private AWS service without exposing data to the public internet. Which feature should be configured?",
+    "options": {
+      "A": "A VPC interface endpoint",
+      "B": "A public IP on every instance",
+      "C": "An S3 website endpoint",
+      "D": "An internet-facing load balancer only"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "An interface endpoint provides private access to supported AWS service APIs.\nPublic addresses and internet-facing endpoints do not meet private access requirements.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-028",
+    "type": "single",
+    "question": "A company migrating an existing workload must encrypt a secret used by a Lambda function and rotate it without source changes. Which service fits?",
+    "options": {
+      "A": "A Route 53 record",
+      "B": "AWS Secrets Manager with a KMS key",
+      "C": "An S3 public object",
+      "D": "A CloudFront cache"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Secrets Manager stores and rotates secrets and can use KMS for encryption at rest.\nThe other choices do not securely manage rotating application secrets.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-029",
+    "type": "single",
+    "question": "A team with strict recovery objectives needs to prevent an application from logging sensitive user data. Which control should be added?",
+    "options": {
+      "A": "Disable all authorization",
+      "B": "Use a larger EC2 instance",
+      "C": "Input validation and log redaction before emitting records",
+      "D": "Log every request body in plaintext"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Sanitization and redaction prevent sensitive fields from entering application logs.\nPlaintext logging increases exposure and the other choices do not protect logged data.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-030",
+    "type": "single",
+    "question": "A developer team preparing a release must encrypt data in transit between a client and an API. Which configuration should be used?",
+    "options": {
+      "A": "HTTP only",
+      "B": "An S3 lifecycle rule",
+      "C": "A DynamoDB scan",
+      "D": "HTTPS with a managed TLS certificate"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "HTTPS protects application traffic in transit and a managed certificate provides server identity.\nThe other choices do not provide transport encryption.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-031",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs users to sign in to a mobile application and receive tokens. Which service should be used?",
+    "options": {
+      "A": "Amazon Cognito user pools",
+      "B": "AWS Organizations",
+      "C": "Amazon CloudWatch",
+      "D": "AWS Transit Gateway"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Cognito user pools provide managed application user directories and tokens.\nThe other choices provide governance, monitoring, or networking.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-032",
+    "type": "single",
+    "question": "A service owner reviewing an incident needs an application to call a private AWS service without exposing data to the public internet. Which feature should be configured?",
+    "options": {
+      "A": "An internet-facing load balancer only",
+      "B": "A VPC interface endpoint",
+      "C": "A public IP on every instance",
+      "D": "An S3 website endpoint"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "An interface endpoint provides private access to supported AWS service APIs.\nPublic addresses and internet-facing endpoints do not meet private access requirements.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-033",
+    "type": "single",
+    "question": "A team optimizing an existing implementation must encrypt a secret used by a Lambda function and rotate it without source changes. Which service fits?",
+    "options": {
+      "A": "A CloudFront cache",
+      "B": "A Route 53 record",
+      "C": "AWS Secrets Manager with a KMS key",
+      "D": "An S3 public object"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Secrets Manager stores and rotates secrets and can use KMS for encryption at rest.\nThe other choices do not securely manage rotating application secrets.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-034",
+    "type": "single",
+    "question": "A company introducing an automated workflow needs to prevent an application from logging sensitive user data. Which control should be added?",
+    "options": {
+      "A": "Log every request body in plaintext",
+      "B": "Disable all authorization",
+      "C": "Use a larger EC2 instance",
+      "D": "Input validation and log redaction before emitting records"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Sanitization and redaction prevent sensitive fields from entering application logs.\nPlaintext logging increases exposure and the other choices do not protect logged data.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-035",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment must encrypt data in transit between a client and an API. Which configuration should be used?",
+    "options": {
+      "A": "HTTPS with a managed TLS certificate",
+      "B": "HTTP only",
+      "C": "An S3 lifecycle rule",
+      "D": "A DynamoDB scan"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "HTTPS protects application traffic in transit and a managed certificate provides server identity.\nThe other choices do not provide transport encryption.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-036",
+    "type": "single",
+    "question": "A customer-facing application team needs users to sign in to a mobile application and receive tokens. Which service should be used?",
+    "options": {
+      "A": "AWS Transit Gateway",
+      "B": "Amazon Cognito user pools",
+      "C": "AWS Organizations",
+      "D": "Amazon CloudWatch"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Cognito user pools provide managed application user directories and tokens.\nThe other choices provide governance, monitoring, or networking.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-037",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments needs an application to call a private AWS service without exposing data to the public internet. Which feature should be configured?",
+    "options": {
+      "A": "An S3 website endpoint",
+      "B": "An internet-facing load balancer only",
+      "C": "A VPC interface endpoint",
+      "D": "A public IP on every instance"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "An interface endpoint provides private access to supported AWS service APIs.\nPublic addresses and internet-facing endpoints do not meet private access requirements.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-038",
+    "type": "single",
+    "question": "A team preparing evidence for an audit must encrypt a secret used by a Lambda function and rotate it without source changes. Which service fits?",
+    "options": {
+      "A": "An S3 public object",
+      "B": "A CloudFront cache",
+      "C": "A Route 53 record",
+      "D": "AWS Secrets Manager with a KMS key"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Secrets Manager stores and rotates secrets and can use KMS for encryption at rest.\nThe other choices do not securely manage rotating application secrets.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-039",
+    "type": "single",
+    "question": "A business replacing a manual process needs to prevent an application from logging sensitive user data. Which control should be added?",
+    "options": {
+      "A": "Input validation and log redaction before emitting records",
+      "B": "Log every request body in plaintext",
+      "C": "Disable all authorization",
+      "D": "Use a larger EC2 instance"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Sanitization and redaction prevent sensitive fields from entering application logs.\nPlaintext logging increases exposure and the other choices do not protect logged data.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-040",
+    "type": "single",
+    "question": "A team validating a design against the exam guide must encrypt data in transit between a client and an API. Which configuration should be used?",
+    "options": {
+      "A": "A DynamoDB scan",
+      "B": "HTTPS with a managed TLS certificate",
+      "C": "HTTP only",
+      "D": "An S3 lifecycle rule"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "HTTPS protects application traffic in transit and a managed certificate provides server identity.\nThe other choices do not provide transport encryption.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-041",
+    "type": "single",
+    "question": "A production team needs users to sign in to a mobile application and receive tokens. Which service should be used?",
+    "options": {
+      "A": "Amazon CloudWatch",
+      "B": "AWS Transit Gateway",
+      "C": "Amazon Cognito user pools",
+      "D": "AWS Organizations"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Cognito user pools provide managed application user directories and tokens.\nThe other choices provide governance, monitoring, or networking.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-042",
+    "type": "single",
+    "question": "A multi-account platform team needs an application to call a private AWS service without exposing data to the public internet. Which feature should be configured?",
+    "options": {
+      "A": "A public IP on every instance",
+      "B": "An S3 website endpoint",
+      "C": "An internet-facing load balancer only",
+      "D": "A VPC interface endpoint"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "An interface endpoint provides private access to supported AWS service APIs.\nPublic addresses and internet-facing endpoints do not meet private access requirements.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-043",
+    "type": "single",
+    "question": "A regulated company must encrypt a secret used by a Lambda function and rotate it without source changes. Which service fits?",
+    "options": {
+      "A": "AWS Secrets Manager with a KMS key",
+      "B": "An S3 public object",
+      "C": "A CloudFront cache",
+      "D": "A Route 53 record"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Secrets Manager stores and rotates secrets and can use KMS for encryption at rest.\nThe other choices do not securely manage rotating application secrets.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-044",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs to prevent an application from logging sensitive user data. Which control should be added?",
+    "options": {
+      "A": "Use a larger EC2 instance",
+      "B": "Input validation and log redaction before emitting records",
+      "C": "Log every request body in plaintext",
+      "D": "Disable all authorization"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Sanitization and redaction prevent sensitive fields from entering application logs.\nPlaintext logging increases exposure and the other choices do not protect logged data.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-045",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must encrypt data in transit between a client and an API. Which configuration should be used?",
+    "options": {
+      "A": "An S3 lifecycle rule",
+      "B": "A DynamoDB scan",
+      "C": "HTTPS with a managed TLS certificate",
+      "D": "HTTP only"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "HTTPS protects application traffic in transit and a managed certificate provides server identity.\nThe other choices do not provide transport encryption.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-046",
+    "type": "single",
+    "question": "A data platform team needs users to sign in to a mobile application and receive tokens. Which service should be used?",
+    "options": {
+      "A": "AWS Organizations",
+      "B": "Amazon CloudWatch",
+      "C": "AWS Transit Gateway",
+      "D": "Amazon Cognito user pools"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Cognito user pools provide managed application user directories and tokens.\nThe other choices provide governance, monitoring, or networking.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-047",
+    "type": "single",
+    "question": "A security-conscious engineering team needs an application to call a private AWS service without exposing data to the public internet. Which feature should be configured?",
+    "options": {
+      "A": "A VPC interface endpoint",
+      "B": "A public IP on every instance",
+      "C": "An S3 website endpoint",
+      "D": "An internet-facing load balancer only"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "An interface endpoint provides private access to supported AWS service APIs.\nPublic addresses and internet-facing endpoints do not meet private access requirements.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-048",
+    "type": "single",
+    "question": "A company migrating an existing workload must encrypt a secret used by a Lambda function and rotate it without source changes. Which service fits?",
+    "options": {
+      "A": "A Route 53 record",
+      "B": "AWS Secrets Manager with a KMS key",
+      "C": "An S3 public object",
+      "D": "A CloudFront cache"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Secrets Manager stores and rotates secrets and can use KMS for encryption at rest.\nThe other choices do not securely manage rotating application secrets.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-049",
+    "type": "single",
+    "question": "A team with strict recovery objectives needs to prevent an application from logging sensitive user data. Which control should be added?",
+    "options": {
+      "A": "Disable all authorization",
+      "B": "Use a larger EC2 instance",
+      "C": "Input validation and log redaction before emitting records",
+      "D": "Log every request body in plaintext"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Sanitization and redaction prevent sensitive fields from entering application logs.\nPlaintext logging increases exposure and the other choices do not protect logged data.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-050",
+    "type": "single",
+    "question": "A developer team preparing a release must encrypt data in transit between a client and an API. Which configuration should be used?",
+    "options": {
+      "A": "HTTP only",
+      "B": "An S3 lifecycle rule",
+      "C": "A DynamoDB scan",
+      "D": "HTTPS with a managed TLS certificate"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "HTTPS protects application traffic in transit and a managed certificate provides server identity.\nThe other choices do not provide transport encryption.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dva-c02-d2-051",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs users to sign in to a mobile application and receive tokens. Which service should be used?",
+    "options": {
+      "A": "Amazon Cognito user pools",
+      "B": "AWS Organizations",
+      "C": "Amazon CloudWatch",
+      "D": "AWS Transit Gateway"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Cognito user pools provide managed application user directories and tokens.\nThe other choices provide governance, monitoring, or networking.",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-09"
+  }
+]

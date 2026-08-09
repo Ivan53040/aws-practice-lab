@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useState } from 'react'
 import type { ReactNode } from 'react'
 import { Moon, Sun } from 'lucide-react'
 import type { Certification } from '../data/certifications'
-import { CERTIFICATIONS } from '../data/certifications'
+import { CERTIFICATION_LIST, CERTIFICATIONS } from '../data/certifications'
 import { loadAllQuestions } from '../data/questions'
 import type { Question, QuestionType } from '../types'
 import { formatTime, isAnswerCorrect, selectExamQuestions } from '../lib/scoring'
@@ -466,7 +466,7 @@ function HomeView({
   onStart: () => void
   error: boolean
 }) {
-  const certs = [CERTIFICATIONS['clf-c02'], CERTIFICATIONS['aif-c01'], CERTIFICATIONS['saa-c03']]
+  const certs = CERTIFICATION_LIST.filter(cert => cert.status === 'active' && cert.provider === 'aws')
   const selected = CERTIFICATIONS[certId]
   return (
     <div className="mx-auto w-full max-w-6xl px-4 py-10 md:px-8 md:py-16">
@@ -491,7 +491,7 @@ function HomeView({
         ))}
       </div>
       <div className="mt-8 flex flex-wrap items-center gap-4">
-        <button type="button" onClick={onStart} className="rounded-xl bg-brand px-6 py-3.5 text-sm font-bold text-on-brand shadow-card hover:bg-brand-hover">{labels.start}</button>
+        <button type="button" onClick={onStart} className="rounded-xl bg-brand px-6 py-3.5 text-sm font-bold text-on-brand shadow-card hover:bg-brand-hover">{labels.start.replace('65', String(selected?.examQuestionCount ?? 65))}</button>
         <span className="text-sm text-text-muted">{labels.passRule}</span>
       </div>
       {error && <p role="alert" className="mt-5 rounded-xl border border-danger/30 bg-danger/10 px-4 py-3 text-sm text-danger">{labels.loadingError} <button type="button" onClick={onStart} className="ml-2 font-bold underline">{labels.tryAgain}</button></p>}

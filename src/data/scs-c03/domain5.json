@@ -1,0 +1,562 @@
+[
+  {
+    "id": "scs-c03-d5-001",
+    "type": "single",
+    "question": "A production team needs customer-controlled encryption policies and audit events for S3 data. Which option should be selected?",
+    "options": {
+      "A": "A DNS record",
+      "B": "SSE-KMS with a customer managed key",
+      "C": "Plaintext objects",
+      "D": "SSE-S3 only when key policy control is required"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "SSE-KMS with a customer managed key provides key policy control and KMS audit events.\nPlaintext and unrelated controls do not protect or govern the data.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d5-002",
+    "type": "single",
+    "question": "A multi-account platform team must prevent deletion of compliance records until a retention date. Which S3 feature fits?",
+    "options": {
+      "A": "A security group",
+      "B": "A Route 53 alias",
+      "C": "S3 Object Lock in compliance mode",
+      "D": "S3 Transfer Acceleration"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Object Lock compliance mode enforces retention against deletion and overwrite.\nThe other choices do not enforce object retention.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d5-003",
+    "type": "single",
+    "question": "A regulated company needs to keep database credentials out of source and rotate them automatically. Which service fits?",
+    "options": {
+      "A": "An S3 website",
+      "B": "A CloudFront distribution",
+      "C": "An EBS snapshot",
+      "D": "AWS Secrets Manager"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Secrets Manager stores and rotates credentials and supports runtime retrieval.\nThe other choices do not manage application secrets.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d5-004",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase must protect data in transit to a public API. Which configuration is appropriate?",
+    "options": {
+      "A": "TLS with a managed certificate and strict security policies",
+      "B": "HTTP only",
+      "C": "An unencrypted public endpoint",
+      "D": "A bucket lifecycle rule"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "TLS protects data in transit and certificate management supports trusted endpoints.\nHTTP and unrelated storage controls do not protect transport.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d5-005",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs to discover PII before sharing a data set with another account. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon EFS",
+      "B": "Amazon Macie",
+      "C": "Amazon Inspector",
+      "D": "AWS Shield"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Macie discovers sensitive data in S3 and can inform remediation before sharing.\nThe other choices assess vulnerabilities, DDoS, or file storage.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d5-006",
+    "type": "single",
+    "question": "A data platform team needs customer-controlled encryption policies and audit events for S3 data. Which option should be selected?",
+    "options": {
+      "A": "SSE-S3 only when key policy control is required",
+      "B": "A DNS record",
+      "C": "SSE-KMS with a customer managed key",
+      "D": "Plaintext objects"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "SSE-KMS with a customer managed key provides key policy control and KMS audit events.\nPlaintext and unrelated controls do not protect or govern the data.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d5-007",
+    "type": "single",
+    "question": "A security-conscious engineering team must prevent deletion of compliance records until a retention date. Which S3 feature fits?",
+    "options": {
+      "A": "S3 Transfer Acceleration",
+      "B": "A security group",
+      "C": "A Route 53 alias",
+      "D": "S3 Object Lock in compliance mode"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Object Lock compliance mode enforces retention against deletion and overwrite.\nThe other choices do not enforce object retention.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d5-008",
+    "type": "single",
+    "question": "A company migrating an existing workload needs to keep database credentials out of source and rotate them automatically. Which service fits?",
+    "options": {
+      "A": "AWS Secrets Manager",
+      "B": "An S3 website",
+      "C": "A CloudFront distribution",
+      "D": "An EBS snapshot"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Secrets Manager stores and rotates credentials and supports runtime retrieval.\nThe other choices do not manage application secrets.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d5-009",
+    "type": "single",
+    "question": "A team with strict recovery objectives must protect data in transit to a public API. Which configuration is appropriate?",
+    "options": {
+      "A": "A bucket lifecycle rule",
+      "B": "TLS with a managed certificate and strict security policies",
+      "C": "HTTP only",
+      "D": "An unencrypted public endpoint"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "TLS protects data in transit and certificate management supports trusted endpoints.\nHTTP and unrelated storage controls do not protect transport.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d5-010",
+    "type": "single",
+    "question": "A developer team preparing a release needs to discover PII before sharing a data set with another account. Which service should be evaluated?",
+    "options": {
+      "A": "AWS Shield",
+      "B": "Amazon EFS",
+      "C": "Amazon Macie",
+      "D": "Amazon Inspector"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Macie discovers sensitive data in S3 and can inform remediation before sharing.\nThe other choices assess vulnerabilities, DDoS, or file storage.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d5-011",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs customer-controlled encryption policies and audit events for S3 data. Which option should be selected?",
+    "options": {
+      "A": "Plaintext objects",
+      "B": "SSE-S3 only when key policy control is required",
+      "C": "A DNS record",
+      "D": "SSE-KMS with a customer managed key"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "SSE-KMS with a customer managed key provides key policy control and KMS audit events.\nPlaintext and unrelated controls do not protect or govern the data.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d5-012",
+    "type": "single",
+    "question": "A service owner reviewing an incident must prevent deletion of compliance records until a retention date. Which S3 feature fits?",
+    "options": {
+      "A": "S3 Object Lock in compliance mode",
+      "B": "S3 Transfer Acceleration",
+      "C": "A security group",
+      "D": "A Route 53 alias"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Object Lock compliance mode enforces retention against deletion and overwrite.\nThe other choices do not enforce object retention.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d5-013",
+    "type": "single",
+    "question": "A team optimizing an existing implementation needs to keep database credentials out of source and rotate them automatically. Which service fits?",
+    "options": {
+      "A": "An EBS snapshot",
+      "B": "AWS Secrets Manager",
+      "C": "An S3 website",
+      "D": "A CloudFront distribution"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Secrets Manager stores and rotates credentials and supports runtime retrieval.\nThe other choices do not manage application secrets.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d5-014",
+    "type": "single",
+    "question": "A company introducing an automated workflow must protect data in transit to a public API. Which configuration is appropriate?",
+    "options": {
+      "A": "An unencrypted public endpoint",
+      "B": "A bucket lifecycle rule",
+      "C": "TLS with a managed certificate and strict security policies",
+      "D": "HTTP only"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "TLS protects data in transit and certificate management supports trusted endpoints.\nHTTP and unrelated storage controls do not protect transport.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d5-015",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment needs to discover PII before sharing a data set with another account. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon Inspector",
+      "B": "AWS Shield",
+      "C": "Amazon EFS",
+      "D": "Amazon Macie"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Macie discovers sensitive data in S3 and can inform remediation before sharing.\nThe other choices assess vulnerabilities, DDoS, or file storage.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d5-016",
+    "type": "single",
+    "question": "A customer-facing application team needs customer-controlled encryption policies and audit events for S3 data. Which option should be selected?",
+    "options": {
+      "A": "SSE-KMS with a customer managed key",
+      "B": "Plaintext objects",
+      "C": "SSE-S3 only when key policy control is required",
+      "D": "A DNS record"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "SSE-KMS with a customer managed key provides key policy control and KMS audit events.\nPlaintext and unrelated controls do not protect or govern the data.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d5-017",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments must prevent deletion of compliance records until a retention date. Which S3 feature fits?",
+    "options": {
+      "A": "A Route 53 alias",
+      "B": "S3 Object Lock in compliance mode",
+      "C": "S3 Transfer Acceleration",
+      "D": "A security group"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Object Lock compliance mode enforces retention against deletion and overwrite.\nThe other choices do not enforce object retention.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d5-018",
+    "type": "single",
+    "question": "A team preparing evidence for an audit needs to keep database credentials out of source and rotate them automatically. Which service fits?",
+    "options": {
+      "A": "A CloudFront distribution",
+      "B": "An EBS snapshot",
+      "C": "AWS Secrets Manager",
+      "D": "An S3 website"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Secrets Manager stores and rotates credentials and supports runtime retrieval.\nThe other choices do not manage application secrets.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d5-019",
+    "type": "single",
+    "question": "A business replacing a manual process must protect data in transit to a public API. Which configuration is appropriate?",
+    "options": {
+      "A": "HTTP only",
+      "B": "An unencrypted public endpoint",
+      "C": "A bucket lifecycle rule",
+      "D": "TLS with a managed certificate and strict security policies"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "TLS protects data in transit and certificate management supports trusted endpoints.\nHTTP and unrelated storage controls do not protect transport.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d5-020",
+    "type": "single",
+    "question": "A team validating a design against the exam guide needs to discover PII before sharing a data set with another account. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon Macie",
+      "B": "Amazon Inspector",
+      "C": "AWS Shield",
+      "D": "Amazon EFS"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Macie discovers sensitive data in S3 and can inform remediation before sharing.\nThe other choices assess vulnerabilities, DDoS, or file storage.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d5-021",
+    "type": "single",
+    "question": "A production team needs customer-controlled encryption policies and audit events for S3 data. Which option should be selected?",
+    "options": {
+      "A": "A DNS record",
+      "B": "SSE-KMS with a customer managed key",
+      "C": "Plaintext objects",
+      "D": "SSE-S3 only when key policy control is required"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "SSE-KMS with a customer managed key provides key policy control and KMS audit events.\nPlaintext and unrelated controls do not protect or govern the data.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d5-022",
+    "type": "single",
+    "question": "A multi-account platform team must prevent deletion of compliance records until a retention date. Which S3 feature fits?",
+    "options": {
+      "A": "A security group",
+      "B": "A Route 53 alias",
+      "C": "S3 Object Lock in compliance mode",
+      "D": "S3 Transfer Acceleration"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Object Lock compliance mode enforces retention against deletion and overwrite.\nThe other choices do not enforce object retention.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d5-023",
+    "type": "single",
+    "question": "A regulated company needs to keep database credentials out of source and rotate them automatically. Which service fits?",
+    "options": {
+      "A": "An S3 website",
+      "B": "A CloudFront distribution",
+      "C": "An EBS snapshot",
+      "D": "AWS Secrets Manager"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Secrets Manager stores and rotates credentials and supports runtime retrieval.\nThe other choices do not manage application secrets.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d5-024",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase must protect data in transit to a public API. Which configuration is appropriate?",
+    "options": {
+      "A": "TLS with a managed certificate and strict security policies",
+      "B": "HTTP only",
+      "C": "An unencrypted public endpoint",
+      "D": "A bucket lifecycle rule"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "TLS protects data in transit and certificate management supports trusted endpoints.\nHTTP and unrelated storage controls do not protect transport.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d5-025",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs to discover PII before sharing a data set with another account. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon EFS",
+      "B": "Amazon Macie",
+      "C": "Amazon Inspector",
+      "D": "AWS Shield"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Macie discovers sensitive data in S3 and can inform remediation before sharing.\nThe other choices assess vulnerabilities, DDoS, or file storage.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d5-026",
+    "type": "single",
+    "question": "A data platform team needs customer-controlled encryption policies and audit events for S3 data. Which option should be selected?",
+    "options": {
+      "A": "SSE-S3 only when key policy control is required",
+      "B": "A DNS record",
+      "C": "SSE-KMS with a customer managed key",
+      "D": "Plaintext objects"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "SSE-KMS with a customer managed key provides key policy control and KMS audit events.\nPlaintext and unrelated controls do not protect or govern the data.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d5-027",
+    "type": "single",
+    "question": "A security-conscious engineering team must prevent deletion of compliance records until a retention date. Which S3 feature fits?",
+    "options": {
+      "A": "S3 Transfer Acceleration",
+      "B": "A security group",
+      "C": "A Route 53 alias",
+      "D": "S3 Object Lock in compliance mode"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Object Lock compliance mode enforces retention against deletion and overwrite.\nThe other choices do not enforce object retention.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d5-028",
+    "type": "single",
+    "question": "A company migrating an existing workload needs to keep database credentials out of source and rotate them automatically. Which service fits?",
+    "options": {
+      "A": "AWS Secrets Manager",
+      "B": "An S3 website",
+      "C": "A CloudFront distribution",
+      "D": "An EBS snapshot"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Secrets Manager stores and rotates credentials and supports runtime retrieval.\nThe other choices do not manage application secrets.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d5-029",
+    "type": "single",
+    "question": "A team with strict recovery objectives must protect data in transit to a public API. Which configuration is appropriate?",
+    "options": {
+      "A": "A bucket lifecycle rule",
+      "B": "TLS with a managed certificate and strict security policies",
+      "C": "HTTP only",
+      "D": "An unencrypted public endpoint"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "TLS protects data in transit and certificate management supports trusted endpoints.\nHTTP and unrelated storage controls do not protect transport.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d5-030",
+    "type": "single",
+    "question": "A developer team preparing a release needs to discover PII before sharing a data set with another account. Which service should be evaluated?",
+    "options": {
+      "A": "AWS Shield",
+      "B": "Amazon EFS",
+      "C": "Amazon Macie",
+      "D": "Amazon Inspector"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Macie discovers sensitive data in S3 and can inform remediation before sharing.\nThe other choices assess vulnerabilities, DDoS, or file storage.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d5-031",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs customer-controlled encryption policies and audit events for S3 data. Which option should be selected?",
+    "options": {
+      "A": "Plaintext objects",
+      "B": "SSE-S3 only when key policy control is required",
+      "C": "A DNS record",
+      "D": "SSE-KMS with a customer managed key"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "SSE-KMS with a customer managed key provides key policy control and KMS audit events.\nPlaintext and unrelated controls do not protect or govern the data.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d5-032",
+    "type": "single",
+    "question": "A service owner reviewing an incident must prevent deletion of compliance records until a retention date. Which S3 feature fits?",
+    "options": {
+      "A": "S3 Object Lock in compliance mode",
+      "B": "S3 Transfer Acceleration",
+      "C": "A security group",
+      "D": "A Route 53 alias"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Object Lock compliance mode enforces retention against deletion and overwrite.\nThe other choices do not enforce object retention.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d5-033",
+    "type": "single",
+    "question": "A team optimizing an existing implementation needs to keep database credentials out of source and rotate them automatically. Which service fits?",
+    "options": {
+      "A": "An EBS snapshot",
+      "B": "AWS Secrets Manager",
+      "C": "An S3 website",
+      "D": "A CloudFront distribution"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Secrets Manager stores and rotates credentials and supports runtime retrieval.\nThe other choices do not manage application secrets.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d5-034",
+    "type": "single",
+    "question": "A company introducing an automated workflow must protect data in transit to a public API. Which configuration is appropriate?",
+    "options": {
+      "A": "An unencrypted public endpoint",
+      "B": "A bucket lifecycle rule",
+      "C": "TLS with a managed certificate and strict security policies",
+      "D": "HTTP only"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "TLS protects data in transit and certificate management supports trusted endpoints.\nHTTP and unrelated storage controls do not protect transport.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d5-035",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment needs to discover PII before sharing a data set with another account. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon Inspector",
+      "B": "AWS Shield",
+      "C": "Amazon EFS",
+      "D": "Amazon Macie"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Macie discovers sensitive data in S3 and can inform remediation before sharing.\nThe other choices assess vulnerabilities, DDoS, or file storage.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  }
+]

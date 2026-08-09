@@ -1,0 +1,786 @@
+[
+  {
+    "id": "dop-c02-d1-001",
+    "type": "single",
+    "question": "A production team needs a pipeline that builds an artifact, runs tests, and deploys it after an approval. Which service should orchestrate the stages?",
+    "options": {
+      "A": "Amazon EFS",
+      "B": "AWS CodePipeline",
+      "C": "Amazon Route 53",
+      "D": "AWS KMS"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CodePipeline orchestrates source, build, approval, and deployment stages.\nThe other choices provide DNS, encryption keys, or file storage.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-002",
+    "type": "single",
+    "question": "A multi-account platform team must compile source code and produce a versioned artifact in a managed build environment. Which service fits?",
+    "options": {
+      "A": "AWS WAF",
+      "B": "Amazon Neptune",
+      "C": "AWS CodeBuild",
+      "D": "Amazon Macie"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "CodeBuild runs managed build commands and can publish artifacts.\nThe other choices discover data, filter web requests, or provide graph storage.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-003",
+    "type": "single",
+    "question": "A regulated company needs to deploy a new application version to a subset of instances before full rollout. Which strategy fits?",
+    "options": {
+      "A": "A full replacement with no health check",
+      "B": "A public bucket policy",
+      "C": "A DNS TXT record",
+      "D": "A canary or blue-green deployment"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Canary and blue-green strategies reduce release risk by validating a new version before full traffic shift.\nThe other choices do not implement controlled application rollout.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-004",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase must prevent an untested artifact from being promoted to production. Which control is appropriate?",
+    "options": {
+      "A": "A pipeline approval or quality gate based on test results",
+      "B": "Disable all tests",
+      "C": "Use an unversioned artifact name",
+      "D": "Store credentials in source"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Approval gates and automated quality checks prevent unvalidated artifacts from promotion.\nThe other choices weaken release safety and traceability.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-005",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs to generate release notes and test suggestions using an AWS coding assistant. Which service is relevant?",
+    "options": {
+      "A": "Amazon RDS",
+      "B": "Amazon Q Developer",
+      "C": "Amazon S3 Glacier",
+      "D": "AWS Transit Gateway"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Amazon Q Developer can assist with code, reviews, tests, and development workflows.\nThe other choices provide archival storage, networking, or relational databases.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-006",
+    "type": "single",
+    "question": "A data platform team needs a pipeline that builds an artifact, runs tests, and deploys it after an approval. Which service should orchestrate the stages?",
+    "options": {
+      "A": "AWS KMS",
+      "B": "Amazon EFS",
+      "C": "AWS CodePipeline",
+      "D": "Amazon Route 53"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "CodePipeline orchestrates source, build, approval, and deployment stages.\nThe other choices provide DNS, encryption keys, or file storage.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-007",
+    "type": "single",
+    "question": "A security-conscious engineering team must compile source code and produce a versioned artifact in a managed build environment. Which service fits?",
+    "options": {
+      "A": "Amazon Macie",
+      "B": "AWS WAF",
+      "C": "Amazon Neptune",
+      "D": "AWS CodeBuild"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CodeBuild runs managed build commands and can publish artifacts.\nThe other choices discover data, filter web requests, or provide graph storage.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-008",
+    "type": "single",
+    "question": "A company migrating an existing workload needs to deploy a new application version to a subset of instances before full rollout. Which strategy fits?",
+    "options": {
+      "A": "A canary or blue-green deployment",
+      "B": "A full replacement with no health check",
+      "C": "A public bucket policy",
+      "D": "A DNS TXT record"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Canary and blue-green strategies reduce release risk by validating a new version before full traffic shift.\nThe other choices do not implement controlled application rollout.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-009",
+    "type": "single",
+    "question": "A team with strict recovery objectives must prevent an untested artifact from being promoted to production. Which control is appropriate?",
+    "options": {
+      "A": "Store credentials in source",
+      "B": "A pipeline approval or quality gate based on test results",
+      "C": "Disable all tests",
+      "D": "Use an unversioned artifact name"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Approval gates and automated quality checks prevent unvalidated artifacts from promotion.\nThe other choices weaken release safety and traceability.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-010",
+    "type": "single",
+    "question": "A developer team preparing a release needs to generate release notes and test suggestions using an AWS coding assistant. Which service is relevant?",
+    "options": {
+      "A": "AWS Transit Gateway",
+      "B": "Amazon RDS",
+      "C": "Amazon Q Developer",
+      "D": "Amazon S3 Glacier"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Amazon Q Developer can assist with code, reviews, tests, and development workflows.\nThe other choices provide archival storage, networking, or relational databases.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-011",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs a pipeline that builds an artifact, runs tests, and deploys it after an approval. Which service should orchestrate the stages?",
+    "options": {
+      "A": "Amazon Route 53",
+      "B": "AWS KMS",
+      "C": "Amazon EFS",
+      "D": "AWS CodePipeline"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CodePipeline orchestrates source, build, approval, and deployment stages.\nThe other choices provide DNS, encryption keys, or file storage.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-012",
+    "type": "single",
+    "question": "A service owner reviewing an incident must compile source code and produce a versioned artifact in a managed build environment. Which service fits?",
+    "options": {
+      "A": "AWS CodeBuild",
+      "B": "Amazon Macie",
+      "C": "AWS WAF",
+      "D": "Amazon Neptune"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "CodeBuild runs managed build commands and can publish artifacts.\nThe other choices discover data, filter web requests, or provide graph storage.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-013",
+    "type": "single",
+    "question": "A team optimizing an existing implementation needs to deploy a new application version to a subset of instances before full rollout. Which strategy fits?",
+    "options": {
+      "A": "A DNS TXT record",
+      "B": "A canary or blue-green deployment",
+      "C": "A full replacement with no health check",
+      "D": "A public bucket policy"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Canary and blue-green strategies reduce release risk by validating a new version before full traffic shift.\nThe other choices do not implement controlled application rollout.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-014",
+    "type": "single",
+    "question": "A company introducing an automated workflow must prevent an untested artifact from being promoted to production. Which control is appropriate?",
+    "options": {
+      "A": "Use an unversioned artifact name",
+      "B": "Store credentials in source",
+      "C": "A pipeline approval or quality gate based on test results",
+      "D": "Disable all tests"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Approval gates and automated quality checks prevent unvalidated artifacts from promotion.\nThe other choices weaken release safety and traceability.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-015",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment needs to generate release notes and test suggestions using an AWS coding assistant. Which service is relevant?",
+    "options": {
+      "A": "Amazon S3 Glacier",
+      "B": "AWS Transit Gateway",
+      "C": "Amazon RDS",
+      "D": "Amazon Q Developer"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Amazon Q Developer can assist with code, reviews, tests, and development workflows.\nThe other choices provide archival storage, networking, or relational databases.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-016",
+    "type": "single",
+    "question": "A customer-facing application team needs a pipeline that builds an artifact, runs tests, and deploys it after an approval. Which service should orchestrate the stages?",
+    "options": {
+      "A": "AWS CodePipeline",
+      "B": "Amazon Route 53",
+      "C": "AWS KMS",
+      "D": "Amazon EFS"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "CodePipeline orchestrates source, build, approval, and deployment stages.\nThe other choices provide DNS, encryption keys, or file storage.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-017",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments must compile source code and produce a versioned artifact in a managed build environment. Which service fits?",
+    "options": {
+      "A": "Amazon Neptune",
+      "B": "AWS CodeBuild",
+      "C": "Amazon Macie",
+      "D": "AWS WAF"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CodeBuild runs managed build commands and can publish artifacts.\nThe other choices discover data, filter web requests, or provide graph storage.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-018",
+    "type": "single",
+    "question": "A team preparing evidence for an audit needs to deploy a new application version to a subset of instances before full rollout. Which strategy fits?",
+    "options": {
+      "A": "A public bucket policy",
+      "B": "A DNS TXT record",
+      "C": "A canary or blue-green deployment",
+      "D": "A full replacement with no health check"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Canary and blue-green strategies reduce release risk by validating a new version before full traffic shift.\nThe other choices do not implement controlled application rollout.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-019",
+    "type": "single",
+    "question": "A business replacing a manual process must prevent an untested artifact from being promoted to production. Which control is appropriate?",
+    "options": {
+      "A": "Disable all tests",
+      "B": "Use an unversioned artifact name",
+      "C": "Store credentials in source",
+      "D": "A pipeline approval or quality gate based on test results"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Approval gates and automated quality checks prevent unvalidated artifacts from promotion.\nThe other choices weaken release safety and traceability.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-020",
+    "type": "single",
+    "question": "A team validating a design against the exam guide needs to generate release notes and test suggestions using an AWS coding assistant. Which service is relevant?",
+    "options": {
+      "A": "Amazon Q Developer",
+      "B": "Amazon S3 Glacier",
+      "C": "AWS Transit Gateway",
+      "D": "Amazon RDS"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Amazon Q Developer can assist with code, reviews, tests, and development workflows.\nThe other choices provide archival storage, networking, or relational databases.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-021",
+    "type": "single",
+    "question": "A production team needs a pipeline that builds an artifact, runs tests, and deploys it after an approval. Which service should orchestrate the stages?",
+    "options": {
+      "A": "Amazon EFS",
+      "B": "AWS CodePipeline",
+      "C": "Amazon Route 53",
+      "D": "AWS KMS"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CodePipeline orchestrates source, build, approval, and deployment stages.\nThe other choices provide DNS, encryption keys, or file storage.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-022",
+    "type": "single",
+    "question": "A multi-account platform team must compile source code and produce a versioned artifact in a managed build environment. Which service fits?",
+    "options": {
+      "A": "AWS WAF",
+      "B": "Amazon Neptune",
+      "C": "AWS CodeBuild",
+      "D": "Amazon Macie"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "CodeBuild runs managed build commands and can publish artifacts.\nThe other choices discover data, filter web requests, or provide graph storage.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-023",
+    "type": "single",
+    "question": "A regulated company needs to deploy a new application version to a subset of instances before full rollout. Which strategy fits?",
+    "options": {
+      "A": "A full replacement with no health check",
+      "B": "A public bucket policy",
+      "C": "A DNS TXT record",
+      "D": "A canary or blue-green deployment"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Canary and blue-green strategies reduce release risk by validating a new version before full traffic shift.\nThe other choices do not implement controlled application rollout.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-024",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase must prevent an untested artifact from being promoted to production. Which control is appropriate?",
+    "options": {
+      "A": "A pipeline approval or quality gate based on test results",
+      "B": "Disable all tests",
+      "C": "Use an unversioned artifact name",
+      "D": "Store credentials in source"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Approval gates and automated quality checks prevent unvalidated artifacts from promotion.\nThe other choices weaken release safety and traceability.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-025",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs to generate release notes and test suggestions using an AWS coding assistant. Which service is relevant?",
+    "options": {
+      "A": "Amazon RDS",
+      "B": "Amazon Q Developer",
+      "C": "Amazon S3 Glacier",
+      "D": "AWS Transit Gateway"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Amazon Q Developer can assist with code, reviews, tests, and development workflows.\nThe other choices provide archival storage, networking, or relational databases.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-026",
+    "type": "single",
+    "question": "A data platform team needs a pipeline that builds an artifact, runs tests, and deploys it after an approval. Which service should orchestrate the stages?",
+    "options": {
+      "A": "AWS KMS",
+      "B": "Amazon EFS",
+      "C": "AWS CodePipeline",
+      "D": "Amazon Route 53"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "CodePipeline orchestrates source, build, approval, and deployment stages.\nThe other choices provide DNS, encryption keys, or file storage.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-027",
+    "type": "single",
+    "question": "A security-conscious engineering team must compile source code and produce a versioned artifact in a managed build environment. Which service fits?",
+    "options": {
+      "A": "Amazon Macie",
+      "B": "AWS WAF",
+      "C": "Amazon Neptune",
+      "D": "AWS CodeBuild"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CodeBuild runs managed build commands and can publish artifacts.\nThe other choices discover data, filter web requests, or provide graph storage.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-028",
+    "type": "single",
+    "question": "A company migrating an existing workload needs to deploy a new application version to a subset of instances before full rollout. Which strategy fits?",
+    "options": {
+      "A": "A canary or blue-green deployment",
+      "B": "A full replacement with no health check",
+      "C": "A public bucket policy",
+      "D": "A DNS TXT record"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Canary and blue-green strategies reduce release risk by validating a new version before full traffic shift.\nThe other choices do not implement controlled application rollout.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-029",
+    "type": "single",
+    "question": "A team with strict recovery objectives must prevent an untested artifact from being promoted to production. Which control is appropriate?",
+    "options": {
+      "A": "Store credentials in source",
+      "B": "A pipeline approval or quality gate based on test results",
+      "C": "Disable all tests",
+      "D": "Use an unversioned artifact name"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Approval gates and automated quality checks prevent unvalidated artifacts from promotion.\nThe other choices weaken release safety and traceability.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-030",
+    "type": "single",
+    "question": "A developer team preparing a release needs to generate release notes and test suggestions using an AWS coding assistant. Which service is relevant?",
+    "options": {
+      "A": "AWS Transit Gateway",
+      "B": "Amazon RDS",
+      "C": "Amazon Q Developer",
+      "D": "Amazon S3 Glacier"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Amazon Q Developer can assist with code, reviews, tests, and development workflows.\nThe other choices provide archival storage, networking, or relational databases.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-031",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs a pipeline that builds an artifact, runs tests, and deploys it after an approval. Which service should orchestrate the stages?",
+    "options": {
+      "A": "Amazon Route 53",
+      "B": "AWS KMS",
+      "C": "Amazon EFS",
+      "D": "AWS CodePipeline"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CodePipeline orchestrates source, build, approval, and deployment stages.\nThe other choices provide DNS, encryption keys, or file storage.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-032",
+    "type": "single",
+    "question": "A service owner reviewing an incident must compile source code and produce a versioned artifact in a managed build environment. Which service fits?",
+    "options": {
+      "A": "AWS CodeBuild",
+      "B": "Amazon Macie",
+      "C": "AWS WAF",
+      "D": "Amazon Neptune"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "CodeBuild runs managed build commands and can publish artifacts.\nThe other choices discover data, filter web requests, or provide graph storage.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-033",
+    "type": "single",
+    "question": "A team optimizing an existing implementation needs to deploy a new application version to a subset of instances before full rollout. Which strategy fits?",
+    "options": {
+      "A": "A DNS TXT record",
+      "B": "A canary or blue-green deployment",
+      "C": "A full replacement with no health check",
+      "D": "A public bucket policy"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Canary and blue-green strategies reduce release risk by validating a new version before full traffic shift.\nThe other choices do not implement controlled application rollout.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-034",
+    "type": "single",
+    "question": "A company introducing an automated workflow must prevent an untested artifact from being promoted to production. Which control is appropriate?",
+    "options": {
+      "A": "Use an unversioned artifact name",
+      "B": "Store credentials in source",
+      "C": "A pipeline approval or quality gate based on test results",
+      "D": "Disable all tests"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Approval gates and automated quality checks prevent unvalidated artifacts from promotion.\nThe other choices weaken release safety and traceability.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-035",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment needs to generate release notes and test suggestions using an AWS coding assistant. Which service is relevant?",
+    "options": {
+      "A": "Amazon S3 Glacier",
+      "B": "AWS Transit Gateway",
+      "C": "Amazon RDS",
+      "D": "Amazon Q Developer"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Amazon Q Developer can assist with code, reviews, tests, and development workflows.\nThe other choices provide archival storage, networking, or relational databases.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-036",
+    "type": "single",
+    "question": "A customer-facing application team needs a pipeline that builds an artifact, runs tests, and deploys it after an approval. Which service should orchestrate the stages?",
+    "options": {
+      "A": "AWS CodePipeline",
+      "B": "Amazon Route 53",
+      "C": "AWS KMS",
+      "D": "Amazon EFS"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "CodePipeline orchestrates source, build, approval, and deployment stages.\nThe other choices provide DNS, encryption keys, or file storage.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-037",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments must compile source code and produce a versioned artifact in a managed build environment. Which service fits?",
+    "options": {
+      "A": "Amazon Neptune",
+      "B": "AWS CodeBuild",
+      "C": "Amazon Macie",
+      "D": "AWS WAF"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CodeBuild runs managed build commands and can publish artifacts.\nThe other choices discover data, filter web requests, or provide graph storage.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-038",
+    "type": "single",
+    "question": "A team preparing evidence for an audit needs to deploy a new application version to a subset of instances before full rollout. Which strategy fits?",
+    "options": {
+      "A": "A public bucket policy",
+      "B": "A DNS TXT record",
+      "C": "A canary or blue-green deployment",
+      "D": "A full replacement with no health check"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Canary and blue-green strategies reduce release risk by validating a new version before full traffic shift.\nThe other choices do not implement controlled application rollout.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-039",
+    "type": "single",
+    "question": "A business replacing a manual process must prevent an untested artifact from being promoted to production. Which control is appropriate?",
+    "options": {
+      "A": "Disable all tests",
+      "B": "Use an unversioned artifact name",
+      "C": "Store credentials in source",
+      "D": "A pipeline approval or quality gate based on test results"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Approval gates and automated quality checks prevent unvalidated artifacts from promotion.\nThe other choices weaken release safety and traceability.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-040",
+    "type": "single",
+    "question": "A team validating a design against the exam guide needs to generate release notes and test suggestions using an AWS coding assistant. Which service is relevant?",
+    "options": {
+      "A": "Amazon Q Developer",
+      "B": "Amazon S3 Glacier",
+      "C": "AWS Transit Gateway",
+      "D": "Amazon RDS"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Amazon Q Developer can assist with code, reviews, tests, and development workflows.\nThe other choices provide archival storage, networking, or relational databases.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-041",
+    "type": "single",
+    "question": "A production team needs a pipeline that builds an artifact, runs tests, and deploys it after an approval. Which service should orchestrate the stages?",
+    "options": {
+      "A": "Amazon EFS",
+      "B": "AWS CodePipeline",
+      "C": "Amazon Route 53",
+      "D": "AWS KMS"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CodePipeline orchestrates source, build, approval, and deployment stages.\nThe other choices provide DNS, encryption keys, or file storage.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-042",
+    "type": "single",
+    "question": "A multi-account platform team must compile source code and produce a versioned artifact in a managed build environment. Which service fits?",
+    "options": {
+      "A": "AWS WAF",
+      "B": "Amazon Neptune",
+      "C": "AWS CodeBuild",
+      "D": "Amazon Macie"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "CodeBuild runs managed build commands and can publish artifacts.\nThe other choices discover data, filter web requests, or provide graph storage.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-043",
+    "type": "single",
+    "question": "A regulated company needs to deploy a new application version to a subset of instances before full rollout. Which strategy fits?",
+    "options": {
+      "A": "A full replacement with no health check",
+      "B": "A public bucket policy",
+      "C": "A DNS TXT record",
+      "D": "A canary or blue-green deployment"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Canary and blue-green strategies reduce release risk by validating a new version before full traffic shift.\nThe other choices do not implement controlled application rollout.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-044",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase must prevent an untested artifact from being promoted to production. Which control is appropriate?",
+    "options": {
+      "A": "A pipeline approval or quality gate based on test results",
+      "B": "Disable all tests",
+      "C": "Use an unversioned artifact name",
+      "D": "Store credentials in source"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Approval gates and automated quality checks prevent unvalidated artifacts from promotion.\nThe other choices weaken release safety and traceability.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-045",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs to generate release notes and test suggestions using an AWS coding assistant. Which service is relevant?",
+    "options": {
+      "A": "Amazon RDS",
+      "B": "Amazon Q Developer",
+      "C": "Amazon S3 Glacier",
+      "D": "AWS Transit Gateway"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Amazon Q Developer can assist with code, reviews, tests, and development workflows.\nThe other choices provide archival storage, networking, or relational databases.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-046",
+    "type": "single",
+    "question": "A data platform team needs a pipeline that builds an artifact, runs tests, and deploys it after an approval. Which service should orchestrate the stages?",
+    "options": {
+      "A": "AWS KMS",
+      "B": "Amazon EFS",
+      "C": "AWS CodePipeline",
+      "D": "Amazon Route 53"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "CodePipeline orchestrates source, build, approval, and deployment stages.\nThe other choices provide DNS, encryption keys, or file storage.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-047",
+    "type": "single",
+    "question": "A security-conscious engineering team must compile source code and produce a versioned artifact in a managed build environment. Which service fits?",
+    "options": {
+      "A": "Amazon Macie",
+      "B": "AWS WAF",
+      "C": "Amazon Neptune",
+      "D": "AWS CodeBuild"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CodeBuild runs managed build commands and can publish artifacts.\nThe other choices discover data, filter web requests, or provide graph storage.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-048",
+    "type": "single",
+    "question": "A company migrating an existing workload needs to deploy a new application version to a subset of instances before full rollout. Which strategy fits?",
+    "options": {
+      "A": "A canary or blue-green deployment",
+      "B": "A full replacement with no health check",
+      "C": "A public bucket policy",
+      "D": "A DNS TXT record"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Canary and blue-green strategies reduce release risk by validating a new version before full traffic shift.\nThe other choices do not implement controlled application rollout.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d1-049",
+    "type": "single",
+    "question": "A team with strict recovery objectives must prevent an untested artifact from being promoted to production. Which control is appropriate?",
+    "options": {
+      "A": "Store credentials in source",
+      "B": "A pipeline approval or quality gate based on test results",
+      "C": "Disable all tests",
+      "D": "Use an unversioned artifact name"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Approval gates and automated quality checks prevent unvalidated artifacts from promotion.\nThe other choices weaken release safety and traceability.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  }
+]

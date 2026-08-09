@@ -1,0 +1,1058 @@
+[
+  {
+    "id": "dea-c01-d1-001",
+    "type": "single",
+    "question": "A production team needs to ingest ordered streaming records that multiple consumers can replay independently. Which service fits?",
+    "options": {
+      "A": "AWS Certificate Manager",
+      "B": "Amazon Kinesis Data Streams",
+      "C": "Amazon S3 Glacier",
+      "D": "Amazon Route 53"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Kinesis Data Streams retains ordered records and supports independent consumer positions.\nThe other choices provide archival storage, DNS, or certificates.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-002",
+    "type": "single",
+    "question": "A multi-account platform team needs managed ETL jobs and a central schema catalog for objects in S3. Which service should be used?",
+    "options": {
+      "A": "Amazon Cognito",
+      "B": "AWS Shield",
+      "C": "AWS Glue",
+      "D": "Amazon CloudFront"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "AWS Glue provides ETL jobs, crawlers, and the Glue Data Catalog.\nThe other choices provide content delivery, identity, or DDoS protection.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-003",
+    "type": "single",
+    "question": "A regulated company must convert CSV data into a columnar format for analytics. Which transformation is most appropriate?",
+    "options": {
+      "A": "Convert the records to JPEG",
+      "B": "Store every row as a DNS record",
+      "C": "Encode the data as an IAM policy",
+      "D": "Convert the records to Apache Parquet"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Parquet is a columnar format that can reduce scan volume and improve analytical query performance.\nThe other choices are image, DNS, or authorization representations.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-004",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs a durable workflow that coordinates crawlers, transformations, and validation steps. Which service should orchestrate it?",
+    "options": {
+      "A": "AWS Step Functions or AWS Glue Workflows",
+      "B": "An S3 ACL",
+      "C": "A security group",
+      "D": "An EBS snapshot"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Workflow orchestration services represent dependencies and retries between data pipeline steps.\nThe other choices control access, network traffic, or volume backups.",
+    "taskStatement": "1.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-005",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must prevent a streaming producer from overwhelming a downstream data store. Which strategy is appropriate?",
+    "options": {
+      "A": "Remove partition keys",
+      "B": "Buffer records and apply throttling with retry and backoff",
+      "C": "Disable all retries",
+      "D": "Make the data store public"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Buffering, throttling, and backoff smooth bursts and protect the downstream system from overload.\nThe other choices reduce reliability or data-store performance.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-006",
+    "type": "single",
+    "question": "A data platform team needs to ingest ordered streaming records that multiple consumers can replay independently. Which service fits?",
+    "options": {
+      "A": "Amazon Route 53",
+      "B": "AWS Certificate Manager",
+      "C": "Amazon Kinesis Data Streams",
+      "D": "Amazon S3 Glacier"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Kinesis Data Streams retains ordered records and supports independent consumer positions.\nThe other choices provide archival storage, DNS, or certificates.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-007",
+    "type": "single",
+    "question": "A security-conscious engineering team needs managed ETL jobs and a central schema catalog for objects in S3. Which service should be used?",
+    "options": {
+      "A": "Amazon CloudFront",
+      "B": "Amazon Cognito",
+      "C": "AWS Shield",
+      "D": "AWS Glue"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "AWS Glue provides ETL jobs, crawlers, and the Glue Data Catalog.\nThe other choices provide content delivery, identity, or DDoS protection.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-008",
+    "type": "single",
+    "question": "A company migrating an existing workload must convert CSV data into a columnar format for analytics. Which transformation is most appropriate?",
+    "options": {
+      "A": "Convert the records to Apache Parquet",
+      "B": "Convert the records to JPEG",
+      "C": "Store every row as a DNS record",
+      "D": "Encode the data as an IAM policy"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Parquet is a columnar format that can reduce scan volume and improve analytical query performance.\nThe other choices are image, DNS, or authorization representations.",
+    "taskStatement": "1.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-009",
+    "type": "single",
+    "question": "A team with strict recovery objectives needs a durable workflow that coordinates crawlers, transformations, and validation steps. Which service should orchestrate it?",
+    "options": {
+      "A": "An EBS snapshot",
+      "B": "AWS Step Functions or AWS Glue Workflows",
+      "C": "An S3 ACL",
+      "D": "A security group"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Workflow orchestration services represent dependencies and retries between data pipeline steps.\nThe other choices control access, network traffic, or volume backups.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-010",
+    "type": "single",
+    "question": "A developer team preparing a release must prevent a streaming producer from overwhelming a downstream data store. Which strategy is appropriate?",
+    "options": {
+      "A": "Make the data store public",
+      "B": "Remove partition keys",
+      "C": "Buffer records and apply throttling with retry and backoff",
+      "D": "Disable all retries"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Buffering, throttling, and backoff smooth bursts and protect the downstream system from overload.\nThe other choices reduce reliability or data-store performance.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-011",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs to ingest ordered streaming records that multiple consumers can replay independently. Which service fits?",
+    "options": {
+      "A": "Amazon S3 Glacier",
+      "B": "Amazon Route 53",
+      "C": "AWS Certificate Manager",
+      "D": "Amazon Kinesis Data Streams"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Kinesis Data Streams retains ordered records and supports independent consumer positions.\nThe other choices provide archival storage, DNS, or certificates.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-012",
+    "type": "single",
+    "question": "A service owner reviewing an incident needs managed ETL jobs and a central schema catalog for objects in S3. Which service should be used?",
+    "options": {
+      "A": "AWS Glue",
+      "B": "Amazon CloudFront",
+      "C": "Amazon Cognito",
+      "D": "AWS Shield"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "AWS Glue provides ETL jobs, crawlers, and the Glue Data Catalog.\nThe other choices provide content delivery, identity, or DDoS protection.",
+    "taskStatement": "1.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-013",
+    "type": "single",
+    "question": "A team optimizing an existing implementation must convert CSV data into a columnar format for analytics. Which transformation is most appropriate?",
+    "options": {
+      "A": "Encode the data as an IAM policy",
+      "B": "Convert the records to Apache Parquet",
+      "C": "Convert the records to JPEG",
+      "D": "Store every row as a DNS record"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Parquet is a columnar format that can reduce scan volume and improve analytical query performance.\nThe other choices are image, DNS, or authorization representations.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-014",
+    "type": "single",
+    "question": "A company introducing an automated workflow needs a durable workflow that coordinates crawlers, transformations, and validation steps. Which service should orchestrate it?",
+    "options": {
+      "A": "A security group",
+      "B": "An EBS snapshot",
+      "C": "AWS Step Functions or AWS Glue Workflows",
+      "D": "An S3 ACL"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Workflow orchestration services represent dependencies and retries between data pipeline steps.\nThe other choices control access, network traffic, or volume backups.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-015",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment must prevent a streaming producer from overwhelming a downstream data store. Which strategy is appropriate?",
+    "options": {
+      "A": "Disable all retries",
+      "B": "Make the data store public",
+      "C": "Remove partition keys",
+      "D": "Buffer records and apply throttling with retry and backoff"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Buffering, throttling, and backoff smooth bursts and protect the downstream system from overload.\nThe other choices reduce reliability or data-store performance.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-016",
+    "type": "single",
+    "question": "A customer-facing application team needs to ingest ordered streaming records that multiple consumers can replay independently. Which service fits?",
+    "options": {
+      "A": "Amazon Kinesis Data Streams",
+      "B": "Amazon S3 Glacier",
+      "C": "Amazon Route 53",
+      "D": "AWS Certificate Manager"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Kinesis Data Streams retains ordered records and supports independent consumer positions.\nThe other choices provide archival storage, DNS, or certificates.",
+    "taskStatement": "1.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-017",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments needs managed ETL jobs and a central schema catalog for objects in S3. Which service should be used?",
+    "options": {
+      "A": "AWS Shield",
+      "B": "AWS Glue",
+      "C": "Amazon CloudFront",
+      "D": "Amazon Cognito"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "AWS Glue provides ETL jobs, crawlers, and the Glue Data Catalog.\nThe other choices provide content delivery, identity, or DDoS protection.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-018",
+    "type": "single",
+    "question": "A team preparing evidence for an audit must convert CSV data into a columnar format for analytics. Which transformation is most appropriate?",
+    "options": {
+      "A": "Store every row as a DNS record",
+      "B": "Encode the data as an IAM policy",
+      "C": "Convert the records to Apache Parquet",
+      "D": "Convert the records to JPEG"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Parquet is a columnar format that can reduce scan volume and improve analytical query performance.\nThe other choices are image, DNS, or authorization representations.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-019",
+    "type": "single",
+    "question": "A business replacing a manual process needs a durable workflow that coordinates crawlers, transformations, and validation steps. Which service should orchestrate it?",
+    "options": {
+      "A": "An S3 ACL",
+      "B": "A security group",
+      "C": "An EBS snapshot",
+      "D": "AWS Step Functions or AWS Glue Workflows"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Workflow orchestration services represent dependencies and retries between data pipeline steps.\nThe other choices control access, network traffic, or volume backups.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-020",
+    "type": "single",
+    "question": "A team validating a design against the exam guide must prevent a streaming producer from overwhelming a downstream data store. Which strategy is appropriate?",
+    "options": {
+      "A": "Buffer records and apply throttling with retry and backoff",
+      "B": "Disable all retries",
+      "C": "Make the data store public",
+      "D": "Remove partition keys"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Buffering, throttling, and backoff smooth bursts and protect the downstream system from overload.\nThe other choices reduce reliability or data-store performance.",
+    "taskStatement": "1.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-021",
+    "type": "single",
+    "question": "A production team needs to ingest ordered streaming records that multiple consumers can replay independently. Which service fits?",
+    "options": {
+      "A": "AWS Certificate Manager",
+      "B": "Amazon Kinesis Data Streams",
+      "C": "Amazon S3 Glacier",
+      "D": "Amazon Route 53"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Kinesis Data Streams retains ordered records and supports independent consumer positions.\nThe other choices provide archival storage, DNS, or certificates.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-022",
+    "type": "single",
+    "question": "A multi-account platform team needs managed ETL jobs and a central schema catalog for objects in S3. Which service should be used?",
+    "options": {
+      "A": "Amazon Cognito",
+      "B": "AWS Shield",
+      "C": "AWS Glue",
+      "D": "Amazon CloudFront"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "AWS Glue provides ETL jobs, crawlers, and the Glue Data Catalog.\nThe other choices provide content delivery, identity, or DDoS protection.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-023",
+    "type": "single",
+    "question": "A regulated company must convert CSV data into a columnar format for analytics. Which transformation is most appropriate?",
+    "options": {
+      "A": "Convert the records to JPEG",
+      "B": "Store every row as a DNS record",
+      "C": "Encode the data as an IAM policy",
+      "D": "Convert the records to Apache Parquet"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Parquet is a columnar format that can reduce scan volume and improve analytical query performance.\nThe other choices are image, DNS, or authorization representations.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-024",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs a durable workflow that coordinates crawlers, transformations, and validation steps. Which service should orchestrate it?",
+    "options": {
+      "A": "AWS Step Functions or AWS Glue Workflows",
+      "B": "An S3 ACL",
+      "C": "A security group",
+      "D": "An EBS snapshot"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Workflow orchestration services represent dependencies and retries between data pipeline steps.\nThe other choices control access, network traffic, or volume backups.",
+    "taskStatement": "1.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-025",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must prevent a streaming producer from overwhelming a downstream data store. Which strategy is appropriate?",
+    "options": {
+      "A": "Remove partition keys",
+      "B": "Buffer records and apply throttling with retry and backoff",
+      "C": "Disable all retries",
+      "D": "Make the data store public"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Buffering, throttling, and backoff smooth bursts and protect the downstream system from overload.\nThe other choices reduce reliability or data-store performance.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-026",
+    "type": "single",
+    "question": "A data platform team needs to ingest ordered streaming records that multiple consumers can replay independently. Which service fits?",
+    "options": {
+      "A": "Amazon Route 53",
+      "B": "AWS Certificate Manager",
+      "C": "Amazon Kinesis Data Streams",
+      "D": "Amazon S3 Glacier"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Kinesis Data Streams retains ordered records and supports independent consumer positions.\nThe other choices provide archival storage, DNS, or certificates.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-027",
+    "type": "single",
+    "question": "A security-conscious engineering team needs managed ETL jobs and a central schema catalog for objects in S3. Which service should be used?",
+    "options": {
+      "A": "Amazon CloudFront",
+      "B": "Amazon Cognito",
+      "C": "AWS Shield",
+      "D": "AWS Glue"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "AWS Glue provides ETL jobs, crawlers, and the Glue Data Catalog.\nThe other choices provide content delivery, identity, or DDoS protection.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-028",
+    "type": "single",
+    "question": "A company migrating an existing workload must convert CSV data into a columnar format for analytics. Which transformation is most appropriate?",
+    "options": {
+      "A": "Convert the records to Apache Parquet",
+      "B": "Convert the records to JPEG",
+      "C": "Store every row as a DNS record",
+      "D": "Encode the data as an IAM policy"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Parquet is a columnar format that can reduce scan volume and improve analytical query performance.\nThe other choices are image, DNS, or authorization representations.",
+    "taskStatement": "1.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-029",
+    "type": "single",
+    "question": "A team with strict recovery objectives needs a durable workflow that coordinates crawlers, transformations, and validation steps. Which service should orchestrate it?",
+    "options": {
+      "A": "An EBS snapshot",
+      "B": "AWS Step Functions or AWS Glue Workflows",
+      "C": "An S3 ACL",
+      "D": "A security group"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Workflow orchestration services represent dependencies and retries between data pipeline steps.\nThe other choices control access, network traffic, or volume backups.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-030",
+    "type": "single",
+    "question": "A developer team preparing a release must prevent a streaming producer from overwhelming a downstream data store. Which strategy is appropriate?",
+    "options": {
+      "A": "Make the data store public",
+      "B": "Remove partition keys",
+      "C": "Buffer records and apply throttling with retry and backoff",
+      "D": "Disable all retries"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Buffering, throttling, and backoff smooth bursts and protect the downstream system from overload.\nThe other choices reduce reliability or data-store performance.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-031",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs to ingest ordered streaming records that multiple consumers can replay independently. Which service fits?",
+    "options": {
+      "A": "Amazon S3 Glacier",
+      "B": "Amazon Route 53",
+      "C": "AWS Certificate Manager",
+      "D": "Amazon Kinesis Data Streams"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Kinesis Data Streams retains ordered records and supports independent consumer positions.\nThe other choices provide archival storage, DNS, or certificates.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-032",
+    "type": "single",
+    "question": "A service owner reviewing an incident needs managed ETL jobs and a central schema catalog for objects in S3. Which service should be used?",
+    "options": {
+      "A": "AWS Glue",
+      "B": "Amazon CloudFront",
+      "C": "Amazon Cognito",
+      "D": "AWS Shield"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "AWS Glue provides ETL jobs, crawlers, and the Glue Data Catalog.\nThe other choices provide content delivery, identity, or DDoS protection.",
+    "taskStatement": "1.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-033",
+    "type": "single",
+    "question": "A team optimizing an existing implementation must convert CSV data into a columnar format for analytics. Which transformation is most appropriate?",
+    "options": {
+      "A": "Encode the data as an IAM policy",
+      "B": "Convert the records to Apache Parquet",
+      "C": "Convert the records to JPEG",
+      "D": "Store every row as a DNS record"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Parquet is a columnar format that can reduce scan volume and improve analytical query performance.\nThe other choices are image, DNS, or authorization representations.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-034",
+    "type": "single",
+    "question": "A company introducing an automated workflow needs a durable workflow that coordinates crawlers, transformations, and validation steps. Which service should orchestrate it?",
+    "options": {
+      "A": "A security group",
+      "B": "An EBS snapshot",
+      "C": "AWS Step Functions or AWS Glue Workflows",
+      "D": "An S3 ACL"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Workflow orchestration services represent dependencies and retries between data pipeline steps.\nThe other choices control access, network traffic, or volume backups.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-035",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment must prevent a streaming producer from overwhelming a downstream data store. Which strategy is appropriate?",
+    "options": {
+      "A": "Disable all retries",
+      "B": "Make the data store public",
+      "C": "Remove partition keys",
+      "D": "Buffer records and apply throttling with retry and backoff"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Buffering, throttling, and backoff smooth bursts and protect the downstream system from overload.\nThe other choices reduce reliability or data-store performance.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-036",
+    "type": "single",
+    "question": "A customer-facing application team needs to ingest ordered streaming records that multiple consumers can replay independently. Which service fits?",
+    "options": {
+      "A": "Amazon Kinesis Data Streams",
+      "B": "Amazon S3 Glacier",
+      "C": "Amazon Route 53",
+      "D": "AWS Certificate Manager"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Kinesis Data Streams retains ordered records and supports independent consumer positions.\nThe other choices provide archival storage, DNS, or certificates.",
+    "taskStatement": "1.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-037",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments needs managed ETL jobs and a central schema catalog for objects in S3. Which service should be used?",
+    "options": {
+      "A": "AWS Shield",
+      "B": "AWS Glue",
+      "C": "Amazon CloudFront",
+      "D": "Amazon Cognito"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "AWS Glue provides ETL jobs, crawlers, and the Glue Data Catalog.\nThe other choices provide content delivery, identity, or DDoS protection.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-038",
+    "type": "single",
+    "question": "A team preparing evidence for an audit must convert CSV data into a columnar format for analytics. Which transformation is most appropriate?",
+    "options": {
+      "A": "Store every row as a DNS record",
+      "B": "Encode the data as an IAM policy",
+      "C": "Convert the records to Apache Parquet",
+      "D": "Convert the records to JPEG"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Parquet is a columnar format that can reduce scan volume and improve analytical query performance.\nThe other choices are image, DNS, or authorization representations.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-039",
+    "type": "single",
+    "question": "A business replacing a manual process needs a durable workflow that coordinates crawlers, transformations, and validation steps. Which service should orchestrate it?",
+    "options": {
+      "A": "An S3 ACL",
+      "B": "A security group",
+      "C": "An EBS snapshot",
+      "D": "AWS Step Functions or AWS Glue Workflows"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Workflow orchestration services represent dependencies and retries between data pipeline steps.\nThe other choices control access, network traffic, or volume backups.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-040",
+    "type": "single",
+    "question": "A team validating a design against the exam guide must prevent a streaming producer from overwhelming a downstream data store. Which strategy is appropriate?",
+    "options": {
+      "A": "Buffer records and apply throttling with retry and backoff",
+      "B": "Disable all retries",
+      "C": "Make the data store public",
+      "D": "Remove partition keys"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Buffering, throttling, and backoff smooth bursts and protect the downstream system from overload.\nThe other choices reduce reliability or data-store performance.",
+    "taskStatement": "1.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-041",
+    "type": "single",
+    "question": "A production team needs to ingest ordered streaming records that multiple consumers can replay independently. Which service fits?",
+    "options": {
+      "A": "AWS Certificate Manager",
+      "B": "Amazon Kinesis Data Streams",
+      "C": "Amazon S3 Glacier",
+      "D": "Amazon Route 53"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Kinesis Data Streams retains ordered records and supports independent consumer positions.\nThe other choices provide archival storage, DNS, or certificates.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-042",
+    "type": "single",
+    "question": "A multi-account platform team needs managed ETL jobs and a central schema catalog for objects in S3. Which service should be used?",
+    "options": {
+      "A": "Amazon Cognito",
+      "B": "AWS Shield",
+      "C": "AWS Glue",
+      "D": "Amazon CloudFront"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "AWS Glue provides ETL jobs, crawlers, and the Glue Data Catalog.\nThe other choices provide content delivery, identity, or DDoS protection.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-043",
+    "type": "single",
+    "question": "A regulated company must convert CSV data into a columnar format for analytics. Which transformation is most appropriate?",
+    "options": {
+      "A": "Convert the records to JPEG",
+      "B": "Store every row as a DNS record",
+      "C": "Encode the data as an IAM policy",
+      "D": "Convert the records to Apache Parquet"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Parquet is a columnar format that can reduce scan volume and improve analytical query performance.\nThe other choices are image, DNS, or authorization representations.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-044",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs a durable workflow that coordinates crawlers, transformations, and validation steps. Which service should orchestrate it?",
+    "options": {
+      "A": "AWS Step Functions or AWS Glue Workflows",
+      "B": "An S3 ACL",
+      "C": "A security group",
+      "D": "An EBS snapshot"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Workflow orchestration services represent dependencies and retries between data pipeline steps.\nThe other choices control access, network traffic, or volume backups.",
+    "taskStatement": "1.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-045",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must prevent a streaming producer from overwhelming a downstream data store. Which strategy is appropriate?",
+    "options": {
+      "A": "Remove partition keys",
+      "B": "Buffer records and apply throttling with retry and backoff",
+      "C": "Disable all retries",
+      "D": "Make the data store public"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Buffering, throttling, and backoff smooth bursts and protect the downstream system from overload.\nThe other choices reduce reliability or data-store performance.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-046",
+    "type": "single",
+    "question": "A data platform team needs to ingest ordered streaming records that multiple consumers can replay independently. Which service fits?",
+    "options": {
+      "A": "Amazon Route 53",
+      "B": "AWS Certificate Manager",
+      "C": "Amazon Kinesis Data Streams",
+      "D": "Amazon S3 Glacier"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Kinesis Data Streams retains ordered records and supports independent consumer positions.\nThe other choices provide archival storage, DNS, or certificates.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-047",
+    "type": "single",
+    "question": "A security-conscious engineering team needs managed ETL jobs and a central schema catalog for objects in S3. Which service should be used?",
+    "options": {
+      "A": "Amazon CloudFront",
+      "B": "Amazon Cognito",
+      "C": "AWS Shield",
+      "D": "AWS Glue"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "AWS Glue provides ETL jobs, crawlers, and the Glue Data Catalog.\nThe other choices provide content delivery, identity, or DDoS protection.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-048",
+    "type": "single",
+    "question": "A company migrating an existing workload must convert CSV data into a columnar format for analytics. Which transformation is most appropriate?",
+    "options": {
+      "A": "Convert the records to Apache Parquet",
+      "B": "Convert the records to JPEG",
+      "C": "Store every row as a DNS record",
+      "D": "Encode the data as an IAM policy"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Parquet is a columnar format that can reduce scan volume and improve analytical query performance.\nThe other choices are image, DNS, or authorization representations.",
+    "taskStatement": "1.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-049",
+    "type": "single",
+    "question": "A team with strict recovery objectives needs a durable workflow that coordinates crawlers, transformations, and validation steps. Which service should orchestrate it?",
+    "options": {
+      "A": "An EBS snapshot",
+      "B": "AWS Step Functions or AWS Glue Workflows",
+      "C": "An S3 ACL",
+      "D": "A security group"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Workflow orchestration services represent dependencies and retries between data pipeline steps.\nThe other choices control access, network traffic, or volume backups.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-050",
+    "type": "single",
+    "question": "A developer team preparing a release must prevent a streaming producer from overwhelming a downstream data store. Which strategy is appropriate?",
+    "options": {
+      "A": "Make the data store public",
+      "B": "Remove partition keys",
+      "C": "Buffer records and apply throttling with retry and backoff",
+      "D": "Disable all retries"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Buffering, throttling, and backoff smooth bursts and protect the downstream system from overload.\nThe other choices reduce reliability or data-store performance.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-051",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs to ingest ordered streaming records that multiple consumers can replay independently. Which service fits?",
+    "options": {
+      "A": "Amazon S3 Glacier",
+      "B": "Amazon Route 53",
+      "C": "AWS Certificate Manager",
+      "D": "Amazon Kinesis Data Streams"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Kinesis Data Streams retains ordered records and supports independent consumer positions.\nThe other choices provide archival storage, DNS, or certificates.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-052",
+    "type": "single",
+    "question": "A service owner reviewing an incident needs managed ETL jobs and a central schema catalog for objects in S3. Which service should be used?",
+    "options": {
+      "A": "AWS Glue",
+      "B": "Amazon CloudFront",
+      "C": "Amazon Cognito",
+      "D": "AWS Shield"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "AWS Glue provides ETL jobs, crawlers, and the Glue Data Catalog.\nThe other choices provide content delivery, identity, or DDoS protection.",
+    "taskStatement": "1.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-053",
+    "type": "single",
+    "question": "A team optimizing an existing implementation must convert CSV data into a columnar format for analytics. Which transformation is most appropriate?",
+    "options": {
+      "A": "Encode the data as an IAM policy",
+      "B": "Convert the records to Apache Parquet",
+      "C": "Convert the records to JPEG",
+      "D": "Store every row as a DNS record"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Parquet is a columnar format that can reduce scan volume and improve analytical query performance.\nThe other choices are image, DNS, or authorization representations.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-054",
+    "type": "single",
+    "question": "A company introducing an automated workflow needs a durable workflow that coordinates crawlers, transformations, and validation steps. Which service should orchestrate it?",
+    "options": {
+      "A": "A security group",
+      "B": "An EBS snapshot",
+      "C": "AWS Step Functions or AWS Glue Workflows",
+      "D": "An S3 ACL"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Workflow orchestration services represent dependencies and retries between data pipeline steps.\nThe other choices control access, network traffic, or volume backups.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-055",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment must prevent a streaming producer from overwhelming a downstream data store. Which strategy is appropriate?",
+    "options": {
+      "A": "Disable all retries",
+      "B": "Make the data store public",
+      "C": "Remove partition keys",
+      "D": "Buffer records and apply throttling with retry and backoff"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Buffering, throttling, and backoff smooth bursts and protect the downstream system from overload.\nThe other choices reduce reliability or data-store performance.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-056",
+    "type": "single",
+    "question": "A customer-facing application team needs to ingest ordered streaming records that multiple consumers can replay independently. Which service fits?",
+    "options": {
+      "A": "Amazon Kinesis Data Streams",
+      "B": "Amazon S3 Glacier",
+      "C": "Amazon Route 53",
+      "D": "AWS Certificate Manager"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Kinesis Data Streams retains ordered records and supports independent consumer positions.\nThe other choices provide archival storage, DNS, or certificates.",
+    "taskStatement": "1.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-057",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments needs managed ETL jobs and a central schema catalog for objects in S3. Which service should be used?",
+    "options": {
+      "A": "AWS Shield",
+      "B": "AWS Glue",
+      "C": "Amazon CloudFront",
+      "D": "Amazon Cognito"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "AWS Glue provides ETL jobs, crawlers, and the Glue Data Catalog.\nThe other choices provide content delivery, identity, or DDoS protection.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-058",
+    "type": "single",
+    "question": "A team preparing evidence for an audit must convert CSV data into a columnar format for analytics. Which transformation is most appropriate?",
+    "options": {
+      "A": "Store every row as a DNS record",
+      "B": "Encode the data as an IAM policy",
+      "C": "Convert the records to Apache Parquet",
+      "D": "Convert the records to JPEG"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Parquet is a columnar format that can reduce scan volume and improve analytical query performance.\nThe other choices are image, DNS, or authorization representations.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-059",
+    "type": "single",
+    "question": "A business replacing a manual process needs a durable workflow that coordinates crawlers, transformations, and validation steps. Which service should orchestrate it?",
+    "options": {
+      "A": "An S3 ACL",
+      "B": "A security group",
+      "C": "An EBS snapshot",
+      "D": "AWS Step Functions or AWS Glue Workflows"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Workflow orchestration services represent dependencies and retries between data pipeline steps.\nThe other choices control access, network traffic, or volume backups.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-060",
+    "type": "single",
+    "question": "A team validating a design against the exam guide must prevent a streaming producer from overwhelming a downstream data store. Which strategy is appropriate?",
+    "options": {
+      "A": "Buffer records and apply throttling with retry and backoff",
+      "B": "Disable all retries",
+      "C": "Make the data store public",
+      "D": "Remove partition keys"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Buffering, throttling, and backoff smooth bursts and protect the downstream system from overload.\nThe other choices reduce reliability or data-store performance.",
+    "taskStatement": "1.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-061",
+    "type": "single",
+    "question": "A production team needs to ingest ordered streaming records that multiple consumers can replay independently. Which service fits?",
+    "options": {
+      "A": "AWS Certificate Manager",
+      "B": "Amazon Kinesis Data Streams",
+      "C": "Amazon S3 Glacier",
+      "D": "Amazon Route 53"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Kinesis Data Streams retains ordered records and supports independent consumer positions.\nThe other choices provide archival storage, DNS, or certificates.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-062",
+    "type": "single",
+    "question": "A multi-account platform team needs managed ETL jobs and a central schema catalog for objects in S3. Which service should be used?",
+    "options": {
+      "A": "Amazon Cognito",
+      "B": "AWS Shield",
+      "C": "AWS Glue",
+      "D": "Amazon CloudFront"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "AWS Glue provides ETL jobs, crawlers, and the Glue Data Catalog.\nThe other choices provide content delivery, identity, or DDoS protection.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-063",
+    "type": "single",
+    "question": "A regulated company must convert CSV data into a columnar format for analytics. Which transformation is most appropriate?",
+    "options": {
+      "A": "Convert the records to JPEG",
+      "B": "Store every row as a DNS record",
+      "C": "Encode the data as an IAM policy",
+      "D": "Convert the records to Apache Parquet"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Parquet is a columnar format that can reduce scan volume and improve analytical query performance.\nThe other choices are image, DNS, or authorization representations.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-064",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs a durable workflow that coordinates crawlers, transformations, and validation steps. Which service should orchestrate it?",
+    "options": {
+      "A": "AWS Step Functions or AWS Glue Workflows",
+      "B": "An S3 ACL",
+      "C": "A security group",
+      "D": "An EBS snapshot"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Workflow orchestration services represent dependencies and retries between data pipeline steps.\nThe other choices control access, network traffic, or volume backups.",
+    "taskStatement": "1.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-065",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must prevent a streaming producer from overwhelming a downstream data store. Which strategy is appropriate?",
+    "options": {
+      "A": "Remove partition keys",
+      "B": "Buffer records and apply throttling with retry and backoff",
+      "C": "Disable all retries",
+      "D": "Make the data store public"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Buffering, throttling, and backoff smooth bursts and protect the downstream system from overload.\nThe other choices reduce reliability or data-store performance.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d1-066",
+    "type": "single",
+    "question": "A data platform team needs to ingest ordered streaming records that multiple consumers can replay independently. Which service fits?",
+    "options": {
+      "A": "Amazon Route 53",
+      "B": "AWS Certificate Manager",
+      "C": "Amazon Kinesis Data Streams",
+      "D": "Amazon S3 Glacier"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Kinesis Data Streams retains ordered records and supports independent consumer positions.\nThe other choices provide archival storage, DNS, or certificates.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  }
+]

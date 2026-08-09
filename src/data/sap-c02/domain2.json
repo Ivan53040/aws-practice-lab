@@ -1,0 +1,1042 @@
+[
+  {
+    "id": "sap-c02-d2-001",
+    "type": "single",
+    "question": "A production team needs a resilient web architecture with independent scaling tiers. Which pattern is appropriate?",
+    "options": {
+      "A": "Local session state only",
+      "B": "A public database",
+      "C": "Stateless application tiers behind a load balancer with a durable data layer",
+      "D": "One large instance for every tier"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Stateless tiers and managed data services scale independently and improve resilience.\nA single instance and public database create bottlenecks and exposure.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-002",
+    "type": "single",
+    "question": "A multi-account platform team must serve global users with low latency and protect a Regional origin. Which design fits?",
+    "options": {
+      "A": "Send every request to one public instance",
+      "B": "Use Direct Connect for public users",
+      "C": "Disable caching",
+      "D": "CloudFront with an origin access control and multi-Region strategy where needed"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudFront reduces latency and can protect a private origin.\nThe other choices add latency, cost, or exposure.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-003",
+    "type": "single",
+    "question": "A regulated company needs asynchronous processing for a large volume of requests. Which architecture should be considered?",
+    "options": {
+      "A": "API ingress, SQS buffering, and independently scaled workers",
+      "B": "Synchronous calls to every worker",
+      "C": "One process with local state",
+      "D": "A single shared administrator credential"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Queues decouple producers and workers and absorb bursts.\nSynchronous chains and shared credentials reduce resilience and security.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-004",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase must choose between relational transactions and flexible key-value access. Which factor should drive the selection?",
+    "options": {
+      "A": "The color of the console",
+      "B": "The workload data model, consistency, query, and transaction requirements",
+      "C": "The service name only",
+      "D": "The number of DNS records"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Data model and access patterns determine the appropriate database technology.\nCosmetic or unrelated factors do not select a data store.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-005",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs a disaster recovery architecture with a defined RTO and RPO. Which process should begin the design?",
+    "options": {
+      "A": "Skip recovery tests",
+      "B": "Use one Availability Zone",
+      "C": "Translate RTO and RPO into recovery strategy and testable controls",
+      "D": "Choose the largest instance first"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nInstance size and a single AZ do not define disaster recovery.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-006",
+    "type": "single",
+    "question": "A data platform team needs a resilient web architecture with independent scaling tiers. Which pattern is appropriate?",
+    "options": {
+      "A": "One large instance for every tier",
+      "B": "Local session state only",
+      "C": "A public database",
+      "D": "Stateless application tiers behind a load balancer with a durable data layer"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Stateless tiers and managed data services scale independently and improve resilience.\nA single instance and public database create bottlenecks and exposure.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-007",
+    "type": "single",
+    "question": "A security-conscious engineering team must serve global users with low latency and protect a Regional origin. Which design fits?",
+    "options": {
+      "A": "CloudFront with an origin access control and multi-Region strategy where needed",
+      "B": "Send every request to one public instance",
+      "C": "Use Direct Connect for public users",
+      "D": "Disable caching"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "CloudFront reduces latency and can protect a private origin.\nThe other choices add latency, cost, or exposure.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-008",
+    "type": "single",
+    "question": "A company migrating an existing workload needs asynchronous processing for a large volume of requests. Which architecture should be considered?",
+    "options": {
+      "A": "A single shared administrator credential",
+      "B": "API ingress, SQS buffering, and independently scaled workers",
+      "C": "Synchronous calls to every worker",
+      "D": "One process with local state"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Queues decouple producers and workers and absorb bursts.\nSynchronous chains and shared credentials reduce resilience and security.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-009",
+    "type": "single",
+    "question": "A team with strict recovery objectives must choose between relational transactions and flexible key-value access. Which factor should drive the selection?",
+    "options": {
+      "A": "The number of DNS records",
+      "B": "The color of the console",
+      "C": "The workload data model, consistency, query, and transaction requirements",
+      "D": "The service name only"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Data model and access patterns determine the appropriate database technology.\nCosmetic or unrelated factors do not select a data store.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-010",
+    "type": "single",
+    "question": "A developer team preparing a release needs a disaster recovery architecture with a defined RTO and RPO. Which process should begin the design?",
+    "options": {
+      "A": "Choose the largest instance first",
+      "B": "Skip recovery tests",
+      "C": "Use one Availability Zone",
+      "D": "Translate RTO and RPO into recovery strategy and testable controls"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nInstance size and a single AZ do not define disaster recovery.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-011",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs a resilient web architecture with independent scaling tiers. Which pattern is appropriate?",
+    "options": {
+      "A": "Stateless application tiers behind a load balancer with a durable data layer",
+      "B": "One large instance for every tier",
+      "C": "Local session state only",
+      "D": "A public database"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Stateless tiers and managed data services scale independently and improve resilience.\nA single instance and public database create bottlenecks and exposure.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-012",
+    "type": "single",
+    "question": "A service owner reviewing an incident must serve global users with low latency and protect a Regional origin. Which design fits?",
+    "options": {
+      "A": "Disable caching",
+      "B": "CloudFront with an origin access control and multi-Region strategy where needed",
+      "C": "Send every request to one public instance",
+      "D": "Use Direct Connect for public users"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudFront reduces latency and can protect a private origin.\nThe other choices add latency, cost, or exposure.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-013",
+    "type": "single",
+    "question": "A team optimizing an existing implementation needs asynchronous processing for a large volume of requests. Which architecture should be considered?",
+    "options": {
+      "A": "One process with local state",
+      "B": "A single shared administrator credential",
+      "C": "API ingress, SQS buffering, and independently scaled workers",
+      "D": "Synchronous calls to every worker"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Queues decouple producers and workers and absorb bursts.\nSynchronous chains and shared credentials reduce resilience and security.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-014",
+    "type": "single",
+    "question": "A company introducing an automated workflow must choose between relational transactions and flexible key-value access. Which factor should drive the selection?",
+    "options": {
+      "A": "The service name only",
+      "B": "The number of DNS records",
+      "C": "The color of the console",
+      "D": "The workload data model, consistency, query, and transaction requirements"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Data model and access patterns determine the appropriate database technology.\nCosmetic or unrelated factors do not select a data store.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-015",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment needs a disaster recovery architecture with a defined RTO and RPO. Which process should begin the design?",
+    "options": {
+      "A": "Translate RTO and RPO into recovery strategy and testable controls",
+      "B": "Choose the largest instance first",
+      "C": "Skip recovery tests",
+      "D": "Use one Availability Zone"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nInstance size and a single AZ do not define disaster recovery.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-016",
+    "type": "single",
+    "question": "A customer-facing application team needs a resilient web architecture with independent scaling tiers. Which pattern is appropriate?",
+    "options": {
+      "A": "A public database",
+      "B": "Stateless application tiers behind a load balancer with a durable data layer",
+      "C": "One large instance for every tier",
+      "D": "Local session state only"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Stateless tiers and managed data services scale independently and improve resilience.\nA single instance and public database create bottlenecks and exposure.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-017",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments must serve global users with low latency and protect a Regional origin. Which design fits?",
+    "options": {
+      "A": "Use Direct Connect for public users",
+      "B": "Disable caching",
+      "C": "CloudFront with an origin access control and multi-Region strategy where needed",
+      "D": "Send every request to one public instance"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "CloudFront reduces latency and can protect a private origin.\nThe other choices add latency, cost, or exposure.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-018",
+    "type": "single",
+    "question": "A team preparing evidence for an audit needs asynchronous processing for a large volume of requests. Which architecture should be considered?",
+    "options": {
+      "A": "Synchronous calls to every worker",
+      "B": "One process with local state",
+      "C": "A single shared administrator credential",
+      "D": "API ingress, SQS buffering, and independently scaled workers"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Queues decouple producers and workers and absorb bursts.\nSynchronous chains and shared credentials reduce resilience and security.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-019",
+    "type": "single",
+    "question": "A business replacing a manual process must choose between relational transactions and flexible key-value access. Which factor should drive the selection?",
+    "options": {
+      "A": "The workload data model, consistency, query, and transaction requirements",
+      "B": "The service name only",
+      "C": "The number of DNS records",
+      "D": "The color of the console"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Data model and access patterns determine the appropriate database technology.\nCosmetic or unrelated factors do not select a data store.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-020",
+    "type": "single",
+    "question": "A team validating a design against the exam guide needs a disaster recovery architecture with a defined RTO and RPO. Which process should begin the design?",
+    "options": {
+      "A": "Use one Availability Zone",
+      "B": "Translate RTO and RPO into recovery strategy and testable controls",
+      "C": "Choose the largest instance first",
+      "D": "Skip recovery tests"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nInstance size and a single AZ do not define disaster recovery.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-021",
+    "type": "single",
+    "question": "A production team needs a resilient web architecture with independent scaling tiers. Which pattern is appropriate?",
+    "options": {
+      "A": "Local session state only",
+      "B": "A public database",
+      "C": "Stateless application tiers behind a load balancer with a durable data layer",
+      "D": "One large instance for every tier"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Stateless tiers and managed data services scale independently and improve resilience.\nA single instance and public database create bottlenecks and exposure.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-022",
+    "type": "single",
+    "question": "A multi-account platform team must serve global users with low latency and protect a Regional origin. Which design fits?",
+    "options": {
+      "A": "Send every request to one public instance",
+      "B": "Use Direct Connect for public users",
+      "C": "Disable caching",
+      "D": "CloudFront with an origin access control and multi-Region strategy where needed"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudFront reduces latency and can protect a private origin.\nThe other choices add latency, cost, or exposure.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-023",
+    "type": "single",
+    "question": "A regulated company needs asynchronous processing for a large volume of requests. Which architecture should be considered?",
+    "options": {
+      "A": "API ingress, SQS buffering, and independently scaled workers",
+      "B": "Synchronous calls to every worker",
+      "C": "One process with local state",
+      "D": "A single shared administrator credential"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Queues decouple producers and workers and absorb bursts.\nSynchronous chains and shared credentials reduce resilience and security.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-024",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase must choose between relational transactions and flexible key-value access. Which factor should drive the selection?",
+    "options": {
+      "A": "The color of the console",
+      "B": "The workload data model, consistency, query, and transaction requirements",
+      "C": "The service name only",
+      "D": "The number of DNS records"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Data model and access patterns determine the appropriate database technology.\nCosmetic or unrelated factors do not select a data store.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-025",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs a disaster recovery architecture with a defined RTO and RPO. Which process should begin the design?",
+    "options": {
+      "A": "Skip recovery tests",
+      "B": "Use one Availability Zone",
+      "C": "Translate RTO and RPO into recovery strategy and testable controls",
+      "D": "Choose the largest instance first"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nInstance size and a single AZ do not define disaster recovery.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-026",
+    "type": "single",
+    "question": "A data platform team needs a resilient web architecture with independent scaling tiers. Which pattern is appropriate?",
+    "options": {
+      "A": "One large instance for every tier",
+      "B": "Local session state only",
+      "C": "A public database",
+      "D": "Stateless application tiers behind a load balancer with a durable data layer"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Stateless tiers and managed data services scale independently and improve resilience.\nA single instance and public database create bottlenecks and exposure.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-027",
+    "type": "single",
+    "question": "A security-conscious engineering team must serve global users with low latency and protect a Regional origin. Which design fits?",
+    "options": {
+      "A": "CloudFront with an origin access control and multi-Region strategy where needed",
+      "B": "Send every request to one public instance",
+      "C": "Use Direct Connect for public users",
+      "D": "Disable caching"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "CloudFront reduces latency and can protect a private origin.\nThe other choices add latency, cost, or exposure.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-028",
+    "type": "single",
+    "question": "A company migrating an existing workload needs asynchronous processing for a large volume of requests. Which architecture should be considered?",
+    "options": {
+      "A": "A single shared administrator credential",
+      "B": "API ingress, SQS buffering, and independently scaled workers",
+      "C": "Synchronous calls to every worker",
+      "D": "One process with local state"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Queues decouple producers and workers and absorb bursts.\nSynchronous chains and shared credentials reduce resilience and security.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-029",
+    "type": "single",
+    "question": "A team with strict recovery objectives must choose between relational transactions and flexible key-value access. Which factor should drive the selection?",
+    "options": {
+      "A": "The number of DNS records",
+      "B": "The color of the console",
+      "C": "The workload data model, consistency, query, and transaction requirements",
+      "D": "The service name only"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Data model and access patterns determine the appropriate database technology.\nCosmetic or unrelated factors do not select a data store.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-030",
+    "type": "single",
+    "question": "A developer team preparing a release needs a disaster recovery architecture with a defined RTO and RPO. Which process should begin the design?",
+    "options": {
+      "A": "Choose the largest instance first",
+      "B": "Skip recovery tests",
+      "C": "Use one Availability Zone",
+      "D": "Translate RTO and RPO into recovery strategy and testable controls"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nInstance size and a single AZ do not define disaster recovery.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-031",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs a resilient web architecture with independent scaling tiers. Which pattern is appropriate?",
+    "options": {
+      "A": "Stateless application tiers behind a load balancer with a durable data layer",
+      "B": "One large instance for every tier",
+      "C": "Local session state only",
+      "D": "A public database"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Stateless tiers and managed data services scale independently and improve resilience.\nA single instance and public database create bottlenecks and exposure.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-032",
+    "type": "single",
+    "question": "A service owner reviewing an incident must serve global users with low latency and protect a Regional origin. Which design fits?",
+    "options": {
+      "A": "Disable caching",
+      "B": "CloudFront with an origin access control and multi-Region strategy where needed",
+      "C": "Send every request to one public instance",
+      "D": "Use Direct Connect for public users"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudFront reduces latency and can protect a private origin.\nThe other choices add latency, cost, or exposure.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-033",
+    "type": "single",
+    "question": "A team optimizing an existing implementation needs asynchronous processing for a large volume of requests. Which architecture should be considered?",
+    "options": {
+      "A": "One process with local state",
+      "B": "A single shared administrator credential",
+      "C": "API ingress, SQS buffering, and independently scaled workers",
+      "D": "Synchronous calls to every worker"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Queues decouple producers and workers and absorb bursts.\nSynchronous chains and shared credentials reduce resilience and security.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-034",
+    "type": "single",
+    "question": "A company introducing an automated workflow must choose between relational transactions and flexible key-value access. Which factor should drive the selection?",
+    "options": {
+      "A": "The service name only",
+      "B": "The number of DNS records",
+      "C": "The color of the console",
+      "D": "The workload data model, consistency, query, and transaction requirements"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Data model and access patterns determine the appropriate database technology.\nCosmetic or unrelated factors do not select a data store.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-035",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment needs a disaster recovery architecture with a defined RTO and RPO. Which process should begin the design?",
+    "options": {
+      "A": "Translate RTO and RPO into recovery strategy and testable controls",
+      "B": "Choose the largest instance first",
+      "C": "Skip recovery tests",
+      "D": "Use one Availability Zone"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nInstance size and a single AZ do not define disaster recovery.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-036",
+    "type": "single",
+    "question": "A customer-facing application team needs a resilient web architecture with independent scaling tiers. Which pattern is appropriate?",
+    "options": {
+      "A": "A public database",
+      "B": "Stateless application tiers behind a load balancer with a durable data layer",
+      "C": "One large instance for every tier",
+      "D": "Local session state only"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Stateless tiers and managed data services scale independently and improve resilience.\nA single instance and public database create bottlenecks and exposure.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-037",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments must serve global users with low latency and protect a Regional origin. Which design fits?",
+    "options": {
+      "A": "Use Direct Connect for public users",
+      "B": "Disable caching",
+      "C": "CloudFront with an origin access control and multi-Region strategy where needed",
+      "D": "Send every request to one public instance"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "CloudFront reduces latency and can protect a private origin.\nThe other choices add latency, cost, or exposure.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-038",
+    "type": "single",
+    "question": "A team preparing evidence for an audit needs asynchronous processing for a large volume of requests. Which architecture should be considered?",
+    "options": {
+      "A": "Synchronous calls to every worker",
+      "B": "One process with local state",
+      "C": "A single shared administrator credential",
+      "D": "API ingress, SQS buffering, and independently scaled workers"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Queues decouple producers and workers and absorb bursts.\nSynchronous chains and shared credentials reduce resilience and security.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-039",
+    "type": "single",
+    "question": "A business replacing a manual process must choose between relational transactions and flexible key-value access. Which factor should drive the selection?",
+    "options": {
+      "A": "The workload data model, consistency, query, and transaction requirements",
+      "B": "The service name only",
+      "C": "The number of DNS records",
+      "D": "The color of the console"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Data model and access patterns determine the appropriate database technology.\nCosmetic or unrelated factors do not select a data store.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-040",
+    "type": "single",
+    "question": "A team validating a design against the exam guide needs a disaster recovery architecture with a defined RTO and RPO. Which process should begin the design?",
+    "options": {
+      "A": "Use one Availability Zone",
+      "B": "Translate RTO and RPO into recovery strategy and testable controls",
+      "C": "Choose the largest instance first",
+      "D": "Skip recovery tests"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nInstance size and a single AZ do not define disaster recovery.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-041",
+    "type": "single",
+    "question": "A production team needs a resilient web architecture with independent scaling tiers. Which pattern is appropriate?",
+    "options": {
+      "A": "Local session state only",
+      "B": "A public database",
+      "C": "Stateless application tiers behind a load balancer with a durable data layer",
+      "D": "One large instance for every tier"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Stateless tiers and managed data services scale independently and improve resilience.\nA single instance and public database create bottlenecks and exposure.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-042",
+    "type": "single",
+    "question": "A multi-account platform team must serve global users with low latency and protect a Regional origin. Which design fits?",
+    "options": {
+      "A": "Send every request to one public instance",
+      "B": "Use Direct Connect for public users",
+      "C": "Disable caching",
+      "D": "CloudFront with an origin access control and multi-Region strategy where needed"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudFront reduces latency and can protect a private origin.\nThe other choices add latency, cost, or exposure.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-043",
+    "type": "single",
+    "question": "A regulated company needs asynchronous processing for a large volume of requests. Which architecture should be considered?",
+    "options": {
+      "A": "API ingress, SQS buffering, and independently scaled workers",
+      "B": "Synchronous calls to every worker",
+      "C": "One process with local state",
+      "D": "A single shared administrator credential"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Queues decouple producers and workers and absorb bursts.\nSynchronous chains and shared credentials reduce resilience and security.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-044",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase must choose between relational transactions and flexible key-value access. Which factor should drive the selection?",
+    "options": {
+      "A": "The color of the console",
+      "B": "The workload data model, consistency, query, and transaction requirements",
+      "C": "The service name only",
+      "D": "The number of DNS records"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Data model and access patterns determine the appropriate database technology.\nCosmetic or unrelated factors do not select a data store.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-045",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs a disaster recovery architecture with a defined RTO and RPO. Which process should begin the design?",
+    "options": {
+      "A": "Skip recovery tests",
+      "B": "Use one Availability Zone",
+      "C": "Translate RTO and RPO into recovery strategy and testable controls",
+      "D": "Choose the largest instance first"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nInstance size and a single AZ do not define disaster recovery.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-046",
+    "type": "single",
+    "question": "A data platform team needs a resilient web architecture with independent scaling tiers. Which pattern is appropriate?",
+    "options": {
+      "A": "One large instance for every tier",
+      "B": "Local session state only",
+      "C": "A public database",
+      "D": "Stateless application tiers behind a load balancer with a durable data layer"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Stateless tiers and managed data services scale independently and improve resilience.\nA single instance and public database create bottlenecks and exposure.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-047",
+    "type": "single",
+    "question": "A security-conscious engineering team must serve global users with low latency and protect a Regional origin. Which design fits?",
+    "options": {
+      "A": "CloudFront with an origin access control and multi-Region strategy where needed",
+      "B": "Send every request to one public instance",
+      "C": "Use Direct Connect for public users",
+      "D": "Disable caching"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "CloudFront reduces latency and can protect a private origin.\nThe other choices add latency, cost, or exposure.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-048",
+    "type": "single",
+    "question": "A company migrating an existing workload needs asynchronous processing for a large volume of requests. Which architecture should be considered?",
+    "options": {
+      "A": "A single shared administrator credential",
+      "B": "API ingress, SQS buffering, and independently scaled workers",
+      "C": "Synchronous calls to every worker",
+      "D": "One process with local state"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Queues decouple producers and workers and absorb bursts.\nSynchronous chains and shared credentials reduce resilience and security.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-049",
+    "type": "single",
+    "question": "A team with strict recovery objectives must choose between relational transactions and flexible key-value access. Which factor should drive the selection?",
+    "options": {
+      "A": "The number of DNS records",
+      "B": "The color of the console",
+      "C": "The workload data model, consistency, query, and transaction requirements",
+      "D": "The service name only"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Data model and access patterns determine the appropriate database technology.\nCosmetic or unrelated factors do not select a data store.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-050",
+    "type": "single",
+    "question": "A developer team preparing a release needs a disaster recovery architecture with a defined RTO and RPO. Which process should begin the design?",
+    "options": {
+      "A": "Choose the largest instance first",
+      "B": "Skip recovery tests",
+      "C": "Use one Availability Zone",
+      "D": "Translate RTO and RPO into recovery strategy and testable controls"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nInstance size and a single AZ do not define disaster recovery.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-051",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs a resilient web architecture with independent scaling tiers. Which pattern is appropriate?",
+    "options": {
+      "A": "Stateless application tiers behind a load balancer with a durable data layer",
+      "B": "One large instance for every tier",
+      "C": "Local session state only",
+      "D": "A public database"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Stateless tiers and managed data services scale independently and improve resilience.\nA single instance and public database create bottlenecks and exposure.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-052",
+    "type": "single",
+    "question": "A service owner reviewing an incident must serve global users with low latency and protect a Regional origin. Which design fits?",
+    "options": {
+      "A": "Disable caching",
+      "B": "CloudFront with an origin access control and multi-Region strategy where needed",
+      "C": "Send every request to one public instance",
+      "D": "Use Direct Connect for public users"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudFront reduces latency and can protect a private origin.\nThe other choices add latency, cost, or exposure.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-053",
+    "type": "single",
+    "question": "A team optimizing an existing implementation needs asynchronous processing for a large volume of requests. Which architecture should be considered?",
+    "options": {
+      "A": "One process with local state",
+      "B": "A single shared administrator credential",
+      "C": "API ingress, SQS buffering, and independently scaled workers",
+      "D": "Synchronous calls to every worker"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Queues decouple producers and workers and absorb bursts.\nSynchronous chains and shared credentials reduce resilience and security.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-054",
+    "type": "single",
+    "question": "A company introducing an automated workflow must choose between relational transactions and flexible key-value access. Which factor should drive the selection?",
+    "options": {
+      "A": "The service name only",
+      "B": "The number of DNS records",
+      "C": "The color of the console",
+      "D": "The workload data model, consistency, query, and transaction requirements"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Data model and access patterns determine the appropriate database technology.\nCosmetic or unrelated factors do not select a data store.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-055",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment needs a disaster recovery architecture with a defined RTO and RPO. Which process should begin the design?",
+    "options": {
+      "A": "Translate RTO and RPO into recovery strategy and testable controls",
+      "B": "Choose the largest instance first",
+      "C": "Skip recovery tests",
+      "D": "Use one Availability Zone"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nInstance size and a single AZ do not define disaster recovery.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-056",
+    "type": "single",
+    "question": "A customer-facing application team needs a resilient web architecture with independent scaling tiers. Which pattern is appropriate?",
+    "options": {
+      "A": "A public database",
+      "B": "Stateless application tiers behind a load balancer with a durable data layer",
+      "C": "One large instance for every tier",
+      "D": "Local session state only"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Stateless tiers and managed data services scale independently and improve resilience.\nA single instance and public database create bottlenecks and exposure.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-057",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments must serve global users with low latency and protect a Regional origin. Which design fits?",
+    "options": {
+      "A": "Use Direct Connect for public users",
+      "B": "Disable caching",
+      "C": "CloudFront with an origin access control and multi-Region strategy where needed",
+      "D": "Send every request to one public instance"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "CloudFront reduces latency and can protect a private origin.\nThe other choices add latency, cost, or exposure.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-058",
+    "type": "single",
+    "question": "A team preparing evidence for an audit needs asynchronous processing for a large volume of requests. Which architecture should be considered?",
+    "options": {
+      "A": "Synchronous calls to every worker",
+      "B": "One process with local state",
+      "C": "A single shared administrator credential",
+      "D": "API ingress, SQS buffering, and independently scaled workers"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Queues decouple producers and workers and absorb bursts.\nSynchronous chains and shared credentials reduce resilience and security.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-059",
+    "type": "single",
+    "question": "A business replacing a manual process must choose between relational transactions and flexible key-value access. Which factor should drive the selection?",
+    "options": {
+      "A": "The workload data model, consistency, query, and transaction requirements",
+      "B": "The service name only",
+      "C": "The number of DNS records",
+      "D": "The color of the console"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Data model and access patterns determine the appropriate database technology.\nCosmetic or unrelated factors do not select a data store.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-060",
+    "type": "single",
+    "question": "A team validating a design against the exam guide needs a disaster recovery architecture with a defined RTO and RPO. Which process should begin the design?",
+    "options": {
+      "A": "Use one Availability Zone",
+      "B": "Translate RTO and RPO into recovery strategy and testable controls",
+      "C": "Choose the largest instance first",
+      "D": "Skip recovery tests"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nInstance size and a single AZ do not define disaster recovery.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-061",
+    "type": "single",
+    "question": "A production team needs a resilient web architecture with independent scaling tiers. Which pattern is appropriate?",
+    "options": {
+      "A": "Local session state only",
+      "B": "A public database",
+      "C": "Stateless application tiers behind a load balancer with a durable data layer",
+      "D": "One large instance for every tier"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Stateless tiers and managed data services scale independently and improve resilience.\nA single instance and public database create bottlenecks and exposure.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-062",
+    "type": "single",
+    "question": "A multi-account platform team must serve global users with low latency and protect a Regional origin. Which design fits?",
+    "options": {
+      "A": "Send every request to one public instance",
+      "B": "Use Direct Connect for public users",
+      "C": "Disable caching",
+      "D": "CloudFront with an origin access control and multi-Region strategy where needed"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudFront reduces latency and can protect a private origin.\nThe other choices add latency, cost, or exposure.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-063",
+    "type": "single",
+    "question": "A regulated company needs asynchronous processing for a large volume of requests. Which architecture should be considered?",
+    "options": {
+      "A": "API ingress, SQS buffering, and independently scaled workers",
+      "B": "Synchronous calls to every worker",
+      "C": "One process with local state",
+      "D": "A single shared administrator credential"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Queues decouple producers and workers and absorb bursts.\nSynchronous chains and shared credentials reduce resilience and security.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-064",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase must choose between relational transactions and flexible key-value access. Which factor should drive the selection?",
+    "options": {
+      "A": "The color of the console",
+      "B": "The workload data model, consistency, query, and transaction requirements",
+      "C": "The service name only",
+      "D": "The number of DNS records"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Data model and access patterns determine the appropriate database technology.\nCosmetic or unrelated factors do not select a data store.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d2-065",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs a disaster recovery architecture with a defined RTO and RPO. Which process should begin the design?",
+    "options": {
+      "A": "Skip recovery tests",
+      "B": "Use one Availability Zone",
+      "C": "Translate RTO and RPO into recovery strategy and testable controls",
+      "D": "Choose the largest instance first"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nInstance size and a single AZ do not define disaster recovery.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  }
+]

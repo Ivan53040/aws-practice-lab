@@ -1,0 +1,498 @@
+[
+  {
+    "id": "soa-c03-d4-001",
+    "type": "single",
+    "question": "A production team needs to find why an IAM principal was denied access to an S3 object. Which tool should be checked first?",
+    "options": {
+      "A": "IAM policy simulator and CloudTrail evidence",
+      "B": "CloudFront cache statistics",
+      "C": "EBS burst balance",
+      "D": "Route 53 latency records"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "The IAM policy simulator evaluates authorization and CloudTrail can show the denied API call and context.\nThe other choices measure CDN, storage, or DNS behavior rather than IAM authorization.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d4-002",
+    "type": "single",
+    "question": "A multi-account platform team must enforce a list of approved Regions across member accounts. Which organization control is appropriate?",
+    "options": {
+      "A": "A CloudFront cache policy",
+      "B": "A service control policy",
+      "C": "An S3 lifecycle rule",
+      "D": "A security group"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "An SCP can deny actions outside approved Regions across member accounts.\nThe other choices do not restrict account API operations by Region.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d4-003",
+    "type": "single",
+    "question": "A regulated company needs continuous evaluation of resources against a compliance rule. Which service should be used?",
+    "options": {
+      "A": "Amazon EFS",
+      "B": "AWS CodeBuild",
+      "C": "AWS Config",
+      "D": "Amazon Kinesis"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "AWS Config records resource configuration and evaluates it against rules and conformance packs.\nThe other choices provide streaming, file storage, or build automation.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d4-004",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase must keep application credentials out of source code and rotate them automatically. Which service fits?",
+    "options": {
+      "A": "Amazon CloudFront",
+      "B": "AWS Transit Gateway",
+      "C": "Amazon Athena",
+      "D": "AWS Secrets Manager"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Secrets Manager stores credentials and supports rotation workflows and runtime retrieval.\nThe other choices provide content delivery, routing, or SQL query services.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d4-005",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs a managed service to detect suspicious API and network activity. Which service should be enabled?",
+    "options": {
+      "A": "Amazon GuardDuty",
+      "B": "AWS Artifact",
+      "C": "Amazon EBS",
+      "D": "AWS CloudFormation"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "GuardDuty analyzes supported account and network telemetry and produces threat findings.\nThe other choices provide compliance documents, block storage, or infrastructure provisioning.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d4-006",
+    "type": "single",
+    "question": "A data platform team needs to find why an IAM principal was denied access to an S3 object. Which tool should be checked first?",
+    "options": {
+      "A": "Route 53 latency records",
+      "B": "IAM policy simulator and CloudTrail evidence",
+      "C": "CloudFront cache statistics",
+      "D": "EBS burst balance"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "The IAM policy simulator evaluates authorization and CloudTrail can show the denied API call and context.\nThe other choices measure CDN, storage, or DNS behavior rather than IAM authorization.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d4-007",
+    "type": "single",
+    "question": "A security-conscious engineering team must enforce a list of approved Regions across member accounts. Which organization control is appropriate?",
+    "options": {
+      "A": "A security group",
+      "B": "A CloudFront cache policy",
+      "C": "A service control policy",
+      "D": "An S3 lifecycle rule"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "An SCP can deny actions outside approved Regions across member accounts.\nThe other choices do not restrict account API operations by Region.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d4-008",
+    "type": "single",
+    "question": "A company migrating an existing workload needs continuous evaluation of resources against a compliance rule. Which service should be used?",
+    "options": {
+      "A": "Amazon Kinesis",
+      "B": "Amazon EFS",
+      "C": "AWS CodeBuild",
+      "D": "AWS Config"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "AWS Config records resource configuration and evaluates it against rules and conformance packs.\nThe other choices provide streaming, file storage, or build automation.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d4-009",
+    "type": "single",
+    "question": "A team with strict recovery objectives must keep application credentials out of source code and rotate them automatically. Which service fits?",
+    "options": {
+      "A": "AWS Secrets Manager",
+      "B": "Amazon CloudFront",
+      "C": "AWS Transit Gateway",
+      "D": "Amazon Athena"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Secrets Manager stores credentials and supports rotation workflows and runtime retrieval.\nThe other choices provide content delivery, routing, or SQL query services.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d4-010",
+    "type": "single",
+    "question": "A developer team preparing a release needs a managed service to detect suspicious API and network activity. Which service should be enabled?",
+    "options": {
+      "A": "AWS CloudFormation",
+      "B": "Amazon GuardDuty",
+      "C": "AWS Artifact",
+      "D": "Amazon EBS"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "GuardDuty analyzes supported account and network telemetry and produces threat findings.\nThe other choices provide compliance documents, block storage, or infrastructure provisioning.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d4-011",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs to find why an IAM principal was denied access to an S3 object. Which tool should be checked first?",
+    "options": {
+      "A": "EBS burst balance",
+      "B": "Route 53 latency records",
+      "C": "IAM policy simulator and CloudTrail evidence",
+      "D": "CloudFront cache statistics"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "The IAM policy simulator evaluates authorization and CloudTrail can show the denied API call and context.\nThe other choices measure CDN, storage, or DNS behavior rather than IAM authorization.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d4-012",
+    "type": "single",
+    "question": "A service owner reviewing an incident must enforce a list of approved Regions across member accounts. Which organization control is appropriate?",
+    "options": {
+      "A": "An S3 lifecycle rule",
+      "B": "A security group",
+      "C": "A CloudFront cache policy",
+      "D": "A service control policy"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "An SCP can deny actions outside approved Regions across member accounts.\nThe other choices do not restrict account API operations by Region.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d4-013",
+    "type": "single",
+    "question": "A team optimizing an existing implementation needs continuous evaluation of resources against a compliance rule. Which service should be used?",
+    "options": {
+      "A": "AWS Config",
+      "B": "Amazon Kinesis",
+      "C": "Amazon EFS",
+      "D": "AWS CodeBuild"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "AWS Config records resource configuration and evaluates it against rules and conformance packs.\nThe other choices provide streaming, file storage, or build automation.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d4-014",
+    "type": "single",
+    "question": "A company introducing an automated workflow must keep application credentials out of source code and rotate them automatically. Which service fits?",
+    "options": {
+      "A": "Amazon Athena",
+      "B": "AWS Secrets Manager",
+      "C": "Amazon CloudFront",
+      "D": "AWS Transit Gateway"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Secrets Manager stores credentials and supports rotation workflows and runtime retrieval.\nThe other choices provide content delivery, routing, or SQL query services.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d4-015",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment needs a managed service to detect suspicious API and network activity. Which service should be enabled?",
+    "options": {
+      "A": "Amazon EBS",
+      "B": "AWS CloudFormation",
+      "C": "Amazon GuardDuty",
+      "D": "AWS Artifact"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "GuardDuty analyzes supported account and network telemetry and produces threat findings.\nThe other choices provide compliance documents, block storage, or infrastructure provisioning.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d4-016",
+    "type": "single",
+    "question": "A customer-facing application team needs to find why an IAM principal was denied access to an S3 object. Which tool should be checked first?",
+    "options": {
+      "A": "CloudFront cache statistics",
+      "B": "EBS burst balance",
+      "C": "Route 53 latency records",
+      "D": "IAM policy simulator and CloudTrail evidence"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "The IAM policy simulator evaluates authorization and CloudTrail can show the denied API call and context.\nThe other choices measure CDN, storage, or DNS behavior rather than IAM authorization.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d4-017",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments must enforce a list of approved Regions across member accounts. Which organization control is appropriate?",
+    "options": {
+      "A": "A service control policy",
+      "B": "An S3 lifecycle rule",
+      "C": "A security group",
+      "D": "A CloudFront cache policy"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "An SCP can deny actions outside approved Regions across member accounts.\nThe other choices do not restrict account API operations by Region.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d4-018",
+    "type": "single",
+    "question": "A team preparing evidence for an audit needs continuous evaluation of resources against a compliance rule. Which service should be used?",
+    "options": {
+      "A": "AWS CodeBuild",
+      "B": "AWS Config",
+      "C": "Amazon Kinesis",
+      "D": "Amazon EFS"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "AWS Config records resource configuration and evaluates it against rules and conformance packs.\nThe other choices provide streaming, file storage, or build automation.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d4-019",
+    "type": "single",
+    "question": "A business replacing a manual process must keep application credentials out of source code and rotate them automatically. Which service fits?",
+    "options": {
+      "A": "AWS Transit Gateway",
+      "B": "Amazon Athena",
+      "C": "AWS Secrets Manager",
+      "D": "Amazon CloudFront"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Secrets Manager stores credentials and supports rotation workflows and runtime retrieval.\nThe other choices provide content delivery, routing, or SQL query services.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d4-020",
+    "type": "single",
+    "question": "A team validating a design against the exam guide needs a managed service to detect suspicious API and network activity. Which service should be enabled?",
+    "options": {
+      "A": "AWS Artifact",
+      "B": "Amazon EBS",
+      "C": "AWS CloudFormation",
+      "D": "Amazon GuardDuty"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "GuardDuty analyzes supported account and network telemetry and produces threat findings.\nThe other choices provide compliance documents, block storage, or infrastructure provisioning.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d4-021",
+    "type": "single",
+    "question": "A production team needs to find why an IAM principal was denied access to an S3 object. Which tool should be checked first?",
+    "options": {
+      "A": "IAM policy simulator and CloudTrail evidence",
+      "B": "CloudFront cache statistics",
+      "C": "EBS burst balance",
+      "D": "Route 53 latency records"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "The IAM policy simulator evaluates authorization and CloudTrail can show the denied API call and context.\nThe other choices measure CDN, storage, or DNS behavior rather than IAM authorization.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d4-022",
+    "type": "single",
+    "question": "A multi-account platform team must enforce a list of approved Regions across member accounts. Which organization control is appropriate?",
+    "options": {
+      "A": "A CloudFront cache policy",
+      "B": "A service control policy",
+      "C": "An S3 lifecycle rule",
+      "D": "A security group"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "An SCP can deny actions outside approved Regions across member accounts.\nThe other choices do not restrict account API operations by Region.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d4-023",
+    "type": "single",
+    "question": "A regulated company needs continuous evaluation of resources against a compliance rule. Which service should be used?",
+    "options": {
+      "A": "Amazon EFS",
+      "B": "AWS CodeBuild",
+      "C": "AWS Config",
+      "D": "Amazon Kinesis"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "AWS Config records resource configuration and evaluates it against rules and conformance packs.\nThe other choices provide streaming, file storage, or build automation.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d4-024",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase must keep application credentials out of source code and rotate them automatically. Which service fits?",
+    "options": {
+      "A": "Amazon CloudFront",
+      "B": "AWS Transit Gateway",
+      "C": "Amazon Athena",
+      "D": "AWS Secrets Manager"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Secrets Manager stores credentials and supports rotation workflows and runtime retrieval.\nThe other choices provide content delivery, routing, or SQL query services.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d4-025",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs a managed service to detect suspicious API and network activity. Which service should be enabled?",
+    "options": {
+      "A": "Amazon GuardDuty",
+      "B": "AWS Artifact",
+      "C": "Amazon EBS",
+      "D": "AWS CloudFormation"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "GuardDuty analyzes supported account and network telemetry and produces threat findings.\nThe other choices provide compliance documents, block storage, or infrastructure provisioning.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d4-026",
+    "type": "single",
+    "question": "A data platform team needs to find why an IAM principal was denied access to an S3 object. Which tool should be checked first?",
+    "options": {
+      "A": "Route 53 latency records",
+      "B": "IAM policy simulator and CloudTrail evidence",
+      "C": "CloudFront cache statistics",
+      "D": "EBS burst balance"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "The IAM policy simulator evaluates authorization and CloudTrail can show the denied API call and context.\nThe other choices measure CDN, storage, or DNS behavior rather than IAM authorization.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d4-027",
+    "type": "single",
+    "question": "A security-conscious engineering team must enforce a list of approved Regions across member accounts. Which organization control is appropriate?",
+    "options": {
+      "A": "A security group",
+      "B": "A CloudFront cache policy",
+      "C": "A service control policy",
+      "D": "An S3 lifecycle rule"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "An SCP can deny actions outside approved Regions across member accounts.\nThe other choices do not restrict account API operations by Region.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d4-028",
+    "type": "single",
+    "question": "A company migrating an existing workload needs continuous evaluation of resources against a compliance rule. Which service should be used?",
+    "options": {
+      "A": "Amazon Kinesis",
+      "B": "Amazon EFS",
+      "C": "AWS CodeBuild",
+      "D": "AWS Config"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "AWS Config records resource configuration and evaluates it against rules and conformance packs.\nThe other choices provide streaming, file storage, or build automation.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d4-029",
+    "type": "single",
+    "question": "A team with strict recovery objectives must keep application credentials out of source code and rotate them automatically. Which service fits?",
+    "options": {
+      "A": "AWS Secrets Manager",
+      "B": "Amazon CloudFront",
+      "C": "AWS Transit Gateway",
+      "D": "Amazon Athena"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Secrets Manager stores credentials and supports rotation workflows and runtime retrieval.\nThe other choices provide content delivery, routing, or SQL query services.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d4-030",
+    "type": "single",
+    "question": "A developer team preparing a release needs a managed service to detect suspicious API and network activity. Which service should be enabled?",
+    "options": {
+      "A": "AWS CloudFormation",
+      "B": "Amazon GuardDuty",
+      "C": "AWS Artifact",
+      "D": "Amazon EBS"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "GuardDuty analyzes supported account and network telemetry and produces threat findings.\nThe other choices provide compliance documents, block storage, or infrastructure provisioning.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d4-031",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs to find why an IAM principal was denied access to an S3 object. Which tool should be checked first?",
+    "options": {
+      "A": "EBS burst balance",
+      "B": "Route 53 latency records",
+      "C": "IAM policy simulator and CloudTrail evidence",
+      "D": "CloudFront cache statistics"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "The IAM policy simulator evaluates authorization and CloudTrail can show the denied API call and context.\nThe other choices measure CDN, storage, or DNS behavior rather than IAM authorization.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  }
+]

@@ -1,0 +1,690 @@
+[
+  {
+    "id": "soa-c03-d1-001",
+    "type": "single",
+    "question": "A production team needs a metric for a custom application value that is not emitted by an AWS service. Which feature is most appropriate?",
+    "options": {
+      "A": "A KMS grant",
+      "B": "A CloudWatch custom metric",
+      "C": "A Route 53 record",
+      "D": "An S3 lifecycle rule"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch custom metrics let applications publish business and operational measurements for alarms and dashboards.\nThe other choices manage DNS, storage transitions, or encryption permissions.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d1-002",
+    "type": "single",
+    "question": "A multi-account platform team must collect operating system logs from an EC2 instance. Which tool should be configured?",
+    "options": {
+      "A": "A CloudFront origin group",
+      "B": "A VPC peering route",
+      "C": "The CloudWatch agent",
+      "D": "An S3 bucket ACL"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "The CloudWatch agent collects operating system logs and metrics and sends them to CloudWatch.\nThe other choices do not collect EC2 operating system telemetry.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d1-003",
+    "type": "single",
+    "question": "A regulated company needs an alarm that invokes an action only when two underlying alarms are both in alarm state. Which feature should be used?",
+    "options": {
+      "A": "An S3 event notification",
+      "B": "A Route 53 weighted record",
+      "C": "An IAM permission boundary",
+      "D": "A CloudWatch composite alarm"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "A composite alarm combines the states of other alarms and can reduce noisy or premature remediation.\nThe other choices do not combine CloudWatch alarm states.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d1-004",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase wants to route a CloudWatch alarm event to a Lambda remediation function. Which integration is suitable?",
+    "options": {
+      "A": "EventBridge targeting Lambda",
+      "B": "An EBS snapshot policy",
+      "C": "A security group rule",
+      "D": "An S3 storage class"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge can receive alarm state events and invoke a Lambda target for automated remediation.\nThe other choices do not route CloudWatch events to code.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d1-005",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs to investigate a slow RDS query using database-level performance information. Which feature should be enabled?",
+    "options": {
+      "A": "Amazon Cognito",
+      "B": "Amazon RDS Performance Insights",
+      "C": "S3 Inventory",
+      "D": "AWS Artifact"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Performance Insights exposes database load and helps identify query and wait-event bottlenecks.\nThe other choices provide object reports, compliance documents, or application identity.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d1-006",
+    "type": "single",
+    "question": "A data platform team needs a metric for a custom application value that is not emitted by an AWS service. Which feature is most appropriate?",
+    "options": {
+      "A": "An S3 lifecycle rule",
+      "B": "A KMS grant",
+      "C": "A CloudWatch custom metric",
+      "D": "A Route 53 record"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch custom metrics let applications publish business and operational measurements for alarms and dashboards.\nThe other choices manage DNS, storage transitions, or encryption permissions.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d1-007",
+    "type": "single",
+    "question": "A security-conscious engineering team must collect operating system logs from an EC2 instance. Which tool should be configured?",
+    "options": {
+      "A": "An S3 bucket ACL",
+      "B": "A CloudFront origin group",
+      "C": "A VPC peering route",
+      "D": "The CloudWatch agent"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "The CloudWatch agent collects operating system logs and metrics and sends them to CloudWatch.\nThe other choices do not collect EC2 operating system telemetry.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d1-008",
+    "type": "single",
+    "question": "A company migrating an existing workload needs an alarm that invokes an action only when two underlying alarms are both in alarm state. Which feature should be used?",
+    "options": {
+      "A": "A CloudWatch composite alarm",
+      "B": "An S3 event notification",
+      "C": "A Route 53 weighted record",
+      "D": "An IAM permission boundary"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "A composite alarm combines the states of other alarms and can reduce noisy or premature remediation.\nThe other choices do not combine CloudWatch alarm states.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d1-009",
+    "type": "single",
+    "question": "A team with strict recovery objectives wants to route a CloudWatch alarm event to a Lambda remediation function. Which integration is suitable?",
+    "options": {
+      "A": "An S3 storage class",
+      "B": "EventBridge targeting Lambda",
+      "C": "An EBS snapshot policy",
+      "D": "A security group rule"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge can receive alarm state events and invoke a Lambda target for automated remediation.\nThe other choices do not route CloudWatch events to code.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d1-010",
+    "type": "single",
+    "question": "A developer team preparing a release needs to investigate a slow RDS query using database-level performance information. Which feature should be enabled?",
+    "options": {
+      "A": "AWS Artifact",
+      "B": "Amazon Cognito",
+      "C": "Amazon RDS Performance Insights",
+      "D": "S3 Inventory"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Performance Insights exposes database load and helps identify query and wait-event bottlenecks.\nThe other choices provide object reports, compliance documents, or application identity.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d1-011",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs a metric for a custom application value that is not emitted by an AWS service. Which feature is most appropriate?",
+    "options": {
+      "A": "A Route 53 record",
+      "B": "An S3 lifecycle rule",
+      "C": "A KMS grant",
+      "D": "A CloudWatch custom metric"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch custom metrics let applications publish business and operational measurements for alarms and dashboards.\nThe other choices manage DNS, storage transitions, or encryption permissions.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d1-012",
+    "type": "single",
+    "question": "A service owner reviewing an incident must collect operating system logs from an EC2 instance. Which tool should be configured?",
+    "options": {
+      "A": "The CloudWatch agent",
+      "B": "An S3 bucket ACL",
+      "C": "A CloudFront origin group",
+      "D": "A VPC peering route"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "The CloudWatch agent collects operating system logs and metrics and sends them to CloudWatch.\nThe other choices do not collect EC2 operating system telemetry.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d1-013",
+    "type": "single",
+    "question": "A team optimizing an existing implementation needs an alarm that invokes an action only when two underlying alarms are both in alarm state. Which feature should be used?",
+    "options": {
+      "A": "An IAM permission boundary",
+      "B": "A CloudWatch composite alarm",
+      "C": "An S3 event notification",
+      "D": "A Route 53 weighted record"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "A composite alarm combines the states of other alarms and can reduce noisy or premature remediation.\nThe other choices do not combine CloudWatch alarm states.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d1-014",
+    "type": "single",
+    "question": "A company introducing an automated workflow wants to route a CloudWatch alarm event to a Lambda remediation function. Which integration is suitable?",
+    "options": {
+      "A": "A security group rule",
+      "B": "An S3 storage class",
+      "C": "EventBridge targeting Lambda",
+      "D": "An EBS snapshot policy"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge can receive alarm state events and invoke a Lambda target for automated remediation.\nThe other choices do not route CloudWatch events to code.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d1-015",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment needs to investigate a slow RDS query using database-level performance information. Which feature should be enabled?",
+    "options": {
+      "A": "S3 Inventory",
+      "B": "AWS Artifact",
+      "C": "Amazon Cognito",
+      "D": "Amazon RDS Performance Insights"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Performance Insights exposes database load and helps identify query and wait-event bottlenecks.\nThe other choices provide object reports, compliance documents, or application identity.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d1-016",
+    "type": "single",
+    "question": "A customer-facing application team needs a metric for a custom application value that is not emitted by an AWS service. Which feature is most appropriate?",
+    "options": {
+      "A": "A CloudWatch custom metric",
+      "B": "A Route 53 record",
+      "C": "An S3 lifecycle rule",
+      "D": "A KMS grant"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch custom metrics let applications publish business and operational measurements for alarms and dashboards.\nThe other choices manage DNS, storage transitions, or encryption permissions.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d1-017",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments must collect operating system logs from an EC2 instance. Which tool should be configured?",
+    "options": {
+      "A": "A VPC peering route",
+      "B": "The CloudWatch agent",
+      "C": "An S3 bucket ACL",
+      "D": "A CloudFront origin group"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "The CloudWatch agent collects operating system logs and metrics and sends them to CloudWatch.\nThe other choices do not collect EC2 operating system telemetry.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d1-018",
+    "type": "single",
+    "question": "A team preparing evidence for an audit needs an alarm that invokes an action only when two underlying alarms are both in alarm state. Which feature should be used?",
+    "options": {
+      "A": "A Route 53 weighted record",
+      "B": "An IAM permission boundary",
+      "C": "A CloudWatch composite alarm",
+      "D": "An S3 event notification"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "A composite alarm combines the states of other alarms and can reduce noisy or premature remediation.\nThe other choices do not combine CloudWatch alarm states.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d1-019",
+    "type": "single",
+    "question": "A business replacing a manual process wants to route a CloudWatch alarm event to a Lambda remediation function. Which integration is suitable?",
+    "options": {
+      "A": "An EBS snapshot policy",
+      "B": "A security group rule",
+      "C": "An S3 storage class",
+      "D": "EventBridge targeting Lambda"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge can receive alarm state events and invoke a Lambda target for automated remediation.\nThe other choices do not route CloudWatch events to code.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d1-020",
+    "type": "single",
+    "question": "A team validating a design against the exam guide needs to investigate a slow RDS query using database-level performance information. Which feature should be enabled?",
+    "options": {
+      "A": "Amazon RDS Performance Insights",
+      "B": "S3 Inventory",
+      "C": "AWS Artifact",
+      "D": "Amazon Cognito"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Performance Insights exposes database load and helps identify query and wait-event bottlenecks.\nThe other choices provide object reports, compliance documents, or application identity.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d1-021",
+    "type": "single",
+    "question": "A production team needs a metric for a custom application value that is not emitted by an AWS service. Which feature is most appropriate?",
+    "options": {
+      "A": "A KMS grant",
+      "B": "A CloudWatch custom metric",
+      "C": "A Route 53 record",
+      "D": "An S3 lifecycle rule"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch custom metrics let applications publish business and operational measurements for alarms and dashboards.\nThe other choices manage DNS, storage transitions, or encryption permissions.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d1-022",
+    "type": "single",
+    "question": "A multi-account platform team must collect operating system logs from an EC2 instance. Which tool should be configured?",
+    "options": {
+      "A": "A CloudFront origin group",
+      "B": "A VPC peering route",
+      "C": "The CloudWatch agent",
+      "D": "An S3 bucket ACL"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "The CloudWatch agent collects operating system logs and metrics and sends them to CloudWatch.\nThe other choices do not collect EC2 operating system telemetry.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d1-023",
+    "type": "single",
+    "question": "A regulated company needs an alarm that invokes an action only when two underlying alarms are both in alarm state. Which feature should be used?",
+    "options": {
+      "A": "An S3 event notification",
+      "B": "A Route 53 weighted record",
+      "C": "An IAM permission boundary",
+      "D": "A CloudWatch composite alarm"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "A composite alarm combines the states of other alarms and can reduce noisy or premature remediation.\nThe other choices do not combine CloudWatch alarm states.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d1-024",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase wants to route a CloudWatch alarm event to a Lambda remediation function. Which integration is suitable?",
+    "options": {
+      "A": "EventBridge targeting Lambda",
+      "B": "An EBS snapshot policy",
+      "C": "A security group rule",
+      "D": "An S3 storage class"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge can receive alarm state events and invoke a Lambda target for automated remediation.\nThe other choices do not route CloudWatch events to code.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d1-025",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs to investigate a slow RDS query using database-level performance information. Which feature should be enabled?",
+    "options": {
+      "A": "Amazon Cognito",
+      "B": "Amazon RDS Performance Insights",
+      "C": "S3 Inventory",
+      "D": "AWS Artifact"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Performance Insights exposes database load and helps identify query and wait-event bottlenecks.\nThe other choices provide object reports, compliance documents, or application identity.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d1-026",
+    "type": "single",
+    "question": "A data platform team needs a metric for a custom application value that is not emitted by an AWS service. Which feature is most appropriate?",
+    "options": {
+      "A": "An S3 lifecycle rule",
+      "B": "A KMS grant",
+      "C": "A CloudWatch custom metric",
+      "D": "A Route 53 record"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch custom metrics let applications publish business and operational measurements for alarms and dashboards.\nThe other choices manage DNS, storage transitions, or encryption permissions.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d1-027",
+    "type": "single",
+    "question": "A security-conscious engineering team must collect operating system logs from an EC2 instance. Which tool should be configured?",
+    "options": {
+      "A": "An S3 bucket ACL",
+      "B": "A CloudFront origin group",
+      "C": "A VPC peering route",
+      "D": "The CloudWatch agent"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "The CloudWatch agent collects operating system logs and metrics and sends them to CloudWatch.\nThe other choices do not collect EC2 operating system telemetry.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d1-028",
+    "type": "single",
+    "question": "A company migrating an existing workload needs an alarm that invokes an action only when two underlying alarms are both in alarm state. Which feature should be used?",
+    "options": {
+      "A": "A CloudWatch composite alarm",
+      "B": "An S3 event notification",
+      "C": "A Route 53 weighted record",
+      "D": "An IAM permission boundary"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "A composite alarm combines the states of other alarms and can reduce noisy or premature remediation.\nThe other choices do not combine CloudWatch alarm states.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d1-029",
+    "type": "single",
+    "question": "A team with strict recovery objectives wants to route a CloudWatch alarm event to a Lambda remediation function. Which integration is suitable?",
+    "options": {
+      "A": "An S3 storage class",
+      "B": "EventBridge targeting Lambda",
+      "C": "An EBS snapshot policy",
+      "D": "A security group rule"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge can receive alarm state events and invoke a Lambda target for automated remediation.\nThe other choices do not route CloudWatch events to code.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d1-030",
+    "type": "single",
+    "question": "A developer team preparing a release needs to investigate a slow RDS query using database-level performance information. Which feature should be enabled?",
+    "options": {
+      "A": "AWS Artifact",
+      "B": "Amazon Cognito",
+      "C": "Amazon RDS Performance Insights",
+      "D": "S3 Inventory"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Performance Insights exposes database load and helps identify query and wait-event bottlenecks.\nThe other choices provide object reports, compliance documents, or application identity.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d1-031",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs a metric for a custom application value that is not emitted by an AWS service. Which feature is most appropriate?",
+    "options": {
+      "A": "A Route 53 record",
+      "B": "An S3 lifecycle rule",
+      "C": "A KMS grant",
+      "D": "A CloudWatch custom metric"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch custom metrics let applications publish business and operational measurements for alarms and dashboards.\nThe other choices manage DNS, storage transitions, or encryption permissions.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d1-032",
+    "type": "single",
+    "question": "A service owner reviewing an incident must collect operating system logs from an EC2 instance. Which tool should be configured?",
+    "options": {
+      "A": "The CloudWatch agent",
+      "B": "An S3 bucket ACL",
+      "C": "A CloudFront origin group",
+      "D": "A VPC peering route"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "The CloudWatch agent collects operating system logs and metrics and sends them to CloudWatch.\nThe other choices do not collect EC2 operating system telemetry.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d1-033",
+    "type": "single",
+    "question": "A team optimizing an existing implementation needs an alarm that invokes an action only when two underlying alarms are both in alarm state. Which feature should be used?",
+    "options": {
+      "A": "An IAM permission boundary",
+      "B": "A CloudWatch composite alarm",
+      "C": "An S3 event notification",
+      "D": "A Route 53 weighted record"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "A composite alarm combines the states of other alarms and can reduce noisy or premature remediation.\nThe other choices do not combine CloudWatch alarm states.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d1-034",
+    "type": "single",
+    "question": "A company introducing an automated workflow wants to route a CloudWatch alarm event to a Lambda remediation function. Which integration is suitable?",
+    "options": {
+      "A": "A security group rule",
+      "B": "An S3 storage class",
+      "C": "EventBridge targeting Lambda",
+      "D": "An EBS snapshot policy"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge can receive alarm state events and invoke a Lambda target for automated remediation.\nThe other choices do not route CloudWatch events to code.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d1-035",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment needs to investigate a slow RDS query using database-level performance information. Which feature should be enabled?",
+    "options": {
+      "A": "S3 Inventory",
+      "B": "AWS Artifact",
+      "C": "Amazon Cognito",
+      "D": "Amazon RDS Performance Insights"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Performance Insights exposes database load and helps identify query and wait-event bottlenecks.\nThe other choices provide object reports, compliance documents, or application identity.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d1-036",
+    "type": "single",
+    "question": "A customer-facing application team needs a metric for a custom application value that is not emitted by an AWS service. Which feature is most appropriate?",
+    "options": {
+      "A": "A CloudWatch custom metric",
+      "B": "A Route 53 record",
+      "C": "An S3 lifecycle rule",
+      "D": "A KMS grant"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch custom metrics let applications publish business and operational measurements for alarms and dashboards.\nThe other choices manage DNS, storage transitions, or encryption permissions.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d1-037",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments must collect operating system logs from an EC2 instance. Which tool should be configured?",
+    "options": {
+      "A": "A VPC peering route",
+      "B": "The CloudWatch agent",
+      "C": "An S3 bucket ACL",
+      "D": "A CloudFront origin group"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "The CloudWatch agent collects operating system logs and metrics and sends them to CloudWatch.\nThe other choices do not collect EC2 operating system telemetry.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d1-038",
+    "type": "single",
+    "question": "A team preparing evidence for an audit needs an alarm that invokes an action only when two underlying alarms are both in alarm state. Which feature should be used?",
+    "options": {
+      "A": "A Route 53 weighted record",
+      "B": "An IAM permission boundary",
+      "C": "A CloudWatch composite alarm",
+      "D": "An S3 event notification"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "A composite alarm combines the states of other alarms and can reduce noisy or premature remediation.\nThe other choices do not combine CloudWatch alarm states.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d1-039",
+    "type": "single",
+    "question": "A business replacing a manual process wants to route a CloudWatch alarm event to a Lambda remediation function. Which integration is suitable?",
+    "options": {
+      "A": "An EBS snapshot policy",
+      "B": "A security group rule",
+      "C": "An S3 storage class",
+      "D": "EventBridge targeting Lambda"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge can receive alarm state events and invoke a Lambda target for automated remediation.\nThe other choices do not route CloudWatch events to code.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d1-040",
+    "type": "single",
+    "question": "A team validating a design against the exam guide needs to investigate a slow RDS query using database-level performance information. Which feature should be enabled?",
+    "options": {
+      "A": "Amazon RDS Performance Insights",
+      "B": "S3 Inventory",
+      "C": "AWS Artifact",
+      "D": "Amazon Cognito"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Performance Insights exposes database load and helps identify query and wait-event bottlenecks.\nThe other choices provide object reports, compliance documents, or application identity.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d1-041",
+    "type": "single",
+    "question": "A production team needs a metric for a custom application value that is not emitted by an AWS service. Which feature is most appropriate?",
+    "options": {
+      "A": "A KMS grant",
+      "B": "A CloudWatch custom metric",
+      "C": "A Route 53 record",
+      "D": "An S3 lifecycle rule"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch custom metrics let applications publish business and operational measurements for alarms and dashboards.\nThe other choices manage DNS, storage transitions, or encryption permissions.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d1-042",
+    "type": "single",
+    "question": "A multi-account platform team must collect operating system logs from an EC2 instance. Which tool should be configured?",
+    "options": {
+      "A": "A CloudFront origin group",
+      "B": "A VPC peering route",
+      "C": "The CloudWatch agent",
+      "D": "An S3 bucket ACL"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "The CloudWatch agent collects operating system logs and metrics and sends them to CloudWatch.\nThe other choices do not collect EC2 operating system telemetry.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d1-043",
+    "type": "single",
+    "question": "A regulated company needs an alarm that invokes an action only when two underlying alarms are both in alarm state. Which feature should be used?",
+    "options": {
+      "A": "An S3 event notification",
+      "B": "A Route 53 weighted record",
+      "C": "An IAM permission boundary",
+      "D": "A CloudWatch composite alarm"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "A composite alarm combines the states of other alarms and can reduce noisy or premature remediation.\nThe other choices do not combine CloudWatch alarm states.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  }
+]

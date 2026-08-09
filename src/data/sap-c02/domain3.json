@@ -1,0 +1,898 @@
+[
+  {
+    "id": "sap-c02-d3-001",
+    "type": "single",
+    "question": "A production team must reduce cost in an existing workload without violating availability objectives. Which first step is appropriate?",
+    "options": {
+      "A": "Delete production resources immediately",
+      "B": "Disable monitoring",
+      "C": "Move everything to the largest instance",
+      "D": "Analyze utilization, data transfer, and service metrics before rightsizing"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Measurement identifies safe rightsizing and architectural cost opportunities.\nUnmeasured deletion or oversizing increases risk and cost.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-002",
+    "type": "single",
+    "question": "A multi-account platform team needs to improve a slow service without changing its public API. Which approach fits?",
+    "options": {
+      "A": "Use tracing and metrics to identify the bottleneck before changing components",
+      "B": "Rewrite every service at once",
+      "C": "Disable logs",
+      "D": "Increase all timeouts"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Observability identifies the limiting component and supports targeted improvement.\nBroad rewrites and disabled telemetry increase risk.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-003",
+    "type": "single",
+    "question": "A regulated company must modernize a scheduled batch process into a managed, event-driven workflow. Which design should be evaluated?",
+    "options": {
+      "A": "A public root key",
+      "B": "EventBridge triggering Step Functions and managed compute",
+      "C": "A permanent server with a cron job only",
+      "D": "Manual console execution"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Managed event-driven orchestration reduces operational work and improves retry behavior.\nManual or credential-sharing designs are fragile.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-004",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs to migrate a database while minimizing downtime. Which strategy should be considered?",
+    "options": {
+      "A": "Use a DNS TXT record",
+      "B": "Disable backups",
+      "C": "AWS DMS with continuous replication and a planned cutover",
+      "D": "Copy data once and stop the source for weeks"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "DMS can replicate changes and support a controlled migration cutover.\nA one-time copy creates a long outage window and the other choices are unrelated.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-005",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must replace a self-managed cache with a managed service. Which factor is most important?",
+    "options": {
+      "A": "The shortest service name",
+      "B": "The number of IAM users",
+      "C": "The S3 bucket region only",
+      "D": "Required data structures, latency, durability, and failover behavior"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Cache selection should match workload behavior and resilience requirements.\nThe other factors do not determine cache suitability.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-006",
+    "type": "single",
+    "question": "A data platform team must reduce cost in an existing workload without violating availability objectives. Which first step is appropriate?",
+    "options": {
+      "A": "Analyze utilization, data transfer, and service metrics before rightsizing",
+      "B": "Delete production resources immediately",
+      "C": "Disable monitoring",
+      "D": "Move everything to the largest instance"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Measurement identifies safe rightsizing and architectural cost opportunities.\nUnmeasured deletion or oversizing increases risk and cost.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-007",
+    "type": "single",
+    "question": "A security-conscious engineering team needs to improve a slow service without changing its public API. Which approach fits?",
+    "options": {
+      "A": "Increase all timeouts",
+      "B": "Use tracing and metrics to identify the bottleneck before changing components",
+      "C": "Rewrite every service at once",
+      "D": "Disable logs"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Observability identifies the limiting component and supports targeted improvement.\nBroad rewrites and disabled telemetry increase risk.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-008",
+    "type": "single",
+    "question": "A company migrating an existing workload must modernize a scheduled batch process into a managed, event-driven workflow. Which design should be evaluated?",
+    "options": {
+      "A": "Manual console execution",
+      "B": "A public root key",
+      "C": "EventBridge triggering Step Functions and managed compute",
+      "D": "A permanent server with a cron job only"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Managed event-driven orchestration reduces operational work and improves retry behavior.\nManual or credential-sharing designs are fragile.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-009",
+    "type": "single",
+    "question": "A team with strict recovery objectives needs to migrate a database while minimizing downtime. Which strategy should be considered?",
+    "options": {
+      "A": "Copy data once and stop the source for weeks",
+      "B": "Use a DNS TXT record",
+      "C": "Disable backups",
+      "D": "AWS DMS with continuous replication and a planned cutover"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "DMS can replicate changes and support a controlled migration cutover.\nA one-time copy creates a long outage window and the other choices are unrelated.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-010",
+    "type": "single",
+    "question": "A developer team preparing a release must replace a self-managed cache with a managed service. Which factor is most important?",
+    "options": {
+      "A": "Required data structures, latency, durability, and failover behavior",
+      "B": "The shortest service name",
+      "C": "The number of IAM users",
+      "D": "The S3 bucket region only"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Cache selection should match workload behavior and resilience requirements.\nThe other factors do not determine cache suitability.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-011",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions must reduce cost in an existing workload without violating availability objectives. Which first step is appropriate?",
+    "options": {
+      "A": "Move everything to the largest instance",
+      "B": "Analyze utilization, data transfer, and service metrics before rightsizing",
+      "C": "Delete production resources immediately",
+      "D": "Disable monitoring"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Measurement identifies safe rightsizing and architectural cost opportunities.\nUnmeasured deletion or oversizing increases risk and cost.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-012",
+    "type": "single",
+    "question": "A service owner reviewing an incident needs to improve a slow service without changing its public API. Which approach fits?",
+    "options": {
+      "A": "Disable logs",
+      "B": "Increase all timeouts",
+      "C": "Use tracing and metrics to identify the bottleneck before changing components",
+      "D": "Rewrite every service at once"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Observability identifies the limiting component and supports targeted improvement.\nBroad rewrites and disabled telemetry increase risk.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-013",
+    "type": "single",
+    "question": "A team optimizing an existing implementation must modernize a scheduled batch process into a managed, event-driven workflow. Which design should be evaluated?",
+    "options": {
+      "A": "A permanent server with a cron job only",
+      "B": "Manual console execution",
+      "C": "A public root key",
+      "D": "EventBridge triggering Step Functions and managed compute"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Managed event-driven orchestration reduces operational work and improves retry behavior.\nManual or credential-sharing designs are fragile.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-014",
+    "type": "single",
+    "question": "A company introducing an automated workflow needs to migrate a database while minimizing downtime. Which strategy should be considered?",
+    "options": {
+      "A": "AWS DMS with continuous replication and a planned cutover",
+      "B": "Copy data once and stop the source for weeks",
+      "C": "Use a DNS TXT record",
+      "D": "Disable backups"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "DMS can replicate changes and support a controlled migration cutover.\nA one-time copy creates a long outage window and the other choices are unrelated.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-015",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment must replace a self-managed cache with a managed service. Which factor is most important?",
+    "options": {
+      "A": "The S3 bucket region only",
+      "B": "Required data structures, latency, durability, and failover behavior",
+      "C": "The shortest service name",
+      "D": "The number of IAM users"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Cache selection should match workload behavior and resilience requirements.\nThe other factors do not determine cache suitability.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-016",
+    "type": "single",
+    "question": "A customer-facing application team must reduce cost in an existing workload without violating availability objectives. Which first step is appropriate?",
+    "options": {
+      "A": "Disable monitoring",
+      "B": "Move everything to the largest instance",
+      "C": "Analyze utilization, data transfer, and service metrics before rightsizing",
+      "D": "Delete production resources immediately"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Measurement identifies safe rightsizing and architectural cost opportunities.\nUnmeasured deletion or oversizing increases risk and cost.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-017",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments needs to improve a slow service without changing its public API. Which approach fits?",
+    "options": {
+      "A": "Rewrite every service at once",
+      "B": "Disable logs",
+      "C": "Increase all timeouts",
+      "D": "Use tracing and metrics to identify the bottleneck before changing components"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Observability identifies the limiting component and supports targeted improvement.\nBroad rewrites and disabled telemetry increase risk.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-018",
+    "type": "single",
+    "question": "A team preparing evidence for an audit must modernize a scheduled batch process into a managed, event-driven workflow. Which design should be evaluated?",
+    "options": {
+      "A": "EventBridge triggering Step Functions and managed compute",
+      "B": "A permanent server with a cron job only",
+      "C": "Manual console execution",
+      "D": "A public root key"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Managed event-driven orchestration reduces operational work and improves retry behavior.\nManual or credential-sharing designs are fragile.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-019",
+    "type": "single",
+    "question": "A business replacing a manual process needs to migrate a database while minimizing downtime. Which strategy should be considered?",
+    "options": {
+      "A": "Disable backups",
+      "B": "AWS DMS with continuous replication and a planned cutover",
+      "C": "Copy data once and stop the source for weeks",
+      "D": "Use a DNS TXT record"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "DMS can replicate changes and support a controlled migration cutover.\nA one-time copy creates a long outage window and the other choices are unrelated.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-020",
+    "type": "single",
+    "question": "A team validating a design against the exam guide must replace a self-managed cache with a managed service. Which factor is most important?",
+    "options": {
+      "A": "The number of IAM users",
+      "B": "The S3 bucket region only",
+      "C": "Required data structures, latency, durability, and failover behavior",
+      "D": "The shortest service name"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Cache selection should match workload behavior and resilience requirements.\nThe other factors do not determine cache suitability.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-021",
+    "type": "single",
+    "question": "A production team must reduce cost in an existing workload without violating availability objectives. Which first step is appropriate?",
+    "options": {
+      "A": "Delete production resources immediately",
+      "B": "Disable monitoring",
+      "C": "Move everything to the largest instance",
+      "D": "Analyze utilization, data transfer, and service metrics before rightsizing"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Measurement identifies safe rightsizing and architectural cost opportunities.\nUnmeasured deletion or oversizing increases risk and cost.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-022",
+    "type": "single",
+    "question": "A multi-account platform team needs to improve a slow service without changing its public API. Which approach fits?",
+    "options": {
+      "A": "Use tracing and metrics to identify the bottleneck before changing components",
+      "B": "Rewrite every service at once",
+      "C": "Disable logs",
+      "D": "Increase all timeouts"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Observability identifies the limiting component and supports targeted improvement.\nBroad rewrites and disabled telemetry increase risk.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-023",
+    "type": "single",
+    "question": "A regulated company must modernize a scheduled batch process into a managed, event-driven workflow. Which design should be evaluated?",
+    "options": {
+      "A": "A public root key",
+      "B": "EventBridge triggering Step Functions and managed compute",
+      "C": "A permanent server with a cron job only",
+      "D": "Manual console execution"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Managed event-driven orchestration reduces operational work and improves retry behavior.\nManual or credential-sharing designs are fragile.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-024",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs to migrate a database while minimizing downtime. Which strategy should be considered?",
+    "options": {
+      "A": "Use a DNS TXT record",
+      "B": "Disable backups",
+      "C": "AWS DMS with continuous replication and a planned cutover",
+      "D": "Copy data once and stop the source for weeks"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "DMS can replicate changes and support a controlled migration cutover.\nA one-time copy creates a long outage window and the other choices are unrelated.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-025",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must replace a self-managed cache with a managed service. Which factor is most important?",
+    "options": {
+      "A": "The shortest service name",
+      "B": "The number of IAM users",
+      "C": "The S3 bucket region only",
+      "D": "Required data structures, latency, durability, and failover behavior"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Cache selection should match workload behavior and resilience requirements.\nThe other factors do not determine cache suitability.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-026",
+    "type": "single",
+    "question": "A data platform team must reduce cost in an existing workload without violating availability objectives. Which first step is appropriate?",
+    "options": {
+      "A": "Analyze utilization, data transfer, and service metrics before rightsizing",
+      "B": "Delete production resources immediately",
+      "C": "Disable monitoring",
+      "D": "Move everything to the largest instance"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Measurement identifies safe rightsizing and architectural cost opportunities.\nUnmeasured deletion or oversizing increases risk and cost.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-027",
+    "type": "single",
+    "question": "A security-conscious engineering team needs to improve a slow service without changing its public API. Which approach fits?",
+    "options": {
+      "A": "Increase all timeouts",
+      "B": "Use tracing and metrics to identify the bottleneck before changing components",
+      "C": "Rewrite every service at once",
+      "D": "Disable logs"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Observability identifies the limiting component and supports targeted improvement.\nBroad rewrites and disabled telemetry increase risk.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-028",
+    "type": "single",
+    "question": "A company migrating an existing workload must modernize a scheduled batch process into a managed, event-driven workflow. Which design should be evaluated?",
+    "options": {
+      "A": "Manual console execution",
+      "B": "A public root key",
+      "C": "EventBridge triggering Step Functions and managed compute",
+      "D": "A permanent server with a cron job only"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Managed event-driven orchestration reduces operational work and improves retry behavior.\nManual or credential-sharing designs are fragile.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-029",
+    "type": "single",
+    "question": "A team with strict recovery objectives needs to migrate a database while minimizing downtime. Which strategy should be considered?",
+    "options": {
+      "A": "Copy data once and stop the source for weeks",
+      "B": "Use a DNS TXT record",
+      "C": "Disable backups",
+      "D": "AWS DMS with continuous replication and a planned cutover"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "DMS can replicate changes and support a controlled migration cutover.\nA one-time copy creates a long outage window and the other choices are unrelated.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-030",
+    "type": "single",
+    "question": "A developer team preparing a release must replace a self-managed cache with a managed service. Which factor is most important?",
+    "options": {
+      "A": "Required data structures, latency, durability, and failover behavior",
+      "B": "The shortest service name",
+      "C": "The number of IAM users",
+      "D": "The S3 bucket region only"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Cache selection should match workload behavior and resilience requirements.\nThe other factors do not determine cache suitability.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-031",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions must reduce cost in an existing workload without violating availability objectives. Which first step is appropriate?",
+    "options": {
+      "A": "Move everything to the largest instance",
+      "B": "Analyze utilization, data transfer, and service metrics before rightsizing",
+      "C": "Delete production resources immediately",
+      "D": "Disable monitoring"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Measurement identifies safe rightsizing and architectural cost opportunities.\nUnmeasured deletion or oversizing increases risk and cost.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-032",
+    "type": "single",
+    "question": "A service owner reviewing an incident needs to improve a slow service without changing its public API. Which approach fits?",
+    "options": {
+      "A": "Disable logs",
+      "B": "Increase all timeouts",
+      "C": "Use tracing and metrics to identify the bottleneck before changing components",
+      "D": "Rewrite every service at once"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Observability identifies the limiting component and supports targeted improvement.\nBroad rewrites and disabled telemetry increase risk.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-033",
+    "type": "single",
+    "question": "A team optimizing an existing implementation must modernize a scheduled batch process into a managed, event-driven workflow. Which design should be evaluated?",
+    "options": {
+      "A": "A permanent server with a cron job only",
+      "B": "Manual console execution",
+      "C": "A public root key",
+      "D": "EventBridge triggering Step Functions and managed compute"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Managed event-driven orchestration reduces operational work and improves retry behavior.\nManual or credential-sharing designs are fragile.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-034",
+    "type": "single",
+    "question": "A company introducing an automated workflow needs to migrate a database while minimizing downtime. Which strategy should be considered?",
+    "options": {
+      "A": "AWS DMS with continuous replication and a planned cutover",
+      "B": "Copy data once and stop the source for weeks",
+      "C": "Use a DNS TXT record",
+      "D": "Disable backups"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "DMS can replicate changes and support a controlled migration cutover.\nA one-time copy creates a long outage window and the other choices are unrelated.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-035",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment must replace a self-managed cache with a managed service. Which factor is most important?",
+    "options": {
+      "A": "The S3 bucket region only",
+      "B": "Required data structures, latency, durability, and failover behavior",
+      "C": "The shortest service name",
+      "D": "The number of IAM users"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Cache selection should match workload behavior and resilience requirements.\nThe other factors do not determine cache suitability.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-036",
+    "type": "single",
+    "question": "A customer-facing application team must reduce cost in an existing workload without violating availability objectives. Which first step is appropriate?",
+    "options": {
+      "A": "Disable monitoring",
+      "B": "Move everything to the largest instance",
+      "C": "Analyze utilization, data transfer, and service metrics before rightsizing",
+      "D": "Delete production resources immediately"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Measurement identifies safe rightsizing and architectural cost opportunities.\nUnmeasured deletion or oversizing increases risk and cost.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-037",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments needs to improve a slow service without changing its public API. Which approach fits?",
+    "options": {
+      "A": "Rewrite every service at once",
+      "B": "Disable logs",
+      "C": "Increase all timeouts",
+      "D": "Use tracing and metrics to identify the bottleneck before changing components"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Observability identifies the limiting component and supports targeted improvement.\nBroad rewrites and disabled telemetry increase risk.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-038",
+    "type": "single",
+    "question": "A team preparing evidence for an audit must modernize a scheduled batch process into a managed, event-driven workflow. Which design should be evaluated?",
+    "options": {
+      "A": "EventBridge triggering Step Functions and managed compute",
+      "B": "A permanent server with a cron job only",
+      "C": "Manual console execution",
+      "D": "A public root key"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Managed event-driven orchestration reduces operational work and improves retry behavior.\nManual or credential-sharing designs are fragile.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-039",
+    "type": "single",
+    "question": "A business replacing a manual process needs to migrate a database while minimizing downtime. Which strategy should be considered?",
+    "options": {
+      "A": "Disable backups",
+      "B": "AWS DMS with continuous replication and a planned cutover",
+      "C": "Copy data once and stop the source for weeks",
+      "D": "Use a DNS TXT record"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "DMS can replicate changes and support a controlled migration cutover.\nA one-time copy creates a long outage window and the other choices are unrelated.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-040",
+    "type": "single",
+    "question": "A team validating a design against the exam guide must replace a self-managed cache with a managed service. Which factor is most important?",
+    "options": {
+      "A": "The number of IAM users",
+      "B": "The S3 bucket region only",
+      "C": "Required data structures, latency, durability, and failover behavior",
+      "D": "The shortest service name"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Cache selection should match workload behavior and resilience requirements.\nThe other factors do not determine cache suitability.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-041",
+    "type": "single",
+    "question": "A production team must reduce cost in an existing workload without violating availability objectives. Which first step is appropriate?",
+    "options": {
+      "A": "Delete production resources immediately",
+      "B": "Disable monitoring",
+      "C": "Move everything to the largest instance",
+      "D": "Analyze utilization, data transfer, and service metrics before rightsizing"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Measurement identifies safe rightsizing and architectural cost opportunities.\nUnmeasured deletion or oversizing increases risk and cost.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-042",
+    "type": "single",
+    "question": "A multi-account platform team needs to improve a slow service without changing its public API. Which approach fits?",
+    "options": {
+      "A": "Use tracing and metrics to identify the bottleneck before changing components",
+      "B": "Rewrite every service at once",
+      "C": "Disable logs",
+      "D": "Increase all timeouts"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Observability identifies the limiting component and supports targeted improvement.\nBroad rewrites and disabled telemetry increase risk.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-043",
+    "type": "single",
+    "question": "A regulated company must modernize a scheduled batch process into a managed, event-driven workflow. Which design should be evaluated?",
+    "options": {
+      "A": "A public root key",
+      "B": "EventBridge triggering Step Functions and managed compute",
+      "C": "A permanent server with a cron job only",
+      "D": "Manual console execution"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Managed event-driven orchestration reduces operational work and improves retry behavior.\nManual or credential-sharing designs are fragile.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-044",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs to migrate a database while minimizing downtime. Which strategy should be considered?",
+    "options": {
+      "A": "Use a DNS TXT record",
+      "B": "Disable backups",
+      "C": "AWS DMS with continuous replication and a planned cutover",
+      "D": "Copy data once and stop the source for weeks"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "DMS can replicate changes and support a controlled migration cutover.\nA one-time copy creates a long outage window and the other choices are unrelated.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-045",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must replace a self-managed cache with a managed service. Which factor is most important?",
+    "options": {
+      "A": "The shortest service name",
+      "B": "The number of IAM users",
+      "C": "The S3 bucket region only",
+      "D": "Required data structures, latency, durability, and failover behavior"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Cache selection should match workload behavior and resilience requirements.\nThe other factors do not determine cache suitability.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-046",
+    "type": "single",
+    "question": "A data platform team must reduce cost in an existing workload without violating availability objectives. Which first step is appropriate?",
+    "options": {
+      "A": "Analyze utilization, data transfer, and service metrics before rightsizing",
+      "B": "Delete production resources immediately",
+      "C": "Disable monitoring",
+      "D": "Move everything to the largest instance"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Measurement identifies safe rightsizing and architectural cost opportunities.\nUnmeasured deletion or oversizing increases risk and cost.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-047",
+    "type": "single",
+    "question": "A security-conscious engineering team needs to improve a slow service without changing its public API. Which approach fits?",
+    "options": {
+      "A": "Increase all timeouts",
+      "B": "Use tracing and metrics to identify the bottleneck before changing components",
+      "C": "Rewrite every service at once",
+      "D": "Disable logs"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Observability identifies the limiting component and supports targeted improvement.\nBroad rewrites and disabled telemetry increase risk.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-048",
+    "type": "single",
+    "question": "A company migrating an existing workload must modernize a scheduled batch process into a managed, event-driven workflow. Which design should be evaluated?",
+    "options": {
+      "A": "Manual console execution",
+      "B": "A public root key",
+      "C": "EventBridge triggering Step Functions and managed compute",
+      "D": "A permanent server with a cron job only"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Managed event-driven orchestration reduces operational work and improves retry behavior.\nManual or credential-sharing designs are fragile.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-049",
+    "type": "single",
+    "question": "A team with strict recovery objectives needs to migrate a database while minimizing downtime. Which strategy should be considered?",
+    "options": {
+      "A": "Copy data once and stop the source for weeks",
+      "B": "Use a DNS TXT record",
+      "C": "Disable backups",
+      "D": "AWS DMS with continuous replication and a planned cutover"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "DMS can replicate changes and support a controlled migration cutover.\nA one-time copy creates a long outage window and the other choices are unrelated.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-050",
+    "type": "single",
+    "question": "A developer team preparing a release must replace a self-managed cache with a managed service. Which factor is most important?",
+    "options": {
+      "A": "Required data structures, latency, durability, and failover behavior",
+      "B": "The shortest service name",
+      "C": "The number of IAM users",
+      "D": "The S3 bucket region only"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Cache selection should match workload behavior and resilience requirements.\nThe other factors do not determine cache suitability.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-051",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions must reduce cost in an existing workload without violating availability objectives. Which first step is appropriate?",
+    "options": {
+      "A": "Move everything to the largest instance",
+      "B": "Analyze utilization, data transfer, and service metrics before rightsizing",
+      "C": "Delete production resources immediately",
+      "D": "Disable monitoring"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Measurement identifies safe rightsizing and architectural cost opportunities.\nUnmeasured deletion or oversizing increases risk and cost.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-052",
+    "type": "single",
+    "question": "A service owner reviewing an incident needs to improve a slow service without changing its public API. Which approach fits?",
+    "options": {
+      "A": "Disable logs",
+      "B": "Increase all timeouts",
+      "C": "Use tracing and metrics to identify the bottleneck before changing components",
+      "D": "Rewrite every service at once"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Observability identifies the limiting component and supports targeted improvement.\nBroad rewrites and disabled telemetry increase risk.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-053",
+    "type": "single",
+    "question": "A team optimizing an existing implementation must modernize a scheduled batch process into a managed, event-driven workflow. Which design should be evaluated?",
+    "options": {
+      "A": "A permanent server with a cron job only",
+      "B": "Manual console execution",
+      "C": "A public root key",
+      "D": "EventBridge triggering Step Functions and managed compute"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Managed event-driven orchestration reduces operational work and improves retry behavior.\nManual or credential-sharing designs are fragile.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-054",
+    "type": "single",
+    "question": "A company introducing an automated workflow needs to migrate a database while minimizing downtime. Which strategy should be considered?",
+    "options": {
+      "A": "AWS DMS with continuous replication and a planned cutover",
+      "B": "Copy data once and stop the source for weeks",
+      "C": "Use a DNS TXT record",
+      "D": "Disable backups"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "DMS can replicate changes and support a controlled migration cutover.\nA one-time copy creates a long outage window and the other choices are unrelated.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-055",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment must replace a self-managed cache with a managed service. Which factor is most important?",
+    "options": {
+      "A": "The S3 bucket region only",
+      "B": "Required data structures, latency, durability, and failover behavior",
+      "C": "The shortest service name",
+      "D": "The number of IAM users"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Cache selection should match workload behavior and resilience requirements.\nThe other factors do not determine cache suitability.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d3-056",
+    "type": "single",
+    "question": "A customer-facing application team must reduce cost in an existing workload without violating availability objectives. Which first step is appropriate?",
+    "options": {
+      "A": "Disable monitoring",
+      "B": "Move everything to the largest instance",
+      "C": "Analyze utilization, data transfer, and service metrics before rightsizing",
+      "D": "Delete production resources immediately"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Measurement identifies safe rightsizing and architectural cost opportunities.\nUnmeasured deletion or oversizing increases risk and cost.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  }
+]

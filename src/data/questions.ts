@@ -33,6 +33,66 @@ const CERT_LOADERS: Record<string, Record<number, DomainLoader>> = {
     4: () => import('./aif-c01/domain4.json'),
     5: () => import('./aif-c01/domain5.json'),
   },
+  'soa-c03': {
+    1: () => import('./soa-c03/domain1.json'),
+    2: () => import('./soa-c03/domain2.json'),
+    3: () => import('./soa-c03/domain3.json'),
+    4: () => import('./soa-c03/domain4.json'),
+    5: () => import('./soa-c03/domain5.json'),
+  },
+  'dea-c01': {
+    1: () => import('./dea-c01/domain1.json'),
+    2: () => import('./dea-c01/domain2.json'),
+    3: () => import('./dea-c01/domain3.json'),
+    4: () => import('./dea-c01/domain4.json'),
+  },
+  'dva-c02': {
+    1: () => import('./dva-c02/domain1.json'),
+    2: () => import('./dva-c02/domain2.json'),
+    3: () => import('./dva-c02/domain3.json'),
+    4: () => import('./dva-c02/domain4.json'),
+  },
+  'mla-c01': {
+    1: () => import('./mla-c01/domain1.json'),
+    2: () => import('./mla-c01/domain2.json'),
+    3: () => import('./mla-c01/domain3.json'),
+    4: () => import('./mla-c01/domain4.json'),
+  },
+  'dop-c02': {
+    1: () => import('./dop-c02/domain1.json'),
+    2: () => import('./dop-c02/domain2.json'),
+    3: () => import('./dop-c02/domain3.json'),
+    4: () => import('./dop-c02/domain4.json'),
+    5: () => import('./dop-c02/domain5.json'),
+    6: () => import('./dop-c02/domain6.json'),
+  },
+  'aip-c01': {
+    1: () => import('./aip-c01/domain1.json'),
+    2: () => import('./aip-c01/domain2.json'),
+    3: () => import('./aip-c01/domain3.json'),
+    4: () => import('./aip-c01/domain4.json'),
+    5: () => import('./aip-c01/domain5.json'),
+  },
+  'sap-c02': {
+    1: () => import('./sap-c02/domain1.json'),
+    2: () => import('./sap-c02/domain2.json'),
+    3: () => import('./sap-c02/domain3.json'),
+    4: () => import('./sap-c02/domain4.json'),
+  },
+  'ans-c01': {
+    1: () => import('./ans-c01/domain1.json'),
+    2: () => import('./ans-c01/domain2.json'),
+    3: () => import('./ans-c01/domain3.json'),
+    4: () => import('./ans-c01/domain4.json'),
+  },
+  'scs-c03': {
+    1: () => import('./scs-c03/domain1.json'),
+    2: () => import('./scs-c03/domain2.json'),
+    3: () => import('./scs-c03/domain3.json'),
+    4: () => import('./scs-c03/domain4.json'),
+    5: () => import('./scs-c03/domain5.json'),
+    6: () => import('./scs-c03/domain6.json'),
+  },
 }
 
 /**

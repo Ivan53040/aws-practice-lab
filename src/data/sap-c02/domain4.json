@@ -1,0 +1,722 @@
+[
+  {
+    "id": "sap-c02-d4-001",
+    "type": "single",
+    "question": "A production team needs to discover on-premises application dependencies before migration. Which service should be evaluated?",
+    "options": {
+      "A": "AWS Application Discovery Service",
+      "B": "Amazon CloudFront",
+      "C": "AWS WAF",
+      "D": "Amazon Cognito"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Application Discovery collects utilization and dependency information for migration planning.\nThe other choices provide delivery, filtering, or application identity.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-002",
+    "type": "single",
+    "question": "A multi-account platform team must migrate servers to AWS with minimal changes before later modernization. Which service is appropriate?",
+    "options": {
+      "A": "Amazon EFS only",
+      "B": "AWS Application Migration Service",
+      "C": "AWS Glue",
+      "D": "Amazon Route 53"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Application Migration Service replicates servers for lift-and-shift migration.\nThe other choices provide ETL, DNS, or file storage.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-003",
+    "type": "single",
+    "question": "A regulated company needs to modernize a monolith into event-driven components gradually. Which approach is sensible?",
+    "options": {
+      "A": "Share a root credential",
+      "B": "Disable observability",
+      "C": "Strangler-style incremental decomposition with APIs and events",
+      "D": "Rewrite everything before testing"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Incremental decomposition limits migration risk and permits controlled validation.\nA big-bang rewrite and missing telemetry increase risk.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-004",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase must move large archives to S3 when network bandwidth is constrained. Which service fits?",
+    "options": {
+      "A": "Amazon Cognito",
+      "B": "AWS WAF",
+      "C": "Amazon API Gateway",
+      "D": "AWS Snowball Edge"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Snowball Edge supports offline bulk data transfer when network upload is impractical.\nThe other choices do not transfer offline archives.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-005",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs to run a legacy database temporarily while a managed database migration is prepared. Which principle applies?",
+    "options": {
+      "A": "Separate migration phases and define an explicit decommission plan",
+      "B": "Run both systems forever without reconciliation",
+      "C": "Delete the source immediately",
+      "D": "Ignore data validation"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Phased migration with reconciliation and decommission criteria reduces operational and data risk.\nThe other choices create permanent drift or data loss.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-006",
+    "type": "single",
+    "question": "A data platform team needs to discover on-premises application dependencies before migration. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon Cognito",
+      "B": "AWS Application Discovery Service",
+      "C": "Amazon CloudFront",
+      "D": "AWS WAF"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Application Discovery collects utilization and dependency information for migration planning.\nThe other choices provide delivery, filtering, or application identity.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-007",
+    "type": "single",
+    "question": "A security-conscious engineering team must migrate servers to AWS with minimal changes before later modernization. Which service is appropriate?",
+    "options": {
+      "A": "Amazon Route 53",
+      "B": "Amazon EFS only",
+      "C": "AWS Application Migration Service",
+      "D": "AWS Glue"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Application Migration Service replicates servers for lift-and-shift migration.\nThe other choices provide ETL, DNS, or file storage.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-008",
+    "type": "single",
+    "question": "A company migrating an existing workload needs to modernize a monolith into event-driven components gradually. Which approach is sensible?",
+    "options": {
+      "A": "Rewrite everything before testing",
+      "B": "Share a root credential",
+      "C": "Disable observability",
+      "D": "Strangler-style incremental decomposition with APIs and events"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Incremental decomposition limits migration risk and permits controlled validation.\nA big-bang rewrite and missing telemetry increase risk.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-009",
+    "type": "single",
+    "question": "A team with strict recovery objectives must move large archives to S3 when network bandwidth is constrained. Which service fits?",
+    "options": {
+      "A": "AWS Snowball Edge",
+      "B": "Amazon Cognito",
+      "C": "AWS WAF",
+      "D": "Amazon API Gateway"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Snowball Edge supports offline bulk data transfer when network upload is impractical.\nThe other choices do not transfer offline archives.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-010",
+    "type": "single",
+    "question": "A developer team preparing a release needs to run a legacy database temporarily while a managed database migration is prepared. Which principle applies?",
+    "options": {
+      "A": "Ignore data validation",
+      "B": "Separate migration phases and define an explicit decommission plan",
+      "C": "Run both systems forever without reconciliation",
+      "D": "Delete the source immediately"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Phased migration with reconciliation and decommission criteria reduces operational and data risk.\nThe other choices create permanent drift or data loss.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-011",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs to discover on-premises application dependencies before migration. Which service should be evaluated?",
+    "options": {
+      "A": "AWS WAF",
+      "B": "Amazon Cognito",
+      "C": "AWS Application Discovery Service",
+      "D": "Amazon CloudFront"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Application Discovery collects utilization and dependency information for migration planning.\nThe other choices provide delivery, filtering, or application identity.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-012",
+    "type": "single",
+    "question": "A service owner reviewing an incident must migrate servers to AWS with minimal changes before later modernization. Which service is appropriate?",
+    "options": {
+      "A": "AWS Glue",
+      "B": "Amazon Route 53",
+      "C": "Amazon EFS only",
+      "D": "AWS Application Migration Service"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Application Migration Service replicates servers for lift-and-shift migration.\nThe other choices provide ETL, DNS, or file storage.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-013",
+    "type": "single",
+    "question": "A team optimizing an existing implementation needs to modernize a monolith into event-driven components gradually. Which approach is sensible?",
+    "options": {
+      "A": "Strangler-style incremental decomposition with APIs and events",
+      "B": "Rewrite everything before testing",
+      "C": "Share a root credential",
+      "D": "Disable observability"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Incremental decomposition limits migration risk and permits controlled validation.\nA big-bang rewrite and missing telemetry increase risk.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-014",
+    "type": "single",
+    "question": "A company introducing an automated workflow must move large archives to S3 when network bandwidth is constrained. Which service fits?",
+    "options": {
+      "A": "Amazon API Gateway",
+      "B": "AWS Snowball Edge",
+      "C": "Amazon Cognito",
+      "D": "AWS WAF"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Snowball Edge supports offline bulk data transfer when network upload is impractical.\nThe other choices do not transfer offline archives.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-015",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment needs to run a legacy database temporarily while a managed database migration is prepared. Which principle applies?",
+    "options": {
+      "A": "Delete the source immediately",
+      "B": "Ignore data validation",
+      "C": "Separate migration phases and define an explicit decommission plan",
+      "D": "Run both systems forever without reconciliation"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Phased migration with reconciliation and decommission criteria reduces operational and data risk.\nThe other choices create permanent drift or data loss.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-016",
+    "type": "single",
+    "question": "A customer-facing application team needs to discover on-premises application dependencies before migration. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon CloudFront",
+      "B": "AWS WAF",
+      "C": "Amazon Cognito",
+      "D": "AWS Application Discovery Service"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Application Discovery collects utilization and dependency information for migration planning.\nThe other choices provide delivery, filtering, or application identity.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-017",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments must migrate servers to AWS with minimal changes before later modernization. Which service is appropriate?",
+    "options": {
+      "A": "AWS Application Migration Service",
+      "B": "AWS Glue",
+      "C": "Amazon Route 53",
+      "D": "Amazon EFS only"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Application Migration Service replicates servers for lift-and-shift migration.\nThe other choices provide ETL, DNS, or file storage.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-018",
+    "type": "single",
+    "question": "A team preparing evidence for an audit needs to modernize a monolith into event-driven components gradually. Which approach is sensible?",
+    "options": {
+      "A": "Disable observability",
+      "B": "Strangler-style incremental decomposition with APIs and events",
+      "C": "Rewrite everything before testing",
+      "D": "Share a root credential"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Incremental decomposition limits migration risk and permits controlled validation.\nA big-bang rewrite and missing telemetry increase risk.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-019",
+    "type": "single",
+    "question": "A business replacing a manual process must move large archives to S3 when network bandwidth is constrained. Which service fits?",
+    "options": {
+      "A": "AWS WAF",
+      "B": "Amazon API Gateway",
+      "C": "AWS Snowball Edge",
+      "D": "Amazon Cognito"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Snowball Edge supports offline bulk data transfer when network upload is impractical.\nThe other choices do not transfer offline archives.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-020",
+    "type": "single",
+    "question": "A team validating a design against the exam guide needs to run a legacy database temporarily while a managed database migration is prepared. Which principle applies?",
+    "options": {
+      "A": "Run both systems forever without reconciliation",
+      "B": "Delete the source immediately",
+      "C": "Ignore data validation",
+      "D": "Separate migration phases and define an explicit decommission plan"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Phased migration with reconciliation and decommission criteria reduces operational and data risk.\nThe other choices create permanent drift or data loss.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-021",
+    "type": "single",
+    "question": "A production team needs to discover on-premises application dependencies before migration. Which service should be evaluated?",
+    "options": {
+      "A": "AWS Application Discovery Service",
+      "B": "Amazon CloudFront",
+      "C": "AWS WAF",
+      "D": "Amazon Cognito"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Application Discovery collects utilization and dependency information for migration planning.\nThe other choices provide delivery, filtering, or application identity.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-022",
+    "type": "single",
+    "question": "A multi-account platform team must migrate servers to AWS with minimal changes before later modernization. Which service is appropriate?",
+    "options": {
+      "A": "Amazon EFS only",
+      "B": "AWS Application Migration Service",
+      "C": "AWS Glue",
+      "D": "Amazon Route 53"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Application Migration Service replicates servers for lift-and-shift migration.\nThe other choices provide ETL, DNS, or file storage.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-023",
+    "type": "single",
+    "question": "A regulated company needs to modernize a monolith into event-driven components gradually. Which approach is sensible?",
+    "options": {
+      "A": "Share a root credential",
+      "B": "Disable observability",
+      "C": "Strangler-style incremental decomposition with APIs and events",
+      "D": "Rewrite everything before testing"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Incremental decomposition limits migration risk and permits controlled validation.\nA big-bang rewrite and missing telemetry increase risk.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-024",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase must move large archives to S3 when network bandwidth is constrained. Which service fits?",
+    "options": {
+      "A": "Amazon Cognito",
+      "B": "AWS WAF",
+      "C": "Amazon API Gateway",
+      "D": "AWS Snowball Edge"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Snowball Edge supports offline bulk data transfer when network upload is impractical.\nThe other choices do not transfer offline archives.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-025",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs to run a legacy database temporarily while a managed database migration is prepared. Which principle applies?",
+    "options": {
+      "A": "Separate migration phases and define an explicit decommission plan",
+      "B": "Run both systems forever without reconciliation",
+      "C": "Delete the source immediately",
+      "D": "Ignore data validation"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Phased migration with reconciliation and decommission criteria reduces operational and data risk.\nThe other choices create permanent drift or data loss.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-026",
+    "type": "single",
+    "question": "A data platform team needs to discover on-premises application dependencies before migration. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon Cognito",
+      "B": "AWS Application Discovery Service",
+      "C": "Amazon CloudFront",
+      "D": "AWS WAF"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Application Discovery collects utilization and dependency information for migration planning.\nThe other choices provide delivery, filtering, or application identity.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-027",
+    "type": "single",
+    "question": "A security-conscious engineering team must migrate servers to AWS with minimal changes before later modernization. Which service is appropriate?",
+    "options": {
+      "A": "Amazon Route 53",
+      "B": "Amazon EFS only",
+      "C": "AWS Application Migration Service",
+      "D": "AWS Glue"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Application Migration Service replicates servers for lift-and-shift migration.\nThe other choices provide ETL, DNS, or file storage.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-028",
+    "type": "single",
+    "question": "A company migrating an existing workload needs to modernize a monolith into event-driven components gradually. Which approach is sensible?",
+    "options": {
+      "A": "Rewrite everything before testing",
+      "B": "Share a root credential",
+      "C": "Disable observability",
+      "D": "Strangler-style incremental decomposition with APIs and events"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Incremental decomposition limits migration risk and permits controlled validation.\nA big-bang rewrite and missing telemetry increase risk.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-029",
+    "type": "single",
+    "question": "A team with strict recovery objectives must move large archives to S3 when network bandwidth is constrained. Which service fits?",
+    "options": {
+      "A": "AWS Snowball Edge",
+      "B": "Amazon Cognito",
+      "C": "AWS WAF",
+      "D": "Amazon API Gateway"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Snowball Edge supports offline bulk data transfer when network upload is impractical.\nThe other choices do not transfer offline archives.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-030",
+    "type": "single",
+    "question": "A developer team preparing a release needs to run a legacy database temporarily while a managed database migration is prepared. Which principle applies?",
+    "options": {
+      "A": "Ignore data validation",
+      "B": "Separate migration phases and define an explicit decommission plan",
+      "C": "Run both systems forever without reconciliation",
+      "D": "Delete the source immediately"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Phased migration with reconciliation and decommission criteria reduces operational and data risk.\nThe other choices create permanent drift or data loss.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-031",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs to discover on-premises application dependencies before migration. Which service should be evaluated?",
+    "options": {
+      "A": "AWS WAF",
+      "B": "Amazon Cognito",
+      "C": "AWS Application Discovery Service",
+      "D": "Amazon CloudFront"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Application Discovery collects utilization and dependency information for migration planning.\nThe other choices provide delivery, filtering, or application identity.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-032",
+    "type": "single",
+    "question": "A service owner reviewing an incident must migrate servers to AWS with minimal changes before later modernization. Which service is appropriate?",
+    "options": {
+      "A": "AWS Glue",
+      "B": "Amazon Route 53",
+      "C": "Amazon EFS only",
+      "D": "AWS Application Migration Service"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Application Migration Service replicates servers for lift-and-shift migration.\nThe other choices provide ETL, DNS, or file storage.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-033",
+    "type": "single",
+    "question": "A team optimizing an existing implementation needs to modernize a monolith into event-driven components gradually. Which approach is sensible?",
+    "options": {
+      "A": "Strangler-style incremental decomposition with APIs and events",
+      "B": "Rewrite everything before testing",
+      "C": "Share a root credential",
+      "D": "Disable observability"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Incremental decomposition limits migration risk and permits controlled validation.\nA big-bang rewrite and missing telemetry increase risk.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-034",
+    "type": "single",
+    "question": "A company introducing an automated workflow must move large archives to S3 when network bandwidth is constrained. Which service fits?",
+    "options": {
+      "A": "Amazon API Gateway",
+      "B": "AWS Snowball Edge",
+      "C": "Amazon Cognito",
+      "D": "AWS WAF"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Snowball Edge supports offline bulk data transfer when network upload is impractical.\nThe other choices do not transfer offline archives.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-035",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment needs to run a legacy database temporarily while a managed database migration is prepared. Which principle applies?",
+    "options": {
+      "A": "Delete the source immediately",
+      "B": "Ignore data validation",
+      "C": "Separate migration phases and define an explicit decommission plan",
+      "D": "Run both systems forever without reconciliation"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Phased migration with reconciliation and decommission criteria reduces operational and data risk.\nThe other choices create permanent drift or data loss.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-036",
+    "type": "single",
+    "question": "A customer-facing application team needs to discover on-premises application dependencies before migration. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon CloudFront",
+      "B": "AWS WAF",
+      "C": "Amazon Cognito",
+      "D": "AWS Application Discovery Service"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Application Discovery collects utilization and dependency information for migration planning.\nThe other choices provide delivery, filtering, or application identity.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-037",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments must migrate servers to AWS with minimal changes before later modernization. Which service is appropriate?",
+    "options": {
+      "A": "AWS Application Migration Service",
+      "B": "AWS Glue",
+      "C": "Amazon Route 53",
+      "D": "Amazon EFS only"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Application Migration Service replicates servers for lift-and-shift migration.\nThe other choices provide ETL, DNS, or file storage.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-038",
+    "type": "single",
+    "question": "A team preparing evidence for an audit needs to modernize a monolith into event-driven components gradually. Which approach is sensible?",
+    "options": {
+      "A": "Disable observability",
+      "B": "Strangler-style incremental decomposition with APIs and events",
+      "C": "Rewrite everything before testing",
+      "D": "Share a root credential"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Incremental decomposition limits migration risk and permits controlled validation.\nA big-bang rewrite and missing telemetry increase risk.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-039",
+    "type": "single",
+    "question": "A business replacing a manual process must move large archives to S3 when network bandwidth is constrained. Which service fits?",
+    "options": {
+      "A": "AWS WAF",
+      "B": "Amazon API Gateway",
+      "C": "AWS Snowball Edge",
+      "D": "Amazon Cognito"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Snowball Edge supports offline bulk data transfer when network upload is impractical.\nThe other choices do not transfer offline archives.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-040",
+    "type": "single",
+    "question": "A team validating a design against the exam guide needs to run a legacy database temporarily while a managed database migration is prepared. Which principle applies?",
+    "options": {
+      "A": "Run both systems forever without reconciliation",
+      "B": "Delete the source immediately",
+      "C": "Ignore data validation",
+      "D": "Separate migration phases and define an explicit decommission plan"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Phased migration with reconciliation and decommission criteria reduces operational and data risk.\nThe other choices create permanent drift or data loss.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-041",
+    "type": "single",
+    "question": "A production team needs to discover on-premises application dependencies before migration. Which service should be evaluated?",
+    "options": {
+      "A": "AWS Application Discovery Service",
+      "B": "Amazon CloudFront",
+      "C": "AWS WAF",
+      "D": "Amazon Cognito"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Application Discovery collects utilization and dependency information for migration planning.\nThe other choices provide delivery, filtering, or application identity.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-042",
+    "type": "single",
+    "question": "A multi-account platform team must migrate servers to AWS with minimal changes before later modernization. Which service is appropriate?",
+    "options": {
+      "A": "Amazon EFS only",
+      "B": "AWS Application Migration Service",
+      "C": "AWS Glue",
+      "D": "Amazon Route 53"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Application Migration Service replicates servers for lift-and-shift migration.\nThe other choices provide ETL, DNS, or file storage.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-043",
+    "type": "single",
+    "question": "A regulated company needs to modernize a monolith into event-driven components gradually. Which approach is sensible?",
+    "options": {
+      "A": "Share a root credential",
+      "B": "Disable observability",
+      "C": "Strangler-style incremental decomposition with APIs and events",
+      "D": "Rewrite everything before testing"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Incremental decomposition limits migration risk and permits controlled validation.\nA big-bang rewrite and missing telemetry increase risk.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-044",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase must move large archives to S3 when network bandwidth is constrained. Which service fits?",
+    "options": {
+      "A": "Amazon Cognito",
+      "B": "AWS WAF",
+      "C": "Amazon API Gateway",
+      "D": "AWS Snowball Edge"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Snowball Edge supports offline bulk data transfer when network upload is impractical.\nThe other choices do not transfer offline archives.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d4-045",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs to run a legacy database temporarily while a managed database migration is prepared. Which principle applies?",
+    "options": {
+      "A": "Separate migration phases and define an explicit decommission plan",
+      "B": "Run both systems forever without reconciliation",
+      "C": "Delete the source immediately",
+      "D": "Ignore data validation"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Phased migration with reconciliation and decommission criteria reduces operational and data risk.\nThe other choices create permanent drift or data loss.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  }
+]

@@ -1,0 +1,626 @@
+[
+  {
+    "id": "ans-c01-d3-001",
+    "type": "single",
+    "question": "A production team needs to investigate rejected packets between two VPC subnets. Which evidence should be collected?",
+    "options": {
+      "A": "S3 object tags only",
+      "B": "A CloudFront cache key only",
+      "C": "An IAM username",
+      "D": "VPC Flow Logs and route and security group configuration"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Flow Logs combined with routing and security controls identify where traffic is rejected.\nThe other choices do not describe network packet decisions.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d3-002",
+    "type": "single",
+    "question": "A multi-account platform team must monitor the health of network paths and trigger alerts on latency. Which service combination fits?",
+    "options": {
+      "A": "CloudWatch metrics and appropriate network probes",
+      "B": "An S3 lifecycle rule",
+      "C": "AWS Artifact only",
+      "D": "A DynamoDB table name"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch metrics and probes provide ongoing network health visibility.\nThe other choices do not monitor network paths.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d3-003",
+    "type": "single",
+    "question": "A regulated company needs to reduce DNS query latency for users in several Regions. Which Route 53 policy should be evaluated?",
+    "options": {
+      "A": "A KMS grant",
+      "B": "Latency-based routing",
+      "C": "Simple routing with one endpoint",
+      "D": "An EBS snapshot"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Latency-based routing directs DNS responses based on measured network latency.\nThe other choices do not optimize DNS endpoint selection.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d3-004",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase must troubleshoot intermittent CloudFront stale content after an origin update. Which action should be considered?",
+    "options": {
+      "A": "Disable TLS",
+      "B": "Open all security group ports",
+      "C": "Review cache policy and invalidate affected paths when necessary",
+      "D": "Delete the origin database"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Cache policy and targeted invalidation address stale content without changing unrelated security controls.\nThe other choices increase risk or do not affect CloudFront cache freshness.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d3-005",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs operational runbooks for repeated network changes. Which service should store executable procedures?",
+    "options": {
+      "A": "Amazon SES",
+      "B": "Amazon EFS",
+      "C": "S3 Glacier only",
+      "D": "Systems Manager Automation"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Systems Manager Automation runbooks can execute repeatable operational tasks.\nThe other choices do not provide network automation runbooks.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d3-006",
+    "type": "single",
+    "question": "A data platform team needs to investigate rejected packets between two VPC subnets. Which evidence should be collected?",
+    "options": {
+      "A": "VPC Flow Logs and route and security group configuration",
+      "B": "S3 object tags only",
+      "C": "A CloudFront cache key only",
+      "D": "An IAM username"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Flow Logs combined with routing and security controls identify where traffic is rejected.\nThe other choices do not describe network packet decisions.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d3-007",
+    "type": "single",
+    "question": "A security-conscious engineering team must monitor the health of network paths and trigger alerts on latency. Which service combination fits?",
+    "options": {
+      "A": "A DynamoDB table name",
+      "B": "CloudWatch metrics and appropriate network probes",
+      "C": "An S3 lifecycle rule",
+      "D": "AWS Artifact only"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch metrics and probes provide ongoing network health visibility.\nThe other choices do not monitor network paths.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d3-008",
+    "type": "single",
+    "question": "A company migrating an existing workload needs to reduce DNS query latency for users in several Regions. Which Route 53 policy should be evaluated?",
+    "options": {
+      "A": "An EBS snapshot",
+      "B": "A KMS grant",
+      "C": "Latency-based routing",
+      "D": "Simple routing with one endpoint"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Latency-based routing directs DNS responses based on measured network latency.\nThe other choices do not optimize DNS endpoint selection.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d3-009",
+    "type": "single",
+    "question": "A team with strict recovery objectives must troubleshoot intermittent CloudFront stale content after an origin update. Which action should be considered?",
+    "options": {
+      "A": "Delete the origin database",
+      "B": "Disable TLS",
+      "C": "Open all security group ports",
+      "D": "Review cache policy and invalidate affected paths when necessary"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Cache policy and targeted invalidation address stale content without changing unrelated security controls.\nThe other choices increase risk or do not affect CloudFront cache freshness.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d3-010",
+    "type": "single",
+    "question": "A developer team preparing a release needs operational runbooks for repeated network changes. Which service should store executable procedures?",
+    "options": {
+      "A": "Systems Manager Automation",
+      "B": "Amazon SES",
+      "C": "Amazon EFS",
+      "D": "S3 Glacier only"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Systems Manager Automation runbooks can execute repeatable operational tasks.\nThe other choices do not provide network automation runbooks.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d3-011",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs to investigate rejected packets between two VPC subnets. Which evidence should be collected?",
+    "options": {
+      "A": "An IAM username",
+      "B": "VPC Flow Logs and route and security group configuration",
+      "C": "S3 object tags only",
+      "D": "A CloudFront cache key only"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Flow Logs combined with routing and security controls identify where traffic is rejected.\nThe other choices do not describe network packet decisions.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d3-012",
+    "type": "single",
+    "question": "A service owner reviewing an incident must monitor the health of network paths and trigger alerts on latency. Which service combination fits?",
+    "options": {
+      "A": "AWS Artifact only",
+      "B": "A DynamoDB table name",
+      "C": "CloudWatch metrics and appropriate network probes",
+      "D": "An S3 lifecycle rule"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch metrics and probes provide ongoing network health visibility.\nThe other choices do not monitor network paths.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d3-013",
+    "type": "single",
+    "question": "A team optimizing an existing implementation needs to reduce DNS query latency for users in several Regions. Which Route 53 policy should be evaluated?",
+    "options": {
+      "A": "Simple routing with one endpoint",
+      "B": "An EBS snapshot",
+      "C": "A KMS grant",
+      "D": "Latency-based routing"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Latency-based routing directs DNS responses based on measured network latency.\nThe other choices do not optimize DNS endpoint selection.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d3-014",
+    "type": "single",
+    "question": "A company introducing an automated workflow must troubleshoot intermittent CloudFront stale content after an origin update. Which action should be considered?",
+    "options": {
+      "A": "Review cache policy and invalidate affected paths when necessary",
+      "B": "Delete the origin database",
+      "C": "Disable TLS",
+      "D": "Open all security group ports"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Cache policy and targeted invalidation address stale content without changing unrelated security controls.\nThe other choices increase risk or do not affect CloudFront cache freshness.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d3-015",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment needs operational runbooks for repeated network changes. Which service should store executable procedures?",
+    "options": {
+      "A": "S3 Glacier only",
+      "B": "Systems Manager Automation",
+      "C": "Amazon SES",
+      "D": "Amazon EFS"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Systems Manager Automation runbooks can execute repeatable operational tasks.\nThe other choices do not provide network automation runbooks.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d3-016",
+    "type": "single",
+    "question": "A customer-facing application team needs to investigate rejected packets between two VPC subnets. Which evidence should be collected?",
+    "options": {
+      "A": "A CloudFront cache key only",
+      "B": "An IAM username",
+      "C": "VPC Flow Logs and route and security group configuration",
+      "D": "S3 object tags only"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Flow Logs combined with routing and security controls identify where traffic is rejected.\nThe other choices do not describe network packet decisions.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d3-017",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments must monitor the health of network paths and trigger alerts on latency. Which service combination fits?",
+    "options": {
+      "A": "An S3 lifecycle rule",
+      "B": "AWS Artifact only",
+      "C": "A DynamoDB table name",
+      "D": "CloudWatch metrics and appropriate network probes"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch metrics and probes provide ongoing network health visibility.\nThe other choices do not monitor network paths.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d3-018",
+    "type": "single",
+    "question": "A team preparing evidence for an audit needs to reduce DNS query latency for users in several Regions. Which Route 53 policy should be evaluated?",
+    "options": {
+      "A": "Latency-based routing",
+      "B": "Simple routing with one endpoint",
+      "C": "An EBS snapshot",
+      "D": "A KMS grant"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Latency-based routing directs DNS responses based on measured network latency.\nThe other choices do not optimize DNS endpoint selection.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d3-019",
+    "type": "single",
+    "question": "A business replacing a manual process must troubleshoot intermittent CloudFront stale content after an origin update. Which action should be considered?",
+    "options": {
+      "A": "Open all security group ports",
+      "B": "Review cache policy and invalidate affected paths when necessary",
+      "C": "Delete the origin database",
+      "D": "Disable TLS"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Cache policy and targeted invalidation address stale content without changing unrelated security controls.\nThe other choices increase risk or do not affect CloudFront cache freshness.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d3-020",
+    "type": "single",
+    "question": "A team validating a design against the exam guide needs operational runbooks for repeated network changes. Which service should store executable procedures?",
+    "options": {
+      "A": "Amazon EFS",
+      "B": "S3 Glacier only",
+      "C": "Systems Manager Automation",
+      "D": "Amazon SES"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Systems Manager Automation runbooks can execute repeatable operational tasks.\nThe other choices do not provide network automation runbooks.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d3-021",
+    "type": "single",
+    "question": "A production team needs to investigate rejected packets between two VPC subnets. Which evidence should be collected?",
+    "options": {
+      "A": "S3 object tags only",
+      "B": "A CloudFront cache key only",
+      "C": "An IAM username",
+      "D": "VPC Flow Logs and route and security group configuration"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Flow Logs combined with routing and security controls identify where traffic is rejected.\nThe other choices do not describe network packet decisions.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d3-022",
+    "type": "single",
+    "question": "A multi-account platform team must monitor the health of network paths and trigger alerts on latency. Which service combination fits?",
+    "options": {
+      "A": "CloudWatch metrics and appropriate network probes",
+      "B": "An S3 lifecycle rule",
+      "C": "AWS Artifact only",
+      "D": "A DynamoDB table name"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch metrics and probes provide ongoing network health visibility.\nThe other choices do not monitor network paths.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d3-023",
+    "type": "single",
+    "question": "A regulated company needs to reduce DNS query latency for users in several Regions. Which Route 53 policy should be evaluated?",
+    "options": {
+      "A": "A KMS grant",
+      "B": "Latency-based routing",
+      "C": "Simple routing with one endpoint",
+      "D": "An EBS snapshot"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Latency-based routing directs DNS responses based on measured network latency.\nThe other choices do not optimize DNS endpoint selection.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d3-024",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase must troubleshoot intermittent CloudFront stale content after an origin update. Which action should be considered?",
+    "options": {
+      "A": "Disable TLS",
+      "B": "Open all security group ports",
+      "C": "Review cache policy and invalidate affected paths when necessary",
+      "D": "Delete the origin database"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Cache policy and targeted invalidation address stale content without changing unrelated security controls.\nThe other choices increase risk or do not affect CloudFront cache freshness.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d3-025",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs operational runbooks for repeated network changes. Which service should store executable procedures?",
+    "options": {
+      "A": "Amazon SES",
+      "B": "Amazon EFS",
+      "C": "S3 Glacier only",
+      "D": "Systems Manager Automation"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Systems Manager Automation runbooks can execute repeatable operational tasks.\nThe other choices do not provide network automation runbooks.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d3-026",
+    "type": "single",
+    "question": "A data platform team needs to investigate rejected packets between two VPC subnets. Which evidence should be collected?",
+    "options": {
+      "A": "VPC Flow Logs and route and security group configuration",
+      "B": "S3 object tags only",
+      "C": "A CloudFront cache key only",
+      "D": "An IAM username"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Flow Logs combined with routing and security controls identify where traffic is rejected.\nThe other choices do not describe network packet decisions.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d3-027",
+    "type": "single",
+    "question": "A security-conscious engineering team must monitor the health of network paths and trigger alerts on latency. Which service combination fits?",
+    "options": {
+      "A": "A DynamoDB table name",
+      "B": "CloudWatch metrics and appropriate network probes",
+      "C": "An S3 lifecycle rule",
+      "D": "AWS Artifact only"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch metrics and probes provide ongoing network health visibility.\nThe other choices do not monitor network paths.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d3-028",
+    "type": "single",
+    "question": "A company migrating an existing workload needs to reduce DNS query latency for users in several Regions. Which Route 53 policy should be evaluated?",
+    "options": {
+      "A": "An EBS snapshot",
+      "B": "A KMS grant",
+      "C": "Latency-based routing",
+      "D": "Simple routing with one endpoint"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Latency-based routing directs DNS responses based on measured network latency.\nThe other choices do not optimize DNS endpoint selection.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d3-029",
+    "type": "single",
+    "question": "A team with strict recovery objectives must troubleshoot intermittent CloudFront stale content after an origin update. Which action should be considered?",
+    "options": {
+      "A": "Delete the origin database",
+      "B": "Disable TLS",
+      "C": "Open all security group ports",
+      "D": "Review cache policy and invalidate affected paths when necessary"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Cache policy and targeted invalidation address stale content without changing unrelated security controls.\nThe other choices increase risk or do not affect CloudFront cache freshness.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d3-030",
+    "type": "single",
+    "question": "A developer team preparing a release needs operational runbooks for repeated network changes. Which service should store executable procedures?",
+    "options": {
+      "A": "Systems Manager Automation",
+      "B": "Amazon SES",
+      "C": "Amazon EFS",
+      "D": "S3 Glacier only"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Systems Manager Automation runbooks can execute repeatable operational tasks.\nThe other choices do not provide network automation runbooks.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d3-031",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs to investigate rejected packets between two VPC subnets. Which evidence should be collected?",
+    "options": {
+      "A": "An IAM username",
+      "B": "VPC Flow Logs and route and security group configuration",
+      "C": "S3 object tags only",
+      "D": "A CloudFront cache key only"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Flow Logs combined with routing and security controls identify where traffic is rejected.\nThe other choices do not describe network packet decisions.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d3-032",
+    "type": "single",
+    "question": "A service owner reviewing an incident must monitor the health of network paths and trigger alerts on latency. Which service combination fits?",
+    "options": {
+      "A": "AWS Artifact only",
+      "B": "A DynamoDB table name",
+      "C": "CloudWatch metrics and appropriate network probes",
+      "D": "An S3 lifecycle rule"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch metrics and probes provide ongoing network health visibility.\nThe other choices do not monitor network paths.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d3-033",
+    "type": "single",
+    "question": "A team optimizing an existing implementation needs to reduce DNS query latency for users in several Regions. Which Route 53 policy should be evaluated?",
+    "options": {
+      "A": "Simple routing with one endpoint",
+      "B": "An EBS snapshot",
+      "C": "A KMS grant",
+      "D": "Latency-based routing"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Latency-based routing directs DNS responses based on measured network latency.\nThe other choices do not optimize DNS endpoint selection.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d3-034",
+    "type": "single",
+    "question": "A company introducing an automated workflow must troubleshoot intermittent CloudFront stale content after an origin update. Which action should be considered?",
+    "options": {
+      "A": "Review cache policy and invalidate affected paths when necessary",
+      "B": "Delete the origin database",
+      "C": "Disable TLS",
+      "D": "Open all security group ports"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Cache policy and targeted invalidation address stale content without changing unrelated security controls.\nThe other choices increase risk or do not affect CloudFront cache freshness.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d3-035",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment needs operational runbooks for repeated network changes. Which service should store executable procedures?",
+    "options": {
+      "A": "S3 Glacier only",
+      "B": "Systems Manager Automation",
+      "C": "Amazon SES",
+      "D": "Amazon EFS"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Systems Manager Automation runbooks can execute repeatable operational tasks.\nThe other choices do not provide network automation runbooks.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d3-036",
+    "type": "single",
+    "question": "A customer-facing application team needs to investigate rejected packets between two VPC subnets. Which evidence should be collected?",
+    "options": {
+      "A": "A CloudFront cache key only",
+      "B": "An IAM username",
+      "C": "VPC Flow Logs and route and security group configuration",
+      "D": "S3 object tags only"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Flow Logs combined with routing and security controls identify where traffic is rejected.\nThe other choices do not describe network packet decisions.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d3-037",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments must monitor the health of network paths and trigger alerts on latency. Which service combination fits?",
+    "options": {
+      "A": "An S3 lifecycle rule",
+      "B": "AWS Artifact only",
+      "C": "A DynamoDB table name",
+      "D": "CloudWatch metrics and appropriate network probes"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch metrics and probes provide ongoing network health visibility.\nThe other choices do not monitor network paths.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d3-038",
+    "type": "single",
+    "question": "A team preparing evidence for an audit needs to reduce DNS query latency for users in several Regions. Which Route 53 policy should be evaluated?",
+    "options": {
+      "A": "Latency-based routing",
+      "B": "Simple routing with one endpoint",
+      "C": "An EBS snapshot",
+      "D": "A KMS grant"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Latency-based routing directs DNS responses based on measured network latency.\nThe other choices do not optimize DNS endpoint selection.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d3-039",
+    "type": "single",
+    "question": "A business replacing a manual process must troubleshoot intermittent CloudFront stale content after an origin update. Which action should be considered?",
+    "options": {
+      "A": "Open all security group ports",
+      "B": "Review cache policy and invalidate affected paths when necessary",
+      "C": "Delete the origin database",
+      "D": "Disable TLS"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Cache policy and targeted invalidation address stale content without changing unrelated security controls.\nThe other choices increase risk or do not affect CloudFront cache freshness.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  }
+]

@@ -1,0 +1,402 @@
+[
+  {
+    "id": "aip-c01-d5-001",
+    "type": "single",
+    "question": "A production team needs to detect hallucinations in a grounded answer set. Which test should be included?",
+    "options": {
+      "A": "Test only one prompt",
+      "B": "A factuality or groundedness evaluation against reference evidence",
+      "C": "Only measure response length",
+      "D": "Skip retrieval checks"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Groundedness evaluation checks whether responses are supported by retrieved or reference information.\nLength and one-off prompts do not measure factual reliability.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d5-002",
+    "type": "single",
+    "question": "A multi-account platform team must determine whether poor answers come from retrieval or generation. Which diagnostic is useful?",
+    "options": {
+      "A": "Delete all logs",
+      "B": "Use only a latency metric",
+      "C": "Inspect retrieved chunks and evaluate the generation separately",
+      "D": "Change both systems at once"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Separating retrieval and generation isolates the root cause of a RAG failure.\nChanging multiple systems or removing evidence prevents diagnosis.",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d5-003",
+    "type": "single",
+    "question": "A regulated company needs regression tests for a prompt and model update. Which practice is appropriate?",
+    "options": {
+      "A": "Promote immediately without tests",
+      "B": "Change expected answers after failures",
+      "C": "Test only the UI color",
+      "D": "Run a fixed evaluation suite before promotion"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "A fixed suite detects quality regressions across model, prompt, and retrieval changes.\nUncontrolled expectations do not provide a meaningful regression signal.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d5-004",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase must monitor a retrieval application for stale documents. Which control should be configured?",
+    "options": {
+      "A": "Document freshness metadata and an index refresh process",
+      "B": "Disable document timestamps",
+      "C": "Use a larger model only",
+      "D": "Store documents only in browser cache"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Freshness metadata and index refreshes keep retrieval content aligned with the source of truth.\nModel size and browser cache do not maintain a current knowledge base.",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d5-005",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs to protect troubleshooting logs from containing prompts with confidential data. Which practice fits?",
+    "options": {
+      "A": "Store secrets in error messages",
+      "B": "Redact sensitive fields and restrict log access",
+      "C": "Log all prompts publicly",
+      "D": "Disable authentication"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Redaction and least-privilege log access reduce exposure while preserving useful diagnostics.\nPublic logs and secrets in errors create a data leak.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d5-006",
+    "type": "single",
+    "question": "A data platform team needs to detect hallucinations in a grounded answer set. Which test should be included?",
+    "options": {
+      "A": "Skip retrieval checks",
+      "B": "Test only one prompt",
+      "C": "A factuality or groundedness evaluation against reference evidence",
+      "D": "Only measure response length"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Groundedness evaluation checks whether responses are supported by retrieved or reference information.\nLength and one-off prompts do not measure factual reliability.",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d5-007",
+    "type": "single",
+    "question": "A security-conscious engineering team must determine whether poor answers come from retrieval or generation. Which diagnostic is useful?",
+    "options": {
+      "A": "Change both systems at once",
+      "B": "Delete all logs",
+      "C": "Use only a latency metric",
+      "D": "Inspect retrieved chunks and evaluate the generation separately"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Separating retrieval and generation isolates the root cause of a RAG failure.\nChanging multiple systems or removing evidence prevents diagnosis.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d5-008",
+    "type": "single",
+    "question": "A company migrating an existing workload needs regression tests for a prompt and model update. Which practice is appropriate?",
+    "options": {
+      "A": "Run a fixed evaluation suite before promotion",
+      "B": "Promote immediately without tests",
+      "C": "Change expected answers after failures",
+      "D": "Test only the UI color"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "A fixed suite detects quality regressions across model, prompt, and retrieval changes.\nUncontrolled expectations do not provide a meaningful regression signal.",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d5-009",
+    "type": "single",
+    "question": "A team with strict recovery objectives must monitor a retrieval application for stale documents. Which control should be configured?",
+    "options": {
+      "A": "Store documents only in browser cache",
+      "B": "Document freshness metadata and an index refresh process",
+      "C": "Disable document timestamps",
+      "D": "Use a larger model only"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Freshness metadata and index refreshes keep retrieval content aligned with the source of truth.\nModel size and browser cache do not maintain a current knowledge base.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d5-010",
+    "type": "single",
+    "question": "A developer team preparing a release needs to protect troubleshooting logs from containing prompts with confidential data. Which practice fits?",
+    "options": {
+      "A": "Disable authentication",
+      "B": "Store secrets in error messages",
+      "C": "Redact sensitive fields and restrict log access",
+      "D": "Log all prompts publicly"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Redaction and least-privilege log access reduce exposure while preserving useful diagnostics.\nPublic logs and secrets in errors create a data leak.",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d5-011",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs to detect hallucinations in a grounded answer set. Which test should be included?",
+    "options": {
+      "A": "Only measure response length",
+      "B": "Skip retrieval checks",
+      "C": "Test only one prompt",
+      "D": "A factuality or groundedness evaluation against reference evidence"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Groundedness evaluation checks whether responses are supported by retrieved or reference information.\nLength and one-off prompts do not measure factual reliability.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d5-012",
+    "type": "single",
+    "question": "A service owner reviewing an incident must determine whether poor answers come from retrieval or generation. Which diagnostic is useful?",
+    "options": {
+      "A": "Inspect retrieved chunks and evaluate the generation separately",
+      "B": "Change both systems at once",
+      "C": "Delete all logs",
+      "D": "Use only a latency metric"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Separating retrieval and generation isolates the root cause of a RAG failure.\nChanging multiple systems or removing evidence prevents diagnosis.",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d5-013",
+    "type": "single",
+    "question": "A team optimizing an existing implementation needs regression tests for a prompt and model update. Which practice is appropriate?",
+    "options": {
+      "A": "Test only the UI color",
+      "B": "Run a fixed evaluation suite before promotion",
+      "C": "Promote immediately without tests",
+      "D": "Change expected answers after failures"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "A fixed suite detects quality regressions across model, prompt, and retrieval changes.\nUncontrolled expectations do not provide a meaningful regression signal.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d5-014",
+    "type": "single",
+    "question": "A company introducing an automated workflow must monitor a retrieval application for stale documents. Which control should be configured?",
+    "options": {
+      "A": "Use a larger model only",
+      "B": "Store documents only in browser cache",
+      "C": "Document freshness metadata and an index refresh process",
+      "D": "Disable document timestamps"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Freshness metadata and index refreshes keep retrieval content aligned with the source of truth.\nModel size and browser cache do not maintain a current knowledge base.",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d5-015",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment needs to protect troubleshooting logs from containing prompts with confidential data. Which practice fits?",
+    "options": {
+      "A": "Log all prompts publicly",
+      "B": "Disable authentication",
+      "C": "Store secrets in error messages",
+      "D": "Redact sensitive fields and restrict log access"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Redaction and least-privilege log access reduce exposure while preserving useful diagnostics.\nPublic logs and secrets in errors create a data leak.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d5-016",
+    "type": "single",
+    "question": "A customer-facing application team needs to detect hallucinations in a grounded answer set. Which test should be included?",
+    "options": {
+      "A": "A factuality or groundedness evaluation against reference evidence",
+      "B": "Only measure response length",
+      "C": "Skip retrieval checks",
+      "D": "Test only one prompt"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Groundedness evaluation checks whether responses are supported by retrieved or reference information.\nLength and one-off prompts do not measure factual reliability.",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d5-017",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments must determine whether poor answers come from retrieval or generation. Which diagnostic is useful?",
+    "options": {
+      "A": "Use only a latency metric",
+      "B": "Inspect retrieved chunks and evaluate the generation separately",
+      "C": "Change both systems at once",
+      "D": "Delete all logs"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Separating retrieval and generation isolates the root cause of a RAG failure.\nChanging multiple systems or removing evidence prevents diagnosis.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d5-018",
+    "type": "single",
+    "question": "A team preparing evidence for an audit needs regression tests for a prompt and model update. Which practice is appropriate?",
+    "options": {
+      "A": "Change expected answers after failures",
+      "B": "Test only the UI color",
+      "C": "Run a fixed evaluation suite before promotion",
+      "D": "Promote immediately without tests"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "A fixed suite detects quality regressions across model, prompt, and retrieval changes.\nUncontrolled expectations do not provide a meaningful regression signal.",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d5-019",
+    "type": "single",
+    "question": "A business replacing a manual process must monitor a retrieval application for stale documents. Which control should be configured?",
+    "options": {
+      "A": "Disable document timestamps",
+      "B": "Use a larger model only",
+      "C": "Store documents only in browser cache",
+      "D": "Document freshness metadata and an index refresh process"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Freshness metadata and index refreshes keep retrieval content aligned with the source of truth.\nModel size and browser cache do not maintain a current knowledge base.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d5-020",
+    "type": "single",
+    "question": "A team validating a design against the exam guide needs to protect troubleshooting logs from containing prompts with confidential data. Which practice fits?",
+    "options": {
+      "A": "Redact sensitive fields and restrict log access",
+      "B": "Log all prompts publicly",
+      "C": "Disable authentication",
+      "D": "Store secrets in error messages"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Redaction and least-privilege log access reduce exposure while preserving useful diagnostics.\nPublic logs and secrets in errors create a data leak.",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d5-021",
+    "type": "single",
+    "question": "A production team needs to detect hallucinations in a grounded answer set. Which test should be included?",
+    "options": {
+      "A": "Test only one prompt",
+      "B": "A factuality or groundedness evaluation against reference evidence",
+      "C": "Only measure response length",
+      "D": "Skip retrieval checks"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Groundedness evaluation checks whether responses are supported by retrieved or reference information.\nLength and one-off prompts do not measure factual reliability.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d5-022",
+    "type": "single",
+    "question": "A multi-account platform team must determine whether poor answers come from retrieval or generation. Which diagnostic is useful?",
+    "options": {
+      "A": "Delete all logs",
+      "B": "Use only a latency metric",
+      "C": "Inspect retrieved chunks and evaluate the generation separately",
+      "D": "Change both systems at once"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Separating retrieval and generation isolates the root cause of a RAG failure.\nChanging multiple systems or removing evidence prevents diagnosis.",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d5-023",
+    "type": "single",
+    "question": "A regulated company needs regression tests for a prompt and model update. Which practice is appropriate?",
+    "options": {
+      "A": "Promote immediately without tests",
+      "B": "Change expected answers after failures",
+      "C": "Test only the UI color",
+      "D": "Run a fixed evaluation suite before promotion"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "A fixed suite detects quality regressions across model, prompt, and retrieval changes.\nUncontrolled expectations do not provide a meaningful regression signal.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d5-024",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase must monitor a retrieval application for stale documents. Which control should be configured?",
+    "options": {
+      "A": "Document freshness metadata and an index refresh process",
+      "B": "Disable document timestamps",
+      "C": "Use a larger model only",
+      "D": "Store documents only in browser cache"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Freshness metadata and index refreshes keep retrieval content aligned with the source of truth.\nModel size and browser cache do not maintain a current knowledge base.",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d5-025",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs to protect troubleshooting logs from containing prompts with confidential data. Which practice fits?",
+    "options": {
+      "A": "Store secrets in error messages",
+      "B": "Redact sensitive fields and restrict log access",
+      "C": "Log all prompts publicly",
+      "D": "Disable authentication"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Redaction and least-privilege log access reduce exposure while preserving useful diagnostics.\nPublic logs and secrets in errors create a data leak.",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-09"
+  }
+]

@@ -1,0 +1,946 @@
+[
+  {
+    "id": "sap-c02-d1-001",
+    "type": "single",
+    "question": "A production team needs centralized governance while allowing application teams to deploy in separate accounts. Which design fits?",
+    "options": {
+      "A": "A single VPC for every workload",
+      "B": "AWS Organizations with delegated administration and SCP guardrails",
+      "C": "One shared root account",
+      "D": "Public credentials"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Organizations and SCPs provide account boundaries and guardrails while teams retain delegated control.\nA shared account and public credentials weaken isolation.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-002",
+    "type": "single",
+    "question": "A multi-account platform team must connect many VPCs and on-premises networks through a central hub. Which service should be evaluated?",
+    "options": {
+      "A": "An S3 website",
+      "B": "A CloudFront cache",
+      "C": "AWS Transit Gateway",
+      "D": "A full mesh of public IPs"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Transit Gateway centralizes routing and supports many attachments.\nThe other choices do not provide private transitive network connectivity.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-003",
+    "type": "single",
+    "question": "A regulated company needs to share selected resources across accounts without granting broad account access. Which capability fits?",
+    "options": {
+      "A": "Share root credentials",
+      "B": "Make resources public",
+      "C": "Use one administrator role everywhere",
+      "D": "AWS Resource Access Manager with scoped resource shares"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "RAM shares supported resources with specific principals and organizational scopes.\nPublic or shared administrator access is broader than necessary.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-004",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase must enforce a common security baseline across new accounts. Which service should assist?",
+    "options": {
+      "A": "AWS Control Tower guardrails and account factory",
+      "B": "A local spreadsheet",
+      "C": "An S3 lifecycle rule",
+      "D": "A Route 53 alias"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Control Tower automates account setup and preventive or detective guardrails.\nThe other choices do not govern account baselines.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-005",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs a central identity experience for workforce users across many accounts. Which service should be used?",
+    "options": {
+      "A": "A VPC route table",
+      "B": "IAM Identity Center",
+      "C": "Cognito user pools only",
+      "D": "An S3 bucket policy"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "IAM Identity Center provides workforce access and permission sets across accounts.\nCognito targets application users and the other choices are not workforce identity systems.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-006",
+    "type": "single",
+    "question": "A data platform team needs centralized governance while allowing application teams to deploy in separate accounts. Which design fits?",
+    "options": {
+      "A": "Public credentials",
+      "B": "A single VPC for every workload",
+      "C": "AWS Organizations with delegated administration and SCP guardrails",
+      "D": "One shared root account"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Organizations and SCPs provide account boundaries and guardrails while teams retain delegated control.\nA shared account and public credentials weaken isolation.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-007",
+    "type": "single",
+    "question": "A security-conscious engineering team must connect many VPCs and on-premises networks through a central hub. Which service should be evaluated?",
+    "options": {
+      "A": "A full mesh of public IPs",
+      "B": "An S3 website",
+      "C": "A CloudFront cache",
+      "D": "AWS Transit Gateway"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Transit Gateway centralizes routing and supports many attachments.\nThe other choices do not provide private transitive network connectivity.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-008",
+    "type": "single",
+    "question": "A company migrating an existing workload needs to share selected resources across accounts without granting broad account access. Which capability fits?",
+    "options": {
+      "A": "AWS Resource Access Manager with scoped resource shares",
+      "B": "Share root credentials",
+      "C": "Make resources public",
+      "D": "Use one administrator role everywhere"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "RAM shares supported resources with specific principals and organizational scopes.\nPublic or shared administrator access is broader than necessary.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-009",
+    "type": "single",
+    "question": "A team with strict recovery objectives must enforce a common security baseline across new accounts. Which service should assist?",
+    "options": {
+      "A": "A Route 53 alias",
+      "B": "AWS Control Tower guardrails and account factory",
+      "C": "A local spreadsheet",
+      "D": "An S3 lifecycle rule"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Control Tower automates account setup and preventive or detective guardrails.\nThe other choices do not govern account baselines.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-010",
+    "type": "single",
+    "question": "A developer team preparing a release needs a central identity experience for workforce users across many accounts. Which service should be used?",
+    "options": {
+      "A": "An S3 bucket policy",
+      "B": "A VPC route table",
+      "C": "IAM Identity Center",
+      "D": "Cognito user pools only"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "IAM Identity Center provides workforce access and permission sets across accounts.\nCognito targets application users and the other choices are not workforce identity systems.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-011",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs centralized governance while allowing application teams to deploy in separate accounts. Which design fits?",
+    "options": {
+      "A": "One shared root account",
+      "B": "Public credentials",
+      "C": "A single VPC for every workload",
+      "D": "AWS Organizations with delegated administration and SCP guardrails"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Organizations and SCPs provide account boundaries and guardrails while teams retain delegated control.\nA shared account and public credentials weaken isolation.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-012",
+    "type": "single",
+    "question": "A service owner reviewing an incident must connect many VPCs and on-premises networks through a central hub. Which service should be evaluated?",
+    "options": {
+      "A": "AWS Transit Gateway",
+      "B": "A full mesh of public IPs",
+      "C": "An S3 website",
+      "D": "A CloudFront cache"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Transit Gateway centralizes routing and supports many attachments.\nThe other choices do not provide private transitive network connectivity.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-013",
+    "type": "single",
+    "question": "A team optimizing an existing implementation needs to share selected resources across accounts without granting broad account access. Which capability fits?",
+    "options": {
+      "A": "Use one administrator role everywhere",
+      "B": "AWS Resource Access Manager with scoped resource shares",
+      "C": "Share root credentials",
+      "D": "Make resources public"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "RAM shares supported resources with specific principals and organizational scopes.\nPublic or shared administrator access is broader than necessary.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-014",
+    "type": "single",
+    "question": "A company introducing an automated workflow must enforce a common security baseline across new accounts. Which service should assist?",
+    "options": {
+      "A": "An S3 lifecycle rule",
+      "B": "A Route 53 alias",
+      "C": "AWS Control Tower guardrails and account factory",
+      "D": "A local spreadsheet"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Control Tower automates account setup and preventive or detective guardrails.\nThe other choices do not govern account baselines.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-015",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment needs a central identity experience for workforce users across many accounts. Which service should be used?",
+    "options": {
+      "A": "Cognito user pools only",
+      "B": "An S3 bucket policy",
+      "C": "A VPC route table",
+      "D": "IAM Identity Center"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "IAM Identity Center provides workforce access and permission sets across accounts.\nCognito targets application users and the other choices are not workforce identity systems.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-016",
+    "type": "single",
+    "question": "A customer-facing application team needs centralized governance while allowing application teams to deploy in separate accounts. Which design fits?",
+    "options": {
+      "A": "AWS Organizations with delegated administration and SCP guardrails",
+      "B": "One shared root account",
+      "C": "Public credentials",
+      "D": "A single VPC for every workload"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Organizations and SCPs provide account boundaries and guardrails while teams retain delegated control.\nA shared account and public credentials weaken isolation.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-017",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments must connect many VPCs and on-premises networks through a central hub. Which service should be evaluated?",
+    "options": {
+      "A": "A CloudFront cache",
+      "B": "AWS Transit Gateway",
+      "C": "A full mesh of public IPs",
+      "D": "An S3 website"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Transit Gateway centralizes routing and supports many attachments.\nThe other choices do not provide private transitive network connectivity.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-018",
+    "type": "single",
+    "question": "A team preparing evidence for an audit needs to share selected resources across accounts without granting broad account access. Which capability fits?",
+    "options": {
+      "A": "Make resources public",
+      "B": "Use one administrator role everywhere",
+      "C": "AWS Resource Access Manager with scoped resource shares",
+      "D": "Share root credentials"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "RAM shares supported resources with specific principals and organizational scopes.\nPublic or shared administrator access is broader than necessary.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-019",
+    "type": "single",
+    "question": "A business replacing a manual process must enforce a common security baseline across new accounts. Which service should assist?",
+    "options": {
+      "A": "A local spreadsheet",
+      "B": "An S3 lifecycle rule",
+      "C": "A Route 53 alias",
+      "D": "AWS Control Tower guardrails and account factory"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Control Tower automates account setup and preventive or detective guardrails.\nThe other choices do not govern account baselines.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-020",
+    "type": "single",
+    "question": "A team validating a design against the exam guide needs a central identity experience for workforce users across many accounts. Which service should be used?",
+    "options": {
+      "A": "IAM Identity Center",
+      "B": "Cognito user pools only",
+      "C": "An S3 bucket policy",
+      "D": "A VPC route table"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "IAM Identity Center provides workforce access and permission sets across accounts.\nCognito targets application users and the other choices are not workforce identity systems.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-021",
+    "type": "single",
+    "question": "A production team needs centralized governance while allowing application teams to deploy in separate accounts. Which design fits?",
+    "options": {
+      "A": "A single VPC for every workload",
+      "B": "AWS Organizations with delegated administration and SCP guardrails",
+      "C": "One shared root account",
+      "D": "Public credentials"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Organizations and SCPs provide account boundaries and guardrails while teams retain delegated control.\nA shared account and public credentials weaken isolation.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-022",
+    "type": "single",
+    "question": "A multi-account platform team must connect many VPCs and on-premises networks through a central hub. Which service should be evaluated?",
+    "options": {
+      "A": "An S3 website",
+      "B": "A CloudFront cache",
+      "C": "AWS Transit Gateway",
+      "D": "A full mesh of public IPs"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Transit Gateway centralizes routing and supports many attachments.\nThe other choices do not provide private transitive network connectivity.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-023",
+    "type": "single",
+    "question": "A regulated company needs to share selected resources across accounts without granting broad account access. Which capability fits?",
+    "options": {
+      "A": "Share root credentials",
+      "B": "Make resources public",
+      "C": "Use one administrator role everywhere",
+      "D": "AWS Resource Access Manager with scoped resource shares"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "RAM shares supported resources with specific principals and organizational scopes.\nPublic or shared administrator access is broader than necessary.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-024",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase must enforce a common security baseline across new accounts. Which service should assist?",
+    "options": {
+      "A": "AWS Control Tower guardrails and account factory",
+      "B": "A local spreadsheet",
+      "C": "An S3 lifecycle rule",
+      "D": "A Route 53 alias"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Control Tower automates account setup and preventive or detective guardrails.\nThe other choices do not govern account baselines.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-025",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs a central identity experience for workforce users across many accounts. Which service should be used?",
+    "options": {
+      "A": "A VPC route table",
+      "B": "IAM Identity Center",
+      "C": "Cognito user pools only",
+      "D": "An S3 bucket policy"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "IAM Identity Center provides workforce access and permission sets across accounts.\nCognito targets application users and the other choices are not workforce identity systems.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-026",
+    "type": "single",
+    "question": "A data platform team needs centralized governance while allowing application teams to deploy in separate accounts. Which design fits?",
+    "options": {
+      "A": "Public credentials",
+      "B": "A single VPC for every workload",
+      "C": "AWS Organizations with delegated administration and SCP guardrails",
+      "D": "One shared root account"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Organizations and SCPs provide account boundaries and guardrails while teams retain delegated control.\nA shared account and public credentials weaken isolation.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-027",
+    "type": "single",
+    "question": "A security-conscious engineering team must connect many VPCs and on-premises networks through a central hub. Which service should be evaluated?",
+    "options": {
+      "A": "A full mesh of public IPs",
+      "B": "An S3 website",
+      "C": "A CloudFront cache",
+      "D": "AWS Transit Gateway"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Transit Gateway centralizes routing and supports many attachments.\nThe other choices do not provide private transitive network connectivity.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-028",
+    "type": "single",
+    "question": "A company migrating an existing workload needs to share selected resources across accounts without granting broad account access. Which capability fits?",
+    "options": {
+      "A": "AWS Resource Access Manager with scoped resource shares",
+      "B": "Share root credentials",
+      "C": "Make resources public",
+      "D": "Use one administrator role everywhere"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "RAM shares supported resources with specific principals and organizational scopes.\nPublic or shared administrator access is broader than necessary.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-029",
+    "type": "single",
+    "question": "A team with strict recovery objectives must enforce a common security baseline across new accounts. Which service should assist?",
+    "options": {
+      "A": "A Route 53 alias",
+      "B": "AWS Control Tower guardrails and account factory",
+      "C": "A local spreadsheet",
+      "D": "An S3 lifecycle rule"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Control Tower automates account setup and preventive or detective guardrails.\nThe other choices do not govern account baselines.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-030",
+    "type": "single",
+    "question": "A developer team preparing a release needs a central identity experience for workforce users across many accounts. Which service should be used?",
+    "options": {
+      "A": "An S3 bucket policy",
+      "B": "A VPC route table",
+      "C": "IAM Identity Center",
+      "D": "Cognito user pools only"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "IAM Identity Center provides workforce access and permission sets across accounts.\nCognito targets application users and the other choices are not workforce identity systems.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-031",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs centralized governance while allowing application teams to deploy in separate accounts. Which design fits?",
+    "options": {
+      "A": "One shared root account",
+      "B": "Public credentials",
+      "C": "A single VPC for every workload",
+      "D": "AWS Organizations with delegated administration and SCP guardrails"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Organizations and SCPs provide account boundaries and guardrails while teams retain delegated control.\nA shared account and public credentials weaken isolation.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-032",
+    "type": "single",
+    "question": "A service owner reviewing an incident must connect many VPCs and on-premises networks through a central hub. Which service should be evaluated?",
+    "options": {
+      "A": "AWS Transit Gateway",
+      "B": "A full mesh of public IPs",
+      "C": "An S3 website",
+      "D": "A CloudFront cache"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Transit Gateway centralizes routing and supports many attachments.\nThe other choices do not provide private transitive network connectivity.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-033",
+    "type": "single",
+    "question": "A team optimizing an existing implementation needs to share selected resources across accounts without granting broad account access. Which capability fits?",
+    "options": {
+      "A": "Use one administrator role everywhere",
+      "B": "AWS Resource Access Manager with scoped resource shares",
+      "C": "Share root credentials",
+      "D": "Make resources public"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "RAM shares supported resources with specific principals and organizational scopes.\nPublic or shared administrator access is broader than necessary.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-034",
+    "type": "single",
+    "question": "A company introducing an automated workflow must enforce a common security baseline across new accounts. Which service should assist?",
+    "options": {
+      "A": "An S3 lifecycle rule",
+      "B": "A Route 53 alias",
+      "C": "AWS Control Tower guardrails and account factory",
+      "D": "A local spreadsheet"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Control Tower automates account setup and preventive or detective guardrails.\nThe other choices do not govern account baselines.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-035",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment needs a central identity experience for workforce users across many accounts. Which service should be used?",
+    "options": {
+      "A": "Cognito user pools only",
+      "B": "An S3 bucket policy",
+      "C": "A VPC route table",
+      "D": "IAM Identity Center"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "IAM Identity Center provides workforce access and permission sets across accounts.\nCognito targets application users and the other choices are not workforce identity systems.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-036",
+    "type": "single",
+    "question": "A customer-facing application team needs centralized governance while allowing application teams to deploy in separate accounts. Which design fits?",
+    "options": {
+      "A": "AWS Organizations with delegated administration and SCP guardrails",
+      "B": "One shared root account",
+      "C": "Public credentials",
+      "D": "A single VPC for every workload"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Organizations and SCPs provide account boundaries and guardrails while teams retain delegated control.\nA shared account and public credentials weaken isolation.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-037",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments must connect many VPCs and on-premises networks through a central hub. Which service should be evaluated?",
+    "options": {
+      "A": "A CloudFront cache",
+      "B": "AWS Transit Gateway",
+      "C": "A full mesh of public IPs",
+      "D": "An S3 website"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Transit Gateway centralizes routing and supports many attachments.\nThe other choices do not provide private transitive network connectivity.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-038",
+    "type": "single",
+    "question": "A team preparing evidence for an audit needs to share selected resources across accounts without granting broad account access. Which capability fits?",
+    "options": {
+      "A": "Make resources public",
+      "B": "Use one administrator role everywhere",
+      "C": "AWS Resource Access Manager with scoped resource shares",
+      "D": "Share root credentials"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "RAM shares supported resources with specific principals and organizational scopes.\nPublic or shared administrator access is broader than necessary.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-039",
+    "type": "single",
+    "question": "A business replacing a manual process must enforce a common security baseline across new accounts. Which service should assist?",
+    "options": {
+      "A": "A local spreadsheet",
+      "B": "An S3 lifecycle rule",
+      "C": "A Route 53 alias",
+      "D": "AWS Control Tower guardrails and account factory"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Control Tower automates account setup and preventive or detective guardrails.\nThe other choices do not govern account baselines.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-040",
+    "type": "single",
+    "question": "A team validating a design against the exam guide needs a central identity experience for workforce users across many accounts. Which service should be used?",
+    "options": {
+      "A": "IAM Identity Center",
+      "B": "Cognito user pools only",
+      "C": "An S3 bucket policy",
+      "D": "A VPC route table"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "IAM Identity Center provides workforce access and permission sets across accounts.\nCognito targets application users and the other choices are not workforce identity systems.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-041",
+    "type": "single",
+    "question": "A production team needs centralized governance while allowing application teams to deploy in separate accounts. Which design fits?",
+    "options": {
+      "A": "A single VPC for every workload",
+      "B": "AWS Organizations with delegated administration and SCP guardrails",
+      "C": "One shared root account",
+      "D": "Public credentials"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Organizations and SCPs provide account boundaries and guardrails while teams retain delegated control.\nA shared account and public credentials weaken isolation.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-042",
+    "type": "single",
+    "question": "A multi-account platform team must connect many VPCs and on-premises networks through a central hub. Which service should be evaluated?",
+    "options": {
+      "A": "An S3 website",
+      "B": "A CloudFront cache",
+      "C": "AWS Transit Gateway",
+      "D": "A full mesh of public IPs"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Transit Gateway centralizes routing and supports many attachments.\nThe other choices do not provide private transitive network connectivity.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-043",
+    "type": "single",
+    "question": "A regulated company needs to share selected resources across accounts without granting broad account access. Which capability fits?",
+    "options": {
+      "A": "Share root credentials",
+      "B": "Make resources public",
+      "C": "Use one administrator role everywhere",
+      "D": "AWS Resource Access Manager with scoped resource shares"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "RAM shares supported resources with specific principals and organizational scopes.\nPublic or shared administrator access is broader than necessary.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-044",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase must enforce a common security baseline across new accounts. Which service should assist?",
+    "options": {
+      "A": "AWS Control Tower guardrails and account factory",
+      "B": "A local spreadsheet",
+      "C": "An S3 lifecycle rule",
+      "D": "A Route 53 alias"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Control Tower automates account setup and preventive or detective guardrails.\nThe other choices do not govern account baselines.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-045",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs a central identity experience for workforce users across many accounts. Which service should be used?",
+    "options": {
+      "A": "A VPC route table",
+      "B": "IAM Identity Center",
+      "C": "Cognito user pools only",
+      "D": "An S3 bucket policy"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "IAM Identity Center provides workforce access and permission sets across accounts.\nCognito targets application users and the other choices are not workforce identity systems.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-046",
+    "type": "single",
+    "question": "A data platform team needs centralized governance while allowing application teams to deploy in separate accounts. Which design fits?",
+    "options": {
+      "A": "Public credentials",
+      "B": "A single VPC for every workload",
+      "C": "AWS Organizations with delegated administration and SCP guardrails",
+      "D": "One shared root account"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Organizations and SCPs provide account boundaries and guardrails while teams retain delegated control.\nA shared account and public credentials weaken isolation.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-047",
+    "type": "single",
+    "question": "A security-conscious engineering team must connect many VPCs and on-premises networks through a central hub. Which service should be evaluated?",
+    "options": {
+      "A": "A full mesh of public IPs",
+      "B": "An S3 website",
+      "C": "A CloudFront cache",
+      "D": "AWS Transit Gateway"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Transit Gateway centralizes routing and supports many attachments.\nThe other choices do not provide private transitive network connectivity.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-048",
+    "type": "single",
+    "question": "A company migrating an existing workload needs to share selected resources across accounts without granting broad account access. Which capability fits?",
+    "options": {
+      "A": "AWS Resource Access Manager with scoped resource shares",
+      "B": "Share root credentials",
+      "C": "Make resources public",
+      "D": "Use one administrator role everywhere"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "RAM shares supported resources with specific principals and organizational scopes.\nPublic or shared administrator access is broader than necessary.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-049",
+    "type": "single",
+    "question": "A team with strict recovery objectives must enforce a common security baseline across new accounts. Which service should assist?",
+    "options": {
+      "A": "A Route 53 alias",
+      "B": "AWS Control Tower guardrails and account factory",
+      "C": "A local spreadsheet",
+      "D": "An S3 lifecycle rule"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Control Tower automates account setup and preventive or detective guardrails.\nThe other choices do not govern account baselines.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-050",
+    "type": "single",
+    "question": "A developer team preparing a release needs a central identity experience for workforce users across many accounts. Which service should be used?",
+    "options": {
+      "A": "An S3 bucket policy",
+      "B": "A VPC route table",
+      "C": "IAM Identity Center",
+      "D": "Cognito user pools only"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "IAM Identity Center provides workforce access and permission sets across accounts.\nCognito targets application users and the other choices are not workforce identity systems.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-051",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs centralized governance while allowing application teams to deploy in separate accounts. Which design fits?",
+    "options": {
+      "A": "One shared root account",
+      "B": "Public credentials",
+      "C": "A single VPC for every workload",
+      "D": "AWS Organizations with delegated administration and SCP guardrails"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Organizations and SCPs provide account boundaries and guardrails while teams retain delegated control.\nA shared account and public credentials weaken isolation.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-052",
+    "type": "single",
+    "question": "A service owner reviewing an incident must connect many VPCs and on-premises networks through a central hub. Which service should be evaluated?",
+    "options": {
+      "A": "AWS Transit Gateway",
+      "B": "A full mesh of public IPs",
+      "C": "An S3 website",
+      "D": "A CloudFront cache"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Transit Gateway centralizes routing and supports many attachments.\nThe other choices do not provide private transitive network connectivity.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-053",
+    "type": "single",
+    "question": "A team optimizing an existing implementation needs to share selected resources across accounts without granting broad account access. Which capability fits?",
+    "options": {
+      "A": "Use one administrator role everywhere",
+      "B": "AWS Resource Access Manager with scoped resource shares",
+      "C": "Share root credentials",
+      "D": "Make resources public"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "RAM shares supported resources with specific principals and organizational scopes.\nPublic or shared administrator access is broader than necessary.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-054",
+    "type": "single",
+    "question": "A company introducing an automated workflow must enforce a common security baseline across new accounts. Which service should assist?",
+    "options": {
+      "A": "An S3 lifecycle rule",
+      "B": "A Route 53 alias",
+      "C": "AWS Control Tower guardrails and account factory",
+      "D": "A local spreadsheet"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Control Tower automates account setup and preventive or detective guardrails.\nThe other choices do not govern account baselines.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-055",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment needs a central identity experience for workforce users across many accounts. Which service should be used?",
+    "options": {
+      "A": "Cognito user pools only",
+      "B": "An S3 bucket policy",
+      "C": "A VPC route table",
+      "D": "IAM Identity Center"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "IAM Identity Center provides workforce access and permission sets across accounts.\nCognito targets application users and the other choices are not workforce identity systems.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-056",
+    "type": "single",
+    "question": "A customer-facing application team needs centralized governance while allowing application teams to deploy in separate accounts. Which design fits?",
+    "options": {
+      "A": "AWS Organizations with delegated administration and SCP guardrails",
+      "B": "One shared root account",
+      "C": "Public credentials",
+      "D": "A single VPC for every workload"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Organizations and SCPs provide account boundaries and guardrails while teams retain delegated control.\nA shared account and public credentials weaken isolation.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-057",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments must connect many VPCs and on-premises networks through a central hub. Which service should be evaluated?",
+    "options": {
+      "A": "A CloudFront cache",
+      "B": "AWS Transit Gateway",
+      "C": "A full mesh of public IPs",
+      "D": "An S3 website"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Transit Gateway centralizes routing and supports many attachments.\nThe other choices do not provide private transitive network connectivity.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-058",
+    "type": "single",
+    "question": "A team preparing evidence for an audit needs to share selected resources across accounts without granting broad account access. Which capability fits?",
+    "options": {
+      "A": "Make resources public",
+      "B": "Use one administrator role everywhere",
+      "C": "AWS Resource Access Manager with scoped resource shares",
+      "D": "Share root credentials"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "RAM shares supported resources with specific principals and organizational scopes.\nPublic or shared administrator access is broader than necessary.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "sap-c02-d1-059",
+    "type": "single",
+    "question": "A business replacing a manual process must enforce a common security baseline across new accounts. Which service should assist?",
+    "options": {
+      "A": "A local spreadsheet",
+      "B": "An S3 lifecycle rule",
+      "C": "A Route 53 alias",
+      "D": "AWS Control Tower guardrails and account factory"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Control Tower automates account setup and preventive or detective guardrails.\nThe other choices do not govern account baselines.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  }
+]

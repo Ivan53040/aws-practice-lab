@@ -1,0 +1,546 @@
+[
+  {
+    "id": "dop-c02-d4-001",
+    "type": "single",
+    "question": "A production team needs centralized application logs searchable by request ID. Which design is appropriate?",
+    "options": {
+      "A": "Structured logs in CloudWatch Logs with Logs Insights queries",
+      "B": "Logs only on instance store",
+      "C": "Public S3 objects",
+      "D": "DNS TXT records"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Central structured logs and queries make distributed troubleshooting practical.\nThe other choices are ephemeral or unrelated to application logs.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d4-002",
+    "type": "single",
+    "question": "A multi-account platform team must alert when a deployment causes a latency regression. Which combination fits?",
+    "options": {
+      "A": "Create a static S3 object",
+      "B": "CloudWatch metrics, alarms, and a deployment event",
+      "C": "Disable metrics during deployment",
+      "D": "Use only an IAM policy"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Metrics and alarms can detect regression and trigger an incident or rollback.\nIAM and static objects do not measure deployment performance.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d4-003",
+    "type": "single",
+    "question": "A regulated company needs distributed request tracing across microservices. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon EFS",
+      "B": "AWS Budgets",
+      "C": "AWS X-Ray",
+      "D": "AWS Artifact"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "X-Ray traces requests across supported service boundaries.\nThe other choices provide compliance documents, file storage, or cost monitoring.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d4-004",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase must preserve logs centrally for audit and operational analysis. Which destination is suitable?",
+    "options": {
+      "A": "A single developer laptop",
+      "B": "An instance store volume",
+      "C": "A public web directory",
+      "D": "An encrypted central S3 bucket with CloudTrail and log delivery"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "A protected central bucket provides durable retention and controlled access for logs.\nLocal or public storage is not a reliable audit archive.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d4-005",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs a dashboard that combines metrics from several accounts and Regions. Which feature should be used?",
+    "options": {
+      "A": "CloudWatch cross-account observability dashboards",
+      "B": "A Route 53 record",
+      "C": "An S3 ACL",
+      "D": "A KMS grant"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch supports cross-account and cross-Region monitoring views for centralized operations.\nThe other choices do not aggregate operational metrics.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d4-006",
+    "type": "single",
+    "question": "A data platform team needs centralized application logs searchable by request ID. Which design is appropriate?",
+    "options": {
+      "A": "DNS TXT records",
+      "B": "Structured logs in CloudWatch Logs with Logs Insights queries",
+      "C": "Logs only on instance store",
+      "D": "Public S3 objects"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Central structured logs and queries make distributed troubleshooting practical.\nThe other choices are ephemeral or unrelated to application logs.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d4-007",
+    "type": "single",
+    "question": "A security-conscious engineering team must alert when a deployment causes a latency regression. Which combination fits?",
+    "options": {
+      "A": "Use only an IAM policy",
+      "B": "Create a static S3 object",
+      "C": "CloudWatch metrics, alarms, and a deployment event",
+      "D": "Disable metrics during deployment"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Metrics and alarms can detect regression and trigger an incident or rollback.\nIAM and static objects do not measure deployment performance.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d4-008",
+    "type": "single",
+    "question": "A company migrating an existing workload needs distributed request tracing across microservices. Which service should be evaluated?",
+    "options": {
+      "A": "AWS Artifact",
+      "B": "Amazon EFS",
+      "C": "AWS Budgets",
+      "D": "AWS X-Ray"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "X-Ray traces requests across supported service boundaries.\nThe other choices provide compliance documents, file storage, or cost monitoring.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d4-009",
+    "type": "single",
+    "question": "A team with strict recovery objectives must preserve logs centrally for audit and operational analysis. Which destination is suitable?",
+    "options": {
+      "A": "An encrypted central S3 bucket with CloudTrail and log delivery",
+      "B": "A single developer laptop",
+      "C": "An instance store volume",
+      "D": "A public web directory"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "A protected central bucket provides durable retention and controlled access for logs.\nLocal or public storage is not a reliable audit archive.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d4-010",
+    "type": "single",
+    "question": "A developer team preparing a release needs a dashboard that combines metrics from several accounts and Regions. Which feature should be used?",
+    "options": {
+      "A": "A KMS grant",
+      "B": "CloudWatch cross-account observability dashboards",
+      "C": "A Route 53 record",
+      "D": "An S3 ACL"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch supports cross-account and cross-Region monitoring views for centralized operations.\nThe other choices do not aggregate operational metrics.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d4-011",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs centralized application logs searchable by request ID. Which design is appropriate?",
+    "options": {
+      "A": "Public S3 objects",
+      "B": "DNS TXT records",
+      "C": "Structured logs in CloudWatch Logs with Logs Insights queries",
+      "D": "Logs only on instance store"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Central structured logs and queries make distributed troubleshooting practical.\nThe other choices are ephemeral or unrelated to application logs.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d4-012",
+    "type": "single",
+    "question": "A service owner reviewing an incident must alert when a deployment causes a latency regression. Which combination fits?",
+    "options": {
+      "A": "Disable metrics during deployment",
+      "B": "Use only an IAM policy",
+      "C": "Create a static S3 object",
+      "D": "CloudWatch metrics, alarms, and a deployment event"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Metrics and alarms can detect regression and trigger an incident or rollback.\nIAM and static objects do not measure deployment performance.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d4-013",
+    "type": "single",
+    "question": "A team optimizing an existing implementation needs distributed request tracing across microservices. Which service should be evaluated?",
+    "options": {
+      "A": "AWS X-Ray",
+      "B": "AWS Artifact",
+      "C": "Amazon EFS",
+      "D": "AWS Budgets"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "X-Ray traces requests across supported service boundaries.\nThe other choices provide compliance documents, file storage, or cost monitoring.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d4-014",
+    "type": "single",
+    "question": "A company introducing an automated workflow must preserve logs centrally for audit and operational analysis. Which destination is suitable?",
+    "options": {
+      "A": "A public web directory",
+      "B": "An encrypted central S3 bucket with CloudTrail and log delivery",
+      "C": "A single developer laptop",
+      "D": "An instance store volume"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "A protected central bucket provides durable retention and controlled access for logs.\nLocal or public storage is not a reliable audit archive.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d4-015",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment needs a dashboard that combines metrics from several accounts and Regions. Which feature should be used?",
+    "options": {
+      "A": "An S3 ACL",
+      "B": "A KMS grant",
+      "C": "CloudWatch cross-account observability dashboards",
+      "D": "A Route 53 record"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch supports cross-account and cross-Region monitoring views for centralized operations.\nThe other choices do not aggregate operational metrics.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d4-016",
+    "type": "single",
+    "question": "A customer-facing application team needs centralized application logs searchable by request ID. Which design is appropriate?",
+    "options": {
+      "A": "Logs only on instance store",
+      "B": "Public S3 objects",
+      "C": "DNS TXT records",
+      "D": "Structured logs in CloudWatch Logs with Logs Insights queries"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Central structured logs and queries make distributed troubleshooting practical.\nThe other choices are ephemeral or unrelated to application logs.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d4-017",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments must alert when a deployment causes a latency regression. Which combination fits?",
+    "options": {
+      "A": "CloudWatch metrics, alarms, and a deployment event",
+      "B": "Disable metrics during deployment",
+      "C": "Use only an IAM policy",
+      "D": "Create a static S3 object"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Metrics and alarms can detect regression and trigger an incident or rollback.\nIAM and static objects do not measure deployment performance.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d4-018",
+    "type": "single",
+    "question": "A team preparing evidence for an audit needs distributed request tracing across microservices. Which service should be evaluated?",
+    "options": {
+      "A": "AWS Budgets",
+      "B": "AWS X-Ray",
+      "C": "AWS Artifact",
+      "D": "Amazon EFS"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "X-Ray traces requests across supported service boundaries.\nThe other choices provide compliance documents, file storage, or cost monitoring.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d4-019",
+    "type": "single",
+    "question": "A business replacing a manual process must preserve logs centrally for audit and operational analysis. Which destination is suitable?",
+    "options": {
+      "A": "An instance store volume",
+      "B": "A public web directory",
+      "C": "An encrypted central S3 bucket with CloudTrail and log delivery",
+      "D": "A single developer laptop"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "A protected central bucket provides durable retention and controlled access for logs.\nLocal or public storage is not a reliable audit archive.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d4-020",
+    "type": "single",
+    "question": "A team validating a design against the exam guide needs a dashboard that combines metrics from several accounts and Regions. Which feature should be used?",
+    "options": {
+      "A": "A Route 53 record",
+      "B": "An S3 ACL",
+      "C": "A KMS grant",
+      "D": "CloudWatch cross-account observability dashboards"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch supports cross-account and cross-Region monitoring views for centralized operations.\nThe other choices do not aggregate operational metrics.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d4-021",
+    "type": "single",
+    "question": "A production team needs centralized application logs searchable by request ID. Which design is appropriate?",
+    "options": {
+      "A": "Structured logs in CloudWatch Logs with Logs Insights queries",
+      "B": "Logs only on instance store",
+      "C": "Public S3 objects",
+      "D": "DNS TXT records"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Central structured logs and queries make distributed troubleshooting practical.\nThe other choices are ephemeral or unrelated to application logs.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d4-022",
+    "type": "single",
+    "question": "A multi-account platform team must alert when a deployment causes a latency regression. Which combination fits?",
+    "options": {
+      "A": "Create a static S3 object",
+      "B": "CloudWatch metrics, alarms, and a deployment event",
+      "C": "Disable metrics during deployment",
+      "D": "Use only an IAM policy"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Metrics and alarms can detect regression and trigger an incident or rollback.\nIAM and static objects do not measure deployment performance.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d4-023",
+    "type": "single",
+    "question": "A regulated company needs distributed request tracing across microservices. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon EFS",
+      "B": "AWS Budgets",
+      "C": "AWS X-Ray",
+      "D": "AWS Artifact"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "X-Ray traces requests across supported service boundaries.\nThe other choices provide compliance documents, file storage, or cost monitoring.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d4-024",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase must preserve logs centrally for audit and operational analysis. Which destination is suitable?",
+    "options": {
+      "A": "A single developer laptop",
+      "B": "An instance store volume",
+      "C": "A public web directory",
+      "D": "An encrypted central S3 bucket with CloudTrail and log delivery"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "A protected central bucket provides durable retention and controlled access for logs.\nLocal or public storage is not a reliable audit archive.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d4-025",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs a dashboard that combines metrics from several accounts and Regions. Which feature should be used?",
+    "options": {
+      "A": "CloudWatch cross-account observability dashboards",
+      "B": "A Route 53 record",
+      "C": "An S3 ACL",
+      "D": "A KMS grant"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch supports cross-account and cross-Region monitoring views for centralized operations.\nThe other choices do not aggregate operational metrics.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d4-026",
+    "type": "single",
+    "question": "A data platform team needs centralized application logs searchable by request ID. Which design is appropriate?",
+    "options": {
+      "A": "DNS TXT records",
+      "B": "Structured logs in CloudWatch Logs with Logs Insights queries",
+      "C": "Logs only on instance store",
+      "D": "Public S3 objects"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Central structured logs and queries make distributed troubleshooting practical.\nThe other choices are ephemeral or unrelated to application logs.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d4-027",
+    "type": "single",
+    "question": "A security-conscious engineering team must alert when a deployment causes a latency regression. Which combination fits?",
+    "options": {
+      "A": "Use only an IAM policy",
+      "B": "Create a static S3 object",
+      "C": "CloudWatch metrics, alarms, and a deployment event",
+      "D": "Disable metrics during deployment"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Metrics and alarms can detect regression and trigger an incident or rollback.\nIAM and static objects do not measure deployment performance.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d4-028",
+    "type": "single",
+    "question": "A company migrating an existing workload needs distributed request tracing across microservices. Which service should be evaluated?",
+    "options": {
+      "A": "AWS Artifact",
+      "B": "Amazon EFS",
+      "C": "AWS Budgets",
+      "D": "AWS X-Ray"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "X-Ray traces requests across supported service boundaries.\nThe other choices provide compliance documents, file storage, or cost monitoring.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d4-029",
+    "type": "single",
+    "question": "A team with strict recovery objectives must preserve logs centrally for audit and operational analysis. Which destination is suitable?",
+    "options": {
+      "A": "An encrypted central S3 bucket with CloudTrail and log delivery",
+      "B": "A single developer laptop",
+      "C": "An instance store volume",
+      "D": "A public web directory"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "A protected central bucket provides durable retention and controlled access for logs.\nLocal or public storage is not a reliable audit archive.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d4-030",
+    "type": "single",
+    "question": "A developer team preparing a release needs a dashboard that combines metrics from several accounts and Regions. Which feature should be used?",
+    "options": {
+      "A": "A KMS grant",
+      "B": "CloudWatch cross-account observability dashboards",
+      "C": "A Route 53 record",
+      "D": "An S3 ACL"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch supports cross-account and cross-Region monitoring views for centralized operations.\nThe other choices do not aggregate operational metrics.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d4-031",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs centralized application logs searchable by request ID. Which design is appropriate?",
+    "options": {
+      "A": "Public S3 objects",
+      "B": "DNS TXT records",
+      "C": "Structured logs in CloudWatch Logs with Logs Insights queries",
+      "D": "Logs only on instance store"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Central structured logs and queries make distributed troubleshooting practical.\nThe other choices are ephemeral or unrelated to application logs.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d4-032",
+    "type": "single",
+    "question": "A service owner reviewing an incident must alert when a deployment causes a latency regression. Which combination fits?",
+    "options": {
+      "A": "Disable metrics during deployment",
+      "B": "Use only an IAM policy",
+      "C": "Create a static S3 object",
+      "D": "CloudWatch metrics, alarms, and a deployment event"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Metrics and alarms can detect regression and trigger an incident or rollback.\nIAM and static objects do not measure deployment performance.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d4-033",
+    "type": "single",
+    "question": "A team optimizing an existing implementation needs distributed request tracing across microservices. Which service should be evaluated?",
+    "options": {
+      "A": "AWS X-Ray",
+      "B": "AWS Artifact",
+      "C": "Amazon EFS",
+      "D": "AWS Budgets"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "X-Ray traces requests across supported service boundaries.\nThe other choices provide compliance documents, file storage, or cost monitoring.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dop-c02-d4-034",
+    "type": "single",
+    "question": "A company introducing an automated workflow must preserve logs centrally for audit and operational analysis. Which destination is suitable?",
+    "options": {
+      "A": "A public web directory",
+      "B": "An encrypted central S3 bucket with CloudTrail and log delivery",
+      "C": "A single developer laptop",
+      "D": "An instance store volume"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "A protected central bucket provides durable retention and controlled access for logs.\nLocal or public storage is not a reliable audit archive.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  }
+]

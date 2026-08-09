@@ -1,0 +1,562 @@
+[
+  {
+    "id": "dea-c01-d4-001",
+    "type": "single",
+    "question": "A production team must grant an ETL role access to only a curated S3 prefix. Which control is appropriate?",
+    "options": {
+      "A": "A least-privilege IAM policy scoped to that prefix",
+      "B": "A public bucket policy",
+      "C": "An administrator policy",
+      "D": "A security group rule"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "A narrowly scoped identity or bucket policy limits the role to required prefixes and actions.\nPublic or administrator access is broader than needed, and security groups do not authorize S3 objects.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d4-002",
+    "type": "single",
+    "question": "A multi-account platform team needs to encrypt data in S3 using a customer-controlled key and audit key use. Which option fits?",
+    "options": {
+      "A": "A CloudFront cache policy",
+      "B": "SSE-KMS with a customer managed KMS key",
+      "C": "SSE-S3 with no audit trail",
+      "D": "Plaintext objects"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "SSE-KMS with a customer managed key provides key policy control and KMS audit events.\nThe other choices do not provide the required customer key governance.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d4-003",
+    "type": "single",
+    "question": "A regulated company must discover personally identifiable information in a data lake. Which service should be evaluated?",
+    "options": {
+      "A": "AWS WAF",
+      "B": "Amazon Route 53",
+      "C": "Amazon Macie",
+      "D": "Amazon Inspector"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Macie discovers sensitive data such as PII in S3 and reports findings for investigation.\nInspector scans workloads, WAF filters web traffic, and Route 53 provides DNS.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d4-004",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs a central audit record of data pipeline API activity. Which service should be configured?",
+    "options": {
+      "A": "Amazon ElastiCache",
+      "B": "AWS Batch",
+      "C": "Amazon EFS",
+      "D": "AWS CloudTrail"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudTrail records AWS API activity and can deliver logs to a protected S3 bucket.\nThe other choices provide caching, batch compute, or file storage.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d4-005",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must prevent a pipeline role from decrypting data outside an approved account. Which mechanism should constrain the key?",
+    "options": {
+      "A": "A KMS key policy and encryption context conditions",
+      "B": "A public DNS record",
+      "C": "An S3 lifecycle rule",
+      "D": "A CloudFront origin group"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "KMS key policies and conditions constrain which principals and contexts can use the key.\nThe other choices do not authorize cryptographic operations.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d4-006",
+    "type": "single",
+    "question": "A data platform team must grant an ETL role access to only a curated S3 prefix. Which control is appropriate?",
+    "options": {
+      "A": "A security group rule",
+      "B": "A least-privilege IAM policy scoped to that prefix",
+      "C": "A public bucket policy",
+      "D": "An administrator policy"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "A narrowly scoped identity or bucket policy limits the role to required prefixes and actions.\nPublic or administrator access is broader than needed, and security groups do not authorize S3 objects.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d4-007",
+    "type": "single",
+    "question": "A security-conscious engineering team needs to encrypt data in S3 using a customer-controlled key and audit key use. Which option fits?",
+    "options": {
+      "A": "Plaintext objects",
+      "B": "A CloudFront cache policy",
+      "C": "SSE-KMS with a customer managed KMS key",
+      "D": "SSE-S3 with no audit trail"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "SSE-KMS with a customer managed key provides key policy control and KMS audit events.\nThe other choices do not provide the required customer key governance.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d4-008",
+    "type": "single",
+    "question": "A company migrating an existing workload must discover personally identifiable information in a data lake. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon Inspector",
+      "B": "AWS WAF",
+      "C": "Amazon Route 53",
+      "D": "Amazon Macie"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Macie discovers sensitive data such as PII in S3 and reports findings for investigation.\nInspector scans workloads, WAF filters web traffic, and Route 53 provides DNS.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d4-009",
+    "type": "single",
+    "question": "A team with strict recovery objectives needs a central audit record of data pipeline API activity. Which service should be configured?",
+    "options": {
+      "A": "AWS CloudTrail",
+      "B": "Amazon ElastiCache",
+      "C": "AWS Batch",
+      "D": "Amazon EFS"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "CloudTrail records AWS API activity and can deliver logs to a protected S3 bucket.\nThe other choices provide caching, batch compute, or file storage.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d4-010",
+    "type": "single",
+    "question": "A developer team preparing a release must prevent a pipeline role from decrypting data outside an approved account. Which mechanism should constrain the key?",
+    "options": {
+      "A": "A CloudFront origin group",
+      "B": "A KMS key policy and encryption context conditions",
+      "C": "A public DNS record",
+      "D": "An S3 lifecycle rule"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "KMS key policies and conditions constrain which principals and contexts can use the key.\nThe other choices do not authorize cryptographic operations.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d4-011",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions must grant an ETL role access to only a curated S3 prefix. Which control is appropriate?",
+    "options": {
+      "A": "An administrator policy",
+      "B": "A security group rule",
+      "C": "A least-privilege IAM policy scoped to that prefix",
+      "D": "A public bucket policy"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "A narrowly scoped identity or bucket policy limits the role to required prefixes and actions.\nPublic or administrator access is broader than needed, and security groups do not authorize S3 objects.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d4-012",
+    "type": "single",
+    "question": "A service owner reviewing an incident needs to encrypt data in S3 using a customer-controlled key and audit key use. Which option fits?",
+    "options": {
+      "A": "SSE-S3 with no audit trail",
+      "B": "Plaintext objects",
+      "C": "A CloudFront cache policy",
+      "D": "SSE-KMS with a customer managed KMS key"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "SSE-KMS with a customer managed key provides key policy control and KMS audit events.\nThe other choices do not provide the required customer key governance.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d4-013",
+    "type": "single",
+    "question": "A team optimizing an existing implementation must discover personally identifiable information in a data lake. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon Macie",
+      "B": "Amazon Inspector",
+      "C": "AWS WAF",
+      "D": "Amazon Route 53"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Macie discovers sensitive data such as PII in S3 and reports findings for investigation.\nInspector scans workloads, WAF filters web traffic, and Route 53 provides DNS.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d4-014",
+    "type": "single",
+    "question": "A company introducing an automated workflow needs a central audit record of data pipeline API activity. Which service should be configured?",
+    "options": {
+      "A": "Amazon EFS",
+      "B": "AWS CloudTrail",
+      "C": "Amazon ElastiCache",
+      "D": "AWS Batch"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudTrail records AWS API activity and can deliver logs to a protected S3 bucket.\nThe other choices provide caching, batch compute, or file storage.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d4-015",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment must prevent a pipeline role from decrypting data outside an approved account. Which mechanism should constrain the key?",
+    "options": {
+      "A": "An S3 lifecycle rule",
+      "B": "A CloudFront origin group",
+      "C": "A KMS key policy and encryption context conditions",
+      "D": "A public DNS record"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "KMS key policies and conditions constrain which principals and contexts can use the key.\nThe other choices do not authorize cryptographic operations.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d4-016",
+    "type": "single",
+    "question": "A customer-facing application team must grant an ETL role access to only a curated S3 prefix. Which control is appropriate?",
+    "options": {
+      "A": "A public bucket policy",
+      "B": "An administrator policy",
+      "C": "A security group rule",
+      "D": "A least-privilege IAM policy scoped to that prefix"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "A narrowly scoped identity or bucket policy limits the role to required prefixes and actions.\nPublic or administrator access is broader than needed, and security groups do not authorize S3 objects.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d4-017",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments needs to encrypt data in S3 using a customer-controlled key and audit key use. Which option fits?",
+    "options": {
+      "A": "SSE-KMS with a customer managed KMS key",
+      "B": "SSE-S3 with no audit trail",
+      "C": "Plaintext objects",
+      "D": "A CloudFront cache policy"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "SSE-KMS with a customer managed key provides key policy control and KMS audit events.\nThe other choices do not provide the required customer key governance.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d4-018",
+    "type": "single",
+    "question": "A team preparing evidence for an audit must discover personally identifiable information in a data lake. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon Route 53",
+      "B": "Amazon Macie",
+      "C": "Amazon Inspector",
+      "D": "AWS WAF"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Macie discovers sensitive data such as PII in S3 and reports findings for investigation.\nInspector scans workloads, WAF filters web traffic, and Route 53 provides DNS.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d4-019",
+    "type": "single",
+    "question": "A business replacing a manual process needs a central audit record of data pipeline API activity. Which service should be configured?",
+    "options": {
+      "A": "AWS Batch",
+      "B": "Amazon EFS",
+      "C": "AWS CloudTrail",
+      "D": "Amazon ElastiCache"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "CloudTrail records AWS API activity and can deliver logs to a protected S3 bucket.\nThe other choices provide caching, batch compute, or file storage.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d4-020",
+    "type": "single",
+    "question": "A team validating a design against the exam guide must prevent a pipeline role from decrypting data outside an approved account. Which mechanism should constrain the key?",
+    "options": {
+      "A": "A public DNS record",
+      "B": "An S3 lifecycle rule",
+      "C": "A CloudFront origin group",
+      "D": "A KMS key policy and encryption context conditions"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "KMS key policies and conditions constrain which principals and contexts can use the key.\nThe other choices do not authorize cryptographic operations.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d4-021",
+    "type": "single",
+    "question": "A production team must grant an ETL role access to only a curated S3 prefix. Which control is appropriate?",
+    "options": {
+      "A": "A least-privilege IAM policy scoped to that prefix",
+      "B": "A public bucket policy",
+      "C": "An administrator policy",
+      "D": "A security group rule"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "A narrowly scoped identity or bucket policy limits the role to required prefixes and actions.\nPublic or administrator access is broader than needed, and security groups do not authorize S3 objects.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d4-022",
+    "type": "single",
+    "question": "A multi-account platform team needs to encrypt data in S3 using a customer-controlled key and audit key use. Which option fits?",
+    "options": {
+      "A": "A CloudFront cache policy",
+      "B": "SSE-KMS with a customer managed KMS key",
+      "C": "SSE-S3 with no audit trail",
+      "D": "Plaintext objects"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "SSE-KMS with a customer managed key provides key policy control and KMS audit events.\nThe other choices do not provide the required customer key governance.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d4-023",
+    "type": "single",
+    "question": "A regulated company must discover personally identifiable information in a data lake. Which service should be evaluated?",
+    "options": {
+      "A": "AWS WAF",
+      "B": "Amazon Route 53",
+      "C": "Amazon Macie",
+      "D": "Amazon Inspector"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Macie discovers sensitive data such as PII in S3 and reports findings for investigation.\nInspector scans workloads, WAF filters web traffic, and Route 53 provides DNS.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d4-024",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs a central audit record of data pipeline API activity. Which service should be configured?",
+    "options": {
+      "A": "Amazon ElastiCache",
+      "B": "AWS Batch",
+      "C": "Amazon EFS",
+      "D": "AWS CloudTrail"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudTrail records AWS API activity and can deliver logs to a protected S3 bucket.\nThe other choices provide caching, batch compute, or file storage.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d4-025",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must prevent a pipeline role from decrypting data outside an approved account. Which mechanism should constrain the key?",
+    "options": {
+      "A": "A KMS key policy and encryption context conditions",
+      "B": "A public DNS record",
+      "C": "An S3 lifecycle rule",
+      "D": "A CloudFront origin group"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "KMS key policies and conditions constrain which principals and contexts can use the key.\nThe other choices do not authorize cryptographic operations.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d4-026",
+    "type": "single",
+    "question": "A data platform team must grant an ETL role access to only a curated S3 prefix. Which control is appropriate?",
+    "options": {
+      "A": "A security group rule",
+      "B": "A least-privilege IAM policy scoped to that prefix",
+      "C": "A public bucket policy",
+      "D": "An administrator policy"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "A narrowly scoped identity or bucket policy limits the role to required prefixes and actions.\nPublic or administrator access is broader than needed, and security groups do not authorize S3 objects.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d4-027",
+    "type": "single",
+    "question": "A security-conscious engineering team needs to encrypt data in S3 using a customer-controlled key and audit key use. Which option fits?",
+    "options": {
+      "A": "Plaintext objects",
+      "B": "A CloudFront cache policy",
+      "C": "SSE-KMS with a customer managed KMS key",
+      "D": "SSE-S3 with no audit trail"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "SSE-KMS with a customer managed key provides key policy control and KMS audit events.\nThe other choices do not provide the required customer key governance.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d4-028",
+    "type": "single",
+    "question": "A company migrating an existing workload must discover personally identifiable information in a data lake. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon Inspector",
+      "B": "AWS WAF",
+      "C": "Amazon Route 53",
+      "D": "Amazon Macie"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Macie discovers sensitive data such as PII in S3 and reports findings for investigation.\nInspector scans workloads, WAF filters web traffic, and Route 53 provides DNS.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d4-029",
+    "type": "single",
+    "question": "A team with strict recovery objectives needs a central audit record of data pipeline API activity. Which service should be configured?",
+    "options": {
+      "A": "AWS CloudTrail",
+      "B": "Amazon ElastiCache",
+      "C": "AWS Batch",
+      "D": "Amazon EFS"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "CloudTrail records AWS API activity and can deliver logs to a protected S3 bucket.\nThe other choices provide caching, batch compute, or file storage.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d4-030",
+    "type": "single",
+    "question": "A developer team preparing a release must prevent a pipeline role from decrypting data outside an approved account. Which mechanism should constrain the key?",
+    "options": {
+      "A": "A CloudFront origin group",
+      "B": "A KMS key policy and encryption context conditions",
+      "C": "A public DNS record",
+      "D": "An S3 lifecycle rule"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "KMS key policies and conditions constrain which principals and contexts can use the key.\nThe other choices do not authorize cryptographic operations.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d4-031",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions must grant an ETL role access to only a curated S3 prefix. Which control is appropriate?",
+    "options": {
+      "A": "An administrator policy",
+      "B": "A security group rule",
+      "C": "A least-privilege IAM policy scoped to that prefix",
+      "D": "A public bucket policy"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "A narrowly scoped identity or bucket policy limits the role to required prefixes and actions.\nPublic or administrator access is broader than needed, and security groups do not authorize S3 objects.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d4-032",
+    "type": "single",
+    "question": "A service owner reviewing an incident needs to encrypt data in S3 using a customer-controlled key and audit key use. Which option fits?",
+    "options": {
+      "A": "SSE-S3 with no audit trail",
+      "B": "Plaintext objects",
+      "C": "A CloudFront cache policy",
+      "D": "SSE-KMS with a customer managed KMS key"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "SSE-KMS with a customer managed key provides key policy control and KMS audit events.\nThe other choices do not provide the required customer key governance.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d4-033",
+    "type": "single",
+    "question": "A team optimizing an existing implementation must discover personally identifiable information in a data lake. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon Macie",
+      "B": "Amazon Inspector",
+      "C": "AWS WAF",
+      "D": "Amazon Route 53"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Macie discovers sensitive data such as PII in S3 and reports findings for investigation.\nInspector scans workloads, WAF filters web traffic, and Route 53 provides DNS.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d4-034",
+    "type": "single",
+    "question": "A company introducing an automated workflow needs a central audit record of data pipeline API activity. Which service should be configured?",
+    "options": {
+      "A": "Amazon EFS",
+      "B": "AWS CloudTrail",
+      "C": "Amazon ElastiCache",
+      "D": "AWS Batch"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudTrail records AWS API activity and can deliver logs to a protected S3 bucket.\nThe other choices provide caching, batch compute, or file storage.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "dea-c01-d4-035",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment must prevent a pipeline role from decrypting data outside an approved account. Which mechanism should constrain the key?",
+    "options": {
+      "A": "An S3 lifecycle rule",
+      "B": "A CloudFront origin group",
+      "C": "A KMS key policy and encryption context conditions",
+      "D": "A public DNS record"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "KMS key policies and conditions constrain which principals and contexts can use the key.\nThe other choices do not authorize cryptographic operations.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  }
+]

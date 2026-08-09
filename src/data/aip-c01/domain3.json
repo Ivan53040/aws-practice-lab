@@ -1,0 +1,722 @@
+[
+  {
+    "id": "aip-c01-d3-001",
+    "type": "single",
+    "question": "A production team must block harmful topics in both user prompts and model responses. Which feature fits?",
+    "options": {
+      "A": "A CloudFront cache policy",
+      "B": "An S3 lifecycle rule",
+      "C": "A Route 53 record",
+      "D": "Amazon Bedrock Guardrails"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Guardrails apply configurable policies to model inputs and outputs.\nThe other choices do not filter GenAI content.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-002",
+    "type": "single",
+    "question": "A multi-account platform team needs to prevent customer PII from appearing in model responses. Which layered approach is appropriate?",
+    "options": {
+      "A": "Sensitive information filters, authorization, and output validation",
+      "B": "Return every response without checks",
+      "C": "Log all prompts publicly",
+      "D": "Disable data classification"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Input and output controls plus identity policy reduce the chance of exposing sensitive content.\nUnfiltered responses and public logs increase exposure.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-003",
+    "type": "single",
+    "question": "A regulated company must give each agent its own identity when accessing backend systems. Which design is preferred?",
+    "options": {
+      "A": "Credentials in prompts",
+      "B": "Per-agent identities with scoped credentials",
+      "C": "One administrator key shared by all agents",
+      "D": "Anonymous access"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Distinct identities support least privilege and auditability for agent actions.\nShared or prompt-embedded credentials are difficult to control and audit.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-004",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs an audit trail for Bedrock API calls and policy changes. Which service should be enabled?",
+    "options": {
+      "A": "AWS Batch",
+      "B": "Amazon CloudFront",
+      "C": "AWS CloudTrail",
+      "D": "Amazon EFS"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "CloudTrail records API activity and can deliver it to a protected archive.\nThe other choices do not audit Bedrock API calls.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-005",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must ensure an agent cannot invoke an unapproved tool. Which control should enforce this?",
+    "options": {
+      "A": "Allow every tool dynamically",
+      "B": "Use a random model temperature",
+      "C": "Remove all logs",
+      "D": "An allowlist of tools backed by IAM and application authorization"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "A tool allowlist and IAM policy constrain what the agent can call.\nModel sampling and missing logs do not enforce tool authorization.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-006",
+    "type": "single",
+    "question": "A data platform team must block harmful topics in both user prompts and model responses. Which feature fits?",
+    "options": {
+      "A": "Amazon Bedrock Guardrails",
+      "B": "A CloudFront cache policy",
+      "C": "An S3 lifecycle rule",
+      "D": "A Route 53 record"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Guardrails apply configurable policies to model inputs and outputs.\nThe other choices do not filter GenAI content.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-007",
+    "type": "single",
+    "question": "A security-conscious engineering team needs to prevent customer PII from appearing in model responses. Which layered approach is appropriate?",
+    "options": {
+      "A": "Disable data classification",
+      "B": "Sensitive information filters, authorization, and output validation",
+      "C": "Return every response without checks",
+      "D": "Log all prompts publicly"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Input and output controls plus identity policy reduce the chance of exposing sensitive content.\nUnfiltered responses and public logs increase exposure.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-008",
+    "type": "single",
+    "question": "A company migrating an existing workload must give each agent its own identity when accessing backend systems. Which design is preferred?",
+    "options": {
+      "A": "Anonymous access",
+      "B": "Credentials in prompts",
+      "C": "Per-agent identities with scoped credentials",
+      "D": "One administrator key shared by all agents"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Distinct identities support least privilege and auditability for agent actions.\nShared or prompt-embedded credentials are difficult to control and audit.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-009",
+    "type": "single",
+    "question": "A team with strict recovery objectives needs an audit trail for Bedrock API calls and policy changes. Which service should be enabled?",
+    "options": {
+      "A": "Amazon EFS",
+      "B": "AWS Batch",
+      "C": "Amazon CloudFront",
+      "D": "AWS CloudTrail"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudTrail records API activity and can deliver it to a protected archive.\nThe other choices do not audit Bedrock API calls.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-010",
+    "type": "single",
+    "question": "A developer team preparing a release must ensure an agent cannot invoke an unapproved tool. Which control should enforce this?",
+    "options": {
+      "A": "An allowlist of tools backed by IAM and application authorization",
+      "B": "Allow every tool dynamically",
+      "C": "Use a random model temperature",
+      "D": "Remove all logs"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "A tool allowlist and IAM policy constrain what the agent can call.\nModel sampling and missing logs do not enforce tool authorization.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-011",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions must block harmful topics in both user prompts and model responses. Which feature fits?",
+    "options": {
+      "A": "A Route 53 record",
+      "B": "Amazon Bedrock Guardrails",
+      "C": "A CloudFront cache policy",
+      "D": "An S3 lifecycle rule"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Guardrails apply configurable policies to model inputs and outputs.\nThe other choices do not filter GenAI content.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-012",
+    "type": "single",
+    "question": "A service owner reviewing an incident needs to prevent customer PII from appearing in model responses. Which layered approach is appropriate?",
+    "options": {
+      "A": "Log all prompts publicly",
+      "B": "Disable data classification",
+      "C": "Sensitive information filters, authorization, and output validation",
+      "D": "Return every response without checks"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Input and output controls plus identity policy reduce the chance of exposing sensitive content.\nUnfiltered responses and public logs increase exposure.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-013",
+    "type": "single",
+    "question": "A team optimizing an existing implementation must give each agent its own identity when accessing backend systems. Which design is preferred?",
+    "options": {
+      "A": "One administrator key shared by all agents",
+      "B": "Anonymous access",
+      "C": "Credentials in prompts",
+      "D": "Per-agent identities with scoped credentials"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Distinct identities support least privilege and auditability for agent actions.\nShared or prompt-embedded credentials are difficult to control and audit.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-014",
+    "type": "single",
+    "question": "A company introducing an automated workflow needs an audit trail for Bedrock API calls and policy changes. Which service should be enabled?",
+    "options": {
+      "A": "AWS CloudTrail",
+      "B": "Amazon EFS",
+      "C": "AWS Batch",
+      "D": "Amazon CloudFront"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "CloudTrail records API activity and can deliver it to a protected archive.\nThe other choices do not audit Bedrock API calls.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-015",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment must ensure an agent cannot invoke an unapproved tool. Which control should enforce this?",
+    "options": {
+      "A": "Remove all logs",
+      "B": "An allowlist of tools backed by IAM and application authorization",
+      "C": "Allow every tool dynamically",
+      "D": "Use a random model temperature"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "A tool allowlist and IAM policy constrain what the agent can call.\nModel sampling and missing logs do not enforce tool authorization.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-016",
+    "type": "single",
+    "question": "A customer-facing application team must block harmful topics in both user prompts and model responses. Which feature fits?",
+    "options": {
+      "A": "An S3 lifecycle rule",
+      "B": "A Route 53 record",
+      "C": "Amazon Bedrock Guardrails",
+      "D": "A CloudFront cache policy"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Guardrails apply configurable policies to model inputs and outputs.\nThe other choices do not filter GenAI content.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-017",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments needs to prevent customer PII from appearing in model responses. Which layered approach is appropriate?",
+    "options": {
+      "A": "Return every response without checks",
+      "B": "Log all prompts publicly",
+      "C": "Disable data classification",
+      "D": "Sensitive information filters, authorization, and output validation"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Input and output controls plus identity policy reduce the chance of exposing sensitive content.\nUnfiltered responses and public logs increase exposure.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-018",
+    "type": "single",
+    "question": "A team preparing evidence for an audit must give each agent its own identity when accessing backend systems. Which design is preferred?",
+    "options": {
+      "A": "Per-agent identities with scoped credentials",
+      "B": "One administrator key shared by all agents",
+      "C": "Anonymous access",
+      "D": "Credentials in prompts"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Distinct identities support least privilege and auditability for agent actions.\nShared or prompt-embedded credentials are difficult to control and audit.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-019",
+    "type": "single",
+    "question": "A business replacing a manual process needs an audit trail for Bedrock API calls and policy changes. Which service should be enabled?",
+    "options": {
+      "A": "Amazon CloudFront",
+      "B": "AWS CloudTrail",
+      "C": "Amazon EFS",
+      "D": "AWS Batch"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudTrail records API activity and can deliver it to a protected archive.\nThe other choices do not audit Bedrock API calls.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-020",
+    "type": "single",
+    "question": "A team validating a design against the exam guide must ensure an agent cannot invoke an unapproved tool. Which control should enforce this?",
+    "options": {
+      "A": "Use a random model temperature",
+      "B": "Remove all logs",
+      "C": "An allowlist of tools backed by IAM and application authorization",
+      "D": "Allow every tool dynamically"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "A tool allowlist and IAM policy constrain what the agent can call.\nModel sampling and missing logs do not enforce tool authorization.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-021",
+    "type": "single",
+    "question": "A production team must block harmful topics in both user prompts and model responses. Which feature fits?",
+    "options": {
+      "A": "A CloudFront cache policy",
+      "B": "An S3 lifecycle rule",
+      "C": "A Route 53 record",
+      "D": "Amazon Bedrock Guardrails"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Guardrails apply configurable policies to model inputs and outputs.\nThe other choices do not filter GenAI content.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-022",
+    "type": "single",
+    "question": "A multi-account platform team needs to prevent customer PII from appearing in model responses. Which layered approach is appropriate?",
+    "options": {
+      "A": "Sensitive information filters, authorization, and output validation",
+      "B": "Return every response without checks",
+      "C": "Log all prompts publicly",
+      "D": "Disable data classification"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Input and output controls plus identity policy reduce the chance of exposing sensitive content.\nUnfiltered responses and public logs increase exposure.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-023",
+    "type": "single",
+    "question": "A regulated company must give each agent its own identity when accessing backend systems. Which design is preferred?",
+    "options": {
+      "A": "Credentials in prompts",
+      "B": "Per-agent identities with scoped credentials",
+      "C": "One administrator key shared by all agents",
+      "D": "Anonymous access"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Distinct identities support least privilege and auditability for agent actions.\nShared or prompt-embedded credentials are difficult to control and audit.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-024",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs an audit trail for Bedrock API calls and policy changes. Which service should be enabled?",
+    "options": {
+      "A": "AWS Batch",
+      "B": "Amazon CloudFront",
+      "C": "AWS CloudTrail",
+      "D": "Amazon EFS"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "CloudTrail records API activity and can deliver it to a protected archive.\nThe other choices do not audit Bedrock API calls.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-025",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must ensure an agent cannot invoke an unapproved tool. Which control should enforce this?",
+    "options": {
+      "A": "Allow every tool dynamically",
+      "B": "Use a random model temperature",
+      "C": "Remove all logs",
+      "D": "An allowlist of tools backed by IAM and application authorization"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "A tool allowlist and IAM policy constrain what the agent can call.\nModel sampling and missing logs do not enforce tool authorization.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-026",
+    "type": "single",
+    "question": "A data platform team must block harmful topics in both user prompts and model responses. Which feature fits?",
+    "options": {
+      "A": "Amazon Bedrock Guardrails",
+      "B": "A CloudFront cache policy",
+      "C": "An S3 lifecycle rule",
+      "D": "A Route 53 record"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Guardrails apply configurable policies to model inputs and outputs.\nThe other choices do not filter GenAI content.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-027",
+    "type": "single",
+    "question": "A security-conscious engineering team needs to prevent customer PII from appearing in model responses. Which layered approach is appropriate?",
+    "options": {
+      "A": "Disable data classification",
+      "B": "Sensitive information filters, authorization, and output validation",
+      "C": "Return every response without checks",
+      "D": "Log all prompts publicly"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Input and output controls plus identity policy reduce the chance of exposing sensitive content.\nUnfiltered responses and public logs increase exposure.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-028",
+    "type": "single",
+    "question": "A company migrating an existing workload must give each agent its own identity when accessing backend systems. Which design is preferred?",
+    "options": {
+      "A": "Anonymous access",
+      "B": "Credentials in prompts",
+      "C": "Per-agent identities with scoped credentials",
+      "D": "One administrator key shared by all agents"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Distinct identities support least privilege and auditability for agent actions.\nShared or prompt-embedded credentials are difficult to control and audit.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-029",
+    "type": "single",
+    "question": "A team with strict recovery objectives needs an audit trail for Bedrock API calls and policy changes. Which service should be enabled?",
+    "options": {
+      "A": "Amazon EFS",
+      "B": "AWS Batch",
+      "C": "Amazon CloudFront",
+      "D": "AWS CloudTrail"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudTrail records API activity and can deliver it to a protected archive.\nThe other choices do not audit Bedrock API calls.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-030",
+    "type": "single",
+    "question": "A developer team preparing a release must ensure an agent cannot invoke an unapproved tool. Which control should enforce this?",
+    "options": {
+      "A": "An allowlist of tools backed by IAM and application authorization",
+      "B": "Allow every tool dynamically",
+      "C": "Use a random model temperature",
+      "D": "Remove all logs"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "A tool allowlist and IAM policy constrain what the agent can call.\nModel sampling and missing logs do not enforce tool authorization.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-031",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions must block harmful topics in both user prompts and model responses. Which feature fits?",
+    "options": {
+      "A": "A Route 53 record",
+      "B": "Amazon Bedrock Guardrails",
+      "C": "A CloudFront cache policy",
+      "D": "An S3 lifecycle rule"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Guardrails apply configurable policies to model inputs and outputs.\nThe other choices do not filter GenAI content.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-032",
+    "type": "single",
+    "question": "A service owner reviewing an incident needs to prevent customer PII from appearing in model responses. Which layered approach is appropriate?",
+    "options": {
+      "A": "Log all prompts publicly",
+      "B": "Disable data classification",
+      "C": "Sensitive information filters, authorization, and output validation",
+      "D": "Return every response without checks"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Input and output controls plus identity policy reduce the chance of exposing sensitive content.\nUnfiltered responses and public logs increase exposure.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-033",
+    "type": "single",
+    "question": "A team optimizing an existing implementation must give each agent its own identity when accessing backend systems. Which design is preferred?",
+    "options": {
+      "A": "One administrator key shared by all agents",
+      "B": "Anonymous access",
+      "C": "Credentials in prompts",
+      "D": "Per-agent identities with scoped credentials"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Distinct identities support least privilege and auditability for agent actions.\nShared or prompt-embedded credentials are difficult to control and audit.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-034",
+    "type": "single",
+    "question": "A company introducing an automated workflow needs an audit trail for Bedrock API calls and policy changes. Which service should be enabled?",
+    "options": {
+      "A": "AWS CloudTrail",
+      "B": "Amazon EFS",
+      "C": "AWS Batch",
+      "D": "Amazon CloudFront"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "CloudTrail records API activity and can deliver it to a protected archive.\nThe other choices do not audit Bedrock API calls.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-035",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment must ensure an agent cannot invoke an unapproved tool. Which control should enforce this?",
+    "options": {
+      "A": "Remove all logs",
+      "B": "An allowlist of tools backed by IAM and application authorization",
+      "C": "Allow every tool dynamically",
+      "D": "Use a random model temperature"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "A tool allowlist and IAM policy constrain what the agent can call.\nModel sampling and missing logs do not enforce tool authorization.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-036",
+    "type": "single",
+    "question": "A customer-facing application team must block harmful topics in both user prompts and model responses. Which feature fits?",
+    "options": {
+      "A": "An S3 lifecycle rule",
+      "B": "A Route 53 record",
+      "C": "Amazon Bedrock Guardrails",
+      "D": "A CloudFront cache policy"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Guardrails apply configurable policies to model inputs and outputs.\nThe other choices do not filter GenAI content.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-037",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments needs to prevent customer PII from appearing in model responses. Which layered approach is appropriate?",
+    "options": {
+      "A": "Return every response without checks",
+      "B": "Log all prompts publicly",
+      "C": "Disable data classification",
+      "D": "Sensitive information filters, authorization, and output validation"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Input and output controls plus identity policy reduce the chance of exposing sensitive content.\nUnfiltered responses and public logs increase exposure.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-038",
+    "type": "single",
+    "question": "A team preparing evidence for an audit must give each agent its own identity when accessing backend systems. Which design is preferred?",
+    "options": {
+      "A": "Per-agent identities with scoped credentials",
+      "B": "One administrator key shared by all agents",
+      "C": "Anonymous access",
+      "D": "Credentials in prompts"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Distinct identities support least privilege and auditability for agent actions.\nShared or prompt-embedded credentials are difficult to control and audit.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-039",
+    "type": "single",
+    "question": "A business replacing a manual process needs an audit trail for Bedrock API calls and policy changes. Which service should be enabled?",
+    "options": {
+      "A": "Amazon CloudFront",
+      "B": "AWS CloudTrail",
+      "C": "Amazon EFS",
+      "D": "AWS Batch"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudTrail records API activity and can deliver it to a protected archive.\nThe other choices do not audit Bedrock API calls.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-040",
+    "type": "single",
+    "question": "A team validating a design against the exam guide must ensure an agent cannot invoke an unapproved tool. Which control should enforce this?",
+    "options": {
+      "A": "Use a random model temperature",
+      "B": "Remove all logs",
+      "C": "An allowlist of tools backed by IAM and application authorization",
+      "D": "Allow every tool dynamically"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "A tool allowlist and IAM policy constrain what the agent can call.\nModel sampling and missing logs do not enforce tool authorization.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-041",
+    "type": "single",
+    "question": "A production team must block harmful topics in both user prompts and model responses. Which feature fits?",
+    "options": {
+      "A": "A CloudFront cache policy",
+      "B": "An S3 lifecycle rule",
+      "C": "A Route 53 record",
+      "D": "Amazon Bedrock Guardrails"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Guardrails apply configurable policies to model inputs and outputs.\nThe other choices do not filter GenAI content.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-042",
+    "type": "single",
+    "question": "A multi-account platform team needs to prevent customer PII from appearing in model responses. Which layered approach is appropriate?",
+    "options": {
+      "A": "Sensitive information filters, authorization, and output validation",
+      "B": "Return every response without checks",
+      "C": "Log all prompts publicly",
+      "D": "Disable data classification"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Input and output controls plus identity policy reduce the chance of exposing sensitive content.\nUnfiltered responses and public logs increase exposure.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-043",
+    "type": "single",
+    "question": "A regulated company must give each agent its own identity when accessing backend systems. Which design is preferred?",
+    "options": {
+      "A": "Credentials in prompts",
+      "B": "Per-agent identities with scoped credentials",
+      "C": "One administrator key shared by all agents",
+      "D": "Anonymous access"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Distinct identities support least privilege and auditability for agent actions.\nShared or prompt-embedded credentials are difficult to control and audit.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-044",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs an audit trail for Bedrock API calls and policy changes. Which service should be enabled?",
+    "options": {
+      "A": "AWS Batch",
+      "B": "Amazon CloudFront",
+      "C": "AWS CloudTrail",
+      "D": "Amazon EFS"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "CloudTrail records API activity and can deliver it to a protected archive.\nThe other choices do not audit Bedrock API calls.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d3-045",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must ensure an agent cannot invoke an unapproved tool. Which control should enforce this?",
+    "options": {
+      "A": "Allow every tool dynamically",
+      "B": "Use a random model temperature",
+      "C": "Remove all logs",
+      "D": "An allowlist of tools backed by IAM and application authorization"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "A tool allowlist and IAM policy constrain what the agent can call.\nModel sampling and missing logs do not enforce tool authorization.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  }
+]

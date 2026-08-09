@@ -1,0 +1,754 @@
+[
+  {
+    "id": "ans-c01-d4-001",
+    "type": "single",
+    "question": "A production team must block known malicious domains for workloads in a VPC. Which feature should be evaluated?",
+    "options": {
+      "A": "Route 53 Resolver DNS Firewall",
+      "B": "An S3 lifecycle rule",
+      "C": "A KMS alias",
+      "D": "A CloudWatch dashboard"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "DNS Firewall can block or allow domain queries for VPC workloads.\nThe other choices do not filter DNS requests.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-002",
+    "type": "single",
+    "question": "A multi-account platform team needs layer 3 and layer 4 stateful inspection between network segments. Which service fits?",
+    "options": {
+      "A": "AWS Budgets",
+      "B": "AWS Network Firewall",
+      "C": "Amazon Cognito",
+      "D": "Amazon Athena"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Network Firewall provides managed stateful network traffic inspection.\nThe other choices provide identity, SQL queries, or cost monitoring.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-003",
+    "type": "single",
+    "question": "A regulated company must protect internet-facing applications from DDoS attacks and apply request filtering. Which combination is appropriate?",
+    "options": {
+      "A": "A public root key",
+      "B": "A Route 53 TXT record only",
+      "C": "AWS Shield and AWS WAF",
+      "D": "An EBS volume and S3 lifecycle rule"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Shield provides DDoS protection and WAF filters HTTP requests with managed or custom rules.\nStorage and DNS records do not provide layered web protection.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-004",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs to prove that network changes were made by authorized principals. Which services provide useful evidence?",
+    "options": {
+      "A": "A public dashboard only",
+      "B": "A DNS cache entry",
+      "C": "An EBS volume name",
+      "D": "CloudTrail and configuration history"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudTrail and configuration history provide API and resource-change evidence.\nThe other choices do not establish an audit trail.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-005",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must enforce network and service guardrails across accounts. Which organization control should be used?",
+    "options": {
+      "A": "SCPs combined with centralized policy and security services",
+      "B": "One local security group only",
+      "C": "Public network paths",
+      "D": "Manual console notes"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Organization guardrails and centralized policy reduce inconsistent network governance.\nLocal or manual-only controls do not scale across accounts.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-006",
+    "type": "single",
+    "question": "A data platform team must block known malicious domains for workloads in a VPC. Which feature should be evaluated?",
+    "options": {
+      "A": "A CloudWatch dashboard",
+      "B": "Route 53 Resolver DNS Firewall",
+      "C": "An S3 lifecycle rule",
+      "D": "A KMS alias"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "DNS Firewall can block or allow domain queries for VPC workloads.\nThe other choices do not filter DNS requests.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-007",
+    "type": "single",
+    "question": "A security-conscious engineering team needs layer 3 and layer 4 stateful inspection between network segments. Which service fits?",
+    "options": {
+      "A": "Amazon Athena",
+      "B": "AWS Budgets",
+      "C": "AWS Network Firewall",
+      "D": "Amazon Cognito"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Network Firewall provides managed stateful network traffic inspection.\nThe other choices provide identity, SQL queries, or cost monitoring.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-008",
+    "type": "single",
+    "question": "A company migrating an existing workload must protect internet-facing applications from DDoS attacks and apply request filtering. Which combination is appropriate?",
+    "options": {
+      "A": "An EBS volume and S3 lifecycle rule",
+      "B": "A public root key",
+      "C": "A Route 53 TXT record only",
+      "D": "AWS Shield and AWS WAF"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Shield provides DDoS protection and WAF filters HTTP requests with managed or custom rules.\nStorage and DNS records do not provide layered web protection.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-009",
+    "type": "single",
+    "question": "A team with strict recovery objectives needs to prove that network changes were made by authorized principals. Which services provide useful evidence?",
+    "options": {
+      "A": "CloudTrail and configuration history",
+      "B": "A public dashboard only",
+      "C": "A DNS cache entry",
+      "D": "An EBS volume name"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "CloudTrail and configuration history provide API and resource-change evidence.\nThe other choices do not establish an audit trail.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-010",
+    "type": "single",
+    "question": "A developer team preparing a release must enforce network and service guardrails across accounts. Which organization control should be used?",
+    "options": {
+      "A": "Manual console notes",
+      "B": "SCPs combined with centralized policy and security services",
+      "C": "One local security group only",
+      "D": "Public network paths"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Organization guardrails and centralized policy reduce inconsistent network governance.\nLocal or manual-only controls do not scale across accounts.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-011",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions must block known malicious domains for workloads in a VPC. Which feature should be evaluated?",
+    "options": {
+      "A": "A KMS alias",
+      "B": "A CloudWatch dashboard",
+      "C": "Route 53 Resolver DNS Firewall",
+      "D": "An S3 lifecycle rule"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "DNS Firewall can block or allow domain queries for VPC workloads.\nThe other choices do not filter DNS requests.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-012",
+    "type": "single",
+    "question": "A service owner reviewing an incident needs layer 3 and layer 4 stateful inspection between network segments. Which service fits?",
+    "options": {
+      "A": "Amazon Cognito",
+      "B": "Amazon Athena",
+      "C": "AWS Budgets",
+      "D": "AWS Network Firewall"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Network Firewall provides managed stateful network traffic inspection.\nThe other choices provide identity, SQL queries, or cost monitoring.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-013",
+    "type": "single",
+    "question": "A team optimizing an existing implementation must protect internet-facing applications from DDoS attacks and apply request filtering. Which combination is appropriate?",
+    "options": {
+      "A": "AWS Shield and AWS WAF",
+      "B": "An EBS volume and S3 lifecycle rule",
+      "C": "A public root key",
+      "D": "A Route 53 TXT record only"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Shield provides DDoS protection and WAF filters HTTP requests with managed or custom rules.\nStorage and DNS records do not provide layered web protection.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-014",
+    "type": "single",
+    "question": "A company introducing an automated workflow needs to prove that network changes were made by authorized principals. Which services provide useful evidence?",
+    "options": {
+      "A": "An EBS volume name",
+      "B": "CloudTrail and configuration history",
+      "C": "A public dashboard only",
+      "D": "A DNS cache entry"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudTrail and configuration history provide API and resource-change evidence.\nThe other choices do not establish an audit trail.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-015",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment must enforce network and service guardrails across accounts. Which organization control should be used?",
+    "options": {
+      "A": "Public network paths",
+      "B": "Manual console notes",
+      "C": "SCPs combined with centralized policy and security services",
+      "D": "One local security group only"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Organization guardrails and centralized policy reduce inconsistent network governance.\nLocal or manual-only controls do not scale across accounts.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-016",
+    "type": "single",
+    "question": "A customer-facing application team must block known malicious domains for workloads in a VPC. Which feature should be evaluated?",
+    "options": {
+      "A": "An S3 lifecycle rule",
+      "B": "A KMS alias",
+      "C": "A CloudWatch dashboard",
+      "D": "Route 53 Resolver DNS Firewall"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "DNS Firewall can block or allow domain queries for VPC workloads.\nThe other choices do not filter DNS requests.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-017",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments needs layer 3 and layer 4 stateful inspection between network segments. Which service fits?",
+    "options": {
+      "A": "AWS Network Firewall",
+      "B": "Amazon Cognito",
+      "C": "Amazon Athena",
+      "D": "AWS Budgets"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Network Firewall provides managed stateful network traffic inspection.\nThe other choices provide identity, SQL queries, or cost monitoring.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-018",
+    "type": "single",
+    "question": "A team preparing evidence for an audit must protect internet-facing applications from DDoS attacks and apply request filtering. Which combination is appropriate?",
+    "options": {
+      "A": "A Route 53 TXT record only",
+      "B": "AWS Shield and AWS WAF",
+      "C": "An EBS volume and S3 lifecycle rule",
+      "D": "A public root key"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Shield provides DDoS protection and WAF filters HTTP requests with managed or custom rules.\nStorage and DNS records do not provide layered web protection.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-019",
+    "type": "single",
+    "question": "A business replacing a manual process needs to prove that network changes were made by authorized principals. Which services provide useful evidence?",
+    "options": {
+      "A": "A DNS cache entry",
+      "B": "An EBS volume name",
+      "C": "CloudTrail and configuration history",
+      "D": "A public dashboard only"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "CloudTrail and configuration history provide API and resource-change evidence.\nThe other choices do not establish an audit trail.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-020",
+    "type": "single",
+    "question": "A team validating a design against the exam guide must enforce network and service guardrails across accounts. Which organization control should be used?",
+    "options": {
+      "A": "One local security group only",
+      "B": "Public network paths",
+      "C": "Manual console notes",
+      "D": "SCPs combined with centralized policy and security services"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Organization guardrails and centralized policy reduce inconsistent network governance.\nLocal or manual-only controls do not scale across accounts.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-021",
+    "type": "single",
+    "question": "A production team must block known malicious domains for workloads in a VPC. Which feature should be evaluated?",
+    "options": {
+      "A": "Route 53 Resolver DNS Firewall",
+      "B": "An S3 lifecycle rule",
+      "C": "A KMS alias",
+      "D": "A CloudWatch dashboard"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "DNS Firewall can block or allow domain queries for VPC workloads.\nThe other choices do not filter DNS requests.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-022",
+    "type": "single",
+    "question": "A multi-account platform team needs layer 3 and layer 4 stateful inspection between network segments. Which service fits?",
+    "options": {
+      "A": "AWS Budgets",
+      "B": "AWS Network Firewall",
+      "C": "Amazon Cognito",
+      "D": "Amazon Athena"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Network Firewall provides managed stateful network traffic inspection.\nThe other choices provide identity, SQL queries, or cost monitoring.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-023",
+    "type": "single",
+    "question": "A regulated company must protect internet-facing applications from DDoS attacks and apply request filtering. Which combination is appropriate?",
+    "options": {
+      "A": "A public root key",
+      "B": "A Route 53 TXT record only",
+      "C": "AWS Shield and AWS WAF",
+      "D": "An EBS volume and S3 lifecycle rule"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Shield provides DDoS protection and WAF filters HTTP requests with managed or custom rules.\nStorage and DNS records do not provide layered web protection.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-024",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs to prove that network changes were made by authorized principals. Which services provide useful evidence?",
+    "options": {
+      "A": "A public dashboard only",
+      "B": "A DNS cache entry",
+      "C": "An EBS volume name",
+      "D": "CloudTrail and configuration history"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudTrail and configuration history provide API and resource-change evidence.\nThe other choices do not establish an audit trail.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-025",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must enforce network and service guardrails across accounts. Which organization control should be used?",
+    "options": {
+      "A": "SCPs combined with centralized policy and security services",
+      "B": "One local security group only",
+      "C": "Public network paths",
+      "D": "Manual console notes"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Organization guardrails and centralized policy reduce inconsistent network governance.\nLocal or manual-only controls do not scale across accounts.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-026",
+    "type": "single",
+    "question": "A data platform team must block known malicious domains for workloads in a VPC. Which feature should be evaluated?",
+    "options": {
+      "A": "A CloudWatch dashboard",
+      "B": "Route 53 Resolver DNS Firewall",
+      "C": "An S3 lifecycle rule",
+      "D": "A KMS alias"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "DNS Firewall can block or allow domain queries for VPC workloads.\nThe other choices do not filter DNS requests.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-027",
+    "type": "single",
+    "question": "A security-conscious engineering team needs layer 3 and layer 4 stateful inspection between network segments. Which service fits?",
+    "options": {
+      "A": "Amazon Athena",
+      "B": "AWS Budgets",
+      "C": "AWS Network Firewall",
+      "D": "Amazon Cognito"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Network Firewall provides managed stateful network traffic inspection.\nThe other choices provide identity, SQL queries, or cost monitoring.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-028",
+    "type": "single",
+    "question": "A company migrating an existing workload must protect internet-facing applications from DDoS attacks and apply request filtering. Which combination is appropriate?",
+    "options": {
+      "A": "An EBS volume and S3 lifecycle rule",
+      "B": "A public root key",
+      "C": "A Route 53 TXT record only",
+      "D": "AWS Shield and AWS WAF"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Shield provides DDoS protection and WAF filters HTTP requests with managed or custom rules.\nStorage and DNS records do not provide layered web protection.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-029",
+    "type": "single",
+    "question": "A team with strict recovery objectives needs to prove that network changes were made by authorized principals. Which services provide useful evidence?",
+    "options": {
+      "A": "CloudTrail and configuration history",
+      "B": "A public dashboard only",
+      "C": "A DNS cache entry",
+      "D": "An EBS volume name"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "CloudTrail and configuration history provide API and resource-change evidence.\nThe other choices do not establish an audit trail.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-030",
+    "type": "single",
+    "question": "A developer team preparing a release must enforce network and service guardrails across accounts. Which organization control should be used?",
+    "options": {
+      "A": "Manual console notes",
+      "B": "SCPs combined with centralized policy and security services",
+      "C": "One local security group only",
+      "D": "Public network paths"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Organization guardrails and centralized policy reduce inconsistent network governance.\nLocal or manual-only controls do not scale across accounts.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-031",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions must block known malicious domains for workloads in a VPC. Which feature should be evaluated?",
+    "options": {
+      "A": "A KMS alias",
+      "B": "A CloudWatch dashboard",
+      "C": "Route 53 Resolver DNS Firewall",
+      "D": "An S3 lifecycle rule"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "DNS Firewall can block or allow domain queries for VPC workloads.\nThe other choices do not filter DNS requests.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-032",
+    "type": "single",
+    "question": "A service owner reviewing an incident needs layer 3 and layer 4 stateful inspection between network segments. Which service fits?",
+    "options": {
+      "A": "Amazon Cognito",
+      "B": "Amazon Athena",
+      "C": "AWS Budgets",
+      "D": "AWS Network Firewall"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Network Firewall provides managed stateful network traffic inspection.\nThe other choices provide identity, SQL queries, or cost monitoring.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-033",
+    "type": "single",
+    "question": "A team optimizing an existing implementation must protect internet-facing applications from DDoS attacks and apply request filtering. Which combination is appropriate?",
+    "options": {
+      "A": "AWS Shield and AWS WAF",
+      "B": "An EBS volume and S3 lifecycle rule",
+      "C": "A public root key",
+      "D": "A Route 53 TXT record only"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Shield provides DDoS protection and WAF filters HTTP requests with managed or custom rules.\nStorage and DNS records do not provide layered web protection.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-034",
+    "type": "single",
+    "question": "A company introducing an automated workflow needs to prove that network changes were made by authorized principals. Which services provide useful evidence?",
+    "options": {
+      "A": "An EBS volume name",
+      "B": "CloudTrail and configuration history",
+      "C": "A public dashboard only",
+      "D": "A DNS cache entry"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudTrail and configuration history provide API and resource-change evidence.\nThe other choices do not establish an audit trail.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-035",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment must enforce network and service guardrails across accounts. Which organization control should be used?",
+    "options": {
+      "A": "Public network paths",
+      "B": "Manual console notes",
+      "C": "SCPs combined with centralized policy and security services",
+      "D": "One local security group only"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Organization guardrails and centralized policy reduce inconsistent network governance.\nLocal or manual-only controls do not scale across accounts.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-036",
+    "type": "single",
+    "question": "A customer-facing application team must block known malicious domains for workloads in a VPC. Which feature should be evaluated?",
+    "options": {
+      "A": "An S3 lifecycle rule",
+      "B": "A KMS alias",
+      "C": "A CloudWatch dashboard",
+      "D": "Route 53 Resolver DNS Firewall"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "DNS Firewall can block or allow domain queries for VPC workloads.\nThe other choices do not filter DNS requests.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-037",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments needs layer 3 and layer 4 stateful inspection between network segments. Which service fits?",
+    "options": {
+      "A": "AWS Network Firewall",
+      "B": "Amazon Cognito",
+      "C": "Amazon Athena",
+      "D": "AWS Budgets"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Network Firewall provides managed stateful network traffic inspection.\nThe other choices provide identity, SQL queries, or cost monitoring.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-038",
+    "type": "single",
+    "question": "A team preparing evidence for an audit must protect internet-facing applications from DDoS attacks and apply request filtering. Which combination is appropriate?",
+    "options": {
+      "A": "A Route 53 TXT record only",
+      "B": "AWS Shield and AWS WAF",
+      "C": "An EBS volume and S3 lifecycle rule",
+      "D": "A public root key"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Shield provides DDoS protection and WAF filters HTTP requests with managed or custom rules.\nStorage and DNS records do not provide layered web protection.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-039",
+    "type": "single",
+    "question": "A business replacing a manual process needs to prove that network changes were made by authorized principals. Which services provide useful evidence?",
+    "options": {
+      "A": "A DNS cache entry",
+      "B": "An EBS volume name",
+      "C": "CloudTrail and configuration history",
+      "D": "A public dashboard only"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "CloudTrail and configuration history provide API and resource-change evidence.\nThe other choices do not establish an audit trail.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-040",
+    "type": "single",
+    "question": "A team validating a design against the exam guide must enforce network and service guardrails across accounts. Which organization control should be used?",
+    "options": {
+      "A": "One local security group only",
+      "B": "Public network paths",
+      "C": "Manual console notes",
+      "D": "SCPs combined with centralized policy and security services"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Organization guardrails and centralized policy reduce inconsistent network governance.\nLocal or manual-only controls do not scale across accounts.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-041",
+    "type": "single",
+    "question": "A production team must block known malicious domains for workloads in a VPC. Which feature should be evaluated?",
+    "options": {
+      "A": "Route 53 Resolver DNS Firewall",
+      "B": "An S3 lifecycle rule",
+      "C": "A KMS alias",
+      "D": "A CloudWatch dashboard"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "DNS Firewall can block or allow domain queries for VPC workloads.\nThe other choices do not filter DNS requests.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-042",
+    "type": "single",
+    "question": "A multi-account platform team needs layer 3 and layer 4 stateful inspection between network segments. Which service fits?",
+    "options": {
+      "A": "AWS Budgets",
+      "B": "AWS Network Firewall",
+      "C": "Amazon Cognito",
+      "D": "Amazon Athena"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Network Firewall provides managed stateful network traffic inspection.\nThe other choices provide identity, SQL queries, or cost monitoring.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-043",
+    "type": "single",
+    "question": "A regulated company must protect internet-facing applications from DDoS attacks and apply request filtering. Which combination is appropriate?",
+    "options": {
+      "A": "A public root key",
+      "B": "A Route 53 TXT record only",
+      "C": "AWS Shield and AWS WAF",
+      "D": "An EBS volume and S3 lifecycle rule"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Shield provides DDoS protection and WAF filters HTTP requests with managed or custom rules.\nStorage and DNS records do not provide layered web protection.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-044",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs to prove that network changes were made by authorized principals. Which services provide useful evidence?",
+    "options": {
+      "A": "A public dashboard only",
+      "B": "A DNS cache entry",
+      "C": "An EBS volume name",
+      "D": "CloudTrail and configuration history"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudTrail and configuration history provide API and resource-change evidence.\nThe other choices do not establish an audit trail.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-045",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must enforce network and service guardrails across accounts. Which organization control should be used?",
+    "options": {
+      "A": "SCPs combined with centralized policy and security services",
+      "B": "One local security group only",
+      "C": "Public network paths",
+      "D": "Manual console notes"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Organization guardrails and centralized policy reduce inconsistent network governance.\nLocal or manual-only controls do not scale across accounts.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-046",
+    "type": "single",
+    "question": "A data platform team must block known malicious domains for workloads in a VPC. Which feature should be evaluated?",
+    "options": {
+      "A": "A CloudWatch dashboard",
+      "B": "Route 53 Resolver DNS Firewall",
+      "C": "An S3 lifecycle rule",
+      "D": "A KMS alias"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "DNS Firewall can block or allow domain queries for VPC workloads.\nThe other choices do not filter DNS requests.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d4-047",
+    "type": "single",
+    "question": "A security-conscious engineering team needs layer 3 and layer 4 stateful inspection between network segments. Which service fits?",
+    "options": {
+      "A": "Amazon Athena",
+      "B": "AWS Budgets",
+      "C": "AWS Network Firewall",
+      "D": "Amazon Cognito"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Network Firewall provides managed stateful network traffic inspection.\nThe other choices provide identity, SQL queries, or cost monitoring.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  }
+]

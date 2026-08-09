@@ -1,0 +1,930 @@
+[
+  {
+    "id": "aip-c01-d2-001",
+    "type": "single",
+    "question": "A production team needs a model to call approved business APIs while retaining control over tool permissions. Which pattern is appropriate?",
+    "options": {
+      "A": "Allow arbitrary network egress",
+      "B": "Store tools in a public bucket",
+      "C": "An agent with narrowly scoped action groups and IAM permissions",
+      "D": "Give the model administrator credentials"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Scoped action groups and IAM permissions constrain agent capabilities and reduce blast radius.\nAdministrator credentials and unrestricted tools are unsafe.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-002",
+    "type": "single",
+    "question": "A multi-account platform team must keep prompts consistent across several applications and versions. Which capability should be used?",
+    "options": {
+      "A": "Write prompts only in chat messages",
+      "B": "Use random prompts per request",
+      "C": "Disable evaluation",
+      "D": "Prompt templates or prompt management with version control"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Versioned prompt management improves reuse, testing, and controlled rollout.\nUnversioned or random prompts make application behavior difficult to reproduce.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-003",
+    "type": "single",
+    "question": "A regulated company needs to stream model output to a web client as it is generated. Which API behavior should be used?",
+    "options": {
+      "A": "A streaming inference response",
+      "B": "Wait for a daily batch job",
+      "C": "Store output only in EBS",
+      "D": "Use a DNS health check"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Streaming responses improve perceived latency for interactive applications.\nBatch jobs, EBS, and DNS checks do not stream model output.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-004",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase must limit the amount of retrieved context sent to a model while preserving relevant passages. Which approach fits?",
+    "options": {
+      "A": "Increase unrelated prompt text",
+      "B": "Retrieve, rank, and limit top relevant chunks",
+      "C": "Send the entire data lake every time",
+      "D": "Use no retrieval"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Ranking and limiting context controls token cost while keeping relevant evidence.\nSending all data increases cost and noise, while no retrieval loses grounding.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-005",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs to invoke a foundation model from an application without hosting GPU instances. Which service should be used?",
+    "options": {
+      "A": "Amazon Route 53",
+      "B": "AWS Config",
+      "C": "Amazon Bedrock",
+      "D": "A self-managed GPU fleet only"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Amazon Bedrock provides managed API access to foundation models without managing model servers.\nThe other choices do not provide managed foundation model inference.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-006",
+    "type": "single",
+    "question": "A data platform team needs a model to call approved business APIs while retaining control over tool permissions. Which pattern is appropriate?",
+    "options": {
+      "A": "Give the model administrator credentials",
+      "B": "Allow arbitrary network egress",
+      "C": "Store tools in a public bucket",
+      "D": "An agent with narrowly scoped action groups and IAM permissions"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Scoped action groups and IAM permissions constrain agent capabilities and reduce blast radius.\nAdministrator credentials and unrestricted tools are unsafe.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-007",
+    "type": "single",
+    "question": "A security-conscious engineering team must keep prompts consistent across several applications and versions. Which capability should be used?",
+    "options": {
+      "A": "Prompt templates or prompt management with version control",
+      "B": "Write prompts only in chat messages",
+      "C": "Use random prompts per request",
+      "D": "Disable evaluation"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Versioned prompt management improves reuse, testing, and controlled rollout.\nUnversioned or random prompts make application behavior difficult to reproduce.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-008",
+    "type": "single",
+    "question": "A company migrating an existing workload needs to stream model output to a web client as it is generated. Which API behavior should be used?",
+    "options": {
+      "A": "Use a DNS health check",
+      "B": "A streaming inference response",
+      "C": "Wait for a daily batch job",
+      "D": "Store output only in EBS"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Streaming responses improve perceived latency for interactive applications.\nBatch jobs, EBS, and DNS checks do not stream model output.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-009",
+    "type": "single",
+    "question": "A team with strict recovery objectives must limit the amount of retrieved context sent to a model while preserving relevant passages. Which approach fits?",
+    "options": {
+      "A": "Use no retrieval",
+      "B": "Increase unrelated prompt text",
+      "C": "Retrieve, rank, and limit top relevant chunks",
+      "D": "Send the entire data lake every time"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Ranking and limiting context controls token cost while keeping relevant evidence.\nSending all data increases cost and noise, while no retrieval loses grounding.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-010",
+    "type": "single",
+    "question": "A developer team preparing a release needs to invoke a foundation model from an application without hosting GPU instances. Which service should be used?",
+    "options": {
+      "A": "A self-managed GPU fleet only",
+      "B": "Amazon Route 53",
+      "C": "AWS Config",
+      "D": "Amazon Bedrock"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Amazon Bedrock provides managed API access to foundation models without managing model servers.\nThe other choices do not provide managed foundation model inference.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-011",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs a model to call approved business APIs while retaining control over tool permissions. Which pattern is appropriate?",
+    "options": {
+      "A": "An agent with narrowly scoped action groups and IAM permissions",
+      "B": "Give the model administrator credentials",
+      "C": "Allow arbitrary network egress",
+      "D": "Store tools in a public bucket"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Scoped action groups and IAM permissions constrain agent capabilities and reduce blast radius.\nAdministrator credentials and unrestricted tools are unsafe.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-012",
+    "type": "single",
+    "question": "A service owner reviewing an incident must keep prompts consistent across several applications and versions. Which capability should be used?",
+    "options": {
+      "A": "Disable evaluation",
+      "B": "Prompt templates or prompt management with version control",
+      "C": "Write prompts only in chat messages",
+      "D": "Use random prompts per request"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Versioned prompt management improves reuse, testing, and controlled rollout.\nUnversioned or random prompts make application behavior difficult to reproduce.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-013",
+    "type": "single",
+    "question": "A team optimizing an existing implementation needs to stream model output to a web client as it is generated. Which API behavior should be used?",
+    "options": {
+      "A": "Store output only in EBS",
+      "B": "Use a DNS health check",
+      "C": "A streaming inference response",
+      "D": "Wait for a daily batch job"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Streaming responses improve perceived latency for interactive applications.\nBatch jobs, EBS, and DNS checks do not stream model output.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-014",
+    "type": "single",
+    "question": "A company introducing an automated workflow must limit the amount of retrieved context sent to a model while preserving relevant passages. Which approach fits?",
+    "options": {
+      "A": "Send the entire data lake every time",
+      "B": "Use no retrieval",
+      "C": "Increase unrelated prompt text",
+      "D": "Retrieve, rank, and limit top relevant chunks"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Ranking and limiting context controls token cost while keeping relevant evidence.\nSending all data increases cost and noise, while no retrieval loses grounding.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-015",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment needs to invoke a foundation model from an application without hosting GPU instances. Which service should be used?",
+    "options": {
+      "A": "Amazon Bedrock",
+      "B": "A self-managed GPU fleet only",
+      "C": "Amazon Route 53",
+      "D": "AWS Config"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Amazon Bedrock provides managed API access to foundation models without managing model servers.\nThe other choices do not provide managed foundation model inference.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-016",
+    "type": "single",
+    "question": "A customer-facing application team needs a model to call approved business APIs while retaining control over tool permissions. Which pattern is appropriate?",
+    "options": {
+      "A": "Store tools in a public bucket",
+      "B": "An agent with narrowly scoped action groups and IAM permissions",
+      "C": "Give the model administrator credentials",
+      "D": "Allow arbitrary network egress"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Scoped action groups and IAM permissions constrain agent capabilities and reduce blast radius.\nAdministrator credentials and unrestricted tools are unsafe.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-017",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments must keep prompts consistent across several applications and versions. Which capability should be used?",
+    "options": {
+      "A": "Use random prompts per request",
+      "B": "Disable evaluation",
+      "C": "Prompt templates or prompt management with version control",
+      "D": "Write prompts only in chat messages"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Versioned prompt management improves reuse, testing, and controlled rollout.\nUnversioned or random prompts make application behavior difficult to reproduce.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-018",
+    "type": "single",
+    "question": "A team preparing evidence for an audit needs to stream model output to a web client as it is generated. Which API behavior should be used?",
+    "options": {
+      "A": "Wait for a daily batch job",
+      "B": "Store output only in EBS",
+      "C": "Use a DNS health check",
+      "D": "A streaming inference response"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Streaming responses improve perceived latency for interactive applications.\nBatch jobs, EBS, and DNS checks do not stream model output.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-019",
+    "type": "single",
+    "question": "A business replacing a manual process must limit the amount of retrieved context sent to a model while preserving relevant passages. Which approach fits?",
+    "options": {
+      "A": "Retrieve, rank, and limit top relevant chunks",
+      "B": "Send the entire data lake every time",
+      "C": "Use no retrieval",
+      "D": "Increase unrelated prompt text"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Ranking and limiting context controls token cost while keeping relevant evidence.\nSending all data increases cost and noise, while no retrieval loses grounding.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-020",
+    "type": "single",
+    "question": "A team validating a design against the exam guide needs to invoke a foundation model from an application without hosting GPU instances. Which service should be used?",
+    "options": {
+      "A": "AWS Config",
+      "B": "Amazon Bedrock",
+      "C": "A self-managed GPU fleet only",
+      "D": "Amazon Route 53"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Amazon Bedrock provides managed API access to foundation models without managing model servers.\nThe other choices do not provide managed foundation model inference.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-021",
+    "type": "single",
+    "question": "A production team needs a model to call approved business APIs while retaining control over tool permissions. Which pattern is appropriate?",
+    "options": {
+      "A": "Allow arbitrary network egress",
+      "B": "Store tools in a public bucket",
+      "C": "An agent with narrowly scoped action groups and IAM permissions",
+      "D": "Give the model administrator credentials"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Scoped action groups and IAM permissions constrain agent capabilities and reduce blast radius.\nAdministrator credentials and unrestricted tools are unsafe.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-022",
+    "type": "single",
+    "question": "A multi-account platform team must keep prompts consistent across several applications and versions. Which capability should be used?",
+    "options": {
+      "A": "Write prompts only in chat messages",
+      "B": "Use random prompts per request",
+      "C": "Disable evaluation",
+      "D": "Prompt templates or prompt management with version control"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Versioned prompt management improves reuse, testing, and controlled rollout.\nUnversioned or random prompts make application behavior difficult to reproduce.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-023",
+    "type": "single",
+    "question": "A regulated company needs to stream model output to a web client as it is generated. Which API behavior should be used?",
+    "options": {
+      "A": "A streaming inference response",
+      "B": "Wait for a daily batch job",
+      "C": "Store output only in EBS",
+      "D": "Use a DNS health check"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Streaming responses improve perceived latency for interactive applications.\nBatch jobs, EBS, and DNS checks do not stream model output.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-024",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase must limit the amount of retrieved context sent to a model while preserving relevant passages. Which approach fits?",
+    "options": {
+      "A": "Increase unrelated prompt text",
+      "B": "Retrieve, rank, and limit top relevant chunks",
+      "C": "Send the entire data lake every time",
+      "D": "Use no retrieval"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Ranking and limiting context controls token cost while keeping relevant evidence.\nSending all data increases cost and noise, while no retrieval loses grounding.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-025",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs to invoke a foundation model from an application without hosting GPU instances. Which service should be used?",
+    "options": {
+      "A": "Amazon Route 53",
+      "B": "AWS Config",
+      "C": "Amazon Bedrock",
+      "D": "A self-managed GPU fleet only"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Amazon Bedrock provides managed API access to foundation models without managing model servers.\nThe other choices do not provide managed foundation model inference.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-026",
+    "type": "single",
+    "question": "A data platform team needs a model to call approved business APIs while retaining control over tool permissions. Which pattern is appropriate?",
+    "options": {
+      "A": "Give the model administrator credentials",
+      "B": "Allow arbitrary network egress",
+      "C": "Store tools in a public bucket",
+      "D": "An agent with narrowly scoped action groups and IAM permissions"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Scoped action groups and IAM permissions constrain agent capabilities and reduce blast radius.\nAdministrator credentials and unrestricted tools are unsafe.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-027",
+    "type": "single",
+    "question": "A security-conscious engineering team must keep prompts consistent across several applications and versions. Which capability should be used?",
+    "options": {
+      "A": "Prompt templates or prompt management with version control",
+      "B": "Write prompts only in chat messages",
+      "C": "Use random prompts per request",
+      "D": "Disable evaluation"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Versioned prompt management improves reuse, testing, and controlled rollout.\nUnversioned or random prompts make application behavior difficult to reproduce.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-028",
+    "type": "single",
+    "question": "A company migrating an existing workload needs to stream model output to a web client as it is generated. Which API behavior should be used?",
+    "options": {
+      "A": "Use a DNS health check",
+      "B": "A streaming inference response",
+      "C": "Wait for a daily batch job",
+      "D": "Store output only in EBS"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Streaming responses improve perceived latency for interactive applications.\nBatch jobs, EBS, and DNS checks do not stream model output.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-029",
+    "type": "single",
+    "question": "A team with strict recovery objectives must limit the amount of retrieved context sent to a model while preserving relevant passages. Which approach fits?",
+    "options": {
+      "A": "Use no retrieval",
+      "B": "Increase unrelated prompt text",
+      "C": "Retrieve, rank, and limit top relevant chunks",
+      "D": "Send the entire data lake every time"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Ranking and limiting context controls token cost while keeping relevant evidence.\nSending all data increases cost and noise, while no retrieval loses grounding.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-030",
+    "type": "single",
+    "question": "A developer team preparing a release needs to invoke a foundation model from an application without hosting GPU instances. Which service should be used?",
+    "options": {
+      "A": "A self-managed GPU fleet only",
+      "B": "Amazon Route 53",
+      "C": "AWS Config",
+      "D": "Amazon Bedrock"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Amazon Bedrock provides managed API access to foundation models without managing model servers.\nThe other choices do not provide managed foundation model inference.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-031",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs a model to call approved business APIs while retaining control over tool permissions. Which pattern is appropriate?",
+    "options": {
+      "A": "An agent with narrowly scoped action groups and IAM permissions",
+      "B": "Give the model administrator credentials",
+      "C": "Allow arbitrary network egress",
+      "D": "Store tools in a public bucket"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Scoped action groups and IAM permissions constrain agent capabilities and reduce blast radius.\nAdministrator credentials and unrestricted tools are unsafe.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-032",
+    "type": "single",
+    "question": "A service owner reviewing an incident must keep prompts consistent across several applications and versions. Which capability should be used?",
+    "options": {
+      "A": "Disable evaluation",
+      "B": "Prompt templates or prompt management with version control",
+      "C": "Write prompts only in chat messages",
+      "D": "Use random prompts per request"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Versioned prompt management improves reuse, testing, and controlled rollout.\nUnversioned or random prompts make application behavior difficult to reproduce.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-033",
+    "type": "single",
+    "question": "A team optimizing an existing implementation needs to stream model output to a web client as it is generated. Which API behavior should be used?",
+    "options": {
+      "A": "Store output only in EBS",
+      "B": "Use a DNS health check",
+      "C": "A streaming inference response",
+      "D": "Wait for a daily batch job"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Streaming responses improve perceived latency for interactive applications.\nBatch jobs, EBS, and DNS checks do not stream model output.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-034",
+    "type": "single",
+    "question": "A company introducing an automated workflow must limit the amount of retrieved context sent to a model while preserving relevant passages. Which approach fits?",
+    "options": {
+      "A": "Send the entire data lake every time",
+      "B": "Use no retrieval",
+      "C": "Increase unrelated prompt text",
+      "D": "Retrieve, rank, and limit top relevant chunks"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Ranking and limiting context controls token cost while keeping relevant evidence.\nSending all data increases cost and noise, while no retrieval loses grounding.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-035",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment needs to invoke a foundation model from an application without hosting GPU instances. Which service should be used?",
+    "options": {
+      "A": "Amazon Bedrock",
+      "B": "A self-managed GPU fleet only",
+      "C": "Amazon Route 53",
+      "D": "AWS Config"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Amazon Bedrock provides managed API access to foundation models without managing model servers.\nThe other choices do not provide managed foundation model inference.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-036",
+    "type": "single",
+    "question": "A customer-facing application team needs a model to call approved business APIs while retaining control over tool permissions. Which pattern is appropriate?",
+    "options": {
+      "A": "Store tools in a public bucket",
+      "B": "An agent with narrowly scoped action groups and IAM permissions",
+      "C": "Give the model administrator credentials",
+      "D": "Allow arbitrary network egress"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Scoped action groups and IAM permissions constrain agent capabilities and reduce blast radius.\nAdministrator credentials and unrestricted tools are unsafe.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-037",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments must keep prompts consistent across several applications and versions. Which capability should be used?",
+    "options": {
+      "A": "Use random prompts per request",
+      "B": "Disable evaluation",
+      "C": "Prompt templates or prompt management with version control",
+      "D": "Write prompts only in chat messages"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Versioned prompt management improves reuse, testing, and controlled rollout.\nUnversioned or random prompts make application behavior difficult to reproduce.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-038",
+    "type": "single",
+    "question": "A team preparing evidence for an audit needs to stream model output to a web client as it is generated. Which API behavior should be used?",
+    "options": {
+      "A": "Wait for a daily batch job",
+      "B": "Store output only in EBS",
+      "C": "Use a DNS health check",
+      "D": "A streaming inference response"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Streaming responses improve perceived latency for interactive applications.\nBatch jobs, EBS, and DNS checks do not stream model output.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-039",
+    "type": "single",
+    "question": "A business replacing a manual process must limit the amount of retrieved context sent to a model while preserving relevant passages. Which approach fits?",
+    "options": {
+      "A": "Retrieve, rank, and limit top relevant chunks",
+      "B": "Send the entire data lake every time",
+      "C": "Use no retrieval",
+      "D": "Increase unrelated prompt text"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Ranking and limiting context controls token cost while keeping relevant evidence.\nSending all data increases cost and noise, while no retrieval loses grounding.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-040",
+    "type": "single",
+    "question": "A team validating a design against the exam guide needs to invoke a foundation model from an application without hosting GPU instances. Which service should be used?",
+    "options": {
+      "A": "AWS Config",
+      "B": "Amazon Bedrock",
+      "C": "A self-managed GPU fleet only",
+      "D": "Amazon Route 53"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Amazon Bedrock provides managed API access to foundation models without managing model servers.\nThe other choices do not provide managed foundation model inference.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-041",
+    "type": "single",
+    "question": "A production team needs a model to call approved business APIs while retaining control over tool permissions. Which pattern is appropriate?",
+    "options": {
+      "A": "Allow arbitrary network egress",
+      "B": "Store tools in a public bucket",
+      "C": "An agent with narrowly scoped action groups and IAM permissions",
+      "D": "Give the model administrator credentials"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Scoped action groups and IAM permissions constrain agent capabilities and reduce blast radius.\nAdministrator credentials and unrestricted tools are unsafe.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-042",
+    "type": "single",
+    "question": "A multi-account platform team must keep prompts consistent across several applications and versions. Which capability should be used?",
+    "options": {
+      "A": "Write prompts only in chat messages",
+      "B": "Use random prompts per request",
+      "C": "Disable evaluation",
+      "D": "Prompt templates or prompt management with version control"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Versioned prompt management improves reuse, testing, and controlled rollout.\nUnversioned or random prompts make application behavior difficult to reproduce.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-043",
+    "type": "single",
+    "question": "A regulated company needs to stream model output to a web client as it is generated. Which API behavior should be used?",
+    "options": {
+      "A": "A streaming inference response",
+      "B": "Wait for a daily batch job",
+      "C": "Store output only in EBS",
+      "D": "Use a DNS health check"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Streaming responses improve perceived latency for interactive applications.\nBatch jobs, EBS, and DNS checks do not stream model output.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-044",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase must limit the amount of retrieved context sent to a model while preserving relevant passages. Which approach fits?",
+    "options": {
+      "A": "Increase unrelated prompt text",
+      "B": "Retrieve, rank, and limit top relevant chunks",
+      "C": "Send the entire data lake every time",
+      "D": "Use no retrieval"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Ranking and limiting context controls token cost while keeping relevant evidence.\nSending all data increases cost and noise, while no retrieval loses grounding.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-045",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs to invoke a foundation model from an application without hosting GPU instances. Which service should be used?",
+    "options": {
+      "A": "Amazon Route 53",
+      "B": "AWS Config",
+      "C": "Amazon Bedrock",
+      "D": "A self-managed GPU fleet only"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Amazon Bedrock provides managed API access to foundation models without managing model servers.\nThe other choices do not provide managed foundation model inference.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-046",
+    "type": "single",
+    "question": "A data platform team needs a model to call approved business APIs while retaining control over tool permissions. Which pattern is appropriate?",
+    "options": {
+      "A": "Give the model administrator credentials",
+      "B": "Allow arbitrary network egress",
+      "C": "Store tools in a public bucket",
+      "D": "An agent with narrowly scoped action groups and IAM permissions"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Scoped action groups and IAM permissions constrain agent capabilities and reduce blast radius.\nAdministrator credentials and unrestricted tools are unsafe.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-047",
+    "type": "single",
+    "question": "A security-conscious engineering team must keep prompts consistent across several applications and versions. Which capability should be used?",
+    "options": {
+      "A": "Prompt templates or prompt management with version control",
+      "B": "Write prompts only in chat messages",
+      "C": "Use random prompts per request",
+      "D": "Disable evaluation"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Versioned prompt management improves reuse, testing, and controlled rollout.\nUnversioned or random prompts make application behavior difficult to reproduce.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-048",
+    "type": "single",
+    "question": "A company migrating an existing workload needs to stream model output to a web client as it is generated. Which API behavior should be used?",
+    "options": {
+      "A": "Use a DNS health check",
+      "B": "A streaming inference response",
+      "C": "Wait for a daily batch job",
+      "D": "Store output only in EBS"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Streaming responses improve perceived latency for interactive applications.\nBatch jobs, EBS, and DNS checks do not stream model output.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-049",
+    "type": "single",
+    "question": "A team with strict recovery objectives must limit the amount of retrieved context sent to a model while preserving relevant passages. Which approach fits?",
+    "options": {
+      "A": "Use no retrieval",
+      "B": "Increase unrelated prompt text",
+      "C": "Retrieve, rank, and limit top relevant chunks",
+      "D": "Send the entire data lake every time"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Ranking and limiting context controls token cost while keeping relevant evidence.\nSending all data increases cost and noise, while no retrieval loses grounding.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-050",
+    "type": "single",
+    "question": "A developer team preparing a release needs to invoke a foundation model from an application without hosting GPU instances. Which service should be used?",
+    "options": {
+      "A": "A self-managed GPU fleet only",
+      "B": "Amazon Route 53",
+      "C": "AWS Config",
+      "D": "Amazon Bedrock"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Amazon Bedrock provides managed API access to foundation models without managing model servers.\nThe other choices do not provide managed foundation model inference.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-051",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs a model to call approved business APIs while retaining control over tool permissions. Which pattern is appropriate?",
+    "options": {
+      "A": "An agent with narrowly scoped action groups and IAM permissions",
+      "B": "Give the model administrator credentials",
+      "C": "Allow arbitrary network egress",
+      "D": "Store tools in a public bucket"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Scoped action groups and IAM permissions constrain agent capabilities and reduce blast radius.\nAdministrator credentials and unrestricted tools are unsafe.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-052",
+    "type": "single",
+    "question": "A service owner reviewing an incident must keep prompts consistent across several applications and versions. Which capability should be used?",
+    "options": {
+      "A": "Disable evaluation",
+      "B": "Prompt templates or prompt management with version control",
+      "C": "Write prompts only in chat messages",
+      "D": "Use random prompts per request"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Versioned prompt management improves reuse, testing, and controlled rollout.\nUnversioned or random prompts make application behavior difficult to reproduce.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-053",
+    "type": "single",
+    "question": "A team optimizing an existing implementation needs to stream model output to a web client as it is generated. Which API behavior should be used?",
+    "options": {
+      "A": "Store output only in EBS",
+      "B": "Use a DNS health check",
+      "C": "A streaming inference response",
+      "D": "Wait for a daily batch job"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Streaming responses improve perceived latency for interactive applications.\nBatch jobs, EBS, and DNS checks do not stream model output.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-054",
+    "type": "single",
+    "question": "A company introducing an automated workflow must limit the amount of retrieved context sent to a model while preserving relevant passages. Which approach fits?",
+    "options": {
+      "A": "Send the entire data lake every time",
+      "B": "Use no retrieval",
+      "C": "Increase unrelated prompt text",
+      "D": "Retrieve, rank, and limit top relevant chunks"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Ranking and limiting context controls token cost while keeping relevant evidence.\nSending all data increases cost and noise, while no retrieval loses grounding.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-055",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment needs to invoke a foundation model from an application without hosting GPU instances. Which service should be used?",
+    "options": {
+      "A": "Amazon Bedrock",
+      "B": "A self-managed GPU fleet only",
+      "C": "Amazon Route 53",
+      "D": "AWS Config"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Amazon Bedrock provides managed API access to foundation models without managing model servers.\nThe other choices do not provide managed foundation model inference.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-056",
+    "type": "single",
+    "question": "A customer-facing application team needs a model to call approved business APIs while retaining control over tool permissions. Which pattern is appropriate?",
+    "options": {
+      "A": "Store tools in a public bucket",
+      "B": "An agent with narrowly scoped action groups and IAM permissions",
+      "C": "Give the model administrator credentials",
+      "D": "Allow arbitrary network egress"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Scoped action groups and IAM permissions constrain agent capabilities and reduce blast radius.\nAdministrator credentials and unrestricted tools are unsafe.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-057",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments must keep prompts consistent across several applications and versions. Which capability should be used?",
+    "options": {
+      "A": "Use random prompts per request",
+      "B": "Disable evaluation",
+      "C": "Prompt templates or prompt management with version control",
+      "D": "Write prompts only in chat messages"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Versioned prompt management improves reuse, testing, and controlled rollout.\nUnversioned or random prompts make application behavior difficult to reproduce.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "aip-c01-d2-058",
+    "type": "single",
+    "question": "A team preparing evidence for an audit needs to stream model output to a web client as it is generated. Which API behavior should be used?",
+    "options": {
+      "A": "Wait for a daily batch job",
+      "B": "Store output only in EBS",
+      "C": "Use a DNS health check",
+      "D": "A streaming inference response"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Streaming responses improve perceived latency for interactive applications.\nBatch jobs, EBS, and DNS checks do not stream model output.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  }
+]

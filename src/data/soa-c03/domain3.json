@@ -1,0 +1,690 @@
+[
+  {
+    "id": "soa-c03-d3-001",
+    "type": "single",
+    "question": "A production team needs repeatable infrastructure changes with a reviewable template. Which service is most appropriate?",
+    "options": {
+      "A": "Amazon Macie",
+      "B": "Amazon CloudFront",
+      "C": "Amazon ElastiCache",
+      "D": "AWS CloudFormation"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudFormation defines and manages AWS resources as infrastructure as code.\nThe other choices discover sensitive data, deliver content, or cache data.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d3-002",
+    "type": "single",
+    "question": "A multi-account platform team needs to run an operational command across a fleet of managed instances. Which service should be used?",
+    "options": {
+      "A": "AWS Systems Manager Run Command",
+      "B": "Amazon S3 Select",
+      "C": "Amazon Cognito",
+      "D": "AWS Shield"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Systems Manager Run Command executes commands across managed instances without requiring inbound SSH.\nThe other choices query objects, manage identities, or protect against DDoS.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d3-003",
+    "type": "single",
+    "question": "A regulated company must share a CloudFormation stack configuration across several accounts and Regions. Which feature fits?",
+    "options": {
+      "A": "A Route 53 health check",
+      "B": "CloudFormation StackSets",
+      "C": "An S3 access point",
+      "D": "A Lambda layer"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "StackSets deploy and manage CloudFormation stacks across accounts and Regions.\nThe other choices manage S3 access, Lambda packaging, or endpoint health.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d3-004",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase wants a resource change event to invoke a remediation Lambda function. Which pattern is suitable?",
+    "options": {
+      "A": "An EBS volume type",
+      "B": "An RDS read replica",
+      "C": "EventBridge rule targeting Lambda",
+      "D": "A NAT gateway route"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge rules can match resource events and invoke automation targets.\nThe other choices are networking, block storage, or database read scaling features.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d3-005",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs to build an immutable machine image on a schedule. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon Inspector only",
+      "B": "AWS Budgets",
+      "C": "Amazon SES",
+      "D": "EC2 Image Builder"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "EC2 Image Builder automates image pipelines that build, test, and distribute AMIs.\nInspector scans for vulnerabilities, Budgets monitors cost, and SES sends email.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d3-006",
+    "type": "single",
+    "question": "A data platform team needs repeatable infrastructure changes with a reviewable template. Which service is most appropriate?",
+    "options": {
+      "A": "AWS CloudFormation",
+      "B": "Amazon Macie",
+      "C": "Amazon CloudFront",
+      "D": "Amazon ElastiCache"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "CloudFormation defines and manages AWS resources as infrastructure as code.\nThe other choices discover sensitive data, deliver content, or cache data.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d3-007",
+    "type": "single",
+    "question": "A security-conscious engineering team needs to run an operational command across a fleet of managed instances. Which service should be used?",
+    "options": {
+      "A": "AWS Shield",
+      "B": "AWS Systems Manager Run Command",
+      "C": "Amazon S3 Select",
+      "D": "Amazon Cognito"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Systems Manager Run Command executes commands across managed instances without requiring inbound SSH.\nThe other choices query objects, manage identities, or protect against DDoS.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d3-008",
+    "type": "single",
+    "question": "A company migrating an existing workload must share a CloudFormation stack configuration across several accounts and Regions. Which feature fits?",
+    "options": {
+      "A": "A Lambda layer",
+      "B": "A Route 53 health check",
+      "C": "CloudFormation StackSets",
+      "D": "An S3 access point"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "StackSets deploy and manage CloudFormation stacks across accounts and Regions.\nThe other choices manage S3 access, Lambda packaging, or endpoint health.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d3-009",
+    "type": "single",
+    "question": "A team with strict recovery objectives wants a resource change event to invoke a remediation Lambda function. Which pattern is suitable?",
+    "options": {
+      "A": "A NAT gateway route",
+      "B": "An EBS volume type",
+      "C": "An RDS read replica",
+      "D": "EventBridge rule targeting Lambda"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge rules can match resource events and invoke automation targets.\nThe other choices are networking, block storage, or database read scaling features.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d3-010",
+    "type": "single",
+    "question": "A developer team preparing a release needs to build an immutable machine image on a schedule. Which service should be evaluated?",
+    "options": {
+      "A": "EC2 Image Builder",
+      "B": "Amazon Inspector only",
+      "C": "AWS Budgets",
+      "D": "Amazon SES"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "EC2 Image Builder automates image pipelines that build, test, and distribute AMIs.\nInspector scans for vulnerabilities, Budgets monitors cost, and SES sends email.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d3-011",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs repeatable infrastructure changes with a reviewable template. Which service is most appropriate?",
+    "options": {
+      "A": "Amazon ElastiCache",
+      "B": "AWS CloudFormation",
+      "C": "Amazon Macie",
+      "D": "Amazon CloudFront"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudFormation defines and manages AWS resources as infrastructure as code.\nThe other choices discover sensitive data, deliver content, or cache data.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d3-012",
+    "type": "single",
+    "question": "A service owner reviewing an incident needs to run an operational command across a fleet of managed instances. Which service should be used?",
+    "options": {
+      "A": "Amazon Cognito",
+      "B": "AWS Shield",
+      "C": "AWS Systems Manager Run Command",
+      "D": "Amazon S3 Select"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Systems Manager Run Command executes commands across managed instances without requiring inbound SSH.\nThe other choices query objects, manage identities, or protect against DDoS.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d3-013",
+    "type": "single",
+    "question": "A team optimizing an existing implementation must share a CloudFormation stack configuration across several accounts and Regions. Which feature fits?",
+    "options": {
+      "A": "An S3 access point",
+      "B": "A Lambda layer",
+      "C": "A Route 53 health check",
+      "D": "CloudFormation StackSets"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "StackSets deploy and manage CloudFormation stacks across accounts and Regions.\nThe other choices manage S3 access, Lambda packaging, or endpoint health.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d3-014",
+    "type": "single",
+    "question": "A company introducing an automated workflow wants a resource change event to invoke a remediation Lambda function. Which pattern is suitable?",
+    "options": {
+      "A": "EventBridge rule targeting Lambda",
+      "B": "A NAT gateway route",
+      "C": "An EBS volume type",
+      "D": "An RDS read replica"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge rules can match resource events and invoke automation targets.\nThe other choices are networking, block storage, or database read scaling features.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d3-015",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment needs to build an immutable machine image on a schedule. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon SES",
+      "B": "EC2 Image Builder",
+      "C": "Amazon Inspector only",
+      "D": "AWS Budgets"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "EC2 Image Builder automates image pipelines that build, test, and distribute AMIs.\nInspector scans for vulnerabilities, Budgets monitors cost, and SES sends email.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d3-016",
+    "type": "single",
+    "question": "A customer-facing application team needs repeatable infrastructure changes with a reviewable template. Which service is most appropriate?",
+    "options": {
+      "A": "Amazon CloudFront",
+      "B": "Amazon ElastiCache",
+      "C": "AWS CloudFormation",
+      "D": "Amazon Macie"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "CloudFormation defines and manages AWS resources as infrastructure as code.\nThe other choices discover sensitive data, deliver content, or cache data.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d3-017",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments needs to run an operational command across a fleet of managed instances. Which service should be used?",
+    "options": {
+      "A": "Amazon S3 Select",
+      "B": "Amazon Cognito",
+      "C": "AWS Shield",
+      "D": "AWS Systems Manager Run Command"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Systems Manager Run Command executes commands across managed instances without requiring inbound SSH.\nThe other choices query objects, manage identities, or protect against DDoS.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d3-018",
+    "type": "single",
+    "question": "A team preparing evidence for an audit must share a CloudFormation stack configuration across several accounts and Regions. Which feature fits?",
+    "options": {
+      "A": "CloudFormation StackSets",
+      "B": "An S3 access point",
+      "C": "A Lambda layer",
+      "D": "A Route 53 health check"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "StackSets deploy and manage CloudFormation stacks across accounts and Regions.\nThe other choices manage S3 access, Lambda packaging, or endpoint health.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d3-019",
+    "type": "single",
+    "question": "A business replacing a manual process wants a resource change event to invoke a remediation Lambda function. Which pattern is suitable?",
+    "options": {
+      "A": "An RDS read replica",
+      "B": "EventBridge rule targeting Lambda",
+      "C": "A NAT gateway route",
+      "D": "An EBS volume type"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge rules can match resource events and invoke automation targets.\nThe other choices are networking, block storage, or database read scaling features.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d3-020",
+    "type": "single",
+    "question": "A team validating a design against the exam guide needs to build an immutable machine image on a schedule. Which service should be evaluated?",
+    "options": {
+      "A": "AWS Budgets",
+      "B": "Amazon SES",
+      "C": "EC2 Image Builder",
+      "D": "Amazon Inspector only"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "EC2 Image Builder automates image pipelines that build, test, and distribute AMIs.\nInspector scans for vulnerabilities, Budgets monitors cost, and SES sends email.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d3-021",
+    "type": "single",
+    "question": "A production team needs repeatable infrastructure changes with a reviewable template. Which service is most appropriate?",
+    "options": {
+      "A": "Amazon Macie",
+      "B": "Amazon CloudFront",
+      "C": "Amazon ElastiCache",
+      "D": "AWS CloudFormation"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudFormation defines and manages AWS resources as infrastructure as code.\nThe other choices discover sensitive data, deliver content, or cache data.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d3-022",
+    "type": "single",
+    "question": "A multi-account platform team needs to run an operational command across a fleet of managed instances. Which service should be used?",
+    "options": {
+      "A": "AWS Systems Manager Run Command",
+      "B": "Amazon S3 Select",
+      "C": "Amazon Cognito",
+      "D": "AWS Shield"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Systems Manager Run Command executes commands across managed instances without requiring inbound SSH.\nThe other choices query objects, manage identities, or protect against DDoS.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d3-023",
+    "type": "single",
+    "question": "A regulated company must share a CloudFormation stack configuration across several accounts and Regions. Which feature fits?",
+    "options": {
+      "A": "A Route 53 health check",
+      "B": "CloudFormation StackSets",
+      "C": "An S3 access point",
+      "D": "A Lambda layer"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "StackSets deploy and manage CloudFormation stacks across accounts and Regions.\nThe other choices manage S3 access, Lambda packaging, or endpoint health.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d3-024",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase wants a resource change event to invoke a remediation Lambda function. Which pattern is suitable?",
+    "options": {
+      "A": "An EBS volume type",
+      "B": "An RDS read replica",
+      "C": "EventBridge rule targeting Lambda",
+      "D": "A NAT gateway route"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge rules can match resource events and invoke automation targets.\nThe other choices are networking, block storage, or database read scaling features.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d3-025",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs to build an immutable machine image on a schedule. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon Inspector only",
+      "B": "AWS Budgets",
+      "C": "Amazon SES",
+      "D": "EC2 Image Builder"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "EC2 Image Builder automates image pipelines that build, test, and distribute AMIs.\nInspector scans for vulnerabilities, Budgets monitors cost, and SES sends email.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d3-026",
+    "type": "single",
+    "question": "A data platform team needs repeatable infrastructure changes with a reviewable template. Which service is most appropriate?",
+    "options": {
+      "A": "AWS CloudFormation",
+      "B": "Amazon Macie",
+      "C": "Amazon CloudFront",
+      "D": "Amazon ElastiCache"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "CloudFormation defines and manages AWS resources as infrastructure as code.\nThe other choices discover sensitive data, deliver content, or cache data.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d3-027",
+    "type": "single",
+    "question": "A security-conscious engineering team needs to run an operational command across a fleet of managed instances. Which service should be used?",
+    "options": {
+      "A": "AWS Shield",
+      "B": "AWS Systems Manager Run Command",
+      "C": "Amazon S3 Select",
+      "D": "Amazon Cognito"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Systems Manager Run Command executes commands across managed instances without requiring inbound SSH.\nThe other choices query objects, manage identities, or protect against DDoS.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d3-028",
+    "type": "single",
+    "question": "A company migrating an existing workload must share a CloudFormation stack configuration across several accounts and Regions. Which feature fits?",
+    "options": {
+      "A": "A Lambda layer",
+      "B": "A Route 53 health check",
+      "C": "CloudFormation StackSets",
+      "D": "An S3 access point"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "StackSets deploy and manage CloudFormation stacks across accounts and Regions.\nThe other choices manage S3 access, Lambda packaging, or endpoint health.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d3-029",
+    "type": "single",
+    "question": "A team with strict recovery objectives wants a resource change event to invoke a remediation Lambda function. Which pattern is suitable?",
+    "options": {
+      "A": "A NAT gateway route",
+      "B": "An EBS volume type",
+      "C": "An RDS read replica",
+      "D": "EventBridge rule targeting Lambda"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge rules can match resource events and invoke automation targets.\nThe other choices are networking, block storage, or database read scaling features.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d3-030",
+    "type": "single",
+    "question": "A developer team preparing a release needs to build an immutable machine image on a schedule. Which service should be evaluated?",
+    "options": {
+      "A": "EC2 Image Builder",
+      "B": "Amazon Inspector only",
+      "C": "AWS Budgets",
+      "D": "Amazon SES"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "EC2 Image Builder automates image pipelines that build, test, and distribute AMIs.\nInspector scans for vulnerabilities, Budgets monitors cost, and SES sends email.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d3-031",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs repeatable infrastructure changes with a reviewable template. Which service is most appropriate?",
+    "options": {
+      "A": "Amazon ElastiCache",
+      "B": "AWS CloudFormation",
+      "C": "Amazon Macie",
+      "D": "Amazon CloudFront"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudFormation defines and manages AWS resources as infrastructure as code.\nThe other choices discover sensitive data, deliver content, or cache data.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d3-032",
+    "type": "single",
+    "question": "A service owner reviewing an incident needs to run an operational command across a fleet of managed instances. Which service should be used?",
+    "options": {
+      "A": "Amazon Cognito",
+      "B": "AWS Shield",
+      "C": "AWS Systems Manager Run Command",
+      "D": "Amazon S3 Select"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Systems Manager Run Command executes commands across managed instances without requiring inbound SSH.\nThe other choices query objects, manage identities, or protect against DDoS.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d3-033",
+    "type": "single",
+    "question": "A team optimizing an existing implementation must share a CloudFormation stack configuration across several accounts and Regions. Which feature fits?",
+    "options": {
+      "A": "An S3 access point",
+      "B": "A Lambda layer",
+      "C": "A Route 53 health check",
+      "D": "CloudFormation StackSets"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "StackSets deploy and manage CloudFormation stacks across accounts and Regions.\nThe other choices manage S3 access, Lambda packaging, or endpoint health.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d3-034",
+    "type": "single",
+    "question": "A company introducing an automated workflow wants a resource change event to invoke a remediation Lambda function. Which pattern is suitable?",
+    "options": {
+      "A": "EventBridge rule targeting Lambda",
+      "B": "A NAT gateway route",
+      "C": "An EBS volume type",
+      "D": "An RDS read replica"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge rules can match resource events and invoke automation targets.\nThe other choices are networking, block storage, or database read scaling features.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d3-035",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment needs to build an immutable machine image on a schedule. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon SES",
+      "B": "EC2 Image Builder",
+      "C": "Amazon Inspector only",
+      "D": "AWS Budgets"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "EC2 Image Builder automates image pipelines that build, test, and distribute AMIs.\nInspector scans for vulnerabilities, Budgets monitors cost, and SES sends email.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d3-036",
+    "type": "single",
+    "question": "A customer-facing application team needs repeatable infrastructure changes with a reviewable template. Which service is most appropriate?",
+    "options": {
+      "A": "Amazon CloudFront",
+      "B": "Amazon ElastiCache",
+      "C": "AWS CloudFormation",
+      "D": "Amazon Macie"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "CloudFormation defines and manages AWS resources as infrastructure as code.\nThe other choices discover sensitive data, deliver content, or cache data.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d3-037",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments needs to run an operational command across a fleet of managed instances. Which service should be used?",
+    "options": {
+      "A": "Amazon S3 Select",
+      "B": "Amazon Cognito",
+      "C": "AWS Shield",
+      "D": "AWS Systems Manager Run Command"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Systems Manager Run Command executes commands across managed instances without requiring inbound SSH.\nThe other choices query objects, manage identities, or protect against DDoS.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d3-038",
+    "type": "single",
+    "question": "A team preparing evidence for an audit must share a CloudFormation stack configuration across several accounts and Regions. Which feature fits?",
+    "options": {
+      "A": "CloudFormation StackSets",
+      "B": "An S3 access point",
+      "C": "A Lambda layer",
+      "D": "A Route 53 health check"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "StackSets deploy and manage CloudFormation stacks across accounts and Regions.\nThe other choices manage S3 access, Lambda packaging, or endpoint health.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d3-039",
+    "type": "single",
+    "question": "A business replacing a manual process wants a resource change event to invoke a remediation Lambda function. Which pattern is suitable?",
+    "options": {
+      "A": "An RDS read replica",
+      "B": "EventBridge rule targeting Lambda",
+      "C": "A NAT gateway route",
+      "D": "An EBS volume type"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge rules can match resource events and invoke automation targets.\nThe other choices are networking, block storage, or database read scaling features.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d3-040",
+    "type": "single",
+    "question": "A team validating a design against the exam guide needs to build an immutable machine image on a schedule. Which service should be evaluated?",
+    "options": {
+      "A": "AWS Budgets",
+      "B": "Amazon SES",
+      "C": "EC2 Image Builder",
+      "D": "Amazon Inspector only"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "EC2 Image Builder automates image pipelines that build, test, and distribute AMIs.\nInspector scans for vulnerabilities, Budgets monitors cost, and SES sends email.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d3-041",
+    "type": "single",
+    "question": "A production team needs repeatable infrastructure changes with a reviewable template. Which service is most appropriate?",
+    "options": {
+      "A": "Amazon Macie",
+      "B": "Amazon CloudFront",
+      "C": "Amazon ElastiCache",
+      "D": "AWS CloudFormation"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudFormation defines and manages AWS resources as infrastructure as code.\nThe other choices discover sensitive data, deliver content, or cache data.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d3-042",
+    "type": "single",
+    "question": "A multi-account platform team needs to run an operational command across a fleet of managed instances. Which service should be used?",
+    "options": {
+      "A": "AWS Systems Manager Run Command",
+      "B": "Amazon S3 Select",
+      "C": "Amazon Cognito",
+      "D": "AWS Shield"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Systems Manager Run Command executes commands across managed instances without requiring inbound SSH.\nThe other choices query objects, manage identities, or protect against DDoS.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "soa-c03-d3-043",
+    "type": "single",
+    "question": "A regulated company must share a CloudFormation stack configuration across several accounts and Regions. Which feature fits?",
+    "options": {
+      "A": "A Route 53 health check",
+      "B": "CloudFormation StackSets",
+      "C": "An S3 access point",
+      "D": "A Lambda layer"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "StackSets deploy and manage CloudFormation stacks across accounts and Regions.\nThe other choices manage S3 access, Lambda packaging, or endpoint health.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  }
+]

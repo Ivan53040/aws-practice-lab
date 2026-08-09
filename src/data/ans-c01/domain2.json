@@ -1,0 +1,818 @@
+[
+  {
+    "id": "ans-c01-d2-001",
+    "type": "single",
+    "question": "A production team must advertise selected VPC prefixes to an on-premises router over a private connection. Which protocol is commonly used?",
+    "options": {
+      "A": "DNS TXT records",
+      "B": "S3 lifecycle rules",
+      "C": "BGP over a Direct Connect or VPN connection",
+      "D": "HTTP over CloudFront"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "BGP exchanges routes over supported hybrid connectivity links.\nThe other choices are application, DNS, or storage controls.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-002",
+    "type": "single",
+    "question": "A multi-account platform team needs encrypted connectivity between two networks over the public internet. Which service should be configured?",
+    "options": {
+      "A": "Amazon EFS",
+      "B": "AWS Glue",
+      "C": "Amazon Macie",
+      "D": "AWS Site-to-Site VPN"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Site-to-Site VPN creates encrypted tunnels between networks.\nThe other choices provide file storage, ETL, or data discovery.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-003",
+    "type": "single",
+    "question": "A regulated company must expose a private application to selected customer VPCs without VPC peering. Which feature fits?",
+    "options": {
+      "A": "A PrivateLink endpoint service",
+      "B": "A public IP allowlist only",
+      "C": "An S3 website endpoint",
+      "D": "A single NAT gateway"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "PrivateLink uses interface endpoints and provider endpoint services for private consumer access.\nThe other choices do not provide private service endpoints.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-004",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs to preserve source IP information through a load balancer for an application. Which design detail must be considered?",
+    "options": {
+      "A": "A Route 53 TTL only",
+      "B": "The load balancer type and the relevant proxy or header behavior",
+      "C": "An S3 storage class",
+      "D": "A KMS alias"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Source address preservation depends on load balancer behavior and application headers or protocol support.\nThe other choices do not control load balancer source information.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-005",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must automate VPC and route configuration consistently across accounts. Which approach is appropriate?",
+    "options": {
+      "A": "Public credentials",
+      "B": "A CloudFront cache",
+      "C": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "D": "Manual edits in every account"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "IaC makes network changes repeatable, reviewable, and consistent.\nManual edits and public credentials increase drift and risk.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-006",
+    "type": "single",
+    "question": "A data platform team must advertise selected VPC prefixes to an on-premises router over a private connection. Which protocol is commonly used?",
+    "options": {
+      "A": "HTTP over CloudFront",
+      "B": "DNS TXT records",
+      "C": "S3 lifecycle rules",
+      "D": "BGP over a Direct Connect or VPN connection"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "BGP exchanges routes over supported hybrid connectivity links.\nThe other choices are application, DNS, or storage controls.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-007",
+    "type": "single",
+    "question": "A security-conscious engineering team needs encrypted connectivity between two networks over the public internet. Which service should be configured?",
+    "options": {
+      "A": "AWS Site-to-Site VPN",
+      "B": "Amazon EFS",
+      "C": "AWS Glue",
+      "D": "Amazon Macie"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Site-to-Site VPN creates encrypted tunnels between networks.\nThe other choices provide file storage, ETL, or data discovery.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-008",
+    "type": "single",
+    "question": "A company migrating an existing workload must expose a private application to selected customer VPCs without VPC peering. Which feature fits?",
+    "options": {
+      "A": "A single NAT gateway",
+      "B": "A PrivateLink endpoint service",
+      "C": "A public IP allowlist only",
+      "D": "An S3 website endpoint"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "PrivateLink uses interface endpoints and provider endpoint services for private consumer access.\nThe other choices do not provide private service endpoints.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-009",
+    "type": "single",
+    "question": "A team with strict recovery objectives needs to preserve source IP information through a load balancer for an application. Which design detail must be considered?",
+    "options": {
+      "A": "A KMS alias",
+      "B": "A Route 53 TTL only",
+      "C": "The load balancer type and the relevant proxy or header behavior",
+      "D": "An S3 storage class"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Source address preservation depends on load balancer behavior and application headers or protocol support.\nThe other choices do not control load balancer source information.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-010",
+    "type": "single",
+    "question": "A developer team preparing a release must automate VPC and route configuration consistently across accounts. Which approach is appropriate?",
+    "options": {
+      "A": "Manual edits in every account",
+      "B": "Public credentials",
+      "C": "A CloudFront cache",
+      "D": "Infrastructure as code with CloudFormation or the AWS CDK"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "IaC makes network changes repeatable, reviewable, and consistent.\nManual edits and public credentials increase drift and risk.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-011",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions must advertise selected VPC prefixes to an on-premises router over a private connection. Which protocol is commonly used?",
+    "options": {
+      "A": "BGP over a Direct Connect or VPN connection",
+      "B": "HTTP over CloudFront",
+      "C": "DNS TXT records",
+      "D": "S3 lifecycle rules"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "BGP exchanges routes over supported hybrid connectivity links.\nThe other choices are application, DNS, or storage controls.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-012",
+    "type": "single",
+    "question": "A service owner reviewing an incident needs encrypted connectivity between two networks over the public internet. Which service should be configured?",
+    "options": {
+      "A": "Amazon Macie",
+      "B": "AWS Site-to-Site VPN",
+      "C": "Amazon EFS",
+      "D": "AWS Glue"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Site-to-Site VPN creates encrypted tunnels between networks.\nThe other choices provide file storage, ETL, or data discovery.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-013",
+    "type": "single",
+    "question": "A team optimizing an existing implementation must expose a private application to selected customer VPCs without VPC peering. Which feature fits?",
+    "options": {
+      "A": "An S3 website endpoint",
+      "B": "A single NAT gateway",
+      "C": "A PrivateLink endpoint service",
+      "D": "A public IP allowlist only"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "PrivateLink uses interface endpoints and provider endpoint services for private consumer access.\nThe other choices do not provide private service endpoints.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-014",
+    "type": "single",
+    "question": "A company introducing an automated workflow needs to preserve source IP information through a load balancer for an application. Which design detail must be considered?",
+    "options": {
+      "A": "An S3 storage class",
+      "B": "A KMS alias",
+      "C": "A Route 53 TTL only",
+      "D": "The load balancer type and the relevant proxy or header behavior"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Source address preservation depends on load balancer behavior and application headers or protocol support.\nThe other choices do not control load balancer source information.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-015",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment must automate VPC and route configuration consistently across accounts. Which approach is appropriate?",
+    "options": {
+      "A": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "B": "Manual edits in every account",
+      "C": "Public credentials",
+      "D": "A CloudFront cache"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "IaC makes network changes repeatable, reviewable, and consistent.\nManual edits and public credentials increase drift and risk.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-016",
+    "type": "single",
+    "question": "A customer-facing application team must advertise selected VPC prefixes to an on-premises router over a private connection. Which protocol is commonly used?",
+    "options": {
+      "A": "S3 lifecycle rules",
+      "B": "BGP over a Direct Connect or VPN connection",
+      "C": "HTTP over CloudFront",
+      "D": "DNS TXT records"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "BGP exchanges routes over supported hybrid connectivity links.\nThe other choices are application, DNS, or storage controls.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-017",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments needs encrypted connectivity between two networks over the public internet. Which service should be configured?",
+    "options": {
+      "A": "AWS Glue",
+      "B": "Amazon Macie",
+      "C": "AWS Site-to-Site VPN",
+      "D": "Amazon EFS"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Site-to-Site VPN creates encrypted tunnels between networks.\nThe other choices provide file storage, ETL, or data discovery.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-018",
+    "type": "single",
+    "question": "A team preparing evidence for an audit must expose a private application to selected customer VPCs without VPC peering. Which feature fits?",
+    "options": {
+      "A": "A public IP allowlist only",
+      "B": "An S3 website endpoint",
+      "C": "A single NAT gateway",
+      "D": "A PrivateLink endpoint service"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "PrivateLink uses interface endpoints and provider endpoint services for private consumer access.\nThe other choices do not provide private service endpoints.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-019",
+    "type": "single",
+    "question": "A business replacing a manual process needs to preserve source IP information through a load balancer for an application. Which design detail must be considered?",
+    "options": {
+      "A": "The load balancer type and the relevant proxy or header behavior",
+      "B": "An S3 storage class",
+      "C": "A KMS alias",
+      "D": "A Route 53 TTL only"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Source address preservation depends on load balancer behavior and application headers or protocol support.\nThe other choices do not control load balancer source information.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-020",
+    "type": "single",
+    "question": "A team validating a design against the exam guide must automate VPC and route configuration consistently across accounts. Which approach is appropriate?",
+    "options": {
+      "A": "A CloudFront cache",
+      "B": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "C": "Manual edits in every account",
+      "D": "Public credentials"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "IaC makes network changes repeatable, reviewable, and consistent.\nManual edits and public credentials increase drift and risk.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-021",
+    "type": "single",
+    "question": "A production team must advertise selected VPC prefixes to an on-premises router over a private connection. Which protocol is commonly used?",
+    "options": {
+      "A": "DNS TXT records",
+      "B": "S3 lifecycle rules",
+      "C": "BGP over a Direct Connect or VPN connection",
+      "D": "HTTP over CloudFront"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "BGP exchanges routes over supported hybrid connectivity links.\nThe other choices are application, DNS, or storage controls.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-022",
+    "type": "single",
+    "question": "A multi-account platform team needs encrypted connectivity between two networks over the public internet. Which service should be configured?",
+    "options": {
+      "A": "Amazon EFS",
+      "B": "AWS Glue",
+      "C": "Amazon Macie",
+      "D": "AWS Site-to-Site VPN"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Site-to-Site VPN creates encrypted tunnels between networks.\nThe other choices provide file storage, ETL, or data discovery.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-023",
+    "type": "single",
+    "question": "A regulated company must expose a private application to selected customer VPCs without VPC peering. Which feature fits?",
+    "options": {
+      "A": "A PrivateLink endpoint service",
+      "B": "A public IP allowlist only",
+      "C": "An S3 website endpoint",
+      "D": "A single NAT gateway"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "PrivateLink uses interface endpoints and provider endpoint services for private consumer access.\nThe other choices do not provide private service endpoints.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-024",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs to preserve source IP information through a load balancer for an application. Which design detail must be considered?",
+    "options": {
+      "A": "A Route 53 TTL only",
+      "B": "The load balancer type and the relevant proxy or header behavior",
+      "C": "An S3 storage class",
+      "D": "A KMS alias"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Source address preservation depends on load balancer behavior and application headers or protocol support.\nThe other choices do not control load balancer source information.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-025",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must automate VPC and route configuration consistently across accounts. Which approach is appropriate?",
+    "options": {
+      "A": "Public credentials",
+      "B": "A CloudFront cache",
+      "C": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "D": "Manual edits in every account"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "IaC makes network changes repeatable, reviewable, and consistent.\nManual edits and public credentials increase drift and risk.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-026",
+    "type": "single",
+    "question": "A data platform team must advertise selected VPC prefixes to an on-premises router over a private connection. Which protocol is commonly used?",
+    "options": {
+      "A": "HTTP over CloudFront",
+      "B": "DNS TXT records",
+      "C": "S3 lifecycle rules",
+      "D": "BGP over a Direct Connect or VPN connection"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "BGP exchanges routes over supported hybrid connectivity links.\nThe other choices are application, DNS, or storage controls.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-027",
+    "type": "single",
+    "question": "A security-conscious engineering team needs encrypted connectivity between two networks over the public internet. Which service should be configured?",
+    "options": {
+      "A": "AWS Site-to-Site VPN",
+      "B": "Amazon EFS",
+      "C": "AWS Glue",
+      "D": "Amazon Macie"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Site-to-Site VPN creates encrypted tunnels between networks.\nThe other choices provide file storage, ETL, or data discovery.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-028",
+    "type": "single",
+    "question": "A company migrating an existing workload must expose a private application to selected customer VPCs without VPC peering. Which feature fits?",
+    "options": {
+      "A": "A single NAT gateway",
+      "B": "A PrivateLink endpoint service",
+      "C": "A public IP allowlist only",
+      "D": "An S3 website endpoint"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "PrivateLink uses interface endpoints and provider endpoint services for private consumer access.\nThe other choices do not provide private service endpoints.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-029",
+    "type": "single",
+    "question": "A team with strict recovery objectives needs to preserve source IP information through a load balancer for an application. Which design detail must be considered?",
+    "options": {
+      "A": "A KMS alias",
+      "B": "A Route 53 TTL only",
+      "C": "The load balancer type and the relevant proxy or header behavior",
+      "D": "An S3 storage class"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Source address preservation depends on load balancer behavior and application headers or protocol support.\nThe other choices do not control load balancer source information.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-030",
+    "type": "single",
+    "question": "A developer team preparing a release must automate VPC and route configuration consistently across accounts. Which approach is appropriate?",
+    "options": {
+      "A": "Manual edits in every account",
+      "B": "Public credentials",
+      "C": "A CloudFront cache",
+      "D": "Infrastructure as code with CloudFormation or the AWS CDK"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "IaC makes network changes repeatable, reviewable, and consistent.\nManual edits and public credentials increase drift and risk.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-031",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions must advertise selected VPC prefixes to an on-premises router over a private connection. Which protocol is commonly used?",
+    "options": {
+      "A": "BGP over a Direct Connect or VPN connection",
+      "B": "HTTP over CloudFront",
+      "C": "DNS TXT records",
+      "D": "S3 lifecycle rules"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "BGP exchanges routes over supported hybrid connectivity links.\nThe other choices are application, DNS, or storage controls.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-032",
+    "type": "single",
+    "question": "A service owner reviewing an incident needs encrypted connectivity between two networks over the public internet. Which service should be configured?",
+    "options": {
+      "A": "Amazon Macie",
+      "B": "AWS Site-to-Site VPN",
+      "C": "Amazon EFS",
+      "D": "AWS Glue"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Site-to-Site VPN creates encrypted tunnels between networks.\nThe other choices provide file storage, ETL, or data discovery.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-033",
+    "type": "single",
+    "question": "A team optimizing an existing implementation must expose a private application to selected customer VPCs without VPC peering. Which feature fits?",
+    "options": {
+      "A": "An S3 website endpoint",
+      "B": "A single NAT gateway",
+      "C": "A PrivateLink endpoint service",
+      "D": "A public IP allowlist only"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "PrivateLink uses interface endpoints and provider endpoint services for private consumer access.\nThe other choices do not provide private service endpoints.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-034",
+    "type": "single",
+    "question": "A company introducing an automated workflow needs to preserve source IP information through a load balancer for an application. Which design detail must be considered?",
+    "options": {
+      "A": "An S3 storage class",
+      "B": "A KMS alias",
+      "C": "A Route 53 TTL only",
+      "D": "The load balancer type and the relevant proxy or header behavior"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Source address preservation depends on load balancer behavior and application headers or protocol support.\nThe other choices do not control load balancer source information.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-035",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment must automate VPC and route configuration consistently across accounts. Which approach is appropriate?",
+    "options": {
+      "A": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "B": "Manual edits in every account",
+      "C": "Public credentials",
+      "D": "A CloudFront cache"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "IaC makes network changes repeatable, reviewable, and consistent.\nManual edits and public credentials increase drift and risk.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-036",
+    "type": "single",
+    "question": "A customer-facing application team must advertise selected VPC prefixes to an on-premises router over a private connection. Which protocol is commonly used?",
+    "options": {
+      "A": "S3 lifecycle rules",
+      "B": "BGP over a Direct Connect or VPN connection",
+      "C": "HTTP over CloudFront",
+      "D": "DNS TXT records"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "BGP exchanges routes over supported hybrid connectivity links.\nThe other choices are application, DNS, or storage controls.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-037",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments needs encrypted connectivity between two networks over the public internet. Which service should be configured?",
+    "options": {
+      "A": "AWS Glue",
+      "B": "Amazon Macie",
+      "C": "AWS Site-to-Site VPN",
+      "D": "Amazon EFS"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Site-to-Site VPN creates encrypted tunnels between networks.\nThe other choices provide file storage, ETL, or data discovery.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-038",
+    "type": "single",
+    "question": "A team preparing evidence for an audit must expose a private application to selected customer VPCs without VPC peering. Which feature fits?",
+    "options": {
+      "A": "A public IP allowlist only",
+      "B": "An S3 website endpoint",
+      "C": "A single NAT gateway",
+      "D": "A PrivateLink endpoint service"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "PrivateLink uses interface endpoints and provider endpoint services for private consumer access.\nThe other choices do not provide private service endpoints.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-039",
+    "type": "single",
+    "question": "A business replacing a manual process needs to preserve source IP information through a load balancer for an application. Which design detail must be considered?",
+    "options": {
+      "A": "The load balancer type and the relevant proxy or header behavior",
+      "B": "An S3 storage class",
+      "C": "A KMS alias",
+      "D": "A Route 53 TTL only"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Source address preservation depends on load balancer behavior and application headers or protocol support.\nThe other choices do not control load balancer source information.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-040",
+    "type": "single",
+    "question": "A team validating a design against the exam guide must automate VPC and route configuration consistently across accounts. Which approach is appropriate?",
+    "options": {
+      "A": "A CloudFront cache",
+      "B": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "C": "Manual edits in every account",
+      "D": "Public credentials"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "IaC makes network changes repeatable, reviewable, and consistent.\nManual edits and public credentials increase drift and risk.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-041",
+    "type": "single",
+    "question": "A production team must advertise selected VPC prefixes to an on-premises router over a private connection. Which protocol is commonly used?",
+    "options": {
+      "A": "DNS TXT records",
+      "B": "S3 lifecycle rules",
+      "C": "BGP over a Direct Connect or VPN connection",
+      "D": "HTTP over CloudFront"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "BGP exchanges routes over supported hybrid connectivity links.\nThe other choices are application, DNS, or storage controls.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-042",
+    "type": "single",
+    "question": "A multi-account platform team needs encrypted connectivity between two networks over the public internet. Which service should be configured?",
+    "options": {
+      "A": "Amazon EFS",
+      "B": "AWS Glue",
+      "C": "Amazon Macie",
+      "D": "AWS Site-to-Site VPN"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Site-to-Site VPN creates encrypted tunnels between networks.\nThe other choices provide file storage, ETL, or data discovery.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-043",
+    "type": "single",
+    "question": "A regulated company must expose a private application to selected customer VPCs without VPC peering. Which feature fits?",
+    "options": {
+      "A": "A PrivateLink endpoint service",
+      "B": "A public IP allowlist only",
+      "C": "An S3 website endpoint",
+      "D": "A single NAT gateway"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "PrivateLink uses interface endpoints and provider endpoint services for private consumer access.\nThe other choices do not provide private service endpoints.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-044",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs to preserve source IP information through a load balancer for an application. Which design detail must be considered?",
+    "options": {
+      "A": "A Route 53 TTL only",
+      "B": "The load balancer type and the relevant proxy or header behavior",
+      "C": "An S3 storage class",
+      "D": "A KMS alias"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Source address preservation depends on load balancer behavior and application headers or protocol support.\nThe other choices do not control load balancer source information.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-045",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must automate VPC and route configuration consistently across accounts. Which approach is appropriate?",
+    "options": {
+      "A": "Public credentials",
+      "B": "A CloudFront cache",
+      "C": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "D": "Manual edits in every account"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "IaC makes network changes repeatable, reviewable, and consistent.\nManual edits and public credentials increase drift and risk.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-046",
+    "type": "single",
+    "question": "A data platform team must advertise selected VPC prefixes to an on-premises router over a private connection. Which protocol is commonly used?",
+    "options": {
+      "A": "HTTP over CloudFront",
+      "B": "DNS TXT records",
+      "C": "S3 lifecycle rules",
+      "D": "BGP over a Direct Connect or VPN connection"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "BGP exchanges routes over supported hybrid connectivity links.\nThe other choices are application, DNS, or storage controls.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-047",
+    "type": "single",
+    "question": "A security-conscious engineering team needs encrypted connectivity between two networks over the public internet. Which service should be configured?",
+    "options": {
+      "A": "AWS Site-to-Site VPN",
+      "B": "Amazon EFS",
+      "C": "AWS Glue",
+      "D": "Amazon Macie"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Site-to-Site VPN creates encrypted tunnels between networks.\nThe other choices provide file storage, ETL, or data discovery.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-048",
+    "type": "single",
+    "question": "A company migrating an existing workload must expose a private application to selected customer VPCs without VPC peering. Which feature fits?",
+    "options": {
+      "A": "A single NAT gateway",
+      "B": "A PrivateLink endpoint service",
+      "C": "A public IP allowlist only",
+      "D": "An S3 website endpoint"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "PrivateLink uses interface endpoints and provider endpoint services for private consumer access.\nThe other choices do not provide private service endpoints.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-049",
+    "type": "single",
+    "question": "A team with strict recovery objectives needs to preserve source IP information through a load balancer for an application. Which design detail must be considered?",
+    "options": {
+      "A": "A KMS alias",
+      "B": "A Route 53 TTL only",
+      "C": "The load balancer type and the relevant proxy or header behavior",
+      "D": "An S3 storage class"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Source address preservation depends on load balancer behavior and application headers or protocol support.\nThe other choices do not control load balancer source information.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-050",
+    "type": "single",
+    "question": "A developer team preparing a release must automate VPC and route configuration consistently across accounts. Which approach is appropriate?",
+    "options": {
+      "A": "Manual edits in every account",
+      "B": "Public credentials",
+      "C": "A CloudFront cache",
+      "D": "Infrastructure as code with CloudFormation or the AWS CDK"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "IaC makes network changes repeatable, reviewable, and consistent.\nManual edits and public credentials increase drift and risk.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "ans-c01-d2-051",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions must advertise selected VPC prefixes to an on-premises router over a private connection. Which protocol is commonly used?",
+    "options": {
+      "A": "BGP over a Direct Connect or VPN connection",
+      "B": "HTTP over CloudFront",
+      "C": "DNS TXT records",
+      "D": "S3 lifecycle rules"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "BGP exchanges routes over supported hybrid connectivity links.\nThe other choices are application, DNS, or storage controls.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  }
+]

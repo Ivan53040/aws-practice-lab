@@ -1,0 +1,450 @@
+[
+  {
+    "id": "scs-c03-d2-001",
+    "type": "single",
+    "question": "A production team must isolate a compromised EC2 instance while preserving evidence. Which first action is appropriate?",
+    "options": {
+      "A": "Open all ports",
+      "B": "Delete CloudTrail",
+      "C": "Restrict its network access and preserve snapshots and logs",
+      "D": "Terminate it without evidence"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Isolation limits further access while evidence is preserved for investigation.\nThe other choices destroy evidence or increase exposure.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d2-002",
+    "type": "single",
+    "question": "A multi-account platform team needs a repeatable response to a GuardDuty finding. Which service should run the procedure?",
+    "options": {
+      "A": "Amazon CloudFront",
+      "B": "AWS Route 53",
+      "C": "Amazon Athena only",
+      "D": "Systems Manager Automation"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Automation runbooks can execute controlled response actions for findings.\nThe other choices do not provide incident response procedures.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d2-003",
+    "type": "single",
+    "question": "A regulated company must coordinate human approval before disabling a production role during an incident. Which workflow fits?",
+    "options": {
+      "A": "A Step Functions workflow with an approval step",
+      "B": "An uncontrolled Lambda loop",
+      "C": "A public S3 object",
+      "D": "A DNS TXT record"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "A durable workflow can pause for approval and record the decision.\nThe other choices do not coordinate an auditable approval.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d2-004",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs to retain incident logs in a tamper-resistant archive. Which design should be used?",
+    "options": {
+      "A": "A public bucket",
+      "B": "A dedicated encrypted S3 log bucket with restricted access and retention controls",
+      "C": "A developer laptop",
+      "D": "An instance store volume"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "A protected central archive supports investigation and retention requirements.\nLocal, ephemeral, or public storage is not an incident archive.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d2-005",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must determine the timeline of unauthorized API calls. Which evidence is most useful?",
+    "options": {
+      "A": "A Route 53 TTL",
+      "B": "An S3 storage class",
+      "C": "CloudTrail events correlated with identity and resource logs",
+      "D": "Only CPU utilization"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Correlated API, identity, and resource logs establish who did what and when.\nThe other choices do not provide an incident timeline.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d2-006",
+    "type": "single",
+    "question": "A data platform team must isolate a compromised EC2 instance while preserving evidence. Which first action is appropriate?",
+    "options": {
+      "A": "Terminate it without evidence",
+      "B": "Open all ports",
+      "C": "Delete CloudTrail",
+      "D": "Restrict its network access and preserve snapshots and logs"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Isolation limits further access while evidence is preserved for investigation.\nThe other choices destroy evidence or increase exposure.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d2-007",
+    "type": "single",
+    "question": "A security-conscious engineering team needs a repeatable response to a GuardDuty finding. Which service should run the procedure?",
+    "options": {
+      "A": "Systems Manager Automation",
+      "B": "Amazon CloudFront",
+      "C": "AWS Route 53",
+      "D": "Amazon Athena only"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Automation runbooks can execute controlled response actions for findings.\nThe other choices do not provide incident response procedures.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d2-008",
+    "type": "single",
+    "question": "A company migrating an existing workload must coordinate human approval before disabling a production role during an incident. Which workflow fits?",
+    "options": {
+      "A": "A DNS TXT record",
+      "B": "A Step Functions workflow with an approval step",
+      "C": "An uncontrolled Lambda loop",
+      "D": "A public S3 object"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "A durable workflow can pause for approval and record the decision.\nThe other choices do not coordinate an auditable approval.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d2-009",
+    "type": "single",
+    "question": "A team with strict recovery objectives needs to retain incident logs in a tamper-resistant archive. Which design should be used?",
+    "options": {
+      "A": "An instance store volume",
+      "B": "A public bucket",
+      "C": "A dedicated encrypted S3 log bucket with restricted access and retention controls",
+      "D": "A developer laptop"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "A protected central archive supports investigation and retention requirements.\nLocal, ephemeral, or public storage is not an incident archive.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d2-010",
+    "type": "single",
+    "question": "A developer team preparing a release must determine the timeline of unauthorized API calls. Which evidence is most useful?",
+    "options": {
+      "A": "Only CPU utilization",
+      "B": "A Route 53 TTL",
+      "C": "An S3 storage class",
+      "D": "CloudTrail events correlated with identity and resource logs"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Correlated API, identity, and resource logs establish who did what and when.\nThe other choices do not provide an incident timeline.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d2-011",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions must isolate a compromised EC2 instance while preserving evidence. Which first action is appropriate?",
+    "options": {
+      "A": "Restrict its network access and preserve snapshots and logs",
+      "B": "Terminate it without evidence",
+      "C": "Open all ports",
+      "D": "Delete CloudTrail"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Isolation limits further access while evidence is preserved for investigation.\nThe other choices destroy evidence or increase exposure.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d2-012",
+    "type": "single",
+    "question": "A service owner reviewing an incident needs a repeatable response to a GuardDuty finding. Which service should run the procedure?",
+    "options": {
+      "A": "Amazon Athena only",
+      "B": "Systems Manager Automation",
+      "C": "Amazon CloudFront",
+      "D": "AWS Route 53"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Automation runbooks can execute controlled response actions for findings.\nThe other choices do not provide incident response procedures.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d2-013",
+    "type": "single",
+    "question": "A team optimizing an existing implementation must coordinate human approval before disabling a production role during an incident. Which workflow fits?",
+    "options": {
+      "A": "A public S3 object",
+      "B": "A DNS TXT record",
+      "C": "A Step Functions workflow with an approval step",
+      "D": "An uncontrolled Lambda loop"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "A durable workflow can pause for approval and record the decision.\nThe other choices do not coordinate an auditable approval.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d2-014",
+    "type": "single",
+    "question": "A company introducing an automated workflow needs to retain incident logs in a tamper-resistant archive. Which design should be used?",
+    "options": {
+      "A": "A developer laptop",
+      "B": "An instance store volume",
+      "C": "A public bucket",
+      "D": "A dedicated encrypted S3 log bucket with restricted access and retention controls"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "A protected central archive supports investigation and retention requirements.\nLocal, ephemeral, or public storage is not an incident archive.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d2-015",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment must determine the timeline of unauthorized API calls. Which evidence is most useful?",
+    "options": {
+      "A": "CloudTrail events correlated with identity and resource logs",
+      "B": "Only CPU utilization",
+      "C": "A Route 53 TTL",
+      "D": "An S3 storage class"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Correlated API, identity, and resource logs establish who did what and when.\nThe other choices do not provide an incident timeline.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d2-016",
+    "type": "single",
+    "question": "A customer-facing application team must isolate a compromised EC2 instance while preserving evidence. Which first action is appropriate?",
+    "options": {
+      "A": "Delete CloudTrail",
+      "B": "Restrict its network access and preserve snapshots and logs",
+      "C": "Terminate it without evidence",
+      "D": "Open all ports"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Isolation limits further access while evidence is preserved for investigation.\nThe other choices destroy evidence or increase exposure.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d2-017",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments needs a repeatable response to a GuardDuty finding. Which service should run the procedure?",
+    "options": {
+      "A": "AWS Route 53",
+      "B": "Amazon Athena only",
+      "C": "Systems Manager Automation",
+      "D": "Amazon CloudFront"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Automation runbooks can execute controlled response actions for findings.\nThe other choices do not provide incident response procedures.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d2-018",
+    "type": "single",
+    "question": "A team preparing evidence for an audit must coordinate human approval before disabling a production role during an incident. Which workflow fits?",
+    "options": {
+      "A": "An uncontrolled Lambda loop",
+      "B": "A public S3 object",
+      "C": "A DNS TXT record",
+      "D": "A Step Functions workflow with an approval step"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "A durable workflow can pause for approval and record the decision.\nThe other choices do not coordinate an auditable approval.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d2-019",
+    "type": "single",
+    "question": "A business replacing a manual process needs to retain incident logs in a tamper-resistant archive. Which design should be used?",
+    "options": {
+      "A": "A dedicated encrypted S3 log bucket with restricted access and retention controls",
+      "B": "A developer laptop",
+      "C": "An instance store volume",
+      "D": "A public bucket"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "A protected central archive supports investigation and retention requirements.\nLocal, ephemeral, or public storage is not an incident archive.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d2-020",
+    "type": "single",
+    "question": "A team validating a design against the exam guide must determine the timeline of unauthorized API calls. Which evidence is most useful?",
+    "options": {
+      "A": "An S3 storage class",
+      "B": "CloudTrail events correlated with identity and resource logs",
+      "C": "Only CPU utilization",
+      "D": "A Route 53 TTL"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Correlated API, identity, and resource logs establish who did what and when.\nThe other choices do not provide an incident timeline.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d2-021",
+    "type": "single",
+    "question": "A production team must isolate a compromised EC2 instance while preserving evidence. Which first action is appropriate?",
+    "options": {
+      "A": "Open all ports",
+      "B": "Delete CloudTrail",
+      "C": "Restrict its network access and preserve snapshots and logs",
+      "D": "Terminate it without evidence"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Isolation limits further access while evidence is preserved for investigation.\nThe other choices destroy evidence or increase exposure.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d2-022",
+    "type": "single",
+    "question": "A multi-account platform team needs a repeatable response to a GuardDuty finding. Which service should run the procedure?",
+    "options": {
+      "A": "Amazon CloudFront",
+      "B": "AWS Route 53",
+      "C": "Amazon Athena only",
+      "D": "Systems Manager Automation"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Automation runbooks can execute controlled response actions for findings.\nThe other choices do not provide incident response procedures.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d2-023",
+    "type": "single",
+    "question": "A regulated company must coordinate human approval before disabling a production role during an incident. Which workflow fits?",
+    "options": {
+      "A": "A Step Functions workflow with an approval step",
+      "B": "An uncontrolled Lambda loop",
+      "C": "A public S3 object",
+      "D": "A DNS TXT record"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "A durable workflow can pause for approval and record the decision.\nThe other choices do not coordinate an auditable approval.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d2-024",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase needs to retain incident logs in a tamper-resistant archive. Which design should be used?",
+    "options": {
+      "A": "A public bucket",
+      "B": "A dedicated encrypted S3 log bucket with restricted access and retention controls",
+      "C": "A developer laptop",
+      "D": "An instance store volume"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "A protected central archive supports investigation and retention requirements.\nLocal, ephemeral, or public storage is not an incident archive.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d2-025",
+    "type": "single",
+    "question": "An operations team supporting a critical workload must determine the timeline of unauthorized API calls. Which evidence is most useful?",
+    "options": {
+      "A": "A Route 53 TTL",
+      "B": "An S3 storage class",
+      "C": "CloudTrail events correlated with identity and resource logs",
+      "D": "Only CPU utilization"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Correlated API, identity, and resource logs establish who did what and when.\nThe other choices do not provide an incident timeline.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d2-026",
+    "type": "single",
+    "question": "A data platform team must isolate a compromised EC2 instance while preserving evidence. Which first action is appropriate?",
+    "options": {
+      "A": "Terminate it without evidence",
+      "B": "Open all ports",
+      "C": "Delete CloudTrail",
+      "D": "Restrict its network access and preserve snapshots and logs"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Isolation limits further access while evidence is preserved for investigation.\nThe other choices destroy evidence or increase exposure.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d2-027",
+    "type": "single",
+    "question": "A security-conscious engineering team needs a repeatable response to a GuardDuty finding. Which service should run the procedure?",
+    "options": {
+      "A": "Systems Manager Automation",
+      "B": "Amazon CloudFront",
+      "C": "AWS Route 53",
+      "D": "Amazon Athena only"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Automation runbooks can execute controlled response actions for findings.\nThe other choices do not provide incident response procedures.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d2-028",
+    "type": "single",
+    "question": "A company migrating an existing workload must coordinate human approval before disabling a production role during an incident. Which workflow fits?",
+    "options": {
+      "A": "A DNS TXT record",
+      "B": "A Step Functions workflow with an approval step",
+      "C": "An uncontrolled Lambda loop",
+      "D": "A public S3 object"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "A durable workflow can pause for approval and record the decision.\nThe other choices do not coordinate an auditable approval.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  }
+]

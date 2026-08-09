@@ -1,0 +1,562 @@
+[
+  {
+    "id": "scs-c03-d3-001",
+    "type": "single",
+    "question": "A production team needs layer 7 filtering for a public API. Which service should be configured?",
+    "options": {
+      "A": "Amazon Macie",
+      "B": "AWS Glue",
+      "C": "Amazon EBS",
+      "D": "AWS WAF"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "WAF evaluates HTTP requests and can block managed web exploits and custom patterns.\nThe other choices discover data, transform data, or store blocks.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d3-002",
+    "type": "single",
+    "question": "A multi-account platform team must protect a private subnet workload from unsolicited inbound traffic while allowing updates. Which design fits?",
+    "options": {
+      "A": "Private subnets with controlled egress through a NAT gateway or endpoint",
+      "B": "Public addresses on every instance",
+      "C": "An open security group",
+      "D": "A public bucket"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Private subnets and controlled egress reduce inbound exposure while allowing required outbound access.\nPublic addresses and open rules increase exposure.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d3-003",
+    "type": "single",
+    "question": "A regulated company needs centralized inspection between VPCs. Which service should be evaluated?",
+    "options": {
+      "A": "AWS Budgets",
+      "B": "AWS Network Firewall or a managed inspection VPC pattern",
+      "C": "Amazon SES",
+      "D": "Amazon Polly"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Network Firewall and inspection VPC patterns provide centralized traffic controls.\nThe other choices do not inspect network traffic.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d3-004",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase must protect container images from tampering before deployment. Which control is appropriate?",
+    "options": {
+      "A": "Disable scan results",
+      "B": "Store images in a public website",
+      "C": "ECR image scanning and signed, immutable image tags",
+      "D": "Public mutable tags only"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Scanning and immutability reduce supply-chain tampering and vulnerability risk.\nMutable public tags and disabled scanning reduce assurance.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d3-005",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs host access without inbound SSH ports. Which operational security service should be used?",
+    "options": {
+      "A": "A public bastion with a shared key",
+      "B": "An open security group",
+      "C": "A Route 53 record",
+      "D": "Systems Manager Session Manager"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Session Manager provides audited access through the agent and IAM authorization.\nShared keys and open ports increase attack surface.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d3-006",
+    "type": "single",
+    "question": "A data platform team needs layer 7 filtering for a public API. Which service should be configured?",
+    "options": {
+      "A": "AWS WAF",
+      "B": "Amazon Macie",
+      "C": "AWS Glue",
+      "D": "Amazon EBS"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "WAF evaluates HTTP requests and can block managed web exploits and custom patterns.\nThe other choices discover data, transform data, or store blocks.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d3-007",
+    "type": "single",
+    "question": "A security-conscious engineering team must protect a private subnet workload from unsolicited inbound traffic while allowing updates. Which design fits?",
+    "options": {
+      "A": "A public bucket",
+      "B": "Private subnets with controlled egress through a NAT gateway or endpoint",
+      "C": "Public addresses on every instance",
+      "D": "An open security group"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Private subnets and controlled egress reduce inbound exposure while allowing required outbound access.\nPublic addresses and open rules increase exposure.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d3-008",
+    "type": "single",
+    "question": "A company migrating an existing workload needs centralized inspection between VPCs. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon Polly",
+      "B": "AWS Budgets",
+      "C": "AWS Network Firewall or a managed inspection VPC pattern",
+      "D": "Amazon SES"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Network Firewall and inspection VPC patterns provide centralized traffic controls.\nThe other choices do not inspect network traffic.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d3-009",
+    "type": "single",
+    "question": "A team with strict recovery objectives must protect container images from tampering before deployment. Which control is appropriate?",
+    "options": {
+      "A": "Public mutable tags only",
+      "B": "Disable scan results",
+      "C": "Store images in a public website",
+      "D": "ECR image scanning and signed, immutable image tags"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Scanning and immutability reduce supply-chain tampering and vulnerability risk.\nMutable public tags and disabled scanning reduce assurance.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d3-010",
+    "type": "single",
+    "question": "A developer team preparing a release needs host access without inbound SSH ports. Which operational security service should be used?",
+    "options": {
+      "A": "Systems Manager Session Manager",
+      "B": "A public bastion with a shared key",
+      "C": "An open security group",
+      "D": "A Route 53 record"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Session Manager provides audited access through the agent and IAM authorization.\nShared keys and open ports increase attack surface.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d3-011",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs layer 7 filtering for a public API. Which service should be configured?",
+    "options": {
+      "A": "Amazon EBS",
+      "B": "AWS WAF",
+      "C": "Amazon Macie",
+      "D": "AWS Glue"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "WAF evaluates HTTP requests and can block managed web exploits and custom patterns.\nThe other choices discover data, transform data, or store blocks.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d3-012",
+    "type": "single",
+    "question": "A service owner reviewing an incident must protect a private subnet workload from unsolicited inbound traffic while allowing updates. Which design fits?",
+    "options": {
+      "A": "An open security group",
+      "B": "A public bucket",
+      "C": "Private subnets with controlled egress through a NAT gateway or endpoint",
+      "D": "Public addresses on every instance"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Private subnets and controlled egress reduce inbound exposure while allowing required outbound access.\nPublic addresses and open rules increase exposure.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d3-013",
+    "type": "single",
+    "question": "A team optimizing an existing implementation needs centralized inspection between VPCs. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon SES",
+      "B": "Amazon Polly",
+      "C": "AWS Budgets",
+      "D": "AWS Network Firewall or a managed inspection VPC pattern"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Network Firewall and inspection VPC patterns provide centralized traffic controls.\nThe other choices do not inspect network traffic.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d3-014",
+    "type": "single",
+    "question": "A company introducing an automated workflow must protect container images from tampering before deployment. Which control is appropriate?",
+    "options": {
+      "A": "ECR image scanning and signed, immutable image tags",
+      "B": "Public mutable tags only",
+      "C": "Disable scan results",
+      "D": "Store images in a public website"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Scanning and immutability reduce supply-chain tampering and vulnerability risk.\nMutable public tags and disabled scanning reduce assurance.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d3-015",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment needs host access without inbound SSH ports. Which operational security service should be used?",
+    "options": {
+      "A": "A Route 53 record",
+      "B": "Systems Manager Session Manager",
+      "C": "A public bastion with a shared key",
+      "D": "An open security group"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Session Manager provides audited access through the agent and IAM authorization.\nShared keys and open ports increase attack surface.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d3-016",
+    "type": "single",
+    "question": "A customer-facing application team needs layer 7 filtering for a public API. Which service should be configured?",
+    "options": {
+      "A": "AWS Glue",
+      "B": "Amazon EBS",
+      "C": "AWS WAF",
+      "D": "Amazon Macie"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "WAF evaluates HTTP requests and can block managed web exploits and custom patterns.\nThe other choices discover data, transform data, or store blocks.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d3-017",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments must protect a private subnet workload from unsolicited inbound traffic while allowing updates. Which design fits?",
+    "options": {
+      "A": "Public addresses on every instance",
+      "B": "An open security group",
+      "C": "A public bucket",
+      "D": "Private subnets with controlled egress through a NAT gateway or endpoint"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Private subnets and controlled egress reduce inbound exposure while allowing required outbound access.\nPublic addresses and open rules increase exposure.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d3-018",
+    "type": "single",
+    "question": "A team preparing evidence for an audit needs centralized inspection between VPCs. Which service should be evaluated?",
+    "options": {
+      "A": "AWS Network Firewall or a managed inspection VPC pattern",
+      "B": "Amazon SES",
+      "C": "Amazon Polly",
+      "D": "AWS Budgets"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Network Firewall and inspection VPC patterns provide centralized traffic controls.\nThe other choices do not inspect network traffic.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d3-019",
+    "type": "single",
+    "question": "A business replacing a manual process must protect container images from tampering before deployment. Which control is appropriate?",
+    "options": {
+      "A": "Store images in a public website",
+      "B": "ECR image scanning and signed, immutable image tags",
+      "C": "Public mutable tags only",
+      "D": "Disable scan results"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Scanning and immutability reduce supply-chain tampering and vulnerability risk.\nMutable public tags and disabled scanning reduce assurance.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d3-020",
+    "type": "single",
+    "question": "A team validating a design against the exam guide needs host access without inbound SSH ports. Which operational security service should be used?",
+    "options": {
+      "A": "An open security group",
+      "B": "A Route 53 record",
+      "C": "Systems Manager Session Manager",
+      "D": "A public bastion with a shared key"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Session Manager provides audited access through the agent and IAM authorization.\nShared keys and open ports increase attack surface.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d3-021",
+    "type": "single",
+    "question": "A production team needs layer 7 filtering for a public API. Which service should be configured?",
+    "options": {
+      "A": "Amazon Macie",
+      "B": "AWS Glue",
+      "C": "Amazon EBS",
+      "D": "AWS WAF"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "WAF evaluates HTTP requests and can block managed web exploits and custom patterns.\nThe other choices discover data, transform data, or store blocks.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d3-022",
+    "type": "single",
+    "question": "A multi-account platform team must protect a private subnet workload from unsolicited inbound traffic while allowing updates. Which design fits?",
+    "options": {
+      "A": "Private subnets with controlled egress through a NAT gateway or endpoint",
+      "B": "Public addresses on every instance",
+      "C": "An open security group",
+      "D": "A public bucket"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Private subnets and controlled egress reduce inbound exposure while allowing required outbound access.\nPublic addresses and open rules increase exposure.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d3-023",
+    "type": "single",
+    "question": "A regulated company needs centralized inspection between VPCs. Which service should be evaluated?",
+    "options": {
+      "A": "AWS Budgets",
+      "B": "AWS Network Firewall or a managed inspection VPC pattern",
+      "C": "Amazon SES",
+      "D": "Amazon Polly"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Network Firewall and inspection VPC patterns provide centralized traffic controls.\nThe other choices do not inspect network traffic.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d3-024",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase must protect container images from tampering before deployment. Which control is appropriate?",
+    "options": {
+      "A": "Disable scan results",
+      "B": "Store images in a public website",
+      "C": "ECR image scanning and signed, immutable image tags",
+      "D": "Public mutable tags only"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Scanning and immutability reduce supply-chain tampering and vulnerability risk.\nMutable public tags and disabled scanning reduce assurance.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d3-025",
+    "type": "single",
+    "question": "An operations team supporting a critical workload needs host access without inbound SSH ports. Which operational security service should be used?",
+    "options": {
+      "A": "A public bastion with a shared key",
+      "B": "An open security group",
+      "C": "A Route 53 record",
+      "D": "Systems Manager Session Manager"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Session Manager provides audited access through the agent and IAM authorization.\nShared keys and open ports increase attack surface.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d3-026",
+    "type": "single",
+    "question": "A data platform team needs layer 7 filtering for a public API. Which service should be configured?",
+    "options": {
+      "A": "AWS WAF",
+      "B": "Amazon Macie",
+      "C": "AWS Glue",
+      "D": "Amazon EBS"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "WAF evaluates HTTP requests and can block managed web exploits and custom patterns.\nThe other choices discover data, transform data, or store blocks.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d3-027",
+    "type": "single",
+    "question": "A security-conscious engineering team must protect a private subnet workload from unsolicited inbound traffic while allowing updates. Which design fits?",
+    "options": {
+      "A": "A public bucket",
+      "B": "Private subnets with controlled egress through a NAT gateway or endpoint",
+      "C": "Public addresses on every instance",
+      "D": "An open security group"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Private subnets and controlled egress reduce inbound exposure while allowing required outbound access.\nPublic addresses and open rules increase exposure.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d3-028",
+    "type": "single",
+    "question": "A company migrating an existing workload needs centralized inspection between VPCs. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon Polly",
+      "B": "AWS Budgets",
+      "C": "AWS Network Firewall or a managed inspection VPC pattern",
+      "D": "Amazon SES"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Network Firewall and inspection VPC patterns provide centralized traffic controls.\nThe other choices do not inspect network traffic.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d3-029",
+    "type": "single",
+    "question": "A team with strict recovery objectives must protect container images from tampering before deployment. Which control is appropriate?",
+    "options": {
+      "A": "Public mutable tags only",
+      "B": "Disable scan results",
+      "C": "Store images in a public website",
+      "D": "ECR image scanning and signed, immutable image tags"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Scanning and immutability reduce supply-chain tampering and vulnerability risk.\nMutable public tags and disabled scanning reduce assurance.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d3-030",
+    "type": "single",
+    "question": "A developer team preparing a release needs host access without inbound SSH ports. Which operational security service should be used?",
+    "options": {
+      "A": "Systems Manager Session Manager",
+      "B": "A public bastion with a shared key",
+      "C": "An open security group",
+      "D": "A Route 53 record"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Session Manager provides audited access through the agent and IAM authorization.\nShared keys and open ports increase attack surface.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d3-031",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions needs layer 7 filtering for a public API. Which service should be configured?",
+    "options": {
+      "A": "Amazon EBS",
+      "B": "AWS WAF",
+      "C": "Amazon Macie",
+      "D": "AWS Glue"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "WAF evaluates HTTP requests and can block managed web exploits and custom patterns.\nThe other choices discover data, transform data, or store blocks.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d3-032",
+    "type": "single",
+    "question": "A service owner reviewing an incident must protect a private subnet workload from unsolicited inbound traffic while allowing updates. Which design fits?",
+    "options": {
+      "A": "An open security group",
+      "B": "A public bucket",
+      "C": "Private subnets with controlled egress through a NAT gateway or endpoint",
+      "D": "Public addresses on every instance"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Private subnets and controlled egress reduce inbound exposure while allowing required outbound access.\nPublic addresses and open rules increase exposure.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d3-033",
+    "type": "single",
+    "question": "A team optimizing an existing implementation needs centralized inspection between VPCs. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon SES",
+      "B": "Amazon Polly",
+      "C": "AWS Budgets",
+      "D": "AWS Network Firewall or a managed inspection VPC pattern"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Network Firewall and inspection VPC patterns provide centralized traffic controls.\nThe other choices do not inspect network traffic.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d3-034",
+    "type": "single",
+    "question": "A company introducing an automated workflow must protect container images from tampering before deployment. Which control is appropriate?",
+    "options": {
+      "A": "ECR image scanning and signed, immutable image tags",
+      "B": "Public mutable tags only",
+      "C": "Disable scan results",
+      "D": "Store images in a public website"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Scanning and immutability reduce supply-chain tampering and vulnerability risk.\nMutable public tags and disabled scanning reduce assurance.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "scs-c03-d3-035",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment needs host access without inbound SSH ports. Which operational security service should be used?",
+    "options": {
+      "A": "A Route 53 record",
+      "B": "Systems Manager Session Manager",
+      "C": "A public bastion with a shared key",
+      "D": "An open security group"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Session Manager provides audited access through the agent and IAM authorization.\nShared keys and open ports increase attack surface.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  }
+]
