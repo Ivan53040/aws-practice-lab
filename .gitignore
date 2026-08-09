@@ -30,6 +30,7 @@ graphify-out/
 .vscode/*
 !.vscode/extensions.json
 .idea
+.vercel/
 
 # OS
 .DS_Store
