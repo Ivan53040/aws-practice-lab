@@ -12,6 +12,7 @@ import { useTheme } from '../hooks/useTheme'
 type Language = 'en' | 'zh'
 type AnswerValue = string | string[]
 type ExamScreen = 'home' | 'loading' | 'exam' | 'results'
+type ExamGroup = 'foundational' | 'associate' | 'advanced'
 
 interface QuestionResult {
   question: Question
@@ -24,6 +25,12 @@ const PRACTICE_PASS_PERCENT = 75
 
 const UI = {
   en: {
+    foundational: 'Foundational',
+    foundationalHint: 'Core AWS concepts and services',
+    associate: 'Associate',
+    associateHint: 'Hands-on role-based AWS skills',
+    advanced: 'Professional & Specialty',
+    advancedHint: 'Advanced architecture, operations, and security',
     appName: 'AWS Practice Lab',
     subtitle: 'Offline practice for AWS certification exams',
     certification: 'AWS CERTIFICATION',
@@ -31,6 +38,7 @@ const UI = {
     chooseExamHint: 'Every attempt is fresh. Questions and explanations stay in English.',
     start: 'Start 65-question exam',
     questions: 'questions',
+    exams: 'exams',
     minutes: 'minutes',
     passRule: 'Practice pass: 75% raw score',
     loading: 'Loading the local question bank...',
@@ -85,6 +93,13 @@ const UI = {
     footer: 'MIT licensed open-source practice content. No account or score history required.',
   },
   zh: {
+    exams: '\u5834\u8003\u8a66',
+    foundational: '\u57fa\u790e\u7d1a',
+    foundationalHint: '\u81ea\u6700\u57fa\u790e\u7684 AWS \u6982\u5ff5\u8207\u670d\u52d9',
+    associate: '\u52a9\u7406\u7d1a',
+    associateHint: '\u4ee5\u89d2\u8272\u70ba\u57fa\u790e\u7684\u5be6\u52d9\u6280\u80fd',
+    advanced: '\u5c08\u696d\u7d1a\u8207\u5c08\u9805\u8a8d\u8b49',
+    advancedHint: '\u9032\u968e\u67b6\u69cb\u3001\u904b\u7dad\u8207\u5b89\u5168',
     appName: 'AWS 練習實驗室',
     subtitle: 'AWS 認證考試離線練習',
     certification: 'AWS 認證考試',
@@ -201,6 +216,12 @@ function examCardClass(active = false): string {
       ? 'border-brand bg-brand/10 shadow-card'
       : 'border-border-hairline bg-bg-card hover:border-brand/60 hover:shadow-card'
   }`
+}
+
+function examGroup(level: Certification['level']): ExamGroup {
+  if (level === 'foundational') return 'foundational'
+  if (level === 'associate') return 'associate'
+  return 'advanced'
 }
 
 export default function OfflineExamApp() {
@@ -468,6 +489,14 @@ function HomeView({
 }) {
   const certs = CERTIFICATION_LIST.filter(cert => cert.status === 'active' && cert.provider === 'aws')
   const selected = CERTIFICATIONS[certId]
+  const [selectedGroup, setSelectedGroup] = useState<ExamGroup>(() => examGroup(selected?.level ?? 'foundational'))
+  const groups: { id: ExamGroup; label: string; hint: string }[] = [
+    { id: 'foundational', label: labels.foundational, hint: labels.foundationalHint },
+    { id: 'associate', label: labels.associate, hint: labels.associateHint },
+    { id: 'advanced', label: labels.advanced, hint: labels.advancedHint },
+  ]
+  const activeGroup = groups.find(group => group.id === selectedGroup) ?? groups[0]
+  const visibleCerts = certs.filter(cert => examGroup(cert.level) === selectedGroup)
   return (
     <div className="mx-auto w-full max-w-6xl px-4 py-10 md:px-8 md:py-16">
       <div className="max-w-3xl">
@@ -475,20 +504,41 @@ function HomeView({
         <h1 className="text-3xl font-bold tracking-tight text-text-primary md:text-5xl">{labels.chooseExam}</h1>
         <p className="mt-4 text-base leading-relaxed text-text-muted md:text-lg">{labels.chooseExamHint}</p>
       </div>
-      <div className="mt-10 grid gap-5 md:grid-cols-2">
-        {certs.map(cert => (
-          <button key={cert.code} type="button" aria-label={`${cert.shortName} ${cert.name}`} onClick={() => onSelect(cert.code)} className={examCardClass(cert.code === certId)}>
-            <span className="text-left">
-              <span className="block text-xs font-bold uppercase tracking-widest text-text-muted">{cert.shortName}</span>
-              <span className="mt-2 block text-xl font-bold text-text-primary">{cert.name}</span>
-              <span className="mt-3 block text-sm leading-relaxed text-text-muted">{cert.domains.map(domain => domain.name).join(' / ')}</span>
-            </span>
-            <span className="flex items-center justify-between gap-4 text-left text-xs text-text-muted">
-              <span>{cert.examQuestionCount} {labels.questions} / {Math.round(cert.examTimeSeconds / 60)} {labels.minutes}</span>
-              <span className={`rounded-full px-2 py-1 font-bold ${cert.code === certId ? 'bg-brand text-on-brand' : 'bg-bg-dark'}`}>{cert.code === certId ? labels.selected : labels.select}</span>
-            </span>
+      <div className="mt-10 grid gap-4 md:grid-cols-3" role="tablist" aria-label="AWS certification levels">
+        {groups.map(group => (
+          <button
+            key={group.id}
+            type="button"
+            role="tab"
+            aria-selected={group.id === selectedGroup}
+            onClick={() => setSelectedGroup(group.id)}
+            className={`rounded-2xl border p-5 text-left transition ${group.id === selectedGroup ? 'border-brand bg-brand/10 shadow-card' : 'border-border-hairline bg-bg-card hover:border-brand/60 hover:shadow-card'}`}
+          >
+            <span className="block text-lg font-bold text-text-primary">{group.label}</span>
+            <span className="mt-1 block text-sm text-text-muted">{group.hint}</span>
           </button>
         ))}
+      </div>
+      <div className="mt-8" role="tabpanel" aria-label={activeGroup.label}>
+        <div className="mb-4 flex items-baseline justify-between gap-4">
+          <h2 className="text-xl font-bold text-text-primary">{activeGroup.label}</h2>
+          <span className="text-sm text-text-muted">{visibleCerts.length} {labels.exams}</span>
+        </div>
+        <div className="grid gap-5 md:grid-cols-2">
+          {visibleCerts.map(cert => (
+            <button key={cert.code} type="button" aria-label={`${cert.shortName} ${cert.name}`} onClick={() => { setSelectedGroup(examGroup(cert.level)); onSelect(cert.code) }} className={examCardClass(cert.code === certId)}>
+              <span className="text-left">
+                <span className="block text-xs font-bold uppercase tracking-widest text-text-muted">{cert.shortName}</span>
+                <span className="mt-2 block text-xl font-bold text-text-primary">{cert.name}</span>
+                <span className="mt-3 block text-sm leading-relaxed text-text-muted">{cert.domains.map(domain => domain.name).join(' / ')}</span>
+              </span>
+              <span className="flex items-center justify-between gap-4 text-left text-xs text-text-muted">
+                <span>{cert.examQuestionCount} {labels.questions} / {Math.round(cert.examTimeSeconds / 60)} {labels.minutes}</span>
+                <span className={`rounded-full px-2 py-1 font-bold ${cert.code === certId ? 'bg-brand text-on-brand' : 'bg-bg-dark'}`}>{cert.code === certId ? labels.selected : labels.select}</span>
+              </span>
+            </button>
+          ))}
+        </div>
       </div>
       <div className="mt-8 flex flex-wrap items-center gap-4">
         <button type="button" onClick={onStart} className="rounded-xl bg-brand px-6 py-3.5 text-sm font-bold text-on-brand shadow-card hover:bg-brand-hover">{labels.start.replace('65', String(selected?.examQuestionCount ?? 65))}</button>
