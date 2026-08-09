@@ -4,6 +4,7 @@ import { Moon, Sun } from 'lucide-react'
 import type { Certification } from '../data/certifications'
 import { CERTIFICATION_LIST, CERTIFICATIONS } from '../data/certifications'
 import { loadAllQuestions } from '../data/questions'
+import { getRevisionGuide } from '../data/revision'
 import type { Question, QuestionType } from '../types'
 import { formatTime, isAnswerCorrect, selectExamQuestions } from '../lib/scoring'
 import { getQuestionType, shuffleAndMapQuestions } from '../lib/utils'
@@ -13,6 +14,7 @@ type Language = 'en' | 'zh'
 type AnswerValue = string | string[]
 type ExamScreen = 'home' | 'loading' | 'exam' | 'results'
 type ExamGroup = 'foundational' | 'associate' | 'advanced'
+type AppMode = 'mock' | 'revision'
 
 interface QuestionResult {
   question: Question
@@ -25,6 +27,21 @@ const PRACTICE_PASS_PERCENT = 75
 
 const UI = {
   en: {
+    mockExam: 'Mock Exam',
+    revision: 'Revision',
+    revisionTitle: 'Revision notes',
+    revisionHint: 'Review the exam guide one section at a time. Study content remains in English for exam familiarity.',
+    chooseCertification: 'Choose certification',
+    revisionMap: 'Revision map',
+    studyPoints: 'Key study points',
+    keyTerms: 'Key terms and services',
+    examTip: 'Exam tip',
+    domainWeight: 'of scored content',
+    officialGuide: 'Official exam guide',
+    verified: 'Verified',
+    revisionUnavailable: 'Revision notes are being prepared',
+    revisionUnavailableBody: 'This certification is already connected to the revision architecture. Its section notes will be added in a later content pass.',
+    section: 'Section',
     foundational: 'Foundational',
     foundationalHint: 'Core AWS concepts and services',
     associate: 'Associate',
@@ -93,6 +110,21 @@ const UI = {
     footer: 'MIT licensed open-source practice content. No account or score history required.',
   },
   zh: {
+    mockExam: '\u6a21\u64ec\u8003\u8a66',
+    revision: '\u91cd\u9ede\u6eab\u7fd2',
+    revisionTitle: '\u91cd\u9ede\u6eab\u7fd2',
+    revisionHint: '\u6309 Exam Guide \u7684\u7ae0\u7bc0\u9010\u9805\u6eab\u7fd2\u3002\u5b78\u7fd2\u5167\u5bb9\u7dad\u6301\u82f1\u6587\uff0c\u4ee5\u719f\u6089\u6b63\u5f0f\u8003\u8a66\u7528\u8a9e\u3002',
+    chooseCertification: '\u9078\u64c7\u8a8d\u8b49\u8003\u8a66',
+    revisionMap: '\u6eab\u7fd2\u7ae0\u7bc0',
+    studyPoints: '\u91cd\u9ede\u5167\u5bb9',
+    keyTerms: '\u95dc\u9375\u8a5e\u8207\u670d\u52d9',
+    examTip: '\u61c9\u8a66\u63d0\u793a',
+    domainWeight: '\u8a08\u5206\u5167\u5bb9',
+    officialGuide: '\u5b98\u65b9 Exam Guide',
+    verified: '\u5df2\u6838\u5c0d',
+    revisionUnavailable: '\u91cd\u9ede\u5167\u5bb9\u6b63\u5728\u6574\u7406',
+    revisionUnavailableBody: '\u9019\u5957\u8003\u8a66\u5df2\u63a5\u4e0a\u6eab\u7fd2\u9801\u67b6\u69cb\uff0c\u5c0d\u61c9\u7ae0\u7bc0\u5167\u5bb9\u6703\u5728\u5f8c\u7e8c\u5167\u5bb9\u66f4\u65b0\u52a0\u5165\u3002',
+    section: '\u7ae0\u7bc0',
     exams: '\u5834\u8003\u8a66',
     foundational: '\u57fa\u790e\u7d1a',
     foundationalHint: '\u81ea\u6700\u57fa\u790e\u7684 AWS \u6982\u5ff5\u8207\u670d\u52d9',
@@ -226,7 +258,9 @@ function examGroup(level: Certification['level']): ExamGroup {
 
 export default function OfflineExamApp() {
   const [language, setLanguage] = useState<Language>('en')
+  const [mode, setMode] = useState<AppMode>('mock')
   const [certId, setCertId] = useState('clf-c02')
+  const [revisionCertId, setRevisionCertId] = useState('clf-c02')
   const [screen, setScreen] = useState<ExamScreen>('home')
   const [questions, setQuestions] = useState<Question[]>([])
   const [answers, setAnswers] = useState<Record<string, AnswerValue>>({})
@@ -280,18 +314,18 @@ export default function OfflineExamApp() {
   }, [answers, questions])
 
   useEffect(() => {
-    if (screen !== 'exam') return
+    if (mode !== 'mock' || screen !== 'exam') return
     const interval = window.setInterval(() => {
       setTimeLeft(value => Math.max(0, value - 1))
     }, 1000)
     return () => window.clearInterval(interval)
-  }, [screen])
+  }, [mode, screen])
 
   useEffect(() => {
-    if (screen !== 'exam' || timeLeft !== 0 || questions.length === 0) return
+    if (mode !== 'mock' || screen !== 'exam' || timeLeft !== 0 || questions.length === 0) return
     const timeout = window.setTimeout(finishExam, 0)
     return () => window.clearTimeout(timeout)
-  }, [finishExam, questions.length, screen, timeLeft])
+  }, [finishExam, mode, questions.length, screen, timeLeft])
 
   const updateAnswer = (value: AnswerValue) => {
     if (!currentQuestion) return
@@ -338,13 +372,21 @@ export default function OfflineExamApp() {
     return { correct, percent, passed: percent >= PRACTICE_PASS_PERCENT }
   }, [results])
 
+  if (mode === 'revision') {
+    return (
+      <Shell language={language} setLanguage={setLanguage} labels={labels} mode={mode} setMode={setMode}>
+        <RevisionView labels={labels} certId={revisionCertId} onSelect={setRevisionCertId} />
+      </Shell>
+    )
+  }
+
   if (screen === 'loading') {
-    return <Shell language={language} setLanguage={setLanguage} labels={labels}><LoadingView labels={labels} /></Shell>
+    return <Shell language={language} setLanguage={setLanguage} labels={labels} mode={mode} setMode={setMode}><LoadingView labels={labels} /></Shell>
   }
 
   if (screen === 'results') {
     return (
-      <Shell language={language} setLanguage={setLanguage} labels={labels}>
+      <Shell language={language} setLanguage={setLanguage} labels={labels} mode={mode} setMode={setMode}>
         <ResultsView
           labels={labels}
           cert={cert}
@@ -361,7 +403,7 @@ export default function OfflineExamApp() {
     const type = getQuestionType(currentQuestion)
     const currentAnswer = answers[currentQuestion.id] ?? emptyAnswer(type)
     return (
-      <Shell language={language} setLanguage={setLanguage} labels={labels} compact>
+      <Shell language={language} setLanguage={setLanguage} labels={labels} mode={mode} setMode={setMode} compact>
         <div className="mx-auto w-full max-w-5xl px-4 py-5 md:px-8 md:py-8">
           <div className="mb-5 flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-border-hairline bg-bg-card px-4 py-3 md:px-6">
             <div>
@@ -416,7 +458,7 @@ export default function OfflineExamApp() {
   }
 
   return (
-    <Shell language={language} setLanguage={setLanguage} labels={labels}>
+    <Shell language={language} setLanguage={setLanguage} labels={labels} mode={mode} setMode={setMode}>
       <HomeView
         labels={labels}
         certId={certId}
@@ -432,12 +474,16 @@ function Shell({
   language,
   setLanguage,
   labels,
+  mode,
+  setMode,
   compact = false,
   children,
 }: {
   language: Language
   setLanguage: (language: Language) => void
   labels: Labels
+  mode: AppMode
+  setMode: (mode: AppMode) => void
   compact?: boolean
   children: ReactNode
 }) {
@@ -446,11 +492,29 @@ function Shell({
   return (
     <div className="min-h-screen bg-bg-dark text-text-primary">
       <header className="sticky top-0 z-20 border-b border-border-hairline bg-bg-card/95 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 md:px-8">
-          <div>
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-3 md:px-8">
+          <div className="min-w-0">
             <p className="text-base font-bold tracking-tight text-text-primary">{labels.appName}</p>
             {!compact && <p className="hidden text-xs text-text-muted sm:block">{labels.subtitle}</p>}
           </div>
+          <nav className="order-3 flex w-full rounded-xl border border-border-hairline bg-bg-dark p-1 sm:order-none sm:w-auto" aria-label="Study mode">
+            <button
+              type="button"
+              onClick={() => setMode('mock')}
+              aria-current={mode === 'mock' ? 'page' : undefined}
+              className={`flex-1 rounded-lg px-4 py-2 text-xs font-bold transition sm:flex-none ${mode === 'mock' ? 'bg-brand text-on-brand shadow-card' : 'text-text-muted hover:bg-bg-card-hover hover:text-text-primary'}`}
+            >
+              {labels.mockExam}
+            </button>
+            <button
+              type="button"
+              onClick={() => setMode('revision')}
+              aria-current={mode === 'revision' ? 'page' : undefined}
+              className={`flex-1 rounded-lg px-4 py-2 text-xs font-bold transition sm:flex-none ${mode === 'revision' ? 'bg-brand text-on-brand shadow-card' : 'text-text-muted hover:bg-bg-card-hover hover:text-text-primary'}`}
+            >
+              {labels.revision}
+            </button>
+          </nav>
           <div className="flex items-center gap-2 text-xs">
             <button
               type="button"
@@ -470,6 +534,175 @@ function Shell({
       </header>
       <main>{children}</main>
       <footer className="mx-auto max-w-6xl px-4 py-8 text-center text-xs text-text-muted md:px-8">{labels.footer}</footer>
+    </div>
+  )
+}
+
+function RevisionView({
+  labels,
+  certId,
+  onSelect,
+}: {
+  labels: Labels
+  certId: string
+  onSelect: (certId: string) => void
+}) {
+  const certs = CERTIFICATION_LIST.filter(cert => cert.status === 'active' && cert.provider === 'aws')
+  const cert = CERTIFICATIONS[certId] ?? CERTIFICATIONS['clf-c02']
+  const guide = getRevisionGuide(cert.code)
+  const [topicId, setTopicId] = useState('')
+
+  const topicEntries = guide?.domains.flatMap(domain =>
+    domain.topics.map(topic => ({ domain, topic })),
+  ) ?? []
+  const foundIndex = topicEntries.findIndex(entry => entry.topic.id === topicId)
+  const selectedIndex = foundIndex >= 0 ? foundIndex : 0
+  const selectedEntry = topicEntries[selectedIndex]
+  const groupedCerts: { id: ExamGroup; label: string; certs: Certification[] }[] = [
+    { id: 'foundational', label: labels.foundational, certs: certs.filter(item => examGroup(item.level) === 'foundational') },
+    { id: 'associate', label: labels.associate, certs: certs.filter(item => examGroup(item.level) === 'associate') },
+    { id: 'advanced', label: labels.advanced, certs: certs.filter(item => examGroup(item.level) === 'advanced') },
+  ]
+
+  return (
+    <div className="mx-auto w-full max-w-6xl px-4 py-8 md:px-8 md:py-12">
+      <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+        <div className="max-w-3xl">
+          <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-text-muted">{labels.revision}</p>
+          <h1 className="text-3xl font-bold tracking-tight text-text-primary md:text-5xl">{labels.revisionTitle}</h1>
+          <p className="mt-4 text-base leading-relaxed text-text-muted md:text-lg">{labels.revisionHint}</p>
+        </div>
+        <label className="block w-full md:w-80">
+          <span className="mb-2 block text-xs font-bold uppercase tracking-wide text-text-muted">{labels.chooseCertification}</span>
+          <select
+            value={cert.code}
+            onChange={event => onSelect(event.target.value)}
+            className="w-full rounded-xl border border-border-hairline bg-bg-card px-4 py-3 text-sm font-semibold text-text-primary focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/30"
+          >
+            {groupedCerts.map(group => (
+              <optgroup key={group.id} label={group.label}>
+                {group.certs.map(item => <option key={item.code} value={item.code}>{item.shortName} - {item.name}</option>)}
+              </optgroup>
+            ))}
+          </select>
+        </label>
+      </div>
+
+      {!guide ? (
+        <section className="mt-10 rounded-2xl border border-border-hairline bg-bg-card p-6 shadow-card md:p-10">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-text-muted">{cert.shortName}</p>
+          <h2 className="mt-3 text-2xl font-bold text-text-primary">{labels.revisionUnavailable}</h2>
+          <p className="mt-3 max-w-2xl leading-relaxed text-text-muted">{labels.revisionUnavailableBody}</p>
+          <div className="mt-7 grid gap-3 sm:grid-cols-2">
+            {cert.domains.map(domain => (
+              <div key={domain.id} className="rounded-xl border border-border-hairline bg-bg-dark p-4">
+                <p className="text-xs font-bold text-brand">{domain.taskRange ?? `${domain.id}.1`}</p>
+                <p className="mt-1 font-semibold text-text-primary">{domain.name}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      ) : (
+        <div className="mt-10 grid gap-6 lg:grid-cols-[19rem_minmax(0,1fr)]">
+          <aside className="self-start rounded-2xl border border-border-hairline bg-bg-card p-4 shadow-card lg:sticky lg:top-28">
+            <div className="flex items-center justify-between gap-3 px-2 pb-3">
+              <div>
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-text-muted">{labels.revisionMap}</p>
+                <p className="mt-1 font-bold text-text-primary">{cert.shortName}</p>
+              </div>
+              <span className="rounded-full bg-brand/15 px-2.5 py-1 text-xs font-bold text-brand">{topicEntries.length}</span>
+            </div>
+            <div className="max-h-[62vh] space-y-4 overflow-y-auto pr-1">
+              {guide.domains.map(domain => (
+                <div key={domain.id}>
+                  <div className="mb-2 flex items-start justify-between gap-2 px-2">
+                    <p className="text-sm font-semibold leading-snug text-text-primary">{domain.id}. {domain.title}</p>
+                    <span className="shrink-0 text-xs text-text-muted">{domain.weight}%</span>
+                  </div>
+                  <div className="grid grid-cols-4 gap-1.5">
+                    {domain.topics.map(topic => (
+                      <button
+                        key={topic.id}
+                        type="button"
+                        onClick={() => setTopicId(topic.id)}
+                        aria-current={topic.id === selectedEntry?.topic.id ? 'step' : undefined}
+                        title={topic.title}
+                        className={`rounded-lg px-2 py-2 text-xs font-bold transition ${topic.id === selectedEntry?.topic.id ? 'bg-brand text-on-brand' : 'bg-bg-dark text-text-muted hover:bg-bg-card-hover hover:text-text-primary'}`}
+                      >
+                        {topic.id}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </aside>
+
+          {selectedEntry && (
+            <div>
+              <article className="rounded-2xl border border-border-hairline bg-bg-card p-5 shadow-card md:p-8">
+                <div className="flex flex-wrap items-center justify-between gap-3">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="rounded-full bg-brand px-3 py-1 text-xs font-bold text-on-brand">{labels.section} {selectedEntry.topic.id}</span>
+                    <span className="text-sm text-text-muted">{selectedEntry.domain.weight}% {labels.domainWeight}</span>
+                  </div>
+                  <span className="text-xs font-semibold text-text-muted">{selectedIndex + 1} / {topicEntries.length}</span>
+                </div>
+                <p className="mt-5 text-sm font-semibold text-brand">{selectedEntry.domain.title}</p>
+                <h2 className="mt-2 text-2xl font-bold leading-tight text-text-primary md:text-3xl">{selectedEntry.topic.title}</h2>
+                <p className="mt-4 text-base leading-relaxed text-text-muted">{selectedEntry.topic.summary}</p>
+
+                <section className="mt-8">
+                  <h3 className="text-sm font-bold uppercase tracking-[0.15em] text-text-muted">{labels.studyPoints}</h3>
+                  <ul className="mt-4 space-y-3">
+                    {selectedEntry.topic.points.map(point => (
+                      <li key={point} className="flex gap-3 rounded-xl border border-border-hairline bg-bg-dark p-4 text-sm leading-relaxed text-text-primary">
+                        <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-brand" aria-hidden="true" />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+
+                <section className="mt-8">
+                  <h3 className="text-sm font-bold uppercase tracking-[0.15em] text-text-muted">{labels.keyTerms}</h3>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {selectedEntry.topic.keyTerms.map(term => <span key={term} className="rounded-full border border-brand/30 bg-brand/10 px-3 py-1.5 text-xs font-semibold text-text-primary">{term}</span>)}
+                  </div>
+                </section>
+
+                <section className="mt-8 rounded-xl border border-brand/30 bg-brand/10 p-4">
+                  <h3 className="text-sm font-bold text-text-primary">{labels.examTip}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-text-primary">{selectedEntry.topic.examTip}</p>
+                </section>
+              </article>
+
+              <div className="mt-5 flex flex-wrap items-center justify-between gap-3">
+                <button
+                  type="button"
+                  onClick={() => setTopicId(topicEntries[Math.max(0, selectedIndex - 1)].topic.id)}
+                  disabled={selectedIndex === 0}
+                  className="rounded-xl border border-border-hairline px-5 py-3 text-sm font-semibold text-text-primary disabled:cursor-not-allowed disabled:opacity-40"
+                >
+                  {labels.previous}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setTopicId(topicEntries[Math.min(topicEntries.length - 1, selectedIndex + 1)].topic.id)}
+                  disabled={selectedIndex === topicEntries.length - 1}
+                  className="rounded-xl bg-brand px-5 py-3 text-sm font-bold text-on-brand disabled:cursor-not-allowed disabled:opacity-40"
+                >
+                  {labels.next}
+                </button>
+              </div>
+
+              <p className="mt-6 text-xs text-text-muted">
+                {labels.verified}: {guide.verified} · <a href={guide.sourceUrl} target="_blank" rel="noopener noreferrer" className="font-semibold text-brand hover:underline">{labels.officialGuide}</a>
+              </p>
+            </div>
+          )}
+        </div>
+      )}
     </div>
   )
 }
