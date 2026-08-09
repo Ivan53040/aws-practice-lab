@@ -10,7 +10,10 @@
     },
     "answer": "A",
     "explanation": "SSE-S3 uses Amazon S3 managed keys (AES-256) with no customer involvement, no per-key policies, and no KMS audit trail.\nSSE-KMS uses AWS KMS keys (AWS-managed or customer-managed) and adds KMS access policies and CloudTrail integration, which is more than the requirement asks for. SSE-C requires the customer to provide and manage their own keys on every request. Client-side encryption happens before upload and is fully customer-managed.",
-    "isMultiAnswer": false
+    "isMultiAnswer": false,
+    "type": "single",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
   },
   {
     "id": "saa-d1-002",
@@ -22,8 +25,11 @@
       "D": "AWS Certificate Manager"
     },
     "answer": "B",
-    "explanation": "AWS CloudHSM provides dedicated HSM instances. KMS is a managed key service but uses shared infrastructure. Secrets Manager stores secrets, not HSM keys. ACM manages SSL/TLS certificates.",
-    "isMultiAnswer": false
+    "explanation": "AWS CloudHSM provides dedicated HSM instances. KMS is a managed key service but uses shared infrastructure. Secrets Manager stores secrets, not HSM keys. ACM manages SSL/TLS certificates.\nThe alternative choices do not satisfy the stated SAA-C03 requirement as directly or completely.",
+    "isMultiAnswer": false,
+    "type": "single",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
   },
   {
     "id": "saa-d1-003",
@@ -35,8 +41,11 @@
       "D": "S3 Versioning"
     },
     "answer": "B",
-    "explanation": "A bucket policy with a Condition element can restrict access to a specific IAM role ARN. ACLs are legacy and less precise. Object Lock prevents deletion. Versioning preserves object versions.",
-    "isMultiAnswer": false
+    "explanation": "A bucket policy with a Condition element can restrict access to a specific IAM role ARN. ACLs are legacy and less precise. Object Lock prevents deletion. Versioning preserves object versions.\nThe alternative choices do not satisfy the stated SAA-C03 requirement as directly or completely.",
+    "isMultiAnswer": false,
+    "type": "single",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
   },
   {
     "id": "saa-d1-004",
@@ -48,8 +57,11 @@
       "D": "Internet Gateway"
     },
     "answer": "B",
-    "explanation": "VPC Flow Logs capture information about IP traffic going to and from network interfaces in a VPC. VPC Peering connects VPCs. NAT Gateway enables outbound internet for private subnets. Internet Gateway connects a VPC to the internet.",
-    "isMultiAnswer": false
+    "explanation": "VPC Flow Logs capture information about IP traffic going to and from network interfaces in a VPC. VPC Peering connects VPCs. NAT Gateway enables outbound internet for private subnets. Internet Gateway connects a VPC to the internet.\nThe alternative choices do not satisfy the stated SAA-C03 requirement as directly or completely.",
+    "isMultiAnswer": false,
+    "type": "single",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
   },
   {
     "id": "saa-d1-005",
@@ -61,7 +73,258 @@
       "D": "Amazon GuardDuty"
     },
     "answer": "B",
-    "explanation": "AWS CloudTrail records API calls made to AWS services. CloudWatch monitors metrics and logs. AWS Config tracks resource configurations. GuardDuty is a threat detection service.",
-    "isMultiAnswer": false
+    "explanation": "AWS CloudTrail records API calls made to AWS services. CloudWatch monitors metrics and logs. AWS Config tracks resource configurations. GuardDuty is a threat detection service.\nThe alternative choices do not satisfy the stated SAA-C03 requirement as directly or completely.",
+    "isMultiAnswer": false,
+    "type": "single",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-006",
+    "type": "single",
+    "question": "A company in one AWS account needs an application in a different AWS account to read a private S3 bucket. Which approach follows least privilege?",
+    "options": {
+      "A": "Create an IAM user and share its access keys with the application",
+      "B": "Create an IAM role in the bucket account and allow the application account to assume it",
+      "C": "Make the bucket public and restrict access in the application code",
+      "D": "Create an administrator policy in the application account"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "A cross-account IAM role with a narrowly scoped trust policy and permissions policy avoids long-lived credentials and limits access to the required bucket actions.\nAn IAM user with shared keys creates unmanaged long-lived credentials. A public bucket removes the security boundary. Administrator permissions are broader than the application needs.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-007",
+    "type": "single",
+    "question": "An organization wants employees to use their existing corporate identities to access multiple AWS accounts. Which service should the solutions architect recommend?",
+    "options": {
+      "A": "AWS IAM Identity Center",
+      "B": "Amazon Cognito",
+      "C": "AWS Secrets Manager",
+      "D": "AWS Certificate Manager"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "AWS IAM Identity Center provides centralized workforce access with federated identities and permission sets across AWS accounts.\nAmazon Cognito is for application users. Secrets Manager stores secrets. Certificate Manager manages certificates, not workforce sign-in.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-008",
+    "type": "single",
+    "question": "A security team must prevent member accounts from disabling CloudTrail. Which control should provide the organization-wide guardrail?",
+    "options": {
+      "A": "An IAM policy attached to one administrator user",
+      "B": "An AWS Organizations service control policy",
+      "C": "An S3 lifecycle rule",
+      "D": "A security group rule"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "A service control policy can set a maximum permissions boundary for member accounts and deny actions such as disabling CloudTrail.\nA user policy affects only its identity and can be changed by another administrator. S3 lifecycle rules and security groups do not govern account API permissions.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-009",
+    "type": "multi",
+    "question": "Which two mechanisms can grant a principal access to an S3 bucket in another AWS account? Select two.",
+    "options": {
+      "A": "A bucket policy in the resource account",
+      "B": "An IAM policy in the principal account",
+      "C": "A security group attached to the bucket",
+      "D": "An internet gateway route",
+      "E": "An S3 lifecycle rule"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Cross-account S3 access normally requires permission from the bucket policy and an identity policy in the principal account, subject to any explicit denies.\nSecurity groups and internet gateways control network traffic, not S3 authorization. Lifecycle rules manage object transitions and expiration.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-010",
+    "type": "single",
+    "question": "What is the recommended first protection for the AWS account root user?",
+    "options": {
+      "A": "Use the root user for daily administration",
+      "B": "Enable multi-factor authentication and avoid using the root user for routine work",
+      "C": "Store the root access key in Secrets Manager",
+      "D": "Attach AdministratorAccess to the root user"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "The root user should have multi-factor authentication enabled and should be used only for tasks that require it.\nUsing the root user daily increases exposure. Storing a root access key does not make routine use safe. The root user cannot be limited by an IAM policy in the same way as an IAM principal.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-011",
+    "type": "single",
+    "question": "Instances in a private subnet must download software updates from the public internet without accepting inbound connections. Which design is appropriate?",
+    "options": {
+      "A": "Attach an internet gateway directly to the private subnet",
+      "B": "Route outbound traffic through a NAT gateway in a public subnet",
+      "C": "Assign public IPv4 addresses to the instances",
+      "D": "Use a network ACL to translate private addresses"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "A NAT gateway in a public subnet allows instances in private subnets to initiate outbound internet connections while preventing unsolicited inbound connections.\nAn internet gateway does not provide private-subnet address translation. Public addresses expose the instances directly. Network ACLs do not perform NAT.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-012",
+    "type": "single",
+    "question": "Which statement correctly describes an EC2 security group?",
+    "options": {
+      "A": "It is stateless and requires separate inbound and outbound rules for every flow",
+      "B": "It is stateful and allows return traffic for an accepted connection automatically",
+      "C": "It applies to an entire AWS Region",
+      "D": "It can deny a specific source IP while allowing all other traffic"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Security groups are stateful virtual firewalls attached to network interfaces, so return traffic for an allowed connection is automatically permitted.\nNetwork ACLs are stateless. Security groups apply to interfaces in a VPC, not an entire Region, and support allow rules only, not explicit deny rules.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-013",
+    "type": "single",
+    "question": "A network team needs subnet-level, stateless filtering with both allow and deny rules. Which feature should they use?",
+    "options": {
+      "A": "Security groups",
+      "B": "Network ACLs",
+      "C": "IAM policies",
+      "D": "AWS WAF managed rules"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Network ACLs are stateless subnet-level controls and support ordered allow and deny rules.\nSecurity groups are stateful interface-level allow lists. IAM policies govern API authorization. AWS WAF filters HTTP requests at supported web entry points.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-014",
+    "type": "single",
+    "question": "A public web application must block common SQL injection patterns before requests reach an Application Load Balancer. Which service should be used?",
+    "options": {
+      "A": "Amazon GuardDuty",
+      "B": "AWS WAF",
+      "C": "AWS Config",
+      "D": "Amazon Inspector"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "AWS WAF evaluates HTTP requests with managed or custom rules and can block common web exploits such as SQL injection.\nGuardDuty detects threats from logs and telemetry. Config evaluates resource configuration compliance. Inspector scans workloads for vulnerabilities.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-015",
+    "type": "single",
+    "question": "An application needs to store database credentials and rotate them without putting secrets in source code. Which service is the best fit?",
+    "options": {
+      "A": "Amazon S3",
+      "B": "AWS Secrets Manager",
+      "C": "AWS Certificate Manager",
+      "D": "Amazon CloudWatch Logs"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Secrets Manager securely stores credentials and supports rotation workflows that applications can retrieve at runtime.\nS3 is object storage, Certificate Manager manages certificates, and CloudWatch Logs stores log events rather than application secrets.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-016",
+    "type": "single",
+    "question": "A mobile application needs user registration, sign-in, and token issuance without building an identity service. Which AWS service should be used?",
+    "options": {
+      "A": "Amazon Cognito user pools",
+      "B": "AWS IAM Identity Center",
+      "C": "AWS Organizations",
+      "D": "AWS Control Tower"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Amazon Cognito user pools provide managed application user directories and tokens for web and mobile applications.\nIAM Identity Center is designed for workforce access to AWS accounts and applications. Organizations and Control Tower govern AWS accounts rather than application users.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-017",
+    "type": "single",
+    "question": "A company wants enhanced visibility and assistance during a large distributed denial-of-service attack against its public applications. Which service is most appropriate?",
+    "options": {
+      "A": "AWS Shield Advanced",
+      "B": "Amazon Macie",
+      "C": "AWS KMS",
+      "D": "Amazon Detective"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "AWS Shield Advanced provides enhanced DDoS protection, visibility, and response support for protected AWS resources.\nMacie discovers sensitive data in S3. KMS manages encryption keys. Detective helps investigate findings rather than absorb DDoS traffic.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-018",
+    "type": "single",
+    "question": "A private API should be reachable only from applications inside a VPC. Which API Gateway endpoint type should be used?",
+    "options": {
+      "A": "Edge-optimized",
+      "B": "Regional",
+      "C": "Private",
+      "D": "Public with an IP allow list in application code"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "A private API Gateway endpoint is accessible through an interface VPC endpoint and can be limited to VPC resources.\nEdge-optimized and Regional endpoints are public endpoint types. Application-level filtering does not remove the public network exposure.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-019",
+    "type": "single",
+    "question": "A company requires customer-controlled key policies and an audit trail for S3 encryption operations. Which option should they choose?",
+    "options": {
+      "A": "SSE-S3",
+      "B": "SSE-KMS with a customer managed KMS key",
+      "C": "SSE-C with a key kept in application memory",
+      "D": "Plaintext objects with bucket versioning"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "SSE-KMS with a customer managed key provides customer-controlled key policies and KMS API events that can be audited with CloudTrail.\nSSE-S3 uses S3-managed keys with less customer control. SSE-C requires the customer to provide the key on requests but does not provide KMS key policy management. Versioning does not encrypt data.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-020",
+    "type": "multi",
+    "question": "Which two controls help protect objects in an S3 bucket from accidental deletion? Select two.",
+    "options": {
+      "A": "S3 Versioning",
+      "B": "S3 Object Lock",
+      "C": "S3 Transfer Acceleration",
+      "D": "S3 event notifications",
+      "E": "A CloudFront distribution"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Versioning preserves previous object versions, and Object Lock can enforce retention or legal holds that prevent deletion or overwrite.\nTransfer Acceleration improves transfer speed. Event notifications publish object events. CloudFront caches and serves content but does not protect bucket objects from deletion.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
   }
 ]

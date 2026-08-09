@@ -242,7 +242,8 @@ describe('isCertNoindex', () => {
   })
 
   it('returns true for coming-soon certs', () => {
-    expect(isCertNoindex(CERTIFICATIONS['saa-c03'])).toBe(true)
+    const comingSoon = { ...CERTIFICATIONS['saa-c03'], status: 'coming-soon' as const }
+    expect(isCertNoindex(comingSoon)).toBe(true)
   })
 
   it('returns true for active certs under review', () => {

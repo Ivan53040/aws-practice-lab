@@ -37,6 +37,12 @@ export const FEATURED_SAMPLE_IDS: Record<string, Record<number, string[]>> = {
     4: ['aif-q047', 'aif-q052', 'aif-q100', 'aif-q187', 'aif-q389'],
     5: ['aif-q126', 'aif-q133', 'aif-q026', 'aif-q028', 'aif-q030'],
   },
+  'saa-c03': {
+    1: ['saa-d1-001', 'saa-d1-003', 'saa-d1-006', 'saa-d1-011', 'saa-d1-019'],
+    2: ['saa-d2-001', 'saa-d2-003', 'saa-d2-006', 'saa-d2-011', 'saa-d2-015'],
+    3: ['saa-d3-001', 'saa-d3-002', 'saa-d3-006', 'saa-d3-012', 'saa-d3-015'],
+    4: ['saa-d4-001', 'saa-d4-004', 'saa-d4-006', 'saa-d4-008', 'saa-d4-013'],
+  },
 }
 
 /**

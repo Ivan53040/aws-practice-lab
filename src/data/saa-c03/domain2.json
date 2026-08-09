@@ -9,8 +9,11 @@
       "D": "Deploy to a single Region with CloudFront"
     },
     "answer": "B",
-    "explanation": "Multi-AZ deployment with an ALB distributes traffic across AZs, providing resilience against a single AZ failure. A single AZ deployment, regardless of scaling or instance size, cannot survive an AZ outage.",
-    "isMultiAnswer": false
+    "explanation": "Multi-AZ deployment with an ALB distributes traffic across AZs, providing resilience against a single AZ failure. A single AZ deployment, regardless of scaling or instance size, cannot survive an AZ outage.\nThe alternative choices do not satisfy the stated SAA-C03 requirement as directly or completely.",
+    "isMultiAnswer": false,
+    "type": "single",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
   },
   {
     "id": "saa-d2-002",
@@ -22,8 +25,11 @@
       "D": "RDS Proxy"
     },
     "answer": "B",
-    "explanation": "Multi-AZ deployment maintains a synchronous standby replica in a different AZ with automatic failover. Read Replicas are for read scaling, not automatic failover. Aurora Serverless auto-scales capacity. RDS Proxy manages database connections.",
-    "isMultiAnswer": false
+    "explanation": "Multi-AZ deployment maintains a synchronous standby replica in a different AZ with automatic failover. Read Replicas are for read scaling, not automatic failover. Aurora Serverless auto-scales capacity. RDS Proxy manages database connections.\nThe alternative choices do not satisfy the stated SAA-C03 requirement as directly or completely.",
+    "isMultiAnswer": false,
+    "type": "single",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
   },
   {
     "id": "saa-d2-003",
@@ -35,8 +41,11 @@
       "D": "Amazon S3"
     },
     "answer": "A",
-    "explanation": "Amazon SQS is a fully managed message queuing service that decouples application components. RDS is a database service. EC2 is a compute service. S3 is object storage.",
-    "isMultiAnswer": false
+    "explanation": "Amazon SQS is a fully managed message queuing service that decouples application components. RDS is a database service. EC2 is a compute service. S3 is object storage.\nThe alternative choices do not satisfy the stated SAA-C03 requirement as directly or completely.",
+    "isMultiAnswer": false,
+    "type": "single",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
   },
   {
     "id": "saa-d2-004",
@@ -48,8 +57,11 @@
       "D": "S3 One Zone-IA"
     },
     "answer": "C",
-    "explanation": "Glacier Deep Archive is the lowest-cost storage class, suitable for data accessed rarely with retrieval times of 12-48 hours. Glacier Instant Retrieval provides millisecond access. One Zone-IA stores data in one AZ.",
-    "isMultiAnswer": false
+    "explanation": "Glacier Deep Archive is the lowest-cost storage class, suitable for data accessed rarely with retrieval times of 12-48 hours. Glacier Instant Retrieval provides millisecond access. One Zone-IA stores data in one AZ.\nThe alternative choices do not satisfy the stated SAA-C03 requirement as directly or completely.",
+    "isMultiAnswer": false,
+    "type": "single",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
   },
   {
     "id": "saa-d2-005",
@@ -61,7 +73,226 @@
       "D": "Global tables"
     },
     "answer": "B",
-    "explanation": "Point-in-time recovery allows continuous backups of DynamoDB tables and restoration to any point in the last 35 days. Streams captures table changes. DAX is an in-memory cache. Global tables provide multi-region replication.",
-    "isMultiAnswer": false
+    "explanation": "Point-in-time recovery allows continuous backups of DynamoDB tables and restoration to any point in the last 35 days. Streams captures table changes. DAX is an in-memory cache. Global tables provide multi-region replication.\nThe alternative choices do not satisfy the stated SAA-C03 requirement as directly or completely.",
+    "isMultiAnswer": false,
+    "type": "single",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-006",
+    "type": "single",
+    "question": "A workload needs strict message ordering and exactly-once processing behavior for duplicate messages. Which SQS configuration is most appropriate?",
+    "options": {
+      "A": "Standard queue with a short polling interval",
+      "B": "FIFO queue with message deduplication",
+      "C": "Delay queue with random message groups",
+      "D": "Dead-letter queue without a source queue"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "FIFO queues preserve order within message groups and support deduplication for repeated message sends.\nStandard queues prioritize high throughput and provide at-least-once delivery without strict ordering. Delay queues defer delivery. A dead-letter queue stores failed messages and is not a primary processing queue.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-007",
+    "type": "single",
+    "question": "A single event must be delivered independently to a queue, a Lambda function, and an email endpoint. Which pattern is appropriate?",
+    "options": {
+      "A": "Publish once to an SNS topic with multiple subscriptions",
+      "B": "Store the event in EBS and poll it from each consumer",
+      "C": "Use one SQS queue shared by all consumers",
+      "D": "Use an RDS read replica for each consumer"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "An SNS topic provides pub/sub fanout so each subscription receives the event independently.\nEBS is block storage, not an event bus. A shared queue distributes messages among consumers rather than delivering each message to every consumer. RDS read replicas are database replicas.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-008",
+    "type": "single",
+    "question": "A workflow must coordinate several Lambda functions, retry failed steps, and record the execution state. Which service should orchestrate the workflow?",
+    "options": {
+      "A": "AWS Step Functions",
+      "B": "Amazon Route 53",
+      "C": "AWS DataSync",
+      "D": "Amazon ElastiCache"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Step Functions provides stateful workflow orchestration, retries, branching, and execution history for service integrations and compute steps.\nRoute 53 provides DNS. DataSync moves data. ElastiCache provides in-memory caching.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-009",
+    "type": "multi",
+    "question": "Which two design choices help a web workload scale independently across application components? Select two.",
+    "options": {
+      "A": "Place a durable queue between producers and workers",
+      "B": "Use synchronous calls between every component",
+      "C": "Use an Auto Scaling group for stateless workers",
+      "D": "Store session state only on one application server",
+      "E": "Use a single large instance for all components"
+    },
+    "answer": [
+      "A",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "A durable queue decouples producer and worker rates, and stateless workers in an Auto Scaling group can scale independently.\nSynchronous chains create tight coupling. Local session state prevents horizontal scaling. One large instance creates a scaling bottleneck and a single point of failure.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-010",
+    "type": "single",
+    "question": "A Lambda function processes messages from an SQS queue. What happens when the function fails to process a message?",
+    "options": {
+      "A": "The message is deleted immediately",
+      "B": "The message becomes visible again after the visibility timeout",
+      "C": "The message is permanently moved to S3",
+      "D": "The queue is automatically deleted"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "If a message is not deleted successfully before the visibility timeout expires, it becomes available for another receive attempt.\nSQS does not delete an unacknowledged message or move it to S3. The queue remains available for other messages.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-011",
+    "type": "single",
+    "question": "An application must continue serving requests if one Availability Zone fails. Which architecture is most appropriate?",
+    "options": {
+      "A": "One EC2 instance in one AZ with a larger instance type",
+      "B": "An Auto Scaling group spanning multiple AZs behind an Application Load Balancer",
+      "C": "One instance with a larger EBS volume",
+      "D": "A single subnet with a network ACL"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "A multi-AZ Auto Scaling group and load balancer can route traffic to healthy instances after an AZ failure.\nIncreasing the size of one instance or volume does not remove the AZ dependency. A network ACL is a traffic filter, not a high availability design.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-012",
+    "type": "single",
+    "question": "Which Route 53 routing policy can direct users to the endpoint that has passed a health check?",
+    "options": {
+      "A": "Simple routing without health checks",
+      "B": "Failover routing",
+      "C": "Geolocation routing only",
+      "D": "Multivalue answer routing without health checks"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Failover routing uses a primary and secondary record and can return the healthy endpoint based on health checks.\nSimple routing does not select based on health. Geolocation routes by user location. Multivalue answer can include health checks but is not the primary and secondary failover policy.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-013",
+    "type": "single",
+    "question": "A relational database needs automatic failover within one Region with minimal application changes. Which option should be selected?",
+    "options": {
+      "A": "An RDS Multi-AZ deployment",
+      "B": "An RDS read replica in the same AZ",
+      "C": "A DynamoDB table",
+      "D": "An EC2 instance store volume"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "RDS Multi-AZ maintains a synchronized standby in another Availability Zone and updates the endpoint after a failover.\nRead replicas are primarily for read scaling and are not the same as a synchronous Multi-AZ standby. DynamoDB and instance store use different data models and durability mechanisms.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-014",
+    "type": "single",
+    "question": "A company needs a database design that can serve read traffic from multiple Regions with low latency. Which Aurora feature is appropriate?",
+    "options": {
+      "A": "Aurora Replicas in one AZ",
+      "B": "Aurora Global Database",
+      "C": "RDS Proxy only",
+      "D": "EBS snapshots"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Aurora Global Database replicates storage across Regions and supports read-locality with a primary Region and secondary Regions.\nAurora Replicas in one Region do not provide cross-Region placement. RDS Proxy manages connections. EBS snapshots are backups, not a cross-Region read architecture.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-015",
+    "type": "single",
+    "question": "A company needs an active-passive disaster recovery design with a small running environment in the recovery Region. Which strategy best matches this requirement?",
+    "options": {
+      "A": "Backup and restore only",
+      "B": "Pilot light",
+      "C": "Warm standby",
+      "D": "Active-active"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "Warm standby keeps a scaled-down but functional environment running in the recovery Region so it can be scaled up quickly.\nBackup and restore has the longest recovery process. Pilot light keeps only core components running. Active-active runs production workloads in multiple Regions.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-016",
+    "type": "multi",
+    "question": "Which two features help preserve data availability across a Regional failure? Select two.",
+    "options": {
+      "A": "Amazon S3 Cross-Region Replication",
+      "B": "DynamoDB global tables",
+      "C": "A single-AZ EBS volume",
+      "D": "An instance store volume",
+      "E": "A local security group"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "S3 Cross-Region Replication copies objects to a bucket in another Region, and DynamoDB global tables replicate tables across Regions.\nSingle-AZ EBS and instance store do not provide Regional durability. Security groups control traffic and do not replicate data.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-017",
+    "type": "single",
+    "question": "A web tier must remove unhealthy instances automatically and replace them with healthy capacity. Which feature provides this behavior?",
+    "options": {
+      "A": "Auto Scaling group health checks",
+      "B": "S3 Lifecycle rules",
+      "C": "AWS Budgets",
+      "D": "A KMS key policy"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "An Auto Scaling group can use health checks to terminate unhealthy instances and launch replacements.\nS3 Lifecycle rules manage objects. Budgets monitors cost thresholds. KMS key policies control key usage.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-018",
+    "type": "single",
+    "question": "A company wants backups that can be restored after an accidental deletion of an AWS resource. Which service centralizes policy-based backups across supported services?",
+    "options": {
+      "A": "AWS Backup",
+      "B": "Amazon CloudFront",
+      "C": "AWS WAF",
+      "D": "Amazon EventBridge only"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "AWS Backup centralizes backup plans, schedules, retention, and vault policies for supported AWS resources.\nCloudFront and WAF protect or serve web traffic. EventBridge routes events but is not a backup management service.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
   }
 ]

@@ -1,7 +1,7 @@
 {
-  "name": "AWS Practice Lab",
+  "name": "CloudCertPrep · Free Cloud Certification Practice Exams",
   "short_name": "AWS Practice Lab",
-  "description": "Offline AWS Cloud Practitioner and AI Practitioner practice exams.",
+  "description": "Free cloud certification practice exams across 3 active certifications (1,539+ questions). Timed mock exams, domain practice with adaptive spaced repetition, and progress tracking. No signup, no ads.",
   "id": "/",
   "start_url": "/",
   "scope": "/",

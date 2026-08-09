@@ -466,7 +466,7 @@ function HomeView({
   onStart: () => void
   error: boolean
 }) {
-  const certs = [CERTIFICATIONS['clf-c02'], CERTIFICATIONS['aif-c01']]
+  const certs = [CERTIFICATIONS['clf-c02'], CERTIFICATIONS['aif-c01'], CERTIFICATIONS['saa-c03']]
   const selected = CERTIFICATIONS[certId]
   return (
     <div className="mx-auto w-full max-w-6xl px-4 py-10 md:px-8 md:py-16">

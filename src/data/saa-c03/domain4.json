@@ -9,8 +9,11 @@
       "D": "Dedicated Hosts"
     },
     "answer": "C",
-    "explanation": "Spot Instances offer up to 90% discount but can be interrupted. On-Demand has no discount. Reserved Instances require commitment. Dedicated Hosts provide physical server isolation.",
-    "isMultiAnswer": false
+    "explanation": "Spot Instances offer up to 90% discount but can be interrupted. On-Demand has no discount. Reserved Instances require commitment. Dedicated Hosts provide physical server isolation.\nThe alternative choices do not satisfy the stated SAA-C03 requirement as directly or completely.",
+    "isMultiAnswer": false,
+    "type": "single",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
   },
   {
     "id": "saa-d4-002",
@@ -22,8 +25,11 @@
       "D": "AWS Pricing Calculator"
     },
     "answer": "B",
-    "explanation": "Trusted Advisor inspects your AWS environment and provides recommendations for cost optimization, security, performance, and fault tolerance. Cost Explorer visualizes costs. Budgets sets alerts. Pricing Calculator estimates costs.",
-    "isMultiAnswer": false
+    "explanation": "Trusted Advisor inspects your AWS environment and provides recommendations for cost optimization, security, performance, and fault tolerance. Cost Explorer visualizes costs. Budgets sets alerts. Pricing Calculator estimates costs.\nThe alternative choices do not satisfy the stated SAA-C03 requirement as directly or completely.",
+    "isMultiAnswer": false,
+    "type": "single",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
   },
   {
     "id": "saa-d4-003",
@@ -35,8 +41,11 @@
       "D": "Use Dedicated Hosts"
     },
     "answer": "B",
-    "explanation": "Stopping On-Demand instances when not in use eliminates compute charges (only storage costs remain). Reserved Instances are for steady-state workloads. Spot Instances can be interrupted. Dedicated Hosts are expensive.",
-    "isMultiAnswer": false
+    "explanation": "Stopping On-Demand instances when not in use eliminates compute charges (only storage costs remain). Reserved Instances are for steady-state workloads. Spot Instances can be interrupted. Dedicated Hosts are expensive.\nThe alternative choices do not satisfy the stated SAA-C03 requirement as directly or completely.",
+    "isMultiAnswer": false,
+    "type": "single",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
   },
   {
     "id": "saa-d4-004",
@@ -48,8 +57,11 @@
       "D": "S3 Object Lock"
     },
     "answer": "B",
-    "explanation": "S3 Lifecycle policies automatically transition objects between storage classes or expire them based on rules. Versioning preserves object versions. Replication copies objects across buckets. Object Lock prevents deletion.",
-    "isMultiAnswer": false
+    "explanation": "S3 Lifecycle policies automatically transition objects between storage classes or expire them based on rules. Versioning preserves object versions. Replication copies objects across buckets. Object Lock prevents deletion.\nThe alternative choices do not satisfy the stated SAA-C03 requirement as directly or completely.",
+    "isMultiAnswer": false,
+    "type": "single",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
   },
   {
     "id": "saa-d4-005",
@@ -61,7 +73,174 @@
       "D": "Schema enforcement and referential integrity"
     },
     "answer": "B",
-    "explanation": "DynamoDB provides consistent single-digit millisecond performance at any scale. RDS is better for complex SQL queries, multi-table ACID transactions, and schema enforcement.",
-    "isMultiAnswer": false
+    "explanation": "DynamoDB provides consistent single-digit millisecond performance at any scale. RDS is better for complex SQL queries, multi-table ACID transactions, and schema enforcement.\nThe alternative choices do not satisfy the stated SAA-C03 requirement as directly or completely.",
+    "isMultiAnswer": false,
+    "type": "single",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d4-006",
+    "type": "single",
+    "question": "A data set has unpredictable access patterns and should move automatically to lower-cost S3 tiers without performance analysis by the team. Which storage class is appropriate?",
+    "options": {
+      "A": "S3 Intelligent-Tiering",
+      "B": "S3 Standard only",
+      "C": "S3 One Zone-IA only",
+      "D": "S3 Glacier Deep Archive only"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "S3 Intelligent-Tiering automatically moves objects between access tiers based on changing access patterns.\nS3 Standard does not automatically optimize tier placement. One Zone-IA and Deep Archive require the workload to accept their availability or retrieval characteristics.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d4-007",
+    "type": "single",
+    "question": "A compliance archive is rarely accessed and can tolerate retrieval that takes several hours. Which option is generally the lowest-cost fit?",
+    "options": {
+      "A": "S3 Standard",
+      "B": "S3 Standard-IA",
+      "C": "S3 Glacier Deep Archive",
+      "D": "Amazon EFS Standard"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "S3 Glacier Deep Archive is designed for long-term archival data with very infrequent access and longer retrieval times.\nS3 Standard and Standard-IA are intended for more frequent access. EFS is managed file storage and is not an archival tier.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d4-008",
+    "type": "single",
+    "question": "A workload runs continuously with predictable compute usage for three years. Which purchasing option can reduce compute cost compared with On-Demand pricing?",
+    "options": {
+      "A": "Savings Plans",
+      "B": "Spot Instances only",
+      "C": "Dedicated Hosts for every instance",
+      "D": "On-Demand Instances with no commitment"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Savings Plans provide discounted rates in exchange for a consistent usage commitment and can fit predictable long-running workloads.\nSpot Instances can be interrupted and are not a substitute for a guaranteed three-year baseline. Dedicated Hosts add isolation cost. On-Demand has no commitment discount.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d4-009",
+    "type": "single",
+    "question": "A fault-tolerant batch job can restart from checkpoints and should run at the lowest possible EC2 cost. Which option is most suitable?",
+    "options": {
+      "A": "Spot Instances",
+      "B": "Dedicated Hosts",
+      "C": "On-Demand Instances only",
+      "D": "A three-year Reserved Instance for every task"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Spot Instances use spare EC2 capacity at a discount and are appropriate when interruption can be handled by checkpointing or retrying.\nDedicated Hosts and long commitments cost more than needed for interruptible work. On-Demand is more expensive when interruptions are acceptable.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d4-010",
+    "type": "single",
+    "question": "A team wants to find idle EC2 instances and receive recommendations for reducing cost. Which service should they review?",
+    "options": {
+      "A": "AWS Trusted Advisor",
+      "B": "Amazon Route 53",
+      "C": "AWS Certificate Manager",
+      "D": "Amazon Cognito"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Trusted Advisor provides recommendations that can include underutilized resources and cost optimization opportunities.\nRoute 53 manages DNS, Certificate Manager manages certificates, and Cognito manages application identities.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d4-011",
+    "type": "single",
+    "question": "A serverless application has highly variable database traffic and long idle periods. Which database option can avoid paying for provisioned capacity when idle?",
+    "options": {
+      "A": "DynamoDB on-demand capacity",
+      "B": "A fixed-size RDS instance",
+      "C": "An RDS Dedicated Host",
+      "D": "An EBS volume without a database"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "DynamoDB on-demand capacity automatically handles variable request rates without a provisioned read and write capacity setting.\nA fixed RDS instance and a Dedicated Host continue to incur provisioned infrastructure cost. An EBS volume alone is not a database service.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d4-012",
+    "type": "single",
+    "question": "A relational workload has intermittent traffic and must scale database capacity automatically within configured limits. Which option should be evaluated?",
+    "options": {
+      "A": "Aurora Serverless",
+      "B": "A fixed EC2 instance running MySQL",
+      "C": "An S3 bucket notification",
+      "D": "A CloudFront cache policy"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Aurora Serverless can automatically adjust Aurora capacity for variable workloads within configured limits.\nA fixed database instance does not automatically scale capacity. S3 notifications and CloudFront policies do not provide relational database scaling.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d4-013",
+    "type": "single",
+    "question": "A private application makes frequent calls to Amazon S3 and currently sends them through a NAT gateway. Which change can reduce recurring network processing cost?",
+    "options": {
+      "A": "Add an S3 gateway VPC endpoint",
+      "B": "Add a second NAT gateway in the same AZ",
+      "C": "Assign public addresses to all instances",
+      "D": "Use a larger NAT gateway instance"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "An S3 gateway VPC endpoint provides a private route to S3 and can avoid NAT gateway processing for that traffic.\nAdding more NAT capacity does not remove processing charges. Public addresses create exposure and are not a cost optimization. NAT gateways are managed services, not instances to resize.",
+    "taskStatement": "4.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d4-014",
+    "type": "single",
+    "question": "A global website serves large static files to users in many Regions. Which design can reduce origin data transfer and improve delivery cost?",
+    "options": {
+      "A": "Use CloudFront caching at edge locations",
+      "B": "Send every request directly to an EC2 instance in one Region",
+      "C": "Use Direct Connect for each internet user",
+      "D": "Store every object on an EBS volume attached to one instance"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "CloudFront caches content near users, reducing repeated origin transfers and improving latency for globally distributed viewers.\nA single EC2 origin must serve every request across long distances. Direct Connect is for private connectivity, not public internet users. EBS is attached block storage, not a global distribution layer.",
+    "taskStatement": "4.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d4-015",
+    "type": "multi",
+    "question": "Which two practices help an organization allocate AWS costs to teams and applications? Select two.",
+    "options": {
+      "A": "Apply cost allocation tags to resources",
+      "B": "Use separate AWS accounts or organizational billing boundaries",
+      "C": "Disable CloudTrail in all accounts",
+      "D": "Use security groups as billing tags",
+      "E": "Store billing data only on an EC2 instance"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Cost allocation tags provide resource-level attribution, and separate accounts can create clear billing boundaries and consolidated billing views.\nCloudTrail is unrelated to cost allocation. Security groups are network controls, not billing labels. An EC2 instance is not a reliable billing data system.",
+    "taskStatement": "4.4",
+    "lastVerified": "2026-08-09"
   }
 ]

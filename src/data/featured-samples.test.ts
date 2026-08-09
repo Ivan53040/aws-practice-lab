@@ -11,6 +11,10 @@ import aifDomain2 from './aif-c01/domain2.json'
 import aifDomain3 from './aif-c01/domain3.json'
 import aifDomain4 from './aif-c01/domain4.json'
 import aifDomain5 from './aif-c01/domain5.json'
+import saaDomain1 from './saa-c03/domain1.json'
+import saaDomain2 from './saa-c03/domain2.json'
+import saaDomain3 from './saa-c03/domain3.json'
+import saaDomain4 from './saa-c03/domain4.json'
 
 interface BankQuestion {
   id: string
@@ -32,6 +36,12 @@ const BANKS: Record<string, Record<number, BankQuestion[]>> = {
     3: aifDomain3 as BankQuestion[],
     4: aifDomain4 as BankQuestion[],
     5: aifDomain5 as BankQuestion[],
+  },
+  'saa-c03': {
+    1: saaDomain1 as BankQuestion[],
+    2: saaDomain2 as BankQuestion[],
+    3: saaDomain3 as BankQuestion[],
+    4: saaDomain4 as BankQuestion[],
   },
 }
 

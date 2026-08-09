@@ -9,8 +9,11 @@
       "D": "Amazon Route 53"
     },
     "answer": "B",
-    "explanation": "CloudFront is a CDN that caches content at edge locations worldwide for low-latency delivery. Global Accelerator improves availability and performance for dynamic content. Route 53 is a DNS service. EC2 is a compute service.",
-    "isMultiAnswer": false
+    "explanation": "CloudFront is a CDN that caches content at edge locations worldwide for low-latency delivery. Global Accelerator improves availability and performance for dynamic content. Route 53 is a DNS service. EC2 is a compute service.\nThe alternative choices do not satisfy the stated SAA-C03 requirement as directly or completely.",
+    "isMultiAnswer": false,
+    "type": "single",
+    "taskStatement": "3.4",
+    "lastVerified": "2026-08-09"
   },
   {
     "id": "saa-d3-002",
@@ -22,8 +25,11 @@
       "D": "AWS Elastic Beanstalk"
     },
     "answer": "C",
-    "explanation": "AWS Fargate is a serverless compute engine for containers that removes the need to manage servers. ECS on EC2 requires managing EC2 instances. Elastic Beanstalk is a PaaS for web applications.",
-    "isMultiAnswer": false
+    "explanation": "AWS Fargate is a serverless compute engine for containers that removes the need to manage servers. ECS on EC2 requires managing EC2 instances. Elastic Beanstalk is a PaaS for web applications.\nThe alternative choices do not satisfy the stated SAA-C03 requirement as directly or completely.",
+    "isMultiAnswer": false,
+    "type": "single",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
   },
   {
     "id": "saa-d3-003",
@@ -35,8 +41,11 @@
       "D": "DynamoDB on-demand capacity"
     },
     "answer": "C",
-    "explanation": "DAX is an in-memory cache for DynamoDB that provides microsecond read latency. Streams captures changes. Global tables provide multi-region replication. On-demand capacity auto-scales throughput.",
-    "isMultiAnswer": false
+    "explanation": "DAX is an in-memory cache for DynamoDB that provides microsecond read latency. Streams captures changes. Global tables provide multi-region replication. On-demand capacity auto-scales throughput.\nThe alternative choices do not satisfy the stated SAA-C03 requirement as directly or completely.",
+    "isMultiAnswer": false,
+    "type": "single",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
   },
   {
     "id": "saa-d3-004",
@@ -48,8 +57,11 @@
       "D": "Amazon MQ"
     },
     "answer": "B",
-    "explanation": "Kinesis Data Streams is designed for real-time streaming data ingestion and processing. SQS is for message queuing. SNS is for pub/sub notifications. Amazon MQ is a managed message broker.",
-    "isMultiAnswer": false
+    "explanation": "Kinesis Data Streams is designed for real-time streaming data ingestion and processing. SQS is for message queuing. SNS is for pub/sub notifications. Amazon MQ is a managed message broker.\nThe alternative choices do not satisfy the stated SAA-C03 requirement as directly or completely.",
+    "isMultiAnswer": false,
+    "type": "single",
+    "taskStatement": "3.5",
+    "lastVerified": "2026-08-09"
   },
   {
     "id": "saa-d3-005",
@@ -61,7 +73,202 @@
       "D": "AWS Storage Gateway"
     },
     "answer": "B",
-    "explanation": "Amazon EFS provides scalable, elastic file storage accessible from multiple EC2 instances across AZs. EBS is block storage attached to a single instance. S3 is object storage. Storage Gateway connects on-premises to AWS storage.",
-    "isMultiAnswer": false
+    "explanation": "Amazon EFS provides scalable, elastic file storage accessible from multiple EC2 instances across AZs. EBS is block storage attached to a single instance. S3 is object storage. Storage Gateway connects on-premises to AWS storage.\nThe alternative choices do not satisfy the stated SAA-C03 requirement as directly or completely.",
+    "isMultiAnswer": false,
+    "type": "single",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d3-006",
+    "type": "single",
+    "question": "A workload requires persistent block storage with consistently high IOPS for a database running on EC2. Which EBS volume type is most appropriate?",
+    "options": {
+      "A": "st1",
+      "B": "sc1",
+      "C": "io2",
+      "D": "Throughput Optimized HDD with burst credits only"
+    },
+    "answer": "C",
+    "isMultiAnswer": false,
+    "explanation": "io2 is designed for provisioned IOPS workloads that need high performance and durability.\nst1 and sc1 are throughput-oriented HDD options. Provisioned IOPS SSD is the suitable class for a demanding database workload.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d3-007",
+    "type": "single",
+    "question": "A Windows application on several EC2 instances requires shared SMB file storage with Windows-native features. Which service should be used?",
+    "options": {
+      "A": "Amazon FSx for Windows File Server",
+      "B": "Amazon S3",
+      "C": "Amazon EBS",
+      "D": "Amazon DynamoDB"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "FSx for Windows File Server provides managed SMB file shares and Windows integration for multiple instances.\nS3 is object storage, EBS is block storage attached to instances, and DynamoDB is a NoSQL database.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d3-008",
+    "type": "single",
+    "question": "A company wants to speed up uploads of large objects to an S3 bucket from geographically distant clients. Which feature can improve transfer performance?",
+    "options": {
+      "A": "S3 Transfer Acceleration",
+      "B": "S3 Object Lock",
+      "C": "S3 Inventory only",
+      "D": "S3 Glacier vault lock"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "S3 Transfer Acceleration uses CloudFront edge locations to accelerate long-distance uploads to S3.\nObject Lock and vault lock enforce retention. Inventory produces reports and does not accelerate transfers.",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d3-009",
+    "type": "single",
+    "question": "A batch workload performs CPU-intensive calculations and has no local storage requirement. Which EC2 instance family is the best starting point?",
+    "options": {
+      "A": "Compute optimized",
+      "B": "Memory optimized",
+      "C": "Storage optimized",
+      "D": "Accelerated computing only"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Compute optimized instances are designed for workloads that benefit from a high ratio of CPU performance to memory.\nMemory optimized is for large in-memory datasets. Storage optimized is for high local storage I/O. Accelerated computing is used for specialized GPU or inference needs.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d3-010",
+    "type": "single",
+    "question": "A latency-sensitive Lambda function has unpredictable bursts and must reduce cold-start impact. Which feature should be considered?",
+    "options": {
+      "A": "Provisioned Concurrency",
+      "B": "Lambda layers only",
+      "C": "An S3 lifecycle rule",
+      "D": "A larger S3 bucket"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Provisioned Concurrency keeps a configured number of execution environments initialized for low-latency invocations.\nLayers package shared code but do not keep environments initialized. S3 settings do not control Lambda startup latency.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d3-011",
+    "type": "single",
+    "question": "A team wants to run containers without managing EC2 instances or the container control plane. Which option is appropriate?",
+    "options": {
+      "A": "Amazon ECS with AWS Fargate",
+      "B": "Amazon ECS with self-managed EC2 instances",
+      "C": "Amazon EBS snapshots",
+      "D": "AWS Storage Gateway"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "ECS with Fargate provides serverless container compute while AWS manages the underlying instances.\nECS on EC2 requires instance management. EBS snapshots and Storage Gateway provide storage capabilities, not serverless containers.",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d3-012",
+    "type": "single",
+    "question": "A read-heavy relational workload needs more read throughput without changing the primary writer. Which feature should be added?",
+    "options": {
+      "A": "An RDS read replica",
+      "B": "A KMS key rotation schedule",
+      "C": "An RDS Multi-AZ standby only",
+      "D": "An S3 bucket policy"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "An RDS read replica asynchronously copies data and can serve read queries separately from the primary instance.\nA Multi-AZ standby is for availability and does not normally serve read traffic. KMS and S3 policies do not add database read capacity.",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d3-013",
+    "type": "single",
+    "question": "A DynamoDB table has hot partitions because many requests use the same partition key value. Which design change is most appropriate?",
+    "options": {
+      "A": "Use a higher-cardinality partition key",
+      "B": "Use a longer table name",
+      "C": "Disable point-in-time recovery",
+      "D": "Attach an internet gateway to DynamoDB"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "A high-cardinality partition key distributes items and traffic more evenly across partitions.\nTable naming and point-in-time recovery do not distribute traffic. DynamoDB is accessed through AWS service endpoints rather than an attached internet gateway.",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d3-014",
+    "type": "single",
+    "question": "An application needs an in-memory cache for frequently accessed database records and supports Redis features. Which service should be selected?",
+    "options": {
+      "A": "Amazon ElastiCache for Redis",
+      "B": "Amazon S3 Glacier",
+      "C": "Amazon CloudTrail",
+      "D": "AWS Artifact"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "ElastiCache for Redis provides managed in-memory caching and Redis data structures for low-latency access.\nGlacier is archival storage. CloudTrail records API activity. Artifact provides compliance reports.",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d3-015",
+    "type": "single",
+    "question": "A company needs to deliver cached static and dynamic web content with low latency at edge locations. Which service should they use?",
+    "options": {
+      "A": "Amazon CloudFront",
+      "B": "AWS Direct Connect",
+      "C": "Amazon VPC Flow Logs",
+      "D": "Amazon RDS Proxy"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "CloudFront is a content delivery network that caches and serves content from edge locations.\nDirect Connect is a private network connection to AWS. VPC Flow Logs capture traffic metadata. RDS Proxy manages database connections.",
+    "taskStatement": "3.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d3-016",
+    "type": "single",
+    "question": "Instances in private subnets need private access to Amazon S3 without traversing a NAT gateway. Which VPC feature should be configured?",
+    "options": {
+      "A": "An S3 gateway VPC endpoint",
+      "B": "An internet gateway route",
+      "C": "A public IPv4 address on every instance",
+      "D": "A CloudFront distribution only"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "An S3 gateway VPC endpoint routes supported S3 traffic privately through the VPC and can avoid NAT processing charges.\nAn internet gateway and public addresses expose traffic to the public path. CloudFront serves content but does not provide private S3 API access for instances.",
+    "taskStatement": "3.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d3-017",
+    "type": "single",
+    "question": "A company needs to ingest streaming data and deliver it to S3 with minimal custom code. Which service is best suited?",
+    "options": {
+      "A": "Amazon Kinesis Data Firehose",
+      "B": "Amazon EBS",
+      "C": "Amazon Route 53",
+      "D": "AWS Secrets Manager"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Kinesis Data Firehose buffers and delivers streaming records to destinations such as S3 with managed scaling and transformation options.\nEBS is block storage. Route 53 is DNS. Secrets Manager stores secrets and does not ingest streams.",
+    "taskStatement": "3.5",
+    "lastVerified": "2026-08-09"
   }
 ]
