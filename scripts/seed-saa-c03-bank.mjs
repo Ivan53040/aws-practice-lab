@@ -18,7 +18,7 @@ import { fileURLToPath } from 'node:url'
 
 const ROOT = resolve(fileURLToPath(new URL('..', import.meta.url)))
 const DATA = join(ROOT, 'src', 'data', 'saa-c03')
-const VERIFIED = '2026-08-09'
+const VERIFIED = '2026-08-10'
 
 function single(id, taskStatement, question, options, answer, correct, distractors) {
   return {
@@ -254,6 +254,50 @@ const existingTasks = {
 
 const expectedCounts = { 1: 59, 2: 51, 3: 47, 4: 38 }
 
+const saaDifficultyContexts = [
+  {
+    en: 'This change affects a production workload. The team must preserve existing behavior and prefers a managed AWS capability with low operational overhead.',
+    zh: '這項變更會影響生產工作負載。團隊必須保留現有行為，並希望採用營運負擔較低的 AWS 託管功能。',
+  },
+  {
+    en: 'The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components.',
+    zh: '團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。',
+  },
+  {
+    en: 'The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures.',
+    zh: '實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。',
+  },
+  {
+    en: 'The workload follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement.',
+    zh: '此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。',
+  },
+  {
+    en: 'The team must avoid a prolonged outage and will validate the selected capability in staging before a controlled production rollout.',
+    zh: '團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。',
+  },
+]
+
+function addSaaDifficultyContext(question, index) {
+  const context = saaDifficultyContexts[index % saaDifficultyContexts.length]
+  const alreadyContextualized = saaDifficultyContexts.some(item => question.question.startsWith(item.en))
+  const translated = question.translations?.zh
+  const alreadyTranslated = translated && saaDifficultyContexts.some(item => translated.question.startsWith(item.zh))
+
+  return {
+    ...question,
+    question: alreadyContextualized ? question.question : `${context.en} ${question.question}`,
+    lastVerified: VERIFIED,
+    translations: translated
+      ? {
+          zh: {
+            ...translated,
+            question: alreadyTranslated ? translated.question : `${context.zh}${translated.question}`,
+          },
+        }
+      : question.translations,
+  }
+}
+
 for (const [domainId, expected] of Object.entries(expectedCounts)) {
   const path = join(DATA, `domain${domainId}.json`)
   const existing = JSON.parse(readFileSync(path, 'utf8')).map((question) => ({
@@ -269,7 +313,7 @@ for (const [domainId, expected] of Object.entries(expectedCounts)) {
   for (const question of [...(newQuestions[domainId] ?? []), ...(supplementalQuestions[domainId] ?? [])]) {
     byId.set(question.id, question)
   }
-  const merged = [...byId.values()]
+  const merged = [...byId.values()].map(addSaaDifficultyContext)
   if (merged.length !== expected) {
     throw new Error(`domain${domainId} expected ${expected} questions, found ${merged.length}`)
   }

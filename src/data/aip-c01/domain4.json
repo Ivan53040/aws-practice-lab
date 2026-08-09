@@ -1,757 +1,772 @@
 [
   {
     "id": "aip-c01-d4-001",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A production team needs to reduce inference cost for repeated identical requests. Which optimization should be evaluated?",
+    "question": "A production team is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team needs to reduce inference cost for repeated identical requests. Which optimization should be evaluated?",
     "options": {
       "A": "Cache safe, deterministic responses with an expiration policy",
-      "B": "Send every request to the most expensive model",
-      "C": "Disable all caching",
-      "D": "Include the full conversation forever"
+      "B": "Route requests by complexity and quality requirements",
+      "C": "Summarize or window conversation context while preserving needed facts",
+      "D": "Amazon CloudWatch"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Response caching can reduce repeated model calls when freshness and privacy requirements permit it.\nThe other choices increase token use or inference cost.",
-    "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Response caching can reduce repeated model calls when freshness and privacy requirements permit it.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Cache safe, deterministic responses with an expiration policy for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "生產團隊需要降低重複相同請求的推理成本。應該評估哪些優化？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。生產團隊需要降低重複相同請求的推理成本。應該評估哪些優化？",
         "options": {
           "A": "透過過期策略快取安全、確定的回應",
-          "B": "將每個請求發送給最昂貴的型號",
-          "C": "禁用所有快取",
-          "D": "永遠包含完整的對話"
+          "B": "依複雜性和品質要求路由請求",
+          "C": "總結或視窗對話上下文，同時保留所需的事實",
+          "D": "Amazon CloudWatch"
         },
-        "explanation": "當新鮮度和隱私要求允許時，回應快取可以減少重複的模型呼叫。\n其他選擇會增加代幣使用或推理成本。"
+        "explanation": "當新鮮度和隱私要求允許時，回應快取可以減少重複的模型呼叫。\n其他選項適用於此領域的不同需求，但不能像 透過過期策略快取安全、確定的回應 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d4-002",
-    "type": "single",
-    "question": "A multi-account platform team must choose a lower-cost model for simple classification while reserving a larger model for complex reasoning. Which design fits?",
-    "options": {
-      "A": "Disable evaluation",
-      "B": "Route requests by complexity and quality requirements",
-      "C": "Use the largest model for every request",
-      "D": "Randomly choose a model"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Model routing aligns cost and latency with the task while preserving quality where needed.\nUsing the largest model for every request is usually less cost optimized.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A multi-account platform team is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team must choose a lower-cost model for simple classification while reserving a larger model for complex reasoning. Which design fits?",
+    "options": {
+      "A": "Summarize or window conversation context while preserving needed facts",
+      "B": "Amazon CloudWatch",
+      "C": "Exponential backoff, bounded retries, and a fallback path",
+      "D": "Route requests by complexity and quality requirements"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Model routing aligns cost and latency with the task while preserving quality where needed.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Route requests by complexity and quality requirements for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊必須選擇成本較低的模型進行簡單分類，同時保留較大的模型進行複雜推理。哪種設計適合？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。多帳戶平台團隊必須選擇成本較低的模型進行簡單分類，同時保留較大的模型進行複雜推理。哪種設計適合？",
         "options": {
-          "A": "禁用評估",
-          "B": "依複雜性和品質要求路由請求",
-          "C": "為每個請求使用最大的模型",
-          "D": "隨機選擇一個模型"
+          "A": "總結或視窗對話上下文，同時保留所需的事實",
+          "B": "Amazon CloudWatch",
+          "C": "指數退避、有界重試和後備路徑",
+          "D": "依複雜性和品質要求路由請求"
         },
-        "explanation": "模型路由使成本和延遲與任務保持一致，同時在需要時保持品質。\n對每個請求使用最大的模型通常成本最佳化效果較差。"
+        "explanation": "模型路由使成本和延遲與任務保持一致，同時在需要時保持品質。\n其他選項適用於此領域的不同需求，但不能像 依複雜性和品質要求路由請求 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d4-003",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A regulated company needs to control token costs from long conversation history. Which practice is appropriate?",
+    "question": "A regulated company is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team needs to control token costs from long conversation history. Which practice is appropriate?",
     "options": {
-      "A": "Duplicate every message",
-      "B": "Ignore token metrics",
+      "A": "Exponential backoff, bounded retries, and a fallback path",
+      "B": "Cache safe, deterministic responses with an expiration policy",
       "C": "Summarize or window conversation context while preserving needed facts",
-      "D": "Send the entire history indefinitely"
+      "D": "Amazon CloudWatch"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Context windows and summaries reduce input tokens while retaining relevant state.\nUnbounded history increases cost and latency.",
-    "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Context windows and summaries reduce input tokens while retaining relevant state.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Summarize or window conversation context while preserving needed facts for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司需要透過長期對話歷史來控制代幣成本。哪種做法合適？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。受監管的公司需要透過長期對話歷史來控制代幣成本。哪種做法合適？",
         "options": {
-          "A": "複製每條訊息",
-          "B": "忽略令牌指標",
+          "A": "指數退避、有界重試和後備路徑",
+          "B": "透過過期策略快取安全、確定的回應",
           "C": "總結或視窗對話上下文，同時保留所需的事實",
-          "D": "無限期地發送整個歷史記錄"
+          "D": "Amazon CloudWatch"
         },
-        "explanation": "上下文視窗和摘要減少了輸入標記，同時保留了相關狀態。\n無限制的歷史記錄會增加成本和延遲。"
+        "explanation": "上下文視窗和摘要減少了輸入標記，同時保留了相關狀態。\n其他選項適用於此領域的不同需求，但不能像 總結或視窗對話上下文，同時保留所需的事實 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d4-004",
-    "type": "single",
-    "question": "A startup preparing for a traffic increase must monitor production GenAI latency and token usage. Which service should collect operational metrics?",
-    "options": {
-      "A": "Amazon EFS",
-      "B": "AWS Certificate Manager",
-      "C": "Amazon Route 53",
-      "D": "Amazon CloudWatch"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "CloudWatch dashboards and alarms can track latency, errors, and usage metrics.\nThe other choices do not provide GenAI operational monitoring.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase is redesigning one integrated end-to-end architecture. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The design must keep recurring cost proportional to use, enforce least privilege, and remain available during a component or Availability Zone failure. The workload must monitor production GenAI latency and token usage, and the same architecture needs to protect troubleshooting logs from containing prompts with confidential data. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Combine A vector index in an approved vector store with Private connectivity, encryption, and least-privilege IAM as a single platform design",
+      "B": "Use Amazon CloudWatch for the primary requirement and integrate it with Redact sensitive fields and restrict log access for the connected control",
+      "C": "Use Amazon CloudWatch but replace the connected control with Retrieval Augmented Generation with a knowledge base",
+      "D": "Use A vector index in an approved vector store for the primary requirement and integrate it with Redact sensitive fields and restrict log access"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Amazon CloudWatch satisfies the first part of the architecture: CloudWatch dashboards and alarms can track latency, errors, and usage metrics. Redact sensitive fields and restrict log access satisfies the connected requirement: Redaction and least-privilege log access reduce exposure while preserving useful diagnostics.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司必須監控生產 GenAI 延遲和令牌使用情況。哪個服務應該收集營運指標？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：準備增加流量的新創公司必須監控生產 GenAI 延遲和令牌使用情況。 第二項需求：支援關鍵工作負載的營運團隊需要保護故障排除日誌不包含具有機密資料的提示。 此設計必須讓持續成本與實際用量相符、落實最低權限，並在元件或可用區域發生故障時維持可用。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "Amazon EFS",
-          "B": "AWS Certificate Manager",
-          "C": "Amazon Route 53",
-          "D": "Amazon CloudWatch"
+          "A": "把已核准的向量儲存中的向量索引與私有連線、加密與最低權限 IAM結合為單一平台設計",
+          "B": "以Amazon CloudWatch處理主要需求，並整合編輯敏感字段並限制日誌存取作為相連控制",
+          "C": "使用Amazon CloudWatch，但以具有知識庫的檢索增強生成取代相連控制",
+          "D": "以已核准的向量儲存中的向量索引處理主要需求，並整合編輯敏感字段並限制日誌存取"
         },
-        "explanation": "CloudWatch 儀表板和警報可以追蹤延遲、錯誤和使用指標。\n其他選擇不提供 GenAI 運行監控。"
+        "explanation": "Amazon CloudWatch 負責架構的第一項需求，編輯敏感字段並限制日誌存取 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "aip-c01-d4-005",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An operations team supporting a critical workload needs to keep a workload responsive during model-provider throttling. Which pattern helps?",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team needs to keep a workload responsive during model-provider throttling. Which pattern helps?",
     "options": {
       "A": "Exponential backoff, bounded retries, and a fallback path",
-      "B": "Retry without limit",
-      "C": "Open every request concurrently",
-      "D": "Remove timeouts"
+      "B": "Cache safe, deterministic responses with an expiration policy",
+      "C": "Route requests by complexity and quality requirements",
+      "D": "Summarize or window conversation context while preserving needed facts"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Bounded retries and fallback behavior protect user experience during throttling or transient failures.\nUnbounded retries and no timeouts can amplify an outage.",
-    "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Bounded retries and fallback behavior protect user experience during throttling or transient failures.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Exponential backoff, bounded retries, and a fallback path for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊需要在模型提供者限制期間保持工作負載的回應能力。哪種模式有幫助？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。支援關鍵工作負載的營運團隊需要在模型提供者限制期間保持工作負載的回應能力。哪種模式有幫助？",
         "options": {
           "A": "指數退避、有界重試和後備路徑",
-          "B": "無限制重試",
-          "C": "同時打開每個請求",
-          "D": "刪除超時"
+          "B": "透過過期策略快取安全、確定的回應",
+          "C": "依複雜性和品質要求路由請求",
+          "D": "總結或視窗對話上下文，同時保留所需的事實"
         },
-        "explanation": "有界重試和回退行為可在限製或暫時性故障期間保護使用者體驗。\n無限制的重試和無超時會加劇中斷。"
+        "explanation": "有界重試和回退行為可在限製或暫時性故障期間保護使用者體驗。\n其他選項適用於此領域的不同需求，但不能像 指數退避、有界重試和後備路徑 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d4-006",
-    "type": "single",
-    "question": "A data platform team needs to reduce inference cost for repeated identical requests. Which optimization should be evaluated?",
-    "options": {
-      "A": "Include the full conversation forever",
-      "B": "Cache safe, deterministic responses with an expiration policy",
-      "C": "Send every request to the most expensive model",
-      "D": "Disable all caching"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Response caching can reduce repeated model calls when freshness and privacy requirements permit it.\nThe other choices increase token use or inference cost.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A data platform team is reviewing a production decision. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The team needs to reduce inference cost for repeated identical requests. Which optimization should be evaluated?",
+    "options": {
+      "A": "Route requests by complexity and quality requirements",
+      "B": "Summarize or window conversation context while preserving needed facts",
+      "C": "Amazon CloudWatch",
+      "D": "Cache safe, deterministic responses with an expiration policy"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Response caching can reduce repeated model calls when freshness and privacy requirements permit it.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Cache safe, deterministic responses with an expiration policy for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要降低重複相同請求的推理成本。應該評估哪些優化？",
+        "question": "組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。資料平台團隊需要降低重複相同請求的推理成本。應該評估哪些優化？",
         "options": {
-          "A": "永遠包含完整的對話",
-          "B": "透過過期策略快取安全、確定的回應",
-          "C": "將每個請求發送給最昂貴的型號",
-          "D": "禁用所有快取"
+          "A": "依複雜性和品質要求路由請求",
+          "B": "總結或視窗對話上下文，同時保留所需的事實",
+          "C": "Amazon CloudWatch",
+          "D": "透過過期策略快取安全、確定的回應"
         },
-        "explanation": "當新鮮度和隱私要求允許時，回應快取可以減少重複的模型呼叫。\n其他選擇會增加代幣使用或推理成本。"
+        "explanation": "當新鮮度和隱私要求允許時，回應快取可以減少重複的模型呼叫。\n其他選項適用於此領域的不同需求，但不能像 透過過期策略快取安全、確定的回應 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d4-007",
-    "type": "single",
-    "question": "A security-conscious engineering team must choose a lower-cost model for simple classification while reserving a larger model for complex reasoning. Which design fits?",
-    "options": {
-      "A": "Randomly choose a model",
-      "B": "Disable evaluation",
-      "C": "Route requests by complexity and quality requirements",
-      "D": "Use the largest model for every request"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "Model routing aligns cost and latency with the task while preserving quality where needed.\nUsing the largest model for every request is usually less cost optimized.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A security-conscious engineering team is planning two independent production changes. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The first team must choose a lower-cost model for simple classification while reserving a larger model for complex reasoning. A second team needs to control token costs from long conversation history. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Summarize or window conversation context while preserving needed facts",
+      "B": "Amazon CloudWatch",
+      "C": "Exponential backoff, bounded retries, and a fallback path",
+      "D": "Cache safe, deterministic responses with an expiration policy",
+      "E": "Route requests by complexity and quality requirements"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Route requests by complexity and quality requirements meets the first requirement: Model routing aligns cost and latency with the task while preserving quality where needed. Summarize or window conversation context while preserving needed facts meets the second requirement: Context windows and summaries reduce input tokens while retaining relevant state.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊必須選擇成本較低的模型進行簡單分類，同時保留較大的模型進行複雜推理。哪種設計適合？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。第一項需求：受監管的公司需要透過長期對話歷史來控制代幣成本。第二項需求：多帳戶平台團隊必須選擇成本較低的模型進行簡單分類，同時保留較大的模型進行複雜推理。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "隨機選擇一個模型",
-          "B": "禁用評估",
-          "C": "依複雜性和品質要求路由請求",
-          "D": "為每個請求使用最大的模型"
+          "A": "總結或視窗對話上下文，同時保留所需的事實",
+          "B": "Amazon CloudWatch",
+          "C": "指數退避、有界重試和後備路徑",
+          "D": "透過過期策略快取安全、確定的回應",
+          "E": "依複雜性和品質要求路由請求"
         },
-        "explanation": "模型路由使成本和延遲與任務保持一致，同時在需要時保持品質。\n對每個請求使用最大的模型通常成本最佳化效果較差。"
+        "explanation": "總結或視窗對話上下文，同時保留所需的事實 符合第一項需求：上下文視窗和摘要減少了輸入標記，同時保留了相關狀態。 依複雜性和品質要求路由請求 符合第二項需求：模型路由使成本和延遲與任務保持一致，同時在需要時保持品質。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "aip-c01-d4-008",
-    "type": "single",
-    "question": "A company migrating an existing workload needs to control token costs from long conversation history. Which practice is appropriate?",
-    "options": {
-      "A": "Send the entire history indefinitely",
-      "B": "Duplicate every message",
-      "C": "Ignore token metrics",
-      "D": "Summarize or window conversation context while preserving needed facts"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Context windows and summaries reduce input tokens while retaining relevant state.\nUnbounded history increases cost and latency.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A company migrating an existing workload is redesigning one integrated end-to-end architecture. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The design must avoid unnecessary standby cost without weakening security controls or the availability objective. The workload needs to control token costs from long conversation history, and the same architecture needs to control. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Combine A vector index in an approved vector store with Private connectivity, encryption, and least-privilege IAM as a single platform design",
+      "B": "Use Summarize or window conversation context while preserving needed facts for the primary requirement and integrate it with An IAM policy scoped to approved Bedrock model resources for the connected control",
+      "C": "Use Summarize or window conversation context while preserving needed facts but replace the connected control with Retrieval Augmented Generation with a knowledge base",
+      "D": "Use A vector index in an approved vector store for the primary requirement and integrate it with An IAM policy scoped to approved Bedrock model resources"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Summarize or window conversation context while preserving needed facts satisfies the first part of the architecture: Context windows and summaries reduce input tokens while retaining relevant state. An IAM policy scoped to approved Bedrock model resources satisfies the connected requirement: IAM can restrict model invocation actions and resources for a production role.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司需要控制長期對話歷史記錄中的代幣成本。哪種做法合適？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：受監管的公司需要透過長期對話歷史來控制代幣成本。 第二項需求：生產團隊需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。 此設計必須避免不必要的備用成本，同時不可削弱安全控制或可用性目標。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "無限期地發送整個歷史記錄",
-          "B": "複製每條訊息",
-          "C": "忽略令牌指標",
-          "D": "總結或視窗對話上下文，同時保留所需的事實"
+          "A": "把已核准的向量儲存中的向量索引與私有連線、加密與最低權限 IAM結合為單一平台設計",
+          "B": "以總結或視窗對話上下文，同時保留所需的事實處理主要需求，並整合IAM 策略範圍為已核准的 Bedrock 模型資源作為相連控制",
+          "C": "使用總結或視窗對話上下文，同時保留所需的事實，但以具有知識庫的檢索增強生成取代相連控制",
+          "D": "以已核准的向量儲存中的向量索引處理主要需求，並整合IAM 策略範圍為已核准的 Bedrock 模型資源"
         },
-        "explanation": "上下文視窗和摘要減少了輸入標記，同時保留了相關狀態。\n無限制的歷史記錄會增加成本和延遲。"
+        "explanation": "總結或視窗對話上下文，同時保留所需的事實 負責架構的第一項需求，IAM 策略範圍為已核准的 Bedrock 模型資源 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "aip-c01-d4-009",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team with strict recovery objectives must monitor production GenAI latency and token usage. Which service should collect operational metrics?",
+    "question": "A team with strict recovery objectives is reviewing a production decision. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The team must monitor production GenAI latency and token usage. Which service should collect operational metrics?",
     "options": {
       "A": "Amazon CloudWatch",
-      "B": "Amazon EFS",
-      "C": "AWS Certificate Manager",
-      "D": "Amazon Route 53"
+      "B": "Exponential backoff, bounded retries, and a fallback path",
+      "C": "Cache safe, deterministic responses with an expiration policy",
+      "D": "Route requests by complexity and quality requirements"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "CloudWatch dashboards and alarms can track latency, errors, and usage metrics.\nThe other choices do not provide GenAI operational monitoring.",
-    "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "CloudWatch dashboards and alarms can track latency, errors, and usage metrics.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon CloudWatch for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格恢復目標的團隊必須監控生產 GenAI 延遲和令牌使用情況。哪個服務應該收集營運指標？",
+        "question": "組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。具有嚴格恢復目標的團隊必須監控生產 GenAI 延遲和令牌使用情況。哪個服務應該收集營運指標？",
         "options": {
           "A": "Amazon CloudWatch",
-          "B": "Amazon EFS",
-          "C": "AWS Certificate Manager",
-          "D": "Amazon Route 53"
+          "B": "指數退避、有界重試和後備路徑",
+          "C": "透過過期策略快取安全、確定的回應",
+          "D": "依複雜性和品質要求路由請求"
         },
-        "explanation": "CloudWatch 儀表板和警報可以追蹤延遲、錯誤和使用指標。\n其他選擇不提供 GenAI 運行監控。"
+        "explanation": "CloudWatch 儀表板和警報可以追蹤延遲、錯誤和使用指標。\n其他選項適用於此領域的不同需求，但不能像 Amazon CloudWatch 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d4-010",
-    "type": "single",
-    "question": "A developer team preparing a release needs to keep a workload responsive during model-provider throttling. Which pattern helps?",
-    "options": {
-      "A": "Remove timeouts",
-      "B": "Exponential backoff, bounded retries, and a fallback path",
-      "C": "Retry without limit",
-      "D": "Open every request concurrently"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Bounded retries and fallback behavior protect user experience during throttling or transient failures.\nUnbounded retries and no timeouts can amplify an outage.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A developer team preparing a release is reviewing a production decision. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The team needs to keep a workload responsive during model-provider throttling. Which pattern helps?",
+    "options": {
+      "A": "Cache safe, deterministic responses with an expiration policy",
+      "B": "Route requests by complexity and quality requirements",
+      "C": "Summarize or window conversation context while preserving needed facts",
+      "D": "Exponential backoff, bounded retries, and a fallback path"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Bounded retries and fallback behavior protect user experience during throttling or transient failures.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Exponential backoff, bounded retries, and a fallback path for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊需要在模型提供者限制期間保持工作負載響應。哪種模式有幫助？",
+        "question": "組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。準備發布的開發團隊需要在模型提供者限制期間保持工作負載響應。哪種模式有幫助？",
         "options": {
-          "A": "刪除超時",
-          "B": "指數退避、有界重試和後備路徑",
-          "C": "無限制重試",
-          "D": "同時打開每個請求"
+          "A": "透過過期策略快取安全、確定的回應",
+          "B": "依複雜性和品質要求路由請求",
+          "C": "總結或視窗對話上下文，同時保留所需的事實",
+          "D": "指數退避、有界重試和後備路徑"
         },
-        "explanation": "有界重試和回退行為可在限製或暫時性故障期間保護使用者體驗。\n無限制的重試和無超時會加劇中斷。"
+        "explanation": "有界重試和回退行為可在限製或暫時性故障期間保護使用者體驗。\n其他選項適用於此領域的不同需求，但不能像 指數退避、有界重試和後備路徑 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d4-011",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An enterprise with several AWS Regions needs to reduce inference cost for repeated identical requests. Which optimization should be evaluated?",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team needs to reduce inference cost for repeated identical requests. Which optimization should be evaluated?",
     "options": {
-      "A": "Disable all caching",
-      "B": "Include the full conversation forever",
+      "A": "Summarize or window conversation context while preserving needed facts",
+      "B": "Amazon CloudWatch",
       "C": "Cache safe, deterministic responses with an expiration policy",
-      "D": "Send every request to the most expensive model"
+      "D": "Route requests by complexity and quality requirements"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Response caching can reduce repeated model calls when freshness and privacy requirements permit it.\nThe other choices increase token use or inference cost.",
-    "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Response caching can reduce repeated model calls when freshness and privacy requirements permit it.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Cache safe, deterministic responses with an expiration policy for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS Regions 的企業需要降低重複相同請求的推理成本。應該評估哪些優化？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。擁有多個 AWS Regions 的企業需要降低重複相同請求的推理成本。應該評估哪些優化？",
         "options": {
-          "A": "禁用所有快取",
-          "B": "永遠包含完整的對話",
+          "A": "總結或視窗對話上下文，同時保留所需的事實",
+          "B": "Amazon CloudWatch",
           "C": "透過過期策略快取安全、確定的回應",
-          "D": "將每個請求發送給最昂貴的型號"
+          "D": "依複雜性和品質要求路由請求"
         },
-        "explanation": "當新鮮度和隱私要求允許時，回應快取可以減少重複的模型呼叫。\n其他選擇會增加代幣使用或推理成本。"
+        "explanation": "當新鮮度和隱私要求允許時，回應快取可以減少重複的模型呼叫。\n其他選項適用於此領域的不同需求，但不能像 透過過期策略快取安全、確定的回應 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d4-012",
-    "type": "single",
-    "question": "A service owner reviewing an incident must choose a lower-cost model for simple classification while reserving a larger model for complex reasoning. Which design fits?",
-    "options": {
-      "A": "Use the largest model for every request",
-      "B": "Randomly choose a model",
-      "C": "Disable evaluation",
-      "D": "Route requests by complexity and quality requirements"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Model routing aligns cost and latency with the task while preserving quality where needed.\nUsing the largest model for every request is usually less cost optimized.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A service owner reviewing an incident is redesigning one integrated end-to-end architecture. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The organization will accept additional managed-service cost only when it measurably improves security and availability with less operational effort. The workload must choose a lower-cost model for simple classification while reserving a larger model for complex reasoning, and the same architecture needs to invoke a foundation model from an application without hosting GPU instances. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Combine A vector index in an approved vector store with Private connectivity, encryption, and least-privilege IAM as a single platform design",
+      "B": "Use Route requests by complexity and quality requirements for the primary requirement and integrate it with Amazon Bedrock for the connected control",
+      "C": "Use Route requests by complexity and quality requirements but replace the connected control with Retrieval Augmented Generation with a knowledge base",
+      "D": "Use A vector index in an approved vector store for the primary requirement and integrate it with Amazon Bedrock"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Route requests by complexity and quality requirements satisfies the first part of the architecture: Model routing aligns cost and latency with the task while preserving quality where needed. Amazon Bedrock satisfies the connected requirement: Amazon Bedrock provides managed API access to foundation models without managing model servers.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務所有者必須選擇成本較低的模型進行簡單分類，同時保留較大的模型進行複雜推理。哪種設計適合？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：具有安全意識的工程團隊必須選擇成本較低的模型進行簡單分類，同時保留較大的模型進行複雜推理。 第二項需求：在共享環境中工作的 AWS 管理員需要從應用程式呼叫基礎模型，而無需託管 GPU 執行個體。 只有在託管服務能以較低營運負擔明確改善安全性與可用性時，組織才會接受額外成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "為每個請求使用最大的模型",
-          "B": "隨機選擇一個模型",
-          "C": "禁用評估",
-          "D": "依複雜性和品質要求路由請求"
+          "A": "把已核准的向量儲存中的向量索引與私有連線、加密與最低權限 IAM結合為單一平台設計",
+          "B": "以依複雜性和品質要求路由請求處理主要需求，並整合Amazon Bedrock作為相連控制",
+          "C": "使用依複雜性和品質要求路由請求，但以具有知識庫的檢索增強生成取代相連控制",
+          "D": "以已核准的向量儲存中的向量索引處理主要需求，並整合Amazon Bedrock"
         },
-        "explanation": "模型路由使成本和延遲與任務保持一致，同時在需要時保持品質。\n對每個請求使用最大的模型通常成本最佳化效果較差。"
+        "explanation": "依複雜性和品質要求路由請求 負責架構的第一項需求，Amazon Bedrock 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "aip-c01-d4-013",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team optimizing an existing implementation needs to control token costs from long conversation history. Which practice is appropriate?",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team needs to control token costs from long conversation history. Which practice is appropriate?",
     "options": {
       "A": "Summarize or window conversation context while preserving needed facts",
-      "B": "Send the entire history indefinitely",
-      "C": "Duplicate every message",
-      "D": "Ignore token metrics"
+      "B": "Amazon CloudWatch",
+      "C": "Exponential backoff, bounded retries, and a fallback path",
+      "D": "Cache safe, deterministic responses with an expiration policy"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Context windows and summaries reduce input tokens while retaining relevant state.\nUnbounded history increases cost and latency.",
-    "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Context windows and summaries reduce input tokens while retaining relevant state.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Summarize or window conversation context while preserving needed facts for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊需要控制長期對話歷史記錄中的代幣成本。哪種做法合適？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。優化現有實施的團隊需要控制長期對話歷史記錄中的代幣成本。哪種做法合適？",
         "options": {
           "A": "總結或視窗對話上下文，同時保留所需的事實",
-          "B": "無限期地發送整個歷史記錄",
-          "C": "複製每條訊息",
-          "D": "忽略令牌指標"
+          "B": "Amazon CloudWatch",
+          "C": "指數退避、有界重試和後備路徑",
+          "D": "透過過期策略快取安全、確定的回應"
         },
-        "explanation": "上下文視窗和摘要減少了輸入標記，同時保留了相關狀態。\n無限制的歷史記錄會增加成本和延遲。"
+        "explanation": "上下文視窗和摘要減少了輸入標記，同時保留了相關狀態。\n其他選項適用於此領域的不同需求，但不能像 總結或視窗對話上下文，同時保留所需的事實 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d4-014",
-    "type": "single",
-    "question": "A company introducing an automated workflow must monitor production GenAI latency and token usage. Which service should collect operational metrics?",
-    "options": {
-      "A": "Amazon Route 53",
-      "B": "Amazon CloudWatch",
-      "C": "Amazon EFS",
-      "D": "AWS Certificate Manager"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "CloudWatch dashboards and alarms can track latency, errors, and usage metrics.\nThe other choices do not provide GenAI operational monitoring.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A company introducing an automated workflow is planning two independent production changes. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The first team must monitor production GenAI latency and token usage. A second team needs to keep a workload responsive during model-provider throttling. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Route requests by complexity and quality requirements",
+      "B": "Summarize or window conversation context while preserving needed facts",
+      "C": "Amazon CloudWatch",
+      "D": "Exponential backoff, bounded retries, and a fallback path",
+      "E": "Cache safe, deterministic responses with an expiration policy"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Amazon CloudWatch meets the first requirement: CloudWatch dashboards and alarms can track latency, errors, and usage metrics. Exponential backoff, bounded retries, and a fallback path meets the second requirement: Bounded retries and fallback behavior protect user experience during throttling or transient failures.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司必須監控生產 GenAI 延遲和令牌使用情況。哪個服務應該收集營運指標？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。第一項需求：準備增加流量的新創公司必須監控生產 GenAI 延遲和令牌使用情況。第二項需求：支援關鍵工作負載的營運團隊需要在模型提供者限制期間保持工作負載的回應能力。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "Amazon Route 53",
-          "B": "Amazon CloudWatch",
-          "C": "Amazon EFS",
-          "D": "AWS Certificate Manager"
+          "A": "依複雜性和品質要求路由請求",
+          "B": "總結或視窗對話上下文，同時保留所需的事實",
+          "C": "Amazon CloudWatch",
+          "D": "指數退避、有界重試和後備路徑",
+          "E": "透過過期策略快取安全、確定的回應"
         },
-        "explanation": "CloudWatch 儀表板和警報可以追蹤延遲、錯誤和使用指標。\n其他選擇不提供 GenAI 運行監控。"
+        "explanation": "Amazon CloudWatch 符合第一項需求：CloudWatch 儀表板和警報可以追蹤延遲、錯誤和使用指標。 指數退避、有界重試和後備路徑 符合第二項需求：有界重試和回退行為可在限製或暫時性故障期間保護使用者體驗。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "aip-c01-d4-015",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An AWS administrator working in a shared environment needs to keep a workload responsive during model-provider throttling. Which pattern helps?",
+    "question": "An AWS administrator working in a shared environment is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team needs to keep a workload responsive during model-provider throttling. Which pattern helps?",
     "options": {
-      "A": "Open every request concurrently",
-      "B": "Remove timeouts",
+      "A": "Route requests by complexity and quality requirements",
+      "B": "Summarize or window conversation context while preserving needed facts",
       "C": "Exponential backoff, bounded retries, and a fallback path",
-      "D": "Retry without limit"
+      "D": "Cache safe, deterministic responses with an expiration policy"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Bounded retries and fallback behavior protect user experience during throttling or transient failures.\nUnbounded retries and no timeouts can amplify an outage.",
-    "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Bounded retries and fallback behavior protect user experience during throttling or transient failures.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Exponential backoff, bounded retries, and a fallback path for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "在共享環境中工作的 AWS 管理員需要在模型提供者限制期間保持工作負載的回應能力。哪種模式有幫助？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。在共享環境中工作的 AWS 管理員需要在模型提供者限制期間保持工作負載的回應能力。哪種模式有幫助？",
         "options": {
-          "A": "同時打開每個請求",
-          "B": "刪除超時",
+          "A": "依複雜性和品質要求路由請求",
+          "B": "總結或視窗對話上下文，同時保留所需的事實",
           "C": "指數退避、有界重試和後備路徑",
-          "D": "無限制重試"
+          "D": "透過過期策略快取安全、確定的回應"
         },
-        "explanation": "有界重試和回退行為可在限製或暫時性故障期間保護使用者體驗。\n無限制的重試和無超時會加劇中斷。"
+        "explanation": "有界重試和回退行為可在限製或暫時性故障期間保護使用者體驗。\n其他選項適用於此領域的不同需求，但不能像 指數退避、有界重試和後備路徑 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d4-016",
-    "type": "single",
-    "question": "A customer-facing application team needs to reduce inference cost for repeated identical requests. Which optimization should be evaluated?",
-    "options": {
-      "A": "Send every request to the most expensive model",
-      "B": "Disable all caching",
-      "C": "Include the full conversation forever",
-      "D": "Cache safe, deterministic responses with an expiration policy"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Response caching can reduce repeated model calls when freshness and privacy requirements permit it.\nThe other choices increase token use or inference cost.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A customer-facing application team is redesigning one integrated end-to-end architecture. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The architecture must limit blast radius, preserve availability during change, and control cost through automation instead of permanent overprovisioning. The workload needs to reduce inference cost for repeated identical requests, and the same architecture must ensure an agent cannot invoke an unapproved tool. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Combine A vector index in an approved vector store with Private connectivity, encryption, and least-privilege IAM as a single platform design",
+      "B": "Use Cache safe, deterministic responses with an expiration policy for the primary requirement and integrate it with An allowlist of tools backed by IAM and application authorization for the connected control",
+      "C": "Use Cache safe, deterministic responses with an expiration policy but replace the connected control with Retrieval Augmented Generation with a knowledge base",
+      "D": "Use A vector index in an approved vector store for the primary requirement and integrate it with An allowlist of tools backed by IAM and application authorization"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Cache safe, deterministic responses with an expiration policy satisfies the first part of the architecture: Response caching can reduce repeated model calls when freshness and privacy requirements permit it. An allowlist of tools backed by IAM and application authorization satisfies the connected requirement: A tool allowlist and IAM policy constrain what the agent can call.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊需要降低重複相同請求的推理成本。應該評估哪些優化？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：資料平台團隊需要降低重複相同請求的推理成本。 第二項需求：支援關鍵工作負載的營運團隊必須確保代理無法呼叫未經批准的工具。 此架構必須限制影響範圍、在變更期間維持可用性，並透過自動化控制成本，而不是長期過度佈建。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "將每個請求發送給最昂貴的型號",
-          "B": "禁用所有快取",
-          "C": "永遠包含完整的對話",
-          "D": "透過過期策略快取安全、確定的回應"
+          "A": "把已核准的向量儲存中的向量索引與私有連線、加密與最低權限 IAM結合為單一平台設計",
+          "B": "以透過過期策略快取安全、確定的回應處理主要需求，並整合由 IAM 和應用程式授權支援的工具白名單作為相連控制",
+          "C": "使用透過過期策略快取安全、確定的回應，但以具有知識庫的檢索增強生成取代相連控制",
+          "D": "以已核准的向量儲存中的向量索引處理主要需求，並整合由 IAM 和應用程式授權支援的工具白名單"
         },
-        "explanation": "當新鮮度和隱私要求允許時，回應快取可以減少重複的模型呼叫。\n其他選擇會增加代幣使用或推理成本。"
+        "explanation": "透過過期策略快取安全、確定的回應 負責架構的第一項需求，由 IAM 和應用程式授權支援的工具白名單 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "aip-c01-d4-017",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A platform team standardizing its AWS deployments must choose a lower-cost model for simple classification while reserving a larger model for complex reasoning. Which design fits?",
+    "question": "A platform team standardizing its AWS deployments is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team must choose a lower-cost model for simple classification while reserving a larger model for complex reasoning. Which design fits?",
     "options": {
       "A": "Route requests by complexity and quality requirements",
-      "B": "Use the largest model for every request",
-      "C": "Randomly choose a model",
-      "D": "Disable evaluation"
+      "B": "Summarize or window conversation context while preserving needed facts",
+      "C": "Amazon CloudWatch",
+      "D": "Exponential backoff, bounded retries, and a fallback path"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Model routing aligns cost and latency with the task while preserving quality where needed.\nUsing the largest model for every request is usually less cost optimized.",
-    "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Model routing aligns cost and latency with the task while preserving quality where needed.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Route requests by complexity and quality requirements for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊必須選擇成本較低的模型來進行簡單分類，同時保留更大的模型來進行複雜推理。哪種設計適合？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。標準化其 AWS 部署的平台團隊必須選擇成本較低的模型來進行簡單分類，同時保留更大的模型來進行複雜推理。哪種設計適合？",
         "options": {
           "A": "依複雜性和品質要求路由請求",
-          "B": "為每個請求使用最大的模型",
-          "C": "隨機選擇一個模型",
-          "D": "禁用評估"
+          "B": "總結或視窗對話上下文，同時保留所需的事實",
+          "C": "Amazon CloudWatch",
+          "D": "指數退避、有界重試和後備路徑"
         },
-        "explanation": "模型路由使成本和延遲與任務保持一致，同時在需要時保持品質。\n對每個請求使用最大的模型通常成本最佳化效果較差。"
+        "explanation": "模型路由使成本和延遲與任務保持一致，同時在需要時保持品質。\n其他選項適用於此領域的不同需求，但不能像 依複雜性和品質要求路由請求 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d4-018",
-    "type": "single",
-    "question": "A team preparing evidence for an audit needs to control token costs from long conversation history. Which practice is appropriate?",
-    "options": {
-      "A": "Ignore token metrics",
-      "B": "Summarize or window conversation context while preserving needed facts",
-      "C": "Send the entire history indefinitely",
-      "D": "Duplicate every message"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Context windows and summaries reduce input tokens while retaining relevant state.\nUnbounded history increases cost and latency.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team preparing evidence for an audit is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team needs to control token costs from long conversation history. Which practice is appropriate?",
+    "options": {
+      "A": "Amazon CloudWatch",
+      "B": "Exponential backoff, bounded retries, and a fallback path",
+      "C": "Cache safe, deterministic responses with an expiration policy",
+      "D": "Summarize or window conversation context while preserving needed facts"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Context windows and summaries reduce input tokens while retaining relevant state.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Summarize or window conversation context while preserving needed facts for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "為審計準備證據的團隊需要從長期對話歷史記錄中控制代幣成本。哪種做法合適？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。為審計準備證據的團隊需要從長期對話歷史記錄中控制代幣成本。哪種做法合適？",
         "options": {
-          "A": "忽略令牌指標",
-          "B": "總結或視窗對話上下文，同時保留所需的事實",
-          "C": "無限期地發送整個歷史記錄",
-          "D": "複製每條訊息"
+          "A": "Amazon CloudWatch",
+          "B": "指數退避、有界重試和後備路徑",
+          "C": "透過過期策略快取安全、確定的回應",
+          "D": "總結或視窗對話上下文，同時保留所需的事實"
         },
-        "explanation": "上下文視窗和摘要減少了輸入標記，同時保留了相關狀態。\n無限制的歷史記錄會增加成本和延遲。"
+        "explanation": "上下文視窗和摘要減少了輸入標記，同時保留了相關狀態。\n其他選項適用於此領域的不同需求，但不能像 總結或視窗對話上下文，同時保留所需的事實 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d4-019",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A business replacing a manual process must monitor production GenAI latency and token usage. Which service should collect operational metrics?",
+    "question": "A business replacing a manual process is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team must monitor production GenAI latency and token usage. Which service should collect operational metrics?",
     "options": {
-      "A": "AWS Certificate Manager",
-      "B": "Amazon Route 53",
+      "A": "Cache safe, deterministic responses with an expiration policy",
+      "B": "Route requests by complexity and quality requirements",
       "C": "Amazon CloudWatch",
-      "D": "Amazon EFS"
+      "D": "Exponential backoff, bounded retries, and a fallback path"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "CloudWatch dashboards and alarms can track latency, errors, and usage metrics.\nThe other choices do not provide GenAI operational monitoring.",
-    "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "CloudWatch dashboards and alarms can track latency, errors, and usage metrics.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon CloudWatch for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "替代手動流程的企業必須監控生產 GenAI 延遲和令牌使用情況。哪個服務應該收集營運指標？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。替代手動流程的企業必須監控生產 GenAI 延遲和令牌使用情況。哪個服務應該收集營運指標？",
         "options": {
-          "A": "AWS Certificate Manager",
-          "B": "Amazon Route 53",
+          "A": "透過過期策略快取安全、確定的回應",
+          "B": "依複雜性和品質要求路由請求",
           "C": "Amazon CloudWatch",
-          "D": "Amazon EFS"
+          "D": "指數退避、有界重試和後備路徑"
         },
-        "explanation": "CloudWatch 儀表板和警報可以追蹤延遲、錯誤和使用指標。\n其他選擇不提供 GenAI 運行監控。"
+        "explanation": "CloudWatch 儀表板和警報可以追蹤延遲、錯誤和使用指標。\n其他選項適用於此領域的不同需求，但不能像 Amazon CloudWatch 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d4-020",
-    "type": "single",
-    "question": "A team validating a design against the exam guide needs to keep a workload responsive during model-provider throttling. Which pattern helps?",
-    "options": {
-      "A": "Retry without limit",
-      "B": "Open every request concurrently",
-      "C": "Remove timeouts",
-      "D": "Exponential backoff, bounded retries, and a fallback path"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Bounded retries and fallback behavior protect user experience during throttling or transient failures.\nUnbounded retries and no timeouts can amplify an outage.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team validating a design against the exam guide is redesigning one integrated end-to-end architecture. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The selected controls must provide auditable security, predictable availability, and the lowest operational cost that still satisfies both requirements. The workload needs to keep a workload responsive during model-provider throttling, and the same architecture needs to detect hallucinations in a grounded answer set. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Combine A vector index in an approved vector store with Private connectivity, encryption, and least-privilege IAM as a single platform design",
+      "B": "Use Exponential backoff, bounded retries, and a fallback path for the primary requirement and integrate it with A factuality or groundedness evaluation against reference evidence for the connected control",
+      "C": "Use Exponential backoff, bounded retries, and a fallback path but replace the connected control with Retrieval Augmented Generation with a knowledge base",
+      "D": "Use A vector index in an approved vector store for the primary requirement and integrate it with A factuality or groundedness evaluation against reference evidence"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Exponential backoff, bounded retries, and a fallback path satisfies the first part of the architecture: Bounded retries and fallback behavior protect user experience during throttling or transient failures. A factuality or groundedness evaluation against reference evidence satisfies the connected requirement: Groundedness evaluation checks whether responses are supported by retrieved or reference information.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊需要在模型提供者限制期間保持工作負載的回應能力。哪種模式有幫助？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：支援關鍵工作負載的營運團隊需要在模型提供者限制期間保持工作負載的回應能力。 第二項需求：多帳戶平台團隊必須確定不良答案是來自檢索還是產生。 所選控制必須提供可稽核的安全性、可預測的可用性，以及在滿足兩項要求前提下最低的營運成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "無限制重試",
-          "B": "同時打開每個請求",
-          "C": "刪除超時",
-          "D": "指數退避、有界重試和後備路徑"
+          "A": "把已核准的向量儲存中的向量索引與私有連線、加密與最低權限 IAM結合為單一平台設計",
+          "B": "以指數退避、有界重試和後備路徑處理主要需求，並整合根據參考證據進行事實性或基礎性評估作為相連控制",
+          "C": "使用指數退避、有界重試和後備路徑，但以具有知識庫的檢索增強生成取代相連控制",
+          "D": "以已核准的向量儲存中的向量索引處理主要需求，並整合根據參考證據進行事實性或基礎性評估"
         },
-        "explanation": "有界重試和回退行為可在限製或暫時性故障期間保護使用者體驗。\n無限制的重試和無超時會加劇中斷。"
+        "explanation": "指數退避、有界重試和後備路徑 負責架構的第一項需求，根據參考證據進行事實性或基礎性評估 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "aip-c01-d4-021",
-    "type": "single",
-    "question": "A production team needs to reduce inference cost for repeated identical requests. Which optimization should be evaluated?",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A production team is planning two independent production changes. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The first team needs to reduce inference cost for repeated identical requests. A second team must choose a lower-cost model for simple classification while reserving a larger model for complex reasoning. Which TWO actions satisfy these requirements?",
     "options": {
       "A": "Cache safe, deterministic responses with an expiration policy",
-      "B": "Send every request to the most expensive model",
-      "C": "Disable all caching",
-      "D": "Include the full conversation forever"
+      "B": "Route requests by complexity and quality requirements",
+      "C": "Summarize or window conversation context while preserving needed facts",
+      "D": "Amazon CloudWatch",
+      "E": "Exponential backoff, bounded retries, and a fallback path"
     },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "Response caching can reduce repeated model calls when freshness and privacy requirements permit it.\nThe other choices increase token use or inference cost.",
-    "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Cache safe, deterministic responses with an expiration policy meets the first requirement: Response caching can reduce repeated model calls when freshness and privacy requirements permit it. Route requests by complexity and quality requirements meets the second requirement: Model routing aligns cost and latency with the task while preserving quality where needed.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "生產團隊需要降低重複相同請求的推理成本。應該評估哪些優化？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。第一項需求：生產團隊需要降低重複相同請求的推理成本。第二項需求：多帳戶平台團隊必須選擇成本較低的模型進行簡單分類，同時保留較大的模型進行複雜推理。哪兩項操作可以滿足這些需求？",
         "options": {
           "A": "透過過期策略快取安全、確定的回應",
-          "B": "將每個請求發送給最昂貴的型號",
-          "C": "禁用所有快取",
-          "D": "永遠包含完整的對話"
+          "B": "依複雜性和品質要求路由請求",
+          "C": "總結或視窗對話上下文，同時保留所需的事實",
+          "D": "Amazon CloudWatch",
+          "E": "指數退避、有界重試和後備路徑"
         },
-        "explanation": "當新鮮度和隱私要求允許時，回應快取可以減少重複的模型呼叫。\n其他選擇會增加代幣使用或推理成本。"
+        "explanation": "透過過期策略快取安全、確定的回應 符合第一項需求：當新鮮度和隱私要求允許時，回應快取可以減少重複的模型呼叫。 依複雜性和品質要求路由請求 符合第二項需求：模型路由使成本和延遲與任務保持一致，同時在需要時保持品質。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "aip-c01-d4-022",
-    "type": "single",
-    "question": "A multi-account platform team must choose a lower-cost model for simple classification while reserving a larger model for complex reasoning. Which design fits?",
-    "options": {
-      "A": "Disable evaluation",
-      "B": "Route requests by complexity and quality requirements",
-      "C": "Use the largest model for every request",
-      "D": "Randomly choose a model"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Model routing aligns cost and latency with the task while preserving quality where needed.\nUsing the largest model for every request is usually less cost optimized.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A multi-account platform team is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team must choose a lower-cost model for simple classification while reserving a larger model for complex reasoning. Which design fits?",
+    "options": {
+      "A": "Summarize or window conversation context while preserving needed facts",
+      "B": "Amazon CloudWatch",
+      "C": "Exponential backoff, bounded retries, and a fallback path",
+      "D": "Route requests by complexity and quality requirements"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Model routing aligns cost and latency with the task while preserving quality where needed.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Route requests by complexity and quality requirements for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊必須選擇成本較低的模型進行簡單分類，同時保留較大的模型進行複雜推理。哪種設計適合？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。多帳戶平台團隊必須選擇成本較低的模型進行簡單分類，同時保留較大的模型進行複雜推理。哪種設計適合？",
         "options": {
-          "A": "禁用評估",
-          "B": "依複雜性和品質要求路由請求",
-          "C": "為每個請求使用最大的模型",
-          "D": "隨機選擇一個模型"
+          "A": "總結或視窗對話上下文，同時保留所需的事實",
+          "B": "Amazon CloudWatch",
+          "C": "指數退避、有界重試和後備路徑",
+          "D": "依複雜性和品質要求路由請求"
         },
-        "explanation": "模型路由使成本和延遲與任務保持一致，同時在需要時保持品質。\n對每個請求使用最大的模型通常成本最佳化效果較差。"
+        "explanation": "模型路由使成本和延遲與任務保持一致，同時在需要時保持品質。\n其他選項適用於此領域的不同需求，但不能像 依複雜性和品質要求路由請求 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d4-023",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A regulated company needs to control token costs from long conversation history. Which practice is appropriate?",
+    "question": "A regulated company is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team needs to control token costs from long conversation history. Which practice is appropriate?",
     "options": {
-      "A": "Duplicate every message",
-      "B": "Ignore token metrics",
+      "A": "Exponential backoff, bounded retries, and a fallback path",
+      "B": "Cache safe, deterministic responses with an expiration policy",
       "C": "Summarize or window conversation context while preserving needed facts",
-      "D": "Send the entire history indefinitely"
+      "D": "Amazon CloudWatch"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Context windows and summaries reduce input tokens while retaining relevant state.\nUnbounded history increases cost and latency.",
-    "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Context windows and summaries reduce input tokens while retaining relevant state.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Summarize or window conversation context while preserving needed facts for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司需要透過長期對話歷史來控制代幣成本。哪種做法合適？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。受監管的公司需要透過長期對話歷史來控制代幣成本。哪種做法合適？",
         "options": {
-          "A": "複製每條訊息",
-          "B": "忽略令牌指標",
+          "A": "指數退避、有界重試和後備路徑",
+          "B": "透過過期策略快取安全、確定的回應",
           "C": "總結或視窗對話上下文，同時保留所需的事實",
-          "D": "無限期地發送整個歷史記錄"
+          "D": "Amazon CloudWatch"
         },
-        "explanation": "上下文視窗和摘要減少了輸入標記，同時保留了相關狀態。\n無限制的歷史記錄會增加成本和延遲。"
+        "explanation": "上下文視窗和摘要減少了輸入標記，同時保留了相關狀態。\n其他選項適用於此領域的不同需求，但不能像 總結或視窗對話上下文，同時保留所需的事實 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d4-024",
-    "type": "single",
-    "question": "A startup preparing for a traffic increase must monitor production GenAI latency and token usage. Which service should collect operational metrics?",
-    "options": {
-      "A": "Amazon EFS",
-      "B": "AWS Certificate Manager",
-      "C": "Amazon Route 53",
-      "D": "Amazon CloudWatch"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "CloudWatch dashboards and alarms can track latency, errors, and usage metrics.\nThe other choices do not provide GenAI operational monitoring.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase is redesigning one integrated end-to-end architecture. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The design must keep recurring cost proportional to use, enforce least privilege, and remain available during a component or Availability Zone failure. The workload must monitor production GenAI latency and token usage, and the same architecture needs to protect troubleshooting logs from containing prompts with confidential data. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Combine A vector index in an approved vector store with Private connectivity, encryption, and least-privilege IAM as a single platform design",
+      "B": "Use Amazon CloudWatch for the primary requirement and integrate it with Redact sensitive fields and restrict log access for the connected control",
+      "C": "Use Amazon CloudWatch but replace the connected control with Retrieval Augmented Generation with a knowledge base",
+      "D": "Use A vector index in an approved vector store for the primary requirement and integrate it with Redact sensitive fields and restrict log access"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Amazon CloudWatch satisfies the first part of the architecture: CloudWatch dashboards and alarms can track latency, errors, and usage metrics. Redact sensitive fields and restrict log access satisfies the connected requirement: Redaction and least-privilege log access reduce exposure while preserving useful diagnostics.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司必須監控生產 GenAI 延遲和令牌使用情況。哪個服務應該收集營運指標？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：準備增加流量的新創公司必須監控生產 GenAI 延遲和令牌使用情況。 第二項需求：支援關鍵工作負載的營運團隊需要保護故障排除日誌不包含具有機密資料的提示。 此設計必須讓持續成本與實際用量相符、落實最低權限，並在元件或可用區域發生故障時維持可用。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "Amazon EFS",
-          "B": "AWS Certificate Manager",
-          "C": "Amazon Route 53",
-          "D": "Amazon CloudWatch"
+          "A": "把已核准的向量儲存中的向量索引與私有連線、加密與最低權限 IAM結合為單一平台設計",
+          "B": "以Amazon CloudWatch處理主要需求，並整合編輯敏感字段並限制日誌存取作為相連控制",
+          "C": "使用Amazon CloudWatch，但以具有知識庫的檢索增強生成取代相連控制",
+          "D": "以已核准的向量儲存中的向量索引處理主要需求，並整合編輯敏感字段並限制日誌存取"
         },
-        "explanation": "CloudWatch 儀表板和警報可以追蹤延遲、錯誤和使用指標。\n其他選擇不提供 GenAI 運行監控。"
+        "explanation": "Amazon CloudWatch 負責架構的第一項需求，編輯敏感字段並限制日誌存取 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "aip-c01-d4-025",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An operations team supporting a critical workload needs to keep a workload responsive during model-provider throttling. Which pattern helps?",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team needs to keep a workload responsive during model-provider throttling. Which pattern helps?",
     "options": {
       "A": "Exponential backoff, bounded retries, and a fallback path",
-      "B": "Retry without limit",
-      "C": "Open every request concurrently",
-      "D": "Remove timeouts"
+      "B": "Cache safe, deterministic responses with an expiration policy",
+      "C": "Route requests by complexity and quality requirements",
+      "D": "Summarize or window conversation context while preserving needed facts"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Bounded retries and fallback behavior protect user experience during throttling or transient failures.\nUnbounded retries and no timeouts can amplify an outage.",
-    "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Bounded retries and fallback behavior protect user experience during throttling or transient failures.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Exponential backoff, bounded retries, and a fallback path for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊需要在模型提供者限制期間保持工作負載的回應能力。哪種模式有幫助？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。支援關鍵工作負載的營運團隊需要在模型提供者限制期間保持工作負載的回應能力。哪種模式有幫助？",
         "options": {
           "A": "指數退避、有界重試和後備路徑",
-          "B": "無限制重試",
-          "C": "同時打開每個請求",
-          "D": "刪除超時"
+          "B": "透過過期策略快取安全、確定的回應",
+          "C": "依複雜性和品質要求路由請求",
+          "D": "總結或視窗對話上下文，同時保留所需的事實"
         },
-        "explanation": "有界重試和回退行為可在限製或暫時性故障期間保護使用者體驗。\n無限制的重試和無超時會加劇中斷。"
+        "explanation": "有界重試和回退行為可在限製或暫時性故障期間保護使用者體驗。\n其他選項適用於此領域的不同需求，但不能像 指數退避、有界重試和後備路徑 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d4-026",
-    "type": "single",
-    "question": "A data platform team needs to reduce inference cost for repeated identical requests. Which optimization should be evaluated?",
-    "options": {
-      "A": "Include the full conversation forever",
-      "B": "Cache safe, deterministic responses with an expiration policy",
-      "C": "Send every request to the most expensive model",
-      "D": "Disable all caching"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Response caching can reduce repeated model calls when freshness and privacy requirements permit it.\nThe other choices increase token use or inference cost.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A data platform team is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team needs to reduce inference cost for repeated identical requests. Which optimization should be evaluated?",
+    "options": {
+      "A": "Route requests by complexity and quality requirements",
+      "B": "Summarize or window conversation context while preserving needed facts",
+      "C": "Amazon CloudWatch",
+      "D": "Cache safe, deterministic responses with an expiration policy"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Response caching can reduce repeated model calls when freshness and privacy requirements permit it.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Cache safe, deterministic responses with an expiration policy for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要降低重複相同請求的推理成本。應該評估哪些優化？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。資料平台團隊需要降低重複相同請求的推理成本。應該評估哪些優化？",
         "options": {
-          "A": "永遠包含完整的對話",
-          "B": "透過過期策略快取安全、確定的回應",
-          "C": "將每個請求發送給最昂貴的型號",
-          "D": "禁用所有快取"
+          "A": "依複雜性和品質要求路由請求",
+          "B": "總結或視窗對話上下文，同時保留所需的事實",
+          "C": "Amazon CloudWatch",
+          "D": "透過過期策略快取安全、確定的回應"
         },
-        "explanation": "當新鮮度和隱私要求允許時，回應快取可以減少重複的模型呼叫。\n其他選擇會增加代幣使用或推理成本。"
+        "explanation": "當新鮮度和隱私要求允許時，回應快取可以減少重複的模型呼叫。\n其他選項適用於此領域的不同需求，但不能像 透過過期策略快取安全、確定的回應 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d4-027",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A security-conscious engineering team must choose a lower-cost model for simple classification while reserving a larger model for complex reasoning. Which design fits?",
+    "question": "A security-conscious engineering team is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team must choose a lower-cost model for simple classification while reserving a larger model for complex reasoning. Which design fits?",
     "options": {
-      "A": "Randomly choose a model",
-      "B": "Disable evaluation",
+      "A": "Amazon CloudWatch",
+      "B": "Exponential backoff, bounded retries, and a fallback path",
       "C": "Route requests by complexity and quality requirements",
-      "D": "Use the largest model for every request"
+      "D": "Summarize or window conversation context while preserving needed facts"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Model routing aligns cost and latency with the task while preserving quality where needed.\nUsing the largest model for every request is usually less cost optimized.",
-    "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Model routing aligns cost and latency with the task while preserving quality where needed.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Route requests by complexity and quality requirements for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊必須選擇成本較低的模型進行簡單分類，同時保留較大的模型進行複雜推理。哪種設計適合？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。具有安全意識的工程團隊必須選擇成本較低的模型進行簡單分類，同時保留較大的模型進行複雜推理。哪種設計適合？",
         "options": {
-          "A": "隨機選擇一個模型",
-          "B": "禁用評估",
+          "A": "Amazon CloudWatch",
+          "B": "指數退避、有界重試和後備路徑",
           "C": "依複雜性和品質要求路由請求",
-          "D": "為每個請求使用最大的模型"
+          "D": "總結或視窗對話上下文，同時保留所需的事實"
         },
-        "explanation": "模型路由使成本和延遲與任務保持一致，同時在需要時保持品質。\n對每個請求使用最大的模型通常成本最佳化效果較差。"
+        "explanation": "模型路由使成本和延遲與任務保持一致，同時在需要時保持品質。\n其他選項適用於此領域的不同需求，但不能像 依複雜性和品質要求路由請求 一樣直接滿足題目的指定條件。"
       }
     }
   }

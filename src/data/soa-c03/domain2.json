@@ -1,1205 +1,1235 @@
 [
   {
     "id": "soa-c03-d2-001",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A production team needs to add EC2 capacity when a queue backlog grows. Which scaling signal is most relevant?",
+    "question": "A production team is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team needs to add EC2 capacity when a queue backlog grows. Which scaling signal is most relevant?",
     "options": {
-      "A": "The KMS key rotation date",
-      "B": "The Route 53 hosted zone ID",
+      "A": "Point-in-time restore",
+      "B": "AWS Backup",
       "C": "SQS ApproximateNumberOfMessagesVisible",
-      "D": "The S3 bucket name"
+      "D": "Load balancer target health checks"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Queue depth is a direct measure of work waiting for workers and can drive Auto Scaling.\nThe other values do not measure pending work.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Queue depth is a direct measure of work waiting for workers and can drive Auto Scaling.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide SQS ApproximateNumberOfMessagesVisible for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "當佇列積壓增加時，生產團隊需要增加 EC2 容量。哪個縮放訊號最相關？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。當佇列積壓增加時，生產團隊需要增加 EC2 容量。哪個縮放訊號最相關？",
         "options": {
-          "A": "KMS 金鑰輪替日期",
-          "B": "Route 53 託管區域 ID",
+          "A": "時間點恢復",
+          "B": "AWS Backup",
           "C": "SQS ApproximateNumberOfMessagesVisible",
-          "D": "S3 儲存桶名稱"
+          "D": "負載平衡器目標運作狀況檢查"
         },
-        "explanation": "佇列深度是等待工作人員的工作的直接衡量標準，可以驅動 Auto Scaling。\n其他值不衡量待處理的工作。"
+        "explanation": "佇列深度是等待工作人員的工作的直接衡量標準，可以驅動 Auto Scaling。\n其他選項適用於此領域的不同需求，但不能像 SQS ApproximateNumberOfMessagesVisible 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d2-002",
-    "type": "single",
-    "question": "A multi-account platform team must route traffic only to healthy targets after a deployment. Which capability should be configured?",
-    "options": {
-      "A": "S3 Object Lock",
-      "B": "A KMS alias",
-      "C": "An IAM user password policy",
-      "D": "Load balancer target health checks"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Load balancer health checks remove unhealthy targets from routing.\nThe other choices protect objects, name keys, or govern IAM passwords.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A multi-account platform team is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team must route traffic only to healthy targets after a deployment. Which capability should be configured?",
+    "options": {
+      "A": "Pilot light",
+      "B": "Load balancer target health checks",
+      "C": "Point-in-time restore",
+      "D": "AWS Backup"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Load balancer health checks remove unhealthy targets from routing.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Load balancer target health checks for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊必須在部署後僅將流量路由到健康的目標。應該配置哪些能力？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。多帳戶平台團隊必須在部署後僅將流量路由到健康的目標。應該配置哪些能力？",
         "options": {
-          "A": "S3 Object Lock",
-          "B": "KMS 別名",
-          "C": "IAM Users密碼原則",
-          "D": "負載平衡器目標運作狀況檢查"
+          "A": "指示燈",
+          "B": "負載平衡器目標運作狀況檢查",
+          "C": "時間點恢復",
+          "D": "AWS Backup"
         },
-        "explanation": "負載平衡器運作狀況檢查會從路由中刪除不健康的目標。\n其他選擇保護物件、名稱金鑰或管理 IAM 密碼。"
+        "explanation": "負載平衡器運作狀況檢查會從路由中刪除不健康的目標。\n其他選項適用於此領域的不同需求，但不能像 負載平衡器目標運作狀況檢查 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d2-003",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A regulated company needs a database restore to a specific second before an accidental deletion. Which RDS capability fits?",
+    "question": "A regulated company is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team needs a database restore to a specific second before an accidental deletion. Which RDS capability fits?",
     "options": {
       "A": "Point-in-time restore",
-      "B": "A read replica endpoint",
-      "C": "A security group reference",
-      "D": "A CloudFront invalidation"
+      "B": "AWS Backup",
+      "C": "Pilot light",
+      "D": "SQS ApproximateNumberOfMessagesVisible"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "RDS point-in-time restore uses automated backups and transaction logs to create a new database at a selected time.\nRead replicas, security groups, and cache invalidations do not restore a database to a selected time.",
-    "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "RDS point-in-time restore uses automated backups and transaction logs to create a new database at a selected time.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Point-in-time restore for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司需要將資料庫恢復到意外刪除之前的特定秒數。哪種 RDS 功能適合？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。受監管的公司需要將資料庫恢復到意外刪除之前的特定秒數。哪種 RDS 功能適合？",
         "options": {
           "A": "時間點恢復",
-          "B": "只讀副本端點",
-          "C": "安全群組參考",
-          "D": "CloudFront 失效"
+          "B": "AWS Backup",
+          "C": "指示燈",
+          "D": "SQS ApproximateNumberOfMessagesVisible"
         },
-        "explanation": "RDS 時間點復原使用自動備份和交易日誌在選定時間建立新資料庫。\n只讀副本、安全性群組和快取失效不會將資料庫還原到選定的時間。"
+        "explanation": "RDS 時間點復原使用自動備份和交易日誌在選定時間建立新資料庫。\n其他選項適用於此領域的不同需求，但不能像 時間點恢復 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d2-004",
-    "type": "single",
-    "question": "A startup preparing for a traffic increase wants automated backup policies across supported AWS resources. Which service should manage the plans?",
-    "options": {
-      "A": "AWS Certificate Manager",
-      "B": "AWS Backup",
-      "C": "AWS WAF",
-      "D": "Amazon Route 53"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "AWS Backup centralizes schedules, retention, and vault policies for supported resources.\nThe other choices protect web traffic, provide DNS, or manage certificates.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team wants automated backup policies across supported AWS resources. Which service should manage the plans?",
+    "options": {
+      "A": "Pilot light",
+      "B": "SQS ApproximateNumberOfMessagesVisible",
+      "C": "Load balancer target health checks",
+      "D": "AWS Backup"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "AWS Backup centralizes schedules, retention, and vault policies for supported resources.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Backup for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "一家準備增加流量的新創公司希望在受支援的 AWS 資源上執行自動備份策略。哪個服務應該管理計劃？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。一家準備增加流量的新創公司希望在受支援的 AWS 資源上執行自動備份策略。哪個服務應該管理計劃？",
         "options": {
-          "A": "AWS Certificate Manager",
-          "B": "AWS Backup",
-          "C": "AWS WAF",
-          "D": "Amazon Route 53"
+          "A": "指示燈",
+          "B": "SQS ApproximateNumberOfMessagesVisible",
+          "C": "負載平衡器目標運作狀況檢查",
+          "D": "AWS Backup"
         },
-        "explanation": "AWS Backup 集中支援資源的規劃、保留和保管庫策略。\n其他選擇保護 Web 流量、提供 DNS 或管理憑證。"
+        "explanation": "AWS Backup 集中支援資源的規劃、保留和保管庫策略。\n其他選項適用於此領域的不同需求，但不能像 AWS Backup 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d2-005",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An operations team supporting a critical workload must keep only core recovery components running in a secondary Region and create the rest during a disaster. Which strategy is this?",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team must keep only core recovery components running in a secondary Region and create the rest during a disaster. Which strategy is this?",
     "options": {
-      "A": "Warm standby",
-      "B": "A single-AZ deployment",
+      "A": "Load balancer target health checks",
+      "B": "Point-in-time restore",
       "C": "Pilot light",
-      "D": "Active-active"
+      "D": "SQS ApproximateNumberOfMessagesVisible"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Pilot light keeps the core components available while the remaining environment is provisioned during recovery.\nActive-active and warm standby keep more recovery capacity running. A single AZ is not a Regional recovery strategy.",
-    "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Pilot light keeps the core components available while the remaining environment is provisioned during recovery.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Pilot light for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊必須僅保持核心復原組件在次要區域中運行，並在災難期間建立其餘組件。這是哪個策略？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。支援關鍵工作負載的營運團隊必須僅保持核心復原組件在次要區域中運行，並在災難期間建立其餘組件。這是哪個策略？",
         "options": {
-          "A": "溫備",
-          "B": "單可用區部署",
+          "A": "負載平衡器目標運作狀況檢查",
+          "B": "時間點恢復",
           "C": "指示燈",
-          "D": "主動-主動"
+          "D": "SQS ApproximateNumberOfMessagesVisible"
         },
-        "explanation": "指示燈可使核心組件保持可用，同時在恢復期間配置剩餘環境。\n雙活和熱備用可維持更多恢復容量運作。單一可用區並不是區域復原策略。"
+        "explanation": "指示燈可使核心組件保持可用，同時在恢復期間配置剩餘環境。\n其他選項適用於此領域的不同需求，但不能像 指示燈 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d2-006",
-    "type": "single",
-    "question": "A data platform team needs to add EC2 capacity when a queue backlog grows. Which scaling signal is most relevant?",
-    "options": {
-      "A": "The S3 bucket name",
-      "B": "The KMS key rotation date",
-      "C": "The Route 53 hosted zone ID",
-      "D": "SQS ApproximateNumberOfMessagesVisible"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Queue depth is a direct measure of work waiting for workers and can drive Auto Scaling.\nThe other values do not measure pending work.",
     "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A data platform team is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs to add EC2 capacity when a queue backlog grows. Which scaling signal is most relevant?",
+    "options": {
+      "A": "AWS Backup",
+      "B": "SQS ApproximateNumberOfMessagesVisible",
+      "C": "Load balancer target health checks",
+      "D": "Point-in-time restore"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Queue depth is a direct measure of work waiting for workers and can drive Auto Scaling.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide SQS ApproximateNumberOfMessagesVisible for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "當佇列積壓成長時，資料平台團隊需要增加 EC2 容量。哪個縮放訊號最相關？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。當佇列積壓成長時，資料平台團隊需要增加 EC2 容量。哪個縮放訊號最相關？",
         "options": {
-          "A": "S3 儲存桶名稱",
-          "B": "KMS 金鑰輪替日期",
-          "C": "Route 53 託管區域 ID",
-          "D": "SQS ApproximateNumberOfMessagesVisible"
+          "A": "AWS Backup",
+          "B": "SQS ApproximateNumberOfMessagesVisible",
+          "C": "負載平衡器目標運作狀況檢查",
+          "D": "時間點恢復"
         },
-        "explanation": "佇列深度是等待工作人員的工作的直接衡量標準，可以驅動 Auto Scaling。\n其他值不衡量待處理的工作。"
+        "explanation": "佇列深度是等待工作人員的工作的直接衡量標準，可以驅動 Auto Scaling。\n其他選項適用於此領域的不同需求，但不能像 SQS ApproximateNumberOfMessagesVisible 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d2-007",
-    "type": "single",
-    "question": "A security-conscious engineering team must route traffic only to healthy targets after a deployment. Which capability should be configured?",
-    "options": {
-      "A": "Load balancer target health checks",
-      "B": "S3 Object Lock",
-      "C": "A KMS alias",
-      "D": "An IAM user password policy"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "Load balancer health checks remove unhealthy targets from routing.\nThe other choices protect objects, name keys, or govern IAM passwords.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A security-conscious engineering team is planning two independent production changes. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The first team must route traffic only to healthy targets after a deployment. A second team needs a database restore to a specific second before an accidental deletion. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "SQS ApproximateNumberOfMessagesVisible",
+      "B": "Load balancer target health checks",
+      "C": "Point-in-time restore",
+      "D": "AWS Backup",
+      "E": "Pilot light"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Load balancer target health checks meets the first requirement: Load balancer health checks remove unhealthy targets from routing. Point-in-time restore meets the second requirement: RDS point-in-time restore uses automated backups and transaction logs to create a new database at a selected time.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊必須在部署後僅將流量路由到健康的目標。應該配置哪些能力？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。第一項需求：多帳戶平台團隊必須在部署後僅將流量路由到健康的目標。第二項需求：受監管的公司需要將資料庫恢復到意外刪除之前的特定秒數。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "負載平衡器目標運作狀況檢查",
-          "B": "S3 Object Lock",
-          "C": "KMS 別名",
-          "D": "IAM Users密碼原則"
+          "A": "SQS ApproximateNumberOfMessagesVisible",
+          "B": "負載平衡器目標運作狀況檢查",
+          "C": "時間點恢復",
+          "D": "AWS Backup",
+          "E": "指示燈"
         },
-        "explanation": "負載平衡器運作狀況檢查會從路由中刪除不健康的目標。\n其他選擇保護物件、名稱金鑰或管理 IAM 密碼。"
+        "explanation": "負載平衡器目標運作狀況檢查 符合第一項需求：負載平衡器運作狀況檢查會從路由中刪除不健康的目標。 時間點恢復 符合第二項需求：RDS 時間點復原使用自動備份和交易日誌在選定時間建立新資料庫。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "soa-c03-d2-008",
-    "type": "single",
-    "question": "A company migrating an existing workload needs a database restore to a specific second before an accidental deletion. Which RDS capability fits?",
-    "options": {
-      "A": "A CloudFront invalidation",
-      "B": "Point-in-time restore",
-      "C": "A read replica endpoint",
-      "D": "A security group reference"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "RDS point-in-time restore uses automated backups and transaction logs to create a new database at a selected time.\nRead replicas, security groups, and cache invalidations do not restore a database to a selected time.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A company migrating an existing workload is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs a database restore to a specific second before an accidental deletion. Which RDS capability fits?",
+    "options": {
+      "A": "AWS Backup",
+      "B": "Pilot light",
+      "C": "SQS ApproximateNumberOfMessagesVisible",
+      "D": "Point-in-time restore"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "RDS point-in-time restore uses automated backups and transaction logs to create a new database at a selected time.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Point-in-time restore for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司需要將資料庫還原到意外刪除之前的特定秒數。哪種 RDS 功能適合？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。遷移現有工作負載的公司需要將資料庫還原到意外刪除之前的特定秒數。哪種 RDS 功能適合？",
         "options": {
-          "A": "CloudFront 失效",
-          "B": "時間點恢復",
-          "C": "只讀副本端點",
-          "D": "安全群組參考"
+          "A": "AWS Backup",
+          "B": "指示燈",
+          "C": "SQS ApproximateNumberOfMessagesVisible",
+          "D": "時間點恢復"
         },
-        "explanation": "RDS 時間點復原使用自動備份和交易日誌在選定時間建立新資料庫。\n只讀副本、安全性群組和快取失效不會將資料庫還原到選定的時間。"
+        "explanation": "RDS 時間點復原使用自動備份和交易日誌在選定時間建立新資料庫。\n其他選項適用於此領域的不同需求，但不能像 時間點恢復 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d2-009",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team with strict recovery objectives wants automated backup policies across supported AWS resources. Which service should manage the plans?",
+    "question": "A team with strict recovery objectives is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team wants automated backup policies across supported AWS resources. Which service should manage the plans?",
     "options": {
-      "A": "Amazon Route 53",
-      "B": "AWS Certificate Manager",
+      "A": "SQS ApproximateNumberOfMessagesVisible",
+      "B": "Load balancer target health checks",
       "C": "AWS Backup",
-      "D": "AWS WAF"
+      "D": "Pilot light"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "AWS Backup centralizes schedules, retention, and vault policies for supported resources.\nThe other choices protect web traffic, provide DNS, or manage certificates.",
-    "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "AWS Backup centralizes schedules, retention, and vault policies for supported resources.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Backup for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格復原目標的團隊希望跨支援的 AWS 資源執行自動備份策略。哪個服務應該管理計劃？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。具有嚴格復原目標的團隊希望跨支援的 AWS 資源執行自動備份策略。哪個服務應該管理計劃？",
         "options": {
-          "A": "Amazon Route 53",
-          "B": "AWS Certificate Manager",
+          "A": "SQS ApproximateNumberOfMessagesVisible",
+          "B": "負載平衡器目標運作狀況檢查",
           "C": "AWS Backup",
-          "D": "AWS WAF"
+          "D": "指示燈"
         },
-        "explanation": "AWS Backup 集中支援資源的規劃、保留和保管庫策略。\n其他選擇保護 Web 流量、提供 DNS 或管理憑證。"
+        "explanation": "AWS Backup 集中支援資源的規劃、保留和保管庫策略。\n其他選項適用於此領域的不同需求，但不能像 AWS Backup 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d2-010",
-    "type": "single",
-    "question": "A developer team preparing a release must keep only core recovery components running in a secondary Region and create the rest during a disaster. Which strategy is this?",
-    "options": {
-      "A": "Active-active",
-      "B": "Warm standby",
-      "C": "A single-AZ deployment",
-      "D": "Pilot light"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Pilot light keeps the core components available while the remaining environment is provisioned during recovery.\nActive-active and warm standby keep more recovery capacity running. A single AZ is not a Regional recovery strategy.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A developer team preparing a release is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team must keep only core recovery components running in a secondary Region and create the rest during a disaster. Which strategy is this?",
+    "options": {
+      "A": "Point-in-time restore",
+      "B": "Pilot light",
+      "C": "SQS ApproximateNumberOfMessagesVisible",
+      "D": "Load balancer target health checks"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Pilot light keeps the core components available while the remaining environment is provisioned during recovery.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Pilot light for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊必須僅保留在輔助區域中運行的核心復原元件，並在災難期間建立其餘元件。這是哪個策略？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。準備發布的開發團隊必須僅保留在輔助區域中運行的核心復原元件，並在災難期間建立其餘元件。這是哪個策略？",
         "options": {
-          "A": "主動-主動",
-          "B": "溫備",
-          "C": "單可用區部署",
-          "D": "指示燈"
+          "A": "時間點恢復",
+          "B": "指示燈",
+          "C": "SQS ApproximateNumberOfMessagesVisible",
+          "D": "負載平衡器目標運作狀況檢查"
         },
-        "explanation": "指示燈可使核心組件保持可用，同時在恢復期間配置剩餘環境。\n雙活和熱備用可維持更多恢復容量運作。單一可用區並不是區域復原策略。"
+        "explanation": "指示燈可使核心組件保持可用，同時在恢復期間配置剩餘環境。\n其他選項適用於此領域的不同需求，但不能像 指示燈 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d2-011",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An enterprise with several AWS Regions needs to add EC2 capacity when a queue backlog grows. Which scaling signal is most relevant?",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs to add EC2 capacity when a queue backlog grows. Which scaling signal is most relevant?",
     "options": {
       "A": "SQS ApproximateNumberOfMessagesVisible",
-      "B": "The S3 bucket name",
-      "C": "The KMS key rotation date",
-      "D": "The Route 53 hosted zone ID"
+      "B": "Load balancer target health checks",
+      "C": "Point-in-time restore",
+      "D": "AWS Backup"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Queue depth is a direct measure of work waiting for workers and can drive Auto Scaling.\nThe other values do not measure pending work.",
-    "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Queue depth is a direct measure of work waiting for workers and can drive Auto Scaling.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide SQS ApproximateNumberOfMessagesVisible for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "當佇列積壓增加時，擁有多個 AWS 區域的企業需要增加 EC2 容量。哪個縮放訊號最相關？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。當佇列積壓增加時，擁有多個 AWS 區域的企業需要增加 EC2 容量。哪個縮放訊號最相關？",
         "options": {
           "A": "SQS ApproximateNumberOfMessagesVisible",
-          "B": "S3 儲存桶名稱",
-          "C": "KMS 金鑰輪替日期",
-          "D": "Route 53 託管區域 ID"
+          "B": "負載平衡器目標運作狀況檢查",
+          "C": "時間點恢復",
+          "D": "AWS Backup"
         },
-        "explanation": "佇列深度是等待工作人員的工作的直接衡量標準，可以驅動 Auto Scaling。\n其他值不衡量待處理的工作。"
+        "explanation": "佇列深度是等待工作人員的工作的直接衡量標準，可以驅動 Auto Scaling。\n其他選項適用於此領域的不同需求，但不能像 SQS ApproximateNumberOfMessagesVisible 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d2-012",
-    "type": "single",
-    "question": "A service owner reviewing an incident must route traffic only to healthy targets after a deployment. Which capability should be configured?",
-    "options": {
-      "A": "An IAM user password policy",
-      "B": "Load balancer target health checks",
-      "C": "S3 Object Lock",
-      "D": "A KMS alias"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Load balancer health checks remove unhealthy targets from routing.\nThe other choices protect objects, name keys, or govern IAM passwords.",
     "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A service owner reviewing an incident is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team must route traffic only to healthy targets after a deployment. Which capability should be configured?",
+    "options": {
+      "A": "Point-in-time restore",
+      "B": "AWS Backup",
+      "C": "Pilot light",
+      "D": "Load balancer target health checks"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Load balancer health checks remove unhealthy targets from routing.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Load balancer target health checks for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "部署後，檢查事件的服務擁有者必須僅將流量路由至健康目標。應該配置哪些能力？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。部署後，檢查事件的服務擁有者必須僅將流量路由至健康目標。應該配置哪些能力？",
         "options": {
-          "A": "IAM Users密碼原則",
-          "B": "負載平衡器目標運作狀況檢查",
-          "C": "S3 Object Lock",
-          "D": "KMS 別名"
+          "A": "時間點恢復",
+          "B": "AWS Backup",
+          "C": "指示燈",
+          "D": "負載平衡器目標運作狀況檢查"
         },
-        "explanation": "負載平衡器運作狀況檢查會從路由中刪除不健康的目標。\n其他選擇保護物件、名稱金鑰或管理 IAM 密碼。"
+        "explanation": "負載平衡器運作狀況檢查會從路由中刪除不健康的目標。\n其他選項適用於此領域的不同需求，但不能像 負載平衡器目標運作狀況檢查 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d2-013",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team optimizing an existing implementation needs a database restore to a specific second before an accidental deletion. Which RDS capability fits?",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs a database restore to a specific second before an accidental deletion. Which RDS capability fits?",
     "options": {
-      "A": "A security group reference",
-      "B": "A CloudFront invalidation",
+      "A": "Pilot light",
+      "B": "SQS ApproximateNumberOfMessagesVisible",
       "C": "Point-in-time restore",
-      "D": "A read replica endpoint"
+      "D": "AWS Backup"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "RDS point-in-time restore uses automated backups and transaction logs to create a new database at a selected time.\nRead replicas, security groups, and cache invalidations do not restore a database to a selected time.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "RDS point-in-time restore uses automated backups and transaction logs to create a new database at a selected time.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Point-in-time restore for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實作的團隊需要將資料庫還原到意外刪除之前的特定秒數。哪種 RDS 功能適合？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。優化現有實作的團隊需要將資料庫還原到意外刪除之前的特定秒數。哪種 RDS 功能適合？",
         "options": {
-          "A": "安全群組參考",
-          "B": "CloudFront 失效",
+          "A": "指示燈",
+          "B": "SQS ApproximateNumberOfMessagesVisible",
           "C": "時間點恢復",
-          "D": "只讀副本端點"
+          "D": "AWS Backup"
         },
-        "explanation": "RDS 時間點復原使用自動備份和交易日誌在選定時間建立新資料庫。\n只讀副本、安全性群組和快取失效不會將資料庫還原到選定的時間。"
+        "explanation": "RDS 時間點復原使用自動備份和交易日誌在選定時間建立新資料庫。\n其他選項適用於此領域的不同需求，但不能像 時間點恢復 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d2-014",
-    "type": "single",
-    "question": "A company introducing an automated workflow wants automated backup policies across supported AWS resources. Which service should manage the plans?",
-    "options": {
-      "A": "AWS WAF",
-      "B": "Amazon Route 53",
-      "C": "AWS Certificate Manager",
-      "D": "AWS Backup"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "AWS Backup centralizes schedules, retention, and vault policies for supported resources.\nThe other choices protect web traffic, provide DNS, or manage certificates.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A company introducing an automated workflow is planning two independent production changes. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The first team wants automated backup policies across supported AWS resources. A second team must keep only core recovery components running in a secondary Region and create the rest during a disaster. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Pilot light",
+      "B": "SQS ApproximateNumberOfMessagesVisible",
+      "C": "Load balancer target health checks",
+      "D": "Point-in-time restore",
+      "E": "AWS Backup"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS Backup meets the first requirement: AWS Backup centralizes schedules, retention, and vault policies for supported resources. Pilot light meets the second requirement: Pilot light keeps the core components available while the remaining environment is provisioned during recovery.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "一家引入自動化工作流程的公司希望在受支援的 AWS 資源上實現自動化備份策略。哪個服務應該管理計劃？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。第一項需求：支援關鍵工作負載的營運團隊必須僅保持核心復原組件在次要區域中運行，並在災難期間建立其餘組件。第二項需求：一家準備增加流量的新創公司希望在受支援的 AWS 資源上執行自動備份策略。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "AWS WAF",
-          "B": "Amazon Route 53",
-          "C": "AWS Certificate Manager",
-          "D": "AWS Backup"
+          "A": "指示燈",
+          "B": "SQS ApproximateNumberOfMessagesVisible",
+          "C": "負載平衡器目標運作狀況檢查",
+          "D": "時間點恢復",
+          "E": "AWS Backup"
         },
-        "explanation": "AWS Backup 集中支援資源的規劃、保留和保管庫策略。\n其他選擇保護 Web 流量、提供 DNS 或管理憑證。"
+        "explanation": "指示燈 符合第一項需求：指示燈可使核心組件保持可用，同時在恢復期間配置剩餘環境。 AWS Backup 符合第二項需求：AWS Backup 集中支援資源的規劃、保留和保管庫策略。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "soa-c03-d2-015",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An AWS administrator working in a shared environment must keep only core recovery components running in a secondary Region and create the rest during a disaster. Which strategy is this?",
+    "question": "An AWS administrator working in a shared environment is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team must keep only core recovery components running in a secondary Region and create the rest during a disaster. Which strategy is this?",
     "options": {
       "A": "Pilot light",
-      "B": "Active-active",
-      "C": "Warm standby",
-      "D": "A single-AZ deployment"
+      "B": "SQS ApproximateNumberOfMessagesVisible",
+      "C": "Load balancer target health checks",
+      "D": "Point-in-time restore"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Pilot light keeps the core components available while the remaining environment is provisioned during recovery.\nActive-active and warm standby keep more recovery capacity running. A single AZ is not a Regional recovery strategy.",
-    "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "Pilot light keeps the core components available while the remaining environment is provisioned during recovery.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Pilot light for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "在共用環境中工作的 AWS 管理員必須僅保留在輔助區域中執行的核心復原元件，並在災難期間建立其餘元件。這是哪個策略？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。在共用環境中工作的 AWS 管理員必須僅保留在輔助區域中執行的核心復原元件，並在災難期間建立其餘元件。這是哪個策略？",
         "options": {
           "A": "指示燈",
-          "B": "主動-主動",
-          "C": "溫備",
-          "D": "單可用區部署"
+          "B": "SQS ApproximateNumberOfMessagesVisible",
+          "C": "負載平衡器目標運作狀況檢查",
+          "D": "時間點恢復"
         },
-        "explanation": "指示燈可使核心組件保持可用，同時在恢復期間配置剩餘環境。\n雙活和熱備用可維持更多恢復容量運作。單一可用區並不是區域復原策略。"
+        "explanation": "指示燈可使核心組件保持可用，同時在恢復期間配置剩餘環境。\n其他選項適用於此領域的不同需求，但不能像 指示燈 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d2-016",
-    "type": "single",
-    "question": "A customer-facing application team needs to add EC2 capacity when a queue backlog grows. Which scaling signal is most relevant?",
-    "options": {
-      "A": "The Route 53 hosted zone ID",
-      "B": "SQS ApproximateNumberOfMessagesVisible",
-      "C": "The S3 bucket name",
-      "D": "The KMS key rotation date"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Queue depth is a direct measure of work waiting for workers and can drive Auto Scaling.\nThe other values do not measure pending work.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A customer-facing application team is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs to add EC2 capacity when a queue backlog grows. Which scaling signal is most relevant?",
+    "options": {
+      "A": "Load balancer target health checks",
+      "B": "Point-in-time restore",
+      "C": "AWS Backup",
+      "D": "SQS ApproximateNumberOfMessagesVisible"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Queue depth is a direct measure of work waiting for workers and can drive Auto Scaling.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide SQS ApproximateNumberOfMessagesVisible for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "當佇列積壓增加時，面向客戶的應用程式團隊需要增加 EC2 容量。哪個縮放訊號最相關？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。當佇列積壓增加時，面向客戶的應用程式團隊需要增加 EC2 容量。哪個縮放訊號最相關？",
         "options": {
-          "A": "Route 53 託管區域 ID",
-          "B": "SQS ApproximateNumberOfMessagesVisible",
-          "C": "S3 儲存桶名稱",
-          "D": "KMS 金鑰輪替日期"
+          "A": "負載平衡器目標運作狀況檢查",
+          "B": "時間點恢復",
+          "C": "AWS Backup",
+          "D": "SQS ApproximateNumberOfMessagesVisible"
         },
-        "explanation": "佇列深度是等待工作人員的工作的直接衡量標準，可以驅動 Auto Scaling。\n其他值不衡量待處理的工作。"
+        "explanation": "佇列深度是等待工作人員的工作的直接衡量標準，可以驅動 Auto Scaling。\n其他選項適用於此領域的不同需求，但不能像 SQS ApproximateNumberOfMessagesVisible 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d2-017",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A platform team standardizing its AWS deployments must route traffic only to healthy targets after a deployment. Which capability should be configured?",
+    "question": "A platform team standardizing its AWS deployments is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team must route traffic only to healthy targets after a deployment. Which capability should be configured?",
     "options": {
-      "A": "A KMS alias",
-      "B": "An IAM user password policy",
+      "A": "AWS Backup",
+      "B": "Pilot light",
       "C": "Load balancer target health checks",
-      "D": "S3 Object Lock"
+      "D": "Point-in-time restore"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Load balancer health checks remove unhealthy targets from routing.\nThe other choices protect objects, name keys, or govern IAM passwords.",
-    "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Load balancer health checks remove unhealthy targets from routing.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Load balancer target health checks for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊必須在部署後僅將流量路由到健康的目標。應該配置哪些能力？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。標準化其 AWS 部署的平台團隊必須在部署後僅將流量路由到健康的目標。應該配置哪些能力？",
         "options": {
-          "A": "KMS 別名",
-          "B": "IAM Users密碼原則",
+          "A": "AWS Backup",
+          "B": "指示燈",
           "C": "負載平衡器目標運作狀況檢查",
-          "D": "S3 Object Lock"
+          "D": "時間點恢復"
         },
-        "explanation": "負載平衡器運作狀況檢查會從路由中刪除不健康的目標。\n其他選擇保護物件、名稱金鑰或管理 IAM 密碼。"
+        "explanation": "負載平衡器運作狀況檢查會從路由中刪除不健康的目標。\n其他選項適用於此領域的不同需求，但不能像 負載平衡器目標運作狀況檢查 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d2-018",
-    "type": "single",
-    "question": "A team preparing evidence for an audit needs a database restore to a specific second before an accidental deletion. Which RDS capability fits?",
-    "options": {
-      "A": "A read replica endpoint",
-      "B": "A security group reference",
-      "C": "A CloudFront invalidation",
-      "D": "Point-in-time restore"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "RDS point-in-time restore uses automated backups and transaction logs to create a new database at a selected time.\nRead replicas, security groups, and cache invalidations do not restore a database to a selected time.",
     "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team preparing evidence for an audit is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs a database restore to a specific second before an accidental deletion. Which RDS capability fits?",
+    "options": {
+      "A": "SQS ApproximateNumberOfMessagesVisible",
+      "B": "Point-in-time restore",
+      "C": "AWS Backup",
+      "D": "Pilot light"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "RDS point-in-time restore uses automated backups and transaction logs to create a new database at a selected time.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Point-in-time restore for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備審計證據的團隊需要將資料庫恢復到意外刪除之前的特定秒數。哪種 RDS 功能適合？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。準備審計證據的團隊需要將資料庫恢復到意外刪除之前的特定秒數。哪種 RDS 功能適合？",
         "options": {
-          "A": "只讀副本端點",
-          "B": "安全群組參考",
-          "C": "CloudFront 失效",
-          "D": "時間點恢復"
+          "A": "SQS ApproximateNumberOfMessagesVisible",
+          "B": "時間點恢復",
+          "C": "AWS Backup",
+          "D": "指示燈"
         },
-        "explanation": "RDS 時間點復原使用自動備份和交易日誌在選定時間建立新資料庫。\n只讀副本、安全性群組和快取失效不會將資料庫還原到選定的時間。"
+        "explanation": "RDS 時間點復原使用自動備份和交易日誌在選定時間建立新資料庫。\n其他選項適用於此領域的不同需求，但不能像 時間點恢復 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d2-019",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A business replacing a manual process wants automated backup policies across supported AWS resources. Which service should manage the plans?",
+    "question": "A business replacing a manual process is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team wants automated backup policies across supported AWS resources. Which service should manage the plans?",
     "options": {
       "A": "AWS Backup",
-      "B": "AWS WAF",
-      "C": "Amazon Route 53",
-      "D": "AWS Certificate Manager"
+      "B": "Pilot light",
+      "C": "SQS ApproximateNumberOfMessagesVisible",
+      "D": "Load balancer target health checks"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "AWS Backup centralizes schedules, retention, and vault policies for supported resources.\nThe other choices protect web traffic, provide DNS, or manage certificates.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "AWS Backup centralizes schedules, retention, and vault policies for supported resources.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Backup for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "取代手動流程的企業希望跨支援的 AWS 資源自動執行備份策略。哪個服務應該管理計劃？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。取代手動流程的企業希望跨支援的 AWS 資源自動執行備份策略。哪個服務應該管理計劃？",
         "options": {
           "A": "AWS Backup",
-          "B": "AWS WAF",
-          "C": "Amazon Route 53",
-          "D": "AWS Certificate Manager"
+          "B": "指示燈",
+          "C": "SQS ApproximateNumberOfMessagesVisible",
+          "D": "負載平衡器目標運作狀況檢查"
         },
-        "explanation": "AWS Backup 集中支援資源的規劃、保留和保管庫策略。\n其他選擇保護 Web 流量、提供 DNS 或管理憑證。"
+        "explanation": "AWS Backup 集中支援資源的規劃、保留和保管庫策略。\n其他選項適用於此領域的不同需求，但不能像 AWS Backup 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d2-020",
-    "type": "single",
-    "question": "A team validating a design against the exam guide must keep only core recovery components running in a secondary Region and create the rest during a disaster. Which strategy is this?",
-    "options": {
-      "A": "A single-AZ deployment",
-      "B": "Pilot light",
-      "C": "Active-active",
-      "D": "Warm standby"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Pilot light keeps the core components available while the remaining environment is provisioned during recovery.\nActive-active and warm standby keep more recovery capacity running. A single AZ is not a Regional recovery strategy.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team validating a design against the exam guide is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team must keep only core recovery components running in a secondary Region and create the rest during a disaster. Which strategy is this?",
+    "options": {
+      "A": "SQS ApproximateNumberOfMessagesVisible",
+      "B": "Load balancer target health checks",
+      "C": "Point-in-time restore",
+      "D": "Pilot light"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Pilot light keeps the core components available while the remaining environment is provisioned during recovery.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Pilot light for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊必須僅保留在輔助區域中運行的核心恢復組件，並在災難期間創建其餘組件。這是哪個策略？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。根據考試指南驗證設計的團隊必須僅保留在輔助區域中運行的核心恢復組件，並在災難期間創建其餘組件。這是哪個策略？",
         "options": {
-          "A": "單可用區部署",
-          "B": "指示燈",
-          "C": "主動-主動",
-          "D": "溫備"
+          "A": "SQS ApproximateNumberOfMessagesVisible",
+          "B": "負載平衡器目標運作狀況檢查",
+          "C": "時間點恢復",
+          "D": "指示燈"
         },
-        "explanation": "指示燈可使核心組件保持可用，同時在恢復期間配置剩餘環境。\n雙活和熱備用可維持更多恢復容量運作。單一可用區並不是區域復原策略。"
+        "explanation": "指示燈可使核心組件保持可用，同時在恢復期間配置剩餘環境。\n其他選項適用於此領域的不同需求，但不能像 指示燈 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d2-021",
-    "type": "single",
-    "question": "A production team needs to add EC2 capacity when a queue backlog grows. Which scaling signal is most relevant?",
-    "options": {
-      "A": "The KMS key rotation date",
-      "B": "The Route 53 hosted zone ID",
-      "C": "SQS ApproximateNumberOfMessagesVisible",
-      "D": "The S3 bucket name"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "Queue depth is a direct measure of work waiting for workers and can drive Auto Scaling.\nThe other values do not measure pending work.",
     "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A production team is planning two independent production changes. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The first team needs to add EC2 capacity when a queue backlog grows. A second team must route traffic only to healthy targets after a deployment. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "AWS Backup",
+      "B": "Pilot light",
+      "C": "SQS ApproximateNumberOfMessagesVisible",
+      "D": "Load balancer target health checks",
+      "E": "Point-in-time restore"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "SQS ApproximateNumberOfMessagesVisible meets the first requirement: Queue depth is a direct measure of work waiting for workers and can drive Auto Scaling. Load balancer target health checks meets the second requirement: Load balancer health checks remove unhealthy targets from routing.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "當佇列積壓增加時，生產團隊需要增加 EC2 容量。哪個縮放訊號最相關？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。第一項需求：當佇列積壓增加時，生產團隊需要增加 EC2 容量。第二項需求：多帳戶平台團隊必須在部署後僅將流量路由到健康的目標。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "KMS 金鑰輪替日期",
-          "B": "Route 53 託管區域 ID",
+          "A": "AWS Backup",
+          "B": "指示燈",
           "C": "SQS ApproximateNumberOfMessagesVisible",
-          "D": "S3 儲存桶名稱"
+          "D": "負載平衡器目標運作狀況檢查",
+          "E": "時間點恢復"
         },
-        "explanation": "佇列深度是等待工作人員的工作的直接衡量標準，可以驅動 Auto Scaling。\n其他值不衡量待處理的工作。"
+        "explanation": "SQS ApproximateNumberOfMessagesVisible 符合第一項需求：佇列深度是等待工作人員的工作的直接衡量標準，可以驅動 Auto Scaling。 負載平衡器目標運作狀況檢查 符合第二項需求：負載平衡器運作狀況檢查會從路由中刪除不健康的目標。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "soa-c03-d2-022",
-    "type": "single",
-    "question": "A multi-account platform team must route traffic only to healthy targets after a deployment. Which capability should be configured?",
-    "options": {
-      "A": "S3 Object Lock",
-      "B": "A KMS alias",
-      "C": "An IAM user password policy",
-      "D": "Load balancer target health checks"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Load balancer health checks remove unhealthy targets from routing.\nThe other choices protect objects, name keys, or govern IAM passwords.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A multi-account platform team is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team must route traffic only to healthy targets after a deployment. Which capability should be configured?",
+    "options": {
+      "A": "Pilot light",
+      "B": "Load balancer target health checks",
+      "C": "Point-in-time restore",
+      "D": "AWS Backup"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Load balancer health checks remove unhealthy targets from routing.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Load balancer target health checks for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊必須在部署後僅將流量路由到健康的目標。應該配置哪些能力？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。多帳戶平台團隊必須在部署後僅將流量路由到健康的目標。應該配置哪些能力？",
         "options": {
-          "A": "S3 Object Lock",
-          "B": "KMS 別名",
-          "C": "IAM Users密碼原則",
-          "D": "負載平衡器目標運作狀況檢查"
+          "A": "指示燈",
+          "B": "負載平衡器目標運作狀況檢查",
+          "C": "時間點恢復",
+          "D": "AWS Backup"
         },
-        "explanation": "負載平衡器運作狀況檢查會從路由中刪除不健康的目標。\n其他選擇保護物件、名稱金鑰或管理 IAM 密碼。"
+        "explanation": "負載平衡器運作狀況檢查會從路由中刪除不健康的目標。\n其他選項適用於此領域的不同需求，但不能像 負載平衡器目標運作狀況檢查 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d2-023",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A regulated company needs a database restore to a specific second before an accidental deletion. Which RDS capability fits?",
+    "question": "A regulated company is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs a database restore to a specific second before an accidental deletion. Which RDS capability fits?",
     "options": {
       "A": "Point-in-time restore",
-      "B": "A read replica endpoint",
-      "C": "A security group reference",
-      "D": "A CloudFront invalidation"
+      "B": "AWS Backup",
+      "C": "Pilot light",
+      "D": "SQS ApproximateNumberOfMessagesVisible"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "RDS point-in-time restore uses automated backups and transaction logs to create a new database at a selected time.\nRead replicas, security groups, and cache invalidations do not restore a database to a selected time.",
-    "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "RDS point-in-time restore uses automated backups and transaction logs to create a new database at a selected time.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Point-in-time restore for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司需要將資料庫恢復到意外刪除之前的特定秒數。哪種 RDS 功能適合？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。受監管的公司需要將資料庫恢復到意外刪除之前的特定秒數。哪種 RDS 功能適合？",
         "options": {
           "A": "時間點恢復",
-          "B": "只讀副本端點",
-          "C": "安全群組參考",
-          "D": "CloudFront 失效"
+          "B": "AWS Backup",
+          "C": "指示燈",
+          "D": "SQS ApproximateNumberOfMessagesVisible"
         },
-        "explanation": "RDS 時間點復原使用自動備份和交易日誌在選定時間建立新資料庫。\n只讀副本、安全性群組和快取失效不會將資料庫還原到選定的時間。"
+        "explanation": "RDS 時間點復原使用自動備份和交易日誌在選定時間建立新資料庫。\n其他選項適用於此領域的不同需求，但不能像 時間點恢復 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d2-024",
-    "type": "single",
-    "question": "A startup preparing for a traffic increase wants automated backup policies across supported AWS resources. Which service should manage the plans?",
-    "options": {
-      "A": "AWS Certificate Manager",
-      "B": "AWS Backup",
-      "C": "AWS WAF",
-      "D": "Amazon Route 53"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "AWS Backup centralizes schedules, retention, and vault policies for supported resources.\nThe other choices protect web traffic, provide DNS, or manage certificates.",
     "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team wants automated backup policies across supported AWS resources. Which service should manage the plans?",
+    "options": {
+      "A": "Pilot light",
+      "B": "SQS ApproximateNumberOfMessagesVisible",
+      "C": "Load balancer target health checks",
+      "D": "AWS Backup"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "AWS Backup centralizes schedules, retention, and vault policies for supported resources.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Backup for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "一家準備增加流量的新創公司希望在受支援的 AWS 資源上執行自動備份策略。哪個服務應該管理計劃？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。一家準備增加流量的新創公司希望在受支援的 AWS 資源上執行自動備份策略。哪個服務應該管理計劃？",
         "options": {
-          "A": "AWS Certificate Manager",
-          "B": "AWS Backup",
-          "C": "AWS WAF",
-          "D": "Amazon Route 53"
+          "A": "指示燈",
+          "B": "SQS ApproximateNumberOfMessagesVisible",
+          "C": "負載平衡器目標運作狀況檢查",
+          "D": "AWS Backup"
         },
-        "explanation": "AWS Backup 集中支援資源的規劃、保留和保管庫策略。\n其他選擇保護 Web 流量、提供 DNS 或管理憑證。"
+        "explanation": "AWS Backup 集中支援資源的規劃、保留和保管庫策略。\n其他選項適用於此領域的不同需求，但不能像 AWS Backup 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d2-025",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An operations team supporting a critical workload must keep only core recovery components running in a secondary Region and create the rest during a disaster. Which strategy is this?",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team must keep only core recovery components running in a secondary Region and create the rest during a disaster. Which strategy is this?",
     "options": {
-      "A": "Warm standby",
-      "B": "A single-AZ deployment",
+      "A": "Load balancer target health checks",
+      "B": "Point-in-time restore",
       "C": "Pilot light",
-      "D": "Active-active"
+      "D": "SQS ApproximateNumberOfMessagesVisible"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Pilot light keeps the core components available while the remaining environment is provisioned during recovery.\nActive-active and warm standby keep more recovery capacity running. A single AZ is not a Regional recovery strategy.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Pilot light keeps the core components available while the remaining environment is provisioned during recovery.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Pilot light for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊必須僅保持核心復原組件在次要區域中運行，並在災難期間建立其餘組件。這是哪個策略？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。支援關鍵工作負載的營運團隊必須僅保持核心復原組件在次要區域中運行，並在災難期間建立其餘組件。這是哪個策略？",
         "options": {
-          "A": "溫備",
-          "B": "單可用區部署",
+          "A": "負載平衡器目標運作狀況檢查",
+          "B": "時間點恢復",
           "C": "指示燈",
-          "D": "主動-主動"
+          "D": "SQS ApproximateNumberOfMessagesVisible"
         },
-        "explanation": "指示燈可使核心組件保持可用，同時在恢復期間配置剩餘環境。\n雙活和熱備用可維持更多恢復容量運作。單一可用區並不是區域復原策略。"
+        "explanation": "指示燈可使核心組件保持可用，同時在恢復期間配置剩餘環境。\n其他選項適用於此領域的不同需求，但不能像 指示燈 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d2-026",
-    "type": "single",
-    "question": "A data platform team needs to add EC2 capacity when a queue backlog grows. Which scaling signal is most relevant?",
-    "options": {
-      "A": "The S3 bucket name",
-      "B": "The KMS key rotation date",
-      "C": "The Route 53 hosted zone ID",
-      "D": "SQS ApproximateNumberOfMessagesVisible"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Queue depth is a direct measure of work waiting for workers and can drive Auto Scaling.\nThe other values do not measure pending work.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A data platform team is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team needs to add EC2 capacity when a queue backlog grows. Which scaling signal is most relevant?",
+    "options": {
+      "A": "AWS Backup",
+      "B": "SQS ApproximateNumberOfMessagesVisible",
+      "C": "Load balancer target health checks",
+      "D": "Point-in-time restore"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Queue depth is a direct measure of work waiting for workers and can drive Auto Scaling.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide SQS ApproximateNumberOfMessagesVisible for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "當佇列積壓成長時，資料平台團隊需要增加 EC2 容量。哪個縮放訊號最相關？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。當佇列積壓成長時，資料平台團隊需要增加 EC2 容量。哪個縮放訊號最相關？",
         "options": {
-          "A": "S3 儲存桶名稱",
-          "B": "KMS 金鑰輪替日期",
-          "C": "Route 53 託管區域 ID",
-          "D": "SQS ApproximateNumberOfMessagesVisible"
+          "A": "AWS Backup",
+          "B": "SQS ApproximateNumberOfMessagesVisible",
+          "C": "負載平衡器目標運作狀況檢查",
+          "D": "時間點恢復"
         },
-        "explanation": "佇列深度是等待工作人員的工作的直接衡量標準，可以驅動 Auto Scaling。\n其他值不衡量待處理的工作。"
+        "explanation": "佇列深度是等待工作人員的工作的直接衡量標準，可以驅動 Auto Scaling。\n其他選項適用於此領域的不同需求，但不能像 SQS ApproximateNumberOfMessagesVisible 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d2-027",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A security-conscious engineering team must route traffic only to healthy targets after a deployment. Which capability should be configured?",
+    "question": "A security-conscious engineering team is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team must route traffic only to healthy targets after a deployment. Which capability should be configured?",
     "options": {
       "A": "Load balancer target health checks",
-      "B": "S3 Object Lock",
-      "C": "A KMS alias",
-      "D": "An IAM user password policy"
+      "B": "Point-in-time restore",
+      "C": "AWS Backup",
+      "D": "Pilot light"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Load balancer health checks remove unhealthy targets from routing.\nThe other choices protect objects, name keys, or govern IAM passwords.",
-    "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "Load balancer health checks remove unhealthy targets from routing.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Load balancer target health checks for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊必須在部署後僅將流量路由到健康的目標。應該配置哪些能力？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。具有安全意識的工程團隊必須在部署後僅將流量路由到健康的目標。應該配置哪些能力？",
         "options": {
           "A": "負載平衡器目標運作狀況檢查",
-          "B": "S3 Object Lock",
-          "C": "KMS 別名",
-          "D": "IAM Users密碼原則"
+          "B": "時間點恢復",
+          "C": "AWS Backup",
+          "D": "指示燈"
         },
-        "explanation": "負載平衡器運作狀況檢查會從路由中刪除不健康的目標。\n其他選擇保護物件、名稱金鑰或管理 IAM 密碼。"
+        "explanation": "負載平衡器運作狀況檢查會從路由中刪除不健康的目標。\n其他選項適用於此領域的不同需求，但不能像 負載平衡器目標運作狀況檢查 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d2-028",
-    "type": "single",
-    "question": "A company migrating an existing workload needs a database restore to a specific second before an accidental deletion. Which RDS capability fits?",
-    "options": {
-      "A": "A CloudFront invalidation",
-      "B": "Point-in-time restore",
-      "C": "A read replica endpoint",
-      "D": "A security group reference"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "RDS point-in-time restore uses automated backups and transaction logs to create a new database at a selected time.\nRead replicas, security groups, and cache invalidations do not restore a database to a selected time.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A company migrating an existing workload is planning two independent production changes. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The first team needs a database restore to a specific second before an accidental deletion. A second team wants automated backup policies across supported AWS resources. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Point-in-time restore",
+      "B": "AWS Backup",
+      "C": "Pilot light",
+      "D": "SQS ApproximateNumberOfMessagesVisible",
+      "E": "Load balancer target health checks"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Point-in-time restore meets the first requirement: RDS point-in-time restore uses automated backups and transaction logs to create a new database at a selected time. AWS Backup meets the second requirement: AWS Backup centralizes schedules, retention, and vault policies for supported resources.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司需要將資料庫還原到意外刪除之前的特定秒數。哪種 RDS 功能適合？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。第一項需求：受監管的公司需要將資料庫恢復到意外刪除之前的特定秒數。第二項需求：一家準備增加流量的新創公司希望在受支援的 AWS 資源上執行自動備份策略。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "CloudFront 失效",
-          "B": "時間點恢復",
-          "C": "只讀副本端點",
-          "D": "安全群組參考"
+          "A": "時間點恢復",
+          "B": "AWS Backup",
+          "C": "指示燈",
+          "D": "SQS ApproximateNumberOfMessagesVisible",
+          "E": "負載平衡器目標運作狀況檢查"
         },
-        "explanation": "RDS 時間點復原使用自動備份和交易日誌在選定時間建立新資料庫。\n只讀副本、安全性群組和快取失效不會將資料庫還原到選定的時間。"
+        "explanation": "時間點恢復 符合第一項需求：RDS 時間點復原使用自動備份和交易日誌在選定時間建立新資料庫。 AWS Backup 符合第二項需求：AWS Backup 集中支援資源的規劃、保留和保管庫策略。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "soa-c03-d2-029",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team with strict recovery objectives wants automated backup policies across supported AWS resources. Which service should manage the plans?",
+    "question": "A team with strict recovery objectives is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team wants automated backup policies across supported AWS resources. Which service should manage the plans?",
     "options": {
-      "A": "Amazon Route 53",
-      "B": "AWS Certificate Manager",
+      "A": "SQS ApproximateNumberOfMessagesVisible",
+      "B": "Load balancer target health checks",
       "C": "AWS Backup",
-      "D": "AWS WAF"
+      "D": "Pilot light"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "AWS Backup centralizes schedules, retention, and vault policies for supported resources.\nThe other choices protect web traffic, provide DNS, or manage certificates.",
-    "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "AWS Backup centralizes schedules, retention, and vault policies for supported resources.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Backup for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格復原目標的團隊希望跨支援的 AWS 資源執行自動備份策略。哪個服務應該管理計劃？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。具有嚴格復原目標的團隊希望跨支援的 AWS 資源執行自動備份策略。哪個服務應該管理計劃？",
         "options": {
-          "A": "Amazon Route 53",
-          "B": "AWS Certificate Manager",
+          "A": "SQS ApproximateNumberOfMessagesVisible",
+          "B": "負載平衡器目標運作狀況檢查",
           "C": "AWS Backup",
-          "D": "AWS WAF"
+          "D": "指示燈"
         },
-        "explanation": "AWS Backup 集中支援資源的規劃、保留和保管庫策略。\n其他選擇保護 Web 流量、提供 DNS 或管理憑證。"
+        "explanation": "AWS Backup 集中支援資源的規劃、保留和保管庫策略。\n其他選項適用於此領域的不同需求，但不能像 AWS Backup 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d2-030",
-    "type": "single",
-    "question": "A developer team preparing a release must keep only core recovery components running in a secondary Region and create the rest during a disaster. Which strategy is this?",
-    "options": {
-      "A": "Active-active",
-      "B": "Warm standby",
-      "C": "A single-AZ deployment",
-      "D": "Pilot light"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Pilot light keeps the core components available while the remaining environment is provisioned during recovery.\nActive-active and warm standby keep more recovery capacity running. A single AZ is not a Regional recovery strategy.",
     "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A developer team preparing a release is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team must keep only core recovery components running in a secondary Region and create the rest during a disaster. Which strategy is this?",
+    "options": {
+      "A": "Point-in-time restore",
+      "B": "Pilot light",
+      "C": "SQS ApproximateNumberOfMessagesVisible",
+      "D": "Load balancer target health checks"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Pilot light keeps the core components available while the remaining environment is provisioned during recovery.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Pilot light for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊必須僅保留在輔助區域中運行的核心復原元件，並在災難期間建立其餘元件。這是哪個策略？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。準備發布的開發團隊必須僅保留在輔助區域中運行的核心復原元件，並在災難期間建立其餘元件。這是哪個策略？",
         "options": {
-          "A": "主動-主動",
-          "B": "溫備",
-          "C": "單可用區部署",
-          "D": "指示燈"
+          "A": "時間點恢復",
+          "B": "指示燈",
+          "C": "SQS ApproximateNumberOfMessagesVisible",
+          "D": "負載平衡器目標運作狀況檢查"
         },
-        "explanation": "指示燈可使核心組件保持可用，同時在恢復期間配置剩餘環境。\n雙活和熱備用可維持更多恢復容量運作。單一可用區並不是區域復原策略。"
+        "explanation": "指示燈可使核心組件保持可用，同時在恢復期間配置剩餘環境。\n其他選項適用於此領域的不同需求，但不能像 指示燈 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d2-031",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An enterprise with several AWS Regions needs to add EC2 capacity when a queue backlog grows. Which scaling signal is most relevant?",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs to add EC2 capacity when a queue backlog grows. Which scaling signal is most relevant?",
     "options": {
       "A": "SQS ApproximateNumberOfMessagesVisible",
-      "B": "The S3 bucket name",
-      "C": "The KMS key rotation date",
-      "D": "The Route 53 hosted zone ID"
+      "B": "Load balancer target health checks",
+      "C": "Point-in-time restore",
+      "D": "AWS Backup"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Queue depth is a direct measure of work waiting for workers and can drive Auto Scaling.\nThe other values do not measure pending work.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Queue depth is a direct measure of work waiting for workers and can drive Auto Scaling.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide SQS ApproximateNumberOfMessagesVisible for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "當佇列積壓增加時，擁有多個 AWS 區域的企業需要增加 EC2 容量。哪個縮放訊號最相關？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。當佇列積壓增加時，擁有多個 AWS 區域的企業需要增加 EC2 容量。哪個縮放訊號最相關？",
         "options": {
           "A": "SQS ApproximateNumberOfMessagesVisible",
-          "B": "S3 儲存桶名稱",
-          "C": "KMS 金鑰輪替日期",
-          "D": "Route 53 託管區域 ID"
+          "B": "負載平衡器目標運作狀況檢查",
+          "C": "時間點恢復",
+          "D": "AWS Backup"
         },
-        "explanation": "佇列深度是等待工作人員的工作的直接衡量標準，可以驅動 Auto Scaling。\n其他值不衡量待處理的工作。"
+        "explanation": "佇列深度是等待工作人員的工作的直接衡量標準，可以驅動 Auto Scaling。\n其他選項適用於此領域的不同需求，但不能像 SQS ApproximateNumberOfMessagesVisible 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d2-032",
-    "type": "single",
-    "question": "A service owner reviewing an incident must route traffic only to healthy targets after a deployment. Which capability should be configured?",
-    "options": {
-      "A": "An IAM user password policy",
-      "B": "Load balancer target health checks",
-      "C": "S3 Object Lock",
-      "D": "A KMS alias"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Load balancer health checks remove unhealthy targets from routing.\nThe other choices protect objects, name keys, or govern IAM passwords.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A service owner reviewing an incident is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team must route traffic only to healthy targets after a deployment. Which capability should be configured?",
+    "options": {
+      "A": "Point-in-time restore",
+      "B": "AWS Backup",
+      "C": "Pilot light",
+      "D": "Load balancer target health checks"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Load balancer health checks remove unhealthy targets from routing.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Load balancer target health checks for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "部署後，檢查事件的服務擁有者必須僅將流量路由至健康目標。應該配置哪些能力？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。部署後，檢查事件的服務擁有者必須僅將流量路由至健康目標。應該配置哪些能力？",
         "options": {
-          "A": "IAM Users密碼原則",
-          "B": "負載平衡器目標運作狀況檢查",
-          "C": "S3 Object Lock",
-          "D": "KMS 別名"
+          "A": "時間點恢復",
+          "B": "AWS Backup",
+          "C": "指示燈",
+          "D": "負載平衡器目標運作狀況檢查"
         },
-        "explanation": "負載平衡器運作狀況檢查會從路由中刪除不健康的目標。\n其他選擇保護物件、名稱金鑰或管理 IAM 密碼。"
+        "explanation": "負載平衡器運作狀況檢查會從路由中刪除不健康的目標。\n其他選項適用於此領域的不同需求，但不能像 負載平衡器目標運作狀況檢查 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d2-033",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team optimizing an existing implementation needs a database restore to a specific second before an accidental deletion. Which RDS capability fits?",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs a database restore to a specific second before an accidental deletion. Which RDS capability fits?",
     "options": {
-      "A": "A security group reference",
-      "B": "A CloudFront invalidation",
+      "A": "Pilot light",
+      "B": "SQS ApproximateNumberOfMessagesVisible",
       "C": "Point-in-time restore",
-      "D": "A read replica endpoint"
+      "D": "AWS Backup"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "RDS point-in-time restore uses automated backups and transaction logs to create a new database at a selected time.\nRead replicas, security groups, and cache invalidations do not restore a database to a selected time.",
-    "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "RDS point-in-time restore uses automated backups and transaction logs to create a new database at a selected time.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Point-in-time restore for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實作的團隊需要將資料庫還原到意外刪除之前的特定秒數。哪種 RDS 功能適合？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。優化現有實作的團隊需要將資料庫還原到意外刪除之前的特定秒數。哪種 RDS 功能適合？",
         "options": {
-          "A": "安全群組參考",
-          "B": "CloudFront 失效",
+          "A": "指示燈",
+          "B": "SQS ApproximateNumberOfMessagesVisible",
           "C": "時間點恢復",
-          "D": "只讀副本端點"
+          "D": "AWS Backup"
         },
-        "explanation": "RDS 時間點復原使用自動備份和交易日誌在選定時間建立新資料庫。\n只讀副本、安全性群組和快取失效不會將資料庫還原到選定的時間。"
+        "explanation": "RDS 時間點復原使用自動備份和交易日誌在選定時間建立新資料庫。\n其他選項適用於此領域的不同需求，但不能像 時間點恢復 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d2-034",
-    "type": "single",
-    "question": "A company introducing an automated workflow wants automated backup policies across supported AWS resources. Which service should manage the plans?",
-    "options": {
-      "A": "AWS WAF",
-      "B": "Amazon Route 53",
-      "C": "AWS Certificate Manager",
-      "D": "AWS Backup"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "AWS Backup centralizes schedules, retention, and vault policies for supported resources.\nThe other choices protect web traffic, provide DNS, or manage certificates.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A company introducing an automated workflow is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team wants automated backup policies across supported AWS resources. Which service should manage the plans?",
+    "options": {
+      "A": "Load balancer target health checks",
+      "B": "AWS Backup",
+      "C": "Pilot light",
+      "D": "SQS ApproximateNumberOfMessagesVisible"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "AWS Backup centralizes schedules, retention, and vault policies for supported resources.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Backup for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "一家引入自動化工作流程的公司希望在受支援的 AWS 資源上實現自動化備份策略。哪個服務應該管理計劃？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。一家引入自動化工作流程的公司希望在受支援的 AWS 資源上實現自動化備份策略。哪個服務應該管理計劃？",
         "options": {
-          "A": "AWS WAF",
-          "B": "Amazon Route 53",
-          "C": "AWS Certificate Manager",
-          "D": "AWS Backup"
+          "A": "負載平衡器目標運作狀況檢查",
+          "B": "AWS Backup",
+          "C": "指示燈",
+          "D": "SQS ApproximateNumberOfMessagesVisible"
         },
-        "explanation": "AWS Backup 集中支援資源的規劃、保留和保管庫策略。\n其他選擇保護 Web 流量、提供 DNS 或管理憑證。"
+        "explanation": "AWS Backup 集中支援資源的規劃、保留和保管庫策略。\n其他選項適用於此領域的不同需求，但不能像 AWS Backup 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d2-035",
-    "type": "single",
-    "question": "An AWS administrator working in a shared environment must keep only core recovery components running in a secondary Region and create the rest during a disaster. Which strategy is this?",
-    "options": {
-      "A": "Pilot light",
-      "B": "Active-active",
-      "C": "Warm standby",
-      "D": "A single-AZ deployment"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "Pilot light keeps the core components available while the remaining environment is provisioned during recovery.\nActive-active and warm standby keep more recovery capacity running. A single AZ is not a Regional recovery strategy.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "An AWS administrator working in a shared environment is planning two independent production changes. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The first team must keep only core recovery components running in a secondary Region and create the rest during a disaster. A second team needs to add EC2 capacity when a queue backlog grows. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Load balancer target health checks",
+      "B": "Point-in-time restore",
+      "C": "AWS Backup",
+      "D": "Pilot light",
+      "E": "SQS ApproximateNumberOfMessagesVisible"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Pilot light meets the first requirement: Pilot light keeps the core components available while the remaining environment is provisioned during recovery. SQS ApproximateNumberOfMessagesVisible meets the second requirement: Queue depth is a direct measure of work waiting for workers and can drive Auto Scaling.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "在共用環境中工作的 AWS 管理員必須僅保留在輔助區域中執行的核心復原元件，並在災難期間建立其餘元件。這是哪個策略？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。第一項需求：支援關鍵工作負載的營運團隊必須僅保持核心復原組件在次要區域中運行，並在災難期間建立其餘組件。第二項需求：當佇列積壓增加時，生產團隊需要增加 EC2 容量。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "指示燈",
-          "B": "主動-主動",
-          "C": "溫備",
-          "D": "單可用區部署"
+          "A": "負載平衡器目標運作狀況檢查",
+          "B": "時間點恢復",
+          "C": "AWS Backup",
+          "D": "指示燈",
+          "E": "SQS ApproximateNumberOfMessagesVisible"
         },
-        "explanation": "指示燈可使核心組件保持可用，同時在恢復期間配置剩餘環境。\n雙活和熱備用可維持更多恢復容量運作。單一可用區並不是區域復原策略。"
+        "explanation": "指示燈 符合第一項需求：指示燈可使核心組件保持可用，同時在恢復期間配置剩餘環境。 SQS ApproximateNumberOfMessagesVisible 符合第二項需求：佇列深度是等待工作人員的工作的直接衡量標準，可以驅動 Auto Scaling。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "soa-c03-d2-036",
-    "type": "single",
-    "question": "A customer-facing application team needs to add EC2 capacity when a queue backlog grows. Which scaling signal is most relevant?",
-    "options": {
-      "A": "The Route 53 hosted zone ID",
-      "B": "SQS ApproximateNumberOfMessagesVisible",
-      "C": "The S3 bucket name",
-      "D": "The KMS key rotation date"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Queue depth is a direct measure of work waiting for workers and can drive Auto Scaling.\nThe other values do not measure pending work.",
     "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A customer-facing application team is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs to add EC2 capacity when a queue backlog grows. Which scaling signal is most relevant?",
+    "options": {
+      "A": "Load balancer target health checks",
+      "B": "Point-in-time restore",
+      "C": "AWS Backup",
+      "D": "SQS ApproximateNumberOfMessagesVisible"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Queue depth is a direct measure of work waiting for workers and can drive Auto Scaling.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide SQS ApproximateNumberOfMessagesVisible for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "當佇列積壓增加時，面向客戶的應用程式團隊需要增加 EC2 容量。哪個縮放訊號最相關？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。當佇列積壓增加時，面向客戶的應用程式團隊需要增加 EC2 容量。哪個縮放訊號最相關？",
         "options": {
-          "A": "Route 53 託管區域 ID",
-          "B": "SQS ApproximateNumberOfMessagesVisible",
-          "C": "S3 儲存桶名稱",
-          "D": "KMS 金鑰輪替日期"
+          "A": "負載平衡器目標運作狀況檢查",
+          "B": "時間點恢復",
+          "C": "AWS Backup",
+          "D": "SQS ApproximateNumberOfMessagesVisible"
         },
-        "explanation": "佇列深度是等待工作人員的工作的直接衡量標準，可以驅動 Auto Scaling。\n其他值不衡量待處理的工作。"
+        "explanation": "佇列深度是等待工作人員的工作的直接衡量標準，可以驅動 Auto Scaling。\n其他選項適用於此領域的不同需求，但不能像 SQS ApproximateNumberOfMessagesVisible 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d2-037",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A platform team standardizing its AWS deployments must route traffic only to healthy targets after a deployment. Which capability should be configured?",
+    "question": "A platform team standardizing its AWS deployments is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team must route traffic only to healthy targets after a deployment. Which capability should be configured?",
     "options": {
-      "A": "A KMS alias",
-      "B": "An IAM user password policy",
+      "A": "AWS Backup",
+      "B": "Pilot light",
       "C": "Load balancer target health checks",
-      "D": "S3 Object Lock"
+      "D": "Point-in-time restore"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Load balancer health checks remove unhealthy targets from routing.\nThe other choices protect objects, name keys, or govern IAM passwords.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Load balancer health checks remove unhealthy targets from routing.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Load balancer target health checks for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊必須在部署後僅將流量路由到健康的目標。應該配置哪些能力？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。標準化其 AWS 部署的平台團隊必須在部署後僅將流量路由到健康的目標。應該配置哪些能力？",
         "options": {
-          "A": "KMS 別名",
-          "B": "IAM Users密碼原則",
+          "A": "AWS Backup",
+          "B": "指示燈",
           "C": "負載平衡器目標運作狀況檢查",
-          "D": "S3 Object Lock"
+          "D": "時間點恢復"
         },
-        "explanation": "負載平衡器運作狀況檢查會從路由中刪除不健康的目標。\n其他選擇保護物件、名稱金鑰或管理 IAM 密碼。"
+        "explanation": "負載平衡器運作狀況檢查會從路由中刪除不健康的目標。\n其他選項適用於此領域的不同需求，但不能像 負載平衡器目標運作狀況檢查 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d2-038",
-    "type": "single",
-    "question": "A team preparing evidence for an audit needs a database restore to a specific second before an accidental deletion. Which RDS capability fits?",
-    "options": {
-      "A": "A read replica endpoint",
-      "B": "A security group reference",
-      "C": "A CloudFront invalidation",
-      "D": "Point-in-time restore"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "RDS point-in-time restore uses automated backups and transaction logs to create a new database at a selected time.\nRead replicas, security groups, and cache invalidations do not restore a database to a selected time.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team preparing evidence for an audit is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs a database restore to a specific second before an accidental deletion. Which RDS capability fits?",
+    "options": {
+      "A": "SQS ApproximateNumberOfMessagesVisible",
+      "B": "Point-in-time restore",
+      "C": "AWS Backup",
+      "D": "Pilot light"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "RDS point-in-time restore uses automated backups and transaction logs to create a new database at a selected time.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Point-in-time restore for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備審計證據的團隊需要將資料庫恢復到意外刪除之前的特定秒數。哪種 RDS 功能適合？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。準備審計證據的團隊需要將資料庫恢復到意外刪除之前的特定秒數。哪種 RDS 功能適合？",
         "options": {
-          "A": "只讀副本端點",
-          "B": "安全群組參考",
-          "C": "CloudFront 失效",
-          "D": "時間點恢復"
+          "A": "SQS ApproximateNumberOfMessagesVisible",
+          "B": "時間點恢復",
+          "C": "AWS Backup",
+          "D": "指示燈"
         },
-        "explanation": "RDS 時間點復原使用自動備份和交易日誌在選定時間建立新資料庫。\n只讀副本、安全性群組和快取失效不會將資料庫還原到選定的時間。"
+        "explanation": "RDS 時間點復原使用自動備份和交易日誌在選定時間建立新資料庫。\n其他選項適用於此領域的不同需求，但不能像 時間點恢復 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d2-039",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A business replacing a manual process wants automated backup policies across supported AWS resources. Which service should manage the plans?",
+    "question": "A business replacing a manual process is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team wants automated backup policies across supported AWS resources. Which service should manage the plans?",
     "options": {
       "A": "AWS Backup",
-      "B": "AWS WAF",
-      "C": "Amazon Route 53",
-      "D": "AWS Certificate Manager"
+      "B": "Pilot light",
+      "C": "SQS ApproximateNumberOfMessagesVisible",
+      "D": "Load balancer target health checks"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "AWS Backup centralizes schedules, retention, and vault policies for supported resources.\nThe other choices protect web traffic, provide DNS, or manage certificates.",
-    "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "AWS Backup centralizes schedules, retention, and vault policies for supported resources.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Backup for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "取代手動流程的企業希望跨支援的 AWS 資源自動執行備份策略。哪個服務應該管理計劃？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。取代手動流程的企業希望跨支援的 AWS 資源自動執行備份策略。哪個服務應該管理計劃？",
         "options": {
           "A": "AWS Backup",
-          "B": "AWS WAF",
-          "C": "Amazon Route 53",
-          "D": "AWS Certificate Manager"
+          "B": "指示燈",
+          "C": "SQS ApproximateNumberOfMessagesVisible",
+          "D": "負載平衡器目標運作狀況檢查"
         },
-        "explanation": "AWS Backup 集中支援資源的規劃、保留和保管庫策略。\n其他選擇保護 Web 流量、提供 DNS 或管理憑證。"
+        "explanation": "AWS Backup 集中支援資源的規劃、保留和保管庫策略。\n其他選項適用於此領域的不同需求，但不能像 AWS Backup 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d2-040",
-    "type": "single",
-    "question": "A team validating a design against the exam guide must keep only core recovery components running in a secondary Region and create the rest during a disaster. Which strategy is this?",
-    "options": {
-      "A": "A single-AZ deployment",
-      "B": "Pilot light",
-      "C": "Active-active",
-      "D": "Warm standby"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Pilot light keeps the core components available while the remaining environment is provisioned during recovery.\nActive-active and warm standby keep more recovery capacity running. A single AZ is not a Regional recovery strategy.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team validating a design against the exam guide is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team must keep only core recovery components running in a secondary Region and create the rest during a disaster. Which strategy is this?",
+    "options": {
+      "A": "SQS ApproximateNumberOfMessagesVisible",
+      "B": "Load balancer target health checks",
+      "C": "Point-in-time restore",
+      "D": "Pilot light"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Pilot light keeps the core components available while the remaining environment is provisioned during recovery.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Pilot light for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊必須僅保留在輔助區域中運行的核心恢復組件，並在災難期間創建其餘組件。這是哪個策略？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。根據考試指南驗證設計的團隊必須僅保留在輔助區域中運行的核心恢復組件，並在災難期間創建其餘組件。這是哪個策略？",
         "options": {
-          "A": "單可用區部署",
-          "B": "指示燈",
-          "C": "主動-主動",
-          "D": "溫備"
+          "A": "SQS ApproximateNumberOfMessagesVisible",
+          "B": "負載平衡器目標運作狀況檢查",
+          "C": "時間點恢復",
+          "D": "指示燈"
         },
-        "explanation": "指示燈可使核心組件保持可用，同時在恢復期間配置剩餘環境。\n雙活和熱備用可維持更多恢復容量運作。單一可用區並不是區域復原策略。"
+        "explanation": "指示燈可使核心組件保持可用，同時在恢復期間配置剩餘環境。\n其他選項適用於此領域的不同需求，但不能像 指示燈 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d2-041",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A production team needs to add EC2 capacity when a queue backlog grows. Which scaling signal is most relevant?",
+    "question": "A production team is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs to add EC2 capacity when a queue backlog grows. Which scaling signal is most relevant?",
     "options": {
-      "A": "The KMS key rotation date",
-      "B": "The Route 53 hosted zone ID",
+      "A": "Point-in-time restore",
+      "B": "AWS Backup",
       "C": "SQS ApproximateNumberOfMessagesVisible",
-      "D": "The S3 bucket name"
+      "D": "Load balancer target health checks"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Queue depth is a direct measure of work waiting for workers and can drive Auto Scaling.\nThe other values do not measure pending work.",
-    "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Queue depth is a direct measure of work waiting for workers and can drive Auto Scaling.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide SQS ApproximateNumberOfMessagesVisible for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "當佇列積壓增加時，生產團隊需要增加 EC2 容量。哪個縮放訊號最相關？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。當佇列積壓增加時，生產團隊需要增加 EC2 容量。哪個縮放訊號最相關？",
         "options": {
-          "A": "KMS 金鑰輪替日期",
-          "B": "Route 53 託管區域 ID",
+          "A": "時間點恢復",
+          "B": "AWS Backup",
           "C": "SQS ApproximateNumberOfMessagesVisible",
-          "D": "S3 儲存桶名稱"
+          "D": "負載平衡器目標運作狀況檢查"
         },
-        "explanation": "佇列深度是等待工作人員的工作的直接衡量標準，可以驅動 Auto Scaling。\n其他值不衡量待處理的工作。"
+        "explanation": "佇列深度是等待工作人員的工作的直接衡量標準，可以驅動 Auto Scaling。\n其他選項適用於此領域的不同需求，但不能像 SQS ApproximateNumberOfMessagesVisible 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d2-042",
-    "type": "single",
-    "question": "A multi-account platform team must route traffic only to healthy targets after a deployment. Which capability should be configured?",
-    "options": {
-      "A": "S3 Object Lock",
-      "B": "A KMS alias",
-      "C": "An IAM user password policy",
-      "D": "Load balancer target health checks"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Load balancer health checks remove unhealthy targets from routing.\nThe other choices protect objects, name keys, or govern IAM passwords.",
     "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A multi-account platform team is planning two independent production changes. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The first team must route traffic only to healthy targets after a deployment. A second team needs a database restore to a specific second before an accidental deletion. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "SQS ApproximateNumberOfMessagesVisible",
+      "B": "Load balancer target health checks",
+      "C": "Point-in-time restore",
+      "D": "AWS Backup",
+      "E": "Pilot light"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Load balancer target health checks meets the first requirement: Load balancer health checks remove unhealthy targets from routing. Point-in-time restore meets the second requirement: RDS point-in-time restore uses automated backups and transaction logs to create a new database at a selected time.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊必須在部署後僅將流量路由到健康的目標。應該配置哪些能力？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。第一項需求：多帳戶平台團隊必須在部署後僅將流量路由到健康的目標。第二項需求：受監管的公司需要將資料庫恢復到意外刪除之前的特定秒數。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "S3 Object Lock",
-          "B": "KMS 別名",
-          "C": "IAM Users密碼原則",
-          "D": "負載平衡器目標運作狀況檢查"
+          "A": "SQS ApproximateNumberOfMessagesVisible",
+          "B": "負載平衡器目標運作狀況檢查",
+          "C": "時間點恢復",
+          "D": "AWS Backup",
+          "E": "指示燈"
         },
-        "explanation": "負載平衡器運作狀況檢查會從路由中刪除不健康的目標。\n其他選擇保護物件、名稱金鑰或管理 IAM 密碼。"
+        "explanation": "負載平衡器目標運作狀況檢查 符合第一項需求：負載平衡器運作狀況檢查會從路由中刪除不健康的目標。 時間點恢復 符合第二項需求：RDS 時間點復原使用自動備份和交易日誌在選定時間建立新資料庫。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "soa-c03-d2-043",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A regulated company needs a database restore to a specific second before an accidental deletion. Which RDS capability fits?",
+    "question": "A regulated company is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs a database restore to a specific second before an accidental deletion. Which RDS capability fits?",
     "options": {
       "A": "Point-in-time restore",
-      "B": "A read replica endpoint",
-      "C": "A security group reference",
-      "D": "A CloudFront invalidation"
+      "B": "AWS Backup",
+      "C": "Pilot light",
+      "D": "SQS ApproximateNumberOfMessagesVisible"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "RDS point-in-time restore uses automated backups and transaction logs to create a new database at a selected time.\nRead replicas, security groups, and cache invalidations do not restore a database to a selected time.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "RDS point-in-time restore uses automated backups and transaction logs to create a new database at a selected time.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Point-in-time restore for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司需要將資料庫恢復到意外刪除之前的特定秒數。哪種 RDS 功能適合？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。受監管的公司需要將資料庫恢復到意外刪除之前的特定秒數。哪種 RDS 功能適合？",
         "options": {
           "A": "時間點恢復",
-          "B": "只讀副本端點",
-          "C": "安全群組參考",
-          "D": "CloudFront 失效"
+          "B": "AWS Backup",
+          "C": "指示燈",
+          "D": "SQS ApproximateNumberOfMessagesVisible"
         },
-        "explanation": "RDS 時間點復原使用自動備份和交易日誌在選定時間建立新資料庫。\n只讀副本、安全性群組和快取失效不會將資料庫還原到選定的時間。"
+        "explanation": "RDS 時間點復原使用自動備份和交易日誌在選定時間建立新資料庫。\n其他選項適用於此領域的不同需求，但不能像 時間點恢復 一樣直接滿足題目的指定條件。"
       }
     }
   }

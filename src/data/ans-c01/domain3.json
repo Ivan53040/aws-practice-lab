@@ -1,1093 +1,1360 @@
 [
   {
     "id": "ans-c01-d3-001",
-    "type": "single",
-    "question": "A production team needs to investigate rejected packets between two VPC subnets. Which evidence should be collected?",
-    "options": {
-      "A": "S3 object tags only",
-      "B": "A CloudFront cache key only",
-      "C": "An IAM username",
-      "D": "VPC Flow Logs and route and security group configuration"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Flow Logs combined with routing and security controls identify where traffic is rejected.\nThe other choices do not describe network packet decisions.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A production team is planning two independent production changes. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The first team needs to investigate rejected packets between two VPC subnets. A second team must monitor the health of network paths and trigger alerts on latency. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Systems Manager Automation",
+      "B": "VPC Flow Logs and route and security group configuration",
+      "C": "CloudWatch metrics and appropriate network probes",
+      "D": "Latency-based routing",
+      "E": "Review cache policy and invalidate affected paths when necessary"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "VPC Flow Logs and route and security group configuration meets the first requirement: Flow Logs combined with routing and security controls identify where traffic is rejected. CloudWatch metrics and appropriate network probes meets the second requirement: CloudWatch metrics and probes provide ongoing network health visibility.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "製作團隊需要調查兩個 VPC 子網路之間被拒絕的資料包。應該蒐集哪些證據？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此需求必須大規模套用。方案應避免一次性的人手設定，並提供證據證明控制措施持續有效。第一項需求：製作團隊需要調查兩個 VPC 子網路之間被拒絕的資料包。第二項需求：多帳戶平台團隊必須監控網路路徑的運作狀況並觸發延遲警報。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "僅 S3 物件標籤",
-          "B": "僅 CloudFront 快取鍵",
-          "C": "IAM Users名稱",
-          "D": "VPC Flow Logs 以及路由和安全群組配置"
+          "A": "Systems Manager Automation",
+          "B": "VPC Flow Logs 以及路由和安全群組配置",
+          "C": "CloudWatch 指標和適當的網路探測",
+          "D": "基於延遲的路由",
+          "E": "檢查快取策略並在必要時使受影響的路徑無效"
         },
-        "explanation": "流日誌與路由和安全控制結合，可識別流量被拒絕的位置。\n其他選擇不描述網路資料包決策。"
+        "explanation": "VPC Flow Logs 以及路由和安全群組配置 符合第一項需求：流日誌與路由和安全控制結合，可識別流量被拒絕的位置。 CloudWatch 指標和適當的網路探測 符合第二項需求：CloudWatch 指標和探測提供持續的網路運作狀況可見度。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d3-002",
-    "type": "single",
-    "question": "A multi-account platform team must monitor the health of network paths and trigger alerts on latency. Which service combination fits?",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A multi-account platform team is planning two independent production changes. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The first team must monitor the health of network paths and trigger alerts on latency. A second team needs to reduce DNS query latency for users in several Regions. Which TWO actions satisfy these requirements?",
     "options": {
       "A": "CloudWatch metrics and appropriate network probes",
-      "B": "An S3 lifecycle rule",
-      "C": "AWS Artifact only",
-      "D": "A DynamoDB table name"
+      "B": "Latency-based routing",
+      "C": "Review cache policy and invalidate affected paths when necessary",
+      "D": "Systems Manager Automation",
+      "E": "VPC Flow Logs and route and security group configuration"
     },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "CloudWatch metrics and probes provide ongoing network health visibility.\nThe other choices do not monitor network paths.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "CloudWatch metrics and appropriate network probes meets the first requirement: CloudWatch metrics and probes provide ongoing network health visibility. Latency-based routing meets the second requirement: Latency-based routing directs DNS responses based on measured network latency.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊必須監控網路路徑的運作狀況並觸發延遲警報。哪種服務組合適合？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此需求必須大規模套用。方案應避免一次性的人手設定，並提供證據證明控制措施持續有效。第一項需求：多帳戶平台團隊必須監控網路路徑的運作狀況並觸發延遲警報。第二項需求：受監管的公司需要減少多個區域使用者的 DNS 查詢延遲。哪兩項操作可以滿足這些需求？",
         "options": {
           "A": "CloudWatch 指標和適當的網路探測",
-          "B": "S3 生命週期規則",
-          "C": "僅 AWS Artifact",
-          "D": "DynamoDB 表名稱"
+          "B": "基於延遲的路由",
+          "C": "檢查快取策略並在必要時使受影響的路徑無效",
+          "D": "Systems Manager Automation",
+          "E": "VPC Flow Logs 以及路由和安全群組配置"
         },
-        "explanation": "CloudWatch 指標和探測提供持續的網路運作狀況可見度。\n其他選項不監視網路路徑。"
+        "explanation": "CloudWatch 指標和適當的網路探測 符合第一項需求：CloudWatch 指標和探測提供持續的網路運作狀況可見度。 基於延遲的路由 符合第二項需求：基於延遲的路由根據測量的網路延遲來指導 DNS 回應。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d3-003",
-    "type": "single",
-    "question": "A regulated company needs to reduce DNS query latency for users in several Regions. Which Route 53 policy should be evaluated?",
-    "options": {
-      "A": "A KMS grant",
-      "B": "Latency-based routing",
-      "C": "Simple routing with one endpoint",
-      "D": "An EBS snapshot"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Latency-based routing directs DNS responses based on measured network latency.\nThe other choices do not optimize DNS endpoint selection.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A regulated company is planning two independent production changes. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The first team needs to reduce DNS query latency for users in several Regions. A second team must troubleshoot intermittent CloudFront stale content after an origin update. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Review cache policy and invalidate affected paths when necessary",
+      "B": "Systems Manager Automation",
+      "C": "VPC Flow Logs and route and security group configuration",
+      "D": "CloudWatch metrics and appropriate network probes",
+      "E": "Latency-based routing"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Latency-based routing meets the first requirement: Latency-based routing directs DNS responses based on measured network latency. Review cache policy and invalidate affected paths when necessary meets the second requirement: Cache policy and targeted invalidation address stale content without changing unrelated security controls.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "受監管的公司需要減少多個區域使用者的 DNS 查詢延遲。應評估哪一個 Route 53 策略？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此需求必須大規模套用。方案應避免一次性的人手設定，並提供證據證明控制措施持續有效。第一項需求：準備增加流量的新創公司必須對源更新後間歇性的 CloudFront 過時內容進行故障排除。第二項需求：受監管的公司需要減少多個區域使用者的 DNS 查詢延遲。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "KMS 補助金",
-          "B": "基於延遲的路由",
-          "C": "具有一個端點的簡單路由",
-          "D": "EBS Snapshot"
+          "A": "檢查快取策略並在必要時使受影響的路徑無效",
+          "B": "Systems Manager Automation",
+          "C": "VPC Flow Logs 以及路由和安全群組配置",
+          "D": "CloudWatch 指標和適當的網路探測",
+          "E": "基於延遲的路由"
         },
-        "explanation": "基於延遲的路由根據測量的網路延遲來指導 DNS 回應。\n其他選擇不會優化 DNS 端點選擇。"
+        "explanation": "檢查快取策略並在必要時使受影響的路徑無效 符合第一項需求：快取策略和有針對性的失效可以解決陳舊內容，而無需更改不相關的安全控制。 基於延遲的路由 符合第二項需求：基於延遲的路由根據測量的網路延遲來指導 DNS 回應。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d3-004",
-    "type": "single",
-    "question": "A startup preparing for a traffic increase must troubleshoot intermittent CloudFront stale content after an origin update. Which action should be considered?",
-    "options": {
-      "A": "Disable TLS",
-      "B": "Open all security group ports",
-      "C": "Review cache policy and invalidate affected paths when necessary",
-      "D": "Delete the origin database"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "Cache policy and targeted invalidation address stale content without changing unrelated security controls.\nThe other choices increase risk or do not affect CloudFront cache freshness.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A startup preparing for a traffic increase is designing one integrated end-to-end network architecture across accounts and Regions. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The design must keep recurring cost proportional to use, enforce least privilege, and remain available during a component or Availability Zone failure. Match each connected stage to the implementation that lets the complete architecture satisfy its business outcome.",
+    "options": {
+      "A": "Stage 1: The architecture must troubleshoot intermittent CloudFront stale content after an origin update",
+      "B": "Stage 2: The architecture must enforce network and service guardrails across accounts",
+      "C": "Stage 3: The architecture needs centralized routing between dozens of VPCs and on-premises networks"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "SCPs combined with centralized policy and security services",
+      "2": "AWS Transit Gateway with route domains",
+      "3": "Review cache policy and invalidate affected paths when necessary"
+    },
+    "correctMatches": {
+      "A": "3",
+      "B": "1",
+      "C": "2"
+    },
+    "explanation": "A maps to Review cache policy and invalidate affected paths when necessary. Cache policy and targeted invalidation address stale content without changing unrelated security controls. B maps to SCPs combined with centralized policy and security services. Organization guardrails and centralized policy reduce inconsistent network governance. C maps to AWS Transit Gateway with route domains. Transit Gateway provides scalable centralized routing for many network attachments.\nAll three stages are connected. Substituting an unrelated target would break the architecture or weaken its cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司必須對源更新後間歇性的 CloudFront 過時內容進行故障排除。應考慮採取哪種行動？",
+        "question": "某企業正在跨帳戶與區域設計一個整合式端到端網路架構。三個階段彼此相連，任一階段錯誤都會影響整體業務成果。此設計必須讓持續成本與實際用量相符、落實最低權限，並在元件或可用區域發生故障時維持可用。 請把每個階段配對至最合適的實作。",
         "options": {
-          "A": "停用 TLS",
-          "B": "打開所有安全群組端口",
-          "C": "檢查快取策略並在必要時使受影響的路徑無效",
-          "D": "刪除原始資料庫"
+          "A": "階段 1：準備增加流量的新創公司必須對源更新後間歇性的 CloudFront 過時內容進行故障排除。",
+          "B": "階段 2：支援關鍵工作負載的營運團隊必須跨帳戶實施網路和服務護欄。",
+          "C": "階段 3：階段 3：階段 3：需求：生產團隊需要在數十個 VPC 和本地網路之間進行集中路由"
         },
-        "explanation": "快取策略和有針對性的失效可以解決陳舊內容，而無需更改不相關的安全控制。\n其他選擇會增加風險或不會影響 CloudFront 快取新鮮度。"
+        "targets": {
+          "1": "SCP 與集中式策略和安全服務結合",
+          "2": "AWS Transit Gateway 與路由域",
+          "3": "檢查快取策略並在必要時使受影響的路徑無效"
+        },
+        "explanation": "A 應配對 檢查快取策略並在必要時使受影響的路徑無效；B 應配對 SCP 與集中式策略和安全服務結合；C 應配對 AWS Transit Gateway 與路由域。三個實作共同組成完整架構。\n若以不相關的目標取代任何一項，便會破壞架構或削弱成本、安全性及可用性之間的取捨。"
       }
     }
   },
   {
     "id": "ans-c01-d3-005",
-    "type": "single",
-    "question": "An operations team supporting a critical workload needs operational runbooks for repeated network changes. Which service should store executable procedures?",
-    "options": {
-      "A": "Amazon SES",
-      "B": "Amazon EFS",
-      "C": "S3 Glacier only",
-      "D": "Systems Manager Automation"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Systems Manager Automation runbooks can execute repeatable operational tasks.\nThe other choices do not provide network automation runbooks.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "An operations team supporting a critical workload is planning two independent production changes. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The first team needs operational runbooks for repeated network changes. A second team needs to investigate rejected packets between two VPC subnets. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Latency-based routing",
+      "B": "Review cache policy and invalidate affected paths when necessary",
+      "C": "Systems Manager Automation",
+      "D": "VPC Flow Logs and route and security group configuration",
+      "E": "CloudWatch metrics and appropriate network probes"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Systems Manager Automation meets the first requirement: Systems Manager Automation runbooks can execute repeatable operational tasks. VPC Flow Logs and route and security group configuration meets the second requirement: Flow Logs combined with routing and security controls identify where traffic is rejected.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊需要針對重複網路變更的營運手冊。哪個服務應該儲存可執行程式？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此需求必須大規模套用。方案應避免一次性的人手設定，並提供證據證明控制措施持續有效。第一項需求：支援關鍵工作負載的營運團隊需要針對重複網路變更的營運手冊。第二項需求：製作團隊需要調查兩個 VPC 子網路之間被拒絕的資料包。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "Amazon SES",
-          "B": "Amazon EFS",
-          "C": "S3 僅冰川",
-          "D": "Systems Manager Automation"
+          "A": "基於延遲的路由",
+          "B": "檢查快取策略並在必要時使受影響的路徑無效",
+          "C": "Systems Manager Automation",
+          "D": "VPC Flow Logs 以及路由和安全群組配置",
+          "E": "CloudWatch 指標和適當的網路探測"
         },
-        "explanation": "Systems Manager Automation Runbook 可以執行可重複的操作任務。\n其他選擇不提供網路自動化操作手冊。"
+        "explanation": "Systems Manager Automation 符合第一項需求：Systems Manager Automation Runbook 可以執行可重複的操作任務。 VPC Flow Logs 以及路由和安全群組配置 符合第二項需求：流日誌與路由和安全控制結合，可識別流量被拒絕的位置。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d3-006",
-    "type": "single",
-    "question": "A data platform team needs to investigate rejected packets between two VPC subnets. Which evidence should be collected?",
-    "options": {
-      "A": "VPC Flow Logs and route and security group configuration",
-      "B": "S3 object tags only",
-      "C": "A CloudFront cache key only",
-      "D": "An IAM username"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "Flow Logs combined with routing and security controls identify where traffic is rejected.\nThe other choices do not describe network packet decisions.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A data platform team is planning two independent production changes. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The first team needs to investigate rejected packets between two VPC subnets. A second team must monitor the health of network paths and trigger alerts on latency. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Systems Manager Automation",
+      "B": "VPC Flow Logs and route and security group configuration",
+      "C": "CloudWatch metrics and appropriate network probes",
+      "D": "Latency-based routing",
+      "E": "Review cache policy and invalidate affected paths when necessary"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "VPC Flow Logs and route and security group configuration meets the first requirement: Flow Logs combined with routing and security controls identify where traffic is rejected. CloudWatch metrics and appropriate network probes meets the second requirement: CloudWatch metrics and probes provide ongoing network health visibility.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要調查兩個 VPC 子網路之間被拒絕的資料包。應該蒐集哪些證據？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。目前架構支援業務關鍵服務。所選選項必須處理確切的故障或安全條件，而不會削弱其他控制措施。第一項需求：製作團隊需要調查兩個 VPC 子網路之間被拒絕的資料包。第二項需求：多帳戶平台團隊必須監控網路路徑的運作狀況並觸發延遲警報。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "VPC Flow Logs 以及路由和安全群組配置",
-          "B": "僅 S3 物件標籤",
-          "C": "僅 CloudFront 快取鍵",
-          "D": "IAM Users名稱"
+          "A": "Systems Manager Automation",
+          "B": "VPC Flow Logs 以及路由和安全群組配置",
+          "C": "CloudWatch 指標和適當的網路探測",
+          "D": "基於延遲的路由",
+          "E": "檢查快取策略並在必要時使受影響的路徑無效"
         },
-        "explanation": "流日誌與路由和安全控制結合，可識別流量被拒絕的位置。\n其他選擇不描述網路資料包決策。"
+        "explanation": "VPC Flow Logs 以及路由和安全群組配置 符合第一項需求：流日誌與路由和安全控制結合，可識別流量被拒絕的位置。 CloudWatch 指標和適當的網路探測 符合第二項需求：CloudWatch 指標和探測提供持續的網路運作狀況可見度。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d3-007",
-    "type": "single",
-    "question": "A security-conscious engineering team must monitor the health of network paths and trigger alerts on latency. Which service combination fits?",
-    "options": {
-      "A": "A DynamoDB table name",
-      "B": "CloudWatch metrics and appropriate network probes",
-      "C": "An S3 lifecycle rule",
-      "D": "AWS Artifact only"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "CloudWatch metrics and probes provide ongoing network health visibility.\nThe other choices do not monitor network paths.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A security-conscious engineering team is planning two independent production changes. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The first team must monitor the health of network paths and trigger alerts on latency. A second team needs to reduce DNS query latency for users in several Regions. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "CloudWatch metrics and appropriate network probes",
+      "B": "Latency-based routing",
+      "C": "Review cache policy and invalidate affected paths when necessary",
+      "D": "Systems Manager Automation",
+      "E": "VPC Flow Logs and route and security group configuration"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "CloudWatch metrics and appropriate network probes meets the first requirement: CloudWatch metrics and probes provide ongoing network health visibility. Latency-based routing meets the second requirement: Latency-based routing directs DNS responses based on measured network latency.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊必須監控網路路徑的運作狀況並觸發延遲警報。哪種服務組合適合？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。目前架構支援業務關鍵服務。所選選項必須處理確切的故障或安全條件，而不會削弱其他控制措施。第一項需求：多帳戶平台團隊必須監控網路路徑的運作狀況並觸發延遲警報。第二項需求：受監管的公司需要減少多個區域使用者的 DNS 查詢延遲。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "DynamoDB 表名稱",
-          "B": "CloudWatch 指標和適當的網路探測",
-          "C": "S3 生命週期規則",
-          "D": "僅 AWS Artifact"
+          "A": "CloudWatch 指標和適當的網路探測",
+          "B": "基於延遲的路由",
+          "C": "檢查快取策略並在必要時使受影響的路徑無效",
+          "D": "Systems Manager Automation",
+          "E": "VPC Flow Logs 以及路由和安全群組配置"
         },
-        "explanation": "CloudWatch 指標和探測提供持續的網路運作狀況可見度。\n其他選項不監視網路路徑。"
+        "explanation": "CloudWatch 指標和適當的網路探測 符合第一項需求：CloudWatch 指標和探測提供持續的網路運作狀況可見度。 基於延遲的路由 符合第二項需求：基於延遲的路由根據測量的網路延遲來指導 DNS 回應。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d3-008",
-    "type": "single",
-    "question": "A company migrating an existing workload needs to reduce DNS query latency for users in several Regions. Which Route 53 policy should be evaluated?",
-    "options": {
-      "A": "An EBS snapshot",
-      "B": "A KMS grant",
-      "C": "Latency-based routing",
-      "D": "Simple routing with one endpoint"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "Latency-based routing directs DNS responses based on measured network latency.\nThe other choices do not optimize DNS endpoint selection.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A company migrating an existing workload is designing one integrated end-to-end network architecture across accounts and Regions. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The design must avoid unnecessary standby cost without weakening security controls or the availability objective. Match each connected stage to the implementation that lets the complete architecture satisfy its business outcome.",
+    "options": {
+      "A": "Stage 1: The architecture needs to reduce DNS query latency for users in several Regions",
+      "B": "Stage 2: The architecture needs an architecture that keeps provider and consumer VPC address spaces independent",
+      "C": "Stage 3: The architecture must advertise selected VPC prefixes to an on-premises router over a private connection"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "BGP over a Direct Connect or VPN connection",
+      "2": "Latency-based routing",
+      "3": "AWS PrivateLink"
+    },
+    "correctMatches": {
+      "A": "2",
+      "B": "3",
+      "C": "1"
+    },
+    "explanation": "A maps to Latency-based routing. Latency-based routing directs DNS responses based on measured network latency. B maps to AWS PrivateLink. PrivateLink exposes a service through endpoint interfaces without routing consumer VPCs together. C maps to BGP over a Direct Connect or VPN connection. BGP exchanges routes over supported hybrid connectivity links.\nAll three stages are connected. Substituting an unrelated target would break the architecture or weaken its cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司需要減少多個區域中使用者的 DNS 查詢延遲。應評估哪一個 Route 53 策略？",
+        "question": "某企業正在跨帳戶與區域設計一個整合式端到端網路架構。三個階段彼此相連，任一階段錯誤都會影響整體業務成果。此設計必須避免不必要的備用成本，同時不可削弱安全控制或可用性目標。 請把每個階段配對至最合適的實作。",
         "options": {
-          "A": "EBS Snapshot",
-          "B": "KMS 補助金",
-          "C": "基於延遲的路由",
-          "D": "具有一個端點的簡單路由"
+          "A": "階段 1：準備增加流量的新創公司必須對源更新後間歇性的 CloudFront 過時內容進行故障排除。",
+          "B": "階段 2：階段 2：階段 2：生產團隊需要在數十個 VPC 和本地網路之間進行集中路由。",
+          "C": "階段 3：階段 3：階段 3：生產團隊必須透過專用連線將選定的 VPC 前綴通告到本機路由器。"
         },
-        "explanation": "基於延遲的路由根據測量的網路延遲來指導 DNS 回應。\n其他選擇不會優化 DNS 端點選擇。"
+        "targets": {
+          "1": "透過 Direct Connect 或 VPN 連接的 BGP",
+          "2": "基於延遲的路由",
+          "3": "AWS PrivateLink"
+        },
+        "explanation": "A 應配對 基於延遲的路由；B 應配對 AWS PrivateLink；C 應配對 透過 Direct Connect 或 VPN 連接的 BGP。三個實作共同組成完整架構。\n若以不相關的目標取代任何一項，便會破壞架構或削弱成本、安全性及可用性之間的取捨。"
       }
     }
   },
   {
     "id": "ans-c01-d3-009",
-    "type": "single",
-    "question": "A team with strict recovery objectives must troubleshoot intermittent CloudFront stale content after an origin update. Which action should be considered?",
-    "options": {
-      "A": "Delete the origin database",
-      "B": "Disable TLS",
-      "C": "Open all security group ports",
-      "D": "Review cache policy and invalidate affected paths when necessary"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Cache policy and targeted invalidation address stale content without changing unrelated security controls.\nThe other choices increase risk or do not affect CloudFront cache freshness.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A team with strict recovery objectives is planning two independent production changes. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The first team must troubleshoot intermittent CloudFront stale content after an origin update. A second team needs operational runbooks for repeated network changes. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "VPC Flow Logs and route and security group configuration",
+      "B": "CloudWatch metrics and appropriate network probes",
+      "C": "Latency-based routing",
+      "D": "Review cache policy and invalidate affected paths when necessary",
+      "E": "Systems Manager Automation"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Review cache policy and invalidate affected paths when necessary meets the first requirement: Cache policy and targeted invalidation address stale content without changing unrelated security controls. Systems Manager Automation meets the second requirement: Systems Manager Automation runbooks can execute repeatable operational tasks.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有嚴格復原目標的團隊必須在來源更新後對間歇性的 CloudFront 過時內容進行故障排除。應考慮採取哪種行動？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。目前架構支援業務關鍵服務。所選選項必須處理確切的故障或安全條件，而不會削弱其他控制措施。第一項需求：準備增加流量的新創公司必須對源更新後間歇性的 CloudFront 過時內容進行故障排除。第二項需求：支援關鍵工作負載的營運團隊需要針對重複網路變更的營運手冊。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "刪除原始資料庫",
-          "B": "停用 TLS",
-          "C": "打開所有安全群組端口",
-          "D": "檢查快取策略並在必要時使受影響的路徑無效"
+          "A": "VPC Flow Logs 以及路由和安全群組配置",
+          "B": "CloudWatch 指標和適當的網路探測",
+          "C": "基於延遲的路由",
+          "D": "檢查快取策略並在必要時使受影響的路徑無效",
+          "E": "Systems Manager Automation"
         },
-        "explanation": "快取策略和有針對性的失效可以解決陳舊內容，而無需更改不相關的安全控制。\n其他選擇會增加風險或不會影響 CloudFront 快取新鮮度。"
+        "explanation": "檢查快取策略並在必要時使受影響的路徑無效 符合第一項需求：快取策略和有針對性的失效可以解決陳舊內容，而無需更改不相關的安全控制。 Systems Manager Automation 符合第二項需求：Systems Manager Automation Runbook 可以執行可重複的操作任務。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d3-010",
-    "type": "single",
-    "question": "A developer team preparing a release needs operational runbooks for repeated network changes. Which service should store executable procedures?",
-    "options": {
-      "A": "Systems Manager Automation",
-      "B": "Amazon SES",
-      "C": "Amazon EFS",
-      "D": "S3 Glacier only"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "Systems Manager Automation runbooks can execute repeatable operational tasks.\nThe other choices do not provide network automation runbooks.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A developer team preparing a release is planning two independent production changes. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The first team needs operational runbooks for repeated network changes. A second team needs to investigate rejected packets between two VPC subnets. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Latency-based routing",
+      "B": "Review cache policy and invalidate affected paths when necessary",
+      "C": "Systems Manager Automation",
+      "D": "VPC Flow Logs and route and security group configuration",
+      "E": "CloudWatch metrics and appropriate network probes"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Systems Manager Automation meets the first requirement: Systems Manager Automation runbooks can execute repeatable operational tasks. VPC Flow Logs and route and security group configuration meets the second requirement: Flow Logs combined with routing and security controls identify where traffic is rejected.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊需要針對重複網路變更的操作手冊。哪個服務應該儲存可執行程式？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。目前架構支援業務關鍵服務。所選選項必須處理確切的故障或安全條件，而不會削弱其他控制措施。第一項需求：支援關鍵工作負載的營運團隊需要針對重複網路變更的營運手冊。第二項需求：製作團隊需要調查兩個 VPC 子網路之間被拒絕的資料包。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "Systems Manager Automation",
-          "B": "Amazon SES",
-          "C": "Amazon EFS",
-          "D": "S3 僅冰川"
+          "A": "基於延遲的路由",
+          "B": "檢查快取策略並在必要時使受影響的路徑無效",
+          "C": "Systems Manager Automation",
+          "D": "VPC Flow Logs 以及路由和安全群組配置",
+          "E": "CloudWatch 指標和適當的網路探測"
         },
-        "explanation": "Systems Manager Automation Runbook 可以執行可重複的操作任務。\n其他選擇不提供網路自動化操作手冊。"
+        "explanation": "Systems Manager Automation 符合第一項需求：Systems Manager Automation Runbook 可以執行可重複的操作任務。 VPC Flow Logs 以及路由和安全群組配置 符合第二項需求：流日誌與路由和安全控制結合，可識別流量被拒絕的位置。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d3-011",
-    "type": "single",
-    "question": "An enterprise with several AWS Regions needs to investigate rejected packets between two VPC subnets. Which evidence should be collected?",
-    "options": {
-      "A": "An IAM username",
-      "B": "VPC Flow Logs and route and security group configuration",
-      "C": "S3 object tags only",
-      "D": "A CloudFront cache key only"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Flow Logs combined with routing and security controls identify where traffic is rejected.\nThe other choices do not describe network packet decisions.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "An enterprise with several AWS Regions is planning two independent production changes. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The first team needs to investigate rejected packets between two VPC subnets. A second team must monitor the health of network paths and trigger alerts on latency. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Systems Manager Automation",
+      "B": "VPC Flow Logs and route and security group configuration",
+      "C": "CloudWatch metrics and appropriate network probes",
+      "D": "Latency-based routing",
+      "E": "Review cache policy and invalidate affected paths when necessary"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "VPC Flow Logs and route and security group configuration meets the first requirement: Flow Logs combined with routing and security controls identify where traffic is rejected. CloudWatch metrics and appropriate network probes meets the second requirement: CloudWatch metrics and probes provide ongoing network health visibility.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS Regions 的企業需要調查兩個 VPC 子網路之間被拒絕的資料包。應該蒐集哪些證據？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。專業工程師將審查實作的服務限制、故障行為及建議設計的營運取捨。第一項需求：製作團隊需要調查兩個 VPC 子網路之間被拒絕的資料包。第二項需求：多帳戶平台團隊必須監控網路路徑的運作狀況並觸發延遲警報。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "IAM Users名稱",
+          "A": "Systems Manager Automation",
           "B": "VPC Flow Logs 以及路由和安全群組配置",
-          "C": "僅 S3 物件標籤",
-          "D": "僅 CloudFront 快取鍵"
+          "C": "CloudWatch 指標和適當的網路探測",
+          "D": "基於延遲的路由",
+          "E": "檢查快取策略並在必要時使受影響的路徑無效"
         },
-        "explanation": "流日誌與路由和安全控制結合，可識別流量被拒絕的位置。\n其他選擇不描述網路資料包決策。"
+        "explanation": "VPC Flow Logs 以及路由和安全群組配置 符合第一項需求：流日誌與路由和安全控制結合，可識別流量被拒絕的位置。 CloudWatch 指標和適當的網路探測 符合第二項需求：CloudWatch 指標和探測提供持續的網路運作狀況可見度。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d3-012",
-    "type": "single",
-    "question": "A service owner reviewing an incident must monitor the health of network paths and trigger alerts on latency. Which service combination fits?",
-    "options": {
-      "A": "AWS Artifact only",
-      "B": "A DynamoDB table name",
-      "C": "CloudWatch metrics and appropriate network probes",
-      "D": "An S3 lifecycle rule"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "CloudWatch metrics and probes provide ongoing network health visibility.\nThe other choices do not monitor network paths.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A service owner reviewing an incident is designing one integrated end-to-end network architecture across accounts and Regions. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The organization will accept additional managed-service cost only when it measurably improves security and availability with less operational effort. Match each connected stage to the implementation that lets the complete architecture satisfy its business outcome.",
+    "options": {
+      "A": "Stage 1: The architecture must monitor the health of network paths and trigger alerts on latency",
+      "B": "Stage 2: The architecture must automate VPC and route configuration consistently across accounts",
+      "C": "Stage 3: The architecture needs to investigate rejected packets between two VPC subnets"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "CloudWatch metrics and appropriate network probes",
+      "2": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "3": "VPC Flow Logs and route and security group configuration"
+    },
+    "correctMatches": {
+      "A": "1",
+      "B": "2",
+      "C": "3"
+    },
+    "explanation": "A maps to CloudWatch metrics and appropriate network probes. CloudWatch metrics and probes provide ongoing network health visibility. B maps to Infrastructure as code with CloudFormation or the AWS CDK. IaC makes network changes repeatable, reviewable, and consistent. C maps to VPC Flow Logs and route and security group configuration. Flow Logs combined with routing and security controls identify where traffic is rejected.\nAll three stages are connected. Substituting an unrelated target would break the architecture or weaken its cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務擁有者必須監控網路路徑的運作狀況並觸發延遲警報。哪種服務組合適合？",
+        "question": "某企業正在跨帳戶與區域設計一個整合式端到端網路架構。三個階段彼此相連，任一階段錯誤都會影響整體業務成果。只有在託管服務能以較低營運負擔明確改善安全性與可用性時，組織才會接受額外成本。 請把每個階段配對至最合適的實作。",
         "options": {
-          "A": "僅 AWS Artifact",
-          "B": "DynamoDB 表名稱",
-          "C": "CloudWatch 指標和適當的網路探測",
-          "D": "S3 生命週期規則"
+          "A": "階段 1：多帳戶平台團隊必須監控網路路徑的運作狀況並觸發延遲警報。",
+          "B": "階段 2：階段 2：階段 2：支援關鍵工作負載的營運團隊必須自動化 VPC 並跨帳戶一致地路由配置。",
+          "C": "階段 3：階段 3：階段 3：需求：製作團隊需要調查兩個 VPC 子網路之間被拒絕的資料包"
         },
-        "explanation": "CloudWatch 指標和探測提供持續的網路運作狀況可見度。\n其他選項不監視網路路徑。"
+        "targets": {
+          "1": "CloudWatch 指標和適當的網路探測",
+          "2": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
+          "3": "VPC Flow Logs 以及路由和安全群組配置"
+        },
+        "explanation": "A 應配對 CloudWatch 指標和適當的網路探測；B 應配對 使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼；C 應配對 VPC Flow Logs 以及路由和安全群組配置。三個實作共同組成完整架構。\n若以不相關的目標取代任何一項，便會破壞架構或削弱成本、安全性及可用性之間的取捨。"
       }
     }
   },
   {
     "id": "ans-c01-d3-013",
-    "type": "single",
-    "question": "A team optimizing an existing implementation needs to reduce DNS query latency for users in several Regions. Which Route 53 policy should be evaluated?",
-    "options": {
-      "A": "Simple routing with one endpoint",
-      "B": "An EBS snapshot",
-      "C": "A KMS grant",
-      "D": "Latency-based routing"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Latency-based routing directs DNS responses based on measured network latency.\nThe other choices do not optimize DNS endpoint selection.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A team optimizing an existing implementation is planning two independent production changes. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The first team needs to reduce DNS query latency for users in several Regions. A second team must troubleshoot intermittent CloudFront stale content after an origin update. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Review cache policy and invalidate affected paths when necessary",
+      "B": "Systems Manager Automation",
+      "C": "VPC Flow Logs and route and security group configuration",
+      "D": "CloudWatch metrics and appropriate network probes",
+      "E": "Latency-based routing"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Latency-based routing meets the first requirement: Latency-based routing directs DNS responses based on measured network latency. Review cache policy and invalidate affected paths when necessary meets the second requirement: Cache policy and targeted invalidation address stale content without changing unrelated security controls.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊需要減少多個區域中使用者的 DNS 查詢延遲。應評估哪一個 Route 53 策略？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。專業工程師將審查實作的服務限制、故障行為及建議設計的營運取捨。第一項需求：準備增加流量的新創公司必須對源更新後間歇性的 CloudFront 過時內容進行故障排除。第二項需求：受監管的公司需要減少多個區域使用者的 DNS 查詢延遲。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "具有一個端點的簡單路由",
-          "B": "EBS Snapshot",
-          "C": "KMS 補助金",
-          "D": "基於延遲的路由"
+          "A": "檢查快取策略並在必要時使受影響的路徑無效",
+          "B": "Systems Manager Automation",
+          "C": "VPC Flow Logs 以及路由和安全群組配置",
+          "D": "CloudWatch 指標和適當的網路探測",
+          "E": "基於延遲的路由"
         },
-        "explanation": "基於延遲的路由根據測量的網路延遲來指導 DNS 回應。\n其他選擇不會優化 DNS 端點選擇。"
+        "explanation": "檢查快取策略並在必要時使受影響的路徑無效 符合第一項需求：快取策略和有針對性的失效可以解決陳舊內容，而無需更改不相關的安全控制。 基於延遲的路由 符合第二項需求：基於延遲的路由根據測量的網路延遲來指導 DNS 回應。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d3-014",
-    "type": "single",
-    "question": "A company introducing an automated workflow must troubleshoot intermittent CloudFront stale content after an origin update. Which action should be considered?",
-    "options": {
-      "A": "Review cache policy and invalidate affected paths when necessary",
-      "B": "Delete the origin database",
-      "C": "Disable TLS",
-      "D": "Open all security group ports"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "Cache policy and targeted invalidation address stale content without changing unrelated security controls.\nThe other choices increase risk or do not affect CloudFront cache freshness.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A company introducing an automated workflow is planning two independent production changes. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The first team must troubleshoot intermittent CloudFront stale content after an origin update. A second team needs operational runbooks for repeated network changes. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "VPC Flow Logs and route and security group configuration",
+      "B": "CloudWatch metrics and appropriate network probes",
+      "C": "Latency-based routing",
+      "D": "Review cache policy and invalidate affected paths when necessary",
+      "E": "Systems Manager Automation"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Review cache policy and invalidate affected paths when necessary meets the first requirement: Cache policy and targeted invalidation address stale content without changing unrelated security controls. Systems Manager Automation meets the second requirement: Systems Manager Automation runbooks can execute repeatable operational tasks.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司必須對來源更新後間歇性的 CloudFront 過時內容進行故障排除。應考慮採取哪種行動？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。專業工程師將審查實作的服務限制、故障行為及建議設計的營運取捨。第一項需求：準備增加流量的新創公司必須對源更新後間歇性的 CloudFront 過時內容進行故障排除。第二項需求：支援關鍵工作負載的營運團隊需要針對重複網路變更的營運手冊。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "檢查快取策略並在必要時使受影響的路徑無效",
-          "B": "刪除原始資料庫",
-          "C": "停用 TLS",
-          "D": "打開所有安全群組端口"
+          "A": "VPC Flow Logs 以及路由和安全群組配置",
+          "B": "CloudWatch 指標和適當的網路探測",
+          "C": "基於延遲的路由",
+          "D": "檢查快取策略並在必要時使受影響的路徑無效",
+          "E": "Systems Manager Automation"
         },
-        "explanation": "快取策略和有針對性的失效可以解決陳舊內容，而無需更改不相關的安全控制。\n其他選擇會增加風險或不會影響 CloudFront 快取新鮮度。"
+        "explanation": "檢查快取策略並在必要時使受影響的路徑無效 符合第一項需求：快取策略和有針對性的失效可以解決陳舊內容，而無需更改不相關的安全控制。 Systems Manager Automation 符合第二項需求：Systems Manager Automation Runbook 可以執行可重複的操作任務。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d3-015",
-    "type": "single",
-    "question": "An AWS administrator working in a shared environment needs operational runbooks for repeated network changes. Which service should store executable procedures?",
-    "options": {
-      "A": "S3 Glacier only",
-      "B": "Systems Manager Automation",
-      "C": "Amazon SES",
-      "D": "Amazon EFS"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Systems Manager Automation runbooks can execute repeatable operational tasks.\nThe other choices do not provide network automation runbooks.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "An AWS administrator working in a shared environment is planning two independent production changes. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The first team needs operational runbooks for repeated network changes. A second team needs to investigate rejected packets between two VPC subnets. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Latency-based routing",
+      "B": "Review cache policy and invalidate affected paths when necessary",
+      "C": "Systems Manager Automation",
+      "D": "VPC Flow Logs and route and security group configuration",
+      "E": "CloudWatch metrics and appropriate network probes"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Systems Manager Automation meets the first requirement: Systems Manager Automation runbooks can execute repeatable operational tasks. VPC Flow Logs and route and security group configuration meets the second requirement: Flow Logs combined with routing and security controls identify where traffic is rejected.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "在共用環境中工作的 AWS 管理員需要操作手冊來進行重複的網路變更。哪個服務應該儲存可執行程式？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。專業工程師將審查實作的服務限制、故障行為及建議設計的營運取捨。第一項需求：支援關鍵工作負載的營運團隊需要針對重複網路變更的營運手冊。第二項需求：製作團隊需要調查兩個 VPC 子網路之間被拒絕的資料包。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "S3 僅冰川",
-          "B": "Systems Manager Automation",
-          "C": "Amazon SES",
-          "D": "Amazon EFS"
+          "A": "基於延遲的路由",
+          "B": "檢查快取策略並在必要時使受影響的路徑無效",
+          "C": "Systems Manager Automation",
+          "D": "VPC Flow Logs 以及路由和安全群組配置",
+          "E": "CloudWatch 指標和適當的網路探測"
         },
-        "explanation": "Systems Manager Automation Runbook 可以執行可重複的操作任務。\n其他選擇不提供網路自動化操作手冊。"
+        "explanation": "Systems Manager Automation 符合第一項需求：Systems Manager Automation Runbook 可以執行可重複的操作任務。 VPC Flow Logs 以及路由和安全群組配置 符合第二項需求：流日誌與路由和安全控制結合，可識別流量被拒絕的位置。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d3-016",
-    "type": "single",
-    "question": "A customer-facing application team needs to investigate rejected packets between two VPC subnets. Which evidence should be collected?",
-    "options": {
-      "A": "A CloudFront cache key only",
-      "B": "An IAM username",
-      "C": "VPC Flow Logs and route and security group configuration",
-      "D": "S3 object tags only"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "Flow Logs combined with routing and security controls identify where traffic is rejected.\nThe other choices do not describe network packet decisions.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A customer-facing application team is designing one integrated end-to-end network architecture across accounts and Regions. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The architecture must limit blast radius, preserve availability during change, and control cost through automation instead of permanent overprovisioning. Match each connected stage to the implementation that lets the complete architecture satisfy its business outcome.",
+    "options": {
+      "A": "Stage 1: The architecture needs to investigate rejected packets between two VPC subnets",
+      "B": "Stage 2: The architecture needs operational runbooks for repeated network changes",
+      "C": "Stage 3: The architecture must block known malicious domains for workloads in a VPC"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "Systems Manager Automation",
+      "2": "Route 53 Resolver DNS Firewall",
+      "3": "VPC Flow Logs and route and security group configuration"
+    },
+    "correctMatches": {
+      "A": "3",
+      "B": "1",
+      "C": "2"
+    },
+    "explanation": "A maps to VPC Flow Logs and route and security group configuration. Flow Logs combined with routing and security controls identify where traffic is rejected. B maps to Systems Manager Automation. Systems Manager Automation runbooks can execute repeatable operational tasks. C maps to Route 53 Resolver DNS Firewall. DNS Firewall can block or allow domain queries for VPC workloads.\nAll three stages are connected. Substituting an unrelated target would break the architecture or weaken its cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊需要調查兩個 VPC 子網路之間被拒絕的資料包。應該蒐集哪些證據？",
+        "question": "某企業正在跨帳戶與區域設計一個整合式端到端網路架構。三個階段彼此相連，任一階段錯誤都會影響整體業務成果。此架構必須限制影響範圍、在變更期間維持可用性，並透過自動化控制成本，而不是長期過度佈建。 請把每個階段配對至最合適的實作。",
         "options": {
-          "A": "僅 CloudFront 快取鍵",
-          "B": "IAM Users名稱",
-          "C": "VPC Flow Logs 以及路由和安全群組配置",
-          "D": "僅 S3 物件標籤"
+          "A": "階段 1：階段 3：階段 3：需求：製作團隊需要調查兩個 VPC 子網路之間被拒絕的資料包",
+          "B": "階段 2：階段 2：階段 2：支援關鍵工作負載的營運團隊需要針對重複網路變更的營運手冊。",
+          "C": "階段 3：生產團隊必須阻止 VPC 中工作負載的已知惡意域。"
         },
-        "explanation": "流日誌與路由和安全控制結合，可識別流量被拒絕的位置。\n其他選擇不描述網路資料包決策。"
+        "targets": {
+          "1": "Systems Manager Automation",
+          "2": "Route 53 Resolver DNS Firewall",
+          "3": "VPC Flow Logs 以及路由和安全群組配置"
+        },
+        "explanation": "A 應配對 VPC Flow Logs 以及路由和安全群組配置；B 應配對 Systems Manager Automation；C 應配對 Route 53 Resolver DNS Firewall。三個實作共同組成完整架構。\n若以不相關的目標取代任何一項，便會破壞架構或削弱成本、安全性及可用性之間的取捨。"
       }
     }
   },
   {
     "id": "ans-c01-d3-017",
-    "type": "single",
-    "question": "A platform team standardizing its AWS deployments must monitor the health of network paths and trigger alerts on latency. Which service combination fits?",
-    "options": {
-      "A": "An S3 lifecycle rule",
-      "B": "AWS Artifact only",
-      "C": "A DynamoDB table name",
-      "D": "CloudWatch metrics and appropriate network probes"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "CloudWatch metrics and probes provide ongoing network health visibility.\nThe other choices do not monitor network paths.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A platform team standardizing its AWS deployments is planning two independent production changes. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The first team must monitor the health of network paths and trigger alerts on latency. A second team needs to reduce DNS query latency for users in several Regions. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "CloudWatch metrics and appropriate network probes",
+      "B": "Latency-based routing",
+      "C": "Review cache policy and invalidate affected paths when necessary",
+      "D": "Systems Manager Automation",
+      "E": "VPC Flow Logs and route and security group configuration"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "CloudWatch metrics and appropriate network probes meets the first requirement: CloudWatch metrics and probes provide ongoing network health visibility. Latency-based routing meets the second requirement: Latency-based routing directs DNS responses based on measured network latency.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊必須監控網路路徑的運作狀況並觸發延遲警報。哪種服務組合適合？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此生產環境在多個帳戶中採用集中治理。變更必須符合最低權限、可以稽核，並且不會造成長時間中斷。第一項需求：多帳戶平台團隊必須監控網路路徑的運作狀況並觸發延遲警報。第二項需求：受監管的公司需要減少多個區域使用者的 DNS 查詢延遲。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "S3 生命週期規則",
-          "B": "僅 AWS Artifact",
-          "C": "DynamoDB 表名稱",
-          "D": "CloudWatch 指標和適當的網路探測"
+          "A": "CloudWatch 指標和適當的網路探測",
+          "B": "基於延遲的路由",
+          "C": "檢查快取策略並在必要時使受影響的路徑無效",
+          "D": "Systems Manager Automation",
+          "E": "VPC Flow Logs 以及路由和安全群組配置"
         },
-        "explanation": "CloudWatch 指標和探測提供持續的網路運作狀況可見度。\n其他選項不監視網路路徑。"
+        "explanation": "CloudWatch 指標和適當的網路探測 符合第一項需求：CloudWatch 指標和探測提供持續的網路運作狀況可見度。 基於延遲的路由 符合第二項需求：基於延遲的路由根據測量的網路延遲來指導 DNS 回應。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d3-018",
-    "type": "single",
-    "question": "A team preparing evidence for an audit needs to reduce DNS query latency for users in several Regions. Which Route 53 policy should be evaluated?",
-    "options": {
-      "A": "Latency-based routing",
-      "B": "Simple routing with one endpoint",
-      "C": "An EBS snapshot",
-      "D": "A KMS grant"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "Latency-based routing directs DNS responses based on measured network latency.\nThe other choices do not optimize DNS endpoint selection.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A team preparing evidence for an audit is planning two independent production changes. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The first team needs to reduce DNS query latency for users in several Regions. A second team must troubleshoot intermittent CloudFront stale content after an origin update. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Review cache policy and invalidate affected paths when necessary",
+      "B": "Systems Manager Automation",
+      "C": "VPC Flow Logs and route and security group configuration",
+      "D": "CloudWatch metrics and appropriate network probes",
+      "E": "Latency-based routing"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Latency-based routing meets the first requirement: Latency-based routing directs DNS responses based on measured network latency. Review cache policy and invalidate affected paths when necessary meets the second requirement: Cache policy and targeted invalidation address stale content without changing unrelated security controls.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "準備審計證據的團隊需要減少多個區域中使用者的 DNS 查詢延遲。應評估哪一個 Route 53 策略？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此生產環境在多個帳戶中採用集中治理。變更必須符合最低權限、可以稽核，並且不會造成長時間中斷。第一項需求：準備增加流量的新創公司必須對源更新後間歇性的 CloudFront 過時內容進行故障排除。第二項需求：受監管的公司需要減少多個區域使用者的 DNS 查詢延遲。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "基於延遲的路由",
-          "B": "具有一個端點的簡單路由",
-          "C": "EBS Snapshot",
-          "D": "KMS 補助金"
+          "A": "檢查快取策略並在必要時使受影響的路徑無效",
+          "B": "Systems Manager Automation",
+          "C": "VPC Flow Logs 以及路由和安全群組配置",
+          "D": "CloudWatch 指標和適當的網路探測",
+          "E": "基於延遲的路由"
         },
-        "explanation": "基於延遲的路由根據測量的網路延遲來指導 DNS 回應。\n其他選擇不會優化 DNS 端點選擇。"
+        "explanation": "檢查快取策略並在必要時使受影響的路徑無效 符合第一項需求：快取策略和有針對性的失效可以解決陳舊內容，而無需更改不相關的安全控制。 基於延遲的路由 符合第二項需求：基於延遲的路由根據測量的網路延遲來指導 DNS 回應。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d3-019",
-    "type": "single",
-    "question": "A business replacing a manual process must troubleshoot intermittent CloudFront stale content after an origin update. Which action should be considered?",
-    "options": {
-      "A": "Open all security group ports",
-      "B": "Review cache policy and invalidate affected paths when necessary",
-      "C": "Delete the origin database",
-      "D": "Disable TLS"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Cache policy and targeted invalidation address stale content without changing unrelated security controls.\nThe other choices increase risk or do not affect CloudFront cache freshness.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A business replacing a manual process is planning two independent production changes. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The first team must troubleshoot intermittent CloudFront stale content after an origin update. A second team needs operational runbooks for repeated network changes. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "VPC Flow Logs and route and security group configuration",
+      "B": "CloudWatch metrics and appropriate network probes",
+      "C": "Latency-based routing",
+      "D": "Review cache policy and invalidate affected paths when necessary",
+      "E": "Systems Manager Automation"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Review cache policy and invalidate affected paths when necessary meets the first requirement: Cache policy and targeted invalidation address stale content without changing unrelated security controls. Systems Manager Automation meets the second requirement: Systems Manager Automation runbooks can execute repeatable operational tasks.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "取代手動流程的企業必須對來源更新後間歇性的 CloudFront 過時內容進行故障排除。應考慮採取哪種行動？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此生產環境在多個帳戶中採用集中治理。變更必須符合最低權限、可以稽核，並且不會造成長時間中斷。第一項需求：準備增加流量的新創公司必須對源更新後間歇性的 CloudFront 過時內容進行故障排除。第二項需求：支援關鍵工作負載的營運團隊需要針對重複網路變更的營運手冊。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "打開所有安全群組端口",
-          "B": "檢查快取策略並在必要時使受影響的路徑無效",
-          "C": "刪除原始資料庫",
-          "D": "停用 TLS"
+          "A": "VPC Flow Logs 以及路由和安全群組配置",
+          "B": "CloudWatch 指標和適當的網路探測",
+          "C": "基於延遲的路由",
+          "D": "檢查快取策略並在必要時使受影響的路徑無效",
+          "E": "Systems Manager Automation"
         },
-        "explanation": "快取策略和有針對性的失效可以解決陳舊內容，而無需更改不相關的安全控制。\n其他選擇會增加風險或不會影響 CloudFront 快取新鮮度。"
+        "explanation": "檢查快取策略並在必要時使受影響的路徑無效 符合第一項需求：快取策略和有針對性的失效可以解決陳舊內容，而無需更改不相關的安全控制。 Systems Manager Automation 符合第二項需求：Systems Manager Automation Runbook 可以執行可重複的操作任務。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d3-020",
-    "type": "single",
-    "question": "A team validating a design against the exam guide needs operational runbooks for repeated network changes. Which service should store executable procedures?",
-    "options": {
-      "A": "Amazon EFS",
-      "B": "S3 Glacier only",
-      "C": "Systems Manager Automation",
-      "D": "Amazon SES"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "Systems Manager Automation runbooks can execute repeatable operational tasks.\nThe other choices do not provide network automation runbooks.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A team validating a design against the exam guide is designing one integrated end-to-end network architecture across accounts and Regions. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The selected controls must provide auditable security, predictable availability, and the lowest operational cost that still satisfies both requirements. Match each connected stage to the implementation that lets the complete architecture satisfy its business outcome.",
+    "options": {
+      "A": "Stage 1: The architecture needs operational runbooks for repeated network changes",
+      "B": "Stage 2: The architecture must enforce network and service guardrails across accounts",
+      "C": "Stage 3: The architecture needs centralized routing between dozens of VPCs and on-premises networks"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "AWS Transit Gateway with route domains",
+      "2": "Systems Manager Automation",
+      "3": "SCPs combined with centralized policy and security services"
+    },
+    "correctMatches": {
+      "A": "2",
+      "B": "3",
+      "C": "1"
+    },
+    "explanation": "A maps to Systems Manager Automation. Systems Manager Automation runbooks can execute repeatable operational tasks. B maps to SCPs combined with centralized policy and security services. Organization guardrails and centralized policy reduce inconsistent network governance. C maps to AWS Transit Gateway with route domains. Transit Gateway provides scalable centralized routing for many network attachments.\nAll three stages are connected. Substituting an unrelated target would break the architecture or weaken its cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊需要用於重複網路變更的操作手冊。哪個服務應該儲存可執行程式？",
+        "question": "某企業正在跨帳戶與區域設計一個整合式端到端網路架構。三個階段彼此相連，任一階段錯誤都會影響整體業務成果。所選控制必須提供可稽核的安全性、可預測的可用性，以及在滿足兩項要求前提下最低的營運成本。 請把每個階段配對至最合適的實作。",
         "options": {
-          "A": "Amazon EFS",
-          "B": "S3 僅冰川",
-          "C": "Systems Manager Automation",
-          "D": "Amazon SES"
+          "A": "階段 1：階段 2：階段 2：支援關鍵工作負載的營運團隊需要針對重複網路變更的營運手冊。",
+          "B": "階段 2：支援關鍵工作負載的營運團隊必須跨帳戶實施網路和服務護欄。",
+          "C": "階段 3：階段 3：階段 3：需求：生產團隊需要在數十個 VPC 和本地網路之間進行集中路由"
         },
-        "explanation": "Systems Manager Automation Runbook 可以執行可重複的操作任務。\n其他選擇不提供網路自動化操作手冊。"
+        "targets": {
+          "1": "AWS Transit Gateway 與路由域",
+          "2": "Systems Manager Automation",
+          "3": "SCP 與集中式策略和安全服務結合"
+        },
+        "explanation": "A 應配對 Systems Manager Automation；B 應配對 SCP 與集中式策略和安全服務結合；C 應配對 AWS Transit Gateway 與路由域。三個實作共同組成完整架構。\n若以不相關的目標取代任何一項，便會破壞架構或削弱成本、安全性及可用性之間的取捨。"
       }
     }
   },
   {
     "id": "ans-c01-d3-021",
-    "type": "single",
-    "question": "A production team needs to investigate rejected packets between two VPC subnets. Which evidence should be collected?",
-    "options": {
-      "A": "S3 object tags only",
-      "B": "A CloudFront cache key only",
-      "C": "An IAM username",
-      "D": "VPC Flow Logs and route and security group configuration"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Flow Logs combined with routing and security controls identify where traffic is rejected.\nThe other choices do not describe network packet decisions.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A production team is planning two independent production changes. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The first team needs to investigate rejected packets between two VPC subnets. A second team must monitor the health of network paths and trigger alerts on latency. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Systems Manager Automation",
+      "B": "VPC Flow Logs and route and security group configuration",
+      "C": "CloudWatch metrics and appropriate network probes",
+      "D": "Latency-based routing",
+      "E": "Review cache policy and invalidate affected paths when necessary"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "VPC Flow Logs and route and security group configuration meets the first requirement: Flow Logs combined with routing and security controls identify where traffic is rejected. CloudWatch metrics and appropriate network probes meets the second requirement: CloudWatch metrics and probes provide ongoing network health visibility.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "製作團隊需要調查兩個 VPC 子網路之間被拒絕的資料包。應該蒐集哪些證據？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊必須考慮混合式連線、現有安全邊界，以及變更部署後的營運疑難排解。第一項需求：製作團隊需要調查兩個 VPC 子網路之間被拒絕的資料包。第二項需求：多帳戶平台團隊必須監控網路路徑的運作狀況並觸發延遲警報。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "僅 S3 物件標籤",
-          "B": "僅 CloudFront 快取鍵",
-          "C": "IAM Users名稱",
-          "D": "VPC Flow Logs 以及路由和安全群組配置"
+          "A": "Systems Manager Automation",
+          "B": "VPC Flow Logs 以及路由和安全群組配置",
+          "C": "CloudWatch 指標和適當的網路探測",
+          "D": "基於延遲的路由",
+          "E": "檢查快取策略並在必要時使受影響的路徑無效"
         },
-        "explanation": "流日誌與路由和安全控制結合，可識別流量被拒絕的位置。\n其他選擇不描述網路資料包決策。"
+        "explanation": "VPC Flow Logs 以及路由和安全群組配置 符合第一項需求：流日誌與路由和安全控制結合，可識別流量被拒絕的位置。 CloudWatch 指標和適當的網路探測 符合第二項需求：CloudWatch 指標和探測提供持續的網路運作狀況可見度。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d3-022",
-    "type": "single",
-    "question": "A multi-account platform team must monitor the health of network paths and trigger alerts on latency. Which service combination fits?",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A multi-account platform team is planning two independent production changes. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The first team must monitor the health of network paths and trigger alerts on latency. A second team needs to reduce DNS query latency for users in several Regions. Which TWO actions satisfy these requirements?",
     "options": {
       "A": "CloudWatch metrics and appropriate network probes",
-      "B": "An S3 lifecycle rule",
-      "C": "AWS Artifact only",
-      "D": "A DynamoDB table name"
+      "B": "Latency-based routing",
+      "C": "Review cache policy and invalidate affected paths when necessary",
+      "D": "Systems Manager Automation",
+      "E": "VPC Flow Logs and route and security group configuration"
     },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "CloudWatch metrics and probes provide ongoing network health visibility.\nThe other choices do not monitor network paths.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "CloudWatch metrics and appropriate network probes meets the first requirement: CloudWatch metrics and probes provide ongoing network health visibility. Latency-based routing meets the second requirement: Latency-based routing directs DNS responses based on measured network latency.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊必須監控網路路徑的運作狀況並觸發延遲警報。哪種服務組合適合？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊必須考慮混合式連線、現有安全邊界，以及變更部署後的營運疑難排解。第一項需求：多帳戶平台團隊必須監控網路路徑的運作狀況並觸發延遲警報。第二項需求：受監管的公司需要減少多個區域使用者的 DNS 查詢延遲。哪兩項操作可以滿足這些需求？",
         "options": {
           "A": "CloudWatch 指標和適當的網路探測",
-          "B": "S3 生命週期規則",
-          "C": "僅 AWS Artifact",
-          "D": "DynamoDB 表名稱"
+          "B": "基於延遲的路由",
+          "C": "檢查快取策略並在必要時使受影響的路徑無效",
+          "D": "Systems Manager Automation",
+          "E": "VPC Flow Logs 以及路由和安全群組配置"
         },
-        "explanation": "CloudWatch 指標和探測提供持續的網路運作狀況可見度。\n其他選項不監視網路路徑。"
+        "explanation": "CloudWatch 指標和適當的網路探測 符合第一項需求：CloudWatch 指標和探測提供持續的網路運作狀況可見度。 基於延遲的路由 符合第二項需求：基於延遲的路由根據測量的網路延遲來指導 DNS 回應。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d3-023",
-    "type": "single",
-    "question": "A regulated company needs to reduce DNS query latency for users in several Regions. Which Route 53 policy should be evaluated?",
-    "options": {
-      "A": "A KMS grant",
-      "B": "Latency-based routing",
-      "C": "Simple routing with one endpoint",
-      "D": "An EBS snapshot"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Latency-based routing directs DNS responses based on measured network latency.\nThe other choices do not optimize DNS endpoint selection.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A regulated company is planning two independent production changes. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The first team needs to reduce DNS query latency for users in several Regions. A second team must troubleshoot intermittent CloudFront stale content after an origin update. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Review cache policy and invalidate affected paths when necessary",
+      "B": "Systems Manager Automation",
+      "C": "VPC Flow Logs and route and security group configuration",
+      "D": "CloudWatch metrics and appropriate network probes",
+      "E": "Latency-based routing"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Latency-based routing meets the first requirement: Latency-based routing directs DNS responses based on measured network latency. Review cache policy and invalidate affected paths when necessary meets the second requirement: Cache policy and targeted invalidation address stale content without changing unrelated security controls.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "受監管的公司需要減少多個區域使用者的 DNS 查詢延遲。應評估哪一個 Route 53 策略？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊必須考慮混合式連線、現有安全邊界，以及變更部署後的營運疑難排解。第一項需求：準備增加流量的新創公司必須對源更新後間歇性的 CloudFront 過時內容進行故障排除。第二項需求：受監管的公司需要減少多個區域使用者的 DNS 查詢延遲。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "KMS 補助金",
-          "B": "基於延遲的路由",
-          "C": "具有一個端點的簡單路由",
-          "D": "EBS Snapshot"
+          "A": "檢查快取策略並在必要時使受影響的路徑無效",
+          "B": "Systems Manager Automation",
+          "C": "VPC Flow Logs 以及路由和安全群組配置",
+          "D": "CloudWatch 指標和適當的網路探測",
+          "E": "基於延遲的路由"
         },
-        "explanation": "基於延遲的路由根據測量的網路延遲來指導 DNS 回應。\n其他選擇不會優化 DNS 端點選擇。"
+        "explanation": "檢查快取策略並在必要時使受影響的路徑無效 符合第一項需求：快取策略和有針對性的失效可以解決陳舊內容，而無需更改不相關的安全控制。 基於延遲的路由 符合第二項需求：基於延遲的路由根據測量的網路延遲來指導 DNS 回應。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d3-024",
-    "type": "single",
-    "question": "A startup preparing for a traffic increase must troubleshoot intermittent CloudFront stale content after an origin update. Which action should be considered?",
-    "options": {
-      "A": "Disable TLS",
-      "B": "Open all security group ports",
-      "C": "Review cache policy and invalidate affected paths when necessary",
-      "D": "Delete the origin database"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "Cache policy and targeted invalidation address stale content without changing unrelated security controls.\nThe other choices increase risk or do not affect CloudFront cache freshness.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A startup preparing for a traffic increase is designing one integrated end-to-end network architecture across accounts and Regions. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The design must keep recurring cost proportional to use, enforce least privilege, and remain available during a component or Availability Zone failure. Match each connected stage to the implementation that lets the complete architecture satisfy its business outcome.",
+    "options": {
+      "A": "Stage 1: The architecture must troubleshoot intermittent CloudFront stale content after an origin update",
+      "B": "Stage 2: The architecture needs an architecture that keeps provider and consumer VPC address spaces independent",
+      "C": "Stage 3: The architecture must advertise selected VPC prefixes to an on-premises router over a private connection"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "Review cache policy and invalidate affected paths when necessary",
+      "2": "AWS PrivateLink",
+      "3": "BGP over a Direct Connect or VPN connection"
+    },
+    "correctMatches": {
+      "A": "1",
+      "B": "2",
+      "C": "3"
+    },
+    "explanation": "A maps to Review cache policy and invalidate affected paths when necessary. Cache policy and targeted invalidation address stale content without changing unrelated security controls. B maps to AWS PrivateLink. PrivateLink exposes a service through endpoint interfaces without routing consumer VPCs together. C maps to BGP over a Direct Connect or VPN connection. BGP exchanges routes over supported hybrid connectivity links.\nAll three stages are connected. Substituting an unrelated target would break the architecture or weaken its cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司必須對源更新後間歇性的 CloudFront 過時內容進行故障排除。應考慮採取哪種行動？",
+        "question": "某企業正在跨帳戶與區域設計一個整合式端到端網路架構。三個階段彼此相連，任一階段錯誤都會影響整體業務成果。此設計必須讓持續成本與實際用量相符、落實最低權限，並在元件或可用區域發生故障時維持可用。 請把每個階段配對至最合適的實作。",
         "options": {
-          "A": "停用 TLS",
-          "B": "打開所有安全群組端口",
-          "C": "檢查快取策略並在必要時使受影響的路徑無效",
-          "D": "刪除原始資料庫"
+          "A": "階段 1：準備增加流量的新創公司必須對源更新後間歇性的 CloudFront 過時內容進行故障排除。",
+          "B": "階段 2：階段 2：階段 2：生產團隊需要在數十個 VPC 和本地網路之間進行集中路由。",
+          "C": "階段 3：階段 3：階段 3：生產團隊必須透過專用連線將選定的 VPC 前綴通告到本機路由器。"
         },
-        "explanation": "快取策略和有針對性的失效可以解決陳舊內容，而無需更改不相關的安全控制。\n其他選擇會增加風險或不會影響 CloudFront 快取新鮮度。"
+        "targets": {
+          "1": "檢查快取策略並在必要時使受影響的路徑無效",
+          "2": "AWS PrivateLink",
+          "3": "透過 Direct Connect 或 VPN 連接的 BGP"
+        },
+        "explanation": "A 應配對 檢查快取策略並在必要時使受影響的路徑無效；B 應配對 AWS PrivateLink；C 應配對 透過 Direct Connect 或 VPN 連接的 BGP。三個實作共同組成完整架構。\n若以不相關的目標取代任何一項，便會破壞架構或削弱成本、安全性及可用性之間的取捨。"
       }
     }
   },
   {
     "id": "ans-c01-d3-025",
-    "type": "single",
-    "question": "An operations team supporting a critical workload needs operational runbooks for repeated network changes. Which service should store executable procedures?",
-    "options": {
-      "A": "Amazon SES",
-      "B": "Amazon EFS",
-      "C": "S3 Glacier only",
-      "D": "Systems Manager Automation"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Systems Manager Automation runbooks can execute repeatable operational tasks.\nThe other choices do not provide network automation runbooks.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "An operations team supporting a critical workload is planning two independent production changes. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The first team needs operational runbooks for repeated network changes. A second team needs to investigate rejected packets between two VPC subnets. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Latency-based routing",
+      "B": "Review cache policy and invalidate affected paths when necessary",
+      "C": "Systems Manager Automation",
+      "D": "VPC Flow Logs and route and security group configuration",
+      "E": "CloudWatch metrics and appropriate network probes"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Systems Manager Automation meets the first requirement: Systems Manager Automation runbooks can execute repeatable operational tasks. VPC Flow Logs and route and security group configuration meets the second requirement: Flow Logs combined with routing and security controls identify where traffic is rejected.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊需要針對重複網路變更的營運手冊。哪個服務應該儲存可執行程式？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊必須考慮混合式連線、現有安全邊界，以及變更部署後的營運疑難排解。第一項需求：支援關鍵工作負載的營運團隊需要針對重複網路變更的營運手冊。第二項需求：製作團隊需要調查兩個 VPC 子網路之間被拒絕的資料包。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "Amazon SES",
-          "B": "Amazon EFS",
-          "C": "S3 僅冰川",
-          "D": "Systems Manager Automation"
+          "A": "基於延遲的路由",
+          "B": "檢查快取策略並在必要時使受影響的路徑無效",
+          "C": "Systems Manager Automation",
+          "D": "VPC Flow Logs 以及路由和安全群組配置",
+          "E": "CloudWatch 指標和適當的網路探測"
         },
-        "explanation": "Systems Manager Automation Runbook 可以執行可重複的操作任務。\n其他選擇不提供網路自動化操作手冊。"
+        "explanation": "Systems Manager Automation 符合第一項需求：Systems Manager Automation Runbook 可以執行可重複的操作任務。 VPC Flow Logs 以及路由和安全群組配置 符合第二項需求：流日誌與路由和安全控制結合，可識別流量被拒絕的位置。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d3-026",
-    "type": "single",
-    "question": "A data platform team needs to investigate rejected packets between two VPC subnets. Which evidence should be collected?",
-    "options": {
-      "A": "VPC Flow Logs and route and security group configuration",
-      "B": "S3 object tags only",
-      "C": "A CloudFront cache key only",
-      "D": "An IAM username"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "Flow Logs combined with routing and security controls identify where traffic is rejected.\nThe other choices do not describe network packet decisions.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A data platform team is planning two independent production changes. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The first team needs to investigate rejected packets between two VPC subnets. A second team must monitor the health of network paths and trigger alerts on latency. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Systems Manager Automation",
+      "B": "VPC Flow Logs and route and security group configuration",
+      "C": "CloudWatch metrics and appropriate network probes",
+      "D": "Latency-based routing",
+      "E": "Review cache policy and invalidate affected paths when necessary"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "VPC Flow Logs and route and security group configuration meets the first requirement: Flow Logs combined with routing and security controls identify where traffic is rejected. CloudWatch metrics and appropriate network probes meets the second requirement: CloudWatch metrics and probes provide ongoing network health visibility.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要調查兩個 VPC 子網路之間被拒絕的資料包。應該蒐集哪些證據？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此需求必須大規模套用。方案應避免一次性的人手設定，並提供證據證明控制措施持續有效。第一項需求：製作團隊需要調查兩個 VPC 子網路之間被拒絕的資料包。第二項需求：多帳戶平台團隊必須監控網路路徑的運作狀況並觸發延遲警報。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "VPC Flow Logs 以及路由和安全群組配置",
-          "B": "僅 S3 物件標籤",
-          "C": "僅 CloudFront 快取鍵",
-          "D": "IAM Users名稱"
+          "A": "Systems Manager Automation",
+          "B": "VPC Flow Logs 以及路由和安全群組配置",
+          "C": "CloudWatch 指標和適當的網路探測",
+          "D": "基於延遲的路由",
+          "E": "檢查快取策略並在必要時使受影響的路徑無效"
         },
-        "explanation": "流日誌與路由和安全控制結合，可識別流量被拒絕的位置。\n其他選擇不描述網路資料包決策。"
+        "explanation": "VPC Flow Logs 以及路由和安全群組配置 符合第一項需求：流日誌與路由和安全控制結合，可識別流量被拒絕的位置。 CloudWatch 指標和適當的網路探測 符合第二項需求：CloudWatch 指標和探測提供持續的網路運作狀況可見度。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d3-027",
-    "type": "single",
-    "question": "A security-conscious engineering team must monitor the health of network paths and trigger alerts on latency. Which service combination fits?",
-    "options": {
-      "A": "A DynamoDB table name",
-      "B": "CloudWatch metrics and appropriate network probes",
-      "C": "An S3 lifecycle rule",
-      "D": "AWS Artifact only"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "CloudWatch metrics and probes provide ongoing network health visibility.\nThe other choices do not monitor network paths.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A security-conscious engineering team is planning two independent production changes. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The first team must monitor the health of network paths and trigger alerts on latency. A second team needs to reduce DNS query latency for users in several Regions. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "CloudWatch metrics and appropriate network probes",
+      "B": "Latency-based routing",
+      "C": "Review cache policy and invalidate affected paths when necessary",
+      "D": "Systems Manager Automation",
+      "E": "VPC Flow Logs and route and security group configuration"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "CloudWatch metrics and appropriate network probes meets the first requirement: CloudWatch metrics and probes provide ongoing network health visibility. Latency-based routing meets the second requirement: Latency-based routing directs DNS responses based on measured network latency.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊必須監控網路路徑的運作狀況並觸發延遲警報。哪種服務組合適合？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此需求必須大規模套用。方案應避免一次性的人手設定，並提供證據證明控制措施持續有效。第一項需求：多帳戶平台團隊必須監控網路路徑的運作狀況並觸發延遲警報。第二項需求：受監管的公司需要減少多個區域使用者的 DNS 查詢延遲。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "DynamoDB 表名稱",
-          "B": "CloudWatch 指標和適當的網路探測",
-          "C": "S3 生命週期規則",
-          "D": "僅 AWS Artifact"
+          "A": "CloudWatch 指標和適當的網路探測",
+          "B": "基於延遲的路由",
+          "C": "檢查快取策略並在必要時使受影響的路徑無效",
+          "D": "Systems Manager Automation",
+          "E": "VPC Flow Logs 以及路由和安全群組配置"
         },
-        "explanation": "CloudWatch 指標和探測提供持續的網路運作狀況可見度。\n其他選項不監視網路路徑。"
+        "explanation": "CloudWatch 指標和適當的網路探測 符合第一項需求：CloudWatch 指標和探測提供持續的網路運作狀況可見度。 基於延遲的路由 符合第二項需求：基於延遲的路由根據測量的網路延遲來指導 DNS 回應。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d3-028",
-    "type": "single",
-    "question": "A company migrating an existing workload needs to reduce DNS query latency for users in several Regions. Which Route 53 policy should be evaluated?",
-    "options": {
-      "A": "An EBS snapshot",
-      "B": "A KMS grant",
-      "C": "Latency-based routing",
-      "D": "Simple routing with one endpoint"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "Latency-based routing directs DNS responses based on measured network latency.\nThe other choices do not optimize DNS endpoint selection.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A company migrating an existing workload is designing one integrated end-to-end network architecture across accounts and Regions. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The design must avoid unnecessary standby cost without weakening security controls or the availability objective. Match each connected stage to the implementation that lets the complete architecture satisfy its business outcome.",
+    "options": {
+      "A": "Stage 1: The architecture needs to reduce DNS query latency for users in several Regions",
+      "B": "Stage 2: The architecture must automate VPC and route configuration consistently across accounts",
+      "C": "Stage 3: The architecture needs to investigate rejected packets between two VPC subnets"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "2": "VPC Flow Logs and route and security group configuration",
+      "3": "Latency-based routing"
+    },
+    "correctMatches": {
+      "A": "3",
+      "B": "1",
+      "C": "2"
+    },
+    "explanation": "A maps to Latency-based routing. Latency-based routing directs DNS responses based on measured network latency. B maps to Infrastructure as code with CloudFormation or the AWS CDK. IaC makes network changes repeatable, reviewable, and consistent. C maps to VPC Flow Logs and route and security group configuration. Flow Logs combined with routing and security controls identify where traffic is rejected.\nAll three stages are connected. Substituting an unrelated target would break the architecture or weaken its cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司需要減少多個區域中使用者的 DNS 查詢延遲。應評估哪一個 Route 53 策略？",
+        "question": "某企業正在跨帳戶與區域設計一個整合式端到端網路架構。三個階段彼此相連，任一階段錯誤都會影響整體業務成果。此設計必須避免不必要的備用成本，同時不可削弱安全控制或可用性目標。 請把每個階段配對至最合適的實作。",
         "options": {
-          "A": "EBS Snapshot",
-          "B": "KMS 補助金",
-          "C": "基於延遲的路由",
-          "D": "具有一個端點的簡單路由"
+          "A": "階段 1：準備增加流量的新創公司必須對源更新後間歇性的 CloudFront 過時內容進行故障排除。",
+          "B": "階段 2：階段 2：階段 2：支援關鍵工作負載的營運團隊必須自動化 VPC 並跨帳戶一致地路由配置。",
+          "C": "階段 3：階段 3：階段 3：需求：製作團隊需要調查兩個 VPC 子網路之間被拒絕的資料包"
         },
-        "explanation": "基於延遲的路由根據測量的網路延遲來指導 DNS 回應。\n其他選擇不會優化 DNS 端點選擇。"
+        "targets": {
+          "1": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
+          "2": "VPC Flow Logs 以及路由和安全群組配置",
+          "3": "基於延遲的路由"
+        },
+        "explanation": "A 應配對 基於延遲的路由；B 應配對 使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼；C 應配對 VPC Flow Logs 以及路由和安全群組配置。三個實作共同組成完整架構。\n若以不相關的目標取代任何一項，便會破壞架構或削弱成本、安全性及可用性之間的取捨。"
       }
     }
   },
   {
     "id": "ans-c01-d3-029",
-    "type": "single",
-    "question": "A team with strict recovery objectives must troubleshoot intermittent CloudFront stale content after an origin update. Which action should be considered?",
-    "options": {
-      "A": "Delete the origin database",
-      "B": "Disable TLS",
-      "C": "Open all security group ports",
-      "D": "Review cache policy and invalidate affected paths when necessary"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Cache policy and targeted invalidation address stale content without changing unrelated security controls.\nThe other choices increase risk or do not affect CloudFront cache freshness.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A team with strict recovery objectives is planning two independent production changes. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The first team must troubleshoot intermittent CloudFront stale content after an origin update. A second team needs operational runbooks for repeated network changes. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "VPC Flow Logs and route and security group configuration",
+      "B": "CloudWatch metrics and appropriate network probes",
+      "C": "Latency-based routing",
+      "D": "Review cache policy and invalidate affected paths when necessary",
+      "E": "Systems Manager Automation"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Review cache policy and invalidate affected paths when necessary meets the first requirement: Cache policy and targeted invalidation address stale content without changing unrelated security controls. Systems Manager Automation meets the second requirement: Systems Manager Automation runbooks can execute repeatable operational tasks.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有嚴格復原目標的團隊必須在來源更新後對間歇性的 CloudFront 過時內容進行故障排除。應考慮採取哪種行動？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此需求必須大規模套用。方案應避免一次性的人手設定，並提供證據證明控制措施持續有效。第一項需求：準備增加流量的新創公司必須對源更新後間歇性的 CloudFront 過時內容進行故障排除。第二項需求：支援關鍵工作負載的營運團隊需要針對重複網路變更的營運手冊。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "刪除原始資料庫",
-          "B": "停用 TLS",
-          "C": "打開所有安全群組端口",
-          "D": "檢查快取策略並在必要時使受影響的路徑無效"
+          "A": "VPC Flow Logs 以及路由和安全群組配置",
+          "B": "CloudWatch 指標和適當的網路探測",
+          "C": "基於延遲的路由",
+          "D": "檢查快取策略並在必要時使受影響的路徑無效",
+          "E": "Systems Manager Automation"
         },
-        "explanation": "快取策略和有針對性的失效可以解決陳舊內容，而無需更改不相關的安全控制。\n其他選擇會增加風險或不會影響 CloudFront 快取新鮮度。"
+        "explanation": "檢查快取策略並在必要時使受影響的路徑無效 符合第一項需求：快取策略和有針對性的失效可以解決陳舊內容，而無需更改不相關的安全控制。 Systems Manager Automation 符合第二項需求：Systems Manager Automation Runbook 可以執行可重複的操作任務。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d3-030",
-    "type": "single",
-    "question": "A developer team preparing a release needs operational runbooks for repeated network changes. Which service should store executable procedures?",
-    "options": {
-      "A": "Systems Manager Automation",
-      "B": "Amazon SES",
-      "C": "Amazon EFS",
-      "D": "S3 Glacier only"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "Systems Manager Automation runbooks can execute repeatable operational tasks.\nThe other choices do not provide network automation runbooks.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A developer team preparing a release is planning two independent production changes. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The first team needs operational runbooks for repeated network changes. A second team needs to investigate rejected packets between two VPC subnets. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Latency-based routing",
+      "B": "Review cache policy and invalidate affected paths when necessary",
+      "C": "Systems Manager Automation",
+      "D": "VPC Flow Logs and route and security group configuration",
+      "E": "CloudWatch metrics and appropriate network probes"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Systems Manager Automation meets the first requirement: Systems Manager Automation runbooks can execute repeatable operational tasks. VPC Flow Logs and route and security group configuration meets the second requirement: Flow Logs combined with routing and security controls identify where traffic is rejected.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊需要針對重複網路變更的操作手冊。哪個服務應該儲存可執行程式？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此需求必須大規模套用。方案應避免一次性的人手設定，並提供證據證明控制措施持續有效。第一項需求：支援關鍵工作負載的營運團隊需要針對重複網路變更的營運手冊。第二項需求：製作團隊需要調查兩個 VPC 子網路之間被拒絕的資料包。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "Systems Manager Automation",
-          "B": "Amazon SES",
-          "C": "Amazon EFS",
-          "D": "S3 僅冰川"
+          "A": "基於延遲的路由",
+          "B": "檢查快取策略並在必要時使受影響的路徑無效",
+          "C": "Systems Manager Automation",
+          "D": "VPC Flow Logs 以及路由和安全群組配置",
+          "E": "CloudWatch 指標和適當的網路探測"
         },
-        "explanation": "Systems Manager Automation Runbook 可以執行可重複的操作任務。\n其他選擇不提供網路自動化操作手冊。"
+        "explanation": "Systems Manager Automation 符合第一項需求：Systems Manager Automation Runbook 可以執行可重複的操作任務。 VPC Flow Logs 以及路由和安全群組配置 符合第二項需求：流日誌與路由和安全控制結合，可識別流量被拒絕的位置。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d3-031",
-    "type": "single",
-    "question": "An enterprise with several AWS Regions needs to investigate rejected packets between two VPC subnets. Which evidence should be collected?",
-    "options": {
-      "A": "An IAM username",
-      "B": "VPC Flow Logs and route and security group configuration",
-      "C": "S3 object tags only",
-      "D": "A CloudFront cache key only"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Flow Logs combined with routing and security controls identify where traffic is rejected.\nThe other choices do not describe network packet decisions.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "An enterprise with several AWS Regions is planning two independent production changes. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The first team needs to investigate rejected packets between two VPC subnets. A second team must monitor the health of network paths and trigger alerts on latency. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Systems Manager Automation",
+      "B": "VPC Flow Logs and route and security group configuration",
+      "C": "CloudWatch metrics and appropriate network probes",
+      "D": "Latency-based routing",
+      "E": "Review cache policy and invalidate affected paths when necessary"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "VPC Flow Logs and route and security group configuration meets the first requirement: Flow Logs combined with routing and security controls identify where traffic is rejected. CloudWatch metrics and appropriate network probes meets the second requirement: CloudWatch metrics and probes provide ongoing network health visibility.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS Regions 的企業需要調查兩個 VPC 子網路之間被拒絕的資料包。應該蒐集哪些證據？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。目前架構支援業務關鍵服務。所選選項必須處理確切的故障或安全條件，而不會削弱其他控制措施。第一項需求：製作團隊需要調查兩個 VPC 子網路之間被拒絕的資料包。第二項需求：多帳戶平台團隊必須監控網路路徑的運作狀況並觸發延遲警報。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "IAM Users名稱",
+          "A": "Systems Manager Automation",
           "B": "VPC Flow Logs 以及路由和安全群組配置",
-          "C": "僅 S3 物件標籤",
-          "D": "僅 CloudFront 快取鍵"
+          "C": "CloudWatch 指標和適當的網路探測",
+          "D": "基於延遲的路由",
+          "E": "檢查快取策略並在必要時使受影響的路徑無效"
         },
-        "explanation": "流日誌與路由和安全控制結合，可識別流量被拒絕的位置。\n其他選擇不描述網路資料包決策。"
+        "explanation": "VPC Flow Logs 以及路由和安全群組配置 符合第一項需求：流日誌與路由和安全控制結合，可識別流量被拒絕的位置。 CloudWatch 指標和適當的網路探測 符合第二項需求：CloudWatch 指標和探測提供持續的網路運作狀況可見度。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d3-032",
-    "type": "single",
-    "question": "A service owner reviewing an incident must monitor the health of network paths and trigger alerts on latency. Which service combination fits?",
-    "options": {
-      "A": "AWS Artifact only",
-      "B": "A DynamoDB table name",
-      "C": "CloudWatch metrics and appropriate network probes",
-      "D": "An S3 lifecycle rule"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "CloudWatch metrics and probes provide ongoing network health visibility.\nThe other choices do not monitor network paths.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A service owner reviewing an incident is designing one integrated end-to-end network architecture across accounts and Regions. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The organization will accept additional managed-service cost only when it measurably improves security and availability with less operational effort. Match each connected stage to the implementation that lets the complete architecture satisfy its business outcome.",
+    "options": {
+      "A": "Stage 1: The architecture must monitor the health of network paths and trigger alerts on latency",
+      "B": "Stage 2: The architecture needs operational runbooks for repeated network changes",
+      "C": "Stage 3: The architecture must block known malicious domains for workloads in a VPC"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "Route 53 Resolver DNS Firewall",
+      "2": "CloudWatch metrics and appropriate network probes",
+      "3": "Systems Manager Automation"
+    },
+    "correctMatches": {
+      "A": "2",
+      "B": "3",
+      "C": "1"
+    },
+    "explanation": "A maps to CloudWatch metrics and appropriate network probes. CloudWatch metrics and probes provide ongoing network health visibility. B maps to Systems Manager Automation. Systems Manager Automation runbooks can execute repeatable operational tasks. C maps to Route 53 Resolver DNS Firewall. DNS Firewall can block or allow domain queries for VPC workloads.\nAll three stages are connected. Substituting an unrelated target would break the architecture or weaken its cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務擁有者必須監控網路路徑的運作狀況並觸發延遲警報。哪種服務組合適合？",
+        "question": "某企業正在跨帳戶與區域設計一個整合式端到端網路架構。三個階段彼此相連，任一階段錯誤都會影響整體業務成果。只有在託管服務能以較低營運負擔明確改善安全性與可用性時，組織才會接受額外成本。 請把每個階段配對至最合適的實作。",
         "options": {
-          "A": "僅 AWS Artifact",
-          "B": "DynamoDB 表名稱",
-          "C": "CloudWatch 指標和適當的網路探測",
-          "D": "S3 生命週期規則"
+          "A": "階段 1：多帳戶平台團隊必須監控網路路徑的運作狀況並觸發延遲警報。",
+          "B": "階段 2：階段 2：階段 2：支援關鍵工作負載的營運團隊需要針對重複網路變更的營運手冊。",
+          "C": "階段 3：生產團隊必須阻止 VPC 中工作負載的已知惡意域。"
         },
-        "explanation": "CloudWatch 指標和探測提供持續的網路運作狀況可見度。\n其他選項不監視網路路徑。"
+        "targets": {
+          "1": "Route 53 Resolver DNS Firewall",
+          "2": "CloudWatch 指標和適當的網路探測",
+          "3": "Systems Manager Automation"
+        },
+        "explanation": "A 應配對 CloudWatch 指標和適當的網路探測；B 應配對 Systems Manager Automation；C 應配對 Route 53 Resolver DNS Firewall。三個實作共同組成完整架構。\n若以不相關的目標取代任何一項，便會破壞架構或削弱成本、安全性及可用性之間的取捨。"
       }
     }
   },
   {
     "id": "ans-c01-d3-033",
-    "type": "single",
-    "question": "A team optimizing an existing implementation needs to reduce DNS query latency for users in several Regions. Which Route 53 policy should be evaluated?",
-    "options": {
-      "A": "Simple routing with one endpoint",
-      "B": "An EBS snapshot",
-      "C": "A KMS grant",
-      "D": "Latency-based routing"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Latency-based routing directs DNS responses based on measured network latency.\nThe other choices do not optimize DNS endpoint selection.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A team optimizing an existing implementation is planning two independent production changes. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The first team needs to reduce DNS query latency for users in several Regions. A second team must troubleshoot intermittent CloudFront stale content after an origin update. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Review cache policy and invalidate affected paths when necessary",
+      "B": "Systems Manager Automation",
+      "C": "VPC Flow Logs and route and security group configuration",
+      "D": "CloudWatch metrics and appropriate network probes",
+      "E": "Latency-based routing"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Latency-based routing meets the first requirement: Latency-based routing directs DNS responses based on measured network latency. Review cache policy and invalidate affected paths when necessary meets the second requirement: Cache policy and targeted invalidation address stale content without changing unrelated security controls.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊需要減少多個區域中使用者的 DNS 查詢延遲。應評估哪一個 Route 53 策略？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。目前架構支援業務關鍵服務。所選選項必須處理確切的故障或安全條件，而不會削弱其他控制措施。第一項需求：準備增加流量的新創公司必須對源更新後間歇性的 CloudFront 過時內容進行故障排除。第二項需求：受監管的公司需要減少多個區域使用者的 DNS 查詢延遲。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "具有一個端點的簡單路由",
-          "B": "EBS Snapshot",
-          "C": "KMS 補助金",
-          "D": "基於延遲的路由"
+          "A": "檢查快取策略並在必要時使受影響的路徑無效",
+          "B": "Systems Manager Automation",
+          "C": "VPC Flow Logs 以及路由和安全群組配置",
+          "D": "CloudWatch 指標和適當的網路探測",
+          "E": "基於延遲的路由"
         },
-        "explanation": "基於延遲的路由根據測量的網路延遲來指導 DNS 回應。\n其他選擇不會優化 DNS 端點選擇。"
+        "explanation": "檢查快取策略並在必要時使受影響的路徑無效 符合第一項需求：快取策略和有針對性的失效可以解決陳舊內容，而無需更改不相關的安全控制。 基於延遲的路由 符合第二項需求：基於延遲的路由根據測量的網路延遲來指導 DNS 回應。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d3-034",
-    "type": "single",
-    "question": "A company introducing an automated workflow must troubleshoot intermittent CloudFront stale content after an origin update. Which action should be considered?",
-    "options": {
-      "A": "Review cache policy and invalidate affected paths when necessary",
-      "B": "Delete the origin database",
-      "C": "Disable TLS",
-      "D": "Open all security group ports"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "Cache policy and targeted invalidation address stale content without changing unrelated security controls.\nThe other choices increase risk or do not affect CloudFront cache freshness.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A company introducing an automated workflow is planning two independent production changes. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The first team must troubleshoot intermittent CloudFront stale content after an origin update. A second team needs operational runbooks for repeated network changes. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "VPC Flow Logs and route and security group configuration",
+      "B": "CloudWatch metrics and appropriate network probes",
+      "C": "Latency-based routing",
+      "D": "Review cache policy and invalidate affected paths when necessary",
+      "E": "Systems Manager Automation"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Review cache policy and invalidate affected paths when necessary meets the first requirement: Cache policy and targeted invalidation address stale content without changing unrelated security controls. Systems Manager Automation meets the second requirement: Systems Manager Automation runbooks can execute repeatable operational tasks.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司必須對來源更新後間歇性的 CloudFront 過時內容進行故障排除。應考慮採取哪種行動？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。目前架構支援業務關鍵服務。所選選項必須處理確切的故障或安全條件，而不會削弱其他控制措施。第一項需求：準備增加流量的新創公司必須對源更新後間歇性的 CloudFront 過時內容進行故障排除。第二項需求：支援關鍵工作負載的營運團隊需要針對重複網路變更的營運手冊。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "檢查快取策略並在必要時使受影響的路徑無效",
-          "B": "刪除原始資料庫",
-          "C": "停用 TLS",
-          "D": "打開所有安全群組端口"
+          "A": "VPC Flow Logs 以及路由和安全群組配置",
+          "B": "CloudWatch 指標和適當的網路探測",
+          "C": "基於延遲的路由",
+          "D": "檢查快取策略並在必要時使受影響的路徑無效",
+          "E": "Systems Manager Automation"
         },
-        "explanation": "快取策略和有針對性的失效可以解決陳舊內容，而無需更改不相關的安全控制。\n其他選擇會增加風險或不會影響 CloudFront 快取新鮮度。"
+        "explanation": "檢查快取策略並在必要時使受影響的路徑無效 符合第一項需求：快取策略和有針對性的失效可以解決陳舊內容，而無需更改不相關的安全控制。 Systems Manager Automation 符合第二項需求：Systems Manager Automation Runbook 可以執行可重複的操作任務。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d3-035",
-    "type": "single",
-    "question": "An AWS administrator working in a shared environment needs operational runbooks for repeated network changes. Which service should store executable procedures?",
-    "options": {
-      "A": "S3 Glacier only",
-      "B": "Systems Manager Automation",
-      "C": "Amazon SES",
-      "D": "Amazon EFS"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Systems Manager Automation runbooks can execute repeatable operational tasks.\nThe other choices do not provide network automation runbooks.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "An AWS administrator working in a shared environment is planning two independent production changes. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The first team needs operational runbooks for repeated network changes. A second team needs to investigate rejected packets between two VPC subnets. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Latency-based routing",
+      "B": "Review cache policy and invalidate affected paths when necessary",
+      "C": "Systems Manager Automation",
+      "D": "VPC Flow Logs and route and security group configuration",
+      "E": "CloudWatch metrics and appropriate network probes"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Systems Manager Automation meets the first requirement: Systems Manager Automation runbooks can execute repeatable operational tasks. VPC Flow Logs and route and security group configuration meets the second requirement: Flow Logs combined with routing and security controls identify where traffic is rejected.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "在共用環境中工作的 AWS 管理員需要操作手冊來進行重複的網路變更。哪個服務應該儲存可執行程式？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。目前架構支援業務關鍵服務。所選選項必須處理確切的故障或安全條件，而不會削弱其他控制措施。第一項需求：支援關鍵工作負載的營運團隊需要針對重複網路變更的營運手冊。第二項需求：製作團隊需要調查兩個 VPC 子網路之間被拒絕的資料包。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "S3 僅冰川",
-          "B": "Systems Manager Automation",
-          "C": "Amazon SES",
-          "D": "Amazon EFS"
+          "A": "基於延遲的路由",
+          "B": "檢查快取策略並在必要時使受影響的路徑無效",
+          "C": "Systems Manager Automation",
+          "D": "VPC Flow Logs 以及路由和安全群組配置",
+          "E": "CloudWatch 指標和適當的網路探測"
         },
-        "explanation": "Systems Manager Automation Runbook 可以執行可重複的操作任務。\n其他選擇不提供網路自動化操作手冊。"
+        "explanation": "Systems Manager Automation 符合第一項需求：Systems Manager Automation Runbook 可以執行可重複的操作任務。 VPC Flow Logs 以及路由和安全群組配置 符合第二項需求：流日誌與路由和安全控制結合，可識別流量被拒絕的位置。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d3-036",
-    "type": "single",
-    "question": "A customer-facing application team needs to investigate rejected packets between two VPC subnets. Which evidence should be collected?",
-    "options": {
-      "A": "A CloudFront cache key only",
-      "B": "An IAM username",
-      "C": "VPC Flow Logs and route and security group configuration",
-      "D": "S3 object tags only"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "Flow Logs combined with routing and security controls identify where traffic is rejected.\nThe other choices do not describe network packet decisions.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A customer-facing application team is designing one integrated end-to-end network architecture across accounts and Regions. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The architecture must limit blast radius, preserve availability during change, and control cost through automation instead of permanent overprovisioning. Match each connected stage to the implementation that lets the complete architecture satisfy its business outcome.",
+    "options": {
+      "A": "Stage 1: The architecture needs to investigate rejected packets between two VPC subnets",
+      "B": "Stage 2: The architecture must enforce network and service guardrails across accounts",
+      "C": "Stage 3: The architecture needs centralized routing between dozens of VPCs and on-premises networks"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "VPC Flow Logs and route and security group configuration",
+      "2": "SCPs combined with centralized policy and security services",
+      "3": "AWS Transit Gateway with route domains"
+    },
+    "correctMatches": {
+      "A": "1",
+      "B": "2",
+      "C": "3"
+    },
+    "explanation": "A maps to VPC Flow Logs and route and security group configuration. Flow Logs combined with routing and security controls identify where traffic is rejected. B maps to SCPs combined with centralized policy and security services. Organization guardrails and centralized policy reduce inconsistent network governance. C maps to AWS Transit Gateway with route domains. Transit Gateway provides scalable centralized routing for many network attachments.\nAll three stages are connected. Substituting an unrelated target would break the architecture or weaken its cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊需要調查兩個 VPC 子網路之間被拒絕的資料包。應該蒐集哪些證據？",
+        "question": "某企業正在跨帳戶與區域設計一個整合式端到端網路架構。三個階段彼此相連，任一階段錯誤都會影響整體業務成果。此架構必須限制影響範圍、在變更期間維持可用性，並透過自動化控制成本，而不是長期過度佈建。 請把每個階段配對至最合適的實作。",
         "options": {
-          "A": "僅 CloudFront 快取鍵",
-          "B": "IAM Users名稱",
-          "C": "VPC Flow Logs 以及路由和安全群組配置",
-          "D": "僅 S3 物件標籤"
+          "A": "階段 1：階段 3：階段 3：需求：製作團隊需要調查兩個 VPC 子網路之間被拒絕的資料包",
+          "B": "階段 2：支援關鍵工作負載的營運團隊必須跨帳戶實施網路和服務護欄。",
+          "C": "階段 3：階段 3：階段 3：需求：生產團隊需要在數十個 VPC 和本地網路之間進行集中路由"
         },
-        "explanation": "流日誌與路由和安全控制結合，可識別流量被拒絕的位置。\n其他選擇不描述網路資料包決策。"
+        "targets": {
+          "1": "VPC Flow Logs 以及路由和安全群組配置",
+          "2": "SCP 與集中式策略和安全服務結合",
+          "3": "AWS Transit Gateway 與路由域"
+        },
+        "explanation": "A 應配對 VPC Flow Logs 以及路由和安全群組配置；B 應配對 SCP 與集中式策略和安全服務結合；C 應配對 AWS Transit Gateway 與路由域。三個實作共同組成完整架構。\n若以不相關的目標取代任何一項，便會破壞架構或削弱成本、安全性及可用性之間的取捨。"
       }
     }
   },
   {
     "id": "ans-c01-d3-037",
-    "type": "single",
-    "question": "A platform team standardizing its AWS deployments must monitor the health of network paths and trigger alerts on latency. Which service combination fits?",
-    "options": {
-      "A": "An S3 lifecycle rule",
-      "B": "AWS Artifact only",
-      "C": "A DynamoDB table name",
-      "D": "CloudWatch metrics and appropriate network probes"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "CloudWatch metrics and probes provide ongoing network health visibility.\nThe other choices do not monitor network paths.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A platform team standardizing its AWS deployments is planning two independent production changes. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The first team must monitor the health of network paths and trigger alerts on latency. A second team needs to reduce DNS query latency for users in several Regions. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "CloudWatch metrics and appropriate network probes",
+      "B": "Latency-based routing",
+      "C": "Review cache policy and invalidate affected paths when necessary",
+      "D": "Systems Manager Automation",
+      "E": "VPC Flow Logs and route and security group configuration"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "CloudWatch metrics and appropriate network probes meets the first requirement: CloudWatch metrics and probes provide ongoing network health visibility. Latency-based routing meets the second requirement: Latency-based routing directs DNS responses based on measured network latency.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊必須監控網路路徑的運作狀況並觸發延遲警報。哪種服務組合適合？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。專業工程師將審查實作的服務限制、故障行為及建議設計的營運取捨。第一項需求：多帳戶平台團隊必須監控網路路徑的運作狀況並觸發延遲警報。第二項需求：受監管的公司需要減少多個區域使用者的 DNS 查詢延遲。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "S3 生命週期規則",
-          "B": "僅 AWS Artifact",
-          "C": "DynamoDB 表名稱",
-          "D": "CloudWatch 指標和適當的網路探測"
+          "A": "CloudWatch 指標和適當的網路探測",
+          "B": "基於延遲的路由",
+          "C": "檢查快取策略並在必要時使受影響的路徑無效",
+          "D": "Systems Manager Automation",
+          "E": "VPC Flow Logs 以及路由和安全群組配置"
         },
-        "explanation": "CloudWatch 指標和探測提供持續的網路運作狀況可見度。\n其他選項不監視網路路徑。"
+        "explanation": "CloudWatch 指標和適當的網路探測 符合第一項需求：CloudWatch 指標和探測提供持續的網路運作狀況可見度。 基於延遲的路由 符合第二項需求：基於延遲的路由根據測量的網路延遲來指導 DNS 回應。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d3-038",
-    "type": "single",
-    "question": "A team preparing evidence for an audit needs to reduce DNS query latency for users in several Regions. Which Route 53 policy should be evaluated?",
-    "options": {
-      "A": "Latency-based routing",
-      "B": "Simple routing with one endpoint",
-      "C": "An EBS snapshot",
-      "D": "A KMS grant"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "Latency-based routing directs DNS responses based on measured network latency.\nThe other choices do not optimize DNS endpoint selection.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A team preparing evidence for an audit is planning two independent production changes. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The first team needs to reduce DNS query latency for users in several Regions. A second team must troubleshoot intermittent CloudFront stale content after an origin update. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Review cache policy and invalidate affected paths when necessary",
+      "B": "Systems Manager Automation",
+      "C": "VPC Flow Logs and route and security group configuration",
+      "D": "CloudWatch metrics and appropriate network probes",
+      "E": "Latency-based routing"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Latency-based routing meets the first requirement: Latency-based routing directs DNS responses based on measured network latency. Review cache policy and invalidate affected paths when necessary meets the second requirement: Cache policy and targeted invalidation address stale content without changing unrelated security controls.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "準備審計證據的團隊需要減少多個區域中使用者的 DNS 查詢延遲。應評估哪一個 Route 53 策略？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。專業工程師將審查實作的服務限制、故障行為及建議設計的營運取捨。第一項需求：準備增加流量的新創公司必須對源更新後間歇性的 CloudFront 過時內容進行故障排除。第二項需求：受監管的公司需要減少多個區域使用者的 DNS 查詢延遲。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "基於延遲的路由",
-          "B": "具有一個端點的簡單路由",
-          "C": "EBS Snapshot",
-          "D": "KMS 補助金"
+          "A": "檢查快取策略並在必要時使受影響的路徑無效",
+          "B": "Systems Manager Automation",
+          "C": "VPC Flow Logs 以及路由和安全群組配置",
+          "D": "CloudWatch 指標和適當的網路探測",
+          "E": "基於延遲的路由"
         },
-        "explanation": "基於延遲的路由根據測量的網路延遲來指導 DNS 回應。\n其他選擇不會優化 DNS 端點選擇。"
+        "explanation": "檢查快取策略並在必要時使受影響的路徑無效 符合第一項需求：快取策略和有針對性的失效可以解決陳舊內容，而無需更改不相關的安全控制。 基於延遲的路由 符合第二項需求：基於延遲的路由根據測量的網路延遲來指導 DNS 回應。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d3-039",
-    "type": "single",
-    "question": "A business replacing a manual process must troubleshoot intermittent CloudFront stale content after an origin update. Which action should be considered?",
-    "options": {
-      "A": "Open all security group ports",
-      "B": "Review cache policy and invalidate affected paths when necessary",
-      "C": "Delete the origin database",
-      "D": "Disable TLS"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Cache policy and targeted invalidation address stale content without changing unrelated security controls.\nThe other choices increase risk or do not affect CloudFront cache freshness.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A business replacing a manual process is planning two independent production changes. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The first team must troubleshoot intermittent CloudFront stale content after an origin update. A second team needs operational runbooks for repeated network changes. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "VPC Flow Logs and route and security group configuration",
+      "B": "CloudWatch metrics and appropriate network probes",
+      "C": "Latency-based routing",
+      "D": "Review cache policy and invalidate affected paths when necessary",
+      "E": "Systems Manager Automation"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Review cache policy and invalidate affected paths when necessary meets the first requirement: Cache policy and targeted invalidation address stale content without changing unrelated security controls. Systems Manager Automation meets the second requirement: Systems Manager Automation runbooks can execute repeatable operational tasks.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "取代手動流程的企業必須對來源更新後間歇性的 CloudFront 過時內容進行故障排除。應考慮採取哪種行動？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。專業工程師將審查實作的服務限制、故障行為及建議設計的營運取捨。第一項需求：準備增加流量的新創公司必須對源更新後間歇性的 CloudFront 過時內容進行故障排除。第二項需求：支援關鍵工作負載的營運團隊需要針對重複網路變更的營運手冊。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "打開所有安全群組端口",
-          "B": "檢查快取策略並在必要時使受影響的路徑無效",
-          "C": "刪除原始資料庫",
-          "D": "停用 TLS"
+          "A": "VPC Flow Logs 以及路由和安全群組配置",
+          "B": "CloudWatch 指標和適當的網路探測",
+          "C": "基於延遲的路由",
+          "D": "檢查快取策略並在必要時使受影響的路徑無效",
+          "E": "Systems Manager Automation"
         },
-        "explanation": "快取策略和有針對性的失效可以解決陳舊內容，而無需更改不相關的安全控制。\n其他選擇會增加風險或不會影響 CloudFront 快取新鮮度。"
+        "explanation": "檢查快取策略並在必要時使受影響的路徑無效 符合第一項需求：快取策略和有針對性的失效可以解決陳舊內容，而無需更改不相關的安全控制。 Systems Manager Automation 符合第二項需求：Systems Manager Automation Runbook 可以執行可重複的操作任務。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   }

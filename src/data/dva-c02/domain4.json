@@ -1,981 +1,1006 @@
 [
   {
     "id": "dva-c02-d4-001",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A production team needs end-to-end traces across API Gateway, Lambda, and downstream services. Which service should be configured?",
+    "question": "A production team is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs end-to-end traces across API Gateway, Lambda, and downstream services. Which service should be configured?",
     "options": {
       "A": "AWS X-Ray",
-      "B": "Amazon S3 Inventory",
-      "C": "AWS Budgets",
-      "D": "Amazon Route 53"
+      "B": "CloudWatch Logs Insights",
+      "C": "Provisioned Concurrency",
+      "D": "Cache responses with an expiration policy"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "X-Ray traces requests across supported service boundaries and helps identify latency and errors.\nThe other choices provide object reports, cost monitoring, or DNS.",
-    "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "X-Ray traces requests across supported service boundaries and helps identify latency and errors.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS X-Ray for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "生產團隊需要跨 API Gateway、Lambda 和下游服務的端到端追蹤。應該配置哪個服務？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。生產團隊需要跨 API Gateway、Lambda 和下游服務的端到端追蹤。應該配置哪個服務？",
         "options": {
           "A": "AWS X-Ray",
-          "B": "Amazon S3 Inventory",
-          "C": "AWS Budgets",
-          "D": "Amazon Route 53"
+          "B": "CloudWatch Logs Insights",
+          "C": "預先配置並發",
+          "D": "使用過期策略快取回應"
         },
-        "explanation": "X-Ray 跨支援的服務邊界追蹤請求，並協助識別延遲和錯誤。\n其他選項提供物件報告、成本監控或 DNS。"
+        "explanation": "X-Ray 跨支援的服務邊界追蹤請求，並協助識別延遲和錯誤。\n其他選項適用於此領域的不同需求，但不能像 AWS X-Ray 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dva-c02-d4-002",
-    "type": "single",
-    "question": "A multi-account platform team must find application errors in structured logs using a query language. Which feature is suitable?",
-    "options": {
-      "A": "A VPC route table",
-      "B": "CloudWatch Logs Insights",
-      "C": "An IAM role trust policy",
-      "D": "An S3 lifecycle rule"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Logs Insights queries centralized log events and supports operational troubleshooting.\nThe other choices do not query application log records.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A multi-account platform team is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team must find application errors in structured logs using a query language. Which feature is suitable?",
+    "options": {
+      "A": "Provisioned Concurrency",
+      "B": "Cache responses with an expiration policy",
+      "C": "Publish a CloudWatch custom metric and alarm on it",
+      "D": "CloudWatch Logs Insights"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Logs Insights queries centralized log events and supports operational troubleshooting.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide CloudWatch Logs Insights for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊必須使用查詢語言在結構化日誌中尋找應用程式錯誤。哪個功能適合？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。多帳戶平台團隊必須使用查詢語言在結構化日誌中尋找應用程式錯誤。哪個功能適合？",
         "options": {
-          "A": "VPC 路由表",
-          "B": "CloudWatch Logs Insights",
-          "C": "IAM Roles信任策略",
-          "D": "S3 生命週期規則"
+          "A": "預先配置並發",
+          "B": "使用過期策略快取回應",
+          "C": "發布 CloudWatch 自訂指標和警報",
+          "D": "CloudWatch Logs Insights"
         },
-        "explanation": "Logs Insights 查詢集中日誌事件並支援操作故障排除。\n其他選項不查詢應用程式日誌記錄。"
+        "explanation": "Logs Insights 查詢集中日誌事件並支援操作故障排除。\n其他選項適用於此領域的不同需求，但不能像 CloudWatch Logs Insights 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dva-c02-d4-003",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A regulated company needs to reduce Lambda cold-start latency for a predictable request rate. Which feature should be evaluated?",
+    "question": "A regulated company is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs to reduce Lambda cold-start latency for a predictable request rate. Which feature should be evaluated?",
     "options": {
-      "A": "A larger Route 53 TTL",
-      "B": "A KMS alias",
+      "A": "Publish a CloudWatch custom metric and alarm on it",
+      "B": "AWS X-Ray",
       "C": "Provisioned Concurrency",
-      "D": "An S3 bucket policy"
+      "D": "Cache responses with an expiration policy"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Provisioned Concurrency keeps execution environments initialized for lower startup latency.\nThe other choices do not control Lambda initialization.",
-    "taskStatement": "4.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "Provisioned Concurrency keeps execution environments initialized for lower startup latency.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Provisioned Concurrency for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司需要減少 Lambda 冷啟動延遲以獲得可預測的請求率。應該評估哪個功能？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。受監管的公司需要減少 Lambda 冷啟動延遲以獲得可預測的請求率。應該評估哪個功能？",
         "options": {
-          "A": "更大的 Route 53 TTL",
-          "B": "KMS 別名",
+          "A": "發布 CloudWatch 自訂指標和警報",
+          "B": "AWS X-Ray",
           "C": "預先配置並發",
-          "D": "S3 儲存桶策略"
+          "D": "使用過期策略快取回應"
         },
-        "explanation": "預置並發使執行環境保持初始化，以降低啟動延遲。\n其他選擇不控制 Lambda 初始化。"
+        "explanation": "預置並發使執行環境保持初始化，以降低啟動延遲。\n其他選項適用於此領域的不同需求，但不能像 預先配置並發 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dva-c02-d4-004",
-    "type": "single",
-    "question": "A startup preparing for a traffic increase must reduce repeated reads from a slow downstream service. Which application pattern is appropriate?",
-    "options": {
-      "A": "Retry every request immediately forever",
-      "B": "Disable timeouts",
-      "C": "Write credentials to logs",
-      "D": "Cache responses with an expiration policy"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Application-level caching can reduce repeated downstream calls and improve response latency.\nUnbounded retries and disabled timeouts can worsen outages, and logging credentials is unsafe.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team must reduce repeated reads from a slow downstream service. Which application pattern is appropriate?",
+    "options": {
+      "A": "CloudWatch Logs Insights",
+      "B": "Cache responses with an expiration policy",
+      "C": "Publish a CloudWatch custom metric and alarm on it",
+      "D": "AWS X-Ray"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Application-level caching can reduce repeated downstream calls and improve response latency.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Cache responses with an expiration policy for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司必須減少對緩慢下游服務的重複讀取。哪種應用模式適合？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。準備增加流量的新創公司必須減少對緩慢下游服務的重複讀取。哪種應用模式適合？",
         "options": {
-          "A": "立即永遠重試每個請求",
-          "B": "停用逾時",
-          "C": "將憑證寫入日誌",
-          "D": "使用過期策略快取回應"
+          "A": "CloudWatch Logs Insights",
+          "B": "使用過期策略快取回應",
+          "C": "發布 CloudWatch 自訂指標和警報",
+          "D": "AWS X-Ray"
         },
-        "explanation": "應用程式級快取可以減少重複的下游呼叫並改善回應延遲。\n無限制的重試和停用逾時可能會加劇中斷，並且記錄憑證是不安全的。"
+        "explanation": "應用程式級快取可以減少重複的下游呼叫並改善回應延遲。\n其他選項適用於此領域的不同需求，但不能像 使用過期策略快取回應 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dva-c02-d4-005",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An operations team supporting a critical workload needs a custom application metric for failed business transactions. Which approach fits?",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs a custom application metric for failed business transactions. Which approach fits?",
     "options": {
       "A": "Publish a CloudWatch custom metric and alarm on it",
-      "B": "Use a public DNS record",
-      "C": "Create an EBS snapshot",
-      "D": "Change an IAM username"
+      "B": "AWS X-Ray",
+      "C": "CloudWatch Logs Insights",
+      "D": "Provisioned Concurrency"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Custom metrics expose business failures to CloudWatch dashboards and alarms.\nThe other choices do not provide application observability.",
-    "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Custom metrics expose business failures to CloudWatch dashboards and alarms.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Publish a CloudWatch custom metric and alarm on it for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊需要針對失敗的業務事務制定自訂應用程式指標。哪種方法適合？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。支援關鍵工作負載的營運團隊需要針對失敗的業務事務制定自訂應用程式指標。哪種方法適合？",
         "options": {
           "A": "發布 CloudWatch 自訂指標和警報",
-          "B": "使用公共 DNS 記錄",
-          "C": "建立EBS快照",
-          "D": "更改 IAM Users名稱"
+          "B": "AWS X-Ray",
+          "C": "CloudWatch Logs Insights",
+          "D": "預先配置並發"
         },
-        "explanation": "自訂指標將業務故障暴露給 CloudWatch 儀表板和警報。\n其他選擇不提供應用程式可觀察性。"
+        "explanation": "自訂指標將業務故障暴露給 CloudWatch 儀表板和警報。\n其他選項適用於此領域的不同需求，但不能像 發布 CloudWatch 自訂指標和警報 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dva-c02-d4-006",
-    "type": "single",
-    "question": "A data platform team needs end-to-end traces across API Gateway, Lambda, and downstream services. Which service should be configured?",
-    "options": {
-      "A": "Amazon Route 53",
-      "B": "AWS X-Ray",
-      "C": "Amazon S3 Inventory",
-      "D": "AWS Budgets"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "X-Ray traces requests across supported service boundaries and helps identify latency and errors.\nThe other choices provide object reports, cost monitoring, or DNS.",
     "taskStatement": "4.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A data platform team is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs end-to-end traces across API Gateway, Lambda, and downstream services. Which service should be configured?",
+    "options": {
+      "A": "CloudWatch Logs Insights",
+      "B": "Provisioned Concurrency",
+      "C": "Cache responses with an expiration policy",
+      "D": "AWS X-Ray"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "X-Ray traces requests across supported service boundaries and helps identify latency and errors.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS X-Ray for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要跨 API Gateway、Lambda 和下游服務的端到端追蹤。應該配置哪個服務？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。資料平台團隊需要跨 API Gateway、Lambda 和下游服務的端到端追蹤。應該配置哪個服務？",
         "options": {
-          "A": "Amazon Route 53",
-          "B": "AWS X-Ray",
-          "C": "Amazon S3 Inventory",
-          "D": "AWS Budgets"
+          "A": "CloudWatch Logs Insights",
+          "B": "預先配置並發",
+          "C": "使用過期策略快取回應",
+          "D": "AWS X-Ray"
         },
-        "explanation": "X-Ray 跨支援的服務邊界追蹤請求，並協助識別延遲和錯誤。\n其他選項提供物件報告、成本監控或 DNS。"
+        "explanation": "X-Ray 跨支援的服務邊界追蹤請求，並協助識別延遲和錯誤。\n其他選項適用於此領域的不同需求，但不能像 AWS X-Ray 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dva-c02-d4-007",
-    "type": "single",
-    "question": "A security-conscious engineering team must find application errors in structured logs using a query language. Which feature is suitable?",
-    "options": {
-      "A": "An S3 lifecycle rule",
-      "B": "A VPC route table",
-      "C": "CloudWatch Logs Insights",
-      "D": "An IAM role trust policy"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "Logs Insights queries centralized log events and supports operational troubleshooting.\nThe other choices do not query application log records.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A security-conscious engineering team is planning two independent production changes. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The first team must find application errors in structured logs using a query language. A second team needs to reduce Lambda cold-start latency for a predictable request rate. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Provisioned Concurrency",
+      "B": "Cache responses with an expiration policy",
+      "C": "Publish a CloudWatch custom metric and alarm on it",
+      "D": "AWS X-Ray",
+      "E": "CloudWatch Logs Insights"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "CloudWatch Logs Insights meets the first requirement: Logs Insights queries centralized log events and supports operational troubleshooting. Provisioned Concurrency meets the second requirement: Provisioned Concurrency keeps execution environments initialized for lower startup latency.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊必須使用查詢語言在結構化日誌中尋找應用程式錯誤。哪個功能適合？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。第一項需求：受監管的公司需要減少 Lambda 冷啟動延遲以獲得可預測的請求率。第二項需求：多帳戶平台團隊必須使用查詢語言在結構化日誌中尋找應用程式錯誤。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "S3 生命週期規則",
-          "B": "VPC 路由表",
-          "C": "CloudWatch Logs Insights",
-          "D": "IAM Roles信任策略"
+          "A": "預先配置並發",
+          "B": "使用過期策略快取回應",
+          "C": "發布 CloudWatch 自訂指標和警報",
+          "D": "AWS X-Ray",
+          "E": "CloudWatch Logs Insights"
         },
-        "explanation": "Logs Insights 查詢集中日誌事件並支援操作故障排除。\n其他選項不查詢應用程式日誌記錄。"
+        "explanation": "預先配置並發 符合第一項需求：預置並發使執行環境保持初始化，以降低啟動延遲。 CloudWatch Logs Insights 符合第二項需求：Logs Insights 查詢集中日誌事件並支援操作故障排除。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "dva-c02-d4-008",
-    "type": "single",
-    "question": "A company migrating an existing workload needs to reduce Lambda cold-start latency for a predictable request rate. Which feature should be evaluated?",
-    "options": {
-      "A": "An S3 bucket policy",
-      "B": "A larger Route 53 TTL",
-      "C": "A KMS alias",
-      "D": "Provisioned Concurrency"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Provisioned Concurrency keeps execution environments initialized for lower startup latency.\nThe other choices do not control Lambda initialization.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A company migrating an existing workload is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs to reduce Lambda cold-start latency for a predictable request rate. Which feature should be evaluated?",
+    "options": {
+      "A": "AWS X-Ray",
+      "B": "Provisioned Concurrency",
+      "C": "Cache responses with an expiration policy",
+      "D": "Publish a CloudWatch custom metric and alarm on it"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Provisioned Concurrency keeps execution environments initialized for lower startup latency.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Provisioned Concurrency for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司需要減少 Lambda 冷啟動延遲以獲得可預測的請求率。應該評估哪個功能？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。遷移現有工作負載的公司需要減少 Lambda 冷啟動延遲以獲得可預測的請求率。應該評估哪個功能？",
         "options": {
-          "A": "S3 儲存桶策略",
-          "B": "更大的 Route 53 TTL",
-          "C": "KMS 別名",
-          "D": "預先配置並發"
+          "A": "AWS X-Ray",
+          "B": "預先配置並發",
+          "C": "使用過期策略快取回應",
+          "D": "發布 CloudWatch 自訂指標和警報"
         },
-        "explanation": "預置並發使執行環境保持初始化，以降低啟動延遲。\n其他選擇不控制 Lambda 初始化。"
+        "explanation": "預置並發使執行環境保持初始化，以降低啟動延遲。\n其他選項適用於此領域的不同需求，但不能像 預先配置並發 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dva-c02-d4-009",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team with strict recovery objectives must reduce repeated reads from a slow downstream service. Which application pattern is appropriate?",
+    "question": "A team with strict recovery objectives is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team must reduce repeated reads from a slow downstream service. Which application pattern is appropriate?",
     "options": {
       "A": "Cache responses with an expiration policy",
-      "B": "Retry every request immediately forever",
-      "C": "Disable timeouts",
-      "D": "Write credentials to logs"
+      "B": "Publish a CloudWatch custom metric and alarm on it",
+      "C": "AWS X-Ray",
+      "D": "CloudWatch Logs Insights"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Application-level caching can reduce repeated downstream calls and improve response latency.\nUnbounded retries and disabled timeouts can worsen outages, and logging credentials is unsafe.",
-    "taskStatement": "4.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "Application-level caching can reduce repeated downstream calls and improve response latency.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Cache responses with an expiration policy for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格恢復目標的團隊必須減少對緩慢下游服務的重複讀取。哪種應用模式適合？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。具有嚴格恢復目標的團隊必須減少對緩慢下游服務的重複讀取。哪種應用模式適合？",
         "options": {
           "A": "使用過期策略快取回應",
-          "B": "立即永遠重試每個請求",
-          "C": "停用逾時",
-          "D": "將憑證寫入日誌"
+          "B": "發布 CloudWatch 自訂指標和警報",
+          "C": "AWS X-Ray",
+          "D": "CloudWatch Logs Insights"
         },
-        "explanation": "應用程式級快取可以減少重複的下游呼叫並改善回應延遲。\n無限制的重試和停用逾時可能會加劇中斷，並且記錄憑證是不安全的。"
+        "explanation": "應用程式級快取可以減少重複的下游呼叫並改善回應延遲。\n其他選項適用於此領域的不同需求，但不能像 使用過期策略快取回應 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dva-c02-d4-010",
-    "type": "single",
-    "question": "A developer team preparing a release needs a custom application metric for failed business transactions. Which approach fits?",
-    "options": {
-      "A": "Change an IAM username",
-      "B": "Publish a CloudWatch custom metric and alarm on it",
-      "C": "Use a public DNS record",
-      "D": "Create an EBS snapshot"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Custom metrics expose business failures to CloudWatch dashboards and alarms.\nThe other choices do not provide application observability.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A developer team preparing a release is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs a custom application metric for failed business transactions. Which approach fits?",
+    "options": {
+      "A": "AWS X-Ray",
+      "B": "CloudWatch Logs Insights",
+      "C": "Provisioned Concurrency",
+      "D": "Publish a CloudWatch custom metric and alarm on it"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Custom metrics expose business failures to CloudWatch dashboards and alarms.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Publish a CloudWatch custom metric and alarm on it for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊需要針對失敗的業務事務制定自訂應用程式指標。哪種方法適合？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。準備發布的開發團隊需要針對失敗的業務事務制定自訂應用程式指標。哪種方法適合？",
         "options": {
-          "A": "更改 IAM Users名稱",
-          "B": "發布 CloudWatch 自訂指標和警報",
-          "C": "使用公共 DNS 記錄",
-          "D": "建立EBS快照"
+          "A": "AWS X-Ray",
+          "B": "CloudWatch Logs Insights",
+          "C": "預先配置並發",
+          "D": "發布 CloudWatch 自訂指標和警報"
         },
-        "explanation": "自訂指標將業務故障暴露給 CloudWatch 儀表板和警報。\n其他選擇不提供應用程式可觀察性。"
+        "explanation": "自訂指標將業務故障暴露給 CloudWatch 儀表板和警報。\n其他選項適用於此領域的不同需求，但不能像 發布 CloudWatch 自訂指標和警報 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dva-c02-d4-011",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An enterprise with several AWS Regions needs end-to-end traces across API Gateway, Lambda, and downstream services. Which service should be configured?",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs end-to-end traces across API Gateway, Lambda, and downstream services. Which service should be configured?",
     "options": {
-      "A": "AWS Budgets",
-      "B": "Amazon Route 53",
+      "A": "Provisioned Concurrency",
+      "B": "Cache responses with an expiration policy",
       "C": "AWS X-Ray",
-      "D": "Amazon S3 Inventory"
+      "D": "CloudWatch Logs Insights"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "X-Ray traces requests across supported service boundaries and helps identify latency and errors.\nThe other choices provide object reports, cost monitoring, or DNS.",
-    "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "X-Ray traces requests across supported service boundaries and helps identify latency and errors.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS X-Ray for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業需要跨 API Gateway、Lambda 和下游服務的端到端追蹤。應該配置哪個服務？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。擁有多個 AWS 區域的企業需要跨 API Gateway、Lambda 和下游服務的端到端追蹤。應該配置哪個服務？",
         "options": {
-          "A": "AWS Budgets",
-          "B": "Amazon Route 53",
+          "A": "預先配置並發",
+          "B": "使用過期策略快取回應",
           "C": "AWS X-Ray",
-          "D": "Amazon S3 Inventory"
+          "D": "CloudWatch Logs Insights"
         },
-        "explanation": "X-Ray 跨支援的服務邊界追蹤請求，並協助識別延遲和錯誤。\n其他選項提供物件報告、成本監控或 DNS。"
+        "explanation": "X-Ray 跨支援的服務邊界追蹤請求，並協助識別延遲和錯誤。\n其他選項適用於此領域的不同需求，但不能像 AWS X-Ray 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dva-c02-d4-012",
-    "type": "single",
-    "question": "A service owner reviewing an incident must find application errors in structured logs using a query language. Which feature is suitable?",
-    "options": {
-      "A": "An IAM role trust policy",
-      "B": "An S3 lifecycle rule",
-      "C": "A VPC route table",
-      "D": "CloudWatch Logs Insights"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Logs Insights queries centralized log events and supports operational troubleshooting.\nThe other choices do not query application log records.",
     "taskStatement": "4.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A service owner reviewing an incident is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team must find application errors in structured logs using a query language. Which feature is suitable?",
+    "options": {
+      "A": "Publish a CloudWatch custom metric and alarm on it",
+      "B": "CloudWatch Logs Insights",
+      "C": "Provisioned Concurrency",
+      "D": "Cache responses with an expiration policy"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Logs Insights queries centralized log events and supports operational troubleshooting.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide CloudWatch Logs Insights for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務擁有者必須使用查詢語言在結構化日誌中尋找應用程式錯誤。哪個功能適合？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。審查事件的服務擁有者必須使用查詢語言在結構化日誌中尋找應用程式錯誤。哪個功能適合？",
         "options": {
-          "A": "IAM Roles信任策略",
-          "B": "S3 生命週期規則",
-          "C": "VPC 路由表",
-          "D": "CloudWatch Logs Insights"
+          "A": "發布 CloudWatch 自訂指標和警報",
+          "B": "CloudWatch Logs Insights",
+          "C": "預先配置並發",
+          "D": "使用過期策略快取回應"
         },
-        "explanation": "Logs Insights 查詢集中日誌事件並支援操作故障排除。\n其他選項不查詢應用程式日誌記錄。"
+        "explanation": "Logs Insights 查詢集中日誌事件並支援操作故障排除。\n其他選項適用於此領域的不同需求，但不能像 CloudWatch Logs Insights 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dva-c02-d4-013",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team optimizing an existing implementation needs to reduce Lambda cold-start latency for a predictable request rate. Which feature should be evaluated?",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs to reduce Lambda cold-start latency for a predictable request rate. Which feature should be evaluated?",
     "options": {
       "A": "Provisioned Concurrency",
-      "B": "An S3 bucket policy",
-      "C": "A larger Route 53 TTL",
-      "D": "A KMS alias"
+      "B": "Cache responses with an expiration policy",
+      "C": "Publish a CloudWatch custom metric and alarm on it",
+      "D": "AWS X-Ray"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Provisioned Concurrency keeps execution environments initialized for lower startup latency.\nThe other choices do not control Lambda initialization.",
-    "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Provisioned Concurrency keeps execution environments initialized for lower startup latency.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Provisioned Concurrency for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊需要減少 Lambda 冷啟動延遲以獲得可預測的請求率。應該評估哪個功能？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。優化現有實施的團隊需要減少 Lambda 冷啟動延遲以獲得可預測的請求率。應該評估哪個功能？",
         "options": {
           "A": "預先配置並發",
-          "B": "S3 儲存桶策略",
-          "C": "更大的 Route 53 TTL",
-          "D": "KMS 別名"
+          "B": "使用過期策略快取回應",
+          "C": "發布 CloudWatch 自訂指標和警報",
+          "D": "AWS X-Ray"
         },
-        "explanation": "預置並發使執行環境保持初始化，以降低啟動延遲。\n其他選擇不控制 Lambda 初始化。"
+        "explanation": "預置並發使執行環境保持初始化，以降低啟動延遲。\n其他選項適用於此領域的不同需求，但不能像 預先配置並發 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dva-c02-d4-014",
-    "type": "single",
-    "question": "A company introducing an automated workflow must reduce repeated reads from a slow downstream service. Which application pattern is appropriate?",
-    "options": {
-      "A": "Write credentials to logs",
-      "B": "Cache responses with an expiration policy",
-      "C": "Retry every request immediately forever",
-      "D": "Disable timeouts"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Application-level caching can reduce repeated downstream calls and improve response latency.\nUnbounded retries and disabled timeouts can worsen outages, and logging credentials is unsafe.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A company introducing an automated workflow is planning two independent production changes. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The first team must reduce repeated reads from a slow downstream service. A second team needs a custom application metric for failed business transactions. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "CloudWatch Logs Insights",
+      "B": "Provisioned Concurrency",
+      "C": "Cache responses with an expiration policy",
+      "D": "Publish a CloudWatch custom metric and alarm on it",
+      "E": "AWS X-Ray"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Cache responses with an expiration policy meets the first requirement: Application-level caching can reduce repeated downstream calls and improve response latency. Publish a CloudWatch custom metric and alarm on it meets the second requirement: Custom metrics expose business failures to CloudWatch dashboards and alarms.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司必須減少來自緩慢下游服務的重複讀取。哪種應用模式適合？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。第一項需求：準備增加流量的新創公司必須減少對緩慢下游服務的重複讀取。第二項需求：支援關鍵工作負載的營運團隊需要針對失敗的業務事務制定自訂應用程式指標。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "將憑證寫入日誌",
-          "B": "使用過期策略快取回應",
-          "C": "立即永遠重試每個請求",
-          "D": "停用逾時"
+          "A": "CloudWatch Logs Insights",
+          "B": "預先配置並發",
+          "C": "使用過期策略快取回應",
+          "D": "發布 CloudWatch 自訂指標和警報",
+          "E": "AWS X-Ray"
         },
-        "explanation": "應用程式級快取可以減少重複的下游呼叫並改善回應延遲。\n無限制的重試和停用逾時可能會加劇中斷，並且記錄憑證是不安全的。"
+        "explanation": "使用過期策略快取回應 符合第一項需求：應用程式級快取可以減少重複的下游呼叫並改善回應延遲。 發布 CloudWatch 自訂指標和警報 符合第二項需求：自訂指標將業務故障暴露給 CloudWatch 儀表板和警報。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "dva-c02-d4-015",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An AWS administrator working in a shared environment needs a custom application metric for failed business transactions. Which approach fits?",
+    "question": "An AWS administrator working in a shared environment is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs a custom application metric for failed business transactions. Which approach fits?",
     "options": {
-      "A": "Create an EBS snapshot",
-      "B": "Change an IAM username",
+      "A": "CloudWatch Logs Insights",
+      "B": "Provisioned Concurrency",
       "C": "Publish a CloudWatch custom metric and alarm on it",
-      "D": "Use a public DNS record"
+      "D": "AWS X-Ray"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Custom metrics expose business failures to CloudWatch dashboards and alarms.\nThe other choices do not provide application observability.",
-    "taskStatement": "4.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "Custom metrics expose business failures to CloudWatch dashboards and alarms.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Publish a CloudWatch custom metric and alarm on it for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "在共用環境中工作的 AWS 管理員需要針對失敗的業務事務的自訂應用程式指標。哪種方法適合？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。在共用環境中工作的 AWS 管理員需要針對失敗的業務事務的自訂應用程式指標。哪種方法適合？",
         "options": {
-          "A": "建立EBS快照",
-          "B": "更改 IAM Users名稱",
+          "A": "CloudWatch Logs Insights",
+          "B": "預先配置並發",
           "C": "發布 CloudWatch 自訂指標和警報",
-          "D": "使用公共 DNS 記錄"
+          "D": "AWS X-Ray"
         },
-        "explanation": "自訂指標將業務故障暴露給 CloudWatch 儀表板和警報。\n其他選擇不提供應用程式可觀察性。"
+        "explanation": "自訂指標將業務故障暴露給 CloudWatch 儀表板和警報。\n其他選項適用於此領域的不同需求，但不能像 發布 CloudWatch 自訂指標和警報 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dva-c02-d4-016",
-    "type": "single",
-    "question": "A customer-facing application team needs end-to-end traces across API Gateway, Lambda, and downstream services. Which service should be configured?",
-    "options": {
-      "A": "Amazon S3 Inventory",
-      "B": "AWS Budgets",
-      "C": "Amazon Route 53",
-      "D": "AWS X-Ray"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "X-Ray traces requests across supported service boundaries and helps identify latency and errors.\nThe other choices provide object reports, cost monitoring, or DNS.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A customer-facing application team is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team needs end-to-end traces across API Gateway, Lambda, and downstream services. Which service should be configured?",
+    "options": {
+      "A": "Cache responses with an expiration policy",
+      "B": "AWS X-Ray",
+      "C": "CloudWatch Logs Insights",
+      "D": "Provisioned Concurrency"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "X-Ray traces requests across supported service boundaries and helps identify latency and errors.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS X-Ray for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊需要跨 API Gateway、Lambda 和下游服務的端到端追蹤。應該配置哪個服務？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。面向客戶的應用程式團隊需要跨 API Gateway、Lambda 和下游服務的端到端追蹤。應該配置哪個服務？",
         "options": {
-          "A": "Amazon S3 Inventory",
-          "B": "AWS Budgets",
-          "C": "Amazon Route 53",
-          "D": "AWS X-Ray"
+          "A": "使用過期策略快取回應",
+          "B": "AWS X-Ray",
+          "C": "CloudWatch Logs Insights",
+          "D": "預先配置並發"
         },
-        "explanation": "X-Ray 跨支援的服務邊界追蹤請求，並協助識別延遲和錯誤。\n其他選項提供物件報告、成本監控或 DNS。"
+        "explanation": "X-Ray 跨支援的服務邊界追蹤請求，並協助識別延遲和錯誤。\n其他選項適用於此領域的不同需求，但不能像 AWS X-Ray 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dva-c02-d4-017",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A platform team standardizing its AWS deployments must find application errors in structured logs using a query language. Which feature is suitable?",
+    "question": "A platform team standardizing its AWS deployments is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team must find application errors in structured logs using a query language. Which feature is suitable?",
     "options": {
       "A": "CloudWatch Logs Insights",
-      "B": "An IAM role trust policy",
-      "C": "An S3 lifecycle rule",
-      "D": "A VPC route table"
+      "B": "Provisioned Concurrency",
+      "C": "Cache responses with an expiration policy",
+      "D": "Publish a CloudWatch custom metric and alarm on it"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Logs Insights queries centralized log events and supports operational troubleshooting.\nThe other choices do not query application log records.",
-    "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Logs Insights queries centralized log events and supports operational troubleshooting.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide CloudWatch Logs Insights for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊必須使用查詢語言在結構化日誌中尋找應用程式錯誤。哪個功能適合？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。標準化其 AWS 部署的平台團隊必須使用查詢語言在結構化日誌中尋找應用程式錯誤。哪個功能適合？",
         "options": {
           "A": "CloudWatch Logs Insights",
-          "B": "IAM Roles信任策略",
-          "C": "S3 生命週期規則",
-          "D": "VPC 路由表"
+          "B": "預先配置並發",
+          "C": "使用過期策略快取回應",
+          "D": "發布 CloudWatch 自訂指標和警報"
         },
-        "explanation": "Logs Insights 查詢集中日誌事件並支援操作故障排除。\n其他選項不查詢應用程式日誌記錄。"
+        "explanation": "Logs Insights 查詢集中日誌事件並支援操作故障排除。\n其他選項適用於此領域的不同需求，但不能像 CloudWatch Logs Insights 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dva-c02-d4-018",
-    "type": "single",
-    "question": "A team preparing evidence for an audit needs to reduce Lambda cold-start latency for a predictable request rate. Which feature should be evaluated?",
-    "options": {
-      "A": "A KMS alias",
-      "B": "Provisioned Concurrency",
-      "C": "An S3 bucket policy",
-      "D": "A larger Route 53 TTL"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Provisioned Concurrency keeps execution environments initialized for lower startup latency.\nThe other choices do not control Lambda initialization.",
     "taskStatement": "4.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team preparing evidence for an audit is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team needs to reduce Lambda cold-start latency for a predictable request rate. Which feature should be evaluated?",
+    "options": {
+      "A": "Cache responses with an expiration policy",
+      "B": "Publish a CloudWatch custom metric and alarm on it",
+      "C": "AWS X-Ray",
+      "D": "Provisioned Concurrency"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Provisioned Concurrency keeps execution environments initialized for lower startup latency.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Provisioned Concurrency for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "為審計準備證據的團隊需要減少 Lambda 冷啟動延遲以獲得可預測的請求率。應該評估哪個功能？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。為審計準備證據的團隊需要減少 Lambda 冷啟動延遲以獲得可預測的請求率。應該評估哪個功能？",
         "options": {
-          "A": "KMS 別名",
-          "B": "預先配置並發",
-          "C": "S3 儲存桶策略",
-          "D": "更大的 Route 53 TTL"
+          "A": "使用過期策略快取回應",
+          "B": "發布 CloudWatch 自訂指標和警報",
+          "C": "AWS X-Ray",
+          "D": "預先配置並發"
         },
-        "explanation": "預置並發使執行環境保持初始化，以降低啟動延遲。\n其他選擇不控制 Lambda 初始化。"
+        "explanation": "預置並發使執行環境保持初始化，以降低啟動延遲。\n其他選項適用於此領域的不同需求，但不能像 預先配置並發 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dva-c02-d4-019",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A business replacing a manual process must reduce repeated reads from a slow downstream service. Which application pattern is appropriate?",
+    "question": "A business replacing a manual process is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team must reduce repeated reads from a slow downstream service. Which application pattern is appropriate?",
     "options": {
-      "A": "Disable timeouts",
-      "B": "Write credentials to logs",
+      "A": "AWS X-Ray",
+      "B": "CloudWatch Logs Insights",
       "C": "Cache responses with an expiration policy",
-      "D": "Retry every request immediately forever"
+      "D": "Publish a CloudWatch custom metric and alarm on it"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Application-level caching can reduce repeated downstream calls and improve response latency.\nUnbounded retries and disabled timeouts can worsen outages, and logging credentials is unsafe.",
-    "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Application-level caching can reduce repeated downstream calls and improve response latency.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Cache responses with an expiration policy for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "取代手動流程的企業必須減少對緩慢下游服務的重複讀取。哪種應用模式適合？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。取代手動流程的企業必須減少對緩慢下游服務的重複讀取。哪種應用模式適合？",
         "options": {
-          "A": "停用逾時",
-          "B": "將憑證寫入日誌",
+          "A": "AWS X-Ray",
+          "B": "CloudWatch Logs Insights",
           "C": "使用過期策略快取回應",
-          "D": "立即永遠重試每個請求"
+          "D": "發布 CloudWatch 自訂指標和警報"
         },
-        "explanation": "應用程式級快取可以減少重複的下游呼叫並改善回應延遲。\n無限制的重試和停用逾時可能會加劇中斷，並且記錄憑證是不安全的。"
+        "explanation": "應用程式級快取可以減少重複的下游呼叫並改善回應延遲。\n其他選項適用於此領域的不同需求，但不能像 使用過期策略快取回應 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dva-c02-d4-020",
-    "type": "single",
-    "question": "A team validating a design against the exam guide needs a custom application metric for failed business transactions. Which approach fits?",
-    "options": {
-      "A": "Use a public DNS record",
-      "B": "Create an EBS snapshot",
-      "C": "Change an IAM username",
-      "D": "Publish a CloudWatch custom metric and alarm on it"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Custom metrics expose business failures to CloudWatch dashboards and alarms.\nThe other choices do not provide application observability.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team validating a design against the exam guide is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team needs a custom application metric for failed business transactions. Which approach fits?",
+    "options": {
+      "A": "Provisioned Concurrency",
+      "B": "Publish a CloudWatch custom metric and alarm on it",
+      "C": "AWS X-Ray",
+      "D": "CloudWatch Logs Insights"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Custom metrics expose business failures to CloudWatch dashboards and alarms.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Publish a CloudWatch custom metric and alarm on it for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊需要針對失敗的業務交易制定自訂應用程式指標。哪種方法適合？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。根據考試指南驗證設計的團隊需要針對失敗的業務交易制定自訂應用程式指標。哪種方法適合？",
         "options": {
-          "A": "使用公共 DNS 記錄",
-          "B": "建立EBS快照",
-          "C": "更改 IAM Users名稱",
-          "D": "發布 CloudWatch 自訂指標和警報"
+          "A": "預先配置並發",
+          "B": "發布 CloudWatch 自訂指標和警報",
+          "C": "AWS X-Ray",
+          "D": "CloudWatch Logs Insights"
         },
-        "explanation": "自訂指標將業務故障暴露給 CloudWatch 儀表板和警報。\n其他選擇不提供應用程式可觀察性。"
+        "explanation": "自訂指標將業務故障暴露給 CloudWatch 儀表板和警報。\n其他選項適用於此領域的不同需求，但不能像 發布 CloudWatch 自訂指標和警報 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dva-c02-d4-021",
-    "type": "single",
-    "question": "A production team needs end-to-end traces across API Gateway, Lambda, and downstream services. Which service should be configured?",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A production team is planning two independent production changes. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The first team needs end-to-end traces across API Gateway, Lambda, and downstream services. A second team must find application errors in structured logs using a query language. Which TWO actions satisfy these requirements?",
     "options": {
       "A": "AWS X-Ray",
-      "B": "Amazon S3 Inventory",
-      "C": "AWS Budgets",
-      "D": "Amazon Route 53"
+      "B": "CloudWatch Logs Insights",
+      "C": "Provisioned Concurrency",
+      "D": "Cache responses with an expiration policy",
+      "E": "Publish a CloudWatch custom metric and alarm on it"
     },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "X-Ray traces requests across supported service boundaries and helps identify latency and errors.\nThe other choices provide object reports, cost monitoring, or DNS.",
-    "taskStatement": "4.3",
-    "lastVerified": "2026-08-09",
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS X-Ray meets the first requirement: X-Ray traces requests across supported service boundaries and helps identify latency and errors. CloudWatch Logs Insights meets the second requirement: Logs Insights queries centralized log events and supports operational troubleshooting.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "生產團隊需要跨 API Gateway、Lambda 和下游服務的端到端追蹤。應該配置哪個服務？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。第一項需求：生產團隊需要跨 API Gateway、Lambda 和下游服務的端到端追蹤。第二項需求：多帳戶平台團隊必須使用查詢語言在結構化日誌中尋找應用程式錯誤。哪兩項操作可以滿足這些需求？",
         "options": {
           "A": "AWS X-Ray",
-          "B": "Amazon S3 Inventory",
-          "C": "AWS Budgets",
-          "D": "Amazon Route 53"
+          "B": "CloudWatch Logs Insights",
+          "C": "預先配置並發",
+          "D": "使用過期策略快取回應",
+          "E": "發布 CloudWatch 自訂指標和警報"
         },
-        "explanation": "X-Ray 跨支援的服務邊界追蹤請求，並協助識別延遲和錯誤。\n其他選項提供物件報告、成本監控或 DNS。"
+        "explanation": "AWS X-Ray 符合第一項需求：X-Ray 跨支援的服務邊界追蹤請求，並協助識別延遲和錯誤。 CloudWatch Logs Insights 符合第二項需求：Logs Insights 查詢集中日誌事件並支援操作故障排除。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "dva-c02-d4-022",
-    "type": "single",
-    "question": "A multi-account platform team must find application errors in structured logs using a query language. Which feature is suitable?",
-    "options": {
-      "A": "A VPC route table",
-      "B": "CloudWatch Logs Insights",
-      "C": "An IAM role trust policy",
-      "D": "An S3 lifecycle rule"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Logs Insights queries centralized log events and supports operational troubleshooting.\nThe other choices do not query application log records.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A multi-account platform team is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team must find application errors in structured logs using a query language. Which feature is suitable?",
+    "options": {
+      "A": "Provisioned Concurrency",
+      "B": "Cache responses with an expiration policy",
+      "C": "Publish a CloudWatch custom metric and alarm on it",
+      "D": "CloudWatch Logs Insights"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Logs Insights queries centralized log events and supports operational troubleshooting.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide CloudWatch Logs Insights for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊必須使用查詢語言在結構化日誌中尋找應用程式錯誤。哪個功能適合？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。多帳戶平台團隊必須使用查詢語言在結構化日誌中尋找應用程式錯誤。哪個功能適合？",
         "options": {
-          "A": "VPC 路由表",
-          "B": "CloudWatch Logs Insights",
-          "C": "IAM Roles信任策略",
-          "D": "S3 生命週期規則"
+          "A": "預先配置並發",
+          "B": "使用過期策略快取回應",
+          "C": "發布 CloudWatch 自訂指標和警報",
+          "D": "CloudWatch Logs Insights"
         },
-        "explanation": "Logs Insights 查詢集中日誌事件並支援操作故障排除。\n其他選項不查詢應用程式日誌記錄。"
+        "explanation": "Logs Insights 查詢集中日誌事件並支援操作故障排除。\n其他選項適用於此領域的不同需求，但不能像 CloudWatch Logs Insights 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dva-c02-d4-023",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A regulated company needs to reduce Lambda cold-start latency for a predictable request rate. Which feature should be evaluated?",
+    "question": "A regulated company is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs to reduce Lambda cold-start latency for a predictable request rate. Which feature should be evaluated?",
     "options": {
-      "A": "A larger Route 53 TTL",
-      "B": "A KMS alias",
+      "A": "Publish a CloudWatch custom metric and alarm on it",
+      "B": "AWS X-Ray",
       "C": "Provisioned Concurrency",
-      "D": "An S3 bucket policy"
+      "D": "Cache responses with an expiration policy"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Provisioned Concurrency keeps execution environments initialized for lower startup latency.\nThe other choices do not control Lambda initialization.",
-    "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Provisioned Concurrency keeps execution environments initialized for lower startup latency.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Provisioned Concurrency for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司需要減少 Lambda 冷啟動延遲以獲得可預測的請求率。應該評估哪個功能？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。受監管的公司需要減少 Lambda 冷啟動延遲以獲得可預測的請求率。應該評估哪個功能？",
         "options": {
-          "A": "更大的 Route 53 TTL",
-          "B": "KMS 別名",
+          "A": "發布 CloudWatch 自訂指標和警報",
+          "B": "AWS X-Ray",
           "C": "預先配置並發",
-          "D": "S3 儲存桶策略"
+          "D": "使用過期策略快取回應"
         },
-        "explanation": "預置並發使執行環境保持初始化，以降低啟動延遲。\n其他選擇不控制 Lambda 初始化。"
+        "explanation": "預置並發使執行環境保持初始化，以降低啟動延遲。\n其他選項適用於此領域的不同需求，但不能像 預先配置並發 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dva-c02-d4-024",
-    "type": "single",
-    "question": "A startup preparing for a traffic increase must reduce repeated reads from a slow downstream service. Which application pattern is appropriate?",
-    "options": {
-      "A": "Retry every request immediately forever",
-      "B": "Disable timeouts",
-      "C": "Write credentials to logs",
-      "D": "Cache responses with an expiration policy"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Application-level caching can reduce repeated downstream calls and improve response latency.\nUnbounded retries and disabled timeouts can worsen outages, and logging credentials is unsafe.",
     "taskStatement": "4.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team must reduce repeated reads from a slow downstream service. Which application pattern is appropriate?",
+    "options": {
+      "A": "CloudWatch Logs Insights",
+      "B": "Cache responses with an expiration policy",
+      "C": "Publish a CloudWatch custom metric and alarm on it",
+      "D": "AWS X-Ray"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Application-level caching can reduce repeated downstream calls and improve response latency.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Cache responses with an expiration policy for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司必須減少對緩慢下游服務的重複讀取。哪種應用模式適合？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。準備增加流量的新創公司必須減少對緩慢下游服務的重複讀取。哪種應用模式適合？",
         "options": {
-          "A": "立即永遠重試每個請求",
-          "B": "停用逾時",
-          "C": "將憑證寫入日誌",
-          "D": "使用過期策略快取回應"
+          "A": "CloudWatch Logs Insights",
+          "B": "使用過期策略快取回應",
+          "C": "發布 CloudWatch 自訂指標和警報",
+          "D": "AWS X-Ray"
         },
-        "explanation": "應用程式級快取可以減少重複的下游呼叫並改善回應延遲。\n無限制的重試和停用逾時可能會加劇中斷，並且記錄憑證是不安全的。"
+        "explanation": "應用程式級快取可以減少重複的下游呼叫並改善回應延遲。\n其他選項適用於此領域的不同需求，但不能像 使用過期策略快取回應 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dva-c02-d4-025",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An operations team supporting a critical workload needs a custom application metric for failed business transactions. Which approach fits?",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs a custom application metric for failed business transactions. Which approach fits?",
     "options": {
       "A": "Publish a CloudWatch custom metric and alarm on it",
-      "B": "Use a public DNS record",
-      "C": "Create an EBS snapshot",
-      "D": "Change an IAM username"
+      "B": "AWS X-Ray",
+      "C": "CloudWatch Logs Insights",
+      "D": "Provisioned Concurrency"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Custom metrics expose business failures to CloudWatch dashboards and alarms.\nThe other choices do not provide application observability.",
-    "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Custom metrics expose business failures to CloudWatch dashboards and alarms.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Publish a CloudWatch custom metric and alarm on it for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊需要針對失敗的業務事務制定自訂應用程式指標。哪種方法適合？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。支援關鍵工作負載的營運團隊需要針對失敗的業務事務制定自訂應用程式指標。哪種方法適合？",
         "options": {
           "A": "發布 CloudWatch 自訂指標和警報",
-          "B": "使用公共 DNS 記錄",
-          "C": "建立EBS快照",
-          "D": "更改 IAM Users名稱"
+          "B": "AWS X-Ray",
+          "C": "CloudWatch Logs Insights",
+          "D": "預先配置並發"
         },
-        "explanation": "自訂指標將業務故障暴露給 CloudWatch 儀表板和警報。\n其他選擇不提供應用程式可觀察性。"
+        "explanation": "自訂指標將業務故障暴露給 CloudWatch 儀表板和警報。\n其他選項適用於此領域的不同需求，但不能像 發布 CloudWatch 自訂指標和警報 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dva-c02-d4-026",
-    "type": "single",
-    "question": "A data platform team needs end-to-end traces across API Gateway, Lambda, and downstream services. Which service should be configured?",
-    "options": {
-      "A": "Amazon Route 53",
-      "B": "AWS X-Ray",
-      "C": "Amazon S3 Inventory",
-      "D": "AWS Budgets"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "X-Ray traces requests across supported service boundaries and helps identify latency and errors.\nThe other choices provide object reports, cost monitoring, or DNS.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A data platform team is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs end-to-end traces across API Gateway, Lambda, and downstream services. Which service should be configured?",
+    "options": {
+      "A": "CloudWatch Logs Insights",
+      "B": "Provisioned Concurrency",
+      "C": "Cache responses with an expiration policy",
+      "D": "AWS X-Ray"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "X-Ray traces requests across supported service boundaries and helps identify latency and errors.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS X-Ray for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要跨 API Gateway、Lambda 和下游服務的端到端追蹤。應該配置哪個服務？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。資料平台團隊需要跨 API Gateway、Lambda 和下游服務的端到端追蹤。應該配置哪個服務？",
         "options": {
-          "A": "Amazon Route 53",
-          "B": "AWS X-Ray",
-          "C": "Amazon S3 Inventory",
-          "D": "AWS Budgets"
+          "A": "CloudWatch Logs Insights",
+          "B": "預先配置並發",
+          "C": "使用過期策略快取回應",
+          "D": "AWS X-Ray"
         },
-        "explanation": "X-Ray 跨支援的服務邊界追蹤請求，並協助識別延遲和錯誤。\n其他選項提供物件報告、成本監控或 DNS。"
+        "explanation": "X-Ray 跨支援的服務邊界追蹤請求，並協助識別延遲和錯誤。\n其他選項適用於此領域的不同需求，但不能像 AWS X-Ray 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dva-c02-d4-027",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A security-conscious engineering team must find application errors in structured logs using a query language. Which feature is suitable?",
+    "question": "A security-conscious engineering team is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team must find application errors in structured logs using a query language. Which feature is suitable?",
     "options": {
-      "A": "An S3 lifecycle rule",
-      "B": "A VPC route table",
+      "A": "Cache responses with an expiration policy",
+      "B": "Publish a CloudWatch custom metric and alarm on it",
       "C": "CloudWatch Logs Insights",
-      "D": "An IAM role trust policy"
+      "D": "Provisioned Concurrency"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Logs Insights queries centralized log events and supports operational troubleshooting.\nThe other choices do not query application log records.",
-    "taskStatement": "4.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "Logs Insights queries centralized log events and supports operational troubleshooting.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide CloudWatch Logs Insights for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊必須使用查詢語言在結構化日誌中尋找應用程式錯誤。哪個功能適合？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。具有安全意識的工程團隊必須使用查詢語言在結構化日誌中尋找應用程式錯誤。哪個功能適合？",
         "options": {
-          "A": "S3 生命週期規則",
-          "B": "VPC 路由表",
+          "A": "使用過期策略快取回應",
+          "B": "發布 CloudWatch 自訂指標和警報",
           "C": "CloudWatch Logs Insights",
-          "D": "IAM Roles信任策略"
+          "D": "預先配置並發"
         },
-        "explanation": "Logs Insights 查詢集中日誌事件並支援操作故障排除。\n其他選項不查詢應用程式日誌記錄。"
+        "explanation": "Logs Insights 查詢集中日誌事件並支援操作故障排除。\n其他選項適用於此領域的不同需求，但不能像 CloudWatch Logs Insights 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dva-c02-d4-028",
-    "type": "single",
-    "question": "A company migrating an existing workload needs to reduce Lambda cold-start latency for a predictable request rate. Which feature should be evaluated?",
-    "options": {
-      "A": "An S3 bucket policy",
-      "B": "A larger Route 53 TTL",
-      "C": "A KMS alias",
-      "D": "Provisioned Concurrency"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Provisioned Concurrency keeps execution environments initialized for lower startup latency.\nThe other choices do not control Lambda initialization.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A company migrating an existing workload is planning two independent production changes. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The first team needs to reduce Lambda cold-start latency for a predictable request rate. A second team must reduce repeated reads from a slow downstream service. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Publish a CloudWatch custom metric and alarm on it",
+      "B": "AWS X-Ray",
+      "C": "CloudWatch Logs Insights",
+      "D": "Provisioned Concurrency",
+      "E": "Cache responses with an expiration policy"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Provisioned Concurrency meets the first requirement: Provisioned Concurrency keeps execution environments initialized for lower startup latency. Cache responses with an expiration policy meets the second requirement: Application-level caching can reduce repeated downstream calls and improve response latency.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司需要減少 Lambda 冷啟動延遲以獲得可預測的請求率。應該評估哪個功能？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。第一項需求：受監管的公司需要減少 Lambda 冷啟動延遲以獲得可預測的請求率。第二項需求：準備增加流量的新創公司必須減少對緩慢下游服務的重複讀取。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "S3 儲存桶策略",
-          "B": "更大的 Route 53 TTL",
-          "C": "KMS 別名",
-          "D": "預先配置並發"
+          "A": "發布 CloudWatch 自訂指標和警報",
+          "B": "AWS X-Ray",
+          "C": "CloudWatch Logs Insights",
+          "D": "預先配置並發",
+          "E": "使用過期策略快取回應"
         },
-        "explanation": "預置並發使執行環境保持初始化，以降低啟動延遲。\n其他選擇不控制 Lambda 初始化。"
+        "explanation": "預先配置並發 符合第一項需求：預置並發使執行環境保持初始化，以降低啟動延遲。 使用過期策略快取回應 符合第二項需求：應用程式級快取可以減少重複的下游呼叫並改善回應延遲。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "dva-c02-d4-029",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team with strict recovery objectives must reduce repeated reads from a slow downstream service. Which application pattern is appropriate?",
+    "question": "A team with strict recovery objectives is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team must reduce repeated reads from a slow downstream service. Which application pattern is appropriate?",
     "options": {
       "A": "Cache responses with an expiration policy",
-      "B": "Retry every request immediately forever",
-      "C": "Disable timeouts",
-      "D": "Write credentials to logs"
+      "B": "Publish a CloudWatch custom metric and alarm on it",
+      "C": "AWS X-Ray",
+      "D": "CloudWatch Logs Insights"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Application-level caching can reduce repeated downstream calls and improve response latency.\nUnbounded retries and disabled timeouts can worsen outages, and logging credentials is unsafe.",
-    "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Application-level caching can reduce repeated downstream calls and improve response latency.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Cache responses with an expiration policy for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格恢復目標的團隊必須減少對緩慢下游服務的重複讀取。哪種應用模式適合？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。具有嚴格恢復目標的團隊必須減少對緩慢下游服務的重複讀取。哪種應用模式適合？",
         "options": {
           "A": "使用過期策略快取回應",
-          "B": "立即永遠重試每個請求",
-          "C": "停用逾時",
-          "D": "將憑證寫入日誌"
+          "B": "發布 CloudWatch 自訂指標和警報",
+          "C": "AWS X-Ray",
+          "D": "CloudWatch Logs Insights"
         },
-        "explanation": "應用程式級快取可以減少重複的下游呼叫並改善回應延遲。\n無限制的重試和停用逾時可能會加劇中斷，並且記錄憑證是不安全的。"
+        "explanation": "應用程式級快取可以減少重複的下游呼叫並改善回應延遲。\n其他選項適用於此領域的不同需求，但不能像 使用過期策略快取回應 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dva-c02-d4-030",
-    "type": "single",
-    "question": "A developer team preparing a release needs a custom application metric for failed business transactions. Which approach fits?",
-    "options": {
-      "A": "Change an IAM username",
-      "B": "Publish a CloudWatch custom metric and alarm on it",
-      "C": "Use a public DNS record",
-      "D": "Create an EBS snapshot"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Custom metrics expose business failures to CloudWatch dashboards and alarms.\nThe other choices do not provide application observability.",
     "taskStatement": "4.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A developer team preparing a release is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs a custom application metric for failed business transactions. Which approach fits?",
+    "options": {
+      "A": "AWS X-Ray",
+      "B": "CloudWatch Logs Insights",
+      "C": "Provisioned Concurrency",
+      "D": "Publish a CloudWatch custom metric and alarm on it"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Custom metrics expose business failures to CloudWatch dashboards and alarms.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Publish a CloudWatch custom metric and alarm on it for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊需要針對失敗的業務事務制定自訂應用程式指標。哪種方法適合？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。準備發布的開發團隊需要針對失敗的業務事務制定自訂應用程式指標。哪種方法適合？",
         "options": {
-          "A": "更改 IAM Users名稱",
-          "B": "發布 CloudWatch 自訂指標和警報",
-          "C": "使用公共 DNS 記錄",
-          "D": "建立EBS快照"
+          "A": "AWS X-Ray",
+          "B": "CloudWatch Logs Insights",
+          "C": "預先配置並發",
+          "D": "發布 CloudWatch 自訂指標和警報"
         },
-        "explanation": "自訂指標將業務故障暴露給 CloudWatch 儀表板和警報。\n其他選擇不提供應用程式可觀察性。"
+        "explanation": "自訂指標將業務故障暴露給 CloudWatch 儀表板和警報。\n其他選項適用於此領域的不同需求，但不能像 發布 CloudWatch 自訂指標和警報 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dva-c02-d4-031",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An enterprise with several AWS Regions needs end-to-end traces across API Gateway, Lambda, and downstream services. Which service should be configured?",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs end-to-end traces across API Gateway, Lambda, and downstream services. Which service should be configured?",
     "options": {
-      "A": "AWS Budgets",
-      "B": "Amazon Route 53",
+      "A": "Provisioned Concurrency",
+      "B": "Cache responses with an expiration policy",
       "C": "AWS X-Ray",
-      "D": "Amazon S3 Inventory"
+      "D": "CloudWatch Logs Insights"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "X-Ray traces requests across supported service boundaries and helps identify latency and errors.\nThe other choices provide object reports, cost monitoring, or DNS.",
-    "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "X-Ray traces requests across supported service boundaries and helps identify latency and errors.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS X-Ray for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業需要跨 API Gateway、Lambda 和下游服務的端到端追蹤。應該配置哪個服務？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。擁有多個 AWS 區域的企業需要跨 API Gateway、Lambda 和下游服務的端到端追蹤。應該配置哪個服務？",
         "options": {
-          "A": "AWS Budgets",
-          "B": "Amazon Route 53",
+          "A": "預先配置並發",
+          "B": "使用過期策略快取回應",
           "C": "AWS X-Ray",
-          "D": "Amazon S3 Inventory"
+          "D": "CloudWatch Logs Insights"
         },
-        "explanation": "X-Ray 跨支援的服務邊界追蹤請求，並協助識別延遲和錯誤。\n其他選項提供物件報告、成本監控或 DNS。"
+        "explanation": "X-Ray 跨支援的服務邊界追蹤請求，並協助識別延遲和錯誤。\n其他選項適用於此領域的不同需求，但不能像 AWS X-Ray 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dva-c02-d4-032",
-    "type": "single",
-    "question": "A service owner reviewing an incident must find application errors in structured logs using a query language. Which feature is suitable?",
-    "options": {
-      "A": "An IAM role trust policy",
-      "B": "An S3 lifecycle rule",
-      "C": "A VPC route table",
-      "D": "CloudWatch Logs Insights"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Logs Insights queries centralized log events and supports operational troubleshooting.\nThe other choices do not query application log records.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A service owner reviewing an incident is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team must find application errors in structured logs using a query language. Which feature is suitable?",
+    "options": {
+      "A": "Publish a CloudWatch custom metric and alarm on it",
+      "B": "CloudWatch Logs Insights",
+      "C": "Provisioned Concurrency",
+      "D": "Cache responses with an expiration policy"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Logs Insights queries centralized log events and supports operational troubleshooting.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide CloudWatch Logs Insights for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務擁有者必須使用查詢語言在結構化日誌中尋找應用程式錯誤。哪個功能適合？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。審查事件的服務擁有者必須使用查詢語言在結構化日誌中尋找應用程式錯誤。哪個功能適合？",
         "options": {
-          "A": "IAM Roles信任策略",
-          "B": "S3 生命週期規則",
-          "C": "VPC 路由表",
-          "D": "CloudWatch Logs Insights"
+          "A": "發布 CloudWatch 自訂指標和警報",
+          "B": "CloudWatch Logs Insights",
+          "C": "預先配置並發",
+          "D": "使用過期策略快取回應"
         },
-        "explanation": "Logs Insights 查詢集中日誌事件並支援操作故障排除。\n其他選項不查詢應用程式日誌記錄。"
+        "explanation": "Logs Insights 查詢集中日誌事件並支援操作故障排除。\n其他選項適用於此領域的不同需求，但不能像 CloudWatch Logs Insights 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dva-c02-d4-033",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team optimizing an existing implementation needs to reduce Lambda cold-start latency for a predictable request rate. Which feature should be evaluated?",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs to reduce Lambda cold-start latency for a predictable request rate. Which feature should be evaluated?",
     "options": {
       "A": "Provisioned Concurrency",
-      "B": "An S3 bucket policy",
-      "C": "A larger Route 53 TTL",
-      "D": "A KMS alias"
+      "B": "Cache responses with an expiration policy",
+      "C": "Publish a CloudWatch custom metric and alarm on it",
+      "D": "AWS X-Ray"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Provisioned Concurrency keeps execution environments initialized for lower startup latency.\nThe other choices do not control Lambda initialization.",
-    "taskStatement": "4.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "Provisioned Concurrency keeps execution environments initialized for lower startup latency.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Provisioned Concurrency for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊需要減少 Lambda 冷啟動延遲以獲得可預測的請求率。應該評估哪個功能？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。優化現有實施的團隊需要減少 Lambda 冷啟動延遲以獲得可預測的請求率。應該評估哪個功能？",
         "options": {
           "A": "預先配置並發",
-          "B": "S3 儲存桶策略",
-          "C": "更大的 Route 53 TTL",
-          "D": "KMS 別名"
+          "B": "使用過期策略快取回應",
+          "C": "發布 CloudWatch 自訂指標和警報",
+          "D": "AWS X-Ray"
         },
-        "explanation": "預置並發使執行環境保持初始化，以降低啟動延遲。\n其他選擇不控制 Lambda 初始化。"
+        "explanation": "預置並發使執行環境保持初始化，以降低啟動延遲。\n其他選項適用於此領域的不同需求，但不能像 預先配置並發 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dva-c02-d4-034",
-    "type": "single",
-    "question": "A company introducing an automated workflow must reduce repeated reads from a slow downstream service. Which application pattern is appropriate?",
-    "options": {
-      "A": "Write credentials to logs",
-      "B": "Cache responses with an expiration policy",
-      "C": "Retry every request immediately forever",
-      "D": "Disable timeouts"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Application-level caching can reduce repeated downstream calls and improve response latency.\nUnbounded retries and disabled timeouts can worsen outages, and logging credentials is unsafe.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A company introducing an automated workflow is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team must reduce repeated reads from a slow downstream service. Which application pattern is appropriate?",
+    "options": {
+      "A": "Publish a CloudWatch custom metric and alarm on it",
+      "B": "AWS X-Ray",
+      "C": "CloudWatch Logs Insights",
+      "D": "Cache responses with an expiration policy"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Application-level caching can reduce repeated downstream calls and improve response latency.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Cache responses with an expiration policy for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司必須減少來自緩慢下游服務的重複讀取。哪種應用模式適合？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。引入自動化工作流程的公司必須減少來自緩慢下游服務的重複讀取。哪種應用模式適合？",
         "options": {
-          "A": "將憑證寫入日誌",
-          "B": "使用過期策略快取回應",
-          "C": "立即永遠重試每個請求",
-          "D": "停用逾時"
+          "A": "發布 CloudWatch 自訂指標和警報",
+          "B": "AWS X-Ray",
+          "C": "CloudWatch Logs Insights",
+          "D": "使用過期策略快取回應"
         },
-        "explanation": "應用程式級快取可以減少重複的下游呼叫並改善回應延遲。\n無限制的重試和停用逾時可能會加劇中斷，並且記錄憑證是不安全的。"
+        "explanation": "應用程式級快取可以減少重複的下游呼叫並改善回應延遲。\n其他選項適用於此領域的不同需求，但不能像 使用過期策略快取回應 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dva-c02-d4-035",
-    "type": "single",
-    "question": "An AWS administrator working in a shared environment needs a custom application metric for failed business transactions. Which approach fits?",
-    "options": {
-      "A": "Create an EBS snapshot",
-      "B": "Change an IAM username",
-      "C": "Publish a CloudWatch custom metric and alarm on it",
-      "D": "Use a public DNS record"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "Custom metrics expose business failures to CloudWatch dashboards and alarms.\nThe other choices do not provide application observability.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "An AWS administrator working in a shared environment is planning two independent production changes. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The first team needs a custom application metric for failed business transactions. A second team needs end-to-end traces across API Gateway, Lambda, and downstream services. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Cache responses with an expiration policy",
+      "B": "Publish a CloudWatch custom metric and alarm on it",
+      "C": "AWS X-Ray",
+      "D": "CloudWatch Logs Insights",
+      "E": "Provisioned Concurrency"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Publish a CloudWatch custom metric and alarm on it meets the first requirement: Custom metrics expose business failures to CloudWatch dashboards and alarms. AWS X-Ray meets the second requirement: X-Ray traces requests across supported service boundaries and helps identify latency and errors.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "在共用環境中工作的 AWS 管理員需要針對失敗的業務事務的自訂應用程式指標。哪種方法適合？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。第一項需求：支援關鍵工作負載的營運團隊需要針對失敗的業務事務制定自訂應用程式指標。第二項需求：生產團隊需要跨 API Gateway、Lambda 和下游服務的端到端追蹤。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "建立EBS快照",
-          "B": "更改 IAM Users名稱",
-          "C": "發布 CloudWatch 自訂指標和警報",
-          "D": "使用公共 DNS 記錄"
+          "A": "使用過期策略快取回應",
+          "B": "發布 CloudWatch 自訂指標和警報",
+          "C": "AWS X-Ray",
+          "D": "CloudWatch Logs Insights",
+          "E": "預先配置並發"
         },
-        "explanation": "自訂指標將業務故障暴露給 CloudWatch 儀表板和警報。\n其他選擇不提供應用程式可觀察性。"
+        "explanation": "發布 CloudWatch 自訂指標和警報 符合第一項需求：自訂指標將業務故障暴露給 CloudWatch 儀表板和警報。 AWS X-Ray 符合第二項需求：X-Ray 跨支援的服務邊界追蹤請求，並協助識別延遲和錯誤。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   }

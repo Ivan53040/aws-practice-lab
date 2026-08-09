@@ -1,1429 +1,1464 @@
 [
   {
     "id": "dea-c01-d2-001",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A production team needs SQL analytics over large columnar tables with a managed warehouse. Which service fits?",
+    "question": "A production team is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team needs SQL analytics over large columnar tables with a managed warehouse. Which service fits?",
     "options": {
-      "A": "Amazon SQS",
-      "B": "Amazon Cognito",
+      "A": "An S3 Lifecycle rule",
+      "B": "Use a schema registry or catalog with versioned compatible schemas",
       "C": "Amazon Redshift",
-      "D": "Amazon EFS"
+      "D": "AWS Glue Data Catalog with a crawler"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Redshift is a managed analytical data warehouse optimized for columnar scans and parallel queries.\nThe other choices provide file storage, queues, or identity.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Redshift is a managed analytical data warehouse optimized for columnar scans and parallel queries.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Redshift for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "生產團隊需要透過託管倉庫對大型柱狀表進行 SQL 分析。適合哪種服務？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。生產團隊需要透過託管倉庫對大型柱狀表進行 SQL 分析。適合哪種服務？",
         "options": {
-          "A": "Amazon SQS",
-          "B": "Amazon Cognito",
+          "A": "S3 生命週期規則",
+          "B": "使用具有版本化相容模式的模式註冊表或目錄",
           "C": "Amazon Redshift",
-          "D": "Amazon EFS"
+          "D": "帶有爬網程式的 AWS Glue 資料目錄"
         },
-        "explanation": "Redshift 是一個針對列式掃描和平行查詢進行最佳化的託管分析資料倉儲。\n其他選擇提供文件儲存、佇列或身分。"
+        "explanation": "Redshift 是一個針對列式掃描和平行查詢進行最佳化的託管分析資料倉儲。\n其他選項適用於此領域的不同需求，但不能像 Amazon Redshift 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d2-002",
-    "type": "single",
-    "question": "A multi-account platform team needs a technical catalog of table schemas discovered from S3 data. Which feature should be used?",
-    "options": {
-      "A": "A Route 53 hosted zone",
-      "B": "An EC2 security group",
-      "C": "A CloudFront cache policy",
-      "D": "AWS Glue Data Catalog with a crawler"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "A Glue crawler discovers schemas and stores table metadata in the Glue Data Catalog.\nThe other choices do not catalog data schemas.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A multi-account platform team is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team needs a technical catalog of table schemas discovered from S3 data. Which feature should be used?",
+    "options": {
+      "A": "Amazon DynamoDB",
+      "B": "AWS Glue Data Catalog with a crawler",
+      "C": "An S3 Lifecycle rule",
+      "D": "Use a schema registry or catalog with versioned compatible schemas"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "A Glue crawler discovers schemas and stores table metadata in the Glue Data Catalog.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Glue Data Catalog with a crawler for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊需要從 S3 資料中發現的表格模式的技術目錄。應該使用哪個功能？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。多帳戶平台團隊需要從 S3 資料中發現的表格模式的技術目錄。應該使用哪個功能？",
         "options": {
-          "A": "Route 53 託管區域",
-          "B": "EC2 安全群組",
-          "C": "CloudFront 快取策略",
-          "D": "帶有爬網程式的 AWS Glue 資料目錄"
+          "A": "Amazon DynamoDB",
+          "B": "帶有爬網程式的 AWS Glue 資料目錄",
+          "C": "S3 生命週期規則",
+          "D": "使用具有版本化相容模式的模式註冊表或目錄"
         },
-        "explanation": "Glue 爬蟲會發現模式並將表元資料儲存在 Glue 資料目錄中。\n其他選擇不對資料模式進行編目。"
+        "explanation": "Glue 爬蟲會發現模式並將表元資料儲存在 Glue 資料目錄中。\n其他選項適用於此領域的不同需求，但不能像 帶有爬網程式的 AWS Glue 資料目錄 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d2-003",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A regulated company needs to remove old objects automatically after a retention period. Which feature should be configured?",
+    "question": "A regulated company is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team needs to remove old objects automatically after a retention period. Which feature should be configured?",
     "options": {
       "A": "An S3 Lifecycle rule",
-      "B": "An IAM permission boundary",
-      "C": "A VPC endpoint",
-      "D": "An SNS subscription"
+      "B": "Use a schema registry or catalog with versioned compatible schemas",
+      "C": "Amazon DynamoDB",
+      "D": "Amazon Redshift"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "S3 Lifecycle rules transition or expire objects based on age and storage requirements.\nThe other choices manage IAM, private connectivity, or notifications.",
-    "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "S3 Lifecycle rules transition or expire objects based on age and storage requirements.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide An S3 Lifecycle rule for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司需要在保留期後自動刪除舊物件。應該配置哪個功能？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。受監管的公司需要在保留期後自動刪除舊物件。應該配置哪個功能？",
         "options": {
           "A": "S3 生命週期規則",
-          "B": "IAM Permissions邊界",
-          "C": "VPC 終端節點",
-          "D": "SNS 訂閱"
+          "B": "使用具有版本化相容模式的模式註冊表或目錄",
+          "C": "Amazon DynamoDB",
+          "D": "Amazon Redshift"
         },
-        "explanation": "S3 生命週期規則會根據年齡和儲存需求來轉換或過期物件。\n其他選項管理 IAM、專用連線或通知。"
+        "explanation": "S3 生命週期規則會根據年齡和儲存需求來轉換或過期物件。\n其他選項適用於此領域的不同需求，但不能像 S3 生命週期規則 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d2-004",
-    "type": "single",
-    "question": "A startup preparing for a traffic increase needs flexible schema evolution for semi-structured records. Which design is appropriate?",
-    "options": {
-      "A": "Disable validation",
-      "B": "Use a schema registry or catalog with versioned compatible schemas",
-      "C": "Require every consumer to share an immutable table forever",
-      "D": "Use a security group as a schema"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Versioned schemas let producers and consumers evolve without breaking compatible readers.\nThe other choices do not manage data schema compatibility.",
     "taskStatement": "2.4",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team needs flexible schema evolution for semi-structured records. Which design is appropriate?",
+    "options": {
+      "A": "Amazon DynamoDB",
+      "B": "Amazon Redshift",
+      "C": "AWS Glue Data Catalog with a crawler",
+      "D": "Use a schema registry or catalog with versioned compatible schemas"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Versioned schemas let producers and consumers evolve without breaking compatible readers.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Use a schema registry or catalog with versioned compatible schemas for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司需要針對半結構化記錄進行靈活的模式演進。哪種設計合適？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。準備增加流量的新創公司需要針對半結構化記錄進行靈活的模式演進。哪種設計合適？",
         "options": {
-          "A": "禁用驗證",
-          "B": "使用具有版本化相容模式的模式註冊表或目錄",
-          "C": "要求每個消費者永遠共享一個不可變的表",
-          "D": "使用安全性群組作為架構"
+          "A": "Amazon DynamoDB",
+          "B": "Amazon Redshift",
+          "C": "帶有爬網程式的 AWS Glue 資料目錄",
+          "D": "使用具有版本化相容模式的模式註冊表或目錄"
         },
-        "explanation": "版本化模式讓生產者和消費者在不破壞相容讀取器的情況下持續發展。\n其他選擇不管理資料模式相容性。"
+        "explanation": "版本化模式讓生產者和消費者在不破壞相容讀取器的情況下持續發展。\n其他選項適用於此領域的不同需求，但不能像 使用具有版本化相容模式的模式註冊表或目錄 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d2-005",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An operations team supporting a critical workload needs a key-value store with predictable single-digit millisecond access at scale. Which service should be evaluated?",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team needs a key-value store with predictable single-digit millisecond access at scale. Which service should be evaluated?",
     "options": {
-      "A": "Amazon EFS",
-      "B": "Amazon SES",
+      "A": "AWS Glue Data Catalog with a crawler",
+      "B": "An S3 Lifecycle rule",
       "C": "Amazon DynamoDB",
-      "D": "Amazon CloudFront"
+      "D": "Amazon Redshift"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "DynamoDB is a managed key-value and document database designed for low-latency access at scale.\nThe other choices deliver content, store files, or send email.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "DynamoDB is a managed key-value and document database designed for low-latency access at scale.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon DynamoDB for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊需要一個具有可預測的個位數毫秒級大規模存取的鍵值儲存。應該評估哪些服務？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。支援關鍵工作負載的營運團隊需要一個具有可預測的個位數毫秒級大規模存取的鍵值儲存。應該評估哪些服務？",
         "options": {
-          "A": "Amazon EFS",
-          "B": "Amazon SES",
+          "A": "帶有爬網程式的 AWS Glue 資料目錄",
+          "B": "S3 生命週期規則",
           "C": "Amazon DynamoDB",
-          "D": "Amazon CloudFront"
+          "D": "Amazon Redshift"
         },
-        "explanation": "DynamoDB 是一種託管鍵值和文件資料庫，專為大規模低延遲存取而設計。\n其他選項提供內容、儲存檔案或發送電子郵件。"
+        "explanation": "DynamoDB 是一種託管鍵值和文件資料庫，專為大規模低延遲存取而設計。\n其他選項適用於此領域的不同需求，但不能像 Amazon DynamoDB 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d2-006",
-    "type": "single",
-    "question": "A data platform team needs SQL analytics over large columnar tables with a managed warehouse. Which service fits?",
-    "options": {
-      "A": "Amazon EFS",
-      "B": "Amazon SQS",
-      "C": "Amazon Cognito",
-      "D": "Amazon Redshift"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Redshift is a managed analytical data warehouse optimized for columnar scans and parallel queries.\nThe other choices provide file storage, queues, or identity.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A data platform team is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs SQL analytics over large columnar tables with a managed warehouse. Which service fits?",
+    "options": {
+      "A": "Use a schema registry or catalog with versioned compatible schemas",
+      "B": "Amazon Redshift",
+      "C": "AWS Glue Data Catalog with a crawler",
+      "D": "An S3 Lifecycle rule"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Redshift is a managed analytical data warehouse optimized for columnar scans and parallel queries.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Redshift for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要透過託管倉庫對大型柱狀表進行 SQL 分析。適合哪種服務？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。資料平台團隊需要透過託管倉庫對大型柱狀表進行 SQL 分析。適合哪種服務？",
         "options": {
-          "A": "Amazon EFS",
-          "B": "Amazon SQS",
-          "C": "Amazon Cognito",
-          "D": "Amazon Redshift"
+          "A": "使用具有版本化相容模式的模式註冊表或目錄",
+          "B": "Amazon Redshift",
+          "C": "帶有爬網程式的 AWS Glue 資料目錄",
+          "D": "S3 生命週期規則"
         },
-        "explanation": "Redshift 是一個針對列式掃描和平行查詢進行最佳化的託管分析資料倉儲。\n其他選擇提供文件儲存、佇列或身分。"
+        "explanation": "Redshift 是一個針對列式掃描和平行查詢進行最佳化的託管分析資料倉儲。\n其他選項適用於此領域的不同需求，但不能像 Amazon Redshift 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d2-007",
-    "type": "single",
-    "question": "A security-conscious engineering team needs a technical catalog of table schemas discovered from S3 data. Which feature should be used?",
-    "options": {
-      "A": "AWS Glue Data Catalog with a crawler",
-      "B": "A Route 53 hosted zone",
-      "C": "An EC2 security group",
-      "D": "A CloudFront cache policy"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "A Glue crawler discovers schemas and stores table metadata in the Glue Data Catalog.\nThe other choices do not catalog data schemas.",
     "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A security-conscious engineering team is planning two independent production changes. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The first team needs a technical catalog of table schemas discovered from S3 data. A second team needs to remove old objects automatically after a retention period. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Amazon Redshift",
+      "B": "AWS Glue Data Catalog with a crawler",
+      "C": "An S3 Lifecycle rule",
+      "D": "Use a schema registry or catalog with versioned compatible schemas",
+      "E": "Amazon DynamoDB"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS Glue Data Catalog with a crawler meets the first requirement: A Glue crawler discovers schemas and stores table metadata in the Glue Data Catalog. An S3 Lifecycle rule meets the second requirement: S3 Lifecycle rules transition or expire objects based on age and storage requirements.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊需要從 S3 資料中發現的表格模式的技術目錄。應該使用哪個功能？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。第一項需求：多帳戶平台團隊需要從 S3 資料中發現的表格模式的技術目錄。第二項需求：受監管的公司需要在保留期後自動刪除舊物件。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "帶有爬網程式的 AWS Glue 資料目錄",
-          "B": "Route 53 託管區域",
-          "C": "EC2 安全群組",
-          "D": "CloudFront 快取策略"
+          "A": "Amazon Redshift",
+          "B": "帶有爬網程式的 AWS Glue 資料目錄",
+          "C": "S3 生命週期規則",
+          "D": "使用具有版本化相容模式的模式註冊表或目錄",
+          "E": "Amazon DynamoDB"
         },
-        "explanation": "Glue 爬蟲會發現模式並將表元資料儲存在 Glue 資料目錄中。\n其他選擇不對資料模式進行編目。"
+        "explanation": "帶有爬網程式的 AWS Glue 資料目錄 符合第一項需求：Glue 爬蟲會發現模式並將表元資料儲存在 Glue 資料目錄中。 S3 生命週期規則 符合第二項需求：S3 生命週期規則會根據年齡和儲存需求來轉換或過期物件。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "dea-c01-d2-008",
-    "type": "single",
-    "question": "A company migrating an existing workload needs to remove old objects automatically after a retention period. Which feature should be configured?",
-    "options": {
-      "A": "An SNS subscription",
-      "B": "An S3 Lifecycle rule",
-      "C": "An IAM permission boundary",
-      "D": "A VPC endpoint"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "S3 Lifecycle rules transition or expire objects based on age and storage requirements.\nThe other choices manage IAM, private connectivity, or notifications.",
     "taskStatement": "2.4",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A company migrating an existing workload is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs to remove old objects automatically after a retention period. Which feature should be configured?",
+    "options": {
+      "A": "Use a schema registry or catalog with versioned compatible schemas",
+      "B": "Amazon DynamoDB",
+      "C": "Amazon Redshift",
+      "D": "An S3 Lifecycle rule"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "S3 Lifecycle rules transition or expire objects based on age and storage requirements.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide An S3 Lifecycle rule for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司需要在保留期後自動刪除舊物件。應該配置哪個功能？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。遷移現有工作負載的公司需要在保留期後自動刪除舊物件。應該配置哪個功能？",
         "options": {
-          "A": "SNS 訂閱",
-          "B": "S3 生命週期規則",
-          "C": "IAM Permissions邊界",
-          "D": "VPC 終端節點"
+          "A": "使用具有版本化相容模式的模式註冊表或目錄",
+          "B": "Amazon DynamoDB",
+          "C": "Amazon Redshift",
+          "D": "S3 生命週期規則"
         },
-        "explanation": "S3 生命週期規則會根據年齡和儲存需求來轉換或過期物件。\n其他選項管理 IAM、專用連線或通知。"
+        "explanation": "S3 生命週期規則會根據年齡和儲存需求來轉換或過期物件。\n其他選項適用於此領域的不同需求，但不能像 S3 生命週期規則 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d2-009",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team with strict recovery objectives needs flexible schema evolution for semi-structured records. Which design is appropriate?",
+    "question": "A team with strict recovery objectives is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs flexible schema evolution for semi-structured records. Which design is appropriate?",
     "options": {
-      "A": "Use a security group as a schema",
-      "B": "Disable validation",
+      "A": "Amazon Redshift",
+      "B": "AWS Glue Data Catalog with a crawler",
       "C": "Use a schema registry or catalog with versioned compatible schemas",
-      "D": "Require every consumer to share an immutable table forever"
+      "D": "Amazon DynamoDB"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Versioned schemas let producers and consumers evolve without breaking compatible readers.\nThe other choices do not manage data schema compatibility.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Versioned schemas let producers and consumers evolve without breaking compatible readers.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Use a schema registry or catalog with versioned compatible schemas for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格恢復目標的團隊需要針對半結構化記錄進行靈活的模式演進。哪種設計合適？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。具有嚴格恢復目標的團隊需要針對半結構化記錄進行靈活的模式演進。哪種設計合適？",
         "options": {
-          "A": "使用安全性群組作為架構",
-          "B": "禁用驗證",
+          "A": "Amazon Redshift",
+          "B": "帶有爬網程式的 AWS Glue 資料目錄",
           "C": "使用具有版本化相容模式的模式註冊表或目錄",
-          "D": "要求每個消費者永遠共享一個不可變的表"
+          "D": "Amazon DynamoDB"
         },
-        "explanation": "版本化模式讓生產者和消費者在不破壞相容讀取器的情況下持續發展。\n其他選擇不管理資料模式相容性。"
+        "explanation": "版本化模式讓生產者和消費者在不破壞相容讀取器的情況下持續發展。\n其他選項適用於此領域的不同需求，但不能像 使用具有版本化相容模式的模式註冊表或目錄 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d2-010",
-    "type": "single",
-    "question": "A developer team preparing a release needs a key-value store with predictable single-digit millisecond access at scale. Which service should be evaluated?",
-    "options": {
-      "A": "Amazon CloudFront",
-      "B": "Amazon EFS",
-      "C": "Amazon SES",
-      "D": "Amazon DynamoDB"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "DynamoDB is a managed key-value and document database designed for low-latency access at scale.\nThe other choices deliver content, store files, or send email.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A developer team preparing a release is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs a key-value store with predictable single-digit millisecond access at scale. Which service should be evaluated?",
+    "options": {
+      "A": "An S3 Lifecycle rule",
+      "B": "Amazon DynamoDB",
+      "C": "Amazon Redshift",
+      "D": "AWS Glue Data Catalog with a crawler"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "DynamoDB is a managed key-value and document database designed for low-latency access at scale.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon DynamoDB for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊需要一個具有可預測的個位數毫秒級存取權限的鍵值儲存。應該評估哪些服務？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。準備發布的開發團隊需要一個具有可預測的個位數毫秒級存取權限的鍵值儲存。應該評估哪些服務？",
         "options": {
-          "A": "Amazon CloudFront",
-          "B": "Amazon EFS",
-          "C": "Amazon SES",
-          "D": "Amazon DynamoDB"
+          "A": "S3 生命週期規則",
+          "B": "Amazon DynamoDB",
+          "C": "Amazon Redshift",
+          "D": "帶有爬網程式的 AWS Glue 資料目錄"
         },
-        "explanation": "DynamoDB 是一種託管鍵值和文件資料庫，專為大規模低延遲存取而設計。\n其他選項提供內容、儲存檔案或發送電子郵件。"
+        "explanation": "DynamoDB 是一種託管鍵值和文件資料庫，專為大規模低延遲存取而設計。\n其他選項適用於此領域的不同需求，但不能像 Amazon DynamoDB 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d2-011",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An enterprise with several AWS Regions needs SQL analytics over large columnar tables with a managed warehouse. Which service fits?",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs SQL analytics over large columnar tables with a managed warehouse. Which service fits?",
     "options": {
       "A": "Amazon Redshift",
-      "B": "Amazon EFS",
-      "C": "Amazon SQS",
-      "D": "Amazon Cognito"
+      "B": "AWS Glue Data Catalog with a crawler",
+      "C": "An S3 Lifecycle rule",
+      "D": "Use a schema registry or catalog with versioned compatible schemas"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Redshift is a managed analytical data warehouse optimized for columnar scans and parallel queries.\nThe other choices provide file storage, queues, or identity.",
-    "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "Redshift is a managed analytical data warehouse optimized for columnar scans and parallel queries.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Redshift for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業需要透過託管倉庫對大型柱狀表進行 SQL 分析。適合哪種服務？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。擁有多個 AWS 區域的企業需要透過託管倉庫對大型柱狀表進行 SQL 分析。適合哪種服務？",
         "options": {
           "A": "Amazon Redshift",
-          "B": "Amazon EFS",
-          "C": "Amazon SQS",
-          "D": "Amazon Cognito"
+          "B": "帶有爬網程式的 AWS Glue 資料目錄",
+          "C": "S3 生命週期規則",
+          "D": "使用具有版本化相容模式的模式註冊表或目錄"
         },
-        "explanation": "Redshift 是一個針對列式掃描和平行查詢進行最佳化的託管分析資料倉儲。\n其他選擇提供文件儲存、佇列或身分。"
+        "explanation": "Redshift 是一個針對列式掃描和平行查詢進行最佳化的託管分析資料倉儲。\n其他選項適用於此領域的不同需求，但不能像 Amazon Redshift 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d2-012",
-    "type": "single",
-    "question": "A service owner reviewing an incident needs a technical catalog of table schemas discovered from S3 data. Which feature should be used?",
-    "options": {
-      "A": "A CloudFront cache policy",
-      "B": "AWS Glue Data Catalog with a crawler",
-      "C": "A Route 53 hosted zone",
-      "D": "An EC2 security group"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "A Glue crawler discovers schemas and stores table metadata in the Glue Data Catalog.\nThe other choices do not catalog data schemas.",
     "taskStatement": "2.4",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A service owner reviewing an incident is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs a technical catalog of table schemas discovered from S3 data. Which feature should be used?",
+    "options": {
+      "A": "An S3 Lifecycle rule",
+      "B": "Use a schema registry or catalog with versioned compatible schemas",
+      "C": "Amazon DynamoDB",
+      "D": "AWS Glue Data Catalog with a crawler"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "A Glue crawler discovers schemas and stores table metadata in the Glue Data Catalog.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Glue Data Catalog with a crawler for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務擁有者需要從 S3 資料中發現的表格模式的技術目錄。應該使用哪個功能？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。審查事件的服務擁有者需要從 S3 資料中發現的表格模式的技術目錄。應該使用哪個功能？",
         "options": {
-          "A": "CloudFront 快取策略",
-          "B": "帶有爬網程式的 AWS Glue 資料目錄",
-          "C": "Route 53 託管區域",
-          "D": "EC2 安全群組"
+          "A": "S3 生命週期規則",
+          "B": "使用具有版本化相容模式的模式註冊表或目錄",
+          "C": "Amazon DynamoDB",
+          "D": "帶有爬網程式的 AWS Glue 資料目錄"
         },
-        "explanation": "Glue 爬蟲會發現模式並將表元資料儲存在 Glue 資料目錄中。\n其他選擇不對資料模式進行編目。"
+        "explanation": "Glue 爬蟲會發現模式並將表元資料儲存在 Glue 資料目錄中。\n其他選項適用於此領域的不同需求，但不能像 帶有爬網程式的 AWS Glue 資料目錄 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d2-013",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team optimizing an existing implementation needs to remove old objects automatically after a retention period. Which feature should be configured?",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs to remove old objects automatically after a retention period. Which feature should be configured?",
     "options": {
-      "A": "A VPC endpoint",
-      "B": "An SNS subscription",
+      "A": "Amazon DynamoDB",
+      "B": "Amazon Redshift",
       "C": "An S3 Lifecycle rule",
-      "D": "An IAM permission boundary"
+      "D": "Use a schema registry or catalog with versioned compatible schemas"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "S3 Lifecycle rules transition or expire objects based on age and storage requirements.\nThe other choices manage IAM, private connectivity, or notifications.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "S3 Lifecycle rules transition or expire objects based on age and storage requirements.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide An S3 Lifecycle rule for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實作的團隊需要在保留期後自動刪除舊物件。應該配置哪個功能？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。優化現有實作的團隊需要在保留期後自動刪除舊物件。應該配置哪個功能？",
         "options": {
-          "A": "VPC 終端節點",
-          "B": "SNS 訂閱",
+          "A": "Amazon DynamoDB",
+          "B": "Amazon Redshift",
           "C": "S3 生命週期規則",
-          "D": "IAM Permissions邊界"
+          "D": "使用具有版本化相容模式的模式註冊表或目錄"
         },
-        "explanation": "S3 生命週期規則會根據年齡和儲存需求來轉換或過期物件。\n其他選項管理 IAM、專用連線或通知。"
+        "explanation": "S3 生命週期規則會根據年齡和儲存需求來轉換或過期物件。\n其他選項適用於此領域的不同需求，但不能像 S3 生命週期規則 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d2-014",
-    "type": "single",
-    "question": "A company introducing an automated workflow needs flexible schema evolution for semi-structured records. Which design is appropriate?",
-    "options": {
-      "A": "Require every consumer to share an immutable table forever",
-      "B": "Use a security group as a schema",
-      "C": "Disable validation",
-      "D": "Use a schema registry or catalog with versioned compatible schemas"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Versioned schemas let producers and consumers evolve without breaking compatible readers.\nThe other choices do not manage data schema compatibility.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A company introducing an automated workflow is planning two independent production changes. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The first team needs flexible schema evolution for semi-structured records. A second team needs a key-value store with predictable single-digit millisecond access at scale. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Amazon DynamoDB",
+      "B": "Amazon Redshift",
+      "C": "AWS Glue Data Catalog with a crawler",
+      "D": "An S3 Lifecycle rule",
+      "E": "Use a schema registry or catalog with versioned compatible schemas"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Use a schema registry or catalog with versioned compatible schemas meets the first requirement: Versioned schemas let producers and consumers evolve without breaking compatible readers. Amazon DynamoDB meets the second requirement: DynamoDB is a managed key-value and document database designed for low-latency access at scale.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司需要對半結構化記錄進行靈活的模式演變。哪種設計合適？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。第一項需求：支援關鍵工作負載的營運團隊需要一個具有可預測的個位數毫秒級大規模存取的鍵值儲存。第二項需求：準備增加流量的新創公司需要針對半結構化記錄進行靈活的模式演進。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "要求每個消費者永遠共享一個不可變的表",
-          "B": "使用安全性群組作為架構",
-          "C": "禁用驗證",
-          "D": "使用具有版本化相容模式的模式註冊表或目錄"
+          "A": "Amazon DynamoDB",
+          "B": "Amazon Redshift",
+          "C": "帶有爬網程式的 AWS Glue 資料目錄",
+          "D": "S3 生命週期規則",
+          "E": "使用具有版本化相容模式的模式註冊表或目錄"
         },
-        "explanation": "版本化模式讓生產者和消費者在不破壞相容讀取器的情況下持續發展。\n其他選擇不管理資料模式相容性。"
+        "explanation": "Amazon DynamoDB 符合第一項需求：DynamoDB 是一種託管鍵值和文件資料庫，專為大規模低延遲存取而設計。 使用具有版本化相容模式的模式註冊表或目錄 符合第二項需求：版本化模式讓生產者和消費者在不破壞相容讀取器的情況下持續發展。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "dea-c01-d2-015",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An AWS administrator working in a shared environment needs a key-value store with predictable single-digit millisecond access at scale. Which service should be evaluated?",
+    "question": "An AWS administrator working in a shared environment is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs a key-value store with predictable single-digit millisecond access at scale. Which service should be evaluated?",
     "options": {
       "A": "Amazon DynamoDB",
-      "B": "Amazon CloudFront",
-      "C": "Amazon EFS",
-      "D": "Amazon SES"
+      "B": "Amazon Redshift",
+      "C": "AWS Glue Data Catalog with a crawler",
+      "D": "An S3 Lifecycle rule"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "DynamoDB is a managed key-value and document database designed for low-latency access at scale.\nThe other choices deliver content, store files, or send email.",
-    "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "DynamoDB is a managed key-value and document database designed for low-latency access at scale.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon DynamoDB for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "在共用環境中工作的 AWS 管理員需要一個具有可預測的個位數毫秒級大規模存取的鍵值儲存。應該評估哪些服務？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。在共用環境中工作的 AWS 管理員需要一個具有可預測的個位數毫秒級大規模存取的鍵值儲存。應該評估哪些服務？",
         "options": {
           "A": "Amazon DynamoDB",
-          "B": "Amazon CloudFront",
-          "C": "Amazon EFS",
-          "D": "Amazon SES"
+          "B": "Amazon Redshift",
+          "C": "帶有爬網程式的 AWS Glue 資料目錄",
+          "D": "S3 生命週期規則"
         },
-        "explanation": "DynamoDB 是一種託管鍵值和文件資料庫，專為大規模低延遲存取而設計。\n其他選項提供內容、儲存檔案或發送電子郵件。"
+        "explanation": "DynamoDB 是一種託管鍵值和文件資料庫，專為大規模低延遲存取而設計。\n其他選項適用於此領域的不同需求，但不能像 Amazon DynamoDB 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d2-016",
-    "type": "single",
-    "question": "A customer-facing application team needs SQL analytics over large columnar tables with a managed warehouse. Which service fits?",
-    "options": {
-      "A": "Amazon Cognito",
-      "B": "Amazon Redshift",
-      "C": "Amazon EFS",
-      "D": "Amazon SQS"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Redshift is a managed analytical data warehouse optimized for columnar scans and parallel queries.\nThe other choices provide file storage, queues, or identity.",
     "taskStatement": "2.4",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A customer-facing application team is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs SQL analytics over large columnar tables with a managed warehouse. Which service fits?",
+    "options": {
+      "A": "AWS Glue Data Catalog with a crawler",
+      "B": "An S3 Lifecycle rule",
+      "C": "Use a schema registry or catalog with versioned compatible schemas",
+      "D": "Amazon Redshift"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Redshift is a managed analytical data warehouse optimized for columnar scans and parallel queries.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Redshift for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊需要透過託管倉庫對大型柱狀表進行 SQL 分析。適合哪種服務？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。面向客戶的應用程式團隊需要透過託管倉庫對大型柱狀表進行 SQL 分析。適合哪種服務？",
         "options": {
-          "A": "Amazon Cognito",
-          "B": "Amazon Redshift",
-          "C": "Amazon EFS",
-          "D": "Amazon SQS"
+          "A": "帶有爬網程式的 AWS Glue 資料目錄",
+          "B": "S3 生命週期規則",
+          "C": "使用具有版本化相容模式的模式註冊表或目錄",
+          "D": "Amazon Redshift"
         },
-        "explanation": "Redshift 是一個針對列式掃描和平行查詢進行最佳化的託管分析資料倉儲。\n其他選擇提供文件儲存、佇列或身分。"
+        "explanation": "Redshift 是一個針對列式掃描和平行查詢進行最佳化的託管分析資料倉儲。\n其他選項適用於此領域的不同需求，但不能像 Amazon Redshift 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d2-017",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A platform team standardizing its AWS deployments needs a technical catalog of table schemas discovered from S3 data. Which feature should be used?",
+    "question": "A platform team standardizing its AWS deployments is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs a technical catalog of table schemas discovered from S3 data. Which feature should be used?",
     "options": {
-      "A": "An EC2 security group",
-      "B": "A CloudFront cache policy",
+      "A": "Use a schema registry or catalog with versioned compatible schemas",
+      "B": "Amazon DynamoDB",
       "C": "AWS Glue Data Catalog with a crawler",
-      "D": "A Route 53 hosted zone"
+      "D": "An S3 Lifecycle rule"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "A Glue crawler discovers schemas and stores table metadata in the Glue Data Catalog.\nThe other choices do not catalog data schemas.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "A Glue crawler discovers schemas and stores table metadata in the Glue Data Catalog.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Glue Data Catalog with a crawler for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊需要從 S3 資料中發現的表格模式的技術目錄。應該使用哪個功能？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。標準化其 AWS 部署的平台團隊需要從 S3 資料中發現的表格模式的技術目錄。應該使用哪個功能？",
         "options": {
-          "A": "EC2 安全群組",
-          "B": "CloudFront 快取策略",
+          "A": "使用具有版本化相容模式的模式註冊表或目錄",
+          "B": "Amazon DynamoDB",
           "C": "帶有爬網程式的 AWS Glue 資料目錄",
-          "D": "Route 53 託管區域"
+          "D": "S3 生命週期規則"
         },
-        "explanation": "Glue 爬蟲會發現模式並將表元資料儲存在 Glue 資料目錄中。\n其他選擇不對資料模式進行編目。"
+        "explanation": "Glue 爬蟲會發現模式並將表元資料儲存在 Glue 資料目錄中。\n其他選項適用於此領域的不同需求，但不能像 帶有爬網程式的 AWS Glue 資料目錄 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d2-018",
-    "type": "single",
-    "question": "A team preparing evidence for an audit needs to remove old objects automatically after a retention period. Which feature should be configured?",
-    "options": {
-      "A": "An IAM permission boundary",
-      "B": "A VPC endpoint",
-      "C": "An SNS subscription",
-      "D": "An S3 Lifecycle rule"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "S3 Lifecycle rules transition or expire objects based on age and storage requirements.\nThe other choices manage IAM, private connectivity, or notifications.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team preparing evidence for an audit is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs to remove old objects automatically after a retention period. Which feature should be configured?",
+    "options": {
+      "A": "Amazon Redshift",
+      "B": "An S3 Lifecycle rule",
+      "C": "Use a schema registry or catalog with versioned compatible schemas",
+      "D": "Amazon DynamoDB"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "S3 Lifecycle rules transition or expire objects based on age and storage requirements.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide An S3 Lifecycle rule for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "為審計準備證據的團隊需要在保留期後自動刪除舊物件。應該配置哪個功能？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。為審計準備證據的團隊需要在保留期後自動刪除舊物件。應該配置哪個功能？",
         "options": {
-          "A": "IAM Permissions邊界",
-          "B": "VPC 終端節點",
-          "C": "SNS 訂閱",
-          "D": "S3 生命週期規則"
+          "A": "Amazon Redshift",
+          "B": "S3 生命週期規則",
+          "C": "使用具有版本化相容模式的模式註冊表或目錄",
+          "D": "Amazon DynamoDB"
         },
-        "explanation": "S3 生命週期規則會根據年齡和儲存需求來轉換或過期物件。\n其他選項管理 IAM、專用連線或通知。"
+        "explanation": "S3 生命週期規則會根據年齡和儲存需求來轉換或過期物件。\n其他選項適用於此領域的不同需求，但不能像 S3 生命週期規則 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d2-019",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A business replacing a manual process needs flexible schema evolution for semi-structured records. Which design is appropriate?",
+    "question": "A business replacing a manual process is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs flexible schema evolution for semi-structured records. Which design is appropriate?",
     "options": {
       "A": "Use a schema registry or catalog with versioned compatible schemas",
-      "B": "Require every consumer to share an immutable table forever",
-      "C": "Use a security group as a schema",
-      "D": "Disable validation"
+      "B": "Amazon DynamoDB",
+      "C": "Amazon Redshift",
+      "D": "AWS Glue Data Catalog with a crawler"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Versioned schemas let producers and consumers evolve without breaking compatible readers.\nThe other choices do not manage data schema compatibility.",
-    "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "Versioned schemas let producers and consumers evolve without breaking compatible readers.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Use a schema registry or catalog with versioned compatible schemas for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "取代手動流程的企業需要針對半結構化記錄進行靈活的模式演進。哪種設計合適？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。取代手動流程的企業需要針對半結構化記錄進行靈活的模式演進。哪種設計合適？",
         "options": {
           "A": "使用具有版本化相容模式的模式註冊表或目錄",
-          "B": "要求每個消費者永遠共享一個不可變的表",
-          "C": "使用安全性群組作為架構",
-          "D": "禁用驗證"
+          "B": "Amazon DynamoDB",
+          "C": "Amazon Redshift",
+          "D": "帶有爬網程式的 AWS Glue 資料目錄"
         },
-        "explanation": "版本化模式讓生產者和消費者在不破壞相容讀取器的情況下持續發展。\n其他選擇不管理資料模式相容性。"
+        "explanation": "版本化模式讓生產者和消費者在不破壞相容讀取器的情況下持續發展。\n其他選項適用於此領域的不同需求，但不能像 使用具有版本化相容模式的模式註冊表或目錄 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d2-020",
-    "type": "single",
-    "question": "A team validating a design against the exam guide needs a key-value store with predictable single-digit millisecond access at scale. Which service should be evaluated?",
-    "options": {
-      "A": "Amazon SES",
-      "B": "Amazon DynamoDB",
-      "C": "Amazon CloudFront",
-      "D": "Amazon EFS"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "DynamoDB is a managed key-value and document database designed for low-latency access at scale.\nThe other choices deliver content, store files, or send email.",
     "taskStatement": "2.4",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team validating a design against the exam guide is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs a key-value store with predictable single-digit millisecond access at scale. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon Redshift",
+      "B": "AWS Glue Data Catalog with a crawler",
+      "C": "An S3 Lifecycle rule",
+      "D": "Amazon DynamoDB"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "DynamoDB is a managed key-value and document database designed for low-latency access at scale.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon DynamoDB for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊需要一個具有可預測的個位數毫秒級存取權限的鍵值儲存。應該評估哪些服務？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。根據考試指南驗證設計的團隊需要一個具有可預測的個位數毫秒級存取權限的鍵值儲存。應該評估哪些服務？",
         "options": {
-          "A": "Amazon SES",
-          "B": "Amazon DynamoDB",
-          "C": "Amazon CloudFront",
-          "D": "Amazon EFS"
+          "A": "Amazon Redshift",
+          "B": "帶有爬網程式的 AWS Glue 資料目錄",
+          "C": "S3 生命週期規則",
+          "D": "Amazon DynamoDB"
         },
-        "explanation": "DynamoDB 是一種託管鍵值和文件資料庫，專為大規模低延遲存取而設計。\n其他選項提供內容、儲存檔案或發送電子郵件。"
+        "explanation": "DynamoDB 是一種託管鍵值和文件資料庫，專為大規模低延遲存取而設計。\n其他選項適用於此領域的不同需求，但不能像 Amazon DynamoDB 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d2-021",
-    "type": "single",
-    "question": "A production team needs SQL analytics over large columnar tables with a managed warehouse. Which service fits?",
-    "options": {
-      "A": "Amazon SQS",
-      "B": "Amazon Cognito",
-      "C": "Amazon Redshift",
-      "D": "Amazon EFS"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "Redshift is a managed analytical data warehouse optimized for columnar scans and parallel queries.\nThe other choices provide file storage, queues, or identity.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A production team is planning two independent production changes. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The first team needs SQL analytics over large columnar tables with a managed warehouse. A second team needs a technical catalog of table schemas discovered from S3 data. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Use a schema registry or catalog with versioned compatible schemas",
+      "B": "Amazon DynamoDB",
+      "C": "Amazon Redshift",
+      "D": "AWS Glue Data Catalog with a crawler",
+      "E": "An S3 Lifecycle rule"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Amazon Redshift meets the first requirement: Redshift is a managed analytical data warehouse optimized for columnar scans and parallel queries. AWS Glue Data Catalog with a crawler meets the second requirement: A Glue crawler discovers schemas and stores table metadata in the Glue Data Catalog.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "生產團隊需要透過託管倉庫對大型柱狀表進行 SQL 分析。適合哪種服務？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。第一項需求：生產團隊需要透過託管倉庫對大型柱狀表進行 SQL 分析。第二項需求：多帳戶平台團隊需要從 S3 資料中發現的表格模式的技術目錄。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "Amazon SQS",
-          "B": "Amazon Cognito",
+          "A": "使用具有版本化相容模式的模式註冊表或目錄",
+          "B": "Amazon DynamoDB",
           "C": "Amazon Redshift",
-          "D": "Amazon EFS"
+          "D": "帶有爬網程式的 AWS Glue 資料目錄",
+          "E": "S3 生命週期規則"
         },
-        "explanation": "Redshift 是一個針對列式掃描和平行查詢進行最佳化的託管分析資料倉儲。\n其他選擇提供文件儲存、佇列或身分。"
+        "explanation": "Amazon Redshift 符合第一項需求：Redshift 是一個針對列式掃描和平行查詢進行最佳化的託管分析資料倉儲。 帶有爬網程式的 AWS Glue 資料目錄 符合第二項需求：Glue 爬蟲會發現模式並將表元資料儲存在 Glue 資料目錄中。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "dea-c01-d2-022",
-    "type": "single",
-    "question": "A multi-account platform team needs a technical catalog of table schemas discovered from S3 data. Which feature should be used?",
-    "options": {
-      "A": "A Route 53 hosted zone",
-      "B": "An EC2 security group",
-      "C": "A CloudFront cache policy",
-      "D": "AWS Glue Data Catalog with a crawler"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "A Glue crawler discovers schemas and stores table metadata in the Glue Data Catalog.\nThe other choices do not catalog data schemas.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A multi-account platform team is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs a technical catalog of table schemas discovered from S3 data. Which feature should be used?",
+    "options": {
+      "A": "Amazon DynamoDB",
+      "B": "AWS Glue Data Catalog with a crawler",
+      "C": "An S3 Lifecycle rule",
+      "D": "Use a schema registry or catalog with versioned compatible schemas"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "A Glue crawler discovers schemas and stores table metadata in the Glue Data Catalog.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Glue Data Catalog with a crawler for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊需要從 S3 資料中發現的表格模式的技術目錄。應該使用哪個功能？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。多帳戶平台團隊需要從 S3 資料中發現的表格模式的技術目錄。應該使用哪個功能？",
         "options": {
-          "A": "Route 53 託管區域",
-          "B": "EC2 安全群組",
-          "C": "CloudFront 快取策略",
-          "D": "帶有爬網程式的 AWS Glue 資料目錄"
+          "A": "Amazon DynamoDB",
+          "B": "帶有爬網程式的 AWS Glue 資料目錄",
+          "C": "S3 生命週期規則",
+          "D": "使用具有版本化相容模式的模式註冊表或目錄"
         },
-        "explanation": "Glue 爬蟲會發現模式並將表元資料儲存在 Glue 資料目錄中。\n其他選擇不對資料模式進行編目。"
+        "explanation": "Glue 爬蟲會發現模式並將表元資料儲存在 Glue 資料目錄中。\n其他選項適用於此領域的不同需求，但不能像 帶有爬網程式的 AWS Glue 資料目錄 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d2-023",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A regulated company needs to remove old objects automatically after a retention period. Which feature should be configured?",
+    "question": "A regulated company is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs to remove old objects automatically after a retention period. Which feature should be configured?",
     "options": {
       "A": "An S3 Lifecycle rule",
-      "B": "An IAM permission boundary",
-      "C": "A VPC endpoint",
-      "D": "An SNS subscription"
+      "B": "Use a schema registry or catalog with versioned compatible schemas",
+      "C": "Amazon DynamoDB",
+      "D": "Amazon Redshift"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "S3 Lifecycle rules transition or expire objects based on age and storage requirements.\nThe other choices manage IAM, private connectivity, or notifications.",
-    "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "S3 Lifecycle rules transition or expire objects based on age and storage requirements.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide An S3 Lifecycle rule for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司需要在保留期後自動刪除舊物件。應該配置哪個功能？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。受監管的公司需要在保留期後自動刪除舊物件。應該配置哪個功能？",
         "options": {
           "A": "S3 生命週期規則",
-          "B": "IAM Permissions邊界",
-          "C": "VPC 終端節點",
-          "D": "SNS 訂閱"
+          "B": "使用具有版本化相容模式的模式註冊表或目錄",
+          "C": "Amazon DynamoDB",
+          "D": "Amazon Redshift"
         },
-        "explanation": "S3 生命週期規則會根據年齡和儲存需求來轉換或過期物件。\n其他選項管理 IAM、專用連線或通知。"
+        "explanation": "S3 生命週期規則會根據年齡和儲存需求來轉換或過期物件。\n其他選項適用於此領域的不同需求，但不能像 S3 生命週期規則 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d2-024",
-    "type": "single",
-    "question": "A startup preparing for a traffic increase needs flexible schema evolution for semi-structured records. Which design is appropriate?",
-    "options": {
-      "A": "Disable validation",
-      "B": "Use a schema registry or catalog with versioned compatible schemas",
-      "C": "Require every consumer to share an immutable table forever",
-      "D": "Use a security group as a schema"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Versioned schemas let producers and consumers evolve without breaking compatible readers.\nThe other choices do not manage data schema compatibility.",
     "taskStatement": "2.4",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs flexible schema evolution for semi-structured records. Which design is appropriate?",
+    "options": {
+      "A": "Amazon DynamoDB",
+      "B": "Amazon Redshift",
+      "C": "AWS Glue Data Catalog with a crawler",
+      "D": "Use a schema registry or catalog with versioned compatible schemas"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Versioned schemas let producers and consumers evolve without breaking compatible readers.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Use a schema registry or catalog with versioned compatible schemas for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司需要針對半結構化記錄進行靈活的模式演進。哪種設計合適？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。準備增加流量的新創公司需要針對半結構化記錄進行靈活的模式演進。哪種設計合適？",
         "options": {
-          "A": "禁用驗證",
-          "B": "使用具有版本化相容模式的模式註冊表或目錄",
-          "C": "要求每個消費者永遠共享一個不可變的表",
-          "D": "使用安全性群組作為架構"
+          "A": "Amazon DynamoDB",
+          "B": "Amazon Redshift",
+          "C": "帶有爬網程式的 AWS Glue 資料目錄",
+          "D": "使用具有版本化相容模式的模式註冊表或目錄"
         },
-        "explanation": "版本化模式讓生產者和消費者在不破壞相容讀取器的情況下持續發展。\n其他選擇不管理資料模式相容性。"
+        "explanation": "版本化模式讓生產者和消費者在不破壞相容讀取器的情況下持續發展。\n其他選項適用於此領域的不同需求，但不能像 使用具有版本化相容模式的模式註冊表或目錄 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d2-025",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An operations team supporting a critical workload needs a key-value store with predictable single-digit millisecond access at scale. Which service should be evaluated?",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs a key-value store with predictable single-digit millisecond access at scale. Which service should be evaluated?",
     "options": {
-      "A": "Amazon EFS",
-      "B": "Amazon SES",
+      "A": "AWS Glue Data Catalog with a crawler",
+      "B": "An S3 Lifecycle rule",
       "C": "Amazon DynamoDB",
-      "D": "Amazon CloudFront"
+      "D": "Amazon Redshift"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "DynamoDB is a managed key-value and document database designed for low-latency access at scale.\nThe other choices deliver content, store files, or send email.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "DynamoDB is a managed key-value and document database designed for low-latency access at scale.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon DynamoDB for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊需要一個具有可預測的個位數毫秒級大規模存取的鍵值儲存。應該評估哪些服務？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。支援關鍵工作負載的營運團隊需要一個具有可預測的個位數毫秒級大規模存取的鍵值儲存。應該評估哪些服務？",
         "options": {
-          "A": "Amazon EFS",
-          "B": "Amazon SES",
+          "A": "帶有爬網程式的 AWS Glue 資料目錄",
+          "B": "S3 生命週期規則",
           "C": "Amazon DynamoDB",
-          "D": "Amazon CloudFront"
+          "D": "Amazon Redshift"
         },
-        "explanation": "DynamoDB 是一種託管鍵值和文件資料庫，專為大規模低延遲存取而設計。\n其他選項提供內容、儲存檔案或發送電子郵件。"
+        "explanation": "DynamoDB 是一種託管鍵值和文件資料庫，專為大規模低延遲存取而設計。\n其他選項適用於此領域的不同需求，但不能像 Amazon DynamoDB 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d2-026",
-    "type": "single",
-    "question": "A data platform team needs SQL analytics over large columnar tables with a managed warehouse. Which service fits?",
-    "options": {
-      "A": "Amazon EFS",
-      "B": "Amazon SQS",
-      "C": "Amazon Cognito",
-      "D": "Amazon Redshift"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Redshift is a managed analytical data warehouse optimized for columnar scans and parallel queries.\nThe other choices provide file storage, queues, or identity.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A data platform team is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team needs SQL analytics over large columnar tables with a managed warehouse. Which service fits?",
+    "options": {
+      "A": "Use a schema registry or catalog with versioned compatible schemas",
+      "B": "Amazon Redshift",
+      "C": "AWS Glue Data Catalog with a crawler",
+      "D": "An S3 Lifecycle rule"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Redshift is a managed analytical data warehouse optimized for columnar scans and parallel queries.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Redshift for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要透過託管倉庫對大型柱狀表進行 SQL 分析。適合哪種服務？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。資料平台團隊需要透過託管倉庫對大型柱狀表進行 SQL 分析。適合哪種服務？",
         "options": {
-          "A": "Amazon EFS",
-          "B": "Amazon SQS",
-          "C": "Amazon Cognito",
-          "D": "Amazon Redshift"
+          "A": "使用具有版本化相容模式的模式註冊表或目錄",
+          "B": "Amazon Redshift",
+          "C": "帶有爬網程式的 AWS Glue 資料目錄",
+          "D": "S3 生命週期規則"
         },
-        "explanation": "Redshift 是一個針對列式掃描和平行查詢進行最佳化的託管分析資料倉儲。\n其他選擇提供文件儲存、佇列或身分。"
+        "explanation": "Redshift 是一個針對列式掃描和平行查詢進行最佳化的託管分析資料倉儲。\n其他選項適用於此領域的不同需求，但不能像 Amazon Redshift 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d2-027",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A security-conscious engineering team needs a technical catalog of table schemas discovered from S3 data. Which feature should be used?",
+    "question": "A security-conscious engineering team is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team needs a technical catalog of table schemas discovered from S3 data. Which feature should be used?",
     "options": {
       "A": "AWS Glue Data Catalog with a crawler",
-      "B": "A Route 53 hosted zone",
-      "C": "An EC2 security group",
-      "D": "A CloudFront cache policy"
+      "B": "An S3 Lifecycle rule",
+      "C": "Use a schema registry or catalog with versioned compatible schemas",
+      "D": "Amazon DynamoDB"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "A Glue crawler discovers schemas and stores table metadata in the Glue Data Catalog.\nThe other choices do not catalog data schemas.",
-    "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "A Glue crawler discovers schemas and stores table metadata in the Glue Data Catalog.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Glue Data Catalog with a crawler for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊需要從 S3 資料中發現的表格模式的技術目錄。應該使用哪個功能？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。具有安全意識的工程團隊需要從 S3 資料中發現的表格模式的技術目錄。應該使用哪個功能？",
         "options": {
           "A": "帶有爬網程式的 AWS Glue 資料目錄",
-          "B": "Route 53 託管區域",
-          "C": "EC2 安全群組",
-          "D": "CloudFront 快取策略"
+          "B": "S3 生命週期規則",
+          "C": "使用具有版本化相容模式的模式註冊表或目錄",
+          "D": "Amazon DynamoDB"
         },
-        "explanation": "Glue 爬蟲會發現模式並將表元資料儲存在 Glue 資料目錄中。\n其他選擇不對資料模式進行編目。"
+        "explanation": "Glue 爬蟲會發現模式並將表元資料儲存在 Glue 資料目錄中。\n其他選項適用於此領域的不同需求，但不能像 帶有爬網程式的 AWS Glue 資料目錄 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d2-028",
-    "type": "single",
-    "question": "A company migrating an existing workload needs to remove old objects automatically after a retention period. Which feature should be configured?",
-    "options": {
-      "A": "An SNS subscription",
-      "B": "An S3 Lifecycle rule",
-      "C": "An IAM permission boundary",
-      "D": "A VPC endpoint"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "S3 Lifecycle rules transition or expire objects based on age and storage requirements.\nThe other choices manage IAM, private connectivity, or notifications.",
     "taskStatement": "2.4",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A company migrating an existing workload is planning two independent production changes. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The first team needs to remove old objects automatically after a retention period. A second team needs flexible schema evolution for semi-structured records. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "An S3 Lifecycle rule",
+      "B": "Use a schema registry or catalog with versioned compatible schemas",
+      "C": "Amazon DynamoDB",
+      "D": "Amazon Redshift",
+      "E": "AWS Glue Data Catalog with a crawler"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "An S3 Lifecycle rule meets the first requirement: S3 Lifecycle rules transition or expire objects based on age and storage requirements. Use a schema registry or catalog with versioned compatible schemas meets the second requirement: Versioned schemas let producers and consumers evolve without breaking compatible readers.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司需要在保留期後自動刪除舊物件。應該配置哪個功能？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。第一項需求：受監管的公司需要在保留期後自動刪除舊物件。第二項需求：準備增加流量的新創公司需要針對半結構化記錄進行靈活的模式演進。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "SNS 訂閱",
-          "B": "S3 生命週期規則",
-          "C": "IAM Permissions邊界",
-          "D": "VPC 終端節點"
+          "A": "S3 生命週期規則",
+          "B": "使用具有版本化相容模式的模式註冊表或目錄",
+          "C": "Amazon DynamoDB",
+          "D": "Amazon Redshift",
+          "E": "帶有爬網程式的 AWS Glue 資料目錄"
         },
-        "explanation": "S3 生命週期規則會根據年齡和儲存需求來轉換或過期物件。\n其他選項管理 IAM、專用連線或通知。"
+        "explanation": "S3 生命週期規則 符合第一項需求：S3 生命週期規則會根據年齡和儲存需求來轉換或過期物件。 使用具有版本化相容模式的模式註冊表或目錄 符合第二項需求：版本化模式讓生產者和消費者在不破壞相容讀取器的情況下持續發展。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "dea-c01-d2-029",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team with strict recovery objectives needs flexible schema evolution for semi-structured records. Which design is appropriate?",
+    "question": "A team with strict recovery objectives is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team needs flexible schema evolution for semi-structured records. Which design is appropriate?",
     "options": {
-      "A": "Use a security group as a schema",
-      "B": "Disable validation",
+      "A": "Amazon Redshift",
+      "B": "AWS Glue Data Catalog with a crawler",
       "C": "Use a schema registry or catalog with versioned compatible schemas",
-      "D": "Require every consumer to share an immutable table forever"
+      "D": "Amazon DynamoDB"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Versioned schemas let producers and consumers evolve without breaking compatible readers.\nThe other choices do not manage data schema compatibility.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Versioned schemas let producers and consumers evolve without breaking compatible readers.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Use a schema registry or catalog with versioned compatible schemas for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格恢復目標的團隊需要針對半結構化記錄進行靈活的模式演進。哪種設計合適？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。具有嚴格恢復目標的團隊需要針對半結構化記錄進行靈活的模式演進。哪種設計合適？",
         "options": {
-          "A": "使用安全性群組作為架構",
-          "B": "禁用驗證",
+          "A": "Amazon Redshift",
+          "B": "帶有爬網程式的 AWS Glue 資料目錄",
           "C": "使用具有版本化相容模式的模式註冊表或目錄",
-          "D": "要求每個消費者永遠共享一個不可變的表"
+          "D": "Amazon DynamoDB"
         },
-        "explanation": "版本化模式讓生產者和消費者在不破壞相容讀取器的情況下持續發展。\n其他選擇不管理資料模式相容性。"
+        "explanation": "版本化模式讓生產者和消費者在不破壞相容讀取器的情況下持續發展。\n其他選項適用於此領域的不同需求，但不能像 使用具有版本化相容模式的模式註冊表或目錄 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d2-030",
-    "type": "single",
-    "question": "A developer team preparing a release needs a key-value store with predictable single-digit millisecond access at scale. Which service should be evaluated?",
-    "options": {
-      "A": "Amazon CloudFront",
-      "B": "Amazon EFS",
-      "C": "Amazon SES",
-      "D": "Amazon DynamoDB"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "DynamoDB is a managed key-value and document database designed for low-latency access at scale.\nThe other choices deliver content, store files, or send email.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A developer team preparing a release is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team needs a key-value store with predictable single-digit millisecond access at scale. Which service should be evaluated?",
+    "options": {
+      "A": "An S3 Lifecycle rule",
+      "B": "Amazon DynamoDB",
+      "C": "Amazon Redshift",
+      "D": "AWS Glue Data Catalog with a crawler"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "DynamoDB is a managed key-value and document database designed for low-latency access at scale.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon DynamoDB for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊需要一個具有可預測的個位數毫秒級存取權限的鍵值儲存。應該評估哪些服務？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。準備發布的開發團隊需要一個具有可預測的個位數毫秒級存取權限的鍵值儲存。應該評估哪些服務？",
         "options": {
-          "A": "Amazon CloudFront",
-          "B": "Amazon EFS",
-          "C": "Amazon SES",
-          "D": "Amazon DynamoDB"
+          "A": "S3 生命週期規則",
+          "B": "Amazon DynamoDB",
+          "C": "Amazon Redshift",
+          "D": "帶有爬網程式的 AWS Glue 資料目錄"
         },
-        "explanation": "DynamoDB 是一種託管鍵值和文件資料庫，專為大規模低延遲存取而設計。\n其他選項提供內容、儲存檔案或發送電子郵件。"
+        "explanation": "DynamoDB 是一種託管鍵值和文件資料庫，專為大規模低延遲存取而設計。\n其他選項適用於此領域的不同需求，但不能像 Amazon DynamoDB 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d2-031",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An enterprise with several AWS Regions needs SQL analytics over large columnar tables with a managed warehouse. Which service fits?",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs SQL analytics over large columnar tables with a managed warehouse. Which service fits?",
     "options": {
       "A": "Amazon Redshift",
-      "B": "Amazon EFS",
-      "C": "Amazon SQS",
-      "D": "Amazon Cognito"
+      "B": "AWS Glue Data Catalog with a crawler",
+      "C": "An S3 Lifecycle rule",
+      "D": "Use a schema registry or catalog with versioned compatible schemas"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Redshift is a managed analytical data warehouse optimized for columnar scans and parallel queries.\nThe other choices provide file storage, queues, or identity.",
-    "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "Redshift is a managed analytical data warehouse optimized for columnar scans and parallel queries.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Redshift for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業需要透過託管倉庫對大型柱狀表進行 SQL 分析。適合哪種服務？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。擁有多個 AWS 區域的企業需要透過託管倉庫對大型柱狀表進行 SQL 分析。適合哪種服務？",
         "options": {
           "A": "Amazon Redshift",
-          "B": "Amazon EFS",
-          "C": "Amazon SQS",
-          "D": "Amazon Cognito"
+          "B": "帶有爬網程式的 AWS Glue 資料目錄",
+          "C": "S3 生命週期規則",
+          "D": "使用具有版本化相容模式的模式註冊表或目錄"
         },
-        "explanation": "Redshift 是一個針對列式掃描和平行查詢進行最佳化的託管分析資料倉儲。\n其他選擇提供文件儲存、佇列或身分。"
+        "explanation": "Redshift 是一個針對列式掃描和平行查詢進行最佳化的託管分析資料倉儲。\n其他選項適用於此領域的不同需求，但不能像 Amazon Redshift 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d2-032",
-    "type": "single",
-    "question": "A service owner reviewing an incident needs a technical catalog of table schemas discovered from S3 data. Which feature should be used?",
-    "options": {
-      "A": "A CloudFront cache policy",
-      "B": "AWS Glue Data Catalog with a crawler",
-      "C": "A Route 53 hosted zone",
-      "D": "An EC2 security group"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "A Glue crawler discovers schemas and stores table metadata in the Glue Data Catalog.\nThe other choices do not catalog data schemas.",
     "taskStatement": "2.4",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A service owner reviewing an incident is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs a technical catalog of table schemas discovered from S3 data. Which feature should be used?",
+    "options": {
+      "A": "An S3 Lifecycle rule",
+      "B": "Use a schema registry or catalog with versioned compatible schemas",
+      "C": "Amazon DynamoDB",
+      "D": "AWS Glue Data Catalog with a crawler"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "A Glue crawler discovers schemas and stores table metadata in the Glue Data Catalog.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Glue Data Catalog with a crawler for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務擁有者需要從 S3 資料中發現的表格模式的技術目錄。應該使用哪個功能？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。審查事件的服務擁有者需要從 S3 資料中發現的表格模式的技術目錄。應該使用哪個功能？",
         "options": {
-          "A": "CloudFront 快取策略",
-          "B": "帶有爬網程式的 AWS Glue 資料目錄",
-          "C": "Route 53 託管區域",
-          "D": "EC2 安全群組"
+          "A": "S3 生命週期規則",
+          "B": "使用具有版本化相容模式的模式註冊表或目錄",
+          "C": "Amazon DynamoDB",
+          "D": "帶有爬網程式的 AWS Glue 資料目錄"
         },
-        "explanation": "Glue 爬蟲會發現模式並將表元資料儲存在 Glue 資料目錄中。\n其他選擇不對資料模式進行編目。"
+        "explanation": "Glue 爬蟲會發現模式並將表元資料儲存在 Glue 資料目錄中。\n其他選項適用於此領域的不同需求，但不能像 帶有爬網程式的 AWS Glue 資料目錄 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d2-033",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team optimizing an existing implementation needs to remove old objects automatically after a retention period. Which feature should be configured?",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs to remove old objects automatically after a retention period. Which feature should be configured?",
     "options": {
-      "A": "A VPC endpoint",
-      "B": "An SNS subscription",
+      "A": "Amazon DynamoDB",
+      "B": "Amazon Redshift",
       "C": "An S3 Lifecycle rule",
-      "D": "An IAM permission boundary"
+      "D": "Use a schema registry or catalog with versioned compatible schemas"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "S3 Lifecycle rules transition or expire objects based on age and storage requirements.\nThe other choices manage IAM, private connectivity, or notifications.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "S3 Lifecycle rules transition or expire objects based on age and storage requirements.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide An S3 Lifecycle rule for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實作的團隊需要在保留期後自動刪除舊物件。應該配置哪個功能？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。優化現有實作的團隊需要在保留期後自動刪除舊物件。應該配置哪個功能？",
         "options": {
-          "A": "VPC 終端節點",
-          "B": "SNS 訂閱",
+          "A": "Amazon DynamoDB",
+          "B": "Amazon Redshift",
           "C": "S3 生命週期規則",
-          "D": "IAM Permissions邊界"
+          "D": "使用具有版本化相容模式的模式註冊表或目錄"
         },
-        "explanation": "S3 生命週期規則會根據年齡和儲存需求來轉換或過期物件。\n其他選項管理 IAM、專用連線或通知。"
+        "explanation": "S3 生命週期規則會根據年齡和儲存需求來轉換或過期物件。\n其他選項適用於此領域的不同需求，但不能像 S3 生命週期規則 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d2-034",
-    "type": "single",
-    "question": "A company introducing an automated workflow needs flexible schema evolution for semi-structured records. Which design is appropriate?",
-    "options": {
-      "A": "Require every consumer to share an immutable table forever",
-      "B": "Use a security group as a schema",
-      "C": "Disable validation",
-      "D": "Use a schema registry or catalog with versioned compatible schemas"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Versioned schemas let producers and consumers evolve without breaking compatible readers.\nThe other choices do not manage data schema compatibility.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A company introducing an automated workflow is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs flexible schema evolution for semi-structured records. Which design is appropriate?",
+    "options": {
+      "A": "AWS Glue Data Catalog with a crawler",
+      "B": "Use a schema registry or catalog with versioned compatible schemas",
+      "C": "Amazon DynamoDB",
+      "D": "Amazon Redshift"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Versioned schemas let producers and consumers evolve without breaking compatible readers.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Use a schema registry or catalog with versioned compatible schemas for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司需要對半結構化記錄進行靈活的模式演變。哪種設計合適？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。引入自動化工作流程的公司需要對半結構化記錄進行靈活的模式演變。哪種設計合適？",
         "options": {
-          "A": "要求每個消費者永遠共享一個不可變的表",
-          "B": "使用安全性群組作為架構",
-          "C": "禁用驗證",
-          "D": "使用具有版本化相容模式的模式註冊表或目錄"
+          "A": "帶有爬網程式的 AWS Glue 資料目錄",
+          "B": "使用具有版本化相容模式的模式註冊表或目錄",
+          "C": "Amazon DynamoDB",
+          "D": "Amazon Redshift"
         },
-        "explanation": "版本化模式讓生產者和消費者在不破壞相容讀取器的情況下持續發展。\n其他選擇不管理資料模式相容性。"
+        "explanation": "版本化模式讓生產者和消費者在不破壞相容讀取器的情況下持續發展。\n其他選項適用於此領域的不同需求，但不能像 使用具有版本化相容模式的模式註冊表或目錄 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d2-035",
-    "type": "single",
-    "question": "An AWS administrator working in a shared environment needs a key-value store with predictable single-digit millisecond access at scale. Which service should be evaluated?",
-    "options": {
-      "A": "Amazon DynamoDB",
-      "B": "Amazon CloudFront",
-      "C": "Amazon EFS",
-      "D": "Amazon SES"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "DynamoDB is a managed key-value and document database designed for low-latency access at scale.\nThe other choices deliver content, store files, or send email.",
     "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "An AWS administrator working in a shared environment is planning two independent production changes. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The first team needs a key-value store with predictable single-digit millisecond access at scale. A second team needs SQL analytics over large columnar tables with a managed warehouse. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "AWS Glue Data Catalog with a crawler",
+      "B": "An S3 Lifecycle rule",
+      "C": "Use a schema registry or catalog with versioned compatible schemas",
+      "D": "Amazon DynamoDB",
+      "E": "Amazon Redshift"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Amazon DynamoDB meets the first requirement: DynamoDB is a managed key-value and document database designed for low-latency access at scale. Amazon Redshift meets the second requirement: Redshift is a managed analytical data warehouse optimized for columnar scans and parallel queries.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "在共用環境中工作的 AWS 管理員需要一個具有可預測的個位數毫秒級大規模存取的鍵值儲存。應該評估哪些服務？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。第一項需求：支援關鍵工作負載的營運團隊需要一個具有可預測的個位數毫秒級大規模存取的鍵值儲存。第二項需求：生產團隊需要透過託管倉庫對大型柱狀表進行 SQL 分析。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "Amazon DynamoDB",
-          "B": "Amazon CloudFront",
-          "C": "Amazon EFS",
-          "D": "Amazon SES"
+          "A": "帶有爬網程式的 AWS Glue 資料目錄",
+          "B": "S3 生命週期規則",
+          "C": "使用具有版本化相容模式的模式註冊表或目錄",
+          "D": "Amazon DynamoDB",
+          "E": "Amazon Redshift"
         },
-        "explanation": "DynamoDB 是一種託管鍵值和文件資料庫，專為大規模低延遲存取而設計。\n其他選項提供內容、儲存檔案或發送電子郵件。"
+        "explanation": "Amazon DynamoDB 符合第一項需求：DynamoDB 是一種託管鍵值和文件資料庫，專為大規模低延遲存取而設計。 Amazon Redshift 符合第二項需求：Redshift 是一個針對列式掃描和平行查詢進行最佳化的託管分析資料倉儲。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "dea-c01-d2-036",
-    "type": "single",
-    "question": "A customer-facing application team needs SQL analytics over large columnar tables with a managed warehouse. Which service fits?",
-    "options": {
-      "A": "Amazon Cognito",
-      "B": "Amazon Redshift",
-      "C": "Amazon EFS",
-      "D": "Amazon SQS"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Redshift is a managed analytical data warehouse optimized for columnar scans and parallel queries.\nThe other choices provide file storage, queues, or identity.",
     "taskStatement": "2.4",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A customer-facing application team is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs SQL analytics over large columnar tables with a managed warehouse. Which service fits?",
+    "options": {
+      "A": "AWS Glue Data Catalog with a crawler",
+      "B": "An S3 Lifecycle rule",
+      "C": "Use a schema registry or catalog with versioned compatible schemas",
+      "D": "Amazon Redshift"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Redshift is a managed analytical data warehouse optimized for columnar scans and parallel queries.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Redshift for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊需要透過託管倉庫對大型柱狀表進行 SQL 分析。適合哪種服務？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。面向客戶的應用程式團隊需要透過託管倉庫對大型柱狀表進行 SQL 分析。適合哪種服務？",
         "options": {
-          "A": "Amazon Cognito",
-          "B": "Amazon Redshift",
-          "C": "Amazon EFS",
-          "D": "Amazon SQS"
+          "A": "帶有爬網程式的 AWS Glue 資料目錄",
+          "B": "S3 生命週期規則",
+          "C": "使用具有版本化相容模式的模式註冊表或目錄",
+          "D": "Amazon Redshift"
         },
-        "explanation": "Redshift 是一個針對列式掃描和平行查詢進行最佳化的託管分析資料倉儲。\n其他選擇提供文件儲存、佇列或身分。"
+        "explanation": "Redshift 是一個針對列式掃描和平行查詢進行最佳化的託管分析資料倉儲。\n其他選項適用於此領域的不同需求，但不能像 Amazon Redshift 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d2-037",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A platform team standardizing its AWS deployments needs a technical catalog of table schemas discovered from S3 data. Which feature should be used?",
+    "question": "A platform team standardizing its AWS deployments is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs a technical catalog of table schemas discovered from S3 data. Which feature should be used?",
     "options": {
-      "A": "An EC2 security group",
-      "B": "A CloudFront cache policy",
+      "A": "Use a schema registry or catalog with versioned compatible schemas",
+      "B": "Amazon DynamoDB",
       "C": "AWS Glue Data Catalog with a crawler",
-      "D": "A Route 53 hosted zone"
+      "D": "An S3 Lifecycle rule"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "A Glue crawler discovers schemas and stores table metadata in the Glue Data Catalog.\nThe other choices do not catalog data schemas.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "A Glue crawler discovers schemas and stores table metadata in the Glue Data Catalog.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Glue Data Catalog with a crawler for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊需要從 S3 資料中發現的表格模式的技術目錄。應該使用哪個功能？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。標準化其 AWS 部署的平台團隊需要從 S3 資料中發現的表格模式的技術目錄。應該使用哪個功能？",
         "options": {
-          "A": "EC2 安全群組",
-          "B": "CloudFront 快取策略",
+          "A": "使用具有版本化相容模式的模式註冊表或目錄",
+          "B": "Amazon DynamoDB",
           "C": "帶有爬網程式的 AWS Glue 資料目錄",
-          "D": "Route 53 託管區域"
+          "D": "S3 生命週期規則"
         },
-        "explanation": "Glue 爬蟲會發現模式並將表元資料儲存在 Glue 資料目錄中。\n其他選擇不對資料模式進行編目。"
+        "explanation": "Glue 爬蟲會發現模式並將表元資料儲存在 Glue 資料目錄中。\n其他選項適用於此領域的不同需求，但不能像 帶有爬網程式的 AWS Glue 資料目錄 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d2-038",
-    "type": "single",
-    "question": "A team preparing evidence for an audit needs to remove old objects automatically after a retention period. Which feature should be configured?",
-    "options": {
-      "A": "An IAM permission boundary",
-      "B": "A VPC endpoint",
-      "C": "An SNS subscription",
-      "D": "An S3 Lifecycle rule"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "S3 Lifecycle rules transition or expire objects based on age and storage requirements.\nThe other choices manage IAM, private connectivity, or notifications.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team preparing evidence for an audit is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs to remove old objects automatically after a retention period. Which feature should be configured?",
+    "options": {
+      "A": "Amazon Redshift",
+      "B": "An S3 Lifecycle rule",
+      "C": "Use a schema registry or catalog with versioned compatible schemas",
+      "D": "Amazon DynamoDB"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "S3 Lifecycle rules transition or expire objects based on age and storage requirements.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide An S3 Lifecycle rule for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "為審計準備證據的團隊需要在保留期後自動刪除舊物件。應該配置哪個功能？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。為審計準備證據的團隊需要在保留期後自動刪除舊物件。應該配置哪個功能？",
         "options": {
-          "A": "IAM Permissions邊界",
-          "B": "VPC 終端節點",
-          "C": "SNS 訂閱",
-          "D": "S3 生命週期規則"
+          "A": "Amazon Redshift",
+          "B": "S3 生命週期規則",
+          "C": "使用具有版本化相容模式的模式註冊表或目錄",
+          "D": "Amazon DynamoDB"
         },
-        "explanation": "S3 生命週期規則會根據年齡和儲存需求來轉換或過期物件。\n其他選項管理 IAM、專用連線或通知。"
+        "explanation": "S3 生命週期規則會根據年齡和儲存需求來轉換或過期物件。\n其他選項適用於此領域的不同需求，但不能像 S3 生命週期規則 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d2-039",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A business replacing a manual process needs flexible schema evolution for semi-structured records. Which design is appropriate?",
+    "question": "A business replacing a manual process is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs flexible schema evolution for semi-structured records. Which design is appropriate?",
     "options": {
       "A": "Use a schema registry or catalog with versioned compatible schemas",
-      "B": "Require every consumer to share an immutable table forever",
-      "C": "Use a security group as a schema",
-      "D": "Disable validation"
+      "B": "Amazon DynamoDB",
+      "C": "Amazon Redshift",
+      "D": "AWS Glue Data Catalog with a crawler"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Versioned schemas let producers and consumers evolve without breaking compatible readers.\nThe other choices do not manage data schema compatibility.",
-    "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "Versioned schemas let producers and consumers evolve without breaking compatible readers.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Use a schema registry or catalog with versioned compatible schemas for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "取代手動流程的企業需要針對半結構化記錄進行靈活的模式演進。哪種設計合適？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。取代手動流程的企業需要針對半結構化記錄進行靈活的模式演進。哪種設計合適？",
         "options": {
           "A": "使用具有版本化相容模式的模式註冊表或目錄",
-          "B": "要求每個消費者永遠共享一個不可變的表",
-          "C": "使用安全性群組作為架構",
-          "D": "禁用驗證"
+          "B": "Amazon DynamoDB",
+          "C": "Amazon Redshift",
+          "D": "帶有爬網程式的 AWS Glue 資料目錄"
         },
-        "explanation": "版本化模式讓生產者和消費者在不破壞相容讀取器的情況下持續發展。\n其他選擇不管理資料模式相容性。"
+        "explanation": "版本化模式讓生產者和消費者在不破壞相容讀取器的情況下持續發展。\n其他選項適用於此領域的不同需求，但不能像 使用具有版本化相容模式的模式註冊表或目錄 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d2-040",
-    "type": "single",
-    "question": "A team validating a design against the exam guide needs a key-value store with predictable single-digit millisecond access at scale. Which service should be evaluated?",
-    "options": {
-      "A": "Amazon SES",
-      "B": "Amazon DynamoDB",
-      "C": "Amazon CloudFront",
-      "D": "Amazon EFS"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "DynamoDB is a managed key-value and document database designed for low-latency access at scale.\nThe other choices deliver content, store files, or send email.",
     "taskStatement": "2.4",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team validating a design against the exam guide is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs a key-value store with predictable single-digit millisecond access at scale. Which service should be evaluated?",
+    "options": {
+      "A": "Amazon Redshift",
+      "B": "AWS Glue Data Catalog with a crawler",
+      "C": "An S3 Lifecycle rule",
+      "D": "Amazon DynamoDB"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "DynamoDB is a managed key-value and document database designed for low-latency access at scale.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon DynamoDB for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊需要一個具有可預測的個位數毫秒級存取權限的鍵值儲存。應該評估哪些服務？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。根據考試指南驗證設計的團隊需要一個具有可預測的個位數毫秒級存取權限的鍵值儲存。應該評估哪些服務？",
         "options": {
-          "A": "Amazon SES",
-          "B": "Amazon DynamoDB",
-          "C": "Amazon CloudFront",
-          "D": "Amazon EFS"
+          "A": "Amazon Redshift",
+          "B": "帶有爬網程式的 AWS Glue 資料目錄",
+          "C": "S3 生命週期規則",
+          "D": "Amazon DynamoDB"
         },
-        "explanation": "DynamoDB 是一種託管鍵值和文件資料庫，專為大規模低延遲存取而設計。\n其他選項提供內容、儲存檔案或發送電子郵件。"
+        "explanation": "DynamoDB 是一種託管鍵值和文件資料庫，專為大規模低延遲存取而設計。\n其他選項適用於此領域的不同需求，但不能像 Amazon DynamoDB 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d2-041",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A production team needs SQL analytics over large columnar tables with a managed warehouse. Which service fits?",
+    "question": "A production team is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs SQL analytics over large columnar tables with a managed warehouse. Which service fits?",
     "options": {
-      "A": "Amazon SQS",
-      "B": "Amazon Cognito",
+      "A": "An S3 Lifecycle rule",
+      "B": "Use a schema registry or catalog with versioned compatible schemas",
       "C": "Amazon Redshift",
-      "D": "Amazon EFS"
+      "D": "AWS Glue Data Catalog with a crawler"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Redshift is a managed analytical data warehouse optimized for columnar scans and parallel queries.\nThe other choices provide file storage, queues, or identity.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Redshift is a managed analytical data warehouse optimized for columnar scans and parallel queries.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Redshift for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "生產團隊需要透過託管倉庫對大型柱狀表進行 SQL 分析。適合哪種服務？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。生產團隊需要透過託管倉庫對大型柱狀表進行 SQL 分析。適合哪種服務？",
         "options": {
-          "A": "Amazon SQS",
-          "B": "Amazon Cognito",
+          "A": "S3 生命週期規則",
+          "B": "使用具有版本化相容模式的模式註冊表或目錄",
           "C": "Amazon Redshift",
-          "D": "Amazon EFS"
+          "D": "帶有爬網程式的 AWS Glue 資料目錄"
         },
-        "explanation": "Redshift 是一個針對列式掃描和平行查詢進行最佳化的託管分析資料倉儲。\n其他選擇提供文件儲存、佇列或身分。"
+        "explanation": "Redshift 是一個針對列式掃描和平行查詢進行最佳化的託管分析資料倉儲。\n其他選項適用於此領域的不同需求，但不能像 Amazon Redshift 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d2-042",
-    "type": "single",
-    "question": "A multi-account platform team needs a technical catalog of table schemas discovered from S3 data. Which feature should be used?",
-    "options": {
-      "A": "A Route 53 hosted zone",
-      "B": "An EC2 security group",
-      "C": "A CloudFront cache policy",
-      "D": "AWS Glue Data Catalog with a crawler"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "A Glue crawler discovers schemas and stores table metadata in the Glue Data Catalog.\nThe other choices do not catalog data schemas.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A multi-account platform team is planning two independent production changes. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The first team needs a technical catalog of table schemas discovered from S3 data. A second team needs to remove old objects automatically after a retention period. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Amazon Redshift",
+      "B": "AWS Glue Data Catalog with a crawler",
+      "C": "An S3 Lifecycle rule",
+      "D": "Use a schema registry or catalog with versioned compatible schemas",
+      "E": "Amazon DynamoDB"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS Glue Data Catalog with a crawler meets the first requirement: A Glue crawler discovers schemas and stores table metadata in the Glue Data Catalog. An S3 Lifecycle rule meets the second requirement: S3 Lifecycle rules transition or expire objects based on age and storage requirements.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊需要從 S3 資料中發現的表格模式的技術目錄。應該使用哪個功能？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。第一項需求：多帳戶平台團隊需要從 S3 資料中發現的表格模式的技術目錄。第二項需求：受監管的公司需要在保留期後自動刪除舊物件。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "Route 53 託管區域",
-          "B": "EC2 安全群組",
-          "C": "CloudFront 快取策略",
-          "D": "帶有爬網程式的 AWS Glue 資料目錄"
+          "A": "Amazon Redshift",
+          "B": "帶有爬網程式的 AWS Glue 資料目錄",
+          "C": "S3 生命週期規則",
+          "D": "使用具有版本化相容模式的模式註冊表或目錄",
+          "E": "Amazon DynamoDB"
         },
-        "explanation": "Glue 爬蟲會發現模式並將表元資料儲存在 Glue 資料目錄中。\n其他選擇不對資料模式進行編目。"
+        "explanation": "帶有爬網程式的 AWS Glue 資料目錄 符合第一項需求：Glue 爬蟲會發現模式並將表元資料儲存在 Glue 資料目錄中。 S3 生命週期規則 符合第二項需求：S3 生命週期規則會根據年齡和儲存需求來轉換或過期物件。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "dea-c01-d2-043",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A regulated company needs to remove old objects automatically after a retention period. Which feature should be configured?",
+    "question": "A regulated company is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs to remove old objects automatically after a retention period. Which feature should be configured?",
     "options": {
       "A": "An S3 Lifecycle rule",
-      "B": "An IAM permission boundary",
-      "C": "A VPC endpoint",
-      "D": "An SNS subscription"
+      "B": "Use a schema registry or catalog with versioned compatible schemas",
+      "C": "Amazon DynamoDB",
+      "D": "Amazon Redshift"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "S3 Lifecycle rules transition or expire objects based on age and storage requirements.\nThe other choices manage IAM, private connectivity, or notifications.",
-    "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "S3 Lifecycle rules transition or expire objects based on age and storage requirements.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide An S3 Lifecycle rule for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司需要在保留期後自動刪除舊物件。應該配置哪個功能？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。受監管的公司需要在保留期後自動刪除舊物件。應該配置哪個功能？",
         "options": {
           "A": "S3 生命週期規則",
-          "B": "IAM Permissions邊界",
-          "C": "VPC 終端節點",
-          "D": "SNS 訂閱"
+          "B": "使用具有版本化相容模式的模式註冊表或目錄",
+          "C": "Amazon DynamoDB",
+          "D": "Amazon Redshift"
         },
-        "explanation": "S3 生命週期規則會根據年齡和儲存需求來轉換或過期物件。\n其他選項管理 IAM、專用連線或通知。"
+        "explanation": "S3 生命週期規則會根據年齡和儲存需求來轉換或過期物件。\n其他選項適用於此領域的不同需求，但不能像 S3 生命週期規則 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d2-044",
-    "type": "single",
-    "question": "A startup preparing for a traffic increase needs flexible schema evolution for semi-structured records. Which design is appropriate?",
-    "options": {
-      "A": "Disable validation",
-      "B": "Use a schema registry or catalog with versioned compatible schemas",
-      "C": "Require every consumer to share an immutable table forever",
-      "D": "Use a security group as a schema"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Versioned schemas let producers and consumers evolve without breaking compatible readers.\nThe other choices do not manage data schema compatibility.",
     "taskStatement": "2.4",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs flexible schema evolution for semi-structured records. Which design is appropriate?",
+    "options": {
+      "A": "Amazon DynamoDB",
+      "B": "Amazon Redshift",
+      "C": "AWS Glue Data Catalog with a crawler",
+      "D": "Use a schema registry or catalog with versioned compatible schemas"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Versioned schemas let producers and consumers evolve without breaking compatible readers.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Use a schema registry or catalog with versioned compatible schemas for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司需要針對半結構化記錄進行靈活的模式演進。哪種設計合適？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。準備增加流量的新創公司需要針對半結構化記錄進行靈活的模式演進。哪種設計合適？",
         "options": {
-          "A": "禁用驗證",
-          "B": "使用具有版本化相容模式的模式註冊表或目錄",
-          "C": "要求每個消費者永遠共享一個不可變的表",
-          "D": "使用安全性群組作為架構"
+          "A": "Amazon DynamoDB",
+          "B": "Amazon Redshift",
+          "C": "帶有爬網程式的 AWS Glue 資料目錄",
+          "D": "使用具有版本化相容模式的模式註冊表或目錄"
         },
-        "explanation": "版本化模式讓生產者和消費者在不破壞相容讀取器的情況下持續發展。\n其他選擇不管理資料模式相容性。"
+        "explanation": "版本化模式讓生產者和消費者在不破壞相容讀取器的情況下持續發展。\n其他選項適用於此領域的不同需求，但不能像 使用具有版本化相容模式的模式註冊表或目錄 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d2-045",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An operations team supporting a critical workload needs a key-value store with predictable single-digit millisecond access at scale. Which service should be evaluated?",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs a key-value store with predictable single-digit millisecond access at scale. Which service should be evaluated?",
     "options": {
-      "A": "Amazon EFS",
-      "B": "Amazon SES",
+      "A": "AWS Glue Data Catalog with a crawler",
+      "B": "An S3 Lifecycle rule",
       "C": "Amazon DynamoDB",
-      "D": "Amazon CloudFront"
+      "D": "Amazon Redshift"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "DynamoDB is a managed key-value and document database designed for low-latency access at scale.\nThe other choices deliver content, store files, or send email.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "DynamoDB is a managed key-value and document database designed for low-latency access at scale.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon DynamoDB for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊需要一個具有可預測的個位數毫秒級大規模存取的鍵值儲存。應該評估哪些服務？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。支援關鍵工作負載的營運團隊需要一個具有可預測的個位數毫秒級大規模存取的鍵值儲存。應該評估哪些服務？",
         "options": {
-          "A": "Amazon EFS",
-          "B": "Amazon SES",
+          "A": "帶有爬網程式的 AWS Glue 資料目錄",
+          "B": "S3 生命週期規則",
           "C": "Amazon DynamoDB",
-          "D": "Amazon CloudFront"
+          "D": "Amazon Redshift"
         },
-        "explanation": "DynamoDB 是一種託管鍵值和文件資料庫，專為大規模低延遲存取而設計。\n其他選項提供內容、儲存檔案或發送電子郵件。"
+        "explanation": "DynamoDB 是一種託管鍵值和文件資料庫，專為大規模低延遲存取而設計。\n其他選項適用於此領域的不同需求，但不能像 Amazon DynamoDB 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d2-046",
-    "type": "single",
-    "question": "A data platform team needs SQL analytics over large columnar tables with a managed warehouse. Which service fits?",
-    "options": {
-      "A": "Amazon EFS",
-      "B": "Amazon SQS",
-      "C": "Amazon Cognito",
-      "D": "Amazon Redshift"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Redshift is a managed analytical data warehouse optimized for columnar scans and parallel queries.\nThe other choices provide file storage, queues, or identity.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A data platform team is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs SQL analytics over large columnar tables with a managed warehouse. Which service fits?",
+    "options": {
+      "A": "Use a schema registry or catalog with versioned compatible schemas",
+      "B": "Amazon Redshift",
+      "C": "AWS Glue Data Catalog with a crawler",
+      "D": "An S3 Lifecycle rule"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Redshift is a managed analytical data warehouse optimized for columnar scans and parallel queries.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Redshift for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要透過託管倉庫對大型柱狀表進行 SQL 分析。適合哪種服務？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。資料平台團隊需要透過託管倉庫對大型柱狀表進行 SQL 分析。適合哪種服務？",
         "options": {
-          "A": "Amazon EFS",
-          "B": "Amazon SQS",
-          "C": "Amazon Cognito",
-          "D": "Amazon Redshift"
+          "A": "使用具有版本化相容模式的模式註冊表或目錄",
+          "B": "Amazon Redshift",
+          "C": "帶有爬網程式的 AWS Glue 資料目錄",
+          "D": "S3 生命週期規則"
         },
-        "explanation": "Redshift 是一個針對列式掃描和平行查詢進行最佳化的託管分析資料倉儲。\n其他選擇提供文件儲存、佇列或身分。"
+        "explanation": "Redshift 是一個針對列式掃描和平行查詢進行最佳化的託管分析資料倉儲。\n其他選項適用於此領域的不同需求，但不能像 Amazon Redshift 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d2-047",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A security-conscious engineering team needs a technical catalog of table schemas discovered from S3 data. Which feature should be used?",
+    "question": "A security-conscious engineering team is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs a technical catalog of table schemas discovered from S3 data. Which feature should be used?",
     "options": {
       "A": "AWS Glue Data Catalog with a crawler",
-      "B": "A Route 53 hosted zone",
-      "C": "An EC2 security group",
-      "D": "A CloudFront cache policy"
+      "B": "An S3 Lifecycle rule",
+      "C": "Use a schema registry or catalog with versioned compatible schemas",
+      "D": "Amazon DynamoDB"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "A Glue crawler discovers schemas and stores table metadata in the Glue Data Catalog.\nThe other choices do not catalog data schemas.",
-    "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "A Glue crawler discovers schemas and stores table metadata in the Glue Data Catalog.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Glue Data Catalog with a crawler for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊需要從 S3 資料中發現的表格模式的技術目錄。應該使用哪個功能？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。具有安全意識的工程團隊需要從 S3 資料中發現的表格模式的技術目錄。應該使用哪個功能？",
         "options": {
           "A": "帶有爬網程式的 AWS Glue 資料目錄",
-          "B": "Route 53 託管區域",
-          "C": "EC2 安全群組",
-          "D": "CloudFront 快取策略"
+          "B": "S3 生命週期規則",
+          "C": "使用具有版本化相容模式的模式註冊表或目錄",
+          "D": "Amazon DynamoDB"
         },
-        "explanation": "Glue 爬蟲會發現模式並將表元資料儲存在 Glue 資料目錄中。\n其他選擇不對資料模式進行編目。"
+        "explanation": "Glue 爬蟲會發現模式並將表元資料儲存在 Glue 資料目錄中。\n其他選項適用於此領域的不同需求，但不能像 帶有爬網程式的 AWS Glue 資料目錄 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d2-048",
-    "type": "single",
-    "question": "A company migrating an existing workload needs to remove old objects automatically after a retention period. Which feature should be configured?",
-    "options": {
-      "A": "An SNS subscription",
-      "B": "An S3 Lifecycle rule",
-      "C": "An IAM permission boundary",
-      "D": "A VPC endpoint"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "S3 Lifecycle rules transition or expire objects based on age and storage requirements.\nThe other choices manage IAM, private connectivity, or notifications.",
     "taskStatement": "2.4",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A company migrating an existing workload is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs to remove old objects automatically after a retention period. Which feature should be configured?",
+    "options": {
+      "A": "Use a schema registry or catalog with versioned compatible schemas",
+      "B": "Amazon DynamoDB",
+      "C": "Amazon Redshift",
+      "D": "An S3 Lifecycle rule"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "S3 Lifecycle rules transition or expire objects based on age and storage requirements.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide An S3 Lifecycle rule for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司需要在保留期後自動刪除舊物件。應該配置哪個功能？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。遷移現有工作負載的公司需要在保留期後自動刪除舊物件。應該配置哪個功能？",
         "options": {
-          "A": "SNS 訂閱",
-          "B": "S3 生命週期規則",
-          "C": "IAM Permissions邊界",
-          "D": "VPC 終端節點"
+          "A": "使用具有版本化相容模式的模式註冊表或目錄",
+          "B": "Amazon DynamoDB",
+          "C": "Amazon Redshift",
+          "D": "S3 生命週期規則"
         },
-        "explanation": "S3 生命週期規則會根據年齡和儲存需求來轉換或過期物件。\n其他選項管理 IAM、專用連線或通知。"
+        "explanation": "S3 生命週期規則會根據年齡和儲存需求來轉換或過期物件。\n其他選項適用於此領域的不同需求，但不能像 S3 生命週期規則 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d2-049",
-    "type": "single",
-    "question": "A team with strict recovery objectives needs flexible schema evolution for semi-structured records. Which design is appropriate?",
-    "options": {
-      "A": "Use a security group as a schema",
-      "B": "Disable validation",
-      "C": "Use a schema registry or catalog with versioned compatible schemas",
-      "D": "Require every consumer to share an immutable table forever"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "Versioned schemas let producers and consumers evolve without breaking compatible readers.\nThe other choices do not manage data schema compatibility.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A team with strict recovery objectives is planning two independent production changes. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The first team needs flexible schema evolution for semi-structured records. A second team needs a key-value store with predictable single-digit millisecond access at scale. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Amazon DynamoDB",
+      "B": "Amazon Redshift",
+      "C": "AWS Glue Data Catalog with a crawler",
+      "D": "An S3 Lifecycle rule",
+      "E": "Use a schema registry or catalog with versioned compatible schemas"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Use a schema registry or catalog with versioned compatible schemas meets the first requirement: Versioned schemas let producers and consumers evolve without breaking compatible readers. Amazon DynamoDB meets the second requirement: DynamoDB is a managed key-value and document database designed for low-latency access at scale.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有嚴格恢復目標的團隊需要針對半結構化記錄進行靈活的模式演進。哪種設計合適？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。第一項需求：支援關鍵工作負載的營運團隊需要一個具有可預測的個位數毫秒級大規模存取的鍵值儲存。第二項需求：準備增加流量的新創公司需要針對半結構化記錄進行靈活的模式演進。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "使用安全性群組作為架構",
-          "B": "禁用驗證",
-          "C": "使用具有版本化相容模式的模式註冊表或目錄",
-          "D": "要求每個消費者永遠共享一個不可變的表"
+          "A": "Amazon DynamoDB",
+          "B": "Amazon Redshift",
+          "C": "帶有爬網程式的 AWS Glue 資料目錄",
+          "D": "S3 生命週期規則",
+          "E": "使用具有版本化相容模式的模式註冊表或目錄"
         },
-        "explanation": "版本化模式讓生產者和消費者在不破壞相容讀取器的情況下持續發展。\n其他選擇不管理資料模式相容性。"
+        "explanation": "Amazon DynamoDB 符合第一項需求：DynamoDB 是一種託管鍵值和文件資料庫，專為大規模低延遲存取而設計。 使用具有版本化相容模式的模式註冊表或目錄 符合第二項需求：版本化模式讓生產者和消費者在不破壞相容讀取器的情況下持續發展。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "dea-c01-d2-050",
-    "type": "single",
-    "question": "A developer team preparing a release needs a key-value store with predictable single-digit millisecond access at scale. Which service should be evaluated?",
-    "options": {
-      "A": "Amazon CloudFront",
-      "B": "Amazon EFS",
-      "C": "Amazon SES",
-      "D": "Amazon DynamoDB"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "DynamoDB is a managed key-value and document database designed for low-latency access at scale.\nThe other choices deliver content, store files, or send email.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A developer team preparing a release is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs a key-value store with predictable single-digit millisecond access at scale. Which service should be evaluated?",
+    "options": {
+      "A": "An S3 Lifecycle rule",
+      "B": "Amazon DynamoDB",
+      "C": "Amazon Redshift",
+      "D": "AWS Glue Data Catalog with a crawler"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "DynamoDB is a managed key-value and document database designed for low-latency access at scale.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon DynamoDB for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊需要一個具有可預測的個位數毫秒級存取權限的鍵值儲存。應該評估哪些服務？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。準備發布的開發團隊需要一個具有可預測的個位數毫秒級存取權限的鍵值儲存。應該評估哪些服務？",
         "options": {
-          "A": "Amazon CloudFront",
-          "B": "Amazon EFS",
-          "C": "Amazon SES",
-          "D": "Amazon DynamoDB"
+          "A": "S3 生命週期規則",
+          "B": "Amazon DynamoDB",
+          "C": "Amazon Redshift",
+          "D": "帶有爬網程式的 AWS Glue 資料目錄"
         },
-        "explanation": "DynamoDB 是一種託管鍵值和文件資料庫，專為大規模低延遲存取而設計。\n其他選項提供內容、儲存檔案或發送電子郵件。"
+        "explanation": "DynamoDB 是一種託管鍵值和文件資料庫，專為大規模低延遲存取而設計。\n其他選項適用於此領域的不同需求，但不能像 Amazon DynamoDB 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d2-051",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An enterprise with several AWS Regions needs SQL analytics over large columnar tables with a managed warehouse. Which service fits?",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team needs SQL analytics over large columnar tables with a managed warehouse. Which service fits?",
     "options": {
       "A": "Amazon Redshift",
-      "B": "Amazon EFS",
-      "C": "Amazon SQS",
-      "D": "Amazon Cognito"
+      "B": "AWS Glue Data Catalog with a crawler",
+      "C": "An S3 Lifecycle rule",
+      "D": "Use a schema registry or catalog with versioned compatible schemas"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Redshift is a managed analytical data warehouse optimized for columnar scans and parallel queries.\nThe other choices provide file storage, queues, or identity.",
-    "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "Redshift is a managed analytical data warehouse optimized for columnar scans and parallel queries.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Redshift for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業需要透過託管倉庫對大型柱狀表進行 SQL 分析。適合哪種服務？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。擁有多個 AWS 區域的企業需要透過託管倉庫對大型柱狀表進行 SQL 分析。適合哪種服務？",
         "options": {
           "A": "Amazon Redshift",
-          "B": "Amazon EFS",
-          "C": "Amazon SQS",
-          "D": "Amazon Cognito"
+          "B": "帶有爬網程式的 AWS Glue 資料目錄",
+          "C": "S3 生命週期規則",
+          "D": "使用具有版本化相容模式的模式註冊表或目錄"
         },
-        "explanation": "Redshift 是一個針對列式掃描和平行查詢進行最佳化的託管分析資料倉儲。\n其他選擇提供文件儲存、佇列或身分。"
+        "explanation": "Redshift 是一個針對列式掃描和平行查詢進行最佳化的託管分析資料倉儲。\n其他選項適用於此領域的不同需求，但不能像 Amazon Redshift 一樣直接滿足題目的指定條件。"
       }
     }
   }

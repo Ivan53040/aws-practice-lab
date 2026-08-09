@@ -1,1065 +1,1085 @@
 [
   {
     "id": "dop-c02-d2-001",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A production team needs repeatable multi-account infrastructure deployments from one template. Which CloudFormation feature fits?",
+    "question": "A production team is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team needs repeatable multi-account infrastructure deployments from one template. Which CloudFormation feature fits?",
     "options": {
-      "A": "An S3 ACL",
-      "B": "An RDS read replica",
+      "A": "CloudFormation drift detection",
+      "B": "Reference Secrets Manager or Parameter Store at runtime",
       "C": "CloudFormation StackSets",
-      "D": "A CloudFront cache policy"
+      "D": "AWS AppConfig"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "StackSets deploy templates across multiple accounts and Regions.\nThe other choices do not manage multi-account infrastructure.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "StackSets deploy templates across multiple accounts and Regions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide CloudFormation StackSets for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "生產團隊需要透過一個範本進行可重複的多帳戶基礎架構部署。哪種 CloudFormation 功能適合？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。生產團隊需要透過一個範本進行可重複的多帳戶基礎架構部署。哪種 CloudFormation 功能適合？",
         "options": {
-          "A": "S3 ACL",
-          "B": "RDS 唯讀副本",
+          "A": "CloudFormation 漂移偵測",
+          "B": "在運行時引用 Secrets Manager 或 Parameter Store",
           "C": "CloudFormation StackSets",
-          "D": "CloudFront 快取策略"
+          "D": "AWS AppConfig"
         },
-        "explanation": "StackSets 跨多個帳戶和區域部署範本。\n其他選擇不管理多帳戶基礎設施。"
+        "explanation": "StackSets 跨多個帳戶和區域部署範本。\n其他選項適用於此領域的不同需求，但不能像 CloudFormation StackSets 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d2-002",
-    "type": "single",
-    "question": "A multi-account platform team must store environment-specific application settings and roll them out safely. Which service should be evaluated?",
-    "options": {
-      "A": "Amazon Inspector",
-      "B": "AWS Shield",
-      "C": "Amazon SQS",
-      "D": "AWS AppConfig"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "AppConfig manages and deploys application configuration with validation and controlled rollout.\nThe other choices scan, protect, or queue but do not manage application configuration.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A multi-account platform team is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team must store environment-specific application settings and roll them out safely. Which service should be evaluated?",
+    "options": {
+      "A": "An AWS Organizations service control policy",
+      "B": "AWS AppConfig",
+      "C": "CloudFormation drift detection",
+      "D": "Reference Secrets Manager or Parameter Store at runtime"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "AppConfig manages and deploys application configuration with validation and controlled rollout.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS AppConfig for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊必須儲存特定於環境的應用程式設定並安全地推出它們。應該評估哪些服務？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。多帳戶平台團隊必須儲存特定於環境的應用程式設定並安全地推出它們。應該評估哪些服務？",
         "options": {
-          "A": "Amazon Inspector",
-          "B": "AWS Shield",
-          "C": "Amazon SQS",
-          "D": "AWS AppConfig"
+          "A": "AWS Organizations 服務控制原則",
+          "B": "AWS AppConfig",
+          "C": "CloudFormation 漂移偵測",
+          "D": "在運行時引用 Secrets Manager 或 Parameter Store"
         },
-        "explanation": "AppConfig 透過驗證和受控部署來管理和部署應用程式配置。\n其他選項掃描、保護或排隊，但不管理應用程式配置。"
+        "explanation": "AppConfig 透過驗證和受控部署來管理和部署應用程式配置。\n其他選項適用於此領域的不同需求，但不能像 AWS AppConfig 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d2-003",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A regulated company needs to detect configuration drift from its infrastructure templates. Which capability should be used?",
+    "question": "A regulated company is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team needs to detect configuration drift from its infrastructure templates. Which capability should be used?",
     "options": {
       "A": "CloudFormation drift detection",
-      "B": "A Route 53 health check",
-      "C": "An S3 event notification",
-      "D": "An EBS snapshot"
+      "B": "Reference Secrets Manager or Parameter Store at runtime",
+      "C": "An AWS Organizations service control policy",
+      "D": "CloudFormation StackSets"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Drift detection compares deployed resources with the expected template state.\nThe other choices monitor DNS, publish object events, or back up volumes.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Drift detection compares deployed resources with the expected template state.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide CloudFormation drift detection for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司需要檢測其基礎設施範本中的配置偏差。應該使用哪種能力？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。受監管的公司需要檢測其基礎設施範本中的配置偏差。應該使用哪種能力？",
         "options": {
           "A": "CloudFormation 漂移偵測",
-          "B": "Route 53 運轉狀況檢查",
-          "C": "S3 事件通知",
-          "D": "EBS Snapshot"
+          "B": "在運行時引用 Secrets Manager 或 Parameter Store",
+          "C": "AWS Organizations 服務控制原則",
+          "D": "CloudFormation StackSets"
         },
-        "explanation": "偏差檢測將已部署的資源與預期的模板狀態進行比較。\n其他選擇監視 DNS、發布物件事件或備份磁碟區。"
+        "explanation": "偏差檢測將已部署的資源與預期的模板狀態進行比較。\n其他選項適用於此領域的不同需求，但不能像 CloudFormation 漂移偵測 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d2-004",
-    "type": "single",
-    "question": "A startup preparing for a traffic increase must prevent secrets from appearing in IaC templates and deployment logs. Which practice is appropriate?",
-    "options": {
-      "A": "Put secrets in a public S3 object",
-      "B": "Reference Secrets Manager or Parameter Store at runtime",
-      "C": "Hard-code secrets in the template",
-      "D": "Print secrets during the build"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Runtime secret references keep sensitive values out of source and logs.\nHard-coded or public secrets expose credentials.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase is redesigning one integrated end-to-end architecture. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The design must keep recurring cost proportional to use, enforce least privilege, and remain available during a component or Availability Zone failure. The workload must prevent secrets from appearing in IaC templates and deployment logs, and the same architecture wants an event to trigger an automated recovery workflow. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Use Reference Secrets Manager or Parameter Store at runtime but replace the connected control with AWS CodePipeline",
+      "B": "Use AWS CodeBuild for the primary requirement and integrate it with EventBridge invoking Step Functions",
+      "C": "Combine AWS CodeBuild with A canary or blue-green deployment as a single platform design",
+      "D": "Use Reference Secrets Manager or Parameter Store at runtime for the primary requirement and integrate it with EventBridge invoking Step Functions for the connected control"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Reference Secrets Manager or Parameter Store at runtime satisfies the first part of the architecture: Runtime secret references keep sensitive values out of source and logs. EventBridge invoking Step Functions satisfies the connected requirement: EventBridge and Step Functions can route events into durable, retryable recovery workflows.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司必須防止機密出現在 IaC 範本和部署日誌中。哪種做法合適？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：引入自動化工作流程的公司必須防止機密出現在 IaC 範本和部署日誌中。 第二項需求：準備發布的開發團隊希望有一個事件可以觸發自動恢復工作流程。 此設計必須讓持續成本與實際用量相符、落實最低權限，並在元件或可用區域發生故障時維持可用。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "將機密放入公共 S3 物件中",
-          "B": "在運行時引用 Secrets Manager 或 Parameter Store",
-          "C": "在模板中硬編碼秘密",
-          "D": "在建造過程中列印秘密"
+          "A": "使用在運行時引用 Secrets Manager 或 Parameter Store，但以AWS CodePipeline取代相連控制",
+          "B": "以AWS CodeBuild處理主要需求，並整合EventBridge 呼叫 Step Functions",
+          "C": "把AWS CodeBuild與金絲雀或藍綠部署結合為單一平台設計",
+          "D": "以在運行時引用 Secrets Manager 或 Parameter Store處理主要需求，並整合EventBridge 呼叫 Step Functions作為相連控制"
         },
-        "explanation": "運行時秘密引用使敏感值遠離來源和日誌。\n硬編碼或公共秘密會暴露憑證。"
+        "explanation": "在運行時引用 Secrets Manager 或 Parameter Store 負責架構的第一項需求，EventBridge 呼叫 Step Functions 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "dop-c02-d2-005",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An operations team supporting a critical workload needs to apply the same guardrail policy to every account. Which organization feature fits?",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team needs to apply the same guardrail policy to every account. Which organization feature fits?",
     "options": {
-      "A": "A CloudFront invalidation",
-      "B": "An EFS lifecycle rule",
+      "A": "AWS AppConfig",
+      "B": "CloudFormation drift detection",
       "C": "An AWS Organizations service control policy",
-      "D": "A local EC2 user"
+      "D": "CloudFormation StackSets"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "SCPs apply permission guardrails across member accounts.\nThe other choices do not establish an organization-wide API guardrail.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "SCPs apply permission guardrails across member accounts.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide An AWS Organizations service control policy for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊需要對每個帳戶應用相同的護欄策略。哪種組織功能適合？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。支援關鍵工作負載的營運團隊需要對每個帳戶應用相同的護欄策略。哪種組織功能適合？",
         "options": {
-          "A": "CloudFront 失效",
-          "B": "EFS 生命週期規則",
+          "A": "AWS AppConfig",
+          "B": "CloudFormation 漂移偵測",
           "C": "AWS Organizations 服務控制原則",
-          "D": "本地 EC2 使用者"
+          "D": "CloudFormation StackSets"
         },
-        "explanation": "SCP 在成員帳號之間套用權限護欄。\n其他選擇不建立組織範圍的 API 護欄。"
+        "explanation": "SCP 在成員帳號之間套用權限護欄。\n其他選項適用於此領域的不同需求，但不能像 AWS Organizations 服務控制原則 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d2-006",
-    "type": "single",
-    "question": "A data platform team needs repeatable multi-account infrastructure deployments from one template. Which CloudFormation feature fits?",
-    "options": {
-      "A": "A CloudFront cache policy",
-      "B": "An S3 ACL",
-      "C": "An RDS read replica",
-      "D": "CloudFormation StackSets"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "StackSets deploy templates across multiple accounts and Regions.\nThe other choices do not manage multi-account infrastructure.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A data platform team is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team needs repeatable multi-account infrastructure deployments from one template. Which CloudFormation feature fits?",
+    "options": {
+      "A": "Reference Secrets Manager or Parameter Store at runtime",
+      "B": "CloudFormation StackSets",
+      "C": "AWS AppConfig",
+      "D": "CloudFormation drift detection"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "StackSets deploy templates across multiple accounts and Regions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide CloudFormation StackSets for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要透過一個範本進行可重複的多帳戶基礎架構部署。哪種 CloudFormation 功能適合？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。資料平台團隊需要透過一個範本進行可重複的多帳戶基礎架構部署。哪種 CloudFormation 功能適合？",
         "options": {
-          "A": "CloudFront 快取策略",
-          "B": "S3 ACL",
-          "C": "RDS 唯讀副本",
-          "D": "CloudFormation StackSets"
+          "A": "在運行時引用 Secrets Manager 或 Parameter Store",
+          "B": "CloudFormation StackSets",
+          "C": "AWS AppConfig",
+          "D": "CloudFormation 漂移偵測"
         },
-        "explanation": "StackSets 跨多個帳戶和區域部署範本。\n其他選擇不管理多帳戶基礎設施。"
+        "explanation": "StackSets 跨多個帳戶和區域部署範本。\n其他選項適用於此領域的不同需求，但不能像 CloudFormation StackSets 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d2-007",
-    "type": "single",
-    "question": "A security-conscious engineering team must store environment-specific application settings and roll them out safely. Which service should be evaluated?",
-    "options": {
-      "A": "AWS AppConfig",
-      "B": "Amazon Inspector",
-      "C": "AWS Shield",
-      "D": "Amazon SQS"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "AppConfig manages and deploys application configuration with validation and controlled rollout.\nThe other choices scan, protect, or queue but do not manage application configuration.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A security-conscious engineering team is planning two independent production changes. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The first team must store environment-specific application settings and roll them out safely. A second team needs to detect configuration drift from its infrastructure templates. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "CloudFormation StackSets",
+      "B": "AWS AppConfig",
+      "C": "CloudFormation drift detection",
+      "D": "Reference Secrets Manager or Parameter Store at runtime",
+      "E": "An AWS Organizations service control policy"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS AppConfig meets the first requirement: AppConfig manages and deploys application configuration with validation and controlled rollout. CloudFormation drift detection meets the second requirement: Drift detection compares deployed resources with the expected template state.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊必須儲存特定於環境的應用程式設定並安全地部署它們。應該評估哪些服務？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。第一項需求：多帳戶平台團隊必須儲存特定於環境的應用程式設定並安全地推出它們。第二項需求：受監管的公司需要檢測其基礎設施範本中的配置偏差。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "AWS AppConfig",
-          "B": "Amazon Inspector",
-          "C": "AWS Shield",
-          "D": "Amazon SQS"
+          "A": "CloudFormation StackSets",
+          "B": "AWS AppConfig",
+          "C": "CloudFormation 漂移偵測",
+          "D": "在運行時引用 Secrets Manager 或 Parameter Store",
+          "E": "AWS Organizations 服務控制原則"
         },
-        "explanation": "AppConfig 透過驗證和受控部署來管理和部署應用程式配置。\n其他選項掃描、保護或排隊，但不管理應用程式配置。"
+        "explanation": "AWS AppConfig 符合第一項需求：AppConfig 透過驗證和受控部署來管理和部署應用程式配置。 CloudFormation 漂移偵測 符合第二項需求：偏差檢測將已部署的資源與預期的模板狀態進行比較。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "dop-c02-d2-008",
-    "type": "single",
-    "question": "A company migrating an existing workload needs to detect configuration drift from its infrastructure templates. Which capability should be used?",
-    "options": {
-      "A": "An EBS snapshot",
-      "B": "CloudFormation drift detection",
-      "C": "A Route 53 health check",
-      "D": "An S3 event notification"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Drift detection compares deployed resources with the expected template state.\nThe other choices monitor DNS, publish object events, or back up volumes.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A company migrating an existing workload is redesigning one integrated end-to-end architecture. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The design must avoid unnecessary standby cost without weakening security controls or the availability objective. The workload needs to detect configuration drift from its infrastructure templates, and the same architecture needs a dashboard that combines metrics from several accounts and Regions. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Use CloudFormation drift detection but replace the connected control with AWS CodePipeline",
+      "B": "Use AWS CodeBuild for the primary requirement and integrate it with CloudWatch cross-account observability dashboards",
+      "C": "Combine AWS CodeBuild with A canary or blue-green deployment as a single platform design",
+      "D": "Use CloudFormation drift detection for the primary requirement and integrate it with CloudWatch cross-account observability dashboards for the connected control"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudFormation drift detection satisfies the first part of the architecture: Drift detection compares deployed resources with the expected template state. CloudWatch cross-account observability dashboards satisfies the connected requirement: CloudWatch supports cross-account and cross-Region monitoring views for centralized operations.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司需要偵測其基礎架構範本中的配置偏差。應該使用哪種能力？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：準備審計證據的團隊需要檢測其基礎設施模板中的配置偏差。 第二項需求：準備發布的開發團隊需要一個儀表板，其中結合了多個帳戶和區域的指標。 此設計必須避免不必要的備用成本，同時不可削弱安全控制或可用性目標。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "EBS Snapshot",
-          "B": "CloudFormation 漂移偵測",
-          "C": "Route 53 運轉狀況檢查",
-          "D": "S3 事件通知"
+          "A": "使用CloudFormation 漂移偵測，但以AWS CodePipeline取代相連控制",
+          "B": "以AWS CodeBuild處理主要需求，並整合CloudWatch 跨帳戶可觀測性儀表板",
+          "C": "把AWS CodeBuild與金絲雀或藍綠部署結合為單一平台設計",
+          "D": "以CloudFormation 漂移偵測處理主要需求，並整合CloudWatch 跨帳戶可觀測性儀表板作為相連控制"
         },
-        "explanation": "偏差檢測將已部署的資源與預期的模板狀態進行比較。\n其他選擇監視 DNS、發布物件事件或備份磁碟區。"
+        "explanation": "CloudFormation 漂移偵測 負責架構的第一項需求，CloudWatch 跨帳戶可觀測性儀表板 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "dop-c02-d2-009",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team with strict recovery objectives must prevent secrets from appearing in IaC templates and deployment logs. Which practice is appropriate?",
+    "question": "A team with strict recovery objectives is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team must prevent secrets from appearing in IaC templates and deployment logs. Which practice is appropriate?",
     "options": {
-      "A": "Print secrets during the build",
-      "B": "Put secrets in a public S3 object",
+      "A": "CloudFormation StackSets",
+      "B": "AWS AppConfig",
       "C": "Reference Secrets Manager or Parameter Store at runtime",
-      "D": "Hard-code secrets in the template"
+      "D": "An AWS Organizations service control policy"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Runtime secret references keep sensitive values out of source and logs.\nHard-coded or public secrets expose credentials.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Runtime secret references keep sensitive values out of source and logs.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Reference Secrets Manager or Parameter Store at runtime for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格復原目標的團隊必須防止機密出現在 IaC 範本和部署日誌中。哪種做法合適？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。具有嚴格復原目標的團隊必須防止機密出現在 IaC 範本和部署日誌中。哪種做法合適？",
         "options": {
-          "A": "在建造過程中列印秘密",
-          "B": "將機密放入公共 S3 物件中",
+          "A": "CloudFormation StackSets",
+          "B": "AWS AppConfig",
           "C": "在運行時引用 Secrets Manager 或 Parameter Store",
-          "D": "在模板中硬編碼秘密"
+          "D": "AWS Organizations 服務控制原則"
         },
-        "explanation": "運行時秘密引用使敏感值遠離來源和日誌。\n硬編碼或公共秘密會暴露憑證。"
+        "explanation": "運行時秘密引用使敏感值遠離來源和日誌。\n其他選項適用於此領域的不同需求，但不能像 在運行時引用 Secrets Manager 或 Parameter Store 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d2-010",
-    "type": "single",
-    "question": "A developer team preparing a release needs to apply the same guardrail policy to every account. Which organization feature fits?",
-    "options": {
-      "A": "A local EC2 user",
-      "B": "A CloudFront invalidation",
-      "C": "An EFS lifecycle rule",
-      "D": "An AWS Organizations service control policy"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "SCPs apply permission guardrails across member accounts.\nThe other choices do not establish an organization-wide API guardrail.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A developer team preparing a release is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team needs to apply the same guardrail policy to every account. Which organization feature fits?",
+    "options": {
+      "A": "CloudFormation drift detection",
+      "B": "An AWS Organizations service control policy",
+      "C": "CloudFormation StackSets",
+      "D": "AWS AppConfig"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "SCPs apply permission guardrails across member accounts.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide An AWS Organizations service control policy for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊需要對每個帳戶套用相同的護欄策略。哪種組織功能適合？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。準備發布的開發團隊需要對每個帳戶套用相同的護欄策略。哪種組織功能適合？",
         "options": {
-          "A": "本地 EC2 使用者",
-          "B": "CloudFront 失效",
-          "C": "EFS 生命週期規則",
-          "D": "AWS Organizations 服務控制原則"
+          "A": "CloudFormation 漂移偵測",
+          "B": "AWS Organizations 服務控制原則",
+          "C": "CloudFormation StackSets",
+          "D": "AWS AppConfig"
         },
-        "explanation": "SCP 在成員帳號之間套用權限護欄。\n其他選擇不建立組織範圍的 API 護欄。"
+        "explanation": "SCP 在成員帳號之間套用權限護欄。\n其他選項適用於此領域的不同需求，但不能像 AWS Organizations 服務控制原則 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d2-011",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An enterprise with several AWS Regions needs repeatable multi-account infrastructure deployments from one template. Which CloudFormation feature fits?",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team needs repeatable multi-account infrastructure deployments from one template. Which CloudFormation feature fits?",
     "options": {
       "A": "CloudFormation StackSets",
-      "B": "A CloudFront cache policy",
-      "C": "An S3 ACL",
-      "D": "An RDS read replica"
+      "B": "AWS AppConfig",
+      "C": "CloudFormation drift detection",
+      "D": "Reference Secrets Manager or Parameter Store at runtime"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "StackSets deploy templates across multiple accounts and Regions.\nThe other choices do not manage multi-account infrastructure.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "StackSets deploy templates across multiple accounts and Regions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide CloudFormation StackSets for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業需要透過一個範本進行可重複的多帳戶基礎架構部署。哪種 CloudFormation 功能適合？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。擁有多個 AWS 區域的企業需要透過一個範本進行可重複的多帳戶基礎架構部署。哪種 CloudFormation 功能適合？",
         "options": {
           "A": "CloudFormation StackSets",
-          "B": "CloudFront 快取策略",
-          "C": "S3 ACL",
-          "D": "RDS 唯讀副本"
+          "B": "AWS AppConfig",
+          "C": "CloudFormation 漂移偵測",
+          "D": "在運行時引用 Secrets Manager 或 Parameter Store"
         },
-        "explanation": "StackSets 跨多個帳戶和區域部署範本。\n其他選擇不管理多帳戶基礎設施。"
+        "explanation": "StackSets 跨多個帳戶和區域部署範本。\n其他選項適用於此領域的不同需求，但不能像 CloudFormation StackSets 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d2-012",
-    "type": "single",
-    "question": "A service owner reviewing an incident must store environment-specific application settings and roll them out safely. Which service should be evaluated?",
-    "options": {
-      "A": "Amazon SQS",
-      "B": "AWS AppConfig",
-      "C": "Amazon Inspector",
-      "D": "AWS Shield"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "AppConfig manages and deploys application configuration with validation and controlled rollout.\nThe other choices scan, protect, or queue but do not manage application configuration.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A service owner reviewing an incident is redesigning one integrated end-to-end architecture. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The organization will accept additional managed-service cost only when it measurably improves security and availability with less operational effort. The workload must store environment-specific application settings and roll them out safely, and the same architecture must document a repeatable response to a common alarm. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Use AWS AppConfig but replace the connected control with AWS CodePipeline",
+      "B": "Use AWS CodeBuild for the primary requirement and integrate it with Systems Manager Automation runbook",
+      "C": "Combine AWS CodeBuild with A canary or blue-green deployment as a single platform design",
+      "D": "Use AWS AppConfig for the primary requirement and integrate it with Systems Manager Automation runbook for the connected control"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "AWS AppConfig satisfies the first part of the architecture: AppConfig manages and deploys application configuration with validation and controlled rollout. Systems Manager Automation runbook satisfies the connected requirement: Automation runbooks encode repeatable operational response steps.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務所有者必須儲存特定於環境的應用程式設定並安全地推出它們。應該評估哪些服務？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：標準化其 AWS 部署的平台團隊必須儲存特定於環境的應用程式設定並安全地部署它們。 第二項需求：準備發布的開發團隊必須記錄對常見警報的可重複回應。 只有在託管服務能以較低營運負擔明確改善安全性與可用性時，組織才會接受額外成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "Amazon SQS",
-          "B": "AWS AppConfig",
-          "C": "Amazon Inspector",
-          "D": "AWS Shield"
+          "A": "使用AWS AppConfig，但以AWS CodePipeline取代相連控制",
+          "B": "以AWS CodeBuild處理主要需求，並整合Systems Manager Automation操作手冊",
+          "C": "把AWS CodeBuild與金絲雀或藍綠部署結合為單一平台設計",
+          "D": "以AWS AppConfig處理主要需求，並整合Systems Manager Automation操作手冊作為相連控制"
         },
-        "explanation": "AppConfig 透過驗證和受控部署來管理和部署應用程式配置。\n其他選項掃描、保護或排隊，但不管理應用程式配置。"
+        "explanation": "AWS AppConfig 負責架構的第一項需求，Systems Manager Automation操作手冊 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "dop-c02-d2-013",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team optimizing an existing implementation needs to detect configuration drift from its infrastructure templates. Which capability should be used?",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team needs to detect configuration drift from its infrastructure templates. Which capability should be used?",
     "options": {
-      "A": "An S3 event notification",
-      "B": "An EBS snapshot",
+      "A": "An AWS Organizations service control policy",
+      "B": "CloudFormation StackSets",
       "C": "CloudFormation drift detection",
-      "D": "A Route 53 health check"
+      "D": "Reference Secrets Manager or Parameter Store at runtime"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Drift detection compares deployed resources with the expected template state.\nThe other choices monitor DNS, publish object events, or back up volumes.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Drift detection compares deployed resources with the expected template state.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide CloudFormation drift detection for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊需要檢測其基礎設施範本中的配置偏差。應該使用哪種能力？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。優化現有實施的團隊需要檢測其基礎設施範本中的配置偏差。應該使用哪種能力？",
         "options": {
-          "A": "S3 事件通知",
-          "B": "EBS Snapshot",
+          "A": "AWS Organizations 服務控制原則",
+          "B": "CloudFormation StackSets",
           "C": "CloudFormation 漂移偵測",
-          "D": "Route 53 運轉狀況檢查"
+          "D": "在運行時引用 Secrets Manager 或 Parameter Store"
         },
-        "explanation": "偏差檢測將已部署的資源與預期的模板狀態進行比較。\n其他選擇監視 DNS、發布物件事件或備份磁碟區。"
+        "explanation": "偏差檢測將已部署的資源與預期的模板狀態進行比較。\n其他選項適用於此領域的不同需求，但不能像 CloudFormation 漂移偵測 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d2-014",
-    "type": "single",
-    "question": "A company introducing an automated workflow must prevent secrets from appearing in IaC templates and deployment logs. Which practice is appropriate?",
-    "options": {
-      "A": "Hard-code secrets in the template",
-      "B": "Print secrets during the build",
-      "C": "Put secrets in a public S3 object",
-      "D": "Reference Secrets Manager or Parameter Store at runtime"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Runtime secret references keep sensitive values out of source and logs.\nHard-coded or public secrets expose credentials.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A company introducing an automated workflow is planning two independent production changes. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The first team must prevent secrets from appearing in IaC templates and deployment logs. A second team needs to apply the same guardrail policy to every account. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "An AWS Organizations service control policy",
+      "B": "CloudFormation StackSets",
+      "C": "AWS AppConfig",
+      "D": "CloudFormation drift detection",
+      "E": "Reference Secrets Manager or Parameter Store at runtime"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Reference Secrets Manager or Parameter Store at runtime meets the first requirement: Runtime secret references keep sensitive values out of source and logs. An AWS Organizations service control policy meets the second requirement: SCPs apply permission guardrails across member accounts.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司必須防止機密出現在 IaC 範本和部署日誌中。哪種做法合適？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。第一項需求：支援關鍵工作負載的營運團隊需要對每個帳戶應用相同的護欄策略。第二項需求：準備增加流量的新創公司必須防止機密出現在 IaC 範本和部署日誌中。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "在模板中硬編碼秘密",
-          "B": "在建造過程中列印秘密",
-          "C": "將機密放入公共 S3 物件中",
-          "D": "在運行時引用 Secrets Manager 或 Parameter Store"
+          "A": "AWS Organizations 服務控制原則",
+          "B": "CloudFormation StackSets",
+          "C": "AWS AppConfig",
+          "D": "CloudFormation 漂移偵測",
+          "E": "在運行時引用 Secrets Manager 或 Parameter Store"
         },
-        "explanation": "運行時秘密引用使敏感值遠離來源和日誌。\n硬編碼或公共秘密會暴露憑證。"
+        "explanation": "AWS Organizations 服務控制原則 符合第一項需求：SCP 在成員帳號之間套用權限護欄。 在運行時引用 Secrets Manager 或 Parameter Store 符合第二項需求：運行時秘密引用使敏感值遠離來源和日誌。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "dop-c02-d2-015",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An AWS administrator working in a shared environment needs to apply the same guardrail policy to every account. Which organization feature fits?",
+    "question": "An AWS administrator working in a shared environment is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team needs to apply the same guardrail policy to every account. Which organization feature fits?",
     "options": {
       "A": "An AWS Organizations service control policy",
-      "B": "A local EC2 user",
-      "C": "A CloudFront invalidation",
-      "D": "An EFS lifecycle rule"
+      "B": "CloudFormation StackSets",
+      "C": "AWS AppConfig",
+      "D": "CloudFormation drift detection"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "SCPs apply permission guardrails across member accounts.\nThe other choices do not establish an organization-wide API guardrail.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "SCPs apply permission guardrails across member accounts.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide An AWS Organizations service control policy for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "在共用環境中工作的 AWS 管理員需要對每個帳號套用相同的防護策略。哪種組織功能適合？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。在共用環境中工作的 AWS 管理員需要對每個帳號套用相同的防護策略。哪種組織功能適合？",
         "options": {
           "A": "AWS Organizations 服務控制原則",
-          "B": "本地 EC2 使用者",
-          "C": "CloudFront 失效",
-          "D": "EFS 生命週期規則"
+          "B": "CloudFormation StackSets",
+          "C": "AWS AppConfig",
+          "D": "CloudFormation 漂移偵測"
         },
-        "explanation": "SCP 在成員帳號之間套用權限護欄。\n其他選擇不建立組織範圍的 API 護欄。"
+        "explanation": "SCP 在成員帳號之間套用權限護欄。\n其他選項適用於此領域的不同需求，但不能像 AWS Organizations 服務控制原則 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d2-016",
-    "type": "single",
-    "question": "A customer-facing application team needs repeatable multi-account infrastructure deployments from one template. Which CloudFormation feature fits?",
-    "options": {
-      "A": "An RDS read replica",
-      "B": "CloudFormation StackSets",
-      "C": "A CloudFront cache policy",
-      "D": "An S3 ACL"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "StackSets deploy templates across multiple accounts and Regions.\nThe other choices do not manage multi-account infrastructure.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A customer-facing application team is redesigning one integrated end-to-end architecture. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The architecture must limit blast radius, preserve availability during change, and control cost through automation instead of permanent overprovisioning. The workload needs repeatable multi-account infrastructure deployments from one template, and the same architecture needs a managed service to detect vulnerabilities in container images before deployment. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Use CloudFormation StackSets but replace the connected control with AWS CodePipeline",
+      "B": "Use AWS CodeBuild for the primary requirement and integrate it with Amazon Inspector",
+      "C": "Combine AWS CodeBuild with A canary or blue-green deployment as a single platform design",
+      "D": "Use CloudFormation StackSets for the primary requirement and integrate it with Amazon Inspector for the connected control"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudFormation StackSets satisfies the first part of the architecture: StackSets deploy templates across multiple accounts and Regions. Amazon Inspector satisfies the connected requirement: Inspector assesses supported container images and workloads for vulnerabilities.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊需要透過一個範本進行可重複的多帳戶基礎架構部署。哪種 CloudFormation 功能適合？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：面向客戶的應用程式團隊需要透過一個範本進行可重複的多帳戶基礎架構部署。 第二項需求：製作團隊需要對所有新 S3 物件強制加密。 此架構必須限制影響範圍、在變更期間維持可用性，並透過自動化控制成本，而不是長期過度佈建。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "RDS 唯讀副本",
-          "B": "CloudFormation StackSets",
-          "C": "CloudFront 快取策略",
-          "D": "S3 ACL"
+          "A": "使用CloudFormation StackSets，但以AWS CodePipeline取代相連控制",
+          "B": "以AWS CodeBuild處理主要需求，並整合Amazon Inspector",
+          "C": "把AWS CodeBuild與金絲雀或藍綠部署結合為單一平台設計",
+          "D": "以CloudFormation StackSets處理主要需求，並整合Amazon Inspector作為相連控制"
         },
-        "explanation": "StackSets 跨多個帳戶和區域部署範本。\n其他選擇不管理多帳戶基礎設施。"
+        "explanation": "CloudFormation StackSets 負責架構的第一項需求，Amazon Inspector 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "dop-c02-d2-017",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A platform team standardizing its AWS deployments must store environment-specific application settings and roll them out safely. Which service should be evaluated?",
+    "question": "A platform team standardizing its AWS deployments is reviewing a production decision. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The team must store environment-specific application settings and roll them out safely. Which service should be evaluated?",
     "options": {
-      "A": "AWS Shield",
-      "B": "Amazon SQS",
+      "A": "Reference Secrets Manager or Parameter Store at runtime",
+      "B": "An AWS Organizations service control policy",
       "C": "AWS AppConfig",
-      "D": "Amazon Inspector"
+      "D": "CloudFormation drift detection"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "AppConfig manages and deploys application configuration with validation and controlled rollout.\nThe other choices scan, protect, or queue but do not manage application configuration.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "AppConfig manages and deploys application configuration with validation and controlled rollout.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS AppConfig for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊必須儲存特定於環境的應用程式設定並安全地部署它們。應該評估哪些服務？",
+        "question": "組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。標準化其 AWS 部署的平台團隊必須儲存特定於環境的應用程式設定並安全地部署它們。應該評估哪些服務？",
         "options": {
-          "A": "AWS Shield",
-          "B": "Amazon SQS",
+          "A": "在運行時引用 Secrets Manager 或 Parameter Store",
+          "B": "AWS Organizations 服務控制原則",
           "C": "AWS AppConfig",
-          "D": "Amazon Inspector"
+          "D": "CloudFormation 漂移偵測"
         },
-        "explanation": "AppConfig 透過驗證和受控部署來管理和部署應用程式配置。\n其他選項掃描、保護或排隊，但不管理應用程式配置。"
+        "explanation": "AppConfig 透過驗證和受控部署來管理和部署應用程式配置。\n其他選項適用於此領域的不同需求，但不能像 AWS AppConfig 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d2-018",
-    "type": "single",
-    "question": "A team preparing evidence for an audit needs to detect configuration drift from its infrastructure templates. Which capability should be used?",
-    "options": {
-      "A": "A Route 53 health check",
-      "B": "An S3 event notification",
-      "C": "An EBS snapshot",
-      "D": "CloudFormation drift detection"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Drift detection compares deployed resources with the expected template state.\nThe other choices monitor DNS, publish object events, or back up volumes.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team preparing evidence for an audit is reviewing a production decision. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The team needs to detect configuration drift from its infrastructure templates. Which capability should be used?",
+    "options": {
+      "A": "CloudFormation StackSets",
+      "B": "CloudFormation drift detection",
+      "C": "Reference Secrets Manager or Parameter Store at runtime",
+      "D": "An AWS Organizations service control policy"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Drift detection compares deployed resources with the expected template state.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide CloudFormation drift detection for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備審計證據的團隊需要檢測其基礎設施模板中的配置偏差。應該使用哪種能力？",
+        "question": "組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。準備審計證據的團隊需要檢測其基礎設施模板中的配置偏差。應該使用哪種能力？",
         "options": {
-          "A": "Route 53 運轉狀況檢查",
-          "B": "S3 事件通知",
-          "C": "EBS Snapshot",
-          "D": "CloudFormation 漂移偵測"
+          "A": "CloudFormation StackSets",
+          "B": "CloudFormation 漂移偵測",
+          "C": "在運行時引用 Secrets Manager 或 Parameter Store",
+          "D": "AWS Organizations 服務控制原則"
         },
-        "explanation": "偏差檢測將已部署的資源與預期的模板狀態進行比較。\n其他選擇監視 DNS、發布物件事件或備份磁碟區。"
+        "explanation": "偏差檢測將已部署的資源與預期的模板狀態進行比較。\n其他選項適用於此領域的不同需求，但不能像 CloudFormation 漂移偵測 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d2-019",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A business replacing a manual process must prevent secrets from appearing in IaC templates and deployment logs. Which practice is appropriate?",
+    "question": "A business replacing a manual process is reviewing a production decision. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The team must prevent secrets from appearing in IaC templates and deployment logs. Which practice is appropriate?",
     "options": {
       "A": "Reference Secrets Manager or Parameter Store at runtime",
-      "B": "Hard-code secrets in the template",
-      "C": "Print secrets during the build",
-      "D": "Put secrets in a public S3 object"
+      "B": "An AWS Organizations service control policy",
+      "C": "CloudFormation StackSets",
+      "D": "AWS AppConfig"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Runtime secret references keep sensitive values out of source and logs.\nHard-coded or public secrets expose credentials.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Runtime secret references keep sensitive values out of source and logs.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Reference Secrets Manager or Parameter Store at runtime for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "替代手動流程的企業必須防止機密出現在 IaC 範本和部署日誌中。哪種做法合適？",
+        "question": "組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。替代手動流程的企業必須防止機密出現在 IaC 範本和部署日誌中。哪種做法合適？",
         "options": {
           "A": "在運行時引用 Secrets Manager 或 Parameter Store",
-          "B": "在模板中硬編碼秘密",
-          "C": "在建造過程中列印秘密",
-          "D": "將機密放入公共 S3 物件中"
+          "B": "AWS Organizations 服務控制原則",
+          "C": "CloudFormation StackSets",
+          "D": "AWS AppConfig"
         },
-        "explanation": "運行時秘密引用使敏感值遠離來源和日誌。\n硬編碼或公共秘密會暴露憑證。"
+        "explanation": "運行時秘密引用使敏感值遠離來源和日誌。\n其他選項適用於此領域的不同需求，但不能像 在運行時引用 Secrets Manager 或 Parameter Store 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d2-020",
-    "type": "single",
-    "question": "A team validating a design against the exam guide needs to apply the same guardrail policy to every account. Which organization feature fits?",
-    "options": {
-      "A": "An EFS lifecycle rule",
-      "B": "An AWS Organizations service control policy",
-      "C": "A local EC2 user",
-      "D": "A CloudFront invalidation"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "SCPs apply permission guardrails across member accounts.\nThe other choices do not establish an organization-wide API guardrail.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team validating a design against the exam guide is redesigning one integrated end-to-end architecture. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The selected controls must provide auditable security, predictable availability, and the lowest operational cost that still satisfies both requirements. The workload needs to apply the same guardrail policy to every account, and the same architecture needs to generate release notes and test suggestions using an AWS coding assistant. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Use An AWS Organizations service control policy but replace the connected control with AWS CodePipeline",
+      "B": "Use AWS CodeBuild for the primary requirement and integrate it with Amazon Q Developer",
+      "C": "Combine AWS CodeBuild with A canary or blue-green deployment as a single platform design",
+      "D": "Use An AWS Organizations service control policy for the primary requirement and integrate it with Amazon Q Developer for the connected control"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "An AWS Organizations service control policy satisfies the first part of the architecture: SCPs apply permission guardrails across member accounts. Amazon Q Developer satisfies the connected requirement: Amazon Q Developer can assist with code, reviews, tests, and development workflows.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊需要對每個帳戶應用相同的護欄策略。哪種組織功能適合？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：支援關鍵工作負載的營運團隊需要對每個帳戶應用相同的護欄策略。 第二項需求：支援關鍵工作負載的營運團隊需要使用 AWS 編碼助理產生發行說明並測試建議。 所選控制必須提供可稽核的安全性、可預測的可用性，以及在滿足兩項要求前提下最低的營運成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "EFS 生命週期規則",
-          "B": "AWS Organizations 服務控制原則",
-          "C": "本地 EC2 使用者",
-          "D": "CloudFront 失效"
+          "A": "使用AWS Organizations 服務控制原則，但以AWS CodePipeline取代相連控制",
+          "B": "以AWS CodeBuild處理主要需求，並整合Amazon Q Developer",
+          "C": "把AWS CodeBuild與金絲雀或藍綠部署結合為單一平台設計",
+          "D": "以AWS Organizations 服務控制原則處理主要需求，並整合Amazon Q Developer作為相連控制"
         },
-        "explanation": "SCP 在成員帳號之間套用權限護欄。\n其他選擇不建立組織範圍的 API 護欄。"
+        "explanation": "AWS Organizations 服務控制原則 負責架構的第一項需求，Amazon Q Developer 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "dop-c02-d2-021",
-    "type": "single",
-    "question": "A production team needs repeatable multi-account infrastructure deployments from one template. Which CloudFormation feature fits?",
-    "options": {
-      "A": "An S3 ACL",
-      "B": "An RDS read replica",
-      "C": "CloudFormation StackSets",
-      "D": "A CloudFront cache policy"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "StackSets deploy templates across multiple accounts and Regions.\nThe other choices do not manage multi-account infrastructure.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A production team is planning two independent production changes. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The first team needs repeatable multi-account infrastructure deployments from one template. A second team must store environment-specific application settings and roll them out safely. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Reference Secrets Manager or Parameter Store at runtime",
+      "B": "An AWS Organizations service control policy",
+      "C": "CloudFormation StackSets",
+      "D": "AWS AppConfig",
+      "E": "CloudFormation drift detection"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "CloudFormation StackSets meets the first requirement: StackSets deploy templates across multiple accounts and Regions. AWS AppConfig meets the second requirement: AppConfig manages and deploys application configuration with validation and controlled rollout.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "生產團隊需要透過一個範本進行可重複的多帳戶基礎架構部署。哪種 CloudFormation 功能適合？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。第一項需求：生產團隊需要透過一個範本進行可重複的多帳戶基礎架構部署。第二項需求：多帳戶平台團隊必須儲存特定於環境的應用程式設定並安全地推出它們。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "S3 ACL",
-          "B": "RDS 唯讀副本",
+          "A": "在運行時引用 Secrets Manager 或 Parameter Store",
+          "B": "AWS Organizations 服務控制原則",
           "C": "CloudFormation StackSets",
-          "D": "CloudFront 快取策略"
+          "D": "AWS AppConfig",
+          "E": "CloudFormation 漂移偵測"
         },
-        "explanation": "StackSets 跨多個帳戶和區域部署範本。\n其他選擇不管理多帳戶基礎設施。"
+        "explanation": "CloudFormation StackSets 符合第一項需求：StackSets 跨多個帳戶和區域部署範本。 AWS AppConfig 符合第二項需求：AppConfig 透過驗證和受控部署來管理和部署應用程式配置。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "dop-c02-d2-022",
-    "type": "single",
-    "question": "A multi-account platform team must store environment-specific application settings and roll them out safely. Which service should be evaluated?",
-    "options": {
-      "A": "Amazon Inspector",
-      "B": "AWS Shield",
-      "C": "Amazon SQS",
-      "D": "AWS AppConfig"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "AppConfig manages and deploys application configuration with validation and controlled rollout.\nThe other choices scan, protect, or queue but do not manage application configuration.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A multi-account platform team is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team must store environment-specific application settings and roll them out safely. Which service should be evaluated?",
+    "options": {
+      "A": "An AWS Organizations service control policy",
+      "B": "AWS AppConfig",
+      "C": "CloudFormation drift detection",
+      "D": "Reference Secrets Manager or Parameter Store at runtime"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "AppConfig manages and deploys application configuration with validation and controlled rollout.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS AppConfig for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊必須儲存特定於環境的應用程式設定並安全地推出它們。應該評估哪些服務？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。多帳戶平台團隊必須儲存特定於環境的應用程式設定並安全地推出它們。應該評估哪些服務？",
         "options": {
-          "A": "Amazon Inspector",
-          "B": "AWS Shield",
-          "C": "Amazon SQS",
-          "D": "AWS AppConfig"
+          "A": "AWS Organizations 服務控制原則",
+          "B": "AWS AppConfig",
+          "C": "CloudFormation 漂移偵測",
+          "D": "在運行時引用 Secrets Manager 或 Parameter Store"
         },
-        "explanation": "AppConfig 透過驗證和受控部署來管理和部署應用程式配置。\n其他選項掃描、保護或排隊，但不管理應用程式配置。"
+        "explanation": "AppConfig 透過驗證和受控部署來管理和部署應用程式配置。\n其他選項適用於此領域的不同需求，但不能像 AWS AppConfig 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d2-023",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A regulated company needs to detect configuration drift from its infrastructure templates. Which capability should be used?",
+    "question": "A regulated company is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team needs to detect configuration drift from its infrastructure templates. Which capability should be used?",
     "options": {
       "A": "CloudFormation drift detection",
-      "B": "A Route 53 health check",
-      "C": "An S3 event notification",
-      "D": "An EBS snapshot"
+      "B": "Reference Secrets Manager or Parameter Store at runtime",
+      "C": "An AWS Organizations service control policy",
+      "D": "CloudFormation StackSets"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Drift detection compares deployed resources with the expected template state.\nThe other choices monitor DNS, publish object events, or back up volumes.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Drift detection compares deployed resources with the expected template state.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide CloudFormation drift detection for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司需要檢測其基礎設施範本中的配置偏差。應該使用哪種能力？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。受監管的公司需要檢測其基礎設施範本中的配置偏差。應該使用哪種能力？",
         "options": {
           "A": "CloudFormation 漂移偵測",
-          "B": "Route 53 運轉狀況檢查",
-          "C": "S3 事件通知",
-          "D": "EBS Snapshot"
+          "B": "在運行時引用 Secrets Manager 或 Parameter Store",
+          "C": "AWS Organizations 服務控制原則",
+          "D": "CloudFormation StackSets"
         },
-        "explanation": "偏差檢測將已部署的資源與預期的模板狀態進行比較。\n其他選擇監視 DNS、發布物件事件或備份磁碟區。"
+        "explanation": "偏差檢測將已部署的資源與預期的模板狀態進行比較。\n其他選項適用於此領域的不同需求，但不能像 CloudFormation 漂移偵測 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d2-024",
-    "type": "single",
-    "question": "A startup preparing for a traffic increase must prevent secrets from appearing in IaC templates and deployment logs. Which practice is appropriate?",
-    "options": {
-      "A": "Put secrets in a public S3 object",
-      "B": "Reference Secrets Manager or Parameter Store at runtime",
-      "C": "Hard-code secrets in the template",
-      "D": "Print secrets during the build"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Runtime secret references keep sensitive values out of source and logs.\nHard-coded or public secrets expose credentials.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase is redesigning one integrated end-to-end architecture. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The design must keep recurring cost proportional to use, enforce least privilege, and remain available during a component or Availability Zone failure. The workload must prevent secrets from appearing in IaC templates and deployment logs, and the same architecture needs to apply the same guardrail policy to every account. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Use Reference Secrets Manager or Parameter Store at runtime but replace the connected control with AWS CodePipeline",
+      "B": "Use AWS CodeBuild for the primary requirement and integrate it with An AWS Organizations service control policy",
+      "C": "Combine AWS CodeBuild with A canary or blue-green deployment as a single platform design",
+      "D": "Use Reference Secrets Manager or Parameter Store at runtime for the primary requirement and integrate it with An AWS Organizations service control policy for the connected control"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Reference Secrets Manager or Parameter Store at runtime satisfies the first part of the architecture: Runtime secret references keep sensitive values out of source and logs. An AWS Organizations service control policy satisfies the connected requirement: SCPs apply permission guardrails across member accounts.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司必須防止機密出現在 IaC 範本和部署日誌中。哪種做法合適？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：引入自動化工作流程的公司必須防止機密出現在 IaC 範本和部署日誌中。 第二項需求：支援關鍵工作負載的營運團隊需要對每個帳戶應用相同的護欄策略。 此設計必須讓持續成本與實際用量相符、落實最低權限，並在元件或可用區域發生故障時維持可用。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "將機密放入公共 S3 物件中",
-          "B": "在運行時引用 Secrets Manager 或 Parameter Store",
-          "C": "在模板中硬編碼秘密",
-          "D": "在建造過程中列印秘密"
+          "A": "使用在運行時引用 Secrets Manager 或 Parameter Store，但以AWS CodePipeline取代相連控制",
+          "B": "以AWS CodeBuild處理主要需求，並整合AWS Organizations 服務控制原則",
+          "C": "把AWS CodeBuild與金絲雀或藍綠部署結合為單一平台設計",
+          "D": "以在運行時引用 Secrets Manager 或 Parameter Store處理主要需求，並整合AWS Organizations 服務控制原則作為相連控制"
         },
-        "explanation": "運行時秘密引用使敏感值遠離來源和日誌。\n硬編碼或公共秘密會暴露憑證。"
+        "explanation": "在運行時引用 Secrets Manager 或 Parameter Store 負責架構的第一項需求，AWS Organizations 服務控制原則 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "dop-c02-d2-025",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An operations team supporting a critical workload needs to apply the same guardrail policy to every account. Which organization feature fits?",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team needs to apply the same guardrail policy to every account. Which organization feature fits?",
     "options": {
-      "A": "A CloudFront invalidation",
-      "B": "An EFS lifecycle rule",
+      "A": "AWS AppConfig",
+      "B": "CloudFormation drift detection",
       "C": "An AWS Organizations service control policy",
-      "D": "A local EC2 user"
+      "D": "CloudFormation StackSets"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "SCPs apply permission guardrails across member accounts.\nThe other choices do not establish an organization-wide API guardrail.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "SCPs apply permission guardrails across member accounts.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide An AWS Organizations service control policy for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊需要對每個帳戶應用相同的護欄策略。哪種組織功能適合？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。支援關鍵工作負載的營運團隊需要對每個帳戶應用相同的護欄策略。哪種組織功能適合？",
         "options": {
-          "A": "CloudFront 失效",
-          "B": "EFS 生命週期規則",
+          "A": "AWS AppConfig",
+          "B": "CloudFormation 漂移偵測",
           "C": "AWS Organizations 服務控制原則",
-          "D": "本地 EC2 使用者"
+          "D": "CloudFormation StackSets"
         },
-        "explanation": "SCP 在成員帳號之間套用權限護欄。\n其他選擇不建立組織範圍的 API 護欄。"
+        "explanation": "SCP 在成員帳號之間套用權限護欄。\n其他選項適用於此領域的不同需求，但不能像 AWS Organizations 服務控制原則 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d2-026",
-    "type": "single",
-    "question": "A data platform team needs repeatable multi-account infrastructure deployments from one template. Which CloudFormation feature fits?",
-    "options": {
-      "A": "A CloudFront cache policy",
-      "B": "An S3 ACL",
-      "C": "An RDS read replica",
-      "D": "CloudFormation StackSets"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "StackSets deploy templates across multiple accounts and Regions.\nThe other choices do not manage multi-account infrastructure.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A data platform team is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team needs repeatable multi-account infrastructure deployments from one template. Which CloudFormation feature fits?",
+    "options": {
+      "A": "Reference Secrets Manager or Parameter Store at runtime",
+      "B": "CloudFormation StackSets",
+      "C": "AWS AppConfig",
+      "D": "CloudFormation drift detection"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "StackSets deploy templates across multiple accounts and Regions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide CloudFormation StackSets for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要透過一個範本進行可重複的多帳戶基礎架構部署。哪種 CloudFormation 功能適合？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。資料平台團隊需要透過一個範本進行可重複的多帳戶基礎架構部署。哪種 CloudFormation 功能適合？",
         "options": {
-          "A": "CloudFront 快取策略",
-          "B": "S3 ACL",
-          "C": "RDS 唯讀副本",
-          "D": "CloudFormation StackSets"
+          "A": "在運行時引用 Secrets Manager 或 Parameter Store",
+          "B": "CloudFormation StackSets",
+          "C": "AWS AppConfig",
+          "D": "CloudFormation 漂移偵測"
         },
-        "explanation": "StackSets 跨多個帳戶和區域部署範本。\n其他選擇不管理多帳戶基礎設施。"
+        "explanation": "StackSets 跨多個帳戶和區域部署範本。\n其他選項適用於此領域的不同需求，但不能像 CloudFormation StackSets 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d2-027",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A security-conscious engineering team must store environment-specific application settings and roll them out safely. Which service should be evaluated?",
+    "question": "A security-conscious engineering team is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team must store environment-specific application settings and roll them out safely. Which service should be evaluated?",
     "options": {
       "A": "AWS AppConfig",
-      "B": "Amazon Inspector",
-      "C": "AWS Shield",
-      "D": "Amazon SQS"
+      "B": "CloudFormation drift detection",
+      "C": "Reference Secrets Manager or Parameter Store at runtime",
+      "D": "An AWS Organizations service control policy"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "AppConfig manages and deploys application configuration with validation and controlled rollout.\nThe other choices scan, protect, or queue but do not manage application configuration.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "AppConfig manages and deploys application configuration with validation and controlled rollout.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS AppConfig for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊必須儲存特定於環境的應用程式設定並安全地部署它們。應該評估哪些服務？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。具有安全意識的工程團隊必須儲存特定於環境的應用程式設定並安全地部署它們。應該評估哪些服務？",
         "options": {
           "A": "AWS AppConfig",
-          "B": "Amazon Inspector",
-          "C": "AWS Shield",
-          "D": "Amazon SQS"
+          "B": "CloudFormation 漂移偵測",
+          "C": "在運行時引用 Secrets Manager 或 Parameter Store",
+          "D": "AWS Organizations 服務控制原則"
         },
-        "explanation": "AppConfig 透過驗證和受控部署來管理和部署應用程式配置。\n其他選項掃描、保護或排隊，但不管理應用程式配置。"
+        "explanation": "AppConfig 透過驗證和受控部署來管理和部署應用程式配置。\n其他選項適用於此領域的不同需求，但不能像 AWS AppConfig 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d2-028",
-    "type": "single",
-    "question": "A company migrating an existing workload needs to detect configuration drift from its infrastructure templates. Which capability should be used?",
-    "options": {
-      "A": "An EBS snapshot",
-      "B": "CloudFormation drift detection",
-      "C": "A Route 53 health check",
-      "D": "An S3 event notification"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Drift detection compares deployed resources with the expected template state.\nThe other choices monitor DNS, publish object events, or back up volumes.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A company migrating an existing workload is redesigning one integrated end-to-end architecture. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The design must avoid unnecessary standby cost without weakening security controls or the availability objective. The workload needs to detect configuration drift from its infrastructure templates, and the same architecture wants an event to trigger an automated recovery workflow. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Use CloudFormation drift detection but replace the connected control with AWS CodePipeline",
+      "B": "Use AWS CodeBuild for the primary requirement and integrate it with EventBridge invoking Step Functions",
+      "C": "Combine AWS CodeBuild with A canary or blue-green deployment as a single platform design",
+      "D": "Use CloudFormation drift detection for the primary requirement and integrate it with EventBridge invoking Step Functions for the connected control"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudFormation drift detection satisfies the first part of the architecture: Drift detection compares deployed resources with the expected template state. EventBridge invoking Step Functions satisfies the connected requirement: EventBridge and Step Functions can route events into durable, retryable recovery workflows.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司需要偵測其基礎架構範本中的配置偏差。應該使用哪種能力？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：準備審計證據的團隊需要檢測其基礎設施模板中的配置偏差。 第二項需求：準備發布的開發團隊希望有一個事件可以觸發自動恢復工作流程。 此設計必須避免不必要的備用成本，同時不可削弱安全控制或可用性目標。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "EBS Snapshot",
-          "B": "CloudFormation 漂移偵測",
-          "C": "Route 53 運轉狀況檢查",
-          "D": "S3 事件通知"
+          "A": "使用CloudFormation 漂移偵測，但以AWS CodePipeline取代相連控制",
+          "B": "以AWS CodeBuild處理主要需求，並整合EventBridge 呼叫 Step Functions",
+          "C": "把AWS CodeBuild與金絲雀或藍綠部署結合為單一平台設計",
+          "D": "以CloudFormation 漂移偵測處理主要需求，並整合EventBridge 呼叫 Step Functions作為相連控制"
         },
-        "explanation": "偏差檢測將已部署的資源與預期的模板狀態進行比較。\n其他選擇監視 DNS、發布物件事件或備份磁碟區。"
+        "explanation": "CloudFormation 漂移偵測 負責架構的第一項需求，EventBridge 呼叫 Step Functions 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "dop-c02-d2-029",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team with strict recovery objectives must prevent secrets from appearing in IaC templates and deployment logs. Which practice is appropriate?",
+    "question": "A team with strict recovery objectives is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team must prevent secrets from appearing in IaC templates and deployment logs. Which practice is appropriate?",
     "options": {
-      "A": "Print secrets during the build",
-      "B": "Put secrets in a public S3 object",
+      "A": "CloudFormation StackSets",
+      "B": "AWS AppConfig",
       "C": "Reference Secrets Manager or Parameter Store at runtime",
-      "D": "Hard-code secrets in the template"
+      "D": "An AWS Organizations service control policy"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Runtime secret references keep sensitive values out of source and logs.\nHard-coded or public secrets expose credentials.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Runtime secret references keep sensitive values out of source and logs.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Reference Secrets Manager or Parameter Store at runtime for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格復原目標的團隊必須防止機密出現在 IaC 範本和部署日誌中。哪種做法合適？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。具有嚴格復原目標的團隊必須防止機密出現在 IaC 範本和部署日誌中。哪種做法合適？",
         "options": {
-          "A": "在建造過程中列印秘密",
-          "B": "將機密放入公共 S3 物件中",
+          "A": "CloudFormation StackSets",
+          "B": "AWS AppConfig",
           "C": "在運行時引用 Secrets Manager 或 Parameter Store",
-          "D": "在模板中硬編碼秘密"
+          "D": "AWS Organizations 服務控制原則"
         },
-        "explanation": "運行時秘密引用使敏感值遠離來源和日誌。\n硬編碼或公共秘密會暴露憑證。"
+        "explanation": "運行時秘密引用使敏感值遠離來源和日誌。\n其他選項適用於此領域的不同需求，但不能像 在運行時引用 Secrets Manager 或 Parameter Store 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d2-030",
-    "type": "single",
-    "question": "A developer team preparing a release needs to apply the same guardrail policy to every account. Which organization feature fits?",
-    "options": {
-      "A": "A local EC2 user",
-      "B": "A CloudFront invalidation",
-      "C": "An EFS lifecycle rule",
-      "D": "An AWS Organizations service control policy"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "SCPs apply permission guardrails across member accounts.\nThe other choices do not establish an organization-wide API guardrail.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A developer team preparing a release is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team needs to apply the same guardrail policy to every account. Which organization feature fits?",
+    "options": {
+      "A": "CloudFormation drift detection",
+      "B": "An AWS Organizations service control policy",
+      "C": "CloudFormation StackSets",
+      "D": "AWS AppConfig"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "SCPs apply permission guardrails across member accounts.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide An AWS Organizations service control policy for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊需要對每個帳戶套用相同的護欄策略。哪種組織功能適合？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。準備發布的開發團隊需要對每個帳戶套用相同的護欄策略。哪種組織功能適合？",
         "options": {
-          "A": "本地 EC2 使用者",
-          "B": "CloudFront 失效",
-          "C": "EFS 生命週期規則",
-          "D": "AWS Organizations 服務控制原則"
+          "A": "CloudFormation 漂移偵測",
+          "B": "AWS Organizations 服務控制原則",
+          "C": "CloudFormation StackSets",
+          "D": "AWS AppConfig"
         },
-        "explanation": "SCP 在成員帳號之間套用權限護欄。\n其他選擇不建立組織範圍的 API 護欄。"
+        "explanation": "SCP 在成員帳號之間套用權限護欄。\n其他選項適用於此領域的不同需求，但不能像 AWS Organizations 服務控制原則 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d2-031",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An enterprise with several AWS Regions needs repeatable multi-account infrastructure deployments from one template. Which CloudFormation feature fits?",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team needs repeatable multi-account infrastructure deployments from one template. Which CloudFormation feature fits?",
     "options": {
       "A": "CloudFormation StackSets",
-      "B": "A CloudFront cache policy",
-      "C": "An S3 ACL",
-      "D": "An RDS read replica"
+      "B": "AWS AppConfig",
+      "C": "CloudFormation drift detection",
+      "D": "Reference Secrets Manager or Parameter Store at runtime"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "StackSets deploy templates across multiple accounts and Regions.\nThe other choices do not manage multi-account infrastructure.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "StackSets deploy templates across multiple accounts and Regions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide CloudFormation StackSets for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業需要透過一個範本進行可重複的多帳戶基礎架構部署。哪種 CloudFormation 功能適合？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。擁有多個 AWS 區域的企業需要透過一個範本進行可重複的多帳戶基礎架構部署。哪種 CloudFormation 功能適合？",
         "options": {
           "A": "CloudFormation StackSets",
-          "B": "CloudFront 快取策略",
-          "C": "S3 ACL",
-          "D": "RDS 唯讀副本"
+          "B": "AWS AppConfig",
+          "C": "CloudFormation 漂移偵測",
+          "D": "在運行時引用 Secrets Manager 或 Parameter Store"
         },
-        "explanation": "StackSets 跨多個帳戶和區域部署範本。\n其他選擇不管理多帳戶基礎設施。"
+        "explanation": "StackSets 跨多個帳戶和區域部署範本。\n其他選項適用於此領域的不同需求，但不能像 CloudFormation StackSets 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d2-032",
-    "type": "single",
-    "question": "A service owner reviewing an incident must store environment-specific application settings and roll them out safely. Which service should be evaluated?",
-    "options": {
-      "A": "Amazon SQS",
-      "B": "AWS AppConfig",
-      "C": "Amazon Inspector",
-      "D": "AWS Shield"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "AppConfig manages and deploys application configuration with validation and controlled rollout.\nThe other choices scan, protect, or queue but do not manage application configuration.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A service owner reviewing an incident is redesigning one integrated end-to-end architecture. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The organization will accept additional managed-service cost only when it measurably improves security and availability with less operational effort. The workload must store environment-specific application settings and roll them out safely, and the same architecture needs a dashboard that combines metrics from several accounts and Regions. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Use AWS AppConfig but replace the connected control with AWS CodePipeline",
+      "B": "Use AWS CodeBuild for the primary requirement and integrate it with CloudWatch cross-account observability dashboards",
+      "C": "Combine AWS CodeBuild with A canary or blue-green deployment as a single platform design",
+      "D": "Use AWS AppConfig for the primary requirement and integrate it with CloudWatch cross-account observability dashboards for the connected control"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "AWS AppConfig satisfies the first part of the architecture: AppConfig manages and deploys application configuration with validation and controlled rollout. CloudWatch cross-account observability dashboards satisfies the connected requirement: CloudWatch supports cross-account and cross-Region monitoring views for centralized operations.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務所有者必須儲存特定於環境的應用程式設定並安全地推出它們。應該評估哪些服務？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：標準化其 AWS 部署的平台團隊必須儲存特定於環境的應用程式設定並安全地部署它們。 第二項需求：準備發布的開發團隊需要一個儀表板，其中結合了多個帳戶和區域的指標。 只有在託管服務能以較低營運負擔明確改善安全性與可用性時，組織才會接受額外成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "Amazon SQS",
-          "B": "AWS AppConfig",
-          "C": "Amazon Inspector",
-          "D": "AWS Shield"
+          "A": "使用AWS AppConfig，但以AWS CodePipeline取代相連控制",
+          "B": "以AWS CodeBuild處理主要需求，並整合CloudWatch 跨帳戶可觀測性儀表板",
+          "C": "把AWS CodeBuild與金絲雀或藍綠部署結合為單一平台設計",
+          "D": "以AWS AppConfig處理主要需求，並整合CloudWatch 跨帳戶可觀測性儀表板作為相連控制"
         },
-        "explanation": "AppConfig 透過驗證和受控部署來管理和部署應用程式配置。\n其他選項掃描、保護或排隊，但不管理應用程式配置。"
+        "explanation": "AWS AppConfig 負責架構的第一項需求，CloudWatch 跨帳戶可觀測性儀表板 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "dop-c02-d2-033",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team optimizing an existing implementation needs to detect configuration drift from its infrastructure templates. Which capability should be used?",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team needs to detect configuration drift from its infrastructure templates. Which capability should be used?",
     "options": {
-      "A": "An S3 event notification",
-      "B": "An EBS snapshot",
+      "A": "An AWS Organizations service control policy",
+      "B": "CloudFormation StackSets",
       "C": "CloudFormation drift detection",
-      "D": "A Route 53 health check"
+      "D": "Reference Secrets Manager or Parameter Store at runtime"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Drift detection compares deployed resources with the expected template state.\nThe other choices monitor DNS, publish object events, or back up volumes.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Drift detection compares deployed resources with the expected template state.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide CloudFormation drift detection for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊需要檢測其基礎設施範本中的配置偏差。應該使用哪種能力？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。優化現有實施的團隊需要檢測其基礎設施範本中的配置偏差。應該使用哪種能力？",
         "options": {
-          "A": "S3 事件通知",
-          "B": "EBS Snapshot",
+          "A": "AWS Organizations 服務控制原則",
+          "B": "CloudFormation StackSets",
           "C": "CloudFormation 漂移偵測",
-          "D": "Route 53 運轉狀況檢查"
+          "D": "在運行時引用 Secrets Manager 或 Parameter Store"
         },
-        "explanation": "偏差檢測將已部署的資源與預期的模板狀態進行比較。\n其他選擇監視 DNS、發布物件事件或備份磁碟區。"
+        "explanation": "偏差檢測將已部署的資源與預期的模板狀態進行比較。\n其他選項適用於此領域的不同需求，但不能像 CloudFormation 漂移偵測 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d2-034",
-    "type": "single",
-    "question": "A company introducing an automated workflow must prevent secrets from appearing in IaC templates and deployment logs. Which practice is appropriate?",
-    "options": {
-      "A": "Hard-code secrets in the template",
-      "B": "Print secrets during the build",
-      "C": "Put secrets in a public S3 object",
-      "D": "Reference Secrets Manager or Parameter Store at runtime"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Runtime secret references keep sensitive values out of source and logs.\nHard-coded or public secrets expose credentials.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A company introducing an automated workflow is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team must prevent secrets from appearing in IaC templates and deployment logs. Which practice is appropriate?",
+    "options": {
+      "A": "AWS AppConfig",
+      "B": "Reference Secrets Manager or Parameter Store at runtime",
+      "C": "An AWS Organizations service control policy",
+      "D": "CloudFormation StackSets"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Runtime secret references keep sensitive values out of source and logs.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Reference Secrets Manager or Parameter Store at runtime for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司必須防止機密出現在 IaC 範本和部署日誌中。哪種做法合適？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。引入自動化工作流程的公司必須防止機密出現在 IaC 範本和部署日誌中。哪種做法合適？",
         "options": {
-          "A": "在模板中硬編碼秘密",
-          "B": "在建造過程中列印秘密",
-          "C": "將機密放入公共 S3 物件中",
-          "D": "在運行時引用 Secrets Manager 或 Parameter Store"
+          "A": "AWS AppConfig",
+          "B": "在運行時引用 Secrets Manager 或 Parameter Store",
+          "C": "AWS Organizations 服務控制原則",
+          "D": "CloudFormation StackSets"
         },
-        "explanation": "運行時秘密引用使敏感值遠離來源和日誌。\n硬編碼或公共秘密會暴露憑證。"
+        "explanation": "運行時秘密引用使敏感值遠離來源和日誌。\n其他選項適用於此領域的不同需求，但不能像 在運行時引用 Secrets Manager 或 Parameter Store 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d2-035",
-    "type": "single",
-    "question": "An AWS administrator working in a shared environment needs to apply the same guardrail policy to every account. Which organization feature fits?",
-    "options": {
-      "A": "An AWS Organizations service control policy",
-      "B": "A local EC2 user",
-      "C": "A CloudFront invalidation",
-      "D": "An EFS lifecycle rule"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "SCPs apply permission guardrails across member accounts.\nThe other choices do not establish an organization-wide API guardrail.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "An AWS administrator working in a shared environment is planning two independent production changes. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The first team needs to apply the same guardrail policy to every account. A second team needs repeatable multi-account infrastructure deployments from one template. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "AWS AppConfig",
+      "B": "CloudFormation drift detection",
+      "C": "Reference Secrets Manager or Parameter Store at runtime",
+      "D": "An AWS Organizations service control policy",
+      "E": "CloudFormation StackSets"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "An AWS Organizations service control policy meets the first requirement: SCPs apply permission guardrails across member accounts. CloudFormation StackSets meets the second requirement: StackSets deploy templates across multiple accounts and Regions.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "在共用環境中工作的 AWS 管理員需要對每個帳號套用相同的防護策略。哪種組織功能適合？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。第一項需求：支援關鍵工作負載的營運團隊需要對每個帳戶應用相同的護欄策略。第二項需求：生產團隊需要透過一個範本進行可重複的多帳戶基礎架構部署。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "AWS Organizations 服務控制原則",
-          "B": "本地 EC2 使用者",
-          "C": "CloudFront 失效",
-          "D": "EFS 生命週期規則"
+          "A": "AWS AppConfig",
+          "B": "CloudFormation 漂移偵測",
+          "C": "在運行時引用 Secrets Manager 或 Parameter Store",
+          "D": "AWS Organizations 服務控制原則",
+          "E": "CloudFormation StackSets"
         },
-        "explanation": "SCP 在成員帳號之間套用權限護欄。\n其他選擇不建立組織範圍的 API 護欄。"
+        "explanation": "AWS Organizations 服務控制原則 符合第一項需求：SCP 在成員帳號之間套用權限護欄。 CloudFormation StackSets 符合第二項需求：StackSets 跨多個帳戶和區域部署範本。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "dop-c02-d2-036",
-    "type": "single",
-    "question": "A customer-facing application team needs repeatable multi-account infrastructure deployments from one template. Which CloudFormation feature fits?",
-    "options": {
-      "A": "An RDS read replica",
-      "B": "CloudFormation StackSets",
-      "C": "A CloudFront cache policy",
-      "D": "An S3 ACL"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "StackSets deploy templates across multiple accounts and Regions.\nThe other choices do not manage multi-account infrastructure.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A customer-facing application team is redesigning one integrated end-to-end architecture. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The architecture must limit blast radius, preserve availability during change, and control cost through automation instead of permanent overprovisioning. The workload needs repeatable multi-account infrastructure deployments from one template, and the same architecture must document a repeatable response to a common alarm. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Use CloudFormation StackSets but replace the connected control with AWS CodePipeline",
+      "B": "Use AWS CodeBuild for the primary requirement and integrate it with Systems Manager Automation runbook",
+      "C": "Combine AWS CodeBuild with A canary or blue-green deployment as a single platform design",
+      "D": "Use CloudFormation StackSets for the primary requirement and integrate it with Systems Manager Automation runbook for the connected control"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudFormation StackSets satisfies the first part of the architecture: StackSets deploy templates across multiple accounts and Regions. Systems Manager Automation runbook satisfies the connected requirement: Automation runbooks encode repeatable operational response steps.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊需要透過一個範本進行可重複的多帳戶基礎架構部署。哪種 CloudFormation 功能適合？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：面向客戶的應用程式團隊需要透過一個範本進行可重複的多帳戶基礎架構部署。 第二項需求：準備發布的開發團隊必須記錄對常見警報的可重複回應。 此架構必須限制影響範圍、在變更期間維持可用性，並透過自動化控制成本，而不是長期過度佈建。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "RDS 唯讀副本",
-          "B": "CloudFormation StackSets",
-          "C": "CloudFront 快取策略",
-          "D": "S3 ACL"
+          "A": "使用CloudFormation StackSets，但以AWS CodePipeline取代相連控制",
+          "B": "以AWS CodeBuild處理主要需求，並整合Systems Manager Automation操作手冊",
+          "C": "把AWS CodeBuild與金絲雀或藍綠部署結合為單一平台設計",
+          "D": "以CloudFormation StackSets處理主要需求，並整合Systems Manager Automation操作手冊作為相連控制"
         },
-        "explanation": "StackSets 跨多個帳戶和區域部署範本。\n其他選擇不管理多帳戶基礎設施。"
+        "explanation": "CloudFormation StackSets 負責架構的第一項需求，Systems Manager Automation操作手冊 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "dop-c02-d2-037",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A platform team standardizing its AWS deployments must store environment-specific application settings and roll them out safely. Which service should be evaluated?",
+    "question": "A platform team standardizing its AWS deployments is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team must store environment-specific application settings and roll them out safely. Which service should be evaluated?",
     "options": {
-      "A": "AWS Shield",
-      "B": "Amazon SQS",
+      "A": "Reference Secrets Manager or Parameter Store at runtime",
+      "B": "An AWS Organizations service control policy",
       "C": "AWS AppConfig",
-      "D": "Amazon Inspector"
+      "D": "CloudFormation drift detection"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "AppConfig manages and deploys application configuration with validation and controlled rollout.\nThe other choices scan, protect, or queue but do not manage application configuration.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "AppConfig manages and deploys application configuration with validation and controlled rollout.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS AppConfig for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊必須儲存特定於環境的應用程式設定並安全地部署它們。應該評估哪些服務？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。標準化其 AWS 部署的平台團隊必須儲存特定於環境的應用程式設定並安全地部署它們。應該評估哪些服務？",
         "options": {
-          "A": "AWS Shield",
-          "B": "Amazon SQS",
+          "A": "在運行時引用 Secrets Manager 或 Parameter Store",
+          "B": "AWS Organizations 服務控制原則",
           "C": "AWS AppConfig",
-          "D": "Amazon Inspector"
+          "D": "CloudFormation 漂移偵測"
         },
-        "explanation": "AppConfig 透過驗證和受控部署來管理和部署應用程式配置。\n其他選項掃描、保護或排隊，但不管理應用程式配置。"
+        "explanation": "AppConfig 透過驗證和受控部署來管理和部署應用程式配置。\n其他選項適用於此領域的不同需求，但不能像 AWS AppConfig 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d2-038",
-    "type": "single",
-    "question": "A team preparing evidence for an audit needs to detect configuration drift from its infrastructure templates. Which capability should be used?",
-    "options": {
-      "A": "A Route 53 health check",
-      "B": "An S3 event notification",
-      "C": "An EBS snapshot",
-      "D": "CloudFormation drift detection"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Drift detection compares deployed resources with the expected template state.\nThe other choices monitor DNS, publish object events, or back up volumes.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team preparing evidence for an audit is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team needs to detect configuration drift from its infrastructure templates. Which capability should be used?",
+    "options": {
+      "A": "CloudFormation StackSets",
+      "B": "CloudFormation drift detection",
+      "C": "Reference Secrets Manager or Parameter Store at runtime",
+      "D": "An AWS Organizations service control policy"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Drift detection compares deployed resources with the expected template state.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide CloudFormation drift detection for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備審計證據的團隊需要檢測其基礎設施模板中的配置偏差。應該使用哪種能力？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。準備審計證據的團隊需要檢測其基礎設施模板中的配置偏差。應該使用哪種能力？",
         "options": {
-          "A": "Route 53 運轉狀況檢查",
-          "B": "S3 事件通知",
-          "C": "EBS Snapshot",
-          "D": "CloudFormation 漂移偵測"
+          "A": "CloudFormation StackSets",
+          "B": "CloudFormation 漂移偵測",
+          "C": "在運行時引用 Secrets Manager 或 Parameter Store",
+          "D": "AWS Organizations 服務控制原則"
         },
-        "explanation": "偏差檢測將已部署的資源與預期的模板狀態進行比較。\n其他選擇監視 DNS、發布物件事件或備份磁碟區。"
+        "explanation": "偏差檢測將已部署的資源與預期的模板狀態進行比較。\n其他選項適用於此領域的不同需求，但不能像 CloudFormation 漂移偵測 一樣直接滿足題目的指定條件。"
       }
     }
   }

@@ -1,1569 +1,1599 @@
 [
   {
     "id": "sap-c02-d3-001",
-    "type": "single",
-    "question": "A production team must reduce cost in an existing workload without violating availability objectives. Which first step is appropriate?",
-    "options": {
-      "A": "Delete production resources immediately",
-      "B": "Disable monitoring",
-      "C": "Move everything to the largest instance",
-      "D": "Analyze utilization, data transfer, and service metrics before rightsizing"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Measurement identifies safe rightsizing and architectural cost opportunities.\nUnmeasured deletion or oversizing increases risk and cost.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A production team is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team must reduce cost in an existing workload without violating availability objectives. Which first step is appropriate?",
+    "options": {
+      "A": "AWS DMS with continuous replication and a planned cutover",
+      "B": "Analyze utilization, data transfer, and service metrics before rightsizing",
+      "C": "Use tracing and metrics to identify the bottleneck before changing components",
+      "D": "EventBridge triggering Step Functions and managed compute"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Measurement identifies safe rightsizing and architectural cost opportunities.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Analyze utilization, data transfer, and service metrics before rightsizing for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "生產團隊必須在不違反可用性目標的情況下降低現有工作負載的成本。哪一個第一步是合適的？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。生產團隊必須在不違反可用性目標的情況下降低現有工作負載的成本。哪一個第一步是合適的？",
         "options": {
-          "A": "立即刪除生產資源",
-          "B": "停用監控",
-          "C": "將所有內容移動到最大的執行個體",
-          "D": "在調整規模之前分析使用率、資料傳輸和服務指標"
+          "A": "具有持續複製和計劃切換的 AWS DMS",
+          "B": "在調整規模之前分析使用率、資料傳輸和服務指標",
+          "C": "在更改組件之前使用追蹤和指標來識別瓶頸",
+          "D": "EventBridge 觸發 Step Functions 和託管計算"
         },
-        "explanation": "測量確定安全的規模調整和架構成本機會。\n未測量的刪除或過度增加會增加風險和成本。"
+        "explanation": "測量確定安全的規模調整和架構成本機會。\n其他選項適用於此領域的不同需求，但不能像 在調整規模之前分析使用率、資料傳輸和服務指標 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d3-002",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A multi-account platform team needs to improve a slow service without changing its public API. Which approach fits?",
+    "question": "A multi-account platform team is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team needs to improve a slow service without changing its public API. Which approach fits?",
     "options": {
       "A": "Use tracing and metrics to identify the bottleneck before changing components",
-      "B": "Rewrite every service at once",
-      "C": "Disable logs",
-      "D": "Increase all timeouts"
+      "B": "EventBridge triggering Step Functions and managed compute",
+      "C": "AWS DMS with continuous replication and a planned cutover",
+      "D": "Required data structures, latency, durability, and failover behavior"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Observability identifies the limiting component and supports targeted improvement.\nBroad rewrites and disabled telemetry increase risk.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Observability identifies the limiting component and supports targeted improvement.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Use tracing and metrics to identify the bottleneck before changing components for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊需要在不更改公共 API 的情況下改善緩慢的服務。哪種方法適合？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。多帳戶平台團隊需要在不更改公共 API 的情況下改善緩慢的服務。哪種方法適合？",
         "options": {
           "A": "在更改組件之前使用追蹤和指標來識別瓶頸",
-          "B": "立即重寫每個服務",
-          "C": "禁用日誌",
-          "D": "增加所有超時"
+          "B": "EventBridge 觸發 Step Functions 和託管計算",
+          "C": "具有持續複製和計劃切換的 AWS DMS",
+          "D": "所需的資料結構、延遲、持久性和故障轉移行為"
         },
-        "explanation": "可觀察性識別限制因素並支持有針對性的改進。\n廣泛的重寫和禁用遙測會增加風險。"
+        "explanation": "可觀察性識別限制因素並支持有針對性的改進。\n其他選項適用於此領域的不同需求，但不能像 在更改組件之前使用追蹤和指標來識別瓶頸 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d3-003",
-    "type": "single",
-    "question": "A regulated company must modernize a scheduled batch process into a managed, event-driven workflow. Which design should be evaluated?",
-    "options": {
-      "A": "A public root key",
-      "B": "EventBridge triggering Step Functions and managed compute",
-      "C": "A permanent server with a cron job only",
-      "D": "Manual console execution"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Managed event-driven orchestration reduces operational work and improves retry behavior.\nManual or credential-sharing designs are fragile.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A regulated company is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team must modernize a scheduled batch process into a managed, event-driven workflow. Which design should be evaluated?",
+    "options": {
+      "A": "AWS DMS with continuous replication and a planned cutover",
+      "B": "Required data structures, latency, durability, and failover behavior",
+      "C": "Analyze utilization, data transfer, and service metrics before rightsizing",
+      "D": "EventBridge triggering Step Functions and managed compute"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Managed event-driven orchestration reduces operational work and improves retry behavior.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide EventBridge triggering Step Functions and managed compute for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司必須將預定的批次流程現代化為託管的、事件驅動的工作流程。應該評估哪種設計？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。受監管的公司必須將預定的批次流程現代化為託管的、事件驅動的工作流程。應該評估哪種設計？",
         "options": {
-          "A": "公有根密鑰",
-          "B": "EventBridge 觸發 Step Functions 和託管計算",
-          "C": "僅具有 cron 作業的永久伺服器",
-          "D": "手動控制台執行"
+          "A": "具有持續複製和計劃切換的 AWS DMS",
+          "B": "所需的資料結構、延遲、持久性和故障轉移行為",
+          "C": "在調整規模之前分析使用率、資料傳輸和服務指標",
+          "D": "EventBridge 觸發 Step Functions 和託管計算"
         },
-        "explanation": "託管事件驅動的編排減少了操作工作並改善了重試行為。\n手動或憑證共享設計很脆弱。"
+        "explanation": "託管事件驅動的編排減少了操作工作並改善了重試行為。\n其他選項適用於此領域的不同需求，但不能像 EventBridge 觸發 Step Functions 和託管計算 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d3-004",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A startup preparing for a traffic increase needs to migrate a database while minimizing downtime. Which strategy should be considered?",
+    "question": "A startup preparing for a traffic increase is redesigning one integrated end-to-end architecture. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The design must keep recurring cost proportional to use, enforce least privilege, and remain available during a component or Availability Zone failure. The workload needs to migrate a database while minimizing downtime, and the same architecture needs to run a legacy database temporarily while a managed database migration is prepared. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "Use a DNS TXT record",
-      "B": "Disable backups",
-      "C": "AWS DMS with continuous replication and a planned cutover",
-      "D": "Copy data once and stop the source for weeks"
+      "A": "Use AWS Transit Gateway for the primary requirement and integrate it with Separate migration phases and define an explicit decommission plan",
+      "B": "Combine AWS Transit Gateway with AWS Resource Access Manager with scoped resource shares as a single platform design",
+      "C": "Use AWS DMS with continuous replication and a planned cutover for the primary requirement and integrate it with Separate migration phases and define an explicit decommission plan for the connected control",
+      "D": "Use AWS DMS with continuous replication and a planned cutover but replace the connected control with AWS Organizations with delegated administration and SCP guardrails"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "DMS can replicate changes and support a controlled migration cutover.\nA one-time copy creates a long outage window and the other choices are unrelated.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "AWS DMS with continuous replication and a planned cutover satisfies the first part of the architecture: DMS can replicate changes and support a controlled migration cutover. Separate migration phases and define an explicit decommission plan satisfies the connected requirement: Phased migration with reconciliation and decommission criteria reduces operational and data risk.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "準備應對流量增加的新創公司需要遷移資料庫，同時最大限度地減少停機時間。應考慮哪種策略？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：引入自動化工作流程的公司需要遷移資料庫，同時最大限度地減少停機時間。 第二項需求：支援關鍵工作負載的營運團隊需要在準備託管資料庫遷移時暫時執行舊資料庫。 此設計必須讓持續成本與實際用量相符、落實最低權限，並在元件或可用區域發生故障時維持可用。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "使用 DNS TXT 記錄",
-          "B": "停用備份",
-          "C": "具有持續複製和計劃切換的 AWS DMS",
-          "D": "複製資料一次並停止來源數週"
+          "A": "以AWS Transit Gateway處理主要需求，並整合分離遷移階段並定義明確的退役計劃",
+          "B": "把AWS Transit Gateway與具有範圍內資源共用的 AWS Resource Access Manager結合為單一平台設計",
+          "C": "以具有持續複製和計劃切換的 AWS DMS處理主要需求，並整合分離遷移階段並定義明確的退役計劃作為相連控制",
+          "D": "使用具有持續複製和計劃切換的 AWS DMS，但以具有委派管理和 SCP 護欄的 AWS Organizations取代相連控制"
         },
-        "explanation": "DMS 可以複製變更並支援受控的遷移切換。\n一次性複製會產生較長的中斷窗口，而其他選擇則無關。"
+        "explanation": "具有持續複製和計劃切換的 AWS DMS 負責架構的第一項需求，分離遷移階段並定義明確的退役計劃 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "sap-c02-d3-005",
-    "type": "single",
-    "question": "An operations team supporting a critical workload must replace a self-managed cache with a managed service. Which factor is most important?",
-    "options": {
-      "A": "The shortest service name",
-      "B": "The number of IAM users",
-      "C": "The S3 bucket region only",
-      "D": "Required data structures, latency, durability, and failover behavior"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Cache selection should match workload behavior and resilience requirements.\nThe other factors do not determine cache suitability.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team must replace a self-managed cache with a managed service. Which factor is most important?",
+    "options": {
+      "A": "EventBridge triggering Step Functions and managed compute",
+      "B": "Required data structures, latency, durability, and failover behavior",
+      "C": "Analyze utilization, data transfer, and service metrics before rightsizing",
+      "D": "Use tracing and metrics to identify the bottleneck before changing components"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Cache selection should match workload behavior and resilience requirements.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Required data structures, latency, durability, and failover behavior for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊必須以託管服務取代自我管理的快取。哪個因素最重要？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。支援關鍵工作負載的營運團隊必須以託管服務取代自我管理的快取。哪個因素最重要？",
         "options": {
-          "A": "最短的服務名稱",
-          "B": "IAM使用者數",
-          "C": "僅限 S3 儲存桶區域",
-          "D": "所需的資料結構、延遲、持久性和故障轉移行為"
+          "A": "EventBridge 觸發 Step Functions 和託管計算",
+          "B": "所需的資料結構、延遲、持久性和故障轉移行為",
+          "C": "在調整規模之前分析使用率、資料傳輸和服務指標",
+          "D": "在更改組件之前使用追蹤和指標來識別瓶頸"
         },
-        "explanation": "快取選擇應符合工作負載行為和彈性要求。\n其他因素並未決定快取的適用性。"
+        "explanation": "快取選擇應符合工作負載行為和彈性要求。\n其他選項適用於此領域的不同需求，但不能像 所需的資料結構、延遲、持久性和故障轉移行為 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d3-006",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A data platform team must reduce cost in an existing workload without violating availability objectives. Which first step is appropriate?",
+    "question": "A data platform team is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team must reduce cost in an existing workload without violating availability objectives. Which first step is appropriate?",
     "options": {
       "A": "Analyze utilization, data transfer, and service metrics before rightsizing",
-      "B": "Delete production resources immediately",
-      "C": "Disable monitoring",
-      "D": "Move everything to the largest instance"
+      "B": "Use tracing and metrics to identify the bottleneck before changing components",
+      "C": "EventBridge triggering Step Functions and managed compute",
+      "D": "AWS DMS with continuous replication and a planned cutover"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Measurement identifies safe rightsizing and architectural cost opportunities.\nUnmeasured deletion or oversizing increases risk and cost.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Measurement identifies safe rightsizing and architectural cost opportunities.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Analyze utilization, data transfer, and service metrics before rightsizing for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊必須在不違反可用性目標的情況下降低現有工作負載的成本。哪一個第一步是合適的？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。資料平台團隊必須在不違反可用性目標的情況下降低現有工作負載的成本。哪一個第一步是合適的？",
         "options": {
           "A": "在調整規模之前分析使用率、資料傳輸和服務指標",
-          "B": "立即刪除生產資源",
-          "C": "停用監控",
-          "D": "將所有內容移動到最大的執行個體"
+          "B": "在更改組件之前使用追蹤和指標來識別瓶頸",
+          "C": "EventBridge 觸發 Step Functions 和託管計算",
+          "D": "具有持續複製和計劃切換的 AWS DMS"
         },
-        "explanation": "測量確定安全的規模調整和架構成本機會。\n未測量的刪除或過度增加會增加風險和成本。"
+        "explanation": "測量確定安全的規模調整和架構成本機會。\n其他選項適用於此領域的不同需求，但不能像 在調整規模之前分析使用率、資料傳輸和服務指標 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d3-007",
-    "type": "single",
-    "question": "A security-conscious engineering team needs to improve a slow service without changing its public API. Which approach fits?",
-    "options": {
-      "A": "Increase all timeouts",
-      "B": "Use tracing and metrics to identify the bottleneck before changing components",
-      "C": "Rewrite every service at once",
-      "D": "Disable logs"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Observability identifies the limiting component and supports targeted improvement.\nBroad rewrites and disabled telemetry increase risk.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A security-conscious engineering team is planning two independent production changes. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The first team needs to improve a slow service without changing its public API. A second team must modernize a scheduled batch process into a managed, event-driven workflow. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Use tracing and metrics to identify the bottleneck before changing components",
+      "B": "EventBridge triggering Step Functions and managed compute",
+      "C": "AWS DMS with continuous replication and a planned cutover",
+      "D": "Required data structures, latency, durability, and failover behavior",
+      "E": "Analyze utilization, data transfer, and service metrics before rightsizing"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Use tracing and metrics to identify the bottleneck before changing components meets the first requirement: Observability identifies the limiting component and supports targeted improvement. EventBridge triggering Step Functions and managed compute meets the second requirement: Managed event-driven orchestration reduces operational work and improves retry behavior.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊需要在不更改公共 API 的情況下改善緩慢的服務。哪種方法適合？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。第一項需求：多帳戶平台團隊需要在不更改公共 API 的情況下改善緩慢的服務。第二項需求：受監管的公司必須將預定的批次流程現代化為託管的、事件驅動的工作流程。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "增加所有超時",
-          "B": "在更改組件之前使用追蹤和指標來識別瓶頸",
-          "C": "立即重寫每個服務",
-          "D": "禁用日誌"
+          "A": "在更改組件之前使用追蹤和指標來識別瓶頸",
+          "B": "EventBridge 觸發 Step Functions 和託管計算",
+          "C": "具有持續複製和計劃切換的 AWS DMS",
+          "D": "所需的資料結構、延遲、持久性和故障轉移行為",
+          "E": "在調整規模之前分析使用率、資料傳輸和服務指標"
         },
-        "explanation": "可觀察性識別限制因素並支持有針對性的改進。\n廣泛的重寫和禁用遙測會增加風險。"
+        "explanation": "在更改組件之前使用追蹤和指標來識別瓶頸 符合第一項需求：可觀察性識別限制因素並支持有針對性的改進。 EventBridge 觸發 Step Functions 和託管計算 符合第二項需求：託管事件驅動的編排減少了操作工作並改善了重試行為。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "sap-c02-d3-008",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A company migrating an existing workload must modernize a scheduled batch process into a managed, event-driven workflow. Which design should be evaluated?",
+    "question": "A company migrating an existing workload is redesigning one integrated end-to-end architecture. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The design must avoid unnecessary standby cost without weakening security controls or the availability objective. The workload must modernize a scheduled batch process into a managed, event-driven workflow, and the same architecture needs a central identity experience for workforce users across many accounts. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "Manual console execution",
-      "B": "A public root key",
-      "C": "EventBridge triggering Step Functions and managed compute",
-      "D": "A permanent server with a cron job only"
+      "A": "Use AWS Transit Gateway for the primary requirement and integrate it with IAM Identity Center",
+      "B": "Combine AWS Transit Gateway with AWS Resource Access Manager with scoped resource shares as a single platform design",
+      "C": "Use EventBridge triggering Step Functions and managed compute for the primary requirement and integrate it with IAM Identity Center for the connected control",
+      "D": "Use EventBridge triggering Step Functions and managed compute but replace the connected control with AWS Organizations with delegated administration and SCP guardrails"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Managed event-driven orchestration reduces operational work and improves retry behavior.\nManual or credential-sharing designs are fragile.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "EventBridge triggering Step Functions and managed compute satisfies the first part of the architecture: Managed event-driven orchestration reduces operational work and improves retry behavior. IAM Identity Center satisfies the connected requirement: IAM Identity Center provides workforce access and permission sets across accounts.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司必須將預定的批次流程現代化為託管的、事件驅動的工作流程。應該評估哪種設計？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：優化現有實施的團隊必須將預定的批次流程現代化為託管的、事件驅動的工作流程。 第二項需求：在共用環境中工作的 AWS 管理員需要為多個帳戶中的員工使用者提供集中身分體驗。 此設計必須避免不必要的備用成本，同時不可削弱安全控制或可用性目標。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "手動控制台執行",
-          "B": "公有根密鑰",
-          "C": "EventBridge 觸發 Step Functions 和託管計算",
-          "D": "僅具有 cron 作業的永久伺服器"
+          "A": "以AWS Transit Gateway處理主要需求，並整合IAM Identity Center",
+          "B": "把AWS Transit Gateway與具有範圍內資源共用的 AWS Resource Access Manager結合為單一平台設計",
+          "C": "以EventBridge 觸發 Step Functions 和託管計算處理主要需求，並整合IAM Identity Center作為相連控制",
+          "D": "使用EventBridge 觸發 Step Functions 和託管計算，但以具有委派管理和 SCP 護欄的 AWS Organizations取代相連控制"
         },
-        "explanation": "託管事件驅動的編排減少了操作工作並改善了重試行為。\n手動或憑證共享設計很脆弱。"
+        "explanation": "EventBridge 觸發 Step Functions 和託管計算 負責架構的第一項需求，IAM Identity Center 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "sap-c02-d3-009",
-    "type": "single",
-    "question": "A team with strict recovery objectives needs to migrate a database while minimizing downtime. Which strategy should be considered?",
-    "options": {
-      "A": "Copy data once and stop the source for weeks",
-      "B": "Use a DNS TXT record",
-      "C": "Disable backups",
-      "D": "AWS DMS with continuous replication and a planned cutover"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "DMS can replicate changes and support a controlled migration cutover.\nA one-time copy creates a long outage window and the other choices are unrelated.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team with strict recovery objectives is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team needs to migrate a database while minimizing downtime. Which strategy should be considered?",
+    "options": {
+      "A": "Use tracing and metrics to identify the bottleneck before changing components",
+      "B": "AWS DMS with continuous replication and a planned cutover",
+      "C": "Required data structures, latency, durability, and failover behavior",
+      "D": "Analyze utilization, data transfer, and service metrics before rightsizing"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "DMS can replicate changes and support a controlled migration cutover.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS DMS with continuous replication and a planned cutover for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格復原目標的團隊需要遷移資料庫，同時最大限度地減少停機時間。應考慮哪種策略？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。具有嚴格復原目標的團隊需要遷移資料庫，同時最大限度地減少停機時間。應考慮哪種策略？",
         "options": {
-          "A": "複製資料一次並停止來源數週",
-          "B": "使用 DNS TXT 記錄",
-          "C": "停用備份",
-          "D": "具有持續複製和計劃切換的 AWS DMS"
+          "A": "在更改組件之前使用追蹤和指標來識別瓶頸",
+          "B": "具有持續複製和計劃切換的 AWS DMS",
+          "C": "所需的資料結構、延遲、持久性和故障轉移行為",
+          "D": "在調整規模之前分析使用率、資料傳輸和服務指標"
         },
-        "explanation": "DMS 可以複製變更並支援受控的遷移切換。\n一次性複製會產生較長的中斷窗口，而其他選擇則無關。"
+        "explanation": "DMS 可以複製變更並支援受控的遷移切換。\n其他選項適用於此領域的不同需求，但不能像 具有持續複製和計劃切換的 AWS DMS 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d3-010",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A developer team preparing a release must replace a self-managed cache with a managed service. Which factor is most important?",
+    "question": "A developer team preparing a release is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team must replace a self-managed cache with a managed service. Which factor is most important?",
     "options": {
       "A": "Required data structures, latency, durability, and failover behavior",
-      "B": "The shortest service name",
-      "C": "The number of IAM users",
-      "D": "The S3 bucket region only"
+      "B": "Analyze utilization, data transfer, and service metrics before rightsizing",
+      "C": "Use tracing and metrics to identify the bottleneck before changing components",
+      "D": "EventBridge triggering Step Functions and managed compute"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Cache selection should match workload behavior and resilience requirements.\nThe other factors do not determine cache suitability.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Cache selection should match workload behavior and resilience requirements.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Required data structures, latency, durability, and failover behavior for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊必須用託管服務取代自我管理的快取。哪個因素最重要？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。準備發布的開發團隊必須用託管服務取代自我管理的快取。哪個因素最重要？",
         "options": {
           "A": "所需的資料結構、延遲、持久性和故障轉移行為",
-          "B": "最短的服務名稱",
-          "C": "IAM使用者數",
-          "D": "僅限 S3 儲存桶區域"
+          "B": "在調整規模之前分析使用率、資料傳輸和服務指標",
+          "C": "在更改組件之前使用追蹤和指標來識別瓶頸",
+          "D": "EventBridge 觸發 Step Functions 和託管計算"
         },
-        "explanation": "快取選擇應符合工作負載行為和彈性要求。\n其他因素並未決定快取的適用性。"
+        "explanation": "快取選擇應符合工作負載行為和彈性要求。\n其他選項適用於此領域的不同需求，但不能像 所需的資料結構、延遲、持久性和故障轉移行為 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d3-011",
-    "type": "single",
-    "question": "An enterprise with several AWS Regions must reduce cost in an existing workload without violating availability objectives. Which first step is appropriate?",
-    "options": {
-      "A": "Move everything to the largest instance",
-      "B": "Analyze utilization, data transfer, and service metrics before rightsizing",
-      "C": "Delete production resources immediately",
-      "D": "Disable monitoring"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Measurement identifies safe rightsizing and architectural cost opportunities.\nUnmeasured deletion or oversizing increases risk and cost.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The team must reduce cost in an existing workload without violating availability objectives. Which first step is appropriate?",
+    "options": {
+      "A": "Use tracing and metrics to identify the bottleneck before changing components",
+      "B": "EventBridge triggering Step Functions and managed compute",
+      "C": "AWS DMS with continuous replication and a planned cutover",
+      "D": "Analyze utilization, data transfer, and service metrics before rightsizing"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Measurement identifies safe rightsizing and architectural cost opportunities.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Analyze utilization, data transfer, and service metrics before rightsizing for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業必須在不違反可用性目標的情況下降低現有工作負載的成本。哪一個第一步是合適的？",
+        "question": "組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。擁有多個 AWS 區域的企業必須在不違反可用性目標的情況下降低現有工作負載的成本。哪一個第一步是合適的？",
         "options": {
-          "A": "將所有內容移動到最大的執行個體",
-          "B": "在調整規模之前分析使用率、資料傳輸和服務指標",
-          "C": "立即刪除生產資源",
-          "D": "停用監控"
+          "A": "在更改組件之前使用追蹤和指標來識別瓶頸",
+          "B": "EventBridge 觸發 Step Functions 和託管計算",
+          "C": "具有持續複製和計劃切換的 AWS DMS",
+          "D": "在調整規模之前分析使用率、資料傳輸和服務指標"
         },
-        "explanation": "測量確定安全的規模調整和架構成本機會。\n未測量的刪除或過度增加會增加風險和成本。"
+        "explanation": "測量確定安全的規模調整和架構成本機會。\n其他選項適用於此領域的不同需求，但不能像 在調整規模之前分析使用率、資料傳輸和服務指標 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d3-012",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A service owner reviewing an incident needs to improve a slow service without changing its public API. Which approach fits?",
+    "question": "A service owner reviewing an incident is redesigning one integrated end-to-end architecture. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The organization will accept additional managed-service cost only when it measurably improves security and availability with less operational effort. The workload needs to improve a slow service without changing its public API, and the same architecture needs a disaster recovery architecture with a defined RTO and RPO. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "Disable logs",
-      "B": "Increase all timeouts",
-      "C": "Use tracing and metrics to identify the bottleneck before changing components",
-      "D": "Rewrite every service at once"
+      "A": "Use AWS Transit Gateway for the primary requirement and integrate it with Translate RTO and RPO into recovery strategy and testable controls",
+      "B": "Combine AWS Transit Gateway with AWS Resource Access Manager with scoped resource shares as a single platform design",
+      "C": "Use Use tracing and metrics to identify the bottleneck before changing components for the primary requirement and integrate it with Translate RTO and RPO into recovery strategy and testable controls for the connected control",
+      "D": "Use Use tracing and metrics to identify the bottleneck before changing components but replace the connected control with AWS Organizations with delegated administration and SCP guardrails"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Observability identifies the limiting component and supports targeted improvement.\nBroad rewrites and disabled telemetry increase risk.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Use tracing and metrics to identify the bottleneck before changing components satisfies the first part of the architecture: Observability identifies the limiting component and supports targeted improvement. Translate RTO and RPO into recovery strategy and testable controls satisfies the connected requirement: RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務所有者需要改進緩慢的服務而不更改其公共 API。哪種方法適合？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：在共用環境中工作的 AWS 管理員需要為多個帳戶中的員工使用者提供集中身分體驗。 此架構必須限制影響範圍、在變更期間維持可用性，並透過自動化控制成本，而不是長期過度佈建。 應結合 第二項需求：支援關鍵工作負載的營運團隊需要一個具有定義的 RTO 和 RPO 的災難復原架構。 只有在託管服務能以較低營運負擔明確改善安全性與可用性時，組織才會接受額外成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "禁用日誌",
-          "B": "增加所有超時",
-          "C": "在更改組件之前使用追蹤和指標來識別瓶頸",
-          "D": "立即重寫每個服務"
+          "A": "以AWS Transit Gateway處理主要需求，並整合將 RTO 和 RPO 轉化為復原策略和可測試的控制",
+          "B": "把AWS Transit Gateway與具有範圍內資源共用的 AWS Resource Access Manager結合為單一平台設計",
+          "C": "以在更改組件之前使用追蹤和指標來識別瓶頸處理主要需求，並整合將 RTO 和 RPO 轉化為復原策略和可測試的控制作為相連控制",
+          "D": "使用在更改組件之前使用追蹤和指標來識別瓶頸，但以具有委派管理和 SCP 護欄的 AWS Organizations取代相連控制"
         },
-        "explanation": "可觀察性識別限制因素並支持有針對性的改進。\n廣泛的重寫和禁用遙測會增加風險。"
+        "explanation": "在更改組件之前使用追蹤和指標來識別瓶頸 負責架構的第一項需求，將 RTO 和 RPO 轉化為復原策略和可測試的控制 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "sap-c02-d3-013",
-    "type": "single",
-    "question": "A team optimizing an existing implementation must modernize a scheduled batch process into a managed, event-driven workflow. Which design should be evaluated?",
-    "options": {
-      "A": "A permanent server with a cron job only",
-      "B": "Manual console execution",
-      "C": "A public root key",
-      "D": "EventBridge triggering Step Functions and managed compute"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Managed event-driven orchestration reduces operational work and improves retry behavior.\nManual or credential-sharing designs are fragile.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The team must modernize a scheduled batch process into a managed, event-driven workflow. Which design should be evaluated?",
+    "options": {
+      "A": "Analyze utilization, data transfer, and service metrics before rightsizing",
+      "B": "EventBridge triggering Step Functions and managed compute",
+      "C": "AWS DMS with continuous replication and a planned cutover",
+      "D": "Required data structures, latency, durability, and failover behavior"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Managed event-driven orchestration reduces operational work and improves retry behavior.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide EventBridge triggering Step Functions and managed compute for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊必須將預定的批次流程現代化為託管的、事件驅動的工作流程。應該評估哪種設計？",
+        "question": "組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。優化現有實施的團隊必須將預定的批次流程現代化為託管的、事件驅動的工作流程。應該評估哪種設計？",
         "options": {
-          "A": "僅具有 cron 作業的永久伺服器",
-          "B": "手動控制台執行",
-          "C": "公有根密鑰",
-          "D": "EventBridge 觸發 Step Functions 和託管計算"
+          "A": "在調整規模之前分析使用率、資料傳輸和服務指標",
+          "B": "EventBridge 觸發 Step Functions 和託管計算",
+          "C": "具有持續複製和計劃切換的 AWS DMS",
+          "D": "所需的資料結構、延遲、持久性和故障轉移行為"
         },
-        "explanation": "託管事件驅動的編排減少了操作工作並改善了重試行為。\n手動或憑證共享設計很脆弱。"
+        "explanation": "託管事件驅動的編排減少了操作工作並改善了重試行為。\n其他選項適用於此領域的不同需求，但不能像 EventBridge 觸發 Step Functions 和託管計算 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d3-014",
-    "type": "single",
-    "question": "A company introducing an automated workflow needs to migrate a database while minimizing downtime. Which strategy should be considered?",
-    "options": {
-      "A": "AWS DMS with continuous replication and a planned cutover",
-      "B": "Copy data once and stop the source for weeks",
-      "C": "Use a DNS TXT record",
-      "D": "Disable backups"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "DMS can replicate changes and support a controlled migration cutover.\nA one-time copy creates a long outage window and the other choices are unrelated.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A company introducing an automated workflow is planning two independent production changes. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The first team needs to migrate a database while minimizing downtime. A second team must replace a self-managed cache with a managed service. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Analyze utilization, data transfer, and service metrics before rightsizing",
+      "B": "Use tracing and metrics to identify the bottleneck before changing components",
+      "C": "EventBridge triggering Step Functions and managed compute",
+      "D": "AWS DMS with continuous replication and a planned cutover",
+      "E": "Required data structures, latency, durability, and failover behavior"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS DMS with continuous replication and a planned cutover meets the first requirement: DMS can replicate changes and support a controlled migration cutover. Required data structures, latency, durability, and failover behavior meets the second requirement: Cache selection should match workload behavior and resilience requirements.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司需要遷移資料庫，同時最大限度地減少停機時間。應考慮哪種策略？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。第一項需求：準備應對流量增加的新創公司需要遷移資料庫，同時最大限度地減少停機時間。第二項需求：支援關鍵工作負載的營運團隊必須以託管服務取代自我管理的快取。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "具有持續複製和計劃切換的 AWS DMS",
-          "B": "複製資料一次並停止來源數週",
-          "C": "使用 DNS TXT 記錄",
-          "D": "停用備份"
+          "A": "在調整規模之前分析使用率、資料傳輸和服務指標",
+          "B": "在更改組件之前使用追蹤和指標來識別瓶頸",
+          "C": "EventBridge 觸發 Step Functions 和託管計算",
+          "D": "具有持續複製和計劃切換的 AWS DMS",
+          "E": "所需的資料結構、延遲、持久性和故障轉移行為"
         },
-        "explanation": "DMS 可以複製變更並支援受控的遷移切換。\n一次性複製會產生較長的中斷窗口，而其他選擇則無關。"
+        "explanation": "具有持續複製和計劃切換的 AWS DMS 符合第一項需求：DMS 可以複製變更並支援受控的遷移切換。 所需的資料結構、延遲、持久性和故障轉移行為 符合第二項需求：快取選擇應符合工作負載行為和彈性要求。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "sap-c02-d3-015",
-    "type": "single",
-    "question": "An AWS administrator working in a shared environment must replace a self-managed cache with a managed service. Which factor is most important?",
-    "options": {
-      "A": "The S3 bucket region only",
-      "B": "Required data structures, latency, durability, and failover behavior",
-      "C": "The shortest service name",
-      "D": "The number of IAM users"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Cache selection should match workload behavior and resilience requirements.\nThe other factors do not determine cache suitability.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment is reviewing a production decision. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The team must replace a self-managed cache with a managed service. Which factor is most important?",
+    "options": {
+      "A": "Analyze utilization, data transfer, and service metrics before rightsizing",
+      "B": "Use tracing and metrics to identify the bottleneck before changing components",
+      "C": "EventBridge triggering Step Functions and managed compute",
+      "D": "Required data structures, latency, durability, and failover behavior"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Cache selection should match workload behavior and resilience requirements.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Required data structures, latency, durability, and failover behavior for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "在共享環境中工作的 AWS 管理員必須將自我管理的快取替換為託管服務。哪個因素最重要？",
+        "question": "組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。在共享環境中工作的 AWS 管理員必須將自我管理的快取替換為託管服務。哪個因素最重要？",
         "options": {
-          "A": "僅限 S3 儲存桶區域",
-          "B": "所需的資料結構、延遲、持久性和故障轉移行為",
-          "C": "最短的服務名稱",
-          "D": "IAM使用者數"
+          "A": "在調整規模之前分析使用率、資料傳輸和服務指標",
+          "B": "在更改組件之前使用追蹤和指標來識別瓶頸",
+          "C": "EventBridge 觸發 Step Functions 和託管計算",
+          "D": "所需的資料結構、延遲、持久性和故障轉移行為"
         },
-        "explanation": "快取選擇應符合工作負載行為和彈性要求。\n其他因素並未決定快取的適用性。"
+        "explanation": "快取選擇應符合工作負載行為和彈性要求。\n其他選項適用於此領域的不同需求，但不能像 所需的資料結構、延遲、持久性和故障轉移行為 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d3-016",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A customer-facing application team must reduce cost in an existing workload without violating availability objectives. Which first step is appropriate?",
+    "question": "A customer-facing application team is redesigning one integrated end-to-end architecture. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The architecture must limit blast radius, preserve availability during change, and control cost through automation instead of permanent overprovisioning. The workload must reduce cost in an existing workload without violating availability objectives, and the same architecture must replace a self-managed cache with a managed service. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "Disable monitoring",
-      "B": "Move everything to the largest instance",
-      "C": "Analyze utilization, data transfer, and service metrics before rightsizing",
-      "D": "Delete production resources immediately"
+      "A": "Use AWS Transit Gateway for the primary requirement and integrate it with Required data structures, latency, durability, and failover behavior",
+      "B": "Combine AWS Transit Gateway with AWS Resource Access Manager with scoped resource shares as a single platform design",
+      "C": "Use Analyze utilization, data transfer, and service metrics before rightsizing for the primary requirement and integrate it with Required data structures, latency, durability, and failover behavior for the connected control",
+      "D": "Use Analyze utilization, data transfer, and service metrics before rightsizing but replace the connected control with AWS Organizations with delegated administration and SCP guardrails"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Measurement identifies safe rightsizing and architectural cost opportunities.\nUnmeasured deletion or oversizing increases risk and cost.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Analyze utilization, data transfer, and service metrics before rightsizing satisfies the first part of the architecture: Measurement identifies safe rightsizing and architectural cost opportunities. Required data structures, latency, durability, and failover behavior satisfies the connected requirement: Cache selection should match workload behavior and resilience requirements.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊必須在不違反可用性目標的情況下降低現有工作負載的成本。哪一個第一步是合適的？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：生產團隊必須在不違反可用性目標的情況下降低現有工作負載的成本。 第二項需求：在共享環境中工作的 AWS 管理員必須將自我管理的快取替換為託管服務。 此架構必須限制影響範圍、在變更期間維持可用性，並透過自動化控制成本，而不是長期過度佈建。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "停用監控",
-          "B": "將所有內容移動到最大的執行個體",
-          "C": "在調整規模之前分析使用率、資料傳輸和服務指標",
-          "D": "立即刪除生產資源"
+          "A": "以AWS Transit Gateway處理主要需求，並整合所需的資料結構、延遲、持久性和故障轉移行為",
+          "B": "把AWS Transit Gateway與具有範圍內資源共用的 AWS Resource Access Manager結合為單一平台設計",
+          "C": "以在調整規模之前分析使用率、資料傳輸和服務指標處理主要需求，並整合所需的資料結構、延遲、持久性和故障轉移行為作為相連控制",
+          "D": "使用在調整規模之前分析使用率、資料傳輸和服務指標，但以具有委派管理和 SCP 護欄的 AWS Organizations取代相連控制"
         },
-        "explanation": "測量確定安全的規模調整和架構成本機會。\n未測量的刪除或過度增加會增加風險和成本。"
+        "explanation": "在調整規模之前分析使用率、資料傳輸和服務指標 負責架構的第一項需求，所需的資料結構、延遲、持久性和故障轉移行為 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "sap-c02-d3-017",
-    "type": "single",
-    "question": "A platform team standardizing its AWS deployments needs to improve a slow service without changing its public API. Which approach fits?",
-    "options": {
-      "A": "Rewrite every service at once",
-      "B": "Disable logs",
-      "C": "Increase all timeouts",
-      "D": "Use tracing and metrics to identify the bottleneck before changing components"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Observability identifies the limiting component and supports targeted improvement.\nBroad rewrites and disabled telemetry increase risk.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team needs to improve a slow service without changing its public API. Which approach fits?",
+    "options": {
+      "A": "Required data structures, latency, durability, and failover behavior",
+      "B": "Use tracing and metrics to identify the bottleneck before changing components",
+      "C": "EventBridge triggering Step Functions and managed compute",
+      "D": "AWS DMS with continuous replication and a planned cutover"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Observability identifies the limiting component and supports targeted improvement.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Use tracing and metrics to identify the bottleneck before changing components for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊需要在不更改其公共 API 的情況下改善緩慢的服務。哪種方法適合？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。標準化其 AWS 部署的平台團隊需要在不更改其公共 API 的情況下改善緩慢的服務。哪種方法適合？",
         "options": {
-          "A": "立即重寫每個服務",
-          "B": "禁用日誌",
-          "C": "增加所有超時",
-          "D": "在更改組件之前使用追蹤和指標來識別瓶頸"
+          "A": "所需的資料結構、延遲、持久性和故障轉移行為",
+          "B": "在更改組件之前使用追蹤和指標來識別瓶頸",
+          "C": "EventBridge 觸發 Step Functions 和託管計算",
+          "D": "具有持續複製和計劃切換的 AWS DMS"
         },
-        "explanation": "可觀察性識別限制因素並支持有針對性的改進。\n廣泛的重寫和禁用遙測會增加風險。"
+        "explanation": "可觀察性識別限制因素並支持有針對性的改進。\n其他選項適用於此領域的不同需求，但不能像 在更改組件之前使用追蹤和指標來識別瓶頸 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d3-018",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team preparing evidence for an audit must modernize a scheduled batch process into a managed, event-driven workflow. Which design should be evaluated?",
+    "question": "A team preparing evidence for an audit is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team must modernize a scheduled batch process into a managed, event-driven workflow. Which design should be evaluated?",
     "options": {
       "A": "EventBridge triggering Step Functions and managed compute",
-      "B": "A permanent server with a cron job only",
-      "C": "Manual console execution",
-      "D": "A public root key"
+      "B": "AWS DMS with continuous replication and a planned cutover",
+      "C": "Required data structures, latency, durability, and failover behavior",
+      "D": "Analyze utilization, data transfer, and service metrics before rightsizing"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Managed event-driven orchestration reduces operational work and improves retry behavior.\nManual or credential-sharing designs are fragile.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Managed event-driven orchestration reduces operational work and improves retry behavior.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide EventBridge triggering Step Functions and managed compute for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備審計證據的團隊必須將預定的批次流程現代化為託管的、事件驅動的工作流程。應該評估哪種設計？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。準備審計證據的團隊必須將預定的批次流程現代化為託管的、事件驅動的工作流程。應該評估哪種設計？",
         "options": {
           "A": "EventBridge 觸發 Step Functions 和託管計算",
-          "B": "僅具有 cron 作業的永久伺服器",
-          "C": "手動控制台執行",
-          "D": "公有根密鑰"
+          "B": "具有持續複製和計劃切換的 AWS DMS",
+          "C": "所需的資料結構、延遲、持久性和故障轉移行為",
+          "D": "在調整規模之前分析使用率、資料傳輸和服務指標"
         },
-        "explanation": "託管事件驅動的編排減少了操作工作並改善了重試行為。\n手動或憑證共享設計很脆弱。"
+        "explanation": "託管事件驅動的編排減少了操作工作並改善了重試行為。\n其他選項適用於此領域的不同需求，但不能像 EventBridge 觸發 Step Functions 和託管計算 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d3-019",
-    "type": "single",
-    "question": "A business replacing a manual process needs to migrate a database while minimizing downtime. Which strategy should be considered?",
-    "options": {
-      "A": "Disable backups",
-      "B": "AWS DMS with continuous replication and a planned cutover",
-      "C": "Copy data once and stop the source for weeks",
-      "D": "Use a DNS TXT record"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "DMS can replicate changes and support a controlled migration cutover.\nA one-time copy creates a long outage window and the other choices are unrelated.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A business replacing a manual process is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team needs to migrate a database while minimizing downtime. Which strategy should be considered?",
+    "options": {
+      "A": "Required data structures, latency, durability, and failover behavior",
+      "B": "Analyze utilization, data transfer, and service metrics before rightsizing",
+      "C": "Use tracing and metrics to identify the bottleneck before changing components",
+      "D": "AWS DMS with continuous replication and a planned cutover"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "DMS can replicate changes and support a controlled migration cutover.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS DMS with continuous replication and a planned cutover for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "取代手動流程的企業需要遷移資料庫，同時最大限度地減少停機時間。應考慮哪種策略？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。取代手動流程的企業需要遷移資料庫，同時最大限度地減少停機時間。應考慮哪種策略？",
         "options": {
-          "A": "停用備份",
-          "B": "具有持續複製和計劃切換的 AWS DMS",
-          "C": "複製資料一次並停止來源數週",
-          "D": "使用 DNS TXT 記錄"
+          "A": "所需的資料結構、延遲、持久性和故障轉移行為",
+          "B": "在調整規模之前分析使用率、資料傳輸和服務指標",
+          "C": "在更改組件之前使用追蹤和指標來識別瓶頸",
+          "D": "具有持續複製和計劃切換的 AWS DMS"
         },
-        "explanation": "DMS 可以複製變更並支援受控的遷移切換。\n一次性複製會產生較長的中斷窗口，而其他選擇則無關。"
+        "explanation": "DMS 可以複製變更並支援受控的遷移切換。\n其他選項適用於此領域的不同需求，但不能像 具有持續複製和計劃切換的 AWS DMS 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d3-020",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team validating a design against the exam guide must replace a self-managed cache with a managed service. Which factor is most important?",
+    "question": "A team validating a design against the exam guide is redesigning one integrated end-to-end architecture. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The selected controls must provide auditable security, predictable availability, and the lowest operational cost that still satisfies both requirements. The workload must replace a self-managed cache with a managed service, and the same architecture needs to run a legacy database temporarily while a managed database migration is prepared. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "The number of IAM users",
-      "B": "The S3 bucket region only",
-      "C": "Required data structures, latency, durability, and failover behavior",
-      "D": "The shortest service name"
+      "A": "Use AWS Transit Gateway for the primary requirement and integrate it with Separate migration phases and define an explicit decommission plan",
+      "B": "Combine AWS Transit Gateway with AWS Resource Access Manager with scoped resource shares as a single platform design",
+      "C": "Use Required data structures, latency, durability, and failover behavior for the primary requirement and integrate it with Separate migration phases and define an explicit decommission plan for the connected control",
+      "D": "Use Required data structures, latency, durability, and failover behavior but replace the connected control with AWS Organizations with delegated administration and SCP guardrails"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Cache selection should match workload behavior and resilience requirements.\nThe other factors do not determine cache suitability.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Required data structures, latency, durability, and failover behavior satisfies the first part of the architecture: Cache selection should match workload behavior and resilience requirements. Separate migration phases and define an explicit decommission plan satisfies the connected requirement: Phased migration with reconciliation and decommission criteria reduces operational and data risk.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊必須用託管服務替換自我管理的快取。哪個因素最重要？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：在共享環境中工作的 AWS 管理員必須將自我管理的快取替換為託管服務。 第二項需求：支援關鍵工作負載的營運團隊需要在準備託管資料庫遷移時暫時執行舊資料庫。 所選控制必須提供可稽核的安全性、可預測的可用性，以及在滿足兩項要求前提下最低的營運成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "IAM使用者數",
-          "B": "僅限 S3 儲存桶區域",
-          "C": "所需的資料結構、延遲、持久性和故障轉移行為",
-          "D": "最短的服務名稱"
+          "A": "以AWS Transit Gateway處理主要需求，並整合分離遷移階段並定義明確的退役計劃",
+          "B": "把AWS Transit Gateway與具有範圍內資源共用的 AWS Resource Access Manager結合為單一平台設計",
+          "C": "以所需的資料結構、延遲、持久性和故障轉移行為處理主要需求，並整合分離遷移階段並定義明確的退役計劃作為相連控制",
+          "D": "使用所需的資料結構、延遲、持久性和故障轉移行為，但以具有委派管理和 SCP 護欄的 AWS Organizations取代相連控制"
         },
-        "explanation": "快取選擇應符合工作負載行為和彈性要求。\n其他因素並未決定快取的適用性。"
+        "explanation": "所需的資料結構、延遲、持久性和故障轉移行為 負責架構的第一項需求，分離遷移階段並定義明確的退役計劃 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "sap-c02-d3-021",
-    "type": "single",
-    "question": "A production team must reduce cost in an existing workload without violating availability objectives. Which first step is appropriate?",
-    "options": {
-      "A": "Delete production resources immediately",
-      "B": "Disable monitoring",
-      "C": "Move everything to the largest instance",
-      "D": "Analyze utilization, data transfer, and service metrics before rightsizing"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Measurement identifies safe rightsizing and architectural cost opportunities.\nUnmeasured deletion or oversizing increases risk and cost.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A production team is planning two independent production changes. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The first team must reduce cost in an existing workload without violating availability objectives. A second team needs to improve a slow service without changing its public API. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Required data structures, latency, durability, and failover behavior",
+      "B": "Analyze utilization, data transfer, and service metrics before rightsizing",
+      "C": "Use tracing and metrics to identify the bottleneck before changing components",
+      "D": "EventBridge triggering Step Functions and managed compute",
+      "E": "AWS DMS with continuous replication and a planned cutover"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Analyze utilization, data transfer, and service metrics before rightsizing meets the first requirement: Measurement identifies safe rightsizing and architectural cost opportunities. Use tracing and metrics to identify the bottleneck before changing components meets the second requirement: Observability identifies the limiting component and supports targeted improvement.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "生產團隊必須在不違反可用性目標的情況下降低現有工作負載的成本。哪一個第一步是合適的？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。第一項需求：生產團隊必須在不違反可用性目標的情況下降低現有工作負載的成本。第二項需求：多帳戶平台團隊需要在不更改公共 API 的情況下改善緩慢的服務。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "立即刪除生產資源",
-          "B": "停用監控",
-          "C": "將所有內容移動到最大的執行個體",
-          "D": "在調整規模之前分析使用率、資料傳輸和服務指標"
+          "A": "所需的資料結構、延遲、持久性和故障轉移行為",
+          "B": "在調整規模之前分析使用率、資料傳輸和服務指標",
+          "C": "在更改組件之前使用追蹤和指標來識別瓶頸",
+          "D": "EventBridge 觸發 Step Functions 和託管計算",
+          "E": "具有持續複製和計劃切換的 AWS DMS"
         },
-        "explanation": "測量確定安全的規模調整和架構成本機會。\n未測量的刪除或過度增加會增加風險和成本。"
+        "explanation": "在調整規模之前分析使用率、資料傳輸和服務指標 符合第一項需求：測量確定安全的規模調整和架構成本機會。 在更改組件之前使用追蹤和指標來識別瓶頸 符合第二項需求：可觀察性識別限制因素並支持有針對性的改進。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "sap-c02-d3-022",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A multi-account platform team needs to improve a slow service without changing its public API. Which approach fits?",
+    "question": "A multi-account platform team is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team needs to improve a slow service without changing its public API. Which approach fits?",
     "options": {
       "A": "Use tracing and metrics to identify the bottleneck before changing components",
-      "B": "Rewrite every service at once",
-      "C": "Disable logs",
-      "D": "Increase all timeouts"
+      "B": "EventBridge triggering Step Functions and managed compute",
+      "C": "AWS DMS with continuous replication and a planned cutover",
+      "D": "Required data structures, latency, durability, and failover behavior"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Observability identifies the limiting component and supports targeted improvement.\nBroad rewrites and disabled telemetry increase risk.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Observability identifies the limiting component and supports targeted improvement.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Use tracing and metrics to identify the bottleneck before changing components for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊需要在不更改公共 API 的情況下改善緩慢的服務。哪種方法適合？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。多帳戶平台團隊需要在不更改公共 API 的情況下改善緩慢的服務。哪種方法適合？",
         "options": {
           "A": "在更改組件之前使用追蹤和指標來識別瓶頸",
-          "B": "立即重寫每個服務",
-          "C": "禁用日誌",
-          "D": "增加所有超時"
+          "B": "EventBridge 觸發 Step Functions 和託管計算",
+          "C": "具有持續複製和計劃切換的 AWS DMS",
+          "D": "所需的資料結構、延遲、持久性和故障轉移行為"
         },
-        "explanation": "可觀察性識別限制因素並支持有針對性的改進。\n廣泛的重寫和禁用遙測會增加風險。"
+        "explanation": "可觀察性識別限制因素並支持有針對性的改進。\n其他選項適用於此領域的不同需求，但不能像 在更改組件之前使用追蹤和指標來識別瓶頸 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d3-023",
-    "type": "single",
-    "question": "A regulated company must modernize a scheduled batch process into a managed, event-driven workflow. Which design should be evaluated?",
-    "options": {
-      "A": "A public root key",
-      "B": "EventBridge triggering Step Functions and managed compute",
-      "C": "A permanent server with a cron job only",
-      "D": "Manual console execution"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Managed event-driven orchestration reduces operational work and improves retry behavior.\nManual or credential-sharing designs are fragile.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A regulated company is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team must modernize a scheduled batch process into a managed, event-driven workflow. Which design should be evaluated?",
+    "options": {
+      "A": "AWS DMS with continuous replication and a planned cutover",
+      "B": "Required data structures, latency, durability, and failover behavior",
+      "C": "Analyze utilization, data transfer, and service metrics before rightsizing",
+      "D": "EventBridge triggering Step Functions and managed compute"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Managed event-driven orchestration reduces operational work and improves retry behavior.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide EventBridge triggering Step Functions and managed compute for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司必須將預定的批次流程現代化為託管的、事件驅動的工作流程。應該評估哪種設計？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。受監管的公司必須將預定的批次流程現代化為託管的、事件驅動的工作流程。應該評估哪種設計？",
         "options": {
-          "A": "公有根密鑰",
-          "B": "EventBridge 觸發 Step Functions 和託管計算",
-          "C": "僅具有 cron 作業的永久伺服器",
-          "D": "手動控制台執行"
+          "A": "具有持續複製和計劃切換的 AWS DMS",
+          "B": "所需的資料結構、延遲、持久性和故障轉移行為",
+          "C": "在調整規模之前分析使用率、資料傳輸和服務指標",
+          "D": "EventBridge 觸發 Step Functions 和託管計算"
         },
-        "explanation": "託管事件驅動的編排減少了操作工作並改善了重試行為。\n手動或憑證共享設計很脆弱。"
+        "explanation": "託管事件驅動的編排減少了操作工作並改善了重試行為。\n其他選項適用於此領域的不同需求，但不能像 EventBridge 觸發 Step Functions 和託管計算 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d3-024",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A startup preparing for a traffic increase needs to migrate a database while minimizing downtime. Which strategy should be considered?",
+    "question": "A startup preparing for a traffic increase is redesigning one integrated end-to-end architecture. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The design must keep recurring cost proportional to use, enforce least privilege, and remain available during a component or Availability Zone failure. The workload needs to migrate a database while minimizing downtime, and the same architecture needs a central identity experience for workforce users across many accounts. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "Use a DNS TXT record",
-      "B": "Disable backups",
-      "C": "AWS DMS with continuous replication and a planned cutover",
-      "D": "Copy data once and stop the source for weeks"
+      "A": "Use AWS Transit Gateway for the primary requirement and integrate it with IAM Identity Center",
+      "B": "Combine AWS Transit Gateway with AWS Resource Access Manager with scoped resource shares as a single platform design",
+      "C": "Use AWS DMS with continuous replication and a planned cutover for the primary requirement and integrate it with IAM Identity Center for the connected control",
+      "D": "Use AWS DMS with continuous replication and a planned cutover but replace the connected control with AWS Organizations with delegated administration and SCP guardrails"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "DMS can replicate changes and support a controlled migration cutover.\nA one-time copy creates a long outage window and the other choices are unrelated.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "AWS DMS with continuous replication and a planned cutover satisfies the first part of the architecture: DMS can replicate changes and support a controlled migration cutover. IAM Identity Center satisfies the connected requirement: IAM Identity Center provides workforce access and permission sets across accounts.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "準備應對流量增加的新創公司需要遷移資料庫，同時最大限度地減少停機時間。應考慮哪種策略？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：引入自動化工作流程的公司需要遷移資料庫，同時最大限度地減少停機時間。 第二項需求：在共用環境中工作的 AWS 管理員需要為多個帳戶中的員工使用者提供集中身分體驗。 此設計必須讓持續成本與實際用量相符、落實最低權限，並在元件或可用區域發生故障時維持可用。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "使用 DNS TXT 記錄",
-          "B": "停用備份",
-          "C": "具有持續複製和計劃切換的 AWS DMS",
-          "D": "複製資料一次並停止來源數週"
+          "A": "以AWS Transit Gateway處理主要需求，並整合IAM Identity Center",
+          "B": "把AWS Transit Gateway與具有範圍內資源共用的 AWS Resource Access Manager結合為單一平台設計",
+          "C": "以具有持續複製和計劃切換的 AWS DMS處理主要需求，並整合IAM Identity Center作為相連控制",
+          "D": "使用具有持續複製和計劃切換的 AWS DMS，但以具有委派管理和 SCP 護欄的 AWS Organizations取代相連控制"
         },
-        "explanation": "DMS 可以複製變更並支援受控的遷移切換。\n一次性複製會產生較長的中斷窗口，而其他選擇則無關。"
+        "explanation": "具有持續複製和計劃切換的 AWS DMS 負責架構的第一項需求，IAM Identity Center 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "sap-c02-d3-025",
-    "type": "single",
-    "question": "An operations team supporting a critical workload must replace a self-managed cache with a managed service. Which factor is most important?",
-    "options": {
-      "A": "The shortest service name",
-      "B": "The number of IAM users",
-      "C": "The S3 bucket region only",
-      "D": "Required data structures, latency, durability, and failover behavior"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Cache selection should match workload behavior and resilience requirements.\nThe other factors do not determine cache suitability.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team must replace a self-managed cache with a managed service. Which factor is most important?",
+    "options": {
+      "A": "EventBridge triggering Step Functions and managed compute",
+      "B": "Required data structures, latency, durability, and failover behavior",
+      "C": "Analyze utilization, data transfer, and service metrics before rightsizing",
+      "D": "Use tracing and metrics to identify the bottleneck before changing components"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Cache selection should match workload behavior and resilience requirements.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Required data structures, latency, durability, and failover behavior for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊必須以託管服務取代自我管理的快取。哪個因素最重要？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。支援關鍵工作負載的營運團隊必須以託管服務取代自我管理的快取。哪個因素最重要？",
         "options": {
-          "A": "最短的服務名稱",
-          "B": "IAM使用者數",
-          "C": "僅限 S3 儲存桶區域",
-          "D": "所需的資料結構、延遲、持久性和故障轉移行為"
+          "A": "EventBridge 觸發 Step Functions 和託管計算",
+          "B": "所需的資料結構、延遲、持久性和故障轉移行為",
+          "C": "在調整規模之前分析使用率、資料傳輸和服務指標",
+          "D": "在更改組件之前使用追蹤和指標來識別瓶頸"
         },
-        "explanation": "快取選擇應符合工作負載行為和彈性要求。\n其他因素並未決定快取的適用性。"
+        "explanation": "快取選擇應符合工作負載行為和彈性要求。\n其他選項適用於此領域的不同需求，但不能像 所需的資料結構、延遲、持久性和故障轉移行為 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d3-026",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A data platform team must reduce cost in an existing workload without violating availability objectives. Which first step is appropriate?",
+    "question": "A data platform team is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team must reduce cost in an existing workload without violating availability objectives. Which first step is appropriate?",
     "options": {
       "A": "Analyze utilization, data transfer, and service metrics before rightsizing",
-      "B": "Delete production resources immediately",
-      "C": "Disable monitoring",
-      "D": "Move everything to the largest instance"
+      "B": "Use tracing and metrics to identify the bottleneck before changing components",
+      "C": "EventBridge triggering Step Functions and managed compute",
+      "D": "AWS DMS with continuous replication and a planned cutover"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Measurement identifies safe rightsizing and architectural cost opportunities.\nUnmeasured deletion or oversizing increases risk and cost.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Measurement identifies safe rightsizing and architectural cost opportunities.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Analyze utilization, data transfer, and service metrics before rightsizing for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊必須在不違反可用性目標的情況下降低現有工作負載的成本。哪一個第一步是合適的？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。資料平台團隊必須在不違反可用性目標的情況下降低現有工作負載的成本。哪一個第一步是合適的？",
         "options": {
           "A": "在調整規模之前分析使用率、資料傳輸和服務指標",
-          "B": "立即刪除生產資源",
-          "C": "停用監控",
-          "D": "將所有內容移動到最大的執行個體"
+          "B": "在更改組件之前使用追蹤和指標來識別瓶頸",
+          "C": "EventBridge 觸發 Step Functions 和託管計算",
+          "D": "具有持續複製和計劃切換的 AWS DMS"
         },
-        "explanation": "測量確定安全的規模調整和架構成本機會。\n未測量的刪除或過度增加會增加風險和成本。"
+        "explanation": "測量確定安全的規模調整和架構成本機會。\n其他選項適用於此領域的不同需求，但不能像 在調整規模之前分析使用率、資料傳輸和服務指標 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d3-027",
-    "type": "single",
-    "question": "A security-conscious engineering team needs to improve a slow service without changing its public API. Which approach fits?",
-    "options": {
-      "A": "Increase all timeouts",
-      "B": "Use tracing and metrics to identify the bottleneck before changing components",
-      "C": "Rewrite every service at once",
-      "D": "Disable logs"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Observability identifies the limiting component and supports targeted improvement.\nBroad rewrites and disabled telemetry increase risk.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A security-conscious engineering team is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team needs to improve a slow service without changing its public API. Which approach fits?",
+    "options": {
+      "A": "EventBridge triggering Step Functions and managed compute",
+      "B": "AWS DMS with continuous replication and a planned cutover",
+      "C": "Required data structures, latency, durability, and failover behavior",
+      "D": "Use tracing and metrics to identify the bottleneck before changing components"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Observability identifies the limiting component and supports targeted improvement.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Use tracing and metrics to identify the bottleneck before changing components for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊需要在不更改公共 API 的情況下改善緩慢的服務。哪種方法適合？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。具有安全意識的工程團隊需要在不更改公共 API 的情況下改善緩慢的服務。哪種方法適合？",
         "options": {
-          "A": "增加所有超時",
-          "B": "在更改組件之前使用追蹤和指標來識別瓶頸",
-          "C": "立即重寫每個服務",
-          "D": "禁用日誌"
+          "A": "EventBridge 觸發 Step Functions 和託管計算",
+          "B": "具有持續複製和計劃切換的 AWS DMS",
+          "C": "所需的資料結構、延遲、持久性和故障轉移行為",
+          "D": "在更改組件之前使用追蹤和指標來識別瓶頸"
         },
-        "explanation": "可觀察性識別限制因素並支持有針對性的改進。\n廣泛的重寫和禁用遙測會增加風險。"
+        "explanation": "可觀察性識別限制因素並支持有針對性的改進。\n其他選項適用於此領域的不同需求，但不能像 在更改組件之前使用追蹤和指標來識別瓶頸 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d3-028",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A company migrating an existing workload must modernize a scheduled batch process into a managed, event-driven workflow. Which design should be evaluated?",
+    "question": "A company migrating an existing workload is redesigning one integrated end-to-end architecture. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The design must avoid unnecessary standby cost without weakening security controls or the availability objective. The workload must modernize a scheduled batch process into a managed, event-driven workflow, and the same architecture needs a disaster recovery architecture with a defined RTO and RPO. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "Manual console execution",
-      "B": "A public root key",
-      "C": "EventBridge triggering Step Functions and managed compute",
-      "D": "A permanent server with a cron job only"
+      "A": "Use AWS Transit Gateway for the primary requirement and integrate it with Translate RTO and RPO into recovery strategy and testable controls",
+      "B": "Combine AWS Transit Gateway with AWS Resource Access Manager with scoped resource shares as a single platform design",
+      "C": "Use EventBridge triggering Step Functions and managed compute for the primary requirement and integrate it with Translate RTO and RPO into recovery strategy and testable controls for the connected control",
+      "D": "Use EventBridge triggering Step Functions and managed compute but replace the connected control with AWS Organizations with delegated administration and SCP guardrails"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Managed event-driven orchestration reduces operational work and improves retry behavior.\nManual or credential-sharing designs are fragile.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "EventBridge triggering Step Functions and managed compute satisfies the first part of the architecture: Managed event-driven orchestration reduces operational work and improves retry behavior. Translate RTO and RPO into recovery strategy and testable controls satisfies the connected requirement: RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司必須將預定的批次流程現代化為託管的、事件驅動的工作流程。應該評估哪種設計？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：優化現有實施的團隊必須將預定的批次流程現代化為託管的、事件驅動的工作流程。 第二項需求：支援關鍵工作負載的營運團隊需要一個具有定義的 RTO 和 RPO 的災難復原架構。 此設計必須避免不必要的備用成本，同時不可削弱安全控制或可用性目標。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "手動控制台執行",
-          "B": "公有根密鑰",
-          "C": "EventBridge 觸發 Step Functions 和託管計算",
-          "D": "僅具有 cron 作業的永久伺服器"
+          "A": "以AWS Transit Gateway處理主要需求，並整合將 RTO 和 RPO 轉化為復原策略和可測試的控制",
+          "B": "把AWS Transit Gateway與具有範圍內資源共用的 AWS Resource Access Manager結合為單一平台設計",
+          "C": "以EventBridge 觸發 Step Functions 和託管計算處理主要需求，並整合將 RTO 和 RPO 轉化為復原策略和可測試的控制作為相連控制",
+          "D": "使用EventBridge 觸發 Step Functions 和託管計算，但以具有委派管理和 SCP 護欄的 AWS Organizations取代相連控制"
         },
-        "explanation": "託管事件驅動的編排減少了操作工作並改善了重試行為。\n手動或憑證共享設計很脆弱。"
+        "explanation": "EventBridge 觸發 Step Functions 和託管計算 負責架構的第一項需求，將 RTO 和 RPO 轉化為復原策略和可測試的控制 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "sap-c02-d3-029",
-    "type": "single",
-    "question": "A team with strict recovery objectives needs to migrate a database while minimizing downtime. Which strategy should be considered?",
-    "options": {
-      "A": "Copy data once and stop the source for weeks",
-      "B": "Use a DNS TXT record",
-      "C": "Disable backups",
-      "D": "AWS DMS with continuous replication and a planned cutover"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "DMS can replicate changes and support a controlled migration cutover.\nA one-time copy creates a long outage window and the other choices are unrelated.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team with strict recovery objectives is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team needs to migrate a database while minimizing downtime. Which strategy should be considered?",
+    "options": {
+      "A": "Use tracing and metrics to identify the bottleneck before changing components",
+      "B": "AWS DMS with continuous replication and a planned cutover",
+      "C": "Required data structures, latency, durability, and failover behavior",
+      "D": "Analyze utilization, data transfer, and service metrics before rightsizing"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "DMS can replicate changes and support a controlled migration cutover.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS DMS with continuous replication and a planned cutover for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格復原目標的團隊需要遷移資料庫，同時最大限度地減少停機時間。應考慮哪種策略？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。具有嚴格復原目標的團隊需要遷移資料庫，同時最大限度地減少停機時間。應考慮哪種策略？",
         "options": {
-          "A": "複製資料一次並停止來源數週",
-          "B": "使用 DNS TXT 記錄",
-          "C": "停用備份",
-          "D": "具有持續複製和計劃切換的 AWS DMS"
+          "A": "在更改組件之前使用追蹤和指標來識別瓶頸",
+          "B": "具有持續複製和計劃切換的 AWS DMS",
+          "C": "所需的資料結構、延遲、持久性和故障轉移行為",
+          "D": "在調整規模之前分析使用率、資料傳輸和服務指標"
         },
-        "explanation": "DMS 可以複製變更並支援受控的遷移切換。\n一次性複製會產生較長的中斷窗口，而其他選擇則無關。"
+        "explanation": "DMS 可以複製變更並支援受控的遷移切換。\n其他選項適用於此領域的不同需求，但不能像 具有持續複製和計劃切換的 AWS DMS 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d3-030",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A developer team preparing a release must replace a self-managed cache with a managed service. Which factor is most important?",
+    "question": "A developer team preparing a release is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team must replace a self-managed cache with a managed service. Which factor is most important?",
     "options": {
       "A": "Required data structures, latency, durability, and failover behavior",
-      "B": "The shortest service name",
-      "C": "The number of IAM users",
-      "D": "The S3 bucket region only"
+      "B": "Analyze utilization, data transfer, and service metrics before rightsizing",
+      "C": "Use tracing and metrics to identify the bottleneck before changing components",
+      "D": "EventBridge triggering Step Functions and managed compute"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Cache selection should match workload behavior and resilience requirements.\nThe other factors do not determine cache suitability.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Cache selection should match workload behavior and resilience requirements.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Required data structures, latency, durability, and failover behavior for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊必須用託管服務取代自我管理的快取。哪個因素最重要？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。準備發布的開發團隊必須用託管服務取代自我管理的快取。哪個因素最重要？",
         "options": {
           "A": "所需的資料結構、延遲、持久性和故障轉移行為",
-          "B": "最短的服務名稱",
-          "C": "IAM使用者數",
-          "D": "僅限 S3 儲存桶區域"
+          "B": "在調整規模之前分析使用率、資料傳輸和服務指標",
+          "C": "在更改組件之前使用追蹤和指標來識別瓶頸",
+          "D": "EventBridge 觸發 Step Functions 和託管計算"
         },
-        "explanation": "快取選擇應符合工作負載行為和彈性要求。\n其他因素並未決定快取的適用性。"
+        "explanation": "快取選擇應符合工作負載行為和彈性要求。\n其他選項適用於此領域的不同需求，但不能像 所需的資料結構、延遲、持久性和故障轉移行為 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d3-031",
-    "type": "single",
-    "question": "An enterprise with several AWS Regions must reduce cost in an existing workload without violating availability objectives. Which first step is appropriate?",
-    "options": {
-      "A": "Move everything to the largest instance",
-      "B": "Analyze utilization, data transfer, and service metrics before rightsizing",
-      "C": "Delete production resources immediately",
-      "D": "Disable monitoring"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Measurement identifies safe rightsizing and architectural cost opportunities.\nUnmeasured deletion or oversizing increases risk and cost.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team must reduce cost in an existing workload without violating availability objectives. Which first step is appropriate?",
+    "options": {
+      "A": "Use tracing and metrics to identify the bottleneck before changing components",
+      "B": "EventBridge triggering Step Functions and managed compute",
+      "C": "AWS DMS with continuous replication and a planned cutover",
+      "D": "Analyze utilization, data transfer, and service metrics before rightsizing"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Measurement identifies safe rightsizing and architectural cost opportunities.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Analyze utilization, data transfer, and service metrics before rightsizing for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業必須在不違反可用性目標的情況下降低現有工作負載的成本。哪一個第一步是合適的？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。擁有多個 AWS 區域的企業必須在不違反可用性目標的情況下降低現有工作負載的成本。哪一個第一步是合適的？",
         "options": {
-          "A": "將所有內容移動到最大的執行個體",
-          "B": "在調整規模之前分析使用率、資料傳輸和服務指標",
-          "C": "立即刪除生產資源",
-          "D": "停用監控"
+          "A": "在更改組件之前使用追蹤和指標來識別瓶頸",
+          "B": "EventBridge 觸發 Step Functions 和託管計算",
+          "C": "具有持續複製和計劃切換的 AWS DMS",
+          "D": "在調整規模之前分析使用率、資料傳輸和服務指標"
         },
-        "explanation": "測量確定安全的規模調整和架構成本機會。\n未測量的刪除或過度增加會增加風險和成本。"
+        "explanation": "測量確定安全的規模調整和架構成本機會。\n其他選項適用於此領域的不同需求，但不能像 在調整規模之前分析使用率、資料傳輸和服務指標 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d3-032",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A service owner reviewing an incident needs to improve a slow service without changing its public API. Which approach fits?",
+    "question": "A service owner reviewing an incident is redesigning one integrated end-to-end architecture. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The organization will accept additional managed-service cost only when it measurably improves security and availability with less operational effort. The workload needs to improve a slow service without changing its public API, and the same architecture must replace a self-managed cache with a managed service. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "Disable logs",
-      "B": "Increase all timeouts",
-      "C": "Use tracing and metrics to identify the bottleneck before changing components",
-      "D": "Rewrite every service at once"
+      "A": "Use AWS Transit Gateway for the primary requirement and integrate it with Required data structures, latency, durability, and failover behavior",
+      "B": "Combine AWS Transit Gateway with AWS Resource Access Manager with scoped resource shares as a single platform design",
+      "C": "Use Use tracing and metrics to identify the bottleneck before changing components for the primary requirement and integrate it with Required data structures, latency, durability, and failover behavior for the connected control",
+      "D": "Use Use tracing and metrics to identify the bottleneck before changing components but replace the connected control with AWS Organizations with delegated administration and SCP guardrails"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Observability identifies the limiting component and supports targeted improvement.\nBroad rewrites and disabled telemetry increase risk.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Use tracing and metrics to identify the bottleneck before changing components satisfies the first part of the architecture: Observability identifies the limiting component and supports targeted improvement. Required data structures, latency, durability, and failover behavior satisfies the connected requirement: Cache selection should match workload behavior and resilience requirements.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務所有者需要改進緩慢的服務而不更改其公共 API。哪種方法適合？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：在共用環境中工作的 AWS 管理員需要為多個帳戶中的員工使用者提供集中身分體驗。 此架構必須限制影響範圍、在變更期間維持可用性，並透過自動化控制成本，而不是長期過度佈建。 應結合 第二項需求：在共享環境中工作的 AWS 管理員必須將自我管理的快取替換為託管服務。 只有在託管服務能以較低營運負擔明確改善安全性與可用性時，組織才會接受額外成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "禁用日誌",
-          "B": "增加所有超時",
-          "C": "在更改組件之前使用追蹤和指標來識別瓶頸",
-          "D": "立即重寫每個服務"
+          "A": "以AWS Transit Gateway處理主要需求，並整合所需的資料結構、延遲、持久性和故障轉移行為",
+          "B": "把AWS Transit Gateway與具有範圍內資源共用的 AWS Resource Access Manager結合為單一平台設計",
+          "C": "以在更改組件之前使用追蹤和指標來識別瓶頸處理主要需求，並整合所需的資料結構、延遲、持久性和故障轉移行為作為相連控制",
+          "D": "使用在更改組件之前使用追蹤和指標來識別瓶頸，但以具有委派管理和 SCP 護欄的 AWS Organizations取代相連控制"
         },
-        "explanation": "可觀察性識別限制因素並支持有針對性的改進。\n廣泛的重寫和禁用遙測會增加風險。"
+        "explanation": "在更改組件之前使用追蹤和指標來識別瓶頸 負責架構的第一項需求，所需的資料結構、延遲、持久性和故障轉移行為 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "sap-c02-d3-033",
-    "type": "single",
-    "question": "A team optimizing an existing implementation must modernize a scheduled batch process into a managed, event-driven workflow. Which design should be evaluated?",
-    "options": {
-      "A": "A permanent server with a cron job only",
-      "B": "Manual console execution",
-      "C": "A public root key",
-      "D": "EventBridge triggering Step Functions and managed compute"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Managed event-driven orchestration reduces operational work and improves retry behavior.\nManual or credential-sharing designs are fragile.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team must modernize a scheduled batch process into a managed, event-driven workflow. Which design should be evaluated?",
+    "options": {
+      "A": "Analyze utilization, data transfer, and service metrics before rightsizing",
+      "B": "EventBridge triggering Step Functions and managed compute",
+      "C": "AWS DMS with continuous replication and a planned cutover",
+      "D": "Required data structures, latency, durability, and failover behavior"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Managed event-driven orchestration reduces operational work and improves retry behavior.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide EventBridge triggering Step Functions and managed compute for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊必須將預定的批次流程現代化為託管的、事件驅動的工作流程。應該評估哪種設計？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。優化現有實施的團隊必須將預定的批次流程現代化為託管的、事件驅動的工作流程。應該評估哪種設計？",
         "options": {
-          "A": "僅具有 cron 作業的永久伺服器",
-          "B": "手動控制台執行",
-          "C": "公有根密鑰",
-          "D": "EventBridge 觸發 Step Functions 和託管計算"
+          "A": "在調整規模之前分析使用率、資料傳輸和服務指標",
+          "B": "EventBridge 觸發 Step Functions 和託管計算",
+          "C": "具有持續複製和計劃切換的 AWS DMS",
+          "D": "所需的資料結構、延遲、持久性和故障轉移行為"
         },
-        "explanation": "託管事件驅動的編排減少了操作工作並改善了重試行為。\n手動或憑證共享設計很脆弱。"
+        "explanation": "託管事件驅動的編排減少了操作工作並改善了重試行為。\n其他選項適用於此領域的不同需求，但不能像 EventBridge 觸發 Step Functions 和託管計算 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d3-034",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A company introducing an automated workflow needs to migrate a database while minimizing downtime. Which strategy should be considered?",
+    "question": "A company introducing an automated workflow is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team needs to migrate a database while minimizing downtime. Which strategy should be considered?",
     "options": {
       "A": "AWS DMS with continuous replication and a planned cutover",
-      "B": "Copy data once and stop the source for weeks",
-      "C": "Use a DNS TXT record",
-      "D": "Disable backups"
+      "B": "Required data structures, latency, durability, and failover behavior",
+      "C": "Analyze utilization, data transfer, and service metrics before rightsizing",
+      "D": "Use tracing and metrics to identify the bottleneck before changing components"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "DMS can replicate changes and support a controlled migration cutover.\nA one-time copy creates a long outage window and the other choices are unrelated.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "DMS can replicate changes and support a controlled migration cutover.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS DMS with continuous replication and a planned cutover for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司需要遷移資料庫，同時最大限度地減少停機時間。應考慮哪種策略？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。引入自動化工作流程的公司需要遷移資料庫，同時最大限度地減少停機時間。應考慮哪種策略？",
         "options": {
           "A": "具有持續複製和計劃切換的 AWS DMS",
-          "B": "複製資料一次並停止來源數週",
-          "C": "使用 DNS TXT 記錄",
-          "D": "停用備份"
+          "B": "所需的資料結構、延遲、持久性和故障轉移行為",
+          "C": "在調整規模之前分析使用率、資料傳輸和服務指標",
+          "D": "在更改組件之前使用追蹤和指標來識別瓶頸"
         },
-        "explanation": "DMS 可以複製變更並支援受控的遷移切換。\n一次性複製會產生較長的中斷窗口，而其他選擇則無關。"
+        "explanation": "DMS 可以複製變更並支援受控的遷移切換。\n其他選項適用於此領域的不同需求，但不能像 具有持續複製和計劃切換的 AWS DMS 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d3-035",
-    "type": "single",
-    "question": "An AWS administrator working in a shared environment must replace a self-managed cache with a managed service. Which factor is most important?",
-    "options": {
-      "A": "The S3 bucket region only",
-      "B": "Required data structures, latency, durability, and failover behavior",
-      "C": "The shortest service name",
-      "D": "The number of IAM users"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Cache selection should match workload behavior and resilience requirements.\nThe other factors do not determine cache suitability.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "An AWS administrator working in a shared environment is planning two independent production changes. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The first team must replace a self-managed cache with a managed service. A second team must reduce cost in an existing workload without violating availability objectives. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "EventBridge triggering Step Functions and managed compute",
+      "B": "AWS DMS with continuous replication and a planned cutover",
+      "C": "Required data structures, latency, durability, and failover behavior",
+      "D": "Analyze utilization, data transfer, and service metrics before rightsizing",
+      "E": "Use tracing and metrics to identify the bottleneck before changing components"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Required data structures, latency, durability, and failover behavior meets the first requirement: Cache selection should match workload behavior and resilience requirements. Analyze utilization, data transfer, and service metrics before rightsizing meets the second requirement: Measurement identifies safe rightsizing and architectural cost opportunities.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "在共享環境中工作的 AWS 管理員必須將自我管理的快取替換為託管服務。哪個因素最重要？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。第一項需求：支援關鍵工作負載的營運團隊必須以託管服務取代自我管理的快取。第二項需求：生產團隊必須在不違反可用性目標的情況下降低現有工作負載的成本。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "僅限 S3 儲存桶區域",
-          "B": "所需的資料結構、延遲、持久性和故障轉移行為",
-          "C": "最短的服務名稱",
-          "D": "IAM使用者數"
+          "A": "EventBridge 觸發 Step Functions 和託管計算",
+          "B": "具有持續複製和計劃切換的 AWS DMS",
+          "C": "所需的資料結構、延遲、持久性和故障轉移行為",
+          "D": "在調整規模之前分析使用率、資料傳輸和服務指標",
+          "E": "在更改組件之前使用追蹤和指標來識別瓶頸"
         },
-        "explanation": "快取選擇應符合工作負載行為和彈性要求。\n其他因素並未決定快取的適用性。"
+        "explanation": "所需的資料結構、延遲、持久性和故障轉移行為 符合第一項需求：快取選擇應符合工作負載行為和彈性要求。 在調整規模之前分析使用率、資料傳輸和服務指標 符合第二項需求：測量確定安全的規模調整和架構成本機會。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "sap-c02-d3-036",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A customer-facing application team must reduce cost in an existing workload without violating availability objectives. Which first step is appropriate?",
+    "question": "A customer-facing application team is redesigning one integrated end-to-end architecture. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The architecture must limit blast radius, preserve availability during change, and control cost through automation instead of permanent overprovisioning. The workload must reduce cost in an existing workload without violating availability objectives, and the same architecture needs to run a legacy database temporarily while a managed database migration is prepared. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "Disable monitoring",
-      "B": "Move everything to the largest instance",
-      "C": "Analyze utilization, data transfer, and service metrics before rightsizing",
-      "D": "Delete production resources immediately"
+      "A": "Use AWS Transit Gateway for the primary requirement and integrate it with Separate migration phases and define an explicit decommission plan",
+      "B": "Combine AWS Transit Gateway with AWS Resource Access Manager with scoped resource shares as a single platform design",
+      "C": "Use Analyze utilization, data transfer, and service metrics before rightsizing for the primary requirement and integrate it with Separate migration phases and define an explicit decommission plan for the connected control",
+      "D": "Use Analyze utilization, data transfer, and service metrics before rightsizing but replace the connected control with AWS Organizations with delegated administration and SCP guardrails"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Measurement identifies safe rightsizing and architectural cost opportunities.\nUnmeasured deletion or oversizing increases risk and cost.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Analyze utilization, data transfer, and service metrics before rightsizing satisfies the first part of the architecture: Measurement identifies safe rightsizing and architectural cost opportunities. Separate migration phases and define an explicit decommission plan satisfies the connected requirement: Phased migration with reconciliation and decommission criteria reduces operational and data risk.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊必須在不違反可用性目標的情況下降低現有工作負載的成本。哪一個第一步是合適的？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：生產團隊必須在不違反可用性目標的情況下降低現有工作負載的成本。 第二項需求：支援關鍵工作負載的營運團隊需要在準備託管資料庫遷移時暫時執行舊資料庫。 此架構必須限制影響範圍、在變更期間維持可用性，並透過自動化控制成本，而不是長期過度佈建。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "停用監控",
-          "B": "將所有內容移動到最大的執行個體",
-          "C": "在調整規模之前分析使用率、資料傳輸和服務指標",
-          "D": "立即刪除生產資源"
+          "A": "以AWS Transit Gateway處理主要需求，並整合分離遷移階段並定義明確的退役計劃",
+          "B": "把AWS Transit Gateway與具有範圍內資源共用的 AWS Resource Access Manager結合為單一平台設計",
+          "C": "以在調整規模之前分析使用率、資料傳輸和服務指標處理主要需求，並整合分離遷移階段並定義明確的退役計劃作為相連控制",
+          "D": "使用在調整規模之前分析使用率、資料傳輸和服務指標，但以具有委派管理和 SCP 護欄的 AWS Organizations取代相連控制"
         },
-        "explanation": "測量確定安全的規模調整和架構成本機會。\n未測量的刪除或過度增加會增加風險和成本。"
+        "explanation": "在調整規模之前分析使用率、資料傳輸和服務指標 負責架構的第一項需求，分離遷移階段並定義明確的退役計劃 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "sap-c02-d3-037",
-    "type": "single",
-    "question": "A platform team standardizing its AWS deployments needs to improve a slow service without changing its public API. Which approach fits?",
-    "options": {
-      "A": "Rewrite every service at once",
-      "B": "Disable logs",
-      "C": "Increase all timeouts",
-      "D": "Use tracing and metrics to identify the bottleneck before changing components"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Observability identifies the limiting component and supports targeted improvement.\nBroad rewrites and disabled telemetry increase risk.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments is reviewing a production decision. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The team needs to improve a slow service without changing its public API. Which approach fits?",
+    "options": {
+      "A": "Required data structures, latency, durability, and failover behavior",
+      "B": "Use tracing and metrics to identify the bottleneck before changing components",
+      "C": "EventBridge triggering Step Functions and managed compute",
+      "D": "AWS DMS with continuous replication and a planned cutover"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Observability identifies the limiting component and supports targeted improvement.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Use tracing and metrics to identify the bottleneck before changing components for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊需要在不更改其公共 API 的情況下改善緩慢的服務。哪種方法適合？",
+        "question": "組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。標準化其 AWS 部署的平台團隊需要在不更改其公共 API 的情況下改善緩慢的服務。哪種方法適合？",
         "options": {
-          "A": "立即重寫每個服務",
-          "B": "禁用日誌",
-          "C": "增加所有超時",
-          "D": "在更改組件之前使用追蹤和指標來識別瓶頸"
+          "A": "所需的資料結構、延遲、持久性和故障轉移行為",
+          "B": "在更改組件之前使用追蹤和指標來識別瓶頸",
+          "C": "EventBridge 觸發 Step Functions 和託管計算",
+          "D": "具有持續複製和計劃切換的 AWS DMS"
         },
-        "explanation": "可觀察性識別限制因素並支持有針對性的改進。\n廣泛的重寫和禁用遙測會增加風險。"
+        "explanation": "可觀察性識別限制因素並支持有針對性的改進。\n其他選項適用於此領域的不同需求，但不能像 在更改組件之前使用追蹤和指標來識別瓶頸 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d3-038",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team preparing evidence for an audit must modernize a scheduled batch process into a managed, event-driven workflow. Which design should be evaluated?",
+    "question": "A team preparing evidence for an audit is reviewing a production decision. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The team must modernize a scheduled batch process into a managed, event-driven workflow. Which design should be evaluated?",
     "options": {
       "A": "EventBridge triggering Step Functions and managed compute",
-      "B": "A permanent server with a cron job only",
-      "C": "Manual console execution",
-      "D": "A public root key"
+      "B": "AWS DMS with continuous replication and a planned cutover",
+      "C": "Required data structures, latency, durability, and failover behavior",
+      "D": "Analyze utilization, data transfer, and service metrics before rightsizing"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Managed event-driven orchestration reduces operational work and improves retry behavior.\nManual or credential-sharing designs are fragile.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Managed event-driven orchestration reduces operational work and improves retry behavior.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide EventBridge triggering Step Functions and managed compute for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備審計證據的團隊必須將預定的批次流程現代化為託管的、事件驅動的工作流程。應該評估哪種設計？",
+        "question": "組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。準備審計證據的團隊必須將預定的批次流程現代化為託管的、事件驅動的工作流程。應該評估哪種設計？",
         "options": {
           "A": "EventBridge 觸發 Step Functions 和託管計算",
-          "B": "僅具有 cron 作業的永久伺服器",
-          "C": "手動控制台執行",
-          "D": "公有根密鑰"
+          "B": "具有持續複製和計劃切換的 AWS DMS",
+          "C": "所需的資料結構、延遲、持久性和故障轉移行為",
+          "D": "在調整規模之前分析使用率、資料傳輸和服務指標"
         },
-        "explanation": "託管事件驅動的編排減少了操作工作並改善了重試行為。\n手動或憑證共享設計很脆弱。"
+        "explanation": "託管事件驅動的編排減少了操作工作並改善了重試行為。\n其他選項適用於此領域的不同需求，但不能像 EventBridge 觸發 Step Functions 和託管計算 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d3-039",
-    "type": "single",
-    "question": "A business replacing a manual process needs to migrate a database while minimizing downtime. Which strategy should be considered?",
-    "options": {
-      "A": "Disable backups",
-      "B": "AWS DMS with continuous replication and a planned cutover",
-      "C": "Copy data once and stop the source for weeks",
-      "D": "Use a DNS TXT record"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "DMS can replicate changes and support a controlled migration cutover.\nA one-time copy creates a long outage window and the other choices are unrelated.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A business replacing a manual process is reviewing a production decision. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The team needs to migrate a database while minimizing downtime. Which strategy should be considered?",
+    "options": {
+      "A": "Required data structures, latency, durability, and failover behavior",
+      "B": "Analyze utilization, data transfer, and service metrics before rightsizing",
+      "C": "Use tracing and metrics to identify the bottleneck before changing components",
+      "D": "AWS DMS with continuous replication and a planned cutover"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "DMS can replicate changes and support a controlled migration cutover.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS DMS with continuous replication and a planned cutover for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "取代手動流程的企業需要遷移資料庫，同時最大限度地減少停機時間。應考慮哪種策略？",
+        "question": "組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。取代手動流程的企業需要遷移資料庫，同時最大限度地減少停機時間。應考慮哪種策略？",
         "options": {
-          "A": "停用備份",
-          "B": "具有持續複製和計劃切換的 AWS DMS",
-          "C": "複製資料一次並停止來源數週",
-          "D": "使用 DNS TXT 記錄"
+          "A": "所需的資料結構、延遲、持久性和故障轉移行為",
+          "B": "在調整規模之前分析使用率、資料傳輸和服務指標",
+          "C": "在更改組件之前使用追蹤和指標來識別瓶頸",
+          "D": "具有持續複製和計劃切換的 AWS DMS"
         },
-        "explanation": "DMS 可以複製變更並支援受控的遷移切換。\n一次性複製會產生較長的中斷窗口，而其他選擇則無關。"
+        "explanation": "DMS 可以複製變更並支援受控的遷移切換。\n其他選項適用於此領域的不同需求，但不能像 具有持續複製和計劃切換的 AWS DMS 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d3-040",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team validating a design against the exam guide must replace a self-managed cache with a managed service. Which factor is most important?",
+    "question": "A team validating a design against the exam guide is redesigning one integrated end-to-end architecture. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The selected controls must provide auditable security, predictable availability, and the lowest operational cost that still satisfies both requirements. The workload must replace a self-managed cache with a managed service, and the same architecture needs a central identity experience for workforce users across many accounts. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "The number of IAM users",
-      "B": "The S3 bucket region only",
-      "C": "Required data structures, latency, durability, and failover behavior",
-      "D": "The shortest service name"
+      "A": "Use AWS Transit Gateway for the primary requirement and integrate it with IAM Identity Center",
+      "B": "Combine AWS Transit Gateway with AWS Resource Access Manager with scoped resource shares as a single platform design",
+      "C": "Use Required data structures, latency, durability, and failover behavior for the primary requirement and integrate it with IAM Identity Center for the connected control",
+      "D": "Use Required data structures, latency, durability, and failover behavior but replace the connected control with AWS Organizations with delegated administration and SCP guardrails"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Cache selection should match workload behavior and resilience requirements.\nThe other factors do not determine cache suitability.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Required data structures, latency, durability, and failover behavior satisfies the first part of the architecture: Cache selection should match workload behavior and resilience requirements. IAM Identity Center satisfies the connected requirement: IAM Identity Center provides workforce access and permission sets across accounts.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊必須用託管服務替換自我管理的快取。哪個因素最重要？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：在共享環境中工作的 AWS 管理員必須將自我管理的快取替換為託管服務。 第二項需求：在共用環境中工作的 AWS 管理員需要為多個帳戶中的員工使用者提供集中身分體驗。 所選控制必須提供可稽核的安全性、可預測的可用性，以及在滿足兩項要求前提下最低的營運成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "IAM使用者數",
-          "B": "僅限 S3 儲存桶區域",
-          "C": "所需的資料結構、延遲、持久性和故障轉移行為",
-          "D": "最短的服務名稱"
+          "A": "以AWS Transit Gateway處理主要需求，並整合IAM Identity Center",
+          "B": "把AWS Transit Gateway與具有範圍內資源共用的 AWS Resource Access Manager結合為單一平台設計",
+          "C": "以所需的資料結構、延遲、持久性和故障轉移行為處理主要需求，並整合IAM Identity Center作為相連控制",
+          "D": "使用所需的資料結構、延遲、持久性和故障轉移行為，但以具有委派管理和 SCP 護欄的 AWS Organizations取代相連控制"
         },
-        "explanation": "快取選擇應符合工作負載行為和彈性要求。\n其他因素並未決定快取的適用性。"
+        "explanation": "所需的資料結構、延遲、持久性和故障轉移行為 負責架構的第一項需求，IAM Identity Center 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "sap-c02-d3-041",
-    "type": "single",
-    "question": "A production team must reduce cost in an existing workload without violating availability objectives. Which first step is appropriate?",
-    "options": {
-      "A": "Delete production resources immediately",
-      "B": "Disable monitoring",
-      "C": "Move everything to the largest instance",
-      "D": "Analyze utilization, data transfer, and service metrics before rightsizing"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Measurement identifies safe rightsizing and architectural cost opportunities.\nUnmeasured deletion or oversizing increases risk and cost.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A production team is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team must reduce cost in an existing workload without violating availability objectives. Which first step is appropriate?",
+    "options": {
+      "A": "AWS DMS with continuous replication and a planned cutover",
+      "B": "Analyze utilization, data transfer, and service metrics before rightsizing",
+      "C": "Use tracing and metrics to identify the bottleneck before changing components",
+      "D": "EventBridge triggering Step Functions and managed compute"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Measurement identifies safe rightsizing and architectural cost opportunities.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Analyze utilization, data transfer, and service metrics before rightsizing for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "生產團隊必須在不違反可用性目標的情況下降低現有工作負載的成本。哪一個第一步是合適的？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。生產團隊必須在不違反可用性目標的情況下降低現有工作負載的成本。哪一個第一步是合適的？",
         "options": {
-          "A": "立即刪除生產資源",
-          "B": "停用監控",
-          "C": "將所有內容移動到最大的執行個體",
-          "D": "在調整規模之前分析使用率、資料傳輸和服務指標"
+          "A": "具有持續複製和計劃切換的 AWS DMS",
+          "B": "在調整規模之前分析使用率、資料傳輸和服務指標",
+          "C": "在更改組件之前使用追蹤和指標來識別瓶頸",
+          "D": "EventBridge 觸發 Step Functions 和託管計算"
         },
-        "explanation": "測量確定安全的規模調整和架構成本機會。\n未測量的刪除或過度增加會增加風險和成本。"
+        "explanation": "測量確定安全的規模調整和架構成本機會。\n其他選項適用於此領域的不同需求，但不能像 在調整規模之前分析使用率、資料傳輸和服務指標 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d3-042",
-    "type": "single",
-    "question": "A multi-account platform team needs to improve a slow service without changing its public API. Which approach fits?",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A multi-account platform team is planning two independent production changes. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The first team needs to improve a slow service without changing its public API. A second team must modernize a scheduled batch process into a managed, event-driven workflow. Which TWO actions satisfy these requirements?",
     "options": {
       "A": "Use tracing and metrics to identify the bottleneck before changing components",
-      "B": "Rewrite every service at once",
-      "C": "Disable logs",
-      "D": "Increase all timeouts"
+      "B": "EventBridge triggering Step Functions and managed compute",
+      "C": "AWS DMS with continuous replication and a planned cutover",
+      "D": "Required data structures, latency, durability, and failover behavior",
+      "E": "Analyze utilization, data transfer, and service metrics before rightsizing"
     },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "Observability identifies the limiting component and supports targeted improvement.\nBroad rewrites and disabled telemetry increase risk.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Use tracing and metrics to identify the bottleneck before changing components meets the first requirement: Observability identifies the limiting component and supports targeted improvement. EventBridge triggering Step Functions and managed compute meets the second requirement: Managed event-driven orchestration reduces operational work and improves retry behavior.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊需要在不更改公共 API 的情況下改善緩慢的服務。哪種方法適合？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。第一項需求：多帳戶平台團隊需要在不更改公共 API 的情況下改善緩慢的服務。第二項需求：受監管的公司必須將預定的批次流程現代化為託管的、事件驅動的工作流程。哪兩項操作可以滿足這些需求？",
         "options": {
           "A": "在更改組件之前使用追蹤和指標來識別瓶頸",
-          "B": "立即重寫每個服務",
-          "C": "禁用日誌",
-          "D": "增加所有超時"
+          "B": "EventBridge 觸發 Step Functions 和託管計算",
+          "C": "具有持續複製和計劃切換的 AWS DMS",
+          "D": "所需的資料結構、延遲、持久性和故障轉移行為",
+          "E": "在調整規模之前分析使用率、資料傳輸和服務指標"
         },
-        "explanation": "可觀察性識別限制因素並支持有針對性的改進。\n廣泛的重寫和禁用遙測會增加風險。"
+        "explanation": "在更改組件之前使用追蹤和指標來識別瓶頸 符合第一項需求：可觀察性識別限制因素並支持有針對性的改進。 EventBridge 觸發 Step Functions 和託管計算 符合第二項需求：託管事件驅動的編排減少了操作工作並改善了重試行為。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "sap-c02-d3-043",
-    "type": "single",
-    "question": "A regulated company must modernize a scheduled batch process into a managed, event-driven workflow. Which design should be evaluated?",
-    "options": {
-      "A": "A public root key",
-      "B": "EventBridge triggering Step Functions and managed compute",
-      "C": "A permanent server with a cron job only",
-      "D": "Manual console execution"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Managed event-driven orchestration reduces operational work and improves retry behavior.\nManual or credential-sharing designs are fragile.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A regulated company is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team must modernize a scheduled batch process into a managed, event-driven workflow. Which design should be evaluated?",
+    "options": {
+      "A": "AWS DMS with continuous replication and a planned cutover",
+      "B": "Required data structures, latency, durability, and failover behavior",
+      "C": "Analyze utilization, data transfer, and service metrics before rightsizing",
+      "D": "EventBridge triggering Step Functions and managed compute"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Managed event-driven orchestration reduces operational work and improves retry behavior.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide EventBridge triggering Step Functions and managed compute for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司必須將預定的批次流程現代化為託管的、事件驅動的工作流程。應該評估哪種設計？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。受監管的公司必須將預定的批次流程現代化為託管的、事件驅動的工作流程。應該評估哪種設計？",
         "options": {
-          "A": "公有根密鑰",
-          "B": "EventBridge 觸發 Step Functions 和託管計算",
-          "C": "僅具有 cron 作業的永久伺服器",
-          "D": "手動控制台執行"
+          "A": "具有持續複製和計劃切換的 AWS DMS",
+          "B": "所需的資料結構、延遲、持久性和故障轉移行為",
+          "C": "在調整規模之前分析使用率、資料傳輸和服務指標",
+          "D": "EventBridge 觸發 Step Functions 和託管計算"
         },
-        "explanation": "託管事件驅動的編排減少了操作工作並改善了重試行為。\n手動或憑證共享設計很脆弱。"
+        "explanation": "託管事件驅動的編排減少了操作工作並改善了重試行為。\n其他選項適用於此領域的不同需求，但不能像 EventBridge 觸發 Step Functions 和託管計算 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d3-044",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A startup preparing for a traffic increase needs to migrate a database while minimizing downtime. Which strategy should be considered?",
+    "question": "A startup preparing for a traffic increase is redesigning one integrated end-to-end architecture. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The design must keep recurring cost proportional to use, enforce least privilege, and remain available during a component or Availability Zone failure. The workload needs to migrate a database while minimizing downtime, and the same architecture needs a disaster recovery architecture with a defined RTO and RPO. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "Use a DNS TXT record",
-      "B": "Disable backups",
-      "C": "AWS DMS with continuous replication and a planned cutover",
-      "D": "Copy data once and stop the source for weeks"
+      "A": "Use AWS Transit Gateway for the primary requirement and integrate it with Translate RTO and RPO into recovery strategy and testable controls",
+      "B": "Combine AWS Transit Gateway with AWS Resource Access Manager with scoped resource shares as a single platform design",
+      "C": "Use AWS DMS with continuous replication and a planned cutover for the primary requirement and integrate it with Translate RTO and RPO into recovery strategy and testable controls for the connected control",
+      "D": "Use AWS DMS with continuous replication and a planned cutover but replace the connected control with AWS Organizations with delegated administration and SCP guardrails"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "DMS can replicate changes and support a controlled migration cutover.\nA one-time copy creates a long outage window and the other choices are unrelated.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "AWS DMS with continuous replication and a planned cutover satisfies the first part of the architecture: DMS can replicate changes and support a controlled migration cutover. Translate RTO and RPO into recovery strategy and testable controls satisfies the connected requirement: RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "準備應對流量增加的新創公司需要遷移資料庫，同時最大限度地減少停機時間。應考慮哪種策略？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：引入自動化工作流程的公司需要遷移資料庫，同時最大限度地減少停機時間。 第二項需求：支援關鍵工作負載的營運團隊需要一個具有定義的 RTO 和 RPO 的災難復原架構。 此設計必須讓持續成本與實際用量相符、落實最低權限，並在元件或可用區域發生故障時維持可用。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "使用 DNS TXT 記錄",
-          "B": "停用備份",
-          "C": "具有持續複製和計劃切換的 AWS DMS",
-          "D": "複製資料一次並停止來源數週"
+          "A": "以AWS Transit Gateway處理主要需求，並整合將 RTO 和 RPO 轉化為復原策略和可測試的控制",
+          "B": "把AWS Transit Gateway與具有範圍內資源共用的 AWS Resource Access Manager結合為單一平台設計",
+          "C": "以具有持續複製和計劃切換的 AWS DMS處理主要需求，並整合將 RTO 和 RPO 轉化為復原策略和可測試的控制作為相連控制",
+          "D": "使用具有持續複製和計劃切換的 AWS DMS，但以具有委派管理和 SCP 護欄的 AWS Organizations取代相連控制"
         },
-        "explanation": "DMS 可以複製變更並支援受控的遷移切換。\n一次性複製會產生較長的中斷窗口，而其他選擇則無關。"
+        "explanation": "具有持續複製和計劃切換的 AWS DMS 負責架構的第一項需求，將 RTO 和 RPO 轉化為復原策略和可測試的控制 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "sap-c02-d3-045",
-    "type": "single",
-    "question": "An operations team supporting a critical workload must replace a self-managed cache with a managed service. Which factor is most important?",
-    "options": {
-      "A": "The shortest service name",
-      "B": "The number of IAM users",
-      "C": "The S3 bucket region only",
-      "D": "Required data structures, latency, durability, and failover behavior"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Cache selection should match workload behavior and resilience requirements.\nThe other factors do not determine cache suitability.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team must replace a self-managed cache with a managed service. Which factor is most important?",
+    "options": {
+      "A": "EventBridge triggering Step Functions and managed compute",
+      "B": "Required data structures, latency, durability, and failover behavior",
+      "C": "Analyze utilization, data transfer, and service metrics before rightsizing",
+      "D": "Use tracing and metrics to identify the bottleneck before changing components"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Cache selection should match workload behavior and resilience requirements.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Required data structures, latency, durability, and failover behavior for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊必須以託管服務取代自我管理的快取。哪個因素最重要？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。支援關鍵工作負載的營運團隊必須以託管服務取代自我管理的快取。哪個因素最重要？",
         "options": {
-          "A": "最短的服務名稱",
-          "B": "IAM使用者數",
-          "C": "僅限 S3 儲存桶區域",
-          "D": "所需的資料結構、延遲、持久性和故障轉移行為"
+          "A": "EventBridge 觸發 Step Functions 和託管計算",
+          "B": "所需的資料結構、延遲、持久性和故障轉移行為",
+          "C": "在調整規模之前分析使用率、資料傳輸和服務指標",
+          "D": "在更改組件之前使用追蹤和指標來識別瓶頸"
         },
-        "explanation": "快取選擇應符合工作負載行為和彈性要求。\n其他因素並未決定快取的適用性。"
+        "explanation": "快取選擇應符合工作負載行為和彈性要求。\n其他選項適用於此領域的不同需求，但不能像 所需的資料結構、延遲、持久性和故障轉移行為 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d3-046",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A data platform team must reduce cost in an existing workload without violating availability objectives. Which first step is appropriate?",
+    "question": "A data platform team is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team must reduce cost in an existing workload without violating availability objectives. Which first step is appropriate?",
     "options": {
       "A": "Analyze utilization, data transfer, and service metrics before rightsizing",
-      "B": "Delete production resources immediately",
-      "C": "Disable monitoring",
-      "D": "Move everything to the largest instance"
+      "B": "Use tracing and metrics to identify the bottleneck before changing components",
+      "C": "EventBridge triggering Step Functions and managed compute",
+      "D": "AWS DMS with continuous replication and a planned cutover"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Measurement identifies safe rightsizing and architectural cost opportunities.\nUnmeasured deletion or oversizing increases risk and cost.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Measurement identifies safe rightsizing and architectural cost opportunities.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Analyze utilization, data transfer, and service metrics before rightsizing for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊必須在不違反可用性目標的情況下降低現有工作負載的成本。哪一個第一步是合適的？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。資料平台團隊必須在不違反可用性目標的情況下降低現有工作負載的成本。哪一個第一步是合適的？",
         "options": {
           "A": "在調整規模之前分析使用率、資料傳輸和服務指標",
-          "B": "立即刪除生產資源",
-          "C": "停用監控",
-          "D": "將所有內容移動到最大的執行個體"
+          "B": "在更改組件之前使用追蹤和指標來識別瓶頸",
+          "C": "EventBridge 觸發 Step Functions 和託管計算",
+          "D": "具有持續複製和計劃切換的 AWS DMS"
         },
-        "explanation": "測量確定安全的規模調整和架構成本機會。\n未測量的刪除或過度增加會增加風險和成本。"
+        "explanation": "測量確定安全的規模調整和架構成本機會。\n其他選項適用於此領域的不同需求，但不能像 在調整規模之前分析使用率、資料傳輸和服務指標 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d3-047",
-    "type": "single",
-    "question": "A security-conscious engineering team needs to improve a slow service without changing its public API. Which approach fits?",
-    "options": {
-      "A": "Increase all timeouts",
-      "B": "Use tracing and metrics to identify the bottleneck before changing components",
-      "C": "Rewrite every service at once",
-      "D": "Disable logs"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Observability identifies the limiting component and supports targeted improvement.\nBroad rewrites and disabled telemetry increase risk.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A security-conscious engineering team is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team needs to improve a slow service without changing its public API. Which approach fits?",
+    "options": {
+      "A": "EventBridge triggering Step Functions and managed compute",
+      "B": "AWS DMS with continuous replication and a planned cutover",
+      "C": "Required data structures, latency, durability, and failover behavior",
+      "D": "Use tracing and metrics to identify the bottleneck before changing components"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Observability identifies the limiting component and supports targeted improvement.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Use tracing and metrics to identify the bottleneck before changing components for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊需要在不更改公共 API 的情況下改善緩慢的服務。哪種方法適合？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。具有安全意識的工程團隊需要在不更改公共 API 的情況下改善緩慢的服務。哪種方法適合？",
         "options": {
-          "A": "增加所有超時",
-          "B": "在更改組件之前使用追蹤和指標來識別瓶頸",
-          "C": "立即重寫每個服務",
-          "D": "禁用日誌"
+          "A": "EventBridge 觸發 Step Functions 和託管計算",
+          "B": "具有持續複製和計劃切換的 AWS DMS",
+          "C": "所需的資料結構、延遲、持久性和故障轉移行為",
+          "D": "在更改組件之前使用追蹤和指標來識別瓶頸"
         },
-        "explanation": "可觀察性識別限制因素並支持有針對性的改進。\n廣泛的重寫和禁用遙測會增加風險。"
+        "explanation": "可觀察性識別限制因素並支持有針對性的改進。\n其他選項適用於此領域的不同需求，但不能像 在更改組件之前使用追蹤和指標來識別瓶頸 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d3-048",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A company migrating an existing workload must modernize a scheduled batch process into a managed, event-driven workflow. Which design should be evaluated?",
+    "question": "A company migrating an existing workload is redesigning one integrated end-to-end architecture. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The design must avoid unnecessary standby cost without weakening security controls or the availability objective. The workload must modernize a scheduled batch process into a managed, event-driven workflow, and the same architecture must replace a self-managed cache with a managed service. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "Manual console execution",
-      "B": "A public root key",
-      "C": "EventBridge triggering Step Functions and managed compute",
-      "D": "A permanent server with a cron job only"
+      "A": "Use AWS Transit Gateway for the primary requirement and integrate it with Required data structures, latency, durability, and failover behavior",
+      "B": "Combine AWS Transit Gateway with AWS Resource Access Manager with scoped resource shares as a single platform design",
+      "C": "Use EventBridge triggering Step Functions and managed compute for the primary requirement and integrate it with Required data structures, latency, durability, and failover behavior for the connected control",
+      "D": "Use EventBridge triggering Step Functions and managed compute but replace the connected control with AWS Organizations with delegated administration and SCP guardrails"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Managed event-driven orchestration reduces operational work and improves retry behavior.\nManual or credential-sharing designs are fragile.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "EventBridge triggering Step Functions and managed compute satisfies the first part of the architecture: Managed event-driven orchestration reduces operational work and improves retry behavior. Required data structures, latency, durability, and failover behavior satisfies the connected requirement: Cache selection should match workload behavior and resilience requirements.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司必須將預定的批次流程現代化為託管的、事件驅動的工作流程。應該評估哪種設計？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：優化現有實施的團隊必須將預定的批次流程現代化為託管的、事件驅動的工作流程。 第二項需求：在共享環境中工作的 AWS 管理員必須將自我管理的快取替換為託管服務。 此設計必須避免不必要的備用成本，同時不可削弱安全控制或可用性目標。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "手動控制台執行",
-          "B": "公有根密鑰",
-          "C": "EventBridge 觸發 Step Functions 和託管計算",
-          "D": "僅具有 cron 作業的永久伺服器"
+          "A": "以AWS Transit Gateway處理主要需求，並整合所需的資料結構、延遲、持久性和故障轉移行為",
+          "B": "把AWS Transit Gateway與具有範圍內資源共用的 AWS Resource Access Manager結合為單一平台設計",
+          "C": "以EventBridge 觸發 Step Functions 和託管計算處理主要需求，並整合所需的資料結構、延遲、持久性和故障轉移行為作為相連控制",
+          "D": "使用EventBridge 觸發 Step Functions 和託管計算，但以具有委派管理和 SCP 護欄的 AWS Organizations取代相連控制"
         },
-        "explanation": "託管事件驅動的編排減少了操作工作並改善了重試行為。\n手動或憑證共享設計很脆弱。"
+        "explanation": "EventBridge 觸發 Step Functions 和託管計算 負責架構的第一項需求，所需的資料結構、延遲、持久性和故障轉移行為 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "sap-c02-d3-049",
-    "type": "single",
-    "question": "A team with strict recovery objectives needs to migrate a database while minimizing downtime. Which strategy should be considered?",
-    "options": {
-      "A": "Copy data once and stop the source for weeks",
-      "B": "Use a DNS TXT record",
-      "C": "Disable backups",
-      "D": "AWS DMS with continuous replication and a planned cutover"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "DMS can replicate changes and support a controlled migration cutover.\nA one-time copy creates a long outage window and the other choices are unrelated.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A team with strict recovery objectives is planning two independent production changes. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The first team needs to migrate a database while minimizing downtime. A second team must replace a self-managed cache with a managed service. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Analyze utilization, data transfer, and service metrics before rightsizing",
+      "B": "Use tracing and metrics to identify the bottleneck before changing components",
+      "C": "EventBridge triggering Step Functions and managed compute",
+      "D": "AWS DMS with continuous replication and a planned cutover",
+      "E": "Required data structures, latency, durability, and failover behavior"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS DMS with continuous replication and a planned cutover meets the first requirement: DMS can replicate changes and support a controlled migration cutover. Required data structures, latency, durability, and failover behavior meets the second requirement: Cache selection should match workload behavior and resilience requirements.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有嚴格復原目標的團隊需要遷移資料庫，同時最大限度地減少停機時間。應考慮哪種策略？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。第一項需求：準備應對流量增加的新創公司需要遷移資料庫，同時最大限度地減少停機時間。第二項需求：支援關鍵工作負載的營運團隊必須以託管服務取代自我管理的快取。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "複製資料一次並停止來源數週",
-          "B": "使用 DNS TXT 記錄",
-          "C": "停用備份",
-          "D": "具有持續複製和計劃切換的 AWS DMS"
+          "A": "在調整規模之前分析使用率、資料傳輸和服務指標",
+          "B": "在更改組件之前使用追蹤和指標來識別瓶頸",
+          "C": "EventBridge 觸發 Step Functions 和託管計算",
+          "D": "具有持續複製和計劃切換的 AWS DMS",
+          "E": "所需的資料結構、延遲、持久性和故障轉移行為"
         },
-        "explanation": "DMS 可以複製變更並支援受控的遷移切換。\n一次性複製會產生較長的中斷窗口，而其他選擇則無關。"
+        "explanation": "具有持續複製和計劃切換的 AWS DMS 符合第一項需求：DMS 可以複製變更並支援受控的遷移切換。 所需的資料結構、延遲、持久性和故障轉移行為 符合第二項需求：快取選擇應符合工作負載行為和彈性要求。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "sap-c02-d3-050",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A developer team preparing a release must replace a self-managed cache with a managed service. Which factor is most important?",
+    "question": "A developer team preparing a release is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team must replace a self-managed cache with a managed service. Which factor is most important?",
     "options": {
       "A": "Required data structures, latency, durability, and failover behavior",
-      "B": "The shortest service name",
-      "C": "The number of IAM users",
-      "D": "The S3 bucket region only"
+      "B": "Analyze utilization, data transfer, and service metrics before rightsizing",
+      "C": "Use tracing and metrics to identify the bottleneck before changing components",
+      "D": "EventBridge triggering Step Functions and managed compute"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Cache selection should match workload behavior and resilience requirements.\nThe other factors do not determine cache suitability.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Cache selection should match workload behavior and resilience requirements.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Required data structures, latency, durability, and failover behavior for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊必須用託管服務取代自我管理的快取。哪個因素最重要？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。準備發布的開發團隊必須用託管服務取代自我管理的快取。哪個因素最重要？",
         "options": {
           "A": "所需的資料結構、延遲、持久性和故障轉移行為",
-          "B": "最短的服務名稱",
-          "C": "IAM使用者數",
-          "D": "僅限 S3 儲存桶區域"
+          "B": "在調整規模之前分析使用率、資料傳輸和服務指標",
+          "C": "在更改組件之前使用追蹤和指標來識別瓶頸",
+          "D": "EventBridge 觸發 Step Functions 和託管計算"
         },
-        "explanation": "快取選擇應符合工作負載行為和彈性要求。\n其他因素並未決定快取的適用性。"
+        "explanation": "快取選擇應符合工作負載行為和彈性要求。\n其他選項適用於此領域的不同需求，但不能像 所需的資料結構、延遲、持久性和故障轉移行為 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d3-051",
-    "type": "single",
-    "question": "An enterprise with several AWS Regions must reduce cost in an existing workload without violating availability objectives. Which first step is appropriate?",
-    "options": {
-      "A": "Move everything to the largest instance",
-      "B": "Analyze utilization, data transfer, and service metrics before rightsizing",
-      "C": "Delete production resources immediately",
-      "D": "Disable monitoring"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Measurement identifies safe rightsizing and architectural cost opportunities.\nUnmeasured deletion or oversizing increases risk and cost.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team must reduce cost in an existing workload without violating availability objectives. Which first step is appropriate?",
+    "options": {
+      "A": "Use tracing and metrics to identify the bottleneck before changing components",
+      "B": "EventBridge triggering Step Functions and managed compute",
+      "C": "AWS DMS with continuous replication and a planned cutover",
+      "D": "Analyze utilization, data transfer, and service metrics before rightsizing"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Measurement identifies safe rightsizing and architectural cost opportunities.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Analyze utilization, data transfer, and service metrics before rightsizing for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業必須在不違反可用性目標的情況下降低現有工作負載的成本。哪一個第一步是合適的？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。擁有多個 AWS 區域的企業必須在不違反可用性目標的情況下降低現有工作負載的成本。哪一個第一步是合適的？",
         "options": {
-          "A": "將所有內容移動到最大的執行個體",
-          "B": "在調整規模之前分析使用率、資料傳輸和服務指標",
-          "C": "立即刪除生產資源",
-          "D": "停用監控"
+          "A": "在更改組件之前使用追蹤和指標來識別瓶頸",
+          "B": "EventBridge 觸發 Step Functions 和託管計算",
+          "C": "具有持續複製和計劃切換的 AWS DMS",
+          "D": "在調整規模之前分析使用率、資料傳輸和服務指標"
         },
-        "explanation": "測量確定安全的規模調整和架構成本機會。\n未測量的刪除或過度增加會增加風險和成本。"
+        "explanation": "測量確定安全的規模調整和架構成本機會。\n其他選項適用於此領域的不同需求，但不能像 在調整規模之前分析使用率、資料傳輸和服務指標 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d3-052",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A service owner reviewing an incident needs to improve a slow service without changing its public API. Which approach fits?",
+    "question": "A service owner reviewing an incident is redesigning one integrated end-to-end architecture. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The organization will accept additional managed-service cost only when it measurably improves security and availability with less operational effort. The workload needs to improve a slow service without changing its public API, and the same architecture needs to run a legacy database temporarily while a managed database migration is prepared. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "Disable logs",
-      "B": "Increase all timeouts",
-      "C": "Use tracing and metrics to identify the bottleneck before changing components",
-      "D": "Rewrite every service at once"
+      "A": "Use AWS Transit Gateway for the primary requirement and integrate it with Separate migration phases and define an explicit decommission plan",
+      "B": "Combine AWS Transit Gateway with AWS Resource Access Manager with scoped resource shares as a single platform design",
+      "C": "Use Use tracing and metrics to identify the bottleneck before changing components for the primary requirement and integrate it with Separate migration phases and define an explicit decommission plan for the connected control",
+      "D": "Use Use tracing and metrics to identify the bottleneck before changing components but replace the connected control with AWS Organizations with delegated administration and SCP guardrails"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Observability identifies the limiting component and supports targeted improvement.\nBroad rewrites and disabled telemetry increase risk.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Use tracing and metrics to identify the bottleneck before changing components satisfies the first part of the architecture: Observability identifies the limiting component and supports targeted improvement. Separate migration phases and define an explicit decommission plan satisfies the connected requirement: Phased migration with reconciliation and decommission criteria reduces operational and data risk.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務所有者需要改進緩慢的服務而不更改其公共 API。哪種方法適合？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：在共用環境中工作的 AWS 管理員需要為多個帳戶中的員工使用者提供集中身分體驗。 此架構必須限制影響範圍、在變更期間維持可用性，並透過自動化控制成本，而不是長期過度佈建。 應結合 第二項需求：支援關鍵工作負載的營運團隊需要在準備託管資料庫遷移時暫時執行舊資料庫。 只有在託管服務能以較低營運負擔明確改善安全性與可用性時，組織才會接受額外成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "禁用日誌",
-          "B": "增加所有超時",
-          "C": "在更改組件之前使用追蹤和指標來識別瓶頸",
-          "D": "立即重寫每個服務"
+          "A": "以AWS Transit Gateway處理主要需求，並整合分離遷移階段並定義明確的退役計劃",
+          "B": "把AWS Transit Gateway與具有範圍內資源共用的 AWS Resource Access Manager結合為單一平台設計",
+          "C": "以在更改組件之前使用追蹤和指標來識別瓶頸處理主要需求，並整合分離遷移階段並定義明確的退役計劃作為相連控制",
+          "D": "使用在更改組件之前使用追蹤和指標來識別瓶頸，但以具有委派管理和 SCP 護欄的 AWS Organizations取代相連控制"
         },
-        "explanation": "可觀察性識別限制因素並支持有針對性的改進。\n廣泛的重寫和禁用遙測會增加風險。"
+        "explanation": "在更改組件之前使用追蹤和指標來識別瓶頸 負責架構的第一項需求，分離遷移階段並定義明確的退役計劃 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "sap-c02-d3-053",
-    "type": "single",
-    "question": "A team optimizing an existing implementation must modernize a scheduled batch process into a managed, event-driven workflow. Which design should be evaluated?",
-    "options": {
-      "A": "A permanent server with a cron job only",
-      "B": "Manual console execution",
-      "C": "A public root key",
-      "D": "EventBridge triggering Step Functions and managed compute"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Managed event-driven orchestration reduces operational work and improves retry behavior.\nManual or credential-sharing designs are fragile.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team must modernize a scheduled batch process into a managed, event-driven workflow. Which design should be evaluated?",
+    "options": {
+      "A": "Analyze utilization, data transfer, and service metrics before rightsizing",
+      "B": "EventBridge triggering Step Functions and managed compute",
+      "C": "AWS DMS with continuous replication and a planned cutover",
+      "D": "Required data structures, latency, durability, and failover behavior"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Managed event-driven orchestration reduces operational work and improves retry behavior.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide EventBridge triggering Step Functions and managed compute for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊必須將預定的批次流程現代化為託管的、事件驅動的工作流程。應該評估哪種設計？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。優化現有實施的團隊必須將預定的批次流程現代化為託管的、事件驅動的工作流程。應該評估哪種設計？",
         "options": {
-          "A": "僅具有 cron 作業的永久伺服器",
-          "B": "手動控制台執行",
-          "C": "公有根密鑰",
-          "D": "EventBridge 觸發 Step Functions 和託管計算"
+          "A": "在調整規模之前分析使用率、資料傳輸和服務指標",
+          "B": "EventBridge 觸發 Step Functions 和託管計算",
+          "C": "具有持續複製和計劃切換的 AWS DMS",
+          "D": "所需的資料結構、延遲、持久性和故障轉移行為"
         },
-        "explanation": "託管事件驅動的編排減少了操作工作並改善了重試行為。\n手動或憑證共享設計很脆弱。"
+        "explanation": "託管事件驅動的編排減少了操作工作並改善了重試行為。\n其他選項適用於此領域的不同需求，但不能像 EventBridge 觸發 Step Functions 和託管計算 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d3-054",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A company introducing an automated workflow needs to migrate a database while minimizing downtime. Which strategy should be considered?",
+    "question": "A company introducing an automated workflow is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team needs to migrate a database while minimizing downtime. Which strategy should be considered?",
     "options": {
       "A": "AWS DMS with continuous replication and a planned cutover",
-      "B": "Copy data once and stop the source for weeks",
-      "C": "Use a DNS TXT record",
-      "D": "Disable backups"
+      "B": "Required data structures, latency, durability, and failover behavior",
+      "C": "Analyze utilization, data transfer, and service metrics before rightsizing",
+      "D": "Use tracing and metrics to identify the bottleneck before changing components"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "DMS can replicate changes and support a controlled migration cutover.\nA one-time copy creates a long outage window and the other choices are unrelated.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "DMS can replicate changes and support a controlled migration cutover.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS DMS with continuous replication and a planned cutover for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司需要遷移資料庫，同時最大限度地減少停機時間。應考慮哪種策略？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。引入自動化工作流程的公司需要遷移資料庫，同時最大限度地減少停機時間。應考慮哪種策略？",
         "options": {
           "A": "具有持續複製和計劃切換的 AWS DMS",
-          "B": "複製資料一次並停止來源數週",
-          "C": "使用 DNS TXT 記錄",
-          "D": "停用備份"
+          "B": "所需的資料結構、延遲、持久性和故障轉移行為",
+          "C": "在調整規模之前分析使用率、資料傳輸和服務指標",
+          "D": "在更改組件之前使用追蹤和指標來識別瓶頸"
         },
-        "explanation": "DMS 可以複製變更並支援受控的遷移切換。\n一次性複製會產生較長的中斷窗口，而其他選擇則無關。"
+        "explanation": "DMS 可以複製變更並支援受控的遷移切換。\n其他選項適用於此領域的不同需求，但不能像 具有持續複製和計劃切換的 AWS DMS 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d3-055",
-    "type": "single",
-    "question": "An AWS administrator working in a shared environment must replace a self-managed cache with a managed service. Which factor is most important?",
-    "options": {
-      "A": "The S3 bucket region only",
-      "B": "Required data structures, latency, durability, and failover behavior",
-      "C": "The shortest service name",
-      "D": "The number of IAM users"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Cache selection should match workload behavior and resilience requirements.\nThe other factors do not determine cache suitability.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team must replace a self-managed cache with a managed service. Which factor is most important?",
+    "options": {
+      "A": "Analyze utilization, data transfer, and service metrics before rightsizing",
+      "B": "Use tracing and metrics to identify the bottleneck before changing components",
+      "C": "EventBridge triggering Step Functions and managed compute",
+      "D": "Required data structures, latency, durability, and failover behavior"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Cache selection should match workload behavior and resilience requirements.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Required data structures, latency, durability, and failover behavior for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "在共享環境中工作的 AWS 管理員必須將自我管理的快取替換為託管服務。哪個因素最重要？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。在共享環境中工作的 AWS 管理員必須將自我管理的快取替換為託管服務。哪個因素最重要？",
         "options": {
-          "A": "僅限 S3 儲存桶區域",
-          "B": "所需的資料結構、延遲、持久性和故障轉移行為",
-          "C": "最短的服務名稱",
-          "D": "IAM使用者數"
+          "A": "在調整規模之前分析使用率、資料傳輸和服務指標",
+          "B": "在更改組件之前使用追蹤和指標來識別瓶頸",
+          "C": "EventBridge 觸發 Step Functions 和託管計算",
+          "D": "所需的資料結構、延遲、持久性和故障轉移行為"
         },
-        "explanation": "快取選擇應符合工作負載行為和彈性要求。\n其他因素並未決定快取的適用性。"
+        "explanation": "快取選擇應符合工作負載行為和彈性要求。\n其他選項適用於此領域的不同需求，但不能像 所需的資料結構、延遲、持久性和故障轉移行為 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d3-056",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A customer-facing application team must reduce cost in an existing workload without violating availability objectives. Which first step is appropriate?",
+    "question": "A customer-facing application team is redesigning one integrated end-to-end architecture. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The architecture must limit blast radius, preserve availability during change, and control cost through automation instead of permanent overprovisioning. The workload must reduce cost in an existing workload without violating availability objectives, and the same architecture needs a central identity experience for workforce users across many accounts. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "Disable monitoring",
-      "B": "Move everything to the largest instance",
-      "C": "Analyze utilization, data transfer, and service metrics before rightsizing",
-      "D": "Delete production resources immediately"
+      "A": "Use AWS Transit Gateway for the primary requirement and integrate it with IAM Identity Center",
+      "B": "Combine AWS Transit Gateway with AWS Resource Access Manager with scoped resource shares as a single platform design",
+      "C": "Use Analyze utilization, data transfer, and service metrics before rightsizing for the primary requirement and integrate it with IAM Identity Center for the connected control",
+      "D": "Use Analyze utilization, data transfer, and service metrics before rightsizing but replace the connected control with AWS Organizations with delegated administration and SCP guardrails"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Measurement identifies safe rightsizing and architectural cost opportunities.\nUnmeasured deletion or oversizing increases risk and cost.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Analyze utilization, data transfer, and service metrics before rightsizing satisfies the first part of the architecture: Measurement identifies safe rightsizing and architectural cost opportunities. IAM Identity Center satisfies the connected requirement: IAM Identity Center provides workforce access and permission sets across accounts.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊必須在不違反可用性目標的情況下降低現有工作負載的成本。哪一個第一步是合適的？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：生產團隊必須在不違反可用性目標的情況下降低現有工作負載的成本。 第二項需求：在共用環境中工作的 AWS 管理員需要為多個帳戶中的員工使用者提供集中身分體驗。 此架構必須限制影響範圍、在變更期間維持可用性，並透過自動化控制成本，而不是長期過度佈建。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "停用監控",
-          "B": "將所有內容移動到最大的執行個體",
-          "C": "在調整規模之前分析使用率、資料傳輸和服務指標",
-          "D": "立即刪除生產資源"
+          "A": "以AWS Transit Gateway處理主要需求，並整合IAM Identity Center",
+          "B": "把AWS Transit Gateway與具有範圍內資源共用的 AWS Resource Access Manager結合為單一平台設計",
+          "C": "以在調整規模之前分析使用率、資料傳輸和服務指標處理主要需求，並整合IAM Identity Center作為相連控制",
+          "D": "使用在調整規模之前分析使用率、資料傳輸和服務指標，但以具有委派管理和 SCP 護欄的 AWS Organizations取代相連控制"
         },
-        "explanation": "測量確定安全的規模調整和架構成本機會。\n未測量的刪除或過度增加會增加風險和成本。"
+        "explanation": "在調整規模之前分析使用率、資料傳輸和服務指標 負責架構的第一項需求，IAM Identity Center 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   }

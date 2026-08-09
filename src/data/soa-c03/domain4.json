@@ -1,869 +1,889 @@
 [
   {
     "id": "soa-c03-d4-001",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A production team needs to find why an IAM principal was denied access to an S3 object. Which tool should be checked first?",
+    "question": "A production team is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs to find why an IAM principal was denied access to an S3 object. Which tool should be checked first?",
     "options": {
       "A": "IAM policy simulator and CloudTrail evidence",
-      "B": "CloudFront cache statistics",
-      "C": "EBS burst balance",
-      "D": "Route 53 latency records"
+      "B": "A service control policy",
+      "C": "AWS Config",
+      "D": "AWS Secrets Manager"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "The IAM policy simulator evaluates authorization and CloudTrail can show the denied API call and context.\nThe other choices measure CDN, storage, or DNS behavior rather than IAM authorization.",
-    "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "The IAM policy simulator evaluates authorization and CloudTrail can show the denied API call and context.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide IAM policy simulator and CloudTrail evidence for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "生產團隊需要找出 IAM 委託人被拒絕存取 S3 物件的原因。應先檢查哪個工具？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。生產團隊需要找出 IAM 委託人被拒絕存取 S3 物件的原因。應先檢查哪個工具？",
         "options": {
           "A": "IAM 策略模擬器和 CloudTrail 證據",
-          "B": "CloudFront 快取統計資訊",
-          "C": "EBS 突發餘額",
-          "D": "Route 53 延遲記錄"
+          "B": "服務控制策略",
+          "C": "AWS Config",
+          "D": "AWS Secrets Manager"
         },
-        "explanation": "IAM 策略模擬器評估授權，CloudTrail 可以顯示被拒絕的 API 呼叫和上下文。\n其他選擇衡量 CDN、儲存或 DNS 行為，而不是 IAM 授權。"
+        "explanation": "IAM 策略模擬器評估授權，CloudTrail 可以顯示被拒絕的 API 呼叫和上下文。\n其他選項適用於此領域的不同需求，但不能像 IAM 策略模擬器和 CloudTrail 證據 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d4-002",
-    "type": "single",
-    "question": "A multi-account platform team must enforce a list of approved Regions across member accounts. Which organization control is appropriate?",
-    "options": {
-      "A": "A CloudFront cache policy",
-      "B": "A service control policy",
-      "C": "An S3 lifecycle rule",
-      "D": "A security group"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "An SCP can deny actions outside approved Regions across member accounts.\nThe other choices do not restrict account API operations by Region.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A multi-account platform team is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team must enforce a list of approved Regions across member accounts. Which organization control is appropriate?",
+    "options": {
+      "A": "AWS Config",
+      "B": "AWS Secrets Manager",
+      "C": "Amazon GuardDuty",
+      "D": "A service control policy"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "An SCP can deny actions outside approved Regions across member accounts.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A service control policy for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊必須跨成員帳戶強制執行已批准區域的清單。哪種組織控制是適當的？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。多帳戶平台團隊必須跨成員帳戶強制執行已批准區域的清單。哪種組織控制是適當的？",
         "options": {
-          "A": "CloudFront 快取策略",
-          "B": "服務控制策略",
-          "C": "S3 生命週期規則",
-          "D": "一個安全群組"
+          "A": "AWS Config",
+          "B": "AWS Secrets Manager",
+          "C": "Amazon GuardDuty",
+          "D": "服務控制策略"
         },
-        "explanation": "SCP 可以拒絕跨成員帳戶在批准區域之外的操作。\n其他選項不按區域限制帳戶 API 操作。"
+        "explanation": "SCP 可以拒絕跨成員帳戶在批准區域之外的操作。\n其他選項適用於此領域的不同需求，但不能像 服務控制策略 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d4-003",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A regulated company needs continuous evaluation of resources against a compliance rule. Which service should be used?",
+    "question": "A regulated company is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs continuous evaluation of resources against a compliance rule. Which service should be used?",
     "options": {
-      "A": "Amazon EFS",
-      "B": "AWS CodeBuild",
+      "A": "Amazon GuardDuty",
+      "B": "IAM policy simulator and CloudTrail evidence",
       "C": "AWS Config",
-      "D": "Amazon Kinesis"
+      "D": "AWS Secrets Manager"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "AWS Config records resource configuration and evaluates it against rules and conformance packs.\nThe other choices provide streaming, file storage, or build automation.",
-    "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "AWS Config records resource configuration and evaluates it against rules and conformance packs.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Config for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司需要根據合規規則持續評估資源。應該使用哪種服務？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。受監管的公司需要根據合規規則持續評估資源。應該使用哪種服務？",
         "options": {
-          "A": "Amazon EFS",
-          "B": "AWS CodeBuild",
+          "A": "Amazon GuardDuty",
+          "B": "IAM 策略模擬器和 CloudTrail 證據",
           "C": "AWS Config",
-          "D": "Amazon Kinesis"
+          "D": "AWS Secrets Manager"
         },
-        "explanation": "AWS Config 記錄資源配置並根據規則和一致性套件進行評估。\n其他選擇提供串流媒體、文件儲存或建置自動化。"
+        "explanation": "AWS Config 記錄資源配置並根據規則和一致性套件進行評估。\n其他選項適用於此領域的不同需求，但不能像 AWS Config 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d4-004",
-    "type": "single",
-    "question": "A startup preparing for a traffic increase must keep application credentials out of source code and rotate them automatically. Which service fits?",
-    "options": {
-      "A": "Amazon CloudFront",
-      "B": "AWS Transit Gateway",
-      "C": "Amazon Athena",
-      "D": "AWS Secrets Manager"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Secrets Manager stores credentials and supports rotation workflows and runtime retrieval.\nThe other choices provide content delivery, routing, or SQL query services.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team must keep application credentials out of source code and rotate them automatically. Which service fits?",
+    "options": {
+      "A": "A service control policy",
+      "B": "AWS Secrets Manager",
+      "C": "Amazon GuardDuty",
+      "D": "IAM policy simulator and CloudTrail evidence"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Secrets Manager stores credentials and supports rotation workflows and runtime retrieval.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Secrets Manager for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司必須將應用程式憑證保留在原始程式碼之外並自動輪換它們。適合哪種服務？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。準備增加流量的新創公司必須將應用程式憑證保留在原始程式碼之外並自動輪換它們。適合哪種服務？",
         "options": {
-          "A": "Amazon CloudFront",
-          "B": "AWS Transit Gateway",
-          "C": "Amazon Athena",
-          "D": "AWS Secrets Manager"
+          "A": "服務控制策略",
+          "B": "AWS Secrets Manager",
+          "C": "Amazon GuardDuty",
+          "D": "IAM 策略模擬器和 CloudTrail 證據"
         },
-        "explanation": "Secrets Manager 儲存憑證並支援輪換工作流程和執行時間檢索。\n其他選擇提供內容交付、路由或 SQL 查詢服務。"
+        "explanation": "Secrets Manager 儲存憑證並支援輪換工作流程和執行時間檢索。\n其他選項適用於此領域的不同需求，但不能像 AWS Secrets Manager 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d4-005",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An operations team supporting a critical workload needs a managed service to detect suspicious API and network activity. Which service should be enabled?",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs a managed service to detect suspicious API and network activity. Which service should be enabled?",
     "options": {
       "A": "Amazon GuardDuty",
-      "B": "AWS Artifact",
-      "C": "Amazon EBS",
-      "D": "AWS CloudFormation"
+      "B": "IAM policy simulator and CloudTrail evidence",
+      "C": "A service control policy",
+      "D": "AWS Config"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "GuardDuty analyzes supported account and network telemetry and produces threat findings.\nThe other choices provide compliance documents, block storage, or infrastructure provisioning.",
-    "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "GuardDuty analyzes supported account and network telemetry and produces threat findings.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon GuardDuty for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊需要託管服務來偵測可疑的 API 和網路活動。應該啟用哪個服務？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。支援關鍵工作負載的營運團隊需要託管服務來偵測可疑的 API 和網路活動。應該啟用哪個服務？",
         "options": {
           "A": "Amazon GuardDuty",
-          "B": "AWS Artifact",
-          "C": "Amazon EBS",
-          "D": "AWS CloudFormation"
+          "B": "IAM 策略模擬器和 CloudTrail 證據",
+          "C": "服務控制策略",
+          "D": "AWS Config"
         },
-        "explanation": "GuardDuty 分析支援的帳戶和網路遙測並產生威脅結果。\n其他選擇提供合規性文件、區塊儲存或基礎架構配置。"
+        "explanation": "GuardDuty 分析支援的帳戶和網路遙測並產生威脅結果。\n其他選項適用於此領域的不同需求，但不能像 Amazon GuardDuty 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d4-006",
-    "type": "single",
-    "question": "A data platform team needs to find why an IAM principal was denied access to an S3 object. Which tool should be checked first?",
-    "options": {
-      "A": "Route 53 latency records",
-      "B": "IAM policy simulator and CloudTrail evidence",
-      "C": "CloudFront cache statistics",
-      "D": "EBS burst balance"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "The IAM policy simulator evaluates authorization and CloudTrail can show the denied API call and context.\nThe other choices measure CDN, storage, or DNS behavior rather than IAM authorization.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A data platform team is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs to find why an IAM principal was denied access to an S3 object. Which tool should be checked first?",
+    "options": {
+      "A": "A service control policy",
+      "B": "AWS Config",
+      "C": "AWS Secrets Manager",
+      "D": "IAM policy simulator and CloudTrail evidence"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "The IAM policy simulator evaluates authorization and CloudTrail can show the denied API call and context.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide IAM policy simulator and CloudTrail evidence for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要找出 IAM 委託人被拒絕存取 S3 物件的原因。應先檢查哪個工具？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。資料平台團隊需要找出 IAM 委託人被拒絕存取 S3 物件的原因。應先檢查哪個工具？",
         "options": {
-          "A": "Route 53 延遲記錄",
-          "B": "IAM 策略模擬器和 CloudTrail 證據",
-          "C": "CloudFront 快取統計資訊",
-          "D": "EBS 突發餘額"
+          "A": "服務控制策略",
+          "B": "AWS Config",
+          "C": "AWS Secrets Manager",
+          "D": "IAM 策略模擬器和 CloudTrail 證據"
         },
-        "explanation": "IAM 策略模擬器評估授權，CloudTrail 可以顯示被拒絕的 API 呼叫和上下文。\n其他選擇衡量 CDN、儲存或 DNS 行為，而不是 IAM 授權。"
+        "explanation": "IAM 策略模擬器評估授權，CloudTrail 可以顯示被拒絕的 API 呼叫和上下文。\n其他選項適用於此領域的不同需求，但不能像 IAM 策略模擬器和 CloudTrail 證據 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d4-007",
-    "type": "single",
-    "question": "A security-conscious engineering team must enforce a list of approved Regions across member accounts. Which organization control is appropriate?",
-    "options": {
-      "A": "A security group",
-      "B": "A CloudFront cache policy",
-      "C": "A service control policy",
-      "D": "An S3 lifecycle rule"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "An SCP can deny actions outside approved Regions across member accounts.\nThe other choices do not restrict account API operations by Region.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A security-conscious engineering team is planning two independent production changes. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The first team must enforce a list of approved Regions across member accounts. A second team needs continuous evaluation of resources against a compliance rule. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "AWS Config",
+      "B": "AWS Secrets Manager",
+      "C": "Amazon GuardDuty",
+      "D": "IAM policy simulator and CloudTrail evidence",
+      "E": "A service control policy"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "A service control policy meets the first requirement: An SCP can deny actions outside approved Regions across member accounts. AWS Config meets the second requirement: AWS Config records resource configuration and evaluates it against rules and conformance packs.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊必須在成員帳戶之間強制執行已批准的區域清單。哪種組織控制是適當的？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。第一項需求：受監管的公司需要根據合規規則持續評估資源。第二項需求：多帳戶平台團隊必須跨成員帳戶強制執行已批准區域的清單。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "一個安全群組",
-          "B": "CloudFront 快取策略",
-          "C": "服務控制策略",
-          "D": "S3 生命週期規則"
+          "A": "AWS Config",
+          "B": "AWS Secrets Manager",
+          "C": "Amazon GuardDuty",
+          "D": "IAM 策略模擬器和 CloudTrail 證據",
+          "E": "服務控制策略"
         },
-        "explanation": "SCP 可以拒絕跨成員帳戶在批准區域之外的操作。\n其他選項不按區域限制帳戶 API 操作。"
+        "explanation": "AWS Config 符合第一項需求：AWS Config 記錄資源配置並根據規則和一致性套件進行評估。 服務控制策略 符合第二項需求：SCP 可以拒絕跨成員帳戶在批准區域之外的操作。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "soa-c03-d4-008",
-    "type": "single",
-    "question": "A company migrating an existing workload needs continuous evaluation of resources against a compliance rule. Which service should be used?",
-    "options": {
-      "A": "Amazon Kinesis",
-      "B": "Amazon EFS",
-      "C": "AWS CodeBuild",
-      "D": "AWS Config"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "AWS Config records resource configuration and evaluates it against rules and conformance packs.\nThe other choices provide streaming, file storage, or build automation.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A company migrating an existing workload is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs continuous evaluation of resources against a compliance rule. Which service should be used?",
+    "options": {
+      "A": "IAM policy simulator and CloudTrail evidence",
+      "B": "AWS Config",
+      "C": "AWS Secrets Manager",
+      "D": "Amazon GuardDuty"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "AWS Config records resource configuration and evaluates it against rules and conformance packs.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Config for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司需要根據合規性規則持續評估資源。應該使用哪種服務？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。遷移現有工作負載的公司需要根據合規性規則持續評估資源。應該使用哪種服務？",
         "options": {
-          "A": "Amazon Kinesis",
-          "B": "Amazon EFS",
-          "C": "AWS CodeBuild",
-          "D": "AWS Config"
+          "A": "IAM 策略模擬器和 CloudTrail 證據",
+          "B": "AWS Config",
+          "C": "AWS Secrets Manager",
+          "D": "Amazon GuardDuty"
         },
-        "explanation": "AWS Config 記錄資源配置並根據規則和一致性套件進行評估。\n其他選擇提供串流媒體、文件儲存或建置自動化。"
+        "explanation": "AWS Config 記錄資源配置並根據規則和一致性套件進行評估。\n其他選項適用於此領域的不同需求，但不能像 AWS Config 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d4-009",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team with strict recovery objectives must keep application credentials out of source code and rotate them automatically. Which service fits?",
+    "question": "A team with strict recovery objectives is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team must keep application credentials out of source code and rotate them automatically. Which service fits?",
     "options": {
       "A": "AWS Secrets Manager",
-      "B": "Amazon CloudFront",
-      "C": "AWS Transit Gateway",
-      "D": "Amazon Athena"
+      "B": "Amazon GuardDuty",
+      "C": "IAM policy simulator and CloudTrail evidence",
+      "D": "A service control policy"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Secrets Manager stores credentials and supports rotation workflows and runtime retrieval.\nThe other choices provide content delivery, routing, or SQL query services.",
-    "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Secrets Manager stores credentials and supports rotation workflows and runtime retrieval.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Secrets Manager for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格恢復目標的團隊必須將應用程式憑證保留在原始程式碼之外並自動輪換它們。適合哪種服務？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。具有嚴格恢復目標的團隊必須將應用程式憑證保留在原始程式碼之外並自動輪換它們。適合哪種服務？",
         "options": {
           "A": "AWS Secrets Manager",
-          "B": "Amazon CloudFront",
-          "C": "AWS Transit Gateway",
-          "D": "Amazon Athena"
+          "B": "Amazon GuardDuty",
+          "C": "IAM 策略模擬器和 CloudTrail 證據",
+          "D": "服務控制策略"
         },
-        "explanation": "Secrets Manager 儲存憑證並支援輪換工作流程和執行時間檢索。\n其他選擇提供內容交付、路由或 SQL 查詢服務。"
+        "explanation": "Secrets Manager 儲存憑證並支援輪換工作流程和執行時間檢索。\n其他選項適用於此領域的不同需求，但不能像 AWS Secrets Manager 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d4-010",
-    "type": "single",
-    "question": "A developer team preparing a release needs a managed service to detect suspicious API and network activity. Which service should be enabled?",
-    "options": {
-      "A": "AWS CloudFormation",
-      "B": "Amazon GuardDuty",
-      "C": "AWS Artifact",
-      "D": "Amazon EBS"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "GuardDuty analyzes supported account and network telemetry and produces threat findings.\nThe other choices provide compliance documents, block storage, or infrastructure provisioning.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A developer team preparing a release is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs a managed service to detect suspicious API and network activity. Which service should be enabled?",
+    "options": {
+      "A": "IAM policy simulator and CloudTrail evidence",
+      "B": "A service control policy",
+      "C": "AWS Config",
+      "D": "Amazon GuardDuty"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "GuardDuty analyzes supported account and network telemetry and produces threat findings.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon GuardDuty for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊需要託管服務來偵測可疑的 API 和網路活動。應該啟用哪個服務？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。準備發布的開發團隊需要託管服務來偵測可疑的 API 和網路活動。應該啟用哪個服務？",
         "options": {
-          "A": "AWS CloudFormation",
-          "B": "Amazon GuardDuty",
-          "C": "AWS Artifact",
-          "D": "Amazon EBS"
+          "A": "IAM 策略模擬器和 CloudTrail 證據",
+          "B": "服務控制策略",
+          "C": "AWS Config",
+          "D": "Amazon GuardDuty"
         },
-        "explanation": "GuardDuty 分析支援的帳戶和網路遙測並產生威脅結果。\n其他選擇提供合規性文件、區塊儲存或基礎架構配置。"
+        "explanation": "GuardDuty 分析支援的帳戶和網路遙測並產生威脅結果。\n其他選項適用於此領域的不同需求，但不能像 Amazon GuardDuty 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d4-011",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An enterprise with several AWS Regions needs to find why an IAM principal was denied access to an S3 object. Which tool should be checked first?",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs to find why an IAM principal was denied access to an S3 object. Which tool should be checked first?",
     "options": {
-      "A": "EBS burst balance",
-      "B": "Route 53 latency records",
+      "A": "AWS Config",
+      "B": "AWS Secrets Manager",
       "C": "IAM policy simulator and CloudTrail evidence",
-      "D": "CloudFront cache statistics"
+      "D": "A service control policy"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "The IAM policy simulator evaluates authorization and CloudTrail can show the denied API call and context.\nThe other choices measure CDN, storage, or DNS behavior rather than IAM authorization.",
-    "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "The IAM policy simulator evaluates authorization and CloudTrail can show the denied API call and context.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide IAM policy simulator and CloudTrail evidence for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業需要找出 IAM 委託人存取 S3 物件被拒絕的原因。應先檢查哪個工具？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。擁有多個 AWS 區域的企業需要找出 IAM 委託人存取 S3 物件被拒絕的原因。應先檢查哪個工具？",
         "options": {
-          "A": "EBS 突發餘額",
-          "B": "Route 53 延遲記錄",
+          "A": "AWS Config",
+          "B": "AWS Secrets Manager",
           "C": "IAM 策略模擬器和 CloudTrail 證據",
-          "D": "CloudFront 快取統計資訊"
+          "D": "服務控制策略"
         },
-        "explanation": "IAM 策略模擬器評估授權，CloudTrail 可以顯示被拒絕的 API 呼叫和上下文。\n其他選擇衡量 CDN、儲存或 DNS 行為，而不是 IAM 授權。"
+        "explanation": "IAM 策略模擬器評估授權，CloudTrail 可以顯示被拒絕的 API 呼叫和上下文。\n其他選項適用於此領域的不同需求，但不能像 IAM 策略模擬器和 CloudTrail 證據 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d4-012",
-    "type": "single",
-    "question": "A service owner reviewing an incident must enforce a list of approved Regions across member accounts. Which organization control is appropriate?",
-    "options": {
-      "A": "An S3 lifecycle rule",
-      "B": "A security group",
-      "C": "A CloudFront cache policy",
-      "D": "A service control policy"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "An SCP can deny actions outside approved Regions across member accounts.\nThe other choices do not restrict account API operations by Region.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A service owner reviewing an incident is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team must enforce a list of approved Regions across member accounts. Which organization control is appropriate?",
+    "options": {
+      "A": "Amazon GuardDuty",
+      "B": "A service control policy",
+      "C": "AWS Config",
+      "D": "AWS Secrets Manager"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "An SCP can deny actions outside approved Regions across member accounts.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A service control policy for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務所有者必須跨成員帳戶強制執行已批准區域的清單。哪種組織控制是適當的？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。審查事件的服務所有者必須跨成員帳戶強制執行已批准區域的清單。哪種組織控制是適當的？",
         "options": {
-          "A": "S3 生命週期規則",
-          "B": "一個安全群組",
-          "C": "CloudFront 快取策略",
-          "D": "服務控制策略"
+          "A": "Amazon GuardDuty",
+          "B": "服務控制策略",
+          "C": "AWS Config",
+          "D": "AWS Secrets Manager"
         },
-        "explanation": "SCP 可以拒絕跨成員帳戶在批准區域之外的操作。\n其他選項不按區域限制帳戶 API 操作。"
+        "explanation": "SCP 可以拒絕跨成員帳戶在批准區域之外的操作。\n其他選項適用於此領域的不同需求，但不能像 服務控制策略 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d4-013",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team optimizing an existing implementation needs continuous evaluation of resources against a compliance rule. Which service should be used?",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs continuous evaluation of resources against a compliance rule. Which service should be used?",
     "options": {
       "A": "AWS Config",
-      "B": "Amazon Kinesis",
-      "C": "Amazon EFS",
-      "D": "AWS CodeBuild"
+      "B": "AWS Secrets Manager",
+      "C": "Amazon GuardDuty",
+      "D": "IAM policy simulator and CloudTrail evidence"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "AWS Config records resource configuration and evaluates it against rules and conformance packs.\nThe other choices provide streaming, file storage, or build automation.",
-    "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "AWS Config records resource configuration and evaluates it against rules and conformance packs.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Config for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊需要根據合規性規則持續評估資源。應該使用哪種服務？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。優化現有實施的團隊需要根據合規性規則持續評估資源。應該使用哪種服務？",
         "options": {
           "A": "AWS Config",
-          "B": "Amazon Kinesis",
-          "C": "Amazon EFS",
-          "D": "AWS CodeBuild"
+          "B": "AWS Secrets Manager",
+          "C": "Amazon GuardDuty",
+          "D": "IAM 策略模擬器和 CloudTrail 證據"
         },
-        "explanation": "AWS Config 記錄資源配置並根據規則和一致性套件進行評估。\n其他選擇提供串流媒體、文件儲存或建置自動化。"
+        "explanation": "AWS Config 記錄資源配置並根據規則和一致性套件進行評估。\n其他選項適用於此領域的不同需求，但不能像 AWS Config 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d4-014",
-    "type": "single",
-    "question": "A company introducing an automated workflow must keep application credentials out of source code and rotate them automatically. Which service fits?",
-    "options": {
-      "A": "Amazon Athena",
-      "B": "AWS Secrets Manager",
-      "C": "Amazon CloudFront",
-      "D": "AWS Transit Gateway"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Secrets Manager stores credentials and supports rotation workflows and runtime retrieval.\nThe other choices provide content delivery, routing, or SQL query services.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A company introducing an automated workflow is planning two independent production changes. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The first team must keep application credentials out of source code and rotate them automatically. A second team needs a managed service to detect suspicious API and network activity. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "A service control policy",
+      "B": "AWS Config",
+      "C": "AWS Secrets Manager",
+      "D": "Amazon GuardDuty",
+      "E": "IAM policy simulator and CloudTrail evidence"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS Secrets Manager meets the first requirement: Secrets Manager stores credentials and supports rotation workflows and runtime retrieval. Amazon GuardDuty meets the second requirement: GuardDuty analyzes supported account and network telemetry and produces threat findings.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司必須將應用程式憑證保留在原始程式碼之外並自動輪換它們。適合哪種服務？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。第一項需求：準備增加流量的新創公司必須將應用程式憑證保留在原始程式碼之外並自動輪換它們。第二項需求：支援關鍵工作負載的營運團隊需要託管服務來偵測可疑的 API 和網路活動。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "Amazon Athena",
-          "B": "AWS Secrets Manager",
-          "C": "Amazon CloudFront",
-          "D": "AWS Transit Gateway"
+          "A": "服務控制策略",
+          "B": "AWS Config",
+          "C": "AWS Secrets Manager",
+          "D": "Amazon GuardDuty",
+          "E": "IAM 策略模擬器和 CloudTrail 證據"
         },
-        "explanation": "Secrets Manager 儲存憑證並支援輪換工作流程和執行時間檢索。\n其他選擇提供內容交付、路由或 SQL 查詢服務。"
+        "explanation": "AWS Secrets Manager 符合第一項需求：Secrets Manager 儲存憑證並支援輪換工作流程和執行時間檢索。 Amazon GuardDuty 符合第二項需求：GuardDuty 分析支援的帳戶和網路遙測並產生威脅結果。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "soa-c03-d4-015",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An AWS administrator working in a shared environment needs a managed service to detect suspicious API and network activity. Which service should be enabled?",
+    "question": "An AWS administrator working in a shared environment is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs a managed service to detect suspicious API and network activity. Which service should be enabled?",
     "options": {
-      "A": "Amazon EBS",
-      "B": "AWS CloudFormation",
+      "A": "A service control policy",
+      "B": "AWS Config",
       "C": "Amazon GuardDuty",
-      "D": "AWS Artifact"
+      "D": "IAM policy simulator and CloudTrail evidence"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "GuardDuty analyzes supported account and network telemetry and produces threat findings.\nThe other choices provide compliance documents, block storage, or infrastructure provisioning.",
-    "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "GuardDuty analyzes supported account and network telemetry and produces threat findings.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon GuardDuty for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "在共享環境中工作的 AWS 管理員需要託管服務來偵測可疑的 API 和網路活動。應該啟用哪個服務？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。在共享環境中工作的 AWS 管理員需要託管服務來偵測可疑的 API 和網路活動。應該啟用哪個服務？",
         "options": {
-          "A": "Amazon EBS",
-          "B": "AWS CloudFormation",
+          "A": "服務控制策略",
+          "B": "AWS Config",
           "C": "Amazon GuardDuty",
-          "D": "AWS Artifact"
+          "D": "IAM 策略模擬器和 CloudTrail 證據"
         },
-        "explanation": "GuardDuty 分析支援的帳戶和網路遙測並產生威脅結果。\n其他選擇提供合規性文件、區塊儲存或基礎架構配置。"
+        "explanation": "GuardDuty 分析支援的帳戶和網路遙測並產生威脅結果。\n其他選項適用於此領域的不同需求，但不能像 Amazon GuardDuty 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d4-016",
-    "type": "single",
-    "question": "A customer-facing application team needs to find why an IAM principal was denied access to an S3 object. Which tool should be checked first?",
-    "options": {
-      "A": "CloudFront cache statistics",
-      "B": "EBS burst balance",
-      "C": "Route 53 latency records",
-      "D": "IAM policy simulator and CloudTrail evidence"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "The IAM policy simulator evaluates authorization and CloudTrail can show the denied API call and context.\nThe other choices measure CDN, storage, or DNS behavior rather than IAM authorization.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A customer-facing application team is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team needs to find why an IAM principal was denied access to an S3 object. Which tool should be checked first?",
+    "options": {
+      "A": "AWS Secrets Manager",
+      "B": "IAM policy simulator and CloudTrail evidence",
+      "C": "A service control policy",
+      "D": "AWS Config"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "The IAM policy simulator evaluates authorization and CloudTrail can show the denied API call and context.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide IAM policy simulator and CloudTrail evidence for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "以客戶為導向的應用程式團隊需要找出 IAM 委託人被拒絕存取 S3 物件的原因。應先檢查哪個工具？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。以客戶為導向的應用程式團隊需要找出 IAM 委託人被拒絕存取 S3 物件的原因。應先檢查哪個工具？",
         "options": {
-          "A": "CloudFront 快取統計資訊",
-          "B": "EBS 突發餘額",
-          "C": "Route 53 延遲記錄",
-          "D": "IAM 策略模擬器和 CloudTrail 證據"
+          "A": "AWS Secrets Manager",
+          "B": "IAM 策略模擬器和 CloudTrail 證據",
+          "C": "服務控制策略",
+          "D": "AWS Config"
         },
-        "explanation": "IAM 策略模擬器評估授權，CloudTrail 可以顯示被拒絕的 API 呼叫和上下文。\n其他選擇衡量 CDN、儲存或 DNS 行為，而不是 IAM 授權。"
+        "explanation": "IAM 策略模擬器評估授權，CloudTrail 可以顯示被拒絕的 API 呼叫和上下文。\n其他選項適用於此領域的不同需求，但不能像 IAM 策略模擬器和 CloudTrail 證據 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d4-017",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A platform team standardizing its AWS deployments must enforce a list of approved Regions across member accounts. Which organization control is appropriate?",
+    "question": "A platform team standardizing its AWS deployments is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team must enforce a list of approved Regions across member accounts. Which organization control is appropriate?",
     "options": {
       "A": "A service control policy",
-      "B": "An S3 lifecycle rule",
-      "C": "A security group",
-      "D": "A CloudFront cache policy"
+      "B": "AWS Config",
+      "C": "AWS Secrets Manager",
+      "D": "Amazon GuardDuty"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "An SCP can deny actions outside approved Regions across member accounts.\nThe other choices do not restrict account API operations by Region.",
-    "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "An SCP can deny actions outside approved Regions across member accounts.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A service control policy for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊必須跨成員帳號強制執行已核准區域的清單。哪種組織控制是適當的？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。標準化其 AWS 部署的平台團隊必須跨成員帳號強制執行已核准區域的清單。哪種組織控制是適當的？",
         "options": {
           "A": "服務控制策略",
-          "B": "S3 生命週期規則",
-          "C": "一個安全群組",
-          "D": "CloudFront 快取策略"
+          "B": "AWS Config",
+          "C": "AWS Secrets Manager",
+          "D": "Amazon GuardDuty"
         },
-        "explanation": "SCP 可以拒絕跨成員帳戶在批准區域之外的操作。\n其他選項不按區域限制帳戶 API 操作。"
+        "explanation": "SCP 可以拒絕跨成員帳戶在批准區域之外的操作。\n其他選項適用於此領域的不同需求，但不能像 服務控制策略 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d4-018",
-    "type": "single",
-    "question": "A team preparing evidence for an audit needs continuous evaluation of resources against a compliance rule. Which service should be used?",
-    "options": {
-      "A": "AWS CodeBuild",
-      "B": "AWS Config",
-      "C": "Amazon Kinesis",
-      "D": "Amazon EFS"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "AWS Config records resource configuration and evaluates it against rules and conformance packs.\nThe other choices provide streaming, file storage, or build automation.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team preparing evidence for an audit is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team needs continuous evaluation of resources against a compliance rule. Which service should be used?",
+    "options": {
+      "A": "AWS Secrets Manager",
+      "B": "Amazon GuardDuty",
+      "C": "IAM policy simulator and CloudTrail evidence",
+      "D": "AWS Config"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "AWS Config records resource configuration and evaluates it against rules and conformance packs.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Config for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "為審計準備證據的團隊需要根據合規性規則持續評估資源。應該使用哪種服務？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。為審計準備證據的團隊需要根據合規性規則持續評估資源。應該使用哪種服務？",
         "options": {
-          "A": "AWS CodeBuild",
-          "B": "AWS Config",
-          "C": "Amazon Kinesis",
-          "D": "Amazon EFS"
+          "A": "AWS Secrets Manager",
+          "B": "Amazon GuardDuty",
+          "C": "IAM 策略模擬器和 CloudTrail 證據",
+          "D": "AWS Config"
         },
-        "explanation": "AWS Config 記錄資源配置並根據規則和一致性套件進行評估。\n其他選擇提供串流媒體、文件儲存或建置自動化。"
+        "explanation": "AWS Config 記錄資源配置並根據規則和一致性套件進行評估。\n其他選項適用於此領域的不同需求，但不能像 AWS Config 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d4-019",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A business replacing a manual process must keep application credentials out of source code and rotate them automatically. Which service fits?",
+    "question": "A business replacing a manual process is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team must keep application credentials out of source code and rotate them automatically. Which service fits?",
     "options": {
-      "A": "AWS Transit Gateway",
-      "B": "Amazon Athena",
+      "A": "IAM policy simulator and CloudTrail evidence",
+      "B": "A service control policy",
       "C": "AWS Secrets Manager",
-      "D": "Amazon CloudFront"
+      "D": "Amazon GuardDuty"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Secrets Manager stores credentials and supports rotation workflows and runtime retrieval.\nThe other choices provide content delivery, routing, or SQL query services.",
-    "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Secrets Manager stores credentials and supports rotation workflows and runtime retrieval.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Secrets Manager for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "取代手動流程的企業必須將應用程式憑證保留在原始程式碼之外並自動輪換它們。適合哪種服務？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。取代手動流程的企業必須將應用程式憑證保留在原始程式碼之外並自動輪換它們。適合哪種服務？",
         "options": {
-          "A": "AWS Transit Gateway",
-          "B": "Amazon Athena",
+          "A": "IAM 策略模擬器和 CloudTrail 證據",
+          "B": "服務控制策略",
           "C": "AWS Secrets Manager",
-          "D": "Amazon CloudFront"
+          "D": "Amazon GuardDuty"
         },
-        "explanation": "Secrets Manager 儲存憑證並支援輪換工作流程和執行時間檢索。\n其他選擇提供內容交付、路由或 SQL 查詢服務。"
+        "explanation": "Secrets Manager 儲存憑證並支援輪換工作流程和執行時間檢索。\n其他選項適用於此領域的不同需求，但不能像 AWS Secrets Manager 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d4-020",
-    "type": "single",
-    "question": "A team validating a design against the exam guide needs a managed service to detect suspicious API and network activity. Which service should be enabled?",
-    "options": {
-      "A": "AWS Artifact",
-      "B": "Amazon EBS",
-      "C": "AWS CloudFormation",
-      "D": "Amazon GuardDuty"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "GuardDuty analyzes supported account and network telemetry and produces threat findings.\nThe other choices provide compliance documents, block storage, or infrastructure provisioning.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team validating a design against the exam guide is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team needs a managed service to detect suspicious API and network activity. Which service should be enabled?",
+    "options": {
+      "A": "AWS Config",
+      "B": "Amazon GuardDuty",
+      "C": "IAM policy simulator and CloudTrail evidence",
+      "D": "A service control policy"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "GuardDuty analyzes supported account and network telemetry and produces threat findings.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon GuardDuty for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊需要託管服務來偵測可疑的 API 和網路活動。應該啟用哪個服務？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。根據考試指南驗證設計的團隊需要託管服務來偵測可疑的 API 和網路活動。應該啟用哪個服務？",
         "options": {
-          "A": "AWS Artifact",
-          "B": "Amazon EBS",
-          "C": "AWS CloudFormation",
-          "D": "Amazon GuardDuty"
+          "A": "AWS Config",
+          "B": "Amazon GuardDuty",
+          "C": "IAM 策略模擬器和 CloudTrail 證據",
+          "D": "服務控制策略"
         },
-        "explanation": "GuardDuty 分析支援的帳戶和網路遙測並產生威脅結果。\n其他選擇提供合規性文件、區塊儲存或基礎架構配置。"
+        "explanation": "GuardDuty 分析支援的帳戶和網路遙測並產生威脅結果。\n其他選項適用於此領域的不同需求，但不能像 Amazon GuardDuty 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d4-021",
-    "type": "single",
-    "question": "A production team needs to find why an IAM principal was denied access to an S3 object. Which tool should be checked first?",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A production team is planning two independent production changes. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The first team needs to find why an IAM principal was denied access to an S3 object. A second team must enforce a list of approved Regions across member accounts. Which TWO actions satisfy these requirements?",
     "options": {
       "A": "IAM policy simulator and CloudTrail evidence",
-      "B": "CloudFront cache statistics",
-      "C": "EBS burst balance",
-      "D": "Route 53 latency records"
+      "B": "A service control policy",
+      "C": "AWS Config",
+      "D": "AWS Secrets Manager",
+      "E": "Amazon GuardDuty"
     },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "The IAM policy simulator evaluates authorization and CloudTrail can show the denied API call and context.\nThe other choices measure CDN, storage, or DNS behavior rather than IAM authorization.",
-    "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "IAM policy simulator and CloudTrail evidence meets the first requirement: The IAM policy simulator evaluates authorization and CloudTrail can show the denied API call and context. A service control policy meets the second requirement: An SCP can deny actions outside approved Regions across member accounts.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "生產團隊需要找出 IAM 委託人被拒絕存取 S3 物件的原因。應先檢查哪個工具？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。第一項需求：生產團隊需要找出 IAM 委託人被拒絕存取 S3 物件的原因。第二項需求：多帳戶平台團隊必須跨成員帳戶強制執行已批准區域的清單。哪兩項操作可以滿足這些需求？",
         "options": {
           "A": "IAM 策略模擬器和 CloudTrail 證據",
-          "B": "CloudFront 快取統計資訊",
-          "C": "EBS 突發餘額",
-          "D": "Route 53 延遲記錄"
+          "B": "服務控制策略",
+          "C": "AWS Config",
+          "D": "AWS Secrets Manager",
+          "E": "Amazon GuardDuty"
         },
-        "explanation": "IAM 策略模擬器評估授權，CloudTrail 可以顯示被拒絕的 API 呼叫和上下文。\n其他選擇衡量 CDN、儲存或 DNS 行為，而不是 IAM 授權。"
+        "explanation": "IAM 策略模擬器和 CloudTrail 證據 符合第一項需求：IAM 策略模擬器評估授權，CloudTrail 可以顯示被拒絕的 API 呼叫和上下文。 服務控制策略 符合第二項需求：SCP 可以拒絕跨成員帳戶在批准區域之外的操作。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "soa-c03-d4-022",
-    "type": "single",
-    "question": "A multi-account platform team must enforce a list of approved Regions across member accounts. Which organization control is appropriate?",
-    "options": {
-      "A": "A CloudFront cache policy",
-      "B": "A service control policy",
-      "C": "An S3 lifecycle rule",
-      "D": "A security group"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "An SCP can deny actions outside approved Regions across member accounts.\nThe other choices do not restrict account API operations by Region.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A multi-account platform team is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team must enforce a list of approved Regions across member accounts. Which organization control is appropriate?",
+    "options": {
+      "A": "AWS Config",
+      "B": "AWS Secrets Manager",
+      "C": "Amazon GuardDuty",
+      "D": "A service control policy"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "An SCP can deny actions outside approved Regions across member accounts.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A service control policy for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊必須跨成員帳戶強制執行已批准區域的清單。哪種組織控制是適當的？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。多帳戶平台團隊必須跨成員帳戶強制執行已批准區域的清單。哪種組織控制是適當的？",
         "options": {
-          "A": "CloudFront 快取策略",
-          "B": "服務控制策略",
-          "C": "S3 生命週期規則",
-          "D": "一個安全群組"
+          "A": "AWS Config",
+          "B": "AWS Secrets Manager",
+          "C": "Amazon GuardDuty",
+          "D": "服務控制策略"
         },
-        "explanation": "SCP 可以拒絕跨成員帳戶在批准區域之外的操作。\n其他選項不按區域限制帳戶 API 操作。"
+        "explanation": "SCP 可以拒絕跨成員帳戶在批准區域之外的操作。\n其他選項適用於此領域的不同需求，但不能像 服務控制策略 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d4-023",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A regulated company needs continuous evaluation of resources against a compliance rule. Which service should be used?",
+    "question": "A regulated company is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs continuous evaluation of resources against a compliance rule. Which service should be used?",
     "options": {
-      "A": "Amazon EFS",
-      "B": "AWS CodeBuild",
+      "A": "Amazon GuardDuty",
+      "B": "IAM policy simulator and CloudTrail evidence",
       "C": "AWS Config",
-      "D": "Amazon Kinesis"
+      "D": "AWS Secrets Manager"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "AWS Config records resource configuration and evaluates it against rules and conformance packs.\nThe other choices provide streaming, file storage, or build automation.",
-    "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "AWS Config records resource configuration and evaluates it against rules and conformance packs.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Config for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司需要根據合規規則持續評估資源。應該使用哪種服務？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。受監管的公司需要根據合規規則持續評估資源。應該使用哪種服務？",
         "options": {
-          "A": "Amazon EFS",
-          "B": "AWS CodeBuild",
+          "A": "Amazon GuardDuty",
+          "B": "IAM 策略模擬器和 CloudTrail 證據",
           "C": "AWS Config",
-          "D": "Amazon Kinesis"
+          "D": "AWS Secrets Manager"
         },
-        "explanation": "AWS Config 記錄資源配置並根據規則和一致性套件進行評估。\n其他選擇提供串流媒體、文件儲存或建置自動化。"
+        "explanation": "AWS Config 記錄資源配置並根據規則和一致性套件進行評估。\n其他選項適用於此領域的不同需求，但不能像 AWS Config 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d4-024",
-    "type": "single",
-    "question": "A startup preparing for a traffic increase must keep application credentials out of source code and rotate them automatically. Which service fits?",
-    "options": {
-      "A": "Amazon CloudFront",
-      "B": "AWS Transit Gateway",
-      "C": "Amazon Athena",
-      "D": "AWS Secrets Manager"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Secrets Manager stores credentials and supports rotation workflows and runtime retrieval.\nThe other choices provide content delivery, routing, or SQL query services.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team must keep application credentials out of source code and rotate them automatically. Which service fits?",
+    "options": {
+      "A": "A service control policy",
+      "B": "AWS Secrets Manager",
+      "C": "Amazon GuardDuty",
+      "D": "IAM policy simulator and CloudTrail evidence"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Secrets Manager stores credentials and supports rotation workflows and runtime retrieval.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Secrets Manager for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司必須將應用程式憑證保留在原始程式碼之外並自動輪換它們。適合哪種服務？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。準備增加流量的新創公司必須將應用程式憑證保留在原始程式碼之外並自動輪換它們。適合哪種服務？",
         "options": {
-          "A": "Amazon CloudFront",
-          "B": "AWS Transit Gateway",
-          "C": "Amazon Athena",
-          "D": "AWS Secrets Manager"
+          "A": "服務控制策略",
+          "B": "AWS Secrets Manager",
+          "C": "Amazon GuardDuty",
+          "D": "IAM 策略模擬器和 CloudTrail 證據"
         },
-        "explanation": "Secrets Manager 儲存憑證並支援輪換工作流程和執行時間檢索。\n其他選擇提供內容交付、路由或 SQL 查詢服務。"
+        "explanation": "Secrets Manager 儲存憑證並支援輪換工作流程和執行時間檢索。\n其他選項適用於此領域的不同需求，但不能像 AWS Secrets Manager 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d4-025",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An operations team supporting a critical workload needs a managed service to detect suspicious API and network activity. Which service should be enabled?",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs a managed service to detect suspicious API and network activity. Which service should be enabled?",
     "options": {
       "A": "Amazon GuardDuty",
-      "B": "AWS Artifact",
-      "C": "Amazon EBS",
-      "D": "AWS CloudFormation"
+      "B": "IAM policy simulator and CloudTrail evidence",
+      "C": "A service control policy",
+      "D": "AWS Config"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "GuardDuty analyzes supported account and network telemetry and produces threat findings.\nThe other choices provide compliance documents, block storage, or infrastructure provisioning.",
-    "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "GuardDuty analyzes supported account and network telemetry and produces threat findings.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon GuardDuty for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊需要託管服務來偵測可疑的 API 和網路活動。應該啟用哪個服務？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。支援關鍵工作負載的營運團隊需要託管服務來偵測可疑的 API 和網路活動。應該啟用哪個服務？",
         "options": {
           "A": "Amazon GuardDuty",
-          "B": "AWS Artifact",
-          "C": "Amazon EBS",
-          "D": "AWS CloudFormation"
+          "B": "IAM 策略模擬器和 CloudTrail 證據",
+          "C": "服務控制策略",
+          "D": "AWS Config"
         },
-        "explanation": "GuardDuty 分析支援的帳戶和網路遙測並產生威脅結果。\n其他選擇提供合規性文件、區塊儲存或基礎架構配置。"
+        "explanation": "GuardDuty 分析支援的帳戶和網路遙測並產生威脅結果。\n其他選項適用於此領域的不同需求，但不能像 Amazon GuardDuty 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d4-026",
-    "type": "single",
-    "question": "A data platform team needs to find why an IAM principal was denied access to an S3 object. Which tool should be checked first?",
-    "options": {
-      "A": "Route 53 latency records",
-      "B": "IAM policy simulator and CloudTrail evidence",
-      "C": "CloudFront cache statistics",
-      "D": "EBS burst balance"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "The IAM policy simulator evaluates authorization and CloudTrail can show the denied API call and context.\nThe other choices measure CDN, storage, or DNS behavior rather than IAM authorization.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A data platform team is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs to find why an IAM principal was denied access to an S3 object. Which tool should be checked first?",
+    "options": {
+      "A": "A service control policy",
+      "B": "AWS Config",
+      "C": "AWS Secrets Manager",
+      "D": "IAM policy simulator and CloudTrail evidence"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "The IAM policy simulator evaluates authorization and CloudTrail can show the denied API call and context.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide IAM policy simulator and CloudTrail evidence for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要找出 IAM 委託人被拒絕存取 S3 物件的原因。應先檢查哪個工具？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。資料平台團隊需要找出 IAM 委託人被拒絕存取 S3 物件的原因。應先檢查哪個工具？",
         "options": {
-          "A": "Route 53 延遲記錄",
-          "B": "IAM 策略模擬器和 CloudTrail 證據",
-          "C": "CloudFront 快取統計資訊",
-          "D": "EBS 突發餘額"
+          "A": "服務控制策略",
+          "B": "AWS Config",
+          "C": "AWS Secrets Manager",
+          "D": "IAM 策略模擬器和 CloudTrail 證據"
         },
-        "explanation": "IAM 策略模擬器評估授權，CloudTrail 可以顯示被拒絕的 API 呼叫和上下文。\n其他選擇衡量 CDN、儲存或 DNS 行為，而不是 IAM 授權。"
+        "explanation": "IAM 策略模擬器評估授權，CloudTrail 可以顯示被拒絕的 API 呼叫和上下文。\n其他選項適用於此領域的不同需求，但不能像 IAM 策略模擬器和 CloudTrail 證據 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d4-027",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A security-conscious engineering team must enforce a list of approved Regions across member accounts. Which organization control is appropriate?",
+    "question": "A security-conscious engineering team is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team must enforce a list of approved Regions across member accounts. Which organization control is appropriate?",
     "options": {
-      "A": "A security group",
-      "B": "A CloudFront cache policy",
+      "A": "AWS Secrets Manager",
+      "B": "Amazon GuardDuty",
       "C": "A service control policy",
-      "D": "An S3 lifecycle rule"
+      "D": "AWS Config"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "An SCP can deny actions outside approved Regions across member accounts.\nThe other choices do not restrict account API operations by Region.",
-    "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "An SCP can deny actions outside approved Regions across member accounts.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A service control policy for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊必須在成員帳戶之間強制執行已批准的區域清單。哪種組織控制是適當的？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。具有安全意識的工程團隊必須在成員帳戶之間強制執行已批准的區域清單。哪種組織控制是適當的？",
         "options": {
-          "A": "一個安全群組",
-          "B": "CloudFront 快取策略",
+          "A": "AWS Secrets Manager",
+          "B": "Amazon GuardDuty",
           "C": "服務控制策略",
-          "D": "S3 生命週期規則"
+          "D": "AWS Config"
         },
-        "explanation": "SCP 可以拒絕跨成員帳戶在批准區域之外的操作。\n其他選項不按區域限制帳戶 API 操作。"
+        "explanation": "SCP 可以拒絕跨成員帳戶在批准區域之外的操作。\n其他選項適用於此領域的不同需求，但不能像 服務控制策略 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d4-028",
-    "type": "single",
-    "question": "A company migrating an existing workload needs continuous evaluation of resources against a compliance rule. Which service should be used?",
-    "options": {
-      "A": "Amazon Kinesis",
-      "B": "Amazon EFS",
-      "C": "AWS CodeBuild",
-      "D": "AWS Config"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "AWS Config records resource configuration and evaluates it against rules and conformance packs.\nThe other choices provide streaming, file storage, or build automation.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A company migrating an existing workload is planning two independent production changes. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The first team needs continuous evaluation of resources against a compliance rule. A second team must keep application credentials out of source code and rotate them automatically. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Amazon GuardDuty",
+      "B": "IAM policy simulator and CloudTrail evidence",
+      "C": "A service control policy",
+      "D": "AWS Config",
+      "E": "AWS Secrets Manager"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS Config meets the first requirement: AWS Config records resource configuration and evaluates it against rules and conformance packs. AWS Secrets Manager meets the second requirement: Secrets Manager stores credentials and supports rotation workflows and runtime retrieval.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司需要根據合規性規則持續評估資源。應該使用哪種服務？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。第一項需求：受監管的公司需要根據合規規則持續評估資源。第二項需求：準備增加流量的新創公司必須將應用程式憑證保留在原始程式碼之外並自動輪換它們。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "Amazon Kinesis",
-          "B": "Amazon EFS",
-          "C": "AWS CodeBuild",
-          "D": "AWS Config"
+          "A": "Amazon GuardDuty",
+          "B": "IAM 策略模擬器和 CloudTrail 證據",
+          "C": "服務控制策略",
+          "D": "AWS Config",
+          "E": "AWS Secrets Manager"
         },
-        "explanation": "AWS Config 記錄資源配置並根據規則和一致性套件進行評估。\n其他選擇提供串流媒體、文件儲存或建置自動化。"
+        "explanation": "AWS Config 符合第一項需求：AWS Config 記錄資源配置並根據規則和一致性套件進行評估。 AWS Secrets Manager 符合第二項需求：Secrets Manager 儲存憑證並支援輪換工作流程和執行時間檢索。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "soa-c03-d4-029",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team with strict recovery objectives must keep application credentials out of source code and rotate them automatically. Which service fits?",
+    "question": "A team with strict recovery objectives is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team must keep application credentials out of source code and rotate them automatically. Which service fits?",
     "options": {
       "A": "AWS Secrets Manager",
-      "B": "Amazon CloudFront",
-      "C": "AWS Transit Gateway",
-      "D": "Amazon Athena"
+      "B": "Amazon GuardDuty",
+      "C": "IAM policy simulator and CloudTrail evidence",
+      "D": "A service control policy"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Secrets Manager stores credentials and supports rotation workflows and runtime retrieval.\nThe other choices provide content delivery, routing, or SQL query services.",
-    "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Secrets Manager stores credentials and supports rotation workflows and runtime retrieval.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Secrets Manager for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格恢復目標的團隊必須將應用程式憑證保留在原始程式碼之外並自動輪換它們。適合哪種服務？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。具有嚴格恢復目標的團隊必須將應用程式憑證保留在原始程式碼之外並自動輪換它們。適合哪種服務？",
         "options": {
           "A": "AWS Secrets Manager",
-          "B": "Amazon CloudFront",
-          "C": "AWS Transit Gateway",
-          "D": "Amazon Athena"
+          "B": "Amazon GuardDuty",
+          "C": "IAM 策略模擬器和 CloudTrail 證據",
+          "D": "服務控制策略"
         },
-        "explanation": "Secrets Manager 儲存憑證並支援輪換工作流程和執行時間檢索。\n其他選擇提供內容交付、路由或 SQL 查詢服務。"
+        "explanation": "Secrets Manager 儲存憑證並支援輪換工作流程和執行時間檢索。\n其他選項適用於此領域的不同需求，但不能像 AWS Secrets Manager 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d4-030",
-    "type": "single",
-    "question": "A developer team preparing a release needs a managed service to detect suspicious API and network activity. Which service should be enabled?",
-    "options": {
-      "A": "AWS CloudFormation",
-      "B": "Amazon GuardDuty",
-      "C": "AWS Artifact",
-      "D": "Amazon EBS"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "GuardDuty analyzes supported account and network telemetry and produces threat findings.\nThe other choices provide compliance documents, block storage, or infrastructure provisioning.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A developer team preparing a release is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs a managed service to detect suspicious API and network activity. Which service should be enabled?",
+    "options": {
+      "A": "IAM policy simulator and CloudTrail evidence",
+      "B": "A service control policy",
+      "C": "AWS Config",
+      "D": "Amazon GuardDuty"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "GuardDuty analyzes supported account and network telemetry and produces threat findings.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon GuardDuty for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊需要託管服務來偵測可疑的 API 和網路活動。應該啟用哪個服務？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。準備發布的開發團隊需要託管服務來偵測可疑的 API 和網路活動。應該啟用哪個服務？",
         "options": {
-          "A": "AWS CloudFormation",
-          "B": "Amazon GuardDuty",
-          "C": "AWS Artifact",
-          "D": "Amazon EBS"
+          "A": "IAM 策略模擬器和 CloudTrail 證據",
+          "B": "服務控制策略",
+          "C": "AWS Config",
+          "D": "Amazon GuardDuty"
         },
-        "explanation": "GuardDuty 分析支援的帳戶和網路遙測並產生威脅結果。\n其他選擇提供合規性文件、區塊儲存或基礎架構配置。"
+        "explanation": "GuardDuty 分析支援的帳戶和網路遙測並產生威脅結果。\n其他選項適用於此領域的不同需求，但不能像 Amazon GuardDuty 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d4-031",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An enterprise with several AWS Regions needs to find why an IAM principal was denied access to an S3 object. Which tool should be checked first?",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs to find why an IAM principal was denied access to an S3 object. Which tool should be checked first?",
     "options": {
-      "A": "EBS burst balance",
-      "B": "Route 53 latency records",
+      "A": "AWS Config",
+      "B": "AWS Secrets Manager",
       "C": "IAM policy simulator and CloudTrail evidence",
-      "D": "CloudFront cache statistics"
+      "D": "A service control policy"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "The IAM policy simulator evaluates authorization and CloudTrail can show the denied API call and context.\nThe other choices measure CDN, storage, or DNS behavior rather than IAM authorization.",
-    "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "The IAM policy simulator evaluates authorization and CloudTrail can show the denied API call and context.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide IAM policy simulator and CloudTrail evidence for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業需要找出 IAM 委託人存取 S3 物件被拒絕的原因。應先檢查哪個工具？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。擁有多個 AWS 區域的企業需要找出 IAM 委託人存取 S3 物件被拒絕的原因。應先檢查哪個工具？",
         "options": {
-          "A": "EBS 突發餘額",
-          "B": "Route 53 延遲記錄",
+          "A": "AWS Config",
+          "B": "AWS Secrets Manager",
           "C": "IAM 策略模擬器和 CloudTrail 證據",
-          "D": "CloudFront 快取統計資訊"
+          "D": "服務控制策略"
         },
-        "explanation": "IAM 策略模擬器評估授權，CloudTrail 可以顯示被拒絕的 API 呼叫和上下文。\n其他選擇衡量 CDN、儲存或 DNS 行為，而不是 IAM 授權。"
+        "explanation": "IAM 策略模擬器評估授權，CloudTrail 可以顯示被拒絕的 API 呼叫和上下文。\n其他選項適用於此領域的不同需求，但不能像 IAM 策略模擬器和 CloudTrail 證據 一樣直接滿足題目的指定條件。"
       }
     }
   }

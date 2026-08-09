@@ -1,1429 +1,1780 @@
 [
   {
     "id": "ans-c01-d2-001",
-    "type": "single",
-    "question": "A production team must advertise selected VPC prefixes to an on-premises router over a private connection. Which protocol is commonly used?",
-    "options": {
-      "A": "DNS TXT records",
-      "B": "S3 lifecycle rules",
-      "C": "BGP over a Direct Connect or VPN connection",
-      "D": "HTTP over CloudFront"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "BGP exchanges routes over supported hybrid connectivity links.\nThe other choices are application, DNS, or storage controls.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A production team is planning two independent production changes. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The first team must advertise selected VPC prefixes to an on-premises router over a private connection. A second team needs encrypted connectivity between two networks over the public internet. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "The load balancer type and the relevant proxy or header behavior",
+      "B": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "C": "BGP over a Direct Connect or VPN connection",
+      "D": "AWS Site-to-Site VPN",
+      "E": "A PrivateLink endpoint service"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "BGP over a Direct Connect or VPN connection meets the first requirement: BGP exchanges routes over supported hybrid connectivity links. AWS Site-to-Site VPN meets the second requirement: Site-to-Site VPN creates encrypted tunnels between networks.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "生產團隊必須透過專用連線將選定的 VPC 前綴通告到本機路由器。常用的是哪種協定？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊必須考慮混合式連線、現有安全邊界，以及變更部署後的營運疑難排解。第一項需求：生產團隊必須透過專用連線將選定的 VPC 前綴通告到本機路由器。第二項需求：多帳戶平台團隊需要透過公共互聯網在兩個網路之間建立加密連線。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "DNS TXT 記錄",
-          "B": "S3 生命週期規則",
+          "A": "負載平衡器類型和相關代理或標頭行為",
+          "B": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
           "C": "透過 Direct Connect 或 VPN 連接的 BGP",
-          "D": "透過 CloudFront 的 HTTP"
+          "D": "AWS Site-to-Site VPN",
+          "E": "PrivateLink 端點服務"
         },
-        "explanation": "BGP 透過支援的混合連接鏈路交換路由。\n其他選擇是應用程式、DNS 或儲存控制。"
+        "explanation": "透過 Direct Connect 或 VPN 連接的 BGP 符合第一項需求：BGP 透過支援的混合連接鏈路交換路由。 AWS Site-to-Site VPN 符合第二項需求：站點到站點 VPN 在網路之間建立加密隧道。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d2-002",
-    "type": "single",
-    "question": "A multi-account platform team needs encrypted connectivity between two networks over the public internet. Which service should be configured?",
-    "options": {
-      "A": "Amazon EFS",
-      "B": "AWS Glue",
-      "C": "Amazon Macie",
-      "D": "AWS Site-to-Site VPN"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Site-to-Site VPN creates encrypted tunnels between networks.\nThe other choices provide file storage, ETL, or data discovery.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A multi-account platform team is planning two independent production changes. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The first team needs encrypted connectivity between two networks over the public internet. A second team must expose a private application to selected customer VPCs without VPC peering. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "BGP over a Direct Connect or VPN connection",
+      "B": "AWS Site-to-Site VPN",
+      "C": "A PrivateLink endpoint service",
+      "D": "The load balancer type and the relevant proxy or header behavior",
+      "E": "Infrastructure as code with CloudFormation or the AWS CDK"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS Site-to-Site VPN meets the first requirement: Site-to-Site VPN creates encrypted tunnels between networks. A PrivateLink endpoint service meets the second requirement: PrivateLink uses interface endpoints and provider endpoint services for private consumer access.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊需要透過公共互聯網在兩個網路之間建立加密連線。應該配置哪個服務？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊必須考慮混合式連線、現有安全邊界，以及變更部署後的營運疑難排解。第一項需求：多帳戶平台團隊需要透過公共互聯網在兩個網路之間建立加密連線。第二項需求：受監管的公司必須向選定的客戶 VPC 公開私有應用程式，而無需 VPC 對等互連。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "Amazon EFS",
-          "B": "AWS Glue",
-          "C": "Amazon Macie",
-          "D": "AWS Site-to-Site VPN"
+          "A": "透過 Direct Connect 或 VPN 連接的 BGP",
+          "B": "AWS Site-to-Site VPN",
+          "C": "PrivateLink 端點服務",
+          "D": "負載平衡器類型和相關代理或標頭行為",
+          "E": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼"
         },
-        "explanation": "站點到站點 VPN 在網路之間建立加密隧道。\n其他選項提供文件儲存、ETL 或資料發現。"
+        "explanation": "AWS Site-to-Site VPN 符合第一項需求：站點到站點 VPN 在網路之間建立加密隧道。 PrivateLink 端點服務 符合第二項需求：PrivateLink 使用介面端點和提供者端點服務進行私人消費者存取。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d2-003",
-    "type": "single",
-    "question": "A regulated company must expose a private application to selected customer VPCs without VPC peering. Which feature fits?",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A regulated company is planning two independent production changes. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The first team must expose a private application to selected customer VPCs without VPC peering. A second team needs to preserve source IP information through a load balancer for an application. Which TWO actions satisfy these requirements?",
     "options": {
       "A": "A PrivateLink endpoint service",
-      "B": "A public IP allowlist only",
-      "C": "An S3 website endpoint",
-      "D": "A single NAT gateway"
+      "B": "The load balancer type and the relevant proxy or header behavior",
+      "C": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "D": "BGP over a Direct Connect or VPN connection",
+      "E": "AWS Site-to-Site VPN"
     },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "PrivateLink uses interface endpoints and provider endpoint services for private consumer access.\nThe other choices do not provide private service endpoints.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "A PrivateLink endpoint service meets the first requirement: PrivateLink uses interface endpoints and provider endpoint services for private consumer access. The load balancer type and the relevant proxy or header behavior meets the second requirement: Source address preservation depends on load balancer behavior and application headers or protocol support.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "受監管的公司必須向選定的客戶 VPC 公開私有應用程式，而無需 VPC 對等互連。適合哪個功能？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊必須考慮混合式連線、現有安全邊界，以及變更部署後的營運疑難排解。第一項需求：受監管的公司必須向選定的客戶 VPC 公開私有應用程式，而無需 VPC 對等互連。第二項需求：準備應對流量增加的新創公司需要透過應用程式的負載平衡器保留來源 IP 資訊。哪兩項操作可以滿足這些需求？",
         "options": {
           "A": "PrivateLink 端點服務",
-          "B": "僅限公共 IP 授權名單",
-          "C": "S3 網站端點",
-          "D": "單一 NAT gateway"
+          "B": "負載平衡器類型和相關代理或標頭行為",
+          "C": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
+          "D": "透過 Direct Connect 或 VPN 連接的 BGP",
+          "E": "AWS Site-to-Site VPN"
         },
-        "explanation": "PrivateLink 使用介面端點和提供者端點服務進行私人消費者存取。\n其他選擇不提供專用服務端點。"
+        "explanation": "PrivateLink 端點服務 符合第一項需求：PrivateLink 使用介面端點和提供者端點服務進行私人消費者存取。 負載平衡器類型和相關代理或標頭行為 符合第二項需求：來源位址保留取決於負載平衡器行為和應用程式標頭或協定支援。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d2-004",
-    "type": "single",
-    "question": "A startup preparing for a traffic increase needs to preserve source IP information through a load balancer for an application. Which design detail must be considered?",
-    "options": {
-      "A": "A Route 53 TTL only",
-      "B": "The load balancer type and the relevant proxy or header behavior",
-      "C": "An S3 storage class",
-      "D": "A KMS alias"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Source address preservation depends on load balancer behavior and application headers or protocol support.\nThe other choices do not control load balancer source information.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A startup preparing for a traffic increase is designing one integrated end-to-end network architecture across accounts and Regions. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The design must keep recurring cost proportional to use, enforce least privilege, and remain available during a component or Availability Zone failure. Match each connected stage to the implementation that lets the complete architecture satisfy its business outcome.",
+    "options": {
+      "A": "Stage 1: The architecture needs to preserve source IP information through a load balancer for an application",
+      "B": "Stage 2: The architecture needs operational runbooks for repeated network changes",
+      "C": "Stage 3: The architecture must block known malicious domains for workloads in a VPC"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "The load balancer type and the relevant proxy or header behavior",
+      "2": "Systems Manager Automation",
+      "3": "Route 53 Resolver DNS Firewall"
+    },
+    "correctMatches": {
+      "A": "1",
+      "B": "2",
+      "C": "3"
+    },
+    "explanation": "A maps to The load balancer type and the relevant proxy or header behavior. Source address preservation depends on load balancer behavior and application headers or protocol support. B maps to Systems Manager Automation. Systems Manager Automation runbooks can execute repeatable operational tasks. C maps to Route 53 Resolver DNS Firewall. DNS Firewall can block or allow domain queries for VPC workloads.\nAll three stages are connected. Substituting an unrelated target would break the architecture or weaken its cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "準備應對流量增加的新創公司需要透過應用程式的負載平衡器保留來源 IP 資訊。必須考慮哪些設計細節？",
+        "question": "某企業正在跨帳戶與區域設計一個整合式端到端網路架構。三個階段彼此相連，任一階段錯誤都會影響整體業務成果。此設計必須讓持續成本與實際用量相符、落實最低權限，並在元件或可用區域發生故障時維持可用。 請把每個階段配對至最合適的實作。",
         "options": {
-          "A": "僅 Route 53 TTL",
-          "B": "負載平衡器類型和相關代理或標頭行為",
-          "C": "S3 儲存類別",
-          "D": "KMS 別名"
+          "A": "階段 1：支援關鍵工作負載的營運團隊必須自動化 VPC 並跨帳戶一致地路由配置。",
+          "B": "階段 2：階段 2：階段 2：支援關鍵工作負載的營運團隊需要針對重複網路變更的營運手冊。",
+          "C": "階段 3：生產團隊必須阻止 VPC 中工作負載的已知惡意域。"
         },
-        "explanation": "來源位址保留取決於負載平衡器行為和應用程式標頭或協定支援。\n其他選項不控制負載平衡器來源資訊。"
+        "targets": {
+          "1": "負載平衡器類型和相關代理或標頭行為",
+          "2": "Systems Manager Automation",
+          "3": "Route 53 Resolver DNS Firewall"
+        },
+        "explanation": "A 應配對 負載平衡器類型和相關代理或標頭行為；B 應配對 Systems Manager Automation；C 應配對 Route 53 Resolver DNS Firewall。三個實作共同組成完整架構。\n若以不相關的目標取代任何一項，便會破壞架構或削弱成本、安全性及可用性之間的取捨。"
       }
     }
   },
   {
     "id": "ans-c01-d2-005",
-    "type": "single",
-    "question": "An operations team supporting a critical workload must automate VPC and route configuration consistently across accounts. Which approach is appropriate?",
-    "options": {
-      "A": "Public credentials",
-      "B": "A CloudFront cache",
-      "C": "Infrastructure as code with CloudFormation or the AWS CDK",
-      "D": "Manual edits in every account"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "IaC makes network changes repeatable, reviewable, and consistent.\nManual edits and public credentials increase drift and risk.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "An operations team supporting a critical workload is planning two independent production changes. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The first team must automate VPC and route configuration consistently across accounts. A second team must advertise selected VPC prefixes to an on-premises router over a private connection. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "AWS Site-to-Site VPN",
+      "B": "A PrivateLink endpoint service",
+      "C": "The load balancer type and the relevant proxy or header behavior",
+      "D": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "E": "BGP over a Direct Connect or VPN connection"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Infrastructure as code with CloudFormation or the AWS CDK meets the first requirement: IaC makes network changes repeatable, reviewable, and consistent. BGP over a Direct Connect or VPN connection meets the second requirement: BGP exchanges routes over supported hybrid connectivity links.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊必須自動化 VPC 並跨帳戶一致地路由配置。哪種方法適合？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊必須考慮混合式連線、現有安全邊界，以及變更部署後的營運疑難排解。第一項需求：支援關鍵工作負載的營運團隊必須自動化 VPC 並跨帳戶一致地路由配置。第二項需求：生產團隊必須透過專用連線將選定的 VPC 前綴通告到本機路由器。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "公共憑證",
-          "B": "CloudFront 快取",
-          "C": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
-          "D": "每個帳戶中的手動編輯"
+          "A": "AWS Site-to-Site VPN",
+          "B": "PrivateLink 端點服務",
+          "C": "負載平衡器類型和相關代理或標頭行為",
+          "D": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
+          "E": "透過 Direct Connect 或 VPN 連接的 BGP"
         },
-        "explanation": "IaC 使網路變更可重複、可審查且一致。\n手動編輯和公共憑證會增加偏差和風險。"
+        "explanation": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼 符合第一項需求：IaC 使網路變更可重複、可審查且一致。 透過 Direct Connect 或 VPN 連接的 BGP 符合第二項需求：BGP 透過支援的混合連接鏈路交換路由。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d2-006",
-    "type": "single",
-    "question": "A data platform team must advertise selected VPC prefixes to an on-premises router over a private connection. Which protocol is commonly used?",
-    "options": {
-      "A": "HTTP over CloudFront",
-      "B": "DNS TXT records",
-      "C": "S3 lifecycle rules",
-      "D": "BGP over a Direct Connect or VPN connection"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "BGP exchanges routes over supported hybrid connectivity links.\nThe other choices are application, DNS, or storage controls.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A data platform team is planning two independent production changes. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The first team must advertise selected VPC prefixes to an on-premises router over a private connection. A second team needs encrypted connectivity between two networks over the public internet. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "The load balancer type and the relevant proxy or header behavior",
+      "B": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "C": "BGP over a Direct Connect or VPN connection",
+      "D": "AWS Site-to-Site VPN",
+      "E": "A PrivateLink endpoint service"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "BGP over a Direct Connect or VPN connection meets the first requirement: BGP exchanges routes over supported hybrid connectivity links. AWS Site-to-Site VPN meets the second requirement: Site-to-Site VPN creates encrypted tunnels between networks.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊必須透過專用連線將選取的 VPC 前綴通告至本機路由器。常用的是哪種協定？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此需求必須大規模套用。方案應避免一次性的人手設定，並提供證據證明控制措施持續有效。第一項需求：生產團隊必須透過專用連線將選定的 VPC 前綴通告到本機路由器。第二項需求：多帳戶平台團隊需要透過公共互聯網在兩個網路之間建立加密連線。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "透過 CloudFront 的 HTTP",
-          "B": "DNS TXT 記錄",
-          "C": "S3 生命週期規則",
-          "D": "透過 Direct Connect 或 VPN 連接的 BGP"
+          "A": "負載平衡器類型和相關代理或標頭行為",
+          "B": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
+          "C": "透過 Direct Connect 或 VPN 連接的 BGP",
+          "D": "AWS Site-to-Site VPN",
+          "E": "PrivateLink 端點服務"
         },
-        "explanation": "BGP 透過支援的混合連接鏈路交換路由。\n其他選擇是應用程式、DNS 或儲存控制。"
+        "explanation": "透過 Direct Connect 或 VPN 連接的 BGP 符合第一項需求：BGP 透過支援的混合連接鏈路交換路由。 AWS Site-to-Site VPN 符合第二項需求：站點到站點 VPN 在網路之間建立加密隧道。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d2-007",
-    "type": "single",
-    "question": "A security-conscious engineering team needs encrypted connectivity between two networks over the public internet. Which service should be configured?",
-    "options": {
-      "A": "AWS Site-to-Site VPN",
-      "B": "Amazon EFS",
-      "C": "AWS Glue",
-      "D": "Amazon Macie"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "Site-to-Site VPN creates encrypted tunnels between networks.\nThe other choices provide file storage, ETL, or data discovery.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A security-conscious engineering team is planning two independent production changes. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The first team needs encrypted connectivity between two networks over the public internet. A second team must expose a private application to selected customer VPCs without VPC peering. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "BGP over a Direct Connect or VPN connection",
+      "B": "AWS Site-to-Site VPN",
+      "C": "A PrivateLink endpoint service",
+      "D": "The load balancer type and the relevant proxy or header behavior",
+      "E": "Infrastructure as code with CloudFormation or the AWS CDK"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS Site-to-Site VPN meets the first requirement: Site-to-Site VPN creates encrypted tunnels between networks. A PrivateLink endpoint service meets the second requirement: PrivateLink uses interface endpoints and provider endpoint services for private consumer access.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊需要透過公共互聯網在兩個網路之間進行加密連接。應該配置哪個服務？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此需求必須大規模套用。方案應避免一次性的人手設定，並提供證據證明控制措施持續有效。第一項需求：多帳戶平台團隊需要透過公共互聯網在兩個網路之間建立加密連線。第二項需求：受監管的公司必須向選定的客戶 VPC 公開私有應用程式，而無需 VPC 對等互連。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "AWS Site-to-Site VPN",
-          "B": "Amazon EFS",
-          "C": "AWS Glue",
-          "D": "Amazon Macie"
+          "A": "透過 Direct Connect 或 VPN 連接的 BGP",
+          "B": "AWS Site-to-Site VPN",
+          "C": "PrivateLink 端點服務",
+          "D": "負載平衡器類型和相關代理或標頭行為",
+          "E": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼"
         },
-        "explanation": "站點到站點 VPN 在網路之間建立加密隧道。\n其他選項提供文件儲存、ETL 或資料發現。"
+        "explanation": "AWS Site-to-Site VPN 符合第一項需求：站點到站點 VPN 在網路之間建立加密隧道。 PrivateLink 端點服務 符合第二項需求：PrivateLink 使用介面端點和提供者端點服務進行私人消費者存取。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d2-008",
-    "type": "single",
-    "question": "A company migrating an existing workload must expose a private application to selected customer VPCs without VPC peering. Which feature fits?",
-    "options": {
-      "A": "A single NAT gateway",
-      "B": "A PrivateLink endpoint service",
-      "C": "A public IP allowlist only",
-      "D": "An S3 website endpoint"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "PrivateLink uses interface endpoints and provider endpoint services for private consumer access.\nThe other choices do not provide private service endpoints.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A company migrating an existing workload is designing one integrated end-to-end network architecture across accounts and Regions. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The design must avoid unnecessary standby cost without weakening security controls or the availability objective. Match each connected stage to the implementation that lets the complete architecture satisfy its business outcome.",
+    "options": {
+      "A": "Stage 1: The architecture must expose a private application to selected customer VPCs without VPC peering",
+      "B": "Stage 2: The architecture must enforce network and service guardrails across accounts",
+      "C": "Stage 3: The architecture needs centralized routing between dozens of VPCs and on-premises networks"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "SCPs combined with centralized policy and security services",
+      "2": "AWS Transit Gateway with route domains",
+      "3": "A PrivateLink endpoint service"
+    },
+    "correctMatches": {
+      "A": "3",
+      "B": "1",
+      "C": "2"
+    },
+    "explanation": "A maps to A PrivateLink endpoint service. PrivateLink uses interface endpoints and provider endpoint services for private consumer access. B maps to SCPs combined with centralized policy and security services. Organization guardrails and centralized policy reduce inconsistent network governance. C maps to AWS Transit Gateway with route domains. Transit Gateway provides scalable centralized routing for many network attachments.\nAll three stages are connected. Substituting an unrelated target would break the architecture or weaken its cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司必須向選定的客戶 VPC 公開私有應用程式，而無需 VPC 對等互連。適合哪個功能？",
+        "question": "某企業正在跨帳戶與區域設計一個整合式端到端網路架構。三個階段彼此相連，任一階段錯誤都會影響整體業務成果。此設計必須避免不必要的備用成本，同時不可削弱安全控制或可用性目標。 請把每個階段配對至最合適的實作。",
         "options": {
-          "A": "單一 NAT gateway",
-          "B": "PrivateLink 端點服務",
-          "C": "僅限公共 IP 授權名單",
-          "D": "S3 網站端點"
+          "A": "階段 1：階段 1：階段 1：需求：受監管的公司必須向選定的客戶 VPC 公開私有應用程式，而無需 VPC 對等互連",
+          "B": "階段 2：支援關鍵工作負載的營運團隊必須跨帳戶實施網路和服務護欄。",
+          "C": "階段 3：階段 3：階段 3：需求：生產團隊需要在數十個 VPC 和本地網路之間進行集中路由"
         },
-        "explanation": "PrivateLink 使用介面端點和提供者端點服務進行私人消費者存取。\n其他選擇不提供專用服務端點。"
+        "targets": {
+          "1": "SCP 與集中式策略和安全服務結合",
+          "2": "AWS Transit Gateway 與路由域",
+          "3": "PrivateLink 端點服務"
+        },
+        "explanation": "A 應配對 PrivateLink 端點服務；B 應配對 SCP 與集中式策略和安全服務結合；C 應配對 AWS Transit Gateway 與路由域。三個實作共同組成完整架構。\n若以不相關的目標取代任何一項，便會破壞架構或削弱成本、安全性及可用性之間的取捨。"
       }
     }
   },
   {
     "id": "ans-c01-d2-009",
-    "type": "single",
-    "question": "A team with strict recovery objectives needs to preserve source IP information through a load balancer for an application. Which design detail must be considered?",
-    "options": {
-      "A": "A KMS alias",
-      "B": "A Route 53 TTL only",
-      "C": "The load balancer type and the relevant proxy or header behavior",
-      "D": "An S3 storage class"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "Source address preservation depends on load balancer behavior and application headers or protocol support.\nThe other choices do not control load balancer source information.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A team with strict recovery objectives is planning two independent production changes. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The first team needs to preserve source IP information through a load balancer for an application. A second team must automate VPC and route configuration consistently across accounts. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "B": "BGP over a Direct Connect or VPN connection",
+      "C": "AWS Site-to-Site VPN",
+      "D": "A PrivateLink endpoint service",
+      "E": "The load balancer type and the relevant proxy or header behavior"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "The load balancer type and the relevant proxy or header behavior meets the first requirement: Source address preservation depends on load balancer behavior and application headers or protocol support. Infrastructure as code with CloudFormation or the AWS CDK meets the second requirement: IaC makes network changes repeatable, reviewable, and consistent.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有嚴格恢復目標的團隊需要透過應用程式的負載平衡器保留來源 IP 資訊。必須考慮哪些設計細節？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此需求必須大規模套用。方案應避免一次性的人手設定，並提供證據證明控制措施持續有效。第一項需求：支援關鍵工作負載的營運團隊必須自動化 VPC 並跨帳戶一致地路由配置。第二項需求：準備應對流量增加的新創公司需要透過應用程式的負載平衡器保留來源 IP 資訊。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "KMS 別名",
-          "B": "僅 Route 53 TTL",
-          "C": "負載平衡器類型和相關代理或標頭行為",
-          "D": "S3 儲存類別"
+          "A": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
+          "B": "透過 Direct Connect 或 VPN 連接的 BGP",
+          "C": "AWS Site-to-Site VPN",
+          "D": "PrivateLink 端點服務",
+          "E": "負載平衡器類型和相關代理或標頭行為"
         },
-        "explanation": "來源位址保留取決於負載平衡器行為和應用程式標頭或協定支援。\n其他選項不控制負載平衡器來源資訊。"
+        "explanation": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼 符合第一項需求：IaC 使網路變更可重複、可審查且一致。 負載平衡器類型和相關代理或標頭行為 符合第二項需求：來源位址保留取決於負載平衡器行為和應用程式標頭或協定支援。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d2-010",
-    "type": "single",
-    "question": "A developer team preparing a release must automate VPC and route configuration consistently across accounts. Which approach is appropriate?",
-    "options": {
-      "A": "Manual edits in every account",
-      "B": "Public credentials",
-      "C": "A CloudFront cache",
-      "D": "Infrastructure as code with CloudFormation or the AWS CDK"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "IaC makes network changes repeatable, reviewable, and consistent.\nManual edits and public credentials increase drift and risk.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A developer team preparing a release is planning two independent production changes. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The first team must automate VPC and route configuration consistently across accounts. A second team must advertise selected VPC prefixes to an on-premises router over a private connection. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "AWS Site-to-Site VPN",
+      "B": "A PrivateLink endpoint service",
+      "C": "The load balancer type and the relevant proxy or header behavior",
+      "D": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "E": "BGP over a Direct Connect or VPN connection"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Infrastructure as code with CloudFormation or the AWS CDK meets the first requirement: IaC makes network changes repeatable, reviewable, and consistent. BGP over a Direct Connect or VPN connection meets the second requirement: BGP exchanges routes over supported hybrid connectivity links.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊必須自動化 VPC 並跨帳戶一致地路由配置。哪種方法適合？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此需求必須大規模套用。方案應避免一次性的人手設定，並提供證據證明控制措施持續有效。第一項需求：支援關鍵工作負載的營運團隊必須自動化 VPC 並跨帳戶一致地路由配置。第二項需求：生產團隊必須透過專用連線將選定的 VPC 前綴通告到本機路由器。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "每個帳戶中的手動編輯",
-          "B": "公共憑證",
-          "C": "CloudFront 快取",
-          "D": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼"
+          "A": "AWS Site-to-Site VPN",
+          "B": "PrivateLink 端點服務",
+          "C": "負載平衡器類型和相關代理或標頭行為",
+          "D": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
+          "E": "透過 Direct Connect 或 VPN 連接的 BGP"
         },
-        "explanation": "IaC 使網路變更可重複、可審查且一致。\n手動編輯和公共憑證會增加偏差和風險。"
+        "explanation": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼 符合第一項需求：IaC 使網路變更可重複、可審查且一致。 透過 Direct Connect 或 VPN 連接的 BGP 符合第二項需求：BGP 透過支援的混合連接鏈路交換路由。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d2-011",
-    "type": "single",
-    "question": "An enterprise with several AWS Regions must advertise selected VPC prefixes to an on-premises router over a private connection. Which protocol is commonly used?",
-    "options": {
-      "A": "BGP over a Direct Connect or VPN connection",
-      "B": "HTTP over CloudFront",
-      "C": "DNS TXT records",
-      "D": "S3 lifecycle rules"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "BGP exchanges routes over supported hybrid connectivity links.\nThe other choices are application, DNS, or storage controls.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "An enterprise with several AWS Regions is planning two independent production changes. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The first team must advertise selected VPC prefixes to an on-premises router over a private connection. A second team needs encrypted connectivity between two networks over the public internet. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "The load balancer type and the relevant proxy or header behavior",
+      "B": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "C": "BGP over a Direct Connect or VPN connection",
+      "D": "AWS Site-to-Site VPN",
+      "E": "A PrivateLink endpoint service"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "BGP over a Direct Connect or VPN connection meets the first requirement: BGP exchanges routes over supported hybrid connectivity links. AWS Site-to-Site VPN meets the second requirement: Site-to-Site VPN creates encrypted tunnels between networks.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS Regions 的企業必須透過專用連線將選定的 VPC 前綴通告到本機路由器。常用哪種協議？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。目前架構支援業務關鍵服務。所選選項必須處理確切的故障或安全條件，而不會削弱其他控制措施。第一項需求：生產團隊必須透過專用連線將選定的 VPC 前綴通告到本機路由器。第二項需求：多帳戶平台團隊需要透過公共互聯網在兩個網路之間建立加密連線。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "透過 Direct Connect 或 VPN 連接的 BGP",
-          "B": "透過 CloudFront 的 HTTP",
-          "C": "DNS TXT 記錄",
-          "D": "S3 生命週期規則"
+          "A": "負載平衡器類型和相關代理或標頭行為",
+          "B": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
+          "C": "透過 Direct Connect 或 VPN 連接的 BGP",
+          "D": "AWS Site-to-Site VPN",
+          "E": "PrivateLink 端點服務"
         },
-        "explanation": "BGP 透過支援的混合連接鏈路交換路由。\n其他選擇是應用程式、DNS 或儲存控制。"
+        "explanation": "透過 Direct Connect 或 VPN 連接的 BGP 符合第一項需求：BGP 透過支援的混合連接鏈路交換路由。 AWS Site-to-Site VPN 符合第二項需求：站點到站點 VPN 在網路之間建立加密隧道。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d2-012",
-    "type": "single",
-    "question": "A service owner reviewing an incident needs encrypted connectivity between two networks over the public internet. Which service should be configured?",
-    "options": {
-      "A": "Amazon Macie",
-      "B": "AWS Site-to-Site VPN",
-      "C": "Amazon EFS",
-      "D": "AWS Glue"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Site-to-Site VPN creates encrypted tunnels between networks.\nThe other choices provide file storage, ETL, or data discovery.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A service owner reviewing an incident is designing one integrated end-to-end network architecture across accounts and Regions. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The organization will accept additional managed-service cost only when it measurably improves security and availability with less operational effort. Match each connected stage to the implementation that lets the complete architecture satisfy its business outcome.",
+    "options": {
+      "A": "Stage 1: The architecture needs encrypted connectivity between two networks over the public internet",
+      "B": "Stage 2: The architecture needs an architecture that keeps provider and consumer VPC address spaces independent",
+      "C": "Stage 3: The architecture must advertise selected VPC prefixes to an on-premises router over a private connection"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "BGP over a Direct Connect or VPN connection",
+      "2": "AWS Site-to-Site VPN",
+      "3": "AWS PrivateLink"
+    },
+    "correctMatches": {
+      "A": "2",
+      "B": "3",
+      "C": "1"
+    },
+    "explanation": "A maps to AWS Site-to-Site VPN. Site-to-Site VPN creates encrypted tunnels between networks. B maps to AWS PrivateLink. PrivateLink exposes a service through endpoint interfaces without routing consumer VPCs together. C maps to BGP over a Direct Connect or VPN connection. BGP exchanges routes over supported hybrid connectivity links.\nAll three stages are connected. Substituting an unrelated target would break the architecture or weaken its cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務所有者需要透過公共互聯網在兩個網路之間建立加密連線。應該配置哪個服務？",
+        "question": "某企業正在跨帳戶與區域設計一個整合式端到端網路架構。三個階段彼此相連，任一階段錯誤都會影響整體業務成果。只有在託管服務能以較低營運負擔明確改善安全性與可用性時，組織才會接受額外成本。 請把每個階段配對至最合適的實作。",
         "options": {
-          "A": "Amazon Macie",
-          "B": "AWS Site-to-Site VPN",
-          "C": "Amazon EFS",
-          "D": "AWS Glue"
+          "A": "階段 1：多帳戶平台團隊需要透過公共互聯網在兩個網路之間建立加密連線。",
+          "B": "階段 2：階段 2：階段 2：生產團隊需要在數十個 VPC 和本地網路之間進行集中路由。",
+          "C": "階段 3：階段 3：階段 3：生產團隊必須透過專用連線將選定的 VPC 前綴通告到本機路由器。"
         },
-        "explanation": "站點到站點 VPN 在網路之間建立加密隧道。\n其他選項提供文件儲存、ETL 或資料發現。"
+        "targets": {
+          "1": "透過 Direct Connect 或 VPN 連接的 BGP",
+          "2": "AWS Site-to-Site VPN",
+          "3": "AWS PrivateLink"
+        },
+        "explanation": "A 應配對 AWS Site-to-Site VPN；B 應配對 AWS PrivateLink；C 應配對 透過 Direct Connect 或 VPN 連接的 BGP。三個實作共同組成完整架構。\n若以不相關的目標取代任何一項，便會破壞架構或削弱成本、安全性及可用性之間的取捨。"
       }
     }
   },
   {
     "id": "ans-c01-d2-013",
-    "type": "single",
-    "question": "A team optimizing an existing implementation must expose a private application to selected customer VPCs without VPC peering. Which feature fits?",
-    "options": {
-      "A": "An S3 website endpoint",
-      "B": "A single NAT gateway",
-      "C": "A PrivateLink endpoint service",
-      "D": "A public IP allowlist only"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "PrivateLink uses interface endpoints and provider endpoint services for private consumer access.\nThe other choices do not provide private service endpoints.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A team optimizing an existing implementation is planning two independent production changes. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The first team must expose a private application to selected customer VPCs without VPC peering. A second team needs to preserve source IP information through a load balancer for an application. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "A PrivateLink endpoint service",
+      "B": "The load balancer type and the relevant proxy or header behavior",
+      "C": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "D": "BGP over a Direct Connect or VPN connection",
+      "E": "AWS Site-to-Site VPN"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "A PrivateLink endpoint service meets the first requirement: PrivateLink uses interface endpoints and provider endpoint services for private consumer access. The load balancer type and the relevant proxy or header behavior meets the second requirement: Source address preservation depends on load balancer behavior and application headers or protocol support.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊必須向選定的客戶 VPC 公開私有應用程式，而無需 VPC 對等互連。適合哪個功能？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。目前架構支援業務關鍵服務。所選選項必須處理確切的故障或安全條件，而不會削弱其他控制措施。第一項需求：受監管的公司必須向選定的客戶 VPC 公開私有應用程式，而無需 VPC 對等互連。第二項需求：準備應對流量增加的新創公司需要透過應用程式的負載平衡器保留來源 IP 資訊。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "S3 網站端點",
-          "B": "單一 NAT gateway",
-          "C": "PrivateLink 端點服務",
-          "D": "僅限公共 IP 授權名單"
+          "A": "PrivateLink 端點服務",
+          "B": "負載平衡器類型和相關代理或標頭行為",
+          "C": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
+          "D": "透過 Direct Connect 或 VPN 連接的 BGP",
+          "E": "AWS Site-to-Site VPN"
         },
-        "explanation": "PrivateLink 使用介面端點和提供者端點服務進行私人消費者存取。\n其他選擇不提供專用服務端點。"
+        "explanation": "PrivateLink 端點服務 符合第一項需求：PrivateLink 使用介面端點和提供者端點服務進行私人消費者存取。 負載平衡器類型和相關代理或標頭行為 符合第二項需求：來源位址保留取決於負載平衡器行為和應用程式標頭或協定支援。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d2-014",
-    "type": "single",
-    "question": "A company introducing an automated workflow needs to preserve source IP information through a load balancer for an application. Which design detail must be considered?",
-    "options": {
-      "A": "An S3 storage class",
-      "B": "A KMS alias",
-      "C": "A Route 53 TTL only",
-      "D": "The load balancer type and the relevant proxy or header behavior"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Source address preservation depends on load balancer behavior and application headers or protocol support.\nThe other choices do not control load balancer source information.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A company introducing an automated workflow is planning two independent production changes. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The first team needs to preserve source IP information through a load balancer for an application. A second team must automate VPC and route configuration consistently across accounts. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "B": "BGP over a Direct Connect or VPN connection",
+      "C": "AWS Site-to-Site VPN",
+      "D": "A PrivateLink endpoint service",
+      "E": "The load balancer type and the relevant proxy or header behavior"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "The load balancer type and the relevant proxy or header behavior meets the first requirement: Source address preservation depends on load balancer behavior and application headers or protocol support. Infrastructure as code with CloudFormation or the AWS CDK meets the second requirement: IaC makes network changes repeatable, reviewable, and consistent.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司需要透過應用程式的負載平衡器保留來源 IP 資訊。必須考慮哪些設計細節？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。目前架構支援業務關鍵服務。所選選項必須處理確切的故障或安全條件，而不會削弱其他控制措施。第一項需求：支援關鍵工作負載的營運團隊必須自動化 VPC 並跨帳戶一致地路由配置。第二項需求：準備應對流量增加的新創公司需要透過應用程式的負載平衡器保留來源 IP 資訊。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "S3 儲存類別",
-          "B": "KMS 別名",
-          "C": "僅 Route 53 TTL",
-          "D": "負載平衡器類型和相關代理或標頭行為"
+          "A": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
+          "B": "透過 Direct Connect 或 VPN 連接的 BGP",
+          "C": "AWS Site-to-Site VPN",
+          "D": "PrivateLink 端點服務",
+          "E": "負載平衡器類型和相關代理或標頭行為"
         },
-        "explanation": "來源位址保留取決於負載平衡器行為和應用程式標頭或協定支援。\n其他選項不控制負載平衡器來源資訊。"
+        "explanation": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼 符合第一項需求：IaC 使網路變更可重複、可審查且一致。 負載平衡器類型和相關代理或標頭行為 符合第二項需求：來源位址保留取決於負載平衡器行為和應用程式標頭或協定支援。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d2-015",
-    "type": "single",
-    "question": "An AWS administrator working in a shared environment must automate VPC and route configuration consistently across accounts. Which approach is appropriate?",
-    "options": {
-      "A": "Infrastructure as code with CloudFormation or the AWS CDK",
-      "B": "Manual edits in every account",
-      "C": "Public credentials",
-      "D": "A CloudFront cache"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "IaC makes network changes repeatable, reviewable, and consistent.\nManual edits and public credentials increase drift and risk.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "An AWS administrator working in a shared environment is planning two independent production changes. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The first team must automate VPC and route configuration consistently across accounts. A second team must advertise selected VPC prefixes to an on-premises router over a private connection. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "AWS Site-to-Site VPN",
+      "B": "A PrivateLink endpoint service",
+      "C": "The load balancer type and the relevant proxy or header behavior",
+      "D": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "E": "BGP over a Direct Connect or VPN connection"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Infrastructure as code with CloudFormation or the AWS CDK meets the first requirement: IaC makes network changes repeatable, reviewable, and consistent. BGP over a Direct Connect or VPN connection meets the second requirement: BGP exchanges routes over supported hybrid connectivity links.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "在共用環境中工作的 AWS 管理員必須自動化 VPC 並跨帳戶一致地路由配置。哪種方法適合？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。目前架構支援業務關鍵服務。所選選項必須處理確切的故障或安全條件，而不會削弱其他控制措施。第一項需求：支援關鍵工作負載的營運團隊必須自動化 VPC 並跨帳戶一致地路由配置。第二項需求：生產團隊必須透過專用連線將選定的 VPC 前綴通告到本機路由器。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
-          "B": "每個帳戶中的手動編輯",
-          "C": "公共憑證",
-          "D": "CloudFront 快取"
+          "A": "AWS Site-to-Site VPN",
+          "B": "PrivateLink 端點服務",
+          "C": "負載平衡器類型和相關代理或標頭行為",
+          "D": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
+          "E": "透過 Direct Connect 或 VPN 連接的 BGP"
         },
-        "explanation": "IaC 使網路變更可重複、可審查且一致。\n手動編輯和公共憑證會增加偏差和風險。"
+        "explanation": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼 符合第一項需求：IaC 使網路變更可重複、可審查且一致。 透過 Direct Connect 或 VPN 連接的 BGP 符合第二項需求：BGP 透過支援的混合連接鏈路交換路由。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d2-016",
-    "type": "single",
-    "question": "A customer-facing application team must advertise selected VPC prefixes to an on-premises router over a private connection. Which protocol is commonly used?",
-    "options": {
-      "A": "S3 lifecycle rules",
-      "B": "BGP over a Direct Connect or VPN connection",
-      "C": "HTTP over CloudFront",
-      "D": "DNS TXT records"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "BGP exchanges routes over supported hybrid connectivity links.\nThe other choices are application, DNS, or storage controls.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A customer-facing application team is designing one integrated end-to-end network architecture across accounts and Regions. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The architecture must limit blast radius, preserve availability during change, and control cost through automation instead of permanent overprovisioning. Match each connected stage to the implementation that lets the complete architecture satisfy its business outcome.",
+    "options": {
+      "A": "Stage 1: The architecture must advertise selected VPC prefixes to an on-premises router over a private connection",
+      "B": "Stage 2: The architecture must automate VPC and route configuration consistently across accounts",
+      "C": "Stage 3: The architecture needs to investigate rejected packets between two VPC subnets"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "BGP over a Direct Connect or VPN connection",
+      "2": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "3": "VPC Flow Logs and route and security group configuration"
+    },
+    "correctMatches": {
+      "A": "1",
+      "B": "2",
+      "C": "3"
+    },
+    "explanation": "A maps to BGP over a Direct Connect or VPN connection. BGP exchanges routes over supported hybrid connectivity links. B maps to Infrastructure as code with CloudFormation or the AWS CDK. IaC makes network changes repeatable, reviewable, and consistent. C maps to VPC Flow Logs and route and security group configuration. Flow Logs combined with routing and security controls identify where traffic is rejected.\nAll three stages are connected. Substituting an unrelated target would break the architecture or weaken its cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊必須透過專用連線將選取的 VPC 前綴通告到本機路由器。常用的是哪種協定？",
+        "question": "某企業正在跨帳戶與區域設計一個整合式端到端網路架構。三個階段彼此相連，任一階段錯誤都會影響整體業務成果。此架構必須限制影響範圍、在變更期間維持可用性，並透過自動化控制成本，而不是長期過度佈建。 請把每個階段配對至最合適的實作。",
         "options": {
-          "A": "S3 生命週期規則",
-          "B": "透過 Direct Connect 或 VPN 連接的 BGP",
-          "C": "透過 CloudFront 的 HTTP",
-          "D": "DNS TXT 記錄"
+          "A": "階段 1：階段 3：階段 3：生產團隊必須透過專用連線將選定的 VPC 前綴通告到本機路由器。",
+          "B": "階段 2：階段 2：階段 2：支援關鍵工作負載的營運團隊必須自動化 VPC 並跨帳戶一致地路由配置。",
+          "C": "階段 3：階段 3：階段 3：需求：製作團隊需要調查兩個 VPC 子網路之間被拒絕的資料包"
         },
-        "explanation": "BGP 透過支援的混合連接鏈路交換路由。\n其他選擇是應用程式、DNS 或儲存控制。"
+        "targets": {
+          "1": "透過 Direct Connect 或 VPN 連接的 BGP",
+          "2": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
+          "3": "VPC Flow Logs 以及路由和安全群組配置"
+        },
+        "explanation": "A 應配對 透過 Direct Connect 或 VPN 連接的 BGP；B 應配對 使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼；C 應配對 VPC Flow Logs 以及路由和安全群組配置。三個實作共同組成完整架構。\n若以不相關的目標取代任何一項，便會破壞架構或削弱成本、安全性及可用性之間的取捨。"
       }
     }
   },
   {
     "id": "ans-c01-d2-017",
-    "type": "single",
-    "question": "A platform team standardizing its AWS deployments needs encrypted connectivity between two networks over the public internet. Which service should be configured?",
-    "options": {
-      "A": "AWS Glue",
-      "B": "Amazon Macie",
-      "C": "AWS Site-to-Site VPN",
-      "D": "Amazon EFS"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "Site-to-Site VPN creates encrypted tunnels between networks.\nThe other choices provide file storage, ETL, or data discovery.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A platform team standardizing its AWS deployments is planning two independent production changes. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The first team needs encrypted connectivity between two networks over the public internet. A second team must expose a private application to selected customer VPCs without VPC peering. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "BGP over a Direct Connect or VPN connection",
+      "B": "AWS Site-to-Site VPN",
+      "C": "A PrivateLink endpoint service",
+      "D": "The load balancer type and the relevant proxy or header behavior",
+      "E": "Infrastructure as code with CloudFormation or the AWS CDK"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS Site-to-Site VPN meets the first requirement: Site-to-Site VPN creates encrypted tunnels between networks. A PrivateLink endpoint service meets the second requirement: PrivateLink uses interface endpoints and provider endpoint services for private consumer access.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊需要透過公共互聯網在兩個網路之間建立加密連線。應該配置哪個服務？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。專業工程師將審查實作的服務限制、故障行為及建議設計的營運取捨。第一項需求：多帳戶平台團隊需要透過公共互聯網在兩個網路之間建立加密連線。第二項需求：受監管的公司必須向選定的客戶 VPC 公開私有應用程式，而無需 VPC 對等互連。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "AWS Glue",
-          "B": "Amazon Macie",
-          "C": "AWS Site-to-Site VPN",
-          "D": "Amazon EFS"
+          "A": "透過 Direct Connect 或 VPN 連接的 BGP",
+          "B": "AWS Site-to-Site VPN",
+          "C": "PrivateLink 端點服務",
+          "D": "負載平衡器類型和相關代理或標頭行為",
+          "E": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼"
         },
-        "explanation": "站點到站點 VPN 在網路之間建立加密隧道。\n其他選項提供文件儲存、ETL 或資料發現。"
+        "explanation": "AWS Site-to-Site VPN 符合第一項需求：站點到站點 VPN 在網路之間建立加密隧道。 PrivateLink 端點服務 符合第二項需求：PrivateLink 使用介面端點和提供者端點服務進行私人消費者存取。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d2-018",
-    "type": "single",
-    "question": "A team preparing evidence for an audit must expose a private application to selected customer VPCs without VPC peering. Which feature fits?",
-    "options": {
-      "A": "A public IP allowlist only",
-      "B": "An S3 website endpoint",
-      "C": "A single NAT gateway",
-      "D": "A PrivateLink endpoint service"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "PrivateLink uses interface endpoints and provider endpoint services for private consumer access.\nThe other choices do not provide private service endpoints.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A team preparing evidence for an audit is planning two independent production changes. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The first team must expose a private application to selected customer VPCs without VPC peering. A second team needs to preserve source IP information through a load balancer for an application. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "A PrivateLink endpoint service",
+      "B": "The load balancer type and the relevant proxy or header behavior",
+      "C": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "D": "BGP over a Direct Connect or VPN connection",
+      "E": "AWS Site-to-Site VPN"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "A PrivateLink endpoint service meets the first requirement: PrivateLink uses interface endpoints and provider endpoint services for private consumer access. The load balancer type and the relevant proxy or header behavior meets the second requirement: Source address preservation depends on load balancer behavior and application headers or protocol support.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "準備審計證據的團隊必須向選定的客戶 VPC 公開私有應用程式，而無需 VPC 對等互連。適合哪個功能？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。專業工程師將審查實作的服務限制、故障行為及建議設計的營運取捨。第一項需求：受監管的公司必須向選定的客戶 VPC 公開私有應用程式，而無需 VPC 對等互連。第二項需求：準備應對流量增加的新創公司需要透過應用程式的負載平衡器保留來源 IP 資訊。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "僅限公共 IP 授權名單",
-          "B": "S3 網站端點",
-          "C": "單一 NAT gateway",
-          "D": "PrivateLink 端點服務"
+          "A": "PrivateLink 端點服務",
+          "B": "負載平衡器類型和相關代理或標頭行為",
+          "C": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
+          "D": "透過 Direct Connect 或 VPN 連接的 BGP",
+          "E": "AWS Site-to-Site VPN"
         },
-        "explanation": "PrivateLink 使用介面端點和提供者端點服務進行私人消費者存取。\n其他選擇不提供專用服務端點。"
+        "explanation": "PrivateLink 端點服務 符合第一項需求：PrivateLink 使用介面端點和提供者端點服務進行私人消費者存取。 負載平衡器類型和相關代理或標頭行為 符合第二項需求：來源位址保留取決於負載平衡器行為和應用程式標頭或協定支援。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d2-019",
-    "type": "single",
-    "question": "A business replacing a manual process needs to preserve source IP information through a load balancer for an application. Which design detail must be considered?",
-    "options": {
-      "A": "The load balancer type and the relevant proxy or header behavior",
-      "B": "An S3 storage class",
-      "C": "A KMS alias",
-      "D": "A Route 53 TTL only"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "Source address preservation depends on load balancer behavior and application headers or protocol support.\nThe other choices do not control load balancer source information.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A business replacing a manual process is planning two independent production changes. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The first team needs to preserve source IP information through a load balancer for an application. A second team must automate VPC and route configuration consistently across accounts. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "B": "BGP over a Direct Connect or VPN connection",
+      "C": "AWS Site-to-Site VPN",
+      "D": "A PrivateLink endpoint service",
+      "E": "The load balancer type and the relevant proxy or header behavior"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "The load balancer type and the relevant proxy or header behavior meets the first requirement: Source address preservation depends on load balancer behavior and application headers or protocol support. Infrastructure as code with CloudFormation or the AWS CDK meets the second requirement: IaC makes network changes repeatable, reviewable, and consistent.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "替代手動流程的企業需要透過應用程式的負載平衡器保留來源 IP 資訊。必須考慮哪些設計細節？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。專業工程師將審查實作的服務限制、故障行為及建議設計的營運取捨。第一項需求：支援關鍵工作負載的營運團隊必須自動化 VPC 並跨帳戶一致地路由配置。第二項需求：準備應對流量增加的新創公司需要透過應用程式的負載平衡器保留來源 IP 資訊。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "負載平衡器類型和相關代理或標頭行為",
-          "B": "S3 儲存類別",
-          "C": "KMS 別名",
-          "D": "僅 Route 53 TTL"
+          "A": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
+          "B": "透過 Direct Connect 或 VPN 連接的 BGP",
+          "C": "AWS Site-to-Site VPN",
+          "D": "PrivateLink 端點服務",
+          "E": "負載平衡器類型和相關代理或標頭行為"
         },
-        "explanation": "來源位址保留取決於負載平衡器行為和應用程式標頭或協定支援。\n其他選項不控制負載平衡器來源資訊。"
+        "explanation": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼 符合第一項需求：IaC 使網路變更可重複、可審查且一致。 負載平衡器類型和相關代理或標頭行為 符合第二項需求：來源位址保留取決於負載平衡器行為和應用程式標頭或協定支援。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d2-020",
-    "type": "single",
-    "question": "A team validating a design against the exam guide must automate VPC and route configuration consistently across accounts. Which approach is appropriate?",
-    "options": {
-      "A": "A CloudFront cache",
-      "B": "Infrastructure as code with CloudFormation or the AWS CDK",
-      "C": "Manual edits in every account",
-      "D": "Public credentials"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "IaC makes network changes repeatable, reviewable, and consistent.\nManual edits and public credentials increase drift and risk.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A team validating a design against the exam guide is designing one integrated end-to-end network architecture across accounts and Regions. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The selected controls must provide auditable security, predictable availability, and the lowest operational cost that still satisfies both requirements. Match each connected stage to the implementation that lets the complete architecture satisfy its business outcome.",
+    "options": {
+      "A": "Stage 1: The architecture must automate VPC and route configuration consistently across accounts",
+      "B": "Stage 2: The architecture needs operational runbooks for repeated network changes",
+      "C": "Stage 3: The architecture must block known malicious domains for workloads in a VPC"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "Systems Manager Automation",
+      "2": "Route 53 Resolver DNS Firewall",
+      "3": "Infrastructure as code with CloudFormation or the AWS CDK"
+    },
+    "correctMatches": {
+      "A": "3",
+      "B": "1",
+      "C": "2"
+    },
+    "explanation": "A maps to Infrastructure as code with CloudFormation or the AWS CDK. IaC makes network changes repeatable, reviewable, and consistent. B maps to Systems Manager Automation. Systems Manager Automation runbooks can execute repeatable operational tasks. C maps to Route 53 Resolver DNS Firewall. DNS Firewall can block or allow domain queries for VPC workloads.\nAll three stages are connected. Substituting an unrelated target would break the architecture or weaken its cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊必須自動化 VPC 並跨帳戶一致地路由配置。哪種方法適合？",
+        "question": "某企業正在跨帳戶與區域設計一個整合式端到端網路架構。三個階段彼此相連，任一階段錯誤都會影響整體業務成果。所選控制必須提供可稽核的安全性、可預測的可用性，以及在滿足兩項要求前提下最低的營運成本。 請把每個階段配對至最合適的實作。",
         "options": {
-          "A": "CloudFront 快取",
-          "B": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
-          "C": "每個帳戶中的手動編輯",
-          "D": "公共憑證"
+          "A": "階段 1：階段 2：階段 2：支援關鍵工作負載的營運團隊必須自動化 VPC 並跨帳戶一致地路由配置。",
+          "B": "階段 2：階段 2：階段 2：支援關鍵工作負載的營運團隊需要針對重複網路變更的營運手冊。",
+          "C": "階段 3：生產團隊必須阻止 VPC 中工作負載的已知惡意域。"
         },
-        "explanation": "IaC 使網路變更可重複、可審查且一致。\n手動編輯和公共憑證會增加偏差和風險。"
+        "targets": {
+          "1": "Systems Manager Automation",
+          "2": "Route 53 Resolver DNS Firewall",
+          "3": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼"
+        },
+        "explanation": "A 應配對 使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼；B 應配對 Systems Manager Automation；C 應配對 Route 53 Resolver DNS Firewall。三個實作共同組成完整架構。\n若以不相關的目標取代任何一項，便會破壞架構或削弱成本、安全性及可用性之間的取捨。"
       }
     }
   },
   {
     "id": "ans-c01-d2-021",
-    "type": "single",
-    "question": "A production team must advertise selected VPC prefixes to an on-premises router over a private connection. Which protocol is commonly used?",
-    "options": {
-      "A": "DNS TXT records",
-      "B": "S3 lifecycle rules",
-      "C": "BGP over a Direct Connect or VPN connection",
-      "D": "HTTP over CloudFront"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "BGP exchanges routes over supported hybrid connectivity links.\nThe other choices are application, DNS, or storage controls.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A production team is planning two independent production changes. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The first team must advertise selected VPC prefixes to an on-premises router over a private connection. A second team needs encrypted connectivity between two networks over the public internet. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "The load balancer type and the relevant proxy or header behavior",
+      "B": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "C": "BGP over a Direct Connect or VPN connection",
+      "D": "AWS Site-to-Site VPN",
+      "E": "A PrivateLink endpoint service"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "BGP over a Direct Connect or VPN connection meets the first requirement: BGP exchanges routes over supported hybrid connectivity links. AWS Site-to-Site VPN meets the second requirement: Site-to-Site VPN creates encrypted tunnels between networks.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "生產團隊必須透過專用連線將選定的 VPC 前綴通告到本機路由器。常用的是哪種協定？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此生產環境在多個帳戶中採用集中治理。變更必須符合最低權限、可以稽核，並且不會造成長時間中斷。第一項需求：生產團隊必須透過專用連線將選定的 VPC 前綴通告到本機路由器。第二項需求：多帳戶平台團隊需要透過公共互聯網在兩個網路之間建立加密連線。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "DNS TXT 記錄",
-          "B": "S3 生命週期規則",
+          "A": "負載平衡器類型和相關代理或標頭行為",
+          "B": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
           "C": "透過 Direct Connect 或 VPN 連接的 BGP",
-          "D": "透過 CloudFront 的 HTTP"
+          "D": "AWS Site-to-Site VPN",
+          "E": "PrivateLink 端點服務"
         },
-        "explanation": "BGP 透過支援的混合連接鏈路交換路由。\n其他選擇是應用程式、DNS 或儲存控制。"
+        "explanation": "透過 Direct Connect 或 VPN 連接的 BGP 符合第一項需求：BGP 透過支援的混合連接鏈路交換路由。 AWS Site-to-Site VPN 符合第二項需求：站點到站點 VPN 在網路之間建立加密隧道。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d2-022",
-    "type": "single",
-    "question": "A multi-account platform team needs encrypted connectivity between two networks over the public internet. Which service should be configured?",
-    "options": {
-      "A": "Amazon EFS",
-      "B": "AWS Glue",
-      "C": "Amazon Macie",
-      "D": "AWS Site-to-Site VPN"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Site-to-Site VPN creates encrypted tunnels between networks.\nThe other choices provide file storage, ETL, or data discovery.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A multi-account platform team is planning two independent production changes. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The first team needs encrypted connectivity between two networks over the public internet. A second team must expose a private application to selected customer VPCs without VPC peering. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "BGP over a Direct Connect or VPN connection",
+      "B": "AWS Site-to-Site VPN",
+      "C": "A PrivateLink endpoint service",
+      "D": "The load balancer type and the relevant proxy or header behavior",
+      "E": "Infrastructure as code with CloudFormation or the AWS CDK"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS Site-to-Site VPN meets the first requirement: Site-to-Site VPN creates encrypted tunnels between networks. A PrivateLink endpoint service meets the second requirement: PrivateLink uses interface endpoints and provider endpoint services for private consumer access.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊需要透過公共互聯網在兩個網路之間建立加密連線。應該配置哪個服務？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此生產環境在多個帳戶中採用集中治理。變更必須符合最低權限、可以稽核，並且不會造成長時間中斷。第一項需求：多帳戶平台團隊需要透過公共互聯網在兩個網路之間建立加密連線。第二項需求：受監管的公司必須向選定的客戶 VPC 公開私有應用程式，而無需 VPC 對等互連。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "Amazon EFS",
-          "B": "AWS Glue",
-          "C": "Amazon Macie",
-          "D": "AWS Site-to-Site VPN"
+          "A": "透過 Direct Connect 或 VPN 連接的 BGP",
+          "B": "AWS Site-to-Site VPN",
+          "C": "PrivateLink 端點服務",
+          "D": "負載平衡器類型和相關代理或標頭行為",
+          "E": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼"
         },
-        "explanation": "站點到站點 VPN 在網路之間建立加密隧道。\n其他選項提供文件儲存、ETL 或資料發現。"
+        "explanation": "AWS Site-to-Site VPN 符合第一項需求：站點到站點 VPN 在網路之間建立加密隧道。 PrivateLink 端點服務 符合第二項需求：PrivateLink 使用介面端點和提供者端點服務進行私人消費者存取。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d2-023",
-    "type": "single",
-    "question": "A regulated company must expose a private application to selected customer VPCs without VPC peering. Which feature fits?",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A regulated company is planning two independent production changes. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The first team must expose a private application to selected customer VPCs without VPC peering. A second team needs to preserve source IP information through a load balancer for an application. Which TWO actions satisfy these requirements?",
     "options": {
       "A": "A PrivateLink endpoint service",
-      "B": "A public IP allowlist only",
-      "C": "An S3 website endpoint",
-      "D": "A single NAT gateway"
+      "B": "The load balancer type and the relevant proxy or header behavior",
+      "C": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "D": "BGP over a Direct Connect or VPN connection",
+      "E": "AWS Site-to-Site VPN"
     },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "PrivateLink uses interface endpoints and provider endpoint services for private consumer access.\nThe other choices do not provide private service endpoints.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "A PrivateLink endpoint service meets the first requirement: PrivateLink uses interface endpoints and provider endpoint services for private consumer access. The load balancer type and the relevant proxy or header behavior meets the second requirement: Source address preservation depends on load balancer behavior and application headers or protocol support.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "受監管的公司必須向選定的客戶 VPC 公開私有應用程式，而無需 VPC 對等互連。適合哪個功能？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此生產環境在多個帳戶中採用集中治理。變更必須符合最低權限、可以稽核，並且不會造成長時間中斷。第一項需求：受監管的公司必須向選定的客戶 VPC 公開私有應用程式，而無需 VPC 對等互連。第二項需求：準備應對流量增加的新創公司需要透過應用程式的負載平衡器保留來源 IP 資訊。哪兩項操作可以滿足這些需求？",
         "options": {
           "A": "PrivateLink 端點服務",
-          "B": "僅限公共 IP 授權名單",
-          "C": "S3 網站端點",
-          "D": "單一 NAT gateway"
+          "B": "負載平衡器類型和相關代理或標頭行為",
+          "C": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
+          "D": "透過 Direct Connect 或 VPN 連接的 BGP",
+          "E": "AWS Site-to-Site VPN"
         },
-        "explanation": "PrivateLink 使用介面端點和提供者端點服務進行私人消費者存取。\n其他選擇不提供專用服務端點。"
+        "explanation": "PrivateLink 端點服務 符合第一項需求：PrivateLink 使用介面端點和提供者端點服務進行私人消費者存取。 負載平衡器類型和相關代理或標頭行為 符合第二項需求：來源位址保留取決於負載平衡器行為和應用程式標頭或協定支援。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d2-024",
-    "type": "single",
-    "question": "A startup preparing for a traffic increase needs to preserve source IP information through a load balancer for an application. Which design detail must be considered?",
-    "options": {
-      "A": "A Route 53 TTL only",
-      "B": "The load balancer type and the relevant proxy or header behavior",
-      "C": "An S3 storage class",
-      "D": "A KMS alias"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Source address preservation depends on load balancer behavior and application headers or protocol support.\nThe other choices do not control load balancer source information.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A startup preparing for a traffic increase is designing one integrated end-to-end network architecture across accounts and Regions. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The design must keep recurring cost proportional to use, enforce least privilege, and remain available during a component or Availability Zone failure. Match each connected stage to the implementation that lets the complete architecture satisfy its business outcome.",
+    "options": {
+      "A": "Stage 1: The architecture needs to preserve source IP information through a load balancer for an application",
+      "B": "Stage 2: The architecture must enforce network and service guardrails across accounts",
+      "C": "Stage 3: The architecture needs centralized routing between dozens of VPCs and on-premises networks"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "AWS Transit Gateway with route domains",
+      "2": "The load balancer type and the relevant proxy or header behavior",
+      "3": "SCPs combined with centralized policy and security services"
+    },
+    "correctMatches": {
+      "A": "2",
+      "B": "3",
+      "C": "1"
+    },
+    "explanation": "A maps to The load balancer type and the relevant proxy or header behavior. Source address preservation depends on load balancer behavior and application headers or protocol support. B maps to SCPs combined with centralized policy and security services. Organization guardrails and centralized policy reduce inconsistent network governance. C maps to AWS Transit Gateway with route domains. Transit Gateway provides scalable centralized routing for many network attachments.\nAll three stages are connected. Substituting an unrelated target would break the architecture or weaken its cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "準備應對流量增加的新創公司需要透過應用程式的負載平衡器保留來源 IP 資訊。必須考慮哪些設計細節？",
+        "question": "某企業正在跨帳戶與區域設計一個整合式端到端網路架構。三個階段彼此相連，任一階段錯誤都會影響整體業務成果。此設計必須讓持續成本與實際用量相符、落實最低權限，並在元件或可用區域發生故障時維持可用。 請把每個階段配對至最合適的實作。",
         "options": {
-          "A": "僅 Route 53 TTL",
-          "B": "負載平衡器類型和相關代理或標頭行為",
-          "C": "S3 儲存類別",
-          "D": "KMS 別名"
+          "A": "階段 1：支援關鍵工作負載的營運團隊必須自動化 VPC 並跨帳戶一致地路由配置。",
+          "B": "階段 2：支援關鍵工作負載的營運團隊必須跨帳戶實施網路和服務護欄。",
+          "C": "階段 3：階段 3：階段 3：需求：生產團隊需要在數十個 VPC 和本地網路之間進行集中路由"
         },
-        "explanation": "來源位址保留取決於負載平衡器行為和應用程式標頭或協定支援。\n其他選項不控制負載平衡器來源資訊。"
+        "targets": {
+          "1": "AWS Transit Gateway 與路由域",
+          "2": "負載平衡器類型和相關代理或標頭行為",
+          "3": "SCP 與集中式策略和安全服務結合"
+        },
+        "explanation": "A 應配對 負載平衡器類型和相關代理或標頭行為；B 應配對 SCP 與集中式策略和安全服務結合；C 應配對 AWS Transit Gateway 與路由域。三個實作共同組成完整架構。\n若以不相關的目標取代任何一項，便會破壞架構或削弱成本、安全性及可用性之間的取捨。"
       }
     }
   },
   {
     "id": "ans-c01-d2-025",
-    "type": "single",
-    "question": "An operations team supporting a critical workload must automate VPC and route configuration consistently across accounts. Which approach is appropriate?",
-    "options": {
-      "A": "Public credentials",
-      "B": "A CloudFront cache",
-      "C": "Infrastructure as code with CloudFormation or the AWS CDK",
-      "D": "Manual edits in every account"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "IaC makes network changes repeatable, reviewable, and consistent.\nManual edits and public credentials increase drift and risk.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "An operations team supporting a critical workload is planning two independent production changes. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The first team must automate VPC and route configuration consistently across accounts. A second team must advertise selected VPC prefixes to an on-premises router over a private connection. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "AWS Site-to-Site VPN",
+      "B": "A PrivateLink endpoint service",
+      "C": "The load balancer type and the relevant proxy or header behavior",
+      "D": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "E": "BGP over a Direct Connect or VPN connection"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Infrastructure as code with CloudFormation or the AWS CDK meets the first requirement: IaC makes network changes repeatable, reviewable, and consistent. BGP over a Direct Connect or VPN connection meets the second requirement: BGP exchanges routes over supported hybrid connectivity links.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊必須自動化 VPC 並跨帳戶一致地路由配置。哪種方法適合？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此生產環境在多個帳戶中採用集中治理。變更必須符合最低權限、可以稽核，並且不會造成長時間中斷。第一項需求：支援關鍵工作負載的營運團隊必須自動化 VPC 並跨帳戶一致地路由配置。第二項需求：生產團隊必須透過專用連線將選定的 VPC 前綴通告到本機路由器。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "公共憑證",
-          "B": "CloudFront 快取",
-          "C": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
-          "D": "每個帳戶中的手動編輯"
+          "A": "AWS Site-to-Site VPN",
+          "B": "PrivateLink 端點服務",
+          "C": "負載平衡器類型和相關代理或標頭行為",
+          "D": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
+          "E": "透過 Direct Connect 或 VPN 連接的 BGP"
         },
-        "explanation": "IaC 使網路變更可重複、可審查且一致。\n手動編輯和公共憑證會增加偏差和風險。"
+        "explanation": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼 符合第一項需求：IaC 使網路變更可重複、可審查且一致。 透過 Direct Connect 或 VPN 連接的 BGP 符合第二項需求：BGP 透過支援的混合連接鏈路交換路由。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d2-026",
-    "type": "single",
-    "question": "A data platform team must advertise selected VPC prefixes to an on-premises router over a private connection. Which protocol is commonly used?",
-    "options": {
-      "A": "HTTP over CloudFront",
-      "B": "DNS TXT records",
-      "C": "S3 lifecycle rules",
-      "D": "BGP over a Direct Connect or VPN connection"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "BGP exchanges routes over supported hybrid connectivity links.\nThe other choices are application, DNS, or storage controls.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A data platform team is planning two independent production changes. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The first team must advertise selected VPC prefixes to an on-premises router over a private connection. A second team needs encrypted connectivity between two networks over the public internet. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "The load balancer type and the relevant proxy or header behavior",
+      "B": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "C": "BGP over a Direct Connect or VPN connection",
+      "D": "AWS Site-to-Site VPN",
+      "E": "A PrivateLink endpoint service"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "BGP over a Direct Connect or VPN connection meets the first requirement: BGP exchanges routes over supported hybrid connectivity links. AWS Site-to-Site VPN meets the second requirement: Site-to-Site VPN creates encrypted tunnels between networks.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊必須透過專用連線將選取的 VPC 前綴通告至本機路由器。常用的是哪種協定？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊必須考慮混合式連線、現有安全邊界，以及變更部署後的營運疑難排解。第一項需求：生產團隊必須透過專用連線將選定的 VPC 前綴通告到本機路由器。第二項需求：多帳戶平台團隊需要透過公共互聯網在兩個網路之間建立加密連線。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "透過 CloudFront 的 HTTP",
-          "B": "DNS TXT 記錄",
-          "C": "S3 生命週期規則",
-          "D": "透過 Direct Connect 或 VPN 連接的 BGP"
+          "A": "負載平衡器類型和相關代理或標頭行為",
+          "B": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
+          "C": "透過 Direct Connect 或 VPN 連接的 BGP",
+          "D": "AWS Site-to-Site VPN",
+          "E": "PrivateLink 端點服務"
         },
-        "explanation": "BGP 透過支援的混合連接鏈路交換路由。\n其他選擇是應用程式、DNS 或儲存控制。"
+        "explanation": "透過 Direct Connect 或 VPN 連接的 BGP 符合第一項需求：BGP 透過支援的混合連接鏈路交換路由。 AWS Site-to-Site VPN 符合第二項需求：站點到站點 VPN 在網路之間建立加密隧道。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d2-027",
-    "type": "single",
-    "question": "A security-conscious engineering team needs encrypted connectivity between two networks over the public internet. Which service should be configured?",
-    "options": {
-      "A": "AWS Site-to-Site VPN",
-      "B": "Amazon EFS",
-      "C": "AWS Glue",
-      "D": "Amazon Macie"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "Site-to-Site VPN creates encrypted tunnels between networks.\nThe other choices provide file storage, ETL, or data discovery.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A security-conscious engineering team is planning two independent production changes. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The first team needs encrypted connectivity between two networks over the public internet. A second team must expose a private application to selected customer VPCs without VPC peering. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "BGP over a Direct Connect or VPN connection",
+      "B": "AWS Site-to-Site VPN",
+      "C": "A PrivateLink endpoint service",
+      "D": "The load balancer type and the relevant proxy or header behavior",
+      "E": "Infrastructure as code with CloudFormation or the AWS CDK"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS Site-to-Site VPN meets the first requirement: Site-to-Site VPN creates encrypted tunnels between networks. A PrivateLink endpoint service meets the second requirement: PrivateLink uses interface endpoints and provider endpoint services for private consumer access.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊需要透過公共互聯網在兩個網路之間進行加密連接。應該配置哪個服務？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊必須考慮混合式連線、現有安全邊界，以及變更部署後的營運疑難排解。第一項需求：多帳戶平台團隊需要透過公共互聯網在兩個網路之間建立加密連線。第二項需求：受監管的公司必須向選定的客戶 VPC 公開私有應用程式，而無需 VPC 對等互連。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "AWS Site-to-Site VPN",
-          "B": "Amazon EFS",
-          "C": "AWS Glue",
-          "D": "Amazon Macie"
+          "A": "透過 Direct Connect 或 VPN 連接的 BGP",
+          "B": "AWS Site-to-Site VPN",
+          "C": "PrivateLink 端點服務",
+          "D": "負載平衡器類型和相關代理或標頭行為",
+          "E": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼"
         },
-        "explanation": "站點到站點 VPN 在網路之間建立加密隧道。\n其他選項提供文件儲存、ETL 或資料發現。"
+        "explanation": "AWS Site-to-Site VPN 符合第一項需求：站點到站點 VPN 在網路之間建立加密隧道。 PrivateLink 端點服務 符合第二項需求：PrivateLink 使用介面端點和提供者端點服務進行私人消費者存取。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d2-028",
-    "type": "single",
-    "question": "A company migrating an existing workload must expose a private application to selected customer VPCs without VPC peering. Which feature fits?",
-    "options": {
-      "A": "A single NAT gateway",
-      "B": "A PrivateLink endpoint service",
-      "C": "A public IP allowlist only",
-      "D": "An S3 website endpoint"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "PrivateLink uses interface endpoints and provider endpoint services for private consumer access.\nThe other choices do not provide private service endpoints.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A company migrating an existing workload is designing one integrated end-to-end network architecture across accounts and Regions. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The design must avoid unnecessary standby cost without weakening security controls or the availability objective. Match each connected stage to the implementation that lets the complete architecture satisfy its business outcome.",
+    "options": {
+      "A": "Stage 1: The architecture must expose a private application to selected customer VPCs without VPC peering",
+      "B": "Stage 2: The architecture needs an architecture that keeps provider and consumer VPC address spaces independent",
+      "C": "Stage 3: The architecture must advertise selected VPC prefixes to an on-premises router over a private connection"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "A PrivateLink endpoint service",
+      "2": "AWS PrivateLink",
+      "3": "BGP over a Direct Connect or VPN connection"
+    },
+    "correctMatches": {
+      "A": "1",
+      "B": "2",
+      "C": "3"
+    },
+    "explanation": "A maps to A PrivateLink endpoint service. PrivateLink uses interface endpoints and provider endpoint services for private consumer access. B maps to AWS PrivateLink. PrivateLink exposes a service through endpoint interfaces without routing consumer VPCs together. C maps to BGP over a Direct Connect or VPN connection. BGP exchanges routes over supported hybrid connectivity links.\nAll three stages are connected. Substituting an unrelated target would break the architecture or weaken its cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司必須向選定的客戶 VPC 公開私有應用程式，而無需 VPC 對等互連。適合哪個功能？",
+        "question": "某企業正在跨帳戶與區域設計一個整合式端到端網路架構。三個階段彼此相連，任一階段錯誤都會影響整體業務成果。此設計必須避免不必要的備用成本，同時不可削弱安全控制或可用性目標。 請把每個階段配對至最合適的實作。",
         "options": {
-          "A": "單一 NAT gateway",
-          "B": "PrivateLink 端點服務",
-          "C": "僅限公共 IP 授權名單",
-          "D": "S3 網站端點"
+          "A": "階段 1：階段 1：階段 1：需求：受監管的公司必須向選定的客戶 VPC 公開私有應用程式，而無需 VPC 對等互連",
+          "B": "階段 2：階段 2：階段 2：生產團隊需要在數十個 VPC 和本地網路之間進行集中路由。",
+          "C": "階段 3：階段 3：階段 3：生產團隊必須透過專用連線將選定的 VPC 前綴通告到本機路由器。"
         },
-        "explanation": "PrivateLink 使用介面端點和提供者端點服務進行私人消費者存取。\n其他選擇不提供專用服務端點。"
+        "targets": {
+          "1": "PrivateLink 端點服務",
+          "2": "AWS PrivateLink",
+          "3": "透過 Direct Connect 或 VPN 連接的 BGP"
+        },
+        "explanation": "A 應配對 PrivateLink 端點服務；B 應配對 AWS PrivateLink；C 應配對 透過 Direct Connect 或 VPN 連接的 BGP。三個實作共同組成完整架構。\n若以不相關的目標取代任何一項，便會破壞架構或削弱成本、安全性及可用性之間的取捨。"
       }
     }
   },
   {
     "id": "ans-c01-d2-029",
-    "type": "single",
-    "question": "A team with strict recovery objectives needs to preserve source IP information through a load balancer for an application. Which design detail must be considered?",
-    "options": {
-      "A": "A KMS alias",
-      "B": "A Route 53 TTL only",
-      "C": "The load balancer type and the relevant proxy or header behavior",
-      "D": "An S3 storage class"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "Source address preservation depends on load balancer behavior and application headers or protocol support.\nThe other choices do not control load balancer source information.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A team with strict recovery objectives is planning two independent production changes. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The first team needs to preserve source IP information through a load balancer for an application. A second team must automate VPC and route configuration consistently across accounts. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "B": "BGP over a Direct Connect or VPN connection",
+      "C": "AWS Site-to-Site VPN",
+      "D": "A PrivateLink endpoint service",
+      "E": "The load balancer type and the relevant proxy or header behavior"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "The load balancer type and the relevant proxy or header behavior meets the first requirement: Source address preservation depends on load balancer behavior and application headers or protocol support. Infrastructure as code with CloudFormation or the AWS CDK meets the second requirement: IaC makes network changes repeatable, reviewable, and consistent.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有嚴格恢復目標的團隊需要透過應用程式的負載平衡器保留來源 IP 資訊。必須考慮哪些設計細節？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊必須考慮混合式連線、現有安全邊界，以及變更部署後的營運疑難排解。第一項需求：支援關鍵工作負載的營運團隊必須自動化 VPC 並跨帳戶一致地路由配置。第二項需求：準備應對流量增加的新創公司需要透過應用程式的負載平衡器保留來源 IP 資訊。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "KMS 別名",
-          "B": "僅 Route 53 TTL",
-          "C": "負載平衡器類型和相關代理或標頭行為",
-          "D": "S3 儲存類別"
+          "A": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
+          "B": "透過 Direct Connect 或 VPN 連接的 BGP",
+          "C": "AWS Site-to-Site VPN",
+          "D": "PrivateLink 端點服務",
+          "E": "負載平衡器類型和相關代理或標頭行為"
         },
-        "explanation": "來源位址保留取決於負載平衡器行為和應用程式標頭或協定支援。\n其他選項不控制負載平衡器來源資訊。"
+        "explanation": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼 符合第一項需求：IaC 使網路變更可重複、可審查且一致。 負載平衡器類型和相關代理或標頭行為 符合第二項需求：來源位址保留取決於負載平衡器行為和應用程式標頭或協定支援。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d2-030",
-    "type": "single",
-    "question": "A developer team preparing a release must automate VPC and route configuration consistently across accounts. Which approach is appropriate?",
-    "options": {
-      "A": "Manual edits in every account",
-      "B": "Public credentials",
-      "C": "A CloudFront cache",
-      "D": "Infrastructure as code with CloudFormation or the AWS CDK"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "IaC makes network changes repeatable, reviewable, and consistent.\nManual edits and public credentials increase drift and risk.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A developer team preparing a release is planning two independent production changes. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The first team must automate VPC and route configuration consistently across accounts. A second team must advertise selected VPC prefixes to an on-premises router over a private connection. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "AWS Site-to-Site VPN",
+      "B": "A PrivateLink endpoint service",
+      "C": "The load balancer type and the relevant proxy or header behavior",
+      "D": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "E": "BGP over a Direct Connect or VPN connection"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Infrastructure as code with CloudFormation or the AWS CDK meets the first requirement: IaC makes network changes repeatable, reviewable, and consistent. BGP over a Direct Connect or VPN connection meets the second requirement: BGP exchanges routes over supported hybrid connectivity links.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊必須自動化 VPC 並跨帳戶一致地路由配置。哪種方法適合？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊必須考慮混合式連線、現有安全邊界，以及變更部署後的營運疑難排解。第一項需求：支援關鍵工作負載的營運團隊必須自動化 VPC 並跨帳戶一致地路由配置。第二項需求：生產團隊必須透過專用連線將選定的 VPC 前綴通告到本機路由器。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "每個帳戶中的手動編輯",
-          "B": "公共憑證",
-          "C": "CloudFront 快取",
-          "D": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼"
+          "A": "AWS Site-to-Site VPN",
+          "B": "PrivateLink 端點服務",
+          "C": "負載平衡器類型和相關代理或標頭行為",
+          "D": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
+          "E": "透過 Direct Connect 或 VPN 連接的 BGP"
         },
-        "explanation": "IaC 使網路變更可重複、可審查且一致。\n手動編輯和公共憑證會增加偏差和風險。"
+        "explanation": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼 符合第一項需求：IaC 使網路變更可重複、可審查且一致。 透過 Direct Connect 或 VPN 連接的 BGP 符合第二項需求：BGP 透過支援的混合連接鏈路交換路由。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d2-031",
-    "type": "single",
-    "question": "An enterprise with several AWS Regions must advertise selected VPC prefixes to an on-premises router over a private connection. Which protocol is commonly used?",
-    "options": {
-      "A": "BGP over a Direct Connect or VPN connection",
-      "B": "HTTP over CloudFront",
-      "C": "DNS TXT records",
-      "D": "S3 lifecycle rules"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "BGP exchanges routes over supported hybrid connectivity links.\nThe other choices are application, DNS, or storage controls.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "An enterprise with several AWS Regions is planning two independent production changes. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The first team must advertise selected VPC prefixes to an on-premises router over a private connection. A second team needs encrypted connectivity between two networks over the public internet. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "The load balancer type and the relevant proxy or header behavior",
+      "B": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "C": "BGP over a Direct Connect or VPN connection",
+      "D": "AWS Site-to-Site VPN",
+      "E": "A PrivateLink endpoint service"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "BGP over a Direct Connect or VPN connection meets the first requirement: BGP exchanges routes over supported hybrid connectivity links. AWS Site-to-Site VPN meets the second requirement: Site-to-Site VPN creates encrypted tunnels between networks.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS Regions 的企業必須透過專用連線將選定的 VPC 前綴通告到本機路由器。常用的是哪種協定？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此需求必須大規模套用。方案應避免一次性的人手設定，並提供證據證明控制措施持續有效。第一項需求：生產團隊必須透過專用連線將選定的 VPC 前綴通告到本機路由器。第二項需求：多帳戶平台團隊需要透過公共互聯網在兩個網路之間建立加密連線。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "透過 Direct Connect 或 VPN 連接的 BGP",
-          "B": "透過 CloudFront 的 HTTP",
-          "C": "DNS TXT 記錄",
-          "D": "S3 生命週期規則"
+          "A": "負載平衡器類型和相關代理或標頭行為",
+          "B": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
+          "C": "透過 Direct Connect 或 VPN 連接的 BGP",
+          "D": "AWS Site-to-Site VPN",
+          "E": "PrivateLink 端點服務"
         },
-        "explanation": "BGP 透過支援的混合連接鏈路交換路由。\n其他選擇是應用程式、DNS 或儲存控制。"
+        "explanation": "透過 Direct Connect 或 VPN 連接的 BGP 符合第一項需求：BGP 透過支援的混合連接鏈路交換路由。 AWS Site-to-Site VPN 符合第二項需求：站點到站點 VPN 在網路之間建立加密隧道。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d2-032",
-    "type": "single",
-    "question": "A service owner reviewing an incident needs encrypted connectivity between two networks over the public internet. Which service should be configured?",
-    "options": {
-      "A": "Amazon Macie",
-      "B": "AWS Site-to-Site VPN",
-      "C": "Amazon EFS",
-      "D": "AWS Glue"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Site-to-Site VPN creates encrypted tunnels between networks.\nThe other choices provide file storage, ETL, or data discovery.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A service owner reviewing an incident is designing one integrated end-to-end network architecture across accounts and Regions. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The organization will accept additional managed-service cost only when it measurably improves security and availability with less operational effort. Match each connected stage to the implementation that lets the complete architecture satisfy its business outcome.",
+    "options": {
+      "A": "Stage 1: The architecture needs encrypted connectivity between two networks over the public internet",
+      "B": "Stage 2: The architecture must automate VPC and route configuration consistently across accounts",
+      "C": "Stage 3: The architecture needs to investigate rejected packets between two VPC subnets"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "2": "VPC Flow Logs and route and security group configuration",
+      "3": "AWS Site-to-Site VPN"
+    },
+    "correctMatches": {
+      "A": "3",
+      "B": "1",
+      "C": "2"
+    },
+    "explanation": "A maps to AWS Site-to-Site VPN. Site-to-Site VPN creates encrypted tunnels between networks. B maps to Infrastructure as code with CloudFormation or the AWS CDK. IaC makes network changes repeatable, reviewable, and consistent. C maps to VPC Flow Logs and route and security group configuration. Flow Logs combined with routing and security controls identify where traffic is rejected.\nAll three stages are connected. Substituting an unrelated target would break the architecture or weaken its cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務所有者需要透過公共互聯網在兩個網路之間建立加密連線。應該配置哪個服務？",
+        "question": "某企業正在跨帳戶與區域設計一個整合式端到端網路架構。三個階段彼此相連，任一階段錯誤都會影響整體業務成果。只有在託管服務能以較低營運負擔明確改善安全性與可用性時，組織才會接受額外成本。 請把每個階段配對至最合適的實作。",
         "options": {
-          "A": "Amazon Macie",
-          "B": "AWS Site-to-Site VPN",
-          "C": "Amazon EFS",
-          "D": "AWS Glue"
+          "A": "階段 1：多帳戶平台團隊需要透過公共互聯網在兩個網路之間建立加密連線。",
+          "B": "階段 2：階段 2：階段 2：支援關鍵工作負載的營運團隊必須自動化 VPC 並跨帳戶一致地路由配置。",
+          "C": "階段 3：階段 3：階段 3：需求：製作團隊需要調查兩個 VPC 子網路之間被拒絕的資料包"
         },
-        "explanation": "站點到站點 VPN 在網路之間建立加密隧道。\n其他選項提供文件儲存、ETL 或資料發現。"
+        "targets": {
+          "1": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
+          "2": "VPC Flow Logs 以及路由和安全群組配置",
+          "3": "AWS Site-to-Site VPN"
+        },
+        "explanation": "A 應配對 AWS Site-to-Site VPN；B 應配對 使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼；C 應配對 VPC Flow Logs 以及路由和安全群組配置。三個實作共同組成完整架構。\n若以不相關的目標取代任何一項，便會破壞架構或削弱成本、安全性及可用性之間的取捨。"
       }
     }
   },
   {
     "id": "ans-c01-d2-033",
-    "type": "single",
-    "question": "A team optimizing an existing implementation must expose a private application to selected customer VPCs without VPC peering. Which feature fits?",
-    "options": {
-      "A": "An S3 website endpoint",
-      "B": "A single NAT gateway",
-      "C": "A PrivateLink endpoint service",
-      "D": "A public IP allowlist only"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "PrivateLink uses interface endpoints and provider endpoint services for private consumer access.\nThe other choices do not provide private service endpoints.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A team optimizing an existing implementation is planning two independent production changes. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The first team must expose a private application to selected customer VPCs without VPC peering. A second team needs to preserve source IP information through a load balancer for an application. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "A PrivateLink endpoint service",
+      "B": "The load balancer type and the relevant proxy or header behavior",
+      "C": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "D": "BGP over a Direct Connect or VPN connection",
+      "E": "AWS Site-to-Site VPN"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "A PrivateLink endpoint service meets the first requirement: PrivateLink uses interface endpoints and provider endpoint services for private consumer access. The load balancer type and the relevant proxy or header behavior meets the second requirement: Source address preservation depends on load balancer behavior and application headers or protocol support.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊必須向選定的客戶 VPC 公開私有應用程式，而無需 VPC 對等互連。適合哪個功能？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此需求必須大規模套用。方案應避免一次性的人手設定，並提供證據證明控制措施持續有效。第一項需求：受監管的公司必須向選定的客戶 VPC 公開私有應用程式，而無需 VPC 對等互連。第二項需求：準備應對流量增加的新創公司需要透過應用程式的負載平衡器保留來源 IP 資訊。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "S3 網站端點",
-          "B": "單一 NAT gateway",
-          "C": "PrivateLink 端點服務",
-          "D": "僅限公共 IP 授權名單"
+          "A": "PrivateLink 端點服務",
+          "B": "負載平衡器類型和相關代理或標頭行為",
+          "C": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
+          "D": "透過 Direct Connect 或 VPN 連接的 BGP",
+          "E": "AWS Site-to-Site VPN"
         },
-        "explanation": "PrivateLink 使用介面端點和提供者端點服務進行私人消費者存取。\n其他選擇不提供專用服務端點。"
+        "explanation": "PrivateLink 端點服務 符合第一項需求：PrivateLink 使用介面端點和提供者端點服務進行私人消費者存取。 負載平衡器類型和相關代理或標頭行為 符合第二項需求：來源位址保留取決於負載平衡器行為和應用程式標頭或協定支援。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d2-034",
-    "type": "single",
-    "question": "A company introducing an automated workflow needs to preserve source IP information through a load balancer for an application. Which design detail must be considered?",
-    "options": {
-      "A": "An S3 storage class",
-      "B": "A KMS alias",
-      "C": "A Route 53 TTL only",
-      "D": "The load balancer type and the relevant proxy or header behavior"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Source address preservation depends on load balancer behavior and application headers or protocol support.\nThe other choices do not control load balancer source information.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A company introducing an automated workflow is planning two independent production changes. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The first team needs to preserve source IP information through a load balancer for an application. A second team must automate VPC and route configuration consistently across accounts. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "B": "BGP over a Direct Connect or VPN connection",
+      "C": "AWS Site-to-Site VPN",
+      "D": "A PrivateLink endpoint service",
+      "E": "The load balancer type and the relevant proxy or header behavior"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "The load balancer type and the relevant proxy or header behavior meets the first requirement: Source address preservation depends on load balancer behavior and application headers or protocol support. Infrastructure as code with CloudFormation or the AWS CDK meets the second requirement: IaC makes network changes repeatable, reviewable, and consistent.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司需要透過應用程式的負載平衡器保留來源 IP 資訊。必須考慮哪些設計細節？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此需求必須大規模套用。方案應避免一次性的人手設定，並提供證據證明控制措施持續有效。第一項需求：支援關鍵工作負載的營運團隊必須自動化 VPC 並跨帳戶一致地路由配置。第二項需求：準備應對流量增加的新創公司需要透過應用程式的負載平衡器保留來源 IP 資訊。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "S3 儲存類別",
-          "B": "KMS 別名",
-          "C": "僅 Route 53 TTL",
-          "D": "負載平衡器類型和相關代理或標頭行為"
+          "A": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
+          "B": "透過 Direct Connect 或 VPN 連接的 BGP",
+          "C": "AWS Site-to-Site VPN",
+          "D": "PrivateLink 端點服務",
+          "E": "負載平衡器類型和相關代理或標頭行為"
         },
-        "explanation": "來源位址保留取決於負載平衡器行為和應用程式標頭或協定支援。\n其他選項不控制負載平衡器來源資訊。"
+        "explanation": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼 符合第一項需求：IaC 使網路變更可重複、可審查且一致。 負載平衡器類型和相關代理或標頭行為 符合第二項需求：來源位址保留取決於負載平衡器行為和應用程式標頭或協定支援。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d2-035",
-    "type": "single",
-    "question": "An AWS administrator working in a shared environment must automate VPC and route configuration consistently across accounts. Which approach is appropriate?",
-    "options": {
-      "A": "Infrastructure as code with CloudFormation or the AWS CDK",
-      "B": "Manual edits in every account",
-      "C": "Public credentials",
-      "D": "A CloudFront cache"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "IaC makes network changes repeatable, reviewable, and consistent.\nManual edits and public credentials increase drift and risk.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "An AWS administrator working in a shared environment is planning two independent production changes. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The first team must automate VPC and route configuration consistently across accounts. A second team must advertise selected VPC prefixes to an on-premises router over a private connection. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "AWS Site-to-Site VPN",
+      "B": "A PrivateLink endpoint service",
+      "C": "The load balancer type and the relevant proxy or header behavior",
+      "D": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "E": "BGP over a Direct Connect or VPN connection"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Infrastructure as code with CloudFormation or the AWS CDK meets the first requirement: IaC makes network changes repeatable, reviewable, and consistent. BGP over a Direct Connect or VPN connection meets the second requirement: BGP exchanges routes over supported hybrid connectivity links.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "在共用環境中工作的 AWS 管理員必須自動化 VPC 並跨帳戶一致地路由配置。哪種方法適合？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此需求必須大規模套用。方案應避免一次性的人手設定，並提供證據證明控制措施持續有效。第一項需求：支援關鍵工作負載的營運團隊必須自動化 VPC 並跨帳戶一致地路由配置。第二項需求：生產團隊必須透過專用連線將選定的 VPC 前綴通告到本機路由器。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
-          "B": "每個帳戶中的手動編輯",
-          "C": "公共憑證",
-          "D": "CloudFront 快取"
+          "A": "AWS Site-to-Site VPN",
+          "B": "PrivateLink 端點服務",
+          "C": "負載平衡器類型和相關代理或標頭行為",
+          "D": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
+          "E": "透過 Direct Connect 或 VPN 連接的 BGP"
         },
-        "explanation": "IaC 使網路變更可重複、可審查且一致。\n手動編輯和公共憑證會增加偏差和風險。"
+        "explanation": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼 符合第一項需求：IaC 使網路變更可重複、可審查且一致。 透過 Direct Connect 或 VPN 連接的 BGP 符合第二項需求：BGP 透過支援的混合連接鏈路交換路由。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d2-036",
-    "type": "single",
-    "question": "A customer-facing application team must advertise selected VPC prefixes to an on-premises router over a private connection. Which protocol is commonly used?",
-    "options": {
-      "A": "S3 lifecycle rules",
-      "B": "BGP over a Direct Connect or VPN connection",
-      "C": "HTTP over CloudFront",
-      "D": "DNS TXT records"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "BGP exchanges routes over supported hybrid connectivity links.\nThe other choices are application, DNS, or storage controls.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A customer-facing application team is designing one integrated end-to-end network architecture across accounts and Regions. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The architecture must limit blast radius, preserve availability during change, and control cost through automation instead of permanent overprovisioning. Match each connected stage to the implementation that lets the complete architecture satisfy its business outcome.",
+    "options": {
+      "A": "Stage 1: The architecture must advertise selected VPC prefixes to an on-premises router over a private connection",
+      "B": "Stage 2: The architecture needs operational runbooks for repeated network changes",
+      "C": "Stage 3: The architecture must block known malicious domains for workloads in a VPC"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "Route 53 Resolver DNS Firewall",
+      "2": "BGP over a Direct Connect or VPN connection",
+      "3": "Systems Manager Automation"
+    },
+    "correctMatches": {
+      "A": "2",
+      "B": "3",
+      "C": "1"
+    },
+    "explanation": "A maps to BGP over a Direct Connect or VPN connection. BGP exchanges routes over supported hybrid connectivity links. B maps to Systems Manager Automation. Systems Manager Automation runbooks can execute repeatable operational tasks. C maps to Route 53 Resolver DNS Firewall. DNS Firewall can block or allow domain queries for VPC workloads.\nAll three stages are connected. Substituting an unrelated target would break the architecture or weaken its cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊必須透過專用連線將選取的 VPC 前綴通告到本機路由器。常用哪種協議？",
+        "question": "某企業正在跨帳戶與區域設計一個整合式端到端網路架構。三個階段彼此相連，任一階段錯誤都會影響整體業務成果。此架構必須限制影響範圍、在變更期間維持可用性，並透過自動化控制成本，而不是長期過度佈建。 請把每個階段配對至最合適的實作。",
         "options": {
-          "A": "S3 生命週期規則",
-          "B": "透過 Direct Connect 或 VPN 連接的 BGP",
-          "C": "透過 CloudFront 的 HTTP",
-          "D": "DNS TXT 記錄"
+          "A": "階段 1：階段 3：階段 3：生產團隊必須透過專用連線將選定的 VPC 前綴通告到本機路由器。",
+          "B": "階段 2：階段 2：階段 2：支援關鍵工作負載的營運團隊需要針對重複網路變更的營運手冊。",
+          "C": "階段 3：生產團隊必須阻止 VPC 中工作負載的已知惡意域。"
         },
-        "explanation": "BGP 透過支援的混合連接鏈路交換路由。\n其他選擇是應用程式、DNS 或儲存控制。"
+        "targets": {
+          "1": "Route 53 Resolver DNS Firewall",
+          "2": "透過 Direct Connect 或 VPN 連接的 BGP",
+          "3": "Systems Manager Automation"
+        },
+        "explanation": "A 應配對 透過 Direct Connect 或 VPN 連接的 BGP；B 應配對 Systems Manager Automation；C 應配對 Route 53 Resolver DNS Firewall。三個實作共同組成完整架構。\n若以不相關的目標取代任何一項，便會破壞架構或削弱成本、安全性及可用性之間的取捨。"
       }
     }
   },
   {
     "id": "ans-c01-d2-037",
-    "type": "single",
-    "question": "A platform team standardizing its AWS deployments needs encrypted connectivity between two networks over the public internet. Which service should be configured?",
-    "options": {
-      "A": "AWS Glue",
-      "B": "Amazon Macie",
-      "C": "AWS Site-to-Site VPN",
-      "D": "Amazon EFS"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "Site-to-Site VPN creates encrypted tunnels between networks.\nThe other choices provide file storage, ETL, or data discovery.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A platform team standardizing its AWS deployments is planning two independent production changes. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The first team needs encrypted connectivity between two networks over the public internet. A second team must expose a private application to selected customer VPCs without VPC peering. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "BGP over a Direct Connect or VPN connection",
+      "B": "AWS Site-to-Site VPN",
+      "C": "A PrivateLink endpoint service",
+      "D": "The load balancer type and the relevant proxy or header behavior",
+      "E": "Infrastructure as code with CloudFormation or the AWS CDK"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS Site-to-Site VPN meets the first requirement: Site-to-Site VPN creates encrypted tunnels between networks. A PrivateLink endpoint service meets the second requirement: PrivateLink uses interface endpoints and provider endpoint services for private consumer access.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊需要透過公共互聯網在兩個網路之間建立加密連線。應該配置哪個服務？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。目前架構支援業務關鍵服務。所選選項必須處理確切的故障或安全條件，而不會削弱其他控制措施。第一項需求：多帳戶平台團隊需要透過公共互聯網在兩個網路之間建立加密連線。第二項需求：受監管的公司必須向選定的客戶 VPC 公開私有應用程式，而無需 VPC 對等互連。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "AWS Glue",
-          "B": "Amazon Macie",
-          "C": "AWS Site-to-Site VPN",
-          "D": "Amazon EFS"
+          "A": "透過 Direct Connect 或 VPN 連接的 BGP",
+          "B": "AWS Site-to-Site VPN",
+          "C": "PrivateLink 端點服務",
+          "D": "負載平衡器類型和相關代理或標頭行為",
+          "E": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼"
         },
-        "explanation": "站點到站點 VPN 在網路之間建立加密隧道。\n其他選項提供文件儲存、ETL 或資料發現。"
+        "explanation": "AWS Site-to-Site VPN 符合第一項需求：站點到站點 VPN 在網路之間建立加密隧道。 PrivateLink 端點服務 符合第二項需求：PrivateLink 使用介面端點和提供者端點服務進行私人消費者存取。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d2-038",
-    "type": "single",
-    "question": "A team preparing evidence for an audit must expose a private application to selected customer VPCs without VPC peering. Which feature fits?",
-    "options": {
-      "A": "A public IP allowlist only",
-      "B": "An S3 website endpoint",
-      "C": "A single NAT gateway",
-      "D": "A PrivateLink endpoint service"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "PrivateLink uses interface endpoints and provider endpoint services for private consumer access.\nThe other choices do not provide private service endpoints.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A team preparing evidence for an audit is planning two independent production changes. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The first team must expose a private application to selected customer VPCs without VPC peering. A second team needs to preserve source IP information through a load balancer for an application. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "A PrivateLink endpoint service",
+      "B": "The load balancer type and the relevant proxy or header behavior",
+      "C": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "D": "BGP over a Direct Connect or VPN connection",
+      "E": "AWS Site-to-Site VPN"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "A PrivateLink endpoint service meets the first requirement: PrivateLink uses interface endpoints and provider endpoint services for private consumer access. The load balancer type and the relevant proxy or header behavior meets the second requirement: Source address preservation depends on load balancer behavior and application headers or protocol support.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "準備審計證據的團隊必須向選定的客戶 VPC 公開私有應用程式，而無需 VPC 對等互連。適合哪個功能？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。目前架構支援業務關鍵服務。所選選項必須處理確切的故障或安全條件，而不會削弱其他控制措施。第一項需求：受監管的公司必須向選定的客戶 VPC 公開私有應用程式，而無需 VPC 對等互連。第二項需求：準備應對流量增加的新創公司需要透過應用程式的負載平衡器保留來源 IP 資訊。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "僅限公共 IP 授權名單",
-          "B": "S3 網站端點",
-          "C": "單一 NAT gateway",
-          "D": "PrivateLink 端點服務"
+          "A": "PrivateLink 端點服務",
+          "B": "負載平衡器類型和相關代理或標頭行為",
+          "C": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
+          "D": "透過 Direct Connect 或 VPN 連接的 BGP",
+          "E": "AWS Site-to-Site VPN"
         },
-        "explanation": "PrivateLink 使用介面端點和提供者端點服務進行私人消費者存取。\n其他選擇不提供專用服務端點。"
+        "explanation": "PrivateLink 端點服務 符合第一項需求：PrivateLink 使用介面端點和提供者端點服務進行私人消費者存取。 負載平衡器類型和相關代理或標頭行為 符合第二項需求：來源位址保留取決於負載平衡器行為和應用程式標頭或協定支援。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d2-039",
-    "type": "single",
-    "question": "A business replacing a manual process needs to preserve source IP information through a load balancer for an application. Which design detail must be considered?",
-    "options": {
-      "A": "The load balancer type and the relevant proxy or header behavior",
-      "B": "An S3 storage class",
-      "C": "A KMS alias",
-      "D": "A Route 53 TTL only"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "Source address preservation depends on load balancer behavior and application headers or protocol support.\nThe other choices do not control load balancer source information.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A business replacing a manual process is planning two independent production changes. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The first team needs to preserve source IP information through a load balancer for an application. A second team must automate VPC and route configuration consistently across accounts. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "B": "BGP over a Direct Connect or VPN connection",
+      "C": "AWS Site-to-Site VPN",
+      "D": "A PrivateLink endpoint service",
+      "E": "The load balancer type and the relevant proxy or header behavior"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "The load balancer type and the relevant proxy or header behavior meets the first requirement: Source address preservation depends on load balancer behavior and application headers or protocol support. Infrastructure as code with CloudFormation or the AWS CDK meets the second requirement: IaC makes network changes repeatable, reviewable, and consistent.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "替代手動流程的企業需要透過應用程式的負載平衡器保留來源 IP 資訊。必須考慮哪些設計細節？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。目前架構支援業務關鍵服務。所選選項必須處理確切的故障或安全條件，而不會削弱其他控制措施。第一項需求：支援關鍵工作負載的營運團隊必須自動化 VPC 並跨帳戶一致地路由配置。第二項需求：準備應對流量增加的新創公司需要透過應用程式的負載平衡器保留來源 IP 資訊。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "負載平衡器類型和相關代理或標頭行為",
-          "B": "S3 儲存類別",
-          "C": "KMS 別名",
-          "D": "僅 Route 53 TTL"
+          "A": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
+          "B": "透過 Direct Connect 或 VPN 連接的 BGP",
+          "C": "AWS Site-to-Site VPN",
+          "D": "PrivateLink 端點服務",
+          "E": "負載平衡器類型和相關代理或標頭行為"
         },
-        "explanation": "來源位址保留取決於負載平衡器行為和應用程式標頭或協定支援。\n其他選項不控制負載平衡器來源資訊。"
+        "explanation": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼 符合第一項需求：IaC 使網路變更可重複、可審查且一致。 負載平衡器類型和相關代理或標頭行為 符合第二項需求：來源位址保留取決於負載平衡器行為和應用程式標頭或協定支援。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d2-040",
-    "type": "single",
-    "question": "A team validating a design against the exam guide must automate VPC and route configuration consistently across accounts. Which approach is appropriate?",
-    "options": {
-      "A": "A CloudFront cache",
-      "B": "Infrastructure as code with CloudFormation or the AWS CDK",
-      "C": "Manual edits in every account",
-      "D": "Public credentials"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "IaC makes network changes repeatable, reviewable, and consistent.\nManual edits and public credentials increase drift and risk.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A team validating a design against the exam guide is designing one integrated end-to-end network architecture across accounts and Regions. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The selected controls must provide auditable security, predictable availability, and the lowest operational cost that still satisfies both requirements. Match each connected stage to the implementation that lets the complete architecture satisfy its business outcome.",
+    "options": {
+      "A": "Stage 1: The architecture must automate VPC and route configuration consistently across accounts",
+      "B": "Stage 2: The architecture must enforce network and service guardrails across accounts",
+      "C": "Stage 3: The architecture needs centralized routing between dozens of VPCs and on-premises networks"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "2": "SCPs combined with centralized policy and security services",
+      "3": "AWS Transit Gateway with route domains"
+    },
+    "correctMatches": {
+      "A": "1",
+      "B": "2",
+      "C": "3"
+    },
+    "explanation": "A maps to Infrastructure as code with CloudFormation or the AWS CDK. IaC makes network changes repeatable, reviewable, and consistent. B maps to SCPs combined with centralized policy and security services. Organization guardrails and centralized policy reduce inconsistent network governance. C maps to AWS Transit Gateway with route domains. Transit Gateway provides scalable centralized routing for many network attachments.\nAll three stages are connected. Substituting an unrelated target would break the architecture or weaken its cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊必須自動化 VPC 並跨帳戶一致地路由配置。哪種方法適合？",
+        "question": "某企業正在跨帳戶與區域設計一個整合式端到端網路架構。三個階段彼此相連，任一階段錯誤都會影響整體業務成果。所選控制必須提供可稽核的安全性、可預測的可用性，以及在滿足兩項要求前提下最低的營運成本。 請把每個階段配對至最合適的實作。",
         "options": {
-          "A": "CloudFront 快取",
-          "B": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
-          "C": "每個帳戶中的手動編輯",
-          "D": "公共憑證"
+          "A": "階段 1：階段 2：階段 2：支援關鍵工作負載的營運團隊必須自動化 VPC 並跨帳戶一致地路由配置。",
+          "B": "階段 2：支援關鍵工作負載的營運團隊必須跨帳戶實施網路和服務護欄。",
+          "C": "階段 3：階段 3：階段 3：需求：生產團隊需要在數十個 VPC 和本地網路之間進行集中路由"
         },
-        "explanation": "IaC 使網路變更可重複、可審查且一致。\n手動編輯和公共憑證會增加偏差和風險。"
+        "targets": {
+          "1": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
+          "2": "SCP 與集中式策略和安全服務結合",
+          "3": "AWS Transit Gateway 與路由域"
+        },
+        "explanation": "A 應配對 使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼；B 應配對 SCP 與集中式策略和安全服務結合；C 應配對 AWS Transit Gateway 與路由域。三個實作共同組成完整架構。\n若以不相關的目標取代任何一項，便會破壞架構或削弱成本、安全性及可用性之間的取捨。"
       }
     }
   },
   {
     "id": "ans-c01-d2-041",
-    "type": "single",
-    "question": "A production team must advertise selected VPC prefixes to an on-premises router over a private connection. Which protocol is commonly used?",
-    "options": {
-      "A": "DNS TXT records",
-      "B": "S3 lifecycle rules",
-      "C": "BGP over a Direct Connect or VPN connection",
-      "D": "HTTP over CloudFront"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "BGP exchanges routes over supported hybrid connectivity links.\nThe other choices are application, DNS, or storage controls.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A production team is planning two independent production changes. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The first team must advertise selected VPC prefixes to an on-premises router over a private connection. A second team needs encrypted connectivity between two networks over the public internet. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "The load balancer type and the relevant proxy or header behavior",
+      "B": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "C": "BGP over a Direct Connect or VPN connection",
+      "D": "AWS Site-to-Site VPN",
+      "E": "A PrivateLink endpoint service"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "BGP over a Direct Connect or VPN connection meets the first requirement: BGP exchanges routes over supported hybrid connectivity links. AWS Site-to-Site VPN meets the second requirement: Site-to-Site VPN creates encrypted tunnels between networks.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "生產團隊必須透過專用連線將選定的 VPC 前綴通告到本機路由器。常用的是哪種協定？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。專業工程師將審查實作的服務限制、故障行為及建議設計的營運取捨。第一項需求：生產團隊必須透過專用連線將選定的 VPC 前綴通告到本機路由器。第二項需求：多帳戶平台團隊需要透過公共互聯網在兩個網路之間建立加密連線。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "DNS TXT 記錄",
-          "B": "S3 生命週期規則",
+          "A": "負載平衡器類型和相關代理或標頭行為",
+          "B": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
           "C": "透過 Direct Connect 或 VPN 連接的 BGP",
-          "D": "透過 CloudFront 的 HTTP"
+          "D": "AWS Site-to-Site VPN",
+          "E": "PrivateLink 端點服務"
         },
-        "explanation": "BGP 透過支援的混合連接鏈路交換路由。\n其他選擇是應用程式、DNS 或儲存控制。"
+        "explanation": "透過 Direct Connect 或 VPN 連接的 BGP 符合第一項需求：BGP 透過支援的混合連接鏈路交換路由。 AWS Site-to-Site VPN 符合第二項需求：站點到站點 VPN 在網路之間建立加密隧道。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d2-042",
-    "type": "single",
-    "question": "A multi-account platform team needs encrypted connectivity between two networks over the public internet. Which service should be configured?",
-    "options": {
-      "A": "Amazon EFS",
-      "B": "AWS Glue",
-      "C": "Amazon Macie",
-      "D": "AWS Site-to-Site VPN"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Site-to-Site VPN creates encrypted tunnels between networks.\nThe other choices provide file storage, ETL, or data discovery.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A multi-account platform team is planning two independent production changes. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The first team needs encrypted connectivity between two networks over the public internet. A second team must expose a private application to selected customer VPCs without VPC peering. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "BGP over a Direct Connect or VPN connection",
+      "B": "AWS Site-to-Site VPN",
+      "C": "A PrivateLink endpoint service",
+      "D": "The load balancer type and the relevant proxy or header behavior",
+      "E": "Infrastructure as code with CloudFormation or the AWS CDK"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS Site-to-Site VPN meets the first requirement: Site-to-Site VPN creates encrypted tunnels between networks. A PrivateLink endpoint service meets the second requirement: PrivateLink uses interface endpoints and provider endpoint services for private consumer access.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊需要透過公共互聯網在兩個網路之間建立加密連線。應該配置哪個服務？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。專業工程師將審查實作的服務限制、故障行為及建議設計的營運取捨。第一項需求：多帳戶平台團隊需要透過公共互聯網在兩個網路之間建立加密連線。第二項需求：受監管的公司必須向選定的客戶 VPC 公開私有應用程式，而無需 VPC 對等互連。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "Amazon EFS",
-          "B": "AWS Glue",
-          "C": "Amazon Macie",
-          "D": "AWS Site-to-Site VPN"
+          "A": "透過 Direct Connect 或 VPN 連接的 BGP",
+          "B": "AWS Site-to-Site VPN",
+          "C": "PrivateLink 端點服務",
+          "D": "負載平衡器類型和相關代理或標頭行為",
+          "E": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼"
         },
-        "explanation": "站點到站點 VPN 在網路之間建立加密隧道。\n其他選項提供文件儲存、ETL 或資料發現。"
+        "explanation": "AWS Site-to-Site VPN 符合第一項需求：站點到站點 VPN 在網路之間建立加密隧道。 PrivateLink 端點服務 符合第二項需求：PrivateLink 使用介面端點和提供者端點服務進行私人消費者存取。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d2-043",
-    "type": "single",
-    "question": "A regulated company must expose a private application to selected customer VPCs without VPC peering. Which feature fits?",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A regulated company is planning two independent production changes. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The first team must expose a private application to selected customer VPCs without VPC peering. A second team needs to preserve source IP information through a load balancer for an application. Which TWO actions satisfy these requirements?",
     "options": {
       "A": "A PrivateLink endpoint service",
-      "B": "A public IP allowlist only",
-      "C": "An S3 website endpoint",
-      "D": "A single NAT gateway"
+      "B": "The load balancer type and the relevant proxy or header behavior",
+      "C": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "D": "BGP over a Direct Connect or VPN connection",
+      "E": "AWS Site-to-Site VPN"
     },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "PrivateLink uses interface endpoints and provider endpoint services for private consumer access.\nThe other choices do not provide private service endpoints.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "A PrivateLink endpoint service meets the first requirement: PrivateLink uses interface endpoints and provider endpoint services for private consumer access. The load balancer type and the relevant proxy or header behavior meets the second requirement: Source address preservation depends on load balancer behavior and application headers or protocol support.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "受監管的公司必須向選定的客戶 VPC 公開私有應用程式，而無需 VPC 對等互連。適合哪個功能？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。專業工程師將審查實作的服務限制、故障行為及建議設計的營運取捨。第一項需求：受監管的公司必須向選定的客戶 VPC 公開私有應用程式，而無需 VPC 對等互連。第二項需求：準備應對流量增加的新創公司需要透過應用程式的負載平衡器保留來源 IP 資訊。哪兩項操作可以滿足這些需求？",
         "options": {
           "A": "PrivateLink 端點服務",
-          "B": "僅限公共 IP 授權名單",
-          "C": "S3 網站端點",
-          "D": "單一 NAT gateway"
+          "B": "負載平衡器類型和相關代理或標頭行為",
+          "C": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
+          "D": "透過 Direct Connect 或 VPN 連接的 BGP",
+          "E": "AWS Site-to-Site VPN"
         },
-        "explanation": "PrivateLink 使用介面端點和提供者端點服務進行私人消費者存取。\n其他選擇不提供專用服務端點。"
+        "explanation": "PrivateLink 端點服務 符合第一項需求：PrivateLink 使用介面端點和提供者端點服務進行私人消費者存取。 負載平衡器類型和相關代理或標頭行為 符合第二項需求：來源位址保留取決於負載平衡器行為和應用程式標頭或協定支援。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d2-044",
-    "type": "single",
-    "question": "A startup preparing for a traffic increase needs to preserve source IP information through a load balancer for an application. Which design detail must be considered?",
-    "options": {
-      "A": "A Route 53 TTL only",
-      "B": "The load balancer type and the relevant proxy or header behavior",
-      "C": "An S3 storage class",
-      "D": "A KMS alias"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Source address preservation depends on load balancer behavior and application headers or protocol support.\nThe other choices do not control load balancer source information.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A startup preparing for a traffic increase is designing one integrated end-to-end network architecture across accounts and Regions. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The design must keep recurring cost proportional to use, enforce least privilege, and remain available during a component or Availability Zone failure. Match each connected stage to the implementation that lets the complete architecture satisfy its business outcome.",
+    "options": {
+      "A": "Stage 1: The architecture needs to preserve source IP information through a load balancer for an application",
+      "B": "Stage 2: The architecture needs an architecture that keeps provider and consumer VPC address spaces independent",
+      "C": "Stage 3: The architecture must advertise selected VPC prefixes to an on-premises router over a private connection"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "AWS PrivateLink",
+      "2": "BGP over a Direct Connect or VPN connection",
+      "3": "The load balancer type and the relevant proxy or header behavior"
+    },
+    "correctMatches": {
+      "A": "3",
+      "B": "1",
+      "C": "2"
+    },
+    "explanation": "A maps to The load balancer type and the relevant proxy or header behavior. Source address preservation depends on load balancer behavior and application headers or protocol support. B maps to AWS PrivateLink. PrivateLink exposes a service through endpoint interfaces without routing consumer VPCs together. C maps to BGP over a Direct Connect or VPN connection. BGP exchanges routes over supported hybrid connectivity links.\nAll three stages are connected. Substituting an unrelated target would break the architecture or weaken its cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "準備應對流量增加的新創公司需要透過應用程式的負載平衡器保留來源 IP 資訊。必須考慮哪些設計細節？",
+        "question": "某企業正在跨帳戶與區域設計一個整合式端到端網路架構。三個階段彼此相連，任一階段錯誤都會影響整體業務成果。此設計必須讓持續成本與實際用量相符、落實最低權限，並在元件或可用區域發生故障時維持可用。 請把每個階段配對至最合適的實作。",
         "options": {
-          "A": "僅 Route 53 TTL",
-          "B": "負載平衡器類型和相關代理或標頭行為",
-          "C": "S3 儲存類別",
-          "D": "KMS 別名"
+          "A": "階段 1：支援關鍵工作負載的營運團隊必須自動化 VPC 並跨帳戶一致地路由配置。",
+          "B": "階段 2：階段 2：階段 2：生產團隊需要在數十個 VPC 和本地網路之間進行集中路由。",
+          "C": "階段 3：階段 3：階段 3：生產團隊必須透過專用連線將選定的 VPC 前綴通告到本機路由器。"
         },
-        "explanation": "來源位址保留取決於負載平衡器行為和應用程式標頭或協定支援。\n其他選項不控制負載平衡器來源資訊。"
+        "targets": {
+          "1": "AWS PrivateLink",
+          "2": "透過 Direct Connect 或 VPN 連接的 BGP",
+          "3": "負載平衡器類型和相關代理或標頭行為"
+        },
+        "explanation": "A 應配對 負載平衡器類型和相關代理或標頭行為；B 應配對 AWS PrivateLink；C 應配對 透過 Direct Connect 或 VPN 連接的 BGP。三個實作共同組成完整架構。\n若以不相關的目標取代任何一項，便會破壞架構或削弱成本、安全性及可用性之間的取捨。"
       }
     }
   },
   {
     "id": "ans-c01-d2-045",
-    "type": "single",
-    "question": "An operations team supporting a critical workload must automate VPC and route configuration consistently across accounts. Which approach is appropriate?",
-    "options": {
-      "A": "Public credentials",
-      "B": "A CloudFront cache",
-      "C": "Infrastructure as code with CloudFormation or the AWS CDK",
-      "D": "Manual edits in every account"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "IaC makes network changes repeatable, reviewable, and consistent.\nManual edits and public credentials increase drift and risk.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "An operations team supporting a critical workload is planning two independent production changes. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The first team must automate VPC and route configuration consistently across accounts. A second team must advertise selected VPC prefixes to an on-premises router over a private connection. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "AWS Site-to-Site VPN",
+      "B": "A PrivateLink endpoint service",
+      "C": "The load balancer type and the relevant proxy or header behavior",
+      "D": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "E": "BGP over a Direct Connect or VPN connection"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Infrastructure as code with CloudFormation or the AWS CDK meets the first requirement: IaC makes network changes repeatable, reviewable, and consistent. BGP over a Direct Connect or VPN connection meets the second requirement: BGP exchanges routes over supported hybrid connectivity links.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊必須自動化 VPC 並跨帳戶一致地路由配置。哪種方法適合？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。專業工程師將審查實作的服務限制、故障行為及建議設計的營運取捨。第一項需求：支援關鍵工作負載的營運團隊必須自動化 VPC 並跨帳戶一致地路由配置。第二項需求：生產團隊必須透過專用連線將選定的 VPC 前綴通告到本機路由器。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "公共憑證",
-          "B": "CloudFront 快取",
-          "C": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
-          "D": "每個帳戶中的手動編輯"
+          "A": "AWS Site-to-Site VPN",
+          "B": "PrivateLink 端點服務",
+          "C": "負載平衡器類型和相關代理或標頭行為",
+          "D": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
+          "E": "透過 Direct Connect 或 VPN 連接的 BGP"
         },
-        "explanation": "IaC 使網路變更可重複、可審查且一致。\n手動編輯和公共憑證會增加偏差和風險。"
+        "explanation": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼 符合第一項需求：IaC 使網路變更可重複、可審查且一致。 透過 Direct Connect 或 VPN 連接的 BGP 符合第二項需求：BGP 透過支援的混合連接鏈路交換路由。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d2-046",
-    "type": "single",
-    "question": "A data platform team must advertise selected VPC prefixes to an on-premises router over a private connection. Which protocol is commonly used?",
-    "options": {
-      "A": "HTTP over CloudFront",
-      "B": "DNS TXT records",
-      "C": "S3 lifecycle rules",
-      "D": "BGP over a Direct Connect or VPN connection"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "BGP exchanges routes over supported hybrid connectivity links.\nThe other choices are application, DNS, or storage controls.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A data platform team is planning two independent production changes. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The first team must advertise selected VPC prefixes to an on-premises router over a private connection. A second team needs encrypted connectivity between two networks over the public internet. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "The load balancer type and the relevant proxy or header behavior",
+      "B": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "C": "BGP over a Direct Connect or VPN connection",
+      "D": "AWS Site-to-Site VPN",
+      "E": "A PrivateLink endpoint service"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "BGP over a Direct Connect or VPN connection meets the first requirement: BGP exchanges routes over supported hybrid connectivity links. AWS Site-to-Site VPN meets the second requirement: Site-to-Site VPN creates encrypted tunnels between networks.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊必須透過專用連線將選取的 VPC 前綴通告至本機路由器。常用的是哪種協定？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此生產環境在多個帳戶中採用集中治理。變更必須符合最低權限、可以稽核，並且不會造成長時間中斷。第一項需求：生產團隊必須透過專用連線將選定的 VPC 前綴通告到本機路由器。第二項需求：多帳戶平台團隊需要透過公共互聯網在兩個網路之間建立加密連線。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "透過 CloudFront 的 HTTP",
-          "B": "DNS TXT 記錄",
-          "C": "S3 生命週期規則",
-          "D": "透過 Direct Connect 或 VPN 連接的 BGP"
+          "A": "負載平衡器類型和相關代理或標頭行為",
+          "B": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
+          "C": "透過 Direct Connect 或 VPN 連接的 BGP",
+          "D": "AWS Site-to-Site VPN",
+          "E": "PrivateLink 端點服務"
         },
-        "explanation": "BGP 透過支援的混合連接鏈路交換路由。\n其他選擇是應用程式、DNS 或儲存控制。"
+        "explanation": "透過 Direct Connect 或 VPN 連接的 BGP 符合第一項需求：BGP 透過支援的混合連接鏈路交換路由。 AWS Site-to-Site VPN 符合第二項需求：站點到站點 VPN 在網路之間建立加密隧道。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d2-047",
-    "type": "single",
-    "question": "A security-conscious engineering team needs encrypted connectivity between two networks over the public internet. Which service should be configured?",
-    "options": {
-      "A": "AWS Site-to-Site VPN",
-      "B": "Amazon EFS",
-      "C": "AWS Glue",
-      "D": "Amazon Macie"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "Site-to-Site VPN creates encrypted tunnels between networks.\nThe other choices provide file storage, ETL, or data discovery.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A security-conscious engineering team is planning two independent production changes. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The first team needs encrypted connectivity between two networks over the public internet. A second team must expose a private application to selected customer VPCs without VPC peering. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "BGP over a Direct Connect or VPN connection",
+      "B": "AWS Site-to-Site VPN",
+      "C": "A PrivateLink endpoint service",
+      "D": "The load balancer type and the relevant proxy or header behavior",
+      "E": "Infrastructure as code with CloudFormation or the AWS CDK"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS Site-to-Site VPN meets the first requirement: Site-to-Site VPN creates encrypted tunnels between networks. A PrivateLink endpoint service meets the second requirement: PrivateLink uses interface endpoints and provider endpoint services for private consumer access.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊需要透過公共互聯網在兩個網路之間進行加密連接。應該配置哪個服務？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此生產環境在多個帳戶中採用集中治理。變更必須符合最低權限、可以稽核，並且不會造成長時間中斷。第一項需求：多帳戶平台團隊需要透過公共互聯網在兩個網路之間建立加密連線。第二項需求：受監管的公司必須向選定的客戶 VPC 公開私有應用程式，而無需 VPC 對等互連。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "AWS Site-to-Site VPN",
-          "B": "Amazon EFS",
-          "C": "AWS Glue",
-          "D": "Amazon Macie"
+          "A": "透過 Direct Connect 或 VPN 連接的 BGP",
+          "B": "AWS Site-to-Site VPN",
+          "C": "PrivateLink 端點服務",
+          "D": "負載平衡器類型和相關代理或標頭行為",
+          "E": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼"
         },
-        "explanation": "站點到站點 VPN 在網路之間建立加密隧道。\n其他選項提供文件儲存、ETL 或資料發現。"
+        "explanation": "AWS Site-to-Site VPN 符合第一項需求：站點到站點 VPN 在網路之間建立加密隧道。 PrivateLink 端點服務 符合第二項需求：PrivateLink 使用介面端點和提供者端點服務進行私人消費者存取。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d2-048",
-    "type": "single",
-    "question": "A company migrating an existing workload must expose a private application to selected customer VPCs without VPC peering. Which feature fits?",
-    "options": {
-      "A": "A single NAT gateway",
-      "B": "A PrivateLink endpoint service",
-      "C": "A public IP allowlist only",
-      "D": "An S3 website endpoint"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "PrivateLink uses interface endpoints and provider endpoint services for private consumer access.\nThe other choices do not provide private service endpoints.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A company migrating an existing workload is designing one integrated end-to-end network architecture across accounts and Regions. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The design must avoid unnecessary standby cost without weakening security controls or the availability objective. Match each connected stage to the implementation that lets the complete architecture satisfy its business outcome.",
+    "options": {
+      "A": "Stage 1: The architecture must expose a private application to selected customer VPCs without VPC peering",
+      "B": "Stage 2: The architecture must automate VPC and route configuration consistently across accounts",
+      "C": "Stage 3: The architecture needs to investigate rejected packets between two VPC subnets"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "VPC Flow Logs and route and security group configuration",
+      "2": "A PrivateLink endpoint service",
+      "3": "Infrastructure as code with CloudFormation or the AWS CDK"
+    },
+    "correctMatches": {
+      "A": "2",
+      "B": "3",
+      "C": "1"
+    },
+    "explanation": "A maps to A PrivateLink endpoint service. PrivateLink uses interface endpoints and provider endpoint services for private consumer access. B maps to Infrastructure as code with CloudFormation or the AWS CDK. IaC makes network changes repeatable, reviewable, and consistent. C maps to VPC Flow Logs and route and security group configuration. Flow Logs combined with routing and security controls identify where traffic is rejected.\nAll three stages are connected. Substituting an unrelated target would break the architecture or weaken its cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司必須向選定的客戶 VPC 公開私有應用程式，而無需 VPC 對等互連。適合哪個功能？",
+        "question": "某企業正在跨帳戶與區域設計一個整合式端到端網路架構。三個階段彼此相連，任一階段錯誤都會影響整體業務成果。此設計必須避免不必要的備用成本，同時不可削弱安全控制或可用性目標。 請把每個階段配對至最合適的實作。",
         "options": {
-          "A": "單一 NAT gateway",
-          "B": "PrivateLink 端點服務",
-          "C": "僅限公共 IP 授權名單",
-          "D": "S3 網站端點"
+          "A": "階段 1：階段 1：階段 1：需求：受監管的公司必須向選定的客戶 VPC 公開私有應用程式，而無需 VPC 對等互連",
+          "B": "階段 2：階段 2：階段 2：支援關鍵工作負載的營運團隊必須自動化 VPC 並跨帳戶一致地路由配置。",
+          "C": "階段 3：階段 3：階段 3：需求：製作團隊需要調查兩個 VPC 子網路之間被拒絕的資料包"
         },
-        "explanation": "PrivateLink 使用介面端點和提供者端點服務進行私人消費者存取。\n其他選擇不提供專用服務端點。"
+        "targets": {
+          "1": "VPC Flow Logs 以及路由和安全群組配置",
+          "2": "PrivateLink 端點服務",
+          "3": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼"
+        },
+        "explanation": "A 應配對 PrivateLink 端點服務；B 應配對 使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼；C 應配對 VPC Flow Logs 以及路由和安全群組配置。三個實作共同組成完整架構。\n若以不相關的目標取代任何一項，便會破壞架構或削弱成本、安全性及可用性之間的取捨。"
       }
     }
   },
   {
     "id": "ans-c01-d2-049",
-    "type": "single",
-    "question": "A team with strict recovery objectives needs to preserve source IP information through a load balancer for an application. Which design detail must be considered?",
-    "options": {
-      "A": "A KMS alias",
-      "B": "A Route 53 TTL only",
-      "C": "The load balancer type and the relevant proxy or header behavior",
-      "D": "An S3 storage class"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "Source address preservation depends on load balancer behavior and application headers or protocol support.\nThe other choices do not control load balancer source information.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A team with strict recovery objectives is planning two independent production changes. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The first team needs to preserve source IP information through a load balancer for an application. A second team must automate VPC and route configuration consistently across accounts. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "B": "BGP over a Direct Connect or VPN connection",
+      "C": "AWS Site-to-Site VPN",
+      "D": "A PrivateLink endpoint service",
+      "E": "The load balancer type and the relevant proxy or header behavior"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "The load balancer type and the relevant proxy or header behavior meets the first requirement: Source address preservation depends on load balancer behavior and application headers or protocol support. Infrastructure as code with CloudFormation or the AWS CDK meets the second requirement: IaC makes network changes repeatable, reviewable, and consistent.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有嚴格恢復目標的團隊需要透過應用程式的負載平衡器保留來源 IP 資訊。必須考慮哪些設計細節？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此生產環境在多個帳戶中採用集中治理。變更必須符合最低權限、可以稽核，並且不會造成長時間中斷。第一項需求：支援關鍵工作負載的營運團隊必須自動化 VPC 並跨帳戶一致地路由配置。第二項需求：準備應對流量增加的新創公司需要透過應用程式的負載平衡器保留來源 IP 資訊。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "KMS 別名",
-          "B": "僅 Route 53 TTL",
-          "C": "負載平衡器類型和相關代理或標頭行為",
-          "D": "S3 儲存類別"
+          "A": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
+          "B": "透過 Direct Connect 或 VPN 連接的 BGP",
+          "C": "AWS Site-to-Site VPN",
+          "D": "PrivateLink 端點服務",
+          "E": "負載平衡器類型和相關代理或標頭行為"
         },
-        "explanation": "來源位址保留取決於負載平衡器行為和應用程式標頭或協定支援。\n其他選項不控制負載平衡器來源資訊。"
+        "explanation": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼 符合第一項需求：IaC 使網路變更可重複、可審查且一致。 負載平衡器類型和相關代理或標頭行為 符合第二項需求：來源位址保留取決於負載平衡器行為和應用程式標頭或協定支援。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d2-050",
-    "type": "single",
-    "question": "A developer team preparing a release must automate VPC and route configuration consistently across accounts. Which approach is appropriate?",
-    "options": {
-      "A": "Manual edits in every account",
-      "B": "Public credentials",
-      "C": "A CloudFront cache",
-      "D": "Infrastructure as code with CloudFormation or the AWS CDK"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "IaC makes network changes repeatable, reviewable, and consistent.\nManual edits and public credentials increase drift and risk.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A developer team preparing a release is planning two independent production changes. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The first team must automate VPC and route configuration consistently across accounts. A second team must advertise selected VPC prefixes to an on-premises router over a private connection. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "AWS Site-to-Site VPN",
+      "B": "A PrivateLink endpoint service",
+      "C": "The load balancer type and the relevant proxy or header behavior",
+      "D": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "E": "BGP over a Direct Connect or VPN connection"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Infrastructure as code with CloudFormation or the AWS CDK meets the first requirement: IaC makes network changes repeatable, reviewable, and consistent. BGP over a Direct Connect or VPN connection meets the second requirement: BGP exchanges routes over supported hybrid connectivity links.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊必須自動化 VPC 並跨帳戶一致地路由配置。哪種方法適合？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此生產環境在多個帳戶中採用集中治理。變更必須符合最低權限、可以稽核，並且不會造成長時間中斷。第一項需求：支援關鍵工作負載的營運團隊必須自動化 VPC 並跨帳戶一致地路由配置。第二項需求：生產團隊必須透過專用連線將選定的 VPC 前綴通告到本機路由器。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "每個帳戶中的手動編輯",
-          "B": "公共憑證",
-          "C": "CloudFront 快取",
-          "D": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼"
+          "A": "AWS Site-to-Site VPN",
+          "B": "PrivateLink 端點服務",
+          "C": "負載平衡器類型和相關代理或標頭行為",
+          "D": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
+          "E": "透過 Direct Connect 或 VPN 連接的 BGP"
         },
-        "explanation": "IaC 使網路變更可重複、可審查且一致。\n手動編輯和公共憑證會增加偏差和風險。"
+        "explanation": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼 符合第一項需求：IaC 使網路變更可重複、可審查且一致。 透過 Direct Connect 或 VPN 連接的 BGP 符合第二項需求：BGP 透過支援的混合連接鏈路交換路由。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d2-051",
-    "type": "single",
-    "question": "An enterprise with several AWS Regions must advertise selected VPC prefixes to an on-premises router over a private connection. Which protocol is commonly used?",
-    "options": {
-      "A": "BGP over a Direct Connect or VPN connection",
-      "B": "HTTP over CloudFront",
-      "C": "DNS TXT records",
-      "D": "S3 lifecycle rules"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "BGP exchanges routes over supported hybrid connectivity links.\nThe other choices are application, DNS, or storage controls.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "An enterprise with several AWS Regions is planning two independent production changes. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The first team must advertise selected VPC prefixes to an on-premises router over a private connection. A second team needs encrypted connectivity between two networks over the public internet. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "The load balancer type and the relevant proxy or header behavior",
+      "B": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "C": "BGP over a Direct Connect or VPN connection",
+      "D": "AWS Site-to-Site VPN",
+      "E": "A PrivateLink endpoint service"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "BGP over a Direct Connect or VPN connection meets the first requirement: BGP exchanges routes over supported hybrid connectivity links. AWS Site-to-Site VPN meets the second requirement: Site-to-Site VPN creates encrypted tunnels between networks.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS Regions 的企業必須透過專用連線將選定的 VPC 前綴通告到本機路由器。常用的是哪種協定？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊必須考慮混合式連線、現有安全邊界，以及變更部署後的營運疑難排解。第一項需求：生產團隊必須透過專用連線將選定的 VPC 前綴通告到本機路由器。第二項需求：多帳戶平台團隊需要透過公共互聯網在兩個網路之間建立加密連線。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "透過 Direct Connect 或 VPN 連接的 BGP",
-          "B": "透過 CloudFront 的 HTTP",
-          "C": "DNS TXT 記錄",
-          "D": "S3 生命週期規則"
+          "A": "負載平衡器類型和相關代理或標頭行為",
+          "B": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
+          "C": "透過 Direct Connect 或 VPN 連接的 BGP",
+          "D": "AWS Site-to-Site VPN",
+          "E": "PrivateLink 端點服務"
         },
-        "explanation": "BGP 透過支援的混合連接鏈路交換路由。\n其他選擇是應用程式、DNS 或儲存控制。"
+        "explanation": "透過 Direct Connect 或 VPN 連接的 BGP 符合第一項需求：BGP 透過支援的混合連接鏈路交換路由。 AWS Site-to-Site VPN 符合第二項需求：站點到站點 VPN 在網路之間建立加密隧道。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   }

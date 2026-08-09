@@ -1,1261 +1,1286 @@
 [
   {
     "id": "aip-c01-d3-001",
-    "type": "single",
-    "question": "A production team must block harmful topics in both user prompts and model responses. Which feature fits?",
-    "options": {
-      "A": "A CloudFront cache policy",
-      "B": "An S3 lifecycle rule",
-      "C": "A Route 53 record",
-      "D": "Amazon Bedrock Guardrails"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Guardrails apply configurable policies to model inputs and outputs.\nThe other choices do not filter GenAI content.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A production team is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team must block harmful topics in both user prompts and model responses. Which feature fits?",
+    "options": {
+      "A": "AWS CloudTrail",
+      "B": "Amazon Bedrock Guardrails",
+      "C": "Sensitive information filters, authorization, and output validation",
+      "D": "Per-agent identities with scoped credentials"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Guardrails apply configurable policies to model inputs and outputs.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Bedrock Guardrails for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "製作團隊必須阻止使用者提示和模型回應中的有害主題。適合哪個功能？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。製作團隊必須阻止使用者提示和模型回應中的有害主題。適合哪個功能？",
         "options": {
-          "A": "CloudFront 快取策略",
-          "B": "S3 生命週期規則",
-          "C": "一筆 Route 53 記錄",
-          "D": "Amazon Bedrock Guardrails"
+          "A": "AWS CloudTrail",
+          "B": "Amazon Bedrock Guardrails",
+          "C": "敏感資訊過濾、授權和輸出驗證",
+          "D": "具有範圍憑證的每個代理身份"
         },
-        "explanation": "Guardrails 將可設定策略應用於模型輸入和輸出。\n其他選項不會過濾 GenAI 內容。"
+        "explanation": "Guardrails 將可設定策略應用於模型輸入和輸出。\n其他選項適用於此領域的不同需求，但不能像 Amazon Bedrock Guardrails 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d3-002",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A multi-account platform team needs to prevent customer PII from appearing in model responses. Which layered approach is appropriate?",
+    "question": "A multi-account platform team is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team needs to prevent customer PII from appearing in model responses. Which layered approach is appropriate?",
     "options": {
       "A": "Sensitive information filters, authorization, and output validation",
-      "B": "Return every response without checks",
-      "C": "Log all prompts publicly",
-      "D": "Disable data classification"
+      "B": "Per-agent identities with scoped credentials",
+      "C": "AWS CloudTrail",
+      "D": "An allowlist of tools backed by IAM and application authorization"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Input and output controls plus identity policy reduce the chance of exposing sensitive content.\nUnfiltered responses and public logs increase exposure.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Input and output controls plus identity policy reduce the chance of exposing sensitive content.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Sensitive information filters, authorization, and output validation for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊需要防止客戶 PII 出現在模型回應中。哪種分層方法適合？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。多帳戶平台團隊需要防止客戶 PII 出現在模型回應中。哪種分層方法適合？",
         "options": {
           "A": "敏感資訊過濾、授權和輸出驗證",
-          "B": "傳回每個回應而不進行檢查",
-          "C": "公開記錄所有提示",
-          "D": "停用資料分類"
+          "B": "具有範圍憑證的每個代理身份",
+          "C": "AWS CloudTrail",
+          "D": "由 IAM 和應用程式授權支援的工具白名單"
         },
-        "explanation": "輸入和輸出控制加上身分策略可減少暴露敏感內容的機會。\n未經過濾的回覆和公開日誌會增加曝光率。"
+        "explanation": "輸入和輸出控制加上身分策略可減少暴露敏感內容的機會。\n其他選項適用於此領域的不同需求，但不能像 敏感資訊過濾、授權和輸出驗證 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d3-003",
-    "type": "single",
-    "question": "A regulated company must give each agent its own identity when accessing backend systems. Which design is preferred?",
-    "options": {
-      "A": "Credentials in prompts",
-      "B": "Per-agent identities with scoped credentials",
-      "C": "One administrator key shared by all agents",
-      "D": "Anonymous access"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Distinct identities support least privilege and auditability for agent actions.\nShared or prompt-embedded credentials are difficult to control and audit.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A regulated company is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team must give each agent its own identity when accessing backend systems. Which design is preferred?",
+    "options": {
+      "A": "AWS CloudTrail",
+      "B": "An allowlist of tools backed by IAM and application authorization",
+      "C": "Amazon Bedrock Guardrails",
+      "D": "Per-agent identities with scoped credentials"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Distinct identities support least privilege and auditability for agent actions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Per-agent identities with scoped credentials for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司在存取後端系統時必須為每個代理商提供自己的身分。哪種設計是首選？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。受監管的公司在存取後端系統時必須為每個代理商提供自己的身分。哪種設計是首選？",
         "options": {
-          "A": "提示中的憑證",
-          "B": "具有範圍憑證的每個代理身份",
-          "C": "所有代理共享一把管理員金鑰",
-          "D": "匿名存取"
+          "A": "AWS CloudTrail",
+          "B": "由 IAM 和應用程式授權支援的工具白名單",
+          "C": "Amazon Bedrock Guardrails",
+          "D": "具有範圍憑證的每個代理身份"
         },
-        "explanation": "不同的身分支援代理操作的最小特權和可審核性。\n共享或提示嵌入的憑證難以控制和審核。"
+        "explanation": "不同的身分支援代理操作的最小特權和可審核性。\n其他選項適用於此領域的不同需求，但不能像 具有範圍憑證的每個代理身份 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d3-004",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A startup preparing for a traffic increase needs an audit trail for Bedrock API calls and policy changes. Which service should be enabled?",
+    "question": "A startup preparing for a traffic increase is redesigning one integrated end-to-end architecture. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The design must keep recurring cost proportional to use, enforce least privilege, and remain available during a component or Availability Zone failure. The workload needs an audit trail for Bedrock API calls and policy changes, and the same architecture needs to keep a workload responsive during model-provider throttling. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "AWS Batch",
-      "B": "Amazon CloudFront",
-      "C": "AWS CloudTrail",
-      "D": "Amazon EFS"
+      "A": "Use A vector index in an approved vector store for the primary requirement and integrate it with Exponential backoff, bounded retries, and a fallback path",
+      "B": "Combine A vector index in an approved vector store with Private connectivity, encryption, and least-privilege IAM as a single platform design",
+      "C": "Use AWS CloudTrail for the primary requirement and integrate it with Exponential backoff, bounded retries, and a fallback path for the connected control",
+      "D": "Use AWS CloudTrail but replace the connected control with Retrieval Augmented Generation with a knowledge base"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "CloudTrail records API activity and can deliver it to a protected archive.\nThe other choices do not audit Bedrock API calls.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "AWS CloudTrail satisfies the first part of the architecture: CloudTrail records API activity and can deliver it to a protected archive. Exponential backoff, bounded retries, and a fallback path satisfies the connected requirement: Bounded retries and fallback behavior protect user experience during throttling or transient failures.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司需要對 Bedrock API 呼叫和策略變更進行審核追蹤。應該啟用哪個服務？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：準備增加流量的新創公司需要對 Bedrock API 呼叫和策略變更進行審核追蹤。 第二項需求：支援關鍵工作負載的營運團隊需要在模型提供者限制期間保持工作負載的回應能力。 此設計必須讓持續成本與實際用量相符、落實最低權限，並在元件或可用區域發生故障時維持可用。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "AWS Batch",
-          "B": "Amazon CloudFront",
-          "C": "AWS CloudTrail",
-          "D": "Amazon EFS"
+          "A": "以已核准的向量儲存中的向量索引處理主要需求，並整合指數退避、有界重試和後備路徑",
+          "B": "把已核准的向量儲存中的向量索引與私有連線、加密與最低權限 IAM結合為單一平台設計",
+          "C": "以AWS CloudTrail處理主要需求，並整合指數退避、有界重試和後備路徑作為相連控制",
+          "D": "使用AWS CloudTrail，但以具有知識庫的檢索增強生成取代相連控制"
         },
-        "explanation": "CloudTrail 記錄 API 活動並且可以將其傳送到受保護的檔案。\n其他選項不審核 Bedrock API 呼叫。"
+        "explanation": "AWS CloudTrail 負責架構的第一項需求，指數退避、有界重試和後備路徑 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "aip-c01-d3-005",
-    "type": "single",
-    "question": "An operations team supporting a critical workload must ensure an agent cannot invoke an unapproved tool. Which control should enforce this?",
-    "options": {
-      "A": "Allow every tool dynamically",
-      "B": "Use a random model temperature",
-      "C": "Remove all logs",
-      "D": "An allowlist of tools backed by IAM and application authorization"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "A tool allowlist and IAM policy constrain what the agent can call.\nModel sampling and missing logs do not enforce tool authorization.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team must ensure an agent cannot invoke an unapproved tool. Which control should enforce this?",
+    "options": {
+      "A": "Per-agent identities with scoped credentials",
+      "B": "An allowlist of tools backed by IAM and application authorization",
+      "C": "Amazon Bedrock Guardrails",
+      "D": "Sensitive information filters, authorization, and output validation"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "A tool allowlist and IAM policy constrain what the agent can call.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide An allowlist of tools backed by IAM and application authorization for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊必須確保代理無法呼叫未經批准的工具。哪個控制項應該強制執行此操作？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。支援關鍵工作負載的營運團隊必須確保代理無法呼叫未經批准的工具。哪個控制項應該強制執行此操作？",
         "options": {
-          "A": "動態地允許每個工具",
-          "B": "使用隨機模型溫度",
-          "C": "刪除所有日誌",
-          "D": "由 IAM 和應用程式授權支援的工具白名單"
+          "A": "具有範圍憑證的每個代理身份",
+          "B": "由 IAM 和應用程式授權支援的工具白名單",
+          "C": "Amazon Bedrock Guardrails",
+          "D": "敏感資訊過濾、授權和輸出驗證"
         },
-        "explanation": "工具白名單和 IAM 策略限制代理可以呼叫的內容。\n模型採樣和遺失日誌不會強制執行工具授權。"
+        "explanation": "工具白名單和 IAM 策略限制代理可以呼叫的內容。\n其他選項適用於此領域的不同需求，但不能像 由 IAM 和應用程式授權支援的工具白名單 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d3-006",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A data platform team must block harmful topics in both user prompts and model responses. Which feature fits?",
+    "question": "A data platform team is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team must block harmful topics in both user prompts and model responses. Which feature fits?",
     "options": {
       "A": "Amazon Bedrock Guardrails",
-      "B": "A CloudFront cache policy",
-      "C": "An S3 lifecycle rule",
-      "D": "A Route 53 record"
+      "B": "Sensitive information filters, authorization, and output validation",
+      "C": "Per-agent identities with scoped credentials",
+      "D": "AWS CloudTrail"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Guardrails apply configurable policies to model inputs and outputs.\nThe other choices do not filter GenAI content.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Guardrails apply configurable policies to model inputs and outputs.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Bedrock Guardrails for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊必須阻止使用者提示和模型回應中的有害主題。適合哪個功能？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。資料平台團隊必須阻止使用者提示和模型回應中的有害主題。適合哪個功能？",
         "options": {
           "A": "Amazon Bedrock Guardrails",
-          "B": "CloudFront 快取策略",
-          "C": "S3 生命週期規則",
-          "D": "一筆 Route 53 記錄"
+          "B": "敏感資訊過濾、授權和輸出驗證",
+          "C": "具有範圍憑證的每個代理身份",
+          "D": "AWS CloudTrail"
         },
-        "explanation": "Guardrails 將可設定策略應用於模型輸入和輸出。\n其他選項不會過濾 GenAI 內容。"
+        "explanation": "Guardrails 將可設定策略應用於模型輸入和輸出。\n其他選項適用於此領域的不同需求，但不能像 Amazon Bedrock Guardrails 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d3-007",
-    "type": "single",
-    "question": "A security-conscious engineering team needs to prevent customer PII from appearing in model responses. Which layered approach is appropriate?",
-    "options": {
-      "A": "Disable data classification",
-      "B": "Sensitive information filters, authorization, and output validation",
-      "C": "Return every response without checks",
-      "D": "Log all prompts publicly"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Input and output controls plus identity policy reduce the chance of exposing sensitive content.\nUnfiltered responses and public logs increase exposure.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A security-conscious engineering team is planning two independent production changes. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The first team needs to prevent customer PII from appearing in model responses. A second team must give each agent its own identity when accessing backend systems. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Sensitive information filters, authorization, and output validation",
+      "B": "Per-agent identities with scoped credentials",
+      "C": "AWS CloudTrail",
+      "D": "An allowlist of tools backed by IAM and application authorization",
+      "E": "Amazon Bedrock Guardrails"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Sensitive information filters, authorization, and output validation meets the first requirement: Input and output controls plus identity policy reduce the chance of exposing sensitive content. Per-agent identities with scoped credentials meets the second requirement: Distinct identities support least privilege and auditability for agent actions.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊需要防止客戶 PII 出現在模型回應中。哪種分層方法適合？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。第一項需求：多帳戶平台團隊需要防止客戶 PII 出現在模型回應中。第二項需求：受監管的公司在存取後端系統時必須為每個代理商提供自己的身分。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "停用資料分類",
-          "B": "敏感資訊過濾、授權和輸出驗證",
-          "C": "傳回每個回應而不進行檢查",
-          "D": "公開記錄所有提示"
+          "A": "敏感資訊過濾、授權和輸出驗證",
+          "B": "具有範圍憑證的每個代理身份",
+          "C": "AWS CloudTrail",
+          "D": "由 IAM 和應用程式授權支援的工具白名單",
+          "E": "Amazon Bedrock Guardrails"
         },
-        "explanation": "輸入和輸出控制加上身分策略可減少暴露敏感內容的機會。\n未經過濾的回覆和公開日誌會增加曝光率。"
+        "explanation": "敏感資訊過濾、授權和輸出驗證 符合第一項需求：輸入和輸出控制加上身分策略可減少暴露敏感內容的機會。 具有範圍憑證的每個代理身份 符合第二項需求：不同的身分支援代理操作的最小特權和可審核性。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "aip-c01-d3-008",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A company migrating an existing workload must give each agent its own identity when accessing backend systems. Which design is preferred?",
+    "question": "A company migrating an existing workload is redesigning one integrated end-to-end architecture. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The design must avoid unnecessary standby cost without weakening security controls or the availability objective. The workload must give each agent its own identity when accessing backend systems, and the same architecture needs to protect troubleshooting logs from containing prompts with confidential data. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "Anonymous access",
-      "B": "Credentials in prompts",
-      "C": "Per-agent identities with scoped credentials",
-      "D": "One administrator key shared by all agents"
+      "A": "Use A vector index in an approved vector store for the primary requirement and integrate it with Redact sensitive fields and restrict log access",
+      "B": "Combine A vector index in an approved vector store with Private connectivity, encryption, and least-privilege IAM as a single platform design",
+      "C": "Use Per-agent identities with scoped credentials for the primary requirement and integrate it with Redact sensitive fields and restrict log access for the connected control",
+      "D": "Use Per-agent identities with scoped credentials but replace the connected control with Retrieval Augmented Generation with a knowledge base"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Distinct identities support least privilege and auditability for agent actions.\nShared or prompt-embedded credentials are difficult to control and audit.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Per-agent identities with scoped credentials satisfies the first part of the architecture: Distinct identities support least privilege and auditability for agent actions. Redact sensitive fields and restrict log access satisfies the connected requirement: Redaction and least-privilege log access reduce exposure while preserving useful diagnostics.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司在存取後端系統時必須為每個代理提供自己的身分。哪種設計是首選？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：受監管的公司在存取後端系統時必須為每個代理商提供自己的身分。 第二項需求：支援關鍵工作負載的營運團隊需要保護故障排除日誌不包含具有機密資料的提示。 此設計必須避免不必要的備用成本，同時不可削弱安全控制或可用性目標。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "匿名存取",
-          "B": "提示中的憑證",
-          "C": "具有範圍憑證的每個代理身份",
-          "D": "所有代理共享一把管理員金鑰"
+          "A": "以已核准的向量儲存中的向量索引處理主要需求，並整合編輯敏感字段並限制日誌存取",
+          "B": "把已核准的向量儲存中的向量索引與私有連線、加密與最低權限 IAM結合為單一平台設計",
+          "C": "以具有範圍憑證的每個代理身份處理主要需求，並整合編輯敏感字段並限制日誌存取作為相連控制",
+          "D": "使用具有範圍憑證的每個代理身份，但以具有知識庫的檢索增強生成取代相連控制"
         },
-        "explanation": "不同的身分支援代理操作的最小特權和可審核性。\n共享或提示嵌入的憑證難以控制和審核。"
+        "explanation": "具有範圍憑證的每個代理身份 負責架構的第一項需求，編輯敏感字段並限制日誌存取 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "aip-c01-d3-009",
-    "type": "single",
-    "question": "A team with strict recovery objectives needs an audit trail for Bedrock API calls and policy changes. Which service should be enabled?",
-    "options": {
-      "A": "Amazon EFS",
-      "B": "AWS Batch",
-      "C": "Amazon CloudFront",
-      "D": "AWS CloudTrail"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "CloudTrail records API activity and can deliver it to a protected archive.\nThe other choices do not audit Bedrock API calls.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team with strict recovery objectives is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team needs an audit trail for Bedrock API calls and policy changes. Which service should be enabled?",
+    "options": {
+      "A": "Sensitive information filters, authorization, and output validation",
+      "B": "AWS CloudTrail",
+      "C": "An allowlist of tools backed by IAM and application authorization",
+      "D": "Amazon Bedrock Guardrails"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudTrail records API activity and can deliver it to a protected archive.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS CloudTrail for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格復原目標的團隊需要對 Bedrock API 呼叫和策略變更進行稽核追蹤。應該啟用哪個服務？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。具有嚴格復原目標的團隊需要對 Bedrock API 呼叫和策略變更進行稽核追蹤。應該啟用哪個服務？",
         "options": {
-          "A": "Amazon EFS",
-          "B": "AWS Batch",
-          "C": "Amazon CloudFront",
-          "D": "AWS CloudTrail"
+          "A": "敏感資訊過濾、授權和輸出驗證",
+          "B": "AWS CloudTrail",
+          "C": "由 IAM 和應用程式授權支援的工具白名單",
+          "D": "Amazon Bedrock Guardrails"
         },
-        "explanation": "CloudTrail 記錄 API 活動並且可以將其傳送到受保護的檔案。\n其他選項不審核 Bedrock API 呼叫。"
+        "explanation": "CloudTrail 記錄 API 活動並且可以將其傳送到受保護的檔案。\n其他選項適用於此領域的不同需求，但不能像 AWS CloudTrail 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d3-010",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A developer team preparing a release must ensure an agent cannot invoke an unapproved tool. Which control should enforce this?",
+    "question": "A developer team preparing a release is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team must ensure an agent cannot invoke an unapproved tool. Which control should enforce this?",
     "options": {
       "A": "An allowlist of tools backed by IAM and application authorization",
-      "B": "Allow every tool dynamically",
-      "C": "Use a random model temperature",
-      "D": "Remove all logs"
+      "B": "Amazon Bedrock Guardrails",
+      "C": "Sensitive information filters, authorization, and output validation",
+      "D": "Per-agent identities with scoped credentials"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "A tool allowlist and IAM policy constrain what the agent can call.\nModel sampling and missing logs do not enforce tool authorization.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "A tool allowlist and IAM policy constrain what the agent can call.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide An allowlist of tools backed by IAM and application authorization for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊必須確保代理無法呼叫未經批准的工具。哪個控制項應該強制執行此操作？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。準備發布的開發團隊必須確保代理無法呼叫未經批准的工具。哪個控制項應該強制執行此操作？",
         "options": {
           "A": "由 IAM 和應用程式授權支援的工具白名單",
-          "B": "動態地允許每個工具",
-          "C": "使用隨機模型溫度",
-          "D": "刪除所有日誌"
+          "B": "Amazon Bedrock Guardrails",
+          "C": "敏感資訊過濾、授權和輸出驗證",
+          "D": "具有範圍憑證的每個代理身份"
         },
-        "explanation": "工具白名單和 IAM 策略限制代理可以呼叫的內容。\n模型採樣和遺失日誌不會強制執行工具授權。"
+        "explanation": "工具白名單和 IAM 策略限制代理可以呼叫的內容。\n其他選項適用於此領域的不同需求，但不能像 由 IAM 和應用程式授權支援的工具白名單 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d3-011",
-    "type": "single",
-    "question": "An enterprise with several AWS Regions must block harmful topics in both user prompts and model responses. Which feature fits?",
-    "options": {
-      "A": "A Route 53 record",
-      "B": "Amazon Bedrock Guardrails",
-      "C": "A CloudFront cache policy",
-      "D": "An S3 lifecycle rule"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Guardrails apply configurable policies to model inputs and outputs.\nThe other choices do not filter GenAI content.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The team must block harmful topics in both user prompts and model responses. Which feature fits?",
+    "options": {
+      "A": "Sensitive information filters, authorization, and output validation",
+      "B": "Per-agent identities with scoped credentials",
+      "C": "AWS CloudTrail",
+      "D": "Amazon Bedrock Guardrails"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Guardrails apply configurable policies to model inputs and outputs.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Bedrock Guardrails for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS Regions 的企業必須阻止使用者提示和模型回應中的有害主題。適合哪個功能？",
+        "question": "組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。擁有多個 AWS Regions 的企業必須阻止使用者提示和模型回應中的有害主題。適合哪個功能？",
         "options": {
-          "A": "一筆 Route 53 記錄",
-          "B": "Amazon Bedrock Guardrails",
-          "C": "CloudFront 快取策略",
-          "D": "S3 生命週期規則"
+          "A": "敏感資訊過濾、授權和輸出驗證",
+          "B": "具有範圍憑證的每個代理身份",
+          "C": "AWS CloudTrail",
+          "D": "Amazon Bedrock Guardrails"
         },
-        "explanation": "Guardrails 將可設定策略應用於模型輸入和輸出。\n其他選項不會過濾 GenAI 內容。"
+        "explanation": "Guardrails 將可設定策略應用於模型輸入和輸出。\n其他選項適用於此領域的不同需求，但不能像 Amazon Bedrock Guardrails 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d3-012",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A service owner reviewing an incident needs to prevent customer PII from appearing in model responses. Which layered approach is appropriate?",
+    "question": "A service owner reviewing an incident is redesigning one integrated end-to-end architecture. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The organization will accept additional managed-service cost only when it measurably improves security and availability with less operational effort. The workload needs to prevent customer PII from appearing in model responses, and the same architecture needs to control. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "Log all prompts publicly",
-      "B": "Disable data classification",
-      "C": "Sensitive information filters, authorization, and output validation",
-      "D": "Return every response without checks"
+      "A": "Use A vector index in an approved vector store for the primary requirement and integrate it with An IAM policy scoped to approved Bedrock model resources",
+      "B": "Combine A vector index in an approved vector store with Private connectivity, encryption, and least-privilege IAM as a single platform design",
+      "C": "Use Sensitive information filters, authorization, and output validation for the primary requirement and integrate it with An IAM policy scoped to approved Bedrock model resources for the connected control",
+      "D": "Use Sensitive information filters, authorization, and output validation but replace the connected control with Retrieval Augmented Generation with a knowledge base"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Input and output controls plus identity policy reduce the chance of exposing sensitive content.\nUnfiltered responses and public logs increase exposure.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Sensitive information filters, authorization, and output validation satisfies the first part of the architecture: Input and output controls plus identity policy reduce the chance of exposing sensitive content. An IAM policy scoped to approved Bedrock model resources satisfies the connected requirement: IAM can restrict model invocation actions and resources for a production role.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務所有者需要防止客戶 PII 出現在模型回應中。哪種分層方法適合？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：多帳戶平台團隊需要防止客戶 PII 出現在模型回應中。 第二項需求：生產團隊需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。 只有在託管服務能以較低營運負擔明確改善安全性與可用性時，組織才會接受額外成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "公開記錄所有提示",
-          "B": "停用資料分類",
-          "C": "敏感資訊過濾、授權和輸出驗證",
-          "D": "傳回每個回應而不進行檢查"
+          "A": "以已核准的向量儲存中的向量索引處理主要需求，並整合IAM 策略範圍為已核准的 Bedrock 模型資源",
+          "B": "把已核准的向量儲存中的向量索引與私有連線、加密與最低權限 IAM結合為單一平台設計",
+          "C": "以敏感資訊過濾、授權和輸出驗證處理主要需求，並整合IAM 策略範圍為已核准的 Bedrock 模型資源作為相連控制",
+          "D": "使用敏感資訊過濾、授權和輸出驗證，但以具有知識庫的檢索增強生成取代相連控制"
         },
-        "explanation": "輸入和輸出控制加上身分策略可減少暴露敏感內容的機會。\n未經過濾的回覆和公開日誌會增加曝光率。"
+        "explanation": "敏感資訊過濾、授權和輸出驗證 負責架構的第一項需求，IAM 策略範圍為已核准的 Bedrock 模型資源 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "aip-c01-d3-013",
-    "type": "single",
-    "question": "A team optimizing an existing implementation must give each agent its own identity when accessing backend systems. Which design is preferred?",
-    "options": {
-      "A": "One administrator key shared by all agents",
-      "B": "Anonymous access",
-      "C": "Credentials in prompts",
-      "D": "Per-agent identities with scoped credentials"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Distinct identities support least privilege and auditability for agent actions.\nShared or prompt-embedded credentials are difficult to control and audit.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The team must give each agent its own identity when accessing backend systems. Which design is preferred?",
+    "options": {
+      "A": "Amazon Bedrock Guardrails",
+      "B": "Per-agent identities with scoped credentials",
+      "C": "AWS CloudTrail",
+      "D": "An allowlist of tools backed by IAM and application authorization"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Distinct identities support least privilege and auditability for agent actions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Per-agent identities with scoped credentials for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊必須在存取後端系統時為每個代理提供自己的身分。哪種設計是首選？",
+        "question": "組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。優化現有實施的團隊必須在存取後端系統時為每個代理提供自己的身分。哪種設計是首選？",
         "options": {
-          "A": "所有代理共享一把管理員金鑰",
-          "B": "匿名存取",
-          "C": "提示中的憑證",
-          "D": "具有範圍憑證的每個代理身份"
+          "A": "Amazon Bedrock Guardrails",
+          "B": "具有範圍憑證的每個代理身份",
+          "C": "AWS CloudTrail",
+          "D": "由 IAM 和應用程式授權支援的工具白名單"
         },
-        "explanation": "不同的身分支援代理操作的最小特權和可審核性。\n共享或提示嵌入的憑證難以控制和審核。"
+        "explanation": "不同的身分支援代理操作的最小特權和可審核性。\n其他選項適用於此領域的不同需求，但不能像 具有範圍憑證的每個代理身份 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d3-014",
-    "type": "single",
-    "question": "A company introducing an automated workflow needs an audit trail for Bedrock API calls and policy changes. Which service should be enabled?",
-    "options": {
-      "A": "AWS CloudTrail",
-      "B": "Amazon EFS",
-      "C": "AWS Batch",
-      "D": "Amazon CloudFront"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "CloudTrail records API activity and can deliver it to a protected archive.\nThe other choices do not audit Bedrock API calls.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A company introducing an automated workflow is planning two independent production changes. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The first team needs an audit trail for Bedrock API calls and policy changes. A second team must ensure an agent cannot invoke an unapproved tool. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Amazon Bedrock Guardrails",
+      "B": "Sensitive information filters, authorization, and output validation",
+      "C": "Per-agent identities with scoped credentials",
+      "D": "AWS CloudTrail",
+      "E": "An allowlist of tools backed by IAM and application authorization"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS CloudTrail meets the first requirement: CloudTrail records API activity and can deliver it to a protected archive. An allowlist of tools backed by IAM and application authorization meets the second requirement: A tool allowlist and IAM policy constrain what the agent can call.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司需要對 Bedrock API 呼叫和策略變更進行稽核追蹤。應該啟用哪個服務？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。第一項需求：準備增加流量的新創公司需要對 Bedrock API 呼叫和策略變更進行審核追蹤。第二項需求：支援關鍵工作負載的營運團隊必須確保代理無法呼叫未經批准的工具。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "AWS CloudTrail",
-          "B": "Amazon EFS",
-          "C": "AWS Batch",
-          "D": "Amazon CloudFront"
+          "A": "Amazon Bedrock Guardrails",
+          "B": "敏感資訊過濾、授權和輸出驗證",
+          "C": "具有範圍憑證的每個代理身份",
+          "D": "AWS CloudTrail",
+          "E": "由 IAM 和應用程式授權支援的工具白名單"
         },
-        "explanation": "CloudTrail 記錄 API 活動並且可以將其傳送到受保護的檔案。\n其他選項不審核 Bedrock API 呼叫。"
+        "explanation": "AWS CloudTrail 符合第一項需求：CloudTrail 記錄 API 活動並且可以將其傳送到受保護的檔案。 由 IAM 和應用程式授權支援的工具白名單 符合第二項需求：工具白名單和 IAM 策略限制代理可以呼叫的內容。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "aip-c01-d3-015",
-    "type": "single",
-    "question": "An AWS administrator working in a shared environment must ensure an agent cannot invoke an unapproved tool. Which control should enforce this?",
-    "options": {
-      "A": "Remove all logs",
-      "B": "An allowlist of tools backed by IAM and application authorization",
-      "C": "Allow every tool dynamically",
-      "D": "Use a random model temperature"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "A tool allowlist and IAM policy constrain what the agent can call.\nModel sampling and missing logs do not enforce tool authorization.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment is reviewing a production decision. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The team must ensure an agent cannot invoke an unapproved tool. Which control should enforce this?",
+    "options": {
+      "A": "Amazon Bedrock Guardrails",
+      "B": "Sensitive information filters, authorization, and output validation",
+      "C": "Per-agent identities with scoped credentials",
+      "D": "An allowlist of tools backed by IAM and application authorization"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "A tool allowlist and IAM policy constrain what the agent can call.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide An allowlist of tools backed by IAM and application authorization for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "在共享環境中工作的 AWS 管理員必須確保代理無法呼叫未經批准的工具。哪個控制項應該強制執行此操作？",
+        "question": "組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。在共享環境中工作的 AWS 管理員必須確保代理無法呼叫未經批准的工具。哪個控制項應該強制執行此操作？",
         "options": {
-          "A": "刪除所有日誌",
-          "B": "由 IAM 和應用程式授權支援的工具白名單",
-          "C": "動態地允許每個工具",
-          "D": "使用隨機模型溫度"
+          "A": "Amazon Bedrock Guardrails",
+          "B": "敏感資訊過濾、授權和輸出驗證",
+          "C": "具有範圍憑證的每個代理身份",
+          "D": "由 IAM 和應用程式授權支援的工具白名單"
         },
-        "explanation": "工具白名單和 IAM 策略限制代理可以呼叫的內容。\n模型採樣和遺失日誌不會強制執行工具授權。"
+        "explanation": "工具白名單和 IAM 策略限制代理可以呼叫的內容。\n其他選項適用於此領域的不同需求，但不能像 由 IAM 和應用程式授權支援的工具白名單 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d3-016",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A customer-facing application team must block harmful topics in both user prompts and model responses. Which feature fits?",
+    "question": "A customer-facing application team is redesigning one integrated end-to-end architecture. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The architecture must limit blast radius, preserve availability during change, and control cost through automation instead of permanent overprovisioning. The workload must block harmful topics in both user prompts and model responses, and the same architecture needs to invoke a foundation model from an application without hosting GPU instances. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "An S3 lifecycle rule",
-      "B": "A Route 53 record",
-      "C": "Amazon Bedrock Guardrails",
-      "D": "A CloudFront cache policy"
+      "A": "Use A vector index in an approved vector store for the primary requirement and integrate it with Amazon Bedrock",
+      "B": "Combine A vector index in an approved vector store with Private connectivity, encryption, and least-privilege IAM as a single platform design",
+      "C": "Use Amazon Bedrock Guardrails for the primary requirement and integrate it with Amazon Bedrock for the connected control",
+      "D": "Use Amazon Bedrock Guardrails but replace the connected control with Retrieval Augmented Generation with a knowledge base"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Guardrails apply configurable policies to model inputs and outputs.\nThe other choices do not filter GenAI content.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Amazon Bedrock Guardrails satisfies the first part of the architecture: Guardrails apply configurable policies to model inputs and outputs. Amazon Bedrock satisfies the connected requirement: Amazon Bedrock provides managed API access to foundation models without managing model servers.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊必須阻止使用者提示和模型回應中的有害主題。適合哪個功能？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：製作團隊必須阻止使用者提示和模型回應中的有害主題。 第二項需求：在共享環境中工作的 AWS 管理員需要從應用程式呼叫基礎模型，而無需託管 GPU 執行個體。 此架構必須限制影響範圍、在變更期間維持可用性，並透過自動化控制成本，而不是長期過度佈建。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "S3 生命週期規則",
-          "B": "一筆 Route 53 記錄",
-          "C": "Amazon Bedrock Guardrails",
-          "D": "CloudFront 快取策略"
+          "A": "以已核准的向量儲存中的向量索引處理主要需求，並整合Amazon Bedrock",
+          "B": "把已核准的向量儲存中的向量索引與私有連線、加密與最低權限 IAM結合為單一平台設計",
+          "C": "以Amazon Bedrock Guardrails處理主要需求，並整合Amazon Bedrock作為相連控制",
+          "D": "使用Amazon Bedrock Guardrails，但以具有知識庫的檢索增強生成取代相連控制"
         },
-        "explanation": "Guardrails 將可設定策略應用於模型輸入和輸出。\n其他選項不會過濾 GenAI 內容。"
+        "explanation": "Amazon Bedrock Guardrails 負責架構的第一項需求，Amazon Bedrock 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "aip-c01-d3-017",
-    "type": "single",
-    "question": "A platform team standardizing its AWS deployments needs to prevent customer PII from appearing in model responses. Which layered approach is appropriate?",
-    "options": {
-      "A": "Return every response without checks",
-      "B": "Log all prompts publicly",
-      "C": "Disable data classification",
-      "D": "Sensitive information filters, authorization, and output validation"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Input and output controls plus identity policy reduce the chance of exposing sensitive content.\nUnfiltered responses and public logs increase exposure.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team needs to prevent customer PII from appearing in model responses. Which layered approach is appropriate?",
+    "options": {
+      "A": "An allowlist of tools backed by IAM and application authorization",
+      "B": "Sensitive information filters, authorization, and output validation",
+      "C": "Per-agent identities with scoped credentials",
+      "D": "AWS CloudTrail"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Input and output controls plus identity policy reduce the chance of exposing sensitive content.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Sensitive information filters, authorization, and output validation for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊需要防止客戶 PII 出現在模型回應中。哪種分層方法適合？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。標準化其 AWS 部署的平台團隊需要防止客戶 PII 出現在模型回應中。哪種分層方法適合？",
         "options": {
-          "A": "傳回每個回應而不進行檢查",
-          "B": "公開記錄所有提示",
-          "C": "停用資料分類",
-          "D": "敏感資訊過濾、授權和輸出驗證"
+          "A": "由 IAM 和應用程式授權支援的工具白名單",
+          "B": "敏感資訊過濾、授權和輸出驗證",
+          "C": "具有範圍憑證的每個代理身份",
+          "D": "AWS CloudTrail"
         },
-        "explanation": "輸入和輸出控制加上身分策略可減少暴露敏感內容的機會。\n未經過濾的回覆和公開日誌會增加曝光率。"
+        "explanation": "輸入和輸出控制加上身分策略可減少暴露敏感內容的機會。\n其他選項適用於此領域的不同需求，但不能像 敏感資訊過濾、授權和輸出驗證 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d3-018",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team preparing evidence for an audit must give each agent its own identity when accessing backend systems. Which design is preferred?",
+    "question": "A team preparing evidence for an audit is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team must give each agent its own identity when accessing backend systems. Which design is preferred?",
     "options": {
       "A": "Per-agent identities with scoped credentials",
-      "B": "One administrator key shared by all agents",
-      "C": "Anonymous access",
-      "D": "Credentials in prompts"
+      "B": "AWS CloudTrail",
+      "C": "An allowlist of tools backed by IAM and application authorization",
+      "D": "Amazon Bedrock Guardrails"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Distinct identities support least privilege and auditability for agent actions.\nShared or prompt-embedded credentials are difficult to control and audit.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Distinct identities support least privilege and auditability for agent actions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Per-agent identities with scoped credentials for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備審計證據的團隊在存取後端系統時必須為每個代理人提供自己的身分。哪種設計是首選？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。準備審計證據的團隊在存取後端系統時必須為每個代理人提供自己的身分。哪種設計是首選？",
         "options": {
           "A": "具有範圍憑證的每個代理身份",
-          "B": "所有代理共享一把管理員金鑰",
-          "C": "匿名存取",
-          "D": "提示中的憑證"
+          "B": "AWS CloudTrail",
+          "C": "由 IAM 和應用程式授權支援的工具白名單",
+          "D": "Amazon Bedrock Guardrails"
         },
-        "explanation": "不同的身分支援代理操作的最小特權和可審核性。\n共享或提示嵌入的憑證難以控制和審核。"
+        "explanation": "不同的身分支援代理操作的最小特權和可審核性。\n其他選項適用於此領域的不同需求，但不能像 具有範圍憑證的每個代理身份 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d3-019",
-    "type": "single",
-    "question": "A business replacing a manual process needs an audit trail for Bedrock API calls and policy changes. Which service should be enabled?",
-    "options": {
-      "A": "Amazon CloudFront",
-      "B": "AWS CloudTrail",
-      "C": "Amazon EFS",
-      "D": "AWS Batch"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "CloudTrail records API activity and can deliver it to a protected archive.\nThe other choices do not audit Bedrock API calls.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A business replacing a manual process is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team needs an audit trail for Bedrock API calls and policy changes. Which service should be enabled?",
+    "options": {
+      "A": "An allowlist of tools backed by IAM and application authorization",
+      "B": "Amazon Bedrock Guardrails",
+      "C": "Sensitive information filters, authorization, and output validation",
+      "D": "AWS CloudTrail"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudTrail records API activity and can deliver it to a protected archive.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS CloudTrail for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "取代手動流程的企業需要對 Bedrock API 呼叫和策略變更進行審核追蹤。應該啟用哪個服務？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。取代手動流程的企業需要對 Bedrock API 呼叫和策略變更進行審核追蹤。應該啟用哪個服務？",
         "options": {
-          "A": "Amazon CloudFront",
-          "B": "AWS CloudTrail",
-          "C": "Amazon EFS",
-          "D": "AWS Batch"
+          "A": "由 IAM 和應用程式授權支援的工具白名單",
+          "B": "Amazon Bedrock Guardrails",
+          "C": "敏感資訊過濾、授權和輸出驗證",
+          "D": "AWS CloudTrail"
         },
-        "explanation": "CloudTrail 記錄 API 活動並且可以將其傳送到受保護的檔案。\n其他選項不審核 Bedrock API 呼叫。"
+        "explanation": "CloudTrail 記錄 API 活動並且可以將其傳送到受保護的檔案。\n其他選項適用於此領域的不同需求，但不能像 AWS CloudTrail 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d3-020",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team validating a design against the exam guide must ensure an agent cannot invoke an unapproved tool. Which control should enforce this?",
+    "question": "A team validating a design against the exam guide is redesigning one integrated end-to-end architecture. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The selected controls must provide auditable security, predictable availability, and the lowest operational cost that still satisfies both requirements. The workload must ensure an agent cannot invoke an unapproved tool, and the same architecture needs to reduce inference cost for repeated identical requests. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "Use a random model temperature",
-      "B": "Remove all logs",
-      "C": "An allowlist of tools backed by IAM and application authorization",
-      "D": "Allow every tool dynamically"
+      "A": "Use A vector index in an approved vector store for the primary requirement and integrate it with Cache safe, deterministic responses with an expiration policy",
+      "B": "Combine A vector index in an approved vector store with Private connectivity, encryption, and least-privilege IAM as a single platform design",
+      "C": "Use An allowlist of tools backed by IAM and application authorization for the primary requirement and integrate it with Cache safe, deterministic responses with an expiration policy for the connected control",
+      "D": "Use An allowlist of tools backed by IAM and application authorization but replace the connected control with Retrieval Augmented Generation with a knowledge base"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "A tool allowlist and IAM policy constrain what the agent can call.\nModel sampling and missing logs do not enforce tool authorization.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "An allowlist of tools backed by IAM and application authorization satisfies the first part of the architecture: A tool allowlist and IAM policy constrain what the agent can call. Cache safe, deterministic responses with an expiration policy satisfies the connected requirement: Response caching can reduce repeated model calls when freshness and privacy requirements permit it.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊必須確保代理商無法調用未經批准的工具。哪個控制項應該強制執行此操作？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：支援關鍵工作負載的營運團隊必須確保代理無法呼叫未經批准的工具。 第二項需求：資料平台團隊需要降低重複相同請求的推理成本。 所選控制必須提供可稽核的安全性、可預測的可用性，以及在滿足兩項要求前提下最低的營運成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "使用隨機模型溫度",
-          "B": "刪除所有日誌",
-          "C": "由 IAM 和應用程式授權支援的工具白名單",
-          "D": "動態地允許每個工具"
+          "A": "以已核准的向量儲存中的向量索引處理主要需求，並整合透過過期策略快取安全、確定的回應",
+          "B": "把已核准的向量儲存中的向量索引與私有連線、加密與最低權限 IAM結合為單一平台設計",
+          "C": "以由 IAM 和應用程式授權支援的工具白名單處理主要需求，並整合透過過期策略快取安全、確定的回應作為相連控制",
+          "D": "使用由 IAM 和應用程式授權支援的工具白名單，但以具有知識庫的檢索增強生成取代相連控制"
         },
-        "explanation": "工具白名單和 IAM 策略限制代理可以呼叫的內容。\n模型採樣和遺失日誌不會強制執行工具授權。"
+        "explanation": "由 IAM 和應用程式授權支援的工具白名單 負責架構的第一項需求，透過過期策略快取安全、確定的回應 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "aip-c01-d3-021",
-    "type": "single",
-    "question": "A production team must block harmful topics in both user prompts and model responses. Which feature fits?",
-    "options": {
-      "A": "A CloudFront cache policy",
-      "B": "An S3 lifecycle rule",
-      "C": "A Route 53 record",
-      "D": "Amazon Bedrock Guardrails"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Guardrails apply configurable policies to model inputs and outputs.\nThe other choices do not filter GenAI content.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A production team is planning two independent production changes. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The first team must block harmful topics in both user prompts and model responses. A second team needs to prevent customer PII from appearing in model responses. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "An allowlist of tools backed by IAM and application authorization",
+      "B": "Amazon Bedrock Guardrails",
+      "C": "Sensitive information filters, authorization, and output validation",
+      "D": "Per-agent identities with scoped credentials",
+      "E": "AWS CloudTrail"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Amazon Bedrock Guardrails meets the first requirement: Guardrails apply configurable policies to model inputs and outputs. Sensitive information filters, authorization, and output validation meets the second requirement: Input and output controls plus identity policy reduce the chance of exposing sensitive content.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "製作團隊必須阻止使用者提示和模型回應中的有害主題。適合哪個功能？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。第一項需求：製作團隊必須阻止使用者提示和模型回應中的有害主題。第二項需求：多帳戶平台團隊需要防止客戶 PII 出現在模型回應中。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "CloudFront 快取策略",
-          "B": "S3 生命週期規則",
-          "C": "一筆 Route 53 記錄",
-          "D": "Amazon Bedrock Guardrails"
+          "A": "由 IAM 和應用程式授權支援的工具白名單",
+          "B": "Amazon Bedrock Guardrails",
+          "C": "敏感資訊過濾、授權和輸出驗證",
+          "D": "具有範圍憑證的每個代理身份",
+          "E": "AWS CloudTrail"
         },
-        "explanation": "Guardrails 將可設定策略應用於模型輸入和輸出。\n其他選項不會過濾 GenAI 內容。"
+        "explanation": "Amazon Bedrock Guardrails 符合第一項需求：Guardrails 將可設定策略應用於模型輸入和輸出。 敏感資訊過濾、授權和輸出驗證 符合第二項需求：輸入和輸出控制加上身分策略可減少暴露敏感內容的機會。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "aip-c01-d3-022",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A multi-account platform team needs to prevent customer PII from appearing in model responses. Which layered approach is appropriate?",
+    "question": "A multi-account platform team is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team needs to prevent customer PII from appearing in model responses. Which layered approach is appropriate?",
     "options": {
       "A": "Sensitive information filters, authorization, and output validation",
-      "B": "Return every response without checks",
-      "C": "Log all prompts publicly",
-      "D": "Disable data classification"
+      "B": "Per-agent identities with scoped credentials",
+      "C": "AWS CloudTrail",
+      "D": "An allowlist of tools backed by IAM and application authorization"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Input and output controls plus identity policy reduce the chance of exposing sensitive content.\nUnfiltered responses and public logs increase exposure.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Input and output controls plus identity policy reduce the chance of exposing sensitive content.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Sensitive information filters, authorization, and output validation for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊需要防止客戶 PII 出現在模型回應中。哪種分層方法適合？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。多帳戶平台團隊需要防止客戶 PII 出現在模型回應中。哪種分層方法適合？",
         "options": {
           "A": "敏感資訊過濾、授權和輸出驗證",
-          "B": "傳回每個回應而不進行檢查",
-          "C": "公開記錄所有提示",
-          "D": "停用資料分類"
+          "B": "具有範圍憑證的每個代理身份",
+          "C": "AWS CloudTrail",
+          "D": "由 IAM 和應用程式授權支援的工具白名單"
         },
-        "explanation": "輸入和輸出控制加上身分策略可減少暴露敏感內容的機會。\n未經過濾的回覆和公開日誌會增加曝光率。"
+        "explanation": "輸入和輸出控制加上身分策略可減少暴露敏感內容的機會。\n其他選項適用於此領域的不同需求，但不能像 敏感資訊過濾、授權和輸出驗證 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d3-023",
-    "type": "single",
-    "question": "A regulated company must give each agent its own identity when accessing backend systems. Which design is preferred?",
-    "options": {
-      "A": "Credentials in prompts",
-      "B": "Per-agent identities with scoped credentials",
-      "C": "One administrator key shared by all agents",
-      "D": "Anonymous access"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Distinct identities support least privilege and auditability for agent actions.\nShared or prompt-embedded credentials are difficult to control and audit.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A regulated company is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team must give each agent its own identity when accessing backend systems. Which design is preferred?",
+    "options": {
+      "A": "AWS CloudTrail",
+      "B": "An allowlist of tools backed by IAM and application authorization",
+      "C": "Amazon Bedrock Guardrails",
+      "D": "Per-agent identities with scoped credentials"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Distinct identities support least privilege and auditability for agent actions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Per-agent identities with scoped credentials for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司在存取後端系統時必須為每個代理商提供自己的身分。哪種設計是首選？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。受監管的公司在存取後端系統時必須為每個代理商提供自己的身分。哪種設計是首選？",
         "options": {
-          "A": "提示中的憑證",
-          "B": "具有範圍憑證的每個代理身份",
-          "C": "所有代理共享一把管理員金鑰",
-          "D": "匿名存取"
+          "A": "AWS CloudTrail",
+          "B": "由 IAM 和應用程式授權支援的工具白名單",
+          "C": "Amazon Bedrock Guardrails",
+          "D": "具有範圍憑證的每個代理身份"
         },
-        "explanation": "不同的身分支援代理操作的最小特權和可審核性。\n共享或提示嵌入的憑證難以控制和審核。"
+        "explanation": "不同的身分支援代理操作的最小特權和可審核性。\n其他選項適用於此領域的不同需求，但不能像 具有範圍憑證的每個代理身份 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d3-024",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A startup preparing for a traffic increase needs an audit trail for Bedrock API calls and policy changes. Which service should be enabled?",
+    "question": "A startup preparing for a traffic increase is redesigning one integrated end-to-end architecture. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The design must keep recurring cost proportional to use, enforce least privilege, and remain available during a component or Availability Zone failure. The workload needs an audit trail for Bedrock API calls and policy changes, and the same architecture needs to keep a workload responsive during model-provider throttling. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "AWS Batch",
-      "B": "Amazon CloudFront",
-      "C": "AWS CloudTrail",
-      "D": "Amazon EFS"
+      "A": "Use A vector index in an approved vector store for the primary requirement and integrate it with Exponential backoff, bounded retries, and a fallback path",
+      "B": "Combine A vector index in an approved vector store with Private connectivity, encryption, and least-privilege IAM as a single platform design",
+      "C": "Use AWS CloudTrail for the primary requirement and integrate it with Exponential backoff, bounded retries, and a fallback path for the connected control",
+      "D": "Use AWS CloudTrail but replace the connected control with Retrieval Augmented Generation with a knowledge base"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "CloudTrail records API activity and can deliver it to a protected archive.\nThe other choices do not audit Bedrock API calls.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "AWS CloudTrail satisfies the first part of the architecture: CloudTrail records API activity and can deliver it to a protected archive. Exponential backoff, bounded retries, and a fallback path satisfies the connected requirement: Bounded retries and fallback behavior protect user experience during throttling or transient failures.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司需要對 Bedrock API 呼叫和策略變更進行審核追蹤。應該啟用哪個服務？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：準備增加流量的新創公司需要對 Bedrock API 呼叫和策略變更進行審核追蹤。 第二項需求：支援關鍵工作負載的營運團隊需要在模型提供者限制期間保持工作負載的回應能力。 此設計必須讓持續成本與實際用量相符、落實最低權限，並在元件或可用區域發生故障時維持可用。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "AWS Batch",
-          "B": "Amazon CloudFront",
-          "C": "AWS CloudTrail",
-          "D": "Amazon EFS"
+          "A": "以已核准的向量儲存中的向量索引處理主要需求，並整合指數退避、有界重試和後備路徑",
+          "B": "把已核准的向量儲存中的向量索引與私有連線、加密與最低權限 IAM結合為單一平台設計",
+          "C": "以AWS CloudTrail處理主要需求，並整合指數退避、有界重試和後備路徑作為相連控制",
+          "D": "使用AWS CloudTrail，但以具有知識庫的檢索增強生成取代相連控制"
         },
-        "explanation": "CloudTrail 記錄 API 活動並且可以將其傳送到受保護的檔案。\n其他選項不審核 Bedrock API 呼叫。"
+        "explanation": "AWS CloudTrail 負責架構的第一項需求，指數退避、有界重試和後備路徑 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "aip-c01-d3-025",
-    "type": "single",
-    "question": "An operations team supporting a critical workload must ensure an agent cannot invoke an unapproved tool. Which control should enforce this?",
-    "options": {
-      "A": "Allow every tool dynamically",
-      "B": "Use a random model temperature",
-      "C": "Remove all logs",
-      "D": "An allowlist of tools backed by IAM and application authorization"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "A tool allowlist and IAM policy constrain what the agent can call.\nModel sampling and missing logs do not enforce tool authorization.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team must ensure an agent cannot invoke an unapproved tool. Which control should enforce this?",
+    "options": {
+      "A": "Per-agent identities with scoped credentials",
+      "B": "An allowlist of tools backed by IAM and application authorization",
+      "C": "Amazon Bedrock Guardrails",
+      "D": "Sensitive information filters, authorization, and output validation"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "A tool allowlist and IAM policy constrain what the agent can call.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide An allowlist of tools backed by IAM and application authorization for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊必須確保代理無法呼叫未經批准的工具。哪個控制項應該強制執行此操作？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。支援關鍵工作負載的營運團隊必須確保代理無法呼叫未經批准的工具。哪個控制項應該強制執行此操作？",
         "options": {
-          "A": "動態地允許每個工具",
-          "B": "使用隨機模型溫度",
-          "C": "刪除所有日誌",
-          "D": "由 IAM 和應用程式授權支援的工具白名單"
+          "A": "具有範圍憑證的每個代理身份",
+          "B": "由 IAM 和應用程式授權支援的工具白名單",
+          "C": "Amazon Bedrock Guardrails",
+          "D": "敏感資訊過濾、授權和輸出驗證"
         },
-        "explanation": "工具白名單和 IAM 策略限制代理可以呼叫的內容。\n模型採樣和遺失日誌不會強制執行工具授權。"
+        "explanation": "工具白名單和 IAM 策略限制代理可以呼叫的內容。\n其他選項適用於此領域的不同需求，但不能像 由 IAM 和應用程式授權支援的工具白名單 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d3-026",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A data platform team must block harmful topics in both user prompts and model responses. Which feature fits?",
+    "question": "A data platform team is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team must block harmful topics in both user prompts and model responses. Which feature fits?",
     "options": {
       "A": "Amazon Bedrock Guardrails",
-      "B": "A CloudFront cache policy",
-      "C": "An S3 lifecycle rule",
-      "D": "A Route 53 record"
+      "B": "Sensitive information filters, authorization, and output validation",
+      "C": "Per-agent identities with scoped credentials",
+      "D": "AWS CloudTrail"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Guardrails apply configurable policies to model inputs and outputs.\nThe other choices do not filter GenAI content.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Guardrails apply configurable policies to model inputs and outputs.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Bedrock Guardrails for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊必須阻止使用者提示和模型回應中的有害主題。適合哪個功能？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。資料平台團隊必須阻止使用者提示和模型回應中的有害主題。適合哪個功能？",
         "options": {
           "A": "Amazon Bedrock Guardrails",
-          "B": "CloudFront 快取策略",
-          "C": "S3 生命週期規則",
-          "D": "一筆 Route 53 記錄"
+          "B": "敏感資訊過濾、授權和輸出驗證",
+          "C": "具有範圍憑證的每個代理身份",
+          "D": "AWS CloudTrail"
         },
-        "explanation": "Guardrails 將可設定策略應用於模型輸入和輸出。\n其他選項不會過濾 GenAI 內容。"
+        "explanation": "Guardrails 將可設定策略應用於模型輸入和輸出。\n其他選項適用於此領域的不同需求，但不能像 Amazon Bedrock Guardrails 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d3-027",
-    "type": "single",
-    "question": "A security-conscious engineering team needs to prevent customer PII from appearing in model responses. Which layered approach is appropriate?",
-    "options": {
-      "A": "Disable data classification",
-      "B": "Sensitive information filters, authorization, and output validation",
-      "C": "Return every response without checks",
-      "D": "Log all prompts publicly"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Input and output controls plus identity policy reduce the chance of exposing sensitive content.\nUnfiltered responses and public logs increase exposure.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A security-conscious engineering team is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team needs to prevent customer PII from appearing in model responses. Which layered approach is appropriate?",
+    "options": {
+      "A": "Per-agent identities with scoped credentials",
+      "B": "AWS CloudTrail",
+      "C": "An allowlist of tools backed by IAM and application authorization",
+      "D": "Sensitive information filters, authorization, and output validation"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Input and output controls plus identity policy reduce the chance of exposing sensitive content.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Sensitive information filters, authorization, and output validation for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊需要防止客戶 PII 出現在模型回應中。哪種分層方法適合？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。具有安全意識的工程團隊需要防止客戶 PII 出現在模型回應中。哪種分層方法適合？",
         "options": {
-          "A": "停用資料分類",
-          "B": "敏感資訊過濾、授權和輸出驗證",
-          "C": "傳回每個回應而不進行檢查",
-          "D": "公開記錄所有提示"
+          "A": "具有範圍憑證的每個代理身份",
+          "B": "AWS CloudTrail",
+          "C": "由 IAM 和應用程式授權支援的工具白名單",
+          "D": "敏感資訊過濾、授權和輸出驗證"
         },
-        "explanation": "輸入和輸出控制加上身分策略可減少暴露敏感內容的機會。\n未經過濾的回覆和公開日誌會增加曝光率。"
+        "explanation": "輸入和輸出控制加上身分策略可減少暴露敏感內容的機會。\n其他選項適用於此領域的不同需求，但不能像 敏感資訊過濾、授權和輸出驗證 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d3-028",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A company migrating an existing workload must give each agent its own identity when accessing backend systems. Which design is preferred?",
+    "question": "A company migrating an existing workload is redesigning one integrated end-to-end architecture. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The design must avoid unnecessary standby cost without weakening security controls or the availability objective. The workload must give each agent its own identity when accessing backend systems, and the same architecture needs to protect troubleshooting logs from containing prompts with confidential data. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "Anonymous access",
-      "B": "Credentials in prompts",
-      "C": "Per-agent identities with scoped credentials",
-      "D": "One administrator key shared by all agents"
+      "A": "Use A vector index in an approved vector store for the primary requirement and integrate it with Redact sensitive fields and restrict log access",
+      "B": "Combine A vector index in an approved vector store with Private connectivity, encryption, and least-privilege IAM as a single platform design",
+      "C": "Use Per-agent identities with scoped credentials for the primary requirement and integrate it with Redact sensitive fields and restrict log access for the connected control",
+      "D": "Use Per-agent identities with scoped credentials but replace the connected control with Retrieval Augmented Generation with a knowledge base"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Distinct identities support least privilege and auditability for agent actions.\nShared or prompt-embedded credentials are difficult to control and audit.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Per-agent identities with scoped credentials satisfies the first part of the architecture: Distinct identities support least privilege and auditability for agent actions. Redact sensitive fields and restrict log access satisfies the connected requirement: Redaction and least-privilege log access reduce exposure while preserving useful diagnostics.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司在存取後端系統時必須為每個代理提供自己的身分。哪種設計是首選？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：受監管的公司在存取後端系統時必須為每個代理商提供自己的身分。 第二項需求：支援關鍵工作負載的營運團隊需要保護故障排除日誌不包含具有機密資料的提示。 此設計必須避免不必要的備用成本，同時不可削弱安全控制或可用性目標。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "匿名存取",
-          "B": "提示中的憑證",
-          "C": "具有範圍憑證的每個代理身份",
-          "D": "所有代理共享一把管理員金鑰"
+          "A": "以已核准的向量儲存中的向量索引處理主要需求，並整合編輯敏感字段並限制日誌存取",
+          "B": "把已核准的向量儲存中的向量索引與私有連線、加密與最低權限 IAM結合為單一平台設計",
+          "C": "以具有範圍憑證的每個代理身份處理主要需求，並整合編輯敏感字段並限制日誌存取作為相連控制",
+          "D": "使用具有範圍憑證的每個代理身份，但以具有知識庫的檢索增強生成取代相連控制"
         },
-        "explanation": "不同的身分支援代理操作的最小特權和可審核性。\n共享或提示嵌入的憑證難以控制和審核。"
+        "explanation": "具有範圍憑證的每個代理身份 負責架構的第一項需求，編輯敏感字段並限制日誌存取 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "aip-c01-d3-029",
-    "type": "single",
-    "question": "A team with strict recovery objectives needs an audit trail for Bedrock API calls and policy changes. Which service should be enabled?",
-    "options": {
-      "A": "Amazon EFS",
-      "B": "AWS Batch",
-      "C": "Amazon CloudFront",
-      "D": "AWS CloudTrail"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "CloudTrail records API activity and can deliver it to a protected archive.\nThe other choices do not audit Bedrock API calls.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team with strict recovery objectives is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team needs an audit trail for Bedrock API calls and policy changes. Which service should be enabled?",
+    "options": {
+      "A": "Sensitive information filters, authorization, and output validation",
+      "B": "AWS CloudTrail",
+      "C": "An allowlist of tools backed by IAM and application authorization",
+      "D": "Amazon Bedrock Guardrails"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudTrail records API activity and can deliver it to a protected archive.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS CloudTrail for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格復原目標的團隊需要對 Bedrock API 呼叫和策略變更進行稽核追蹤。應該啟用哪個服務？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。具有嚴格復原目標的團隊需要對 Bedrock API 呼叫和策略變更進行稽核追蹤。應該啟用哪個服務？",
         "options": {
-          "A": "Amazon EFS",
-          "B": "AWS Batch",
-          "C": "Amazon CloudFront",
-          "D": "AWS CloudTrail"
+          "A": "敏感資訊過濾、授權和輸出驗證",
+          "B": "AWS CloudTrail",
+          "C": "由 IAM 和應用程式授權支援的工具白名單",
+          "D": "Amazon Bedrock Guardrails"
         },
-        "explanation": "CloudTrail 記錄 API 活動並且可以將其傳送到受保護的檔案。\n其他選項不審核 Bedrock API 呼叫。"
+        "explanation": "CloudTrail 記錄 API 活動並且可以將其傳送到受保護的檔案。\n其他選項適用於此領域的不同需求，但不能像 AWS CloudTrail 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d3-030",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A developer team preparing a release must ensure an agent cannot invoke an unapproved tool. Which control should enforce this?",
+    "question": "A developer team preparing a release is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team must ensure an agent cannot invoke an unapproved tool. Which control should enforce this?",
     "options": {
       "A": "An allowlist of tools backed by IAM and application authorization",
-      "B": "Allow every tool dynamically",
-      "C": "Use a random model temperature",
-      "D": "Remove all logs"
+      "B": "Amazon Bedrock Guardrails",
+      "C": "Sensitive information filters, authorization, and output validation",
+      "D": "Per-agent identities with scoped credentials"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "A tool allowlist and IAM policy constrain what the agent can call.\nModel sampling and missing logs do not enforce tool authorization.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "A tool allowlist and IAM policy constrain what the agent can call.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide An allowlist of tools backed by IAM and application authorization for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊必須確保代理無法呼叫未經批准的工具。哪個控制項應該強制執行此操作？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。準備發布的開發團隊必須確保代理無法呼叫未經批准的工具。哪個控制項應該強制執行此操作？",
         "options": {
           "A": "由 IAM 和應用程式授權支援的工具白名單",
-          "B": "動態地允許每個工具",
-          "C": "使用隨機模型溫度",
-          "D": "刪除所有日誌"
+          "B": "Amazon Bedrock Guardrails",
+          "C": "敏感資訊過濾、授權和輸出驗證",
+          "D": "具有範圍憑證的每個代理身份"
         },
-        "explanation": "工具白名單和 IAM 策略限制代理可以呼叫的內容。\n模型採樣和遺失日誌不會強制執行工具授權。"
+        "explanation": "工具白名單和 IAM 策略限制代理可以呼叫的內容。\n其他選項適用於此領域的不同需求，但不能像 由 IAM 和應用程式授權支援的工具白名單 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d3-031",
-    "type": "single",
-    "question": "An enterprise with several AWS Regions must block harmful topics in both user prompts and model responses. Which feature fits?",
-    "options": {
-      "A": "A Route 53 record",
-      "B": "Amazon Bedrock Guardrails",
-      "C": "A CloudFront cache policy",
-      "D": "An S3 lifecycle rule"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Guardrails apply configurable policies to model inputs and outputs.\nThe other choices do not filter GenAI content.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team must block harmful topics in both user prompts and model responses. Which feature fits?",
+    "options": {
+      "A": "Sensitive information filters, authorization, and output validation",
+      "B": "Per-agent identities with scoped credentials",
+      "C": "AWS CloudTrail",
+      "D": "Amazon Bedrock Guardrails"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Guardrails apply configurable policies to model inputs and outputs.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Bedrock Guardrails for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS Regions 的企業必須阻止使用者提示和模型回應中的有害主題。適合哪個功能？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。擁有多個 AWS Regions 的企業必須阻止使用者提示和模型回應中的有害主題。適合哪個功能？",
         "options": {
-          "A": "一筆 Route 53 記錄",
-          "B": "Amazon Bedrock Guardrails",
-          "C": "CloudFront 快取策略",
-          "D": "S3 生命週期規則"
+          "A": "敏感資訊過濾、授權和輸出驗證",
+          "B": "具有範圍憑證的每個代理身份",
+          "C": "AWS CloudTrail",
+          "D": "Amazon Bedrock Guardrails"
         },
-        "explanation": "Guardrails 將可設定策略應用於模型輸入和輸出。\n其他選項不會過濾 GenAI 內容。"
+        "explanation": "Guardrails 將可設定策略應用於模型輸入和輸出。\n其他選項適用於此領域的不同需求，但不能像 Amazon Bedrock Guardrails 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d3-032",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A service owner reviewing an incident needs to prevent customer PII from appearing in model responses. Which layered approach is appropriate?",
+    "question": "A service owner reviewing an incident is redesigning one integrated end-to-end architecture. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The organization will accept additional managed-service cost only when it measurably improves security and availability with less operational effort. The workload needs to prevent customer PII from appearing in model responses, and the same architecture needs to control. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "Log all prompts publicly",
-      "B": "Disable data classification",
-      "C": "Sensitive information filters, authorization, and output validation",
-      "D": "Return every response without checks"
+      "A": "Use A vector index in an approved vector store for the primary requirement and integrate it with An IAM policy scoped to approved Bedrock model resources",
+      "B": "Combine A vector index in an approved vector store with Private connectivity, encryption, and least-privilege IAM as a single platform design",
+      "C": "Use Sensitive information filters, authorization, and output validation for the primary requirement and integrate it with An IAM policy scoped to approved Bedrock model resources for the connected control",
+      "D": "Use Sensitive information filters, authorization, and output validation but replace the connected control with Retrieval Augmented Generation with a knowledge base"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Input and output controls plus identity policy reduce the chance of exposing sensitive content.\nUnfiltered responses and public logs increase exposure.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Sensitive information filters, authorization, and output validation satisfies the first part of the architecture: Input and output controls plus identity policy reduce the chance of exposing sensitive content. An IAM policy scoped to approved Bedrock model resources satisfies the connected requirement: IAM can restrict model invocation actions and resources for a production role.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務所有者需要防止客戶 PII 出現在模型回應中。哪種分層方法適合？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：多帳戶平台團隊需要防止客戶 PII 出現在模型回應中。 第二項需求：生產團隊需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。 只有在託管服務能以較低營運負擔明確改善安全性與可用性時，組織才會接受額外成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "公開記錄所有提示",
-          "B": "停用資料分類",
-          "C": "敏感資訊過濾、授權和輸出驗證",
-          "D": "傳回每個回應而不進行檢查"
+          "A": "以已核准的向量儲存中的向量索引處理主要需求，並整合IAM 策略範圍為已核准的 Bedrock 模型資源",
+          "B": "把已核准的向量儲存中的向量索引與私有連線、加密與最低權限 IAM結合為單一平台設計",
+          "C": "以敏感資訊過濾、授權和輸出驗證處理主要需求，並整合IAM 策略範圍為已核准的 Bedrock 模型資源作為相連控制",
+          "D": "使用敏感資訊過濾、授權和輸出驗證，但以具有知識庫的檢索增強生成取代相連控制"
         },
-        "explanation": "輸入和輸出控制加上身分策略可減少暴露敏感內容的機會。\n未經過濾的回覆和公開日誌會增加曝光率。"
+        "explanation": "敏感資訊過濾、授權和輸出驗證 負責架構的第一項需求，IAM 策略範圍為已核准的 Bedrock 模型資源 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "aip-c01-d3-033",
-    "type": "single",
-    "question": "A team optimizing an existing implementation must give each agent its own identity when accessing backend systems. Which design is preferred?",
-    "options": {
-      "A": "One administrator key shared by all agents",
-      "B": "Anonymous access",
-      "C": "Credentials in prompts",
-      "D": "Per-agent identities with scoped credentials"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Distinct identities support least privilege and auditability for agent actions.\nShared or prompt-embedded credentials are difficult to control and audit.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team must give each agent its own identity when accessing backend systems. Which design is preferred?",
+    "options": {
+      "A": "Amazon Bedrock Guardrails",
+      "B": "Per-agent identities with scoped credentials",
+      "C": "AWS CloudTrail",
+      "D": "An allowlist of tools backed by IAM and application authorization"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Distinct identities support least privilege and auditability for agent actions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Per-agent identities with scoped credentials for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊必須在存取後端系統時為每個代理提供自己的身分。哪種設計是首選？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。優化現有實施的團隊必須在存取後端系統時為每個代理提供自己的身分。哪種設計是首選？",
         "options": {
-          "A": "所有代理共享一把管理員金鑰",
-          "B": "匿名存取",
-          "C": "提示中的憑證",
-          "D": "具有範圍憑證的每個代理身份"
+          "A": "Amazon Bedrock Guardrails",
+          "B": "具有範圍憑證的每個代理身份",
+          "C": "AWS CloudTrail",
+          "D": "由 IAM 和應用程式授權支援的工具白名單"
         },
-        "explanation": "不同的身分支援代理操作的最小特權和可審核性。\n共享或提示嵌入的憑證難以控制和審核。"
+        "explanation": "不同的身分支援代理操作的最小特權和可審核性。\n其他選項適用於此領域的不同需求，但不能像 具有範圍憑證的每個代理身份 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d3-034",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A company introducing an automated workflow needs an audit trail for Bedrock API calls and policy changes. Which service should be enabled?",
+    "question": "A company introducing an automated workflow is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team needs an audit trail for Bedrock API calls and policy changes. Which service should be enabled?",
     "options": {
       "A": "AWS CloudTrail",
-      "B": "Amazon EFS",
-      "C": "AWS Batch",
-      "D": "Amazon CloudFront"
+      "B": "An allowlist of tools backed by IAM and application authorization",
+      "C": "Amazon Bedrock Guardrails",
+      "D": "Sensitive information filters, authorization, and output validation"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "CloudTrail records API activity and can deliver it to a protected archive.\nThe other choices do not audit Bedrock API calls.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "CloudTrail records API activity and can deliver it to a protected archive.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS CloudTrail for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司需要對 Bedrock API 呼叫和策略變更進行稽核追蹤。應該啟用哪個服務？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。引入自動化工作流程的公司需要對 Bedrock API 呼叫和策略變更進行稽核追蹤。應該啟用哪個服務？",
         "options": {
           "A": "AWS CloudTrail",
-          "B": "Amazon EFS",
-          "C": "AWS Batch",
-          "D": "Amazon CloudFront"
+          "B": "由 IAM 和應用程式授權支援的工具白名單",
+          "C": "Amazon Bedrock Guardrails",
+          "D": "敏感資訊過濾、授權和輸出驗證"
         },
-        "explanation": "CloudTrail 記錄 API 活動並且可以將其傳送到受保護的檔案。\n其他選項不審核 Bedrock API 呼叫。"
+        "explanation": "CloudTrail 記錄 API 活動並且可以將其傳送到受保護的檔案。\n其他選項適用於此領域的不同需求，但不能像 AWS CloudTrail 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d3-035",
-    "type": "single",
-    "question": "An AWS administrator working in a shared environment must ensure an agent cannot invoke an unapproved tool. Which control should enforce this?",
-    "options": {
-      "A": "Remove all logs",
-      "B": "An allowlist of tools backed by IAM and application authorization",
-      "C": "Allow every tool dynamically",
-      "D": "Use a random model temperature"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "A tool allowlist and IAM policy constrain what the agent can call.\nModel sampling and missing logs do not enforce tool authorization.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "An AWS administrator working in a shared environment is planning two independent production changes. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The first team must ensure an agent cannot invoke an unapproved tool. A second team must block harmful topics in both user prompts and model responses. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Per-agent identities with scoped credentials",
+      "B": "AWS CloudTrail",
+      "C": "An allowlist of tools backed by IAM and application authorization",
+      "D": "Amazon Bedrock Guardrails",
+      "E": "Sensitive information filters, authorization, and output validation"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "An allowlist of tools backed by IAM and application authorization meets the first requirement: A tool allowlist and IAM policy constrain what the agent can call. Amazon Bedrock Guardrails meets the second requirement: Guardrails apply configurable policies to model inputs and outputs.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "在共享環境中工作的 AWS 管理員必須確保代理無法呼叫未經批准的工具。哪個控制項應該強制執行此操作？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。第一項需求：支援關鍵工作負載的營運團隊必須確保代理無法呼叫未經批准的工具。第二項需求：製作團隊必須阻止使用者提示和模型回應中的有害主題。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "刪除所有日誌",
-          "B": "由 IAM 和應用程式授權支援的工具白名單",
-          "C": "動態地允許每個工具",
-          "D": "使用隨機模型溫度"
+          "A": "具有範圍憑證的每個代理身份",
+          "B": "AWS CloudTrail",
+          "C": "由 IAM 和應用程式授權支援的工具白名單",
+          "D": "Amazon Bedrock Guardrails",
+          "E": "敏感資訊過濾、授權和輸出驗證"
         },
-        "explanation": "工具白名單和 IAM 策略限制代理可以呼叫的內容。\n模型採樣和遺失日誌不會強制執行工具授權。"
+        "explanation": "由 IAM 和應用程式授權支援的工具白名單 符合第一項需求：工具白名單和 IAM 策略限制代理可以呼叫的內容。 Amazon Bedrock Guardrails 符合第二項需求：Guardrails 將可設定策略應用於模型輸入和輸出。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "aip-c01-d3-036",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A customer-facing application team must block harmful topics in both user prompts and model responses. Which feature fits?",
+    "question": "A customer-facing application team is redesigning one integrated end-to-end architecture. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The architecture must limit blast radius, preserve availability during change, and control cost through automation instead of permanent overprovisioning. The workload must block harmful topics in both user prompts and model responses, and the same architecture needs to invoke a foundation model from an application without hosting GPU instances. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "An S3 lifecycle rule",
-      "B": "A Route 53 record",
-      "C": "Amazon Bedrock Guardrails",
-      "D": "A CloudFront cache policy"
+      "A": "Use A vector index in an approved vector store for the primary requirement and integrate it with Amazon Bedrock",
+      "B": "Combine A vector index in an approved vector store with Private connectivity, encryption, and least-privilege IAM as a single platform design",
+      "C": "Use Amazon Bedrock Guardrails for the primary requirement and integrate it with Amazon Bedrock for the connected control",
+      "D": "Use Amazon Bedrock Guardrails but replace the connected control with Retrieval Augmented Generation with a knowledge base"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Guardrails apply configurable policies to model inputs and outputs.\nThe other choices do not filter GenAI content.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Amazon Bedrock Guardrails satisfies the first part of the architecture: Guardrails apply configurable policies to model inputs and outputs. Amazon Bedrock satisfies the connected requirement: Amazon Bedrock provides managed API access to foundation models without managing model servers.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊必須阻止使用者提示和模型回應中的有害主題。適合哪個功能？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：製作團隊必須阻止使用者提示和模型回應中的有害主題。 第二項需求：在共享環境中工作的 AWS 管理員需要從應用程式呼叫基礎模型，而無需託管 GPU 執行個體。 此架構必須限制影響範圍、在變更期間維持可用性，並透過自動化控制成本，而不是長期過度佈建。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "S3 生命週期規則",
-          "B": "一筆 Route 53 記錄",
-          "C": "Amazon Bedrock Guardrails",
-          "D": "CloudFront 快取策略"
+          "A": "以已核准的向量儲存中的向量索引處理主要需求，並整合Amazon Bedrock",
+          "B": "把已核准的向量儲存中的向量索引與私有連線、加密與最低權限 IAM結合為單一平台設計",
+          "C": "以Amazon Bedrock Guardrails處理主要需求，並整合Amazon Bedrock作為相連控制",
+          "D": "使用Amazon Bedrock Guardrails，但以具有知識庫的檢索增強生成取代相連控制"
         },
-        "explanation": "Guardrails 將可設定策略應用於模型輸入和輸出。\n其他選項不會過濾 GenAI 內容。"
+        "explanation": "Amazon Bedrock Guardrails 負責架構的第一項需求，Amazon Bedrock 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "aip-c01-d3-037",
-    "type": "single",
-    "question": "A platform team standardizing its AWS deployments needs to prevent customer PII from appearing in model responses. Which layered approach is appropriate?",
-    "options": {
-      "A": "Return every response without checks",
-      "B": "Log all prompts publicly",
-      "C": "Disable data classification",
-      "D": "Sensitive information filters, authorization, and output validation"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Input and output controls plus identity policy reduce the chance of exposing sensitive content.\nUnfiltered responses and public logs increase exposure.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments is reviewing a production decision. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The team needs to prevent customer PII from appearing in model responses. Which layered approach is appropriate?",
+    "options": {
+      "A": "An allowlist of tools backed by IAM and application authorization",
+      "B": "Sensitive information filters, authorization, and output validation",
+      "C": "Per-agent identities with scoped credentials",
+      "D": "AWS CloudTrail"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Input and output controls plus identity policy reduce the chance of exposing sensitive content.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Sensitive information filters, authorization, and output validation for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊需要防止客戶 PII 出現在模型回應中。哪種分層方法適合？",
+        "question": "組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。標準化其 AWS 部署的平台團隊需要防止客戶 PII 出現在模型回應中。哪種分層方法適合？",
         "options": {
-          "A": "傳回每個回應而不進行檢查",
-          "B": "公開記錄所有提示",
-          "C": "停用資料分類",
-          "D": "敏感資訊過濾、授權和輸出驗證"
+          "A": "由 IAM 和應用程式授權支援的工具白名單",
+          "B": "敏感資訊過濾、授權和輸出驗證",
+          "C": "具有範圍憑證的每個代理身份",
+          "D": "AWS CloudTrail"
         },
-        "explanation": "輸入和輸出控制加上身分策略可減少暴露敏感內容的機會。\n未經過濾的回覆和公開日誌會增加曝光率。"
+        "explanation": "輸入和輸出控制加上身分策略可減少暴露敏感內容的機會。\n其他選項適用於此領域的不同需求，但不能像 敏感資訊過濾、授權和輸出驗證 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d3-038",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team preparing evidence for an audit must give each agent its own identity when accessing backend systems. Which design is preferred?",
+    "question": "A team preparing evidence for an audit is reviewing a production decision. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The team must give each agent its own identity when accessing backend systems. Which design is preferred?",
     "options": {
       "A": "Per-agent identities with scoped credentials",
-      "B": "One administrator key shared by all agents",
-      "C": "Anonymous access",
-      "D": "Credentials in prompts"
+      "B": "AWS CloudTrail",
+      "C": "An allowlist of tools backed by IAM and application authorization",
+      "D": "Amazon Bedrock Guardrails"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Distinct identities support least privilege and auditability for agent actions.\nShared or prompt-embedded credentials are difficult to control and audit.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Distinct identities support least privilege and auditability for agent actions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Per-agent identities with scoped credentials for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備審計證據的團隊在存取後端系統時必須為每個代理人提供自己的身分。哪種設計是首選？",
+        "question": "組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。準備審計證據的團隊在存取後端系統時必須為每個代理人提供自己的身分。哪種設計是首選？",
         "options": {
           "A": "具有範圍憑證的每個代理身份",
-          "B": "所有代理共享一把管理員金鑰",
-          "C": "匿名存取",
-          "D": "提示中的憑證"
+          "B": "AWS CloudTrail",
+          "C": "由 IAM 和應用程式授權支援的工具白名單",
+          "D": "Amazon Bedrock Guardrails"
         },
-        "explanation": "不同的身分支援代理操作的最小特權和可審核性。\n共享或提示嵌入的憑證難以控制和審核。"
+        "explanation": "不同的身分支援代理操作的最小特權和可審核性。\n其他選項適用於此領域的不同需求，但不能像 具有範圍憑證的每個代理身份 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d3-039",
-    "type": "single",
-    "question": "A business replacing a manual process needs an audit trail for Bedrock API calls and policy changes. Which service should be enabled?",
-    "options": {
-      "A": "Amazon CloudFront",
-      "B": "AWS CloudTrail",
-      "C": "Amazon EFS",
-      "D": "AWS Batch"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "CloudTrail records API activity and can deliver it to a protected archive.\nThe other choices do not audit Bedrock API calls.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A business replacing a manual process is reviewing a production decision. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The team needs an audit trail for Bedrock API calls and policy changes. Which service should be enabled?",
+    "options": {
+      "A": "An allowlist of tools backed by IAM and application authorization",
+      "B": "Amazon Bedrock Guardrails",
+      "C": "Sensitive information filters, authorization, and output validation",
+      "D": "AWS CloudTrail"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudTrail records API activity and can deliver it to a protected archive.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS CloudTrail for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "取代手動流程的企業需要對 Bedrock API 呼叫和策略變更進行審核追蹤。應該啟用哪個服務？",
+        "question": "組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。取代手動流程的企業需要對 Bedrock API 呼叫和策略變更進行審核追蹤。應該啟用哪個服務？",
         "options": {
-          "A": "Amazon CloudFront",
-          "B": "AWS CloudTrail",
-          "C": "Amazon EFS",
-          "D": "AWS Batch"
+          "A": "由 IAM 和應用程式授權支援的工具白名單",
+          "B": "Amazon Bedrock Guardrails",
+          "C": "敏感資訊過濾、授權和輸出驗證",
+          "D": "AWS CloudTrail"
         },
-        "explanation": "CloudTrail 記錄 API 活動並且可以將其傳送到受保護的檔案。\n其他選項不審核 Bedrock API 呼叫。"
+        "explanation": "CloudTrail 記錄 API 活動並且可以將其傳送到受保護的檔案。\n其他選項適用於此領域的不同需求，但不能像 AWS CloudTrail 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d3-040",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team validating a design against the exam guide must ensure an agent cannot invoke an unapproved tool. Which control should enforce this?",
+    "question": "A team validating a design against the exam guide is redesigning one integrated end-to-end architecture. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The selected controls must provide auditable security, predictable availability, and the lowest operational cost that still satisfies both requirements. The workload must ensure an agent cannot invoke an unapproved tool, and the same architecture needs to reduce inference cost for repeated identical requests. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "Use a random model temperature",
-      "B": "Remove all logs",
-      "C": "An allowlist of tools backed by IAM and application authorization",
-      "D": "Allow every tool dynamically"
+      "A": "Use A vector index in an approved vector store for the primary requirement and integrate it with Cache safe, deterministic responses with an expiration policy",
+      "B": "Combine A vector index in an approved vector store with Private connectivity, encryption, and least-privilege IAM as a single platform design",
+      "C": "Use An allowlist of tools backed by IAM and application authorization for the primary requirement and integrate it with Cache safe, deterministic responses with an expiration policy for the connected control",
+      "D": "Use An allowlist of tools backed by IAM and application authorization but replace the connected control with Retrieval Augmented Generation with a knowledge base"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "A tool allowlist and IAM policy constrain what the agent can call.\nModel sampling and missing logs do not enforce tool authorization.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "An allowlist of tools backed by IAM and application authorization satisfies the first part of the architecture: A tool allowlist and IAM policy constrain what the agent can call. Cache safe, deterministic responses with an expiration policy satisfies the connected requirement: Response caching can reduce repeated model calls when freshness and privacy requirements permit it.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊必須確保代理商無法調用未經批准的工具。哪個控制項應該強制執行此操作？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：支援關鍵工作負載的營運團隊必須確保代理無法呼叫未經批准的工具。 第二項需求：資料平台團隊需要降低重複相同請求的推理成本。 所選控制必須提供可稽核的安全性、可預測的可用性，以及在滿足兩項要求前提下最低的營運成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "使用隨機模型溫度",
-          "B": "刪除所有日誌",
-          "C": "由 IAM 和應用程式授權支援的工具白名單",
-          "D": "動態地允許每個工具"
+          "A": "以已核准的向量儲存中的向量索引處理主要需求，並整合透過過期策略快取安全、確定的回應",
+          "B": "把已核准的向量儲存中的向量索引與私有連線、加密與最低權限 IAM結合為單一平台設計",
+          "C": "以由 IAM 和應用程式授權支援的工具白名單處理主要需求，並整合透過過期策略快取安全、確定的回應作為相連控制",
+          "D": "使用由 IAM 和應用程式授權支援的工具白名單，但以具有知識庫的檢索增強生成取代相連控制"
         },
-        "explanation": "工具白名單和 IAM 策略限制代理可以呼叫的內容。\n模型採樣和遺失日誌不會強制執行工具授權。"
+        "explanation": "由 IAM 和應用程式授權支援的工具白名單 負責架構的第一項需求，透過過期策略快取安全、確定的回應 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "aip-c01-d3-041",
-    "type": "single",
-    "question": "A production team must block harmful topics in both user prompts and model responses. Which feature fits?",
-    "options": {
-      "A": "A CloudFront cache policy",
-      "B": "An S3 lifecycle rule",
-      "C": "A Route 53 record",
-      "D": "Amazon Bedrock Guardrails"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Guardrails apply configurable policies to model inputs and outputs.\nThe other choices do not filter GenAI content.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A production team is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team must block harmful topics in both user prompts and model responses. Which feature fits?",
+    "options": {
+      "A": "AWS CloudTrail",
+      "B": "Amazon Bedrock Guardrails",
+      "C": "Sensitive information filters, authorization, and output validation",
+      "D": "Per-agent identities with scoped credentials"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Guardrails apply configurable policies to model inputs and outputs.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Bedrock Guardrails for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "製作團隊必須阻止使用者提示和模型回應中的有害主題。適合哪個功能？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。製作團隊必須阻止使用者提示和模型回應中的有害主題。適合哪個功能？",
         "options": {
-          "A": "CloudFront 快取策略",
-          "B": "S3 生命週期規則",
-          "C": "一筆 Route 53 記錄",
-          "D": "Amazon Bedrock Guardrails"
+          "A": "AWS CloudTrail",
+          "B": "Amazon Bedrock Guardrails",
+          "C": "敏感資訊過濾、授權和輸出驗證",
+          "D": "具有範圍憑證的每個代理身份"
         },
-        "explanation": "Guardrails 將可設定策略應用於模型輸入和輸出。\n其他選項不會過濾 GenAI 內容。"
+        "explanation": "Guardrails 將可設定策略應用於模型輸入和輸出。\n其他選項適用於此領域的不同需求，但不能像 Amazon Bedrock Guardrails 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d3-042",
-    "type": "single",
-    "question": "A multi-account platform team needs to prevent customer PII from appearing in model responses. Which layered approach is appropriate?",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A multi-account platform team is planning two independent production changes. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The first team needs to prevent customer PII from appearing in model responses. A second team must give each agent its own identity when accessing backend systems. Which TWO actions satisfy these requirements?",
     "options": {
       "A": "Sensitive information filters, authorization, and output validation",
-      "B": "Return every response without checks",
-      "C": "Log all prompts publicly",
-      "D": "Disable data classification"
+      "B": "Per-agent identities with scoped credentials",
+      "C": "AWS CloudTrail",
+      "D": "An allowlist of tools backed by IAM and application authorization",
+      "E": "Amazon Bedrock Guardrails"
     },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "Input and output controls plus identity policy reduce the chance of exposing sensitive content.\nUnfiltered responses and public logs increase exposure.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Sensitive information filters, authorization, and output validation meets the first requirement: Input and output controls plus identity policy reduce the chance of exposing sensitive content. Per-agent identities with scoped credentials meets the second requirement: Distinct identities support least privilege and auditability for agent actions.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊需要防止客戶 PII 出現在模型回應中。哪種分層方法適合？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。第一項需求：多帳戶平台團隊需要防止客戶 PII 出現在模型回應中。第二項需求：受監管的公司在存取後端系統時必須為每個代理商提供自己的身分。哪兩項操作可以滿足這些需求？",
         "options": {
           "A": "敏感資訊過濾、授權和輸出驗證",
-          "B": "傳回每個回應而不進行檢查",
-          "C": "公開記錄所有提示",
-          "D": "停用資料分類"
+          "B": "具有範圍憑證的每個代理身份",
+          "C": "AWS CloudTrail",
+          "D": "由 IAM 和應用程式授權支援的工具白名單",
+          "E": "Amazon Bedrock Guardrails"
         },
-        "explanation": "輸入和輸出控制加上身分策略可減少暴露敏感內容的機會。\n未經過濾的回覆和公開日誌會增加曝光率。"
+        "explanation": "敏感資訊過濾、授權和輸出驗證 符合第一項需求：輸入和輸出控制加上身分策略可減少暴露敏感內容的機會。 具有範圍憑證的每個代理身份 符合第二項需求：不同的身分支援代理操作的最小特權和可審核性。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "aip-c01-d3-043",
-    "type": "single",
-    "question": "A regulated company must give each agent its own identity when accessing backend systems. Which design is preferred?",
-    "options": {
-      "A": "Credentials in prompts",
-      "B": "Per-agent identities with scoped credentials",
-      "C": "One administrator key shared by all agents",
-      "D": "Anonymous access"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Distinct identities support least privilege and auditability for agent actions.\nShared or prompt-embedded credentials are difficult to control and audit.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A regulated company is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team must give each agent its own identity when accessing backend systems. Which design is preferred?",
+    "options": {
+      "A": "AWS CloudTrail",
+      "B": "An allowlist of tools backed by IAM and application authorization",
+      "C": "Amazon Bedrock Guardrails",
+      "D": "Per-agent identities with scoped credentials"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Distinct identities support least privilege and auditability for agent actions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Per-agent identities with scoped credentials for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司在存取後端系統時必須為每個代理商提供自己的身分。哪種設計是首選？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。受監管的公司在存取後端系統時必須為每個代理商提供自己的身分。哪種設計是首選？",
         "options": {
-          "A": "提示中的憑證",
-          "B": "具有範圍憑證的每個代理身份",
-          "C": "所有代理共享一把管理員金鑰",
-          "D": "匿名存取"
+          "A": "AWS CloudTrail",
+          "B": "由 IAM 和應用程式授權支援的工具白名單",
+          "C": "Amazon Bedrock Guardrails",
+          "D": "具有範圍憑證的每個代理身份"
         },
-        "explanation": "不同的身分支援代理操作的最小特權和可審核性。\n共享或提示嵌入的憑證難以控制和審核。"
+        "explanation": "不同的身分支援代理操作的最小特權和可審核性。\n其他選項適用於此領域的不同需求，但不能像 具有範圍憑證的每個代理身份 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d3-044",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A startup preparing for a traffic increase needs an audit trail for Bedrock API calls and policy changes. Which service should be enabled?",
+    "question": "A startup preparing for a traffic increase is redesigning one integrated end-to-end architecture. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The design must keep recurring cost proportional to use, enforce least privilege, and remain available during a component or Availability Zone failure. The workload needs an audit trail for Bedrock API calls and policy changes, and the same architecture needs to keep a workload responsive during model-provider throttling. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "AWS Batch",
-      "B": "Amazon CloudFront",
-      "C": "AWS CloudTrail",
-      "D": "Amazon EFS"
+      "A": "Use A vector index in an approved vector store for the primary requirement and integrate it with Exponential backoff, bounded retries, and a fallback path",
+      "B": "Combine A vector index in an approved vector store with Private connectivity, encryption, and least-privilege IAM as a single platform design",
+      "C": "Use AWS CloudTrail for the primary requirement and integrate it with Exponential backoff, bounded retries, and a fallback path for the connected control",
+      "D": "Use AWS CloudTrail but replace the connected control with Retrieval Augmented Generation with a knowledge base"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "CloudTrail records API activity and can deliver it to a protected archive.\nThe other choices do not audit Bedrock API calls.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "AWS CloudTrail satisfies the first part of the architecture: CloudTrail records API activity and can deliver it to a protected archive. Exponential backoff, bounded retries, and a fallback path satisfies the connected requirement: Bounded retries and fallback behavior protect user experience during throttling or transient failures.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司需要對 Bedrock API 呼叫和策略變更進行審核追蹤。應該啟用哪個服務？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：準備增加流量的新創公司需要對 Bedrock API 呼叫和策略變更進行審核追蹤。 第二項需求：支援關鍵工作負載的營運團隊需要在模型提供者限制期間保持工作負載的回應能力。 此設計必須讓持續成本與實際用量相符、落實最低權限，並在元件或可用區域發生故障時維持可用。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "AWS Batch",
-          "B": "Amazon CloudFront",
-          "C": "AWS CloudTrail",
-          "D": "Amazon EFS"
+          "A": "以已核准的向量儲存中的向量索引處理主要需求，並整合指數退避、有界重試和後備路徑",
+          "B": "把已核准的向量儲存中的向量索引與私有連線、加密與最低權限 IAM結合為單一平台設計",
+          "C": "以AWS CloudTrail處理主要需求，並整合指數退避、有界重試和後備路徑作為相連控制",
+          "D": "使用AWS CloudTrail，但以具有知識庫的檢索增強生成取代相連控制"
         },
-        "explanation": "CloudTrail 記錄 API 活動並且可以將其傳送到受保護的檔案。\n其他選項不審核 Bedrock API 呼叫。"
+        "explanation": "AWS CloudTrail 負責架構的第一項需求，指數退避、有界重試和後備路徑 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "aip-c01-d3-045",
-    "type": "single",
-    "question": "An operations team supporting a critical workload must ensure an agent cannot invoke an unapproved tool. Which control should enforce this?",
-    "options": {
-      "A": "Allow every tool dynamically",
-      "B": "Use a random model temperature",
-      "C": "Remove all logs",
-      "D": "An allowlist of tools backed by IAM and application authorization"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "A tool allowlist and IAM policy constrain what the agent can call.\nModel sampling and missing logs do not enforce tool authorization.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team must ensure an agent cannot invoke an unapproved tool. Which control should enforce this?",
+    "options": {
+      "A": "Per-agent identities with scoped credentials",
+      "B": "An allowlist of tools backed by IAM and application authorization",
+      "C": "Amazon Bedrock Guardrails",
+      "D": "Sensitive information filters, authorization, and output validation"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "A tool allowlist and IAM policy constrain what the agent can call.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide An allowlist of tools backed by IAM and application authorization for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊必須確保代理無法呼叫未經批准的工具。哪個控制項應該強制執行此操作？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。支援關鍵工作負載的營運團隊必須確保代理無法呼叫未經批准的工具。哪個控制項應該強制執行此操作？",
         "options": {
-          "A": "動態地允許每個工具",
-          "B": "使用隨機模型溫度",
-          "C": "刪除所有日誌",
-          "D": "由 IAM 和應用程式授權支援的工具白名單"
+          "A": "具有範圍憑證的每個代理身份",
+          "B": "由 IAM 和應用程式授權支援的工具白名單",
+          "C": "Amazon Bedrock Guardrails",
+          "D": "敏感資訊過濾、授權和輸出驗證"
         },
-        "explanation": "工具白名單和 IAM 策略限制代理可以呼叫的內容。\n模型採樣和遺失日誌不會強制執行工具授權。"
+        "explanation": "工具白名單和 IAM 策略限制代理可以呼叫的內容。\n其他選項適用於此領域的不同需求，但不能像 由 IAM 和應用程式授權支援的工具白名單 一樣直接滿足題目的指定條件。"
       }
     }
   }

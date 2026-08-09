@@ -1,1205 +1,1261 @@
 [
   {
     "id": "mla-c01-d3-001",
-    "type": "single",
-    "question": "A production team needs a real-time prediction endpoint that automatically adds instances with request volume. Which design fits?",
-    "options": {
-      "A": "A batch transform job only",
-      "B": "An S3 Glacier vault",
-      "C": "A Route 53 TXT record",
-      "D": "A SageMaker real-time endpoint with autoscaling"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "A real-time endpoint serves requests and autoscaling adjusts instances to demand.\nBatch transform is offline, Glacier is archival, and DNS text records do not host models.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A production team is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs a real-time prediction endpoint that automatically adds instances with request volume. Which design fits?",
+    "options": {
+      "A": "A shadow or canary deployment with monitored traffic",
+      "B": "A SageMaker real-time endpoint with autoscaling",
+      "C": "A SageMaker batch transform job",
+      "D": "SageMaker Pipelines"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "A real-time endpoint serves requests and autoscaling adjusts instances to demand.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A SageMaker real-time endpoint with autoscaling for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "生產團隊需要一個即時預測端點，可以根據請求量自動添加執行個體。哪種設計適合？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。生產團隊需要一個即時預測端點，可以根據請求量自動添加執行個體。哪種設計適合？",
         "options": {
-          "A": "僅批量轉換作業",
-          "B": "S3 冰川拱頂",
-          "C": "Route 53 TXT 記錄",
-          "D": "具有自動縮放功能的 SageMaker 即時端點"
+          "A": "具有受監控流量的影子或金絲雀部署",
+          "B": "具有自動縮放功能的 SageMaker 即時端點",
+          "C": "SageMaker 批次轉換作業",
+          "D": "SageMaker Pipelines"
         },
-        "explanation": "即時端點服務請求，自動縮放根據需求調整執行個體。\n批次轉換是離線的，Glacier 是存檔的，DNS 文字記錄不託管模型。"
+        "explanation": "即時端點服務請求，自動縮放根據需求調整執行個體。\n其他選項適用於此領域的不同需求，但不能像 具有自動縮放功能的 SageMaker 即時端點 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d3-002",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A multi-account platform team needs predictions for a large data set without a low-latency request requirement. Which option is appropriate?",
+    "question": "A multi-account platform team is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs predictions for a large data set without a low-latency request requirement. Which option is appropriate?",
     "options": {
       "A": "A SageMaker batch transform job",
-      "B": "A public Lambda URL for every row",
-      "C": "A CloudFront distribution",
-      "D": "An IAM group"
+      "B": "SageMaker Pipelines",
+      "C": "A shadow or canary deployment with monitored traffic",
+      "D": "A versioned container image or reproducible source package"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Batch Transform processes a data set offline without maintaining a real-time endpoint.\nThe other choices add unnecessary request infrastructure or do not run predictions.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Batch Transform processes a data set offline without maintaining a real-time endpoint.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A SageMaker batch transform job for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊需要對大型資料集進行預測，而不需要低延遲請求。哪個選項合適？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。多帳戶平台團隊需要對大型資料集進行預測，而不需要低延遲請求。哪個選項合適？",
         "options": {
           "A": "SageMaker 批次轉換作業",
-          "B": "每行的公共 Lambda URL",
-          "C": "CloudFront 發行版",
-          "D": "IAM Groups"
+          "B": "SageMaker Pipelines",
+          "C": "具有受監控流量的影子或金絲雀部署",
+          "D": "版本化的容器鏡像或可複製的來源包"
         },
-        "explanation": "批量轉換離線處理資料集，無需維護即時端點。\n其他選擇添加不必要的請求基礎設施或不運行預測。"
+        "explanation": "批量轉換離線處理資料集，無需維護即時端點。\n其他選項適用於此領域的不同需求，但不能像 SageMaker 批次轉換作業 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d3-003",
-    "type": "single",
-    "question": "A regulated company must orchestrate preprocessing, training, evaluation, and registration. Which service should define the workflow?",
-    "options": {
-      "A": "Amazon Route 53",
-      "B": "SageMaker Pipelines",
-      "C": "AWS WAF",
-      "D": "Amazon EFS"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "SageMaker Pipelines represents repeatable ML workflow steps and conditions.\nThe other choices do not orchestrate ML lifecycle steps.",
     "taskStatement": "3.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A regulated company is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team must orchestrate preprocessing, training, evaluation, and registration. Which service should define the workflow?",
+    "options": {
+      "A": "A shadow or canary deployment with monitored traffic",
+      "B": "A versioned container image or reproducible source package",
+      "C": "A SageMaker real-time endpoint with autoscaling",
+      "D": "SageMaker Pipelines"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "SageMaker Pipelines represents repeatable ML workflow steps and conditions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide SageMaker Pipelines for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司必須精心安排預處理、培訓、評估和註冊。哪個服務應該定義工作流程？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。受監管的公司必須精心安排預處理、培訓、評估和註冊。哪個服務應該定義工作流程？",
         "options": {
-          "A": "Amazon Route 53",
-          "B": "SageMaker Pipelines",
-          "C": "AWS WAF",
-          "D": "Amazon EFS"
+          "A": "具有受監控流量的影子或金絲雀部署",
+          "B": "版本化的容器鏡像或可複製的來源包",
+          "C": "具有自動縮放功能的 SageMaker 即時端點",
+          "D": "SageMaker Pipelines"
         },
-        "explanation": "SageMaker Pipelines 代表可重複的 ML 工作流程步驟和條件。\n其他選擇不編排 ML 生命週期步驟。"
+        "explanation": "SageMaker Pipelines 代表可重複的 ML 工作流程步驟和條件。\n其他選項適用於此領域的不同需求，但不能像 SageMaker Pipelines 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d3-004",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A startup preparing for a traffic increase needs to deploy a new model version gradually while comparing it with the existing version. Which strategy is appropriate?",
+    "question": "A startup preparing for a traffic increase is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs to deploy a new model version gradually while comparing it with the existing version. Which strategy is appropriate?",
     "options": {
-      "A": "Disable metrics",
-      "B": "Use a public S3 bucket",
+      "A": "A SageMaker real-time endpoint with autoscaling",
+      "B": "A SageMaker batch transform job",
       "C": "A shadow or canary deployment with monitored traffic",
-      "D": "Delete the existing endpoint first"
+      "D": "A versioned container image or reproducible source package"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Shadow or canary deployments reduce release risk by comparing a new version before full traffic shift.\nDeleting the old model and disabling metrics removes safety controls.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Shadow or canary deployments reduce release risk by comparing a new version before full traffic shift.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A shadow or canary deployment with monitored traffic for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司需要在與現有版本進行比較的同時逐步部署新的模型版本。哪種策略合適？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。準備增加流量的新創公司需要在與現有版本進行比較的同時逐步部署新的模型版本。哪種策略合適？",
         "options": {
-          "A": "禁用指標",
-          "B": "使用公共 S3 儲存桶",
+          "A": "具有自動縮放功能的 SageMaker 即時端點",
+          "B": "SageMaker 批次轉換作業",
           "C": "具有受監控流量的影子或金絲雀部署",
-          "D": "首先刪除現有端點"
+          "D": "版本化的容器鏡像或可複製的來源包"
         },
-        "explanation": "影子或金絲雀部署透過在完全流量轉移之前比較新版本來降低發布風險。\n刪除舊模型並停用指標會刪除安全控制。"
+        "explanation": "影子或金絲雀部署透過在完全流量轉移之前比較新版本來降低發布風險。\n其他選項適用於此領域的不同需求，但不能像 具有受監控流量的影子或金絲雀部署 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d3-005",
-    "type": "single",
-    "question": "An operations team supporting a critical workload must package preprocessing code and dependencies consistently for training and inference. Which artifact is suitable?",
-    "options": {
-      "A": "A DNS record",
-      "B": "A security group description",
-      "C": "A billing tag only",
-      "D": "A versioned container image or reproducible source package"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Versioned artifacts make ML execution environments repeatable across stages.\nNetwork and billing metadata do not package runtime dependencies.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team must package preprocessing code and dependencies consistently for training and inference. Which artifact is suitable?",
+    "options": {
+      "A": "SageMaker Pipelines",
+      "B": "A versioned container image or reproducible source package",
+      "C": "A SageMaker real-time endpoint with autoscaling",
+      "D": "A SageMaker batch transform job"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Versioned artifacts make ML execution environments repeatable across stages.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A versioned container image or reproducible source package for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊必須一致地打包預處理程式碼和依賴項，以進行訓練和推理。哪款神器合適？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。支援關鍵工作負載的營運團隊必須一致地打包預處理程式碼和依賴項，以進行訓練和推理。哪款神器合適？",
         "options": {
-          "A": "DNS 記錄",
-          "B": "安全群組描述",
-          "C": "僅計費標籤",
-          "D": "版本化的容器鏡像或可複製的來源包"
+          "A": "SageMaker Pipelines",
+          "B": "版本化的容器鏡像或可複製的來源包",
+          "C": "具有自動縮放功能的 SageMaker 即時端點",
+          "D": "SageMaker 批次轉換作業"
         },
-        "explanation": "版本化工件使 ML 執行環境可跨階段重複。\n網路和計費元資料不打包運行時依賴項。"
+        "explanation": "版本化工件使 ML 執行環境可跨階段重複。\n其他選項適用於此領域的不同需求，但不能像 版本化的容器鏡像或可複製的來源包 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d3-006",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A data platform team needs a real-time prediction endpoint that automatically adds instances with request volume. Which design fits?",
+    "question": "A data platform team is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs a real-time prediction endpoint that automatically adds instances with request volume. Which design fits?",
     "options": {
       "A": "A SageMaker real-time endpoint with autoscaling",
-      "B": "A batch transform job only",
-      "C": "An S3 Glacier vault",
-      "D": "A Route 53 TXT record"
+      "B": "A SageMaker batch transform job",
+      "C": "SageMaker Pipelines",
+      "D": "A shadow or canary deployment with monitored traffic"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "A real-time endpoint serves requests and autoscaling adjusts instances to demand.\nBatch transform is offline, Glacier is archival, and DNS text records do not host models.",
-    "taskStatement": "3.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "A real-time endpoint serves requests and autoscaling adjusts instances to demand.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A SageMaker real-time endpoint with autoscaling for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要一個即時預測端點，可以自動新增具有請求量的執行個體。哪種設計適合？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。資料平台團隊需要一個即時預測端點，可以自動新增具有請求量的執行個體。哪種設計適合？",
         "options": {
           "A": "具有自動縮放功能的 SageMaker 即時端點",
-          "B": "僅批量轉換作業",
-          "C": "S3 冰川拱頂",
-          "D": "Route 53 TXT 記錄"
+          "B": "SageMaker 批次轉換作業",
+          "C": "SageMaker Pipelines",
+          "D": "具有受監控流量的影子或金絲雀部署"
         },
-        "explanation": "即時端點服務請求，自動縮放根據需求調整執行個體。\n批次轉換是離線的，Glacier 是存檔的，DNS 文字記錄不託管模型。"
+        "explanation": "即時端點服務請求，自動縮放根據需求調整執行個體。\n其他選項適用於此領域的不同需求，但不能像 具有自動縮放功能的 SageMaker 即時端點 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d3-007",
-    "type": "single",
-    "question": "A security-conscious engineering team needs predictions for a large data set without a low-latency request requirement. Which option is appropriate?",
-    "options": {
-      "A": "An IAM group",
-      "B": "A SageMaker batch transform job",
-      "C": "A public Lambda URL for every row",
-      "D": "A CloudFront distribution"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Batch Transform processes a data set offline without maintaining a real-time endpoint.\nThe other choices add unnecessary request infrastructure or do not run predictions.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A security-conscious engineering team is planning two independent production changes. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The first team needs predictions for a large data set without a low-latency request requirement. A second team must orchestrate preprocessing, training, evaluation, and registration. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "A SageMaker batch transform job",
+      "B": "SageMaker Pipelines",
+      "C": "A shadow or canary deployment with monitored traffic",
+      "D": "A versioned container image or reproducible source package",
+      "E": "A SageMaker real-time endpoint with autoscaling"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "A SageMaker batch transform job meets the first requirement: Batch Transform processes a data set offline without maintaining a real-time endpoint. SageMaker Pipelines meets the second requirement: SageMaker Pipelines represents repeatable ML workflow steps and conditions.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊需要在沒有低延遲請求要求的情況下對大型資料集進行預測。哪個選項合適？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。第一項需求：多帳戶平台團隊需要對大型資料集進行預測，而不需要低延遲請求。第二項需求：受監管的公司必須精心安排預處理、培訓、評估和註冊。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "IAM Groups",
-          "B": "SageMaker 批次轉換作業",
-          "C": "每行的公共 Lambda URL",
-          "D": "CloudFront 發行版"
+          "A": "SageMaker 批次轉換作業",
+          "B": "SageMaker Pipelines",
+          "C": "具有受監控流量的影子或金絲雀部署",
+          "D": "版本化的容器鏡像或可複製的來源包",
+          "E": "具有自動縮放功能的 SageMaker 即時端點"
         },
-        "explanation": "批量轉換離線處理資料集，無需維護即時端點。\n其他選擇添加不必要的請求基礎設施或不運行預測。"
+        "explanation": "SageMaker 批次轉換作業 符合第一項需求：批量轉換離線處理資料集，無需維護即時端點。 SageMaker Pipelines 符合第二項需求：SageMaker Pipelines 代表可重複的 ML 工作流程步驟和條件。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "mla-c01-d3-008",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A company migrating an existing workload must orchestrate preprocessing, training, evaluation, and registration. Which service should define the workflow?",
+    "question": "A company migrating an existing workload is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team must orchestrate preprocessing, training, evaluation, and registration. Which service should define the workflow?",
     "options": {
-      "A": "Amazon EFS",
-      "B": "Amazon Route 53",
+      "A": "A versioned container image or reproducible source package",
+      "B": "A SageMaker real-time endpoint with autoscaling",
       "C": "SageMaker Pipelines",
-      "D": "AWS WAF"
+      "D": "A shadow or canary deployment with monitored traffic"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "SageMaker Pipelines represents repeatable ML workflow steps and conditions.\nThe other choices do not orchestrate ML lifecycle steps.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "SageMaker Pipelines represents repeatable ML workflow steps and conditions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide SageMaker Pipelines for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司必須協調預處理、培訓、評估和註冊。哪個服務應該定義工作流程？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。遷移現有工作負載的公司必須協調預處理、培訓、評估和註冊。哪個服務應該定義工作流程？",
         "options": {
-          "A": "Amazon EFS",
-          "B": "Amazon Route 53",
+          "A": "版本化的容器鏡像或可複製的來源包",
+          "B": "具有自動縮放功能的 SageMaker 即時端點",
           "C": "SageMaker Pipelines",
-          "D": "AWS WAF"
+          "D": "具有受監控流量的影子或金絲雀部署"
         },
-        "explanation": "SageMaker Pipelines 代表可重複的 ML 工作流程步驟和條件。\n其他選擇不編排 ML 生命週期步驟。"
+        "explanation": "SageMaker Pipelines 代表可重複的 ML 工作流程步驟和條件。\n其他選項適用於此領域的不同需求，但不能像 SageMaker Pipelines 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d3-009",
-    "type": "single",
-    "question": "A team with strict recovery objectives needs to deploy a new model version gradually while comparing it with the existing version. Which strategy is appropriate?",
-    "options": {
-      "A": "Delete the existing endpoint first",
-      "B": "Disable metrics",
-      "C": "Use a public S3 bucket",
-      "D": "A shadow or canary deployment with monitored traffic"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Shadow or canary deployments reduce release risk by comparing a new version before full traffic shift.\nDeleting the old model and disabling metrics removes safety controls.",
     "taskStatement": "3.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team with strict recovery objectives is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs to deploy a new model version gradually while comparing it with the existing version. Which strategy is appropriate?",
+    "options": {
+      "A": "A SageMaker batch transform job",
+      "B": "A shadow or canary deployment with monitored traffic",
+      "C": "A versioned container image or reproducible source package",
+      "D": "A SageMaker real-time endpoint with autoscaling"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Shadow or canary deployments reduce release risk by comparing a new version before full traffic shift.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A shadow or canary deployment with monitored traffic for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格復原目標的團隊需要在與現有版本進行比較的同時逐步部署新的模型版本。哪種策略合適？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。具有嚴格復原目標的團隊需要在與現有版本進行比較的同時逐步部署新的模型版本。哪種策略合適？",
         "options": {
-          "A": "首先刪除現有端點",
-          "B": "禁用指標",
-          "C": "使用公共 S3 儲存桶",
-          "D": "具有受監控流量的影子或金絲雀部署"
+          "A": "SageMaker 批次轉換作業",
+          "B": "具有受監控流量的影子或金絲雀部署",
+          "C": "版本化的容器鏡像或可複製的來源包",
+          "D": "具有自動縮放功能的 SageMaker 即時端點"
         },
-        "explanation": "影子或金絲雀部署透過在完全流量轉移之前比較新版本來降低發布風險。\n刪除舊模型並停用指標會刪除安全控制。"
+        "explanation": "影子或金絲雀部署透過在完全流量轉移之前比較新版本來降低發布風險。\n其他選項適用於此領域的不同需求，但不能像 具有受監控流量的影子或金絲雀部署 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d3-010",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A developer team preparing a release must package preprocessing code and dependencies consistently for training and inference. Which artifact is suitable?",
+    "question": "A developer team preparing a release is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team must package preprocessing code and dependencies consistently for training and inference. Which artifact is suitable?",
     "options": {
       "A": "A versioned container image or reproducible source package",
-      "B": "A DNS record",
-      "C": "A security group description",
-      "D": "A billing tag only"
+      "B": "A SageMaker real-time endpoint with autoscaling",
+      "C": "A SageMaker batch transform job",
+      "D": "SageMaker Pipelines"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Versioned artifacts make ML execution environments repeatable across stages.\nNetwork and billing metadata do not package runtime dependencies.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Versioned artifacts make ML execution environments repeatable across stages.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A versioned container image or reproducible source package for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊必須一致地打包預處理程式碼和依賴項，以進行訓練和推理。哪款神器合適？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。準備發布的開發團隊必須一致地打包預處理程式碼和依賴項，以進行訓練和推理。哪款神器合適？",
         "options": {
           "A": "版本化的容器鏡像或可複製的來源包",
-          "B": "DNS 記錄",
-          "C": "安全群組描述",
-          "D": "僅計費標籤"
+          "B": "具有自動縮放功能的 SageMaker 即時端點",
+          "C": "SageMaker 批次轉換作業",
+          "D": "SageMaker Pipelines"
         },
-        "explanation": "版本化工件使 ML 執行環境可跨階段重複。\n網路和計費元資料不打包運行時依賴項。"
+        "explanation": "版本化工件使 ML 執行環境可跨階段重複。\n其他選項適用於此領域的不同需求，但不能像 版本化的容器鏡像或可複製的來源包 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d3-011",
-    "type": "single",
-    "question": "An enterprise with several AWS Regions needs a real-time prediction endpoint that automatically adds instances with request volume. Which design fits?",
-    "options": {
-      "A": "A Route 53 TXT record",
-      "B": "A SageMaker real-time endpoint with autoscaling",
-      "C": "A batch transform job only",
-      "D": "An S3 Glacier vault"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "A real-time endpoint serves requests and autoscaling adjusts instances to demand.\nBatch transform is offline, Glacier is archival, and DNS text records do not host models.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs a real-time prediction endpoint that automatically adds instances with request volume. Which design fits?",
+    "options": {
+      "A": "A SageMaker batch transform job",
+      "B": "SageMaker Pipelines",
+      "C": "A shadow or canary deployment with monitored traffic",
+      "D": "A SageMaker real-time endpoint with autoscaling"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "A real-time endpoint serves requests and autoscaling adjusts instances to demand.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A SageMaker real-time endpoint with autoscaling for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業需要一個即時預測終端節點，可以根據請求量自動新增執行個體。哪種設計適合？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。擁有多個 AWS 區域的企業需要一個即時預測終端節點，可以根據請求量自動新增執行個體。哪種設計適合？",
         "options": {
-          "A": "Route 53 TXT 記錄",
-          "B": "具有自動縮放功能的 SageMaker 即時端點",
-          "C": "僅批量轉換作業",
-          "D": "S3 冰川拱頂"
+          "A": "SageMaker 批次轉換作業",
+          "B": "SageMaker Pipelines",
+          "C": "具有受監控流量的影子或金絲雀部署",
+          "D": "具有自動縮放功能的 SageMaker 即時端點"
         },
-        "explanation": "即時端點服務請求，自動縮放根據需求調整執行個體。\n批次轉換是離線的，Glacier 是存檔的，DNS 文字記錄不託管模型。"
+        "explanation": "即時端點服務請求，自動縮放根據需求調整執行個體。\n其他選項適用於此領域的不同需求，但不能像 具有自動縮放功能的 SageMaker 即時端點 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d3-012",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A service owner reviewing an incident needs predictions for a large data set without a low-latency request requirement. Which option is appropriate?",
+    "question": "A service owner reviewing an incident is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs predictions for a large data set without a low-latency request requirement. Which option is appropriate?",
     "options": {
-      "A": "A CloudFront distribution",
-      "B": "An IAM group",
+      "A": "A shadow or canary deployment with monitored traffic",
+      "B": "A versioned container image or reproducible source package",
       "C": "A SageMaker batch transform job",
-      "D": "A public Lambda URL for every row"
+      "D": "SageMaker Pipelines"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Batch Transform processes a data set offline without maintaining a real-time endpoint.\nThe other choices add unnecessary request infrastructure or do not run predictions.",
-    "taskStatement": "3.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "Batch Transform processes a data set offline without maintaining a real-time endpoint.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A SageMaker batch transform job for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務擁有者需要對大型資料集進行預測，而不需要低延遲請求。哪個選項合適？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。審查事件的服務擁有者需要對大型資料集進行預測，而不需要低延遲請求。哪個選項合適？",
         "options": {
-          "A": "CloudFront 發行版",
-          "B": "IAM Groups",
+          "A": "具有受監控流量的影子或金絲雀部署",
+          "B": "版本化的容器鏡像或可複製的來源包",
           "C": "SageMaker 批次轉換作業",
-          "D": "每行的公共 Lambda URL"
+          "D": "SageMaker Pipelines"
         },
-        "explanation": "批量轉換離線處理資料集，無需維護即時端點。\n其他選擇添加不必要的請求基礎設施或不運行預測。"
+        "explanation": "批量轉換離線處理資料集，無需維護即時端點。\n其他選項適用於此領域的不同需求，但不能像 SageMaker 批次轉換作業 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d3-013",
-    "type": "single",
-    "question": "A team optimizing an existing implementation must orchestrate preprocessing, training, evaluation, and registration. Which service should define the workflow?",
-    "options": {
-      "A": "AWS WAF",
-      "B": "Amazon EFS",
-      "C": "Amazon Route 53",
-      "D": "SageMaker Pipelines"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "SageMaker Pipelines represents repeatable ML workflow steps and conditions.\nThe other choices do not orchestrate ML lifecycle steps.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team must orchestrate preprocessing, training, evaluation, and registration. Which service should define the workflow?",
+    "options": {
+      "A": "A SageMaker real-time endpoint with autoscaling",
+      "B": "SageMaker Pipelines",
+      "C": "A shadow or canary deployment with monitored traffic",
+      "D": "A versioned container image or reproducible source package"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "SageMaker Pipelines represents repeatable ML workflow steps and conditions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide SageMaker Pipelines for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊必須協調預處理、培訓、評估和註冊。哪個服務應該定義工作流程？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。優化現有實施的團隊必須協調預處理、培訓、評估和註冊。哪個服務應該定義工作流程？",
         "options": {
-          "A": "AWS WAF",
-          "B": "Amazon EFS",
-          "C": "Amazon Route 53",
-          "D": "SageMaker Pipelines"
+          "A": "具有自動縮放功能的 SageMaker 即時端點",
+          "B": "SageMaker Pipelines",
+          "C": "具有受監控流量的影子或金絲雀部署",
+          "D": "版本化的容器鏡像或可複製的來源包"
         },
-        "explanation": "SageMaker Pipelines 代表可重複的 ML 工作流程步驟和條件。\n其他選擇不編排 ML 生命週期步驟。"
+        "explanation": "SageMaker Pipelines 代表可重複的 ML 工作流程步驟和條件。\n其他選項適用於此領域的不同需求，但不能像 SageMaker Pipelines 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d3-014",
-    "type": "single",
-    "question": "A company introducing an automated workflow needs to deploy a new model version gradually while comparing it with the existing version. Which strategy is appropriate?",
-    "options": {
-      "A": "A shadow or canary deployment with monitored traffic",
-      "B": "Delete the existing endpoint first",
-      "C": "Disable metrics",
-      "D": "Use a public S3 bucket"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "Shadow or canary deployments reduce release risk by comparing a new version before full traffic shift.\nDeleting the old model and disabling metrics removes safety controls.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A company introducing an automated workflow is planning two independent production changes. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The first team needs to deploy a new model version gradually while comparing it with the existing version. A second team must package preprocessing code and dependencies consistently for training and inference. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "A SageMaker real-time endpoint with autoscaling",
+      "B": "A SageMaker batch transform job",
+      "C": "SageMaker Pipelines",
+      "D": "A shadow or canary deployment with monitored traffic",
+      "E": "A versioned container image or reproducible source package"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "A shadow or canary deployment with monitored traffic meets the first requirement: Shadow or canary deployments reduce release risk by comparing a new version before full traffic shift. A versioned container image or reproducible source package meets the second requirement: Versioned artifacts make ML execution environments repeatable across stages.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司需要逐步部署新的模型版本，同時與現有版本進行比較。哪種策略合適？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。第一項需求：準備增加流量的新創公司需要在與現有版本進行比較的同時逐步部署新的模型版本。第二項需求：支援關鍵工作負載的營運團隊必須一致地打包預處理程式碼和依賴項，以進行訓練和推理。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "具有受監控流量的影子或金絲雀部署",
-          "B": "首先刪除現有端點",
-          "C": "禁用指標",
-          "D": "使用公共 S3 儲存桶"
+          "A": "具有自動縮放功能的 SageMaker 即時端點",
+          "B": "SageMaker 批次轉換作業",
+          "C": "SageMaker Pipelines",
+          "D": "具有受監控流量的影子或金絲雀部署",
+          "E": "版本化的容器鏡像或可複製的來源包"
         },
-        "explanation": "影子或金絲雀部署透過在完全流量轉移之前比較新版本來降低發布風險。\n刪除舊模型並停用指標會刪除安全控制。"
+        "explanation": "具有受監控流量的影子或金絲雀部署 符合第一項需求：影子或金絲雀部署透過在完全流量轉移之前比較新版本來降低發布風險。 版本化的容器鏡像或可複製的來源包 符合第二項需求：版本化工件使 ML 執行環境可跨階段重複。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "mla-c01-d3-015",
-    "type": "single",
-    "question": "An AWS administrator working in a shared environment must package preprocessing code and dependencies consistently for training and inference. Which artifact is suitable?",
-    "options": {
-      "A": "A billing tag only",
-      "B": "A versioned container image or reproducible source package",
-      "C": "A DNS record",
-      "D": "A security group description"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Versioned artifacts make ML execution environments repeatable across stages.\nNetwork and billing metadata do not package runtime dependencies.",
     "taskStatement": "3.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team must package preprocessing code and dependencies consistently for training and inference. Which artifact is suitable?",
+    "options": {
+      "A": "A SageMaker real-time endpoint with autoscaling",
+      "B": "A SageMaker batch transform job",
+      "C": "SageMaker Pipelines",
+      "D": "A versioned container image or reproducible source package"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Versioned artifacts make ML execution environments repeatable across stages.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A versioned container image or reproducible source package for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "在共享環境中工作的 AWS 管理員必須一致地打包預處理程式碼和相依項，以進行訓練和推理。哪款神器合適？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。在共享環境中工作的 AWS 管理員必須一致地打包預處理程式碼和相依項，以進行訓練和推理。哪款神器合適？",
         "options": {
-          "A": "僅計費標籤",
-          "B": "版本化的容器鏡像或可複製的來源包",
-          "C": "DNS 記錄",
-          "D": "安全群組描述"
+          "A": "具有自動縮放功能的 SageMaker 即時端點",
+          "B": "SageMaker 批次轉換作業",
+          "C": "SageMaker Pipelines",
+          "D": "版本化的容器鏡像或可複製的來源包"
         },
-        "explanation": "版本化工件使 ML 執行環境可跨階段重複。\n網路和計費元資料不打包運行時依賴項。"
+        "explanation": "版本化工件使 ML 執行環境可跨階段重複。\n其他選項適用於此領域的不同需求，但不能像 版本化的容器鏡像或可複製的來源包 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d3-016",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A customer-facing application team needs a real-time prediction endpoint that automatically adds instances with request volume. Which design fits?",
+    "question": "A customer-facing application team is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs a real-time prediction endpoint that automatically adds instances with request volume. Which design fits?",
     "options": {
-      "A": "An S3 Glacier vault",
-      "B": "A Route 53 TXT record",
+      "A": "SageMaker Pipelines",
+      "B": "A shadow or canary deployment with monitored traffic",
       "C": "A SageMaker real-time endpoint with autoscaling",
-      "D": "A batch transform job only"
+      "D": "A SageMaker batch transform job"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "A real-time endpoint serves requests and autoscaling adjusts instances to demand.\nBatch transform is offline, Glacier is archival, and DNS text records do not host models.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "A real-time endpoint serves requests and autoscaling adjusts instances to demand.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A SageMaker real-time endpoint with autoscaling for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊需要一個即時預測端點，該端點可以自動添加具有請求量的執行個體。哪種設計適合？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。面向客戶的應用程式團隊需要一個即時預測端點，該端點可以自動添加具有請求量的執行個體。哪種設計適合？",
         "options": {
-          "A": "S3 冰川拱頂",
-          "B": "Route 53 TXT 記錄",
+          "A": "SageMaker Pipelines",
+          "B": "具有受監控流量的影子或金絲雀部署",
           "C": "具有自動縮放功能的 SageMaker 即時端點",
-          "D": "僅批量轉換作業"
+          "D": "SageMaker 批次轉換作業"
         },
-        "explanation": "即時端點服務請求，自動縮放根據需求調整執行個體。\n批次轉換是離線的，Glacier 是存檔的，DNS 文字記錄不託管模型。"
+        "explanation": "即時端點服務請求，自動縮放根據需求調整執行個體。\n其他選項適用於此領域的不同需求，但不能像 具有自動縮放功能的 SageMaker 即時端點 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d3-017",
-    "type": "single",
-    "question": "A platform team standardizing its AWS deployments needs predictions for a large data set without a low-latency request requirement. Which option is appropriate?",
-    "options": {
-      "A": "A public Lambda URL for every row",
-      "B": "A CloudFront distribution",
-      "C": "An IAM group",
-      "D": "A SageMaker batch transform job"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Batch Transform processes a data set offline without maintaining a real-time endpoint.\nThe other choices add unnecessary request infrastructure or do not run predictions.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A platform team standardizing its AWS deployments is reviewing several independent production requirements. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. Match each workload requirement to the most appropriate implementation.",
+    "options": {
+      "A": "A workload needs predictions for a large data set without a low-latency request requirement",
+      "B": "A workload must orchestrate preprocessing, training, evaluation, and registration",
+      "C": "A workload needs to deploy a new model version gradually while comparing it with the existing version"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "A shadow or canary deployment with monitored traffic",
+      "2": "A SageMaker batch transform job",
+      "3": "SageMaker Pipelines"
+    },
+    "correctMatches": {
+      "A": "2",
+      "B": "3",
+      "C": "1"
+    },
+    "explanation": "A maps to A SageMaker batch transform job. Batch Transform processes a data set offline without maintaining a real-time endpoint. B maps to SageMaker Pipelines. SageMaker Pipelines represents repeatable ML workflow steps and conditions. C maps to A shadow or canary deployment with monitored traffic. Shadow or canary deployments reduce release risk by comparing a new version before full traffic shift.\nEach target is intended for a different requirement, so all three mappings must be evaluated independently.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊需要對大型資料集進行預測，而不需要低延遲請求。哪個選項合適？",
+        "question": "團隊正在審查多項彼此獨立的生產需求。這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。請將每項工作負載需求配對至最適合的實作。",
         "options": {
-          "A": "每行的公共 Lambda URL",
-          "B": "CloudFront 發行版",
-          "C": "IAM Groups",
-          "D": "SageMaker 批次轉換作業"
+          "A": "工作負載需求：多帳戶平台團隊需要對大型資料集進行預測，而不需要低延遲請求",
+          "B": "工作負載需求：受監管的公司必須精心安排預處理、培訓、評估和註冊",
+          "C": "工作負載需求：準備增加流量的新創公司需要在與現有版本進行比較的同時逐步部署新的模型版本"
         },
-        "explanation": "批量轉換離線處理資料集，無需維護即時端點。\n其他選擇添加不必要的請求基礎設施或不運行預測。"
+        "targets": {
+          "1": "具有受監控流量的影子或金絲雀部署",
+          "2": "SageMaker 批次轉換作業",
+          "3": "SageMaker Pipelines"
+        },
+        "explanation": "A 對應 SageMaker 批次轉換作業。批量轉換離線處理資料集，無需維護即時端點。 B 對應 SageMaker Pipelines。SageMaker Pipelines 代表可重複的 ML 工作流程步驟和條件。 C 對應 具有受監控流量的影子或金絲雀部署。影子或金絲雀部署透過在完全流量轉移之前比較新版本來降低發布風險。\n每個目標均處理不同需求，因此必須分別評估三項配對。"
       }
     }
   },
   {
     "id": "mla-c01-d3-018",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team preparing evidence for an audit must orchestrate preprocessing, training, evaluation, and registration. Which service should define the workflow?",
+    "question": "A team preparing evidence for an audit is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team must orchestrate preprocessing, training, evaluation, and registration. Which service should define the workflow?",
     "options": {
       "A": "SageMaker Pipelines",
-      "B": "AWS WAF",
-      "C": "Amazon EFS",
-      "D": "Amazon Route 53"
+      "B": "A shadow or canary deployment with monitored traffic",
+      "C": "A versioned container image or reproducible source package",
+      "D": "A SageMaker real-time endpoint with autoscaling"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "SageMaker Pipelines represents repeatable ML workflow steps and conditions.\nThe other choices do not orchestrate ML lifecycle steps.",
-    "taskStatement": "3.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "SageMaker Pipelines represents repeatable ML workflow steps and conditions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide SageMaker Pipelines for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備審計證據的團隊必須協調預處理、訓練、評估和註冊。哪個服務應該定義工作流程？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。準備審計證據的團隊必須協調預處理、訓練、評估和註冊。哪個服務應該定義工作流程？",
         "options": {
           "A": "SageMaker Pipelines",
-          "B": "AWS WAF",
-          "C": "Amazon EFS",
-          "D": "Amazon Route 53"
+          "B": "具有受監控流量的影子或金絲雀部署",
+          "C": "版本化的容器鏡像或可複製的來源包",
+          "D": "具有自動縮放功能的 SageMaker 即時端點"
         },
-        "explanation": "SageMaker Pipelines 代表可重複的 ML 工作流程步驟和條件。\n其他選擇不編排 ML 生命週期步驟。"
+        "explanation": "SageMaker Pipelines 代表可重複的 ML 工作流程步驟和條件。\n其他選項適用於此領域的不同需求，但不能像 SageMaker Pipelines 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d3-019",
-    "type": "single",
-    "question": "A business replacing a manual process needs to deploy a new model version gradually while comparing it with the existing version. Which strategy is appropriate?",
-    "options": {
-      "A": "Use a public S3 bucket",
-      "B": "A shadow or canary deployment with monitored traffic",
-      "C": "Delete the existing endpoint first",
-      "D": "Disable metrics"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Shadow or canary deployments reduce release risk by comparing a new version before full traffic shift.\nDeleting the old model and disabling metrics removes safety controls.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A business replacing a manual process is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs to deploy a new model version gradually while comparing it with the existing version. Which strategy is appropriate?",
+    "options": {
+      "A": "A versioned container image or reproducible source package",
+      "B": "A SageMaker real-time endpoint with autoscaling",
+      "C": "A SageMaker batch transform job",
+      "D": "A shadow or canary deployment with monitored traffic"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Shadow or canary deployments reduce release risk by comparing a new version before full traffic shift.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A shadow or canary deployment with monitored traffic for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "替代手動流程的業務需要逐步部署新的模型版本，同時與現有版本進行比較。哪種策略合適？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。替代手動流程的業務需要逐步部署新的模型版本，同時與現有版本進行比較。哪種策略合適？",
         "options": {
-          "A": "使用公共 S3 儲存桶",
-          "B": "具有受監控流量的影子或金絲雀部署",
-          "C": "首先刪除現有端點",
-          "D": "禁用指標"
+          "A": "版本化的容器鏡像或可複製的來源包",
+          "B": "具有自動縮放功能的 SageMaker 即時端點",
+          "C": "SageMaker 批次轉換作業",
+          "D": "具有受監控流量的影子或金絲雀部署"
         },
-        "explanation": "影子或金絲雀部署透過在完全流量轉移之前比較新版本來降低發布風險。\n刪除舊模型並停用指標會刪除安全控制。"
+        "explanation": "影子或金絲雀部署透過在完全流量轉移之前比較新版本來降低發布風險。\n其他選項適用於此領域的不同需求，但不能像 具有受監控流量的影子或金絲雀部署 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d3-020",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team validating a design against the exam guide must package preprocessing code and dependencies consistently for training and inference. Which artifact is suitable?",
+    "question": "A team validating a design against the exam guide is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team must package preprocessing code and dependencies consistently for training and inference. Which artifact is suitable?",
     "options": {
-      "A": "A security group description",
-      "B": "A billing tag only",
+      "A": "A SageMaker batch transform job",
+      "B": "SageMaker Pipelines",
       "C": "A versioned container image or reproducible source package",
-      "D": "A DNS record"
+      "D": "A SageMaker real-time endpoint with autoscaling"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Versioned artifacts make ML execution environments repeatable across stages.\nNetwork and billing metadata do not package runtime dependencies.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Versioned artifacts make ML execution environments repeatable across stages.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A versioned container image or reproducible source package for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊必須一致地打包預處理程式碼和依賴項，以進行訓練和推理。哪款神器合適？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。根據考試指南驗證設計的團隊必須一致地打包預處理程式碼和依賴項，以進行訓練和推理。哪款神器合適？",
         "options": {
-          "A": "安全群組描述",
-          "B": "僅計費標籤",
+          "A": "SageMaker 批次轉換作業",
+          "B": "SageMaker Pipelines",
           "C": "版本化的容器鏡像或可複製的來源包",
-          "D": "DNS 記錄"
+          "D": "具有自動縮放功能的 SageMaker 即時端點"
         },
-        "explanation": "版本化工件使 ML 執行環境可跨階段重複。\n網路和計費元資料不打包運行時依賴項。"
+        "explanation": "版本化工件使 ML 執行環境可跨階段重複。\n其他選項適用於此領域的不同需求，但不能像 版本化的容器鏡像或可複製的來源包 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d3-021",
-    "type": "single",
-    "question": "A production team needs a real-time prediction endpoint that automatically adds instances with request volume. Which design fits?",
-    "options": {
-      "A": "A batch transform job only",
-      "B": "An S3 Glacier vault",
-      "C": "A Route 53 TXT record",
-      "D": "A SageMaker real-time endpoint with autoscaling"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "A real-time endpoint serves requests and autoscaling adjusts instances to demand.\nBatch transform is offline, Glacier is archival, and DNS text records do not host models.",
     "taskStatement": "3.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A production team is planning two independent production changes. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The first team needs a real-time prediction endpoint that automatically adds instances with request volume. A second team needs predictions for a large data set without a low-latency request requirement. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "A versioned container image or reproducible source package",
+      "B": "A SageMaker real-time endpoint with autoscaling",
+      "C": "A SageMaker batch transform job",
+      "D": "SageMaker Pipelines",
+      "E": "A shadow or canary deployment with monitored traffic"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "A SageMaker real-time endpoint with autoscaling meets the first requirement: A real-time endpoint serves requests and autoscaling adjusts instances to demand. A SageMaker batch transform job meets the second requirement: Batch Transform processes a data set offline without maintaining a real-time endpoint.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "生產團隊需要一個即時預測端點，可以根據請求量自動添加執行個體。哪種設計適合？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。第一項需求：生產團隊需要一個即時預測端點，可以根據請求量自動添加執行個體。第二項需求：多帳戶平台團隊需要對大型資料集進行預測，而不需要低延遲請求。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "僅批量轉換作業",
-          "B": "S3 冰川拱頂",
-          "C": "Route 53 TXT 記錄",
-          "D": "具有自動縮放功能的 SageMaker 即時端點"
+          "A": "版本化的容器鏡像或可複製的來源包",
+          "B": "具有自動縮放功能的 SageMaker 即時端點",
+          "C": "SageMaker 批次轉換作業",
+          "D": "SageMaker Pipelines",
+          "E": "具有受監控流量的影子或金絲雀部署"
         },
-        "explanation": "即時端點服務請求，自動縮放根據需求調整執行個體。\n批次轉換是離線的，Glacier 是存檔的，DNS 文字記錄不託管模型。"
+        "explanation": "具有自動縮放功能的 SageMaker 即時端點 符合第一項需求：即時端點服務請求，自動縮放根據需求調整執行個體。 SageMaker 批次轉換作業 符合第二項需求：批量轉換離線處理資料集，無需維護即時端點。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "mla-c01-d3-022",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A multi-account platform team needs predictions for a large data set without a low-latency request requirement. Which option is appropriate?",
+    "question": "A multi-account platform team is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team needs predictions for a large data set without a low-latency request requirement. Which option is appropriate?",
     "options": {
       "A": "A SageMaker batch transform job",
-      "B": "A public Lambda URL for every row",
-      "C": "A CloudFront distribution",
-      "D": "An IAM group"
+      "B": "SageMaker Pipelines",
+      "C": "A shadow or canary deployment with monitored traffic",
+      "D": "A versioned container image or reproducible source package"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Batch Transform processes a data set offline without maintaining a real-time endpoint.\nThe other choices add unnecessary request infrastructure or do not run predictions.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Batch Transform processes a data set offline without maintaining a real-time endpoint.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A SageMaker batch transform job for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊需要對大型資料集進行預測，而不需要低延遲請求。哪個選項合適？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。多帳戶平台團隊需要對大型資料集進行預測，而不需要低延遲請求。哪個選項合適？",
         "options": {
           "A": "SageMaker 批次轉換作業",
-          "B": "每行的公共 Lambda URL",
-          "C": "CloudFront 發行版",
-          "D": "IAM Groups"
+          "B": "SageMaker Pipelines",
+          "C": "具有受監控流量的影子或金絲雀部署",
+          "D": "版本化的容器鏡像或可複製的來源包"
         },
-        "explanation": "批量轉換離線處理資料集，無需維護即時端點。\n其他選擇添加不必要的請求基礎設施或不運行預測。"
+        "explanation": "批量轉換離線處理資料集，無需維護即時端點。\n其他選項適用於此領域的不同需求，但不能像 SageMaker 批次轉換作業 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d3-023",
-    "type": "single",
-    "question": "A regulated company must orchestrate preprocessing, training, evaluation, and registration. Which service should define the workflow?",
-    "options": {
-      "A": "Amazon Route 53",
-      "B": "SageMaker Pipelines",
-      "C": "AWS WAF",
-      "D": "Amazon EFS"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "SageMaker Pipelines represents repeatable ML workflow steps and conditions.\nThe other choices do not orchestrate ML lifecycle steps.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A regulated company is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team must orchestrate preprocessing, training, evaluation, and registration. Which service should define the workflow?",
+    "options": {
+      "A": "A shadow or canary deployment with monitored traffic",
+      "B": "A versioned container image or reproducible source package",
+      "C": "A SageMaker real-time endpoint with autoscaling",
+      "D": "SageMaker Pipelines"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "SageMaker Pipelines represents repeatable ML workflow steps and conditions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide SageMaker Pipelines for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司必須精心安排預處理、培訓、評估和註冊。哪個服務應該定義工作流程？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。受監管的公司必須精心安排預處理、培訓、評估和註冊。哪個服務應該定義工作流程？",
         "options": {
-          "A": "Amazon Route 53",
-          "B": "SageMaker Pipelines",
-          "C": "AWS WAF",
-          "D": "Amazon EFS"
+          "A": "具有受監控流量的影子或金絲雀部署",
+          "B": "版本化的容器鏡像或可複製的來源包",
+          "C": "具有自動縮放功能的 SageMaker 即時端點",
+          "D": "SageMaker Pipelines"
         },
-        "explanation": "SageMaker Pipelines 代表可重複的 ML 工作流程步驟和條件。\n其他選擇不編排 ML 生命週期步驟。"
+        "explanation": "SageMaker Pipelines 代表可重複的 ML 工作流程步驟和條件。\n其他選項適用於此領域的不同需求，但不能像 SageMaker Pipelines 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d3-024",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A startup preparing for a traffic increase needs to deploy a new model version gradually while comparing it with the existing version. Which strategy is appropriate?",
+    "question": "A startup preparing for a traffic increase is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team needs to deploy a new model version gradually while comparing it with the existing version. Which strategy is appropriate?",
     "options": {
-      "A": "Disable metrics",
-      "B": "Use a public S3 bucket",
+      "A": "A SageMaker real-time endpoint with autoscaling",
+      "B": "A SageMaker batch transform job",
       "C": "A shadow or canary deployment with monitored traffic",
-      "D": "Delete the existing endpoint first"
+      "D": "A versioned container image or reproducible source package"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Shadow or canary deployments reduce release risk by comparing a new version before full traffic shift.\nDeleting the old model and disabling metrics removes safety controls.",
-    "taskStatement": "3.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "Shadow or canary deployments reduce release risk by comparing a new version before full traffic shift.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A shadow or canary deployment with monitored traffic for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司需要在與現有版本進行比較的同時逐步部署新的模型版本。哪種策略合適？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。準備增加流量的新創公司需要在與現有版本進行比較的同時逐步部署新的模型版本。哪種策略合適？",
         "options": {
-          "A": "禁用指標",
-          "B": "使用公共 S3 儲存桶",
+          "A": "具有自動縮放功能的 SageMaker 即時端點",
+          "B": "SageMaker 批次轉換作業",
           "C": "具有受監控流量的影子或金絲雀部署",
-          "D": "首先刪除現有端點"
+          "D": "版本化的容器鏡像或可複製的來源包"
         },
-        "explanation": "影子或金絲雀部署透過在完全流量轉移之前比較新版本來降低發布風險。\n刪除舊模型並停用指標會刪除安全控制。"
+        "explanation": "影子或金絲雀部署透過在完全流量轉移之前比較新版本來降低發布風險。\n其他選項適用於此領域的不同需求，但不能像 具有受監控流量的影子或金絲雀部署 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d3-025",
-    "type": "single",
-    "question": "An operations team supporting a critical workload must package preprocessing code and dependencies consistently for training and inference. Which artifact is suitable?",
-    "options": {
-      "A": "A DNS record",
-      "B": "A security group description",
-      "C": "A billing tag only",
-      "D": "A versioned container image or reproducible source package"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Versioned artifacts make ML execution environments repeatable across stages.\nNetwork and billing metadata do not package runtime dependencies.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team must package preprocessing code and dependencies consistently for training and inference. Which artifact is suitable?",
+    "options": {
+      "A": "SageMaker Pipelines",
+      "B": "A versioned container image or reproducible source package",
+      "C": "A SageMaker real-time endpoint with autoscaling",
+      "D": "A SageMaker batch transform job"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Versioned artifacts make ML execution environments repeatable across stages.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A versioned container image or reproducible source package for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊必須一致地打包預處理程式碼和依賴項，以進行訓練和推理。哪款神器合適？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。支援關鍵工作負載的營運團隊必須一致地打包預處理程式碼和依賴項，以進行訓練和推理。哪款神器合適？",
         "options": {
-          "A": "DNS 記錄",
-          "B": "安全群組描述",
-          "C": "僅計費標籤",
-          "D": "版本化的容器鏡像或可複製的來源包"
+          "A": "SageMaker Pipelines",
+          "B": "版本化的容器鏡像或可複製的來源包",
+          "C": "具有自動縮放功能的 SageMaker 即時端點",
+          "D": "SageMaker 批次轉換作業"
         },
-        "explanation": "版本化工件使 ML 執行環境可跨階段重複。\n網路和計費元資料不打包運行時依賴項。"
+        "explanation": "版本化工件使 ML 執行環境可跨階段重複。\n其他選項適用於此領域的不同需求，但不能像 版本化的容器鏡像或可複製的來源包 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d3-026",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A data platform team needs a real-time prediction endpoint that automatically adds instances with request volume. Which design fits?",
+    "question": "A data platform team is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs a real-time prediction endpoint that automatically adds instances with request volume. Which design fits?",
     "options": {
       "A": "A SageMaker real-time endpoint with autoscaling",
-      "B": "A batch transform job only",
-      "C": "An S3 Glacier vault",
-      "D": "A Route 53 TXT record"
+      "B": "A SageMaker batch transform job",
+      "C": "SageMaker Pipelines",
+      "D": "A shadow or canary deployment with monitored traffic"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "A real-time endpoint serves requests and autoscaling adjusts instances to demand.\nBatch transform is offline, Glacier is archival, and DNS text records do not host models.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "A real-time endpoint serves requests and autoscaling adjusts instances to demand.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A SageMaker real-time endpoint with autoscaling for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要一個即時預測端點，可以自動新增具有請求量的執行個體。哪種設計適合？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。資料平台團隊需要一個即時預測端點，可以自動新增具有請求量的執行個體。哪種設計適合？",
         "options": {
           "A": "具有自動縮放功能的 SageMaker 即時端點",
-          "B": "僅批量轉換作業",
-          "C": "S3 冰川拱頂",
-          "D": "Route 53 TXT 記錄"
+          "B": "SageMaker 批次轉換作業",
+          "C": "SageMaker Pipelines",
+          "D": "具有受監控流量的影子或金絲雀部署"
         },
-        "explanation": "即時端點服務請求，自動縮放根據需求調整執行個體。\n批次轉換是離線的，Glacier 是存檔的，DNS 文字記錄不託管模型。"
+        "explanation": "即時端點服務請求，自動縮放根據需求調整執行個體。\n其他選項適用於此領域的不同需求，但不能像 具有自動縮放功能的 SageMaker 即時端點 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d3-027",
-    "type": "single",
-    "question": "A security-conscious engineering team needs predictions for a large data set without a low-latency request requirement. Which option is appropriate?",
-    "options": {
-      "A": "An IAM group",
-      "B": "A SageMaker batch transform job",
-      "C": "A public Lambda URL for every row",
-      "D": "A CloudFront distribution"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Batch Transform processes a data set offline without maintaining a real-time endpoint.\nThe other choices add unnecessary request infrastructure or do not run predictions.",
     "taskStatement": "3.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A security-conscious engineering team is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs predictions for a large data set without a low-latency request requirement. Which option is appropriate?",
+    "options": {
+      "A": "SageMaker Pipelines",
+      "B": "A shadow or canary deployment with monitored traffic",
+      "C": "A versioned container image or reproducible source package",
+      "D": "A SageMaker batch transform job"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Batch Transform processes a data set offline without maintaining a real-time endpoint.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A SageMaker batch transform job for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊需要在沒有低延遲請求要求的情況下對大型資料集進行預測。哪個選項合適？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。具有安全意識的工程團隊需要在沒有低延遲請求要求的情況下對大型資料集進行預測。哪個選項合適？",
         "options": {
-          "A": "IAM Groups",
-          "B": "SageMaker 批次轉換作業",
-          "C": "每行的公共 Lambda URL",
-          "D": "CloudFront 發行版"
+          "A": "SageMaker Pipelines",
+          "B": "具有受監控流量的影子或金絲雀部署",
+          "C": "版本化的容器鏡像或可複製的來源包",
+          "D": "SageMaker 批次轉換作業"
         },
-        "explanation": "批量轉換離線處理資料集，無需維護即時端點。\n其他選擇添加不必要的請求基礎設施或不運行預測。"
+        "explanation": "批量轉換離線處理資料集，無需維護即時端點。\n其他選項適用於此領域的不同需求，但不能像 SageMaker 批次轉換作業 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d3-028",
-    "type": "single",
-    "question": "A company migrating an existing workload must orchestrate preprocessing, training, evaluation, and registration. Which service should define the workflow?",
-    "options": {
-      "A": "Amazon EFS",
-      "B": "Amazon Route 53",
-      "C": "SageMaker Pipelines",
-      "D": "AWS WAF"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "SageMaker Pipelines represents repeatable ML workflow steps and conditions.\nThe other choices do not orchestrate ML lifecycle steps.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A company migrating an existing workload is planning two independent production changes. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The first team must orchestrate preprocessing, training, evaluation, and registration. A second team needs to deploy a new model version gradually while comparing it with the existing version. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "A shadow or canary deployment with monitored traffic",
+      "B": "A versioned container image or reproducible source package",
+      "C": "A SageMaker real-time endpoint with autoscaling",
+      "D": "A SageMaker batch transform job",
+      "E": "SageMaker Pipelines"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "SageMaker Pipelines meets the first requirement: SageMaker Pipelines represents repeatable ML workflow steps and conditions. A shadow or canary deployment with monitored traffic meets the second requirement: Shadow or canary deployments reduce release risk by comparing a new version before full traffic shift.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司必須協調預處理、培訓、評估和註冊。哪個服務應該定義工作流程？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。第一項需求：準備增加流量的新創公司需要在與現有版本進行比較的同時逐步部署新的模型版本。第二項需求：受監管的公司必須精心安排預處理、培訓、評估和註冊。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "Amazon EFS",
-          "B": "Amazon Route 53",
-          "C": "SageMaker Pipelines",
-          "D": "AWS WAF"
+          "A": "具有受監控流量的影子或金絲雀部署",
+          "B": "版本化的容器鏡像或可複製的來源包",
+          "C": "具有自動縮放功能的 SageMaker 即時端點",
+          "D": "SageMaker 批次轉換作業",
+          "E": "SageMaker Pipelines"
         },
-        "explanation": "SageMaker Pipelines 代表可重複的 ML 工作流程步驟和條件。\n其他選擇不編排 ML 生命週期步驟。"
+        "explanation": "具有受監控流量的影子或金絲雀部署 符合第一項需求：影子或金絲雀部署透過在完全流量轉移之前比較新版本來降低發布風險。 SageMaker Pipelines 符合第二項需求：SageMaker Pipelines 代表可重複的 ML 工作流程步驟和條件。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "mla-c01-d3-029",
-    "type": "single",
-    "question": "A team with strict recovery objectives needs to deploy a new model version gradually while comparing it with the existing version. Which strategy is appropriate?",
-    "options": {
-      "A": "Delete the existing endpoint first",
-      "B": "Disable metrics",
-      "C": "Use a public S3 bucket",
-      "D": "A shadow or canary deployment with monitored traffic"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Shadow or canary deployments reduce release risk by comparing a new version before full traffic shift.\nDeleting the old model and disabling metrics removes safety controls.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team with strict recovery objectives is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs to deploy a new model version gradually while comparing it with the existing version. Which strategy is appropriate?",
+    "options": {
+      "A": "A SageMaker batch transform job",
+      "B": "A shadow or canary deployment with monitored traffic",
+      "C": "A versioned container image or reproducible source package",
+      "D": "A SageMaker real-time endpoint with autoscaling"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Shadow or canary deployments reduce release risk by comparing a new version before full traffic shift.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A shadow or canary deployment with monitored traffic for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格復原目標的團隊需要在與現有版本進行比較的同時逐步部署新的模型版本。哪種策略合適？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。具有嚴格復原目標的團隊需要在與現有版本進行比較的同時逐步部署新的模型版本。哪種策略合適？",
         "options": {
-          "A": "首先刪除現有端點",
-          "B": "禁用指標",
-          "C": "使用公共 S3 儲存桶",
-          "D": "具有受監控流量的影子或金絲雀部署"
+          "A": "SageMaker 批次轉換作業",
+          "B": "具有受監控流量的影子或金絲雀部署",
+          "C": "版本化的容器鏡像或可複製的來源包",
+          "D": "具有自動縮放功能的 SageMaker 即時端點"
         },
-        "explanation": "影子或金絲雀部署透過在完全流量轉移之前比較新版本來降低發布風險。\n刪除舊模型並停用指標會刪除安全控制。"
+        "explanation": "影子或金絲雀部署透過在完全流量轉移之前比較新版本來降低發布風險。\n其他選項適用於此領域的不同需求，但不能像 具有受監控流量的影子或金絲雀部署 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d3-030",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A developer team preparing a release must package preprocessing code and dependencies consistently for training and inference. Which artifact is suitable?",
+    "question": "A developer team preparing a release is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team must package preprocessing code and dependencies consistently for training and inference. Which artifact is suitable?",
     "options": {
       "A": "A versioned container image or reproducible source package",
-      "B": "A DNS record",
-      "C": "A security group description",
-      "D": "A billing tag only"
+      "B": "A SageMaker real-time endpoint with autoscaling",
+      "C": "A SageMaker batch transform job",
+      "D": "SageMaker Pipelines"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Versioned artifacts make ML execution environments repeatable across stages.\nNetwork and billing metadata do not package runtime dependencies.",
-    "taskStatement": "3.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "Versioned artifacts make ML execution environments repeatable across stages.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A versioned container image or reproducible source package for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊必須一致地打包預處理程式碼和依賴項，以進行訓練和推理。哪款神器合適？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。準備發布的開發團隊必須一致地打包預處理程式碼和依賴項，以進行訓練和推理。哪款神器合適？",
         "options": {
           "A": "版本化的容器鏡像或可複製的來源包",
-          "B": "DNS 記錄",
-          "C": "安全群組描述",
-          "D": "僅計費標籤"
+          "B": "具有自動縮放功能的 SageMaker 即時端點",
+          "C": "SageMaker 批次轉換作業",
+          "D": "SageMaker Pipelines"
         },
-        "explanation": "版本化工件使 ML 執行環境可跨階段重複。\n網路和計費元資料不打包運行時依賴項。"
+        "explanation": "版本化工件使 ML 執行環境可跨階段重複。\n其他選項適用於此領域的不同需求，但不能像 版本化的容器鏡像或可複製的來源包 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d3-031",
-    "type": "single",
-    "question": "An enterprise with several AWS Regions needs a real-time prediction endpoint that automatically adds instances with request volume. Which design fits?",
-    "options": {
-      "A": "A Route 53 TXT record",
-      "B": "A SageMaker real-time endpoint with autoscaling",
-      "C": "A batch transform job only",
-      "D": "An S3 Glacier vault"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "A real-time endpoint serves requests and autoscaling adjusts instances to demand.\nBatch transform is offline, Glacier is archival, and DNS text records do not host models.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs a real-time prediction endpoint that automatically adds instances with request volume. Which design fits?",
+    "options": {
+      "A": "A SageMaker batch transform job",
+      "B": "SageMaker Pipelines",
+      "C": "A shadow or canary deployment with monitored traffic",
+      "D": "A SageMaker real-time endpoint with autoscaling"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "A real-time endpoint serves requests and autoscaling adjusts instances to demand.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A SageMaker real-time endpoint with autoscaling for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業需要一個即時預測終端節點，可以根據請求量自動新增執行個體。哪種設計適合？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。擁有多個 AWS 區域的企業需要一個即時預測終端節點，可以根據請求量自動新增執行個體。哪種設計適合？",
         "options": {
-          "A": "Route 53 TXT 記錄",
-          "B": "具有自動縮放功能的 SageMaker 即時端點",
-          "C": "僅批量轉換作業",
-          "D": "S3 冰川拱頂"
+          "A": "SageMaker 批次轉換作業",
+          "B": "SageMaker Pipelines",
+          "C": "具有受監控流量的影子或金絲雀部署",
+          "D": "具有自動縮放功能的 SageMaker 即時端點"
         },
-        "explanation": "即時端點服務請求，自動縮放根據需求調整執行個體。\n批次轉換是離線的，Glacier 是存檔的，DNS 文字記錄不託管模型。"
+        "explanation": "即時端點服務請求，自動縮放根據需求調整執行個體。\n其他選項適用於此領域的不同需求，但不能像 具有自動縮放功能的 SageMaker 即時端點 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d3-032",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A service owner reviewing an incident needs predictions for a large data set without a low-latency request requirement. Which option is appropriate?",
+    "question": "A service owner reviewing an incident is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs predictions for a large data set without a low-latency request requirement. Which option is appropriate?",
     "options": {
-      "A": "A CloudFront distribution",
-      "B": "An IAM group",
+      "A": "A shadow or canary deployment with monitored traffic",
+      "B": "A versioned container image or reproducible source package",
       "C": "A SageMaker batch transform job",
-      "D": "A public Lambda URL for every row"
+      "D": "SageMaker Pipelines"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Batch Transform processes a data set offline without maintaining a real-time endpoint.\nThe other choices add unnecessary request infrastructure or do not run predictions.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Batch Transform processes a data set offline without maintaining a real-time endpoint.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A SageMaker batch transform job for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務擁有者需要對大型資料集進行預測，而不需要低延遲請求。哪個選項合適？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。審查事件的服務擁有者需要對大型資料集進行預測，而不需要低延遲請求。哪個選項合適？",
         "options": {
-          "A": "CloudFront 發行版",
-          "B": "IAM Groups",
+          "A": "具有受監控流量的影子或金絲雀部署",
+          "B": "版本化的容器鏡像或可複製的來源包",
           "C": "SageMaker 批次轉換作業",
-          "D": "每行的公共 Lambda URL"
+          "D": "SageMaker Pipelines"
         },
-        "explanation": "批量轉換離線處理資料集，無需維護即時端點。\n其他選擇添加不必要的請求基礎設施或不運行預測。"
+        "explanation": "批量轉換離線處理資料集，無需維護即時端點。\n其他選項適用於此領域的不同需求，但不能像 SageMaker 批次轉換作業 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d3-033",
-    "type": "single",
-    "question": "A team optimizing an existing implementation must orchestrate preprocessing, training, evaluation, and registration. Which service should define the workflow?",
-    "options": {
-      "A": "AWS WAF",
-      "B": "Amazon EFS",
-      "C": "Amazon Route 53",
-      "D": "SageMaker Pipelines"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "SageMaker Pipelines represents repeatable ML workflow steps and conditions.\nThe other choices do not orchestrate ML lifecycle steps.",
     "taskStatement": "3.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team must orchestrate preprocessing, training, evaluation, and registration. Which service should define the workflow?",
+    "options": {
+      "A": "A SageMaker real-time endpoint with autoscaling",
+      "B": "SageMaker Pipelines",
+      "C": "A shadow or canary deployment with monitored traffic",
+      "D": "A versioned container image or reproducible source package"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "SageMaker Pipelines represents repeatable ML workflow steps and conditions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide SageMaker Pipelines for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊必須協調預處理、培訓、評估和註冊。哪個服務應該定義工作流程？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。優化現有實施的團隊必須協調預處理、培訓、評估和註冊。哪個服務應該定義工作流程？",
         "options": {
-          "A": "AWS WAF",
-          "B": "Amazon EFS",
-          "C": "Amazon Route 53",
-          "D": "SageMaker Pipelines"
+          "A": "具有自動縮放功能的 SageMaker 即時端點",
+          "B": "SageMaker Pipelines",
+          "C": "具有受監控流量的影子或金絲雀部署",
+          "D": "版本化的容器鏡像或可複製的來源包"
         },
-        "explanation": "SageMaker Pipelines 代表可重複的 ML 工作流程步驟和條件。\n其他選擇不編排 ML 生命週期步驟。"
+        "explanation": "SageMaker Pipelines 代表可重複的 ML 工作流程步驟和條件。\n其他選項適用於此領域的不同需求，但不能像 SageMaker Pipelines 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d3-034",
-    "type": "single",
-    "question": "A company introducing an automated workflow needs to deploy a new model version gradually while comparing it with the existing version. Which strategy is appropriate?",
-    "options": {
-      "A": "A shadow or canary deployment with monitored traffic",
-      "B": "Delete the existing endpoint first",
-      "C": "Disable metrics",
-      "D": "Use a public S3 bucket"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "Shadow or canary deployments reduce release risk by comparing a new version before full traffic shift.\nDeleting the old model and disabling metrics removes safety controls.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A company introducing an automated workflow is reviewing several independent production requirements. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. Match each workload requirement to the most appropriate implementation.",
+    "options": {
+      "A": "A workload needs to deploy a new model version gradually while comparing it with the existing version",
+      "B": "A workload must package preprocessing code and dependencies consistently for training and inference",
+      "C": "A workload needs a real-time prediction endpoint that automatically adds instances with request volume"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "A versioned container image or reproducible source package",
+      "2": "A SageMaker real-time endpoint with autoscaling",
+      "3": "A shadow or canary deployment with monitored traffic"
+    },
+    "correctMatches": {
+      "A": "3",
+      "B": "1",
+      "C": "2"
+    },
+    "explanation": "A maps to A shadow or canary deployment with monitored traffic. Shadow or canary deployments reduce release risk by comparing a new version before full traffic shift. B maps to A versioned container image or reproducible source package. Versioned artifacts make ML execution environments repeatable across stages. C maps to A SageMaker real-time endpoint with autoscaling. A real-time endpoint serves requests and autoscaling adjusts instances to demand.\nEach target is intended for a different requirement, so all three mappings must be evaluated independently.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司需要逐步部署新的模型版本，同時與現有版本進行比較。哪種策略合適？",
+        "question": "團隊正在審查多項彼此獨立的生產需求。此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。請將每項工作負載需求配對至最適合的實作。",
         "options": {
-          "A": "具有受監控流量的影子或金絲雀部署",
-          "B": "首先刪除現有端點",
-          "C": "禁用指標",
-          "D": "使用公共 S3 儲存桶"
+          "A": "工作負載需求：準備增加流量的新創公司需要在與現有版本進行比較的同時逐步部署新的模型版本",
+          "B": "工作負載需求：支援關鍵工作負載的營運團隊必須一致地打包預處理程式碼和依賴項，以進行訓練和推理",
+          "C": "工作負載需求：生產團隊需要一個即時預測端點，可以根據請求量自動添加執行個體"
         },
-        "explanation": "影子或金絲雀部署透過在完全流量轉移之前比較新版本來降低發布風險。\n刪除舊模型並停用指標會刪除安全控制。"
+        "targets": {
+          "1": "版本化的容器鏡像或可複製的來源包",
+          "2": "具有自動縮放功能的 SageMaker 即時端點",
+          "3": "具有受監控流量的影子或金絲雀部署"
+        },
+        "explanation": "A 對應 具有受監控流量的影子或金絲雀部署。影子或金絲雀部署透過在完全流量轉移之前比較新版本來降低發布風險。 B 對應 版本化的容器鏡像或可複製的來源包。版本化工件使 ML 執行環境可跨階段重複。 C 對應 具有自動縮放功能的 SageMaker 即時端點。即時端點服務請求，自動縮放根據需求調整執行個體。\n每個目標均處理不同需求，因此必須分別評估三項配對。"
       }
     }
   },
   {
     "id": "mla-c01-d3-035",
-    "type": "single",
-    "question": "An AWS administrator working in a shared environment must package preprocessing code and dependencies consistently for training and inference. Which artifact is suitable?",
-    "options": {
-      "A": "A billing tag only",
-      "B": "A versioned container image or reproducible source package",
-      "C": "A DNS record",
-      "D": "A security group description"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Versioned artifacts make ML execution environments repeatable across stages.\nNetwork and billing metadata do not package runtime dependencies.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "An AWS administrator working in a shared environment is planning two independent production changes. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The first team must package preprocessing code and dependencies consistently for training and inference. A second team needs a real-time prediction endpoint that automatically adds instances with request volume. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "SageMaker Pipelines",
+      "B": "A shadow or canary deployment with monitored traffic",
+      "C": "A versioned container image or reproducible source package",
+      "D": "A SageMaker real-time endpoint with autoscaling",
+      "E": "A SageMaker batch transform job"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "A versioned container image or reproducible source package meets the first requirement: Versioned artifacts make ML execution environments repeatable across stages. A SageMaker real-time endpoint with autoscaling meets the second requirement: A real-time endpoint serves requests and autoscaling adjusts instances to demand.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "在共享環境中工作的 AWS 管理員必須一致地打包預處理程式碼和相依項，以進行訓練和推理。哪款神器合適？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。第一項需求：支援關鍵工作負載的營運團隊必須一致地打包預處理程式碼和依賴項，以進行訓練和推理。第二項需求：生產團隊需要一個即時預測端點，可以根據請求量自動添加執行個體。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "僅計費標籤",
-          "B": "版本化的容器鏡像或可複製的來源包",
-          "C": "DNS 記錄",
-          "D": "安全群組描述"
+          "A": "SageMaker Pipelines",
+          "B": "具有受監控流量的影子或金絲雀部署",
+          "C": "版本化的容器鏡像或可複製的來源包",
+          "D": "具有自動縮放功能的 SageMaker 即時端點",
+          "E": "SageMaker 批次轉換作業"
         },
-        "explanation": "版本化工件使 ML 執行環境可跨階段重複。\n網路和計費元資料不打包運行時依賴項。"
+        "explanation": "版本化的容器鏡像或可複製的來源包 符合第一項需求：版本化工件使 ML 執行環境可跨階段重複。 具有自動縮放功能的 SageMaker 即時端點 符合第二項需求：即時端點服務請求，自動縮放根據需求調整執行個體。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "mla-c01-d3-036",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A customer-facing application team needs a real-time prediction endpoint that automatically adds instances with request volume. Which design fits?",
+    "question": "A customer-facing application team is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs a real-time prediction endpoint that automatically adds instances with request volume. Which design fits?",
     "options": {
-      "A": "An S3 Glacier vault",
-      "B": "A Route 53 TXT record",
+      "A": "SageMaker Pipelines",
+      "B": "A shadow or canary deployment with monitored traffic",
       "C": "A SageMaker real-time endpoint with autoscaling",
-      "D": "A batch transform job only"
+      "D": "A SageMaker batch transform job"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "A real-time endpoint serves requests and autoscaling adjusts instances to demand.\nBatch transform is offline, Glacier is archival, and DNS text records do not host models.",
-    "taskStatement": "3.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "A real-time endpoint serves requests and autoscaling adjusts instances to demand.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A SageMaker real-time endpoint with autoscaling for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊需要一個即時預測端點，該端點可以自動添加具有請求量的執行個體。哪種設計適合？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。面向客戶的應用程式團隊需要一個即時預測端點，該端點可以自動添加具有請求量的執行個體。哪種設計適合？",
         "options": {
-          "A": "S3 冰川拱頂",
-          "B": "Route 53 TXT 記錄",
+          "A": "SageMaker Pipelines",
+          "B": "具有受監控流量的影子或金絲雀部署",
           "C": "具有自動縮放功能的 SageMaker 即時端點",
-          "D": "僅批量轉換作業"
+          "D": "SageMaker 批次轉換作業"
         },
-        "explanation": "即時端點服務請求，自動縮放根據需求調整執行個體。\n批次轉換是離線的，Glacier 是存檔的，DNS 文字記錄不託管模型。"
+        "explanation": "即時端點服務請求，自動縮放根據需求調整執行個體。\n其他選項適用於此領域的不同需求，但不能像 具有自動縮放功能的 SageMaker 即時端點 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d3-037",
-    "type": "single",
-    "question": "A platform team standardizing its AWS deployments needs predictions for a large data set without a low-latency request requirement. Which option is appropriate?",
-    "options": {
-      "A": "A public Lambda URL for every row",
-      "B": "A CloudFront distribution",
-      "C": "An IAM group",
-      "D": "A SageMaker batch transform job"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Batch Transform processes a data set offline without maintaining a real-time endpoint.\nThe other choices add unnecessary request infrastructure or do not run predictions.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs predictions for a large data set without a low-latency request requirement. Which option is appropriate?",
+    "options": {
+      "A": "A versioned container image or reproducible source package",
+      "B": "A SageMaker batch transform job",
+      "C": "SageMaker Pipelines",
+      "D": "A shadow or canary deployment with monitored traffic"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Batch Transform processes a data set offline without maintaining a real-time endpoint.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A SageMaker batch transform job for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊需要對大型資料集進行預測，而不需要低延遲請求。哪個選項合適？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。標準化其 AWS 部署的平台團隊需要對大型資料集進行預測，而不需要低延遲請求。哪個選項合適？",
         "options": {
-          "A": "每行的公共 Lambda URL",
-          "B": "CloudFront 發行版",
-          "C": "IAM Groups",
-          "D": "SageMaker 批次轉換作業"
+          "A": "版本化的容器鏡像或可複製的來源包",
+          "B": "SageMaker 批次轉換作業",
+          "C": "SageMaker Pipelines",
+          "D": "具有受監控流量的影子或金絲雀部署"
         },
-        "explanation": "批量轉換離線處理資料集，無需維護即時端點。\n其他選擇添加不必要的請求基礎設施或不運行預測。"
+        "explanation": "批量轉換離線處理資料集，無需維護即時端點。\n其他選項適用於此領域的不同需求，但不能像 SageMaker 批次轉換作業 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d3-038",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team preparing evidence for an audit must orchestrate preprocessing, training, evaluation, and registration. Which service should define the workflow?",
+    "question": "A team preparing evidence for an audit is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team must orchestrate preprocessing, training, evaluation, and registration. Which service should define the workflow?",
     "options": {
       "A": "SageMaker Pipelines",
-      "B": "AWS WAF",
-      "C": "Amazon EFS",
-      "D": "Amazon Route 53"
+      "B": "A shadow or canary deployment with monitored traffic",
+      "C": "A versioned container image or reproducible source package",
+      "D": "A SageMaker real-time endpoint with autoscaling"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "SageMaker Pipelines represents repeatable ML workflow steps and conditions.\nThe other choices do not orchestrate ML lifecycle steps.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "SageMaker Pipelines represents repeatable ML workflow steps and conditions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide SageMaker Pipelines for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備審計證據的團隊必須協調預處理、訓練、評估和註冊。哪個服務應該定義工作流程？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。準備審計證據的團隊必須協調預處理、訓練、評估和註冊。哪個服務應該定義工作流程？",
         "options": {
           "A": "SageMaker Pipelines",
-          "B": "AWS WAF",
-          "C": "Amazon EFS",
-          "D": "Amazon Route 53"
+          "B": "具有受監控流量的影子或金絲雀部署",
+          "C": "版本化的容器鏡像或可複製的來源包",
+          "D": "具有自動縮放功能的 SageMaker 即時端點"
         },
-        "explanation": "SageMaker Pipelines 代表可重複的 ML 工作流程步驟和條件。\n其他選擇不編排 ML 生命週期步驟。"
+        "explanation": "SageMaker Pipelines 代表可重複的 ML 工作流程步驟和條件。\n其他選項適用於此領域的不同需求，但不能像 SageMaker Pipelines 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d3-039",
-    "type": "single",
-    "question": "A business replacing a manual process needs to deploy a new model version gradually while comparing it with the existing version. Which strategy is appropriate?",
-    "options": {
-      "A": "Use a public S3 bucket",
-      "B": "A shadow or canary deployment with monitored traffic",
-      "C": "Delete the existing endpoint first",
-      "D": "Disable metrics"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Shadow or canary deployments reduce release risk by comparing a new version before full traffic shift.\nDeleting the old model and disabling metrics removes safety controls.",
     "taskStatement": "3.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A business replacing a manual process is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs to deploy a new model version gradually while comparing it with the existing version. Which strategy is appropriate?",
+    "options": {
+      "A": "A versioned container image or reproducible source package",
+      "B": "A SageMaker real-time endpoint with autoscaling",
+      "C": "A SageMaker batch transform job",
+      "D": "A shadow or canary deployment with monitored traffic"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Shadow or canary deployments reduce release risk by comparing a new version before full traffic shift.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A shadow or canary deployment with monitored traffic for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "替代手動流程的業務需要逐步部署新的模型版本，同時與現有版本進行比較。哪種策略合適？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。替代手動流程的業務需要逐步部署新的模型版本，同時與現有版本進行比較。哪種策略合適？",
         "options": {
-          "A": "使用公共 S3 儲存桶",
-          "B": "具有受監控流量的影子或金絲雀部署",
-          "C": "首先刪除現有端點",
-          "D": "禁用指標"
+          "A": "版本化的容器鏡像或可複製的來源包",
+          "B": "具有自動縮放功能的 SageMaker 即時端點",
+          "C": "SageMaker 批次轉換作業",
+          "D": "具有受監控流量的影子或金絲雀部署"
         },
-        "explanation": "影子或金絲雀部署透過在完全流量轉移之前比較新版本來降低發布風險。\n刪除舊模型並停用指標會刪除安全控制。"
+        "explanation": "影子或金絲雀部署透過在完全流量轉移之前比較新版本來降低發布風險。\n其他選項適用於此領域的不同需求，但不能像 具有受監控流量的影子或金絲雀部署 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d3-040",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team validating a design against the exam guide must package preprocessing code and dependencies consistently for training and inference. Which artifact is suitable?",
+    "question": "A team validating a design against the exam guide is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team must package preprocessing code and dependencies consistently for training and inference. Which artifact is suitable?",
     "options": {
-      "A": "A security group description",
-      "B": "A billing tag only",
+      "A": "A SageMaker batch transform job",
+      "B": "SageMaker Pipelines",
       "C": "A versioned container image or reproducible source package",
-      "D": "A DNS record"
+      "D": "A SageMaker real-time endpoint with autoscaling"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Versioned artifacts make ML execution environments repeatable across stages.\nNetwork and billing metadata do not package runtime dependencies.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Versioned artifacts make ML execution environments repeatable across stages.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A versioned container image or reproducible source package for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊必須一致地打包預處理程式碼和依賴項，以進行訓練和推理。哪款神器合適？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。根據考試指南驗證設計的團隊必須一致地打包預處理程式碼和依賴項，以進行訓練和推理。哪款神器合適？",
         "options": {
-          "A": "安全群組描述",
-          "B": "僅計費標籤",
+          "A": "SageMaker 批次轉換作業",
+          "B": "SageMaker Pipelines",
           "C": "版本化的容器鏡像或可複製的來源包",
-          "D": "DNS 記錄"
+          "D": "具有自動縮放功能的 SageMaker 即時端點"
         },
-        "explanation": "版本化工件使 ML 執行環境可跨階段重複。\n網路和計費元資料不打包運行時依賴項。"
+        "explanation": "版本化工件使 ML 執行環境可跨階段重複。\n其他選項適用於此領域的不同需求，但不能像 版本化的容器鏡像或可複製的來源包 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d3-041",
-    "type": "single",
-    "question": "A production team needs a real-time prediction endpoint that automatically adds instances with request volume. Which design fits?",
-    "options": {
-      "A": "A batch transform job only",
-      "B": "An S3 Glacier vault",
-      "C": "A Route 53 TXT record",
-      "D": "A SageMaker real-time endpoint with autoscaling"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "A real-time endpoint serves requests and autoscaling adjusts instances to demand.\nBatch transform is offline, Glacier is archival, and DNS text records do not host models.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A production team is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs a real-time prediction endpoint that automatically adds instances with request volume. Which design fits?",
+    "options": {
+      "A": "A shadow or canary deployment with monitored traffic",
+      "B": "A SageMaker real-time endpoint with autoscaling",
+      "C": "A SageMaker batch transform job",
+      "D": "SageMaker Pipelines"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "A real-time endpoint serves requests and autoscaling adjusts instances to demand.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A SageMaker real-time endpoint with autoscaling for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "生產團隊需要一個即時預測端點，可以根據請求量自動添加執行個體。哪種設計適合？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。生產團隊需要一個即時預測端點，可以根據請求量自動添加執行個體。哪種設計適合？",
         "options": {
-          "A": "僅批量轉換作業",
-          "B": "S3 冰川拱頂",
-          "C": "Route 53 TXT 記錄",
-          "D": "具有自動縮放功能的 SageMaker 即時端點"
+          "A": "具有受監控流量的影子或金絲雀部署",
+          "B": "具有自動縮放功能的 SageMaker 即時端點",
+          "C": "SageMaker 批次轉換作業",
+          "D": "SageMaker Pipelines"
         },
-        "explanation": "即時端點服務請求，自動縮放根據需求調整執行個體。\n批次轉換是離線的，Glacier 是存檔的，DNS 文字記錄不託管模型。"
+        "explanation": "即時端點服務請求，自動縮放根據需求調整執行個體。\n其他選項適用於此領域的不同需求，但不能像 具有自動縮放功能的 SageMaker 即時端點 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d3-042",
-    "type": "single",
-    "question": "A multi-account platform team needs predictions for a large data set without a low-latency request requirement. Which option is appropriate?",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A multi-account platform team is planning two independent production changes. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The first team needs predictions for a large data set without a low-latency request requirement. A second team must orchestrate preprocessing, training, evaluation, and registration. Which TWO actions satisfy these requirements?",
     "options": {
       "A": "A SageMaker batch transform job",
-      "B": "A public Lambda URL for every row",
-      "C": "A CloudFront distribution",
-      "D": "An IAM group"
+      "B": "SageMaker Pipelines",
+      "C": "A shadow or canary deployment with monitored traffic",
+      "D": "A versioned container image or reproducible source package",
+      "E": "A SageMaker real-time endpoint with autoscaling"
     },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "Batch Transform processes a data set offline without maintaining a real-time endpoint.\nThe other choices add unnecessary request infrastructure or do not run predictions.",
-    "taskStatement": "3.3",
-    "lastVerified": "2026-08-09",
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "A SageMaker batch transform job meets the first requirement: Batch Transform processes a data set offline without maintaining a real-time endpoint. SageMaker Pipelines meets the second requirement: SageMaker Pipelines represents repeatable ML workflow steps and conditions.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊需要對大型資料集進行預測，而不需要低延遲請求。哪個選項合適？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。第一項需求：多帳戶平台團隊需要對大型資料集進行預測，而不需要低延遲請求。第二項需求：受監管的公司必須精心安排預處理、培訓、評估和註冊。哪兩項操作可以滿足這些需求？",
         "options": {
           "A": "SageMaker 批次轉換作業",
-          "B": "每行的公共 Lambda URL",
-          "C": "CloudFront 發行版",
-          "D": "IAM Groups"
+          "B": "SageMaker Pipelines",
+          "C": "具有受監控流量的影子或金絲雀部署",
+          "D": "版本化的容器鏡像或可複製的來源包",
+          "E": "具有自動縮放功能的 SageMaker 即時端點"
         },
-        "explanation": "批量轉換離線處理資料集，無需維護即時端點。\n其他選擇添加不必要的請求基礎設施或不運行預測。"
+        "explanation": "SageMaker 批次轉換作業 符合第一項需求：批量轉換離線處理資料集，無需維護即時端點。 SageMaker Pipelines 符合第二項需求：SageMaker Pipelines 代表可重複的 ML 工作流程步驟和條件。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "mla-c01-d3-043",
-    "type": "single",
-    "question": "A regulated company must orchestrate preprocessing, training, evaluation, and registration. Which service should define the workflow?",
-    "options": {
-      "A": "Amazon Route 53",
-      "B": "SageMaker Pipelines",
-      "C": "AWS WAF",
-      "D": "Amazon EFS"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "SageMaker Pipelines represents repeatable ML workflow steps and conditions.\nThe other choices do not orchestrate ML lifecycle steps.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A regulated company is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team must orchestrate preprocessing, training, evaluation, and registration. Which service should define the workflow?",
+    "options": {
+      "A": "A shadow or canary deployment with monitored traffic",
+      "B": "A versioned container image or reproducible source package",
+      "C": "A SageMaker real-time endpoint with autoscaling",
+      "D": "SageMaker Pipelines"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "SageMaker Pipelines represents repeatable ML workflow steps and conditions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide SageMaker Pipelines for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司必須精心安排預處理、培訓、評估和註冊。哪個服務應該定義工作流程？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。受監管的公司必須精心安排預處理、培訓、評估和註冊。哪個服務應該定義工作流程？",
         "options": {
-          "A": "Amazon Route 53",
-          "B": "SageMaker Pipelines",
-          "C": "AWS WAF",
-          "D": "Amazon EFS"
+          "A": "具有受監控流量的影子或金絲雀部署",
+          "B": "版本化的容器鏡像或可複製的來源包",
+          "C": "具有自動縮放功能的 SageMaker 即時端點",
+          "D": "SageMaker Pipelines"
         },
-        "explanation": "SageMaker Pipelines 代表可重複的 ML 工作流程步驟和條件。\n其他選擇不編排 ML 生命週期步驟。"
+        "explanation": "SageMaker Pipelines 代表可重複的 ML 工作流程步驟和條件。\n其他選項適用於此領域的不同需求，但不能像 SageMaker Pipelines 一樣直接滿足題目的指定條件。"
       }
     }
   }

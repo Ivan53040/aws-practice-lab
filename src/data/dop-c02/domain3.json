@@ -1,953 +1,968 @@
 [
   {
     "id": "dop-c02-d3-001",
-    "type": "single",
-    "question": "A production team must replace unhealthy instances automatically and spread capacity across Availability Zones. Which design fits?",
-    "options": {
-      "A": "One fixed instance",
-      "B": "An S3 bucket website",
-      "C": "A KMS alias",
-      "D": "A multi-AZ Auto Scaling group with health checks"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Auto Scaling health checks replace failed instances and multiple subnets spread capacity.\nThe other choices do not provide self-healing compute.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A production team is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team must replace unhealthy instances automatically and spread capacity across Availability Zones. Which design fits?",
+    "options": {
+      "A": "RDS Multi-AZ",
+      "B": "A multi-AZ Auto Scaling group with health checks",
+      "C": "Amazon SQS",
+      "D": "An Application Load Balancer with target health checks"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Auto Scaling health checks replace failed instances and multiple subnets spread capacity.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A multi-AZ Auto Scaling group with health checks for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "生產團隊必須自動替換不健康的執行個體，並將容量分佈到可用區。哪種設計適合？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。生產團隊必須自動替換不健康的執行個體，並將容量分佈到可用區。哪種設計適合？",
         "options": {
-          "A": "1個固定執行個體",
-          "B": "S3 儲存桶網站",
-          "C": "KMS 別名",
-          "D": "具有健康檢查功能的多可用區 Auto Scaling 組"
+          "A": "RDS Multi-AZ",
+          "B": "具有健康檢查功能的多可用區 Auto Scaling 組",
+          "C": "Amazon SQS",
+          "D": "具有目標運行狀況檢查的應用程式負載平衡器"
         },
-        "explanation": "Auto Scaling 運作狀況檢查會取代失敗的執行個體，並透過多個子網路擴充容量。\n其他選擇不提供自我修復計算。"
+        "explanation": "Auto Scaling 運作狀況檢查會取代失敗的執行個體，並透過多個子網路擴充容量。\n其他選項適用於此領域的不同需求，但不能像 具有健康檢查功能的多可用區 Auto Scaling 組 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d3-002",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A multi-account platform team needs to decouple a producer from workers when the worker fleet is temporarily unavailable. Which service should buffer work?",
+    "question": "A multi-account platform team is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team needs to decouple a producer from workers when the worker fleet is temporarily unavailable. Which service should buffer work?",
     "options": {
       "A": "Amazon SQS",
-      "B": "Amazon Route 53",
-      "C": "AWS Certificate Manager",
-      "D": "Amazon EBS"
+      "B": "An Application Load Balancer with target health checks",
+      "C": "RDS Multi-AZ",
+      "D": "EventBridge invoking Step Functions"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "SQS durably buffers messages until workers can process them.\nThe other choices provide DNS, certificates, or block storage.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "SQS durably buffers messages until workers can process them.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon SQS for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "當工作佇列暫時無法使用時，多帳戶平台團隊需要將生產者與工作人員解耦。哪個服務應該緩衝工作？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。當工作佇列暫時無法使用時，多帳戶平台團隊需要將生產者與工作人員解耦。哪個服務應該緩衝工作？",
         "options": {
           "A": "Amazon SQS",
-          "B": "Amazon Route 53",
-          "C": "AWS Certificate Manager",
-          "D": "Amazon EBS"
+          "B": "具有目標運行狀況檢查的應用程式負載平衡器",
+          "C": "RDS Multi-AZ",
+          "D": "EventBridge 呼叫 Step Functions"
         },
-        "explanation": "SQS 持久緩衝訊息，直到工作人員可以處理它們。\n其他選擇提供 DNS、憑證或區塊儲存。"
+        "explanation": "SQS 持久緩衝訊息，直到工作人員可以處理它們。\n其他選項適用於此領域的不同需求，但不能像 Amazon SQS 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d3-003",
-    "type": "single",
-    "question": "A regulated company must send requests to healthy application targets in multiple Availability Zones. Which service fits?",
-    "options": {
-      "A": "An IAM group",
-      "B": "An Application Load Balancer with target health checks",
-      "C": "A single EC2 public IP",
-      "D": "An S3 lifecycle rule"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "An ALB routes to healthy targets across configured subnets.\nThe other choices do not perform application load balancing.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A regulated company is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team must send requests to healthy application targets in multiple Availability Zones. Which service fits?",
+    "options": {
+      "A": "RDS Multi-AZ",
+      "B": "EventBridge invoking Step Functions",
+      "C": "A multi-AZ Auto Scaling group with health checks",
+      "D": "An Application Load Balancer with target health checks"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "An ALB routes to healthy targets across configured subnets.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide An Application Load Balancer with target health checks for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司必須向多個可用區中的健康應用程式目標發送請求。適合哪種服務？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。受監管的公司必須向多個可用區中的健康應用程式目標發送請求。適合哪種服務？",
         "options": {
-          "A": "IAM Groups",
-          "B": "具有目標運行狀況檢查的應用程式負載平衡器",
-          "C": "單一 EC2 公共 IP",
-          "D": "S3 生命週期規則"
+          "A": "RDS Multi-AZ",
+          "B": "EventBridge 呼叫 Step Functions",
+          "C": "具有健康檢查功能的多可用區 Auto Scaling 組",
+          "D": "具有目標運行狀況檢查的應用程式負載平衡器"
         },
-        "explanation": "ALB 跨配置的子網路路由到健康目標。\n其他選擇不執行應用程式負載平衡。"
+        "explanation": "ALB 跨配置的子網路路由到健康目標。\n其他選項適用於此領域的不同需求，但不能像 具有目標運行狀況檢查的應用程式負載平衡器 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d3-004",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A startup preparing for a traffic increase needs a database failover target without changing the application connection endpoint. Which deployment should be used?",
+    "question": "A startup preparing for a traffic increase is redesigning one integrated end-to-end architecture. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The design must keep recurring cost proportional to use, enforce least privilege, and remain available during a component or Availability Zone failure. The workload needs a database failover target without changing the application connection endpoint, and the same architecture needs a dashboard that combines metrics from several accounts and Regions. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "An S3 bucket policy",
-      "B": "An EBS snapshot only",
-      "C": "RDS Multi-AZ",
-      "D": "A single-AZ RDS instance"
+      "A": "Use AWS CodeBuild for the primary requirement and integrate it with CloudWatch cross-account observability dashboards",
+      "B": "Combine AWS CodeBuild with A canary or blue-green deployment as a single platform design",
+      "C": "Use RDS Multi-AZ for the primary requirement and integrate it with CloudWatch cross-account observability dashboards for the connected control",
+      "D": "Use RDS Multi-AZ but replace the connected control with AWS CodePipeline"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "RDS Multi-AZ maintains a standby and updates the managed endpoint during failover.\nThe other choices do not provide managed database failover.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "RDS Multi-AZ satisfies the first part of the architecture: RDS Multi-AZ maintains a standby and updates the managed endpoint during failover. CloudWatch cross-account observability dashboards satisfies the connected requirement: CloudWatch supports cross-account and cross-Region monitoring views for centralized operations.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司需要一個資料庫故障轉移目標，而不需要更改應用程式連接端點。應該使用哪種部署？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：引入自動化工作流程的公司需要一個資料庫故障轉移目標，而無需更改應用程式連接端點。 第二項需求：準備發布的開發團隊需要一個儀表板，其中結合了多個帳戶和區域的指標。 此設計必須讓持續成本與實際用量相符、落實最低權限，並在元件或可用區域發生故障時維持可用。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "S3 儲存桶策略",
-          "B": "僅 EBS Snapshot",
-          "C": "RDS Multi-AZ",
-          "D": "單AZ RDS執行個體"
+          "A": "以AWS CodeBuild處理主要需求，並整合CloudWatch 跨帳戶可觀測性儀表板",
+          "B": "把AWS CodeBuild與金絲雀或藍綠部署結合為單一平台設計",
+          "C": "以RDS Multi-AZ處理主要需求，並整合CloudWatch 跨帳戶可觀測性儀表板作為相連控制",
+          "D": "使用RDS Multi-AZ，但以AWS CodePipeline取代相連控制"
         },
-        "explanation": "RDS Multi-AZ在故障轉移期間保持備用狀態並更新託管端點。\n其他選擇不提供託管資料庫故障轉移。"
+        "explanation": "RDS Multi-AZ 負責架構的第一項需求，CloudWatch 跨帳戶可觀測性儀表板 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "dop-c02-d3-005",
-    "type": "single",
-    "question": "An operations team supporting a critical workload wants an event to trigger an automated recovery workflow. Which integration is suitable?",
-    "options": {
-      "A": "A public DNS record",
-      "B": "A security group only",
-      "C": "An S3 storage class",
-      "D": "EventBridge invoking Step Functions"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "EventBridge and Step Functions can route events into durable, retryable recovery workflows.\nThe other choices do not orchestrate recovery steps.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team wants an event to trigger an automated recovery workflow. Which integration is suitable?",
+    "options": {
+      "A": "An Application Load Balancer with target health checks",
+      "B": "EventBridge invoking Step Functions",
+      "C": "A multi-AZ Auto Scaling group with health checks",
+      "D": "Amazon SQS"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge and Step Functions can route events into durable, retryable recovery workflows.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide EventBridge invoking Step Functions for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊希望有一個事件可以觸發自動恢復工作流程。哪種整合合適？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。支援關鍵工作負載的營運團隊希望有一個事件可以觸發自動恢復工作流程。哪種整合合適？",
         "options": {
-          "A": "公共 DNS 記錄",
-          "B": "僅安全群組",
-          "C": "S3 儲存類別",
-          "D": "EventBridge 呼叫 Step Functions"
+          "A": "具有目標運行狀況檢查的應用程式負載平衡器",
+          "B": "EventBridge 呼叫 Step Functions",
+          "C": "具有健康檢查功能的多可用區 Auto Scaling 組",
+          "D": "Amazon SQS"
         },
-        "explanation": "EventBridge 和 Step Functions 可以將事件路由到持久、可重試的復原工作流程。\n其他選擇不安排恢復步驟。"
+        "explanation": "EventBridge 和 Step Functions 可以將事件路由到持久、可重試的復原工作流程。\n其他選項適用於此領域的不同需求，但不能像 EventBridge 呼叫 Step Functions 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d3-006",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A data platform team must replace unhealthy instances automatically and spread capacity across Availability Zones. Which design fits?",
+    "question": "A data platform team is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team must replace unhealthy instances automatically and spread capacity across Availability Zones. Which design fits?",
     "options": {
       "A": "A multi-AZ Auto Scaling group with health checks",
-      "B": "One fixed instance",
-      "C": "An S3 bucket website",
-      "D": "A KMS alias"
+      "B": "Amazon SQS",
+      "C": "An Application Load Balancer with target health checks",
+      "D": "RDS Multi-AZ"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Auto Scaling health checks replace failed instances and multiple subnets spread capacity.\nThe other choices do not provide self-healing compute.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Auto Scaling health checks replace failed instances and multiple subnets spread capacity.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A multi-AZ Auto Scaling group with health checks for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊必須自動取代不健康的執行個體，並將容量分佈到可用區。哪種設計適合？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。資料平台團隊必須自動取代不健康的執行個體，並將容量分佈到可用區。哪種設計適合？",
         "options": {
           "A": "具有健康檢查功能的多可用區 Auto Scaling 組",
-          "B": "1個固定執行個體",
-          "C": "S3 儲存桶網站",
-          "D": "KMS 別名"
+          "B": "Amazon SQS",
+          "C": "具有目標運行狀況檢查的應用程式負載平衡器",
+          "D": "RDS Multi-AZ"
         },
-        "explanation": "Auto Scaling 運作狀況檢查會取代失敗的執行個體，並透過多個子網路傳播容量。\n其他選擇不提供自我修復計算。"
+        "explanation": "Auto Scaling 運作狀況檢查會取代失敗的執行個體，並透過多個子網路傳播容量。\n其他選項適用於此領域的不同需求，但不能像 具有健康檢查功能的多可用區 Auto Scaling 組 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d3-007",
-    "type": "single",
-    "question": "A security-conscious engineering team needs to decouple a producer from workers when the worker fleet is temporarily unavailable. Which service should buffer work?",
-    "options": {
-      "A": "Amazon EBS",
-      "B": "Amazon SQS",
-      "C": "Amazon Route 53",
-      "D": "AWS Certificate Manager"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "SQS durably buffers messages until workers can process them.\nThe other choices provide DNS, certificates, or block storage.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A security-conscious engineering team is planning two independent production changes. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The first team needs to decouple a producer from workers when the worker fleet is temporarily unavailable. A second team must send requests to healthy application targets in multiple Availability Zones. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Amazon SQS",
+      "B": "An Application Load Balancer with target health checks",
+      "C": "RDS Multi-AZ",
+      "D": "EventBridge invoking Step Functions",
+      "E": "A multi-AZ Auto Scaling group with health checks"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Amazon SQS meets the first requirement: SQS durably buffers messages until workers can process them. An Application Load Balancer with target health checks meets the second requirement: An ALB routes to healthy targets across configured subnets.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "當工作佇列暫時無法使用時，具有安全意識的工程團隊需要將生產者與工作人員脫鉤。哪個服務應該緩衝工作？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。第一項需求：當工作佇列暫時無法使用時，多帳戶平台團隊需要將生產者與工作人員解耦。第二項需求：受監管的公司必須向多個可用區中的健康應用程式目標發送請求。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "Amazon EBS",
-          "B": "Amazon SQS",
-          "C": "Amazon Route 53",
-          "D": "AWS Certificate Manager"
+          "A": "Amazon SQS",
+          "B": "具有目標運行狀況檢查的應用程式負載平衡器",
+          "C": "RDS Multi-AZ",
+          "D": "EventBridge 呼叫 Step Functions",
+          "E": "具有健康檢查功能的多可用區 Auto Scaling 組"
         },
-        "explanation": "SQS 持久緩衝訊息，直到工作人員可以處理它們。\n其他選擇提供 DNS、憑證或區塊儲存。"
+        "explanation": "Amazon SQS 符合第一項需求：SQS 持久緩衝訊息，直到工作人員可以處理它們。 具有目標運行狀況檢查的應用程式負載平衡器 符合第二項需求：ALB 跨配置的子網路路由到健康目標。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "dop-c02-d3-008",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A company migrating an existing workload must send requests to healthy application targets in multiple Availability Zones. Which service fits?",
+    "question": "A company migrating an existing workload is redesigning one integrated end-to-end architecture. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The design must avoid unnecessary standby cost without weakening security controls or the availability objective. The workload must send requests to healthy application targets in multiple Availability Zones, and the same architecture must document a repeatable response to a common alarm. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "An S3 lifecycle rule",
-      "B": "An IAM group",
-      "C": "An Application Load Balancer with target health checks",
-      "D": "A single EC2 public IP"
+      "A": "Use AWS CodeBuild for the primary requirement and integrate it with Systems Manager Automation runbook",
+      "B": "Combine AWS CodeBuild with A canary or blue-green deployment as a single platform design",
+      "C": "Use An Application Load Balancer with target health checks for the primary requirement and integrate it with Systems Manager Automation runbook for the connected control",
+      "D": "Use An Application Load Balancer with target health checks but replace the connected control with AWS CodePipeline"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "An ALB routes to healthy targets across configured subnets.\nThe other choices do not perform application load balancing.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "An Application Load Balancer with target health checks satisfies the first part of the architecture: An ALB routes to healthy targets across configured subnets. Systems Manager Automation runbook satisfies the connected requirement: Automation runbooks encode repeatable operational response steps.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司必須向多個可用區中的健康應用程式目標發送請求。適合哪種服務？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：優化現有實施的團隊必須向多個可用區中的健康應用程式目標發送請求。 第二項需求：準備發布的開發團隊必須記錄對常見警報的可重複回應。 此設計必須避免不必要的備用成本，同時不可削弱安全控制或可用性目標。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "S3 生命週期規則",
-          "B": "IAM Groups",
-          "C": "具有目標運行狀況檢查的應用程式負載平衡器",
-          "D": "單一 EC2 公共 IP"
+          "A": "以AWS CodeBuild處理主要需求，並整合Systems Manager Automation操作手冊",
+          "B": "把AWS CodeBuild與金絲雀或藍綠部署結合為單一平台設計",
+          "C": "以具有目標運行狀況檢查的應用程式負載平衡器處理主要需求，並整合Systems Manager Automation操作手冊作為相連控制",
+          "D": "使用具有目標運行狀況檢查的應用程式負載平衡器，但以AWS CodePipeline取代相連控制"
         },
-        "explanation": "ALB 跨配置的子網路路由到健康目標。\n其他選擇不執行應用程式負載平衡。"
+        "explanation": "具有目標運行狀況檢查的應用程式負載平衡器 負責架構的第一項需求，Systems Manager Automation操作手冊 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "dop-c02-d3-009",
-    "type": "single",
-    "question": "A team with strict recovery objectives needs a database failover target without changing the application connection endpoint. Which deployment should be used?",
-    "options": {
-      "A": "A single-AZ RDS instance",
-      "B": "An S3 bucket policy",
-      "C": "An EBS snapshot only",
-      "D": "RDS Multi-AZ"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "RDS Multi-AZ maintains a standby and updates the managed endpoint during failover.\nThe other choices do not provide managed database failover.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team with strict recovery objectives is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team needs a database failover target without changing the application connection endpoint. Which deployment should be used?",
+    "options": {
+      "A": "Amazon SQS",
+      "B": "RDS Multi-AZ",
+      "C": "EventBridge invoking Step Functions",
+      "D": "A multi-AZ Auto Scaling group with health checks"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "RDS Multi-AZ maintains a standby and updates the managed endpoint during failover.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide RDS Multi-AZ for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格復原目標的團隊需要一個資料庫故障轉移目標而不更改應用程式連線端點。應該使用哪種部署？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。具有嚴格復原目標的團隊需要一個資料庫故障轉移目標而不更改應用程式連線端點。應該使用哪種部署？",
         "options": {
-          "A": "單AZ RDS執行個體",
-          "B": "S3 儲存桶策略",
-          "C": "僅 EBS Snapshot",
-          "D": "RDS Multi-AZ"
+          "A": "Amazon SQS",
+          "B": "RDS Multi-AZ",
+          "C": "EventBridge 呼叫 Step Functions",
+          "D": "具有健康檢查功能的多可用區 Auto Scaling 組"
         },
-        "explanation": "RDS Multi-AZ在故障轉移期間保持備用狀態並更新託管端點。\n其他選擇不提供託管資料庫故障轉移。"
+        "explanation": "RDS Multi-AZ在故障轉移期間保持備用狀態並更新託管端點。\n其他選項適用於此領域的不同需求，但不能像 RDS Multi-AZ 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d3-010",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A developer team preparing a release wants an event to trigger an automated recovery workflow. Which integration is suitable?",
+    "question": "A developer team preparing a release is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team wants an event to trigger an automated recovery workflow. Which integration is suitable?",
     "options": {
       "A": "EventBridge invoking Step Functions",
-      "B": "A public DNS record",
-      "C": "A security group only",
-      "D": "An S3 storage class"
+      "B": "A multi-AZ Auto Scaling group with health checks",
+      "C": "Amazon SQS",
+      "D": "An Application Load Balancer with target health checks"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "EventBridge and Step Functions can route events into durable, retryable recovery workflows.\nThe other choices do not orchestrate recovery steps.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "EventBridge and Step Functions can route events into durable, retryable recovery workflows.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide EventBridge invoking Step Functions for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊希望有一個事件可以觸發自動恢復工作流程。哪種整合合適？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。準備發布的開發團隊希望有一個事件可以觸發自動恢復工作流程。哪種整合合適？",
         "options": {
           "A": "EventBridge 呼叫 Step Functions",
-          "B": "公共 DNS 記錄",
-          "C": "僅安全群組",
-          "D": "S3 儲存類別"
+          "B": "具有健康檢查功能的多可用區 Auto Scaling 組",
+          "C": "Amazon SQS",
+          "D": "具有目標運行狀況檢查的應用程式負載平衡器"
         },
-        "explanation": "EventBridge 和 Step Functions 可以將事件路由到持久、可重試的復原工作流程。\n其他選擇不安排恢復步驟。"
+        "explanation": "EventBridge 和 Step Functions 可以將事件路由到持久、可重試的復原工作流程。\n其他選項適用於此領域的不同需求，但不能像 EventBridge 呼叫 Step Functions 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d3-011",
-    "type": "single",
-    "question": "An enterprise with several AWS Regions must replace unhealthy instances automatically and spread capacity across Availability Zones. Which design fits?",
-    "options": {
-      "A": "A KMS alias",
-      "B": "A multi-AZ Auto Scaling group with health checks",
-      "C": "One fixed instance",
-      "D": "An S3 bucket website"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Auto Scaling health checks replace failed instances and multiple subnets spread capacity.\nThe other choices do not provide self-healing compute.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The team must replace unhealthy instances automatically and spread capacity across Availability Zones. Which design fits?",
+    "options": {
+      "A": "Amazon SQS",
+      "B": "An Application Load Balancer with target health checks",
+      "C": "RDS Multi-AZ",
+      "D": "A multi-AZ Auto Scaling group with health checks"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Auto Scaling health checks replace failed instances and multiple subnets spread capacity.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A multi-AZ Auto Scaling group with health checks for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業必須自動取代不健康的執行個體並將容量分佈到可用區。哪種設計適合？",
+        "question": "組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。擁有多個 AWS 區域的企業必須自動取代不健康的執行個體並將容量分佈到可用區。哪種設計適合？",
         "options": {
-          "A": "KMS 別名",
-          "B": "具有健康檢查功能的多可用區 Auto Scaling 組",
-          "C": "1個固定執行個體",
-          "D": "S3 儲存桶網站"
+          "A": "Amazon SQS",
+          "B": "具有目標運行狀況檢查的應用程式負載平衡器",
+          "C": "RDS Multi-AZ",
+          "D": "具有健康檢查功能的多可用區 Auto Scaling 組"
         },
-        "explanation": "Auto Scaling 運作狀況檢查會取代失敗的執行個體，並透過多個子網路擴充容量。\n其他選擇不提供自我修復計算。"
+        "explanation": "Auto Scaling 運作狀況檢查會取代失敗的執行個體，並透過多個子網路擴充容量。\n其他選項適用於此領域的不同需求，但不能像 具有健康檢查功能的多可用區 Auto Scaling 組 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d3-012",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A service owner reviewing an incident needs to decouple a producer from workers when the worker fleet is temporarily unavailable. Which service should buffer work?",
+    "question": "A service owner reviewing an incident is redesigning one integrated end-to-end architecture. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The organization will accept additional managed-service cost only when it measurably improves security and availability with less operational effort. The workload needs to decouple a producer from workers when the worker fleet is temporarily unavailable, and the same architecture needs a managed service to detect vulnerabilities in container images before deployment. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "AWS Certificate Manager",
-      "B": "Amazon EBS",
-      "C": "Amazon SQS",
-      "D": "Amazon Route 53"
+      "A": "Use AWS CodeBuild for the primary requirement and integrate it with Amazon Inspector",
+      "B": "Combine AWS CodeBuild with A canary or blue-green deployment as a single platform design",
+      "C": "Use Amazon SQS for the primary requirement and integrate it with Amazon Inspector for the connected control",
+      "D": "Use Amazon SQS but replace the connected control with AWS CodePipeline"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "SQS durably buffers messages until workers can process them.\nThe other choices provide DNS, certificates, or block storage.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Amazon SQS satisfies the first part of the architecture: SQS durably buffers messages until workers can process them. Amazon Inspector satisfies the connected requirement: Inspector assesses supported container images and workloads for vulnerabilities.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "當工作人員佇列暫時無法使用時，審查事件的服務所有者需要將生產者與工作人員脫鉤。哪個服務應該緩衝工作？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：審查事件的服務所有者需要一個用於操作警報的中央佇列，以便響應人員可以按順序確認它們。 第二項需求：製作團隊需要對所有新 S3 物件強制加密。 只有在託管服務能以較低營運負擔明確改善安全性與可用性時，組織才會接受額外成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "AWS Certificate Manager",
-          "B": "Amazon EBS",
-          "C": "Amazon SQS",
-          "D": "Amazon Route 53"
+          "A": "以AWS CodeBuild處理主要需求，並整合Amazon Inspector",
+          "B": "把AWS CodeBuild與金絲雀或藍綠部署結合為單一平台設計",
+          "C": "以Amazon SQS處理主要需求，並整合Amazon Inspector作為相連控制",
+          "D": "使用Amazon SQS，但以AWS CodePipeline取代相連控制"
         },
-        "explanation": "SQS 持久緩衝訊息，直到工作人員可以處理它們。\n其他選擇提供 DNS、憑證或區塊儲存。"
+        "explanation": "Amazon SQS 負責架構的第一項需求，Amazon Inspector 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "dop-c02-d3-013",
-    "type": "single",
-    "question": "A team optimizing an existing implementation must send requests to healthy application targets in multiple Availability Zones. Which service fits?",
-    "options": {
-      "A": "A single EC2 public IP",
-      "B": "An S3 lifecycle rule",
-      "C": "An IAM group",
-      "D": "An Application Load Balancer with target health checks"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "An ALB routes to healthy targets across configured subnets.\nThe other choices do not perform application load balancing.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The team must send requests to healthy application targets in multiple Availability Zones. Which service fits?",
+    "options": {
+      "A": "A multi-AZ Auto Scaling group with health checks",
+      "B": "An Application Load Balancer with target health checks",
+      "C": "RDS Multi-AZ",
+      "D": "EventBridge invoking Step Functions"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "An ALB routes to healthy targets across configured subnets.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide An Application Load Balancer with target health checks for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊必須向多個可用區中的健康應用程式目標發送請求。適合哪種服務？",
+        "question": "組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。優化現有實施的團隊必須向多個可用區中的健康應用程式目標發送請求。適合哪種服務？",
         "options": {
-          "A": "單一 EC2 公共 IP",
-          "B": "S3 生命週期規則",
-          "C": "IAM Groups",
-          "D": "具有目標運行狀況檢查的應用程式負載平衡器"
+          "A": "具有健康檢查功能的多可用區 Auto Scaling 組",
+          "B": "具有目標運行狀況檢查的應用程式負載平衡器",
+          "C": "RDS Multi-AZ",
+          "D": "EventBridge 呼叫 Step Functions"
         },
-        "explanation": "ALB 跨配置的子網路路由到健康目標。\n其他選擇不執行應用程式負載平衡。"
+        "explanation": "ALB 跨配置的子網路路由到健康目標。\n其他選項適用於此領域的不同需求，但不能像 具有目標運行狀況檢查的應用程式負載平衡器 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d3-014",
-    "type": "single",
-    "question": "A company introducing an automated workflow needs a database failover target without changing the application connection endpoint. Which deployment should be used?",
-    "options": {
-      "A": "RDS Multi-AZ",
-      "B": "A single-AZ RDS instance",
-      "C": "An S3 bucket policy",
-      "D": "An EBS snapshot only"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "RDS Multi-AZ maintains a standby and updates the managed endpoint during failover.\nThe other choices do not provide managed database failover.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A company introducing an automated workflow is planning two independent production changes. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The first team needs a database failover target without changing the application connection endpoint. A second team wants an event to trigger an automated recovery workflow. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "A multi-AZ Auto Scaling group with health checks",
+      "B": "Amazon SQS",
+      "C": "An Application Load Balancer with target health checks",
+      "D": "RDS Multi-AZ",
+      "E": "EventBridge invoking Step Functions"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "RDS Multi-AZ meets the first requirement: RDS Multi-AZ maintains a standby and updates the managed endpoint during failover. EventBridge invoking Step Functions meets the second requirement: EventBridge and Step Functions can route events into durable, retryable recovery workflows.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司需要一個資料庫故障轉移目標，而無需更改應用程式連接端點。應該使用哪種部署？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。第一項需求：準備增加流量的新創公司需要一個資料庫故障轉移目標，而不需要更改應用程式連接端點。第二項需求：支援關鍵工作負載的營運團隊希望有一個事件可以觸發自動恢復工作流程。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "RDS Multi-AZ",
-          "B": "單AZ RDS執行個體",
-          "C": "S3 儲存桶策略",
-          "D": "僅 EBS Snapshot"
+          "A": "具有健康檢查功能的多可用區 Auto Scaling 組",
+          "B": "Amazon SQS",
+          "C": "具有目標運行狀況檢查的應用程式負載平衡器",
+          "D": "RDS Multi-AZ",
+          "E": "EventBridge 呼叫 Step Functions"
         },
-        "explanation": "RDS Multi-AZ在故障轉移期間保持備用狀態並更新託管端點。\n其他選擇不提供託管資料庫故障轉移。"
+        "explanation": "RDS Multi-AZ 符合第一項需求：RDS Multi-AZ在故障轉移期間保持備用狀態並更新託管端點。 EventBridge 呼叫 Step Functions 符合第二項需求：EventBridge 和 Step Functions 可以將事件路由到持久、可重試的復原工作流程。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "dop-c02-d3-015",
-    "type": "single",
-    "question": "An AWS administrator working in a shared environment wants an event to trigger an automated recovery workflow. Which integration is suitable?",
-    "options": {
-      "A": "An S3 storage class",
-      "B": "EventBridge invoking Step Functions",
-      "C": "A public DNS record",
-      "D": "A security group only"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "EventBridge and Step Functions can route events into durable, retryable recovery workflows.\nThe other choices do not orchestrate recovery steps.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment is reviewing a production decision. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The team wants an event to trigger an automated recovery workflow. Which integration is suitable?",
+    "options": {
+      "A": "A multi-AZ Auto Scaling group with health checks",
+      "B": "Amazon SQS",
+      "C": "An Application Load Balancer with target health checks",
+      "D": "EventBridge invoking Step Functions"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge and Step Functions can route events into durable, retryable recovery workflows.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide EventBridge invoking Step Functions for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "在共用環境中工作的 AWS 管理員希望透過事件觸發自動復原工作流程。哪種整合合適？",
+        "question": "組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。在共用環境中工作的 AWS 管理員希望透過事件觸發自動復原工作流程。哪種整合合適？",
         "options": {
-          "A": "S3 儲存類別",
-          "B": "EventBridge 呼叫 Step Functions",
-          "C": "公共 DNS 記錄",
-          "D": "僅安全群組"
+          "A": "具有健康檢查功能的多可用區 Auto Scaling 組",
+          "B": "Amazon SQS",
+          "C": "具有目標運行狀況檢查的應用程式負載平衡器",
+          "D": "EventBridge 呼叫 Step Functions"
         },
-        "explanation": "EventBridge 和 Step Functions 可以將事件路由到持久、可重試的復原工作流程。\n其他選擇不安排恢復步驟。"
+        "explanation": "EventBridge 和 Step Functions 可以將事件路由到持久、可重試的復原工作流程。\n其他選項適用於此領域的不同需求，但不能像 EventBridge 呼叫 Step Functions 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d3-016",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A customer-facing application team must replace unhealthy instances automatically and spread capacity across Availability Zones. Which design fits?",
+    "question": "A customer-facing application team is redesigning one integrated end-to-end architecture. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The architecture must limit blast radius, preserve availability during change, and control cost through automation instead of permanent overprovisioning. The workload must replace unhealthy instances automatically and spread capacity across Availability Zones, and the same architecture needs to generate release notes and test suggestions using an AWS coding assistant. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "An S3 bucket website",
-      "B": "A KMS alias",
-      "C": "A multi-AZ Auto Scaling group with health checks",
-      "D": "One fixed instance"
+      "A": "Use AWS CodeBuild for the primary requirement and integrate it with Amazon Q Developer",
+      "B": "Combine AWS CodeBuild with A canary or blue-green deployment as a single platform design",
+      "C": "Use A multi-AZ Auto Scaling group with health checks for the primary requirement and integrate it with Amazon Q Developer for the connected control",
+      "D": "Use A multi-AZ Auto Scaling group with health checks but replace the connected control with AWS CodePipeline"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Auto Scaling health checks replace failed instances and multiple subnets spread capacity.\nThe other choices do not provide self-healing compute.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "A multi-AZ Auto Scaling group with health checks satisfies the first part of the architecture: Auto Scaling health checks replace failed instances and multiple subnets spread capacity. Amazon Q Developer satisfies the connected requirement: Amazon Q Developer can assist with code, reviews, tests, and development workflows.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊必須自動替換不健康的執行個體，並將容量分佈到可用區。哪種設計適合？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：擁有多個 AWS 區域的企業必須自動取代不健康的執行個體並將容量分佈到可用區。 第二項需求：支援關鍵工作負載的營運團隊需要使用 AWS 編碼助理產生發行說明並測試建議。 此架構必須限制影響範圍、在變更期間維持可用性，並透過自動化控制成本，而不是長期過度佈建。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "S3 儲存桶網站",
-          "B": "KMS 別名",
-          "C": "具有健康檢查功能的多可用區 Auto Scaling 組",
-          "D": "1個固定執行個體"
+          "A": "以AWS CodeBuild處理主要需求，並整合Amazon Q Developer",
+          "B": "把AWS CodeBuild與金絲雀或藍綠部署結合為單一平台設計",
+          "C": "以具有健康檢查功能的多可用區 Auto Scaling 組處理主要需求，並整合Amazon Q Developer作為相連控制",
+          "D": "使用具有健康檢查功能的多可用區 Auto Scaling 組，但以AWS CodePipeline取代相連控制"
         },
-        "explanation": "Auto Scaling 運作狀況檢查會取代失敗的執行個體，並透過多個子網路擴充容量。\n其他選擇不提供自我修復計算。"
+        "explanation": "具有健康檢查功能的多可用區 Auto Scaling 組 負責架構的第一項需求，Amazon Q Developer 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "dop-c02-d3-017",
-    "type": "single",
-    "question": "A platform team standardizing its AWS deployments needs to decouple a producer from workers when the worker fleet is temporarily unavailable. Which service should buffer work?",
-    "options": {
-      "A": "Amazon Route 53",
-      "B": "AWS Certificate Manager",
-      "C": "Amazon EBS",
-      "D": "Amazon SQS"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "SQS durably buffers messages until workers can process them.\nThe other choices provide DNS, certificates, or block storage.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team needs to decouple a producer from workers when the worker fleet is temporarily unavailable. Which service should buffer work?",
+    "options": {
+      "A": "EventBridge invoking Step Functions",
+      "B": "Amazon SQS",
+      "C": "An Application Load Balancer with target health checks",
+      "D": "RDS Multi-AZ"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "SQS durably buffers messages until workers can process them.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon SQS for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "當工作人員佇列暫時無法使用時，標準化其 AWS 部署的平台團隊需要將生產者與工作人員脫鉤。哪個服務應該緩衝工作？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。當工作人員佇列暫時無法使用時，標準化其 AWS 部署的平台團隊需要將生產者與工作人員脫鉤。哪個服務應該緩衝工作？",
         "options": {
-          "A": "Amazon Route 53",
-          "B": "AWS Certificate Manager",
-          "C": "Amazon EBS",
-          "D": "Amazon SQS"
+          "A": "EventBridge 呼叫 Step Functions",
+          "B": "Amazon SQS",
+          "C": "具有目標運行狀況檢查的應用程式負載平衡器",
+          "D": "RDS Multi-AZ"
         },
-        "explanation": "SQS 持久緩衝訊息，直到工作人員可以處理它們。\n其他選擇提供 DNS、憑證或區塊儲存。"
+        "explanation": "SQS 持久緩衝訊息，直到工作人員可以處理它們。\n其他選項適用於此領域的不同需求，但不能像 Amazon SQS 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d3-018",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team preparing evidence for an audit must send requests to healthy application targets in multiple Availability Zones. Which service fits?",
+    "question": "A team preparing evidence for an audit is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team must send requests to healthy application targets in multiple Availability Zones. Which service fits?",
     "options": {
       "A": "An Application Load Balancer with target health checks",
-      "B": "A single EC2 public IP",
-      "C": "An S3 lifecycle rule",
-      "D": "An IAM group"
+      "B": "RDS Multi-AZ",
+      "C": "EventBridge invoking Step Functions",
+      "D": "A multi-AZ Auto Scaling group with health checks"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "An ALB routes to healthy targets across configured subnets.\nThe other choices do not perform application load balancing.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "An ALB routes to healthy targets across configured subnets.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide An Application Load Balancer with target health checks for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備審計證據的團隊必須向多個可用區域中的健康應用目標發送請求。適合哪種服務？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。準備審計證據的團隊必須向多個可用區域中的健康應用目標發送請求。適合哪種服務？",
         "options": {
           "A": "具有目標運行狀況檢查的應用程式負載平衡器",
-          "B": "單一 EC2 公共 IP",
-          "C": "S3 生命週期規則",
-          "D": "IAM Groups"
+          "B": "RDS Multi-AZ",
+          "C": "EventBridge 呼叫 Step Functions",
+          "D": "具有健康檢查功能的多可用區 Auto Scaling 組"
         },
-        "explanation": "ALB 跨配置的子網路路由到健康目標。\n其他選擇不執行應用程式負載平衡。"
+        "explanation": "ALB 跨配置的子網路路由到健康目標。\n其他選項適用於此領域的不同需求，但不能像 具有目標運行狀況檢查的應用程式負載平衡器 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d3-019",
-    "type": "single",
-    "question": "A business replacing a manual process needs a database failover target without changing the application connection endpoint. Which deployment should be used?",
-    "options": {
-      "A": "An EBS snapshot only",
-      "B": "RDS Multi-AZ",
-      "C": "A single-AZ RDS instance",
-      "D": "An S3 bucket policy"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "RDS Multi-AZ maintains a standby and updates the managed endpoint during failover.\nThe other choices do not provide managed database failover.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A business replacing a manual process is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team needs a database failover target without changing the application connection endpoint. Which deployment should be used?",
+    "options": {
+      "A": "EventBridge invoking Step Functions",
+      "B": "A multi-AZ Auto Scaling group with health checks",
+      "C": "Amazon SQS",
+      "D": "RDS Multi-AZ"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "RDS Multi-AZ maintains a standby and updates the managed endpoint during failover.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide RDS Multi-AZ for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "取代手動流程的業務需要資料庫故障轉移目標，而不更改應用程式連線端點。應該使用哪種部署？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。取代手動流程的業務需要資料庫故障轉移目標，而不更改應用程式連線端點。應該使用哪種部署？",
         "options": {
-          "A": "僅 EBS Snapshot",
-          "B": "RDS Multi-AZ",
-          "C": "單AZ RDS執行個體",
-          "D": "S3 儲存桶策略"
+          "A": "EventBridge 呼叫 Step Functions",
+          "B": "具有健康檢查功能的多可用區 Auto Scaling 組",
+          "C": "Amazon SQS",
+          "D": "RDS Multi-AZ"
         },
-        "explanation": "RDS Multi-AZ在故障轉移期間保持備用狀態並更新託管端點。\n其他選擇不提供託管資料庫故障轉移。"
+        "explanation": "RDS Multi-AZ在故障轉移期間保持備用狀態並更新託管端點。\n其他選項適用於此領域的不同需求，但不能像 RDS Multi-AZ 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d3-020",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team validating a design against the exam guide wants an event to trigger an automated recovery workflow. Which integration is suitable?",
+    "question": "A team validating a design against the exam guide is redesigning one integrated end-to-end architecture. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The selected controls must provide auditable security, predictable availability, and the lowest operational cost that still satisfies both requirements. The workload wants an event to trigger an automated recovery workflow, and the same architecture needs to apply the same guardrail policy to every account. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "A security group only",
-      "B": "An S3 storage class",
-      "C": "EventBridge invoking Step Functions",
-      "D": "A public DNS record"
+      "A": "Use AWS CodeBuild for the primary requirement and integrate it with An AWS Organizations service control policy",
+      "B": "Combine AWS CodeBuild with A canary or blue-green deployment as a single platform design",
+      "C": "Use EventBridge invoking Step Functions for the primary requirement and integrate it with An AWS Organizations service control policy for the connected control",
+      "D": "Use EventBridge invoking Step Functions but replace the connected control with AWS CodePipeline"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "EventBridge and Step Functions can route events into durable, retryable recovery workflows.\nThe other choices do not orchestrate recovery steps.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "EventBridge invoking Step Functions satisfies the first part of the architecture: EventBridge and Step Functions can route events into durable, retryable recovery workflows. An AWS Organizations service control policy satisfies the connected requirement: SCPs apply permission guardrails across member accounts.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊希望有一個事件可以觸發自動恢復工作流程。哪種整合合適？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：準備發布的開發團隊希望有一個事件可以觸發自動恢復工作流程。 第二項需求：支援關鍵工作負載的營運團隊需要對每個帳戶應用相同的護欄策略。 所選控制必須提供可稽核的安全性、可預測的可用性，以及在滿足兩項要求前提下最低的營運成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "僅安全群組",
-          "B": "S3 儲存類別",
-          "C": "EventBridge 呼叫 Step Functions",
-          "D": "公共 DNS 記錄"
+          "A": "以AWS CodeBuild處理主要需求，並整合AWS Organizations 服務控制原則",
+          "B": "把AWS CodeBuild與金絲雀或藍綠部署結合為單一平台設計",
+          "C": "以EventBridge 呼叫 Step Functions處理主要需求，並整合AWS Organizations 服務控制原則作為相連控制",
+          "D": "使用EventBridge 呼叫 Step Functions，但以AWS CodePipeline取代相連控制"
         },
-        "explanation": "EventBridge 和 Step Functions 可以將事件路由到持久、可重試的復原工作流程。\n其他選擇不安排恢復步驟。"
+        "explanation": "EventBridge 呼叫 Step Functions 負責架構的第一項需求，AWS Organizations 服務控制原則 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "dop-c02-d3-021",
-    "type": "single",
-    "question": "A production team must replace unhealthy instances automatically and spread capacity across Availability Zones. Which design fits?",
-    "options": {
-      "A": "One fixed instance",
-      "B": "An S3 bucket website",
-      "C": "A KMS alias",
-      "D": "A multi-AZ Auto Scaling group with health checks"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Auto Scaling health checks replace failed instances and multiple subnets spread capacity.\nThe other choices do not provide self-healing compute.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A production team is planning two independent production changes. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The first team must replace unhealthy instances automatically and spread capacity across Availability Zones. A second team needs to decouple a producer from workers when the worker fleet is temporarily unavailable. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "EventBridge invoking Step Functions",
+      "B": "A multi-AZ Auto Scaling group with health checks",
+      "C": "Amazon SQS",
+      "D": "An Application Load Balancer with target health checks",
+      "E": "RDS Multi-AZ"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "A multi-AZ Auto Scaling group with health checks meets the first requirement: Auto Scaling health checks replace failed instances and multiple subnets spread capacity. Amazon SQS meets the second requirement: SQS durably buffers messages until workers can process them.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "生產團隊必須自動替換不健康的執行個體，並將容量分佈到可用區。哪種設計適合？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。第一項需求：生產團隊必須自動替換不健康的執行個體，並將容量分佈到可用區。第二項需求：當工作佇列暫時無法使用時，多帳戶平台團隊需要將生產者與工作人員解耦。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "1個固定執行個體",
-          "B": "S3 儲存桶網站",
-          "C": "KMS 別名",
-          "D": "具有健康檢查功能的多可用區 Auto Scaling 組"
+          "A": "EventBridge 呼叫 Step Functions",
+          "B": "具有健康檢查功能的多可用區 Auto Scaling 組",
+          "C": "Amazon SQS",
+          "D": "具有目標運行狀況檢查的應用程式負載平衡器",
+          "E": "RDS Multi-AZ"
         },
-        "explanation": "Auto Scaling 運作狀況檢查會取代失敗的執行個體，並透過多個子網路擴充容量。\n其他選擇不提供自我修復計算。"
+        "explanation": "具有健康檢查功能的多可用區 Auto Scaling 組 符合第一項需求：Auto Scaling 運作狀況檢查會取代失敗的執行個體，並透過多個子網路擴充容量。 Amazon SQS 符合第二項需求：SQS 持久緩衝訊息，直到工作人員可以處理它們。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "dop-c02-d3-022",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A multi-account platform team needs to decouple a producer from workers when the worker fleet is temporarily unavailable. Which service should buffer work?",
+    "question": "A multi-account platform team is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team needs to decouple a producer from workers when the worker fleet is temporarily unavailable. Which service should buffer work?",
     "options": {
       "A": "Amazon SQS",
-      "B": "Amazon Route 53",
-      "C": "AWS Certificate Manager",
-      "D": "Amazon EBS"
+      "B": "An Application Load Balancer with target health checks",
+      "C": "RDS Multi-AZ",
+      "D": "EventBridge invoking Step Functions"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "SQS durably buffers messages until workers can process them.\nThe other choices provide DNS, certificates, or block storage.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "SQS durably buffers messages until workers can process them.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon SQS for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "當工作佇列暫時無法使用時，多帳戶平台團隊需要將生產者與工作人員解耦。哪個服務應該緩衝工作？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。當工作佇列暫時無法使用時，多帳戶平台團隊需要將生產者與工作人員解耦。哪個服務應該緩衝工作？",
         "options": {
           "A": "Amazon SQS",
-          "B": "Amazon Route 53",
-          "C": "AWS Certificate Manager",
-          "D": "Amazon EBS"
+          "B": "具有目標運行狀況檢查的應用程式負載平衡器",
+          "C": "RDS Multi-AZ",
+          "D": "EventBridge 呼叫 Step Functions"
         },
-        "explanation": "SQS 持久緩衝訊息，直到工作人員可以處理它們。\n其他選擇提供 DNS、憑證或區塊儲存。"
+        "explanation": "SQS 持久緩衝訊息，直到工作人員可以處理它們。\n其他選項適用於此領域的不同需求，但不能像 Amazon SQS 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d3-023",
-    "type": "single",
-    "question": "A regulated company must send requests to healthy application targets in multiple Availability Zones. Which service fits?",
-    "options": {
-      "A": "An IAM group",
-      "B": "An Application Load Balancer with target health checks",
-      "C": "A single EC2 public IP",
-      "D": "An S3 lifecycle rule"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "An ALB routes to healthy targets across configured subnets.\nThe other choices do not perform application load balancing.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A regulated company is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team must send requests to healthy application targets in multiple Availability Zones. Which service fits?",
+    "options": {
+      "A": "RDS Multi-AZ",
+      "B": "EventBridge invoking Step Functions",
+      "C": "A multi-AZ Auto Scaling group with health checks",
+      "D": "An Application Load Balancer with target health checks"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "An ALB routes to healthy targets across configured subnets.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide An Application Load Balancer with target health checks for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司必須向多個可用區中的健康應用程式目標發送請求。適合哪種服務？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。受監管的公司必須向多個可用區中的健康應用程式目標發送請求。適合哪種服務？",
         "options": {
-          "A": "IAM Groups",
-          "B": "具有目標運行狀況檢查的應用程式負載平衡器",
-          "C": "單一 EC2 公共 IP",
-          "D": "S3 生命週期規則"
+          "A": "RDS Multi-AZ",
+          "B": "EventBridge 呼叫 Step Functions",
+          "C": "具有健康檢查功能的多可用區 Auto Scaling 組",
+          "D": "具有目標運行狀況檢查的應用程式負載平衡器"
         },
-        "explanation": "ALB 跨配置的子網路路由到健康目標。\n其他選擇不執行應用程式負載平衡。"
+        "explanation": "ALB 跨配置的子網路路由到健康目標。\n其他選項適用於此領域的不同需求，但不能像 具有目標運行狀況檢查的應用程式負載平衡器 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d3-024",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A startup preparing for a traffic increase needs a database failover target without changing the application connection endpoint. Which deployment should be used?",
+    "question": "A startup preparing for a traffic increase is redesigning one integrated end-to-end architecture. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The design must keep recurring cost proportional to use, enforce least privilege, and remain available during a component or Availability Zone failure. The workload needs a database failover target without changing the application connection endpoint, and the same architecture wants an event to trigger an automated recovery workflow. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "An S3 bucket policy",
-      "B": "An EBS snapshot only",
-      "C": "RDS Multi-AZ",
-      "D": "A single-AZ RDS instance"
+      "A": "Use AWS CodeBuild for the primary requirement and integrate it with EventBridge invoking Step Functions",
+      "B": "Combine AWS CodeBuild with A canary or blue-green deployment as a single platform design",
+      "C": "Use RDS Multi-AZ for the primary requirement and integrate it with EventBridge invoking Step Functions for the connected control",
+      "D": "Use RDS Multi-AZ but replace the connected control with AWS CodePipeline"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "RDS Multi-AZ maintains a standby and updates the managed endpoint during failover.\nThe other choices do not provide managed database failover.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "RDS Multi-AZ satisfies the first part of the architecture: RDS Multi-AZ maintains a standby and updates the managed endpoint during failover. EventBridge invoking Step Functions satisfies the connected requirement: EventBridge and Step Functions can route events into durable, retryable recovery workflows.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司需要一個資料庫故障轉移目標，而不需要更改應用程式連接端點。應該使用哪種部署？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：引入自動化工作流程的公司需要一個資料庫故障轉移目標，而無需更改應用程式連接端點。 第二項需求：準備發布的開發團隊希望有一個事件可以觸發自動恢復工作流程。 此設計必須讓持續成本與實際用量相符、落實最低權限，並在元件或可用區域發生故障時維持可用。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "S3 儲存桶策略",
-          "B": "僅 EBS Snapshot",
-          "C": "RDS Multi-AZ",
-          "D": "單AZ RDS執行個體"
+          "A": "以AWS CodeBuild處理主要需求，並整合EventBridge 呼叫 Step Functions",
+          "B": "把AWS CodeBuild與金絲雀或藍綠部署結合為單一平台設計",
+          "C": "以RDS Multi-AZ處理主要需求，並整合EventBridge 呼叫 Step Functions作為相連控制",
+          "D": "使用RDS Multi-AZ，但以AWS CodePipeline取代相連控制"
         },
-        "explanation": "RDS Multi-AZ在故障轉移期間保持備用狀態並更新託管端點。\n其他選擇不提供託管資料庫故障轉移。"
+        "explanation": "RDS Multi-AZ 負責架構的第一項需求，EventBridge 呼叫 Step Functions 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "dop-c02-d3-025",
-    "type": "single",
-    "question": "An operations team supporting a critical workload wants an event to trigger an automated recovery workflow. Which integration is suitable?",
-    "options": {
-      "A": "A public DNS record",
-      "B": "A security group only",
-      "C": "An S3 storage class",
-      "D": "EventBridge invoking Step Functions"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "EventBridge and Step Functions can route events into durable, retryable recovery workflows.\nThe other choices do not orchestrate recovery steps.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team wants an event to trigger an automated recovery workflow. Which integration is suitable?",
+    "options": {
+      "A": "An Application Load Balancer with target health checks",
+      "B": "EventBridge invoking Step Functions",
+      "C": "A multi-AZ Auto Scaling group with health checks",
+      "D": "Amazon SQS"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge and Step Functions can route events into durable, retryable recovery workflows.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide EventBridge invoking Step Functions for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊希望有一個事件可以觸發自動恢復工作流程。哪種整合合適？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。支援關鍵工作負載的營運團隊希望有一個事件可以觸發自動恢復工作流程。哪種整合合適？",
         "options": {
-          "A": "公共 DNS 記錄",
-          "B": "僅安全群組",
-          "C": "S3 儲存類別",
-          "D": "EventBridge 呼叫 Step Functions"
+          "A": "具有目標運行狀況檢查的應用程式負載平衡器",
+          "B": "EventBridge 呼叫 Step Functions",
+          "C": "具有健康檢查功能的多可用區 Auto Scaling 組",
+          "D": "Amazon SQS"
         },
-        "explanation": "EventBridge 和 Step Functions 可以將事件路由到持久、可重試的復原工作流程。\n其他選擇不安排恢復步驟。"
+        "explanation": "EventBridge 和 Step Functions 可以將事件路由到持久、可重試的復原工作流程。\n其他選項適用於此領域的不同需求，但不能像 EventBridge 呼叫 Step Functions 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d3-026",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A data platform team must replace unhealthy instances automatically and spread capacity across Availability Zones. Which design fits?",
+    "question": "A data platform team is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team must replace unhealthy instances automatically and spread capacity across Availability Zones. Which design fits?",
     "options": {
       "A": "A multi-AZ Auto Scaling group with health checks",
-      "B": "One fixed instance",
-      "C": "An S3 bucket website",
-      "D": "A KMS alias"
+      "B": "Amazon SQS",
+      "C": "An Application Load Balancer with target health checks",
+      "D": "RDS Multi-AZ"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Auto Scaling health checks replace failed instances and multiple subnets spread capacity.\nThe other choices do not provide self-healing compute.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Auto Scaling health checks replace failed instances and multiple subnets spread capacity.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A multi-AZ Auto Scaling group with health checks for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊必須自動取代不健康的執行個體，並將容量分佈到可用區。哪種設計適合？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。資料平台團隊必須自動取代不健康的執行個體，並將容量分佈到可用區。哪種設計適合？",
         "options": {
           "A": "具有健康檢查功能的多可用區 Auto Scaling 組",
-          "B": "1個固定執行個體",
-          "C": "S3 儲存桶網站",
-          "D": "KMS 別名"
+          "B": "Amazon SQS",
+          "C": "具有目標運行狀況檢查的應用程式負載平衡器",
+          "D": "RDS Multi-AZ"
         },
-        "explanation": "Auto Scaling 運作狀況檢查會取代失敗的執行個體，並透過多個子網路擴充容量。\n其他選擇不提供自我修復計算。"
+        "explanation": "Auto Scaling 運作狀況檢查會取代失敗的執行個體，並透過多個子網路擴充容量。\n其他選項適用於此領域的不同需求，但不能像 具有健康檢查功能的多可用區 Auto Scaling 組 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d3-027",
-    "type": "single",
-    "question": "A security-conscious engineering team needs to decouple a producer from workers when the worker fleet is temporarily unavailable. Which service should buffer work?",
-    "options": {
-      "A": "Amazon EBS",
-      "B": "Amazon SQS",
-      "C": "Amazon Route 53",
-      "D": "AWS Certificate Manager"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "SQS durably buffers messages until workers can process them.\nThe other choices provide DNS, certificates, or block storage.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A security-conscious engineering team is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team needs to decouple a producer from workers when the worker fleet is temporarily unavailable. Which service should buffer work?",
+    "options": {
+      "A": "An Application Load Balancer with target health checks",
+      "B": "RDS Multi-AZ",
+      "C": "EventBridge invoking Step Functions",
+      "D": "Amazon SQS"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "SQS durably buffers messages until workers can process them.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon SQS for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "當工作佇列暫時無法使用時，具有安全意識的工程團隊需要將生產者與工作人員脫鉤。哪個服務應該緩衝工作？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。當工作佇列暫時無法使用時，具有安全意識的工程團隊需要將生產者與工作人員脫鉤。哪個服務應該緩衝工作？",
         "options": {
-          "A": "Amazon EBS",
-          "B": "Amazon SQS",
-          "C": "Amazon Route 53",
-          "D": "AWS Certificate Manager"
+          "A": "具有目標運行狀況檢查的應用程式負載平衡器",
+          "B": "RDS Multi-AZ",
+          "C": "EventBridge 呼叫 Step Functions",
+          "D": "Amazon SQS"
         },
-        "explanation": "SQS 持久緩衝訊息，直到工作人員可以處理它們。\n其他選擇提供 DNS、憑證或區塊儲存。"
+        "explanation": "SQS 持久緩衝訊息，直到工作人員可以處理它們。\n其他選項適用於此領域的不同需求，但不能像 Amazon SQS 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d3-028",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A company migrating an existing workload must send requests to healthy application targets in multiple Availability Zones. Which service fits?",
+    "question": "A company migrating an existing workload is redesigning one integrated end-to-end architecture. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The design must avoid unnecessary standby cost without weakening security controls or the availability objective. The workload must send requests to healthy application targets in multiple Availability Zones, and the same architecture needs a dashboard that combines metrics from several accounts and Regions. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "An S3 lifecycle rule",
-      "B": "An IAM group",
-      "C": "An Application Load Balancer with target health checks",
-      "D": "A single EC2 public IP"
+      "A": "Use AWS CodeBuild for the primary requirement and integrate it with CloudWatch cross-account observability dashboards",
+      "B": "Combine AWS CodeBuild with A canary or blue-green deployment as a single platform design",
+      "C": "Use An Application Load Balancer with target health checks for the primary requirement and integrate it with CloudWatch cross-account observability dashboards for the connected control",
+      "D": "Use An Application Load Balancer with target health checks but replace the connected control with AWS CodePipeline"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "An ALB routes to healthy targets across configured subnets.\nThe other choices do not perform application load balancing.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "An Application Load Balancer with target health checks satisfies the first part of the architecture: An ALB routes to healthy targets across configured subnets. CloudWatch cross-account observability dashboards satisfies the connected requirement: CloudWatch supports cross-account and cross-Region monitoring views for centralized operations.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司必須向多個可用區中的健康應用程式目標發送請求。適合哪種服務？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：優化現有實施的團隊必須向多個可用區中的健康應用程式目標發送請求。 第二項需求：準備發布的開發團隊需要一個儀表板，其中結合了多個帳戶和區域的指標。 此設計必須避免不必要的備用成本，同時不可削弱安全控制或可用性目標。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "S3 生命週期規則",
-          "B": "IAM Groups",
-          "C": "具有目標運行狀況檢查的應用程式負載平衡器",
-          "D": "單一 EC2 公共 IP"
+          "A": "以AWS CodeBuild處理主要需求，並整合CloudWatch 跨帳戶可觀測性儀表板",
+          "B": "把AWS CodeBuild與金絲雀或藍綠部署結合為單一平台設計",
+          "C": "以具有目標運行狀況檢查的應用程式負載平衡器處理主要需求，並整合CloudWatch 跨帳戶可觀測性儀表板作為相連控制",
+          "D": "使用具有目標運行狀況檢查的應用程式負載平衡器，但以AWS CodePipeline取代相連控制"
         },
-        "explanation": "ALB 跨配置的子網路路由到健康目標。\n其他選擇不執行應用程式負載平衡。"
+        "explanation": "具有目標運行狀況檢查的應用程式負載平衡器 負責架構的第一項需求，CloudWatch 跨帳戶可觀測性儀表板 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "dop-c02-d3-029",
-    "type": "single",
-    "question": "A team with strict recovery objectives needs a database failover target without changing the application connection endpoint. Which deployment should be used?",
-    "options": {
-      "A": "A single-AZ RDS instance",
-      "B": "An S3 bucket policy",
-      "C": "An EBS snapshot only",
-      "D": "RDS Multi-AZ"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "RDS Multi-AZ maintains a standby and updates the managed endpoint during failover.\nThe other choices do not provide managed database failover.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team with strict recovery objectives is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team needs a database failover target without changing the application connection endpoint. Which deployment should be used?",
+    "options": {
+      "A": "Amazon SQS",
+      "B": "RDS Multi-AZ",
+      "C": "EventBridge invoking Step Functions",
+      "D": "A multi-AZ Auto Scaling group with health checks"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "RDS Multi-AZ maintains a standby and updates the managed endpoint during failover.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide RDS Multi-AZ for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格復原目標的團隊需要一個資料庫故障轉移目標而不更改應用程式連線端點。應該使用哪種部署？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。具有嚴格復原目標的團隊需要一個資料庫故障轉移目標而不更改應用程式連線端點。應該使用哪種部署？",
         "options": {
-          "A": "單AZ RDS執行個體",
-          "B": "S3 儲存桶策略",
-          "C": "僅 EBS Snapshot",
-          "D": "RDS Multi-AZ"
+          "A": "Amazon SQS",
+          "B": "RDS Multi-AZ",
+          "C": "EventBridge 呼叫 Step Functions",
+          "D": "具有健康檢查功能的多可用區 Auto Scaling 組"
         },
-        "explanation": "RDS Multi-AZ在故障轉移期間保持備用狀態並更新託管端點。\n其他選擇不提供託管資料庫故障轉移。"
+        "explanation": "RDS Multi-AZ在故障轉移期間保持備用狀態並更新託管端點。\n其他選項適用於此領域的不同需求，但不能像 RDS Multi-AZ 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d3-030",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A developer team preparing a release wants an event to trigger an automated recovery workflow. Which integration is suitable?",
+    "question": "A developer team preparing a release is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team wants an event to trigger an automated recovery workflow. Which integration is suitable?",
     "options": {
       "A": "EventBridge invoking Step Functions",
-      "B": "A public DNS record",
-      "C": "A security group only",
-      "D": "An S3 storage class"
+      "B": "A multi-AZ Auto Scaling group with health checks",
+      "C": "Amazon SQS",
+      "D": "An Application Load Balancer with target health checks"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "EventBridge and Step Functions can route events into durable, retryable recovery workflows.\nThe other choices do not orchestrate recovery steps.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "EventBridge and Step Functions can route events into durable, retryable recovery workflows.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide EventBridge invoking Step Functions for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊希望有一個事件可以觸發自動恢復工作流程。哪種整合合適？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。準備發布的開發團隊希望有一個事件可以觸發自動恢復工作流程。哪種整合合適？",
         "options": {
           "A": "EventBridge 呼叫 Step Functions",
-          "B": "公共 DNS 記錄",
-          "C": "僅安全群組",
-          "D": "S3 儲存類別"
+          "B": "具有健康檢查功能的多可用區 Auto Scaling 組",
+          "C": "Amazon SQS",
+          "D": "具有目標運行狀況檢查的應用程式負載平衡器"
         },
-        "explanation": "EventBridge 和 Step Functions 可以將事件路由到持久、可重試的復原工作流程。\n其他選擇不安排恢復步驟。"
+        "explanation": "EventBridge 和 Step Functions 可以將事件路由到持久、可重試的復原工作流程。\n其他選項適用於此領域的不同需求，但不能像 EventBridge 呼叫 Step Functions 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d3-031",
-    "type": "single",
-    "question": "An enterprise with several AWS Regions must replace unhealthy instances automatically and spread capacity across Availability Zones. Which design fits?",
-    "options": {
-      "A": "A KMS alias",
-      "B": "A multi-AZ Auto Scaling group with health checks",
-      "C": "One fixed instance",
-      "D": "An S3 bucket website"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Auto Scaling health checks replace failed instances and multiple subnets spread capacity.\nThe other choices do not provide self-healing compute.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team must replace unhealthy instances automatically and spread capacity across Availability Zones. Which design fits?",
+    "options": {
+      "A": "Amazon SQS",
+      "B": "An Application Load Balancer with target health checks",
+      "C": "RDS Multi-AZ",
+      "D": "A multi-AZ Auto Scaling group with health checks"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Auto Scaling health checks replace failed instances and multiple subnets spread capacity.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A multi-AZ Auto Scaling group with health checks for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業必須自動取代不健康的執行個體並將容量分佈到可用區。哪種設計適合？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。擁有多個 AWS 區域的企業必須自動取代不健康的執行個體並將容量分佈到可用區。哪種設計適合？",
         "options": {
-          "A": "KMS 別名",
-          "B": "具有健康檢查功能的多可用區 Auto Scaling 組",
-          "C": "1個固定執行個體",
-          "D": "S3 儲存桶網站"
+          "A": "Amazon SQS",
+          "B": "具有目標運行狀況檢查的應用程式負載平衡器",
+          "C": "RDS Multi-AZ",
+          "D": "具有健康檢查功能的多可用區 Auto Scaling 組"
         },
-        "explanation": "Auto Scaling 運作狀況檢查會取代失敗的執行個體，並透過多個子網路擴充容量。\n其他選擇不提供自我修復計算。"
+        "explanation": "Auto Scaling 運作狀況檢查會取代失敗的執行個體，並透過多個子網路擴充容量。\n其他選項適用於此領域的不同需求，但不能像 具有健康檢查功能的多可用區 Auto Scaling 組 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d3-032",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A service owner reviewing an incident needs to decouple a producer from workers when the worker fleet is temporarily unavailable. Which service should buffer work?",
+    "question": "A service owner reviewing an incident is redesigning one integrated end-to-end architecture. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The organization will accept additional managed-service cost only when it measurably improves security and availability with less operational effort. The workload needs to decouple a producer from workers when the worker fleet is temporarily unavailable, and the same architecture must document a repeatable response to a common alarm. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "AWS Certificate Manager",
-      "B": "Amazon EBS",
-      "C": "Amazon SQS",
-      "D": "Amazon Route 53"
+      "A": "Use AWS CodeBuild for the primary requirement and integrate it with Systems Manager Automation runbook",
+      "B": "Combine AWS CodeBuild with A canary or blue-green deployment as a single platform design",
+      "C": "Use Amazon SQS for the primary requirement and integrate it with Systems Manager Automation runbook for the connected control",
+      "D": "Use Amazon SQS but replace the connected control with AWS CodePipeline"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "SQS durably buffers messages until workers can process them.\nThe other choices provide DNS, certificates, or block storage.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Amazon SQS satisfies the first part of the architecture: SQS durably buffers messages until workers can process them. Systems Manager Automation runbook satisfies the connected requirement: Automation runbooks encode repeatable operational response steps.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "當工作人員佇列暫時無法使用時，審查事件的服務所有者需要將生產者與工作人員脫鉤。哪個服務應該緩衝工作？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：審查事件的服務所有者需要一個用於操作警報的中央佇列，以便響應人員可以按順序確認它們。 第二項需求：準備發布的開發團隊必須記錄對常見警報的可重複回應。 只有在託管服務能以較低營運負擔明確改善安全性與可用性時，組織才會接受額外成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "AWS Certificate Manager",
-          "B": "Amazon EBS",
-          "C": "Amazon SQS",
-          "D": "Amazon Route 53"
+          "A": "以AWS CodeBuild處理主要需求，並整合Systems Manager Automation操作手冊",
+          "B": "把AWS CodeBuild與金絲雀或藍綠部署結合為單一平台設計",
+          "C": "以Amazon SQS處理主要需求，並整合Systems Manager Automation操作手冊作為相連控制",
+          "D": "使用Amazon SQS，但以AWS CodePipeline取代相連控制"
         },
-        "explanation": "SQS 持久緩衝訊息，直到工作人員可以處理它們。\n其他選擇提供 DNS、憑證或區塊儲存。"
+        "explanation": "Amazon SQS 負責架構的第一項需求，Systems Manager Automation操作手冊 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "dop-c02-d3-033",
-    "type": "single",
-    "question": "A team optimizing an existing implementation must send requests to healthy application targets in multiple Availability Zones. Which service fits?",
-    "options": {
-      "A": "A single EC2 public IP",
-      "B": "An S3 lifecycle rule",
-      "C": "An IAM group",
-      "D": "An Application Load Balancer with target health checks"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "An ALB routes to healthy targets across configured subnets.\nThe other choices do not perform application load balancing.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team must send requests to healthy application targets in multiple Availability Zones. Which service fits?",
+    "options": {
+      "A": "A multi-AZ Auto Scaling group with health checks",
+      "B": "An Application Load Balancer with target health checks",
+      "C": "RDS Multi-AZ",
+      "D": "EventBridge invoking Step Functions"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "An ALB routes to healthy targets across configured subnets.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide An Application Load Balancer with target health checks for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊必須向多個可用區中的健康應用程式目標發送請求。適合哪種服務？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。優化現有實施的團隊必須向多個可用區中的健康應用程式目標發送請求。適合哪種服務？",
         "options": {
-          "A": "單一 EC2 公共 IP",
-          "B": "S3 生命週期規則",
-          "C": "IAM Groups",
-          "D": "具有目標運行狀況檢查的應用程式負載平衡器"
+          "A": "具有健康檢查功能的多可用區 Auto Scaling 組",
+          "B": "具有目標運行狀況檢查的應用程式負載平衡器",
+          "C": "RDS Multi-AZ",
+          "D": "EventBridge 呼叫 Step Functions"
         },
-        "explanation": "ALB 跨配置的子網路路由到健康目標。\n其他選擇不執行應用程式負載平衡。"
+        "explanation": "ALB 跨配置的子網路路由到健康目標。\n其他選項適用於此領域的不同需求，但不能像 具有目標運行狀況檢查的應用程式負載平衡器 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d3-034",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A company introducing an automated workflow needs a database failover target without changing the application connection endpoint. Which deployment should be used?",
+    "question": "A company introducing an automated workflow is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team needs a database failover target without changing the application connection endpoint. Which deployment should be used?",
     "options": {
       "A": "RDS Multi-AZ",
-      "B": "A single-AZ RDS instance",
-      "C": "An S3 bucket policy",
-      "D": "An EBS snapshot only"
+      "B": "EventBridge invoking Step Functions",
+      "C": "A multi-AZ Auto Scaling group with health checks",
+      "D": "Amazon SQS"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "RDS Multi-AZ maintains a standby and updates the managed endpoint during failover.\nThe other choices do not provide managed database failover.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "RDS Multi-AZ maintains a standby and updates the managed endpoint during failover.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide RDS Multi-AZ for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司需要一個資料庫故障轉移目標，而無需更改應用程式連接端點。應該使用哪種部署？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。引入自動化工作流程的公司需要一個資料庫故障轉移目標，而無需更改應用程式連接端點。應該使用哪種部署？",
         "options": {
           "A": "RDS Multi-AZ",
-          "B": "單AZ RDS執行個體",
-          "C": "S3 儲存桶策略",
-          "D": "僅 EBS Snapshot"
+          "B": "EventBridge 呼叫 Step Functions",
+          "C": "具有健康檢查功能的多可用區 Auto Scaling 組",
+          "D": "Amazon SQS"
         },
-        "explanation": "RDS Multi-AZ在故障轉移期間保持備用狀態並更新託管端點。\n其他選擇不提供託管資料庫故障轉移。"
+        "explanation": "RDS Multi-AZ在故障轉移期間保持備用狀態並更新託管端點。\n其他選項適用於此領域的不同需求，但不能像 RDS Multi-AZ 一樣直接滿足題目的指定條件。"
       }
     }
   }

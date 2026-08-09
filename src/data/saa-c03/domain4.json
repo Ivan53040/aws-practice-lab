@@ -1,7 +1,7 @@
 [
   {
     "id": "saa-d4-001",
-    "question": "A company wants to reduce EC2 costs for workloads that can tolerate interruptions. Which purchasing option should they use?",
+    "question": "This change affects a production workload. The team must preserve existing behavior and prefers a managed AWS capability with low operational overhead. A company wants to reduce EC2 costs for workloads that can tolerate interruptions. Which purchasing option should they use?",
     "options": {
       "A": "On-Demand Instances",
       "B": "Reserved Instances",
@@ -13,10 +13,10 @@
     "isMultiAnswer": false,
     "type": "single",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "一家公司希望降低可容忍中斷的工作負載的 EC2 成本。他們應該使用哪種購買選項？",
+        "question": "這項變更會影響生產工作負載。團隊必須保留現有行為，並希望採用營運負擔較低的 AWS 託管功能。一家公司希望降低可容忍中斷的工作負載的 EC2 成本。他們應該使用哪種購買選項？",
         "options": {
           "A": "按需執行個體",
           "B": "預留執行個體",
@@ -29,7 +29,7 @@
   },
   {
     "id": "saa-d4-002",
-    "question": "Which AWS service helps identify underutilized resources and provides cost optimization recommendations?",
+    "question": "The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. Which AWS service helps identify underutilized resources and provides cost optimization recommendations?",
     "options": {
       "A": "AWS Budgets",
       "B": "AWS Trusted Advisor",
@@ -41,10 +41,10 @@
     "isMultiAnswer": false,
     "type": "single",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "哪些 AWS 服務可協助識別未充分利用的資源並提供成本優化建議？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。哪些 AWS 服務可協助識別未充分利用的資源並提供成本優化建議？",
         "options": {
           "A": "AWS Budgets",
           "B": "AWS Trusted Advisor",
@@ -57,7 +57,7 @@
   },
   {
     "id": "saa-d4-003",
-    "question": "A company runs a development environment that is only used during business hours. Which approach minimizes costs?",
+    "question": "The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. A company runs a development environment that is only used during business hours. Which approach minimizes costs?",
     "options": {
       "A": "Use Reserved Instances",
       "B": "Use On-Demand Instances and stop them after hours",
@@ -69,10 +69,10 @@
     "isMultiAnswer": false,
     "type": "single",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "一家公司運行一個僅在工作時間使用的開發環境。哪種方法可以最大限度地降低成本？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。一家公司運行一個僅在工作時間使用的開發環境。哪種方法可以最大限度地降低成本？",
         "options": {
           "A": "使用預留執行個體",
           "B": "使用按需執行個體並在下班後停止它們",
@@ -85,7 +85,7 @@
   },
   {
     "id": "saa-d4-004",
-    "question": "Which S3 feature can automatically move objects to cheaper storage classes based on access patterns?",
+    "question": "The workload follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. Which S3 feature can automatically move objects to cheaper storage classes based on access patterns?",
     "options": {
       "A": "S3 Versioning",
       "B": "S3 Lifecycle policies",
@@ -97,10 +97,10 @@
     "isMultiAnswer": false,
     "type": "single",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "哪個 S3 功能可以根據存取模式自動將物件移至更便宜的儲存類別？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。哪個 S3 功能可以根據存取模式自動將物件移至更便宜的儲存類別？",
         "options": {
           "A": "S3 Versioning",
           "B": "S3 生命週期策略",
@@ -113,7 +113,7 @@
   },
   {
     "id": "saa-d4-005",
-    "question": "A solutions architect needs to choose between Amazon RDS and Amazon DynamoDB. Which factor most favours DynamoDB?",
+    "question": "The team must avoid a prolonged outage and will validate the selected capability in staging before a controlled production rollout. A solutions architect needs to choose between Amazon RDS and Amazon DynamoDB. Which factor most favours DynamoDB?",
     "options": {
       "A": "Complex SQL queries with joins",
       "B": "Consistent single-digit millisecond latency at any scale",
@@ -125,10 +125,10 @@
     "isMultiAnswer": false,
     "type": "single",
     "taskStatement": "4.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "解決方案架構師需要在 Amazon RDS 和 Amazon DynamoDB 之間進行選擇。哪個因素最有利於 DynamoDB？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。解決方案架構師需要在 Amazon RDS 和 Amazon DynamoDB 之間進行選擇。哪個因素最有利於 DynamoDB？",
         "options": {
           "A": "具有連接的複雜 SQL 查詢",
           "B": "任何規模下一致的個位數毫秒延遲",
@@ -142,7 +142,7 @@
   {
     "id": "saa-d4-006",
     "type": "single",
-    "question": "A data set has unpredictable access patterns and should move automatically to lower-cost S3 tiers without performance analysis by the team. Which storage class is appropriate?",
+    "question": "This change affects a production workload. The team must preserve existing behavior and prefers a managed AWS capability with low operational overhead. A data set has unpredictable access patterns and should move automatically to lower-cost S3 tiers without performance analysis by the team. Which storage class is appropriate?",
     "options": {
       "A": "S3 Intelligent-Tiering",
       "B": "S3 Standard only",
@@ -153,10 +153,10 @@
     "isMultiAnswer": false,
     "explanation": "S3 Intelligent-Tiering automatically moves objects between access tiers based on changing access patterns.\nS3 Standard does not automatically optimize tier placement. One Zone-IA and Deep Archive require the workload to accept their availability or retrieval characteristics.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "資料集具有不可預測的存取模式，並且應該自動轉移到成本較低的 S3 層，而無需團隊進行效能分析。哪種儲存類別合適？",
+        "question": "這項變更會影響生產工作負載。團隊必須保留現有行為，並希望採用營運負擔較低的 AWS 託管功能。資料集具有不可預測的存取模式，並且應該自動轉移到成本較低的 S3 層，而無需團隊進行效能分析。哪種儲存類別合適？",
         "options": {
           "A": "S3 Intelligent-Tiering",
           "B": "僅限 S3 Standard",
@@ -170,7 +170,7 @@
   {
     "id": "saa-d4-007",
     "type": "single",
-    "question": "A compliance archive is rarely accessed and can tolerate retrieval that takes several hours. Which option is generally the lowest-cost fit?",
+    "question": "The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. A compliance archive is rarely accessed and can tolerate retrieval that takes several hours. Which option is generally the lowest-cost fit?",
     "options": {
       "A": "S3 Standard",
       "B": "S3 Standard-IA",
@@ -181,10 +181,10 @@
     "isMultiAnswer": false,
     "explanation": "S3 Glacier Deep Archive is designed for long-term archival data with very infrequent access and longer retrieval times.\nS3 Standard and Standard-IA are intended for more frequent access. EFS is managed file storage and is not an archival tier.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "合規性存檔很少被存取，並且可以容忍需要幾個小時的檢索。哪一種選擇通常成本最低？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。合規性存檔很少被存取，並且可以容忍需要幾個小時的檢索。哪一種選擇通常成本最低？",
         "options": {
           "A": "S3 Standard",
           "B": "S3 Standard-IA",
@@ -198,7 +198,7 @@
   {
     "id": "saa-d4-008",
     "type": "single",
-    "question": "A workload runs continuously with predictable compute usage for three years. Which purchasing option can reduce compute cost compared with On-Demand pricing?",
+    "question": "The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. A workload runs continuously with predictable compute usage for three years. Which purchasing option can reduce compute cost compared with On-Demand pricing?",
     "options": {
       "A": "Savings Plans",
       "B": "Spot Instances only",
@@ -209,10 +209,10 @@
     "isMultiAnswer": false,
     "explanation": "Savings Plans provide discounted rates in exchange for a consistent usage commitment and can fit predictable long-running workloads.\nSpot Instances can be interrupted and are not a substitute for a guaranteed three-year baseline. Dedicated Hosts add isolation cost. On-Demand has no commitment discount.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "工作負載以可預測的計算使用量連續運轉三年。與按需定價相比，哪種購買選項可以降低運算成本？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。工作負載以可預測的計算使用量連續運轉三年。與按需定價相比，哪種購買選項可以降低運算成本？",
         "options": {
           "A": "儲蓄計劃",
           "B": "僅限 Spot 執行個體",
@@ -226,7 +226,7 @@
   {
     "id": "saa-d4-009",
     "type": "single",
-    "question": "A fault-tolerant batch job can restart from checkpoints and should run at the lowest possible EC2 cost. Which option is most suitable?",
+    "question": "The workload follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. A fault-tolerant batch job can restart from checkpoints and should run at the lowest possible EC2 cost. Which option is most suitable?",
     "options": {
       "A": "Spot Instances",
       "B": "Dedicated Hosts",
@@ -237,10 +237,10 @@
     "isMultiAnswer": false,
     "explanation": "Spot Instances use spare EC2 capacity at a discount and are appropriate when interruption can be handled by checkpointing or retrying.\nDedicated Hosts and long commitments cost more than needed for interruptible work. On-Demand is more expensive when interruptions are acceptable.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "容錯批次作業可以從檢查點重新啟動，並且應該以盡可能低的 EC2 成本運行。哪個選項最適合？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。容錯批次作業可以從檢查點重新啟動，並且應該以盡可能低的 EC2 成本運行。哪個選項最適合？",
         "options": {
           "A": "現貨執行個體",
           "B": "專用主機",
@@ -254,7 +254,7 @@
   {
     "id": "saa-d4-010",
     "type": "single",
-    "question": "A team wants to find idle EC2 instances and receive recommendations for reducing cost. Which service should they review?",
+    "question": "The team must avoid a prolonged outage and will validate the selected capability in staging before a controlled production rollout. A team wants to find idle EC2 instances and receive recommendations for reducing cost. Which service should they review?",
     "options": {
       "A": "AWS Trusted Advisor",
       "B": "Amazon Route 53",
@@ -265,10 +265,10 @@
     "isMultiAnswer": false,
     "explanation": "Trusted Advisor provides recommendations that can include underutilized resources and cost optimization opportunities.\nRoute 53 manages DNS, Certificate Manager manages certificates, and Cognito manages application identities.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "團隊希望找到空閒的 EC2 執行個體並獲得降低成本的建議。他們應該審查哪些服務？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。團隊希望找到空閒的 EC2 執行個體並獲得降低成本的建議。他們應該審查哪些服務？",
         "options": {
           "A": "AWS Trusted Advisor",
           "B": "Amazon Route 53",
@@ -282,7 +282,7 @@
   {
     "id": "saa-d4-011",
     "type": "single",
-    "question": "A serverless application has highly variable database traffic and long idle periods. Which database option can avoid paying for provisioned capacity when idle?",
+    "question": "This change affects a production workload. The team must preserve existing behavior and prefers a managed AWS capability with low operational overhead. A serverless application has highly variable database traffic and long idle periods. Which database option can avoid paying for provisioned capacity when idle?",
     "options": {
       "A": "DynamoDB on-demand capacity",
       "B": "A fixed-size RDS instance",
@@ -293,10 +293,10 @@
     "isMultiAnswer": false,
     "explanation": "DynamoDB on-demand capacity automatically handles variable request rates without a provisioned read and write capacity setting.\nA fixed RDS instance and a Dedicated Host continue to incur provisioned infrastructure cost. An EBS volume alone is not a database service.",
     "taskStatement": "4.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "無伺服器應用程式具有高度可變的資料庫流量和較長的空閒期。哪種資料庫選項可以避免在閒置時為預配置容量付費？",
+        "question": "這項變更會影響生產工作負載。團隊必須保留現有行為，並希望採用營運負擔較低的 AWS 託管功能。無伺服器應用程式具有高度可變的資料庫流量和較長的空閒期。哪種資料庫選項可以避免在閒置時為預配置容量付費？",
         "options": {
           "A": "DynamoDB 按需容量",
           "B": "固定大小的RDS執行個體",
@@ -310,7 +310,7 @@
   {
     "id": "saa-d4-012",
     "type": "single",
-    "question": "A relational workload has intermittent traffic and must scale database capacity automatically within configured limits. Which option should be evaluated?",
+    "question": "The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. A relational workload has intermittent traffic and must scale database capacity automatically within configured limits. Which option should be evaluated?",
     "options": {
       "A": "Aurora Serverless",
       "B": "A fixed EC2 instance running MySQL",
@@ -321,10 +321,10 @@
     "isMultiAnswer": false,
     "explanation": "Aurora Serverless can automatically adjust Aurora capacity for variable workloads within configured limits.\nA fixed database instance does not automatically scale capacity. S3 notifications and CloudFront policies do not provide relational database scaling.",
     "taskStatement": "4.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "關係工作負載具有間歇性流量，並且必須在配置的限制內自動擴展資料庫容量。應該評估哪個選項？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。關係工作負載具有間歇性流量，並且必須在配置的限制內自動擴展資料庫容量。應該評估哪個選項？",
         "options": {
           "A": "Aurora Serverless",
           "B": "運行 MySQL 的固定 EC2 執行個體",
@@ -338,7 +338,7 @@
   {
     "id": "saa-d4-013",
     "type": "single",
-    "question": "A private application makes frequent calls to Amazon S3 and currently sends them through a NAT gateway. Which change can reduce recurring network processing cost?",
+    "question": "The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. A private application makes frequent calls to Amazon S3 and currently sends them through a NAT gateway. Which change can reduce recurring network processing cost?",
     "options": {
       "A": "Add an S3 gateway VPC endpoint",
       "B": "Add a second NAT gateway in the same AZ",
@@ -349,10 +349,10 @@
     "isMultiAnswer": false,
     "explanation": "An S3 gateway VPC endpoint provides a private route to S3 and can avoid NAT gateway processing for that traffic.\nAdding more NAT capacity does not remove processing charges. Public addresses create exposure and are not a cost optimization. NAT gateways are managed services, not instances to resize.",
     "taskStatement": "4.4",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "私有應用程式經常呼叫 Amazon S3，目前透過 NAT 網關發送這些呼叫。哪些改變可以降低經常性的網路處理成本？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。私有應用程式經常呼叫 Amazon S3，目前透過 NAT 網關發送這些呼叫。哪些改變可以降低經常性的網路處理成本？",
         "options": {
           "A": "新增 S3 網關 VPC 終端節點",
           "B": "在同一可用區中新增第二個 NAT 網關",
@@ -366,7 +366,7 @@
   {
     "id": "saa-d4-014",
     "type": "single",
-    "question": "A global website serves large static files to users in many Regions. Which design can reduce origin data transfer and improve delivery cost?",
+    "question": "The workload follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. A global website serves large static files to users in many Regions. Which design can reduce origin data transfer and improve delivery cost?",
     "options": {
       "A": "Use CloudFront caching at edge locations",
       "B": "Send every request directly to an EC2 instance in one Region",
@@ -377,10 +377,10 @@
     "isMultiAnswer": false,
     "explanation": "CloudFront caches content near users, reducing repeated origin transfers and improving latency for globally distributed viewers.\nA single EC2 origin must serve every request across long distances. Direct Connect is for private connectivity, not public internet users. EBS is attached block storage, not a global distribution layer.",
     "taskStatement": "4.4",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "全球網站向多個區域的使用者提供大型靜態檔案。哪種設計可以減少原始資料傳輸並提高交付成本？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。全球網站向多個區域的使用者提供大型靜態檔案。哪種設計可以減少原始資料傳輸並提高交付成本？",
         "options": {
           "A": "在邊緣站點使用 CloudFront 緩存",
           "B": "將每個請求直接傳送到一個區域中的 EC2 執行個體",
@@ -394,7 +394,7 @@
   {
     "id": "saa-d4-015",
     "type": "multi",
-    "question": "Which two practices help an organization allocate AWS costs to teams and applications? Select two.",
+    "question": "The team must avoid a prolonged outage and will validate the selected capability in staging before a controlled production rollout. Which two practices help an organization allocate AWS costs to teams and applications? Select two.",
     "options": {
       "A": "Apply cost allocation tags to resources",
       "B": "Use separate AWS accounts or organizational billing boundaries",
@@ -409,10 +409,10 @@
     "isMultiAnswer": true,
     "explanation": "Cost allocation tags provide resource-level attribution, and separate accounts can create clear billing boundaries and consolidated billing views.\nCloudTrail is unrelated to cost allocation. Security groups are network controls, not billing labels. An EC2 instance is not a reliable billing data system.",
     "taskStatement": "4.4",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "哪兩種做法可以幫助組織將 AWS 成本分配給團隊和應用程式？選擇兩個。",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。哪兩種做法可以幫助組織將 AWS 成本分配給團隊和應用程式？選擇兩個。",
         "options": {
           "A": "將成本分配標籤應用於資源",
           "B": "使用單獨的 AWS 帳戶或組織計費邊界",
@@ -427,7 +427,7 @@
   {
     "id": "saa-d4-016",
     "type": "single",
-    "question": "Objects are accessed frequently for 30 days and then rarely. Which design can reduce storage cost automatically while preserving S3 lifecycle management?",
+    "question": "This change affects a production workload. The team must preserve existing behavior and prefers a managed AWS capability with low operational overhead. Objects are accessed frequently for 30 days and then rarely. Which design can reduce storage cost automatically while preserving S3 lifecycle management?",
     "options": {
       "A": "A lifecycle rule that transitions objects to Standard-IA or Glacier tiers",
       "B": "Keep every object in S3 Standard forever",
@@ -438,10 +438,10 @@
     "isMultiAnswer": false,
     "explanation": "Lifecycle rules can transition objects to lower-cost storage classes as their access pattern changes.\nKeeping objects in Standard costs more for infrequently accessed data. Instance store is ephemeral, and security groups do not control storage pricing.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "物件在 30 天內被頻繁存取，然後很少被存取。哪一種設計可以自動降低儲存成本，同時保留 S3 生命週期管理？",
+        "question": "這項變更會影響生產工作負載。團隊必須保留現有行為，並希望採用營運負擔較低的 AWS 託管功能。物件在 30 天內被頻繁存取，然後很少被存取。哪一種設計可以自動降低儲存成本，同時保留 S3 生命週期管理？",
         "options": {
           "A": "將物件轉換到 Standard-IA 或 Glacier 層的生命週期規則",
           "B": "永久保留 S3 Standard中的每個物件",
@@ -455,7 +455,7 @@
   {
     "id": "saa-d4-017",
     "type": "single",
-    "question": "A data set has unknown and changing access patterns. The team wants S3 to move objects between access tiers automatically with minimal analysis. Which class should they select?",
+    "question": "The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. A data set has unknown and changing access patterns. The team wants S3 to move objects between access tiers automatically with minimal analysis. Which class should they select?",
     "options": {
       "A": "S3 Intelligent-Tiering",
       "B": "S3 Standard only",
@@ -466,10 +466,10 @@
     "isMultiAnswer": false,
     "explanation": "S3 Intelligent-Tiering monitors access patterns and moves objects between access tiers automatically.\nStandard does not optimize tier placement, while One Zone-IA and Deep Archive require the workload to accept fixed availability and retrieval characteristics.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "資料集具有未知且不斷變化的存取模式。團隊希望 S3 透過最少的分析自動在存取層之間移動物件。他們應該選擇哪個班級？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。資料集具有未知且不斷變化的存取模式。團隊希望 S3 透過最少的分析自動在存取層之間移動物件。他們應該選擇哪個班級？",
         "options": {
           "A": "S3 Intelligent-Tiering",
           "B": "僅限 S3 Standard",
@@ -483,7 +483,7 @@
   {
     "id": "saa-d4-018",
     "type": "single",
-    "question": "A compliance archive is accessed once every few years and can tolerate retrieval times of many hours. Which storage class is usually the most cost optimized?",
+    "question": "The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. A compliance archive is accessed once every few years and can tolerate retrieval times of many hours. Which storage class is usually the most cost optimized?",
     "options": {
       "A": "S3 Glacier Deep Archive",
       "B": "S3 Standard",
@@ -494,10 +494,10 @@
     "isMultiAnswer": false,
     "explanation": "S3 Glacier Deep Archive is designed for long-term retention with very infrequent access and the lowest storage cost among suitable S3 archival classes.\nS3 Standard and Standard-IA are intended for more frequent access. EFS is a file system rather than an archival storage class.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "合規性檔案每隔幾年存取一次，並且可以承受數小時的檢索時間。哪種儲存類別通常成本最優化？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。合規性檔案每隔幾年存取一次，並且可以承受數小時的檢索時間。哪種儲存類別通常成本最優化？",
         "options": {
           "A": "S3 Glacier Deep Archive",
           "B": "S3 Standard",
@@ -511,7 +511,7 @@
   {
     "id": "saa-d4-019",
     "type": "single",
-    "question": "A shared file workload has a hot working set and a large cold data set. Which EFS feature can lower the cost of infrequently accessed files?",
+    "question": "The workload follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. A shared file workload has a hot working set and a large cold data set. Which EFS feature can lower the cost of infrequently accessed files?",
     "options": {
       "A": "EFS lifecycle management to an Infrequent Access storage class",
       "B": "An internet gateway",
@@ -522,10 +522,10 @@
     "isMultiAnswer": false,
     "explanation": "EFS lifecycle management can move files to an Infrequent Access storage class based on access age.\nNetwork routing, EBS attachment, and CloudFront caching do not change EFS file storage class.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "共享文件工作負載具有熱工作集和大型冷資料集。哪個 EFS 功能可以降低不經常存取的檔案的成本？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。共享文件工作負載具有熱工作集和大型冷資料集。哪個 EFS 功能可以降低不經常存取的檔案的成本？",
         "options": {
           "A": "對不頻繁存取儲存類別的 EFS 生命週期管理",
           "B": "網際網路閘關",
@@ -539,7 +539,7 @@
   {
     "id": "saa-d4-020",
     "type": "single",
-    "question": "A general-purpose application needs persistent block storage and wants to avoid paying for more IOPS than it needs. Which choice should be evaluated before io2?",
+    "question": "The team must avoid a prolonged outage and will validate the selected capability in staging before a controlled production rollout. A general-purpose application needs persistent block storage and wants to avoid paying for more IOPS than it needs. Which choice should be evaluated before io2?",
     "options": {
       "A": "gp3 with explicitly provisioned IOPS and throughput",
       "B": "Instance store only",
@@ -550,10 +550,10 @@
     "isMultiAnswer": false,
     "explanation": "gp3 provides configurable IOPS and throughput and can be more cost effective than provisioned-IOPS volumes for general workloads.\nInstance store is ephemeral, sc1 is cold HDD storage, and an S3 website is not persistent block storage.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "通用應用程式需要持久性區塊存儲，並希望避免支付超出其需要的 IOPS。在 io2 之前應該評估哪個選擇？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。通用應用程式需要持久性區塊存儲，並希望避免支付超出其需要的 IOPS。在 io2 之前應該評估哪個選擇？",
         "options": {
           "A": "具有明確配置的 IOPS 和吞吐量的 gp3",
           "B": "僅執行個體存儲",
@@ -567,7 +567,7 @@
   {
     "id": "saa-d4-021",
     "type": "single",
-    "question": "A reproducible data set can be rebuilt and does not need multi-AZ storage resilience. Which S3 class may provide lower storage cost for this data?",
+    "question": "This change affects a production workload. The team must preserve existing behavior and prefers a managed AWS capability with low operational overhead. A reproducible data set can be rebuilt and does not need multi-AZ storage resilience. Which S3 class may provide lower storage cost for this data?",
     "options": {
       "A": "S3 Standard-IA",
       "B": "S3 One Zone-IA",
@@ -578,10 +578,10 @@
     "isMultiAnswer": false,
     "explanation": "S3 One Zone-IA can reduce cost for data that can be recreated and does not require multi-AZ storage resilience.\nStandard-IA provides multi-AZ storage and costs more. Deep Archive has long retrieval times, and EBS is block storage.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "可以重建可重現的資料集，且不需要多可用區儲存彈性。哪個 S3 類別可以為該資料提供更低的儲存成本？",
+        "question": "這項變更會影響生產工作負載。團隊必須保留現有行為，並希望採用營運負擔較低的 AWS 託管功能。可以重建可重現的資料集，且不需要多可用區儲存彈性。哪個 S3 類別可以為該資料提供更低的儲存成本？",
         "options": {
           "A": "S3 Standard-IA",
           "B": "S3 One Zone-IA",
@@ -595,7 +595,7 @@
   {
     "id": "saa-d4-022",
     "type": "single",
-    "question": "A company has predictable compute usage for three years and wants a flexible commitment that can apply across instance families and Regions. Which option should it evaluate?",
+    "question": "The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. A company has predictable compute usage for three years and wants a flexible commitment that can apply across instance families and Regions. Which option should it evaluate?",
     "options": {
       "A": "Compute Savings Plans",
       "B": "Spot Instances only",
@@ -606,10 +606,10 @@
     "isMultiAnswer": false,
     "explanation": "Compute Savings Plans provide discounted rates for a consistent compute spend and are flexible across eligible instance types and Regions.\nSpot capacity can be interrupted, On-Demand has no commitment discount, and Dedicated Hosts add isolation cost.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "一家公司可以預測三年的運算使用情況，並希望獲得可跨執行個體係列和區域應用的靈活承諾。它應該評估哪個選項？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。一家公司可以預測三年的運算使用情況，並希望獲得可跨執行個體係列和區域應用的靈活承諾。它應該評估哪個選項？",
         "options": {
           "A": "計算儲蓄計劃",
           "B": "僅限 Spot 執行個體",
@@ -623,7 +623,7 @@
   {
     "id": "saa-d4-023",
     "type": "single",
-    "question": "A workload runs continuously on a known EC2 instance family in one Region and the team can commit to a specific configuration. Which option may provide a larger discount than On-Demand?",
+    "question": "The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. A workload runs continuously on a known EC2 instance family in one Region and the team can commit to a specific configuration. Which option may provide a larger discount than On-Demand?",
     "options": {
       "A": "A zonal Reserved Instance",
       "B": "A public IP address",
@@ -634,10 +634,10 @@
     "isMultiAnswer": false,
     "explanation": "A Reserved Instance commitment can provide a discount for predictable usage when the instance attributes and Region are known.\nIP addresses, NAT gateway sizing, and cache invalidation do not provide EC2 commitment discounts.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "工作負載在一個區域中的已知 EC2 執行個體系列上持續運行，團隊可以致力於特定的配置。哪個選項可以提供比按需更大的折扣？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。工作負載在一個區域中的已知 EC2 執行個體系列上持續運行，團隊可以致力於特定的配置。哪個選項可以提供比按需更大的折扣？",
         "options": {
           "A": "區域性預留執行個體",
           "B": "公有IP位址",
@@ -651,7 +651,7 @@
   {
     "id": "saa-d4-024",
     "type": "single",
-    "question": "A fault-tolerant batch workload can checkpoint progress and retry after interruption. Which capacity type is usually the lowest-cost fit?",
+    "question": "The workload follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. A fault-tolerant batch workload can checkpoint progress and retry after interruption. Which capacity type is usually the lowest-cost fit?",
     "options": {
       "A": "EC2 Spot Instances",
       "B": "Dedicated Hosts",
@@ -662,10 +662,10 @@
     "isMultiAnswer": false,
     "explanation": "Spot Instances use spare EC2 capacity at a discount and fit workloads that tolerate interruption through checkpointing and retry.\nDedicated and On-Demand options cost more when interruption is acceptable.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "容錯批次工作負載可以檢查進度並在中斷後重試。哪種容量類型通常成本最低？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。容錯批次工作負載可以檢查進度並在中斷後重試。哪種容量類型通常成本最低？",
         "options": {
           "A": "EC2 Spot Instances",
           "B": "專用主機",
@@ -679,7 +679,7 @@
   {
     "id": "saa-d4-025",
     "type": "single",
-    "question": "A team wants to reduce compute cost while keeping application behavior unchanged and the workload can run on ARM64. Which option should it test?",
+    "question": "The team must avoid a prolonged outage and will validate the selected capability in staging before a controlled production rollout. A team wants to reduce compute cost while keeping application behavior unchanged and the workload can run on ARM64. Which option should it test?",
     "options": {
       "A": "AWS Graviton-based instances",
       "B": "Dedicated Hosts only",
@@ -690,10 +690,10 @@
     "isMultiAnswer": false,
     "explanation": "Graviton-based instances can provide a lower price-performance profile for compatible ARM64 workloads.\nDedicated Hosts and oversized x86 instances do not target price-performance optimization. S3 lifecycle rules manage objects.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "團隊希望降低運算成本，同時保持應用程式行為不變，並且工作負載可以在 ARM64 上運行。應該測試哪個選項？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。團隊希望降低運算成本，同時保持應用程式行為不變，並且工作負載可以在 ARM64 上運行。應該測試哪個選項？",
         "options": {
           "A": "基於 AWS Graviton 的執行個體",
           "B": "僅限專用主機",
@@ -707,7 +707,7 @@
   {
     "id": "saa-d4-026",
     "type": "single",
-    "question": "A company wants recommendations to rightsize underutilized EC2 instances based on utilization data. Which service should it review?",
+    "question": "This change affects a production workload. The team must preserve existing behavior and prefers a managed AWS capability with low operational overhead. A company wants recommendations to rightsize underutilized EC2 instances based on utilization data. Which service should it review?",
     "options": {
       "A": "AWS Compute Optimizer",
       "B": "Amazon Macie",
@@ -718,10 +718,10 @@
     "isMultiAnswer": false,
     "explanation": "Compute Optimizer analyzes utilization and provides rightsizing recommendations for supported compute resources.\nMacie discovers sensitive data, Certificate Manager handles TLS certificates, and Route 53 provides DNS.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "一家公司希望根據利用率資料提供建議，以調整未充分利用的 EC2 執行個體的規模。應該審查哪些服務？",
+        "question": "這項變更會影響生產工作負載。團隊必須保留現有行為，並希望採用營運負擔較低的 AWS 託管功能。一家公司希望根據利用率資料提供建議，以調整未充分利用的 EC2 執行個體的規模。應該審查哪些服務？",
         "options": {
           "A": "AWS Compute Optimizer",
           "B": "Amazon Macie",
@@ -735,7 +735,7 @@
   {
     "id": "saa-d4-027",
     "type": "single",
-    "question": "A job runs for a few seconds in response to sporadic events and does not need a continuously running server. Which compute option can reduce idle cost?",
+    "question": "The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. A job runs for a few seconds in response to sporadic events and does not need a continuously running server. Which compute option can reduce idle cost?",
     "options": {
       "A": "AWS Lambda",
       "B": "A dedicated EC2 instance running continuously",
@@ -746,10 +746,10 @@
     "isMultiAnswer": false,
     "explanation": "Lambda charges for invocations and execution duration, which can avoid paying for idle server capacity for sporadic jobs.\nContinuously running EC2, Dedicated Hosts, and RDS instances incur provisioned capacity costs even when idle.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "作業運行幾秒鐘以回應偶發事件，不需要持續運行的伺服器。哪一種計算選項可以降低閒置成本？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。作業運行幾秒鐘以回應偶發事件，不需要持續運行的伺服器。哪一種計算選項可以降低閒置成本？",
         "options": {
           "A": "AWS Lambda",
           "B": "持續運作的專用 EC2 執行個體",
@@ -763,7 +763,7 @@
   {
     "id": "saa-d4-028",
     "type": "single",
-    "question": "A containerized service has unpredictable traffic and no need for host-level customization. Which option can reduce the operational and idle compute cost?",
+    "question": "The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. A containerized service has unpredictable traffic and no need for host-level customization. Which option can reduce the operational and idle compute cost?",
     "options": {
       "A": "ECS on Fargate with service autoscaling",
       "B": "A fixed fleet of oversized EC2 instances",
@@ -774,10 +774,10 @@
     "isMultiAnswer": false,
     "explanation": "Fargate removes instance management and service autoscaling can add or remove task capacity with demand.\nFixed or dedicated capacity can remain idle. EBS snapshots back up volumes and do not run containers.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "容器化服務的流量無法預測，無需主機級自訂。哪個選項可以降低營運和閒置運算成本？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。容器化服務的流量無法預測，無需主機級自訂。哪個選項可以降低營運和閒置運算成本？",
         "options": {
           "A": "Fargate 上的 ECS 具有服務自動縮放功能",
           "B": "固定的超大 EC2 執行個體佇列",
@@ -791,7 +791,7 @@
   {
     "id": "saa-d4-029",
     "type": "single",
-    "question": "A serverless API has unpredictable DynamoDB traffic and long periods with no requests. Which capacity mode avoids provisioning read and write units ahead of time?",
+    "question": "The workload follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. A serverless API has unpredictable DynamoDB traffic and long periods with no requests. Which capacity mode avoids provisioning read and write units ahead of time?",
     "options": {
       "A": "DynamoDB on-demand capacity",
       "B": "Provisioned capacity with a large fixed limit",
@@ -802,10 +802,10 @@
     "isMultiAnswer": false,
     "explanation": "DynamoDB on-demand capacity charges for requests and automatically handles variable traffic without pre-provisioned read and write units.\nFixed provisioned capacity and an RDS instance can cost money during idle periods. EBS alone is not a database.",
     "taskStatement": "4.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "無伺服器 API 的 DynamoDB Streams量無法預測，且長時間沒有請求。哪種容量模式可以避免提前配置讀寫單元？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。無伺服器 API 的 DynamoDB Streams量無法預測，且長時間沒有請求。哪種容量模式可以避免提前配置讀寫單元？",
         "options": {
           "A": "DynamoDB 按需容量",
           "B": "具有較大固定限制的預配置容量",
@@ -819,7 +819,7 @@
   {
     "id": "saa-d4-030",
     "type": "single",
-    "question": "A relational workload has long idle periods and variable usage. Which Aurora option can adjust database capacity automatically for changing demand?",
+    "question": "The team must avoid a prolonged outage and will validate the selected capability in staging before a controlled production rollout. A relational workload has long idle periods and variable usage. Which Aurora option can adjust database capacity automatically for changing demand?",
     "options": {
       "A": "Aurora Serverless",
       "B": "A fixed-size RDS instance",
@@ -830,10 +830,10 @@
     "isMultiAnswer": false,
     "explanation": "Aurora Serverless can scale Aurora capacity within configured limits for variable relational workloads.\nA fixed instance or host does not automatically scale capacity, and S3 notifications do not run a relational database.",
     "taskStatement": "4.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "關係型工作負載具有較長的空閒期和可變的使用。哪個 Aurora 選項可以根據不斷變化的需求自動調整資料庫容量？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。關係型工作負載具有較長的空閒期和可變的使用。哪個 Aurora 選項可以根據不斷變化的需求自動調整資料庫容量？",
         "options": {
           "A": "Aurora Serverless",
           "B": "固定大小的RDS執行個體",
@@ -847,7 +847,7 @@
   {
     "id": "saa-d4-031",
     "type": "single",
-    "question": "A production database runs continuously with predictable utilization and the company can commit to a term. Which RDS pricing option should it consider?",
+    "question": "This change affects a production workload. The team must preserve existing behavior and prefers a managed AWS capability with low operational overhead. A production database runs continuously with predictable utilization and the company can commit to a term. Which RDS pricing option should it consider?",
     "options": {
       "A": "RDS Reserved Instances",
       "B": "RDS On-Demand with no commitment",
@@ -858,10 +858,10 @@
     "isMultiAnswer": false,
     "explanation": "RDS Reserved Instances reduce the hourly rate for predictable database usage in exchange for a commitment.\nOn-Demand has no commitment discount. Spot is not the standard choice for a durable database writer, and Glacier is archival storage.",
     "taskStatement": "4.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "生產資料庫以可預測的利用率持續運行，並且公司可以承諾一個期限。應考慮哪種 RDS 定價選項？",
+        "question": "這項變更會影響生產工作負載。團隊必須保留現有行為，並希望採用營運負擔較低的 AWS 託管功能。生產資料庫以可預測的利用率持續運行，並且公司可以承諾一個期限。應考慮哪種 RDS 定價選項？",
         "options": {
           "A": "RDS Reserved Instances",
           "B": "RDS 按需服務，無需任何承諾",
@@ -875,7 +875,7 @@
   {
     "id": "saa-d4-032",
     "type": "single",
-    "question": "A data warehouse workload has unpredictable usage and should avoid paying for an always-running cluster. Which option should be evaluated?",
+    "question": "The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. A data warehouse workload has unpredictable usage and should avoid paying for an always-running cluster. Which option should be evaluated?",
     "options": {
       "A": "Amazon Redshift Serverless",
       "B": "A permanently provisioned large cluster",
@@ -886,10 +886,10 @@
     "isMultiAnswer": false,
     "explanation": "Redshift Serverless supplies warehouse capacity on demand for workloads that do not need a continuously provisioned cluster.\nA permanently large cluster can remain idle. EBS and Cognito do not provide serverless data warehousing.",
     "taskStatement": "4.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "資料倉儲工作負載的使用情況不可預測，應避免為始終運行的叢集付費。應該評估哪個選項？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。資料倉儲工作負載的使用情況不可預測，應避免為始終運行的叢集付費。應該評估哪個選項？",
         "options": {
           "A": "Amazon Redshift Serverless",
           "B": "永久配置的大型集群",
@@ -903,7 +903,7 @@
   {
     "id": "saa-d4-033",
     "type": "single",
-    "question": "A cache cluster is consistently underutilized and its data can be rebuilt from the database. Which action is the most direct cost optimization?",
+    "question": "The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. A cache cluster is consistently underutilized and its data can be rebuilt from the database. Which action is the most direct cost optimization?",
     "options": {
       "A": "Rightsize the ElastiCache node type and replica count",
       "B": "Add more replicas without measuring usage",
@@ -914,10 +914,10 @@
     "isMultiAnswer": false,
     "explanation": "Rightsizing cache nodes and replicas to observed demand reduces cost while preserving the cache role for the workload.\nAdding capacity without evidence increases cost. Public S3 is not a cache replacement, and database resizing does not optimize unused cache capacity.",
     "taskStatement": "4.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "快取叢集始終未充分利用，並且可以從資料庫重建其資料。哪個行動是最直接的成本最佳化？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。快取叢集始終未充分利用，並且可以從資料庫重建其資料。哪個行動是最直接的成本最佳化？",
         "options": {
           "A": "調整 ElastiCache 節點類型和副本數量",
           "B": "增加更多副本而不測量使用情況",
@@ -931,7 +931,7 @@
   {
     "id": "saa-d4-034",
     "type": "single",
-    "question": "Private subnet instances send large volumes of S3 traffic through a NAT gateway. Which change can reduce NAT data processing charges?",
+    "question": "The workload follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. Private subnet instances send large volumes of S3 traffic through a NAT gateway. Which change can reduce NAT data processing charges?",
     "options": {
       "A": "Use an S3 gateway VPC endpoint",
       "B": "Add a second NAT gateway in the same AZ",
@@ -942,10 +942,10 @@
     "isMultiAnswer": false,
     "explanation": "An S3 gateway endpoint routes supported S3 traffic privately and avoids NAT gateway processing for that path.\nAdditional NAT capacity does not remove processing charges. Public addresses increase exposure, and timeout settings do not change data processing cost.",
     "taskStatement": "4.4",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "私有子網路執行個體透過 NAT 閘道傳送大量 S3 流量。哪些變更可以降低 NAT 資料處理費用？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。私有子網路執行個體透過 NAT 閘道傳送大量 S3 流量。哪些變更可以降低 NAT 資料處理費用？",
         "options": {
           "A": "使用 S3 網關 VPC 終端節點",
           "B": "在同一可用區中新增第二個 NAT 網關",
@@ -959,7 +959,7 @@
   {
     "id": "saa-d4-035",
     "type": "single",
-    "question": "A global site repeatedly serves the same large objects. Which architecture can reduce origin requests and Regional data transfer cost?",
+    "question": "The team must avoid a prolonged outage and will validate the selected capability in staging before a controlled production rollout. A global site repeatedly serves the same large objects. Which architecture can reduce origin requests and Regional data transfer cost?",
     "options": {
       "A": "CloudFront caching with an appropriate cache policy",
       "B": "Send every request to the origin EC2 instance",
@@ -970,10 +970,10 @@
     "isMultiAnswer": false,
     "explanation": "CloudFront serves cached objects at edge locations, reducing repeated origin requests and associated transfer from the origin Region.\nDirect Connect is for private network connectivity, and bypassing caching increases origin load and transfer.",
     "taskStatement": "4.4",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "全球站點重複服務相同的大型物件。哪種架構可以減少來源請求和區域資料傳輸成本？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。全球站點重複服務相同的大型物件。哪種架構可以減少來源請求和區域資料傳輸成本？",
         "options": {
           "A": "使用適當的快取策略進行 CloudFront 快取",
           "B": "將每個請求傳送到原始 EC2 執行個體",
@@ -987,7 +987,7 @@
   {
     "id": "saa-d4-036",
     "type": "single",
-    "question": "An organization has many VPCs that need shared connectivity and wants to avoid maintaining a full mesh of peering connections. Which architecture can simplify network operations?",
+    "question": "This change affects a production workload. The team must preserve existing behavior and prefers a managed AWS capability with low operational overhead. An organization has many VPCs that need shared connectivity and wants to avoid maintaining a full mesh of peering connections. Which architecture can simplify network operations?",
     "options": {
       "A": "Transit Gateway with centralized attachments",
       "B": "A separate peering connection for every VPC pair",
@@ -998,10 +998,10 @@
     "isMultiAnswer": false,
     "explanation": "Transit Gateway provides a central routing hub that can reduce the number of pairwise network connections and simplify operations.\nA full mesh grows complex. Internet gateways and CloudFront do not provide private internal routing for VPCs.",
     "taskStatement": "4.4",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "組織擁有許多需要共享連接的 VPC，並且希望避免維護完整的對等連接網格。哪種架構可以簡化網路運作？",
+        "question": "這項變更會影響生產工作負載。團隊必須保留現有行為，並希望採用營運負擔較低的 AWS 託管功能。組織擁有許多需要共享連接的 VPC，並且希望避免維護完整的對等連接網格。哪種架構可以簡化網路運作？",
         "options": {
           "A": "帶有集中附件的傳輸網關",
           "B": "每個 VPC 對都有單獨的對等連接",
@@ -1015,7 +1015,7 @@
   {
     "id": "saa-d4-037",
     "type": "single",
-    "question": "Two EC2 instances in the same Availability Zone exchange a large amount of data. Which design can reduce unnecessary cross-zone data transfer cost?",
+    "question": "The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. Two EC2 instances in the same Availability Zone exchange a large amount of data. Which design can reduce unnecessary cross-zone data transfer cost?",
     "options": {
       "A": "Place communicating instances in the same AZ when availability requirements allow",
       "B": "Move every instance to a different AZ",
@@ -1026,10 +1026,10 @@
     "isMultiAnswer": false,
     "explanation": "Keeping chatty resources in the same AZ can reduce cross-AZ data transfer, provided the design still meets availability and failure requirements.\nMoving instances across AZs and routing through NAT or CloudFront adds unnecessary network paths and cost.",
     "taskStatement": "4.4",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "同一可用區中的兩個 EC2 執行個體交換大量資料。哪一種設計可以減少不必要的跨區資料傳輸成本？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。同一可用區中的兩個 EC2 執行個體交換大量資料。哪一種設計可以減少不必要的跨區資料傳輸成本？",
         "options": {
           "A": "在可用性要求允許的情況下，將通訊執行個體放置在同一可用區中",
           "B": "將每個執行個體移動到不同的可用區",
@@ -1043,7 +1043,7 @@
   {
     "id": "saa-d4-038",
     "type": "single",
-    "question": "A private application frequently calls an AWS service that supports interface endpoints and currently uses a NAT gateway for every call. Which cost optimization should be evaluated?",
+    "question": "The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. A private application frequently calls an AWS service that supports interface endpoints and currently uses a NAT gateway for every call. Which cost optimization should be evaluated?",
     "options": {
       "A": "Create an interface VPC endpoint for the service",
       "B": "Add a public IP to each private instance",
@@ -1054,10 +1054,10 @@
     "isMultiAnswer": false,
     "explanation": "An interface VPC endpoint provides private service access and can avoid NAT processing for supported API traffic, subject to endpoint pricing and usage.\nPublic addresses reduce network isolation. A larger NAT gateway does not remove per-byte processing, and snapshots are not an API access method.",
     "taskStatement": "4.4",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "私有應用程式經常呼叫支援介面終端節點的 AWS 服務，且目前每次呼叫都使用 NAT 閘道。應該評估哪些成本優化？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。私有應用程式經常呼叫支援介面終端節點的 AWS 服務，且目前每次呼叫都使用 NAT 閘道。應該評估哪些成本優化？",
         "options": {
           "A": "為服務建立介面 VPC 終端節點",
           "B": "為每個私有執行個體新增公用IP",

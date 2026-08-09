@@ -8,11 +8,24 @@ import {
   isAnswerCorrect,
   correctAnswerFor,
   getExamDomainTargets,
+  selectPracticeQuestions,
   computeExamTiming,
 } from './scoring'
 import { MIN_VALID_EXAM_SECONDS } from './constants'
 import type { Certification } from '../data/certifications'
 import type { Question } from '../types'
+
+function practiceQuestion(id: string, domainId: number): Question {
+  return {
+    id,
+    domainId,
+    question: id,
+    options: { A: 'A', B: 'B', C: 'C', D: 'D' },
+    answer: 'A',
+    explanation: 'Explanation',
+    isMultiAnswer: false,
+  }
+}
 
 describe('calculateScaledScore', () => {
   it('returns 100 when no questions are answered correctly', () => {
@@ -103,6 +116,29 @@ describe('getExamDomainTargets', () => {
     expect(targets[2]).toBe(20) // round(65 * 0.30)
     expect(targets[3]).toBe(22) // round(65 * 0.34)
     expect(targets[4]).toBe(7) // remainder = 65 - 16 - 20 - 22
+  })
+})
+
+describe('selectPracticeQuestions', () => {
+  const questions = [
+    ...Array.from({ length: 8 }, (_, index) => practiceQuestion(`d1-${index}`, 1)),
+    ...Array.from({ length: 8 }, (_, index) => practiceQuestion(`d2-${index}`, 2)),
+  ]
+
+  it('selects the requested number from the whole bank', () => {
+    expect(selectPracticeQuestions(questions, 10)).toHaveLength(10)
+  })
+
+  it('limits a practice set to the requested domain', () => {
+    const selected = selectPracticeQuestions(questions, 5, 2)
+    expect(selected).toHaveLength(5)
+    expect(selected.every(question => question.domainId === 2)).toBe(true)
+  })
+
+  it('preserves bank order when question randomization is disabled', () => {
+    const selected = selectPracticeQuestions(questions, 5, 1, false)
+    const indexes = selected.map(question => Number(question.id.split('-')[1]))
+    expect(indexes).toEqual([...indexes].sort((a, b) => a - b))
   })
 })
 

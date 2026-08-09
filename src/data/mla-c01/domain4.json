@@ -1,1317 +1,1373 @@
 [
   {
     "id": "mla-c01-d4-001",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A production team needs to detect that live feature distributions differ from training data. Which control should be considered?",
+    "question": "A production team is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs to detect that live feature distributions differ from training data. Which control should be considered?",
     "options": {
       "A": "Model Monitor data quality or drift monitoring",
-      "B": "An S3 lifecycle rule",
-      "C": "A Route 53 alias",
-      "D": "A KMS key alias"
+      "B": "A least-privilege IAM policy on the invoking role",
+      "C": "Amazon CloudWatch",
+      "D": "SageMaker Clarify"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Model Monitor can detect changes in data quality and distribution that affect model behavior.\nThe other choices do not monitor ML input drift.",
-    "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Model Monitor can detect changes in data quality and distribution that affect model behavior.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Model Monitor data quality or drift monitoring for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "生產團隊需要偵測即時特徵分佈與訓練資料的不同。應考慮哪種控制？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。生產團隊需要偵測即時特徵分佈與訓練資料的不同。應考慮哪種控制？",
         "options": {
           "A": "模型監控資料品質或漂移監控",
-          "B": "S3 生命週期規則",
-          "C": "Route 53 別名",
-          "D": "KMS 金鑰別名"
+          "B": "針對呼叫角色的最小權限 IAM 策略",
+          "C": "Amazon CloudWatch",
+          "D": "SageMaker Clarify"
         },
-        "explanation": "模型監視器可以檢測影響模型行為的資料品質和分佈的變化。\n其他選擇不監控 ML 輸入漂移。"
+        "explanation": "模型監視器可以檢測影響模型行為的資料品質和分佈的變化。\n其他選項適用於此領域的不同需求，但不能像 模型監控資料品質或漂移監控 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d4-002",
-    "type": "single",
-    "question": "A multi-account platform team needs to protect a SageMaker endpoint from unauthorized invocation. Which control is most important?",
-    "options": {
-      "A": "An S3 storage class",
-      "B": "A least-privilege IAM policy on the invoking role",
-      "C": "A public endpoint with no authentication",
-      "D": "A CloudFront cache policy"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "IAM authorization restricts who can invoke the endpoint and which model resources they can access.\nPublic access and storage or cache settings do not authorize model invocation.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A multi-account platform team is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs to protect a SageMaker endpoint from unauthorized invocation. Which control is most important?",
+    "options": {
+      "A": "Amazon CloudWatch",
+      "B": "SageMaker Clarify",
+      "C": "KMS encryption, least-privilege IAM, and CloudTrail logging",
+      "D": "A least-privilege IAM policy on the invoking role"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "IAM authorization restricts who can invoke the endpoint and which model resources they can access.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A least-privilege IAM policy on the invoking role for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊需要保護 SageMaker 端點免遭未經授權的呼叫。哪個控制最重要？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。多帳戶平台團隊需要保護 SageMaker 端點免遭未經授權的呼叫。哪個控制最重要？",
         "options": {
-          "A": "S3 儲存類別",
-          "B": "針對呼叫角色的最小權限 IAM 策略",
-          "C": "沒有身份驗證的公共端點",
-          "D": "CloudFront 快取策略"
+          "A": "Amazon CloudWatch",
+          "B": "SageMaker Clarify",
+          "C": "KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄",
+          "D": "針對呼叫角色的最小權限 IAM 策略"
         },
-        "explanation": "IAM 授權限制誰可以呼叫終端節點以及他們可以存取哪些模型資源。\n公共存取和儲存或快取設定不授權模型呼叫。"
+        "explanation": "IAM 授權限制誰可以呼叫終端節點以及他們可以存取哪些模型資源。\n其他選項適用於此領域的不同需求，但不能像 針對呼叫角色的最小權限 IAM 策略 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d4-003",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A regulated company must monitor endpoint latency, errors, and invocation count. Which service should collect the operational metrics?",
+    "question": "A regulated company is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team must monitor endpoint latency, errors, and invocation count. Which service should collect the operational metrics?",
     "options": {
-      "A": "AWS Artifact",
-      "B": "Amazon EBS",
+      "A": "KMS encryption, least-privilege IAM, and CloudTrail logging",
+      "B": "Model Monitor data quality or drift monitoring",
       "C": "Amazon CloudWatch",
-      "D": "Amazon Macie"
+      "D": "SageMaker Clarify"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "CloudWatch provides endpoint metrics, alarms, dashboards, and logs for SageMaker operations.\nThe other choices discover data, provide compliance documents, or store blocks.",
-    "taskStatement": "4.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "CloudWatch provides endpoint metrics, alarms, dashboards, and logs for SageMaker operations.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon CloudWatch for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司必須監控端點延遲、錯誤和呼叫計數。哪個服務應該收集營運指標？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。受監管的公司必須監控端點延遲、錯誤和呼叫計數。哪個服務應該收集營運指標？",
         "options": {
-          "A": "AWS Artifact",
-          "B": "Amazon EBS",
+          "A": "KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄",
+          "B": "模型監控資料品質或漂移監控",
           "C": "Amazon CloudWatch",
-          "D": "Amazon Macie"
+          "D": "SageMaker Clarify"
         },
-        "explanation": "CloudWatch 為 SageMaker 操作提供端點指標、警報、儀表板和日誌。\n其他選擇發現資料、提供合規性文件或儲存區塊。"
+        "explanation": "CloudWatch 為 SageMaker 操作提供端點指標、警報、儀表板和日誌。\n其他選項適用於此領域的不同需求，但不能像 Amazon CloudWatch 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d4-004",
-    "type": "single",
-    "question": "A startup preparing for a traffic increase needs explainability and bias analysis before promoting a model. Which SageMaker capability fits?",
-    "options": {
-      "A": "Amazon Route 53",
-      "B": "AWS Batch only",
-      "C": "S3 Transfer Acceleration",
-      "D": "SageMaker Clarify"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "SageMaker Clarify provides bias detection and explainability features for ML workflows.\nThe other choices provide DNS, batch compute, or transfer acceleration.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs explainability and bias analysis before promoting a model. Which SageMaker capability fits?",
+    "options": {
+      "A": "A least-privilege IAM policy on the invoking role",
+      "B": "SageMaker Clarify",
+      "C": "KMS encryption, least-privilege IAM, and CloudTrail logging",
+      "D": "Model Monitor data quality or drift monitoring"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "SageMaker Clarify provides bias detection and explainability features for ML workflows.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide SageMaker Clarify for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司在推廣模型之前需要進行可解釋性和偏差分析。哪種 SageMaker 功能適合？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。準備增加流量的新創公司在推廣模型之前需要進行可解釋性和偏差分析。哪種 SageMaker 功能適合？",
         "options": {
-          "A": "Amazon Route 53",
-          "B": "限 AWS Batch",
-          "C": "S3 Transfer Acceleration",
-          "D": "SageMaker Clarify"
+          "A": "針對呼叫角色的最小權限 IAM 策略",
+          "B": "SageMaker Clarify",
+          "C": "KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄",
+          "D": "模型監控資料品質或漂移監控"
         },
-        "explanation": "SageMaker Clarify 為 ML 工作流程提供偏差偵測和可解釋性功能。\n其他選項提供 DNS、批次運算或傳輸加速。"
+        "explanation": "SageMaker Clarify 為 ML 工作流程提供偏差偵測和可解釋性功能。\n其他選項適用於此領域的不同需求，但不能像 SageMaker Clarify 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d4-005",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An operations team supporting a critical workload must ensure model artifacts are encrypted and access is auditable. Which combination is appropriate?",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team must ensure model artifacts are encrypted and access is auditable. Which combination is appropriate?",
     "options": {
       "A": "KMS encryption, least-privilege IAM, and CloudTrail logging",
-      "B": "Public artifact access and no logs",
-      "C": "A security group only",
-      "D": "A DNS health check"
+      "B": "Model Monitor data quality or drift monitoring",
+      "C": "A least-privilege IAM policy on the invoking role",
+      "D": "Amazon CloudWatch"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Encryption, authorization, and audit logging provide layered protection for model artifacts.\nThe other choices do not provide ML artifact confidentiality and accountability.",
-    "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Encryption, authorization, and audit logging provide layered protection for model artifacts.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide KMS encryption, least-privilege IAM, and CloudTrail logging for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊必須確保模型工件經過加密並且存取是可審核的。哪種組合合適？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。支援關鍵工作負載的營運團隊必須確保模型工件經過加密並且存取是可審核的。哪種組合合適？",
         "options": {
           "A": "KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄",
-          "B": "公共工件存取且無日誌",
-          "C": "僅安全群組",
-          "D": "DNS 健康檢查"
+          "B": "模型監控資料品質或漂移監控",
+          "C": "針對呼叫角色的最小權限 IAM 策略",
+          "D": "Amazon CloudWatch"
         },
-        "explanation": "加密、授權和審核日誌記錄為模型工件提供分層保護。\n其他選擇不提供 ML 工件的機密性和責任性。"
+        "explanation": "加密、授權和審核日誌記錄為模型工件提供分層保護。\n其他選項適用於此領域的不同需求，但不能像 KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d4-006",
-    "type": "single",
-    "question": "A data platform team needs to detect that live feature distributions differ from training data. Which control should be considered?",
-    "options": {
-      "A": "A KMS key alias",
-      "B": "Model Monitor data quality or drift monitoring",
-      "C": "An S3 lifecycle rule",
-      "D": "A Route 53 alias"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Model Monitor can detect changes in data quality and distribution that affect model behavior.\nThe other choices do not monitor ML input drift.",
     "taskStatement": "4.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A data platform team is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs to detect that live feature distributions differ from training data. Which control should be considered?",
+    "options": {
+      "A": "A least-privilege IAM policy on the invoking role",
+      "B": "Amazon CloudWatch",
+      "C": "SageMaker Clarify",
+      "D": "Model Monitor data quality or drift monitoring"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Model Monitor can detect changes in data quality and distribution that affect model behavior.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Model Monitor data quality or drift monitoring for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要偵測即時特徵分佈與訓練資料的不同。應考慮哪種控制？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。資料平台團隊需要偵測即時特徵分佈與訓練資料的不同。應考慮哪種控制？",
         "options": {
-          "A": "KMS 金鑰別名",
-          "B": "模型監控資料品質或漂移監控",
-          "C": "S3 生命週期規則",
-          "D": "Route 53 別名"
+          "A": "針對呼叫角色的最小權限 IAM 策略",
+          "B": "Amazon CloudWatch",
+          "C": "SageMaker Clarify",
+          "D": "模型監控資料品質或漂移監控"
         },
-        "explanation": "模型監視器可以檢測影響模型行為的資料品質和分佈的變化。\n其他選擇不監控 ML 輸入漂移。"
+        "explanation": "模型監視器可以檢測影響模型行為的資料品質和分佈的變化。\n其他選項適用於此領域的不同需求，但不能像 模型監控資料品質或漂移監控 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d4-007",
-    "type": "single",
-    "question": "A security-conscious engineering team needs to protect a SageMaker endpoint from unauthorized invocation. Which control is most important?",
-    "options": {
-      "A": "A CloudFront cache policy",
-      "B": "An S3 storage class",
-      "C": "A least-privilege IAM policy on the invoking role",
-      "D": "A public endpoint with no authentication"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "IAM authorization restricts who can invoke the endpoint and which model resources they can access.\nPublic access and storage or cache settings do not authorize model invocation.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A security-conscious engineering team is planning two independent production changes. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The first team needs to protect a SageMaker endpoint from unauthorized invocation. A second team must monitor endpoint latency, errors, and invocation count. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Amazon CloudWatch",
+      "B": "SageMaker Clarify",
+      "C": "KMS encryption, least-privilege IAM, and CloudTrail logging",
+      "D": "Model Monitor data quality or drift monitoring",
+      "E": "A least-privilege IAM policy on the invoking role"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "A least-privilege IAM policy on the invoking role meets the first requirement: IAM authorization restricts who can invoke the endpoint and which model resources they can access. Amazon CloudWatch meets the second requirement: CloudWatch provides endpoint metrics, alarms, dashboards, and logs for SageMaker operations.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊需要保護 SageMaker 端點免於未經授權的呼叫。哪個控制最重要？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。第一項需求：受監管的公司必須監控端點延遲、錯誤和呼叫計數。第二項需求：多帳戶平台團隊需要保護 SageMaker 端點免遭未經授權的呼叫。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "CloudFront 快取策略",
-          "B": "S3 儲存類別",
-          "C": "針對呼叫角色的最小權限 IAM 策略",
-          "D": "沒有身份驗證的公共端點"
+          "A": "Amazon CloudWatch",
+          "B": "SageMaker Clarify",
+          "C": "KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄",
+          "D": "模型監控資料品質或漂移監控",
+          "E": "針對呼叫角色的最小權限 IAM 策略"
         },
-        "explanation": "IAM 授權限制誰可以呼叫終端節點以及他們可以存取哪些模型資源。\n公共存取和儲存或快取設定不授權模型呼叫。"
+        "explanation": "Amazon CloudWatch 符合第一項需求：CloudWatch 為 SageMaker 操作提供端點指標、警報、儀表板和日誌。 針對呼叫角色的最小權限 IAM 策略 符合第二項需求：IAM 授權限制誰可以呼叫終端節點以及他們可以存取哪些模型資源。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "mla-c01-d4-008",
-    "type": "single",
-    "question": "A company migrating an existing workload must monitor endpoint latency, errors, and invocation count. Which service should collect the operational metrics?",
-    "options": {
-      "A": "Amazon Macie",
-      "B": "AWS Artifact",
-      "C": "Amazon EBS",
-      "D": "Amazon CloudWatch"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "CloudWatch provides endpoint metrics, alarms, dashboards, and logs for SageMaker operations.\nThe other choices discover data, provide compliance documents, or store blocks.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A company migrating an existing workload is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team must monitor endpoint latency, errors, and invocation count. Which service should collect the operational metrics?",
+    "options": {
+      "A": "Model Monitor data quality or drift monitoring",
+      "B": "Amazon CloudWatch",
+      "C": "SageMaker Clarify",
+      "D": "KMS encryption, least-privilege IAM, and CloudTrail logging"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch provides endpoint metrics, alarms, dashboards, and logs for SageMaker operations.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon CloudWatch for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司必須監控端點延遲、錯誤和呼叫計數。哪個服務應該收集營運指標？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。遷移現有工作負載的公司必須監控端點延遲、錯誤和呼叫計數。哪個服務應該收集營運指標？",
         "options": {
-          "A": "Amazon Macie",
-          "B": "AWS Artifact",
-          "C": "Amazon EBS",
-          "D": "Amazon CloudWatch"
+          "A": "模型監控資料品質或漂移監控",
+          "B": "Amazon CloudWatch",
+          "C": "SageMaker Clarify",
+          "D": "KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄"
         },
-        "explanation": "CloudWatch 為 SageMaker 操作提供端點指標、警報、儀表板和日誌。\n其他選擇發現資料、提供合規性文件或儲存區塊。"
+        "explanation": "CloudWatch 為 SageMaker 操作提供端點指標、警報、儀表板和日誌。\n其他選項適用於此領域的不同需求，但不能像 Amazon CloudWatch 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d4-009",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team with strict recovery objectives needs explainability and bias analysis before promoting a model. Which SageMaker capability fits?",
+    "question": "A team with strict recovery objectives is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs explainability and bias analysis before promoting a model. Which SageMaker capability fits?",
     "options": {
       "A": "SageMaker Clarify",
-      "B": "Amazon Route 53",
-      "C": "AWS Batch only",
-      "D": "S3 Transfer Acceleration"
+      "B": "KMS encryption, least-privilege IAM, and CloudTrail logging",
+      "C": "Model Monitor data quality or drift monitoring",
+      "D": "A least-privilege IAM policy on the invoking role"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "SageMaker Clarify provides bias detection and explainability features for ML workflows.\nThe other choices provide DNS, batch compute, or transfer acceleration.",
-    "taskStatement": "4.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "SageMaker Clarify provides bias detection and explainability features for ML workflows.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide SageMaker Clarify for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格恢復目標的團隊在推廣模型之前需要進行可解釋性和偏差分析。哪種 SageMaker 功能適合？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。具有嚴格恢復目標的團隊在推廣模型之前需要進行可解釋性和偏差分析。哪種 SageMaker 功能適合？",
         "options": {
           "A": "SageMaker Clarify",
-          "B": "Amazon Route 53",
-          "C": "限 AWS Batch",
-          "D": "S3 Transfer Acceleration"
+          "B": "KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄",
+          "C": "模型監控資料品質或漂移監控",
+          "D": "針對呼叫角色的最小權限 IAM 策略"
         },
-        "explanation": "SageMaker Clarify 為 ML 工作流程提供偏差偵測和可解釋性功能。\n其他選項提供 DNS、批次運算或傳輸加速。"
+        "explanation": "SageMaker Clarify 為 ML 工作流程提供偏差偵測和可解釋性功能。\n其他選項適用於此領域的不同需求，但不能像 SageMaker Clarify 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d4-010",
-    "type": "single",
-    "question": "A developer team preparing a release must ensure model artifacts are encrypted and access is auditable. Which combination is appropriate?",
-    "options": {
-      "A": "A DNS health check",
-      "B": "KMS encryption, least-privilege IAM, and CloudTrail logging",
-      "C": "Public artifact access and no logs",
-      "D": "A security group only"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Encryption, authorization, and audit logging provide layered protection for model artifacts.\nThe other choices do not provide ML artifact confidentiality and accountability.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A developer team preparing a release is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team must ensure model artifacts are encrypted and access is auditable. Which combination is appropriate?",
+    "options": {
+      "A": "Model Monitor data quality or drift monitoring",
+      "B": "A least-privilege IAM policy on the invoking role",
+      "C": "Amazon CloudWatch",
+      "D": "KMS encryption, least-privilege IAM, and CloudTrail logging"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Encryption, authorization, and audit logging provide layered protection for model artifacts.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide KMS encryption, least-privilege IAM, and CloudTrail logging for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊必須確保模型工件經過加密並且存取是可審核的。哪種組合合適？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。準備發布的開發團隊必須確保模型工件經過加密並且存取是可審核的。哪種組合合適？",
         "options": {
-          "A": "DNS 健康檢查",
-          "B": "KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄",
-          "C": "公共工件存取且無日誌",
-          "D": "僅安全群組"
+          "A": "模型監控資料品質或漂移監控",
+          "B": "針對呼叫角色的最小權限 IAM 策略",
+          "C": "Amazon CloudWatch",
+          "D": "KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄"
         },
-        "explanation": "加密、授權和審核日誌記錄為模型工件提供分層保護。\n其他選擇不提供 ML 工件的機密性和責任性。"
+        "explanation": "加密、授權和審核日誌記錄為模型工件提供分層保護。\n其他選項適用於此領域的不同需求，但不能像 KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d4-011",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An enterprise with several AWS Regions needs to detect that live feature distributions differ from training data. Which control should be considered?",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs to detect that live feature distributions differ from training data. Which control should be considered?",
     "options": {
-      "A": "A Route 53 alias",
-      "B": "A KMS key alias",
+      "A": "Amazon CloudWatch",
+      "B": "SageMaker Clarify",
       "C": "Model Monitor data quality or drift monitoring",
-      "D": "An S3 lifecycle rule"
+      "D": "A least-privilege IAM policy on the invoking role"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Model Monitor can detect changes in data quality and distribution that affect model behavior.\nThe other choices do not monitor ML input drift.",
-    "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Model Monitor can detect changes in data quality and distribution that affect model behavior.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Model Monitor data quality or drift monitoring for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業需要偵測即時功能分佈與訓練資料的不同。應考慮哪種控制？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。擁有多個 AWS 區域的企業需要偵測即時功能分佈與訓練資料的不同。應考慮哪種控制？",
         "options": {
-          "A": "Route 53 別名",
-          "B": "KMS 金鑰別名",
+          "A": "Amazon CloudWatch",
+          "B": "SageMaker Clarify",
           "C": "模型監控資料品質或漂移監控",
-          "D": "S3 生命週期規則"
+          "D": "針對呼叫角色的最小權限 IAM 策略"
         },
-        "explanation": "模型監視器可以檢測影響模型行為的資料品質和分佈的變化。\n其他選擇不監控 ML 輸入漂移。"
+        "explanation": "模型監視器可以檢測影響模型行為的資料品質和分佈的變化。\n其他選項適用於此領域的不同需求，但不能像 模型監控資料品質或漂移監控 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d4-012",
-    "type": "single",
-    "question": "A service owner reviewing an incident needs to protect a SageMaker endpoint from unauthorized invocation. Which control is most important?",
-    "options": {
-      "A": "A public endpoint with no authentication",
-      "B": "A CloudFront cache policy",
-      "C": "An S3 storage class",
-      "D": "A least-privilege IAM policy on the invoking role"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "IAM authorization restricts who can invoke the endpoint and which model resources they can access.\nPublic access and storage or cache settings do not authorize model invocation.",
     "taskStatement": "4.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A service owner reviewing an incident is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs to protect a SageMaker endpoint from unauthorized invocation. Which control is most important?",
+    "options": {
+      "A": "KMS encryption, least-privilege IAM, and CloudTrail logging",
+      "B": "A least-privilege IAM policy on the invoking role",
+      "C": "Amazon CloudWatch",
+      "D": "SageMaker Clarify"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "IAM authorization restricts who can invoke the endpoint and which model resources they can access.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A least-privilege IAM policy on the invoking role for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務所有者需要保護 SageMaker 端點免遭未經授權的呼叫。哪個控制最重要？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。審查事件的服務所有者需要保護 SageMaker 端點免遭未經授權的呼叫。哪個控制最重要？",
         "options": {
-          "A": "沒有身份驗證的公共端點",
-          "B": "CloudFront 快取策略",
-          "C": "S3 儲存類別",
-          "D": "針對呼叫角色的最小權限 IAM 策略"
+          "A": "KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄",
+          "B": "針對呼叫角色的最小權限 IAM 策略",
+          "C": "Amazon CloudWatch",
+          "D": "SageMaker Clarify"
         },
-        "explanation": "IAM 授權限制誰可以呼叫終端節點以及他們可以存取哪些模型資源。\n公共存取和儲存或快取設定不授權模型呼叫。"
+        "explanation": "IAM 授權限制誰可以呼叫終端節點以及他們可以存取哪些模型資源。\n其他選項適用於此領域的不同需求，但不能像 針對呼叫角色的最小權限 IAM 策略 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d4-013",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team optimizing an existing implementation must monitor endpoint latency, errors, and invocation count. Which service should collect the operational metrics?",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team must monitor endpoint latency, errors, and invocation count. Which service should collect the operational metrics?",
     "options": {
       "A": "Amazon CloudWatch",
-      "B": "Amazon Macie",
-      "C": "AWS Artifact",
-      "D": "Amazon EBS"
+      "B": "SageMaker Clarify",
+      "C": "KMS encryption, least-privilege IAM, and CloudTrail logging",
+      "D": "Model Monitor data quality or drift monitoring"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "CloudWatch provides endpoint metrics, alarms, dashboards, and logs for SageMaker operations.\nThe other choices discover data, provide compliance documents, or store blocks.",
-    "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "CloudWatch provides endpoint metrics, alarms, dashboards, and logs for SageMaker operations.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon CloudWatch for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊必須監控端點延遲、錯誤和呼叫計數。哪個服務應該收集營運指標？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。優化現有實施的團隊必須監控端點延遲、錯誤和呼叫計數。哪個服務應該收集營運指標？",
         "options": {
           "A": "Amazon CloudWatch",
-          "B": "Amazon Macie",
-          "C": "AWS Artifact",
-          "D": "Amazon EBS"
+          "B": "SageMaker Clarify",
+          "C": "KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄",
+          "D": "模型監控資料品質或漂移監控"
         },
-        "explanation": "CloudWatch 為 SageMaker 操作提供端點指標、警報、儀表板和日誌。\n其他選擇發現資料、提供合規性文件或儲存區塊。"
+        "explanation": "CloudWatch 為 SageMaker 操作提供端點指標、警報、儀表板和日誌。\n其他選項適用於此領域的不同需求，但不能像 Amazon CloudWatch 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d4-014",
-    "type": "single",
-    "question": "A company introducing an automated workflow needs explainability and bias analysis before promoting a model. Which SageMaker capability fits?",
-    "options": {
-      "A": "S3 Transfer Acceleration",
-      "B": "SageMaker Clarify",
-      "C": "Amazon Route 53",
-      "D": "AWS Batch only"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "SageMaker Clarify provides bias detection and explainability features for ML workflows.\nThe other choices provide DNS, batch compute, or transfer acceleration.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A company introducing an automated workflow is planning two independent production changes. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The first team needs explainability and bias analysis before promoting a model. A second team must ensure model artifacts are encrypted and access is auditable. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "A least-privilege IAM policy on the invoking role",
+      "B": "Amazon CloudWatch",
+      "C": "SageMaker Clarify",
+      "D": "KMS encryption, least-privilege IAM, and CloudTrail logging",
+      "E": "Model Monitor data quality or drift monitoring"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "SageMaker Clarify meets the first requirement: SageMaker Clarify provides bias detection and explainability features for ML workflows. KMS encryption, least-privilege IAM, and CloudTrail logging meets the second requirement: Encryption, authorization, and audit logging provide layered protection for model artifacts.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司在推廣模型之前需要進行可解釋性和偏差分析。哪種 SageMaker 功能適合？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。第一項需求：準備增加流量的新創公司在推廣模型之前需要進行可解釋性和偏差分析。第二項需求：支援關鍵工作負載的營運團隊必須確保模型工件經過加密並且存取是可審核的。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "S3 Transfer Acceleration",
-          "B": "SageMaker Clarify",
-          "C": "Amazon Route 53",
-          "D": "限 AWS Batch"
+          "A": "針對呼叫角色的最小權限 IAM 策略",
+          "B": "Amazon CloudWatch",
+          "C": "SageMaker Clarify",
+          "D": "KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄",
+          "E": "模型監控資料品質或漂移監控"
         },
-        "explanation": "SageMaker Clarify 為 ML 工作流程提供偏差偵測和可解釋性功能。\n其他選項提供 DNS、批次運算或傳輸加速。"
+        "explanation": "SageMaker Clarify 符合第一項需求：SageMaker Clarify 為 ML 工作流程提供偏差偵測和可解釋性功能。 KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄 符合第二項需求：加密、授權和審核日誌記錄為模型工件提供分層保護。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "mla-c01-d4-015",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An AWS administrator working in a shared environment must ensure model artifacts are encrypted and access is auditable. Which combination is appropriate?",
+    "question": "An AWS administrator working in a shared environment is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team must ensure model artifacts are encrypted and access is auditable. Which combination is appropriate?",
     "options": {
-      "A": "A security group only",
-      "B": "A DNS health check",
+      "A": "A least-privilege IAM policy on the invoking role",
+      "B": "Amazon CloudWatch",
       "C": "KMS encryption, least-privilege IAM, and CloudTrail logging",
-      "D": "Public artifact access and no logs"
+      "D": "Model Monitor data quality or drift monitoring"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Encryption, authorization, and audit logging provide layered protection for model artifacts.\nThe other choices do not provide ML artifact confidentiality and accountability.",
-    "taskStatement": "4.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "Encryption, authorization, and audit logging provide layered protection for model artifacts.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide KMS encryption, least-privilege IAM, and CloudTrail logging for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "在共用環境中工作的 AWS 管理員必須確保模型工件已加密且存取可審核。哪種組合合適？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。在共用環境中工作的 AWS 管理員必須確保模型工件已加密且存取可審核。哪種組合合適？",
         "options": {
-          "A": "僅安全群組",
-          "B": "DNS 健康檢查",
+          "A": "針對呼叫角色的最小權限 IAM 策略",
+          "B": "Amazon CloudWatch",
           "C": "KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄",
-          "D": "公共工件存取且無日誌"
+          "D": "模型監控資料品質或漂移監控"
         },
-        "explanation": "加密、授權和審核日誌記錄為模型工件提供分層保護。\n其他選擇不提供 ML 工件的機密性和責任性。"
+        "explanation": "加密、授權和審核日誌記錄為模型工件提供分層保護。\n其他選項適用於此領域的不同需求，但不能像 KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d4-016",
-    "type": "single",
-    "question": "A customer-facing application team needs to detect that live feature distributions differ from training data. Which control should be considered?",
-    "options": {
-      "A": "An S3 lifecycle rule",
-      "B": "A Route 53 alias",
-      "C": "A KMS key alias",
-      "D": "Model Monitor data quality or drift monitoring"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Model Monitor can detect changes in data quality and distribution that affect model behavior.\nThe other choices do not monitor ML input drift.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A customer-facing application team is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team needs to detect that live feature distributions differ from training data. Which control should be considered?",
+    "options": {
+      "A": "SageMaker Clarify",
+      "B": "Model Monitor data quality or drift monitoring",
+      "C": "A least-privilege IAM policy on the invoking role",
+      "D": "Amazon CloudWatch"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Model Monitor can detect changes in data quality and distribution that affect model behavior.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Model Monitor data quality or drift monitoring for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊需要偵測即時特徵分佈與訓練資料的不同。應考慮哪種控制？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。面向客戶的應用程式團隊需要偵測即時特徵分佈與訓練資料的不同。應考慮哪種控制？",
         "options": {
-          "A": "S3 生命週期規則",
-          "B": "Route 53 別名",
-          "C": "KMS 金鑰別名",
-          "D": "模型監控資料品質或漂移監控"
+          "A": "SageMaker Clarify",
+          "B": "模型監控資料品質或漂移監控",
+          "C": "針對呼叫角色的最小權限 IAM 策略",
+          "D": "Amazon CloudWatch"
         },
-        "explanation": "模型監視器可以檢測影響模型行為的資料品質和分佈的變化。\n其他選擇不監控 ML 輸入漂移。"
+        "explanation": "模型監視器可以檢測影響模型行為的資料品質和分佈的變化。\n其他選項適用於此領域的不同需求，但不能像 模型監控資料品質或漂移監控 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d4-017",
-    "type": "single",
-    "question": "A platform team standardizing its AWS deployments needs to protect a SageMaker endpoint from unauthorized invocation. Which control is most important?",
-    "options": {
-      "A": "A least-privilege IAM policy on the invoking role",
-      "B": "A public endpoint with no authentication",
-      "C": "A CloudFront cache policy",
-      "D": "An S3 storage class"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "IAM authorization restricts who can invoke the endpoint and which model resources they can access.\nPublic access and storage or cache settings do not authorize model invocation.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A platform team standardizing its AWS deployments is reviewing several independent production requirements. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. Match each workload requirement to the most appropriate implementation.",
+    "options": {
+      "A": "A workload needs to protect a SageMaker endpoint from unauthorized invocation",
+      "B": "A workload must monitor endpoint latency, errors, and invocation count",
+      "C": "A workload needs explainability and bias analysis before promoting a model"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "A least-privilege IAM policy on the invoking role",
+      "2": "Amazon CloudWatch",
+      "3": "SageMaker Clarify"
+    },
+    "correctMatches": {
+      "A": "1",
+      "B": "2",
+      "C": "3"
+    },
+    "explanation": "A maps to A least-privilege IAM policy on the invoking role. IAM authorization restricts who can invoke the endpoint and which model resources they can access. B maps to Amazon CloudWatch. CloudWatch provides endpoint metrics, alarms, dashboards, and logs for SageMaker operations. C maps to SageMaker Clarify. SageMaker Clarify provides bias detection and explainability features for ML workflows.\nEach target is intended for a different requirement, so all three mappings must be evaluated independently.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊需要保護 SageMaker 端點免遭未經授權的呼叫。哪個控制最重要？",
+        "question": "團隊正在審查多項彼此獨立的生產需求。團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。請將每項工作負載需求配對至最適合的實作。",
         "options": {
-          "A": "針對呼叫角色的最小權限 IAM 策略",
-          "B": "沒有身份驗證的公共端點",
-          "C": "CloudFront 快取策略",
-          "D": "S3 儲存類別"
+          "A": "工作負載需求：多帳戶平台團隊需要保護 SageMaker 端點免遭未經授權的呼叫",
+          "B": "工作負載需求：受監管的公司必須監控端點延遲、錯誤和呼叫計數",
+          "C": "工作負載需求：準備增加流量的新創公司在推廣模型之前需要進行可解釋性和偏差分析"
         },
-        "explanation": "IAM 授權限制誰可以呼叫終端節點以及他們可以存取哪些模型資源。\n公共存取和儲存或快取設定不授權模型呼叫。"
+        "targets": {
+          "1": "針對呼叫角色的最小權限 IAM 策略",
+          "2": "Amazon CloudWatch",
+          "3": "SageMaker Clarify"
+        },
+        "explanation": "A 對應 針對呼叫角色的最小權限 IAM 策略。IAM 授權限制誰可以呼叫終端節點以及他們可以存取哪些模型資源。 B 對應 Amazon CloudWatch。CloudWatch 為 SageMaker 操作提供端點指標、警報、儀表板和日誌。 C 對應 SageMaker Clarify。SageMaker Clarify 為 ML 工作流程提供偏差偵測和可解釋性功能。\n每個目標均處理不同需求，因此必須分別評估三項配對。"
       }
     }
   },
   {
     "id": "mla-c01-d4-018",
-    "type": "single",
-    "question": "A team preparing evidence for an audit must monitor endpoint latency, errors, and invocation count. Which service should collect the operational metrics?",
-    "options": {
-      "A": "Amazon EBS",
-      "B": "Amazon CloudWatch",
-      "C": "Amazon Macie",
-      "D": "AWS Artifact"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "CloudWatch provides endpoint metrics, alarms, dashboards, and logs for SageMaker operations.\nThe other choices discover data, provide compliance documents, or store blocks.",
     "taskStatement": "4.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team preparing evidence for an audit is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team must monitor endpoint latency, errors, and invocation count. Which service should collect the operational metrics?",
+    "options": {
+      "A": "SageMaker Clarify",
+      "B": "KMS encryption, least-privilege IAM, and CloudTrail logging",
+      "C": "Model Monitor data quality or drift monitoring",
+      "D": "Amazon CloudWatch"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch provides endpoint metrics, alarms, dashboards, and logs for SageMaker operations.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon CloudWatch for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備審計證據的團隊必須監控端點延遲、錯誤和呼叫計數。哪個服務應該收集營運指標？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。準備審計證據的團隊必須監控端點延遲、錯誤和呼叫計數。哪個服務應該收集營運指標？",
         "options": {
-          "A": "Amazon EBS",
-          "B": "Amazon CloudWatch",
-          "C": "Amazon Macie",
-          "D": "AWS Artifact"
+          "A": "SageMaker Clarify",
+          "B": "KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄",
+          "C": "模型監控資料品質或漂移監控",
+          "D": "Amazon CloudWatch"
         },
-        "explanation": "CloudWatch 為 SageMaker 操作提供端點指標、警報、儀表板和日誌。\n其他選擇發現資料、提供合規性文件或儲存區塊。"
+        "explanation": "CloudWatch 為 SageMaker 操作提供端點指標、警報、儀表板和日誌。\n其他選項適用於此領域的不同需求，但不能像 Amazon CloudWatch 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d4-019",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A business replacing a manual process needs explainability and bias analysis before promoting a model. Which SageMaker capability fits?",
+    "question": "A business replacing a manual process is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team needs explainability and bias analysis before promoting a model. Which SageMaker capability fits?",
     "options": {
-      "A": "AWS Batch only",
-      "B": "S3 Transfer Acceleration",
+      "A": "Model Monitor data quality or drift monitoring",
+      "B": "A least-privilege IAM policy on the invoking role",
       "C": "SageMaker Clarify",
-      "D": "Amazon Route 53"
+      "D": "KMS encryption, least-privilege IAM, and CloudTrail logging"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "SageMaker Clarify provides bias detection and explainability features for ML workflows.\nThe other choices provide DNS, batch compute, or transfer acceleration.",
-    "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "SageMaker Clarify provides bias detection and explainability features for ML workflows.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide SageMaker Clarify for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "取代手動流程的企業在推廣模型之前需要進行可解釋性和偏差分析。哪種 SageMaker 功能適合？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。取代手動流程的企業在推廣模型之前需要進行可解釋性和偏差分析。哪種 SageMaker 功能適合？",
         "options": {
-          "A": "限 AWS Batch",
-          "B": "S3 Transfer Acceleration",
+          "A": "模型監控資料品質或漂移監控",
+          "B": "針對呼叫角色的最小權限 IAM 策略",
           "C": "SageMaker Clarify",
-          "D": "Amazon Route 53"
+          "D": "KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄"
         },
-        "explanation": "SageMaker Clarify 為 ML 工作流程提供偏差偵測和可解釋性功能。\n其他選項提供 DNS、批次運算或傳輸加速。"
+        "explanation": "SageMaker Clarify 為 ML 工作流程提供偏差偵測和可解釋性功能。\n其他選項適用於此領域的不同需求，但不能像 SageMaker Clarify 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d4-020",
-    "type": "single",
-    "question": "A team validating a design against the exam guide must ensure model artifacts are encrypted and access is auditable. Which combination is appropriate?",
-    "options": {
-      "A": "Public artifact access and no logs",
-      "B": "A security group only",
-      "C": "A DNS health check",
-      "D": "KMS encryption, least-privilege IAM, and CloudTrail logging"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Encryption, authorization, and audit logging provide layered protection for model artifacts.\nThe other choices do not provide ML artifact confidentiality and accountability.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team validating a design against the exam guide is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team must ensure model artifacts are encrypted and access is auditable. Which combination is appropriate?",
+    "options": {
+      "A": "Amazon CloudWatch",
+      "B": "KMS encryption, least-privilege IAM, and CloudTrail logging",
+      "C": "Model Monitor data quality or drift monitoring",
+      "D": "A least-privilege IAM policy on the invoking role"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Encryption, authorization, and audit logging provide layered protection for model artifacts.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide KMS encryption, least-privilege IAM, and CloudTrail logging for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊必須確保模型工件經過加密並且存取是可審核的。哪種組合合適？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。根據考試指南驗證設計的團隊必須確保模型工件經過加密並且存取是可審核的。哪種組合合適？",
         "options": {
-          "A": "公共工件存取且無日誌",
-          "B": "僅安全群組",
-          "C": "DNS 健康檢查",
-          "D": "KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄"
+          "A": "Amazon CloudWatch",
+          "B": "KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄",
+          "C": "模型監控資料品質或漂移監控",
+          "D": "針對呼叫角色的最小權限 IAM 策略"
         },
-        "explanation": "加密、授權和審核日誌記錄為模型工件提供分層保護。\n其他選擇不提供 ML 工件的機密性和責任性。"
+        "explanation": "加密、授權和審核日誌記錄為模型工件提供分層保護。\n其他選項適用於此領域的不同需求，但不能像 KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d4-021",
-    "type": "single",
-    "question": "A production team needs to detect that live feature distributions differ from training data. Which control should be considered?",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A production team is planning two independent production changes. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The first team needs to detect that live feature distributions differ from training data. A second team needs to protect a SageMaker endpoint from unauthorized invocation. Which TWO actions satisfy these requirements?",
     "options": {
       "A": "Model Monitor data quality or drift monitoring",
-      "B": "An S3 lifecycle rule",
-      "C": "A Route 53 alias",
-      "D": "A KMS key alias"
+      "B": "A least-privilege IAM policy on the invoking role",
+      "C": "Amazon CloudWatch",
+      "D": "SageMaker Clarify",
+      "E": "KMS encryption, least-privilege IAM, and CloudTrail logging"
     },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "Model Monitor can detect changes in data quality and distribution that affect model behavior.\nThe other choices do not monitor ML input drift.",
-    "taskStatement": "4.3",
-    "lastVerified": "2026-08-09",
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Model Monitor data quality or drift monitoring meets the first requirement: Model Monitor can detect changes in data quality and distribution that affect model behavior. A least-privilege IAM policy on the invoking role meets the second requirement: IAM authorization restricts who can invoke the endpoint and which model resources they can access.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "生產團隊需要偵測即時特徵分佈與訓練資料的不同。應考慮哪種控制？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。第一項需求：生產團隊需要偵測即時特徵分佈與訓練資料的不同。第二項需求：多帳戶平台團隊需要保護 SageMaker 端點免遭未經授權的呼叫。哪兩項操作可以滿足這些需求？",
         "options": {
           "A": "模型監控資料品質或漂移監控",
-          "B": "S3 生命週期規則",
-          "C": "Route 53 別名",
-          "D": "KMS 金鑰別名"
+          "B": "針對呼叫角色的最小權限 IAM 策略",
+          "C": "Amazon CloudWatch",
+          "D": "SageMaker Clarify",
+          "E": "KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄"
         },
-        "explanation": "模型監視器可以檢測影響模型行為的資料品質和分佈的變化。\n其他選擇不監控 ML 輸入漂移。"
+        "explanation": "模型監控資料品質或漂移監控 符合第一項需求：模型監視器可以檢測影響模型行為的資料品質和分佈的變化。 針對呼叫角色的最小權限 IAM 策略 符合第二項需求：IAM 授權限制誰可以呼叫終端節點以及他們可以存取哪些模型資源。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "mla-c01-d4-022",
-    "type": "single",
-    "question": "A multi-account platform team needs to protect a SageMaker endpoint from unauthorized invocation. Which control is most important?",
-    "options": {
-      "A": "An S3 storage class",
-      "B": "A least-privilege IAM policy on the invoking role",
-      "C": "A public endpoint with no authentication",
-      "D": "A CloudFront cache policy"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "IAM authorization restricts who can invoke the endpoint and which model resources they can access.\nPublic access and storage or cache settings do not authorize model invocation.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A multi-account platform team is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs to protect a SageMaker endpoint from unauthorized invocation. Which control is most important?",
+    "options": {
+      "A": "Amazon CloudWatch",
+      "B": "SageMaker Clarify",
+      "C": "KMS encryption, least-privilege IAM, and CloudTrail logging",
+      "D": "A least-privilege IAM policy on the invoking role"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "IAM authorization restricts who can invoke the endpoint and which model resources they can access.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A least-privilege IAM policy on the invoking role for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊需要保護 SageMaker 端點免遭未經授權的呼叫。哪個控制最重要？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。多帳戶平台團隊需要保護 SageMaker 端點免遭未經授權的呼叫。哪個控制最重要？",
         "options": {
-          "A": "S3 儲存類別",
-          "B": "針對呼叫角色的最小權限 IAM 策略",
-          "C": "沒有身份驗證的公共端點",
-          "D": "CloudFront 快取策略"
+          "A": "Amazon CloudWatch",
+          "B": "SageMaker Clarify",
+          "C": "KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄",
+          "D": "針對呼叫角色的最小權限 IAM 策略"
         },
-        "explanation": "IAM 授權限制誰可以呼叫終端節點以及他們可以存取哪些模型資源。\n公共存取和儲存或快取設定不授權模型呼叫。"
+        "explanation": "IAM 授權限制誰可以呼叫終端節點以及他們可以存取哪些模型資源。\n其他選項適用於此領域的不同需求，但不能像 針對呼叫角色的最小權限 IAM 策略 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d4-023",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A regulated company must monitor endpoint latency, errors, and invocation count. Which service should collect the operational metrics?",
+    "question": "A regulated company is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team must monitor endpoint latency, errors, and invocation count. Which service should collect the operational metrics?",
     "options": {
-      "A": "AWS Artifact",
-      "B": "Amazon EBS",
+      "A": "KMS encryption, least-privilege IAM, and CloudTrail logging",
+      "B": "Model Monitor data quality or drift monitoring",
       "C": "Amazon CloudWatch",
-      "D": "Amazon Macie"
+      "D": "SageMaker Clarify"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "CloudWatch provides endpoint metrics, alarms, dashboards, and logs for SageMaker operations.\nThe other choices discover data, provide compliance documents, or store blocks.",
-    "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "CloudWatch provides endpoint metrics, alarms, dashboards, and logs for SageMaker operations.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon CloudWatch for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司必須監控端點延遲、錯誤和呼叫計數。哪個服務應該收集營運指標？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。受監管的公司必須監控端點延遲、錯誤和呼叫計數。哪個服務應該收集營運指標？",
         "options": {
-          "A": "AWS Artifact",
-          "B": "Amazon EBS",
+          "A": "KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄",
+          "B": "模型監控資料品質或漂移監控",
           "C": "Amazon CloudWatch",
-          "D": "Amazon Macie"
+          "D": "SageMaker Clarify"
         },
-        "explanation": "CloudWatch 為 SageMaker 操作提供端點指標、警報、儀表板和日誌。\n其他選擇發現資料、提供合規性文件或儲存區塊。"
+        "explanation": "CloudWatch 為 SageMaker 操作提供端點指標、警報、儀表板和日誌。\n其他選項適用於此領域的不同需求，但不能像 Amazon CloudWatch 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d4-024",
-    "type": "single",
-    "question": "A startup preparing for a traffic increase needs explainability and bias analysis before promoting a model. Which SageMaker capability fits?",
-    "options": {
-      "A": "Amazon Route 53",
-      "B": "AWS Batch only",
-      "C": "S3 Transfer Acceleration",
-      "D": "SageMaker Clarify"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "SageMaker Clarify provides bias detection and explainability features for ML workflows.\nThe other choices provide DNS, batch compute, or transfer acceleration.",
     "taskStatement": "4.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs explainability and bias analysis before promoting a model. Which SageMaker capability fits?",
+    "options": {
+      "A": "A least-privilege IAM policy on the invoking role",
+      "B": "SageMaker Clarify",
+      "C": "KMS encryption, least-privilege IAM, and CloudTrail logging",
+      "D": "Model Monitor data quality or drift monitoring"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "SageMaker Clarify provides bias detection and explainability features for ML workflows.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide SageMaker Clarify for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司在推廣模型之前需要進行可解釋性和偏差分析。哪種 SageMaker 功能適合？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。準備增加流量的新創公司在推廣模型之前需要進行可解釋性和偏差分析。哪種 SageMaker 功能適合？",
         "options": {
-          "A": "Amazon Route 53",
-          "B": "限 AWS Batch",
-          "C": "S3 Transfer Acceleration",
-          "D": "SageMaker Clarify"
+          "A": "針對呼叫角色的最小權限 IAM 策略",
+          "B": "SageMaker Clarify",
+          "C": "KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄",
+          "D": "模型監控資料品質或漂移監控"
         },
-        "explanation": "SageMaker Clarify 為 ML 工作流程提供偏差偵測和可解釋性功能。\n其他選項提供 DNS、批次運算或傳輸加速。"
+        "explanation": "SageMaker Clarify 為 ML 工作流程提供偏差偵測和可解釋性功能。\n其他選項適用於此領域的不同需求，但不能像 SageMaker Clarify 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d4-025",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An operations team supporting a critical workload must ensure model artifacts are encrypted and access is auditable. Which combination is appropriate?",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team must ensure model artifacts are encrypted and access is auditable. Which combination is appropriate?",
     "options": {
       "A": "KMS encryption, least-privilege IAM, and CloudTrail logging",
-      "B": "Public artifact access and no logs",
-      "C": "A security group only",
-      "D": "A DNS health check"
+      "B": "Model Monitor data quality or drift monitoring",
+      "C": "A least-privilege IAM policy on the invoking role",
+      "D": "Amazon CloudWatch"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Encryption, authorization, and audit logging provide layered protection for model artifacts.\nThe other choices do not provide ML artifact confidentiality and accountability.",
-    "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Encryption, authorization, and audit logging provide layered protection for model artifacts.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide KMS encryption, least-privilege IAM, and CloudTrail logging for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊必須確保模型工件經過加密並且存取是可審核的。哪種組合合適？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。支援關鍵工作負載的營運團隊必須確保模型工件經過加密並且存取是可審核的。哪種組合合適？",
         "options": {
           "A": "KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄",
-          "B": "公共工件存取且無日誌",
-          "C": "僅安全群組",
-          "D": "DNS 健康檢查"
+          "B": "模型監控資料品質或漂移監控",
+          "C": "針對呼叫角色的最小權限 IAM 策略",
+          "D": "Amazon CloudWatch"
         },
-        "explanation": "加密、授權和審核日誌記錄為模型工件提供分層保護。\n其他選擇不提供 ML 工件的機密性和責任性。"
+        "explanation": "加密、授權和審核日誌記錄為模型工件提供分層保護。\n其他選項適用於此領域的不同需求，但不能像 KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d4-026",
-    "type": "single",
-    "question": "A data platform team needs to detect that live feature distributions differ from training data. Which control should be considered?",
-    "options": {
-      "A": "A KMS key alias",
-      "B": "Model Monitor data quality or drift monitoring",
-      "C": "An S3 lifecycle rule",
-      "D": "A Route 53 alias"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Model Monitor can detect changes in data quality and distribution that affect model behavior.\nThe other choices do not monitor ML input drift.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A data platform team is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs to detect that live feature distributions differ from training data. Which control should be considered?",
+    "options": {
+      "A": "A least-privilege IAM policy on the invoking role",
+      "B": "Amazon CloudWatch",
+      "C": "SageMaker Clarify",
+      "D": "Model Monitor data quality or drift monitoring"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Model Monitor can detect changes in data quality and distribution that affect model behavior.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Model Monitor data quality or drift monitoring for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要偵測即時特徵分佈與訓練資料的不同。應考慮哪種控制？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。資料平台團隊需要偵測即時特徵分佈與訓練資料的不同。應考慮哪種控制？",
         "options": {
-          "A": "KMS 金鑰別名",
-          "B": "模型監控資料品質或漂移監控",
-          "C": "S3 生命週期規則",
-          "D": "Route 53 別名"
+          "A": "針對呼叫角色的最小權限 IAM 策略",
+          "B": "Amazon CloudWatch",
+          "C": "SageMaker Clarify",
+          "D": "模型監控資料品質或漂移監控"
         },
-        "explanation": "模型監視器可以檢測影響模型行為的資料品質和分佈的變化。\n其他選擇不監控 ML 輸入漂移。"
+        "explanation": "模型監視器可以檢測影響模型行為的資料品質和分佈的變化。\n其他選項適用於此領域的不同需求，但不能像 模型監控資料品質或漂移監控 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d4-027",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A security-conscious engineering team needs to protect a SageMaker endpoint from unauthorized invocation. Which control is most important?",
+    "question": "A security-conscious engineering team is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs to protect a SageMaker endpoint from unauthorized invocation. Which control is most important?",
     "options": {
-      "A": "A CloudFront cache policy",
-      "B": "An S3 storage class",
+      "A": "SageMaker Clarify",
+      "B": "KMS encryption, least-privilege IAM, and CloudTrail logging",
       "C": "A least-privilege IAM policy on the invoking role",
-      "D": "A public endpoint with no authentication"
+      "D": "Amazon CloudWatch"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "IAM authorization restricts who can invoke the endpoint and which model resources they can access.\nPublic access and storage or cache settings do not authorize model invocation.",
-    "taskStatement": "4.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "IAM authorization restricts who can invoke the endpoint and which model resources they can access.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A least-privilege IAM policy on the invoking role for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊需要保護 SageMaker 端點免於未經授權的呼叫。哪個控制最重要？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。具有安全意識的工程團隊需要保護 SageMaker 端點免於未經授權的呼叫。哪個控制最重要？",
         "options": {
-          "A": "CloudFront 快取策略",
-          "B": "S3 儲存類別",
+          "A": "SageMaker Clarify",
+          "B": "KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄",
           "C": "針對呼叫角色的最小權限 IAM 策略",
-          "D": "沒有身份驗證的公共端點"
+          "D": "Amazon CloudWatch"
         },
-        "explanation": "IAM 授權限制誰可以呼叫終端節點以及他們可以存取哪些模型資源。\n公共存取和儲存或快取設定不授權模型呼叫。"
+        "explanation": "IAM 授權限制誰可以呼叫終端節點以及他們可以存取哪些模型資源。\n其他選項適用於此領域的不同需求，但不能像 針對呼叫角色的最小權限 IAM 策略 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d4-028",
-    "type": "single",
-    "question": "A company migrating an existing workload must monitor endpoint latency, errors, and invocation count. Which service should collect the operational metrics?",
-    "options": {
-      "A": "Amazon Macie",
-      "B": "AWS Artifact",
-      "C": "Amazon EBS",
-      "D": "Amazon CloudWatch"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "CloudWatch provides endpoint metrics, alarms, dashboards, and logs for SageMaker operations.\nThe other choices discover data, provide compliance documents, or store blocks.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A company migrating an existing workload is planning two independent production changes. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The first team must monitor endpoint latency, errors, and invocation count. A second team needs explainability and bias analysis before promoting a model. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "KMS encryption, least-privilege IAM, and CloudTrail logging",
+      "B": "Model Monitor data quality or drift monitoring",
+      "C": "A least-privilege IAM policy on the invoking role",
+      "D": "Amazon CloudWatch",
+      "E": "SageMaker Clarify"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Amazon CloudWatch meets the first requirement: CloudWatch provides endpoint metrics, alarms, dashboards, and logs for SageMaker operations. SageMaker Clarify meets the second requirement: SageMaker Clarify provides bias detection and explainability features for ML workflows.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司必須監控端點延遲、錯誤和呼叫計數。哪個服務應該收集營運指標？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。第一項需求：受監管的公司必須監控端點延遲、錯誤和呼叫計數。第二項需求：準備增加流量的新創公司在推廣模型之前需要進行可解釋性和偏差分析。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "Amazon Macie",
-          "B": "AWS Artifact",
-          "C": "Amazon EBS",
-          "D": "Amazon CloudWatch"
+          "A": "KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄",
+          "B": "模型監控資料品質或漂移監控",
+          "C": "針對呼叫角色的最小權限 IAM 策略",
+          "D": "Amazon CloudWatch",
+          "E": "SageMaker Clarify"
         },
-        "explanation": "CloudWatch 為 SageMaker 操作提供端點指標、警報、儀表板和日誌。\n其他選擇發現資料、提供合規性文件或儲存區塊。"
+        "explanation": "Amazon CloudWatch 符合第一項需求：CloudWatch 為 SageMaker 操作提供端點指標、警報、儀表板和日誌。 SageMaker Clarify 符合第二項需求：SageMaker Clarify 為 ML 工作流程提供偏差偵測和可解釋性功能。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "mla-c01-d4-029",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team with strict recovery objectives needs explainability and bias analysis before promoting a model. Which SageMaker capability fits?",
+    "question": "A team with strict recovery objectives is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs explainability and bias analysis before promoting a model. Which SageMaker capability fits?",
     "options": {
       "A": "SageMaker Clarify",
-      "B": "Amazon Route 53",
-      "C": "AWS Batch only",
-      "D": "S3 Transfer Acceleration"
+      "B": "KMS encryption, least-privilege IAM, and CloudTrail logging",
+      "C": "Model Monitor data quality or drift monitoring",
+      "D": "A least-privilege IAM policy on the invoking role"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "SageMaker Clarify provides bias detection and explainability features for ML workflows.\nThe other choices provide DNS, batch compute, or transfer acceleration.",
-    "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "SageMaker Clarify provides bias detection and explainability features for ML workflows.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide SageMaker Clarify for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格恢復目標的團隊在推廣模型之前需要進行可解釋性和偏差分析。哪種 SageMaker 功能適合？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。具有嚴格恢復目標的團隊在推廣模型之前需要進行可解釋性和偏差分析。哪種 SageMaker 功能適合？",
         "options": {
           "A": "SageMaker Clarify",
-          "B": "Amazon Route 53",
-          "C": "限 AWS Batch",
-          "D": "S3 Transfer Acceleration"
+          "B": "KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄",
+          "C": "模型監控資料品質或漂移監控",
+          "D": "針對呼叫角色的最小權限 IAM 策略"
         },
-        "explanation": "SageMaker Clarify 為 ML 工作流程提供偏差偵測和可解釋性功能。\n其他選項提供 DNS、批次運算或傳輸加速。"
+        "explanation": "SageMaker Clarify 為 ML 工作流程提供偏差偵測和可解釋性功能。\n其他選項適用於此領域的不同需求，但不能像 SageMaker Clarify 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d4-030",
-    "type": "single",
-    "question": "A developer team preparing a release must ensure model artifacts are encrypted and access is auditable. Which combination is appropriate?",
-    "options": {
-      "A": "A DNS health check",
-      "B": "KMS encryption, least-privilege IAM, and CloudTrail logging",
-      "C": "Public artifact access and no logs",
-      "D": "A security group only"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Encryption, authorization, and audit logging provide layered protection for model artifacts.\nThe other choices do not provide ML artifact confidentiality and accountability.",
     "taskStatement": "4.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A developer team preparing a release is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team must ensure model artifacts are encrypted and access is auditable. Which combination is appropriate?",
+    "options": {
+      "A": "Model Monitor data quality or drift monitoring",
+      "B": "A least-privilege IAM policy on the invoking role",
+      "C": "Amazon CloudWatch",
+      "D": "KMS encryption, least-privilege IAM, and CloudTrail logging"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Encryption, authorization, and audit logging provide layered protection for model artifacts.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide KMS encryption, least-privilege IAM, and CloudTrail logging for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊必須確保模型工件經過加密並且存取是可審核的。哪種組合合適？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。準備發布的開發團隊必須確保模型工件經過加密並且存取是可審核的。哪種組合合適？",
         "options": {
-          "A": "DNS 健康檢查",
-          "B": "KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄",
-          "C": "公共工件存取且無日誌",
-          "D": "僅安全群組"
+          "A": "模型監控資料品質或漂移監控",
+          "B": "針對呼叫角色的最小權限 IAM 策略",
+          "C": "Amazon CloudWatch",
+          "D": "KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄"
         },
-        "explanation": "加密、授權和審核日誌記錄為模型工件提供分層保護。\n其他選擇不提供 ML 工件的機密性和責任性。"
+        "explanation": "加密、授權和審核日誌記錄為模型工件提供分層保護。\n其他選項適用於此領域的不同需求，但不能像 KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d4-031",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An enterprise with several AWS Regions needs to detect that live feature distributions differ from training data. Which control should be considered?",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs to detect that live feature distributions differ from training data. Which control should be considered?",
     "options": {
-      "A": "A Route 53 alias",
-      "B": "A KMS key alias",
+      "A": "Amazon CloudWatch",
+      "B": "SageMaker Clarify",
       "C": "Model Monitor data quality or drift monitoring",
-      "D": "An S3 lifecycle rule"
+      "D": "A least-privilege IAM policy on the invoking role"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Model Monitor can detect changes in data quality and distribution that affect model behavior.\nThe other choices do not monitor ML input drift.",
-    "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Model Monitor can detect changes in data quality and distribution that affect model behavior.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Model Monitor data quality or drift monitoring for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業需要偵測即時功能分佈與訓練資料的不同。應考慮哪種控制？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。擁有多個 AWS 區域的企業需要偵測即時功能分佈與訓練資料的不同。應考慮哪種控制？",
         "options": {
-          "A": "Route 53 別名",
-          "B": "KMS 金鑰別名",
+          "A": "Amazon CloudWatch",
+          "B": "SageMaker Clarify",
           "C": "模型監控資料品質或漂移監控",
-          "D": "S3 生命週期規則"
+          "D": "針對呼叫角色的最小權限 IAM 策略"
         },
-        "explanation": "模型監視器可以檢測影響模型行為的資料品質和分佈的變化。\n其他選擇不監控 ML 輸入漂移。"
+        "explanation": "模型監視器可以檢測影響模型行為的資料品質和分佈的變化。\n其他選項適用於此領域的不同需求，但不能像 模型監控資料品質或漂移監控 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d4-032",
-    "type": "single",
-    "question": "A service owner reviewing an incident needs to protect a SageMaker endpoint from unauthorized invocation. Which control is most important?",
-    "options": {
-      "A": "A public endpoint with no authentication",
-      "B": "A CloudFront cache policy",
-      "C": "An S3 storage class",
-      "D": "A least-privilege IAM policy on the invoking role"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "IAM authorization restricts who can invoke the endpoint and which model resources they can access.\nPublic access and storage or cache settings do not authorize model invocation.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A service owner reviewing an incident is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs to protect a SageMaker endpoint from unauthorized invocation. Which control is most important?",
+    "options": {
+      "A": "KMS encryption, least-privilege IAM, and CloudTrail logging",
+      "B": "A least-privilege IAM policy on the invoking role",
+      "C": "Amazon CloudWatch",
+      "D": "SageMaker Clarify"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "IAM authorization restricts who can invoke the endpoint and which model resources they can access.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A least-privilege IAM policy on the invoking role for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務所有者需要保護 SageMaker 端點免遭未經授權的呼叫。哪個控制最重要？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。審查事件的服務所有者需要保護 SageMaker 端點免遭未經授權的呼叫。哪個控制最重要？",
         "options": {
-          "A": "沒有身份驗證的公共端點",
-          "B": "CloudFront 快取策略",
-          "C": "S3 儲存類別",
-          "D": "針對呼叫角色的最小權限 IAM 策略"
+          "A": "KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄",
+          "B": "針對呼叫角色的最小權限 IAM 策略",
+          "C": "Amazon CloudWatch",
+          "D": "SageMaker Clarify"
         },
-        "explanation": "IAM 授權限制誰可以呼叫終端節點以及他們可以存取哪些模型資源。\n公共存取和儲存或快取設定不授權模型呼叫。"
+        "explanation": "IAM 授權限制誰可以呼叫終端節點以及他們可以存取哪些模型資源。\n其他選項適用於此領域的不同需求，但不能像 針對呼叫角色的最小權限 IAM 策略 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d4-033",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team optimizing an existing implementation must monitor endpoint latency, errors, and invocation count. Which service should collect the operational metrics?",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team must monitor endpoint latency, errors, and invocation count. Which service should collect the operational metrics?",
     "options": {
       "A": "Amazon CloudWatch",
-      "B": "Amazon Macie",
-      "C": "AWS Artifact",
-      "D": "Amazon EBS"
+      "B": "SageMaker Clarify",
+      "C": "KMS encryption, least-privilege IAM, and CloudTrail logging",
+      "D": "Model Monitor data quality or drift monitoring"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "CloudWatch provides endpoint metrics, alarms, dashboards, and logs for SageMaker operations.\nThe other choices discover data, provide compliance documents, or store blocks.",
-    "taskStatement": "4.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "CloudWatch provides endpoint metrics, alarms, dashboards, and logs for SageMaker operations.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon CloudWatch for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊必須監控端點延遲、錯誤和呼叫計數。哪個服務應該收集營運指標？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。優化現有實施的團隊必須監控端點延遲、錯誤和呼叫計數。哪個服務應該收集營運指標？",
         "options": {
           "A": "Amazon CloudWatch",
-          "B": "Amazon Macie",
-          "C": "AWS Artifact",
-          "D": "Amazon EBS"
+          "B": "SageMaker Clarify",
+          "C": "KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄",
+          "D": "模型監控資料品質或漂移監控"
         },
-        "explanation": "CloudWatch 為 SageMaker 操作提供端點指標、警報、儀表板和日誌。\n其他選擇發現資料、提供合規性文件或儲存區塊。"
+        "explanation": "CloudWatch 為 SageMaker 操作提供端點指標、警報、儀表板和日誌。\n其他選項適用於此領域的不同需求，但不能像 Amazon CloudWatch 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d4-034",
-    "type": "single",
-    "question": "A company introducing an automated workflow needs explainability and bias analysis before promoting a model. Which SageMaker capability fits?",
-    "options": {
-      "A": "S3 Transfer Acceleration",
-      "B": "SageMaker Clarify",
-      "C": "Amazon Route 53",
-      "D": "AWS Batch only"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "SageMaker Clarify provides bias detection and explainability features for ML workflows.\nThe other choices provide DNS, batch compute, or transfer acceleration.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A company introducing an automated workflow is reviewing several independent production requirements. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. Match each workload requirement to the most appropriate implementation.",
+    "options": {
+      "A": "A workload needs explainability and bias analysis before promoting a model",
+      "B": "A workload must ensure model artifacts are encrypted and access is auditable",
+      "C": "A workload needs to detect that live feature distributions differ from training data"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "Model Monitor data quality or drift monitoring",
+      "2": "SageMaker Clarify",
+      "3": "KMS encryption, least-privilege IAM, and CloudTrail logging"
+    },
+    "correctMatches": {
+      "A": "2",
+      "B": "3",
+      "C": "1"
+    },
+    "explanation": "A maps to SageMaker Clarify. SageMaker Clarify provides bias detection and explainability features for ML workflows. B maps to KMS encryption, least-privilege IAM, and CloudTrail logging. Encryption, authorization, and audit logging provide layered protection for model artifacts. C maps to Model Monitor data quality or drift monitoring. Model Monitor can detect changes in data quality and distribution that affect model behavior.\nEach target is intended for a different requirement, so all three mappings must be evaluated independently.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司在推廣模型之前需要進行可解釋性和偏差分析。哪種 SageMaker 功能適合？",
+        "question": "團隊正在審查多項彼此獨立的生產需求。團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。請將每項工作負載需求配對至最適合的實作。",
         "options": {
-          "A": "S3 Transfer Acceleration",
-          "B": "SageMaker Clarify",
-          "C": "Amazon Route 53",
-          "D": "限 AWS Batch"
+          "A": "工作負載需求：準備增加流量的新創公司在推廣模型之前需要進行可解釋性和偏差分析",
+          "B": "工作負載需求：支援關鍵工作負載的營運團隊必須確保模型工件經過加密並且存取是可審核的",
+          "C": "工作負載需求：生產團隊需要偵測即時特徵分佈與訓練資料的不同"
         },
-        "explanation": "SageMaker Clarify 為 ML 工作流程提供偏差偵測和可解釋性功能。\n其他選項提供 DNS、批次運算或傳輸加速。"
+        "targets": {
+          "1": "模型監控資料品質或漂移監控",
+          "2": "SageMaker Clarify",
+          "3": "KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄"
+        },
+        "explanation": "A 對應 SageMaker Clarify。SageMaker Clarify 為 ML 工作流程提供偏差偵測和可解釋性功能。 B 對應 KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄。加密、授權和審核日誌記錄為模型工件提供分層保護。 C 對應 模型監控資料品質或漂移監控。模型監視器可以檢測影響模型行為的資料品質和分佈的變化。\n每個目標均處理不同需求，因此必須分別評估三項配對。"
       }
     }
   },
   {
     "id": "mla-c01-d4-035",
-    "type": "single",
-    "question": "An AWS administrator working in a shared environment must ensure model artifacts are encrypted and access is auditable. Which combination is appropriate?",
-    "options": {
-      "A": "A security group only",
-      "B": "A DNS health check",
-      "C": "KMS encryption, least-privilege IAM, and CloudTrail logging",
-      "D": "Public artifact access and no logs"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "Encryption, authorization, and audit logging provide layered protection for model artifacts.\nThe other choices do not provide ML artifact confidentiality and accountability.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "An AWS administrator working in a shared environment is planning two independent production changes. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The first team must ensure model artifacts are encrypted and access is auditable. A second team needs to detect that live feature distributions differ from training data. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "SageMaker Clarify",
+      "B": "KMS encryption, least-privilege IAM, and CloudTrail logging",
+      "C": "Model Monitor data quality or drift monitoring",
+      "D": "A least-privilege IAM policy on the invoking role",
+      "E": "Amazon CloudWatch"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "KMS encryption, least-privilege IAM, and CloudTrail logging meets the first requirement: Encryption, authorization, and audit logging provide layered protection for model artifacts. Model Monitor data quality or drift monitoring meets the second requirement: Model Monitor can detect changes in data quality and distribution that affect model behavior.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "在共用環境中工作的 AWS 管理員必須確保模型工件已加密且存取可審核。哪種組合合適？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。第一項需求：支援關鍵工作負載的營運團隊必須確保模型工件經過加密並且存取是可審核的。第二項需求：生產團隊需要偵測即時特徵分佈與訓練資料的不同。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "僅安全群組",
-          "B": "DNS 健康檢查",
-          "C": "KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄",
-          "D": "公共工件存取且無日誌"
+          "A": "SageMaker Clarify",
+          "B": "KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄",
+          "C": "模型監控資料品質或漂移監控",
+          "D": "針對呼叫角色的最小權限 IAM 策略",
+          "E": "Amazon CloudWatch"
         },
-        "explanation": "加密、授權和審核日誌記錄為模型工件提供分層保護。\n其他選擇不提供 ML 工件的機密性和責任性。"
+        "explanation": "KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄 符合第一項需求：加密、授權和審核日誌記錄為模型工件提供分層保護。 模型監控資料品質或漂移監控 符合第二項需求：模型監視器可以檢測影響模型行為的資料品質和分佈的變化。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "mla-c01-d4-036",
-    "type": "single",
-    "question": "A customer-facing application team needs to detect that live feature distributions differ from training data. Which control should be considered?",
-    "options": {
-      "A": "An S3 lifecycle rule",
-      "B": "A Route 53 alias",
-      "C": "A KMS key alias",
-      "D": "Model Monitor data quality or drift monitoring"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Model Monitor can detect changes in data quality and distribution that affect model behavior.\nThe other choices do not monitor ML input drift.",
     "taskStatement": "4.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A customer-facing application team is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs to detect that live feature distributions differ from training data. Which control should be considered?",
+    "options": {
+      "A": "SageMaker Clarify",
+      "B": "Model Monitor data quality or drift monitoring",
+      "C": "A least-privilege IAM policy on the invoking role",
+      "D": "Amazon CloudWatch"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Model Monitor can detect changes in data quality and distribution that affect model behavior.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Model Monitor data quality or drift monitoring for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊需要偵測即時特徵分佈與訓練資料的不同。應考慮哪種控制？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。面向客戶的應用程式團隊需要偵測即時特徵分佈與訓練資料的不同。應考慮哪種控制？",
         "options": {
-          "A": "S3 生命週期規則",
-          "B": "Route 53 別名",
-          "C": "KMS 金鑰別名",
-          "D": "模型監控資料品質或漂移監控"
+          "A": "SageMaker Clarify",
+          "B": "模型監控資料品質或漂移監控",
+          "C": "針對呼叫角色的最小權限 IAM 策略",
+          "D": "Amazon CloudWatch"
         },
-        "explanation": "模型監視器可以檢測影響模型行為的資料品質和分佈的變化。\n其他選擇不監控 ML 輸入漂移。"
+        "explanation": "模型監視器可以檢測影響模型行為的資料品質和分佈的變化。\n其他選項適用於此領域的不同需求，但不能像 模型監控資料品質或漂移監控 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d4-037",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A platform team standardizing its AWS deployments needs to protect a SageMaker endpoint from unauthorized invocation. Which control is most important?",
+    "question": "A platform team standardizing its AWS deployments is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs to protect a SageMaker endpoint from unauthorized invocation. Which control is most important?",
     "options": {
       "A": "A least-privilege IAM policy on the invoking role",
-      "B": "A public endpoint with no authentication",
-      "C": "A CloudFront cache policy",
-      "D": "An S3 storage class"
+      "B": "Amazon CloudWatch",
+      "C": "SageMaker Clarify",
+      "D": "KMS encryption, least-privilege IAM, and CloudTrail logging"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "IAM authorization restricts who can invoke the endpoint and which model resources they can access.\nPublic access and storage or cache settings do not authorize model invocation.",
-    "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "IAM authorization restricts who can invoke the endpoint and which model resources they can access.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A least-privilege IAM policy on the invoking role for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊需要保護 SageMaker 端點免遭未經授權的呼叫。哪個控制最重要？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。標準化其 AWS 部署的平台團隊需要保護 SageMaker 端點免遭未經授權的呼叫。哪個控制最重要？",
         "options": {
           "A": "針對呼叫角色的最小權限 IAM 策略",
-          "B": "沒有身份驗證的公共端點",
-          "C": "CloudFront 快取策略",
-          "D": "S3 儲存類別"
+          "B": "Amazon CloudWatch",
+          "C": "SageMaker Clarify",
+          "D": "KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄"
         },
-        "explanation": "IAM 授權限制誰可以呼叫終端節點以及他們可以存取哪些模型資源。\n公共存取和儲存或快取設定不授權模型呼叫。"
+        "explanation": "IAM 授權限制誰可以呼叫終端節點以及他們可以存取哪些模型資源。\n其他選項適用於此領域的不同需求，但不能像 針對呼叫角色的最小權限 IAM 策略 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d4-038",
-    "type": "single",
-    "question": "A team preparing evidence for an audit must monitor endpoint latency, errors, and invocation count. Which service should collect the operational metrics?",
-    "options": {
-      "A": "Amazon EBS",
-      "B": "Amazon CloudWatch",
-      "C": "Amazon Macie",
-      "D": "AWS Artifact"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "CloudWatch provides endpoint metrics, alarms, dashboards, and logs for SageMaker operations.\nThe other choices discover data, provide compliance documents, or store blocks.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team preparing evidence for an audit is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team must monitor endpoint latency, errors, and invocation count. Which service should collect the operational metrics?",
+    "options": {
+      "A": "SageMaker Clarify",
+      "B": "KMS encryption, least-privilege IAM, and CloudTrail logging",
+      "C": "Model Monitor data quality or drift monitoring",
+      "D": "Amazon CloudWatch"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch provides endpoint metrics, alarms, dashboards, and logs for SageMaker operations.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon CloudWatch for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備審計證據的團隊必須監控端點延遲、錯誤和呼叫計數。哪個服務應該收集營運指標？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。準備審計證據的團隊必須監控端點延遲、錯誤和呼叫計數。哪個服務應該收集營運指標？",
         "options": {
-          "A": "Amazon EBS",
-          "B": "Amazon CloudWatch",
-          "C": "Amazon Macie",
-          "D": "AWS Artifact"
+          "A": "SageMaker Clarify",
+          "B": "KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄",
+          "C": "模型監控資料品質或漂移監控",
+          "D": "Amazon CloudWatch"
         },
-        "explanation": "CloudWatch 為 SageMaker 操作提供端點指標、警報、儀表板和日誌。\n其他選擇發現資料、提供合規性文件或儲存區塊。"
+        "explanation": "CloudWatch 為 SageMaker 操作提供端點指標、警報、儀表板和日誌。\n其他選項適用於此領域的不同需求，但不能像 Amazon CloudWatch 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d4-039",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A business replacing a manual process needs explainability and bias analysis before promoting a model. Which SageMaker capability fits?",
+    "question": "A business replacing a manual process is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs explainability and bias analysis before promoting a model. Which SageMaker capability fits?",
     "options": {
-      "A": "AWS Batch only",
-      "B": "S3 Transfer Acceleration",
+      "A": "Model Monitor data quality or drift monitoring",
+      "B": "A least-privilege IAM policy on the invoking role",
       "C": "SageMaker Clarify",
-      "D": "Amazon Route 53"
+      "D": "KMS encryption, least-privilege IAM, and CloudTrail logging"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "SageMaker Clarify provides bias detection and explainability features for ML workflows.\nThe other choices provide DNS, batch compute, or transfer acceleration.",
-    "taskStatement": "4.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "SageMaker Clarify provides bias detection and explainability features for ML workflows.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide SageMaker Clarify for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "取代手動流程的企業在推廣模型之前需要進行可解釋性和偏差分析。哪種 SageMaker 功能適合？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。取代手動流程的企業在推廣模型之前需要進行可解釋性和偏差分析。哪種 SageMaker 功能適合？",
         "options": {
-          "A": "限 AWS Batch",
-          "B": "S3 Transfer Acceleration",
+          "A": "模型監控資料品質或漂移監控",
+          "B": "針對呼叫角色的最小權限 IAM 策略",
           "C": "SageMaker Clarify",
-          "D": "Amazon Route 53"
+          "D": "KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄"
         },
-        "explanation": "SageMaker Clarify 為 ML 工作流程提供偏差偵測和可解釋性功能。\n其他選項提供 DNS、批次運算或傳輸加速。"
+        "explanation": "SageMaker Clarify 為 ML 工作流程提供偏差偵測和可解釋性功能。\n其他選項適用於此領域的不同需求，但不能像 SageMaker Clarify 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d4-040",
-    "type": "single",
-    "question": "A team validating a design against the exam guide must ensure model artifacts are encrypted and access is auditable. Which combination is appropriate?",
-    "options": {
-      "A": "Public artifact access and no logs",
-      "B": "A security group only",
-      "C": "A DNS health check",
-      "D": "KMS encryption, least-privilege IAM, and CloudTrail logging"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Encryption, authorization, and audit logging provide layered protection for model artifacts.\nThe other choices do not provide ML artifact confidentiality and accountability.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team validating a design against the exam guide is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team must ensure model artifacts are encrypted and access is auditable. Which combination is appropriate?",
+    "options": {
+      "A": "Amazon CloudWatch",
+      "B": "KMS encryption, least-privilege IAM, and CloudTrail logging",
+      "C": "Model Monitor data quality or drift monitoring",
+      "D": "A least-privilege IAM policy on the invoking role"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Encryption, authorization, and audit logging provide layered protection for model artifacts.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide KMS encryption, least-privilege IAM, and CloudTrail logging for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊必須確保模型工件經過加密並且存取是可審核的。哪種組合合適？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。根據考試指南驗證設計的團隊必須確保模型工件經過加密並且存取是可審核的。哪種組合合適？",
         "options": {
-          "A": "公共工件存取且無日誌",
-          "B": "僅安全群組",
-          "C": "DNS 健康檢查",
-          "D": "KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄"
+          "A": "Amazon CloudWatch",
+          "B": "KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄",
+          "C": "模型監控資料品質或漂移監控",
+          "D": "針對呼叫角色的最小權限 IAM 策略"
         },
-        "explanation": "加密、授權和審核日誌記錄為模型工件提供分層保護。\n其他選擇不提供 ML 工件的機密性和責任性。"
+        "explanation": "加密、授權和審核日誌記錄為模型工件提供分層保護。\n其他選項適用於此領域的不同需求，但不能像 KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d4-041",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A production team needs to detect that live feature distributions differ from training data. Which control should be considered?",
+    "question": "A production team is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team needs to detect that live feature distributions differ from training data. Which control should be considered?",
     "options": {
       "A": "Model Monitor data quality or drift monitoring",
-      "B": "An S3 lifecycle rule",
-      "C": "A Route 53 alias",
-      "D": "A KMS key alias"
+      "B": "A least-privilege IAM policy on the invoking role",
+      "C": "Amazon CloudWatch",
+      "D": "SageMaker Clarify"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Model Monitor can detect changes in data quality and distribution that affect model behavior.\nThe other choices do not monitor ML input drift.",
-    "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Model Monitor can detect changes in data quality and distribution that affect model behavior.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Model Monitor data quality or drift monitoring for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "生產團隊需要偵測即時特徵分佈與訓練資料的不同。應考慮哪種控制？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。生產團隊需要偵測即時特徵分佈與訓練資料的不同。應考慮哪種控制？",
         "options": {
           "A": "模型監控資料品質或漂移監控",
-          "B": "S3 生命週期規則",
-          "C": "Route 53 別名",
-          "D": "KMS 金鑰別名"
+          "B": "針對呼叫角色的最小權限 IAM 策略",
+          "C": "Amazon CloudWatch",
+          "D": "SageMaker Clarify"
         },
-        "explanation": "模型監視器可以檢測影響模型行為的資料品質和分佈的變化。\n其他選擇不監控 ML 輸入漂移。"
+        "explanation": "模型監視器可以檢測影響模型行為的資料品質和分佈的變化。\n其他選項適用於此領域的不同需求，但不能像 模型監控資料品質或漂移監控 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d4-042",
-    "type": "single",
-    "question": "A multi-account platform team needs to protect a SageMaker endpoint from unauthorized invocation. Which control is most important?",
-    "options": {
-      "A": "An S3 storage class",
-      "B": "A least-privilege IAM policy on the invoking role",
-      "C": "A public endpoint with no authentication",
-      "D": "A CloudFront cache policy"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "IAM authorization restricts who can invoke the endpoint and which model resources they can access.\nPublic access and storage or cache settings do not authorize model invocation.",
     "taskStatement": "4.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A multi-account platform team is planning two independent production changes. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The first team needs to protect a SageMaker endpoint from unauthorized invocation. A second team must monitor endpoint latency, errors, and invocation count. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Amazon CloudWatch",
+      "B": "SageMaker Clarify",
+      "C": "KMS encryption, least-privilege IAM, and CloudTrail logging",
+      "D": "Model Monitor data quality or drift monitoring",
+      "E": "A least-privilege IAM policy on the invoking role"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "A least-privilege IAM policy on the invoking role meets the first requirement: IAM authorization restricts who can invoke the endpoint and which model resources they can access. Amazon CloudWatch meets the second requirement: CloudWatch provides endpoint metrics, alarms, dashboards, and logs for SageMaker operations.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊需要保護 SageMaker 端點免遭未經授權的呼叫。哪個控制最重要？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。第一項需求：受監管的公司必須監控端點延遲、錯誤和呼叫計數。第二項需求：多帳戶平台團隊需要保護 SageMaker 端點免遭未經授權的呼叫。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "S3 儲存類別",
-          "B": "針對呼叫角色的最小權限 IAM 策略",
-          "C": "沒有身份驗證的公共端點",
-          "D": "CloudFront 快取策略"
+          "A": "Amazon CloudWatch",
+          "B": "SageMaker Clarify",
+          "C": "KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄",
+          "D": "模型監控資料品質或漂移監控",
+          "E": "針對呼叫角色的最小權限 IAM 策略"
         },
-        "explanation": "IAM 授權限制誰可以呼叫終端節點以及他們可以存取哪些模型資源。\n公共存取和儲存或快取設定不授權模型呼叫。"
+        "explanation": "Amazon CloudWatch 符合第一項需求：CloudWatch 為 SageMaker 操作提供端點指標、警報、儀表板和日誌。 針對呼叫角色的最小權限 IAM 策略 符合第二項需求：IAM 授權限制誰可以呼叫終端節點以及他們可以存取哪些模型資源。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "mla-c01-d4-043",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A regulated company must monitor endpoint latency, errors, and invocation count. Which service should collect the operational metrics?",
+    "question": "A regulated company is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team must monitor endpoint latency, errors, and invocation count. Which service should collect the operational metrics?",
     "options": {
-      "A": "AWS Artifact",
-      "B": "Amazon EBS",
+      "A": "KMS encryption, least-privilege IAM, and CloudTrail logging",
+      "B": "Model Monitor data quality or drift monitoring",
       "C": "Amazon CloudWatch",
-      "D": "Amazon Macie"
+      "D": "SageMaker Clarify"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "CloudWatch provides endpoint metrics, alarms, dashboards, and logs for SageMaker operations.\nThe other choices discover data, provide compliance documents, or store blocks.",
-    "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "CloudWatch provides endpoint metrics, alarms, dashboards, and logs for SageMaker operations.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon CloudWatch for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司必須監控端點延遲、錯誤和呼叫計數。哪個服務應該收集營運指標？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。受監管的公司必須監控端點延遲、錯誤和呼叫計數。哪個服務應該收集營運指標？",
         "options": {
-          "A": "AWS Artifact",
-          "B": "Amazon EBS",
+          "A": "KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄",
+          "B": "模型監控資料品質或漂移監控",
           "C": "Amazon CloudWatch",
-          "D": "Amazon Macie"
+          "D": "SageMaker Clarify"
         },
-        "explanation": "CloudWatch 為 SageMaker 操作提供端點指標、警報、儀表板和日誌。\n其他選擇發現資料、提供合規性文件或儲存區塊。"
+        "explanation": "CloudWatch 為 SageMaker 操作提供端點指標、警報、儀表板和日誌。\n其他選項適用於此領域的不同需求，但不能像 Amazon CloudWatch 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d4-044",
-    "type": "single",
-    "question": "A startup preparing for a traffic increase needs explainability and bias analysis before promoting a model. Which SageMaker capability fits?",
-    "options": {
-      "A": "Amazon Route 53",
-      "B": "AWS Batch only",
-      "C": "S3 Transfer Acceleration",
-      "D": "SageMaker Clarify"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "SageMaker Clarify provides bias detection and explainability features for ML workflows.\nThe other choices provide DNS, batch compute, or transfer acceleration.",
     "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team needs explainability and bias analysis before promoting a model. Which SageMaker capability fits?",
+    "options": {
+      "A": "A least-privilege IAM policy on the invoking role",
+      "B": "SageMaker Clarify",
+      "C": "KMS encryption, least-privilege IAM, and CloudTrail logging",
+      "D": "Model Monitor data quality or drift monitoring"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "SageMaker Clarify provides bias detection and explainability features for ML workflows.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide SageMaker Clarify for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司在推廣模型之前需要進行可解釋性和偏差分析。哪種 SageMaker 功能適合？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。準備增加流量的新創公司在推廣模型之前需要進行可解釋性和偏差分析。哪種 SageMaker 功能適合？",
         "options": {
-          "A": "Amazon Route 53",
-          "B": "限 AWS Batch",
-          "C": "S3 Transfer Acceleration",
-          "D": "SageMaker Clarify"
+          "A": "針對呼叫角色的最小權限 IAM 策略",
+          "B": "SageMaker Clarify",
+          "C": "KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄",
+          "D": "模型監控資料品質或漂移監控"
         },
-        "explanation": "SageMaker Clarify 為 ML 工作流程提供偏差偵測和可解釋性功能。\n其他選項提供 DNS、批次運算或傳輸加速。"
+        "explanation": "SageMaker Clarify 為 ML 工作流程提供偏差偵測和可解釋性功能。\n其他選項適用於此領域的不同需求，但不能像 SageMaker Clarify 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d4-045",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An operations team supporting a critical workload must ensure model artifacts are encrypted and access is auditable. Which combination is appropriate?",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team must ensure model artifacts are encrypted and access is auditable. Which combination is appropriate?",
     "options": {
       "A": "KMS encryption, least-privilege IAM, and CloudTrail logging",
-      "B": "Public artifact access and no logs",
-      "C": "A security group only",
-      "D": "A DNS health check"
+      "B": "Model Monitor data quality or drift monitoring",
+      "C": "A least-privilege IAM policy on the invoking role",
+      "D": "Amazon CloudWatch"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Encryption, authorization, and audit logging provide layered protection for model artifacts.\nThe other choices do not provide ML artifact confidentiality and accountability.",
-    "taskStatement": "4.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "Encryption, authorization, and audit logging provide layered protection for model artifacts.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide KMS encryption, least-privilege IAM, and CloudTrail logging for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊必須確保模型工件經過加密並且存取是可審核的。哪種組合合適？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。支援關鍵工作負載的營運團隊必須確保模型工件經過加密並且存取是可審核的。哪種組合合適？",
         "options": {
           "A": "KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄",
-          "B": "公共工件存取且無日誌",
-          "C": "僅安全群組",
-          "D": "DNS 健康檢查"
+          "B": "模型監控資料品質或漂移監控",
+          "C": "針對呼叫角色的最小權限 IAM 策略",
+          "D": "Amazon CloudWatch"
         },
-        "explanation": "加密、授權和審核日誌記錄為模型工件提供分層保護。\n其他選擇不提供 ML 工件的機密性和責任性。"
+        "explanation": "加密、授權和審核日誌記錄為模型工件提供分層保護。\n其他選項適用於此領域的不同需求，但不能像 KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d4-046",
-    "type": "single",
-    "question": "A data platform team needs to detect that live feature distributions differ from training data. Which control should be considered?",
-    "options": {
-      "A": "A KMS key alias",
-      "B": "Model Monitor data quality or drift monitoring",
-      "C": "An S3 lifecycle rule",
-      "D": "A Route 53 alias"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Model Monitor can detect changes in data quality and distribution that affect model behavior.\nThe other choices do not monitor ML input drift.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A data platform team is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs to detect that live feature distributions differ from training data. Which control should be considered?",
+    "options": {
+      "A": "A least-privilege IAM policy on the invoking role",
+      "B": "Amazon CloudWatch",
+      "C": "SageMaker Clarify",
+      "D": "Model Monitor data quality or drift monitoring"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Model Monitor can detect changes in data quality and distribution that affect model behavior.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Model Monitor data quality or drift monitoring for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要偵測即時特徵分佈與訓練資料的不同。應考慮哪種控制？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。資料平台團隊需要偵測即時特徵分佈與訓練資料的不同。應考慮哪種控制？",
         "options": {
-          "A": "KMS 金鑰別名",
-          "B": "模型監控資料品質或漂移監控",
-          "C": "S3 生命週期規則",
-          "D": "Route 53 別名"
+          "A": "針對呼叫角色的最小權限 IAM 策略",
+          "B": "Amazon CloudWatch",
+          "C": "SageMaker Clarify",
+          "D": "模型監控資料品質或漂移監控"
         },
-        "explanation": "模型監視器可以檢測影響模型行為的資料品質和分佈的變化。\n其他選擇不監控 ML 輸入漂移。"
+        "explanation": "模型監視器可以檢測影響模型行為的資料品質和分佈的變化。\n其他選項適用於此領域的不同需求，但不能像 模型監控資料品質或漂移監控 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d4-047",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A security-conscious engineering team needs to protect a SageMaker endpoint from unauthorized invocation. Which control is most important?",
+    "question": "A security-conscious engineering team is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs to protect a SageMaker endpoint from unauthorized invocation. Which control is most important?",
     "options": {
-      "A": "A CloudFront cache policy",
-      "B": "An S3 storage class",
+      "A": "SageMaker Clarify",
+      "B": "KMS encryption, least-privilege IAM, and CloudTrail logging",
       "C": "A least-privilege IAM policy on the invoking role",
-      "D": "A public endpoint with no authentication"
+      "D": "Amazon CloudWatch"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "IAM authorization restricts who can invoke the endpoint and which model resources they can access.\nPublic access and storage or cache settings do not authorize model invocation.",
-    "taskStatement": "4.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "IAM authorization restricts who can invoke the endpoint and which model resources they can access.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A least-privilege IAM policy on the invoking role for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊需要保護 SageMaker 端點免於未經授權的呼叫。哪個控制最重要？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。具有安全意識的工程團隊需要保護 SageMaker 端點免於未經授權的呼叫。哪個控制最重要？",
         "options": {
-          "A": "CloudFront 快取策略",
-          "B": "S3 儲存類別",
+          "A": "SageMaker Clarify",
+          "B": "KMS 加密、最低權限 IAM 和 CloudTrail 日誌記錄",
           "C": "針對呼叫角色的最小權限 IAM 策略",
-          "D": "沒有身份驗證的公共端點"
+          "D": "Amazon CloudWatch"
         },
-        "explanation": "IAM 授權限制誰可以呼叫終端節點以及他們可以存取哪些模型資源。\n公共存取和儲存或快取設定不授權模型呼叫。"
+        "explanation": "IAM 授權限制誰可以呼叫終端節點以及他們可以存取哪些模型資源。\n其他選項適用於此領域的不同需求，但不能像 針對呼叫角色的最小權限 IAM 策略 一樣直接滿足題目的指定條件。"
       }
     }
   }

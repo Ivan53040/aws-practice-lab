@@ -1,1065 +1,1085 @@
 [
   {
     "id": "dop-c02-d6-001",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A production team needs to enforce encryption on all new S3 objects. Which control should be configured?",
+    "question": "A production team is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team needs to enforce encryption on all new S3 objects. Which control should be configured?",
     "options": {
-      "A": "A Route 53 health check",
-      "B": "A CloudFront cache",
+      "A": "AWS Secrets Manager",
+      "B": "AWS CloudTrail",
       "C": "An S3 bucket policy that denies unencrypted PutObject requests",
-      "D": "A public bucket ACL"
+      "D": "IAM Access Analyzer"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "A bucket policy can explicitly deny uploads that do not include the required encryption headers.\nThe other choices do not enforce object encryption.",
-    "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "A bucket policy can explicitly deny uploads that do not include the required encryption headers.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide An S3 bucket policy that denies unencrypted PutObject requests for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "製作團隊需要對所有新 S3 物件強制加密。應該配置哪個控制項？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。製作團隊需要對所有新 S3 物件強制加密。應該配置哪個控制項？",
         "options": {
-          "A": "Route 53 運轉狀況檢查",
-          "B": "CloudFront 快取",
+          "A": "AWS Secrets Manager",
+          "B": "AWS CloudTrail",
           "C": "拒絕未加密的 PutObject 請求的 S3 儲存桶策略",
-          "D": "公共儲存桶ACL"
+          "D": "IAM Access Analyzer"
         },
-        "explanation": "儲存桶策略可以明確拒絕不包含所需加密標頭的上傳。\n其他選擇不強制物件加密。"
+        "explanation": "儲存桶策略可以明確拒絕不包含所需加密標頭的上傳。\n其他選項適用於此領域的不同需求，但不能像 拒絕未加密的 PutObject 請求的 S3 儲存桶策略 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d6-002",
-    "type": "single",
-    "question": "A multi-account platform team must identify external access granted by resource policies. Which tool is appropriate?",
-    "options": {
-      "A": "Amazon CloudFront",
-      "B": "AWS Batch",
-      "C": "Amazon EFS",
-      "D": "IAM Access Analyzer"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "IAM Access Analyzer identifies unintended external access in resource policies.\nThe other choices provide content delivery, compute, or file storage.",
     "taskStatement": "6.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A multi-account platform team is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team must identify external access granted by resource policies. Which tool is appropriate?",
+    "options": {
+      "A": "Amazon Inspector",
+      "B": "IAM Access Analyzer",
+      "C": "AWS Secrets Manager",
+      "D": "AWS CloudTrail"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "IAM Access Analyzer identifies unintended external access in resource policies.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide IAM Access Analyzer for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊必須識別資源策略授予的外部存取權限。哪種工具合適？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。多帳戶平台團隊必須識別資源策略授予的外部存取權限。哪種工具合適？",
         "options": {
-          "A": "Amazon CloudFront",
-          "B": "AWS Batch",
-          "C": "Amazon EFS",
-          "D": "IAM Access Analyzer"
+          "A": "Amazon Inspector",
+          "B": "IAM Access Analyzer",
+          "C": "AWS Secrets Manager",
+          "D": "AWS CloudTrail"
         },
-        "explanation": "IAM Access Analyzer可識別資源政策中的意外外部存取。\n其他選擇提供內容交付、計算或文件儲存。"
+        "explanation": "IAM Access Analyzer可識別資源政策中的意外外部存取。\n其他選項適用於此領域的不同需求，但不能像 IAM Access Analyzer 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d6-003",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A regulated company needs to rotate database credentials without rebuilding applications. Which service fits?",
+    "question": "A regulated company is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team needs to rotate database credentials without rebuilding applications. Which service fits?",
     "options": {
       "A": "AWS Secrets Manager",
-      "B": "A security group",
-      "C": "An EBS snapshot",
-      "D": "A Route 53 alias"
+      "B": "AWS CloudTrail",
+      "C": "Amazon Inspector",
+      "D": "An S3 bucket policy that denies unencrypted PutObject requests"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Secrets Manager supports runtime retrieval and rotation of database credentials.\nThe other choices do not rotate application secrets.",
-    "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Secrets Manager supports runtime retrieval and rotation of database credentials.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Secrets Manager for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司需要輪換資料庫憑證而不重建應用程式。適合哪種服務？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。受監管的公司需要輪換資料庫憑證而不重建應用程式。適合哪種服務？",
         "options": {
           "A": "AWS Secrets Manager",
-          "B": "一個安全群組",
-          "C": "EBS Snapshot",
-          "D": "Route 53 別名"
+          "B": "AWS CloudTrail",
+          "C": "Amazon Inspector",
+          "D": "拒絕未加密的 PutObject 請求的 S3 儲存桶策略"
         },
-        "explanation": "Secrets Manager 支援資料庫憑證的執行時間檢索和輪調。\n其他選擇不會輪換應用程式機密。"
+        "explanation": "Secrets Manager 支援資料庫憑證的執行時間檢索和輪調。\n其他選項適用於此領域的不同需求，但不能像 AWS Secrets Manager 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d6-004",
-    "type": "single",
-    "question": "A startup preparing for a traffic increase must audit every API action in a production account. Which service should be enabled?",
-    "options": {
-      "A": "Amazon SES",
-      "B": "AWS CloudTrail",
-      "C": "Amazon ElastiCache",
-      "D": "AWS WAF only"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "CloudTrail records API events for security investigations and compliance.\nThe other choices provide caching, web filtering, or email.",
     "taskStatement": "6.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase is redesigning one integrated end-to-end architecture. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The design must keep recurring cost proportional to use, enforce least privilege, and remain available during a component or Availability Zone failure. The workload must audit every API action in a production account, and the same architecture needs to generate release notes and test suggestions using an AWS coding assistant. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Use AWS CloudTrail but replace the connected control with AWS CodePipeline",
+      "B": "Use AWS CodeBuild for the primary requirement and integrate it with Amazon Q Developer",
+      "C": "Combine AWS CodeBuild with A canary or blue-green deployment as a single platform design",
+      "D": "Use AWS CloudTrail for the primary requirement and integrate it with Amazon Q Developer for the connected control"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "AWS CloudTrail satisfies the first part of the architecture: CloudTrail records API events for security investigations and compliance. Amazon Q Developer satisfies the connected requirement: Amazon Q Developer can assist with code, reviews, tests, and development workflows.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司必須審核生產帳戶中的每個 API 操作。應該啟用哪個服務？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：引入自動化工作流程的公司必須審核生產帳戶中的每個 API 操作。 第二項需求：支援關鍵工作負載的營運團隊需要使用 AWS 編碼助理產生發行說明並測試建議。 此設計必須讓持續成本與實際用量相符、落實最低權限，並在元件或可用區域發生故障時維持可用。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "Amazon SES",
-          "B": "AWS CloudTrail",
-          "C": "Amazon ElastiCache",
-          "D": "僅限 AWS WAF"
+          "A": "使用AWS CloudTrail，但以AWS CodePipeline取代相連控制",
+          "B": "以AWS CodeBuild處理主要需求，並整合Amazon Q Developer",
+          "C": "把AWS CodeBuild與金絲雀或藍綠部署結合為單一平台設計",
+          "D": "以AWS CloudTrail處理主要需求，並整合Amazon Q Developer作為相連控制"
         },
-        "explanation": "CloudTrail 記錄 API 事件以進行安全調查和合規性。\n其他選項提供快取、網路過濾或電子郵件。"
+        "explanation": "AWS CloudTrail 負責架構的第一項需求，Amazon Q Developer 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "dop-c02-d6-005",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An operations team supporting a critical workload needs a managed service to detect vulnerabilities in container images before deployment. Which service should be evaluated?",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team needs a managed service to detect vulnerabilities in container images before deployment. Which service should be evaluated?",
     "options": {
-      "A": "AWS Glue",
-      "B": "Amazon Route 53",
+      "A": "IAM Access Analyzer",
+      "B": "AWS Secrets Manager",
       "C": "Amazon Inspector",
-      "D": "Amazon Cognito"
+      "D": "An S3 bucket policy that denies unencrypted PutObject requests"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Inspector assesses supported container images and workloads for vulnerabilities.\nThe other choices provide identity, ETL, or DNS.",
-    "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Inspector assesses supported container images and workloads for vulnerabilities.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Inspector for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊需要託管服務來在部署之前檢測容器映像中的漏洞。應該評估哪些服務？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。支援關鍵工作負載的營運團隊需要託管服務來在部署之前檢測容器映像中的漏洞。應該評估哪些服務？",
         "options": {
-          "A": "AWS Glue",
-          "B": "Amazon Route 53",
+          "A": "IAM Access Analyzer",
+          "B": "AWS Secrets Manager",
           "C": "Amazon Inspector",
-          "D": "Amazon Cognito"
+          "D": "拒絕未加密的 PutObject 請求的 S3 儲存桶策略"
         },
-        "explanation": "Inspector 評估支援的容器映像和工作負載是否有漏洞。\n其他選項提供身分、ETL 或 DNS。"
+        "explanation": "Inspector 評估支援的容器映像和工作負載是否有漏洞。\n其他選項適用於此領域的不同需求，但不能像 Amazon Inspector 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d6-006",
-    "type": "single",
-    "question": "A data platform team needs to enforce encryption on all new S3 objects. Which control should be configured?",
-    "options": {
-      "A": "A public bucket ACL",
-      "B": "A Route 53 health check",
-      "C": "A CloudFront cache",
-      "D": "An S3 bucket policy that denies unencrypted PutObject requests"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "A bucket policy can explicitly deny uploads that do not include the required encryption headers.\nThe other choices do not enforce object encryption.",
     "taskStatement": "6.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A data platform team is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team needs to enforce encryption on all new S3 objects. Which control should be configured?",
+    "options": {
+      "A": "AWS CloudTrail",
+      "B": "An S3 bucket policy that denies unencrypted PutObject requests",
+      "C": "IAM Access Analyzer",
+      "D": "AWS Secrets Manager"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "A bucket policy can explicitly deny uploads that do not include the required encryption headers.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide An S3 bucket policy that denies unencrypted PutObject requests for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要對所有新的 S3 物件強制加密。應該配置哪個控制項？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。資料平台團隊需要對所有新的 S3 物件強制加密。應該配置哪個控制項？",
         "options": {
-          "A": "公共儲存桶ACL",
-          "B": "Route 53 運轉狀況檢查",
-          "C": "CloudFront 快取",
-          "D": "拒絕未加密的 PutObject 請求的 S3 儲存桶策略"
+          "A": "AWS CloudTrail",
+          "B": "拒絕未加密的 PutObject 請求的 S3 儲存桶策略",
+          "C": "IAM Access Analyzer",
+          "D": "AWS Secrets Manager"
         },
-        "explanation": "儲存桶策略可以明確拒絕不包含所需加密標頭的上傳。\n其他選擇不強制物件加密。"
+        "explanation": "儲存桶策略可以明確拒絕不包含所需加密標頭的上傳。\n其他選項適用於此領域的不同需求，但不能像 拒絕未加密的 PutObject 請求的 S3 儲存桶策略 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d6-007",
-    "type": "single",
-    "question": "A security-conscious engineering team must identify external access granted by resource policies. Which tool is appropriate?",
-    "options": {
-      "A": "IAM Access Analyzer",
-      "B": "Amazon CloudFront",
-      "C": "AWS Batch",
-      "D": "Amazon EFS"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "IAM Access Analyzer identifies unintended external access in resource policies.\nThe other choices provide content delivery, compute, or file storage.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A security-conscious engineering team is planning two independent production changes. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The first team must identify external access granted by resource policies. A second team needs to rotate database credentials without rebuilding applications. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Amazon Inspector",
+      "B": "An S3 bucket policy that denies unencrypted PutObject requests",
+      "C": "IAM Access Analyzer",
+      "D": "AWS Secrets Manager",
+      "E": "AWS CloudTrail"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "IAM Access Analyzer meets the first requirement: IAM Access Analyzer identifies unintended external access in resource policies. AWS Secrets Manager meets the second requirement: Secrets Manager supports runtime retrieval and rotation of database credentials.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊必須識別資源策略授予的外部存取權限。哪種工具合適？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。第一項需求：多帳戶平台團隊必須識別資源策略授予的外部存取權限。第二項需求：受監管的公司需要輪換資料庫憑證而不重建應用程式。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "IAM Access Analyzer",
-          "B": "Amazon CloudFront",
-          "C": "AWS Batch",
-          "D": "Amazon EFS"
+          "A": "Amazon Inspector",
+          "B": "拒絕未加密的 PutObject 請求的 S3 儲存桶策略",
+          "C": "IAM Access Analyzer",
+          "D": "AWS Secrets Manager",
+          "E": "AWS CloudTrail"
         },
-        "explanation": "IAM Access Analyzer可識別資源政策中的意外外部存取。\n其他選擇提供內容交付、計算或文件儲存。"
+        "explanation": "IAM Access Analyzer 符合第一項需求：IAM Access Analyzer可識別資源政策中的意外外部存取。 AWS Secrets Manager 符合第二項需求：Secrets Manager 支援資料庫憑證的執行時間檢索和輪調。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "dop-c02-d6-008",
-    "type": "single",
-    "question": "A company migrating an existing workload needs to rotate database credentials without rebuilding applications. Which service fits?",
-    "options": {
-      "A": "A Route 53 alias",
-      "B": "AWS Secrets Manager",
-      "C": "A security group",
-      "D": "An EBS snapshot"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Secrets Manager supports runtime retrieval and rotation of database credentials.\nThe other choices do not rotate application secrets.",
     "taskStatement": "6.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A company migrating an existing workload is redesigning one integrated end-to-end architecture. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The design must avoid unnecessary standby cost without weakening security controls or the availability objective. The workload needs to rotate database credentials without rebuilding applications, and the same architecture needs to apply the same guardrail policy to every account. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Use AWS Secrets Manager but replace the connected control with AWS CodePipeline",
+      "B": "Use AWS CodeBuild for the primary requirement and integrate it with An AWS Organizations service control policy",
+      "C": "Combine AWS CodeBuild with A canary or blue-green deployment as a single platform design",
+      "D": "Use AWS Secrets Manager for the primary requirement and integrate it with An AWS Organizations service control policy for the connected control"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "AWS Secrets Manager satisfies the first part of the architecture: Secrets Manager supports runtime retrieval and rotation of database credentials. An AWS Organizations service control policy satisfies the connected requirement: SCPs apply permission guardrails across member accounts.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司需要輪換資料庫憑證而不重建應用程式。適合哪種服務？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：準備審計證據的團隊需要輪換資料庫憑證而不重建應用程式。 第二項需求：支援關鍵工作負載的營運團隊需要對每個帳戶應用相同的護欄策略。 此設計必須避免不必要的備用成本，同時不可削弱安全控制或可用性目標。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "Route 53 別名",
-          "B": "AWS Secrets Manager",
-          "C": "一個安全群組",
-          "D": "EBS Snapshot"
+          "A": "使用AWS Secrets Manager，但以AWS CodePipeline取代相連控制",
+          "B": "以AWS CodeBuild處理主要需求，並整合AWS Organizations 服務控制原則",
+          "C": "把AWS CodeBuild與金絲雀或藍綠部署結合為單一平台設計",
+          "D": "以AWS Secrets Manager處理主要需求，並整合AWS Organizations 服務控制原則作為相連控制"
         },
-        "explanation": "Secrets Manager 支援資料庫憑證的執行時間檢索和輪調。\n其他選擇不會輪換應用程式機密。"
+        "explanation": "AWS Secrets Manager 負責架構的第一項需求，AWS Organizations 服務控制原則 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "dop-c02-d6-009",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team with strict recovery objectives must audit every API action in a production account. Which service should be enabled?",
+    "question": "A team with strict recovery objectives is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team must audit every API action in a production account. Which service should be enabled?",
     "options": {
-      "A": "AWS WAF only",
-      "B": "Amazon SES",
+      "A": "An S3 bucket policy that denies unencrypted PutObject requests",
+      "B": "IAM Access Analyzer",
       "C": "AWS CloudTrail",
-      "D": "Amazon ElastiCache"
+      "D": "Amazon Inspector"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "CloudTrail records API events for security investigations and compliance.\nThe other choices provide caching, web filtering, or email.",
-    "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "CloudTrail records API events for security investigations and compliance.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS CloudTrail for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格恢復目標的團隊必須審核生產帳戶中的每個 API 操作。應該啟用哪個服務？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。具有嚴格恢復目標的團隊必須審核生產帳戶中的每個 API 操作。應該啟用哪個服務？",
         "options": {
-          "A": "僅限 AWS WAF",
-          "B": "Amazon SES",
+          "A": "拒絕未加密的 PutObject 請求的 S3 儲存桶策略",
+          "B": "IAM Access Analyzer",
           "C": "AWS CloudTrail",
-          "D": "Amazon ElastiCache"
+          "D": "Amazon Inspector"
         },
-        "explanation": "CloudTrail 記錄 API 事件以進行安全調查和合規性。\n其他選項提供快取、網路過濾或電子郵件。"
+        "explanation": "CloudTrail 記錄 API 事件以進行安全調查和合規性。\n其他選項適用於此領域的不同需求，但不能像 AWS CloudTrail 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d6-010",
-    "type": "single",
-    "question": "A developer team preparing a release needs a managed service to detect vulnerabilities in container images before deployment. Which service should be evaluated?",
-    "options": {
-      "A": "Amazon Cognito",
-      "B": "AWS Glue",
-      "C": "Amazon Route 53",
-      "D": "Amazon Inspector"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Inspector assesses supported container images and workloads for vulnerabilities.\nThe other choices provide identity, ETL, or DNS.",
     "taskStatement": "6.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A developer team preparing a release is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team needs a managed service to detect vulnerabilities in container images before deployment. Which service should be evaluated?",
+    "options": {
+      "A": "AWS Secrets Manager",
+      "B": "Amazon Inspector",
+      "C": "An S3 bucket policy that denies unencrypted PutObject requests",
+      "D": "IAM Access Analyzer"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Inspector assesses supported container images and workloads for vulnerabilities.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Inspector for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊需要託管服務來在部署之前檢測容器映像中的漏洞。應該評估哪些服務？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。準備發布的開發團隊需要託管服務來在部署之前檢測容器映像中的漏洞。應該評估哪些服務？",
         "options": {
-          "A": "Amazon Cognito",
-          "B": "AWS Glue",
-          "C": "Amazon Route 53",
-          "D": "Amazon Inspector"
+          "A": "AWS Secrets Manager",
+          "B": "Amazon Inspector",
+          "C": "拒絕未加密的 PutObject 請求的 S3 儲存桶策略",
+          "D": "IAM Access Analyzer"
         },
-        "explanation": "Inspector 評估支援的容器映像和工作負載是否有漏洞。\n其他選項提供身分、ETL 或 DNS。"
+        "explanation": "Inspector 評估支援的容器映像和工作負載是否有漏洞。\n其他選項適用於此領域的不同需求，但不能像 Amazon Inspector 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d6-011",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An enterprise with several AWS Regions needs to enforce encryption on all new S3 objects. Which control should be configured?",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team needs to enforce encryption on all new S3 objects. Which control should be configured?",
     "options": {
       "A": "An S3 bucket policy that denies unencrypted PutObject requests",
-      "B": "A public bucket ACL",
-      "C": "A Route 53 health check",
-      "D": "A CloudFront cache"
+      "B": "IAM Access Analyzer",
+      "C": "AWS Secrets Manager",
+      "D": "AWS CloudTrail"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "A bucket policy can explicitly deny uploads that do not include the required encryption headers.\nThe other choices do not enforce object encryption.",
-    "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "A bucket policy can explicitly deny uploads that do not include the required encryption headers.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide An S3 bucket policy that denies unencrypted PutObject requests for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業需要對所有新 S3 物件強制加密。應該配置哪個控制項？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。擁有多個 AWS 區域的企業需要對所有新 S3 物件強制加密。應該配置哪個控制項？",
         "options": {
           "A": "拒絕未加密的 PutObject 請求的 S3 儲存桶策略",
-          "B": "公共儲存桶ACL",
-          "C": "Route 53 運轉狀況檢查",
-          "D": "CloudFront 快取"
+          "B": "IAM Access Analyzer",
+          "C": "AWS Secrets Manager",
+          "D": "AWS CloudTrail"
         },
-        "explanation": "儲存桶策略可以明確拒絕不包含所需加密標頭的上傳。\n其他選擇不強制物件加密。"
+        "explanation": "儲存桶策略可以明確拒絕不包含所需加密標頭的上傳。\n其他選項適用於此領域的不同需求，但不能像 拒絕未加密的 PutObject 請求的 S3 儲存桶策略 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d6-012",
-    "type": "single",
-    "question": "A service owner reviewing an incident must identify external access granted by resource policies. Which tool is appropriate?",
-    "options": {
-      "A": "Amazon EFS",
-      "B": "IAM Access Analyzer",
-      "C": "Amazon CloudFront",
-      "D": "AWS Batch"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "IAM Access Analyzer identifies unintended external access in resource policies.\nThe other choices provide content delivery, compute, or file storage.",
     "taskStatement": "6.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A service owner reviewing an incident is redesigning one integrated end-to-end architecture. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The organization will accept additional managed-service cost only when it measurably improves security and availability with less operational effort. The workload must identify external access granted by resource policies, and the same architecture wants an event to trigger an automated recovery workflow. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Use IAM Access Analyzer but replace the connected control with AWS CodePipeline",
+      "B": "Use AWS CodeBuild for the primary requirement and integrate it with EventBridge invoking Step Functions",
+      "C": "Combine AWS CodeBuild with A canary or blue-green deployment as a single platform design",
+      "D": "Use IAM Access Analyzer for the primary requirement and integrate it with EventBridge invoking Step Functions for the connected control"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "IAM Access Analyzer satisfies the first part of the architecture: IAM Access Analyzer identifies unintended external access in resource policies. EventBridge invoking Step Functions satisfies the connected requirement: EventBridge and Step Functions can route events into durable, retryable recovery workflows.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務擁有者必須識別資源策略授予的外部存取權限。哪種工具合適？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：標準化其 AWS 部署的平台團隊必須識別資源策略授予的外部存取權限。 第二項需求：準備發布的開發團隊希望有一個事件可以觸發自動恢復工作流程。 只有在託管服務能以較低營運負擔明確改善安全性與可用性時，組織才會接受額外成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "Amazon EFS",
-          "B": "IAM Access Analyzer",
-          "C": "Amazon CloudFront",
-          "D": "AWS Batch"
+          "A": "使用IAM Access Analyzer，但以AWS CodePipeline取代相連控制",
+          "B": "以AWS CodeBuild處理主要需求，並整合EventBridge 呼叫 Step Functions",
+          "C": "把AWS CodeBuild與金絲雀或藍綠部署結合為單一平台設計",
+          "D": "以IAM Access Analyzer處理主要需求，並整合EventBridge 呼叫 Step Functions作為相連控制"
         },
-        "explanation": "IAM Access Analyzer可識別資源政策中的意外外部存取。\n其他選擇提供內容交付、計算或文件儲存。"
+        "explanation": "IAM Access Analyzer 負責架構的第一項需求，EventBridge 呼叫 Step Functions 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "dop-c02-d6-013",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team optimizing an existing implementation needs to rotate database credentials without rebuilding applications. Which service fits?",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team needs to rotate database credentials without rebuilding applications. Which service fits?",
     "options": {
-      "A": "An EBS snapshot",
-      "B": "A Route 53 alias",
+      "A": "Amazon Inspector",
+      "B": "An S3 bucket policy that denies unencrypted PutObject requests",
       "C": "AWS Secrets Manager",
-      "D": "A security group"
+      "D": "AWS CloudTrail"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Secrets Manager supports runtime retrieval and rotation of database credentials.\nThe other choices do not rotate application secrets.",
-    "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Secrets Manager supports runtime retrieval and rotation of database credentials.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Secrets Manager for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊需要輪換資料庫憑證而不重建應用程式。適合哪種服務？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。優化現有實施的團隊需要輪換資料庫憑證而不重建應用程式。適合哪種服務？",
         "options": {
-          "A": "EBS Snapshot",
-          "B": "Route 53 別名",
+          "A": "Amazon Inspector",
+          "B": "拒絕未加密的 PutObject 請求的 S3 儲存桶策略",
           "C": "AWS Secrets Manager",
-          "D": "一個安全群組"
+          "D": "AWS CloudTrail"
         },
-        "explanation": "Secrets Manager 支援資料庫憑證的執行時間檢索和輪調。\n其他選擇不會輪換應用程式機密。"
+        "explanation": "Secrets Manager 支援資料庫憑證的執行時間檢索和輪調。\n其他選項適用於此領域的不同需求，但不能像 AWS Secrets Manager 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d6-014",
-    "type": "single",
-    "question": "A company introducing an automated workflow must audit every API action in a production account. Which service should be enabled?",
-    "options": {
-      "A": "Amazon ElastiCache",
-      "B": "AWS WAF only",
-      "C": "Amazon SES",
-      "D": "AWS CloudTrail"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "CloudTrail records API events for security investigations and compliance.\nThe other choices provide caching, web filtering, or email.",
     "taskStatement": "6.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A company introducing an automated workflow is planning two independent production changes. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The first team must audit every API action in a production account. A second team needs a managed service to detect vulnerabilities in container images before deployment. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "AWS CloudTrail",
+      "B": "Amazon Inspector",
+      "C": "An S3 bucket policy that denies unencrypted PutObject requests",
+      "D": "IAM Access Analyzer",
+      "E": "AWS Secrets Manager"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS CloudTrail meets the first requirement: CloudTrail records API events for security investigations and compliance. Amazon Inspector meets the second requirement: Inspector assesses supported container images and workloads for vulnerabilities.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司必須審核生產帳戶中的每個 API 操作。應該啟用哪個服務？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。第一項需求：準備增加流量的新創公司必須審核生產帳戶中的每個 API 操作。第二項需求：支援關鍵工作負載的營運團隊需要託管服務來在部署之前檢測容器映像中的漏洞。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "Amazon ElastiCache",
-          "B": "僅限 AWS WAF",
-          "C": "Amazon SES",
-          "D": "AWS CloudTrail"
+          "A": "AWS CloudTrail",
+          "B": "Amazon Inspector",
+          "C": "拒絕未加密的 PutObject 請求的 S3 儲存桶策略",
+          "D": "IAM Access Analyzer",
+          "E": "AWS Secrets Manager"
         },
-        "explanation": "CloudTrail 記錄 API 事件以進行安全調查和合規性。\n其他選項提供快取、網路過濾或電子郵件。"
+        "explanation": "AWS CloudTrail 符合第一項需求：CloudTrail 記錄 API 事件以進行安全調查和合規性。 Amazon Inspector 符合第二項需求：Inspector 評估支援的容器映像和工作負載是否有漏洞。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "dop-c02-d6-015",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An AWS administrator working in a shared environment needs a managed service to detect vulnerabilities in container images before deployment. Which service should be evaluated?",
+    "question": "An AWS administrator working in a shared environment is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team needs a managed service to detect vulnerabilities in container images before deployment. Which service should be evaluated?",
     "options": {
       "A": "Amazon Inspector",
-      "B": "Amazon Cognito",
-      "C": "AWS Glue",
-      "D": "Amazon Route 53"
+      "B": "An S3 bucket policy that denies unencrypted PutObject requests",
+      "C": "IAM Access Analyzer",
+      "D": "AWS Secrets Manager"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Inspector assesses supported container images and workloads for vulnerabilities.\nThe other choices provide identity, ETL, or DNS.",
-    "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Inspector assesses supported container images and workloads for vulnerabilities.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Inspector for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "在共用環境中工作的 AWS 管理員需要託管服務來在部署之前偵測容器映像中的漏洞。應該評估哪些服務？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。在共用環境中工作的 AWS 管理員需要託管服務來在部署之前偵測容器映像中的漏洞。應該評估哪些服務？",
         "options": {
           "A": "Amazon Inspector",
-          "B": "Amazon Cognito",
-          "C": "AWS Glue",
-          "D": "Amazon Route 53"
+          "B": "拒絕未加密的 PutObject 請求的 S3 儲存桶策略",
+          "C": "IAM Access Analyzer",
+          "D": "AWS Secrets Manager"
         },
-        "explanation": "Inspector 評估支援的容器映像和工作負載是否有漏洞。\n其他選項提供身分、ETL 或 DNS。"
+        "explanation": "Inspector 評估支援的容器映像和工作負載是否有漏洞。\n其他選項適用於此領域的不同需求，但不能像 Amazon Inspector 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d6-016",
-    "type": "single",
-    "question": "A customer-facing application team needs to enforce encryption on all new S3 objects. Which control should be configured?",
-    "options": {
-      "A": "A CloudFront cache",
-      "B": "An S3 bucket policy that denies unencrypted PutObject requests",
-      "C": "A public bucket ACL",
-      "D": "A Route 53 health check"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "A bucket policy can explicitly deny uploads that do not include the required encryption headers.\nThe other choices do not enforce object encryption.",
     "taskStatement": "6.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A customer-facing application team is redesigning one integrated end-to-end architecture. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The architecture must limit blast radius, preserve availability during change, and control cost through automation instead of permanent overprovisioning. The workload needs to enforce encryption on all new S3 objects, and the same architecture needs a dashboard that combines metrics from several accounts and Regions. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Use An S3 bucket policy that denies unencrypted PutObject requests but replace the connected control with AWS CodePipeline",
+      "B": "Use AWS CodeBuild for the primary requirement and integrate it with CloudWatch cross-account observability dashboards",
+      "C": "Combine AWS CodeBuild with A canary or blue-green deployment as a single platform design",
+      "D": "Use An S3 bucket policy that denies unencrypted PutObject requests for the primary requirement and integrate it with CloudWatch cross-account observability dashboards for the connected control"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "An S3 bucket policy that denies unencrypted PutObject requests satisfies the first part of the architecture: A bucket policy can explicitly deny uploads that do not include the required encryption headers. CloudWatch cross-account observability dashboards satisfies the connected requirement: CloudWatch supports cross-account and cross-Region monitoring views for centralized operations.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊需要對所有新 S3 物件強制加密。應該配置哪個控制項？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：面向客戶的應用程式團隊需要對所有新 S3 物件強制加密。 第二項需求：準備發布的開發團隊需要一個儀表板，其中結合了多個帳戶和區域的指標。 此架構必須限制影響範圍、在變更期間維持可用性，並透過自動化控制成本，而不是長期過度佈建。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "CloudFront 快取",
-          "B": "拒絕未加密的 PutObject 請求的 S3 儲存桶策略",
-          "C": "公共儲存桶ACL",
-          "D": "Route 53 運轉狀況檢查"
+          "A": "使用拒絕未加密的 PutObject 請求的 S3 儲存桶策略，但以AWS CodePipeline取代相連控制",
+          "B": "以AWS CodeBuild處理主要需求，並整合CloudWatch 跨帳戶可觀測性儀表板",
+          "C": "把AWS CodeBuild與金絲雀或藍綠部署結合為單一平台設計",
+          "D": "以拒絕未加密的 PutObject 請求的 S3 儲存桶策略處理主要需求，並整合CloudWatch 跨帳戶可觀測性儀表板作為相連控制"
         },
-        "explanation": "儲存桶策略可以明確拒絕不包含所需加密標頭的上傳。\n其他選擇不強制物件加密。"
+        "explanation": "拒絕未加密的 PutObject 請求的 S3 儲存桶策略 負責架構的第一項需求，CloudWatch 跨帳戶可觀測性儀表板 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "dop-c02-d6-017",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A platform team standardizing its AWS deployments must identify external access granted by resource policies. Which tool is appropriate?",
+    "question": "A platform team standardizing its AWS deployments is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team must identify external access granted by resource policies. Which tool is appropriate?",
     "options": {
-      "A": "AWS Batch",
-      "B": "Amazon EFS",
+      "A": "AWS CloudTrail",
+      "B": "Amazon Inspector",
       "C": "IAM Access Analyzer",
-      "D": "Amazon CloudFront"
+      "D": "AWS Secrets Manager"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "IAM Access Analyzer identifies unintended external access in resource policies.\nThe other choices provide content delivery, compute, or file storage.",
-    "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "IAM Access Analyzer identifies unintended external access in resource policies.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide IAM Access Analyzer for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊必須識別資源策略授予的外部存取權限。哪種工具合適？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。標準化其 AWS 部署的平台團隊必須識別資源策略授予的外部存取權限。哪種工具合適？",
         "options": {
-          "A": "AWS Batch",
-          "B": "Amazon EFS",
+          "A": "AWS CloudTrail",
+          "B": "Amazon Inspector",
           "C": "IAM Access Analyzer",
-          "D": "Amazon CloudFront"
+          "D": "AWS Secrets Manager"
         },
-        "explanation": "IAM Access Analyzer可識別資源政策中的意外外部存取。\n其他選擇提供內容交付、計算或文件儲存。"
+        "explanation": "IAM Access Analyzer可識別資源政策中的意外外部存取。\n其他選項適用於此領域的不同需求，但不能像 IAM Access Analyzer 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d6-018",
-    "type": "single",
-    "question": "A team preparing evidence for an audit needs to rotate database credentials without rebuilding applications. Which service fits?",
-    "options": {
-      "A": "A security group",
-      "B": "An EBS snapshot",
-      "C": "A Route 53 alias",
-      "D": "AWS Secrets Manager"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Secrets Manager supports runtime retrieval and rotation of database credentials.\nThe other choices do not rotate application secrets.",
     "taskStatement": "6.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team preparing evidence for an audit is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team needs to rotate database credentials without rebuilding applications. Which service fits?",
+    "options": {
+      "A": "An S3 bucket policy that denies unencrypted PutObject requests",
+      "B": "AWS Secrets Manager",
+      "C": "AWS CloudTrail",
+      "D": "Amazon Inspector"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Secrets Manager supports runtime retrieval and rotation of database credentials.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Secrets Manager for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備審計證據的團隊需要輪換資料庫憑證而不重建應用程式。適合哪種服務？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。準備審計證據的團隊需要輪換資料庫憑證而不重建應用程式。適合哪種服務？",
         "options": {
-          "A": "一個安全群組",
-          "B": "EBS Snapshot",
-          "C": "Route 53 別名",
-          "D": "AWS Secrets Manager"
+          "A": "拒絕未加密的 PutObject 請求的 S3 儲存桶策略",
+          "B": "AWS Secrets Manager",
+          "C": "AWS CloudTrail",
+          "D": "Amazon Inspector"
         },
-        "explanation": "Secrets Manager 支援資料庫憑證的執行時間檢索和輪調。\n其他選擇不會輪換應用程式機密。"
+        "explanation": "Secrets Manager 支援資料庫憑證的執行時間檢索和輪調。\n其他選項適用於此領域的不同需求，但不能像 AWS Secrets Manager 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d6-019",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A business replacing a manual process must audit every API action in a production account. Which service should be enabled?",
+    "question": "A business replacing a manual process is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team must audit every API action in a production account. Which service should be enabled?",
     "options": {
       "A": "AWS CloudTrail",
-      "B": "Amazon ElastiCache",
-      "C": "AWS WAF only",
-      "D": "Amazon SES"
+      "B": "Amazon Inspector",
+      "C": "An S3 bucket policy that denies unencrypted PutObject requests",
+      "D": "IAM Access Analyzer"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "CloudTrail records API events for security investigations and compliance.\nThe other choices provide caching, web filtering, or email.",
-    "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "CloudTrail records API events for security investigations and compliance.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS CloudTrail for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "替換手動流程的企業必須審核生產帳戶中的每個 API 操作。應該啟用哪個服務？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。替換手動流程的企業必須審核生產帳戶中的每個 API 操作。應該啟用哪個服務？",
         "options": {
           "A": "AWS CloudTrail",
-          "B": "Amazon ElastiCache",
-          "C": "僅限 AWS WAF",
-          "D": "Amazon SES"
+          "B": "Amazon Inspector",
+          "C": "拒絕未加密的 PutObject 請求的 S3 儲存桶策略",
+          "D": "IAM Access Analyzer"
         },
-        "explanation": "CloudTrail 記錄 API 事件以進行安全調查和合規性。\n其他選項提供快取、網路過濾或電子郵件。"
+        "explanation": "CloudTrail 記錄 API 事件以進行安全調查和合規性。\n其他選項適用於此領域的不同需求，但不能像 AWS CloudTrail 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d6-020",
-    "type": "single",
-    "question": "A team validating a design against the exam guide needs a managed service to detect vulnerabilities in container images before deployment. Which service should be evaluated?",
-    "options": {
-      "A": "Amazon Route 53",
-      "B": "Amazon Inspector",
-      "C": "Amazon Cognito",
-      "D": "AWS Glue"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Inspector assesses supported container images and workloads for vulnerabilities.\nThe other choices provide identity, ETL, or DNS.",
     "taskStatement": "6.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team validating a design against the exam guide is redesigning one integrated end-to-end architecture. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The selected controls must provide auditable security, predictable availability, and the lowest operational cost that still satisfies both requirements. The workload needs a managed service to detect vulnerabilities in container images before deployment, and the same architecture must document a repeatable response to a common alarm. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Use Amazon Inspector but replace the connected control with AWS CodePipeline",
+      "B": "Use AWS CodeBuild for the primary requirement and integrate it with Systems Manager Automation runbook",
+      "C": "Combine AWS CodeBuild with A canary or blue-green deployment as a single platform design",
+      "D": "Use Amazon Inspector for the primary requirement and integrate it with Systems Manager Automation runbook for the connected control"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Amazon Inspector satisfies the first part of the architecture: Inspector assesses supported container images and workloads for vulnerabilities. Systems Manager Automation runbook satisfies the connected requirement: Automation runbooks encode repeatable operational response steps.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊需要託管服務來在部署之前檢測容器映像中的漏洞。應該評估哪些服務？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：製作團隊需要對所有新 S3 物件強制加密。 第二項需求：準備發布的開發團隊必須記錄對常見警報的可重複回應。 所選控制必須提供可稽核的安全性、可預測的可用性，以及在滿足兩項要求前提下最低的營運成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "Amazon Route 53",
-          "B": "Amazon Inspector",
-          "C": "Amazon Cognito",
-          "D": "AWS Glue"
+          "A": "使用Amazon Inspector，但以AWS CodePipeline取代相連控制",
+          "B": "以AWS CodeBuild處理主要需求，並整合Systems Manager Automation操作手冊",
+          "C": "把AWS CodeBuild與金絲雀或藍綠部署結合為單一平台設計",
+          "D": "以Amazon Inspector處理主要需求，並整合Systems Manager Automation操作手冊作為相連控制"
         },
-        "explanation": "Inspector 評估支援的容器映像和工作負載是否有漏洞。\n其他選項提供身分、ETL 或 DNS。"
+        "explanation": "Amazon Inspector 負責架構的第一項需求，Systems Manager Automation操作手冊 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "dop-c02-d6-021",
-    "type": "single",
-    "question": "A production team needs to enforce encryption on all new S3 objects. Which control should be configured?",
-    "options": {
-      "A": "A Route 53 health check",
-      "B": "A CloudFront cache",
-      "C": "An S3 bucket policy that denies unencrypted PutObject requests",
-      "D": "A public bucket ACL"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "A bucket policy can explicitly deny uploads that do not include the required encryption headers.\nThe other choices do not enforce object encryption.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A production team is planning two independent production changes. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The first team needs to enforce encryption on all new S3 objects. A second team must identify external access granted by resource policies. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "AWS Secrets Manager",
+      "B": "AWS CloudTrail",
+      "C": "Amazon Inspector",
+      "D": "An S3 bucket policy that denies unencrypted PutObject requests",
+      "E": "IAM Access Analyzer"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "An S3 bucket policy that denies unencrypted PutObject requests meets the first requirement: A bucket policy can explicitly deny uploads that do not include the required encryption headers. IAM Access Analyzer meets the second requirement: IAM Access Analyzer identifies unintended external access in resource policies.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "製作團隊需要對所有新 S3 物件強制加密。應該配置哪個控制項？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。第一項需求：製作團隊需要對所有新 S3 物件強制加密。第二項需求：多帳戶平台團隊必須識別資源策略授予的外部存取權限。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "Route 53 運轉狀況檢查",
-          "B": "CloudFront 快取",
-          "C": "拒絕未加密的 PutObject 請求的 S3 儲存桶策略",
-          "D": "公共儲存桶ACL"
+          "A": "AWS Secrets Manager",
+          "B": "AWS CloudTrail",
+          "C": "Amazon Inspector",
+          "D": "拒絕未加密的 PutObject 請求的 S3 儲存桶策略",
+          "E": "IAM Access Analyzer"
         },
-        "explanation": "儲存桶策略可以明確拒絕不包含所需加密標頭的上傳。\n其他選擇不強制物件加密。"
+        "explanation": "拒絕未加密的 PutObject 請求的 S3 儲存桶策略 符合第一項需求：儲存桶策略可以明確拒絕不包含所需加密標頭的上傳。 IAM Access Analyzer 符合第二項需求：IAM Access Analyzer可識別資源政策中的意外外部存取。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "dop-c02-d6-022",
-    "type": "single",
-    "question": "A multi-account platform team must identify external access granted by resource policies. Which tool is appropriate?",
-    "options": {
-      "A": "Amazon CloudFront",
-      "B": "AWS Batch",
-      "C": "Amazon EFS",
-      "D": "IAM Access Analyzer"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "IAM Access Analyzer identifies unintended external access in resource policies.\nThe other choices provide content delivery, compute, or file storage.",
     "taskStatement": "6.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A multi-account platform team is reviewing a production decision. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The team must identify external access granted by resource policies. Which tool is appropriate?",
+    "options": {
+      "A": "Amazon Inspector",
+      "B": "IAM Access Analyzer",
+      "C": "AWS Secrets Manager",
+      "D": "AWS CloudTrail"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "IAM Access Analyzer identifies unintended external access in resource policies.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide IAM Access Analyzer for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊必須識別資源策略授予的外部存取權限。哪種工具合適？",
+        "question": "組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。多帳戶平台團隊必須識別資源策略授予的外部存取權限。哪種工具合適？",
         "options": {
-          "A": "Amazon CloudFront",
-          "B": "AWS Batch",
-          "C": "Amazon EFS",
-          "D": "IAM Access Analyzer"
+          "A": "Amazon Inspector",
+          "B": "IAM Access Analyzer",
+          "C": "AWS Secrets Manager",
+          "D": "AWS CloudTrail"
         },
-        "explanation": "IAM Access Analyzer可識別資源政策中的意外外部存取。\n其他選擇提供內容交付、計算或文件儲存。"
+        "explanation": "IAM Access Analyzer可識別資源政策中的意外外部存取。\n其他選項適用於此領域的不同需求，但不能像 IAM Access Analyzer 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d6-023",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A regulated company needs to rotate database credentials without rebuilding applications. Which service fits?",
+    "question": "A regulated company is reviewing a production decision. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The team needs to rotate database credentials without rebuilding applications. Which service fits?",
     "options": {
       "A": "AWS Secrets Manager",
-      "B": "A security group",
-      "C": "An EBS snapshot",
-      "D": "A Route 53 alias"
+      "B": "AWS CloudTrail",
+      "C": "Amazon Inspector",
+      "D": "An S3 bucket policy that denies unencrypted PutObject requests"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Secrets Manager supports runtime retrieval and rotation of database credentials.\nThe other choices do not rotate application secrets.",
-    "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Secrets Manager supports runtime retrieval and rotation of database credentials.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Secrets Manager for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司需要輪換資料庫憑證而不重建應用程式。適合哪種服務？",
+        "question": "組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。受監管的公司需要輪換資料庫憑證而不重建應用程式。適合哪種服務？",
         "options": {
           "A": "AWS Secrets Manager",
-          "B": "一個安全群組",
-          "C": "EBS Snapshot",
-          "D": "Route 53 別名"
+          "B": "AWS CloudTrail",
+          "C": "Amazon Inspector",
+          "D": "拒絕未加密的 PutObject 請求的 S3 儲存桶策略"
         },
-        "explanation": "Secrets Manager 支援資料庫憑證的執行時間檢索和輪調。\n其他選擇不會輪換應用程式機密。"
+        "explanation": "Secrets Manager 支援資料庫憑證的執行時間檢索和輪調。\n其他選項適用於此領域的不同需求，但不能像 AWS Secrets Manager 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d6-024",
-    "type": "single",
-    "question": "A startup preparing for a traffic increase must audit every API action in a production account. Which service should be enabled?",
-    "options": {
-      "A": "Amazon SES",
-      "B": "AWS CloudTrail",
-      "C": "Amazon ElastiCache",
-      "D": "AWS WAF only"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "CloudTrail records API events for security investigations and compliance.\nThe other choices provide caching, web filtering, or email.",
     "taskStatement": "6.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase is redesigning one integrated end-to-end architecture. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The design must keep recurring cost proportional to use, enforce least privilege, and remain available during a component or Availability Zone failure. The workload must audit every API action in a production account, and the same architecture needs a managed service to detect vulnerabilities in container images before deployment. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Use AWS CloudTrail but replace the connected control with AWS CodePipeline",
+      "B": "Use AWS CodeBuild for the primary requirement and integrate it with Amazon Inspector",
+      "C": "Combine AWS CodeBuild with A canary or blue-green deployment as a single platform design",
+      "D": "Use AWS CloudTrail for the primary requirement and integrate it with Amazon Inspector for the connected control"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "AWS CloudTrail satisfies the first part of the architecture: CloudTrail records API events for security investigations and compliance. Amazon Inspector satisfies the connected requirement: Inspector assesses supported container images and workloads for vulnerabilities.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司必須審核生產帳戶中的每個 API 操作。應該啟用哪個服務？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：引入自動化工作流程的公司必須審核生產帳戶中的每個 API 操作。 第二項需求：製作團隊需要對所有新 S3 物件強制加密。 此設計必須讓持續成本與實際用量相符、落實最低權限，並在元件或可用區域發生故障時維持可用。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "Amazon SES",
-          "B": "AWS CloudTrail",
-          "C": "Amazon ElastiCache",
-          "D": "僅限 AWS WAF"
+          "A": "使用AWS CloudTrail，但以AWS CodePipeline取代相連控制",
+          "B": "以AWS CodeBuild處理主要需求，並整合Amazon Inspector",
+          "C": "把AWS CodeBuild與金絲雀或藍綠部署結合為單一平台設計",
+          "D": "以AWS CloudTrail處理主要需求，並整合Amazon Inspector作為相連控制"
         },
-        "explanation": "CloudTrail 記錄 API 事件以進行安全調查和合規性。\n其他選項提供快取、網路過濾或電子郵件。"
+        "explanation": "AWS CloudTrail 負責架構的第一項需求，Amazon Inspector 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "dop-c02-d6-025",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An operations team supporting a critical workload needs a managed service to detect vulnerabilities in container images before deployment. Which service should be evaluated?",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The team needs a managed service to detect vulnerabilities in container images before deployment. Which service should be evaluated?",
     "options": {
-      "A": "AWS Glue",
-      "B": "Amazon Route 53",
+      "A": "IAM Access Analyzer",
+      "B": "AWS Secrets Manager",
       "C": "Amazon Inspector",
-      "D": "Amazon Cognito"
+      "D": "An S3 bucket policy that denies unencrypted PutObject requests"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Inspector assesses supported container images and workloads for vulnerabilities.\nThe other choices provide identity, ETL, or DNS.",
-    "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Inspector assesses supported container images and workloads for vulnerabilities.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Inspector for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊需要託管服務來在部署之前檢測容器映像中的漏洞。應該評估哪些服務？",
+        "question": "組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。支援關鍵工作負載的營運團隊需要託管服務來在部署之前檢測容器映像中的漏洞。應該評估哪些服務？",
         "options": {
-          "A": "AWS Glue",
-          "B": "Amazon Route 53",
+          "A": "IAM Access Analyzer",
+          "B": "AWS Secrets Manager",
           "C": "Amazon Inspector",
-          "D": "Amazon Cognito"
+          "D": "拒絕未加密的 PutObject 請求的 S3 儲存桶策略"
         },
-        "explanation": "Inspector 評估支援的容器映像和工作負載是否有漏洞。\n其他選項提供身分、ETL 或 DNS。"
+        "explanation": "Inspector 評估支援的容器映像和工作負載是否有漏洞。\n其他選項適用於此領域的不同需求，但不能像 Amazon Inspector 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d6-026",
-    "type": "single",
-    "question": "A data platform team needs to enforce encryption on all new S3 objects. Which control should be configured?",
-    "options": {
-      "A": "A public bucket ACL",
-      "B": "A Route 53 health check",
-      "C": "A CloudFront cache",
-      "D": "An S3 bucket policy that denies unencrypted PutObject requests"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "A bucket policy can explicitly deny uploads that do not include the required encryption headers.\nThe other choices do not enforce object encryption.",
     "taskStatement": "6.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A data platform team is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team needs to enforce encryption on all new S3 objects. Which control should be configured?",
+    "options": {
+      "A": "AWS CloudTrail",
+      "B": "An S3 bucket policy that denies unencrypted PutObject requests",
+      "C": "IAM Access Analyzer",
+      "D": "AWS Secrets Manager"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "A bucket policy can explicitly deny uploads that do not include the required encryption headers.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide An S3 bucket policy that denies unencrypted PutObject requests for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要對所有新的 S3 物件強制加密。應該配置哪個控制項？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。資料平台團隊需要對所有新的 S3 物件強制加密。應該配置哪個控制項？",
         "options": {
-          "A": "公共儲存桶ACL",
-          "B": "Route 53 運轉狀況檢查",
-          "C": "CloudFront 快取",
-          "D": "拒絕未加密的 PutObject 請求的 S3 儲存桶策略"
+          "A": "AWS CloudTrail",
+          "B": "拒絕未加密的 PutObject 請求的 S3 儲存桶策略",
+          "C": "IAM Access Analyzer",
+          "D": "AWS Secrets Manager"
         },
-        "explanation": "儲存桶策略可以明確拒絕不包含所需加密標頭的上傳。\n其他選擇不強制物件加密。"
+        "explanation": "儲存桶策略可以明確拒絕不包含所需加密標頭的上傳。\n其他選項適用於此領域的不同需求，但不能像 拒絕未加密的 PutObject 請求的 S3 儲存桶策略 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d6-027",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A security-conscious engineering team must identify external access granted by resource policies. Which tool is appropriate?",
+    "question": "A security-conscious engineering team is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team must identify external access granted by resource policies. Which tool is appropriate?",
     "options": {
       "A": "IAM Access Analyzer",
-      "B": "Amazon CloudFront",
-      "C": "AWS Batch",
-      "D": "Amazon EFS"
+      "B": "AWS Secrets Manager",
+      "C": "AWS CloudTrail",
+      "D": "Amazon Inspector"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "IAM Access Analyzer identifies unintended external access in resource policies.\nThe other choices provide content delivery, compute, or file storage.",
-    "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "IAM Access Analyzer identifies unintended external access in resource policies.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide IAM Access Analyzer for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊必須識別資源策略授予的外部存取權限。哪種工具合適？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。具有安全意識的工程團隊必須識別資源策略授予的外部存取權限。哪種工具合適？",
         "options": {
           "A": "IAM Access Analyzer",
-          "B": "Amazon CloudFront",
-          "C": "AWS Batch",
-          "D": "Amazon EFS"
+          "B": "AWS Secrets Manager",
+          "C": "AWS CloudTrail",
+          "D": "Amazon Inspector"
         },
-        "explanation": "IAM Access Analyzer可識別資源政策中的意外外部存取。\n其他選擇提供內容交付、計算或文件儲存。"
+        "explanation": "IAM Access Analyzer可識別資源政策中的意外外部存取。\n其他選項適用於此領域的不同需求，但不能像 IAM Access Analyzer 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d6-028",
-    "type": "single",
-    "question": "A company migrating an existing workload needs to rotate database credentials without rebuilding applications. Which service fits?",
-    "options": {
-      "A": "A Route 53 alias",
-      "B": "AWS Secrets Manager",
-      "C": "A security group",
-      "D": "An EBS snapshot"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Secrets Manager supports runtime retrieval and rotation of database credentials.\nThe other choices do not rotate application secrets.",
     "taskStatement": "6.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A company migrating an existing workload is redesigning one integrated end-to-end architecture. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The design must avoid unnecessary standby cost without weakening security controls or the availability objective. The workload needs to rotate database credentials without rebuilding applications, and the same architecture needs to generate release notes and test suggestions using an AWS coding assistant. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Use AWS Secrets Manager but replace the connected control with AWS CodePipeline",
+      "B": "Use AWS CodeBuild for the primary requirement and integrate it with Amazon Q Developer",
+      "C": "Combine AWS CodeBuild with A canary or blue-green deployment as a single platform design",
+      "D": "Use AWS Secrets Manager for the primary requirement and integrate it with Amazon Q Developer for the connected control"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "AWS Secrets Manager satisfies the first part of the architecture: Secrets Manager supports runtime retrieval and rotation of database credentials. Amazon Q Developer satisfies the connected requirement: Amazon Q Developer can assist with code, reviews, tests, and development workflows.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司需要輪換資料庫憑證而不重建應用程式。適合哪種服務？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：準備審計證據的團隊需要輪換資料庫憑證而不重建應用程式。 第二項需求：支援關鍵工作負載的營運團隊需要使用 AWS 編碼助理產生發行說明並測試建議。 此設計必須避免不必要的備用成本，同時不可削弱安全控制或可用性目標。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "Route 53 別名",
-          "B": "AWS Secrets Manager",
-          "C": "一個安全群組",
-          "D": "EBS Snapshot"
+          "A": "使用AWS Secrets Manager，但以AWS CodePipeline取代相連控制",
+          "B": "以AWS CodeBuild處理主要需求，並整合Amazon Q Developer",
+          "C": "把AWS CodeBuild與金絲雀或藍綠部署結合為單一平台設計",
+          "D": "以AWS Secrets Manager處理主要需求，並整合Amazon Q Developer作為相連控制"
         },
-        "explanation": "Secrets Manager 支援資料庫憑證的執行時間檢索和輪調。\n其他選擇不會輪換應用程式機密。"
+        "explanation": "AWS Secrets Manager 負責架構的第一項需求，Amazon Q Developer 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "dop-c02-d6-029",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team with strict recovery objectives must audit every API action in a production account. Which service should be enabled?",
+    "question": "A team with strict recovery objectives is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team must audit every API action in a production account. Which service should be enabled?",
     "options": {
-      "A": "AWS WAF only",
-      "B": "Amazon SES",
+      "A": "An S3 bucket policy that denies unencrypted PutObject requests",
+      "B": "IAM Access Analyzer",
       "C": "AWS CloudTrail",
-      "D": "Amazon ElastiCache"
+      "D": "Amazon Inspector"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "CloudTrail records API events for security investigations and compliance.\nThe other choices provide caching, web filtering, or email.",
-    "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "CloudTrail records API events for security investigations and compliance.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS CloudTrail for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格恢復目標的團隊必須審核生產帳戶中的每個 API 操作。應該啟用哪個服務？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。具有嚴格恢復目標的團隊必須審核生產帳戶中的每個 API 操作。應該啟用哪個服務？",
         "options": {
-          "A": "僅限 AWS WAF",
-          "B": "Amazon SES",
+          "A": "拒絕未加密的 PutObject 請求的 S3 儲存桶策略",
+          "B": "IAM Access Analyzer",
           "C": "AWS CloudTrail",
-          "D": "Amazon ElastiCache"
+          "D": "Amazon Inspector"
         },
-        "explanation": "CloudTrail 記錄 API 事件以進行安全調查和合規性。\n其他選項提供快取、網路過濾或電子郵件。"
+        "explanation": "CloudTrail 記錄 API 事件以進行安全調查和合規性。\n其他選項適用於此領域的不同需求，但不能像 AWS CloudTrail 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d6-030",
-    "type": "single",
-    "question": "A developer team preparing a release needs a managed service to detect vulnerabilities in container images before deployment. Which service should be evaluated?",
-    "options": {
-      "A": "Amazon Cognito",
-      "B": "AWS Glue",
-      "C": "Amazon Route 53",
-      "D": "Amazon Inspector"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Inspector assesses supported container images and workloads for vulnerabilities.\nThe other choices provide identity, ETL, or DNS.",
     "taskStatement": "6.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A developer team preparing a release is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team needs a managed service to detect vulnerabilities in container images before deployment. Which service should be evaluated?",
+    "options": {
+      "A": "AWS Secrets Manager",
+      "B": "Amazon Inspector",
+      "C": "An S3 bucket policy that denies unencrypted PutObject requests",
+      "D": "IAM Access Analyzer"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Inspector assesses supported container images and workloads for vulnerabilities.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Inspector for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊需要託管服務來在部署之前檢測容器映像中的漏洞。應該評估哪些服務？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。準備發布的開發團隊需要託管服務來在部署之前檢測容器映像中的漏洞。應該評估哪些服務？",
         "options": {
-          "A": "Amazon Cognito",
-          "B": "AWS Glue",
-          "C": "Amazon Route 53",
-          "D": "Amazon Inspector"
+          "A": "AWS Secrets Manager",
+          "B": "Amazon Inspector",
+          "C": "拒絕未加密的 PutObject 請求的 S3 儲存桶策略",
+          "D": "IAM Access Analyzer"
         },
-        "explanation": "Inspector 評估支援的容器映像和工作負載是否有漏洞。\n其他選項提供身分、ETL 或 DNS。"
+        "explanation": "Inspector 評估支援的容器映像和工作負載是否有漏洞。\n其他選項適用於此領域的不同需求，但不能像 Amazon Inspector 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d6-031",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An enterprise with several AWS Regions needs to enforce encryption on all new S3 objects. Which control should be configured?",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team needs to enforce encryption on all new S3 objects. Which control should be configured?",
     "options": {
       "A": "An S3 bucket policy that denies unencrypted PutObject requests",
-      "B": "A public bucket ACL",
-      "C": "A Route 53 health check",
-      "D": "A CloudFront cache"
+      "B": "IAM Access Analyzer",
+      "C": "AWS Secrets Manager",
+      "D": "AWS CloudTrail"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "A bucket policy can explicitly deny uploads that do not include the required encryption headers.\nThe other choices do not enforce object encryption.",
-    "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "A bucket policy can explicitly deny uploads that do not include the required encryption headers.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide An S3 bucket policy that denies unencrypted PutObject requests for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業需要對所有新 S3 物件強制加密。應該配置哪個控制項？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。擁有多個 AWS 區域的企業需要對所有新 S3 物件強制加密。應該配置哪個控制項？",
         "options": {
           "A": "拒絕未加密的 PutObject 請求的 S3 儲存桶策略",
-          "B": "公共儲存桶ACL",
-          "C": "Route 53 運轉狀況檢查",
-          "D": "CloudFront 快取"
+          "B": "IAM Access Analyzer",
+          "C": "AWS Secrets Manager",
+          "D": "AWS CloudTrail"
         },
-        "explanation": "儲存桶策略可以明確拒絕不包含所需加密標頭的上傳。\n其他選擇不強制物件加密。"
+        "explanation": "儲存桶策略可以明確拒絕不包含所需加密標頭的上傳。\n其他選項適用於此領域的不同需求，但不能像 拒絕未加密的 PutObject 請求的 S3 儲存桶策略 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d6-032",
-    "type": "single",
-    "question": "A service owner reviewing an incident must identify external access granted by resource policies. Which tool is appropriate?",
-    "options": {
-      "A": "Amazon EFS",
-      "B": "IAM Access Analyzer",
-      "C": "Amazon CloudFront",
-      "D": "AWS Batch"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "IAM Access Analyzer identifies unintended external access in resource policies.\nThe other choices provide content delivery, compute, or file storage.",
     "taskStatement": "6.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A service owner reviewing an incident is redesigning one integrated end-to-end architecture. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The organization will accept additional managed-service cost only when it measurably improves security and availability with less operational effort. The workload must identify external access granted by resource policies, and the same architecture needs to apply the same guardrail policy to every account. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Use IAM Access Analyzer but replace the connected control with AWS CodePipeline",
+      "B": "Use AWS CodeBuild for the primary requirement and integrate it with An AWS Organizations service control policy",
+      "C": "Combine AWS CodeBuild with A canary or blue-green deployment as a single platform design",
+      "D": "Use IAM Access Analyzer for the primary requirement and integrate it with An AWS Organizations service control policy for the connected control"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "IAM Access Analyzer satisfies the first part of the architecture: IAM Access Analyzer identifies unintended external access in resource policies. An AWS Organizations service control policy satisfies the connected requirement: SCPs apply permission guardrails across member accounts.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務擁有者必須識別資源策略授予的外部存取權限。哪種工具合適？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：標準化其 AWS 部署的平台團隊必須識別資源策略授予的外部存取權限。 第二項需求：支援關鍵工作負載的營運團隊需要對每個帳戶應用相同的護欄策略。 只有在託管服務能以較低營運負擔明確改善安全性與可用性時，組織才會接受額外成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "Amazon EFS",
-          "B": "IAM Access Analyzer",
-          "C": "Amazon CloudFront",
-          "D": "AWS Batch"
+          "A": "使用IAM Access Analyzer，但以AWS CodePipeline取代相連控制",
+          "B": "以AWS CodeBuild處理主要需求，並整合AWS Organizations 服務控制原則",
+          "C": "把AWS CodeBuild與金絲雀或藍綠部署結合為單一平台設計",
+          "D": "以IAM Access Analyzer處理主要需求，並整合AWS Organizations 服務控制原則作為相連控制"
         },
-        "explanation": "IAM Access Analyzer可識別資源政策中的意外外部存取。\n其他選擇提供內容交付、計算或文件儲存。"
+        "explanation": "IAM Access Analyzer 負責架構的第一項需求，AWS Organizations 服務控制原則 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "dop-c02-d6-033",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team optimizing an existing implementation needs to rotate database credentials without rebuilding applications. Which service fits?",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team needs to rotate database credentials without rebuilding applications. Which service fits?",
     "options": {
-      "A": "An EBS snapshot",
-      "B": "A Route 53 alias",
+      "A": "Amazon Inspector",
+      "B": "An S3 bucket policy that denies unencrypted PutObject requests",
       "C": "AWS Secrets Manager",
-      "D": "A security group"
+      "D": "AWS CloudTrail"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Secrets Manager supports runtime retrieval and rotation of database credentials.\nThe other choices do not rotate application secrets.",
-    "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Secrets Manager supports runtime retrieval and rotation of database credentials.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Secrets Manager for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊需要輪換資料庫憑證而不重建應用程式。適合哪種服務？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。優化現有實施的團隊需要輪換資料庫憑證而不重建應用程式。適合哪種服務？",
         "options": {
-          "A": "EBS Snapshot",
-          "B": "Route 53 別名",
+          "A": "Amazon Inspector",
+          "B": "拒絕未加密的 PutObject 請求的 S3 儲存桶策略",
           "C": "AWS Secrets Manager",
-          "D": "一個安全群組"
+          "D": "AWS CloudTrail"
         },
-        "explanation": "Secrets Manager 支援資料庫憑證的執行時間檢索和輪調。\n其他選擇不會輪換應用程式機密。"
+        "explanation": "Secrets Manager 支援資料庫憑證的執行時間檢索和輪調。\n其他選項適用於此領域的不同需求，但不能像 AWS Secrets Manager 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d6-034",
-    "type": "single",
-    "question": "A company introducing an automated workflow must audit every API action in a production account. Which service should be enabled?",
-    "options": {
-      "A": "Amazon ElastiCache",
-      "B": "AWS WAF only",
-      "C": "Amazon SES",
-      "D": "AWS CloudTrail"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "CloudTrail records API events for security investigations and compliance.\nThe other choices provide caching, web filtering, or email.",
     "taskStatement": "6.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A company introducing an automated workflow is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team must audit every API action in a production account. Which service should be enabled?",
+    "options": {
+      "A": "IAM Access Analyzer",
+      "B": "AWS CloudTrail",
+      "C": "Amazon Inspector",
+      "D": "An S3 bucket policy that denies unencrypted PutObject requests"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudTrail records API events for security investigations and compliance.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS CloudTrail for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司必須審核生產帳戶中的每個 API 操作。應該啟用哪個服務？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。引入自動化工作流程的公司必須審核生產帳戶中的每個 API 操作。應該啟用哪個服務？",
         "options": {
-          "A": "Amazon ElastiCache",
-          "B": "僅限 AWS WAF",
-          "C": "Amazon SES",
-          "D": "AWS CloudTrail"
+          "A": "IAM Access Analyzer",
+          "B": "AWS CloudTrail",
+          "C": "Amazon Inspector",
+          "D": "拒絕未加密的 PutObject 請求的 S3 儲存桶策略"
         },
-        "explanation": "CloudTrail 記錄 API 事件以進行安全調查和合規性。\n其他選項提供快取、網路過濾或電子郵件。"
+        "explanation": "CloudTrail 記錄 API 事件以進行安全調查和合規性。\n其他選項適用於此領域的不同需求，但不能像 AWS CloudTrail 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d6-035",
-    "type": "single",
-    "question": "An AWS administrator working in a shared environment needs a managed service to detect vulnerabilities in container images before deployment. Which service should be evaluated?",
-    "options": {
-      "A": "Amazon Inspector",
-      "B": "Amazon Cognito",
-      "C": "AWS Glue",
-      "D": "Amazon Route 53"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "Inspector assesses supported container images and workloads for vulnerabilities.\nThe other choices provide identity, ETL, or DNS.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "An AWS administrator working in a shared environment is planning two independent production changes. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The first team needs a managed service to detect vulnerabilities in container images before deployment. A second team needs to enforce encryption on all new S3 objects. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "An S3 bucket policy that denies unencrypted PutObject requests",
+      "B": "IAM Access Analyzer",
+      "C": "AWS Secrets Manager",
+      "D": "AWS CloudTrail",
+      "E": "Amazon Inspector"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Amazon Inspector meets the first requirement: Inspector assesses supported container images and workloads for vulnerabilities. An S3 bucket policy that denies unencrypted PutObject requests meets the second requirement: A bucket policy can explicitly deny uploads that do not include the required encryption headers.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "在共用環境中工作的 AWS 管理員需要託管服務來在部署之前偵測容器映像中的漏洞。應該評估哪些服務？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。第一項需求：製作團隊需要對所有新 S3 物件強制加密。第二項需求：支援關鍵工作負載的營運團隊需要託管服務來在部署之前檢測容器映像中的漏洞。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "Amazon Inspector",
-          "B": "Amazon Cognito",
-          "C": "AWS Glue",
-          "D": "Amazon Route 53"
+          "A": "拒絕未加密的 PutObject 請求的 S3 儲存桶策略",
+          "B": "IAM Access Analyzer",
+          "C": "AWS Secrets Manager",
+          "D": "AWS CloudTrail",
+          "E": "Amazon Inspector"
         },
-        "explanation": "Inspector 評估支援的容器映像和工作負載是否有漏洞。\n其他選項提供身分、ETL 或 DNS。"
+        "explanation": "拒絕未加密的 PutObject 請求的 S3 儲存桶策略 符合第一項需求：儲存桶策略可以明確拒絕不包含所需加密標頭的上傳。 Amazon Inspector 符合第二項需求：Inspector 評估支援的容器映像和工作負載是否有漏洞。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "dop-c02-d6-036",
-    "type": "single",
-    "question": "A customer-facing application team needs to enforce encryption on all new S3 objects. Which control should be configured?",
-    "options": {
-      "A": "A CloudFront cache",
-      "B": "An S3 bucket policy that denies unencrypted PutObject requests",
-      "C": "A public bucket ACL",
-      "D": "A Route 53 health check"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "A bucket policy can explicitly deny uploads that do not include the required encryption headers.\nThe other choices do not enforce object encryption.",
     "taskStatement": "6.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A customer-facing application team is redesigning one integrated end-to-end architecture. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The architecture must limit blast radius, preserve availability during change, and control cost through automation instead of permanent overprovisioning. The workload needs to enforce encryption on all new S3 objects, and the same architecture wants an event to trigger an automated recovery workflow. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Use An S3 bucket policy that denies unencrypted PutObject requests but replace the connected control with AWS CodePipeline",
+      "B": "Use AWS CodeBuild for the primary requirement and integrate it with EventBridge invoking Step Functions",
+      "C": "Combine AWS CodeBuild with A canary or blue-green deployment as a single platform design",
+      "D": "Use An S3 bucket policy that denies unencrypted PutObject requests for the primary requirement and integrate it with EventBridge invoking Step Functions for the connected control"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "An S3 bucket policy that denies unencrypted PutObject requests satisfies the first part of the architecture: A bucket policy can explicitly deny uploads that do not include the required encryption headers. EventBridge invoking Step Functions satisfies the connected requirement: EventBridge and Step Functions can route events into durable, retryable recovery workflows.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊需要對所有新 S3 物件強制加密。應該配置哪個控制項？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：面向客戶的應用程式團隊需要對所有新 S3 物件強制加密。 第二項需求：準備發布的開發團隊希望有一個事件可以觸發自動恢復工作流程。 此架構必須限制影響範圍、在變更期間維持可用性，並透過自動化控制成本，而不是長期過度佈建。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "CloudFront 快取",
-          "B": "拒絕未加密的 PutObject 請求的 S3 儲存桶策略",
-          "C": "公共儲存桶ACL",
-          "D": "Route 53 運轉狀況檢查"
+          "A": "使用拒絕未加密的 PutObject 請求的 S3 儲存桶策略，但以AWS CodePipeline取代相連控制",
+          "B": "以AWS CodeBuild處理主要需求，並整合EventBridge 呼叫 Step Functions",
+          "C": "把AWS CodeBuild與金絲雀或藍綠部署結合為單一平台設計",
+          "D": "以拒絕未加密的 PutObject 請求的 S3 儲存桶策略處理主要需求，並整合EventBridge 呼叫 Step Functions作為相連控制"
         },
-        "explanation": "儲存桶策略可以明確拒絕不包含所需加密標頭的上傳。\n其他選擇不強制物件加密。"
+        "explanation": "拒絕未加密的 PutObject 請求的 S3 儲存桶策略 負責架構的第一項需求，EventBridge 呼叫 Step Functions 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "dop-c02-d6-037",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A platform team standardizing its AWS deployments must identify external access granted by resource policies. Which tool is appropriate?",
+    "question": "A platform team standardizing its AWS deployments is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team must identify external access granted by resource policies. Which tool is appropriate?",
     "options": {
-      "A": "AWS Batch",
-      "B": "Amazon EFS",
+      "A": "AWS CloudTrail",
+      "B": "Amazon Inspector",
       "C": "IAM Access Analyzer",
-      "D": "Amazon CloudFront"
+      "D": "AWS Secrets Manager"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "IAM Access Analyzer identifies unintended external access in resource policies.\nThe other choices provide content delivery, compute, or file storage.",
-    "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "IAM Access Analyzer identifies unintended external access in resource policies.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide IAM Access Analyzer for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊必須識別資源策略授予的外部存取權限。哪種工具合適？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。標準化其 AWS 部署的平台團隊必須識別資源策略授予的外部存取權限。哪種工具合適？",
         "options": {
-          "A": "AWS Batch",
-          "B": "Amazon EFS",
+          "A": "AWS CloudTrail",
+          "B": "Amazon Inspector",
           "C": "IAM Access Analyzer",
-          "D": "Amazon CloudFront"
+          "D": "AWS Secrets Manager"
         },
-        "explanation": "IAM Access Analyzer可識別資源政策中的意外外部存取。\n其他選擇提供內容交付、計算或文件儲存。"
+        "explanation": "IAM Access Analyzer可識別資源政策中的意外外部存取。\n其他選項適用於此領域的不同需求，但不能像 IAM Access Analyzer 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d6-038",
-    "type": "single",
-    "question": "A team preparing evidence for an audit needs to rotate database credentials without rebuilding applications. Which service fits?",
-    "options": {
-      "A": "A security group",
-      "B": "An EBS snapshot",
-      "C": "A Route 53 alias",
-      "D": "AWS Secrets Manager"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Secrets Manager supports runtime retrieval and rotation of database credentials.\nThe other choices do not rotate application secrets.",
     "taskStatement": "6.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team preparing evidence for an audit is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team needs to rotate database credentials without rebuilding applications. Which service fits?",
+    "options": {
+      "A": "An S3 bucket policy that denies unencrypted PutObject requests",
+      "B": "AWS Secrets Manager",
+      "C": "AWS CloudTrail",
+      "D": "Amazon Inspector"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Secrets Manager supports runtime retrieval and rotation of database credentials.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Secrets Manager for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備審計證據的團隊需要輪換資料庫憑證而不重建應用程式。適合哪種服務？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。準備審計證據的團隊需要輪換資料庫憑證而不重建應用程式。適合哪種服務？",
         "options": {
-          "A": "一個安全群組",
-          "B": "EBS Snapshot",
-          "C": "Route 53 別名",
-          "D": "AWS Secrets Manager"
+          "A": "拒絕未加密的 PutObject 請求的 S3 儲存桶策略",
+          "B": "AWS Secrets Manager",
+          "C": "AWS CloudTrail",
+          "D": "Amazon Inspector"
         },
-        "explanation": "Secrets Manager 支援資料庫憑證的執行時間檢索和輪調。\n其他選擇不會輪換應用程式機密。"
+        "explanation": "Secrets Manager 支援資料庫憑證的執行時間檢索和輪調。\n其他選項適用於此領域的不同需求，但不能像 AWS Secrets Manager 一樣直接滿足題目的指定條件。"
       }
     }
   }

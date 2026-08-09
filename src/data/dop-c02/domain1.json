@@ -1,1373 +1,1403 @@
 [
   {
     "id": "dop-c02-d1-001",
-    "type": "single",
-    "question": "A production team needs a pipeline that builds an artifact, runs tests, and deploys it after an approval. Which service should orchestrate the stages?",
-    "options": {
-      "A": "Amazon EFS",
-      "B": "AWS CodePipeline",
-      "C": "Amazon Route 53",
-      "D": "AWS KMS"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "CodePipeline orchestrates source, build, approval, and deployment stages.\nThe other choices provide DNS, encryption keys, or file storage.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A production team is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team needs a pipeline that builds an artifact, runs tests, and deploys it after an approval. Which service should orchestrate the stages?",
+    "options": {
+      "A": "AWS CodeBuild",
+      "B": "A canary or blue-green deployment",
+      "C": "A pipeline approval or quality gate based on test results",
+      "D": "AWS CodePipeline"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CodePipeline orchestrates source, build, approval, and deployment stages.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS CodePipeline for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "生產團隊需要一個管道來建置工件、運行測試並在批准後進行部署。哪個服務應該協調各個階段？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。生產團隊需要一個管道來建置工件、運行測試並在批准後進行部署。哪個服務應該協調各個階段？",
         "options": {
-          "A": "Amazon EFS",
-          "B": "AWS CodePipeline",
-          "C": "Amazon Route 53",
-          "D": "AWS KMS"
+          "A": "AWS CodeBuild",
+          "B": "金絲雀或藍綠部署",
+          "C": "基於測試結果的管道批准或品質門",
+          "D": "AWS CodePipeline"
         },
-        "explanation": "CodePipeline 協調來源、建置、核准和部署階段。\n其他選項提供 DNS、加密金鑰或檔案儲存。"
+        "explanation": "CodePipeline 協調來源、建置、核准和部署階段。\n其他選項適用於此領域的不同需求，但不能像 AWS CodePipeline 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d1-002",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A multi-account platform team must compile source code and produce a versioned artifact in a managed build environment. Which service fits?",
+    "question": "A multi-account platform team is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team must compile source code and produce a versioned artifact in a managed build environment. Which service fits?",
     "options": {
-      "A": "AWS WAF",
-      "B": "Amazon Neptune",
+      "A": "A pipeline approval or quality gate based on test results",
+      "B": "Amazon Q Developer",
       "C": "AWS CodeBuild",
-      "D": "Amazon Macie"
+      "D": "A canary or blue-green deployment"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "CodeBuild runs managed build commands and can publish artifacts.\nThe other choices discover data, filter web requests, or provide graph storage.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "CodeBuild runs managed build commands and can publish artifacts.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS CodeBuild for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊必須在託管建置環境中編譯原始程式碼並產生版本化工件。適合哪種服務？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。多帳戶平台團隊必須在託管建置環境中編譯原始程式碼並產生版本化工件。適合哪種服務？",
         "options": {
-          "A": "AWS WAF",
-          "B": "Amazon Neptune",
+          "A": "基於測試結果的管道批准或品質門",
+          "B": "Amazon Q Developer",
           "C": "AWS CodeBuild",
-          "D": "Amazon Macie"
+          "D": "金絲雀或藍綠部署"
         },
-        "explanation": "CodeBuild 運行託管建置命令並且可以發布工件。\n其他選擇發現資料、過濾 Web 請求或提供圖形儲存。"
+        "explanation": "CodeBuild 運行託管建置命令並且可以發布工件。\n其他選項適用於此領域的不同需求，但不能像 AWS CodeBuild 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d1-003",
-    "type": "single",
-    "question": "A regulated company needs to deploy a new application version to a subset of instances before full rollout. Which strategy fits?",
-    "options": {
-      "A": "A full replacement with no health check",
-      "B": "A public bucket policy",
-      "C": "A DNS TXT record",
-      "D": "A canary or blue-green deployment"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Canary and blue-green strategies reduce release risk by validating a new version before full traffic shift.\nThe other choices do not implement controlled application rollout.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A regulated company is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team needs to deploy a new application version to a subset of instances before full rollout. Which strategy fits?",
+    "options": {
+      "A": "AWS CodePipeline",
+      "B": "A canary or blue-green deployment",
+      "C": "A pipeline approval or quality gate based on test results",
+      "D": "Amazon Q Developer"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Canary and blue-green strategies reduce release risk by validating a new version before full traffic shift.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A canary or blue-green deployment for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司需要在全面部署之前將新的應用程式版本部署到執行個體子集。哪種策略適合？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。受監管的公司需要在全面部署之前將新的應用程式版本部署到執行個體子集。哪種策略適合？",
         "options": {
-          "A": "完全替換，無需健康檢查",
-          "B": "公共儲存桶策略",
-          "C": "DNS TXT 記錄",
-          "D": "金絲雀或藍綠部署"
+          "A": "AWS CodePipeline",
+          "B": "金絲雀或藍綠部署",
+          "C": "基於測試結果的管道批准或品質門",
+          "D": "Amazon Q Developer"
         },
-        "explanation": "金絲雀和藍綠色策略透過在流量完全轉移之前驗證新版本來降低發布風險。\n其他選擇不實施受控應用程式推出。"
+        "explanation": "金絲雀和藍綠色策略透過在流量完全轉移之前驗證新版本來降低發布風險。\n其他選項適用於此領域的不同需求，但不能像 金絲雀或藍綠部署 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d1-004",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A startup preparing for a traffic increase must prevent an untested artifact from being promoted to production. Which control is appropriate?",
+    "question": "A startup preparing for a traffic increase is redesigning one integrated end-to-end architecture. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The design must keep recurring cost proportional to use, enforce least privilege, and remain available during a component or Availability Zone failure. The workload must prevent an untested artifact from being promoted to production, and the same architecture needs to apply the same guardrail policy to every account. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "A pipeline approval or quality gate based on test results",
-      "B": "Disable all tests",
-      "C": "Use an unversioned artifact name",
-      "D": "Store credentials in source"
+      "A": "Use A pipeline approval or quality gate based on test results for the primary requirement and integrate it with An AWS Organizations service control policy for the connected control",
+      "B": "Use A pipeline approval or quality gate based on test results but replace the connected control with AWS CodePipeline",
+      "C": "Use AWS CodeBuild for the primary requirement and integrate it with An AWS Organizations service control policy",
+      "D": "Combine AWS CodeBuild with A canary or blue-green deployment as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Approval gates and automated quality checks prevent unvalidated artifacts from promotion.\nThe other choices weaken release safety and traceability.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "A pipeline approval or quality gate based on test results satisfies the first part of the architecture: Approval gates and automated quality checks prevent unvalidated artifacts from promotion. An AWS Organizations service control policy satisfies the connected requirement: SCPs apply permission guardrails across member accounts.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司必須防止未經測試的工件推廣到生產環境。哪種控制合適？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：準備增加流量的新創公司必須防止未經測試的工件推廣到生產環境。 第二項需求：支援關鍵工作負載的營運團隊需要對每個帳戶應用相同的護欄策略。 此設計必須讓持續成本與實際用量相符、落實最低權限，並在元件或可用區域發生故障時維持可用。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "基於測試結果的管道批准或品質門",
-          "B": "停用所有測試",
-          "C": "使用未版本控制的工件名稱",
-          "D": "將憑證儲存在來源中"
+          "A": "以基於測試結果的管道批准或品質門處理主要需求，並整合AWS Organizations 服務控制原則作為相連控制",
+          "B": "使用基於測試結果的管道批准或品質門，但以AWS CodePipeline取代相連控制",
+          "C": "以AWS CodeBuild處理主要需求，並整合AWS Organizations 服務控制原則",
+          "D": "把AWS CodeBuild與金絲雀或藍綠部署結合為單一平台設計"
         },
-        "explanation": "審批門和自動品質檢查可防止未經驗證的工件得到推廣。\n其他選擇削弱了發布安全性和可追溯性。"
+        "explanation": "基於測試結果的管道批准或品質門 負責架構的第一項需求，AWS Organizations 服務控制原則 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "dop-c02-d1-005",
-    "type": "single",
-    "question": "An operations team supporting a critical workload needs to generate release notes and test suggestions using an AWS coding assistant. Which service is relevant?",
-    "options": {
-      "A": "Amazon RDS",
-      "B": "Amazon Q Developer",
-      "C": "Amazon S3 Glacier",
-      "D": "AWS Transit Gateway"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Amazon Q Developer can assist with code, reviews, tests, and development workflows.\nThe other choices provide archival storage, networking, or relational databases.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team needs to generate release notes and test suggestions using an AWS coding assistant. Which service is relevant?",
+    "options": {
+      "A": "AWS CodePipeline",
+      "B": "AWS CodeBuild",
+      "C": "A canary or blue-green deployment",
+      "D": "Amazon Q Developer"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Amazon Q Developer can assist with code, reviews, tests, and development workflows.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Q Developer for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊需要使用 AWS 編碼助理產生發行說明並測試建議。哪些服務是相關的？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。支援關鍵工作負載的營運團隊需要使用 AWS 編碼助理產生發行說明並測試建議。哪些服務是相關的？",
         "options": {
-          "A": "Amazon RDS",
-          "B": "Amazon Q Developer",
-          "C": "Amazon S3 Glacier",
-          "D": "AWS Transit Gateway"
+          "A": "AWS CodePipeline",
+          "B": "AWS CodeBuild",
+          "C": "金絲雀或藍綠部署",
+          "D": "Amazon Q Developer"
         },
-        "explanation": "Amazon Q Developer 可以協助完成程式碼、審查、測試和開發工作流程。\n其他選擇提供檔案儲存、網路或關聯式資料庫。"
+        "explanation": "Amazon Q Developer 可以協助完成程式碼、審查、測試和開發工作流程。\n其他選項適用於此領域的不同需求，但不能像 Amazon Q Developer 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d1-006",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A data platform team needs a pipeline that builds an artifact, runs tests, and deploys it after an approval. Which service should orchestrate the stages?",
+    "question": "A data platform team is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team needs a pipeline that builds an artifact, runs tests, and deploys it after an approval. Which service should orchestrate the stages?",
     "options": {
-      "A": "AWS KMS",
-      "B": "Amazon EFS",
+      "A": "A canary or blue-green deployment",
+      "B": "A pipeline approval or quality gate based on test results",
       "C": "AWS CodePipeline",
-      "D": "Amazon Route 53"
+      "D": "AWS CodeBuild"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "CodePipeline orchestrates source, build, approval, and deployment stages.\nThe other choices provide DNS, encryption keys, or file storage.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "CodePipeline orchestrates source, build, approval, and deployment stages.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS CodePipeline for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要一個管道來建置工件、運行測試並在批准後進行部署。哪個服務應該協調各個階段？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。資料平台團隊需要一個管道來建置工件、運行測試並在批准後進行部署。哪個服務應該協調各個階段？",
         "options": {
-          "A": "AWS KMS",
-          "B": "Amazon EFS",
+          "A": "金絲雀或藍綠部署",
+          "B": "基於測試結果的管道批准或品質門",
           "C": "AWS CodePipeline",
-          "D": "Amazon Route 53"
+          "D": "AWS CodeBuild"
         },
-        "explanation": "CodePipeline 協調來源、建置、核准和部署階段。\n其他選項提供 DNS、加密金鑰或檔案儲存。"
+        "explanation": "CodePipeline 協調來源、建置、核准和部署階段。\n其他選項適用於此領域的不同需求，但不能像 AWS CodePipeline 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d1-007",
-    "type": "single",
-    "question": "A security-conscious engineering team must compile source code and produce a versioned artifact in a managed build environment. Which service fits?",
-    "options": {
-      "A": "Amazon Macie",
-      "B": "AWS WAF",
-      "C": "Amazon Neptune",
-      "D": "AWS CodeBuild"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "CodeBuild runs managed build commands and can publish artifacts.\nThe other choices discover data, filter web requests, or provide graph storage.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A security-conscious engineering team is planning two independent production changes. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The first team must compile source code and produce a versioned artifact in a managed build environment. A second team needs to deploy a new application version to a subset of instances before full rollout. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Amazon Q Developer",
+      "B": "AWS CodePipeline",
+      "C": "AWS CodeBuild",
+      "D": "A canary or blue-green deployment",
+      "E": "A pipeline approval or quality gate based on test results"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS CodeBuild meets the first requirement: CodeBuild runs managed build commands and can publish artifacts. A canary or blue-green deployment meets the second requirement: Canary and blue-green strategies reduce release risk by validating a new version before full traffic shift.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊必須在託管建置環境中編譯原始程式碼並產生版本化工件。適合哪種服務？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。第一項需求：多帳戶平台團隊必須在託管建置環境中編譯原始程式碼並產生版本化工件。第二項需求：受監管的公司需要在全面部署之前將新的應用程式版本部署到執行個體子集。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "Amazon Macie",
-          "B": "AWS WAF",
-          "C": "Amazon Neptune",
-          "D": "AWS CodeBuild"
+          "A": "Amazon Q Developer",
+          "B": "AWS CodePipeline",
+          "C": "AWS CodeBuild",
+          "D": "金絲雀或藍綠部署",
+          "E": "基於測試結果的管道批准或品質門"
         },
-        "explanation": "CodeBuild 運行託管建置命令並且可以發布工件。\n其他選擇發現資料、過濾 Web 請求或提供圖形儲存。"
+        "explanation": "AWS CodeBuild 符合第一項需求：CodeBuild 運行託管建置命令並且可以發布工件。 金絲雀或藍綠部署 符合第二項需求：金絲雀和藍綠色策略透過在流量完全轉移之前驗證新版本來降低發布風險。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "dop-c02-d1-008",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A company migrating an existing workload needs to deploy a new application version to a subset of instances before full rollout. Which strategy fits?",
+    "question": "A company migrating an existing workload is redesigning one integrated end-to-end architecture. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The design must avoid unnecessary standby cost without weakening security controls or the availability objective. The workload needs to deploy a new application version to a subset of instances before full rollout, and the same architecture wants an event to trigger an automated recovery workflow. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "A canary or blue-green deployment",
-      "B": "A full replacement with no health check",
-      "C": "A public bucket policy",
-      "D": "A DNS TXT record"
+      "A": "Use A canary or blue-green deployment for the primary requirement and integrate it with EventBridge invoking Step Functions for the connected control",
+      "B": "Use A canary or blue-green deployment but replace the connected control with AWS CodePipeline",
+      "C": "Use AWS CodeBuild for the primary requirement and integrate it with EventBridge invoking Step Functions",
+      "D": "Combine AWS CodeBuild with A pipeline approval or quality gate based on test results as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Canary and blue-green strategies reduce release risk by validating a new version before full traffic shift.\nThe other choices do not implement controlled application rollout.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "A canary or blue-green deployment satisfies the first part of the architecture: Canary and blue-green strategies reduce release risk by validating a new version before full traffic shift. EventBridge invoking Step Functions satisfies the connected requirement: EventBridge and Step Functions can route events into durable, retryable recovery workflows.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司需要在全面部署之前將新的應用程式版本部署到執行個體子集。哪種策略適合？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：遷移現有工作負載的公司需要在全面部署之前將新的應用程式版本部署到執行個體子集。 第二項需求：準備發布的開發團隊希望有一個事件可以觸發自動恢復工作流程。 此設計必須避免不必要的備用成本，同時不可削弱安全控制或可用性目標。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "金絲雀或藍綠部署",
-          "B": "完全替換，無需健康檢查",
-          "C": "公共儲存桶策略",
-          "D": "DNS TXT 記錄"
+          "A": "以金絲雀或藍綠部署處理主要需求，並整合EventBridge 呼叫 Step Functions作為相連控制",
+          "B": "使用金絲雀或藍綠部署，但以AWS CodePipeline取代相連控制",
+          "C": "以AWS CodeBuild處理主要需求，並整合EventBridge 呼叫 Step Functions",
+          "D": "把AWS CodeBuild與基於測試結果的管道批准或品質門結合為單一平台設計"
         },
-        "explanation": "金絲雀和藍綠色策略透過在流量完全轉移之前驗證新版本來降低發布風險。\n其他選擇不實施受控應用程式推出。"
+        "explanation": "金絲雀或藍綠部署 負責架構的第一項需求，EventBridge 呼叫 Step Functions 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "dop-c02-d1-009",
-    "type": "single",
-    "question": "A team with strict recovery objectives must prevent an untested artifact from being promoted to production. Which control is appropriate?",
-    "options": {
-      "A": "Store credentials in source",
-      "B": "A pipeline approval or quality gate based on test results",
-      "C": "Disable all tests",
-      "D": "Use an unversioned artifact name"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Approval gates and automated quality checks prevent unvalidated artifacts from promotion.\nThe other choices weaken release safety and traceability.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team with strict recovery objectives is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team must prevent an untested artifact from being promoted to production. Which control is appropriate?",
+    "options": {
+      "A": "Amazon Q Developer",
+      "B": "AWS CodePipeline",
+      "C": "AWS CodeBuild",
+      "D": "A pipeline approval or quality gate based on test results"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Approval gates and automated quality checks prevent unvalidated artifacts from promotion.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A pipeline approval or quality gate based on test results for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格恢復目標的團隊必須防止未經測試的工件提升到生產環境。哪種控制合適？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。具有嚴格恢復目標的團隊必須防止未經測試的工件提升到生產環境。哪種控制合適？",
         "options": {
-          "A": "將憑證儲存在來源中",
-          "B": "基於測試結果的管道批准或品質門",
-          "C": "停用所有測試",
-          "D": "使用未版本控制的工件名稱"
+          "A": "Amazon Q Developer",
+          "B": "AWS CodePipeline",
+          "C": "AWS CodeBuild",
+          "D": "基於測試結果的管道批准或品質門"
         },
-        "explanation": "審批門和自動品質檢查可防止未經驗證的工件得到推廣。\n其他選擇削弱了發布安全性和可追溯性。"
+        "explanation": "審批門和自動品質檢查可防止未經驗證的工件得到推廣。\n其他選項適用於此領域的不同需求，但不能像 基於測試結果的管道批准或品質門 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d1-010",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A developer team preparing a release needs to generate release notes and test suggestions using an AWS coding assistant. Which service is relevant?",
+    "question": "A developer team preparing a release is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team needs to generate release notes and test suggestions using an AWS coding assistant. Which service is relevant?",
     "options": {
-      "A": "AWS Transit Gateway",
-      "B": "Amazon RDS",
+      "A": "AWS CodeBuild",
+      "B": "A canary or blue-green deployment",
       "C": "Amazon Q Developer",
-      "D": "Amazon S3 Glacier"
+      "D": "AWS CodePipeline"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Amazon Q Developer can assist with code, reviews, tests, and development workflows.\nThe other choices provide archival storage, networking, or relational databases.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Amazon Q Developer can assist with code, reviews, tests, and development workflows.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Q Developer for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊需要使用 AWS 編碼助手產生發布說明並測試建議。哪些服務是相關的？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。準備發布的開發團隊需要使用 AWS 編碼助手產生發布說明並測試建議。哪些服務是相關的？",
         "options": {
-          "A": "AWS Transit Gateway",
-          "B": "Amazon RDS",
+          "A": "AWS CodeBuild",
+          "B": "金絲雀或藍綠部署",
           "C": "Amazon Q Developer",
-          "D": "Amazon S3 Glacier"
+          "D": "AWS CodePipeline"
         },
-        "explanation": "Amazon Q Developer 可以協助完成程式碼、審查、測試和開發工作流程。\n其他選擇提供檔案儲存、網路或關聯式資料庫。"
+        "explanation": "Amazon Q Developer 可以協助完成程式碼、審查、測試和開發工作流程。\n其他選項適用於此領域的不同需求，但不能像 Amazon Q Developer 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d1-011",
-    "type": "single",
-    "question": "An enterprise with several AWS Regions needs a pipeline that builds an artifact, runs tests, and deploys it after an approval. Which service should orchestrate the stages?",
-    "options": {
-      "A": "Amazon Route 53",
-      "B": "AWS KMS",
-      "C": "Amazon EFS",
-      "D": "AWS CodePipeline"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "CodePipeline orchestrates source, build, approval, and deployment stages.\nThe other choices provide DNS, encryption keys, or file storage.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team needs a pipeline that builds an artifact, runs tests, and deploys it after an approval. Which service should orchestrate the stages?",
+    "options": {
+      "A": "A pipeline approval or quality gate based on test results",
+      "B": "AWS CodePipeline",
+      "C": "AWS CodeBuild",
+      "D": "A canary or blue-green deployment"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CodePipeline orchestrates source, build, approval, and deployment stages.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS CodePipeline for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業需要一個管道來建置工件、運行測試並在批准後進行部署。哪個服務應該協調各個階段？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。擁有多個 AWS 區域的企業需要一個管道來建置工件、運行測試並在批准後進行部署。哪個服務應該協調各個階段？",
         "options": {
-          "A": "Amazon Route 53",
-          "B": "AWS KMS",
-          "C": "Amazon EFS",
-          "D": "AWS CodePipeline"
+          "A": "基於測試結果的管道批准或品質門",
+          "B": "AWS CodePipeline",
+          "C": "AWS CodeBuild",
+          "D": "金絲雀或藍綠部署"
         },
-        "explanation": "CodePipeline 協調來源、建置、核准和部署階段。\n其他選項提供 DNS、加密金鑰或檔案儲存。"
+        "explanation": "CodePipeline 協調來源、建置、核准和部署階段。\n其他選項適用於此領域的不同需求，但不能像 AWS CodePipeline 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d1-012",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A service owner reviewing an incident must compile source code and produce a versioned artifact in a managed build environment. Which service fits?",
+    "question": "A service owner reviewing an incident is redesigning one integrated end-to-end architecture. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The organization will accept additional managed-service cost only when it measurably improves security and availability with less operational effort. The workload must compile source code and produce a versioned artifact in a managed build environment, and the same architecture needs a dashboard that combines metrics from several accounts and Regions. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "AWS CodeBuild",
-      "B": "Amazon Macie",
-      "C": "AWS WAF",
-      "D": "Amazon Neptune"
+      "A": "Use AWS CodeBuild for the primary requirement and integrate it with CloudWatch cross-account observability dashboards for the connected control",
+      "B": "Use AWS CodeBuild but replace the connected control with AWS CodePipeline",
+      "C": "Use A canary or blue-green deployment for the primary requirement and integrate it with CloudWatch cross-account observability dashboards",
+      "D": "Combine A canary or blue-green deployment with A pipeline approval or quality gate based on test results as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "CodeBuild runs managed build commands and can publish artifacts.\nThe other choices discover data, filter web requests, or provide graph storage.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "AWS CodeBuild satisfies the first part of the architecture: CodeBuild runs managed build commands and can publish artifacts. CloudWatch cross-account observability dashboards satisfies the connected requirement: CloudWatch supports cross-account and cross-Region monitoring views for centralized operations.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務擁有者必須編譯原始程式碼並在託管建置環境中產生版本化工件。適合哪種服務？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：具有安全意識的工程團隊必須在託管建置環境中編譯原始程式碼並產生版本化工件。 第二項需求：準備發布的開發團隊需要一個儀表板，其中結合了多個帳戶和區域的指標。 只有在託管服務能以較低營運負擔明確改善安全性與可用性時，組織才會接受額外成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "AWS CodeBuild",
-          "B": "Amazon Macie",
-          "C": "AWS WAF",
-          "D": "Amazon Neptune"
+          "A": "以AWS CodeBuild處理主要需求，並整合CloudWatch 跨帳戶可觀測性儀表板作為相連控制",
+          "B": "使用AWS CodeBuild，但以AWS CodePipeline取代相連控制",
+          "C": "以金絲雀或藍綠部署處理主要需求，並整合CloudWatch 跨帳戶可觀測性儀表板",
+          "D": "把金絲雀或藍綠部署與基於測試結果的管道批准或品質門結合為單一平台設計"
         },
-        "explanation": "CodeBuild 運行託管建置命令並且可以發布工件。\n其他選擇發現資料、過濾 Web 請求或提供圖形儲存。"
+        "explanation": "AWS CodeBuild 負責架構的第一項需求，CloudWatch 跨帳戶可觀測性儀表板 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "dop-c02-d1-013",
-    "type": "single",
-    "question": "A team optimizing an existing implementation needs to deploy a new application version to a subset of instances before full rollout. Which strategy fits?",
-    "options": {
-      "A": "A DNS TXT record",
-      "B": "A canary or blue-green deployment",
-      "C": "A full replacement with no health check",
-      "D": "A public bucket policy"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Canary and blue-green strategies reduce release risk by validating a new version before full traffic shift.\nThe other choices do not implement controlled application rollout.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team needs to deploy a new application version to a subset of instances before full rollout. Which strategy fits?",
+    "options": {
+      "A": "A pipeline approval or quality gate based on test results",
+      "B": "Amazon Q Developer",
+      "C": "AWS CodePipeline",
+      "D": "A canary or blue-green deployment"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Canary and blue-green strategies reduce release risk by validating a new version before full traffic shift.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A canary or blue-green deployment for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊需要在全面部署之前將新的應用程式版本部署到執行個體子集。哪種策略適合？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。優化現有實施的團隊需要在全面部署之前將新的應用程式版本部署到執行個體子集。哪種策略適合？",
         "options": {
-          "A": "DNS TXT 記錄",
-          "B": "金絲雀或藍綠部署",
-          "C": "完全替換，無需健康檢查",
-          "D": "公共儲存桶策略"
+          "A": "基於測試結果的管道批准或品質門",
+          "B": "Amazon Q Developer",
+          "C": "AWS CodePipeline",
+          "D": "金絲雀或藍綠部署"
         },
-        "explanation": "金絲雀和藍綠色策略透過在流量完全轉移之前驗證新版本來降低發布風險。\n其他選擇不實施受控應用程式推出。"
+        "explanation": "金絲雀和藍綠色策略透過在流量完全轉移之前驗證新版本來降低發布風險。\n其他選項適用於此領域的不同需求，但不能像 金絲雀或藍綠部署 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d1-014",
-    "type": "single",
-    "question": "A company introducing an automated workflow must prevent an untested artifact from being promoted to production. Which control is appropriate?",
-    "options": {
-      "A": "Use an unversioned artifact name",
-      "B": "Store credentials in source",
-      "C": "A pipeline approval or quality gate based on test results",
-      "D": "Disable all tests"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "Approval gates and automated quality checks prevent unvalidated artifacts from promotion.\nThe other choices weaken release safety and traceability.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A company introducing an automated workflow is planning two independent production changes. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The first team must prevent an untested artifact from being promoted to production. A second team needs to generate release notes and test suggestions using an AWS coding assistant. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "A pipeline approval or quality gate based on test results",
+      "B": "Amazon Q Developer",
+      "C": "AWS CodePipeline",
+      "D": "AWS CodeBuild",
+      "E": "A canary or blue-green deployment"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "A pipeline approval or quality gate based on test results meets the first requirement: Approval gates and automated quality checks prevent unvalidated artifacts from promotion. Amazon Q Developer meets the second requirement: Amazon Q Developer can assist with code, reviews, tests, and development workflows.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司必須防止未經測試的工件提升到生產環境。哪種控制合適？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。第一項需求：準備增加流量的新創公司必須防止未經測試的工件推廣到生產環境。第二項需求：支援關鍵工作負載的營運團隊需要使用 AWS 編碼助理產生發行說明並測試建議。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "使用未版本控制的工件名稱",
-          "B": "將憑證儲存在來源中",
-          "C": "基於測試結果的管道批准或品質門",
-          "D": "停用所有測試"
+          "A": "基於測試結果的管道批准或品質門",
+          "B": "Amazon Q Developer",
+          "C": "AWS CodePipeline",
+          "D": "AWS CodeBuild",
+          "E": "金絲雀或藍綠部署"
         },
-        "explanation": "審批門和自動品質檢查可防止未經驗證的工件得到推廣。\n其他選擇削弱了發布安全性和可追溯性。"
+        "explanation": "基於測試結果的管道批准或品質門 符合第一項需求：審批門和自動品質檢查可防止未經驗證的工件得到推廣。 Amazon Q Developer 符合第二項需求：Amazon Q Developer 可以協助完成程式碼、審查、測試和開發工作流程。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "dop-c02-d1-015",
-    "type": "single",
-    "question": "An AWS administrator working in a shared environment needs to generate release notes and test suggestions using an AWS coding assistant. Which service is relevant?",
-    "options": {
-      "A": "Amazon S3 Glacier",
-      "B": "AWS Transit Gateway",
-      "C": "Amazon RDS",
-      "D": "Amazon Q Developer"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Amazon Q Developer can assist with code, reviews, tests, and development workflows.\nThe other choices provide archival storage, networking, or relational databases.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team needs to generate release notes and test suggestions using an AWS coding assistant. Which service is relevant?",
+    "options": {
+      "A": "A canary or blue-green deployment",
+      "B": "Amazon Q Developer",
+      "C": "AWS CodePipeline",
+      "D": "AWS CodeBuild"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Amazon Q Developer can assist with code, reviews, tests, and development workflows.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Q Developer for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "在共用環境中工作的 AWS 管理員需要使用 AWS 編碼助理產生發行說明和測試建議。哪些服務是相關的？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。在共用環境中工作的 AWS 管理員需要使用 AWS 編碼助理產生發行說明和測試建議。哪些服務是相關的？",
         "options": {
-          "A": "Amazon S3 Glacier",
-          "B": "AWS Transit Gateway",
-          "C": "Amazon RDS",
-          "D": "Amazon Q Developer"
+          "A": "金絲雀或藍綠部署",
+          "B": "Amazon Q Developer",
+          "C": "AWS CodePipeline",
+          "D": "AWS CodeBuild"
         },
-        "explanation": "Amazon Q Developer 可以協助完成程式碼、審查、測試和開發工作流程。\n其他選擇提供檔案儲存、網路或關聯式資料庫。"
+        "explanation": "Amazon Q Developer 可以協助完成程式碼、審查、測試和開發工作流程。\n其他選項適用於此領域的不同需求，但不能像 Amazon Q Developer 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d1-016",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A customer-facing application team needs a pipeline that builds an artifact, runs tests, and deploys it after an approval. Which service should orchestrate the stages?",
+    "question": "A customer-facing application team is redesigning one integrated end-to-end architecture. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The architecture must limit blast radius, preserve availability during change, and control cost through automation instead of permanent overprovisioning. The workload needs a pipeline that builds an artifact, runs tests, and deploys it after an approval, and the same architecture must document a repeatable response to a common alarm. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "AWS CodePipeline",
-      "B": "Amazon Route 53",
-      "C": "AWS KMS",
-      "D": "Amazon EFS"
+      "A": "Use AWS CodePipeline for the primary requirement and integrate it with Systems Manager Automation runbook for the connected control",
+      "B": "Use AWS CodePipeline but replace the connected control with AWS CodeBuild",
+      "C": "Use A canary or blue-green deployment for the primary requirement and integrate it with Systems Manager Automation runbook",
+      "D": "Combine A canary or blue-green deployment with A pipeline approval or quality gate based on test results as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "CodePipeline orchestrates source, build, approval, and deployment stages.\nThe other choices provide DNS, encryption keys, or file storage.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "AWS CodePipeline satisfies the first part of the architecture: CodePipeline orchestrates source, build, approval, and deployment stages. Systems Manager Automation runbook satisfies the connected requirement: Automation runbooks encode repeatable operational response steps.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊需要一個管道來建置工件、運行測試並在批准後進行部署。哪個服務應該協調各個階段？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：資料平台團隊需要一個管道來建置工件、運行測試並在批准後進行部署。 第二項需求：準備發布的開發團隊必須記錄對常見警報的可重複回應。 此架構必須限制影響範圍、在變更期間維持可用性，並透過自動化控制成本，而不是長期過度佈建。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "AWS CodePipeline",
-          "B": "Amazon Route 53",
-          "C": "AWS KMS",
-          "D": "Amazon EFS"
+          "A": "以AWS CodePipeline處理主要需求，並整合Systems Manager Automation操作手冊作為相連控制",
+          "B": "使用AWS CodePipeline，但以AWS CodeBuild取代相連控制",
+          "C": "以金絲雀或藍綠部署處理主要需求，並整合Systems Manager Automation操作手冊",
+          "D": "把金絲雀或藍綠部署與基於測試結果的管道批准或品質門結合為單一平台設計"
         },
-        "explanation": "CodePipeline 協調來源、建置、核准和部署階段。\n其他選項提供 DNS、加密金鑰或檔案儲存。"
+        "explanation": "AWS CodePipeline 負責架構的第一項需求，Systems Manager Automation操作手冊 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "dop-c02-d1-017",
-    "type": "single",
-    "question": "A platform team standardizing its AWS deployments must compile source code and produce a versioned artifact in a managed build environment. Which service fits?",
-    "options": {
-      "A": "Amazon Neptune",
-      "B": "AWS CodeBuild",
-      "C": "Amazon Macie",
-      "D": "AWS WAF"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "CodeBuild runs managed build commands and can publish artifacts.\nThe other choices discover data, filter web requests, or provide graph storage.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team must compile source code and produce a versioned artifact in a managed build environment. Which service fits?",
+    "options": {
+      "A": "A canary or blue-green deployment",
+      "B": "A pipeline approval or quality gate based on test results",
+      "C": "Amazon Q Developer",
+      "D": "AWS CodeBuild"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CodeBuild runs managed build commands and can publish artifacts.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS CodeBuild for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊必須編譯原始程式碼並在託管建置環境中產生版本化工件。適合哪種服務？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。標準化其 AWS 部署的平台團隊必須編譯原始程式碼並在託管建置環境中產生版本化工件。適合哪種服務？",
         "options": {
-          "A": "Amazon Neptune",
-          "B": "AWS CodeBuild",
-          "C": "Amazon Macie",
-          "D": "AWS WAF"
+          "A": "金絲雀或藍綠部署",
+          "B": "基於測試結果的管道批准或品質門",
+          "C": "Amazon Q Developer",
+          "D": "AWS CodeBuild"
         },
-        "explanation": "CodeBuild 運行託管建置命令並且可以發布工件。\n其他選擇發現資料、過濾 Web 請求或提供圖形儲存。"
+        "explanation": "CodeBuild 運行託管建置命令並且可以發布工件。\n其他選項適用於此領域的不同需求，但不能像 AWS CodeBuild 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d1-018",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team preparing evidence for an audit needs to deploy a new application version to a subset of instances before full rollout. Which strategy fits?",
+    "question": "A team preparing evidence for an audit is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team needs to deploy a new application version to a subset of instances before full rollout. Which strategy fits?",
     "options": {
-      "A": "A public bucket policy",
-      "B": "A DNS TXT record",
+      "A": "Amazon Q Developer",
+      "B": "AWS CodePipeline",
       "C": "A canary or blue-green deployment",
-      "D": "A full replacement with no health check"
+      "D": "A pipeline approval or quality gate based on test results"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Canary and blue-green strategies reduce release risk by validating a new version before full traffic shift.\nThe other choices do not implement controlled application rollout.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Canary and blue-green strategies reduce release risk by validating a new version before full traffic shift.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A canary or blue-green deployment for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備審計證據的團隊需要在全面部署之前將新的應用程式版本部署到執行個體子集。哪種策略適合？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。準備審計證據的團隊需要在全面部署之前將新的應用程式版本部署到執行個體子集。哪種策略適合？",
         "options": {
-          "A": "公共儲存桶策略",
-          "B": "DNS TXT 記錄",
+          "A": "Amazon Q Developer",
+          "B": "AWS CodePipeline",
           "C": "金絲雀或藍綠部署",
-          "D": "完全替換，無需健康檢查"
+          "D": "基於測試結果的管道批准或品質門"
         },
-        "explanation": "金絲雀和藍綠色策略透過在流量完全轉移之前驗證新版本來降低發布風險。\n其他選擇不實施受控應用程式推出。"
+        "explanation": "金絲雀和藍綠色策略透過在流量完全轉移之前驗證新版本來降低發布風險。\n其他選項適用於此領域的不同需求，但不能像 金絲雀或藍綠部署 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d1-019",
-    "type": "single",
-    "question": "A business replacing a manual process must prevent an untested artifact from being promoted to production. Which control is appropriate?",
-    "options": {
-      "A": "Disable all tests",
-      "B": "Use an unversioned artifact name",
-      "C": "Store credentials in source",
-      "D": "A pipeline approval or quality gate based on test results"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Approval gates and automated quality checks prevent unvalidated artifacts from promotion.\nThe other choices weaken release safety and traceability.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A business replacing a manual process is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team must prevent an untested artifact from being promoted to production. Which control is appropriate?",
+    "options": {
+      "A": "AWS CodeBuild",
+      "B": "A pipeline approval or quality gate based on test results",
+      "C": "Amazon Q Developer",
+      "D": "AWS CodePipeline"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Approval gates and automated quality checks prevent unvalidated artifacts from promotion.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A pipeline approval or quality gate based on test results for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "替換手動流程的企業必須防止未經測試的工件升級到生產。哪種控制合適？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。替換手動流程的企業必須防止未經測試的工件升級到生產。哪種控制合適？",
         "options": {
-          "A": "停用所有測試",
-          "B": "使用未版本控制的工件名稱",
-          "C": "將憑證儲存在來源中",
-          "D": "基於測試結果的管道批准或品質門"
+          "A": "AWS CodeBuild",
+          "B": "基於測試結果的管道批准或品質門",
+          "C": "Amazon Q Developer",
+          "D": "AWS CodePipeline"
         },
-        "explanation": "審批門和自動品質檢查可防止未經驗證的工件得到推廣。\n其他選擇削弱了發布安全性和可追溯性。"
+        "explanation": "審批門和自動品質檢查可防止未經驗證的工件得到推廣。\n其他選項適用於此領域的不同需求，但不能像 基於測試結果的管道批准或品質門 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d1-020",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team validating a design against the exam guide needs to generate release notes and test suggestions using an AWS coding assistant. Which service is relevant?",
+    "question": "A team validating a design against the exam guide is redesigning one integrated end-to-end architecture. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The selected controls must provide auditable security, predictable availability, and the lowest operational cost that still satisfies both requirements. The workload needs to generate release notes and test suggestions using an AWS coding assistant, and the same architecture needs a managed service to detect vulnerabilities in container images before deployment. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "Amazon Q Developer",
-      "B": "Amazon S3 Glacier",
-      "C": "AWS Transit Gateway",
-      "D": "Amazon RDS"
+      "A": "Use Amazon Q Developer for the primary requirement and integrate it with Amazon Inspector for the connected control",
+      "B": "Use Amazon Q Developer but replace the connected control with AWS CodePipeline",
+      "C": "Use AWS CodeBuild for the primary requirement and integrate it with Amazon Inspector",
+      "D": "Combine AWS CodeBuild with A canary or blue-green deployment as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Amazon Q Developer can assist with code, reviews, tests, and development workflows.\nThe other choices provide archival storage, networking, or relational databases.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Amazon Q Developer satisfies the first part of the architecture: Amazon Q Developer can assist with code, reviews, tests, and development workflows. Amazon Inspector satisfies the connected requirement: Inspector assesses supported container images and workloads for vulnerabilities.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊需要使用 AWS 編碼助理產生發行說明和測試建議。哪些服務是相關的？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：支援關鍵工作負載的營運團隊需要使用 AWS 編碼助理產生發行說明並測試建議。 第二項需求：製作團隊需要對所有新 S3 物件強制加密。 所選控制必須提供可稽核的安全性、可預測的可用性，以及在滿足兩項要求前提下最低的營運成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "Amazon Q Developer",
-          "B": "Amazon S3 Glacier",
-          "C": "AWS Transit Gateway",
-          "D": "Amazon RDS"
+          "A": "以Amazon Q Developer處理主要需求，並整合Amazon Inspector作為相連控制",
+          "B": "使用Amazon Q Developer，但以AWS CodePipeline取代相連控制",
+          "C": "以AWS CodeBuild處理主要需求，並整合Amazon Inspector",
+          "D": "把AWS CodeBuild與金絲雀或藍綠部署結合為單一平台設計"
         },
-        "explanation": "Amazon Q Developer 可以協助完成程式碼、審查、測試和開發工作流程。\n其他選擇提供檔案儲存、網路或關聯式資料庫。"
+        "explanation": "Amazon Q Developer 負責架構的第一項需求，Amazon Inspector 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "dop-c02-d1-021",
-    "type": "single",
-    "question": "A production team needs a pipeline that builds an artifact, runs tests, and deploys it after an approval. Which service should orchestrate the stages?",
-    "options": {
-      "A": "Amazon EFS",
-      "B": "AWS CodePipeline",
-      "C": "Amazon Route 53",
-      "D": "AWS KMS"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "CodePipeline orchestrates source, build, approval, and deployment stages.\nThe other choices provide DNS, encryption keys, or file storage.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A production team is planning two independent production changes. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The first team needs a pipeline that builds an artifact, runs tests, and deploys it after an approval. A second team must compile source code and produce a versioned artifact in a managed build environment. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "A canary or blue-green deployment",
+      "B": "A pipeline approval or quality gate based on test results",
+      "C": "Amazon Q Developer",
+      "D": "AWS CodePipeline",
+      "E": "AWS CodeBuild"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS CodePipeline meets the first requirement: CodePipeline orchestrates source, build, approval, and deployment stages. AWS CodeBuild meets the second requirement: CodeBuild runs managed build commands and can publish artifacts.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "生產團隊需要一個管道來建置工件、運行測試並在批准後進行部署。哪個服務應該協調各個階段？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。第一項需求：生產團隊需要一個管道來建置工件、運行測試並在批准後進行部署。第二項需求：多帳戶平台團隊必須在託管建置環境中編譯原始程式碼並產生版本化工件。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "Amazon EFS",
-          "B": "AWS CodePipeline",
-          "C": "Amazon Route 53",
-          "D": "AWS KMS"
+          "A": "金絲雀或藍綠部署",
+          "B": "基於測試結果的管道批准或品質門",
+          "C": "Amazon Q Developer",
+          "D": "AWS CodePipeline",
+          "E": "AWS CodeBuild"
         },
-        "explanation": "CodePipeline 協調來源、建置、核准和部署階段。\n其他選項提供 DNS、加密金鑰或檔案儲存。"
+        "explanation": "AWS CodePipeline 符合第一項需求：CodePipeline 協調來源、建置、核准和部署階段。 AWS CodeBuild 符合第二項需求：CodeBuild 運行託管建置命令並且可以發布工件。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "dop-c02-d1-022",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A multi-account platform team must compile source code and produce a versioned artifact in a managed build environment. Which service fits?",
+    "question": "A multi-account platform team is reviewing a production decision. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The team must compile source code and produce a versioned artifact in a managed build environment. Which service fits?",
     "options": {
-      "A": "AWS WAF",
-      "B": "Amazon Neptune",
+      "A": "A pipeline approval or quality gate based on test results",
+      "B": "Amazon Q Developer",
       "C": "AWS CodeBuild",
-      "D": "Amazon Macie"
+      "D": "A canary or blue-green deployment"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "CodeBuild runs managed build commands and can publish artifacts.\nThe other choices discover data, filter web requests, or provide graph storage.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "CodeBuild runs managed build commands and can publish artifacts.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS CodeBuild for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊必須在託管建置環境中編譯原始程式碼並產生版本化工件。適合哪種服務？",
+        "question": "組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。多帳戶平台團隊必須在託管建置環境中編譯原始程式碼並產生版本化工件。適合哪種服務？",
         "options": {
-          "A": "AWS WAF",
-          "B": "Amazon Neptune",
+          "A": "基於測試結果的管道批准或品質門",
+          "B": "Amazon Q Developer",
           "C": "AWS CodeBuild",
-          "D": "Amazon Macie"
+          "D": "金絲雀或藍綠部署"
         },
-        "explanation": "CodeBuild 運行託管建置命令並且可以發布工件。\n其他選擇發現資料、過濾 Web 請求或提供圖形儲存。"
+        "explanation": "CodeBuild 運行託管建置命令並且可以發布工件。\n其他選項適用於此領域的不同需求，但不能像 AWS CodeBuild 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d1-023",
-    "type": "single",
-    "question": "A regulated company needs to deploy a new application version to a subset of instances before full rollout. Which strategy fits?",
-    "options": {
-      "A": "A full replacement with no health check",
-      "B": "A public bucket policy",
-      "C": "A DNS TXT record",
-      "D": "A canary or blue-green deployment"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Canary and blue-green strategies reduce release risk by validating a new version before full traffic shift.\nThe other choices do not implement controlled application rollout.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A regulated company is reviewing a production decision. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The team needs to deploy a new application version to a subset of instances before full rollout. Which strategy fits?",
+    "options": {
+      "A": "AWS CodePipeline",
+      "B": "A canary or blue-green deployment",
+      "C": "A pipeline approval or quality gate based on test results",
+      "D": "Amazon Q Developer"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Canary and blue-green strategies reduce release risk by validating a new version before full traffic shift.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A canary or blue-green deployment for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司需要在全面部署之前將新的應用程式版本部署到執行個體子集。哪種策略適合？",
+        "question": "組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。受監管的公司需要在全面部署之前將新的應用程式版本部署到執行個體子集。哪種策略適合？",
         "options": {
-          "A": "完全替換，無需健康檢查",
-          "B": "公共儲存桶策略",
-          "C": "DNS TXT 記錄",
-          "D": "金絲雀或藍綠部署"
+          "A": "AWS CodePipeline",
+          "B": "金絲雀或藍綠部署",
+          "C": "基於測試結果的管道批准或品質門",
+          "D": "Amazon Q Developer"
         },
-        "explanation": "金絲雀和藍綠色策略透過在流量完全轉移之前驗證新版本來降低發布風險。\n其他選擇不實施受控應用程式推出。"
+        "explanation": "金絲雀和藍綠色策略透過在流量完全轉移之前驗證新版本來降低發布風險。\n其他選項適用於此領域的不同需求，但不能像 金絲雀或藍綠部署 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d1-024",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A startup preparing for a traffic increase must prevent an untested artifact from being promoted to production. Which control is appropriate?",
+    "question": "A startup preparing for a traffic increase is redesigning one integrated end-to-end architecture. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The design must keep recurring cost proportional to use, enforce least privilege, and remain available during a component or Availability Zone failure. The workload must prevent an untested artifact from being promoted to production, and the same architecture needs to generate release notes and test suggestions using an AWS coding assistant. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "A pipeline approval or quality gate based on test results",
-      "B": "Disable all tests",
-      "C": "Use an unversioned artifact name",
-      "D": "Store credentials in source"
+      "A": "Use A pipeline approval or quality gate based on test results for the primary requirement and integrate it with Amazon Q Developer for the connected control",
+      "B": "Use A pipeline approval or quality gate based on test results but replace the connected control with AWS CodePipeline",
+      "C": "Use AWS CodeBuild for the primary requirement and integrate it with Amazon Q Developer",
+      "D": "Combine AWS CodeBuild with A canary or blue-green deployment as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Approval gates and automated quality checks prevent unvalidated artifacts from promotion.\nThe other choices weaken release safety and traceability.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "A pipeline approval or quality gate based on test results satisfies the first part of the architecture: Approval gates and automated quality checks prevent unvalidated artifacts from promotion. Amazon Q Developer satisfies the connected requirement: Amazon Q Developer can assist with code, reviews, tests, and development workflows.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司必須防止未經測試的工件推廣到生產環境。哪種控制合適？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：準備增加流量的新創公司必須防止未經測試的工件推廣到生產環境。 第二項需求：支援關鍵工作負載的營運團隊需要使用 AWS 編碼助理產生發行說明並測試建議。 此設計必須讓持續成本與實際用量相符、落實最低權限，並在元件或可用區域發生故障時維持可用。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "基於測試結果的管道批准或品質門",
-          "B": "停用所有測試",
-          "C": "使用未版本控制的工件名稱",
-          "D": "將憑證儲存在來源中"
+          "A": "以基於測試結果的管道批准或品質門處理主要需求，並整合Amazon Q Developer作為相連控制",
+          "B": "使用基於測試結果的管道批准或品質門，但以AWS CodePipeline取代相連控制",
+          "C": "以AWS CodeBuild處理主要需求，並整合Amazon Q Developer",
+          "D": "把AWS CodeBuild與金絲雀或藍綠部署結合為單一平台設計"
         },
-        "explanation": "審批門和自動品質檢查可防止未經驗證的工件得到推廣。\n其他選擇削弱了發布安全性和可追溯性。"
+        "explanation": "基於測試結果的管道批准或品質門 負責架構的第一項需求，Amazon Q Developer 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "dop-c02-d1-025",
-    "type": "single",
-    "question": "An operations team supporting a critical workload needs to generate release notes and test suggestions using an AWS coding assistant. Which service is relevant?",
-    "options": {
-      "A": "Amazon RDS",
-      "B": "Amazon Q Developer",
-      "C": "Amazon S3 Glacier",
-      "D": "AWS Transit Gateway"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Amazon Q Developer can assist with code, reviews, tests, and development workflows.\nThe other choices provide archival storage, networking, or relational databases.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The team needs to generate release notes and test suggestions using an AWS coding assistant. Which service is relevant?",
+    "options": {
+      "A": "AWS CodePipeline",
+      "B": "AWS CodeBuild",
+      "C": "A canary or blue-green deployment",
+      "D": "Amazon Q Developer"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Amazon Q Developer can assist with code, reviews, tests, and development workflows.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Q Developer for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊需要使用 AWS 編碼助理產生發行說明並測試建議。哪些服務是相關的？",
+        "question": "組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。支援關鍵工作負載的營運團隊需要使用 AWS 編碼助理產生發行說明並測試建議。哪些服務是相關的？",
         "options": {
-          "A": "Amazon RDS",
-          "B": "Amazon Q Developer",
-          "C": "Amazon S3 Glacier",
-          "D": "AWS Transit Gateway"
+          "A": "AWS CodePipeline",
+          "B": "AWS CodeBuild",
+          "C": "金絲雀或藍綠部署",
+          "D": "Amazon Q Developer"
         },
-        "explanation": "Amazon Q Developer 可以協助完成程式碼、審查、測試和開發工作流程。\n其他選擇提供檔案儲存、網路或關聯式資料庫。"
+        "explanation": "Amazon Q Developer 可以協助完成程式碼、審查、測試和開發工作流程。\n其他選項適用於此領域的不同需求，但不能像 Amazon Q Developer 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d1-026",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A data platform team needs a pipeline that builds an artifact, runs tests, and deploys it after an approval. Which service should orchestrate the stages?",
+    "question": "A data platform team is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team needs a pipeline that builds an artifact, runs tests, and deploys it after an approval. Which service should orchestrate the stages?",
     "options": {
-      "A": "AWS KMS",
-      "B": "Amazon EFS",
+      "A": "A canary or blue-green deployment",
+      "B": "A pipeline approval or quality gate based on test results",
       "C": "AWS CodePipeline",
-      "D": "Amazon Route 53"
+      "D": "AWS CodeBuild"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "CodePipeline orchestrates source, build, approval, and deployment stages.\nThe other choices provide DNS, encryption keys, or file storage.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "CodePipeline orchestrates source, build, approval, and deployment stages.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS CodePipeline for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要一個管道來建置工件、運行測試並在批准後進行部署。哪個服務應該協調各個階段？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。資料平台團隊需要一個管道來建置工件、運行測試並在批准後進行部署。哪個服務應該協調各個階段？",
         "options": {
-          "A": "AWS KMS",
-          "B": "Amazon EFS",
+          "A": "金絲雀或藍綠部署",
+          "B": "基於測試結果的管道批准或品質門",
           "C": "AWS CodePipeline",
-          "D": "Amazon Route 53"
+          "D": "AWS CodeBuild"
         },
-        "explanation": "CodePipeline 協調來源、建置、核准和部署階段。\n其他選項提供 DNS、加密金鑰或檔案儲存。"
+        "explanation": "CodePipeline 協調來源、建置、核准和部署階段。\n其他選項適用於此領域的不同需求，但不能像 AWS CodePipeline 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d1-027",
-    "type": "single",
-    "question": "A security-conscious engineering team must compile source code and produce a versioned artifact in a managed build environment. Which service fits?",
-    "options": {
-      "A": "Amazon Macie",
-      "B": "AWS WAF",
-      "C": "Amazon Neptune",
-      "D": "AWS CodeBuild"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "CodeBuild runs managed build commands and can publish artifacts.\nThe other choices discover data, filter web requests, or provide graph storage.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A security-conscious engineering team is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team must compile source code and produce a versioned artifact in a managed build environment. Which service fits?",
+    "options": {
+      "A": "Amazon Q Developer",
+      "B": "AWS CodeBuild",
+      "C": "A canary or blue-green deployment",
+      "D": "A pipeline approval or quality gate based on test results"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CodeBuild runs managed build commands and can publish artifacts.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS CodeBuild for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊必須在託管建置環境中編譯原始程式碼並產生版本化工件。適合哪種服務？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。具有安全意識的工程團隊必須在託管建置環境中編譯原始程式碼並產生版本化工件。適合哪種服務？",
         "options": {
-          "A": "Amazon Macie",
-          "B": "AWS WAF",
-          "C": "Amazon Neptune",
-          "D": "AWS CodeBuild"
+          "A": "Amazon Q Developer",
+          "B": "AWS CodeBuild",
+          "C": "金絲雀或藍綠部署",
+          "D": "基於測試結果的管道批准或品質門"
         },
-        "explanation": "CodeBuild 運行託管建置命令並且可以發布工件。\n其他選擇發現資料、過濾 Web 請求或提供圖形儲存。"
+        "explanation": "CodeBuild 運行託管建置命令並且可以發布工件。\n其他選項適用於此領域的不同需求，但不能像 AWS CodeBuild 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d1-028",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A company migrating an existing workload needs to deploy a new application version to a subset of instances before full rollout. Which strategy fits?",
+    "question": "A company migrating an existing workload is redesigning one integrated end-to-end architecture. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The design must avoid unnecessary standby cost without weakening security controls or the availability objective. The workload needs to deploy a new application version to a subset of instances before full rollout, and the same architecture needs to apply the same guardrail policy to every account. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "A canary or blue-green deployment",
-      "B": "A full replacement with no health check",
-      "C": "A public bucket policy",
-      "D": "A DNS TXT record"
+      "A": "Use A canary or blue-green deployment for the primary requirement and integrate it with An AWS Organizations service control policy for the connected control",
+      "B": "Use A canary or blue-green deployment but replace the connected control with AWS CodePipeline",
+      "C": "Use AWS CodeBuild for the primary requirement and integrate it with An AWS Organizations service control policy",
+      "D": "Combine AWS CodeBuild with A pipeline approval or quality gate based on test results as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Canary and blue-green strategies reduce release risk by validating a new version before full traffic shift.\nThe other choices do not implement controlled application rollout.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "A canary or blue-green deployment satisfies the first part of the architecture: Canary and blue-green strategies reduce release risk by validating a new version before full traffic shift. An AWS Organizations service control policy satisfies the connected requirement: SCPs apply permission guardrails across member accounts.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司需要在全面部署之前將新的應用程式版本部署到執行個體子集。哪種策略適合？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：遷移現有工作負載的公司需要在全面部署之前將新的應用程式版本部署到執行個體子集。 第二項需求：支援關鍵工作負載的營運團隊需要對每個帳戶應用相同的護欄策略。 此設計必須避免不必要的備用成本，同時不可削弱安全控制或可用性目標。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "金絲雀或藍綠部署",
-          "B": "完全替換，無需健康檢查",
-          "C": "公共儲存桶策略",
-          "D": "DNS TXT 記錄"
+          "A": "以金絲雀或藍綠部署處理主要需求，並整合AWS Organizations 服務控制原則作為相連控制",
+          "B": "使用金絲雀或藍綠部署，但以AWS CodePipeline取代相連控制",
+          "C": "以AWS CodeBuild處理主要需求，並整合AWS Organizations 服務控制原則",
+          "D": "把AWS CodeBuild與基於測試結果的管道批准或品質門結合為單一平台設計"
         },
-        "explanation": "金絲雀和藍綠色策略透過在流量完全轉移之前驗證新版本來降低發布風險。\n其他選擇不實施受控應用程式推出。"
+        "explanation": "金絲雀或藍綠部署 負責架構的第一項需求，AWS Organizations 服務控制原則 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "dop-c02-d1-029",
-    "type": "single",
-    "question": "A team with strict recovery objectives must prevent an untested artifact from being promoted to production. Which control is appropriate?",
-    "options": {
-      "A": "Store credentials in source",
-      "B": "A pipeline approval or quality gate based on test results",
-      "C": "Disable all tests",
-      "D": "Use an unversioned artifact name"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Approval gates and automated quality checks prevent unvalidated artifacts from promotion.\nThe other choices weaken release safety and traceability.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team with strict recovery objectives is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team must prevent an untested artifact from being promoted to production. Which control is appropriate?",
+    "options": {
+      "A": "Amazon Q Developer",
+      "B": "AWS CodePipeline",
+      "C": "AWS CodeBuild",
+      "D": "A pipeline approval or quality gate based on test results"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Approval gates and automated quality checks prevent unvalidated artifacts from promotion.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A pipeline approval or quality gate based on test results for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格恢復目標的團隊必須防止未經測試的工件提升到生產環境。哪種控制合適？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。具有嚴格恢復目標的團隊必須防止未經測試的工件提升到生產環境。哪種控制合適？",
         "options": {
-          "A": "將憑證儲存在來源中",
-          "B": "基於測試結果的管道批准或品質門",
-          "C": "停用所有測試",
-          "D": "使用未版本控制的工件名稱"
+          "A": "Amazon Q Developer",
+          "B": "AWS CodePipeline",
+          "C": "AWS CodeBuild",
+          "D": "基於測試結果的管道批准或品質門"
         },
-        "explanation": "審批門和自動品質檢查可防止未經驗證的工件得到推廣。\n其他選擇削弱了發布安全性和可追溯性。"
+        "explanation": "審批門和自動品質檢查可防止未經驗證的工件得到推廣。\n其他選項適用於此領域的不同需求，但不能像 基於測試結果的管道批准或品質門 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d1-030",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A developer team preparing a release needs to generate release notes and test suggestions using an AWS coding assistant. Which service is relevant?",
+    "question": "A developer team preparing a release is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team needs to generate release notes and test suggestions using an AWS coding assistant. Which service is relevant?",
     "options": {
-      "A": "AWS Transit Gateway",
-      "B": "Amazon RDS",
+      "A": "AWS CodeBuild",
+      "B": "A canary or blue-green deployment",
       "C": "Amazon Q Developer",
-      "D": "Amazon S3 Glacier"
+      "D": "AWS CodePipeline"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Amazon Q Developer can assist with code, reviews, tests, and development workflows.\nThe other choices provide archival storage, networking, or relational databases.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Amazon Q Developer can assist with code, reviews, tests, and development workflows.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Q Developer for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊需要使用 AWS 編碼助手產生發布說明並測試建議。哪些服務是相關的？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。準備發布的開發團隊需要使用 AWS 編碼助手產生發布說明並測試建議。哪些服務是相關的？",
         "options": {
-          "A": "AWS Transit Gateway",
-          "B": "Amazon RDS",
+          "A": "AWS CodeBuild",
+          "B": "金絲雀或藍綠部署",
           "C": "Amazon Q Developer",
-          "D": "Amazon S3 Glacier"
+          "D": "AWS CodePipeline"
         },
-        "explanation": "Amazon Q Developer 可以協助完成程式碼、審查、測試和開發工作流程。\n其他選擇提供檔案儲存、網路或關聯式資料庫。"
+        "explanation": "Amazon Q Developer 可以協助完成程式碼、審查、測試和開發工作流程。\n其他選項適用於此領域的不同需求，但不能像 Amazon Q Developer 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d1-031",
-    "type": "single",
-    "question": "An enterprise with several AWS Regions needs a pipeline that builds an artifact, runs tests, and deploys it after an approval. Which service should orchestrate the stages?",
-    "options": {
-      "A": "Amazon Route 53",
-      "B": "AWS KMS",
-      "C": "Amazon EFS",
-      "D": "AWS CodePipeline"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "CodePipeline orchestrates source, build, approval, and deployment stages.\nThe other choices provide DNS, encryption keys, or file storage.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team needs a pipeline that builds an artifact, runs tests, and deploys it after an approval. Which service should orchestrate the stages?",
+    "options": {
+      "A": "A pipeline approval or quality gate based on test results",
+      "B": "AWS CodePipeline",
+      "C": "AWS CodeBuild",
+      "D": "A canary or blue-green deployment"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CodePipeline orchestrates source, build, approval, and deployment stages.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS CodePipeline for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業需要一個管道來建置工件、運行測試並在批准後進行部署。哪個服務應該協調各個階段？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。擁有多個 AWS 區域的企業需要一個管道來建置工件、運行測試並在批准後進行部署。哪個服務應該協調各個階段？",
         "options": {
-          "A": "Amazon Route 53",
-          "B": "AWS KMS",
-          "C": "Amazon EFS",
-          "D": "AWS CodePipeline"
+          "A": "基於測試結果的管道批准或品質門",
+          "B": "AWS CodePipeline",
+          "C": "AWS CodeBuild",
+          "D": "金絲雀或藍綠部署"
         },
-        "explanation": "CodePipeline 協調來源、建置、核准和部署階段。\n其他選項提供 DNS、加密金鑰或檔案儲存。"
+        "explanation": "CodePipeline 協調來源、建置、核准和部署階段。\n其他選項適用於此領域的不同需求，但不能像 AWS CodePipeline 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d1-032",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A service owner reviewing an incident must compile source code and produce a versioned artifact in a managed build environment. Which service fits?",
+    "question": "A service owner reviewing an incident is redesigning one integrated end-to-end architecture. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The organization will accept additional managed-service cost only when it measurably improves security and availability with less operational effort. The workload must compile source code and produce a versioned artifact in a managed build environment, and the same architecture wants an event to trigger an automated recovery workflow. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "AWS CodeBuild",
-      "B": "Amazon Macie",
-      "C": "AWS WAF",
-      "D": "Amazon Neptune"
+      "A": "Use AWS CodeBuild for the primary requirement and integrate it with EventBridge invoking Step Functions for the connected control",
+      "B": "Use AWS CodeBuild but replace the connected control with AWS CodePipeline",
+      "C": "Use A canary or blue-green deployment for the primary requirement and integrate it with EventBridge invoking Step Functions",
+      "D": "Combine A canary or blue-green deployment with A pipeline approval or quality gate based on test results as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "CodeBuild runs managed build commands and can publish artifacts.\nThe other choices discover data, filter web requests, or provide graph storage.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "AWS CodeBuild satisfies the first part of the architecture: CodeBuild runs managed build commands and can publish artifacts. EventBridge invoking Step Functions satisfies the connected requirement: EventBridge and Step Functions can route events into durable, retryable recovery workflows.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務擁有者必須編譯原始程式碼並在託管建置環境中產生版本化工件。適合哪種服務？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：具有安全意識的工程團隊必須在託管建置環境中編譯原始程式碼並產生版本化工件。 第二項需求：準備發布的開發團隊希望有一個事件可以觸發自動恢復工作流程。 只有在託管服務能以較低營運負擔明確改善安全性與可用性時，組織才會接受額外成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "AWS CodeBuild",
-          "B": "Amazon Macie",
-          "C": "AWS WAF",
-          "D": "Amazon Neptune"
+          "A": "以AWS CodeBuild處理主要需求，並整合EventBridge 呼叫 Step Functions作為相連控制",
+          "B": "使用AWS CodeBuild，但以AWS CodePipeline取代相連控制",
+          "C": "以金絲雀或藍綠部署處理主要需求，並整合EventBridge 呼叫 Step Functions",
+          "D": "把金絲雀或藍綠部署與基於測試結果的管道批准或品質門結合為單一平台設計"
         },
-        "explanation": "CodeBuild 運行託管建置命令並且可以發布工件。\n其他選擇發現資料、過濾 Web 請求或提供圖形儲存。"
+        "explanation": "AWS CodeBuild 負責架構的第一項需求，EventBridge 呼叫 Step Functions 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "dop-c02-d1-033",
-    "type": "single",
-    "question": "A team optimizing an existing implementation needs to deploy a new application version to a subset of instances before full rollout. Which strategy fits?",
-    "options": {
-      "A": "A DNS TXT record",
-      "B": "A canary or blue-green deployment",
-      "C": "A full replacement with no health check",
-      "D": "A public bucket policy"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Canary and blue-green strategies reduce release risk by validating a new version before full traffic shift.\nThe other choices do not implement controlled application rollout.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team needs to deploy a new application version to a subset of instances before full rollout. Which strategy fits?",
+    "options": {
+      "A": "A pipeline approval or quality gate based on test results",
+      "B": "Amazon Q Developer",
+      "C": "AWS CodePipeline",
+      "D": "A canary or blue-green deployment"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Canary and blue-green strategies reduce release risk by validating a new version before full traffic shift.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A canary or blue-green deployment for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊需要在全面部署之前將新的應用程式版本部署到執行個體子集。哪種策略適合？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。優化現有實施的團隊需要在全面部署之前將新的應用程式版本部署到執行個體子集。哪種策略適合？",
         "options": {
-          "A": "DNS TXT 記錄",
-          "B": "金絲雀或藍綠部署",
-          "C": "完全替換，無需健康檢查",
-          "D": "公共儲存桶策略"
+          "A": "基於測試結果的管道批准或品質門",
+          "B": "Amazon Q Developer",
+          "C": "AWS CodePipeline",
+          "D": "金絲雀或藍綠部署"
         },
-        "explanation": "金絲雀和藍綠色策略透過在流量完全轉移之前驗證新版本來降低發布風險。\n其他選擇不實施受控應用程式推出。"
+        "explanation": "金絲雀和藍綠色策略透過在流量完全轉移之前驗證新版本來降低發布風險。\n其他選項適用於此領域的不同需求，但不能像 金絲雀或藍綠部署 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d1-034",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A company introducing an automated workflow must prevent an untested artifact from being promoted to production. Which control is appropriate?",
+    "question": "A company introducing an automated workflow is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team must prevent an untested artifact from being promoted to production. Which control is appropriate?",
     "options": {
-      "A": "Use an unversioned artifact name",
-      "B": "Store credentials in source",
+      "A": "AWS CodePipeline",
+      "B": "AWS CodeBuild",
       "C": "A pipeline approval or quality gate based on test results",
-      "D": "Disable all tests"
+      "D": "Amazon Q Developer"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Approval gates and automated quality checks prevent unvalidated artifacts from promotion.\nThe other choices weaken release safety and traceability.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Approval gates and automated quality checks prevent unvalidated artifacts from promotion.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A pipeline approval or quality gate based on test results for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司必須防止未經測試的工件提升到生產環境。哪種控制合適？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。引入自動化工作流程的公司必須防止未經測試的工件提升到生產環境。哪種控制合適？",
         "options": {
-          "A": "使用未版本控制的工件名稱",
-          "B": "將憑證儲存在來源中",
+          "A": "AWS CodePipeline",
+          "B": "AWS CodeBuild",
           "C": "基於測試結果的管道批准或品質門",
-          "D": "停用所有測試"
+          "D": "Amazon Q Developer"
         },
-        "explanation": "審批門和自動品質檢查可防止未經驗證的工件得到推廣。\n其他選擇削弱了發布安全性和可追溯性。"
+        "explanation": "審批門和自動品質檢查可防止未經驗證的工件得到推廣。\n其他選項適用於此領域的不同需求，但不能像 基於測試結果的管道批准或品質門 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d1-035",
-    "type": "single",
-    "question": "An AWS administrator working in a shared environment needs to generate release notes and test suggestions using an AWS coding assistant. Which service is relevant?",
-    "options": {
-      "A": "Amazon S3 Glacier",
-      "B": "AWS Transit Gateway",
-      "C": "Amazon RDS",
-      "D": "Amazon Q Developer"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Amazon Q Developer can assist with code, reviews, tests, and development workflows.\nThe other choices provide archival storage, networking, or relational databases.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "An AWS administrator working in a shared environment is planning two independent production changes. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The first team needs to generate release notes and test suggestions using an AWS coding assistant. A second team needs a pipeline that builds an artifact, runs tests, and deploys it after an approval. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "AWS CodePipeline",
+      "B": "AWS CodeBuild",
+      "C": "A canary or blue-green deployment",
+      "D": "A pipeline approval or quality gate based on test results",
+      "E": "Amazon Q Developer"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Amazon Q Developer meets the first requirement: Amazon Q Developer can assist with code, reviews, tests, and development workflows. AWS CodePipeline meets the second requirement: CodePipeline orchestrates source, build, approval, and deployment stages.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "在共用環境中工作的 AWS 管理員需要使用 AWS 編碼助理產生發行說明和測試建議。哪些服務是相關的？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。第一項需求：生產團隊需要一個管道來建置工件、運行測試並在批准後進行部署。第二項需求：支援關鍵工作負載的營運團隊需要使用 AWS 編碼助理產生發行說明並測試建議。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "Amazon S3 Glacier",
-          "B": "AWS Transit Gateway",
-          "C": "Amazon RDS",
-          "D": "Amazon Q Developer"
+          "A": "AWS CodePipeline",
+          "B": "AWS CodeBuild",
+          "C": "金絲雀或藍綠部署",
+          "D": "基於測試結果的管道批准或品質門",
+          "E": "Amazon Q Developer"
         },
-        "explanation": "Amazon Q Developer 可以協助完成程式碼、審查、測試和開發工作流程。\n其他選擇提供檔案儲存、網路或關聯式資料庫。"
+        "explanation": "AWS CodePipeline 符合第一項需求：CodePipeline 協調來源、建置、核准和部署階段。 Amazon Q Developer 符合第二項需求：Amazon Q Developer 可以協助完成程式碼、審查、測試和開發工作流程。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "dop-c02-d1-036",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A customer-facing application team needs a pipeline that builds an artifact, runs tests, and deploys it after an approval. Which service should orchestrate the stages?",
+    "question": "A customer-facing application team is redesigning one integrated end-to-end architecture. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The architecture must limit blast radius, preserve availability during change, and control cost through automation instead of permanent overprovisioning. The workload needs a pipeline that builds an artifact, runs tests, and deploys it after an approval, and the same architecture needs a dashboard that combines metrics from several accounts and Regions. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "AWS CodePipeline",
-      "B": "Amazon Route 53",
-      "C": "AWS KMS",
-      "D": "Amazon EFS"
+      "A": "Use AWS CodePipeline for the primary requirement and integrate it with CloudWatch cross-account observability dashboards for the connected control",
+      "B": "Use AWS CodePipeline but replace the connected control with AWS CodeBuild",
+      "C": "Use A canary or blue-green deployment for the primary requirement and integrate it with CloudWatch cross-account observability dashboards",
+      "D": "Combine A canary or blue-green deployment with A pipeline approval or quality gate based on test results as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "CodePipeline orchestrates source, build, approval, and deployment stages.\nThe other choices provide DNS, encryption keys, or file storage.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "AWS CodePipeline satisfies the first part of the architecture: CodePipeline orchestrates source, build, approval, and deployment stages. CloudWatch cross-account observability dashboards satisfies the connected requirement: CloudWatch supports cross-account and cross-Region monitoring views for centralized operations.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊需要一個管道來建置工件、運行測試並在批准後進行部署。哪個服務應該協調各個階段？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：資料平台團隊需要一個管道來建置工件、運行測試並在批准後進行部署。 第二項需求：準備發布的開發團隊需要一個儀表板，其中結合了多個帳戶和區域的指標。 此架構必須限制影響範圍、在變更期間維持可用性，並透過自動化控制成本，而不是長期過度佈建。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "AWS CodePipeline",
-          "B": "Amazon Route 53",
-          "C": "AWS KMS",
-          "D": "Amazon EFS"
+          "A": "以AWS CodePipeline處理主要需求，並整合CloudWatch 跨帳戶可觀測性儀表板作為相連控制",
+          "B": "使用AWS CodePipeline，但以AWS CodeBuild取代相連控制",
+          "C": "以金絲雀或藍綠部署處理主要需求，並整合CloudWatch 跨帳戶可觀測性儀表板",
+          "D": "把金絲雀或藍綠部署與基於測試結果的管道批准或品質門結合為單一平台設計"
         },
-        "explanation": "CodePipeline 協調來源、建置、核准和部署階段。\n其他選項提供 DNS、加密金鑰或檔案儲存。"
+        "explanation": "AWS CodePipeline 負責架構的第一項需求，CloudWatch 跨帳戶可觀測性儀表板 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "dop-c02-d1-037",
-    "type": "single",
-    "question": "A platform team standardizing its AWS deployments must compile source code and produce a versioned artifact in a managed build environment. Which service fits?",
-    "options": {
-      "A": "Amazon Neptune",
-      "B": "AWS CodeBuild",
-      "C": "Amazon Macie",
-      "D": "AWS WAF"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "CodeBuild runs managed build commands and can publish artifacts.\nThe other choices discover data, filter web requests, or provide graph storage.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team must compile source code and produce a versioned artifact in a managed build environment. Which service fits?",
+    "options": {
+      "A": "A canary or blue-green deployment",
+      "B": "A pipeline approval or quality gate based on test results",
+      "C": "Amazon Q Developer",
+      "D": "AWS CodeBuild"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CodeBuild runs managed build commands and can publish artifacts.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS CodeBuild for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊必須編譯原始程式碼並在託管建置環境中產生版本化工件。適合哪種服務？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。標準化其 AWS 部署的平台團隊必須編譯原始程式碼並在託管建置環境中產生版本化工件。適合哪種服務？",
         "options": {
-          "A": "Amazon Neptune",
-          "B": "AWS CodeBuild",
-          "C": "Amazon Macie",
-          "D": "AWS WAF"
+          "A": "金絲雀或藍綠部署",
+          "B": "基於測試結果的管道批准或品質門",
+          "C": "Amazon Q Developer",
+          "D": "AWS CodeBuild"
         },
-        "explanation": "CodeBuild 運行託管建置命令並且可以發布工件。\n其他選擇發現資料、過濾 Web 請求或提供圖形儲存。"
+        "explanation": "CodeBuild 運行託管建置命令並且可以發布工件。\n其他選項適用於此領域的不同需求，但不能像 AWS CodeBuild 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d1-038",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team preparing evidence for an audit needs to deploy a new application version to a subset of instances before full rollout. Which strategy fits?",
+    "question": "A team preparing evidence for an audit is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team needs to deploy a new application version to a subset of instances before full rollout. Which strategy fits?",
     "options": {
-      "A": "A public bucket policy",
-      "B": "A DNS TXT record",
+      "A": "Amazon Q Developer",
+      "B": "AWS CodePipeline",
       "C": "A canary or blue-green deployment",
-      "D": "A full replacement with no health check"
+      "D": "A pipeline approval or quality gate based on test results"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Canary and blue-green strategies reduce release risk by validating a new version before full traffic shift.\nThe other choices do not implement controlled application rollout.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Canary and blue-green strategies reduce release risk by validating a new version before full traffic shift.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A canary or blue-green deployment for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備審計證據的團隊需要在全面部署之前將新的應用程式版本部署到執行個體子集。哪種策略適合？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。準備審計證據的團隊需要在全面部署之前將新的應用程式版本部署到執行個體子集。哪種策略適合？",
         "options": {
-          "A": "公共儲存桶策略",
-          "B": "DNS TXT 記錄",
+          "A": "Amazon Q Developer",
+          "B": "AWS CodePipeline",
           "C": "金絲雀或藍綠部署",
-          "D": "完全替換，無需健康檢查"
+          "D": "基於測試結果的管道批准或品質門"
         },
-        "explanation": "金絲雀和藍綠色策略透過在流量完全轉移之前驗證新版本來降低發布風險。\n其他選擇不實施受控應用程式推出。"
+        "explanation": "金絲雀和藍綠色策略透過在流量完全轉移之前驗證新版本來降低發布風險。\n其他選項適用於此領域的不同需求，但不能像 金絲雀或藍綠部署 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d1-039",
-    "type": "single",
-    "question": "A business replacing a manual process must prevent an untested artifact from being promoted to production. Which control is appropriate?",
-    "options": {
-      "A": "Disable all tests",
-      "B": "Use an unversioned artifact name",
-      "C": "Store credentials in source",
-      "D": "A pipeline approval or quality gate based on test results"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Approval gates and automated quality checks prevent unvalidated artifacts from promotion.\nThe other choices weaken release safety and traceability.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A business replacing a manual process is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team must prevent an untested artifact from being promoted to production. Which control is appropriate?",
+    "options": {
+      "A": "AWS CodeBuild",
+      "B": "A pipeline approval or quality gate based on test results",
+      "C": "Amazon Q Developer",
+      "D": "AWS CodePipeline"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Approval gates and automated quality checks prevent unvalidated artifacts from promotion.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A pipeline approval or quality gate based on test results for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "替換手動流程的企業必須防止未經測試的工件升級到生產。哪種控制合適？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。替換手動流程的企業必須防止未經測試的工件升級到生產。哪種控制合適？",
         "options": {
-          "A": "停用所有測試",
-          "B": "使用未版本控制的工件名稱",
-          "C": "將憑證儲存在來源中",
-          "D": "基於測試結果的管道批准或品質門"
+          "A": "AWS CodeBuild",
+          "B": "基於測試結果的管道批准或品質門",
+          "C": "Amazon Q Developer",
+          "D": "AWS CodePipeline"
         },
-        "explanation": "審批門和自動品質檢查可防止未經驗證的工件得到推廣。\n其他選擇削弱了發布安全性和可追溯性。"
+        "explanation": "審批門和自動品質檢查可防止未經驗證的工件得到推廣。\n其他選項適用於此領域的不同需求，但不能像 基於測試結果的管道批准或品質門 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d1-040",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team validating a design against the exam guide needs to generate release notes and test suggestions using an AWS coding assistant. Which service is relevant?",
+    "question": "A team validating a design against the exam guide is redesigning one integrated end-to-end architecture. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The selected controls must provide auditable security, predictable availability, and the lowest operational cost that still satisfies both requirements. The workload needs to generate release notes and test suggestions using an AWS coding assistant, and the same architecture must document a repeatable response to a common alarm. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "Amazon Q Developer",
-      "B": "Amazon S3 Glacier",
-      "C": "AWS Transit Gateway",
-      "D": "Amazon RDS"
+      "A": "Use Amazon Q Developer for the primary requirement and integrate it with Systems Manager Automation runbook for the connected control",
+      "B": "Use Amazon Q Developer but replace the connected control with AWS CodePipeline",
+      "C": "Use AWS CodeBuild for the primary requirement and integrate it with Systems Manager Automation runbook",
+      "D": "Combine AWS CodeBuild with A canary or blue-green deployment as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Amazon Q Developer can assist with code, reviews, tests, and development workflows.\nThe other choices provide archival storage, networking, or relational databases.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Amazon Q Developer satisfies the first part of the architecture: Amazon Q Developer can assist with code, reviews, tests, and development workflows. Systems Manager Automation runbook satisfies the connected requirement: Automation runbooks encode repeatable operational response steps.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊需要使用 AWS 編碼助理產生發行說明和測試建議。哪些服務是相關的？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：支援關鍵工作負載的營運團隊需要使用 AWS 編碼助理產生發行說明並測試建議。 第二項需求：準備發布的開發團隊必須記錄對常見警報的可重複回應。 所選控制必須提供可稽核的安全性、可預測的可用性，以及在滿足兩項要求前提下最低的營運成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "Amazon Q Developer",
-          "B": "Amazon S3 Glacier",
-          "C": "AWS Transit Gateway",
-          "D": "Amazon RDS"
+          "A": "以Amazon Q Developer處理主要需求，並整合Systems Manager Automation操作手冊作為相連控制",
+          "B": "使用Amazon Q Developer，但以AWS CodePipeline取代相連控制",
+          "C": "以AWS CodeBuild處理主要需求，並整合Systems Manager Automation操作手冊",
+          "D": "把AWS CodeBuild與金絲雀或藍綠部署結合為單一平台設計"
         },
-        "explanation": "Amazon Q Developer 可以協助完成程式碼、審查、測試和開發工作流程。\n其他選擇提供檔案儲存、網路或關聯式資料庫。"
+        "explanation": "Amazon Q Developer 負責架構的第一項需求，Systems Manager Automation操作手冊 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "dop-c02-d1-041",
-    "type": "single",
-    "question": "A production team needs a pipeline that builds an artifact, runs tests, and deploys it after an approval. Which service should orchestrate the stages?",
-    "options": {
-      "A": "Amazon EFS",
-      "B": "AWS CodePipeline",
-      "C": "Amazon Route 53",
-      "D": "AWS KMS"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "CodePipeline orchestrates source, build, approval, and deployment stages.\nThe other choices provide DNS, encryption keys, or file storage.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A production team is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team needs a pipeline that builds an artifact, runs tests, and deploys it after an approval. Which service should orchestrate the stages?",
+    "options": {
+      "A": "AWS CodeBuild",
+      "B": "A canary or blue-green deployment",
+      "C": "A pipeline approval or quality gate based on test results",
+      "D": "AWS CodePipeline"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CodePipeline orchestrates source, build, approval, and deployment stages.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS CodePipeline for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "生產團隊需要一個管道來建置工件、運行測試並在批准後進行部署。哪個服務應該協調各個階段？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。生產團隊需要一個管道來建置工件、運行測試並在批准後進行部署。哪個服務應該協調各個階段？",
         "options": {
-          "A": "Amazon EFS",
-          "B": "AWS CodePipeline",
-          "C": "Amazon Route 53",
-          "D": "AWS KMS"
+          "A": "AWS CodeBuild",
+          "B": "金絲雀或藍綠部署",
+          "C": "基於測試結果的管道批准或品質門",
+          "D": "AWS CodePipeline"
         },
-        "explanation": "CodePipeline 協調來源、建置、核准和部署階段。\n其他選項提供 DNS、加密金鑰或檔案儲存。"
+        "explanation": "CodePipeline 協調來源、建置、核准和部署階段。\n其他選項適用於此領域的不同需求，但不能像 AWS CodePipeline 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d1-042",
-    "type": "single",
-    "question": "A multi-account platform team must compile source code and produce a versioned artifact in a managed build environment. Which service fits?",
-    "options": {
-      "A": "AWS WAF",
-      "B": "Amazon Neptune",
-      "C": "AWS CodeBuild",
-      "D": "Amazon Macie"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "CodeBuild runs managed build commands and can publish artifacts.\nThe other choices discover data, filter web requests, or provide graph storage.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A multi-account platform team is planning two independent production changes. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The first team must compile source code and produce a versioned artifact in a managed build environment. A second team needs to deploy a new application version to a subset of instances before full rollout. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Amazon Q Developer",
+      "B": "AWS CodePipeline",
+      "C": "AWS CodeBuild",
+      "D": "A canary or blue-green deployment",
+      "E": "A pipeline approval or quality gate based on test results"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS CodeBuild meets the first requirement: CodeBuild runs managed build commands and can publish artifacts. A canary or blue-green deployment meets the second requirement: Canary and blue-green strategies reduce release risk by validating a new version before full traffic shift.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊必須在託管建置環境中編譯原始程式碼並產生版本化工件。適合哪種服務？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。第一項需求：多帳戶平台團隊必須在託管建置環境中編譯原始程式碼並產生版本化工件。第二項需求：受監管的公司需要在全面部署之前將新的應用程式版本部署到執行個體子集。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "AWS WAF",
-          "B": "Amazon Neptune",
+          "A": "Amazon Q Developer",
+          "B": "AWS CodePipeline",
           "C": "AWS CodeBuild",
-          "D": "Amazon Macie"
+          "D": "金絲雀或藍綠部署",
+          "E": "基於測試結果的管道批准或品質門"
         },
-        "explanation": "CodeBuild 運行託管建置命令並且可以發布工件。\n其他選擇發現資料、過濾 Web 請求或提供圖形儲存。"
+        "explanation": "AWS CodeBuild 符合第一項需求：CodeBuild 運行託管建置命令並且可以發布工件。 金絲雀或藍綠部署 符合第二項需求：金絲雀和藍綠色策略透過在流量完全轉移之前驗證新版本來降低發布風險。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "dop-c02-d1-043",
-    "type": "single",
-    "question": "A regulated company needs to deploy a new application version to a subset of instances before full rollout. Which strategy fits?",
-    "options": {
-      "A": "A full replacement with no health check",
-      "B": "A public bucket policy",
-      "C": "A DNS TXT record",
-      "D": "A canary or blue-green deployment"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Canary and blue-green strategies reduce release risk by validating a new version before full traffic shift.\nThe other choices do not implement controlled application rollout.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A regulated company is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team needs to deploy a new application version to a subset of instances before full rollout. Which strategy fits?",
+    "options": {
+      "A": "AWS CodePipeline",
+      "B": "A canary or blue-green deployment",
+      "C": "A pipeline approval or quality gate based on test results",
+      "D": "Amazon Q Developer"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Canary and blue-green strategies reduce release risk by validating a new version before full traffic shift.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A canary or blue-green deployment for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司需要在全面部署之前將新的應用程式版本部署到執行個體子集。哪種策略適合？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。受監管的公司需要在全面部署之前將新的應用程式版本部署到執行個體子集。哪種策略適合？",
         "options": {
-          "A": "完全替換，無需健康檢查",
-          "B": "公共儲存桶策略",
-          "C": "DNS TXT 記錄",
-          "D": "金絲雀或藍綠部署"
+          "A": "AWS CodePipeline",
+          "B": "金絲雀或藍綠部署",
+          "C": "基於測試結果的管道批准或品質門",
+          "D": "Amazon Q Developer"
         },
-        "explanation": "金絲雀和藍綠色策略透過在流量完全轉移之前驗證新版本來降低發布風險。\n其他選擇不實施受控應用程式推出。"
+        "explanation": "金絲雀和藍綠色策略透過在流量完全轉移之前驗證新版本來降低發布風險。\n其他選項適用於此領域的不同需求，但不能像 金絲雀或藍綠部署 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d1-044",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A startup preparing for a traffic increase must prevent an untested artifact from being promoted to production. Which control is appropriate?",
+    "question": "A startup preparing for a traffic increase is redesigning one integrated end-to-end architecture. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The design must keep recurring cost proportional to use, enforce least privilege, and remain available during a component or Availability Zone failure. The workload must prevent an untested artifact from being promoted to production, and the same architecture needs a managed service to detect vulnerabilities in container images before deployment. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "A pipeline approval or quality gate based on test results",
-      "B": "Disable all tests",
-      "C": "Use an unversioned artifact name",
-      "D": "Store credentials in source"
+      "A": "Use A pipeline approval or quality gate based on test results for the primary requirement and integrate it with Amazon Inspector for the connected control",
+      "B": "Use A pipeline approval or quality gate based on test results but replace the connected control with AWS CodePipeline",
+      "C": "Use AWS CodeBuild for the primary requirement and integrate it with Amazon Inspector",
+      "D": "Combine AWS CodeBuild with A canary or blue-green deployment as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Approval gates and automated quality checks prevent unvalidated artifacts from promotion.\nThe other choices weaken release safety and traceability.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "A pipeline approval or quality gate based on test results satisfies the first part of the architecture: Approval gates and automated quality checks prevent unvalidated artifacts from promotion. Amazon Inspector satisfies the connected requirement: Inspector assesses supported container images and workloads for vulnerabilities.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司必須防止未經測試的工件推廣到生產環境。哪種控制合適？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：準備增加流量的新創公司必須防止未經測試的工件推廣到生產環境。 第二項需求：製作團隊需要對所有新 S3 物件強制加密。 此設計必須讓持續成本與實際用量相符、落實最低權限，並在元件或可用區域發生故障時維持可用。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "基於測試結果的管道批准或品質門",
-          "B": "停用所有測試",
-          "C": "使用未版本控制的工件名稱",
-          "D": "將憑證儲存在來源中"
+          "A": "以基於測試結果的管道批准或品質門處理主要需求，並整合Amazon Inspector作為相連控制",
+          "B": "使用基於測試結果的管道批准或品質門，但以AWS CodePipeline取代相連控制",
+          "C": "以AWS CodeBuild處理主要需求，並整合Amazon Inspector",
+          "D": "把AWS CodeBuild與金絲雀或藍綠部署結合為單一平台設計"
         },
-        "explanation": "審批門和自動品質檢查可防止未經驗證的工件得到推廣。\n其他選擇削弱了發布安全性和可追溯性。"
+        "explanation": "基於測試結果的管道批准或品質門 負責架構的第一項需求，Amazon Inspector 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "dop-c02-d1-045",
-    "type": "single",
-    "question": "An operations team supporting a critical workload needs to generate release notes and test suggestions using an AWS coding assistant. Which service is relevant?",
-    "options": {
-      "A": "Amazon RDS",
-      "B": "Amazon Q Developer",
-      "C": "Amazon S3 Glacier",
-      "D": "AWS Transit Gateway"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Amazon Q Developer can assist with code, reviews, tests, and development workflows.\nThe other choices provide archival storage, networking, or relational databases.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team needs to generate release notes and test suggestions using an AWS coding assistant. Which service is relevant?",
+    "options": {
+      "A": "AWS CodePipeline",
+      "B": "AWS CodeBuild",
+      "C": "A canary or blue-green deployment",
+      "D": "Amazon Q Developer"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Amazon Q Developer can assist with code, reviews, tests, and development workflows.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Q Developer for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊需要使用 AWS 編碼助理產生發行說明並測試建議。哪些服務是相關的？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。支援關鍵工作負載的營運團隊需要使用 AWS 編碼助理產生發行說明並測試建議。哪些服務是相關的？",
         "options": {
-          "A": "Amazon RDS",
-          "B": "Amazon Q Developer",
-          "C": "Amazon S3 Glacier",
-          "D": "AWS Transit Gateway"
+          "A": "AWS CodePipeline",
+          "B": "AWS CodeBuild",
+          "C": "金絲雀或藍綠部署",
+          "D": "Amazon Q Developer"
         },
-        "explanation": "Amazon Q Developer 可以協助完成程式碼、審查、測試和開發工作流程。\n其他選擇提供檔案儲存、網路或關聯式資料庫。"
+        "explanation": "Amazon Q Developer 可以協助完成程式碼、審查、測試和開發工作流程。\n其他選項適用於此領域的不同需求，但不能像 Amazon Q Developer 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d1-046",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A data platform team needs a pipeline that builds an artifact, runs tests, and deploys it after an approval. Which service should orchestrate the stages?",
+    "question": "A data platform team is reviewing a production decision. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The team needs a pipeline that builds an artifact, runs tests, and deploys it after an approval. Which service should orchestrate the stages?",
     "options": {
-      "A": "AWS KMS",
-      "B": "Amazon EFS",
+      "A": "A canary or blue-green deployment",
+      "B": "A pipeline approval or quality gate based on test results",
       "C": "AWS CodePipeline",
-      "D": "Amazon Route 53"
+      "D": "AWS CodeBuild"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "CodePipeline orchestrates source, build, approval, and deployment stages.\nThe other choices provide DNS, encryption keys, or file storage.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "CodePipeline orchestrates source, build, approval, and deployment stages.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS CodePipeline for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要一個管道來建置工件、運行測試並在批准後進行部署。哪個服務應該協調各個階段？",
+        "question": "組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。資料平台團隊需要一個管道來建置工件、運行測試並在批准後進行部署。哪個服務應該協調各個階段？",
         "options": {
-          "A": "AWS KMS",
-          "B": "Amazon EFS",
+          "A": "金絲雀或藍綠部署",
+          "B": "基於測試結果的管道批准或品質門",
           "C": "AWS CodePipeline",
-          "D": "Amazon Route 53"
+          "D": "AWS CodeBuild"
         },
-        "explanation": "CodePipeline 協調來源、建置、核准和部署階段。\n其他選項提供 DNS、加密金鑰或檔案儲存。"
+        "explanation": "CodePipeline 協調來源、建置、核准和部署階段。\n其他選項適用於此領域的不同需求，但不能像 AWS CodePipeline 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d1-047",
-    "type": "single",
-    "question": "A security-conscious engineering team must compile source code and produce a versioned artifact in a managed build environment. Which service fits?",
-    "options": {
-      "A": "Amazon Macie",
-      "B": "AWS WAF",
-      "C": "Amazon Neptune",
-      "D": "AWS CodeBuild"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "CodeBuild runs managed build commands and can publish artifacts.\nThe other choices discover data, filter web requests, or provide graph storage.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A security-conscious engineering team is reviewing a production decision. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The team must compile source code and produce a versioned artifact in a managed build environment. Which service fits?",
+    "options": {
+      "A": "Amazon Q Developer",
+      "B": "AWS CodeBuild",
+      "C": "A canary or blue-green deployment",
+      "D": "A pipeline approval or quality gate based on test results"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CodeBuild runs managed build commands and can publish artifacts.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS CodeBuild for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊必須在託管建置環境中編譯原始程式碼並產生版本化工件。適合哪種服務？",
+        "question": "組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。具有安全意識的工程團隊必須在託管建置環境中編譯原始程式碼並產生版本化工件。適合哪種服務？",
         "options": {
-          "A": "Amazon Macie",
-          "B": "AWS WAF",
-          "C": "Amazon Neptune",
-          "D": "AWS CodeBuild"
+          "A": "Amazon Q Developer",
+          "B": "AWS CodeBuild",
+          "C": "金絲雀或藍綠部署",
+          "D": "基於測試結果的管道批准或品質門"
         },
-        "explanation": "CodeBuild 運行託管建置命令並且可以發布工件。\n其他選擇發現資料、過濾 Web 請求或提供圖形儲存。"
+        "explanation": "CodeBuild 運行託管建置命令並且可以發布工件。\n其他選項適用於此領域的不同需求，但不能像 AWS CodeBuild 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dop-c02-d1-048",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A company migrating an existing workload needs to deploy a new application version to a subset of instances before full rollout. Which strategy fits?",
+    "question": "A company migrating an existing workload is redesigning one integrated end-to-end architecture. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The design must avoid unnecessary standby cost without weakening security controls or the availability objective. The workload needs to deploy a new application version to a subset of instances before full rollout, and the same architecture needs to generate release notes and test suggestions using an AWS coding assistant. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "A canary or blue-green deployment",
-      "B": "A full replacement with no health check",
-      "C": "A public bucket policy",
-      "D": "A DNS TXT record"
+      "A": "Use A canary or blue-green deployment for the primary requirement and integrate it with Amazon Q Developer for the connected control",
+      "B": "Use A canary or blue-green deployment but replace the connected control with AWS CodePipeline",
+      "C": "Use AWS CodeBuild for the primary requirement and integrate it with Amazon Q Developer",
+      "D": "Combine AWS CodeBuild with A pipeline approval or quality gate based on test results as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Canary and blue-green strategies reduce release risk by validating a new version before full traffic shift.\nThe other choices do not implement controlled application rollout.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "A canary or blue-green deployment satisfies the first part of the architecture: Canary and blue-green strategies reduce release risk by validating a new version before full traffic shift. Amazon Q Developer satisfies the connected requirement: Amazon Q Developer can assist with code, reviews, tests, and development workflows.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司需要在全面部署之前將新的應用程式版本部署到執行個體子集。哪種策略適合？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：遷移現有工作負載的公司需要在全面部署之前將新的應用程式版本部署到執行個體子集。 第二項需求：支援關鍵工作負載的營運團隊需要使用 AWS 編碼助理產生發行說明並測試建議。 此設計必須避免不必要的備用成本，同時不可削弱安全控制或可用性目標。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "金絲雀或藍綠部署",
-          "B": "完全替換，無需健康檢查",
-          "C": "公共儲存桶策略",
-          "D": "DNS TXT 記錄"
+          "A": "以金絲雀或藍綠部署處理主要需求，並整合Amazon Q Developer作為相連控制",
+          "B": "使用金絲雀或藍綠部署，但以AWS CodePipeline取代相連控制",
+          "C": "以AWS CodeBuild處理主要需求，並整合Amazon Q Developer",
+          "D": "把AWS CodeBuild與基於測試結果的管道批准或品質門結合為單一平台設計"
         },
-        "explanation": "金絲雀和藍綠色策略透過在流量完全轉移之前驗證新版本來降低發布風險。\n其他選擇不實施受控應用程式推出。"
+        "explanation": "金絲雀或藍綠部署 負責架構的第一項需求，Amazon Q Developer 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "dop-c02-d1-049",
-    "type": "single",
-    "question": "A team with strict recovery objectives must prevent an untested artifact from being promoted to production. Which control is appropriate?",
-    "options": {
-      "A": "Store credentials in source",
-      "B": "A pipeline approval or quality gate based on test results",
-      "C": "Disable all tests",
-      "D": "Use an unversioned artifact name"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Approval gates and automated quality checks prevent unvalidated artifacts from promotion.\nThe other choices weaken release safety and traceability.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A team with strict recovery objectives is planning two independent production changes. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The first team must prevent an untested artifact from being promoted to production. A second team needs to generate release notes and test suggestions using an AWS coding assistant. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "A pipeline approval or quality gate based on test results",
+      "B": "Amazon Q Developer",
+      "C": "AWS CodePipeline",
+      "D": "AWS CodeBuild",
+      "E": "A canary or blue-green deployment"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "A pipeline approval or quality gate based on test results meets the first requirement: Approval gates and automated quality checks prevent unvalidated artifacts from promotion. Amazon Q Developer meets the second requirement: Amazon Q Developer can assist with code, reviews, tests, and development workflows.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有嚴格恢復目標的團隊必須防止未經測試的工件提升到生產環境。哪種控制合適？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。第一項需求：準備增加流量的新創公司必須防止未經測試的工件推廣到生產環境。第二項需求：支援關鍵工作負載的營運團隊需要使用 AWS 編碼助理產生發行說明並測試建議。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "將憑證儲存在來源中",
-          "B": "基於測試結果的管道批准或品質門",
-          "C": "停用所有測試",
-          "D": "使用未版本控制的工件名稱"
+          "A": "基於測試結果的管道批准或品質門",
+          "B": "Amazon Q Developer",
+          "C": "AWS CodePipeline",
+          "D": "AWS CodeBuild",
+          "E": "金絲雀或藍綠部署"
         },
-        "explanation": "審批門和自動品質檢查可防止未經驗證的工件得到推廣。\n其他選擇削弱了發布安全性和可追溯性。"
+        "explanation": "基於測試結果的管道批准或品質門 符合第一項需求：審批門和自動品質檢查可防止未經驗證的工件得到推廣。 Amazon Q Developer 符合第二項需求：Amazon Q Developer 可以協助完成程式碼、審查、測試和開發工作流程。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   }

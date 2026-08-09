@@ -1,1205 +1,1235 @@
 [
   {
     "id": "dea-c01-d3-001",
-    "type": "single",
-    "question": "A production team needs to alert when a pipeline job fails or exceeds its duration objective. Which capability should be configured?",
-    "options": {
-      "A": "An S3 public access point",
-      "B": "A KMS alias",
-      "C": "A Route 53 TXT record",
-      "D": "CloudWatch metrics and alarms for the pipeline"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "CloudWatch metrics and alarms provide operational visibility and notifications for data workflows.\nThe other choices manage storage access, key names, or DNS text records.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A production team is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs to alert when a pipeline job fails or exceeds its duration objective. Which capability should be configured?",
+    "options": {
+      "A": "Materialize or cache the result when the access pattern justifies it",
+      "B": "CloudWatch metrics and alarms for the pipeline",
+      "C": "A data quality validation step",
+      "D": "A centralized CloudWatch Logs group with Logs Insights queries"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch metrics and alarms provide operational visibility and notifications for data workflows.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide CloudWatch metrics and alarms for the pipeline for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "當管道作業失敗或超過其持續時間目標時，生產團隊需要發出警報。應該配置哪些能力？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。當管道作業失敗或超過其持續時間目標時，生產團隊需要發出警報。應該配置哪些能力？",
         "options": {
-          "A": "S3 公共存取點",
-          "B": "KMS 別名",
-          "C": "Route 53 TXT 記錄",
-          "D": "管道的 CloudWatch 指標和警報"
+          "A": "當存取模式證明合理時實現或快取結果",
+          "B": "管道的 CloudWatch 指標和警報",
+          "C": "資料品質驗證步驟",
+          "D": "具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組"
         },
-        "explanation": "CloudWatch 指標和警報為資料工作流程提供操作可見性和通知。\n其他選項管理儲存存取、金鑰名稱或 DNS 文字記錄。"
+        "explanation": "CloudWatch 指標和警報為資料工作流程提供操作可見性和通知。\n其他選項適用於此領域的不同需求，但不能像 管道的 CloudWatch 指標和警報 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d3-002",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A multi-account platform team must check that required columns are non-null before loading a curated table. What should the pipeline include?",
+    "question": "A multi-account platform team is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team must check that required columns are non-null before loading a curated table. What should the pipeline include?",
     "options": {
       "A": "A data quality validation step",
-      "B": "A CloudFront distribution",
-      "C": "An IAM group only",
-      "D": "An EBS placement group"
+      "B": "A centralized CloudWatch Logs group with Logs Insights queries",
+      "C": "Materialize or cache the result when the access pattern justifies it",
+      "D": "Retain source records or a replayable stream for a defined period"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "A validation step detects missing or invalid values before publishing data to downstream consumers.\nThe other choices do not assess record quality.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "A validation step detects missing or invalid values before publishing data to downstream consumers.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A data quality validation step for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊必須在載入規劃表之前檢查所需列是否為非空。管道應該包括什麼？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。多帳戶平台團隊必須在載入規劃表之前檢查所需列是否為非空。管道應該包括什麼？",
         "options": {
           "A": "資料品質驗證步驟",
-          "B": "CloudFront 發行版",
-          "C": "僅 IAM Groups",
-          "D": "EBS 置放組"
+          "B": "具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組",
+          "C": "當存取模式證明合理時實現或快取結果",
+          "D": "在定義的時間內保留來源記錄或可重播流"
         },
-        "explanation": "在將資料發佈給下游消費者之前，驗證步驟會偵測缺失值或無效值。\n其他選擇不評估記錄品質。"
+        "explanation": "在將資料發佈給下游消費者之前，驗證步驟會偵測缺失值或無效值。\n其他選項適用於此領域的不同需求，但不能像 資料品質驗證步驟 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d3-003",
-    "type": "single",
-    "question": "A regulated company needs to query historical pipeline logs efficiently. Which destination is suitable?",
-    "options": {
-      "A": "An S3 website endpoint",
-      "B": "A centralized CloudWatch Logs group with Logs Insights queries",
-      "C": "An EC2 instance store volume",
-      "D": "A security group rule"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "CloudWatch Logs and Logs Insights support centralized retention and queryable operational logs.\nThe other choices do not provide managed log search.",
     "taskStatement": "3.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A regulated company is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs to query historical pipeline logs efficiently. Which destination is suitable?",
+    "options": {
+      "A": "Materialize or cache the result when the access pattern justifies it",
+      "B": "Retain source records or a replayable stream for a defined period",
+      "C": "CloudWatch metrics and alarms for the pipeline",
+      "D": "A centralized CloudWatch Logs group with Logs Insights queries"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch Logs and Logs Insights support centralized retention and queryable operational logs.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A centralized CloudWatch Logs group with Logs Insights queries for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司需要有效率地查詢歷史管道日誌。哪個目的地適合？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。受監管的公司需要有效率地查詢歷史管道日誌。哪個目的地適合？",
         "options": {
-          "A": "S3 網站端點",
-          "B": "具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組",
-          "C": "EC2 執行個體儲存磁碟區",
-          "D": "安全群組規則"
+          "A": "當存取模式證明合理時實現或快取結果",
+          "B": "在定義的時間內保留來源記錄或可重播流",
+          "C": "管道的 CloudWatch 指標和警報",
+          "D": "具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組"
         },
-        "explanation": "CloudWatch Logs 和 Logs Insights 支援集中保留和可查詢的操作日誌。\n其他選項不提供託管日誌搜尋。"
+        "explanation": "CloudWatch Logs 和 Logs Insights 支援集中保留和可查詢的操作日誌。\n其他選項適用於此領域的不同需求，但不能像 具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d3-004",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A startup preparing for a traffic increase wants to reduce the cost of repeated queries over unchanged source data. Which approach is appropriate?",
+    "question": "A startup preparing for a traffic increase is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team wants to reduce the cost of repeated queries over unchanged source data. Which approach is appropriate?",
     "options": {
-      "A": "Disable all partitioning",
-      "B": "Duplicate data into random Regions",
+      "A": "CloudWatch metrics and alarms for the pipeline",
+      "B": "A data quality validation step",
       "C": "Materialize or cache the result when the access pattern justifies it",
-      "D": "Run a full source scan for every request"
+      "D": "Retain source records or a replayable stream for a defined period"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Materialized views, result caching, and partition pruning can reduce repeated processing and cost.\nRepeated full scans and unplanned duplication increase cost.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Materialized views, result caching, and partition pruning can reduce repeated processing and cost.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Materialize or cache the result when the access pattern justifies it for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "一家準備增加流量的新創公司希望降低對未更改的來源資料進行重複查詢的成本。哪種方法適合？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。一家準備增加流量的新創公司希望降低對未更改的來源資料進行重複查詢的成本。哪種方法適合？",
         "options": {
-          "A": "停用所有分割區",
-          "B": "將資料複製到隨機區域",
+          "A": "管道的 CloudWatch 指標和警報",
+          "B": "資料品質驗證步驟",
           "C": "當存取模式證明合理時實現或快取結果",
-          "D": "對每個請求執行完整的來源掃描"
+          "D": "在定義的時間內保留來源記錄或可重播流"
         },
-        "explanation": "物化視圖、結果快取和分區修剪可以減少重複處理和成本。\n重複的全面掃描和計劃外的複製會增加成本。"
+        "explanation": "物化視圖、結果快取和分區修剪可以減少重複處理和成本。\n其他選項適用於此領域的不同需求，但不能像 當存取模式證明合理時實現或快取結果 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d3-005",
-    "type": "single",
-    "question": "An operations team supporting a critical workload must replay data after correcting a transformation bug. Which ingestion design helps?",
-    "options": {
-      "A": "Delete source data immediately",
-      "B": "Store only a final aggregate",
-      "C": "Disable versioning",
-      "D": "Retain source records or a replayable stream for a defined period"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Retained source or stream data lets the pipeline rerun a corrected transformation.\nDeleting source data or retaining only aggregates removes replayability.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team must replay data after correcting a transformation bug. Which ingestion design helps?",
+    "options": {
+      "A": "A centralized CloudWatch Logs group with Logs Insights queries",
+      "B": "Retain source records or a replayable stream for a defined period",
+      "C": "CloudWatch metrics and alarms for the pipeline",
+      "D": "A data quality validation step"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Retained source or stream data lets the pipeline rerun a corrected transformation.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Retain source records or a replayable stream for a defined period for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊必須在更正轉換錯誤後重播資料。哪種攝取設計有幫助？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。支援關鍵工作負載的營運團隊必須在更正轉換錯誤後重播資料。哪種攝取設計有幫助？",
         "options": {
-          "A": "立即刪除來源資料",
-          "B": "僅儲存最終聚合",
-          "C": "禁用版本控制",
-          "D": "在定義的時間內保留來源記錄或可重播流"
+          "A": "具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組",
+          "B": "在定義的時間內保留來源記錄或可重播流",
+          "C": "管道的 CloudWatch 指標和警報",
+          "D": "資料品質驗證步驟"
         },
-        "explanation": "保留的來源或流資料允許管道重新運行更正後的轉換。\n刪除來源資料或僅保留聚合會消除可重玩性。"
+        "explanation": "保留的來源或流資料允許管道重新運行更正後的轉換。\n其他選項適用於此領域的不同需求，但不能像 在定義的時間內保留來源記錄或可重播流 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d3-006",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A data platform team needs to alert when a pipeline job fails or exceeds its duration objective. Which capability should be configured?",
+    "question": "A data platform team is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs to alert when a pipeline job fails or exceeds its duration objective. Which capability should be configured?",
     "options": {
       "A": "CloudWatch metrics and alarms for the pipeline",
-      "B": "An S3 public access point",
-      "C": "A KMS alias",
-      "D": "A Route 53 TXT record"
+      "B": "A data quality validation step",
+      "C": "A centralized CloudWatch Logs group with Logs Insights queries",
+      "D": "Materialize or cache the result when the access pattern justifies it"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "CloudWatch metrics and alarms provide operational visibility and notifications for data workflows.\nThe other choices manage storage access, key names, or DNS text records.",
-    "taskStatement": "3.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "CloudWatch metrics and alarms provide operational visibility and notifications for data workflows.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide CloudWatch metrics and alarms for the pipeline for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "當管道作業失敗或超過其持續時間目標時，資料平台團隊需要發出警報。應該配置哪些能力？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。當管道作業失敗或超過其持續時間目標時，資料平台團隊需要發出警報。應該配置哪些能力？",
         "options": {
           "A": "管道的 CloudWatch 指標和警報",
-          "B": "S3 公共存取點",
-          "C": "KMS 別名",
-          "D": "Route 53 TXT 記錄"
+          "B": "資料品質驗證步驟",
+          "C": "具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組",
+          "D": "當存取模式證明合理時實現或快取結果"
         },
-        "explanation": "CloudWatch 指標和警報為資料工作流程提供操作可見性和通知。\n其他選項管理儲存存取、金鑰名稱或 DNS 文字記錄。"
+        "explanation": "CloudWatch 指標和警報為資料工作流程提供操作可見性和通知。\n其他選項適用於此領域的不同需求，但不能像 管道的 CloudWatch 指標和警報 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d3-007",
-    "type": "single",
-    "question": "A security-conscious engineering team must check that required columns are non-null before loading a curated table. What should the pipeline include?",
-    "options": {
-      "A": "An EBS placement group",
-      "B": "A data quality validation step",
-      "C": "A CloudFront distribution",
-      "D": "An IAM group only"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "A validation step detects missing or invalid values before publishing data to downstream consumers.\nThe other choices do not assess record quality.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A security-conscious engineering team is planning two independent production changes. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The first team must check that required columns are non-null before loading a curated table. A second team needs to query historical pipeline logs efficiently. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "A data quality validation step",
+      "B": "A centralized CloudWatch Logs group with Logs Insights queries",
+      "C": "Materialize or cache the result when the access pattern justifies it",
+      "D": "Retain source records or a replayable stream for a defined period",
+      "E": "CloudWatch metrics and alarms for the pipeline"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "A data quality validation step meets the first requirement: A validation step detects missing or invalid values before publishing data to downstream consumers. A centralized CloudWatch Logs group with Logs Insights queries meets the second requirement: CloudWatch Logs and Logs Insights support centralized retention and queryable operational logs.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊必須在載入規劃表之前檢查所需的欄位是否為非空。管道應該包括什麼？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。第一項需求：多帳戶平台團隊必須在載入規劃表之前檢查所需列是否為非空。第二項需求：受監管的公司需要有效率地查詢歷史管道日誌。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "EBS 置放組",
-          "B": "資料品質驗證步驟",
-          "C": "CloudFront 發行版",
-          "D": "僅 IAM Groups"
+          "A": "資料品質驗證步驟",
+          "B": "具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組",
+          "C": "當存取模式證明合理時實現或快取結果",
+          "D": "在定義的時間內保留來源記錄或可重播流",
+          "E": "管道的 CloudWatch 指標和警報"
         },
-        "explanation": "在將資料發佈給下游消費者之前，驗證步驟會偵測缺失值或無效值。\n其他選擇不評估記錄品質。"
+        "explanation": "資料品質驗證步驟 符合第一項需求：在將資料發佈給下游消費者之前，驗證步驟會偵測缺失值或無效值。 具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組 符合第二項需求：CloudWatch Logs 和 Logs Insights 支援集中保留和可查詢的操作日誌。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "dea-c01-d3-008",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A company migrating an existing workload needs to query historical pipeline logs efficiently. Which destination is suitable?",
+    "question": "A company migrating an existing workload is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs to query historical pipeline logs efficiently. Which destination is suitable?",
     "options": {
-      "A": "A security group rule",
-      "B": "An S3 website endpoint",
+      "A": "Retain source records or a replayable stream for a defined period",
+      "B": "CloudWatch metrics and alarms for the pipeline",
       "C": "A centralized CloudWatch Logs group with Logs Insights queries",
-      "D": "An EC2 instance store volume"
+      "D": "Materialize or cache the result when the access pattern justifies it"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "CloudWatch Logs and Logs Insights support centralized retention and queryable operational logs.\nThe other choices do not provide managed log search.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "CloudWatch Logs and Logs Insights support centralized retention and queryable operational logs.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A centralized CloudWatch Logs group with Logs Insights queries for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司需要有效率地查詢歷史管道日誌。哪個目的地適合？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。遷移現有工作負載的公司需要有效率地查詢歷史管道日誌。哪個目的地適合？",
         "options": {
-          "A": "安全群組規則",
-          "B": "S3 網站端點",
+          "A": "在定義的時間內保留來源記錄或可重播流",
+          "B": "管道的 CloudWatch 指標和警報",
           "C": "具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組",
-          "D": "EC2 執行個體儲存磁碟區"
+          "D": "當存取模式證明合理時實現或快取結果"
         },
-        "explanation": "CloudWatch Logs 和 Logs Insights 支援集中保留和可查詢的操作日誌。\n其他選項不提供託管日誌搜尋。"
+        "explanation": "CloudWatch Logs 和 Logs Insights 支援集中保留和可查詢的操作日誌。\n其他選項適用於此領域的不同需求，但不能像 具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d3-009",
-    "type": "single",
-    "question": "A team with strict recovery objectives wants to reduce the cost of repeated queries over unchanged source data. Which approach is appropriate?",
-    "options": {
-      "A": "Run a full source scan for every request",
-      "B": "Disable all partitioning",
-      "C": "Duplicate data into random Regions",
-      "D": "Materialize or cache the result when the access pattern justifies it"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Materialized views, result caching, and partition pruning can reduce repeated processing and cost.\nRepeated full scans and unplanned duplication increase cost.",
     "taskStatement": "3.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team with strict recovery objectives is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team wants to reduce the cost of repeated queries over unchanged source data. Which approach is appropriate?",
+    "options": {
+      "A": "A data quality validation step",
+      "B": "Materialize or cache the result when the access pattern justifies it",
+      "C": "Retain source records or a replayable stream for a defined period",
+      "D": "CloudWatch metrics and alarms for the pipeline"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Materialized views, result caching, and partition pruning can reduce repeated processing and cost.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Materialize or cache the result when the access pattern justifies it for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格恢復目標的團隊希望減少對未更改的來源資料進行重複查詢的成本。哪種方法適合？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。具有嚴格恢復目標的團隊希望減少對未更改的來源資料進行重複查詢的成本。哪種方法適合？",
         "options": {
-          "A": "對每個請求執行完整的來源掃描",
-          "B": "停用所有分割區",
-          "C": "將資料複製到隨機區域",
-          "D": "當存取模式證明合理時實現或快取結果"
+          "A": "資料品質驗證步驟",
+          "B": "當存取模式證明合理時實現或快取結果",
+          "C": "在定義的時間內保留來源記錄或可重播流",
+          "D": "管道的 CloudWatch 指標和警報"
         },
-        "explanation": "物化視圖、結果快取和分區修剪可以減少重複處理和成本。\n重複的全面掃描和計劃外的複製會增加成本。"
+        "explanation": "物化視圖、結果快取和分區修剪可以減少重複處理和成本。\n其他選項適用於此領域的不同需求，但不能像 當存取模式證明合理時實現或快取結果 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d3-010",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A developer team preparing a release must replay data after correcting a transformation bug. Which ingestion design helps?",
+    "question": "A developer team preparing a release is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team must replay data after correcting a transformation bug. Which ingestion design helps?",
     "options": {
       "A": "Retain source records or a replayable stream for a defined period",
-      "B": "Delete source data immediately",
-      "C": "Store only a final aggregate",
-      "D": "Disable versioning"
+      "B": "CloudWatch metrics and alarms for the pipeline",
+      "C": "A data quality validation step",
+      "D": "A centralized CloudWatch Logs group with Logs Insights queries"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Retained source or stream data lets the pipeline rerun a corrected transformation.\nDeleting source data or retaining only aggregates removes replayability.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Retained source or stream data lets the pipeline rerun a corrected transformation.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Retain source records or a replayable stream for a defined period for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊必須在更正轉換錯誤後重播資料。哪種攝取設計有幫助？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。準備發布的開發團隊必須在更正轉換錯誤後重播資料。哪種攝取設計有幫助？",
         "options": {
           "A": "在定義的時間內保留來源記錄或可重播流",
-          "B": "立即刪除來源資料",
-          "C": "僅儲存最終聚合",
-          "D": "禁用版本控制"
+          "B": "管道的 CloudWatch 指標和警報",
+          "C": "資料品質驗證步驟",
+          "D": "具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組"
         },
-        "explanation": "保留的來源或流資料允許管道重新運行更正後的轉換。\n刪除來源資料或僅保留聚合會消除可重玩性。"
+        "explanation": "保留的來源或流資料允許管道重新運行更正後的轉換。\n其他選項適用於此領域的不同需求，但不能像 在定義的時間內保留來源記錄或可重播流 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d3-011",
-    "type": "single",
-    "question": "An enterprise with several AWS Regions needs to alert when a pipeline job fails or exceeds its duration objective. Which capability should be configured?",
-    "options": {
-      "A": "A Route 53 TXT record",
-      "B": "CloudWatch metrics and alarms for the pipeline",
-      "C": "An S3 public access point",
-      "D": "A KMS alias"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "CloudWatch metrics and alarms provide operational visibility and notifications for data workflows.\nThe other choices manage storage access, key names, or DNS text records.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs to alert when a pipeline job fails or exceeds its duration objective. Which capability should be configured?",
+    "options": {
+      "A": "A data quality validation step",
+      "B": "A centralized CloudWatch Logs group with Logs Insights queries",
+      "C": "Materialize or cache the result when the access pattern justifies it",
+      "D": "CloudWatch metrics and alarms for the pipeline"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch metrics and alarms provide operational visibility and notifications for data workflows.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide CloudWatch metrics and alarms for the pipeline for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業需要在管道作業失敗或超出其持續時間目標時發出警報。應該配置哪些能力？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。擁有多個 AWS 區域的企業需要在管道作業失敗或超出其持續時間目標時發出警報。應該配置哪些能力？",
         "options": {
-          "A": "Route 53 TXT 記錄",
-          "B": "管道的 CloudWatch 指標和警報",
-          "C": "S3 公共存取點",
-          "D": "KMS 別名"
+          "A": "資料品質驗證步驟",
+          "B": "具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組",
+          "C": "當存取模式證明合理時實現或快取結果",
+          "D": "管道的 CloudWatch 指標和警報"
         },
-        "explanation": "CloudWatch 指標和警報為資料工作流程提供操作可見性和通知。\n其他選項管理儲存存取、金鑰名稱或 DNS 文字記錄。"
+        "explanation": "CloudWatch 指標和警報為資料工作流程提供操作可見性和通知。\n其他選項適用於此領域的不同需求，但不能像 管道的 CloudWatch 指標和警報 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d3-012",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A service owner reviewing an incident must check that required columns are non-null before loading a curated table. What should the pipeline include?",
+    "question": "A service owner reviewing an incident is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team must check that required columns are non-null before loading a curated table. What should the pipeline include?",
     "options": {
-      "A": "An IAM group only",
-      "B": "An EBS placement group",
+      "A": "Materialize or cache the result when the access pattern justifies it",
+      "B": "Retain source records or a replayable stream for a defined period",
       "C": "A data quality validation step",
-      "D": "A CloudFront distribution"
+      "D": "A centralized CloudWatch Logs group with Logs Insights queries"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "A validation step detects missing or invalid values before publishing data to downstream consumers.\nThe other choices do not assess record quality.",
-    "taskStatement": "3.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "A validation step detects missing or invalid values before publishing data to downstream consumers.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A data quality validation step for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "在載入規劃表之前，檢查事件的服務擁有者必須檢查所需列是否為非空。管道應該包括什麼？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。在載入規劃表之前，檢查事件的服務擁有者必須檢查所需列是否為非空。管道應該包括什麼？",
         "options": {
-          "A": "僅 IAM Groups",
-          "B": "EBS 置放組",
+          "A": "當存取模式證明合理時實現或快取結果",
+          "B": "在定義的時間內保留來源記錄或可重播流",
           "C": "資料品質驗證步驟",
-          "D": "CloudFront 發行版"
+          "D": "具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組"
         },
-        "explanation": "在將資料發佈給下游消費者之前，驗證步驟會偵測缺失值或無效值。\n其他選擇不評估記錄品質。"
+        "explanation": "在將資料發佈給下游消費者之前，驗證步驟會偵測缺失值或無效值。\n其他選項適用於此領域的不同需求，但不能像 資料品質驗證步驟 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d3-013",
-    "type": "single",
-    "question": "A team optimizing an existing implementation needs to query historical pipeline logs efficiently. Which destination is suitable?",
-    "options": {
-      "A": "An EC2 instance store volume",
-      "B": "A security group rule",
-      "C": "An S3 website endpoint",
-      "D": "A centralized CloudWatch Logs group with Logs Insights queries"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "CloudWatch Logs and Logs Insights support centralized retention and queryable operational logs.\nThe other choices do not provide managed log search.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs to query historical pipeline logs efficiently. Which destination is suitable?",
+    "options": {
+      "A": "CloudWatch metrics and alarms for the pipeline",
+      "B": "A centralized CloudWatch Logs group with Logs Insights queries",
+      "C": "Materialize or cache the result when the access pattern justifies it",
+      "D": "Retain source records or a replayable stream for a defined period"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch Logs and Logs Insights support centralized retention and queryable operational logs.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A centralized CloudWatch Logs group with Logs Insights queries for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊需要有效地查詢歷史管道日誌。哪個目的地適合？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。優化現有實施的團隊需要有效地查詢歷史管道日誌。哪個目的地適合？",
         "options": {
-          "A": "EC2 執行個體儲存磁碟區",
-          "B": "安全群組規則",
-          "C": "S3 網站端點",
-          "D": "具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組"
+          "A": "管道的 CloudWatch 指標和警報",
+          "B": "具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組",
+          "C": "當存取模式證明合理時實現或快取結果",
+          "D": "在定義的時間內保留來源記錄或可重播流"
         },
-        "explanation": "CloudWatch Logs 和 Logs Insights 支援集中保留和可查詢的操作日誌。\n其他選項不提供託管日誌搜尋。"
+        "explanation": "CloudWatch Logs 和 Logs Insights 支援集中保留和可查詢的操作日誌。\n其他選項適用於此領域的不同需求，但不能像 具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d3-014",
-    "type": "single",
-    "question": "A company introducing an automated workflow wants to reduce the cost of repeated queries over unchanged source data. Which approach is appropriate?",
-    "options": {
-      "A": "Materialize or cache the result when the access pattern justifies it",
-      "B": "Run a full source scan for every request",
-      "C": "Disable all partitioning",
-      "D": "Duplicate data into random Regions"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "Materialized views, result caching, and partition pruning can reduce repeated processing and cost.\nRepeated full scans and unplanned duplication increase cost.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A company introducing an automated workflow is planning two independent production changes. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The first team wants to reduce the cost of repeated queries over unchanged source data. A second team must replay data after correcting a transformation bug. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "CloudWatch metrics and alarms for the pipeline",
+      "B": "A data quality validation step",
+      "C": "A centralized CloudWatch Logs group with Logs Insights queries",
+      "D": "Materialize or cache the result when the access pattern justifies it",
+      "E": "Retain source records or a replayable stream for a defined period"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Materialize or cache the result when the access pattern justifies it meets the first requirement: Materialized views, result caching, and partition pruning can reduce repeated processing and cost. Retain source records or a replayable stream for a defined period meets the second requirement: Retained source or stream data lets the pipeline rerun a corrected transformation.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "一家引入自動化工作流程的公司希望降低對未更改的來源資料進行重複查詢的成本。哪種方法適合？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。第一項需求：一家準備增加流量的新創公司希望降低對未更改的來源資料進行重複查詢的成本。第二項需求：支援關鍵工作負載的營運團隊必須在更正轉換錯誤後重播資料。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "當存取模式證明合理時實現或快取結果",
-          "B": "對每個請求執行完整的來源掃描",
-          "C": "停用所有分割區",
-          "D": "將資料複製到隨機區域"
+          "A": "管道的 CloudWatch 指標和警報",
+          "B": "資料品質驗證步驟",
+          "C": "具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組",
+          "D": "當存取模式證明合理時實現或快取結果",
+          "E": "在定義的時間內保留來源記錄或可重播流"
         },
-        "explanation": "物化視圖、結果快取和分區修剪可以減少重複處理和成本。\n重複的全面掃描和計劃外的複製會增加成本。"
+        "explanation": "當存取模式證明合理時實現或快取結果 符合第一項需求：物化視圖、結果快取和分區修剪可以減少重複處理和成本。 在定義的時間內保留來源記錄或可重播流 符合第二項需求：保留的來源或流資料允許管道重新運行更正後的轉換。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "dea-c01-d3-015",
-    "type": "single",
-    "question": "An AWS administrator working in a shared environment must replay data after correcting a transformation bug. Which ingestion design helps?",
-    "options": {
-      "A": "Disable versioning",
-      "B": "Retain source records or a replayable stream for a defined period",
-      "C": "Delete source data immediately",
-      "D": "Store only a final aggregate"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Retained source or stream data lets the pipeline rerun a corrected transformation.\nDeleting source data or retaining only aggregates removes replayability.",
     "taskStatement": "3.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team must replay data after correcting a transformation bug. Which ingestion design helps?",
+    "options": {
+      "A": "CloudWatch metrics and alarms for the pipeline",
+      "B": "A data quality validation step",
+      "C": "A centralized CloudWatch Logs group with Logs Insights queries",
+      "D": "Retain source records or a replayable stream for a defined period"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Retained source or stream data lets the pipeline rerun a corrected transformation.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Retain source records or a replayable stream for a defined period for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "在共用環境中工作的 AWS 管理員必須在更正轉換錯誤後重播資料。哪種攝取設計有幫助？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。在共用環境中工作的 AWS 管理員必須在更正轉換錯誤後重播資料。哪種攝取設計有幫助？",
         "options": {
-          "A": "禁用版本控制",
-          "B": "在定義的時間內保留來源記錄或可重播流",
-          "C": "立即刪除來源資料",
-          "D": "僅儲存最終聚合"
+          "A": "管道的 CloudWatch 指標和警報",
+          "B": "資料品質驗證步驟",
+          "C": "具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組",
+          "D": "在定義的時間內保留來源記錄或可重播流"
         },
-        "explanation": "保留的來源或流資料允許管道重新運行更正後的轉換。\n刪除來源資料或僅保留聚合會消除可重玩性。"
+        "explanation": "保留的來源或流資料允許管道重新運行更正後的轉換。\n其他選項適用於此領域的不同需求，但不能像 在定義的時間內保留來源記錄或可重播流 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d3-016",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A customer-facing application team needs to alert when a pipeline job fails or exceeds its duration objective. Which capability should be configured?",
+    "question": "A customer-facing application team is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs to alert when a pipeline job fails or exceeds its duration objective. Which capability should be configured?",
     "options": {
-      "A": "A KMS alias",
-      "B": "A Route 53 TXT record",
+      "A": "A centralized CloudWatch Logs group with Logs Insights queries",
+      "B": "Materialize or cache the result when the access pattern justifies it",
       "C": "CloudWatch metrics and alarms for the pipeline",
-      "D": "An S3 public access point"
+      "D": "A data quality validation step"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "CloudWatch metrics and alarms provide operational visibility and notifications for data workflows.\nThe other choices manage storage access, key names, or DNS text records.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "CloudWatch metrics and alarms provide operational visibility and notifications for data workflows.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide CloudWatch metrics and alarms for the pipeline for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "當管道作業失敗或超過其持續時間目標時，面向客戶的應用程式團隊需要發出警報。應該配置哪些能力？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。當管道作業失敗或超過其持續時間目標時，面向客戶的應用程式團隊需要發出警報。應該配置哪些能力？",
         "options": {
-          "A": "KMS 別名",
-          "B": "Route 53 TXT 記錄",
+          "A": "具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組",
+          "B": "當存取模式證明合理時實現或快取結果",
           "C": "管道的 CloudWatch 指標和警報",
-          "D": "S3 公共存取點"
+          "D": "資料品質驗證步驟"
         },
-        "explanation": "CloudWatch 指標和警報為資料工作流程提供操作可見性和通知。\n其他選項管理儲存存取、金鑰名稱或 DNS 文字記錄。"
+        "explanation": "CloudWatch 指標和警報為資料工作流程提供操作可見性和通知。\n其他選項適用於此領域的不同需求，但不能像 管道的 CloudWatch 指標和警報 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d3-017",
-    "type": "single",
-    "question": "A platform team standardizing its AWS deployments must check that required columns are non-null before loading a curated table. What should the pipeline include?",
-    "options": {
-      "A": "A CloudFront distribution",
-      "B": "An IAM group only",
-      "C": "An EBS placement group",
-      "D": "A data quality validation step"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "A validation step detects missing or invalid values before publishing data to downstream consumers.\nThe other choices do not assess record quality.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team must check that required columns are non-null before loading a curated table. What should the pipeline include?",
+    "options": {
+      "A": "Retain source records or a replayable stream for a defined period",
+      "B": "A data quality validation step",
+      "C": "A centralized CloudWatch Logs group with Logs Insights queries",
+      "D": "Materialize or cache the result when the access pattern justifies it"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "A validation step detects missing or invalid values before publishing data to downstream consumers.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A data quality validation step for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊必須在載入精選表之前檢查所需欄位是否為非空。管道應該包括什麼？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。標準化其 AWS 部署的平台團隊必須在載入精選表之前檢查所需欄位是否為非空。管道應該包括什麼？",
         "options": {
-          "A": "CloudFront 發行版",
-          "B": "僅 IAM Groups",
-          "C": "EBS 置放組",
-          "D": "資料品質驗證步驟"
+          "A": "在定義的時間內保留來源記錄或可重播流",
+          "B": "資料品質驗證步驟",
+          "C": "具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組",
+          "D": "當存取模式證明合理時實現或快取結果"
         },
-        "explanation": "在將資料發佈給下游消費者之前，驗證步驟會偵測缺失值或無效值。\n其他選擇不評估記錄品質。"
+        "explanation": "在將資料發佈給下游消費者之前，驗證步驟會偵測缺失值或無效值。\n其他選項適用於此領域的不同需求，但不能像 資料品質驗證步驟 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d3-018",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team preparing evidence for an audit needs to query historical pipeline logs efficiently. Which destination is suitable?",
+    "question": "A team preparing evidence for an audit is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs to query historical pipeline logs efficiently. Which destination is suitable?",
     "options": {
       "A": "A centralized CloudWatch Logs group with Logs Insights queries",
-      "B": "An EC2 instance store volume",
-      "C": "A security group rule",
-      "D": "An S3 website endpoint"
+      "B": "Materialize or cache the result when the access pattern justifies it",
+      "C": "Retain source records or a replayable stream for a defined period",
+      "D": "CloudWatch metrics and alarms for the pipeline"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "CloudWatch Logs and Logs Insights support centralized retention and queryable operational logs.\nThe other choices do not provide managed log search.",
-    "taskStatement": "3.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "CloudWatch Logs and Logs Insights support centralized retention and queryable operational logs.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A centralized CloudWatch Logs group with Logs Insights queries for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "為審計準備證據的團隊需要有效查詢歷史管道日誌。哪個目的地適合？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。為審計準備證據的團隊需要有效查詢歷史管道日誌。哪個目的地適合？",
         "options": {
           "A": "具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組",
-          "B": "EC2 執行個體儲存磁碟區",
-          "C": "安全群組規則",
-          "D": "S3 網站端點"
+          "B": "當存取模式證明合理時實現或快取結果",
+          "C": "在定義的時間內保留來源記錄或可重播流",
+          "D": "管道的 CloudWatch 指標和警報"
         },
-        "explanation": "CloudWatch Logs 和 Logs Insights 支援集中保留和可查詢的操作日誌。\n其他選項不提供託管日誌搜尋。"
+        "explanation": "CloudWatch Logs 和 Logs Insights 支援集中保留和可查詢的操作日誌。\n其他選項適用於此領域的不同需求，但不能像 具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d3-019",
-    "type": "single",
-    "question": "A business replacing a manual process wants to reduce the cost of repeated queries over unchanged source data. Which approach is appropriate?",
-    "options": {
-      "A": "Duplicate data into random Regions",
-      "B": "Materialize or cache the result when the access pattern justifies it",
-      "C": "Run a full source scan for every request",
-      "D": "Disable all partitioning"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Materialized views, result caching, and partition pruning can reduce repeated processing and cost.\nRepeated full scans and unplanned duplication increase cost.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A business replacing a manual process is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team wants to reduce the cost of repeated queries over unchanged source data. Which approach is appropriate?",
+    "options": {
+      "A": "Retain source records or a replayable stream for a defined period",
+      "B": "CloudWatch metrics and alarms for the pipeline",
+      "C": "A data quality validation step",
+      "D": "Materialize or cache the result when the access pattern justifies it"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Materialized views, result caching, and partition pruning can reduce repeated processing and cost.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Materialize or cache the result when the access pattern justifies it for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "取代手動流程的企業希望降低對未更改的來源資料進行重複查詢的成本。哪種方法適合？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。取代手動流程的企業希望降低對未更改的來源資料進行重複查詢的成本。哪種方法適合？",
         "options": {
-          "A": "將資料複製到隨機區域",
-          "B": "當存取模式證明合理時實現或快取結果",
-          "C": "對每個請求執行完整的來源掃描",
-          "D": "停用所有分割區"
+          "A": "在定義的時間內保留來源記錄或可重播流",
+          "B": "管道的 CloudWatch 指標和警報",
+          "C": "資料品質驗證步驟",
+          "D": "當存取模式證明合理時實現或快取結果"
         },
-        "explanation": "物化視圖、結果快取和分區修剪可以減少重複處理和成本。\n重複的全面掃描和計劃外的複製會增加成本。"
+        "explanation": "物化視圖、結果快取和分區修剪可以減少重複處理和成本。\n其他選項適用於此領域的不同需求，但不能像 當存取模式證明合理時實現或快取結果 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d3-020",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team validating a design against the exam guide must replay data after correcting a transformation bug. Which ingestion design helps?",
+    "question": "A team validating a design against the exam guide is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team must replay data after correcting a transformation bug. Which ingestion design helps?",
     "options": {
-      "A": "Store only a final aggregate",
-      "B": "Disable versioning",
+      "A": "A data quality validation step",
+      "B": "A centralized CloudWatch Logs group with Logs Insights queries",
       "C": "Retain source records or a replayable stream for a defined period",
-      "D": "Delete source data immediately"
+      "D": "CloudWatch metrics and alarms for the pipeline"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Retained source or stream data lets the pipeline rerun a corrected transformation.\nDeleting source data or retaining only aggregates removes replayability.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Retained source or stream data lets the pipeline rerun a corrected transformation.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Retain source records or a replayable stream for a defined period for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊必須在更正轉換錯誤後重播資料。哪種攝取設計有幫助？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。根據考試指南驗證設計的團隊必須在更正轉換錯誤後重播資料。哪種攝取設計有幫助？",
         "options": {
-          "A": "僅儲存最終聚合",
-          "B": "禁用版本控制",
+          "A": "資料品質驗證步驟",
+          "B": "具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組",
           "C": "在定義的時間內保留來源記錄或可重播流",
-          "D": "立即刪除來源資料"
+          "D": "管道的 CloudWatch 指標和警報"
         },
-        "explanation": "保留的來源或流資料允許管道重新運行更正後的轉換。\n刪除來源資料或僅保留聚合會消除可重玩性。"
+        "explanation": "保留的來源或流資料允許管道重新運行更正後的轉換。\n其他選項適用於此領域的不同需求，但不能像 在定義的時間內保留來源記錄或可重播流 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d3-021",
-    "type": "single",
-    "question": "A production team needs to alert when a pipeline job fails or exceeds its duration objective. Which capability should be configured?",
-    "options": {
-      "A": "An S3 public access point",
-      "B": "A KMS alias",
-      "C": "A Route 53 TXT record",
-      "D": "CloudWatch metrics and alarms for the pipeline"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "CloudWatch metrics and alarms provide operational visibility and notifications for data workflows.\nThe other choices manage storage access, key names, or DNS text records.",
     "taskStatement": "3.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A production team is planning two independent production changes. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The first team needs to alert when a pipeline job fails or exceeds its duration objective. A second team must check that required columns are non-null before loading a curated table. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Retain source records or a replayable stream for a defined period",
+      "B": "CloudWatch metrics and alarms for the pipeline",
+      "C": "A data quality validation step",
+      "D": "A centralized CloudWatch Logs group with Logs Insights queries",
+      "E": "Materialize or cache the result when the access pattern justifies it"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "CloudWatch metrics and alarms for the pipeline meets the first requirement: CloudWatch metrics and alarms provide operational visibility and notifications for data workflows. A data quality validation step meets the second requirement: A validation step detects missing or invalid values before publishing data to downstream consumers.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "當管道作業失敗或超過其持續時間目標時，生產團隊需要發出警報。應該配置哪些能力？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。第一項需求：當管道作業失敗或超過其持續時間目標時，生產團隊需要發出警報。第二項需求：多帳戶平台團隊必須在載入規劃表之前檢查所需列是否為非空。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "S3 公共存取點",
-          "B": "KMS 別名",
-          "C": "Route 53 TXT 記錄",
-          "D": "管道的 CloudWatch 指標和警報"
+          "A": "在定義的時間內保留來源記錄或可重播流",
+          "B": "管道的 CloudWatch 指標和警報",
+          "C": "資料品質驗證步驟",
+          "D": "具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組",
+          "E": "當存取模式證明合理時實現或快取結果"
         },
-        "explanation": "CloudWatch 指標和警報為資料工作流程提供操作可見性和通知。\n其他選項管理儲存存取、金鑰名稱或 DNS 文字記錄。"
+        "explanation": "管道的 CloudWatch 指標和警報 符合第一項需求：CloudWatch 指標和警報為資料工作流程提供操作可見性和通知。 資料品質驗證步驟 符合第二項需求：在將資料發佈給下游消費者之前，驗證步驟會偵測缺失值或無效值。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "dea-c01-d3-022",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A multi-account platform team must check that required columns are non-null before loading a curated table. What should the pipeline include?",
+    "question": "A multi-account platform team is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team must check that required columns are non-null before loading a curated table. What should the pipeline include?",
     "options": {
       "A": "A data quality validation step",
-      "B": "A CloudFront distribution",
-      "C": "An IAM group only",
-      "D": "An EBS placement group"
+      "B": "A centralized CloudWatch Logs group with Logs Insights queries",
+      "C": "Materialize or cache the result when the access pattern justifies it",
+      "D": "Retain source records or a replayable stream for a defined period"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "A validation step detects missing or invalid values before publishing data to downstream consumers.\nThe other choices do not assess record quality.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "A validation step detects missing or invalid values before publishing data to downstream consumers.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A data quality validation step for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊必須在載入規劃表之前檢查所需列是否為非空。管道應該包括什麼？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。多帳戶平台團隊必須在載入規劃表之前檢查所需列是否為非空。管道應該包括什麼？",
         "options": {
           "A": "資料品質驗證步驟",
-          "B": "CloudFront 發行版",
-          "C": "僅 IAM Groups",
-          "D": "EBS 置放組"
+          "B": "具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組",
+          "C": "當存取模式證明合理時實現或快取結果",
+          "D": "在定義的時間內保留來源記錄或可重播流"
         },
-        "explanation": "在將資料發佈給下游消費者之前，驗證步驟會偵測缺失值或無效值。\n其他選擇不評估記錄品質。"
+        "explanation": "在將資料發佈給下游消費者之前，驗證步驟會偵測缺失值或無效值。\n其他選項適用於此領域的不同需求，但不能像 資料品質驗證步驟 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d3-023",
-    "type": "single",
-    "question": "A regulated company needs to query historical pipeline logs efficiently. Which destination is suitable?",
-    "options": {
-      "A": "An S3 website endpoint",
-      "B": "A centralized CloudWatch Logs group with Logs Insights queries",
-      "C": "An EC2 instance store volume",
-      "D": "A security group rule"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "CloudWatch Logs and Logs Insights support centralized retention and queryable operational logs.\nThe other choices do not provide managed log search.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A regulated company is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team needs to query historical pipeline logs efficiently. Which destination is suitable?",
+    "options": {
+      "A": "Materialize or cache the result when the access pattern justifies it",
+      "B": "Retain source records or a replayable stream for a defined period",
+      "C": "CloudWatch metrics and alarms for the pipeline",
+      "D": "A centralized CloudWatch Logs group with Logs Insights queries"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch Logs and Logs Insights support centralized retention and queryable operational logs.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A centralized CloudWatch Logs group with Logs Insights queries for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司需要有效率地查詢歷史管道日誌。哪個目的地適合？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。受監管的公司需要有效率地查詢歷史管道日誌。哪個目的地適合？",
         "options": {
-          "A": "S3 網站端點",
-          "B": "具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組",
-          "C": "EC2 執行個體儲存磁碟區",
-          "D": "安全群組規則"
+          "A": "當存取模式證明合理時實現或快取結果",
+          "B": "在定義的時間內保留來源記錄或可重播流",
+          "C": "管道的 CloudWatch 指標和警報",
+          "D": "具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組"
         },
-        "explanation": "CloudWatch Logs 和 Logs Insights 支援集中保留和可查詢的操作日誌。\n其他選項不提供託管日誌搜尋。"
+        "explanation": "CloudWatch Logs 和 Logs Insights 支援集中保留和可查詢的操作日誌。\n其他選項適用於此領域的不同需求，但不能像 具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d3-024",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A startup preparing for a traffic increase wants to reduce the cost of repeated queries over unchanged source data. Which approach is appropriate?",
+    "question": "A startup preparing for a traffic increase is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team wants to reduce the cost of repeated queries over unchanged source data. Which approach is appropriate?",
     "options": {
-      "A": "Disable all partitioning",
-      "B": "Duplicate data into random Regions",
+      "A": "CloudWatch metrics and alarms for the pipeline",
+      "B": "A data quality validation step",
       "C": "Materialize or cache the result when the access pattern justifies it",
-      "D": "Run a full source scan for every request"
+      "D": "Retain source records or a replayable stream for a defined period"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Materialized views, result caching, and partition pruning can reduce repeated processing and cost.\nRepeated full scans and unplanned duplication increase cost.",
-    "taskStatement": "3.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "Materialized views, result caching, and partition pruning can reduce repeated processing and cost.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Materialize or cache the result when the access pattern justifies it for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "一家準備增加流量的新創公司希望降低對未更改的來源資料進行重複查詢的成本。哪種方法適合？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。一家準備增加流量的新創公司希望降低對未更改的來源資料進行重複查詢的成本。哪種方法適合？",
         "options": {
-          "A": "停用所有分割區",
-          "B": "將資料複製到隨機區域",
+          "A": "管道的 CloudWatch 指標和警報",
+          "B": "資料品質驗證步驟",
           "C": "當存取模式證明合理時實現或快取結果",
-          "D": "對每個請求執行完整的來源掃描"
+          "D": "在定義的時間內保留來源記錄或可重播流"
         },
-        "explanation": "物化視圖、結果快取和分區修剪可以減少重複處理和成本。\n重複的全面掃描和計劃外的複製會增加成本。"
+        "explanation": "物化視圖、結果快取和分區修剪可以減少重複處理和成本。\n其他選項適用於此領域的不同需求，但不能像 當存取模式證明合理時實現或快取結果 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d3-025",
-    "type": "single",
-    "question": "An operations team supporting a critical workload must replay data after correcting a transformation bug. Which ingestion design helps?",
-    "options": {
-      "A": "Delete source data immediately",
-      "B": "Store only a final aggregate",
-      "C": "Disable versioning",
-      "D": "Retain source records or a replayable stream for a defined period"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Retained source or stream data lets the pipeline rerun a corrected transformation.\nDeleting source data or retaining only aggregates removes replayability.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team must replay data after correcting a transformation bug. Which ingestion design helps?",
+    "options": {
+      "A": "A centralized CloudWatch Logs group with Logs Insights queries",
+      "B": "Retain source records or a replayable stream for a defined period",
+      "C": "CloudWatch metrics and alarms for the pipeline",
+      "D": "A data quality validation step"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Retained source or stream data lets the pipeline rerun a corrected transformation.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Retain source records or a replayable stream for a defined period for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊必須在更正轉換錯誤後重播資料。哪種攝取設計有幫助？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。支援關鍵工作負載的營運團隊必須在更正轉換錯誤後重播資料。哪種攝取設計有幫助？",
         "options": {
-          "A": "立即刪除來源資料",
-          "B": "僅儲存最終聚合",
-          "C": "禁用版本控制",
-          "D": "在定義的時間內保留來源記錄或可重播流"
+          "A": "具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組",
+          "B": "在定義的時間內保留來源記錄或可重播流",
+          "C": "管道的 CloudWatch 指標和警報",
+          "D": "資料品質驗證步驟"
         },
-        "explanation": "保留的來源或流資料允許管道重新運行更正後的轉換。\n刪除來源資料或僅保留聚合會消除可重玩性。"
+        "explanation": "保留的來源或流資料允許管道重新運行更正後的轉換。\n其他選項適用於此領域的不同需求，但不能像 在定義的時間內保留來源記錄或可重播流 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d3-026",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A data platform team needs to alert when a pipeline job fails or exceeds its duration objective. Which capability should be configured?",
+    "question": "A data platform team is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs to alert when a pipeline job fails or exceeds its duration objective. Which capability should be configured?",
     "options": {
       "A": "CloudWatch metrics and alarms for the pipeline",
-      "B": "An S3 public access point",
-      "C": "A KMS alias",
-      "D": "A Route 53 TXT record"
+      "B": "A data quality validation step",
+      "C": "A centralized CloudWatch Logs group with Logs Insights queries",
+      "D": "Materialize or cache the result when the access pattern justifies it"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "CloudWatch metrics and alarms provide operational visibility and notifications for data workflows.\nThe other choices manage storage access, key names, or DNS text records.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "CloudWatch metrics and alarms provide operational visibility and notifications for data workflows.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide CloudWatch metrics and alarms for the pipeline for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "當管道作業失敗或超過其持續時間目標時，資料平台團隊需要發出警報。應該配置哪些能力？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。當管道作業失敗或超過其持續時間目標時，資料平台團隊需要發出警報。應該配置哪些能力？",
         "options": {
           "A": "管道的 CloudWatch 指標和警報",
-          "B": "S3 公共存取點",
-          "C": "KMS 別名",
-          "D": "Route 53 TXT 記錄"
+          "B": "資料品質驗證步驟",
+          "C": "具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組",
+          "D": "當存取模式證明合理時實現或快取結果"
         },
-        "explanation": "CloudWatch 指標和警報為資料工作流程提供操作可見性和通知。\n其他選項管理儲存存取、金鑰名稱或 DNS 文字記錄。"
+        "explanation": "CloudWatch 指標和警報為資料工作流程提供操作可見性和通知。\n其他選項適用於此領域的不同需求，但不能像 管道的 CloudWatch 指標和警報 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d3-027",
-    "type": "single",
-    "question": "A security-conscious engineering team must check that required columns are non-null before loading a curated table. What should the pipeline include?",
-    "options": {
-      "A": "An EBS placement group",
-      "B": "A data quality validation step",
-      "C": "A CloudFront distribution",
-      "D": "An IAM group only"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "A validation step detects missing or invalid values before publishing data to downstream consumers.\nThe other choices do not assess record quality.",
     "taskStatement": "3.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A security-conscious engineering team is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team must check that required columns are non-null before loading a curated table. What should the pipeline include?",
+    "options": {
+      "A": "A centralized CloudWatch Logs group with Logs Insights queries",
+      "B": "Materialize or cache the result when the access pattern justifies it",
+      "C": "Retain source records or a replayable stream for a defined period",
+      "D": "A data quality validation step"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "A validation step detects missing or invalid values before publishing data to downstream consumers.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A data quality validation step for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊必須在載入規劃表之前檢查所需的欄位是否為非空。管道應該包括什麼？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。具有安全意識的工程團隊必須在載入規劃表之前檢查所需的欄位是否為非空。管道應該包括什麼？",
         "options": {
-          "A": "EBS 置放組",
-          "B": "資料品質驗證步驟",
-          "C": "CloudFront 發行版",
-          "D": "僅 IAM Groups"
+          "A": "具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組",
+          "B": "當存取模式證明合理時實現或快取結果",
+          "C": "在定義的時間內保留來源記錄或可重播流",
+          "D": "資料品質驗證步驟"
         },
-        "explanation": "在將資料發佈給下游消費者之前，驗證步驟會偵測缺失值或無效值。\n其他選擇不評估記錄品質。"
+        "explanation": "在將資料發佈給下游消費者之前，驗證步驟會偵測缺失值或無效值。\n其他選項適用於此領域的不同需求，但不能像 資料品質驗證步驟 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d3-028",
-    "type": "single",
-    "question": "A company migrating an existing workload needs to query historical pipeline logs efficiently. Which destination is suitable?",
-    "options": {
-      "A": "A security group rule",
-      "B": "An S3 website endpoint",
-      "C": "A centralized CloudWatch Logs group with Logs Insights queries",
-      "D": "An EC2 instance store volume"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "CloudWatch Logs and Logs Insights support centralized retention and queryable operational logs.\nThe other choices do not provide managed log search.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A company migrating an existing workload is planning two independent production changes. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The first team needs to query historical pipeline logs efficiently. A second team wants to reduce the cost of repeated queries over unchanged source data. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Materialize or cache the result when the access pattern justifies it",
+      "B": "Retain source records or a replayable stream for a defined period",
+      "C": "CloudWatch metrics and alarms for the pipeline",
+      "D": "A data quality validation step",
+      "E": "A centralized CloudWatch Logs group with Logs Insights queries"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "A centralized CloudWatch Logs group with Logs Insights queries meets the first requirement: CloudWatch Logs and Logs Insights support centralized retention and queryable operational logs. Materialize or cache the result when the access pattern justifies it meets the second requirement: Materialized views, result caching, and partition pruning can reduce repeated processing and cost.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司需要有效率地查詢歷史管道日誌。哪個目的地適合？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。第一項需求：一家準備增加流量的新創公司希望降低對未更改的來源資料進行重複查詢的成本。第二項需求：受監管的公司需要有效率地查詢歷史管道日誌。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "安全群組規則",
-          "B": "S3 網站端點",
-          "C": "具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組",
-          "D": "EC2 執行個體儲存磁碟區"
+          "A": "當存取模式證明合理時實現或快取結果",
+          "B": "在定義的時間內保留來源記錄或可重播流",
+          "C": "管道的 CloudWatch 指標和警報",
+          "D": "資料品質驗證步驟",
+          "E": "具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組"
         },
-        "explanation": "CloudWatch Logs 和 Logs Insights 支援集中保留和可查詢的操作日誌。\n其他選項不提供託管日誌搜尋。"
+        "explanation": "當存取模式證明合理時實現或快取結果 符合第一項需求：物化視圖、結果快取和分區修剪可以減少重複處理和成本。 具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組 符合第二項需求：CloudWatch Logs 和 Logs Insights 支援集中保留和可查詢的操作日誌。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "dea-c01-d3-029",
-    "type": "single",
-    "question": "A team with strict recovery objectives wants to reduce the cost of repeated queries over unchanged source data. Which approach is appropriate?",
-    "options": {
-      "A": "Run a full source scan for every request",
-      "B": "Disable all partitioning",
-      "C": "Duplicate data into random Regions",
-      "D": "Materialize or cache the result when the access pattern justifies it"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Materialized views, result caching, and partition pruning can reduce repeated processing and cost.\nRepeated full scans and unplanned duplication increase cost.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team with strict recovery objectives is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team wants to reduce the cost of repeated queries over unchanged source data. Which approach is appropriate?",
+    "options": {
+      "A": "A data quality validation step",
+      "B": "Materialize or cache the result when the access pattern justifies it",
+      "C": "Retain source records or a replayable stream for a defined period",
+      "D": "CloudWatch metrics and alarms for the pipeline"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Materialized views, result caching, and partition pruning can reduce repeated processing and cost.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Materialize or cache the result when the access pattern justifies it for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格恢復目標的團隊希望減少對未更改的來源資料進行重複查詢的成本。哪種方法適合？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。具有嚴格恢復目標的團隊希望減少對未更改的來源資料進行重複查詢的成本。哪種方法適合？",
         "options": {
-          "A": "對每個請求執行完整的來源掃描",
-          "B": "停用所有分割區",
-          "C": "將資料複製到隨機區域",
-          "D": "當存取模式證明合理時實現或快取結果"
+          "A": "資料品質驗證步驟",
+          "B": "當存取模式證明合理時實現或快取結果",
+          "C": "在定義的時間內保留來源記錄或可重播流",
+          "D": "管道的 CloudWatch 指標和警報"
         },
-        "explanation": "物化視圖、結果快取和分區修剪可以減少重複處理和成本。\n重複的全面掃描和計劃外的複製會增加成本。"
+        "explanation": "物化視圖、結果快取和分區修剪可以減少重複處理和成本。\n其他選項適用於此領域的不同需求，但不能像 當存取模式證明合理時實現或快取結果 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d3-030",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A developer team preparing a release must replay data after correcting a transformation bug. Which ingestion design helps?",
+    "question": "A developer team preparing a release is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team must replay data after correcting a transformation bug. Which ingestion design helps?",
     "options": {
       "A": "Retain source records or a replayable stream for a defined period",
-      "B": "Delete source data immediately",
-      "C": "Store only a final aggregate",
-      "D": "Disable versioning"
+      "B": "CloudWatch metrics and alarms for the pipeline",
+      "C": "A data quality validation step",
+      "D": "A centralized CloudWatch Logs group with Logs Insights queries"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Retained source or stream data lets the pipeline rerun a corrected transformation.\nDeleting source data or retaining only aggregates removes replayability.",
-    "taskStatement": "3.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "Retained source or stream data lets the pipeline rerun a corrected transformation.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Retain source records or a replayable stream for a defined period for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊必須在更正轉換錯誤後重播資料。哪種攝取設計有幫助？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。準備發布的開發團隊必須在更正轉換錯誤後重播資料。哪種攝取設計有幫助？",
         "options": {
           "A": "在定義的時間內保留來源記錄或可重播流",
-          "B": "立即刪除來源資料",
-          "C": "僅儲存最終聚合",
-          "D": "禁用版本控制"
+          "B": "管道的 CloudWatch 指標和警報",
+          "C": "資料品質驗證步驟",
+          "D": "具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組"
         },
-        "explanation": "保留的來源或流資料允許管道重新運行更正後的轉換。\n刪除來源資料或僅保留聚合會消除可重玩性。"
+        "explanation": "保留的來源或流資料允許管道重新運行更正後的轉換。\n其他選項適用於此領域的不同需求，但不能像 在定義的時間內保留來源記錄或可重播流 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d3-031",
-    "type": "single",
-    "question": "An enterprise with several AWS Regions needs to alert when a pipeline job fails or exceeds its duration objective. Which capability should be configured?",
-    "options": {
-      "A": "A Route 53 TXT record",
-      "B": "CloudWatch metrics and alarms for the pipeline",
-      "C": "An S3 public access point",
-      "D": "A KMS alias"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "CloudWatch metrics and alarms provide operational visibility and notifications for data workflows.\nThe other choices manage storage access, key names, or DNS text records.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs to alert when a pipeline job fails or exceeds its duration objective. Which capability should be configured?",
+    "options": {
+      "A": "A data quality validation step",
+      "B": "A centralized CloudWatch Logs group with Logs Insights queries",
+      "C": "Materialize or cache the result when the access pattern justifies it",
+      "D": "CloudWatch metrics and alarms for the pipeline"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch metrics and alarms provide operational visibility and notifications for data workflows.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide CloudWatch metrics and alarms for the pipeline for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業需要在管道作業失敗或超出其持續時間目標時發出警報。應該配置哪些能力？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。擁有多個 AWS 區域的企業需要在管道作業失敗或超出其持續時間目標時發出警報。應該配置哪些能力？",
         "options": {
-          "A": "Route 53 TXT 記錄",
-          "B": "管道的 CloudWatch 指標和警報",
-          "C": "S3 公共存取點",
-          "D": "KMS 別名"
+          "A": "資料品質驗證步驟",
+          "B": "具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組",
+          "C": "當存取模式證明合理時實現或快取結果",
+          "D": "管道的 CloudWatch 指標和警報"
         },
-        "explanation": "CloudWatch 指標和警報為資料工作流程提供操作可見性和通知。\n其他選項管理儲存存取、金鑰名稱或 DNS 文字記錄。"
+        "explanation": "CloudWatch 指標和警報為資料工作流程提供操作可見性和通知。\n其他選項適用於此領域的不同需求，但不能像 管道的 CloudWatch 指標和警報 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d3-032",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A service owner reviewing an incident must check that required columns are non-null before loading a curated table. What should the pipeline include?",
+    "question": "A service owner reviewing an incident is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team must check that required columns are non-null before loading a curated table. What should the pipeline include?",
     "options": {
-      "A": "An IAM group only",
-      "B": "An EBS placement group",
+      "A": "Materialize or cache the result when the access pattern justifies it",
+      "B": "Retain source records or a replayable stream for a defined period",
       "C": "A data quality validation step",
-      "D": "A CloudFront distribution"
+      "D": "A centralized CloudWatch Logs group with Logs Insights queries"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "A validation step detects missing or invalid values before publishing data to downstream consumers.\nThe other choices do not assess record quality.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "A validation step detects missing or invalid values before publishing data to downstream consumers.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A data quality validation step for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "在載入規劃表之前，檢查事件的服務擁有者必須檢查所需列是否為非空。管道應該包括什麼？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。在載入規劃表之前，檢查事件的服務擁有者必須檢查所需列是否為非空。管道應該包括什麼？",
         "options": {
-          "A": "僅 IAM Groups",
-          "B": "EBS 置放組",
+          "A": "當存取模式證明合理時實現或快取結果",
+          "B": "在定義的時間內保留來源記錄或可重播流",
           "C": "資料品質驗證步驟",
-          "D": "CloudFront 發行版"
+          "D": "具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組"
         },
-        "explanation": "在將資料發佈給下游消費者之前，驗證步驟會偵測缺失值或無效值。\n其他選擇不評估記錄品質。"
+        "explanation": "在將資料發佈給下游消費者之前，驗證步驟會偵測缺失值或無效值。\n其他選項適用於此領域的不同需求，但不能像 資料品質驗證步驟 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d3-033",
-    "type": "single",
-    "question": "A team optimizing an existing implementation needs to query historical pipeline logs efficiently. Which destination is suitable?",
-    "options": {
-      "A": "An EC2 instance store volume",
-      "B": "A security group rule",
-      "C": "An S3 website endpoint",
-      "D": "A centralized CloudWatch Logs group with Logs Insights queries"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "CloudWatch Logs and Logs Insights support centralized retention and queryable operational logs.\nThe other choices do not provide managed log search.",
     "taskStatement": "3.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs to query historical pipeline logs efficiently. Which destination is suitable?",
+    "options": {
+      "A": "CloudWatch metrics and alarms for the pipeline",
+      "B": "A centralized CloudWatch Logs group with Logs Insights queries",
+      "C": "Materialize or cache the result when the access pattern justifies it",
+      "D": "Retain source records or a replayable stream for a defined period"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch Logs and Logs Insights support centralized retention and queryable operational logs.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A centralized CloudWatch Logs group with Logs Insights queries for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊需要有效地查詢歷史管道日誌。哪個目的地適合？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。優化現有實施的團隊需要有效地查詢歷史管道日誌。哪個目的地適合？",
         "options": {
-          "A": "EC2 執行個體儲存磁碟區",
-          "B": "安全群組規則",
-          "C": "S3 網站端點",
-          "D": "具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組"
+          "A": "管道的 CloudWatch 指標和警報",
+          "B": "具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組",
+          "C": "當存取模式證明合理時實現或快取結果",
+          "D": "在定義的時間內保留來源記錄或可重播流"
         },
-        "explanation": "CloudWatch Logs 和 Logs Insights 支援集中保留和可查詢的操作日誌。\n其他選項不提供託管日誌搜尋。"
+        "explanation": "CloudWatch Logs 和 Logs Insights 支援集中保留和可查詢的操作日誌。\n其他選項適用於此領域的不同需求，但不能像 具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d3-034",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A company introducing an automated workflow wants to reduce the cost of repeated queries over unchanged source data. Which approach is appropriate?",
+    "question": "A company introducing an automated workflow is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team wants to reduce the cost of repeated queries over unchanged source data. Which approach is appropriate?",
     "options": {
       "A": "Materialize or cache the result when the access pattern justifies it",
-      "B": "Run a full source scan for every request",
-      "C": "Disable all partitioning",
-      "D": "Duplicate data into random Regions"
+      "B": "Retain source records or a replayable stream for a defined period",
+      "C": "CloudWatch metrics and alarms for the pipeline",
+      "D": "A data quality validation step"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Materialized views, result caching, and partition pruning can reduce repeated processing and cost.\nRepeated full scans and unplanned duplication increase cost.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Materialized views, result caching, and partition pruning can reduce repeated processing and cost.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Materialize or cache the result when the access pattern justifies it for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "一家引入自動化工作流程的公司希望降低對未更改的來源資料進行重複查詢的成本。哪種方法適合？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。一家引入自動化工作流程的公司希望降低對未更改的來源資料進行重複查詢的成本。哪種方法適合？",
         "options": {
           "A": "當存取模式證明合理時實現或快取結果",
-          "B": "對每個請求執行完整的來源掃描",
-          "C": "停用所有分割區",
-          "D": "將資料複製到隨機區域"
+          "B": "在定義的時間內保留來源記錄或可重播流",
+          "C": "管道的 CloudWatch 指標和警報",
+          "D": "資料品質驗證步驟"
         },
-        "explanation": "物化視圖、結果快取和分區修剪可以減少重複處理和成本。\n重複的全面掃描和計劃外的複製會增加成本。"
+        "explanation": "物化視圖、結果快取和分區修剪可以減少重複處理和成本。\n其他選項適用於此領域的不同需求，但不能像 當存取模式證明合理時實現或快取結果 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d3-035",
-    "type": "single",
-    "question": "An AWS administrator working in a shared environment must replay data after correcting a transformation bug. Which ingestion design helps?",
-    "options": {
-      "A": "Disable versioning",
-      "B": "Retain source records or a replayable stream for a defined period",
-      "C": "Delete source data immediately",
-      "D": "Store only a final aggregate"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Retained source or stream data lets the pipeline rerun a corrected transformation.\nDeleting source data or retaining only aggregates removes replayability.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "An AWS administrator working in a shared environment is planning two independent production changes. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The first team must replay data after correcting a transformation bug. A second team needs to alert when a pipeline job fails or exceeds its duration objective. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "A centralized CloudWatch Logs group with Logs Insights queries",
+      "B": "Materialize or cache the result when the access pattern justifies it",
+      "C": "Retain source records or a replayable stream for a defined period",
+      "D": "CloudWatch metrics and alarms for the pipeline",
+      "E": "A data quality validation step"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Retain source records or a replayable stream for a defined period meets the first requirement: Retained source or stream data lets the pipeline rerun a corrected transformation. CloudWatch metrics and alarms for the pipeline meets the second requirement: CloudWatch metrics and alarms provide operational visibility and notifications for data workflows.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "在共用環境中工作的 AWS 管理員必須在更正轉換錯誤後重播資料。哪種攝取設計有幫助？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。第一項需求：支援關鍵工作負載的營運團隊必須在更正轉換錯誤後重播資料。第二項需求：當管道作業失敗或超過其持續時間目標時，生產團隊需要發出警報。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "禁用版本控制",
-          "B": "在定義的時間內保留來源記錄或可重播流",
-          "C": "立即刪除來源資料",
-          "D": "僅儲存最終聚合"
+          "A": "具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組",
+          "B": "當存取模式證明合理時實現或快取結果",
+          "C": "在定義的時間內保留來源記錄或可重播流",
+          "D": "管道的 CloudWatch 指標和警報",
+          "E": "資料品質驗證步驟"
         },
-        "explanation": "保留的來源或流資料允許管道重新運行更正後的轉換。\n刪除來源資料或僅保留聚合會消除可重玩性。"
+        "explanation": "在定義的時間內保留來源記錄或可重播流 符合第一項需求：保留的來源或流資料允許管道重新運行更正後的轉換。 管道的 CloudWatch 指標和警報 符合第二項需求：CloudWatch 指標和警報為資料工作流程提供操作可見性和通知。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "dea-c01-d3-036",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A customer-facing application team needs to alert when a pipeline job fails or exceeds its duration objective. Which capability should be configured?",
+    "question": "A customer-facing application team is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs to alert when a pipeline job fails or exceeds its duration objective. Which capability should be configured?",
     "options": {
-      "A": "A KMS alias",
-      "B": "A Route 53 TXT record",
+      "A": "A centralized CloudWatch Logs group with Logs Insights queries",
+      "B": "Materialize or cache the result when the access pattern justifies it",
       "C": "CloudWatch metrics and alarms for the pipeline",
-      "D": "An S3 public access point"
+      "D": "A data quality validation step"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "CloudWatch metrics and alarms provide operational visibility and notifications for data workflows.\nThe other choices manage storage access, key names, or DNS text records.",
-    "taskStatement": "3.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "CloudWatch metrics and alarms provide operational visibility and notifications for data workflows.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide CloudWatch metrics and alarms for the pipeline for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "當管道作業失敗或超過其持續時間目標時，面向客戶的應用程式團隊需要發出警報。應該配置哪些能力？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。當管道作業失敗或超過其持續時間目標時，面向客戶的應用程式團隊需要發出警報。應該配置哪些能力？",
         "options": {
-          "A": "KMS 別名",
-          "B": "Route 53 TXT 記錄",
+          "A": "具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組",
+          "B": "當存取模式證明合理時實現或快取結果",
           "C": "管道的 CloudWatch 指標和警報",
-          "D": "S3 公共存取點"
+          "D": "資料品質驗證步驟"
         },
-        "explanation": "CloudWatch 指標和警報為資料工作流程提供操作可見性和通知。\n其他選項管理儲存存取、金鑰名稱或 DNS 文字記錄。"
+        "explanation": "CloudWatch 指標和警報為資料工作流程提供操作可見性和通知。\n其他選項適用於此領域的不同需求，但不能像 管道的 CloudWatch 指標和警報 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d3-037",
-    "type": "single",
-    "question": "A platform team standardizing its AWS deployments must check that required columns are non-null before loading a curated table. What should the pipeline include?",
-    "options": {
-      "A": "A CloudFront distribution",
-      "B": "An IAM group only",
-      "C": "An EBS placement group",
-      "D": "A data quality validation step"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "A validation step detects missing or invalid values before publishing data to downstream consumers.\nThe other choices do not assess record quality.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team must check that required columns are non-null before loading a curated table. What should the pipeline include?",
+    "options": {
+      "A": "Retain source records or a replayable stream for a defined period",
+      "B": "A data quality validation step",
+      "C": "A centralized CloudWatch Logs group with Logs Insights queries",
+      "D": "Materialize or cache the result when the access pattern justifies it"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "A validation step detects missing or invalid values before publishing data to downstream consumers.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A data quality validation step for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊必須在載入精選表之前檢查所需欄位是否為非空。管道應該包括什麼？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。標準化其 AWS 部署的平台團隊必須在載入精選表之前檢查所需欄位是否為非空。管道應該包括什麼？",
         "options": {
-          "A": "CloudFront 發行版",
-          "B": "僅 IAM Groups",
-          "C": "EBS 置放組",
-          "D": "資料品質驗證步驟"
+          "A": "在定義的時間內保留來源記錄或可重播流",
+          "B": "資料品質驗證步驟",
+          "C": "具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組",
+          "D": "當存取模式證明合理時實現或快取結果"
         },
-        "explanation": "在將資料發佈給下游消費者之前，驗證步驟會偵測缺失值或無效值。\n其他選擇不評估記錄品質。"
+        "explanation": "在將資料發佈給下游消費者之前，驗證步驟會偵測缺失值或無效值。\n其他選項適用於此領域的不同需求，但不能像 資料品質驗證步驟 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d3-038",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team preparing evidence for an audit needs to query historical pipeline logs efficiently. Which destination is suitable?",
+    "question": "A team preparing evidence for an audit is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs to query historical pipeline logs efficiently. Which destination is suitable?",
     "options": {
       "A": "A centralized CloudWatch Logs group with Logs Insights queries",
-      "B": "An EC2 instance store volume",
-      "C": "A security group rule",
-      "D": "An S3 website endpoint"
+      "B": "Materialize or cache the result when the access pattern justifies it",
+      "C": "Retain source records or a replayable stream for a defined period",
+      "D": "CloudWatch metrics and alarms for the pipeline"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "CloudWatch Logs and Logs Insights support centralized retention and queryable operational logs.\nThe other choices do not provide managed log search.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "CloudWatch Logs and Logs Insights support centralized retention and queryable operational logs.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A centralized CloudWatch Logs group with Logs Insights queries for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "為審計準備證據的團隊需要有效查詢歷史管道日誌。哪個目的地適合？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。為審計準備證據的團隊需要有效查詢歷史管道日誌。哪個目的地適合？",
         "options": {
           "A": "具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組",
-          "B": "EC2 執行個體儲存磁碟區",
-          "C": "安全群組規則",
-          "D": "S3 網站端點"
+          "B": "當存取模式證明合理時實現或快取結果",
+          "C": "在定義的時間內保留來源記錄或可重播流",
+          "D": "管道的 CloudWatch 指標和警報"
         },
-        "explanation": "CloudWatch Logs 和 Logs Insights 支援集中保留和可查詢的操作日誌。\n其他選項不提供託管日誌搜尋。"
+        "explanation": "CloudWatch Logs 和 Logs Insights 支援集中保留和可查詢的操作日誌。\n其他選項適用於此領域的不同需求，但不能像 具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d3-039",
-    "type": "single",
-    "question": "A business replacing a manual process wants to reduce the cost of repeated queries over unchanged source data. Which approach is appropriate?",
-    "options": {
-      "A": "Duplicate data into random Regions",
-      "B": "Materialize or cache the result when the access pattern justifies it",
-      "C": "Run a full source scan for every request",
-      "D": "Disable all partitioning"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Materialized views, result caching, and partition pruning can reduce repeated processing and cost.\nRepeated full scans and unplanned duplication increase cost.",
     "taskStatement": "3.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A business replacing a manual process is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team wants to reduce the cost of repeated queries over unchanged source data. Which approach is appropriate?",
+    "options": {
+      "A": "Retain source records or a replayable stream for a defined period",
+      "B": "CloudWatch metrics and alarms for the pipeline",
+      "C": "A data quality validation step",
+      "D": "Materialize or cache the result when the access pattern justifies it"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Materialized views, result caching, and partition pruning can reduce repeated processing and cost.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Materialize or cache the result when the access pattern justifies it for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "取代手動流程的企業希望降低對未更改的來源資料進行重複查詢的成本。哪種方法適合？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。取代手動流程的企業希望降低對未更改的來源資料進行重複查詢的成本。哪種方法適合？",
         "options": {
-          "A": "將資料複製到隨機區域",
-          "B": "當存取模式證明合理時實現或快取結果",
-          "C": "對每個請求執行完整的來源掃描",
-          "D": "停用所有分割區"
+          "A": "在定義的時間內保留來源記錄或可重播流",
+          "B": "管道的 CloudWatch 指標和警報",
+          "C": "資料品質驗證步驟",
+          "D": "當存取模式證明合理時實現或快取結果"
         },
-        "explanation": "物化視圖、結果快取和分區修剪可以減少重複處理和成本。\n重複的全面掃描和計劃外的複製會增加成本。"
+        "explanation": "物化視圖、結果快取和分區修剪可以減少重複處理和成本。\n其他選項適用於此領域的不同需求，但不能像 當存取模式證明合理時實現或快取結果 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d3-040",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team validating a design against the exam guide must replay data after correcting a transformation bug. Which ingestion design helps?",
+    "question": "A team validating a design against the exam guide is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team must replay data after correcting a transformation bug. Which ingestion design helps?",
     "options": {
-      "A": "Store only a final aggregate",
-      "B": "Disable versioning",
+      "A": "A data quality validation step",
+      "B": "A centralized CloudWatch Logs group with Logs Insights queries",
       "C": "Retain source records or a replayable stream for a defined period",
-      "D": "Delete source data immediately"
+      "D": "CloudWatch metrics and alarms for the pipeline"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Retained source or stream data lets the pipeline rerun a corrected transformation.\nDeleting source data or retaining only aggregates removes replayability.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Retained source or stream data lets the pipeline rerun a corrected transformation.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Retain source records or a replayable stream for a defined period for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊必須在更正轉換錯誤後重播資料。哪種攝取設計有幫助？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。根據考試指南驗證設計的團隊必須在更正轉換錯誤後重播資料。哪種攝取設計有幫助？",
         "options": {
-          "A": "僅儲存最終聚合",
-          "B": "禁用版本控制",
+          "A": "資料品質驗證步驟",
+          "B": "具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組",
           "C": "在定義的時間內保留來源記錄或可重播流",
-          "D": "立即刪除來源資料"
+          "D": "管道的 CloudWatch 指標和警報"
         },
-        "explanation": "保留的來源或流資料允許管道重新運行更正後的轉換。\n刪除來源資料或僅保留聚合會消除可重玩性。"
+        "explanation": "保留的來源或流資料允許管道重新運行更正後的轉換。\n其他選項適用於此領域的不同需求，但不能像 在定義的時間內保留來源記錄或可重播流 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d3-041",
-    "type": "single",
-    "question": "A production team needs to alert when a pipeline job fails or exceeds its duration objective. Which capability should be configured?",
-    "options": {
-      "A": "An S3 public access point",
-      "B": "A KMS alias",
-      "C": "A Route 53 TXT record",
-      "D": "CloudWatch metrics and alarms for the pipeline"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "CloudWatch metrics and alarms provide operational visibility and notifications for data workflows.\nThe other choices manage storage access, key names, or DNS text records.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A production team is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs to alert when a pipeline job fails or exceeds its duration objective. Which capability should be configured?",
+    "options": {
+      "A": "Materialize or cache the result when the access pattern justifies it",
+      "B": "CloudWatch metrics and alarms for the pipeline",
+      "C": "A data quality validation step",
+      "D": "A centralized CloudWatch Logs group with Logs Insights queries"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch metrics and alarms provide operational visibility and notifications for data workflows.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide CloudWatch metrics and alarms for the pipeline for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "當管道作業失敗或超過其持續時間目標時，生產團隊需要發出警報。應該配置哪些能力？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。當管道作業失敗或超過其持續時間目標時，生產團隊需要發出警報。應該配置哪些能力？",
         "options": {
-          "A": "S3 公共存取點",
-          "B": "KMS 別名",
-          "C": "Route 53 TXT 記錄",
-          "D": "管道的 CloudWatch 指標和警報"
+          "A": "當存取模式證明合理時實現或快取結果",
+          "B": "管道的 CloudWatch 指標和警報",
+          "C": "資料品質驗證步驟",
+          "D": "具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組"
         },
-        "explanation": "CloudWatch 指標和警報為資料工作流程提供操作可見性和通知。\n其他選項管理儲存存取、金鑰名稱或 DNS 文字記錄。"
+        "explanation": "CloudWatch 指標和警報為資料工作流程提供操作可見性和通知。\n其他選項適用於此領域的不同需求，但不能像 管道的 CloudWatch 指標和警報 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d3-042",
-    "type": "single",
-    "question": "A multi-account platform team must check that required columns are non-null before loading a curated table. What should the pipeline include?",
+    "taskStatement": "3.3",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A multi-account platform team is planning two independent production changes. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The first team must check that required columns are non-null before loading a curated table. A second team needs to query historical pipeline logs efficiently. Which TWO actions satisfy these requirements?",
     "options": {
       "A": "A data quality validation step",
-      "B": "A CloudFront distribution",
-      "C": "An IAM group only",
-      "D": "An EBS placement group"
+      "B": "A centralized CloudWatch Logs group with Logs Insights queries",
+      "C": "Materialize or cache the result when the access pattern justifies it",
+      "D": "Retain source records or a replayable stream for a defined period",
+      "E": "CloudWatch metrics and alarms for the pipeline"
     },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "A validation step detects missing or invalid values before publishing data to downstream consumers.\nThe other choices do not assess record quality.",
-    "taskStatement": "3.3",
-    "lastVerified": "2026-08-09",
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "A data quality validation step meets the first requirement: A validation step detects missing or invalid values before publishing data to downstream consumers. A centralized CloudWatch Logs group with Logs Insights queries meets the second requirement: CloudWatch Logs and Logs Insights support centralized retention and queryable operational logs.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊必須在載入規劃表之前檢查所需列是否為非空。管道應該包括什麼？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。第一項需求：多帳戶平台團隊必須在載入規劃表之前檢查所需列是否為非空。第二項需求：受監管的公司需要有效率地查詢歷史管道日誌。哪兩項操作可以滿足這些需求？",
         "options": {
           "A": "資料品質驗證步驟",
-          "B": "CloudFront 發行版",
-          "C": "僅 IAM Groups",
-          "D": "EBS 置放組"
+          "B": "具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組",
+          "C": "當存取模式證明合理時實現或快取結果",
+          "D": "在定義的時間內保留來源記錄或可重播流",
+          "E": "管道的 CloudWatch 指標和警報"
         },
-        "explanation": "在將資料發佈給下游消費者之前，驗證步驟會偵測缺失值或無效值。\n其他選擇不評估記錄品質。"
+        "explanation": "資料品質驗證步驟 符合第一項需求：在將資料發佈給下游消費者之前，驗證步驟會偵測缺失值或無效值。 具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組 符合第二項需求：CloudWatch Logs 和 Logs Insights 支援集中保留和可查詢的操作日誌。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "dea-c01-d3-043",
-    "type": "single",
-    "question": "A regulated company needs to query historical pipeline logs efficiently. Which destination is suitable?",
-    "options": {
-      "A": "An S3 website endpoint",
-      "B": "A centralized CloudWatch Logs group with Logs Insights queries",
-      "C": "An EC2 instance store volume",
-      "D": "A security group rule"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "CloudWatch Logs and Logs Insights support centralized retention and queryable operational logs.\nThe other choices do not provide managed log search.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A regulated company is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs to query historical pipeline logs efficiently. Which destination is suitable?",
+    "options": {
+      "A": "Materialize or cache the result when the access pattern justifies it",
+      "B": "Retain source records or a replayable stream for a defined period",
+      "C": "CloudWatch metrics and alarms for the pipeline",
+      "D": "A centralized CloudWatch Logs group with Logs Insights queries"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudWatch Logs and Logs Insights support centralized retention and queryable operational logs.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A centralized CloudWatch Logs group with Logs Insights queries for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司需要有效率地查詢歷史管道日誌。哪個目的地適合？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。受監管的公司需要有效率地查詢歷史管道日誌。哪個目的地適合？",
         "options": {
-          "A": "S3 網站端點",
-          "B": "具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組",
-          "C": "EC2 執行個體儲存磁碟區",
-          "D": "安全群組規則"
+          "A": "當存取模式證明合理時實現或快取結果",
+          "B": "在定義的時間內保留來源記錄或可重播流",
+          "C": "管道的 CloudWatch 指標和警報",
+          "D": "具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組"
         },
-        "explanation": "CloudWatch Logs 和 Logs Insights 支援集中保留和可查詢的操作日誌。\n其他選項不提供託管日誌搜尋。"
+        "explanation": "CloudWatch Logs 和 Logs Insights 支援集中保留和可查詢的操作日誌。\n其他選項適用於此領域的不同需求，但不能像 具有 Logs Insights 查詢的集中式 CloudWatch Logs 群組 一樣直接滿足題目的指定條件。"
       }
     }
   }

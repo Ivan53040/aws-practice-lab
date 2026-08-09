@@ -1,1317 +1,1640 @@
 [
   {
     "id": "ans-c01-d4-001",
-    "type": "single",
-    "question": "A production team must block known malicious domains for workloads in a VPC. Which feature should be evaluated?",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A production team is planning two independent production changes. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The first team must block known malicious domains for workloads in a VPC. A second team needs layer 3 and layer 4 stateful inspection between network segments. Which TWO actions satisfy these requirements?",
     "options": {
       "A": "Route 53 Resolver DNS Firewall",
-      "B": "An S3 lifecycle rule",
-      "C": "A KMS alias",
-      "D": "A CloudWatch dashboard"
+      "B": "AWS Network Firewall",
+      "C": "AWS Shield and AWS WAF",
+      "D": "CloudTrail and configuration history",
+      "E": "SCPs combined with centralized policy and security services"
     },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "DNS Firewall can block or allow domain queries for VPC workloads.\nThe other choices do not filter DNS requests.",
-    "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Route 53 Resolver DNS Firewall meets the first requirement: DNS Firewall can block or allow domain queries for VPC workloads. AWS Network Firewall meets the second requirement: Network Firewall provides managed stateful network traffic inspection.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "生產團隊必須阻止 VPC 中工作負載的已知惡意域。應該評估哪個功能？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。目前架構支援業務關鍵服務。所選選項必須處理確切的故障或安全條件，而不會削弱其他控制措施。第一項需求：生產團隊必須阻止 VPC 中工作負載的已知惡意域。第二項需求：多帳戶平台團隊需要網段之間的第 3 層和第 4 層狀態檢查。哪兩項操作可以滿足這些需求？",
         "options": {
           "A": "Route 53 Resolver DNS Firewall",
-          "B": "S3 生命週期規則",
-          "C": "KMS 別名",
-          "D": "CloudWatch 儀表板"
+          "B": "AWS Network Firewall",
+          "C": "AWS Shield and AWS WAF",
+          "D": "CloudTrail 與設定歷史記錄",
+          "E": "SCP 與集中式策略和安全服務結合"
         },
-        "explanation": "DNS 防火牆可以封鎖或允許 VPC 工作負載的網域查詢。\n其他選項不過濾 DNS 請求。"
+        "explanation": "Route 53 Resolver DNS Firewall 符合第一項需求：DNS 防火牆可以封鎖或允許 VPC 工作負載的網域查詢。 AWS Network Firewall 符合第二項需求：Network Firewall 提供託管狀態網路流量檢查。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d4-002",
-    "type": "single",
-    "question": "A multi-account platform team needs layer 3 and layer 4 stateful inspection between network segments. Which service fits?",
-    "options": {
-      "A": "AWS Budgets",
-      "B": "AWS Network Firewall",
-      "C": "Amazon Cognito",
-      "D": "Amazon Athena"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Network Firewall provides managed stateful network traffic inspection.\nThe other choices provide identity, SQL queries, or cost monitoring.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A multi-account platform team is planning two independent production changes. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The first team needs layer 3 and layer 4 stateful inspection between network segments. A second team must protect internet-facing applications from DDoS attacks and apply request filtering. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "AWS Shield and AWS WAF",
+      "B": "CloudTrail and configuration history",
+      "C": "SCPs combined with centralized policy and security services",
+      "D": "Route 53 Resolver DNS Firewall",
+      "E": "AWS Network Firewall"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS Network Firewall meets the first requirement: Network Firewall provides managed stateful network traffic inspection. AWS Shield and AWS WAF meets the second requirement: Shield provides DDoS protection and WAF filters HTTP requests with managed or custom rules.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊需要網段之間的第 3 層和第 4 層狀態檢查。適合哪種服務？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。目前架構支援業務關鍵服務。所選選項必須處理確切的故障或安全條件，而不會削弱其他控制措施。第一項需求：受監管的公司必須保護面向互聯網的應用程式免受 DDoS 攻擊並應用請求過濾。第二項需求：多帳戶平台團隊需要網段之間的第 3 層和第 4 層狀態檢查。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "AWS Budgets",
-          "B": "AWS Network Firewall",
-          "C": "Amazon Cognito",
-          "D": "Amazon Athena"
+          "A": "AWS Shield and AWS WAF",
+          "B": "CloudTrail 與設定歷史記錄",
+          "C": "SCP 與集中式策略和安全服務結合",
+          "D": "Route 53 Resolver DNS Firewall",
+          "E": "AWS Network Firewall"
         },
-        "explanation": "Network Firewall 提供託管狀態網路流量檢查。\n其他選擇提供身分、SQL 查詢或成本監控。"
+        "explanation": "AWS Shield and AWS WAF 符合第一項需求：Shield 提供 DDoS 保護，WAF 使用託管或自訂規則過濾 HTTP 請求。 AWS Network Firewall 符合第二項需求：Network Firewall 提供託管狀態網路流量檢查。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d4-003",
-    "type": "single",
-    "question": "A regulated company must protect internet-facing applications from DDoS attacks and apply request filtering. Which combination is appropriate?",
-    "options": {
-      "A": "A public root key",
-      "B": "A Route 53 TXT record only",
-      "C": "AWS Shield and AWS WAF",
-      "D": "An EBS volume and S3 lifecycle rule"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "Shield provides DDoS protection and WAF filters HTTP requests with managed or custom rules.\nStorage and DNS records do not provide layered web protection.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A regulated company is planning two independent production changes. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The first team must protect internet-facing applications from DDoS attacks and apply request filtering. A second team needs to prove that network changes were made by authorized principals. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "SCPs combined with centralized policy and security services",
+      "B": "Route 53 Resolver DNS Firewall",
+      "C": "AWS Network Firewall",
+      "D": "AWS Shield and AWS WAF",
+      "E": "CloudTrail and configuration history"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS Shield and AWS WAF meets the first requirement: Shield provides DDoS protection and WAF filters HTTP requests with managed or custom rules. CloudTrail and configuration history meets the second requirement: CloudTrail and configuration history provide API and resource-change evidence.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "受監管的公司必須保護面向互聯網的應用程式免受 DDoS 攻擊並應用請求過濾。哪種組合合適？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。目前架構支援業務關鍵服務。所選選項必須處理確切的故障或安全條件，而不會削弱其他控制措施。第一項需求：受監管的公司必須保護面向互聯網的應用程式免受 DDoS 攻擊並應用請求過濾。第二項需求：準備增加流量的新創公司需要證明網路變更是由授權主體進行的。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "公有根密鑰",
-          "B": "僅 Route 53 TXT 記錄",
-          "C": "AWS Shield and AWS WAF",
-          "D": "EBS 捲和 S3 生命週期規則"
+          "A": "SCP 與集中式策略和安全服務結合",
+          "B": "Route 53 Resolver DNS Firewall",
+          "C": "AWS Network Firewall",
+          "D": "AWS Shield and AWS WAF",
+          "E": "CloudTrail 與設定歷史記錄"
         },
-        "explanation": "Shield 提供 DDoS 保護，WAF 使用託管或自訂規則過濾 HTTP 請求。\n儲存和 DNS 記錄不提供分層 Web 保護。"
+        "explanation": "AWS Shield and AWS WAF 符合第一項需求：Shield 提供 DDoS 保護，WAF 使用託管或自訂規則過濾 HTTP 請求。 CloudTrail 與設定歷史記錄 符合第二項需求：CloudTrail 和設定歷史記錄提供 API 和資源變更證據。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d4-004",
-    "type": "single",
-    "question": "A startup preparing for a traffic increase needs to prove that network changes were made by authorized principals. Which services provide useful evidence?",
-    "options": {
-      "A": "A public dashboard only",
-      "B": "A DNS cache entry",
-      "C": "An EBS volume name",
-      "D": "CloudTrail and configuration history"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "CloudTrail and configuration history provide API and resource-change evidence.\nThe other choices do not establish an audit trail.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A startup preparing for a traffic increase is designing one integrated end-to-end network architecture across accounts and Regions. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The design must keep recurring cost proportional to use, enforce least privilege, and remain available during a component or Availability Zone failure. Match each connected stage to the implementation that lets the complete architecture satisfy its business outcome.",
+    "options": {
+      "A": "Stage 1: The architecture needs to prove that network changes were made by authorized principals",
+      "B": "Stage 2: The architecture needs an architecture that keeps provider and consumer VPC address spaces independent",
+      "C": "Stage 3: The architecture must advertise selected VPC prefixes to an on-premises router over a private connection"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "BGP over a Direct Connect or VPN connection",
+      "2": "CloudTrail and configuration history",
+      "3": "AWS PrivateLink"
+    },
+    "correctMatches": {
+      "A": "2",
+      "B": "3",
+      "C": "1"
+    },
+    "explanation": "A maps to CloudTrail and configuration history. CloudTrail and configuration history provide API and resource-change evidence. B maps to AWS PrivateLink. PrivateLink exposes a service through endpoint interfaces without routing consumer VPCs together. C maps to BGP over a Direct Connect or VPN connection. BGP exchanges routes over supported hybrid connectivity links.\nAll three stages are connected. Substituting an unrelated target would break the architecture or weaken its cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司需要證明網路變更是由授權主體進行的。哪些服務提供有用的證據？",
+        "question": "某企業正在跨帳戶與區域設計一個整合式端到端網路架構。三個階段彼此相連，任一階段錯誤都會影響整體業務成果。此設計必須讓持續成本與實際用量相符、落實最低權限，並在元件或可用區域發生故障時維持可用。 請把每個階段配對至最合適的實作。",
         "options": {
-          "A": "僅公共儀表板",
-          "B": "DNS 快取項目",
-          "C": "EBS 卷名稱",
-          "D": "CloudTrail 與設定歷史記錄"
+          "A": "階段 1：階段 1：階段 1：需求：準備增加流量的新創公司需要證明網路變更是由授權主體進行的",
+          "B": "階段 2：階段 2：階段 2：生產團隊需要在數十個 VPC 和本地網路之間進行集中路由。",
+          "C": "階段 3：階段 3：階段 3：生產團隊必須透過專用連線將選定的 VPC 前綴通告到本機路由器。"
         },
-        "explanation": "CloudTrail 和設定歷史記錄提供 API 和資源變更證據。\n其他選擇不建立審計追蹤。"
+        "targets": {
+          "1": "透過 Direct Connect 或 VPN 連接的 BGP",
+          "2": "CloudTrail 與設定歷史記錄",
+          "3": "AWS PrivateLink"
+        },
+        "explanation": "A 應配對 CloudTrail 與設定歷史記錄；B 應配對 AWS PrivateLink；C 應配對 透過 Direct Connect 或 VPN 連接的 BGP。三個實作共同組成完整架構。\n若以不相關的目標取代任何一項，便會破壞架構或削弱成本、安全性及可用性之間的取捨。"
       }
     }
   },
   {
     "id": "ans-c01-d4-005",
-    "type": "single",
-    "question": "An operations team supporting a critical workload must enforce network and service guardrails across accounts. Which organization control should be used?",
-    "options": {
-      "A": "SCPs combined with centralized policy and security services",
-      "B": "One local security group only",
-      "C": "Public network paths",
-      "D": "Manual console notes"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "Organization guardrails and centralized policy reduce inconsistent network governance.\nLocal or manual-only controls do not scale across accounts.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "An operations team supporting a critical workload is planning two independent production changes. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The first team must enforce network and service guardrails across accounts. A second team must block known malicious domains for workloads in a VPC. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "CloudTrail and configuration history",
+      "B": "SCPs combined with centralized policy and security services",
+      "C": "Route 53 Resolver DNS Firewall",
+      "D": "AWS Network Firewall",
+      "E": "AWS Shield and AWS WAF"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "SCPs combined with centralized policy and security services meets the first requirement: Organization guardrails and centralized policy reduce inconsistent network governance. Route 53 Resolver DNS Firewall meets the second requirement: DNS Firewall can block or allow domain queries for VPC workloads.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊必須跨帳戶實施網路和服務護欄。應使用哪種組織控制？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。目前架構支援業務關鍵服務。所選選項必須處理確切的故障或安全條件，而不會削弱其他控制措施。第一項需求：支援關鍵工作負載的營運團隊必須跨帳戶實施網路和服務護欄。第二項需求：生產團隊必須阻止 VPC 中工作負載的已知惡意域。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "SCP 與集中式策略和安全服務結合",
-          "B": "僅一個本地安全群組",
-          "C": "公網路徑",
-          "D": "手動控制台註釋"
+          "A": "CloudTrail 與設定歷史記錄",
+          "B": "SCP 與集中式策略和安全服務結合",
+          "C": "Route 53 Resolver DNS Firewall",
+          "D": "AWS Network Firewall",
+          "E": "AWS Shield and AWS WAF"
         },
-        "explanation": "組織護欄和集中策略減少了不一致的網路治理。\n本地或僅手動控制無法跨帳戶擴展。"
+        "explanation": "SCP 與集中式策略和安全服務結合 符合第一項需求：組織護欄和集中策略減少了不一致的網路治理。 Route 53 Resolver DNS Firewall 符合第二項需求：DNS 防火牆可以封鎖或允許 VPC 工作負載的網域查詢。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d4-006",
-    "type": "single",
-    "question": "A data platform team must block known malicious domains for workloads in a VPC. Which feature should be evaluated?",
-    "options": {
-      "A": "A CloudWatch dashboard",
-      "B": "Route 53 Resolver DNS Firewall",
-      "C": "An S3 lifecycle rule",
-      "D": "A KMS alias"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "DNS Firewall can block or allow domain queries for VPC workloads.\nThe other choices do not filter DNS requests.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A data platform team is planning two independent production changes. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The first team must block known malicious domains for workloads in a VPC. A second team needs layer 3 and layer 4 stateful inspection between network segments. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Route 53 Resolver DNS Firewall",
+      "B": "AWS Network Firewall",
+      "C": "AWS Shield and AWS WAF",
+      "D": "CloudTrail and configuration history",
+      "E": "SCPs combined with centralized policy and security services"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Route 53 Resolver DNS Firewall meets the first requirement: DNS Firewall can block or allow domain queries for VPC workloads. AWS Network Firewall meets the second requirement: Network Firewall provides managed stateful network traffic inspection.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊必須阻止 VPC 中工作負載的已知惡意域。應該評估哪個功能？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。專業工程師將審查實作的服務限制、故障行為及建議設計的營運取捨。第一項需求：生產團隊必須阻止 VPC 中工作負載的已知惡意域。第二項需求：多帳戶平台團隊需要網段之間的第 3 層和第 4 層狀態檢查。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "CloudWatch 儀表板",
-          "B": "Route 53 Resolver DNS Firewall",
-          "C": "S3 生命週期規則",
-          "D": "KMS 別名"
+          "A": "Route 53 Resolver DNS Firewall",
+          "B": "AWS Network Firewall",
+          "C": "AWS Shield and AWS WAF",
+          "D": "CloudTrail 與設定歷史記錄",
+          "E": "SCP 與集中式策略和安全服務結合"
         },
-        "explanation": "DNS 防火牆可以封鎖或允許 VPC 工作負載的網域查詢。\n其他選項不過濾 DNS 請求。"
+        "explanation": "Route 53 Resolver DNS Firewall 符合第一項需求：DNS 防火牆可以封鎖或允許 VPC 工作負載的網域查詢。 AWS Network Firewall 符合第二項需求：Network Firewall 提供託管狀態網路流量檢查。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d4-007",
-    "type": "single",
-    "question": "A security-conscious engineering team needs layer 3 and layer 4 stateful inspection between network segments. Which service fits?",
-    "options": {
-      "A": "Amazon Athena",
-      "B": "AWS Budgets",
-      "C": "AWS Network Firewall",
-      "D": "Amazon Cognito"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "Network Firewall provides managed stateful network traffic inspection.\nThe other choices provide identity, SQL queries, or cost monitoring.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A security-conscious engineering team is planning two independent production changes. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The first team needs layer 3 and layer 4 stateful inspection between network segments. A second team must protect internet-facing applications from DDoS attacks and apply request filtering. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "AWS Shield and AWS WAF",
+      "B": "CloudTrail and configuration history",
+      "C": "SCPs combined with centralized policy and security services",
+      "D": "Route 53 Resolver DNS Firewall",
+      "E": "AWS Network Firewall"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS Network Firewall meets the first requirement: Network Firewall provides managed stateful network traffic inspection. AWS Shield and AWS WAF meets the second requirement: Shield provides DDoS protection and WAF filters HTTP requests with managed or custom rules.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊需要在網段之間進行第 3 層和第 4 層狀態檢查。適合哪種服務？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。專業工程師將審查實作的服務限制、故障行為及建議設計的營運取捨。第一項需求：受監管的公司必須保護面向互聯網的應用程式免受 DDoS 攻擊並應用請求過濾。第二項需求：多帳戶平台團隊需要網段之間的第 3 層和第 4 層狀態檢查。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "Amazon Athena",
-          "B": "AWS Budgets",
-          "C": "AWS Network Firewall",
-          "D": "Amazon Cognito"
+          "A": "AWS Shield and AWS WAF",
+          "B": "CloudTrail 與設定歷史記錄",
+          "C": "SCP 與集中式策略和安全服務結合",
+          "D": "Route 53 Resolver DNS Firewall",
+          "E": "AWS Network Firewall"
         },
-        "explanation": "Network Firewall 提供託管狀態網路流量檢查。\n其他選擇提供身分、SQL 查詢或成本監控。"
+        "explanation": "AWS Shield and AWS WAF 符合第一項需求：Shield 提供 DDoS 保護，WAF 使用託管或自訂規則過濾 HTTP 請求。 AWS Network Firewall 符合第二項需求：Network Firewall 提供託管狀態網路流量檢查。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d4-008",
-    "type": "single",
-    "question": "A company migrating an existing workload must protect internet-facing applications from DDoS attacks and apply request filtering. Which combination is appropriate?",
-    "options": {
-      "A": "An EBS volume and S3 lifecycle rule",
-      "B": "A public root key",
-      "C": "A Route 53 TXT record only",
-      "D": "AWS Shield and AWS WAF"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Shield provides DDoS protection and WAF filters HTTP requests with managed or custom rules.\nStorage and DNS records do not provide layered web protection.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A company migrating an existing workload is designing one integrated end-to-end network architecture across accounts and Regions. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The design must avoid unnecessary standby cost without weakening security controls or the availability objective. Match each connected stage to the implementation that lets the complete architecture satisfy its business outcome.",
+    "options": {
+      "A": "Stage 1: The architecture must protect internet-facing applications from DDoS attacks and apply request filtering",
+      "B": "Stage 2: The architecture must automate VPC and route configuration consistently across accounts",
+      "C": "Stage 3: The architecture needs to investigate rejected packets between two VPC subnets"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "AWS Shield and AWS WAF",
+      "2": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "3": "VPC Flow Logs and route and security group configuration"
+    },
+    "correctMatches": {
+      "A": "1",
+      "B": "2",
+      "C": "3"
+    },
+    "explanation": "A maps to AWS Shield and AWS WAF. Shield provides DDoS protection and WAF filters HTTP requests with managed or custom rules. B maps to Infrastructure as code with CloudFormation or the AWS CDK. IaC makes network changes repeatable, reviewable, and consistent. C maps to VPC Flow Logs and route and security group configuration. Flow Logs combined with routing and security controls identify where traffic is rejected.\nAll three stages are connected. Substituting an unrelated target would break the architecture or weaken its cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司必須保護面向互聯網的應用程式免受 DDoS 攻擊並應用請求過濾。哪種組合合適？",
+        "question": "某企業正在跨帳戶與區域設計一個整合式端到端網路架構。三個階段彼此相連，任一階段錯誤都會影響整體業務成果。此設計必須避免不必要的備用成本，同時不可削弱安全控制或可用性目標。 請把每個階段配對至最合適的實作。",
         "options": {
-          "A": "EBS 捲和 S3 生命週期規則",
-          "B": "公有根密鑰",
-          "C": "僅 Route 53 TXT 記錄",
-          "D": "AWS Shield and AWS WAF"
+          "A": "階段 1：多帳戶平台團隊需要網段之間的第 3 層和第 4 層狀態檢查。",
+          "B": "階段 2：階段 2：階段 2：支援關鍵工作負載的營運團隊必須自動化 VPC 並跨帳戶一致地路由配置。",
+          "C": "階段 3：階段 3：階段 3：需求：製作團隊需要調查兩個 VPC 子網路之間被拒絕的資料包"
         },
-        "explanation": "Shield 提供 DDoS 保護，WAF 使用託管或自訂規則過濾 HTTP 請求。\n儲存和 DNS 記錄不提供分層 Web 保護。"
+        "targets": {
+          "1": "AWS Shield and AWS WAF",
+          "2": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
+          "3": "VPC Flow Logs 以及路由和安全群組配置"
+        },
+        "explanation": "A 應配對 AWS Shield and AWS WAF；B 應配對 使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼；C 應配對 VPC Flow Logs 以及路由和安全群組配置。三個實作共同組成完整架構。\n若以不相關的目標取代任何一項，便會破壞架構或削弱成本、安全性及可用性之間的取捨。"
       }
     }
   },
   {
     "id": "ans-c01-d4-009",
-    "type": "single",
-    "question": "A team with strict recovery objectives needs to prove that network changes were made by authorized principals. Which services provide useful evidence?",
-    "options": {
-      "A": "CloudTrail and configuration history",
-      "B": "A public dashboard only",
-      "C": "A DNS cache entry",
-      "D": "An EBS volume name"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "CloudTrail and configuration history provide API and resource-change evidence.\nThe other choices do not establish an audit trail.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A team with strict recovery objectives is planning two independent production changes. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The first team needs to prove that network changes were made by authorized principals. A second team must enforce network and service guardrails across accounts. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "AWS Network Firewall",
+      "B": "AWS Shield and AWS WAF",
+      "C": "CloudTrail and configuration history",
+      "D": "SCPs combined with centralized policy and security services",
+      "E": "Route 53 Resolver DNS Firewall"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "CloudTrail and configuration history meets the first requirement: CloudTrail and configuration history provide API and resource-change evidence. SCPs combined with centralized policy and security services meets the second requirement: Organization guardrails and centralized policy reduce inconsistent network governance.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有嚴格恢復目標的團隊需要證明網路變更是由授權主體進行的。哪些服務提供有用的證據？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。專業工程師將審查實作的服務限制、故障行為及建議設計的營運取捨。第一項需求：準備增加流量的新創公司需要證明網路變更是由授權主體進行的。第二項需求：支援關鍵工作負載的營運團隊必須跨帳戶實施網路和服務護欄。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "CloudTrail 與設定歷史記錄",
-          "B": "僅公共儀表板",
-          "C": "DNS 快取項目",
-          "D": "EBS 卷名稱"
+          "A": "AWS Network Firewall",
+          "B": "AWS Shield and AWS WAF",
+          "C": "CloudTrail 與設定歷史記錄",
+          "D": "SCP 與集中式策略和安全服務結合",
+          "E": "Route 53 Resolver DNS Firewall"
         },
-        "explanation": "CloudTrail 和設定歷史記錄提供 API 和資源變更證據。\n其他選擇不建立審計追蹤。"
+        "explanation": "CloudTrail 與設定歷史記錄 符合第一項需求：CloudTrail 和設定歷史記錄提供 API 和資源變更證據。 SCP 與集中式策略和安全服務結合 符合第二項需求：組織護欄和集中策略減少了不一致的網路治理。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d4-010",
-    "type": "single",
-    "question": "A developer team preparing a release must enforce network and service guardrails across accounts. Which organization control should be used?",
-    "options": {
-      "A": "Manual console notes",
-      "B": "SCPs combined with centralized policy and security services",
-      "C": "One local security group only",
-      "D": "Public network paths"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Organization guardrails and centralized policy reduce inconsistent network governance.\nLocal or manual-only controls do not scale across accounts.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A developer team preparing a release is planning two independent production changes. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The first team must enforce network and service guardrails across accounts. A second team must block known malicious domains for workloads in a VPC. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "CloudTrail and configuration history",
+      "B": "SCPs combined with centralized policy and security services",
+      "C": "Route 53 Resolver DNS Firewall",
+      "D": "AWS Network Firewall",
+      "E": "AWS Shield and AWS WAF"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "SCPs combined with centralized policy and security services meets the first requirement: Organization guardrails and centralized policy reduce inconsistent network governance. Route 53 Resolver DNS Firewall meets the second requirement: DNS Firewall can block or allow domain queries for VPC workloads.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊必須跨帳戶強制實施網路和服務護欄。應使用哪種組織控制？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。專業工程師將審查實作的服務限制、故障行為及建議設計的營運取捨。第一項需求：支援關鍵工作負載的營運團隊必須跨帳戶實施網路和服務護欄。第二項需求：生產團隊必須阻止 VPC 中工作負載的已知惡意域。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "手動控制台註釋",
+          "A": "CloudTrail 與設定歷史記錄",
           "B": "SCP 與集中式策略和安全服務結合",
-          "C": "僅一個本地安全群組",
-          "D": "公網路徑"
+          "C": "Route 53 Resolver DNS Firewall",
+          "D": "AWS Network Firewall",
+          "E": "AWS Shield and AWS WAF"
         },
-        "explanation": "組織護欄和集中策略減少了不一致的網路治理。\n本地或僅手動控制無法跨帳戶擴展。"
+        "explanation": "SCP 與集中式策略和安全服務結合 符合第一項需求：組織護欄和集中策略減少了不一致的網路治理。 Route 53 Resolver DNS Firewall 符合第二項需求：DNS 防火牆可以封鎖或允許 VPC 工作負載的網域查詢。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d4-011",
-    "type": "single",
-    "question": "An enterprise with several AWS Regions must block known malicious domains for workloads in a VPC. Which feature should be evaluated?",
-    "options": {
-      "A": "A KMS alias",
-      "B": "A CloudWatch dashboard",
-      "C": "Route 53 Resolver DNS Firewall",
-      "D": "An S3 lifecycle rule"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "DNS Firewall can block or allow domain queries for VPC workloads.\nThe other choices do not filter DNS requests.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "An enterprise with several AWS Regions is planning two independent production changes. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The first team must block known malicious domains for workloads in a VPC. A second team needs layer 3 and layer 4 stateful inspection between network segments. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Route 53 Resolver DNS Firewall",
+      "B": "AWS Network Firewall",
+      "C": "AWS Shield and AWS WAF",
+      "D": "CloudTrail and configuration history",
+      "E": "SCPs combined with centralized policy and security services"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Route 53 Resolver DNS Firewall meets the first requirement: DNS Firewall can block or allow domain queries for VPC workloads. AWS Network Firewall meets the second requirement: Network Firewall provides managed stateful network traffic inspection.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS Regions 的企業必須阻止 VPC 中工作負載的已知惡意域。應該評估哪個功能？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此生產環境在多個帳戶中採用集中治理。變更必須符合最低權限、可以稽核，並且不會造成長時間中斷。第一項需求：生產團隊必須阻止 VPC 中工作負載的已知惡意域。第二項需求：多帳戶平台團隊需要網段之間的第 3 層和第 4 層狀態檢查。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "KMS 別名",
-          "B": "CloudWatch 儀表板",
-          "C": "Route 53 Resolver DNS Firewall",
-          "D": "S3 生命週期規則"
+          "A": "Route 53 Resolver DNS Firewall",
+          "B": "AWS Network Firewall",
+          "C": "AWS Shield and AWS WAF",
+          "D": "CloudTrail 與設定歷史記錄",
+          "E": "SCP 與集中式策略和安全服務結合"
         },
-        "explanation": "DNS 防火牆可以封鎖或允許 VPC 工作負載的網域查詢。\n其他選項不過濾 DNS 請求。"
+        "explanation": "Route 53 Resolver DNS Firewall 符合第一項需求：DNS 防火牆可以封鎖或允許 VPC 工作負載的網域查詢。 AWS Network Firewall 符合第二項需求：Network Firewall 提供託管狀態網路流量檢查。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d4-012",
-    "type": "single",
-    "question": "A service owner reviewing an incident needs layer 3 and layer 4 stateful inspection between network segments. Which service fits?",
-    "options": {
-      "A": "Amazon Cognito",
-      "B": "Amazon Athena",
-      "C": "AWS Budgets",
-      "D": "AWS Network Firewall"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Network Firewall provides managed stateful network traffic inspection.\nThe other choices provide identity, SQL queries, or cost monitoring.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A service owner reviewing an incident is designing one integrated end-to-end network architecture across accounts and Regions. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The organization will accept additional managed-service cost only when it measurably improves security and availability with less operational effort. Match each connected stage to the implementation that lets the complete architecture satisfy its business outcome.",
+    "options": {
+      "A": "Stage 1: The architecture needs layer 3 and layer 4 stateful inspection between network segments",
+      "B": "Stage 2: The architecture needs operational runbooks for repeated network changes",
+      "C": "Stage 3: The architecture must block known malicious domains for workloads in a VPC"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "Systems Manager Automation",
+      "2": "Route 53 Resolver DNS Firewall",
+      "3": "AWS Network Firewall"
+    },
+    "correctMatches": {
+      "A": "3",
+      "B": "1",
+      "C": "2"
+    },
+    "explanation": "A maps to AWS Network Firewall. Network Firewall provides managed stateful network traffic inspection. B maps to Systems Manager Automation. Systems Manager Automation runbooks can execute repeatable operational tasks. C maps to Route 53 Resolver DNS Firewall. DNS Firewall can block or allow domain queries for VPC workloads.\nAll three stages are connected. Substituting an unrelated target would break the architecture or weaken its cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務擁有者需要在網段之間進行第 3 層和第 4 層狀態檢查。適合哪種服務？",
+        "question": "某企業正在跨帳戶與區域設計一個整合式端到端網路架構。三個階段彼此相連，任一階段錯誤都會影響整體業務成果。只有在託管服務能以較低營運負擔明確改善安全性與可用性時，組織才會接受額外成本。 請把每個階段配對至最合適的實作。",
         "options": {
-          "A": "Amazon Cognito",
-          "B": "Amazon Athena",
-          "C": "AWS Budgets",
-          "D": "AWS Network Firewall"
+          "A": "階段 1：受監管的公司必須保護面向互聯網的應用程式免受 DDoS 攻擊並應用請求過濾。",
+          "B": "階段 2：階段 2：階段 2：支援關鍵工作負載的營運團隊需要針對重複網路變更的營運手冊。",
+          "C": "階段 3：生產團隊必須阻止 VPC 中工作負載的已知惡意域。"
         },
-        "explanation": "Network Firewall 提供託管狀態網路流量檢查。\n其他選擇提供身分、SQL 查詢或成本監控。"
+        "targets": {
+          "1": "Systems Manager Automation",
+          "2": "Route 53 Resolver DNS Firewall",
+          "3": "AWS Network Firewall"
+        },
+        "explanation": "A 應配對 AWS Network Firewall；B 應配對 Systems Manager Automation；C 應配對 Route 53 Resolver DNS Firewall。三個實作共同組成完整架構。\n若以不相關的目標取代任何一項，便會破壞架構或削弱成本、安全性及可用性之間的取捨。"
       }
     }
   },
   {
     "id": "ans-c01-d4-013",
-    "type": "single",
-    "question": "A team optimizing an existing implementation must protect internet-facing applications from DDoS attacks and apply request filtering. Which combination is appropriate?",
-    "options": {
-      "A": "AWS Shield and AWS WAF",
-      "B": "An EBS volume and S3 lifecycle rule",
-      "C": "A public root key",
-      "D": "A Route 53 TXT record only"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "Shield provides DDoS protection and WAF filters HTTP requests with managed or custom rules.\nStorage and DNS records do not provide layered web protection.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A team optimizing an existing implementation is planning two independent production changes. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The first team must protect internet-facing applications from DDoS attacks and apply request filtering. A second team needs to prove that network changes were made by authorized principals. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "SCPs combined with centralized policy and security services",
+      "B": "Route 53 Resolver DNS Firewall",
+      "C": "AWS Network Firewall",
+      "D": "AWS Shield and AWS WAF",
+      "E": "CloudTrail and configuration history"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS Shield and AWS WAF meets the first requirement: Shield provides DDoS protection and WAF filters HTTP requests with managed or custom rules. CloudTrail and configuration history meets the second requirement: CloudTrail and configuration history provide API and resource-change evidence.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊必須保護面向互聯網的應用程式免受 DDoS 攻擊並應用請求過濾。哪種組合合適？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此生產環境在多個帳戶中採用集中治理。變更必須符合最低權限、可以稽核，並且不會造成長時間中斷。第一項需求：受監管的公司必須保護面向互聯網的應用程式免受 DDoS 攻擊並應用請求過濾。第二項需求：準備增加流量的新創公司需要證明網路變更是由授權主體進行的。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "AWS Shield and AWS WAF",
-          "B": "EBS 捲和 S3 生命週期規則",
-          "C": "公有根密鑰",
-          "D": "僅 Route 53 TXT 記錄"
+          "A": "SCP 與集中式策略和安全服務結合",
+          "B": "Route 53 Resolver DNS Firewall",
+          "C": "AWS Network Firewall",
+          "D": "AWS Shield and AWS WAF",
+          "E": "CloudTrail 與設定歷史記錄"
         },
-        "explanation": "Shield 提供 DDoS 保護，WAF 使用託管或自訂規則過濾 HTTP 請求。\n儲存和 DNS 記錄不提供分層 Web 保護。"
+        "explanation": "AWS Shield and AWS WAF 符合第一項需求：Shield 提供 DDoS 保護，WAF 使用託管或自訂規則過濾 HTTP 請求。 CloudTrail 與設定歷史記錄 符合第二項需求：CloudTrail 和設定歷史記錄提供 API 和資源變更證據。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d4-014",
-    "type": "single",
-    "question": "A company introducing an automated workflow needs to prove that network changes were made by authorized principals. Which services provide useful evidence?",
-    "options": {
-      "A": "An EBS volume name",
-      "B": "CloudTrail and configuration history",
-      "C": "A public dashboard only",
-      "D": "A DNS cache entry"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "CloudTrail and configuration history provide API and resource-change evidence.\nThe other choices do not establish an audit trail.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A company introducing an automated workflow is planning two independent production changes. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The first team needs to prove that network changes were made by authorized principals. A second team must enforce network and service guardrails across accounts. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "AWS Network Firewall",
+      "B": "AWS Shield and AWS WAF",
+      "C": "CloudTrail and configuration history",
+      "D": "SCPs combined with centralized policy and security services",
+      "E": "Route 53 Resolver DNS Firewall"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "CloudTrail and configuration history meets the first requirement: CloudTrail and configuration history provide API and resource-change evidence. SCPs combined with centralized policy and security services meets the second requirement: Organization guardrails and centralized policy reduce inconsistent network governance.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司需要證明網路變更是由授權主體進行的。哪些服務提供有用的證據？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此生產環境在多個帳戶中採用集中治理。變更必須符合最低權限、可以稽核，並且不會造成長時間中斷。第一項需求：準備增加流量的新創公司需要證明網路變更是由授權主體進行的。第二項需求：支援關鍵工作負載的營運團隊必須跨帳戶實施網路和服務護欄。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "EBS 卷名稱",
-          "B": "CloudTrail 與設定歷史記錄",
-          "C": "僅公共儀表板",
-          "D": "DNS 快取項目"
+          "A": "AWS Network Firewall",
+          "B": "AWS Shield and AWS WAF",
+          "C": "CloudTrail 與設定歷史記錄",
+          "D": "SCP 與集中式策略和安全服務結合",
+          "E": "Route 53 Resolver DNS Firewall"
         },
-        "explanation": "CloudTrail 和設定歷史記錄提供 API 和資源變更證據。\n其他選擇不建立審計追蹤。"
+        "explanation": "CloudTrail 與設定歷史記錄 符合第一項需求：CloudTrail 和設定歷史記錄提供 API 和資源變更證據。 SCP 與集中式策略和安全服務結合 符合第二項需求：組織護欄和集中策略減少了不一致的網路治理。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d4-015",
-    "type": "single",
-    "question": "An AWS administrator working in a shared environment must enforce network and service guardrails across accounts. Which organization control should be used?",
-    "options": {
-      "A": "Public network paths",
-      "B": "Manual console notes",
-      "C": "SCPs combined with centralized policy and security services",
-      "D": "One local security group only"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "Organization guardrails and centralized policy reduce inconsistent network governance.\nLocal or manual-only controls do not scale across accounts.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "An AWS administrator working in a shared environment is planning two independent production changes. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The first team must enforce network and service guardrails across accounts. A second team must block known malicious domains for workloads in a VPC. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "CloudTrail and configuration history",
+      "B": "SCPs combined with centralized policy and security services",
+      "C": "Route 53 Resolver DNS Firewall",
+      "D": "AWS Network Firewall",
+      "E": "AWS Shield and AWS WAF"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "SCPs combined with centralized policy and security services meets the first requirement: Organization guardrails and centralized policy reduce inconsistent network governance. Route 53 Resolver DNS Firewall meets the second requirement: DNS Firewall can block or allow domain queries for VPC workloads.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "在共用環境中工作的 AWS 管理員必須跨帳戶實施網路和服務護欄。應使用哪種組織控制？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此生產環境在多個帳戶中採用集中治理。變更必須符合最低權限、可以稽核，並且不會造成長時間中斷。第一項需求：支援關鍵工作負載的營運團隊必須跨帳戶實施網路和服務護欄。第二項需求：生產團隊必須阻止 VPC 中工作負載的已知惡意域。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "公網路徑",
-          "B": "手動控制台註釋",
-          "C": "SCP 與集中式策略和安全服務結合",
-          "D": "僅一個本地安全群組"
+          "A": "CloudTrail 與設定歷史記錄",
+          "B": "SCP 與集中式策略和安全服務結合",
+          "C": "Route 53 Resolver DNS Firewall",
+          "D": "AWS Network Firewall",
+          "E": "AWS Shield and AWS WAF"
         },
-        "explanation": "組織護欄和集中策略減少了不一致的網路治理。\n本地或僅手動控制無法跨帳戶擴展。"
+        "explanation": "SCP 與集中式策略和安全服務結合 符合第一項需求：組織護欄和集中策略減少了不一致的網路治理。 Route 53 Resolver DNS Firewall 符合第二項需求：DNS 防火牆可以封鎖或允許 VPC 工作負載的網域查詢。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d4-016",
-    "type": "single",
-    "question": "A customer-facing application team must block known malicious domains for workloads in a VPC. Which feature should be evaluated?",
-    "options": {
-      "A": "An S3 lifecycle rule",
-      "B": "A KMS alias",
-      "C": "A CloudWatch dashboard",
-      "D": "Route 53 Resolver DNS Firewall"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "DNS Firewall can block or allow domain queries for VPC workloads.\nThe other choices do not filter DNS requests.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A customer-facing application team is designing one integrated end-to-end network architecture across accounts and Regions. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The architecture must limit blast radius, preserve availability during change, and control cost through automation instead of permanent overprovisioning. Match each connected stage to the implementation that lets the complete architecture satisfy its business outcome.",
+    "options": {
+      "A": "Stage 1: The architecture must block known malicious domains for workloads in a VPC",
+      "B": "Stage 2: The architecture must enforce network and service guardrails across accounts",
+      "C": "Stage 3: The architecture needs centralized routing between dozens of VPCs and on-premises networks"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "AWS Transit Gateway with route domains",
+      "2": "Route 53 Resolver DNS Firewall",
+      "3": "SCPs combined with centralized policy and security services"
+    },
+    "correctMatches": {
+      "A": "2",
+      "B": "3",
+      "C": "1"
+    },
+    "explanation": "A maps to Route 53 Resolver DNS Firewall. DNS Firewall can block or allow domain queries for VPC workloads. B maps to SCPs combined with centralized policy and security services. Organization guardrails and centralized policy reduce inconsistent network governance. C maps to AWS Transit Gateway with route domains. Transit Gateway provides scalable centralized routing for many network attachments.\nAll three stages are connected. Substituting an unrelated target would break the architecture or weaken its cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊必須封鎖 VPC 中工作負載的已知惡意網域。應該評估哪個功能？",
+        "question": "某企業正在跨帳戶與區域設計一個整合式端到端網路架構。三個階段彼此相連，任一階段錯誤都會影響整體業務成果。此架構必須限制影響範圍、在變更期間維持可用性，並透過自動化控制成本，而不是長期過度佈建。 請把每個階段配對至最合適的實作。",
         "options": {
-          "A": "S3 生命週期規則",
-          "B": "KMS 別名",
-          "C": "CloudWatch 儀表板",
-          "D": "Route 53 Resolver DNS Firewall"
+          "A": "階段 1：生產團隊必須阻止 VPC 中工作負載的已知惡意域。",
+          "B": "階段 2：支援關鍵工作負載的營運團隊必須跨帳戶實施網路和服務護欄。",
+          "C": "階段 3：階段 3：階段 3：需求：生產團隊需要在數十個 VPC 和本地網路之間進行集中路由"
         },
-        "explanation": "DNS 防火牆可以封鎖或允許 VPC 工作負載的網域查詢。\n其他選項不過濾 DNS 請求。"
+        "targets": {
+          "1": "AWS Transit Gateway 與路由域",
+          "2": "Route 53 Resolver DNS Firewall",
+          "3": "SCP 與集中式策略和安全服務結合"
+        },
+        "explanation": "A 應配對 Route 53 Resolver DNS Firewall；B 應配對 SCP 與集中式策略和安全服務結合；C 應配對 AWS Transit Gateway 與路由域。三個實作共同組成完整架構。\n若以不相關的目標取代任何一項，便會破壞架構或削弱成本、安全性及可用性之間的取捨。"
       }
     }
   },
   {
     "id": "ans-c01-d4-017",
-    "type": "single",
-    "question": "A platform team standardizing its AWS deployments needs layer 3 and layer 4 stateful inspection between network segments. Which service fits?",
-    "options": {
-      "A": "AWS Network Firewall",
-      "B": "Amazon Cognito",
-      "C": "Amazon Athena",
-      "D": "AWS Budgets"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "Network Firewall provides managed stateful network traffic inspection.\nThe other choices provide identity, SQL queries, or cost monitoring.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A platform team standardizing its AWS deployments is planning two independent production changes. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The first team needs layer 3 and layer 4 stateful inspection between network segments. A second team must protect internet-facing applications from DDoS attacks and apply request filtering. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "AWS Shield and AWS WAF",
+      "B": "CloudTrail and configuration history",
+      "C": "SCPs combined with centralized policy and security services",
+      "D": "Route 53 Resolver DNS Firewall",
+      "E": "AWS Network Firewall"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS Network Firewall meets the first requirement: Network Firewall provides managed stateful network traffic inspection. AWS Shield and AWS WAF meets the second requirement: Shield provides DDoS protection and WAF filters HTTP requests with managed or custom rules.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊需要在網段之間進行第 3 層和第 4 層狀態檢查。適合哪種服務？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊必須考慮混合式連線、現有安全邊界，以及變更部署後的營運疑難排解。第一項需求：受監管的公司必須保護面向互聯網的應用程式免受 DDoS 攻擊並應用請求過濾。第二項需求：多帳戶平台團隊需要網段之間的第 3 層和第 4 層狀態檢查。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "AWS Network Firewall",
-          "B": "Amazon Cognito",
-          "C": "Amazon Athena",
-          "D": "AWS Budgets"
+          "A": "AWS Shield and AWS WAF",
+          "B": "CloudTrail 與設定歷史記錄",
+          "C": "SCP 與集中式策略和安全服務結合",
+          "D": "Route 53 Resolver DNS Firewall",
+          "E": "AWS Network Firewall"
         },
-        "explanation": "Network Firewall 提供託管狀態網路流量檢查。\n其他選擇提供身分、SQL 查詢或成本監控。"
+        "explanation": "AWS Shield and AWS WAF 符合第一項需求：Shield 提供 DDoS 保護，WAF 使用託管或自訂規則過濾 HTTP 請求。 AWS Network Firewall 符合第二項需求：Network Firewall 提供託管狀態網路流量檢查。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d4-018",
-    "type": "single",
-    "question": "A team preparing evidence for an audit must protect internet-facing applications from DDoS attacks and apply request filtering. Which combination is appropriate?",
-    "options": {
-      "A": "A Route 53 TXT record only",
-      "B": "AWS Shield and AWS WAF",
-      "C": "An EBS volume and S3 lifecycle rule",
-      "D": "A public root key"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Shield provides DDoS protection and WAF filters HTTP requests with managed or custom rules.\nStorage and DNS records do not provide layered web protection.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A team preparing evidence for an audit is planning two independent production changes. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The first team must protect internet-facing applications from DDoS attacks and apply request filtering. A second team needs to prove that network changes were made by authorized principals. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "SCPs combined with centralized policy and security services",
+      "B": "Route 53 Resolver DNS Firewall",
+      "C": "AWS Network Firewall",
+      "D": "AWS Shield and AWS WAF",
+      "E": "CloudTrail and configuration history"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS Shield and AWS WAF meets the first requirement: Shield provides DDoS protection and WAF filters HTTP requests with managed or custom rules. CloudTrail and configuration history meets the second requirement: CloudTrail and configuration history provide API and resource-change evidence.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "準備審計證據的團隊必須保護面向互聯網的應用程式免受 DDoS 攻擊並應用請求過濾。哪種組合合適？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊必須考慮混合式連線、現有安全邊界，以及變更部署後的營運疑難排解。第一項需求：受監管的公司必須保護面向互聯網的應用程式免受 DDoS 攻擊並應用請求過濾。第二項需求：準備增加流量的新創公司需要證明網路變更是由授權主體進行的。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "僅 Route 53 TXT 記錄",
-          "B": "AWS Shield and AWS WAF",
-          "C": "EBS 捲和 S3 生命週期規則",
-          "D": "公有根密鑰"
+          "A": "SCP 與集中式策略和安全服務結合",
+          "B": "Route 53 Resolver DNS Firewall",
+          "C": "AWS Network Firewall",
+          "D": "AWS Shield and AWS WAF",
+          "E": "CloudTrail 與設定歷史記錄"
         },
-        "explanation": "Shield 提供 DDoS 保護，WAF 使用託管或自訂規則過濾 HTTP 請求。\n儲存和 DNS 記錄不提供分層 Web 保護。"
+        "explanation": "AWS Shield and AWS WAF 符合第一項需求：Shield 提供 DDoS 保護，WAF 使用託管或自訂規則過濾 HTTP 請求。 CloudTrail 與設定歷史記錄 符合第二項需求：CloudTrail 和設定歷史記錄提供 API 和資源變更證據。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d4-019",
-    "type": "single",
-    "question": "A business replacing a manual process needs to prove that network changes were made by authorized principals. Which services provide useful evidence?",
-    "options": {
-      "A": "A DNS cache entry",
-      "B": "An EBS volume name",
-      "C": "CloudTrail and configuration history",
-      "D": "A public dashboard only"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "CloudTrail and configuration history provide API and resource-change evidence.\nThe other choices do not establish an audit trail.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A business replacing a manual process is planning two independent production changes. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The first team needs to prove that network changes were made by authorized principals. A second team must enforce network and service guardrails across accounts. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "AWS Network Firewall",
+      "B": "AWS Shield and AWS WAF",
+      "C": "CloudTrail and configuration history",
+      "D": "SCPs combined with centralized policy and security services",
+      "E": "Route 53 Resolver DNS Firewall"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "CloudTrail and configuration history meets the first requirement: CloudTrail and configuration history provide API and resource-change evidence. SCPs combined with centralized policy and security services meets the second requirement: Organization guardrails and centralized policy reduce inconsistent network governance.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "取代手動流程的企業需要證明網路變更是由授權主體進行的。哪些服務提供有用的證據？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊必須考慮混合式連線、現有安全邊界，以及變更部署後的營運疑難排解。第一項需求：準備增加流量的新創公司需要證明網路變更是由授權主體進行的。第二項需求：支援關鍵工作負載的營運團隊必須跨帳戶實施網路和服務護欄。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "DNS 快取項目",
-          "B": "EBS 卷名稱",
+          "A": "AWS Network Firewall",
+          "B": "AWS Shield and AWS WAF",
           "C": "CloudTrail 與設定歷史記錄",
-          "D": "僅公共儀表板"
+          "D": "SCP 與集中式策略和安全服務結合",
+          "E": "Route 53 Resolver DNS Firewall"
         },
-        "explanation": "CloudTrail 和設定歷史記錄提供 API 和資源變更證據。\n其他選擇不建立審計追蹤。"
+        "explanation": "CloudTrail 與設定歷史記錄 符合第一項需求：CloudTrail 和設定歷史記錄提供 API 和資源變更證據。 SCP 與集中式策略和安全服務結合 符合第二項需求：組織護欄和集中策略減少了不一致的網路治理。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d4-020",
-    "type": "single",
-    "question": "A team validating a design against the exam guide must enforce network and service guardrails across accounts. Which organization control should be used?",
-    "options": {
-      "A": "One local security group only",
-      "B": "Public network paths",
-      "C": "Manual console notes",
-      "D": "SCPs combined with centralized policy and security services"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Organization guardrails and centralized policy reduce inconsistent network governance.\nLocal or manual-only controls do not scale across accounts.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A team validating a design against the exam guide is designing one integrated end-to-end network architecture across accounts and Regions. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The selected controls must provide auditable security, predictable availability, and the lowest operational cost that still satisfies both requirements. Match each connected stage to the implementation that lets the complete architecture satisfy its business outcome.",
+    "options": {
+      "A": "Stage 1: The architecture must enforce network and service guardrails across accounts",
+      "B": "Stage 2: The architecture needs an architecture that keeps provider and consumer VPC address spaces independent",
+      "C": "Stage 3: The architecture must advertise selected VPC prefixes to an on-premises router over a private connection"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "SCPs combined with centralized policy and security services",
+      "2": "AWS PrivateLink",
+      "3": "BGP over a Direct Connect or VPN connection"
+    },
+    "correctMatches": {
+      "A": "1",
+      "B": "2",
+      "C": "3"
+    },
+    "explanation": "A maps to SCPs combined with centralized policy and security services. Organization guardrails and centralized policy reduce inconsistent network governance. B maps to AWS PrivateLink. PrivateLink exposes a service through endpoint interfaces without routing consumer VPCs together. C maps to BGP over a Direct Connect or VPN connection. BGP exchanges routes over supported hybrid connectivity links.\nAll three stages are connected. Substituting an unrelated target would break the architecture or weaken its cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊必須跨帳戶實施網路和服務護欄。應使用哪種組織控制？",
+        "question": "某企業正在跨帳戶與區域設計一個整合式端到端網路架構。三個階段彼此相連，任一階段錯誤都會影響整體業務成果。所選控制必須提供可稽核的安全性、可預測的可用性，以及在滿足兩項要求前提下最低的營運成本。 請把每個階段配對至最合適的實作。",
         "options": {
-          "A": "僅一個本地安全群組",
-          "B": "公網路徑",
-          "C": "手動控制台註釋",
-          "D": "SCP 與集中式策略和安全服務結合"
+          "A": "階段 1：支援關鍵工作負載的營運團隊必須跨帳戶實施網路和服務護欄。",
+          "B": "階段 2：階段 2：階段 2：生產團隊需要在數十個 VPC 和本地網路之間進行集中路由。",
+          "C": "階段 3：階段 3：階段 3：生產團隊必須透過專用連線將選定的 VPC 前綴通告到本機路由器。"
         },
-        "explanation": "組織護欄和集中策略減少了不一致的網路治理。\n本地或僅手動控制無法跨帳戶擴展。"
+        "targets": {
+          "1": "SCP 與集中式策略和安全服務結合",
+          "2": "AWS PrivateLink",
+          "3": "透過 Direct Connect 或 VPN 連接的 BGP"
+        },
+        "explanation": "A 應配對 SCP 與集中式策略和安全服務結合；B 應配對 AWS PrivateLink；C 應配對 透過 Direct Connect 或 VPN 連接的 BGP。三個實作共同組成完整架構。\n若以不相關的目標取代任何一項，便會破壞架構或削弱成本、安全性及可用性之間的取捨。"
       }
     }
   },
   {
     "id": "ans-c01-d4-021",
-    "type": "single",
-    "question": "A production team must block known malicious domains for workloads in a VPC. Which feature should be evaluated?",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A production team is planning two independent production changes. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The first team must block known malicious domains for workloads in a VPC. A second team needs layer 3 and layer 4 stateful inspection between network segments. Which TWO actions satisfy these requirements?",
     "options": {
       "A": "Route 53 Resolver DNS Firewall",
-      "B": "An S3 lifecycle rule",
-      "C": "A KMS alias",
-      "D": "A CloudWatch dashboard"
+      "B": "AWS Network Firewall",
+      "C": "AWS Shield and AWS WAF",
+      "D": "CloudTrail and configuration history",
+      "E": "SCPs combined with centralized policy and security services"
     },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "DNS Firewall can block or allow domain queries for VPC workloads.\nThe other choices do not filter DNS requests.",
-    "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Route 53 Resolver DNS Firewall meets the first requirement: DNS Firewall can block or allow domain queries for VPC workloads. AWS Network Firewall meets the second requirement: Network Firewall provides managed stateful network traffic inspection.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "生產團隊必須阻止 VPC 中工作負載的已知惡意域。應該評估哪個功能？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此需求必須大規模套用。方案應避免一次性的人手設定，並提供證據證明控制措施持續有效。第一項需求：生產團隊必須阻止 VPC 中工作負載的已知惡意域。第二項需求：多帳戶平台團隊需要網段之間的第 3 層和第 4 層狀態檢查。哪兩項操作可以滿足這些需求？",
         "options": {
           "A": "Route 53 Resolver DNS Firewall",
-          "B": "S3 生命週期規則",
-          "C": "KMS 別名",
-          "D": "CloudWatch 儀表板"
+          "B": "AWS Network Firewall",
+          "C": "AWS Shield and AWS WAF",
+          "D": "CloudTrail 與設定歷史記錄",
+          "E": "SCP 與集中式策略和安全服務結合"
         },
-        "explanation": "DNS 防火牆可以封鎖或允許 VPC 工作負載的網域查詢。\n其他選項不過濾 DNS 請求。"
+        "explanation": "Route 53 Resolver DNS Firewall 符合第一項需求：DNS 防火牆可以封鎖或允許 VPC 工作負載的網域查詢。 AWS Network Firewall 符合第二項需求：Network Firewall 提供託管狀態網路流量檢查。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d4-022",
-    "type": "single",
-    "question": "A multi-account platform team needs layer 3 and layer 4 stateful inspection between network segments. Which service fits?",
-    "options": {
-      "A": "AWS Budgets",
-      "B": "AWS Network Firewall",
-      "C": "Amazon Cognito",
-      "D": "Amazon Athena"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Network Firewall provides managed stateful network traffic inspection.\nThe other choices provide identity, SQL queries, or cost monitoring.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A multi-account platform team is planning two independent production changes. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The first team needs layer 3 and layer 4 stateful inspection between network segments. A second team must protect internet-facing applications from DDoS attacks and apply request filtering. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "AWS Shield and AWS WAF",
+      "B": "CloudTrail and configuration history",
+      "C": "SCPs combined with centralized policy and security services",
+      "D": "Route 53 Resolver DNS Firewall",
+      "E": "AWS Network Firewall"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS Network Firewall meets the first requirement: Network Firewall provides managed stateful network traffic inspection. AWS Shield and AWS WAF meets the second requirement: Shield provides DDoS protection and WAF filters HTTP requests with managed or custom rules.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊需要網段之間的第 3 層和第 4 層狀態檢查。適合哪種服務？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此需求必須大規模套用。方案應避免一次性的人手設定，並提供證據證明控制措施持續有效。第一項需求：受監管的公司必須保護面向互聯網的應用程式免受 DDoS 攻擊並應用請求過濾。第二項需求：多帳戶平台團隊需要網段之間的第 3 層和第 4 層狀態檢查。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "AWS Budgets",
-          "B": "AWS Network Firewall",
-          "C": "Amazon Cognito",
-          "D": "Amazon Athena"
+          "A": "AWS Shield and AWS WAF",
+          "B": "CloudTrail 與設定歷史記錄",
+          "C": "SCP 與集中式策略和安全服務結合",
+          "D": "Route 53 Resolver DNS Firewall",
+          "E": "AWS Network Firewall"
         },
-        "explanation": "Network Firewall 提供託管狀態網路流量檢查。\n其他選擇提供身分、SQL 查詢或成本監控。"
+        "explanation": "AWS Shield and AWS WAF 符合第一項需求：Shield 提供 DDoS 保護，WAF 使用託管或自訂規則過濾 HTTP 請求。 AWS Network Firewall 符合第二項需求：Network Firewall 提供託管狀態網路流量檢查。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d4-023",
-    "type": "single",
-    "question": "A regulated company must protect internet-facing applications from DDoS attacks and apply request filtering. Which combination is appropriate?",
-    "options": {
-      "A": "A public root key",
-      "B": "A Route 53 TXT record only",
-      "C": "AWS Shield and AWS WAF",
-      "D": "An EBS volume and S3 lifecycle rule"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "Shield provides DDoS protection and WAF filters HTTP requests with managed or custom rules.\nStorage and DNS records do not provide layered web protection.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A regulated company is planning two independent production changes. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The first team must protect internet-facing applications from DDoS attacks and apply request filtering. A second team needs to prove that network changes were made by authorized principals. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "SCPs combined with centralized policy and security services",
+      "B": "Route 53 Resolver DNS Firewall",
+      "C": "AWS Network Firewall",
+      "D": "AWS Shield and AWS WAF",
+      "E": "CloudTrail and configuration history"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS Shield and AWS WAF meets the first requirement: Shield provides DDoS protection and WAF filters HTTP requests with managed or custom rules. CloudTrail and configuration history meets the second requirement: CloudTrail and configuration history provide API and resource-change evidence.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "受監管的公司必須保護面向互聯網的應用程式免受 DDoS 攻擊並應用請求過濾。哪種組合合適？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此需求必須大規模套用。方案應避免一次性的人手設定，並提供證據證明控制措施持續有效。第一項需求：受監管的公司必須保護面向互聯網的應用程式免受 DDoS 攻擊並應用請求過濾。第二項需求：準備增加流量的新創公司需要證明網路變更是由授權主體進行的。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "公有根密鑰",
-          "B": "僅 Route 53 TXT 記錄",
-          "C": "AWS Shield and AWS WAF",
-          "D": "EBS 捲和 S3 生命週期規則"
+          "A": "SCP 與集中式策略和安全服務結合",
+          "B": "Route 53 Resolver DNS Firewall",
+          "C": "AWS Network Firewall",
+          "D": "AWS Shield and AWS WAF",
+          "E": "CloudTrail 與設定歷史記錄"
         },
-        "explanation": "Shield 提供 DDoS 保護，WAF 使用託管或自訂規則過濾 HTTP 請求。\n儲存和 DNS 記錄不提供分層 Web 保護。"
+        "explanation": "AWS Shield and AWS WAF 符合第一項需求：Shield 提供 DDoS 保護，WAF 使用託管或自訂規則過濾 HTTP 請求。 CloudTrail 與設定歷史記錄 符合第二項需求：CloudTrail 和設定歷史記錄提供 API 和資源變更證據。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d4-024",
-    "type": "single",
-    "question": "A startup preparing for a traffic increase needs to prove that network changes were made by authorized principals. Which services provide useful evidence?",
-    "options": {
-      "A": "A public dashboard only",
-      "B": "A DNS cache entry",
-      "C": "An EBS volume name",
-      "D": "CloudTrail and configuration history"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "CloudTrail and configuration history provide API and resource-change evidence.\nThe other choices do not establish an audit trail.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A startup preparing for a traffic increase is designing one integrated end-to-end network architecture across accounts and Regions. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The design must keep recurring cost proportional to use, enforce least privilege, and remain available during a component or Availability Zone failure. Match each connected stage to the implementation that lets the complete architecture satisfy its business outcome.",
+    "options": {
+      "A": "Stage 1: The architecture needs to prove that network changes were made by authorized principals",
+      "B": "Stage 2: The architecture must automate VPC and route configuration consistently across accounts",
+      "C": "Stage 3: The architecture needs to investigate rejected packets between two VPC subnets"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "Infrastructure as code with CloudFormation or the AWS CDK",
+      "2": "VPC Flow Logs and route and security group configuration",
+      "3": "CloudTrail and configuration history"
+    },
+    "correctMatches": {
+      "A": "3",
+      "B": "1",
+      "C": "2"
+    },
+    "explanation": "A maps to CloudTrail and configuration history. CloudTrail and configuration history provide API and resource-change evidence. B maps to Infrastructure as code with CloudFormation or the AWS CDK. IaC makes network changes repeatable, reviewable, and consistent. C maps to VPC Flow Logs and route and security group configuration. Flow Logs combined with routing and security controls identify where traffic is rejected.\nAll three stages are connected. Substituting an unrelated target would break the architecture or weaken its cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司需要證明網路變更是由授權主體進行的。哪些服務提供有用的證據？",
+        "question": "某企業正在跨帳戶與區域設計一個整合式端到端網路架構。三個階段彼此相連，任一階段錯誤都會影響整體業務成果。此設計必須讓持續成本與實際用量相符、落實最低權限，並在元件或可用區域發生故障時維持可用。 請把每個階段配對至最合適的實作。",
         "options": {
-          "A": "僅公共儀表板",
-          "B": "DNS 快取項目",
-          "C": "EBS 卷名稱",
-          "D": "CloudTrail 與設定歷史記錄"
+          "A": "階段 1：階段 1：階段 1：需求：準備增加流量的新創公司需要證明網路變更是由授權主體進行的",
+          "B": "階段 2：階段 2：階段 2：支援關鍵工作負載的營運團隊必須自動化 VPC 並跨帳戶一致地路由配置。",
+          "C": "階段 3：階段 3：階段 3：需求：製作團隊需要調查兩個 VPC 子網路之間被拒絕的資料包"
         },
-        "explanation": "CloudTrail 和設定歷史記錄提供 API 和資源變更證據。\n其他選擇不建立審計追蹤。"
+        "targets": {
+          "1": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼",
+          "2": "VPC Flow Logs 以及路由和安全群組配置",
+          "3": "CloudTrail 與設定歷史記錄"
+        },
+        "explanation": "A 應配對 CloudTrail 與設定歷史記錄；B 應配對 使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼；C 應配對 VPC Flow Logs 以及路由和安全群組配置。三個實作共同組成完整架構。\n若以不相關的目標取代任何一項，便會破壞架構或削弱成本、安全性及可用性之間的取捨。"
       }
     }
   },
   {
     "id": "ans-c01-d4-025",
-    "type": "single",
-    "question": "An operations team supporting a critical workload must enforce network and service guardrails across accounts. Which organization control should be used?",
-    "options": {
-      "A": "SCPs combined with centralized policy and security services",
-      "B": "One local security group only",
-      "C": "Public network paths",
-      "D": "Manual console notes"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "Organization guardrails and centralized policy reduce inconsistent network governance.\nLocal or manual-only controls do not scale across accounts.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "An operations team supporting a critical workload is planning two independent production changes. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The first team must enforce network and service guardrails across accounts. A second team must block known malicious domains for workloads in a VPC. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "CloudTrail and configuration history",
+      "B": "SCPs combined with centralized policy and security services",
+      "C": "Route 53 Resolver DNS Firewall",
+      "D": "AWS Network Firewall",
+      "E": "AWS Shield and AWS WAF"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "SCPs combined with centralized policy and security services meets the first requirement: Organization guardrails and centralized policy reduce inconsistent network governance. Route 53 Resolver DNS Firewall meets the second requirement: DNS Firewall can block or allow domain queries for VPC workloads.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊必須跨帳戶實施網路和服務護欄。應使用哪種組織控制？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此需求必須大規模套用。方案應避免一次性的人手設定，並提供證據證明控制措施持續有效。第一項需求：支援關鍵工作負載的營運團隊必須跨帳戶實施網路和服務護欄。第二項需求：生產團隊必須阻止 VPC 中工作負載的已知惡意域。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "SCP 與集中式策略和安全服務結合",
-          "B": "僅一個本地安全群組",
-          "C": "公網路徑",
-          "D": "手動控制台註釋"
+          "A": "CloudTrail 與設定歷史記錄",
+          "B": "SCP 與集中式策略和安全服務結合",
+          "C": "Route 53 Resolver DNS Firewall",
+          "D": "AWS Network Firewall",
+          "E": "AWS Shield and AWS WAF"
         },
-        "explanation": "組織護欄和集中策略減少了不一致的網路治理。\n本地或僅手動控制無法跨帳戶擴展。"
+        "explanation": "SCP 與集中式策略和安全服務結合 符合第一項需求：組織護欄和集中策略減少了不一致的網路治理。 Route 53 Resolver DNS Firewall 符合第二項需求：DNS 防火牆可以封鎖或允許 VPC 工作負載的網域查詢。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d4-026",
-    "type": "single",
-    "question": "A data platform team must block known malicious domains for workloads in a VPC. Which feature should be evaluated?",
-    "options": {
-      "A": "A CloudWatch dashboard",
-      "B": "Route 53 Resolver DNS Firewall",
-      "C": "An S3 lifecycle rule",
-      "D": "A KMS alias"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "DNS Firewall can block or allow domain queries for VPC workloads.\nThe other choices do not filter DNS requests.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A data platform team is planning two independent production changes. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The first team must block known malicious domains for workloads in a VPC. A second team needs layer 3 and layer 4 stateful inspection between network segments. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Route 53 Resolver DNS Firewall",
+      "B": "AWS Network Firewall",
+      "C": "AWS Shield and AWS WAF",
+      "D": "CloudTrail and configuration history",
+      "E": "SCPs combined with centralized policy and security services"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Route 53 Resolver DNS Firewall meets the first requirement: DNS Firewall can block or allow domain queries for VPC workloads. AWS Network Firewall meets the second requirement: Network Firewall provides managed stateful network traffic inspection.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊必須阻止 VPC 中工作負載的已知惡意域。應該評估哪個功能？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。目前架構支援業務關鍵服務。所選選項必須處理確切的故障或安全條件，而不會削弱其他控制措施。第一項需求：生產團隊必須阻止 VPC 中工作負載的已知惡意域。第二項需求：多帳戶平台團隊需要網段之間的第 3 層和第 4 層狀態檢查。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "CloudWatch 儀表板",
-          "B": "Route 53 Resolver DNS Firewall",
-          "C": "S3 生命週期規則",
-          "D": "KMS 別名"
+          "A": "Route 53 Resolver DNS Firewall",
+          "B": "AWS Network Firewall",
+          "C": "AWS Shield and AWS WAF",
+          "D": "CloudTrail 與設定歷史記錄",
+          "E": "SCP 與集中式策略和安全服務結合"
         },
-        "explanation": "DNS 防火牆可以封鎖或允許 VPC 工作負載的網域查詢。\n其他選項不過濾 DNS 請求。"
+        "explanation": "Route 53 Resolver DNS Firewall 符合第一項需求：DNS 防火牆可以封鎖或允許 VPC 工作負載的網域查詢。 AWS Network Firewall 符合第二項需求：Network Firewall 提供託管狀態網路流量檢查。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d4-027",
-    "type": "single",
-    "question": "A security-conscious engineering team needs layer 3 and layer 4 stateful inspection between network segments. Which service fits?",
-    "options": {
-      "A": "Amazon Athena",
-      "B": "AWS Budgets",
-      "C": "AWS Network Firewall",
-      "D": "Amazon Cognito"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "Network Firewall provides managed stateful network traffic inspection.\nThe other choices provide identity, SQL queries, or cost monitoring.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A security-conscious engineering team is planning two independent production changes. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The first team needs layer 3 and layer 4 stateful inspection between network segments. A second team must protect internet-facing applications from DDoS attacks and apply request filtering. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "AWS Shield and AWS WAF",
+      "B": "CloudTrail and configuration history",
+      "C": "SCPs combined with centralized policy and security services",
+      "D": "Route 53 Resolver DNS Firewall",
+      "E": "AWS Network Firewall"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS Network Firewall meets the first requirement: Network Firewall provides managed stateful network traffic inspection. AWS Shield and AWS WAF meets the second requirement: Shield provides DDoS protection and WAF filters HTTP requests with managed or custom rules.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊需要在網段之間進行第 3 層和第 4 層狀態檢查。適合哪種服務？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。目前架構支援業務關鍵服務。所選選項必須處理確切的故障或安全條件，而不會削弱其他控制措施。第一項需求：受監管的公司必須保護面向互聯網的應用程式免受 DDoS 攻擊並應用請求過濾。第二項需求：多帳戶平台團隊需要網段之間的第 3 層和第 4 層狀態檢查。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "Amazon Athena",
-          "B": "AWS Budgets",
-          "C": "AWS Network Firewall",
-          "D": "Amazon Cognito"
+          "A": "AWS Shield and AWS WAF",
+          "B": "CloudTrail 與設定歷史記錄",
+          "C": "SCP 與集中式策略和安全服務結合",
+          "D": "Route 53 Resolver DNS Firewall",
+          "E": "AWS Network Firewall"
         },
-        "explanation": "Network Firewall 提供託管狀態網路流量檢查。\n其他選擇提供身分、SQL 查詢或成本監控。"
+        "explanation": "AWS Shield and AWS WAF 符合第一項需求：Shield 提供 DDoS 保護，WAF 使用託管或自訂規則過濾 HTTP 請求。 AWS Network Firewall 符合第二項需求：Network Firewall 提供託管狀態網路流量檢查。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d4-028",
-    "type": "single",
-    "question": "A company migrating an existing workload must protect internet-facing applications from DDoS attacks and apply request filtering. Which combination is appropriate?",
-    "options": {
-      "A": "An EBS volume and S3 lifecycle rule",
-      "B": "A public root key",
-      "C": "A Route 53 TXT record only",
-      "D": "AWS Shield and AWS WAF"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Shield provides DDoS protection and WAF filters HTTP requests with managed or custom rules.\nStorage and DNS records do not provide layered web protection.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A company migrating an existing workload is designing one integrated end-to-end network architecture across accounts and Regions. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The design must avoid unnecessary standby cost without weakening security controls or the availability objective. Match each connected stage to the implementation that lets the complete architecture satisfy its business outcome.",
+    "options": {
+      "A": "Stage 1: The architecture must protect internet-facing applications from DDoS attacks and apply request filtering",
+      "B": "Stage 2: The architecture needs operational runbooks for repeated network changes",
+      "C": "Stage 3: The architecture must block known malicious domains for workloads in a VPC"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "Route 53 Resolver DNS Firewall",
+      "2": "AWS Shield and AWS WAF",
+      "3": "Systems Manager Automation"
+    },
+    "correctMatches": {
+      "A": "2",
+      "B": "3",
+      "C": "1"
+    },
+    "explanation": "A maps to AWS Shield and AWS WAF. Shield provides DDoS protection and WAF filters HTTP requests with managed or custom rules. B maps to Systems Manager Automation. Systems Manager Automation runbooks can execute repeatable operational tasks. C maps to Route 53 Resolver DNS Firewall. DNS Firewall can block or allow domain queries for VPC workloads.\nAll three stages are connected. Substituting an unrelated target would break the architecture or weaken its cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司必須保護面向互聯網的應用程式免受 DDoS 攻擊並應用請求過濾。哪種組合合適？",
+        "question": "某企業正在跨帳戶與區域設計一個整合式端到端網路架構。三個階段彼此相連，任一階段錯誤都會影響整體業務成果。此設計必須避免不必要的備用成本，同時不可削弱安全控制或可用性目標。 請把每個階段配對至最合適的實作。",
         "options": {
-          "A": "EBS 捲和 S3 生命週期規則",
-          "B": "公有根密鑰",
-          "C": "僅 Route 53 TXT 記錄",
-          "D": "AWS Shield and AWS WAF"
+          "A": "階段 1：多帳戶平台團隊需要網段之間的第 3 層和第 4 層狀態檢查。",
+          "B": "階段 2：階段 2：階段 2：支援關鍵工作負載的營運團隊需要針對重複網路變更的營運手冊。",
+          "C": "階段 3：生產團隊必須阻止 VPC 中工作負載的已知惡意域。"
         },
-        "explanation": "Shield 提供 DDoS 保護，WAF 使用託管或自訂規則過濾 HTTP 請求。\n儲存和 DNS 記錄不提供分層 Web 保護。"
+        "targets": {
+          "1": "Route 53 Resolver DNS Firewall",
+          "2": "AWS Shield and AWS WAF",
+          "3": "Systems Manager Automation"
+        },
+        "explanation": "A 應配對 AWS Shield and AWS WAF；B 應配對 Systems Manager Automation；C 應配對 Route 53 Resolver DNS Firewall。三個實作共同組成完整架構。\n若以不相關的目標取代任何一項，便會破壞架構或削弱成本、安全性及可用性之間的取捨。"
       }
     }
   },
   {
     "id": "ans-c01-d4-029",
-    "type": "single",
-    "question": "A team with strict recovery objectives needs to prove that network changes were made by authorized principals. Which services provide useful evidence?",
-    "options": {
-      "A": "CloudTrail and configuration history",
-      "B": "A public dashboard only",
-      "C": "A DNS cache entry",
-      "D": "An EBS volume name"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "CloudTrail and configuration history provide API and resource-change evidence.\nThe other choices do not establish an audit trail.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A team with strict recovery objectives is planning two independent production changes. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The first team needs to prove that network changes were made by authorized principals. A second team must enforce network and service guardrails across accounts. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "AWS Network Firewall",
+      "B": "AWS Shield and AWS WAF",
+      "C": "CloudTrail and configuration history",
+      "D": "SCPs combined with centralized policy and security services",
+      "E": "Route 53 Resolver DNS Firewall"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "CloudTrail and configuration history meets the first requirement: CloudTrail and configuration history provide API and resource-change evidence. SCPs combined with centralized policy and security services meets the second requirement: Organization guardrails and centralized policy reduce inconsistent network governance.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有嚴格恢復目標的團隊需要證明網路變更是由授權主體進行的。哪些服務提供有用的證據？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。目前架構支援業務關鍵服務。所選選項必須處理確切的故障或安全條件，而不會削弱其他控制措施。第一項需求：準備增加流量的新創公司需要證明網路變更是由授權主體進行的。第二項需求：支援關鍵工作負載的營運團隊必須跨帳戶實施網路和服務護欄。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "CloudTrail 與設定歷史記錄",
-          "B": "僅公共儀表板",
-          "C": "DNS 快取項目",
-          "D": "EBS 卷名稱"
+          "A": "AWS Network Firewall",
+          "B": "AWS Shield and AWS WAF",
+          "C": "CloudTrail 與設定歷史記錄",
+          "D": "SCP 與集中式策略和安全服務結合",
+          "E": "Route 53 Resolver DNS Firewall"
         },
-        "explanation": "CloudTrail 和設定歷史記錄提供 API 和資源變更證據。\n其他選擇不建立審計追蹤。"
+        "explanation": "CloudTrail 與設定歷史記錄 符合第一項需求：CloudTrail 和設定歷史記錄提供 API 和資源變更證據。 SCP 與集中式策略和安全服務結合 符合第二項需求：組織護欄和集中策略減少了不一致的網路治理。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d4-030",
-    "type": "single",
-    "question": "A developer team preparing a release must enforce network and service guardrails across accounts. Which organization control should be used?",
-    "options": {
-      "A": "Manual console notes",
-      "B": "SCPs combined with centralized policy and security services",
-      "C": "One local security group only",
-      "D": "Public network paths"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Organization guardrails and centralized policy reduce inconsistent network governance.\nLocal or manual-only controls do not scale across accounts.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A developer team preparing a release is planning two independent production changes. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The first team must enforce network and service guardrails across accounts. A second team must block known malicious domains for workloads in a VPC. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "CloudTrail and configuration history",
+      "B": "SCPs combined with centralized policy and security services",
+      "C": "Route 53 Resolver DNS Firewall",
+      "D": "AWS Network Firewall",
+      "E": "AWS Shield and AWS WAF"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "SCPs combined with centralized policy and security services meets the first requirement: Organization guardrails and centralized policy reduce inconsistent network governance. Route 53 Resolver DNS Firewall meets the second requirement: DNS Firewall can block or allow domain queries for VPC workloads.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊必須跨帳戶強制實施網路和服務護欄。應使用哪種組織控制？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。目前架構支援業務關鍵服務。所選選項必須處理確切的故障或安全條件，而不會削弱其他控制措施。第一項需求：支援關鍵工作負載的營運團隊必須跨帳戶實施網路和服務護欄。第二項需求：生產團隊必須阻止 VPC 中工作負載的已知惡意域。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "手動控制台註釋",
+          "A": "CloudTrail 與設定歷史記錄",
           "B": "SCP 與集中式策略和安全服務結合",
-          "C": "僅一個本地安全群組",
-          "D": "公網路徑"
+          "C": "Route 53 Resolver DNS Firewall",
+          "D": "AWS Network Firewall",
+          "E": "AWS Shield and AWS WAF"
         },
-        "explanation": "組織護欄和集中策略減少了不一致的網路治理。\n本地或僅手動控制無法跨帳戶擴展。"
+        "explanation": "SCP 與集中式策略和安全服務結合 符合第一項需求：組織護欄和集中策略減少了不一致的網路治理。 Route 53 Resolver DNS Firewall 符合第二項需求：DNS 防火牆可以封鎖或允許 VPC 工作負載的網域查詢。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d4-031",
-    "type": "single",
-    "question": "An enterprise with several AWS Regions must block known malicious domains for workloads in a VPC. Which feature should be evaluated?",
-    "options": {
-      "A": "A KMS alias",
-      "B": "A CloudWatch dashboard",
-      "C": "Route 53 Resolver DNS Firewall",
-      "D": "An S3 lifecycle rule"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "DNS Firewall can block or allow domain queries for VPC workloads.\nThe other choices do not filter DNS requests.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "An enterprise with several AWS Regions is planning two independent production changes. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The first team must block known malicious domains for workloads in a VPC. A second team needs layer 3 and layer 4 stateful inspection between network segments. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Route 53 Resolver DNS Firewall",
+      "B": "AWS Network Firewall",
+      "C": "AWS Shield and AWS WAF",
+      "D": "CloudTrail and configuration history",
+      "E": "SCPs combined with centralized policy and security services"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Route 53 Resolver DNS Firewall meets the first requirement: DNS Firewall can block or allow domain queries for VPC workloads. AWS Network Firewall meets the second requirement: Network Firewall provides managed stateful network traffic inspection.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS Regions 的企業必須阻止 VPC 中工作負載的已知惡意域。應該評估哪個功能？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。專業工程師將審查實作的服務限制、故障行為及建議設計的營運取捨。第一項需求：生產團隊必須阻止 VPC 中工作負載的已知惡意域。第二項需求：多帳戶平台團隊需要網段之間的第 3 層和第 4 層狀態檢查。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "KMS 別名",
-          "B": "CloudWatch 儀表板",
-          "C": "Route 53 Resolver DNS Firewall",
-          "D": "S3 生命週期規則"
+          "A": "Route 53 Resolver DNS Firewall",
+          "B": "AWS Network Firewall",
+          "C": "AWS Shield and AWS WAF",
+          "D": "CloudTrail 與設定歷史記錄",
+          "E": "SCP 與集中式策略和安全服務結合"
         },
-        "explanation": "DNS 防火牆可以封鎖或允許 VPC 工作負載的網域查詢。\n其他選項不過濾 DNS 請求。"
+        "explanation": "Route 53 Resolver DNS Firewall 符合第一項需求：DNS 防火牆可以封鎖或允許 VPC 工作負載的網域查詢。 AWS Network Firewall 符合第二項需求：Network Firewall 提供託管狀態網路流量檢查。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d4-032",
-    "type": "single",
-    "question": "A service owner reviewing an incident needs layer 3 and layer 4 stateful inspection between network segments. Which service fits?",
-    "options": {
-      "A": "Amazon Cognito",
-      "B": "Amazon Athena",
-      "C": "AWS Budgets",
-      "D": "AWS Network Firewall"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Network Firewall provides managed stateful network traffic inspection.\nThe other choices provide identity, SQL queries, or cost monitoring.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A service owner reviewing an incident is designing one integrated end-to-end network architecture across accounts and Regions. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The organization will accept additional managed-service cost only when it measurably improves security and availability with less operational effort. Match each connected stage to the implementation that lets the complete architecture satisfy its business outcome.",
+    "options": {
+      "A": "Stage 1: The architecture needs layer 3 and layer 4 stateful inspection between network segments",
+      "B": "Stage 2: The architecture must enforce network and service guardrails across accounts",
+      "C": "Stage 3: The architecture needs centralized routing between dozens of VPCs and on-premises networks"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "AWS Network Firewall",
+      "2": "SCPs combined with centralized policy and security services",
+      "3": "AWS Transit Gateway with route domains"
+    },
+    "correctMatches": {
+      "A": "1",
+      "B": "2",
+      "C": "3"
+    },
+    "explanation": "A maps to AWS Network Firewall. Network Firewall provides managed stateful network traffic inspection. B maps to SCPs combined with centralized policy and security services. Organization guardrails and centralized policy reduce inconsistent network governance. C maps to AWS Transit Gateway with route domains. Transit Gateway provides scalable centralized routing for many network attachments.\nAll three stages are connected. Substituting an unrelated target would break the architecture or weaken its cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務擁有者需要在網段之間進行第 3 層和第 4 層狀態檢查。適合哪種服務？",
+        "question": "某企業正在跨帳戶與區域設計一個整合式端到端網路架構。三個階段彼此相連，任一階段錯誤都會影響整體業務成果。只有在託管服務能以較低營運負擔明確改善安全性與可用性時，組織才會接受額外成本。 請把每個階段配對至最合適的實作。",
         "options": {
-          "A": "Amazon Cognito",
-          "B": "Amazon Athena",
-          "C": "AWS Budgets",
-          "D": "AWS Network Firewall"
+          "A": "階段 1：受監管的公司必須保護面向互聯網的應用程式免受 DDoS 攻擊並應用請求過濾。",
+          "B": "階段 2：支援關鍵工作負載的營運團隊必須跨帳戶實施網路和服務護欄。",
+          "C": "階段 3：階段 3：階段 3：需求：生產團隊需要在數十個 VPC 和本地網路之間進行集中路由"
         },
-        "explanation": "Network Firewall 提供託管狀態網路流量檢查。\n其他選擇提供身分、SQL 查詢或成本監控。"
+        "targets": {
+          "1": "AWS Network Firewall",
+          "2": "SCP 與集中式策略和安全服務結合",
+          "3": "AWS Transit Gateway 與路由域"
+        },
+        "explanation": "A 應配對 AWS Network Firewall；B 應配對 SCP 與集中式策略和安全服務結合；C 應配對 AWS Transit Gateway 與路由域。三個實作共同組成完整架構。\n若以不相關的目標取代任何一項，便會破壞架構或削弱成本、安全性及可用性之間的取捨。"
       }
     }
   },
   {
     "id": "ans-c01-d4-033",
-    "type": "single",
-    "question": "A team optimizing an existing implementation must protect internet-facing applications from DDoS attacks and apply request filtering. Which combination is appropriate?",
-    "options": {
-      "A": "AWS Shield and AWS WAF",
-      "B": "An EBS volume and S3 lifecycle rule",
-      "C": "A public root key",
-      "D": "A Route 53 TXT record only"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "Shield provides DDoS protection and WAF filters HTTP requests with managed or custom rules.\nStorage and DNS records do not provide layered web protection.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A team optimizing an existing implementation is planning two independent production changes. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The first team must protect internet-facing applications from DDoS attacks and apply request filtering. A second team needs to prove that network changes were made by authorized principals. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "SCPs combined with centralized policy and security services",
+      "B": "Route 53 Resolver DNS Firewall",
+      "C": "AWS Network Firewall",
+      "D": "AWS Shield and AWS WAF",
+      "E": "CloudTrail and configuration history"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS Shield and AWS WAF meets the first requirement: Shield provides DDoS protection and WAF filters HTTP requests with managed or custom rules. CloudTrail and configuration history meets the second requirement: CloudTrail and configuration history provide API and resource-change evidence.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊必須保護面向互聯網的應用程式免受 DDoS 攻擊並應用請求過濾。哪種組合合適？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。專業工程師將審查實作的服務限制、故障行為及建議設計的營運取捨。第一項需求：受監管的公司必須保護面向互聯網的應用程式免受 DDoS 攻擊並應用請求過濾。第二項需求：準備增加流量的新創公司需要證明網路變更是由授權主體進行的。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "AWS Shield and AWS WAF",
-          "B": "EBS 捲和 S3 生命週期規則",
-          "C": "公有根密鑰",
-          "D": "僅 Route 53 TXT 記錄"
+          "A": "SCP 與集中式策略和安全服務結合",
+          "B": "Route 53 Resolver DNS Firewall",
+          "C": "AWS Network Firewall",
+          "D": "AWS Shield and AWS WAF",
+          "E": "CloudTrail 與設定歷史記錄"
         },
-        "explanation": "Shield 提供 DDoS 保護，WAF 使用託管或自訂規則過濾 HTTP 請求。\n儲存和 DNS 記錄不提供分層 Web 保護。"
+        "explanation": "AWS Shield and AWS WAF 符合第一項需求：Shield 提供 DDoS 保護，WAF 使用託管或自訂規則過濾 HTTP 請求。 CloudTrail 與設定歷史記錄 符合第二項需求：CloudTrail 和設定歷史記錄提供 API 和資源變更證據。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d4-034",
-    "type": "single",
-    "question": "A company introducing an automated workflow needs to prove that network changes were made by authorized principals. Which services provide useful evidence?",
-    "options": {
-      "A": "An EBS volume name",
-      "B": "CloudTrail and configuration history",
-      "C": "A public dashboard only",
-      "D": "A DNS cache entry"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "CloudTrail and configuration history provide API and resource-change evidence.\nThe other choices do not establish an audit trail.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A company introducing an automated workflow is planning two independent production changes. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The first team needs to prove that network changes were made by authorized principals. A second team must enforce network and service guardrails across accounts. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "AWS Network Firewall",
+      "B": "AWS Shield and AWS WAF",
+      "C": "CloudTrail and configuration history",
+      "D": "SCPs combined with centralized policy and security services",
+      "E": "Route 53 Resolver DNS Firewall"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "CloudTrail and configuration history meets the first requirement: CloudTrail and configuration history provide API and resource-change evidence. SCPs combined with centralized policy and security services meets the second requirement: Organization guardrails and centralized policy reduce inconsistent network governance.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司需要證明網路變更是由授權主體進行的。哪些服務提供有用的證據？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。專業工程師將審查實作的服務限制、故障行為及建議設計的營運取捨。第一項需求：準備增加流量的新創公司需要證明網路變更是由授權主體進行的。第二項需求：支援關鍵工作負載的營運團隊必須跨帳戶實施網路和服務護欄。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "EBS 卷名稱",
-          "B": "CloudTrail 與設定歷史記錄",
-          "C": "僅公共儀表板",
-          "D": "DNS 快取項目"
+          "A": "AWS Network Firewall",
+          "B": "AWS Shield and AWS WAF",
+          "C": "CloudTrail 與設定歷史記錄",
+          "D": "SCP 與集中式策略和安全服務結合",
+          "E": "Route 53 Resolver DNS Firewall"
         },
-        "explanation": "CloudTrail 和設定歷史記錄提供 API 和資源變更證據。\n其他選擇不建立審計追蹤。"
+        "explanation": "CloudTrail 與設定歷史記錄 符合第一項需求：CloudTrail 和設定歷史記錄提供 API 和資源變更證據。 SCP 與集中式策略和安全服務結合 符合第二項需求：組織護欄和集中策略減少了不一致的網路治理。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d4-035",
-    "type": "single",
-    "question": "An AWS administrator working in a shared environment must enforce network and service guardrails across accounts. Which organization control should be used?",
-    "options": {
-      "A": "Public network paths",
-      "B": "Manual console notes",
-      "C": "SCPs combined with centralized policy and security services",
-      "D": "One local security group only"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "Organization guardrails and centralized policy reduce inconsistent network governance.\nLocal or manual-only controls do not scale across accounts.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "An AWS administrator working in a shared environment is planning two independent production changes. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The first team must enforce network and service guardrails across accounts. A second team must block known malicious domains for workloads in a VPC. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "CloudTrail and configuration history",
+      "B": "SCPs combined with centralized policy and security services",
+      "C": "Route 53 Resolver DNS Firewall",
+      "D": "AWS Network Firewall",
+      "E": "AWS Shield and AWS WAF"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "SCPs combined with centralized policy and security services meets the first requirement: Organization guardrails and centralized policy reduce inconsistent network governance. Route 53 Resolver DNS Firewall meets the second requirement: DNS Firewall can block or allow domain queries for VPC workloads.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "在共用環境中工作的 AWS 管理員必須跨帳戶實施網路和服務護欄。應使用哪種組織控制？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。專業工程師將審查實作的服務限制、故障行為及建議設計的營運取捨。第一項需求：支援關鍵工作負載的營運團隊必須跨帳戶實施網路和服務護欄。第二項需求：生產團隊必須阻止 VPC 中工作負載的已知惡意域。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "公網路徑",
-          "B": "手動控制台註釋",
-          "C": "SCP 與集中式策略和安全服務結合",
-          "D": "僅一個本地安全群組"
+          "A": "CloudTrail 與設定歷史記錄",
+          "B": "SCP 與集中式策略和安全服務結合",
+          "C": "Route 53 Resolver DNS Firewall",
+          "D": "AWS Network Firewall",
+          "E": "AWS Shield and AWS WAF"
         },
-        "explanation": "組織護欄和集中策略減少了不一致的網路治理。\n本地或僅手動控制無法跨帳戶擴展。"
+        "explanation": "SCP 與集中式策略和安全服務結合 符合第一項需求：組織護欄和集中策略減少了不一致的網路治理。 Route 53 Resolver DNS Firewall 符合第二項需求：DNS 防火牆可以封鎖或允許 VPC 工作負載的網域查詢。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d4-036",
-    "type": "single",
-    "question": "A customer-facing application team must block known malicious domains for workloads in a VPC. Which feature should be evaluated?",
-    "options": {
-      "A": "An S3 lifecycle rule",
-      "B": "A KMS alias",
-      "C": "A CloudWatch dashboard",
-      "D": "Route 53 Resolver DNS Firewall"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "DNS Firewall can block or allow domain queries for VPC workloads.\nThe other choices do not filter DNS requests.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A customer-facing application team is designing one integrated end-to-end network architecture across accounts and Regions. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The architecture must limit blast radius, preserve availability during change, and control cost through automation instead of permanent overprovisioning. Match each connected stage to the implementation that lets the complete architecture satisfy its business outcome.",
+    "options": {
+      "A": "Stage 1: The architecture must block known malicious domains for workloads in a VPC",
+      "B": "Stage 2: The architecture needs an architecture that keeps provider and consumer VPC address spaces independent",
+      "C": "Stage 3: The architecture must advertise selected VPC prefixes to an on-premises router over a private connection"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "AWS PrivateLink",
+      "2": "BGP over a Direct Connect or VPN connection",
+      "3": "Route 53 Resolver DNS Firewall"
+    },
+    "correctMatches": {
+      "A": "3",
+      "B": "1",
+      "C": "2"
+    },
+    "explanation": "A maps to Route 53 Resolver DNS Firewall. DNS Firewall can block or allow domain queries for VPC workloads. B maps to AWS PrivateLink. PrivateLink exposes a service through endpoint interfaces without routing consumer VPCs together. C maps to BGP over a Direct Connect or VPN connection. BGP exchanges routes over supported hybrid connectivity links.\nAll three stages are connected. Substituting an unrelated target would break the architecture or weaken its cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊必須封鎖 VPC 中工作負載的已知惡意網域。應該評估哪個功能？",
+        "question": "某企業正在跨帳戶與區域設計一個整合式端到端網路架構。三個階段彼此相連，任一階段錯誤都會影響整體業務成果。此架構必須限制影響範圍、在變更期間維持可用性，並透過自動化控制成本，而不是長期過度佈建。 請把每個階段配對至最合適的實作。",
         "options": {
-          "A": "S3 生命週期規則",
-          "B": "KMS 別名",
-          "C": "CloudWatch 儀表板",
-          "D": "Route 53 Resolver DNS Firewall"
+          "A": "階段 1：生產團隊必須阻止 VPC 中工作負載的已知惡意域。",
+          "B": "階段 2：階段 2：階段 2：生產團隊需要在數十個 VPC 和本地網路之間進行集中路由。",
+          "C": "階段 3：階段 3：階段 3：生產團隊必須透過專用連線將選定的 VPC 前綴通告到本機路由器。"
         },
-        "explanation": "DNS 防火牆可以封鎖或允許 VPC 工作負載的網域查詢。\n其他選項不過濾 DNS 請求。"
+        "targets": {
+          "1": "AWS PrivateLink",
+          "2": "透過 Direct Connect 或 VPN 連接的 BGP",
+          "3": "Route 53 Resolver DNS Firewall"
+        },
+        "explanation": "A 應配對 Route 53 Resolver DNS Firewall；B 應配對 AWS PrivateLink；C 應配對 透過 Direct Connect 或 VPN 連接的 BGP。三個實作共同組成完整架構。\n若以不相關的目標取代任何一項，便會破壞架構或削弱成本、安全性及可用性之間的取捨。"
       }
     }
   },
   {
     "id": "ans-c01-d4-037",
-    "type": "single",
-    "question": "A platform team standardizing its AWS deployments needs layer 3 and layer 4 stateful inspection between network segments. Which service fits?",
-    "options": {
-      "A": "AWS Network Firewall",
-      "B": "Amazon Cognito",
-      "C": "Amazon Athena",
-      "D": "AWS Budgets"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "Network Firewall provides managed stateful network traffic inspection.\nThe other choices provide identity, SQL queries, or cost monitoring.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A platform team standardizing its AWS deployments is planning two independent production changes. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The first team needs layer 3 and layer 4 stateful inspection between network segments. A second team must protect internet-facing applications from DDoS attacks and apply request filtering. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "AWS Shield and AWS WAF",
+      "B": "CloudTrail and configuration history",
+      "C": "SCPs combined with centralized policy and security services",
+      "D": "Route 53 Resolver DNS Firewall",
+      "E": "AWS Network Firewall"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS Network Firewall meets the first requirement: Network Firewall provides managed stateful network traffic inspection. AWS Shield and AWS WAF meets the second requirement: Shield provides DDoS protection and WAF filters HTTP requests with managed or custom rules.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊需要在網段之間進行第 3 層和第 4 層狀態檢查。適合哪種服務？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此生產環境在多個帳戶中採用集中治理。變更必須符合最低權限、可以稽核，並且不會造成長時間中斷。第一項需求：受監管的公司必須保護面向互聯網的應用程式免受 DDoS 攻擊並應用請求過濾。第二項需求：多帳戶平台團隊需要網段之間的第 3 層和第 4 層狀態檢查。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "AWS Network Firewall",
-          "B": "Amazon Cognito",
-          "C": "Amazon Athena",
-          "D": "AWS Budgets"
+          "A": "AWS Shield and AWS WAF",
+          "B": "CloudTrail 與設定歷史記錄",
+          "C": "SCP 與集中式策略和安全服務結合",
+          "D": "Route 53 Resolver DNS Firewall",
+          "E": "AWS Network Firewall"
         },
-        "explanation": "Network Firewall 提供託管狀態網路流量檢查。\n其他選擇提供身分、SQL 查詢或成本監控。"
+        "explanation": "AWS Shield and AWS WAF 符合第一項需求：Shield 提供 DDoS 保護，WAF 使用託管或自訂規則過濾 HTTP 請求。 AWS Network Firewall 符合第二項需求：Network Firewall 提供託管狀態網路流量檢查。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d4-038",
-    "type": "single",
-    "question": "A team preparing evidence for an audit must protect internet-facing applications from DDoS attacks and apply request filtering. Which combination is appropriate?",
-    "options": {
-      "A": "A Route 53 TXT record only",
-      "B": "AWS Shield and AWS WAF",
-      "C": "An EBS volume and S3 lifecycle rule",
-      "D": "A public root key"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Shield provides DDoS protection and WAF filters HTTP requests with managed or custom rules.\nStorage and DNS records do not provide layered web protection.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A team preparing evidence for an audit is planning two independent production changes. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The first team must protect internet-facing applications from DDoS attacks and apply request filtering. A second team needs to prove that network changes were made by authorized principals. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "SCPs combined with centralized policy and security services",
+      "B": "Route 53 Resolver DNS Firewall",
+      "C": "AWS Network Firewall",
+      "D": "AWS Shield and AWS WAF",
+      "E": "CloudTrail and configuration history"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS Shield and AWS WAF meets the first requirement: Shield provides DDoS protection and WAF filters HTTP requests with managed or custom rules. CloudTrail and configuration history meets the second requirement: CloudTrail and configuration history provide API and resource-change evidence.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "準備審計證據的團隊必須保護面向互聯網的應用程式免受 DDoS 攻擊並應用請求過濾。哪種組合合適？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此生產環境在多個帳戶中採用集中治理。變更必須符合最低權限、可以稽核，並且不會造成長時間中斷。第一項需求：受監管的公司必須保護面向互聯網的應用程式免受 DDoS 攻擊並應用請求過濾。第二項需求：準備增加流量的新創公司需要證明網路變更是由授權主體進行的。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "僅 Route 53 TXT 記錄",
-          "B": "AWS Shield and AWS WAF",
-          "C": "EBS 捲和 S3 生命週期規則",
-          "D": "公有根密鑰"
+          "A": "SCP 與集中式策略和安全服務結合",
+          "B": "Route 53 Resolver DNS Firewall",
+          "C": "AWS Network Firewall",
+          "D": "AWS Shield and AWS WAF",
+          "E": "CloudTrail 與設定歷史記錄"
         },
-        "explanation": "Shield 提供 DDoS 保護，WAF 使用託管或自訂規則過濾 HTTP 請求。\n儲存和 DNS 記錄不提供分層 Web 保護。"
+        "explanation": "AWS Shield and AWS WAF 符合第一項需求：Shield 提供 DDoS 保護，WAF 使用託管或自訂規則過濾 HTTP 請求。 CloudTrail 與設定歷史記錄 符合第二項需求：CloudTrail 和設定歷史記錄提供 API 和資源變更證據。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d4-039",
-    "type": "single",
-    "question": "A business replacing a manual process needs to prove that network changes were made by authorized principals. Which services provide useful evidence?",
-    "options": {
-      "A": "A DNS cache entry",
-      "B": "An EBS volume name",
-      "C": "CloudTrail and configuration history",
-      "D": "A public dashboard only"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "CloudTrail and configuration history provide API and resource-change evidence.\nThe other choices do not establish an audit trail.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A business replacing a manual process is planning two independent production changes. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The first team needs to prove that network changes were made by authorized principals. A second team must enforce network and service guardrails across accounts. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "AWS Network Firewall",
+      "B": "AWS Shield and AWS WAF",
+      "C": "CloudTrail and configuration history",
+      "D": "SCPs combined with centralized policy and security services",
+      "E": "Route 53 Resolver DNS Firewall"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "CloudTrail and configuration history meets the first requirement: CloudTrail and configuration history provide API and resource-change evidence. SCPs combined with centralized policy and security services meets the second requirement: Organization guardrails and centralized policy reduce inconsistent network governance.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "取代手動流程的企業需要證明網路變更是由授權主體進行的。哪些服務提供有用的證據？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此生產環境在多個帳戶中採用集中治理。變更必須符合最低權限、可以稽核，並且不會造成長時間中斷。第一項需求：準備增加流量的新創公司需要證明網路變更是由授權主體進行的。第二項需求：支援關鍵工作負載的營運團隊必須跨帳戶實施網路和服務護欄。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "DNS 快取項目",
-          "B": "EBS 卷名稱",
+          "A": "AWS Network Firewall",
+          "B": "AWS Shield and AWS WAF",
           "C": "CloudTrail 與設定歷史記錄",
-          "D": "僅公共儀表板"
+          "D": "SCP 與集中式策略和安全服務結合",
+          "E": "Route 53 Resolver DNS Firewall"
         },
-        "explanation": "CloudTrail 和設定歷史記錄提供 API 和資源變更證據。\n其他選擇不建立審計追蹤。"
+        "explanation": "CloudTrail 與設定歷史記錄 符合第一項需求：CloudTrail 和設定歷史記錄提供 API 和資源變更證據。 SCP 與集中式策略和安全服務結合 符合第二項需求：組織護欄和集中策略減少了不一致的網路治理。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d4-040",
-    "type": "single",
-    "question": "A team validating a design against the exam guide must enforce network and service guardrails across accounts. Which organization control should be used?",
-    "options": {
-      "A": "One local security group only",
-      "B": "Public network paths",
-      "C": "Manual console notes",
-      "D": "SCPs combined with centralized policy and security services"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Organization guardrails and centralized policy reduce inconsistent network governance.\nLocal or manual-only controls do not scale across accounts.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A team validating a design against the exam guide is designing one integrated end-to-end network architecture across accounts and Regions. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The selected controls must provide auditable security, predictable availability, and the lowest operational cost that still satisfies both requirements. Match each connected stage to the implementation that lets the complete architecture satisfy its business outcome.",
+    "options": {
+      "A": "Stage 1: The architecture must enforce network and service guardrails across accounts",
+      "B": "Stage 2: The architecture must automate VPC and route configuration consistently across accounts",
+      "C": "Stage 3: The architecture needs to investigate rejected packets between two VPC subnets"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "VPC Flow Logs and route and security group configuration",
+      "2": "SCPs combined with centralized policy and security services",
+      "3": "Infrastructure as code with CloudFormation or the AWS CDK"
+    },
+    "correctMatches": {
+      "A": "2",
+      "B": "3",
+      "C": "1"
+    },
+    "explanation": "A maps to SCPs combined with centralized policy and security services. Organization guardrails and centralized policy reduce inconsistent network governance. B maps to Infrastructure as code with CloudFormation or the AWS CDK. IaC makes network changes repeatable, reviewable, and consistent. C maps to VPC Flow Logs and route and security group configuration. Flow Logs combined with routing and security controls identify where traffic is rejected.\nAll three stages are connected. Substituting an unrelated target would break the architecture or weaken its cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊必須跨帳戶實施網路和服務護欄。應使用哪種組織控制？",
+        "question": "某企業正在跨帳戶與區域設計一個整合式端到端網路架構。三個階段彼此相連，任一階段錯誤都會影響整體業務成果。所選控制必須提供可稽核的安全性、可預測的可用性，以及在滿足兩項要求前提下最低的營運成本。 請把每個階段配對至最合適的實作。",
         "options": {
-          "A": "僅一個本地安全群組",
-          "B": "公網路徑",
-          "C": "手動控制台註釋",
-          "D": "SCP 與集中式策略和安全服務結合"
+          "A": "階段 1：支援關鍵工作負載的營運團隊必須跨帳戶實施網路和服務護欄。",
+          "B": "階段 2：階段 2：階段 2：支援關鍵工作負載的營運團隊必須自動化 VPC 並跨帳戶一致地路由配置。",
+          "C": "階段 3：階段 3：階段 3：需求：製作團隊需要調查兩個 VPC 子網路之間被拒絕的資料包"
         },
-        "explanation": "組織護欄和集中策略減少了不一致的網路治理。\n本地或僅手動控制無法跨帳戶擴展。"
+        "targets": {
+          "1": "VPC Flow Logs 以及路由和安全群組配置",
+          "2": "SCP 與集中式策略和安全服務結合",
+          "3": "使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼"
+        },
+        "explanation": "A 應配對 SCP 與集中式策略和安全服務結合；B 應配對 使用 CloudFormation 或 AWS CDK 的基礎架構即程式碼；C 應配對 VPC Flow Logs 以及路由和安全群組配置。三個實作共同組成完整架構。\n若以不相關的目標取代任何一項，便會破壞架構或削弱成本、安全性及可用性之間的取捨。"
       }
     }
   },
   {
     "id": "ans-c01-d4-041",
-    "type": "single",
-    "question": "A production team must block known malicious domains for workloads in a VPC. Which feature should be evaluated?",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A production team is planning two independent production changes. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The first team must block known malicious domains for workloads in a VPC. A second team needs layer 3 and layer 4 stateful inspection between network segments. Which TWO actions satisfy these requirements?",
     "options": {
       "A": "Route 53 Resolver DNS Firewall",
-      "B": "An S3 lifecycle rule",
-      "C": "A KMS alias",
-      "D": "A CloudWatch dashboard"
+      "B": "AWS Network Firewall",
+      "C": "AWS Shield and AWS WAF",
+      "D": "CloudTrail and configuration history",
+      "E": "SCPs combined with centralized policy and security services"
     },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "DNS Firewall can block or allow domain queries for VPC workloads.\nThe other choices do not filter DNS requests.",
-    "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Route 53 Resolver DNS Firewall meets the first requirement: DNS Firewall can block or allow domain queries for VPC workloads. AWS Network Firewall meets the second requirement: Network Firewall provides managed stateful network traffic inspection.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "生產團隊必須阻止 VPC 中工作負載的已知惡意域。應該評估哪個功能？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊必須考慮混合式連線、現有安全邊界，以及變更部署後的營運疑難排解。第一項需求：生產團隊必須阻止 VPC 中工作負載的已知惡意域。第二項需求：多帳戶平台團隊需要網段之間的第 3 層和第 4 層狀態檢查。哪兩項操作可以滿足這些需求？",
         "options": {
           "A": "Route 53 Resolver DNS Firewall",
-          "B": "S3 生命週期規則",
-          "C": "KMS 別名",
-          "D": "CloudWatch 儀表板"
+          "B": "AWS Network Firewall",
+          "C": "AWS Shield and AWS WAF",
+          "D": "CloudTrail 與設定歷史記錄",
+          "E": "SCP 與集中式策略和安全服務結合"
         },
-        "explanation": "DNS 防火牆可以封鎖或允許 VPC 工作負載的網域查詢。\n其他選項不過濾 DNS 請求。"
+        "explanation": "Route 53 Resolver DNS Firewall 符合第一項需求：DNS 防火牆可以封鎖或允許 VPC 工作負載的網域查詢。 AWS Network Firewall 符合第二項需求：Network Firewall 提供託管狀態網路流量檢查。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d4-042",
-    "type": "single",
-    "question": "A multi-account platform team needs layer 3 and layer 4 stateful inspection between network segments. Which service fits?",
-    "options": {
-      "A": "AWS Budgets",
-      "B": "AWS Network Firewall",
-      "C": "Amazon Cognito",
-      "D": "Amazon Athena"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Network Firewall provides managed stateful network traffic inspection.\nThe other choices provide identity, SQL queries, or cost monitoring.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A multi-account platform team is planning two independent production changes. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The first team needs layer 3 and layer 4 stateful inspection between network segments. A second team must protect internet-facing applications from DDoS attacks and apply request filtering. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "AWS Shield and AWS WAF",
+      "B": "CloudTrail and configuration history",
+      "C": "SCPs combined with centralized policy and security services",
+      "D": "Route 53 Resolver DNS Firewall",
+      "E": "AWS Network Firewall"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS Network Firewall meets the first requirement: Network Firewall provides managed stateful network traffic inspection. AWS Shield and AWS WAF meets the second requirement: Shield provides DDoS protection and WAF filters HTTP requests with managed or custom rules.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊需要網段之間的第 3 層和第 4 層狀態檢查。適合哪種服務？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊必須考慮混合式連線、現有安全邊界，以及變更部署後的營運疑難排解。第一項需求：受監管的公司必須保護面向互聯網的應用程式免受 DDoS 攻擊並應用請求過濾。第二項需求：多帳戶平台團隊需要網段之間的第 3 層和第 4 層狀態檢查。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "AWS Budgets",
-          "B": "AWS Network Firewall",
-          "C": "Amazon Cognito",
-          "D": "Amazon Athena"
+          "A": "AWS Shield and AWS WAF",
+          "B": "CloudTrail 與設定歷史記錄",
+          "C": "SCP 與集中式策略和安全服務結合",
+          "D": "Route 53 Resolver DNS Firewall",
+          "E": "AWS Network Firewall"
         },
-        "explanation": "Network Firewall 提供託管狀態網路流量檢查。\n其他選擇提供身分、SQL 查詢或成本監控。"
+        "explanation": "AWS Shield and AWS WAF 符合第一項需求：Shield 提供 DDoS 保護，WAF 使用託管或自訂規則過濾 HTTP 請求。 AWS Network Firewall 符合第二項需求：Network Firewall 提供託管狀態網路流量檢查。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d4-043",
-    "type": "single",
-    "question": "A regulated company must protect internet-facing applications from DDoS attacks and apply request filtering. Which combination is appropriate?",
-    "options": {
-      "A": "A public root key",
-      "B": "A Route 53 TXT record only",
-      "C": "AWS Shield and AWS WAF",
-      "D": "An EBS volume and S3 lifecycle rule"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "Shield provides DDoS protection and WAF filters HTTP requests with managed or custom rules.\nStorage and DNS records do not provide layered web protection.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A regulated company is planning two independent production changes. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The first team must protect internet-facing applications from DDoS attacks and apply request filtering. A second team needs to prove that network changes were made by authorized principals. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "SCPs combined with centralized policy and security services",
+      "B": "Route 53 Resolver DNS Firewall",
+      "C": "AWS Network Firewall",
+      "D": "AWS Shield and AWS WAF",
+      "E": "CloudTrail and configuration history"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS Shield and AWS WAF meets the first requirement: Shield provides DDoS protection and WAF filters HTTP requests with managed or custom rules. CloudTrail and configuration history meets the second requirement: CloudTrail and configuration history provide API and resource-change evidence.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "受監管的公司必須保護面向互聯網的應用程式免受 DDoS 攻擊並應用請求過濾。哪種組合合適？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊必須考慮混合式連線、現有安全邊界，以及變更部署後的營運疑難排解。第一項需求：受監管的公司必須保護面向互聯網的應用程式免受 DDoS 攻擊並應用請求過濾。第二項需求：準備增加流量的新創公司需要證明網路變更是由授權主體進行的。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "公有根密鑰",
-          "B": "僅 Route 53 TXT 記錄",
-          "C": "AWS Shield and AWS WAF",
-          "D": "EBS 捲和 S3 生命週期規則"
+          "A": "SCP 與集中式策略和安全服務結合",
+          "B": "Route 53 Resolver DNS Firewall",
+          "C": "AWS Network Firewall",
+          "D": "AWS Shield and AWS WAF",
+          "E": "CloudTrail 與設定歷史記錄"
         },
-        "explanation": "Shield 提供 DDoS 保護，WAF 使用託管或自訂規則過濾 HTTP 請求。\n儲存和 DNS 記錄不提供分層 Web 保護。"
+        "explanation": "AWS Shield and AWS WAF 符合第一項需求：Shield 提供 DDoS 保護，WAF 使用託管或自訂規則過濾 HTTP 請求。 CloudTrail 與設定歷史記錄 符合第二項需求：CloudTrail 和設定歷史記錄提供 API 和資源變更證據。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d4-044",
-    "type": "single",
-    "question": "A startup preparing for a traffic increase needs to prove that network changes were made by authorized principals. Which services provide useful evidence?",
-    "options": {
-      "A": "A public dashboard only",
-      "B": "A DNS cache entry",
-      "C": "An EBS volume name",
-      "D": "CloudTrail and configuration history"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "CloudTrail and configuration history provide API and resource-change evidence.\nThe other choices do not establish an audit trail.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A startup preparing for a traffic increase is designing one integrated end-to-end network architecture across accounts and Regions. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The design must keep recurring cost proportional to use, enforce least privilege, and remain available during a component or Availability Zone failure. Match each connected stage to the implementation that lets the complete architecture satisfy its business outcome.",
+    "options": {
+      "A": "Stage 1: The architecture needs to prove that network changes were made by authorized principals",
+      "B": "Stage 2: The architecture needs operational runbooks for repeated network changes",
+      "C": "Stage 3: The architecture must block known malicious domains for workloads in a VPC"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "CloudTrail and configuration history",
+      "2": "Systems Manager Automation",
+      "3": "Route 53 Resolver DNS Firewall"
+    },
+    "correctMatches": {
+      "A": "1",
+      "B": "2",
+      "C": "3"
+    },
+    "explanation": "A maps to CloudTrail and configuration history. CloudTrail and configuration history provide API and resource-change evidence. B maps to Systems Manager Automation. Systems Manager Automation runbooks can execute repeatable operational tasks. C maps to Route 53 Resolver DNS Firewall. DNS Firewall can block or allow domain queries for VPC workloads.\nAll three stages are connected. Substituting an unrelated target would break the architecture or weaken its cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司需要證明網路變更是由授權主體進行的。哪些服務提供有用的證據？",
+        "question": "某企業正在跨帳戶與區域設計一個整合式端到端網路架構。三個階段彼此相連，任一階段錯誤都會影響整體業務成果。此設計必須讓持續成本與實際用量相符、落實最低權限，並在元件或可用區域發生故障時維持可用。 請把每個階段配對至最合適的實作。",
         "options": {
-          "A": "僅公共儀表板",
-          "B": "DNS 快取項目",
-          "C": "EBS 卷名稱",
-          "D": "CloudTrail 與設定歷史記錄"
+          "A": "階段 1：階段 1：階段 1：需求：準備增加流量的新創公司需要證明網路變更是由授權主體進行的",
+          "B": "階段 2：階段 2：階段 2：支援關鍵工作負載的營運團隊需要針對重複網路變更的營運手冊。",
+          "C": "階段 3：生產團隊必須阻止 VPC 中工作負載的已知惡意域。"
         },
-        "explanation": "CloudTrail 和設定歷史記錄提供 API 和資源變更證據。\n其他選擇不建立審計追蹤。"
+        "targets": {
+          "1": "CloudTrail 與設定歷史記錄",
+          "2": "Systems Manager Automation",
+          "3": "Route 53 Resolver DNS Firewall"
+        },
+        "explanation": "A 應配對 CloudTrail 與設定歷史記錄；B 應配對 Systems Manager Automation；C 應配對 Route 53 Resolver DNS Firewall。三個實作共同組成完整架構。\n若以不相關的目標取代任何一項，便會破壞架構或削弱成本、安全性及可用性之間的取捨。"
       }
     }
   },
   {
     "id": "ans-c01-d4-045",
-    "type": "single",
-    "question": "An operations team supporting a critical workload must enforce network and service guardrails across accounts. Which organization control should be used?",
-    "options": {
-      "A": "SCPs combined with centralized policy and security services",
-      "B": "One local security group only",
-      "C": "Public network paths",
-      "D": "Manual console notes"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "Organization guardrails and centralized policy reduce inconsistent network governance.\nLocal or manual-only controls do not scale across accounts.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "An operations team supporting a critical workload is planning two independent production changes. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The first team must enforce network and service guardrails across accounts. A second team must block known malicious domains for workloads in a VPC. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "CloudTrail and configuration history",
+      "B": "SCPs combined with centralized policy and security services",
+      "C": "Route 53 Resolver DNS Firewall",
+      "D": "AWS Network Firewall",
+      "E": "AWS Shield and AWS WAF"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "SCPs combined with centralized policy and security services meets the first requirement: Organization guardrails and centralized policy reduce inconsistent network governance. Route 53 Resolver DNS Firewall meets the second requirement: DNS Firewall can block or allow domain queries for VPC workloads.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊必須跨帳戶實施網路和服務護欄。應使用哪種組織控制？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊必須考慮混合式連線、現有安全邊界，以及變更部署後的營運疑難排解。第一項需求：支援關鍵工作負載的營運團隊必須跨帳戶實施網路和服務護欄。第二項需求：生產團隊必須阻止 VPC 中工作負載的已知惡意域。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "SCP 與集中式策略和安全服務結合",
-          "B": "僅一個本地安全群組",
-          "C": "公網路徑",
-          "D": "手動控制台註釋"
+          "A": "CloudTrail 與設定歷史記錄",
+          "B": "SCP 與集中式策略和安全服務結合",
+          "C": "Route 53 Resolver DNS Firewall",
+          "D": "AWS Network Firewall",
+          "E": "AWS Shield and AWS WAF"
         },
-        "explanation": "組織護欄和集中策略減少了不一致的網路治理。\n本地或僅手動控制無法跨帳戶擴展。"
+        "explanation": "SCP 與集中式策略和安全服務結合 符合第一項需求：組織護欄和集中策略減少了不一致的網路治理。 Route 53 Resolver DNS Firewall 符合第二項需求：DNS 防火牆可以封鎖或允許 VPC 工作負載的網域查詢。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d4-046",
-    "type": "single",
-    "question": "A data platform team must block known malicious domains for workloads in a VPC. Which feature should be evaluated?",
-    "options": {
-      "A": "A CloudWatch dashboard",
-      "B": "Route 53 Resolver DNS Firewall",
-      "C": "An S3 lifecycle rule",
-      "D": "A KMS alias"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "DNS Firewall can block or allow domain queries for VPC workloads.\nThe other choices do not filter DNS requests.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A data platform team is planning two independent production changes. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The first team must block known malicious domains for workloads in a VPC. A second team needs layer 3 and layer 4 stateful inspection between network segments. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Route 53 Resolver DNS Firewall",
+      "B": "AWS Network Firewall",
+      "C": "AWS Shield and AWS WAF",
+      "D": "CloudTrail and configuration history",
+      "E": "SCPs combined with centralized policy and security services"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Route 53 Resolver DNS Firewall meets the first requirement: DNS Firewall can block or allow domain queries for VPC workloads. AWS Network Firewall meets the second requirement: Network Firewall provides managed stateful network traffic inspection.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊必須阻止 VPC 中工作負載的已知惡意域。應該評估哪個功能？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此需求必須大規模套用。方案應避免一次性的人手設定，並提供證據證明控制措施持續有效。第一項需求：生產團隊必須阻止 VPC 中工作負載的已知惡意域。第二項需求：多帳戶平台團隊需要網段之間的第 3 層和第 4 層狀態檢查。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "CloudWatch 儀表板",
-          "B": "Route 53 Resolver DNS Firewall",
-          "C": "S3 生命週期規則",
-          "D": "KMS 別名"
+          "A": "Route 53 Resolver DNS Firewall",
+          "B": "AWS Network Firewall",
+          "C": "AWS Shield and AWS WAF",
+          "D": "CloudTrail 與設定歷史記錄",
+          "E": "SCP 與集中式策略和安全服務結合"
         },
-        "explanation": "DNS 防火牆可以封鎖或允許 VPC 工作負載的網域查詢。\n其他選項不過濾 DNS 請求。"
+        "explanation": "Route 53 Resolver DNS Firewall 符合第一項需求：DNS 防火牆可以封鎖或允許 VPC 工作負載的網域查詢。 AWS Network Firewall 符合第二項需求：Network Firewall 提供託管狀態網路流量檢查。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "ans-c01-d4-047",
-    "type": "single",
-    "question": "A security-conscious engineering team needs layer 3 and layer 4 stateful inspection between network segments. Which service fits?",
-    "options": {
-      "A": "Amazon Athena",
-      "B": "AWS Budgets",
-      "C": "AWS Network Firewall",
-      "D": "Amazon Cognito"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "Network Firewall provides managed stateful network traffic inspection.\nThe other choices provide identity, SQL queries, or cost monitoring.",
     "taskStatement": "4.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A security-conscious engineering team is planning two independent production changes. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The first team needs layer 3 and layer 4 stateful inspection between network segments. A second team must protect internet-facing applications from DDoS attacks and apply request filtering. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "AWS Shield and AWS WAF",
+      "B": "CloudTrail and configuration history",
+      "C": "SCPs combined with centralized policy and security services",
+      "D": "Route 53 Resolver DNS Firewall",
+      "E": "AWS Network Firewall"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS Network Firewall meets the first requirement: Network Firewall provides managed stateful network traffic inspection. AWS Shield and AWS WAF meets the second requirement: Shield provides DDoS protection and WAF filters HTTP requests with managed or custom rules.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊需要在網段之間進行第 3 層和第 4 層狀態檢查。適合哪種服務？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此需求必須大規模套用。方案應避免一次性的人手設定，並提供證據證明控制措施持續有效。第一項需求：受監管的公司必須保護面向互聯網的應用程式免受 DDoS 攻擊並應用請求過濾。第二項需求：多帳戶平台團隊需要網段之間的第 3 層和第 4 層狀態檢查。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "Amazon Athena",
-          "B": "AWS Budgets",
-          "C": "AWS Network Firewall",
-          "D": "Amazon Cognito"
+          "A": "AWS Shield and AWS WAF",
+          "B": "CloudTrail 與設定歷史記錄",
+          "C": "SCP 與集中式策略和安全服務結合",
+          "D": "Route 53 Resolver DNS Firewall",
+          "E": "AWS Network Firewall"
         },
-        "explanation": "Network Firewall 提供託管狀態網路流量檢查。\n其他選擇提供身分、SQL 查詢或成本監控。"
+        "explanation": "AWS Shield and AWS WAF 符合第一項需求：Shield 提供 DDoS 保護，WAF 使用託管或自訂規則過濾 HTTP 請求。 AWS Network Firewall 符合第二項需求：Network Firewall 提供託管狀態網路流量檢查。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   }

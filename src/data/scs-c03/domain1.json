@@ -1,869 +1,897 @@
 [
   {
     "id": "scs-c03-d1-001",
-    "type": "single",
-    "question": "A production team needs managed threat detection using AWS account and network telemetry. Which service should be enabled?",
-    "options": {
-      "A": "Amazon CloudFront",
-      "B": "Amazon GuardDuty",
-      "C": "Amazon EFS",
-      "D": "AWS Glue"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "GuardDuty analyzes supported telemetry and produces security findings.\nThe other choices provide file storage, ETL, or content delivery.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A production team is reviewing a production decision. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The team needs managed threat detection using AWS account and network telemetry. Which service should be enabled?",
+    "options": {
+      "A": "AWS Security Hub",
+      "B": "Amazon Macie",
+      "C": "Amazon Inspector",
+      "D": "Amazon GuardDuty"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "GuardDuty analyzes supported telemetry and produces security findings.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon GuardDuty for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "生產團隊需要使用 AWS 帳戶和網路遙測進行託管威脅偵測。應該啟用哪個服務？",
+        "question": "此生產環境在多個帳戶中採用集中治理。變更必須符合最低權限、可以稽核，並且不會造成長時間中斷。生產團隊需要使用 AWS 帳戶和網路遙測進行託管威脅偵測。應該啟用哪個服務？",
         "options": {
-          "A": "Amazon CloudFront",
-          "B": "Amazon GuardDuty",
-          "C": "Amazon EFS",
-          "D": "AWS Glue"
+          "A": "AWS Security Hub",
+          "B": "Amazon Macie",
+          "C": "Amazon Inspector",
+          "D": "Amazon GuardDuty"
         },
-        "explanation": "GuardDuty 分析支援的遙測並產生安全結果。\n其他選項提供文件儲存、ETL 或內容交付。"
+        "explanation": "GuardDuty 分析支援的遙測並產生安全結果。\n其他選項適用於此領域的不同需求，但不能像 Amazon GuardDuty 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d1-002",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A multi-account platform team must aggregate security findings across accounts and Regions. Which service should be evaluated?",
+    "question": "A multi-account platform team is reviewing a production decision. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The team must aggregate security findings across accounts and Regions. Which service should be evaluated?",
     "options": {
-      "A": "AWS Batch",
-      "B": "Amazon RDS",
+      "A": "Amazon Inspector",
+      "B": "AWS CloudTrail",
       "C": "AWS Security Hub",
-      "D": "Amazon Route 53"
+      "D": "Amazon Macie"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Security Hub centralizes and normalizes findings from supported security services.\nThe other choices provide DNS, batch compute, or databases.",
-    "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Security Hub centralizes and normalizes findings from supported security services.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Security Hub for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊必須匯總跨帳戶和區域的安全發現。應該評估哪些服務？",
+        "question": "此生產環境在多個帳戶中採用集中治理。變更必須符合最低權限、可以稽核，並且不會造成長時間中斷。多帳戶平台團隊必須匯總跨帳戶和區域的安全發現。應該評估哪些服務？",
         "options": {
-          "A": "AWS Batch",
-          "B": "Amazon RDS",
+          "A": "Amazon Inspector",
+          "B": "AWS CloudTrail",
           "C": "AWS Security Hub",
-          "D": "Amazon Route 53"
+          "D": "Amazon Macie"
         },
-        "explanation": "Security Hub 集中並標準化受支援的安全服務的發現結果。\n其他選擇提供 DNS、批次計算或資料庫。"
+        "explanation": "Security Hub 集中並標準化受支援的安全服務的發現結果。\n其他選項適用於此領域的不同需求，但不能像 AWS Security Hub 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d1-003",
-    "type": "single",
-    "question": "A regulated company needs to identify sensitive data in S3 that could increase incident impact. Which service fits?",
-    "options": {
-      "A": "AWS WAF",
-      "B": "Amazon EBS",
-      "C": "AWS Certificate Manager",
-      "D": "Amazon Macie"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Macie discovers sensitive data such as PII in S3 and reports findings.\nThe other choices provide web filtering, block storage, or certificates.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A regulated company is reviewing a production decision. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The team needs to identify sensitive data in S3 that could increase incident impact. Which service fits?",
+    "options": {
+      "A": "Amazon GuardDuty",
+      "B": "Amazon Macie",
+      "C": "Amazon Inspector",
+      "D": "AWS CloudTrail"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Macie discovers sensitive data such as PII in S3 and reports findings.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Macie for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司需要識別 S3 中可能增加事件影響的敏感資料。適合哪種服務？",
+        "question": "此生產環境在多個帳戶中採用集中治理。變更必須符合最低權限、可以稽核，並且不會造成長時間中斷。受監管的公司需要識別 S3 中可能增加事件影響的敏感資料。適合哪種服務？",
         "options": {
-          "A": "AWS WAF",
-          "B": "Amazon EBS",
-          "C": "AWS Certificate Manager",
-          "D": "Amazon Macie"
+          "A": "Amazon GuardDuty",
+          "B": "Amazon Macie",
+          "C": "Amazon Inspector",
+          "D": "AWS CloudTrail"
         },
-        "explanation": "Macie 在 S3 中發現敏感資料（例如 PII）並報告發現結果。\n其他選項提供 Web 過濾、區塊儲存或憑證。"
+        "explanation": "Macie 在 S3 中發現敏感資料（例如 PII）並報告發現結果。\n其他選項適用於此領域的不同需求，但不能像 Amazon Macie 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d1-004",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A startup preparing for a traffic increase must scan EC2 and container artifacts for known vulnerabilities. Which service should be used?",
+    "question": "A startup preparing for a traffic increase is redesigning one integrated end-to-end architecture. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The design must keep recurring cost proportional to use, enforce least privilege, and remain available during a component or Availability Zone failure. The workload must scan EC2 and container artifacts for known vulnerabilities, and the same architecture must determine the timeline of unauthorized API calls. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "Amazon Inspector",
-      "B": "Amazon Cognito",
-      "C": "AWS CloudFormation",
-      "D": "Amazon SES"
+      "A": "Use Amazon Inspector for the primary requirement and integrate it with CloudTrail events correlated with identity and resource logs for the connected control",
+      "B": "Use Amazon Inspector but replace the connected control with Amazon GuardDuty",
+      "C": "Use AWS Security Hub for the primary requirement and integrate it with CloudTrail events correlated with identity and resource logs",
+      "D": "Combine AWS Security Hub with Amazon Macie as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Inspector assesses supported workloads and images for vulnerabilities.\nThe other choices provide identity, infrastructure as code, or email.",
-    "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Amazon Inspector satisfies the first part of the architecture: Inspector assesses supported workloads and images for vulnerabilities. CloudTrail events correlated with identity and resource logs satisfies the connected requirement: Correlated API, identity, and resource logs establish who did what and when.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司必須掃描 EC2 和容器工件以查找已知漏洞。應該使用哪種服務？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：具有嚴格恢復目標的團隊必須掃描 EC2 和容器工件以查找已知漏洞。 第二項需求：支援關鍵工作負載的營運團隊必須確定未經授權的 API 呼叫的時間表。 此設計必須讓持續成本與實際用量相符、落實最低權限，並在元件或可用區域發生故障時維持可用。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "Amazon Inspector",
-          "B": "Amazon Cognito",
-          "C": "AWS CloudFormation",
-          "D": "Amazon SES"
+          "A": "以Amazon Inspector處理主要需求，並整合與身分和資源日誌相關的 CloudTrail 事件作為相連控制",
+          "B": "使用Amazon Inspector，但以Amazon GuardDuty取代相連控制",
+          "C": "以AWS Security Hub處理主要需求，並整合與身分和資源日誌相關的 CloudTrail 事件",
+          "D": "把AWS Security Hub與Amazon Macie結合為單一平台設計"
         },
-        "explanation": "Inspector 評估支援的工作負載和映像是否有漏洞。\n其他選擇提供身分、基礎設施即代碼或電子郵件。"
+        "explanation": "Amazon Inspector 負責架構的第一項需求，與身分和資源日誌相關的 CloudTrail 事件 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "scs-c03-d1-005",
-    "type": "single",
-    "question": "An operations team supporting a critical workload needs audit records for security API activity. Which service should be configured?",
-    "options": {
-      "A": "Amazon ElastiCache",
-      "B": "AWS CloudTrail",
-      "C": "Amazon EFS",
-      "D": "AWS Budgets"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "CloudTrail records API activity for investigation and compliance.\nThe other choices provide storage, cost monitoring, or caching.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The team needs audit records for security API activity. Which service should be configured?",
+    "options": {
+      "A": "Amazon GuardDuty",
+      "B": "AWS Security Hub",
+      "C": "Amazon Macie",
+      "D": "AWS CloudTrail"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudTrail records API activity for investigation and compliance.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS CloudTrail for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊需要安全 API 活動的審核記錄。應該配置哪個服務？",
+        "question": "此生產環境在多個帳戶中採用集中治理。變更必須符合最低權限、可以稽核，並且不會造成長時間中斷。支援關鍵工作負載的營運團隊需要安全 API 活動的審核記錄。應該配置哪個服務？",
         "options": {
-          "A": "Amazon ElastiCache",
-          "B": "AWS CloudTrail",
-          "C": "Amazon EFS",
-          "D": "AWS Budgets"
+          "A": "Amazon GuardDuty",
+          "B": "AWS Security Hub",
+          "C": "Amazon Macie",
+          "D": "AWS CloudTrail"
         },
-        "explanation": "CloudTrail 記錄 API 活動以進行調查和合規性。\n其他選擇提供儲存、成本監控或快取。"
+        "explanation": "CloudTrail 記錄 API 活動以進行調查和合規性。\n其他選項適用於此領域的不同需求，但不能像 AWS CloudTrail 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d1-006",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A data platform team needs managed threat detection using AWS account and network telemetry. Which service should be enabled?",
+    "question": "A data platform team is reviewing a production decision. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The team needs managed threat detection using AWS account and network telemetry. Which service should be enabled?",
     "options": {
-      "A": "AWS Glue",
-      "B": "Amazon CloudFront",
+      "A": "Amazon Macie",
+      "B": "Amazon Inspector",
       "C": "Amazon GuardDuty",
-      "D": "Amazon EFS"
+      "D": "AWS Security Hub"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "GuardDuty analyzes supported telemetry and produces security findings.\nThe other choices provide file storage, ETL, or content delivery.",
-    "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "GuardDuty analyzes supported telemetry and produces security findings.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon GuardDuty for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要使用 AWS 帳戶和網路遙測進行託管威脅偵測。應該啟用哪個服務？",
+        "question": "團隊必須考慮混合式連線、現有安全邊界，以及變更部署後的營運疑難排解。資料平台團隊需要使用 AWS 帳戶和網路遙測進行託管威脅偵測。應該啟用哪個服務？",
         "options": {
-          "A": "AWS Glue",
-          "B": "Amazon CloudFront",
+          "A": "Amazon Macie",
+          "B": "Amazon Inspector",
           "C": "Amazon GuardDuty",
-          "D": "Amazon EFS"
+          "D": "AWS Security Hub"
         },
-        "explanation": "GuardDuty 分析支援的遙測並產生安全結果。\n其他選項提供文件儲存、ETL 或內容交付。"
+        "explanation": "GuardDuty 分析支援的遙測並產生安全結果。\n其他選項適用於此領域的不同需求，但不能像 Amazon GuardDuty 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d1-007",
-    "type": "single",
-    "question": "A security-conscious engineering team must aggregate security findings across accounts and Regions. Which service should be evaluated?",
-    "options": {
-      "A": "Amazon Route 53",
-      "B": "AWS Batch",
-      "C": "Amazon RDS",
-      "D": "AWS Security Hub"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Security Hub centralizes and normalizes findings from supported security services.\nThe other choices provide DNS, batch compute, or databases.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A security-conscious engineering team is planning two independent production changes. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The first team must aggregate security findings across accounts and Regions. A second team needs to identify sensitive data in S3 that could increase incident impact. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "AWS CloudTrail",
+      "B": "Amazon GuardDuty",
+      "C": "AWS Security Hub",
+      "D": "Amazon Macie",
+      "E": "Amazon Inspector"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS Security Hub meets the first requirement: Security Hub centralizes and normalizes findings from supported security services. Amazon Macie meets the second requirement: Macie discovers sensitive data such as PII in S3 and reports findings.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊必須匯總跨帳戶和區域的安全發現。應該評估哪些服務？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊必須考慮混合式連線、現有安全邊界，以及變更部署後的營運疑難排解。第一項需求：多帳戶平台團隊必須匯總跨帳戶和區域的安全發現。第二項需求：受監管的公司需要識別 S3 中可能增加事件影響的敏感資料。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "Amazon Route 53",
-          "B": "AWS Batch",
-          "C": "Amazon RDS",
-          "D": "AWS Security Hub"
+          "A": "AWS CloudTrail",
+          "B": "Amazon GuardDuty",
+          "C": "AWS Security Hub",
+          "D": "Amazon Macie",
+          "E": "Amazon Inspector"
         },
-        "explanation": "Security Hub 集中並標準化受支援的安全服務的發現結果。\n其他選擇提供 DNS、批次計算或資料庫。"
+        "explanation": "AWS Security Hub 符合第一項需求：Security Hub 集中並標準化受支援的安全服務的發現結果。 Amazon Macie 符合第二項需求：Macie 在 S3 中發現敏感資料（例如 PII）並報告發現結果。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "scs-c03-d1-008",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A company migrating an existing workload needs to identify sensitive data in S3 that could increase incident impact. Which service fits?",
+    "question": "A company migrating an existing workload is redesigning one integrated end-to-end architecture. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The design must avoid unnecessary standby cost without weakening security controls or the availability objective. The workload needs to identify sensitive data in S3 that could increase incident impact, and the same architecture needs host access without inbound SSH ports. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "Amazon Macie",
-      "B": "AWS WAF",
-      "C": "Amazon EBS",
-      "D": "AWS Certificate Manager"
+      "A": "Use Amazon Macie for the primary requirement and integrate it with Systems Manager Session Manager for the connected control",
+      "B": "Use Amazon Macie but replace the connected control with Amazon GuardDuty",
+      "C": "Use AWS Security Hub for the primary requirement and integrate it with Systems Manager Session Manager",
+      "D": "Combine AWS Security Hub with Amazon Inspector as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Macie discovers sensitive data such as PII in S3 and reports findings.\nThe other choices provide web filtering, block storage, or certificates.",
-    "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Amazon Macie satisfies the first part of the architecture: Macie discovers sensitive data such as PII in S3 and reports findings. Systems Manager Session Manager satisfies the connected requirement: Session Manager provides audited access through the agent and IAM authorization.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司需要識別 S3 中可能增加事件影響的敏感資料。適合哪種服務？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：支援關鍵工作負載的營運團隊需要在與其他帳戶共用資料集之前發現 PII。 第二項需求：支援關鍵工作負載的營運團隊需要在沒有入站 SSH 連接埠的情況下進行主機存取。 此設計必須避免不必要的備用成本，同時不可削弱安全控制或可用性目標。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "Amazon Macie",
-          "B": "AWS WAF",
-          "C": "Amazon EBS",
-          "D": "AWS Certificate Manager"
+          "A": "以Amazon Macie處理主要需求，並整合Systems Manager Session Manager作為相連控制",
+          "B": "使用Amazon Macie，但以Amazon GuardDuty取代相連控制",
+          "C": "以AWS Security Hub處理主要需求，並整合Systems Manager Session Manager",
+          "D": "把AWS Security Hub與Amazon Inspector結合為單一平台設計"
         },
-        "explanation": "Macie 在 S3 中發現敏感資料（例如 PII）並報告發現結果。\n其他選項提供 Web 過濾、區塊儲存或憑證。"
+        "explanation": "Amazon Macie 負責架構的第一項需求，Systems Manager Session Manager 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "scs-c03-d1-009",
-    "type": "single",
-    "question": "A team with strict recovery objectives must scan EC2 and container artifacts for known vulnerabilities. Which service should be used?",
-    "options": {
-      "A": "Amazon SES",
-      "B": "Amazon Inspector",
-      "C": "Amazon Cognito",
-      "D": "AWS CloudFormation"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Inspector assesses supported workloads and images for vulnerabilities.\nThe other choices provide identity, infrastructure as code, or email.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team with strict recovery objectives is reviewing a production decision. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The team must scan EC2 and container artifacts for known vulnerabilities. Which service should be used?",
+    "options": {
+      "A": "AWS CloudTrail",
+      "B": "Amazon GuardDuty",
+      "C": "AWS Security Hub",
+      "D": "Amazon Inspector"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Inspector assesses supported workloads and images for vulnerabilities.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Inspector for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格恢復目標的團隊必須掃描 EC2 和容器工件以查找已知漏洞。應該使用哪種服務？",
+        "question": "團隊必須考慮混合式連線、現有安全邊界，以及變更部署後的營運疑難排解。具有嚴格恢復目標的團隊必須掃描 EC2 和容器工件以查找已知漏洞。應該使用哪種服務？",
         "options": {
-          "A": "Amazon SES",
-          "B": "Amazon Inspector",
-          "C": "Amazon Cognito",
-          "D": "AWS CloudFormation"
+          "A": "AWS CloudTrail",
+          "B": "Amazon GuardDuty",
+          "C": "AWS Security Hub",
+          "D": "Amazon Inspector"
         },
-        "explanation": "Inspector 評估支援的工作負載和映像是否有漏洞。\n其他選擇提供身分、基礎設施即代碼或電子郵件。"
+        "explanation": "Inspector 評估支援的工作負載和映像是否有漏洞。\n其他選項適用於此領域的不同需求，但不能像 Amazon Inspector 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d1-010",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A developer team preparing a release needs audit records for security API activity. Which service should be configured?",
+    "question": "A developer team preparing a release is reviewing a production decision. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The team needs audit records for security API activity. Which service should be configured?",
     "options": {
-      "A": "AWS Budgets",
-      "B": "Amazon ElastiCache",
+      "A": "AWS Security Hub",
+      "B": "Amazon Macie",
       "C": "AWS CloudTrail",
-      "D": "Amazon EFS"
+      "D": "Amazon GuardDuty"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "CloudTrail records API activity for investigation and compliance.\nThe other choices provide storage, cost monitoring, or caching.",
-    "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "CloudTrail records API activity for investigation and compliance.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS CloudTrail for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊需要安全 API 活動的審核記錄。應該配置哪個服務？",
+        "question": "團隊必須考慮混合式連線、現有安全邊界，以及變更部署後的營運疑難排解。準備發布的開發團隊需要安全 API 活動的審核記錄。應該配置哪個服務？",
         "options": {
-          "A": "AWS Budgets",
-          "B": "Amazon ElastiCache",
+          "A": "AWS Security Hub",
+          "B": "Amazon Macie",
           "C": "AWS CloudTrail",
-          "D": "Amazon EFS"
+          "D": "Amazon GuardDuty"
         },
-        "explanation": "CloudTrail 記錄 API 活動以進行調查和合規性。\n其他選擇提供儲存、成本監控或快取。"
+        "explanation": "CloudTrail 記錄 API 活動以進行調查和合規性。\n其他選項適用於此領域的不同需求，但不能像 AWS CloudTrail 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d1-011",
-    "type": "single",
-    "question": "An enterprise with several AWS Regions needs managed threat detection using AWS account and network telemetry. Which service should be enabled?",
-    "options": {
-      "A": "Amazon EFS",
-      "B": "AWS Glue",
-      "C": "Amazon CloudFront",
-      "D": "Amazon GuardDuty"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "GuardDuty analyzes supported telemetry and produces security findings.\nThe other choices provide file storage, ETL, or content delivery.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The team needs managed threat detection using AWS account and network telemetry. Which service should be enabled?",
+    "options": {
+      "A": "Amazon Inspector",
+      "B": "Amazon GuardDuty",
+      "C": "AWS Security Hub",
+      "D": "Amazon Macie"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "GuardDuty analyzes supported telemetry and produces security findings.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon GuardDuty for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業需要使用 AWS 帳戶和網路遙測進行託管威脅偵測。應該啟用哪個服務？",
+        "question": "此需求必須大規模套用。方案應避免一次性的人手設定，並提供證據證明控制措施持續有效。擁有多個 AWS 區域的企業需要使用 AWS 帳戶和網路遙測進行託管威脅偵測。應該啟用哪個服務？",
         "options": {
-          "A": "Amazon EFS",
-          "B": "AWS Glue",
-          "C": "Amazon CloudFront",
-          "D": "Amazon GuardDuty"
+          "A": "Amazon Inspector",
+          "B": "Amazon GuardDuty",
+          "C": "AWS Security Hub",
+          "D": "Amazon Macie"
         },
-        "explanation": "GuardDuty 分析支援的遙測並產生安全結果。\n其他選項提供文件儲存、ETL 或內容交付。"
+        "explanation": "GuardDuty 分析支援的遙測並產生安全結果。\n其他選項適用於此領域的不同需求，但不能像 Amazon GuardDuty 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d1-012",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A service owner reviewing an incident must aggregate security findings across accounts and Regions. Which service should be evaluated?",
+    "question": "A service owner reviewing an incident is redesigning one integrated end-to-end architecture. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The organization will accept additional managed-service cost only when it measurably improves security and availability with less operational effort. The workload must aggregate security findings across accounts and Regions, and the same architecture must restrict a delegated administrator from granting permissions beyond an approved set. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "AWS Security Hub",
-      "B": "Amazon Route 53",
-      "C": "AWS Batch",
-      "D": "Amazon RDS"
+      "A": "Use AWS Security Hub for the primary requirement and integrate it with An IAM permission boundary for the connected control",
+      "B": "Use AWS Security Hub but replace the connected control with Amazon GuardDuty",
+      "C": "Use Amazon Macie for the primary requirement and integrate it with An IAM permission boundary",
+      "D": "Combine Amazon Macie with Amazon Inspector as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Security Hub centralizes and normalizes findings from supported security services.\nThe other choices provide DNS, batch compute, or databases.",
-    "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "AWS Security Hub satisfies the first part of the architecture: Security Hub centralizes and normalizes findings from supported security services. An IAM permission boundary satisfies the connected requirement: Permission boundaries cap the maximum permissions an identity can receive.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務所有者必須匯總跨帳戶和區域的安全結果。應該評估哪些服務？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：受監管的公司必須集中安全發現並優先處理高風險問題。 第二項需求：支援關鍵工作負載的營運團隊必須限制委派管理員授予超出批准集的權限。 只有在託管服務能以較低營運負擔明確改善安全性與可用性時，組織才會接受額外成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "AWS Security Hub",
-          "B": "Amazon Route 53",
-          "C": "AWS Batch",
-          "D": "Amazon RDS"
+          "A": "以AWS Security Hub處理主要需求，並整合IAM Permissions邊界作為相連控制",
+          "B": "使用AWS Security Hub，但以Amazon GuardDuty取代相連控制",
+          "C": "以Amazon Macie處理主要需求，並整合IAM Permissions邊界",
+          "D": "把Amazon Macie與Amazon Inspector結合為單一平台設計"
         },
-        "explanation": "Security Hub 集中並標準化受支援的安全服務的發現結果。\n其他選擇提供 DNS、批次計算或資料庫。"
+        "explanation": "AWS Security Hub 負責架構的第一項需求，IAM Permissions邊界 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "scs-c03-d1-013",
-    "type": "single",
-    "question": "A team optimizing an existing implementation needs to identify sensitive data in S3 that could increase incident impact. Which service fits?",
-    "options": {
-      "A": "AWS Certificate Manager",
-      "B": "Amazon Macie",
-      "C": "AWS WAF",
-      "D": "Amazon EBS"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Macie discovers sensitive data such as PII in S3 and reports findings.\nThe other choices provide web filtering, block storage, or certificates.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The team needs to identify sensitive data in S3 that could increase incident impact. Which service fits?",
+    "options": {
+      "A": "Amazon Inspector",
+      "B": "AWS CloudTrail",
+      "C": "Amazon GuardDuty",
+      "D": "Amazon Macie"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Macie discovers sensitive data such as PII in S3 and reports findings.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Macie for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊需要識別 S3 中可能增加事件影響的敏感資料。適合哪種服務？",
+        "question": "此需求必須大規模套用。方案應避免一次性的人手設定，並提供證據證明控制措施持續有效。優化現有實施的團隊需要識別 S3 中可能增加事件影響的敏感資料。適合哪種服務？",
         "options": {
-          "A": "AWS Certificate Manager",
-          "B": "Amazon Macie",
-          "C": "AWS WAF",
-          "D": "Amazon EBS"
+          "A": "Amazon Inspector",
+          "B": "AWS CloudTrail",
+          "C": "Amazon GuardDuty",
+          "D": "Amazon Macie"
         },
-        "explanation": "Macie 在 S3 中發現敏感資料（例如 PII）並報告發現結果。\n其他選項提供 Web 過濾、區塊儲存或憑證。"
+        "explanation": "Macie 在 S3 中發現敏感資料（例如 PII）並報告發現結果。\n其他選項適用於此領域的不同需求，但不能像 Amazon Macie 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d1-014",
-    "type": "single",
-    "question": "A company introducing an automated workflow must scan EC2 and container artifacts for known vulnerabilities. Which service should be used?",
-    "options": {
-      "A": "AWS CloudFormation",
-      "B": "Amazon SES",
-      "C": "Amazon Inspector",
-      "D": "Amazon Cognito"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "Inspector assesses supported workloads and images for vulnerabilities.\nThe other choices provide identity, infrastructure as code, or email.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A company introducing an automated workflow is planning two independent production changes. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The first team must scan EC2 and container artifacts for known vulnerabilities. A second team needs audit records for security API activity. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Amazon Inspector",
+      "B": "AWS CloudTrail",
+      "C": "Amazon GuardDuty",
+      "D": "AWS Security Hub",
+      "E": "Amazon Macie"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Amazon Inspector meets the first requirement: Inspector assesses supported workloads and images for vulnerabilities. AWS CloudTrail meets the second requirement: CloudTrail records API activity for investigation and compliance.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司必須掃描 EC2 和容器工件以查找已知漏洞。應該使用哪種服務？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此需求必須大規模套用。方案應避免一次性的人手設定，並提供證據證明控制措施持續有效。第一項需求：準備增加流量的新創公司必須掃描 EC2 和容器工件以查找已知漏洞。第二項需求：支援關鍵工作負載的營運團隊需要安全 API 活動的審核記錄。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "AWS CloudFormation",
-          "B": "Amazon SES",
-          "C": "Amazon Inspector",
-          "D": "Amazon Cognito"
+          "A": "Amazon Inspector",
+          "B": "AWS CloudTrail",
+          "C": "Amazon GuardDuty",
+          "D": "AWS Security Hub",
+          "E": "Amazon Macie"
         },
-        "explanation": "Inspector 評估支援的工作負載和映像是否有漏洞。\n其他選擇提供身分、基礎設施即代碼或電子郵件。"
+        "explanation": "Amazon Inspector 符合第一項需求：Inspector 評估支援的工作負載和映像是否有漏洞。 AWS CloudTrail 符合第二項需求：CloudTrail 記錄 API 活動以進行調查和合規性。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "scs-c03-d1-015",
-    "type": "single",
-    "question": "An AWS administrator working in a shared environment needs audit records for security API activity. Which service should be configured?",
-    "options": {
-      "A": "Amazon EFS",
-      "B": "AWS Budgets",
-      "C": "Amazon ElastiCache",
-      "D": "AWS CloudTrail"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "CloudTrail records API activity for investigation and compliance.\nThe other choices provide storage, cost monitoring, or caching.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment is reviewing a production decision. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The team needs audit records for security API activity. Which service should be configured?",
+    "options": {
+      "A": "Amazon Macie",
+      "B": "AWS CloudTrail",
+      "C": "Amazon GuardDuty",
+      "D": "AWS Security Hub"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudTrail records API activity for investigation and compliance.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS CloudTrail for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "在共用環境中工作的 AWS 管理員需要安全 API 活動的審核記錄。應該配置哪個服務？",
+        "question": "此需求必須大規模套用。方案應避免一次性的人手設定，並提供證據證明控制措施持續有效。在共用環境中工作的 AWS 管理員需要安全 API 活動的審核記錄。應該配置哪個服務？",
         "options": {
-          "A": "Amazon EFS",
-          "B": "AWS Budgets",
-          "C": "Amazon ElastiCache",
-          "D": "AWS CloudTrail"
+          "A": "Amazon Macie",
+          "B": "AWS CloudTrail",
+          "C": "Amazon GuardDuty",
+          "D": "AWS Security Hub"
         },
-        "explanation": "CloudTrail 記錄 API 活動以進行調查和合規性。\n其他選擇提供儲存、成本監控或快取。"
+        "explanation": "CloudTrail 記錄 API 活動以進行調查和合規性。\n其他選項適用於此領域的不同需求，但不能像 AWS CloudTrail 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d1-016",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A customer-facing application team needs managed threat detection using AWS account and network telemetry. Which service should be enabled?",
+    "question": "A customer-facing application team is redesigning one integrated end-to-end architecture. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The architecture must limit blast radius, preserve availability during change, and control cost through automation instead of permanent overprovisioning. The workload needs managed threat detection using AWS account and network telemetry, and the same architecture needs to discover PII before sharing a data set with another account. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "Amazon GuardDuty",
-      "B": "Amazon EFS",
-      "C": "AWS Glue",
-      "D": "Amazon CloudFront"
+      "A": "Use Amazon GuardDuty for the primary requirement and integrate it with Amazon Macie for the connected control",
+      "B": "Use Amazon GuardDuty but replace the connected control with AWS Security Hub",
+      "C": "Use Amazon Inspector for the primary requirement and integrate it with Amazon Macie",
+      "D": "Combine Amazon Inspector with AWS CloudTrail as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "GuardDuty analyzes supported telemetry and produces security findings.\nThe other choices provide file storage, ETL, or content delivery.",
-    "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Amazon GuardDuty satisfies the first part of the architecture: GuardDuty analyzes supported telemetry and produces security findings. Amazon Macie satisfies the connected requirement: Macie discovers sensitive data in S3 and can inform remediation before sharing.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊需要使用 AWS 帳戶和網路遙測進行託管威脅偵測。應該啟用哪個服務？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：擁有多個 AWS 區域的企業需要使用 AWS 帳戶和網路遙測進行託管威脅偵測。 第二項需求：支援關鍵工作負載的營運團隊需要在與其他帳戶共用資料集之前發現 PII。 此架構必須限制影響範圍、在變更期間維持可用性，並透過自動化控制成本，而不是長期過度佈建。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "Amazon GuardDuty",
-          "B": "Amazon EFS",
-          "C": "AWS Glue",
-          "D": "Amazon CloudFront"
+          "A": "以Amazon GuardDuty處理主要需求，並整合Amazon Macie作為相連控制",
+          "B": "使用Amazon GuardDuty，但以AWS Security Hub取代相連控制",
+          "C": "以Amazon Inspector處理主要需求，並整合Amazon Macie",
+          "D": "把Amazon Inspector與AWS CloudTrail結合為單一平台設計"
         },
-        "explanation": "GuardDuty 分析支援的遙測並產生安全結果。\n其他選項提供文件儲存、ETL 或內容交付。"
+        "explanation": "Amazon GuardDuty 負責架構的第一項需求，Amazon Macie 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "scs-c03-d1-017",
-    "type": "single",
-    "question": "A platform team standardizing its AWS deployments must aggregate security findings across accounts and Regions. Which service should be evaluated?",
-    "options": {
-      "A": "Amazon RDS",
-      "B": "AWS Security Hub",
-      "C": "Amazon Route 53",
-      "D": "AWS Batch"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Security Hub centralizes and normalizes findings from supported security services.\nThe other choices provide DNS, batch compute, or databases.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A platform team standardizing its AWS deployments is reviewing several independent production requirements. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. Match each workload requirement to the most appropriate implementation.",
+    "options": {
+      "A": "A workload must aggregate security findings across accounts and Regions",
+      "B": "A workload needs to identify sensitive data in S3 that could increase incident impact",
+      "C": "A workload must scan EC2 and container artifacts for known vulnerabilities"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "AWS Security Hub",
+      "2": "Amazon Macie",
+      "3": "Amazon Inspector"
+    },
+    "correctMatches": {
+      "A": "1",
+      "B": "2",
+      "C": "3"
+    },
+    "explanation": "A maps to AWS Security Hub. Security Hub centralizes and normalizes findings from supported security services. B maps to Amazon Macie. Macie discovers sensitive data such as PII in S3 and reports findings. C maps to Amazon Inspector. Inspector assesses supported workloads and images for vulnerabilities.\nEach target is intended for a different requirement, so all three mappings must be evaluated independently.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊必須匯總跨帳戶和區域的安全發現。應該評估哪些服務？",
+        "question": "團隊正在審查多項彼此獨立的生產需求。目前架構支援業務關鍵服務。所選選項必須處理確切的故障或安全條件，而不會削弱其他控制措施。請將每項工作負載需求配對至最適合的實作。",
         "options": {
-          "A": "Amazon RDS",
-          "B": "AWS Security Hub",
-          "C": "Amazon Route 53",
-          "D": "AWS Batch"
+          "A": "工作負載需求：多帳戶平台團隊必須匯總跨帳戶和區域的安全發現",
+          "B": "工作負載需求：受監管的公司需要識別 S3 中可能增加事件影響的敏感資料",
+          "C": "工作負載需求：準備增加流量的新創公司必須掃描 EC2 和容器工件以查找已知漏洞"
         },
-        "explanation": "Security Hub 集中並標準化受支援的安全服務的發現結果。\n其他選擇提供 DNS、批次計算或資料庫。"
+        "targets": {
+          "1": "AWS Security Hub",
+          "2": "Amazon Macie",
+          "3": "Amazon Inspector"
+        },
+        "explanation": "A 對應 AWS Security Hub。Security Hub 集中並標準化受支援的安全服務的發現結果。 B 對應 Amazon Macie。Macie 在 S3 中發現敏感資料（例如 PII）並報告發現結果。 C 對應 Amazon Inspector。Inspector 評估支援的工作負載和映像是否有漏洞。\n每個目標均處理不同需求，因此必須分別評估三項配對。"
       }
     }
   },
   {
     "id": "scs-c03-d1-018",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team preparing evidence for an audit needs to identify sensitive data in S3 that could increase incident impact. Which service fits?",
+    "question": "A team preparing evidence for an audit is reviewing a production decision. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The team needs to identify sensitive data in S3 that could increase incident impact. Which service fits?",
     "options": {
-      "A": "Amazon EBS",
-      "B": "AWS Certificate Manager",
+      "A": "AWS CloudTrail",
+      "B": "Amazon GuardDuty",
       "C": "Amazon Macie",
-      "D": "AWS WAF"
+      "D": "Amazon Inspector"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Macie discovers sensitive data such as PII in S3 and reports findings.\nThe other choices provide web filtering, block storage, or certificates.",
-    "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Macie discovers sensitive data such as PII in S3 and reports findings.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Macie for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "為審計準備證據的團隊需要識別 S3 中可能增加事件影響的敏感資料。適合哪種服務？",
+        "question": "目前架構支援業務關鍵服務。所選選項必須處理確切的故障或安全條件，而不會削弱其他控制措施。為審計準備證據的團隊需要識別 S3 中可能增加事件影響的敏感資料。適合哪種服務？",
         "options": {
-          "A": "Amazon EBS",
-          "B": "AWS Certificate Manager",
+          "A": "AWS CloudTrail",
+          "B": "Amazon GuardDuty",
           "C": "Amazon Macie",
-          "D": "AWS WAF"
+          "D": "Amazon Inspector"
         },
-        "explanation": "Macie 在 S3 中發現敏感資料（例如 PII）並報告發現結果。\n其他選項提供 Web 過濾、區塊儲存或憑證。"
+        "explanation": "Macie 在 S3 中發現敏感資料（例如 PII）並報告發現結果。\n其他選項適用於此領域的不同需求，但不能像 Amazon Macie 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d1-019",
-    "type": "single",
-    "question": "A business replacing a manual process must scan EC2 and container artifacts for known vulnerabilities. Which service should be used?",
-    "options": {
-      "A": "Amazon Cognito",
-      "B": "AWS CloudFormation",
-      "C": "Amazon SES",
-      "D": "Amazon Inspector"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Inspector assesses supported workloads and images for vulnerabilities.\nThe other choices provide identity, infrastructure as code, or email.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A business replacing a manual process is reviewing a production decision. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The team must scan EC2 and container artifacts for known vulnerabilities. Which service should be used?",
+    "options": {
+      "A": "AWS Security Hub",
+      "B": "Amazon Inspector",
+      "C": "AWS CloudTrail",
+      "D": "Amazon GuardDuty"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Inspector assesses supported workloads and images for vulnerabilities.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Inspector for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "取代手動流程的企業必須掃描 EC2 和容器工件以尋找已知漏洞。應該使用哪種服務？",
+        "question": "目前架構支援業務關鍵服務。所選選項必須處理確切的故障或安全條件，而不會削弱其他控制措施。取代手動流程的企業必須掃描 EC2 和容器工件以尋找已知漏洞。應該使用哪種服務？",
         "options": {
-          "A": "Amazon Cognito",
-          "B": "AWS CloudFormation",
-          "C": "Amazon SES",
-          "D": "Amazon Inspector"
+          "A": "AWS Security Hub",
+          "B": "Amazon Inspector",
+          "C": "AWS CloudTrail",
+          "D": "Amazon GuardDuty"
         },
-        "explanation": "Inspector 評估支援的工作負載和映像是否有漏洞。\n其他選擇提供身分、基礎設施即代碼或電子郵件。"
+        "explanation": "Inspector 評估支援的工作負載和映像是否有漏洞。\n其他選項適用於此領域的不同需求，但不能像 Amazon Inspector 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d1-020",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team validating a design against the exam guide needs audit records for security API activity. Which service should be configured?",
+    "question": "A team validating a design against the exam guide is redesigning one integrated end-to-end architecture. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The selected controls must provide auditable security, predictable availability, and the lowest operational cost that still satisfies both requirements. The workload needs audit records for security API activity, and the same architecture must protect the organization root user from routine misuse. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "AWS CloudTrail",
-      "B": "Amazon EFS",
-      "C": "AWS Budgets",
-      "D": "Amazon ElastiCache"
+      "A": "Use AWS CloudTrail for the primary requirement and integrate it with Use the root user only when required and enable MFA for the connected control",
+      "B": "Use AWS CloudTrail but replace the connected control with Amazon GuardDuty",
+      "C": "Use AWS Security Hub for the primary requirement and integrate it with Use the root user only when required and enable MFA",
+      "D": "Combine AWS Security Hub with Amazon Macie as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "CloudTrail records API activity for investigation and compliance.\nThe other choices provide storage, cost monitoring, or caching.",
-    "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "AWS CloudTrail satisfies the first part of the architecture: CloudTrail records API activity for investigation and compliance. Use the root user only when required and enable MFA satisfies the connected requirement: Root-use restrictions and MFA reduce the highest-impact credential risk.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊需要安全 API 活動的審核記錄。應該配置哪個服務？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：準備發布的開發團隊需要安全 API 活動的審核記錄。 第二項需求：支援關鍵工作負載的營運團隊必須保護組織根使用者免於日常濫用。 所選控制必須提供可稽核的安全性、可預測的可用性，以及在滿足兩項要求前提下最低的營運成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "AWS CloudTrail",
-          "B": "Amazon EFS",
-          "C": "AWS Budgets",
-          "D": "Amazon ElastiCache"
+          "A": "以AWS CloudTrail處理主要需求，並整合僅在需要時使用 root 使用者並啟用 MFA作為相連控制",
+          "B": "使用AWS CloudTrail，但以Amazon GuardDuty取代相連控制",
+          "C": "以AWS Security Hub處理主要需求，並整合僅在需要時使用 root 使用者並啟用 MFA",
+          "D": "把AWS Security Hub與Amazon Macie結合為單一平台設計"
         },
-        "explanation": "CloudTrail 記錄 API 活動以進行調查和合規性。\n其他選擇提供儲存、成本監控或快取。"
+        "explanation": "AWS CloudTrail 負責架構的第一項需求，僅在需要時使用 root 使用者並啟用 MFA 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "scs-c03-d1-021",
-    "type": "single",
-    "question": "A production team needs managed threat detection using AWS account and network telemetry. Which service should be enabled?",
-    "options": {
-      "A": "Amazon CloudFront",
-      "B": "Amazon GuardDuty",
-      "C": "Amazon EFS",
-      "D": "AWS Glue"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "GuardDuty analyzes supported telemetry and produces security findings.\nThe other choices provide file storage, ETL, or content delivery.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A production team is planning two independent production changes. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The first team needs managed threat detection using AWS account and network telemetry. A second team must aggregate security findings across accounts and Regions. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Amazon Macie",
+      "B": "Amazon Inspector",
+      "C": "AWS CloudTrail",
+      "D": "Amazon GuardDuty",
+      "E": "AWS Security Hub"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Amazon GuardDuty meets the first requirement: GuardDuty analyzes supported telemetry and produces security findings. AWS Security Hub meets the second requirement: Security Hub centralizes and normalizes findings from supported security services.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "生產團隊需要使用 AWS 帳戶和網路遙測進行託管威脅偵測。應該啟用哪個服務？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。專業工程師將審查實作的服務限制、故障行為及建議設計的營運取捨。第一項需求：生產團隊需要使用 AWS 帳戶和網路遙測進行託管威脅偵測。第二項需求：多帳戶平台團隊必須匯總跨帳戶和區域的安全發現。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "Amazon CloudFront",
-          "B": "Amazon GuardDuty",
-          "C": "Amazon EFS",
-          "D": "AWS Glue"
+          "A": "Amazon Macie",
+          "B": "Amazon Inspector",
+          "C": "AWS CloudTrail",
+          "D": "Amazon GuardDuty",
+          "E": "AWS Security Hub"
         },
-        "explanation": "GuardDuty 分析支援的遙測並產生安全結果。\n其他選項提供文件儲存、ETL 或內容交付。"
+        "explanation": "Amazon GuardDuty 符合第一項需求：GuardDuty 分析支援的遙測並產生安全結果。 AWS Security Hub 符合第二項需求：Security Hub 集中並標準化受支援的安全服務的發現結果。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "scs-c03-d1-022",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A multi-account platform team must aggregate security findings across accounts and Regions. Which service should be evaluated?",
+    "question": "A multi-account platform team is reviewing a production decision. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The team must aggregate security findings across accounts and Regions. Which service should be evaluated?",
     "options": {
-      "A": "AWS Batch",
-      "B": "Amazon RDS",
+      "A": "Amazon Inspector",
+      "B": "AWS CloudTrail",
       "C": "AWS Security Hub",
-      "D": "Amazon Route 53"
+      "D": "Amazon Macie"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Security Hub centralizes and normalizes findings from supported security services.\nThe other choices provide DNS, batch compute, or databases.",
-    "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Security Hub centralizes and normalizes findings from supported security services.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Security Hub for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊必須匯總跨帳戶和區域的安全發現。應該評估哪些服務？",
+        "question": "專業工程師將審查實作的服務限制、故障行為及建議設計的營運取捨。多帳戶平台團隊必須匯總跨帳戶和區域的安全發現。應該評估哪些服務？",
         "options": {
-          "A": "AWS Batch",
-          "B": "Amazon RDS",
+          "A": "Amazon Inspector",
+          "B": "AWS CloudTrail",
           "C": "AWS Security Hub",
-          "D": "Amazon Route 53"
+          "D": "Amazon Macie"
         },
-        "explanation": "Security Hub 集中並標準化受支援的安全服務的發現結果。\n其他選擇提供 DNS、批次計算或資料庫。"
+        "explanation": "Security Hub 集中並標準化受支援的安全服務的發現結果。\n其他選項適用於此領域的不同需求，但不能像 AWS Security Hub 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d1-023",
-    "type": "single",
-    "question": "A regulated company needs to identify sensitive data in S3 that could increase incident impact. Which service fits?",
-    "options": {
-      "A": "AWS WAF",
-      "B": "Amazon EBS",
-      "C": "AWS Certificate Manager",
-      "D": "Amazon Macie"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Macie discovers sensitive data such as PII in S3 and reports findings.\nThe other choices provide web filtering, block storage, or certificates.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A regulated company is reviewing a production decision. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The team needs to identify sensitive data in S3 that could increase incident impact. Which service fits?",
+    "options": {
+      "A": "Amazon GuardDuty",
+      "B": "Amazon Macie",
+      "C": "Amazon Inspector",
+      "D": "AWS CloudTrail"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Macie discovers sensitive data such as PII in S3 and reports findings.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Macie for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司需要識別 S3 中可能增加事件影響的敏感資料。適合哪種服務？",
+        "question": "專業工程師將審查實作的服務限制、故障行為及建議設計的營運取捨。受監管的公司需要識別 S3 中可能增加事件影響的敏感資料。適合哪種服務？",
         "options": {
-          "A": "AWS WAF",
-          "B": "Amazon EBS",
-          "C": "AWS Certificate Manager",
-          "D": "Amazon Macie"
+          "A": "Amazon GuardDuty",
+          "B": "Amazon Macie",
+          "C": "Amazon Inspector",
+          "D": "AWS CloudTrail"
         },
-        "explanation": "Macie 在 S3 中發現敏感資料（例如 PII）並報告發現結果。\n其他選項提供 Web 過濾、區塊儲存或憑證。"
+        "explanation": "Macie 在 S3 中發現敏感資料（例如 PII）並報告發現結果。\n其他選項適用於此領域的不同需求，但不能像 Amazon Macie 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d1-024",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A startup preparing for a traffic increase must scan EC2 and container artifacts for known vulnerabilities. Which service should be used?",
+    "question": "A startup preparing for a traffic increase is redesigning one integrated end-to-end architecture. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The design must keep recurring cost proportional to use, enforce least privilege, and remain available during a component or Availability Zone failure. The workload must scan EC2 and container artifacts for known vulnerabilities, and the same architecture needs audit records for security API activity. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "Amazon Inspector",
-      "B": "Amazon Cognito",
-      "C": "AWS CloudFormation",
-      "D": "Amazon SES"
+      "A": "Use Amazon Inspector for the primary requirement and integrate it with AWS CloudTrail for the connected control",
+      "B": "Use Amazon Inspector but replace the connected control with Amazon GuardDuty",
+      "C": "Use AWS Security Hub for the primary requirement and integrate it with AWS CloudTrail",
+      "D": "Combine AWS Security Hub with Amazon Macie as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Inspector assesses supported workloads and images for vulnerabilities.\nThe other choices provide identity, infrastructure as code, or email.",
-    "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Amazon Inspector satisfies the first part of the architecture: Inspector assesses supported workloads and images for vulnerabilities. AWS CloudTrail satisfies the connected requirement: CloudTrail records API activity for investigation and compliance.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司必須掃描 EC2 和容器工件以查找已知漏洞。應該使用哪種服務？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：具有嚴格恢復目標的團隊必須掃描 EC2 和容器工件以查找已知漏洞。 第二項需求：準備發布的開發團隊需要安全 API 活動的審核記錄。 此設計必須讓持續成本與實際用量相符、落實最低權限，並在元件或可用區域發生故障時維持可用。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "Amazon Inspector",
-          "B": "Amazon Cognito",
-          "C": "AWS CloudFormation",
-          "D": "Amazon SES"
+          "A": "以Amazon Inspector處理主要需求，並整合AWS CloudTrail作為相連控制",
+          "B": "使用Amazon Inspector，但以Amazon GuardDuty取代相連控制",
+          "C": "以AWS Security Hub處理主要需求，並整合AWS CloudTrail",
+          "D": "把AWS Security Hub與Amazon Macie結合為單一平台設計"
         },
-        "explanation": "Inspector 評估支援的工作負載和映像是否有漏洞。\n其他選擇提供身分、基礎設施即代碼或電子郵件。"
+        "explanation": "Amazon Inspector 負責架構的第一項需求，AWS CloudTrail 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "scs-c03-d1-025",
-    "type": "single",
-    "question": "An operations team supporting a critical workload needs audit records for security API activity. Which service should be configured?",
-    "options": {
-      "A": "Amazon ElastiCache",
-      "B": "AWS CloudTrail",
-      "C": "Amazon EFS",
-      "D": "AWS Budgets"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "CloudTrail records API activity for investigation and compliance.\nThe other choices provide storage, cost monitoring, or caching.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The team needs audit records for security API activity. Which service should be configured?",
+    "options": {
+      "A": "Amazon GuardDuty",
+      "B": "AWS Security Hub",
+      "C": "Amazon Macie",
+      "D": "AWS CloudTrail"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudTrail records API activity for investigation and compliance.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS CloudTrail for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊需要安全 API 活動的審核記錄。應該配置哪個服務？",
+        "question": "專業工程師將審查實作的服務限制、故障行為及建議設計的營運取捨。支援關鍵工作負載的營運團隊需要安全 API 活動的審核記錄。應該配置哪個服務？",
         "options": {
-          "A": "Amazon ElastiCache",
-          "B": "AWS CloudTrail",
-          "C": "Amazon EFS",
-          "D": "AWS Budgets"
+          "A": "Amazon GuardDuty",
+          "B": "AWS Security Hub",
+          "C": "Amazon Macie",
+          "D": "AWS CloudTrail"
         },
-        "explanation": "CloudTrail 記錄 API 活動以進行調查和合規性。\n其他選擇提供儲存、成本監控或快取。"
+        "explanation": "CloudTrail 記錄 API 活動以進行調查和合規性。\n其他選項適用於此領域的不同需求，但不能像 AWS CloudTrail 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d1-026",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A data platform team needs managed threat detection using AWS account and network telemetry. Which service should be enabled?",
+    "question": "A data platform team is reviewing a production decision. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The team needs managed threat detection using AWS account and network telemetry. Which service should be enabled?",
     "options": {
-      "A": "AWS Glue",
-      "B": "Amazon CloudFront",
+      "A": "Amazon Macie",
+      "B": "Amazon Inspector",
       "C": "Amazon GuardDuty",
-      "D": "Amazon EFS"
+      "D": "AWS Security Hub"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "GuardDuty analyzes supported telemetry and produces security findings.\nThe other choices provide file storage, ETL, or content delivery.",
-    "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "GuardDuty analyzes supported telemetry and produces security findings.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon GuardDuty for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要使用 AWS 帳戶和網路遙測進行託管威脅偵測。應該啟用哪個服務？",
+        "question": "此生產環境在多個帳戶中採用集中治理。變更必須符合最低權限、可以稽核，並且不會造成長時間中斷。資料平台團隊需要使用 AWS 帳戶和網路遙測進行託管威脅偵測。應該啟用哪個服務？",
         "options": {
-          "A": "AWS Glue",
-          "B": "Amazon CloudFront",
+          "A": "Amazon Macie",
+          "B": "Amazon Inspector",
           "C": "Amazon GuardDuty",
-          "D": "Amazon EFS"
+          "D": "AWS Security Hub"
         },
-        "explanation": "GuardDuty 分析支援的遙測並產生安全結果。\n其他選項提供文件儲存、ETL 或內容交付。"
+        "explanation": "GuardDuty 分析支援的遙測並產生安全結果。\n其他選項適用於此領域的不同需求，但不能像 Amazon GuardDuty 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d1-027",
-    "type": "single",
-    "question": "A security-conscious engineering team must aggregate security findings across accounts and Regions. Which service should be evaluated?",
-    "options": {
-      "A": "Amazon Route 53",
-      "B": "AWS Batch",
-      "C": "Amazon RDS",
-      "D": "AWS Security Hub"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Security Hub centralizes and normalizes findings from supported security services.\nThe other choices provide DNS, batch compute, or databases.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A security-conscious engineering team is reviewing a production decision. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The team must aggregate security findings across accounts and Regions. Which service should be evaluated?",
+    "options": {
+      "A": "AWS CloudTrail",
+      "B": "AWS Security Hub",
+      "C": "Amazon Macie",
+      "D": "Amazon Inspector"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Security Hub centralizes and normalizes findings from supported security services.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Security Hub for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊必須匯總跨帳戶和區域的安全發現。應該評估哪些服務？",
+        "question": "此生產環境在多個帳戶中採用集中治理。變更必須符合最低權限、可以稽核，並且不會造成長時間中斷。具有安全意識的工程團隊必須匯總跨帳戶和區域的安全發現。應該評估哪些服務？",
         "options": {
-          "A": "Amazon Route 53",
-          "B": "AWS Batch",
-          "C": "Amazon RDS",
-          "D": "AWS Security Hub"
+          "A": "AWS CloudTrail",
+          "B": "AWS Security Hub",
+          "C": "Amazon Macie",
+          "D": "Amazon Inspector"
         },
-        "explanation": "Security Hub 集中並標準化受支援的安全服務的發現結果。\n其他選擇提供 DNS、批次計算或資料庫。"
+        "explanation": "Security Hub 集中並標準化受支援的安全服務的發現結果。\n其他選項適用於此領域的不同需求，但不能像 AWS Security Hub 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d1-028",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A company migrating an existing workload needs to identify sensitive data in S3 that could increase incident impact. Which service fits?",
+    "question": "A company migrating an existing workload is redesigning one integrated end-to-end architecture. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The design must avoid unnecessary standby cost without weakening security controls or the availability objective. The workload needs to identify sensitive data in S3 that could increase incident impact, and the same architecture must determine the timeline of unauthorized API calls. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "Amazon Macie",
-      "B": "AWS WAF",
-      "C": "Amazon EBS",
-      "D": "AWS Certificate Manager"
+      "A": "Use Amazon Macie for the primary requirement and integrate it with CloudTrail events correlated with identity and resource logs for the connected control",
+      "B": "Use Amazon Macie but replace the connected control with Amazon GuardDuty",
+      "C": "Use AWS Security Hub for the primary requirement and integrate it with CloudTrail events correlated with identity and resource logs",
+      "D": "Combine AWS Security Hub with Amazon Inspector as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Macie discovers sensitive data such as PII in S3 and reports findings.\nThe other choices provide web filtering, block storage, or certificates.",
-    "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Amazon Macie satisfies the first part of the architecture: Macie discovers sensitive data such as PII in S3 and reports findings. CloudTrail events correlated with identity and resource logs satisfies the connected requirement: Correlated API, identity, and resource logs establish who did what and when.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司需要識別 S3 中可能增加事件影響的敏感資料。適合哪種服務？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：支援關鍵工作負載的營運團隊需要在與其他帳戶共用資料集之前發現 PII。 第二項需求：支援關鍵工作負載的營運團隊必須確定未經授權的 API 呼叫的時間表。 此設計必須避免不必要的備用成本，同時不可削弱安全控制或可用性目標。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "Amazon Macie",
-          "B": "AWS WAF",
-          "C": "Amazon EBS",
-          "D": "AWS Certificate Manager"
+          "A": "以Amazon Macie處理主要需求，並整合與身分和資源日誌相關的 CloudTrail 事件作為相連控制",
+          "B": "使用Amazon Macie，但以Amazon GuardDuty取代相連控制",
+          "C": "以AWS Security Hub處理主要需求，並整合與身分和資源日誌相關的 CloudTrail 事件",
+          "D": "把AWS Security Hub與Amazon Inspector結合為單一平台設計"
         },
-        "explanation": "Macie 在 S3 中發現敏感資料（例如 PII）並報告發現結果。\n其他選項提供 Web 過濾、區塊儲存或憑證。"
+        "explanation": "Amazon Macie 負責架構的第一項需求，與身分和資源日誌相關的 CloudTrail 事件 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "scs-c03-d1-029",
-    "type": "single",
-    "question": "A team with strict recovery objectives must scan EC2 and container artifacts for known vulnerabilities. Which service should be used?",
-    "options": {
-      "A": "Amazon SES",
-      "B": "Amazon Inspector",
-      "C": "Amazon Cognito",
-      "D": "AWS CloudFormation"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Inspector assesses supported workloads and images for vulnerabilities.\nThe other choices provide identity, infrastructure as code, or email.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team with strict recovery objectives is reviewing a production decision. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The team must scan EC2 and container artifacts for known vulnerabilities. Which service should be used?",
+    "options": {
+      "A": "AWS CloudTrail",
+      "B": "Amazon GuardDuty",
+      "C": "AWS Security Hub",
+      "D": "Amazon Inspector"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Inspector assesses supported workloads and images for vulnerabilities.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Inspector for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格恢復目標的團隊必須掃描 EC2 和容器工件以查找已知漏洞。應該使用哪種服務？",
+        "question": "此生產環境在多個帳戶中採用集中治理。變更必須符合最低權限、可以稽核，並且不會造成長時間中斷。具有嚴格恢復目標的團隊必須掃描 EC2 和容器工件以查找已知漏洞。應該使用哪種服務？",
         "options": {
-          "A": "Amazon SES",
-          "B": "Amazon Inspector",
-          "C": "Amazon Cognito",
-          "D": "AWS CloudFormation"
+          "A": "AWS CloudTrail",
+          "B": "Amazon GuardDuty",
+          "C": "AWS Security Hub",
+          "D": "Amazon Inspector"
         },
-        "explanation": "Inspector 評估支援的工作負載和映像是否有漏洞。\n其他選擇提供身分、基礎設施即代碼或電子郵件。"
+        "explanation": "Inspector 評估支援的工作負載和映像是否有漏洞。\n其他選項適用於此領域的不同需求，但不能像 Amazon Inspector 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d1-030",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A developer team preparing a release needs audit records for security API activity. Which service should be configured?",
+    "question": "A developer team preparing a release is reviewing a production decision. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The team needs audit records for security API activity. Which service should be configured?",
     "options": {
-      "A": "AWS Budgets",
-      "B": "Amazon ElastiCache",
+      "A": "AWS Security Hub",
+      "B": "Amazon Macie",
       "C": "AWS CloudTrail",
-      "D": "Amazon EFS"
+      "D": "Amazon GuardDuty"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "CloudTrail records API activity for investigation and compliance.\nThe other choices provide storage, cost monitoring, or caching.",
-    "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "CloudTrail records API activity for investigation and compliance.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS CloudTrail for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊需要安全 API 活動的審核記錄。應該配置哪個服務？",
+        "question": "此生產環境在多個帳戶中採用集中治理。變更必須符合最低權限、可以稽核，並且不會造成長時間中斷。準備發布的開發團隊需要安全 API 活動的審核記錄。應該配置哪個服務？",
         "options": {
-          "A": "AWS Budgets",
-          "B": "Amazon ElastiCache",
+          "A": "AWS Security Hub",
+          "B": "Amazon Macie",
           "C": "AWS CloudTrail",
-          "D": "Amazon EFS"
+          "D": "Amazon GuardDuty"
         },
-        "explanation": "CloudTrail 記錄 API 活動以進行調查和合規性。\n其他選擇提供儲存、成本監控或快取。"
+        "explanation": "CloudTrail 記錄 API 活動以進行調查和合規性。\n其他選項適用於此領域的不同需求，但不能像 AWS CloudTrail 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d1-031",
-    "type": "single",
-    "question": "An enterprise with several AWS Regions needs managed threat detection using AWS account and network telemetry. Which service should be enabled?",
-    "options": {
-      "A": "Amazon EFS",
-      "B": "AWS Glue",
-      "C": "Amazon CloudFront",
-      "D": "Amazon GuardDuty"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "GuardDuty analyzes supported telemetry and produces security findings.\nThe other choices provide file storage, ETL, or content delivery.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The team needs managed threat detection using AWS account and network telemetry. Which service should be enabled?",
+    "options": {
+      "A": "Amazon Inspector",
+      "B": "Amazon GuardDuty",
+      "C": "AWS Security Hub",
+      "D": "Amazon Macie"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "GuardDuty analyzes supported telemetry and produces security findings.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon GuardDuty for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業需要使用 AWS 帳戶和網路遙測進行託管威脅偵測。應該啟用哪個服務？",
+        "question": "團隊必須考慮混合式連線、現有安全邊界，以及變更部署後的營運疑難排解。擁有多個 AWS 區域的企業需要使用 AWS 帳戶和網路遙測進行託管威脅偵測。應該啟用哪個服務？",
         "options": {
-          "A": "Amazon EFS",
-          "B": "AWS Glue",
-          "C": "Amazon CloudFront",
-          "D": "Amazon GuardDuty"
+          "A": "Amazon Inspector",
+          "B": "Amazon GuardDuty",
+          "C": "AWS Security Hub",
+          "D": "Amazon Macie"
         },
-        "explanation": "GuardDuty 分析支援的遙測並產生安全結果。\n其他選項提供文件儲存、ETL 或內容交付。"
+        "explanation": "GuardDuty 分析支援的遙測並產生安全結果。\n其他選項適用於此領域的不同需求，但不能像 Amazon GuardDuty 一樣直接滿足題目的指定條件。"
       }
     }
   }

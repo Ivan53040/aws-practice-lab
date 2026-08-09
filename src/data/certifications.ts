@@ -22,8 +22,8 @@ export interface CertDomain {
   weight?: number
   /**
    * Inclusive range of exam-guide task statements covered by this domain, e.g.
-   * '1.1–1.4'. Sourced from the official AWS exam guide's task-statement
-   * numbering (domain N -> 'N.1–N.x'). Surfaced in the Domain_Landing intro
+   * '1.1-1.4'. Sourced from the official AWS exam guide's task-statement
+   * numbering (domain N -> 'N.1-N.x'). Surfaced in the Domain_Landing intro
    * sentence. Optional: populated only for active certs verified against the
    * guide. (R23.4)
    */
@@ -92,7 +92,7 @@ export interface ExamFormat {
   /**
    * Question formats used by the REAL exam, e.g. 'single-select',
    * 'multi-select', 'ordering', 'matching'. Mirrors the official
-   * AWS exam guide verbatim — may include formats CloudCertPrep does not yet
+   * AWS exam guide verbatim - may include formats CloudCertPrep does not yet
    * offer.
    */
   questionTypes: string[]
@@ -130,7 +130,7 @@ export interface Certification {
   /**
    * Canonical URL of the official AWS exam guide (HTML) this bank aligns to.
    * Rendered as an outbound `rel="noopener"` citation by `LastUpdatedStamp` on
-   * Cert_Landings and Domain_Landings — an authoritative outbound link that
+   * Cert_Landings and Domain_Landings - an authoritative outbound link that
    * doubles as an E-E-A-T / LLM-trust signal. Populated for active certs whose
    * guide URL has been verified. (R17.5)
    */
@@ -180,7 +180,7 @@ export const CERTIFICATIONS: Record<string, Certification> = {
     // AWS publishes no version number or change-history for the CLF-C02 exam
     // guide (verified against the official PDF: no version, no date beyond a
     // bare "2026"). No parens -> LastUpdatedStamp renders "Aligned to the
-    // CLF-C02 exam guide — last verified <build date>" with no fabricated
+    // CLF-C02 exam guide - last verified <build date>" with no fabricated
     // version. (R17.5)
     examGuideVersion: 'CLF-C02',
     examGuideUrl: 'https://docs.aws.amazon.com/aws-certification/latest/cloud-practitioner-02/cloud-practitioner-02.html',
@@ -406,7 +406,7 @@ export const CERTIFICATIONS: Record<string, Certification> = {
       passingScore: 700,
       scoringScale: '100-1000',
       // Real AIF-C01 exam (guide v1.1, April 2026) uses these four response
-      // formats. The official exam guide lists NO case-study format — do not
+      // formats. The official exam guide lists NO case-study format - do not
       // re-add it (verified against the AIF-C01 guide question-types section).
       // The practice bank now offers all four (ordering + matching shipped
       // 2026-06-13), so `practiceQuestionTypes` is omitted to claim full parity.
@@ -545,7 +545,7 @@ export const CERTIFICATIONS: Record<string, Certification> = {
     status: 'active',
     examGuideVersion: 'SOA-C03',
     examGuideUrl: 'https://docs.aws.amazon.com/aws-certification/latest/sysops-administrator-associate-03/sysops-administrator-associate-03.html',
-    examFormat: { questionCount: 65, timeMinutes: 130, passingScore: 720, scoringScale: '100-1000', questionTypes: ['multiple choice', 'multiple response'], practiceQuestionTypes: ['multiple choice'] },
+    examFormat: { questionCount: 65, timeMinutes: 130, passingScore: 720, scoringScale: '100-1000', questionTypes: ['multiple choice', 'multiple response'] },
   },
   'dea-c01': {
     code: 'dea-c01',
@@ -565,7 +565,7 @@ export const CERTIFICATIONS: Record<string, Certification> = {
     status: 'active',
     examGuideVersion: 'DEA-C01',
     examGuideUrl: 'https://docs.aws.amazon.com/aws-certification/latest/data-engineer-associate-01/data-engineer-associate-01.html',
-    examFormat: { questionCount: 65, timeMinutes: 130, passingScore: 720, scoringScale: '100-1000', questionTypes: ['multiple choice', 'multiple response'], practiceQuestionTypes: ['multiple choice'] },
+    examFormat: { questionCount: 65, timeMinutes: 130, passingScore: 720, scoringScale: '100-1000', questionTypes: ['multiple choice', 'multiple response'] },
   },
   'dva-c02': {
     code: 'dva-c02',
@@ -585,7 +585,7 @@ export const CERTIFICATIONS: Record<string, Certification> = {
     status: 'active',
     examGuideVersion: 'DVA-C02',
     examGuideUrl: 'https://docs.aws.amazon.com/aws-certification/latest/developer-associate-02/developer-associate-02.html',
-    examFormat: { questionCount: 65, timeMinutes: 130, passingScore: 720, scoringScale: '100-1000', questionTypes: ['multiple choice', 'multiple response'], practiceQuestionTypes: ['multiple choice'] },
+    examFormat: { questionCount: 65, timeMinutes: 130, passingScore: 720, scoringScale: '100-1000', questionTypes: ['multiple choice', 'multiple response'] },
   },
   'mla-c01': {
     code: 'mla-c01',
@@ -605,7 +605,7 @@ export const CERTIFICATIONS: Record<string, Certification> = {
     status: 'active',
     examGuideVersion: 'MLA-C01',
     examGuideUrl: 'https://docs.aws.amazon.com/aws-certification/latest/machine-learning-engineer-associate-01/machine-learning-engineer-associate-01.html',
-    examFormat: { questionCount: 65, timeMinutes: 130, passingScore: 720, scoringScale: '100-1000', questionTypes: ['multiple choice', 'multiple response', 'ordering', 'matching'], practiceQuestionTypes: ['multiple choice'] },
+    examFormat: { questionCount: 65, timeMinutes: 130, passingScore: 720, scoringScale: '100-1000', questionTypes: ['multiple choice', 'multiple response', 'ordering', 'matching'], practiceQuestionTypes: ['multiple choice', 'multiple response', 'matching'] },
   },
   'dop-c02': {
     code: 'dop-c02',
@@ -627,7 +627,7 @@ export const CERTIFICATIONS: Record<string, Certification> = {
     status: 'active',
     examGuideVersion: 'DOP-C02',
     examGuideUrl: 'https://docs.aws.amazon.com/aws-certification/latest/devops-engineer-professional-02/devops-engineer-professional-02.html',
-    examFormat: { questionCount: 75, timeMinutes: 180, passingScore: 750, scoringScale: '100-1000', questionTypes: ['multiple choice', 'multiple response'], practiceQuestionTypes: ['multiple choice'] },
+    examFormat: { questionCount: 75, timeMinutes: 180, passingScore: 750, scoringScale: '100-1000', questionTypes: ['multiple choice', 'multiple response'] },
   },
   'aip-c01': {
     code: 'aip-c01',
@@ -648,7 +648,7 @@ export const CERTIFICATIONS: Record<string, Certification> = {
     status: 'active',
     examGuideVersion: 'AIP-C01',
     examGuideUrl: 'https://docs.aws.amazon.com/aws-certification/latest/ai-professional-01/ai-professional-01.html',
-    examFormat: { questionCount: 75, timeMinutes: 180, passingScore: 750, scoringScale: '100-1000', questionTypes: ['multiple choice', 'multiple response'], practiceQuestionTypes: ['multiple choice'] },
+    examFormat: { questionCount: 75, timeMinutes: 180, passingScore: 750, scoringScale: '100-1000', questionTypes: ['multiple choice', 'multiple response'] },
   },
   'sap-c02': {
     code: 'sap-c02',
@@ -668,7 +668,7 @@ export const CERTIFICATIONS: Record<string, Certification> = {
     status: 'active',
     examGuideVersion: 'SAP-C02',
     examGuideUrl: 'https://docs.aws.amazon.com/aws-certification/latest/solutions-architect-professional-02/solutions-architect-professional-02.html',
-    examFormat: { questionCount: 75, timeMinutes: 180, passingScore: 750, scoringScale: '100-1000', questionTypes: ['multiple choice', 'multiple response'], practiceQuestionTypes: ['multiple choice'] },
+    examFormat: { questionCount: 75, timeMinutes: 180, passingScore: 750, scoringScale: '100-1000', questionTypes: ['multiple choice', 'multiple response'] },
   },
   'ans-c01': {
     code: 'ans-c01',
@@ -688,7 +688,7 @@ export const CERTIFICATIONS: Record<string, Certification> = {
     status: 'active',
     examGuideVersion: 'ANS-C01',
     examGuideUrl: 'https://docs.aws.amazon.com/aws-certification/latest/advanced-networking-specialty-01/advanced-networking-specialty-01.html',
-    examFormat: { questionCount: 65, timeMinutes: 170, passingScore: 700, scoringScale: '100-1000', questionTypes: ['multiple response', 'matching'], practiceQuestionTypes: ['multiple choice'] },
+    examFormat: { questionCount: 65, timeMinutes: 170, passingScore: 700, scoringScale: '100-1000', questionTypes: ['multiple response', 'matching'] },
   },
   'scs-c03': {
     code: 'scs-c03',
@@ -710,7 +710,7 @@ export const CERTIFICATIONS: Record<string, Certification> = {
     status: 'active',
     examGuideVersion: 'SCS-C03',
     examGuideUrl: 'https://docs.aws.amazon.com/aws-certification/latest/security-specialty-03/security-specialty-03.html',
-    examFormat: { questionCount: 65, timeMinutes: 170, passingScore: 750, scoringScale: '100-1000', questionTypes: ['multiple choice', 'multiple response', 'ordering', 'matching'], practiceQuestionTypes: ['multiple choice'] },
+    examFormat: { questionCount: 65, timeMinutes: 170, passingScore: 750, scoringScale: '100-1000', questionTypes: ['multiple choice', 'multiple response', 'ordering', 'matching'], practiceQuestionTypes: ['multiple choice', 'multiple response', 'matching'] },
   },
 }
 

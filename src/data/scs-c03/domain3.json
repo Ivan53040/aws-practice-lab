@@ -1,981 +1,1027 @@
 [
   {
     "id": "scs-c03-d3-001",
-    "type": "single",
-    "question": "A production team needs layer 7 filtering for a public API. Which service should be configured?",
-    "options": {
-      "A": "Amazon Macie",
-      "B": "AWS Glue",
-      "C": "Amazon EBS",
-      "D": "AWS WAF"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "WAF evaluates HTTP requests and can block managed web exploits and custom patterns.\nThe other choices discover data, transform data, or store blocks.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A production team is reviewing a production decision. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The team needs layer 7 filtering for a public API. Which service should be configured?",
+    "options": {
+      "A": "ECR image scanning and signed, immutable image tags",
+      "B": "AWS WAF",
+      "C": "Private subnets with controlled egress through a NAT gateway or endpoint",
+      "D": "AWS Network Firewall or a managed inspection VPC pattern"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "WAF evaluates HTTP requests and can block managed web exploits and custom patterns.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS WAF for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "生產團隊需要對公共 API 進行第 7 層過濾。應該配置哪個服務？",
+        "question": "此需求必須大規模套用。方案應避免一次性的人手設定，並提供證據證明控制措施持續有效。生產團隊需要對公共 API 進行第 7 層過濾。應該配置哪個服務？",
         "options": {
-          "A": "Amazon Macie",
-          "B": "AWS Glue",
-          "C": "Amazon EBS",
-          "D": "AWS WAF"
+          "A": "ECR 影像掃描和簽署的、不可變的影像標籤",
+          "B": "AWS WAF",
+          "C": "透過 NAT 閘道或端點控制出口的私有子網",
+          "D": "AWS Network Firewall或主機檢查 VPC 模式"
         },
-        "explanation": "WAF 評估 HTTP 請求，並可以阻止託管 Web 漏洞和自訂模式。\n其他選擇發現資料、轉換資料或儲存區塊。"
+        "explanation": "WAF 評估 HTTP 請求，並可以阻止託管 Web 漏洞和自訂模式。\n其他選項適用於此領域的不同需求，但不能像 AWS WAF 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d3-002",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A multi-account platform team must protect a private subnet workload from unsolicited inbound traffic while allowing updates. Which design fits?",
+    "question": "A multi-account platform team is reviewing a production decision. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The team must protect a private subnet workload from unsolicited inbound traffic while allowing updates. Which design fits?",
     "options": {
       "A": "Private subnets with controlled egress through a NAT gateway or endpoint",
-      "B": "Public addresses on every instance",
-      "C": "An open security group",
-      "D": "A public bucket"
+      "B": "AWS Network Firewall or a managed inspection VPC pattern",
+      "C": "ECR image scanning and signed, immutable image tags",
+      "D": "Systems Manager Session Manager"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Private subnets and controlled egress reduce inbound exposure while allowing required outbound access.\nPublic addresses and open rules increase exposure.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Private subnets and controlled egress reduce inbound exposure while allowing required outbound access.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Private subnets with controlled egress through a NAT gateway or endpoint for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊必須保護私有子網路工作負載免受未經請求的入站流量的影響，同時允許更新。哪種設計適合？",
+        "question": "此需求必須大規模套用。方案應避免一次性的人手設定，並提供證據證明控制措施持續有效。多帳戶平台團隊必須保護私有子網路工作負載免受未經請求的入站流量的影響，同時允許更新。哪種設計適合？",
         "options": {
           "A": "透過 NAT 閘道或端點控制出口的私有子網",
-          "B": "每個執行個體上的公用位址",
-          "C": "開放的安全群組",
-          "D": "一個公共桶"
+          "B": "AWS Network Firewall或主機檢查 VPC 模式",
+          "C": "ECR 影像掃描和簽署的、不可變的影像標籤",
+          "D": "Systems Manager Session Manager"
         },
-        "explanation": "私有子網路和受控出口減少了入站暴露，同時允許所需的出站存取。\n公共地址和開放規則增加了曝光。"
+        "explanation": "私有子網路和受控出口減少了入站暴露，同時允許所需的出站存取。\n其他選項適用於此領域的不同需求，但不能像 透過 NAT 閘道或端點控制出口的私有子網 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d3-003",
-    "type": "single",
-    "question": "A regulated company needs centralized inspection between VPCs. Which service should be evaluated?",
-    "options": {
-      "A": "AWS Budgets",
-      "B": "AWS Network Firewall or a managed inspection VPC pattern",
-      "C": "Amazon SES",
-      "D": "Amazon Polly"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Network Firewall and inspection VPC patterns provide centralized traffic controls.\nThe other choices do not inspect network traffic.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A regulated company is reviewing a production decision. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The team needs centralized inspection between VPCs. Which service should be evaluated?",
+    "options": {
+      "A": "ECR image scanning and signed, immutable image tags",
+      "B": "Systems Manager Session Manager",
+      "C": "AWS WAF",
+      "D": "AWS Network Firewall or a managed inspection VPC pattern"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Network Firewall and inspection VPC patterns provide centralized traffic controls.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Network Firewall or a managed inspection VPC pattern for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司需要VPC之間的集中檢查。應該評估哪些服務？",
+        "question": "此需求必須大規模套用。方案應避免一次性的人手設定，並提供證據證明控制措施持續有效。受監管的公司需要VPC之間的集中檢查。應該評估哪些服務？",
         "options": {
-          "A": "AWS Budgets",
-          "B": "AWS Network Firewall或主機檢查 VPC 模式",
-          "C": "Amazon SES",
-          "D": "Amazon Polly"
+          "A": "ECR 影像掃描和簽署的、不可變的影像標籤",
+          "B": "Systems Manager Session Manager",
+          "C": "AWS WAF",
+          "D": "AWS Network Firewall或主機檢查 VPC 模式"
         },
-        "explanation": "網路防火牆和檢查 VPC 模式提供集中式流量控制。\n其他選擇不檢查網路流量。"
+        "explanation": "網路防火牆和檢查 VPC 模式提供集中式流量控制。\n其他選項適用於此領域的不同需求，但不能像 AWS Network Firewall或主機檢查 VPC 模式 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d3-004",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A startup preparing for a traffic increase must protect container images from tampering before deployment. Which control is appropriate?",
+    "question": "A startup preparing for a traffic increase is redesigning one integrated end-to-end architecture. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The design must keep recurring cost proportional to use, enforce least privilege, and remain available during a component or Availability Zone failure. The workload must protect container images from tampering before deployment, and the same architecture must restrict a delegated administrator from granting permissions beyond an approved set. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "Disable scan results",
-      "B": "Store images in a public website",
-      "C": "ECR image scanning and signed, immutable image tags",
-      "D": "Public mutable tags only"
+      "A": "Use AWS Security Hub for the primary requirement and integrate it with An IAM permission boundary",
+      "B": "Combine AWS Security Hub with Amazon Macie as a single platform design",
+      "C": "Use ECR image scanning and signed, immutable image tags for the primary requirement and integrate it with An IAM permission boundary for the connected control",
+      "D": "Use ECR image scanning and signed, immutable image tags but replace the connected control with Amazon GuardDuty"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Scanning and immutability reduce supply-chain tampering and vulnerability risk.\nMutable public tags and disabled scanning reduce assurance.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "ECR image scanning and signed, immutable image tags satisfies the first part of the architecture: Scanning and immutability reduce supply-chain tampering and vulnerability risk. An IAM permission boundary satisfies the connected requirement: Permission boundaries cap the maximum permissions an identity can receive.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "準備應對流量增加的新創公司必須在部署之前保護容器映像免於被竄改。哪種控制合適？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：需求：準備應對流量增加的新創公司必須在部署之前保護容器映像免於被竄改 第二項需求：支援關鍵工作負載的營運團隊必須限制委派管理員授予超出批准集的權限。 此設計必須讓持續成本與實際用量相符、落實最低權限，並在元件或可用區域發生故障時維持可用。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "禁用掃描結果",
-          "B": "將圖像儲存在公共網站中",
-          "C": "ECR 影像掃描和簽署的、不可變的影像標籤",
-          "D": "僅公共可變標籤"
+          "A": "以AWS Security Hub處理主要需求，並整合IAM Permissions邊界",
+          "B": "把AWS Security Hub與Amazon Macie結合為單一平台設計",
+          "C": "以ECR 影像掃描和簽署的、不可變的影像標籤處理主要需求，並整合IAM Permissions邊界作為相連控制",
+          "D": "使用ECR 影像掃描和簽署的、不可變的影像標籤，但以Amazon GuardDuty取代相連控制"
         },
-        "explanation": "掃描和不變性減少了供應鏈篡改和漏洞風險。\n可變的公共標籤和禁用的掃描會降低保證性。"
+        "explanation": "ECR 影像掃描和簽署的、不可變的影像標籤 負責架構的第一項需求，IAM Permissions邊界 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "scs-c03-d3-005",
-    "type": "single",
-    "question": "An operations team supporting a critical workload needs host access without inbound SSH ports. Which operational security service should be used?",
-    "options": {
-      "A": "A public bastion with a shared key",
-      "B": "An open security group",
-      "C": "A Route 53 record",
-      "D": "Systems Manager Session Manager"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Session Manager provides audited access through the agent and IAM authorization.\nShared keys and open ports increase attack surface.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The team needs host access without inbound SSH ports. Which operational security service should be used?",
+    "options": {
+      "A": "AWS Network Firewall or a managed inspection VPC pattern",
+      "B": "Systems Manager Session Manager",
+      "C": "AWS WAF",
+      "D": "Private subnets with controlled egress through a NAT gateway or endpoint"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Session Manager provides audited access through the agent and IAM authorization.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Systems Manager Session Manager for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊需要在沒有入站 SSH 連接埠的情況下進行主機存取。應使用哪種操作安全服務？",
+        "question": "此需求必須大規模套用。方案應避免一次性的人手設定，並提供證據證明控制措施持續有效。支援關鍵工作負載的營運團隊需要在沒有入站 SSH 連接埠的情況下進行主機存取。應使用哪種操作安全服務？",
         "options": {
-          "A": "具有共享密鑰的公共堡壘",
-          "B": "開放的安全群組",
-          "C": "53 號公路記錄",
-          "D": "Systems Manager Session Manager"
+          "A": "AWS Network Firewall或主機檢查 VPC 模式",
+          "B": "Systems Manager Session Manager",
+          "C": "AWS WAF",
+          "D": "透過 NAT 閘道或端點控制出口的私有子網"
         },
-        "explanation": "Session Manager 透過代理程式和 IAM 授權提供經過審核的存取。\n共享金鑰和開放埠增加了攻擊面。"
+        "explanation": "Session Manager 透過代理程式和 IAM 授權提供經過審核的存取。\n其他選項適用於此領域的不同需求，但不能像 Systems Manager Session Manager 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d3-006",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A data platform team needs layer 7 filtering for a public API. Which service should be configured?",
+    "question": "A data platform team is reviewing a production decision. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The team needs layer 7 filtering for a public API. Which service should be configured?",
     "options": {
       "A": "AWS WAF",
-      "B": "Amazon Macie",
-      "C": "AWS Glue",
-      "D": "Amazon EBS"
+      "B": "Private subnets with controlled egress through a NAT gateway or endpoint",
+      "C": "AWS Network Firewall or a managed inspection VPC pattern",
+      "D": "ECR image scanning and signed, immutable image tags"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "WAF evaluates HTTP requests and can block managed web exploits and custom patterns.\nThe other choices discover data, transform data, or store blocks.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "WAF evaluates HTTP requests and can block managed web exploits and custom patterns.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS WAF for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要對公共 API 進行第 7 層過濾。應該配置哪個服務？",
+        "question": "目前架構支援業務關鍵服務。所選選項必須處理確切的故障或安全條件，而不會削弱其他控制措施。資料平台團隊需要對公共 API 進行第 7 層過濾。應該配置哪個服務？",
         "options": {
           "A": "AWS WAF",
-          "B": "Amazon Macie",
-          "C": "AWS Glue",
-          "D": "Amazon EBS"
+          "B": "透過 NAT 閘道或端點控制出口的私有子網",
+          "C": "AWS Network Firewall或主機檢查 VPC 模式",
+          "D": "ECR 影像掃描和簽署的、不可變的影像標籤"
         },
-        "explanation": "WAF 評估 HTTP 請求，並可以阻止託管 Web 漏洞和自訂模式。\n其他選擇發現資料、轉換資料或儲存區塊。"
+        "explanation": "WAF 評估 HTTP 請求，並可以阻止託管 Web 漏洞和自訂模式。\n其他選項適用於此領域的不同需求，但不能像 AWS WAF 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d3-007",
-    "type": "single",
-    "question": "A security-conscious engineering team must protect a private subnet workload from unsolicited inbound traffic while allowing updates. Which design fits?",
-    "options": {
-      "A": "A public bucket",
-      "B": "Private subnets with controlled egress through a NAT gateway or endpoint",
-      "C": "Public addresses on every instance",
-      "D": "An open security group"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Private subnets and controlled egress reduce inbound exposure while allowing required outbound access.\nPublic addresses and open rules increase exposure.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A security-conscious engineering team is planning two independent production changes. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The first team must protect a private subnet workload from unsolicited inbound traffic while allowing updates. A second team needs centralized inspection between VPCs. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Private subnets with controlled egress through a NAT gateway or endpoint",
+      "B": "AWS Network Firewall or a managed inspection VPC pattern",
+      "C": "ECR image scanning and signed, immutable image tags",
+      "D": "Systems Manager Session Manager",
+      "E": "AWS WAF"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Private subnets with controlled egress through a NAT gateway or endpoint meets the first requirement: Private subnets and controlled egress reduce inbound exposure while allowing required outbound access. AWS Network Firewall or a managed inspection VPC pattern meets the second requirement: Network Firewall and inspection VPC patterns provide centralized traffic controls.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊必須保護私有子網路工作負載免受未經請求的入站流量的影響，同時允許更新。哪種設計適合？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。目前架構支援業務關鍵服務。所選選項必須處理確切的故障或安全條件，而不會削弱其他控制措施。第一項需求：多帳戶平台團隊必須保護私有子網路工作負載免受未經請求的入站流量的影響，同時允許更新。第二項需求：受監管的公司需要VPC之間的集中檢查。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "一個公共桶",
-          "B": "透過 NAT 閘道或端點控制出口的私有子網",
-          "C": "每個執行個體上的公用位址",
-          "D": "開放的安全群組"
+          "A": "透過 NAT 閘道或端點控制出口的私有子網",
+          "B": "AWS Network Firewall或主機檢查 VPC 模式",
+          "C": "ECR 影像掃描和簽署的、不可變的影像標籤",
+          "D": "Systems Manager Session Manager",
+          "E": "AWS WAF"
         },
-        "explanation": "私有子網路和受控出口減少了入站暴露，同時允許所需的出站存取。\n公共地址和開放規則增加了曝光。"
+        "explanation": "透過 NAT 閘道或端點控制出口的私有子網 符合第一項需求：私有子網路和受控出口減少了入站暴露，同時允許所需的出站存取。 AWS Network Firewall或主機檢查 VPC 模式 符合第二項需求：網路防火牆和檢查 VPC 模式提供集中式流量控制。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "scs-c03-d3-008",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A company migrating an existing workload needs centralized inspection between VPCs. Which service should be evaluated?",
+    "question": "A company migrating an existing workload is redesigning one integrated end-to-end architecture. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The design must avoid unnecessary standby cost without weakening security controls or the availability objective. The workload needs centralized inspection between VPCs, and the same architecture needs to discover PII before sharing a data set with another account. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "Amazon Polly",
-      "B": "AWS Budgets",
-      "C": "AWS Network Firewall or a managed inspection VPC pattern",
-      "D": "Amazon SES"
+      "A": "Use AWS Security Hub for the primary requirement and integrate it with Amazon Macie",
+      "B": "Combine AWS Security Hub with Amazon Inspector as a single platform design",
+      "C": "Use AWS Network Firewall or a managed inspection VPC pattern for the primary requirement and integrate it with Amazon Macie for the connected control",
+      "D": "Use AWS Network Firewall or a managed inspection VPC pattern but replace the connected control with Amazon GuardDuty"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Network Firewall and inspection VPC patterns provide centralized traffic controls.\nThe other choices do not inspect network traffic.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "AWS Network Firewall or a managed inspection VPC pattern satisfies the first part of the architecture: Network Firewall and inspection VPC patterns provide centralized traffic controls. Amazon Macie satisfies the connected requirement: Macie discovers sensitive data in S3 and can inform remediation before sharing.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司需要在 VPC 之間進行集中檢查。應該評估哪些服務？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：優化現有實施的團隊需要在 VPC 之間進行集中檢查。 第二項需求：支援關鍵工作負載的營運團隊需要在與其他帳戶共用資料集之前發現 PII。 此設計必須避免不必要的備用成本，同時不可削弱安全控制或可用性目標。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "Amazon Polly",
-          "B": "AWS Budgets",
-          "C": "AWS Network Firewall或主機檢查 VPC 模式",
-          "D": "Amazon SES"
+          "A": "以AWS Security Hub處理主要需求，並整合Amazon Macie",
+          "B": "把AWS Security Hub與Amazon Inspector結合為單一平台設計",
+          "C": "以AWS Network Firewall或主機檢查 VPC 模式處理主要需求，並整合Amazon Macie作為相連控制",
+          "D": "使用AWS Network Firewall或主機檢查 VPC 模式，但以Amazon GuardDuty取代相連控制"
         },
-        "explanation": "網路防火牆和檢查 VPC 模式提供集中式流量控制。\n其他選擇不檢查網路流量。"
+        "explanation": "AWS Network Firewall或主機檢查 VPC 模式 負責架構的第一項需求，Amazon Macie 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "scs-c03-d3-009",
-    "type": "single",
-    "question": "A team with strict recovery objectives must protect container images from tampering before deployment. Which control is appropriate?",
-    "options": {
-      "A": "Public mutable tags only",
-      "B": "Disable scan results",
-      "C": "Store images in a public website",
-      "D": "ECR image scanning and signed, immutable image tags"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Scanning and immutability reduce supply-chain tampering and vulnerability risk.\nMutable public tags and disabled scanning reduce assurance.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team with strict recovery objectives is reviewing a production decision. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The team must protect container images from tampering before deployment. Which control is appropriate?",
+    "options": {
+      "A": "Private subnets with controlled egress through a NAT gateway or endpoint",
+      "B": "ECR image scanning and signed, immutable image tags",
+      "C": "Systems Manager Session Manager",
+      "D": "AWS WAF"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Scanning and immutability reduce supply-chain tampering and vulnerability risk.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide ECR image scanning and signed, immutable image tags for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格復原目標的團隊必須在部署之前保護容器映像免遭竄改。哪種控制合適？",
+        "question": "目前架構支援業務關鍵服務。所選選項必須處理確切的故障或安全條件，而不會削弱其他控制措施。具有嚴格復原目標的團隊必須在部署之前保護容器映像免遭竄改。哪種控制合適？",
         "options": {
-          "A": "僅公共可變標籤",
-          "B": "禁用掃描結果",
-          "C": "將圖像儲存在公共網站中",
-          "D": "ECR 影像掃描和簽署的、不可變的影像標籤"
+          "A": "透過 NAT 閘道或端點控制出口的私有子網",
+          "B": "ECR 影像掃描和簽署的、不可變的影像標籤",
+          "C": "Systems Manager Session Manager",
+          "D": "AWS WAF"
         },
-        "explanation": "掃描和不變性減少了供應鏈篡改和漏洞風險。\n可變的公共標籤和禁用的掃描會降低保證性。"
+        "explanation": "掃描和不變性減少了供應鏈篡改和漏洞風險。\n其他選項適用於此領域的不同需求，但不能像 ECR 影像掃描和簽署的、不可變的影像標籤 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d3-010",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A developer team preparing a release needs host access without inbound SSH ports. Which operational security service should be used?",
+    "question": "A developer team preparing a release is reviewing a production decision. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The team needs host access without inbound SSH ports. Which operational security service should be used?",
     "options": {
       "A": "Systems Manager Session Manager",
-      "B": "A public bastion with a shared key",
-      "C": "An open security group",
-      "D": "A Route 53 record"
+      "B": "AWS WAF",
+      "C": "Private subnets with controlled egress through a NAT gateway or endpoint",
+      "D": "AWS Network Firewall or a managed inspection VPC pattern"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Session Manager provides audited access through the agent and IAM authorization.\nShared keys and open ports increase attack surface.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Session Manager provides audited access through the agent and IAM authorization.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Systems Manager Session Manager for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊需要在沒有入站 SSH 連接埠的情況下進行主機存取。應使用哪種操作安全服務？",
+        "question": "目前架構支援業務關鍵服務。所選選項必須處理確切的故障或安全條件，而不會削弱其他控制措施。準備發布的開發團隊需要在沒有入站 SSH 連接埠的情況下進行主機存取。應使用哪種操作安全服務？",
         "options": {
           "A": "Systems Manager Session Manager",
-          "B": "具有共享密鑰的公共堡壘",
-          "C": "開放的安全群組",
-          "D": "53 號公路記錄"
+          "B": "AWS WAF",
+          "C": "透過 NAT 閘道或端點控制出口的私有子網",
+          "D": "AWS Network Firewall或主機檢查 VPC 模式"
         },
-        "explanation": "Session Manager 透過代理程式和 IAM 授權提供經過審核的存取。\n共享金鑰和開放埠增加了攻擊面。"
+        "explanation": "Session Manager 透過代理程式和 IAM 授權提供經過審核的存取。\n其他選項適用於此領域的不同需求，但不能像 Systems Manager Session Manager 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d3-011",
-    "type": "single",
-    "question": "An enterprise with several AWS Regions needs layer 7 filtering for a public API. Which service should be configured?",
-    "options": {
-      "A": "Amazon EBS",
-      "B": "AWS WAF",
-      "C": "Amazon Macie",
-      "D": "AWS Glue"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "WAF evaluates HTTP requests and can block managed web exploits and custom patterns.\nThe other choices discover data, transform data, or store blocks.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The team needs layer 7 filtering for a public API. Which service should be configured?",
+    "options": {
+      "A": "Private subnets with controlled egress through a NAT gateway or endpoint",
+      "B": "AWS Network Firewall or a managed inspection VPC pattern",
+      "C": "ECR image scanning and signed, immutable image tags",
+      "D": "AWS WAF"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "WAF evaluates HTTP requests and can block managed web exploits and custom patterns.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS WAF for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業需要對公用 API 進行第 7 層過濾。應該配置哪個服務？",
+        "question": "專業工程師將審查實作的服務限制、故障行為及建議設計的營運取捨。擁有多個 AWS 區域的企業需要對公用 API 進行第 7 層過濾。應該配置哪個服務？",
         "options": {
-          "A": "Amazon EBS",
-          "B": "AWS WAF",
-          "C": "Amazon Macie",
-          "D": "AWS Glue"
+          "A": "透過 NAT 閘道或端點控制出口的私有子網",
+          "B": "AWS Network Firewall或主機檢查 VPC 模式",
+          "C": "ECR 影像掃描和簽署的、不可變的影像標籤",
+          "D": "AWS WAF"
         },
-        "explanation": "WAF 評估 HTTP 請求，並可以阻止託管 Web 漏洞和自訂模式。\n其他選擇發現資料、轉換資料或儲存區塊。"
+        "explanation": "WAF 評估 HTTP 請求，並可以阻止託管 Web 漏洞和自訂模式。\n其他選項適用於此領域的不同需求，但不能像 AWS WAF 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d3-012",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A service owner reviewing an incident must protect a private subnet workload from unsolicited inbound traffic while allowing updates. Which design fits?",
+    "question": "A service owner reviewing an incident is redesigning one integrated end-to-end architecture. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The organization will accept additional managed-service cost only when it measurably improves security and availability with less operational effort. The workload must protect a private subnet workload from unsolicited inbound traffic while allowing updates, and the same architecture must protect the organization root user from routine misuse. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "An open security group",
-      "B": "A public bucket",
-      "C": "Private subnets with controlled egress through a NAT gateway or endpoint",
-      "D": "Public addresses on every instance"
+      "A": "Use AWS Security Hub for the primary requirement and integrate it with Use the root user only when required and enable MFA",
+      "B": "Combine AWS Security Hub with Amazon Macie as a single platform design",
+      "C": "Use Private subnets with controlled egress through a NAT gateway or endpoint for the primary requirement and integrate it with Use the root user only when required and enable MFA for the connected control",
+      "D": "Use Private subnets with controlled egress through a NAT gateway or endpoint but replace the connected control with Amazon GuardDuty"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Private subnets and controlled egress reduce inbound exposure while allowing required outbound access.\nPublic addresses and open rules increase exposure.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Private subnets with controlled egress through a NAT gateway or endpoint satisfies the first part of the architecture: Private subnets and controlled egress reduce inbound exposure while allowing required outbound access. Use the root user only when required and enable MFA satisfies the connected requirement: Root-use restrictions and MFA reduce the highest-impact credential risk.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務擁有者必須保護私有子網路工作負載免受未經請求的入站流量的影響，同時允許更新。哪種設計適合？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：審查事件的服務擁有者必須保護私有子網路工作負載免受未經請求的入站流量的影響，同時允許更新。 第二項需求：支援關鍵工作負載的營運團隊必須保護組織根使用者免於日常濫用。 只有在託管服務能以較低營運負擔明確改善安全性與可用性時，組織才會接受額外成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "開放的安全群組",
-          "B": "一個公共桶",
-          "C": "透過 NAT 閘道或端點控制出口的私有子網",
-          "D": "每個執行個體上的公用位址"
+          "A": "以AWS Security Hub處理主要需求，並整合僅在需要時使用 root 使用者並啟用 MFA",
+          "B": "把AWS Security Hub與Amazon Macie結合為單一平台設計",
+          "C": "以透過 NAT 閘道或端點控制出口的私有子網處理主要需求，並整合僅在需要時使用 root 使用者並啟用 MFA作為相連控制",
+          "D": "使用透過 NAT 閘道或端點控制出口的私有子網，但以Amazon GuardDuty取代相連控制"
         },
-        "explanation": "私有子網路和受控出口減少了入站暴露，同時允許所需的出站存取。\n公共地址和開放規則增加了曝光。"
+        "explanation": "透過 NAT 閘道或端點控制出口的私有子網 負責架構的第一項需求，僅在需要時使用 root 使用者並啟用 MFA 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "scs-c03-d3-013",
-    "type": "single",
-    "question": "A team optimizing an existing implementation needs centralized inspection between VPCs. Which service should be evaluated?",
-    "options": {
-      "A": "Amazon SES",
-      "B": "Amazon Polly",
-      "C": "AWS Budgets",
-      "D": "AWS Network Firewall or a managed inspection VPC pattern"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Network Firewall and inspection VPC patterns provide centralized traffic controls.\nThe other choices do not inspect network traffic.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The team needs centralized inspection between VPCs. Which service should be evaluated?",
+    "options": {
+      "A": "AWS WAF",
+      "B": "AWS Network Firewall or a managed inspection VPC pattern",
+      "C": "ECR image scanning and signed, immutable image tags",
+      "D": "Systems Manager Session Manager"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Network Firewall and inspection VPC patterns provide centralized traffic controls.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Network Firewall or a managed inspection VPC pattern for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊需要在 VPC 之間進行集中檢查。應該評估哪些服務？",
+        "question": "專業工程師將審查實作的服務限制、故障行為及建議設計的營運取捨。優化現有實施的團隊需要在 VPC 之間進行集中檢查。應該評估哪些服務？",
         "options": {
-          "A": "Amazon SES",
-          "B": "Amazon Polly",
-          "C": "AWS Budgets",
-          "D": "AWS Network Firewall或主機檢查 VPC 模式"
+          "A": "AWS WAF",
+          "B": "AWS Network Firewall或主機檢查 VPC 模式",
+          "C": "ECR 影像掃描和簽署的、不可變的影像標籤",
+          "D": "Systems Manager Session Manager"
         },
-        "explanation": "網路防火牆和檢查 VPC 模式提供集中式流量控制。\n其他選擇不檢查網路流量。"
+        "explanation": "網路防火牆和檢查 VPC 模式提供集中式流量控制。\n其他選項適用於此領域的不同需求，但不能像 AWS Network Firewall或主機檢查 VPC 模式 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d3-014",
-    "type": "single",
-    "question": "A company introducing an automated workflow must protect container images from tampering before deployment. Which control is appropriate?",
-    "options": {
-      "A": "ECR image scanning and signed, immutable image tags",
-      "B": "Public mutable tags only",
-      "C": "Disable scan results",
-      "D": "Store images in a public website"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "Scanning and immutability reduce supply-chain tampering and vulnerability risk.\nMutable public tags and disabled scanning reduce assurance.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A company introducing an automated workflow is planning two independent production changes. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The first team must protect container images from tampering before deployment. A second team needs host access without inbound SSH ports. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "AWS WAF",
+      "B": "Private subnets with controlled egress through a NAT gateway or endpoint",
+      "C": "AWS Network Firewall or a managed inspection VPC pattern",
+      "D": "ECR image scanning and signed, immutable image tags",
+      "E": "Systems Manager Session Manager"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "ECR image scanning and signed, immutable image tags meets the first requirement: Scanning and immutability reduce supply-chain tampering and vulnerability risk. Systems Manager Session Manager meets the second requirement: Session Manager provides audited access through the agent and IAM authorization.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司必須在部署之前保護容器映像免受篡改。哪種控制合適？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。專業工程師將審查實作的服務限制、故障行為及建議設計的營運取捨。第一項需求：準備應對流量增加的新創公司必須在部署之前保護容器映像免於被竄改。第二項需求：支援關鍵工作負載的營運團隊需要在沒有入站 SSH 連接埠的情況下進行主機存取。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "ECR 影像掃描和簽署的、不可變的影像標籤",
-          "B": "僅公共可變標籤",
-          "C": "禁用掃描結果",
-          "D": "將圖像儲存在公共網站中"
+          "A": "AWS WAF",
+          "B": "透過 NAT 閘道或端點控制出口的私有子網",
+          "C": "AWS Network Firewall或主機檢查 VPC 模式",
+          "D": "ECR 影像掃描和簽署的、不可變的影像標籤",
+          "E": "Systems Manager Session Manager"
         },
-        "explanation": "掃描和不變性減少了供應鏈篡改和漏洞風險。\n可變的公共標籤和禁用的掃描會降低保證性。"
+        "explanation": "ECR 影像掃描和簽署的、不可變的影像標籤 符合第一項需求：掃描和不變性減少了供應鏈篡改和漏洞風險。 Systems Manager Session Manager 符合第二項需求：Session Manager 透過代理程式和 IAM 授權提供經過審核的存取。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "scs-c03-d3-015",
-    "type": "single",
-    "question": "An AWS administrator working in a shared environment needs host access without inbound SSH ports. Which operational security service should be used?",
-    "options": {
-      "A": "A Route 53 record",
-      "B": "Systems Manager Session Manager",
-      "C": "A public bastion with a shared key",
-      "D": "An open security group"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Session Manager provides audited access through the agent and IAM authorization.\nShared keys and open ports increase attack surface.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment is reviewing a production decision. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The team needs host access without inbound SSH ports. Which operational security service should be used?",
+    "options": {
+      "A": "AWS WAF",
+      "B": "Private subnets with controlled egress through a NAT gateway or endpoint",
+      "C": "AWS Network Firewall or a managed inspection VPC pattern",
+      "D": "Systems Manager Session Manager"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Session Manager provides audited access through the agent and IAM authorization.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Systems Manager Session Manager for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "在共用環境中工作的 AWS 管理員需要在沒有入站 SSH 連接埠的情況下進行主機存取。應使用哪種操作安全服務？",
+        "question": "專業工程師將審查實作的服務限制、故障行為及建議設計的營運取捨。在共用環境中工作的 AWS 管理員需要在沒有入站 SSH 連接埠的情況下進行主機存取。應使用哪種操作安全服務？",
         "options": {
-          "A": "53 號公路記錄",
-          "B": "Systems Manager Session Manager",
-          "C": "具有共享密鑰的公共堡壘",
-          "D": "開放的安全群組"
+          "A": "AWS WAF",
+          "B": "透過 NAT 閘道或端點控制出口的私有子網",
+          "C": "AWS Network Firewall或主機檢查 VPC 模式",
+          "D": "Systems Manager Session Manager"
         },
-        "explanation": "Session Manager 透過代理程式和 IAM 授權提供經過審核的存取。\n共享金鑰和開放埠增加了攻擊面。"
+        "explanation": "Session Manager 透過代理程式和 IAM 授權提供經過審核的存取。\n其他選項適用於此領域的不同需求，但不能像 Systems Manager Session Manager 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d3-016",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A customer-facing application team needs layer 7 filtering for a public API. Which service should be configured?",
+    "question": "A customer-facing application team is redesigning one integrated end-to-end architecture. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The architecture must limit blast radius, preserve availability during change, and control cost through automation instead of permanent overprovisioning. The workload needs layer 7 filtering for a public API, and the same architecture needs audit records for security API activity. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "AWS Glue",
-      "B": "Amazon EBS",
-      "C": "AWS WAF",
-      "D": "Amazon Macie"
+      "A": "Use AWS Security Hub for the primary requirement and integrate it with AWS CloudTrail",
+      "B": "Combine AWS Security Hub with Amazon Macie as a single platform design",
+      "C": "Use AWS WAF for the primary requirement and integrate it with AWS CloudTrail for the connected control",
+      "D": "Use AWS WAF but replace the connected control with Amazon GuardDuty"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "WAF evaluates HTTP requests and can block managed web exploits and custom patterns.\nThe other choices discover data, transform data, or store blocks.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "AWS WAF satisfies the first part of the architecture: WAF evaluates HTTP requests and can block managed web exploits and custom patterns. AWS CloudTrail satisfies the connected requirement: CloudTrail records API activity for investigation and compliance.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊需要對公共 API 進行第 7 層過濾。應該配置哪個服務？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：生產團隊需要對公共 API 進行第 7 層過濾。 第二項需求：準備發布的開發團隊需要安全 API 活動的審核記錄。 此架構必須限制影響範圍、在變更期間維持可用性，並透過自動化控制成本，而不是長期過度佈建。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "AWS Glue",
-          "B": "Amazon EBS",
-          "C": "AWS WAF",
-          "D": "Amazon Macie"
+          "A": "以AWS Security Hub處理主要需求，並整合AWS CloudTrail",
+          "B": "把AWS Security Hub與Amazon Macie結合為單一平台設計",
+          "C": "以AWS WAF處理主要需求，並整合AWS CloudTrail作為相連控制",
+          "D": "使用AWS WAF，但以Amazon GuardDuty取代相連控制"
         },
-        "explanation": "WAF 評估 HTTP 請求，並可以阻止託管 Web 漏洞和自訂模式。\n其他選擇發現資料、轉換資料或儲存區塊。"
+        "explanation": "AWS WAF 負責架構的第一項需求，AWS CloudTrail 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "scs-c03-d3-017",
-    "type": "single",
-    "question": "A platform team standardizing its AWS deployments must protect a private subnet workload from unsolicited inbound traffic while allowing updates. Which design fits?",
-    "options": {
-      "A": "Public addresses on every instance",
-      "B": "An open security group",
-      "C": "A public bucket",
-      "D": "Private subnets with controlled egress through a NAT gateway or endpoint"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Private subnets and controlled egress reduce inbound exposure while allowing required outbound access.\nPublic addresses and open rules increase exposure.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A platform team standardizing its AWS deployments is reviewing several independent production requirements. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. Match each workload requirement to the most appropriate implementation.",
+    "options": {
+      "A": "A workload must protect a private subnet workload from unsolicited inbound traffic while allowing updates",
+      "B": "A workload needs centralized inspection between VPCs",
+      "C": "A workload must protect container images from tampering before deployment"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "ECR image scanning and signed, immutable image tags",
+      "2": "Private subnets with controlled egress through a NAT gateway or endpoint",
+      "3": "AWS Network Firewall or a managed inspection VPC pattern"
+    },
+    "correctMatches": {
+      "A": "2",
+      "B": "3",
+      "C": "1"
+    },
+    "explanation": "A maps to Private subnets with controlled egress through a NAT gateway or endpoint. Private subnets and controlled egress reduce inbound exposure while allowing required outbound access. B maps to AWS Network Firewall or a managed inspection VPC pattern. Network Firewall and inspection VPC patterns provide centralized traffic controls. C maps to ECR image scanning and signed, immutable image tags. Scanning and immutability reduce supply-chain tampering and vulnerability risk.\nEach target is intended for a different requirement, so all three mappings must be evaluated independently.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊必須保護私有子網路工作負載免受未經請求的入站流量的影響，同時允許更新。哪種設計適合？",
+        "question": "團隊正在審查多項彼此獨立的生產需求。此生產環境在多個帳戶中採用集中治理。變更必須符合最低權限、可以稽核，並且不會造成長時間中斷。請將每項工作負載需求配對至最適合的實作。",
         "options": {
-          "A": "每個執行個體上的公用位址",
-          "B": "開放的安全群組",
-          "C": "一個公共桶",
-          "D": "透過 NAT 閘道或端點控制出口的私有子網"
+          "A": "工作負載需求：多帳戶平台團隊必須保護私有子網路工作負載免受未經請求的入站流量的影響，同時允許更新",
+          "B": "工作負載需求：受監管的公司需要VPC之間的集中檢查",
+          "C": "工作負載需求：準備應對流量增加的新創公司必須在部署之前保護容器映像免於被竄改"
         },
-        "explanation": "私有子網路和受控出口減少了入站暴露，同時允許所需的出站存取。\n公共地址和開放規則增加了曝光。"
+        "targets": {
+          "1": "ECR 影像掃描和簽署的、不可變的影像標籤",
+          "2": "透過 NAT 閘道或端點控制出口的私有子網",
+          "3": "AWS Network Firewall或主機檢查 VPC 模式"
+        },
+        "explanation": "A 對應 透過 NAT 閘道或端點控制出口的私有子網。私有子網路和受控出口減少了入站暴露，同時允許所需的出站存取。 B 對應 AWS Network Firewall或主機檢查 VPC 模式。網路防火牆和檢查 VPC 模式提供集中式流量控制。 C 對應 ECR 影像掃描和簽署的、不可變的影像標籤。掃描和不變性減少了供應鏈篡改和漏洞風險。\n每個目標均處理不同需求，因此必須分別評估三項配對。"
       }
     }
   },
   {
     "id": "scs-c03-d3-018",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team preparing evidence for an audit needs centralized inspection between VPCs. Which service should be evaluated?",
+    "question": "A team preparing evidence for an audit is reviewing a production decision. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The team needs centralized inspection between VPCs. Which service should be evaluated?",
     "options": {
       "A": "AWS Network Firewall or a managed inspection VPC pattern",
-      "B": "Amazon SES",
-      "C": "Amazon Polly",
-      "D": "AWS Budgets"
+      "B": "ECR image scanning and signed, immutable image tags",
+      "C": "Systems Manager Session Manager",
+      "D": "AWS WAF"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Network Firewall and inspection VPC patterns provide centralized traffic controls.\nThe other choices do not inspect network traffic.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Network Firewall and inspection VPC patterns provide centralized traffic controls.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Network Firewall or a managed inspection VPC pattern for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "為審計準備證據的團隊需要在 VPC 之間進行集中檢查。應該評估哪些服務？",
+        "question": "此生產環境在多個帳戶中採用集中治理。變更必須符合最低權限、可以稽核，並且不會造成長時間中斷。為審計準備證據的團隊需要在 VPC 之間進行集中檢查。應該評估哪些服務？",
         "options": {
           "A": "AWS Network Firewall或主機檢查 VPC 模式",
-          "B": "Amazon SES",
-          "C": "Amazon Polly",
-          "D": "AWS Budgets"
+          "B": "ECR 影像掃描和簽署的、不可變的影像標籤",
+          "C": "Systems Manager Session Manager",
+          "D": "AWS WAF"
         },
-        "explanation": "網路防火牆和檢查 VPC 模式提供集中式流量控制。\n其他選擇不檢查網路流量。"
+        "explanation": "網路防火牆和檢查 VPC 模式提供集中式流量控制。\n其他選項適用於此領域的不同需求，但不能像 AWS Network Firewall或主機檢查 VPC 模式 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d3-019",
-    "type": "single",
-    "question": "A business replacing a manual process must protect container images from tampering before deployment. Which control is appropriate?",
-    "options": {
-      "A": "Store images in a public website",
-      "B": "ECR image scanning and signed, immutable image tags",
-      "C": "Public mutable tags only",
-      "D": "Disable scan results"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Scanning and immutability reduce supply-chain tampering and vulnerability risk.\nMutable public tags and disabled scanning reduce assurance.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A business replacing a manual process is reviewing a production decision. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The team must protect container images from tampering before deployment. Which control is appropriate?",
+    "options": {
+      "A": "Systems Manager Session Manager",
+      "B": "AWS WAF",
+      "C": "Private subnets with controlled egress through a NAT gateway or endpoint",
+      "D": "ECR image scanning and signed, immutable image tags"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Scanning and immutability reduce supply-chain tampering and vulnerability risk.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide ECR image scanning and signed, immutable image tags for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "替代手動流程的企業必須在部署之前保護容器鏡像不被竄改。哪種控制合適？",
+        "question": "此生產環境在多個帳戶中採用集中治理。變更必須符合最低權限、可以稽核，並且不會造成長時間中斷。替代手動流程的企業必須在部署之前保護容器鏡像不被竄改。哪種控制合適？",
         "options": {
-          "A": "將圖像儲存在公共網站中",
-          "B": "ECR 影像掃描和簽署的、不可變的影像標籤",
-          "C": "僅公共可變標籤",
-          "D": "禁用掃描結果"
+          "A": "Systems Manager Session Manager",
+          "B": "AWS WAF",
+          "C": "透過 NAT 閘道或端點控制出口的私有子網",
+          "D": "ECR 影像掃描和簽署的、不可變的影像標籤"
         },
-        "explanation": "掃描和不變性減少了供應鏈篡改和漏洞風險。\n可變的公共標籤和禁用的掃描會降低保證性。"
+        "explanation": "掃描和不變性減少了供應鏈篡改和漏洞風險。\n其他選項適用於此領域的不同需求，但不能像 ECR 影像掃描和簽署的、不可變的影像標籤 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d3-020",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team validating a design against the exam guide needs host access without inbound SSH ports. Which operational security service should be used?",
+    "question": "A team validating a design against the exam guide is redesigning one integrated end-to-end architecture. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The selected controls must provide auditable security, predictable availability, and the lowest operational cost that still satisfies both requirements. The workload needs host access without inbound SSH ports, and the same architecture must determine the timeline of unauthorized API calls. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "An open security group",
-      "B": "A Route 53 record",
-      "C": "Systems Manager Session Manager",
-      "D": "A public bastion with a shared key"
+      "A": "Use AWS Security Hub for the primary requirement and integrate it with CloudTrail events correlated with identity and resource logs",
+      "B": "Combine AWS Security Hub with Amazon Macie as a single platform design",
+      "C": "Use Systems Manager Session Manager for the primary requirement and integrate it with CloudTrail events correlated with identity and resource logs for the connected control",
+      "D": "Use Systems Manager Session Manager but replace the connected control with Amazon GuardDuty"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Session Manager provides audited access through the agent and IAM authorization.\nShared keys and open ports increase attack surface.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Systems Manager Session Manager satisfies the first part of the architecture: Session Manager provides audited access through the agent and IAM authorization. CloudTrail events correlated with identity and resource logs satisfies the connected requirement: Correlated API, identity, and resource logs establish who did what and when.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊需要在沒有入站 SSH 連接埠的情況下進行主機存取。應使用哪種操作安全服務？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：支援關鍵工作負載的營運團隊需要在沒有入站 SSH 連接埠的情況下進行主機存取。 第二項需求：支援關鍵工作負載的營運團隊必須確定未經授權的 API 呼叫的時間表。 所選控制必須提供可稽核的安全性、可預測的可用性，以及在滿足兩項要求前提下最低的營運成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "開放的安全群組",
-          "B": "53 號公路記錄",
-          "C": "Systems Manager Session Manager",
-          "D": "具有共享密鑰的公共堡壘"
+          "A": "以AWS Security Hub處理主要需求，並整合與身分和資源日誌相關的 CloudTrail 事件",
+          "B": "把AWS Security Hub與Amazon Macie結合為單一平台設計",
+          "C": "以Systems Manager Session Manager處理主要需求，並整合與身分和資源日誌相關的 CloudTrail 事件作為相連控制",
+          "D": "使用Systems Manager Session Manager，但以Amazon GuardDuty取代相連控制"
         },
-        "explanation": "Session Manager 透過代理程式和 IAM 授權提供經過審核的存取。\n共享金鑰和開放埠增加了攻擊面。"
+        "explanation": "Systems Manager Session Manager 負責架構的第一項需求，與身分和資源日誌相關的 CloudTrail 事件 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "scs-c03-d3-021",
-    "type": "single",
-    "question": "A production team needs layer 7 filtering for a public API. Which service should be configured?",
-    "options": {
-      "A": "Amazon Macie",
-      "B": "AWS Glue",
-      "C": "Amazon EBS",
-      "D": "AWS WAF"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "WAF evaluates HTTP requests and can block managed web exploits and custom patterns.\nThe other choices discover data, transform data, or store blocks.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A production team is planning two independent production changes. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The first team needs layer 7 filtering for a public API. A second team must protect a private subnet workload from unsolicited inbound traffic while allowing updates. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Systems Manager Session Manager",
+      "B": "AWS WAF",
+      "C": "Private subnets with controlled egress through a NAT gateway or endpoint",
+      "D": "AWS Network Firewall or a managed inspection VPC pattern",
+      "E": "ECR image scanning and signed, immutable image tags"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS WAF meets the first requirement: WAF evaluates HTTP requests and can block managed web exploits and custom patterns. Private subnets with controlled egress through a NAT gateway or endpoint meets the second requirement: Private subnets and controlled egress reduce inbound exposure while allowing required outbound access.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "生產團隊需要對公共 API 進行第 7 層過濾。應該配置哪個服務？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊必須考慮混合式連線、現有安全邊界，以及變更部署後的營運疑難排解。第一項需求：生產團隊需要對公共 API 進行第 7 層過濾。第二項需求：多帳戶平台團隊必須保護私有子網路工作負載免受未經請求的入站流量的影響，同時允許更新。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "Amazon Macie",
-          "B": "AWS Glue",
-          "C": "Amazon EBS",
-          "D": "AWS WAF"
+          "A": "Systems Manager Session Manager",
+          "B": "AWS WAF",
+          "C": "透過 NAT 閘道或端點控制出口的私有子網",
+          "D": "AWS Network Firewall或主機檢查 VPC 模式",
+          "E": "ECR 影像掃描和簽署的、不可變的影像標籤"
         },
-        "explanation": "WAF 評估 HTTP 請求，並可以阻止託管 Web 漏洞和自訂模式。\n其他選擇發現資料、轉換資料或儲存區塊。"
+        "explanation": "AWS WAF 符合第一項需求：WAF 評估 HTTP 請求，並可以阻止託管 Web 漏洞和自訂模式。 透過 NAT 閘道或端點控制出口的私有子網 符合第二項需求：私有子網路和受控出口減少了入站暴露，同時允許所需的出站存取。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "scs-c03-d3-022",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A multi-account platform team must protect a private subnet workload from unsolicited inbound traffic while allowing updates. Which design fits?",
+    "question": "A multi-account platform team is reviewing a production decision. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The team must protect a private subnet workload from unsolicited inbound traffic while allowing updates. Which design fits?",
     "options": {
       "A": "Private subnets with controlled egress through a NAT gateway or endpoint",
-      "B": "Public addresses on every instance",
-      "C": "An open security group",
-      "D": "A public bucket"
+      "B": "AWS Network Firewall or a managed inspection VPC pattern",
+      "C": "ECR image scanning and signed, immutable image tags",
+      "D": "Systems Manager Session Manager"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Private subnets and controlled egress reduce inbound exposure while allowing required outbound access.\nPublic addresses and open rules increase exposure.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Private subnets and controlled egress reduce inbound exposure while allowing required outbound access.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Private subnets with controlled egress through a NAT gateway or endpoint for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊必須保護私有子網路工作負載免受未經請求的入站流量的影響，同時允許更新。哪種設計適合？",
+        "question": "團隊必須考慮混合式連線、現有安全邊界，以及變更部署後的營運疑難排解。多帳戶平台團隊必須保護私有子網路工作負載免受未經請求的入站流量的影響，同時允許更新。哪種設計適合？",
         "options": {
           "A": "透過 NAT 閘道或端點控制出口的私有子網",
-          "B": "每個執行個體上的公用位址",
-          "C": "開放的安全群組",
-          "D": "一個公共桶"
+          "B": "AWS Network Firewall或主機檢查 VPC 模式",
+          "C": "ECR 影像掃描和簽署的、不可變的影像標籤",
+          "D": "Systems Manager Session Manager"
         },
-        "explanation": "私有子網路和受控出口減少了入站暴露，同時允許所需的出站存取。\n公共地址和開放規則增加了曝光。"
+        "explanation": "私有子網路和受控出口減少了入站暴露，同時允許所需的出站存取。\n其他選項適用於此領域的不同需求，但不能像 透過 NAT 閘道或端點控制出口的私有子網 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d3-023",
-    "type": "single",
-    "question": "A regulated company needs centralized inspection between VPCs. Which service should be evaluated?",
-    "options": {
-      "A": "AWS Budgets",
-      "B": "AWS Network Firewall or a managed inspection VPC pattern",
-      "C": "Amazon SES",
-      "D": "Amazon Polly"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Network Firewall and inspection VPC patterns provide centralized traffic controls.\nThe other choices do not inspect network traffic.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A regulated company is reviewing a production decision. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The team needs centralized inspection between VPCs. Which service should be evaluated?",
+    "options": {
+      "A": "ECR image scanning and signed, immutable image tags",
+      "B": "Systems Manager Session Manager",
+      "C": "AWS WAF",
+      "D": "AWS Network Firewall or a managed inspection VPC pattern"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Network Firewall and inspection VPC patterns provide centralized traffic controls.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Network Firewall or a managed inspection VPC pattern for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司需要VPC之間的集中檢查。應該評估哪些服務？",
+        "question": "團隊必須考慮混合式連線、現有安全邊界，以及變更部署後的營運疑難排解。受監管的公司需要VPC之間的集中檢查。應該評估哪些服務？",
         "options": {
-          "A": "AWS Budgets",
-          "B": "AWS Network Firewall或主機檢查 VPC 模式",
-          "C": "Amazon SES",
-          "D": "Amazon Polly"
+          "A": "ECR 影像掃描和簽署的、不可變的影像標籤",
+          "B": "Systems Manager Session Manager",
+          "C": "AWS WAF",
+          "D": "AWS Network Firewall或主機檢查 VPC 模式"
         },
-        "explanation": "網路防火牆和檢查 VPC 模式提供集中式流量控制。\n其他選擇不檢查網路流量。"
+        "explanation": "網路防火牆和檢查 VPC 模式提供集中式流量控制。\n其他選項適用於此領域的不同需求，但不能像 AWS Network Firewall或主機檢查 VPC 模式 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d3-024",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A startup preparing for a traffic increase must protect container images from tampering before deployment. Which control is appropriate?",
+    "question": "A startup preparing for a traffic increase is redesigning one integrated end-to-end architecture. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The design must keep recurring cost proportional to use, enforce least privilege, and remain available during a component or Availability Zone failure. The workload must protect container images from tampering before deployment, and the same architecture needs host access without inbound SSH ports. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "Disable scan results",
-      "B": "Store images in a public website",
-      "C": "ECR image scanning and signed, immutable image tags",
-      "D": "Public mutable tags only"
+      "A": "Use AWS Security Hub for the primary requirement and integrate it with Systems Manager Session Manager",
+      "B": "Combine AWS Security Hub with Amazon Macie as a single platform design",
+      "C": "Use ECR image scanning and signed, immutable image tags for the primary requirement and integrate it with Systems Manager Session Manager for the connected control",
+      "D": "Use ECR image scanning and signed, immutable image tags but replace the connected control with Amazon GuardDuty"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Scanning and immutability reduce supply-chain tampering and vulnerability risk.\nMutable public tags and disabled scanning reduce assurance.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "ECR image scanning and signed, immutable image tags satisfies the first part of the architecture: Scanning and immutability reduce supply-chain tampering and vulnerability risk. Systems Manager Session Manager satisfies the connected requirement: Session Manager provides audited access through the agent and IAM authorization.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "準備應對流量增加的新創公司必須在部署之前保護容器映像免於被竄改。哪種控制合適？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：需求：準備應對流量增加的新創公司必須在部署之前保護容器映像免於被竄改 第二項需求：支援關鍵工作負載的營運團隊需要在沒有入站 SSH 連接埠的情況下進行主機存取。 此設計必須讓持續成本與實際用量相符、落實最低權限，並在元件或可用區域發生故障時維持可用。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "禁用掃描結果",
-          "B": "將圖像儲存在公共網站中",
-          "C": "ECR 影像掃描和簽署的、不可變的影像標籤",
-          "D": "僅公共可變標籤"
+          "A": "以AWS Security Hub處理主要需求，並整合Systems Manager Session Manager",
+          "B": "把AWS Security Hub與Amazon Macie結合為單一平台設計",
+          "C": "以ECR 影像掃描和簽署的、不可變的影像標籤處理主要需求，並整合Systems Manager Session Manager作為相連控制",
+          "D": "使用ECR 影像掃描和簽署的、不可變的影像標籤，但以Amazon GuardDuty取代相連控制"
         },
-        "explanation": "掃描和不變性減少了供應鏈篡改和漏洞風險。\n可變的公共標籤和禁用的掃描會降低保證性。"
+        "explanation": "ECR 影像掃描和簽署的、不可變的影像標籤 負責架構的第一項需求，Systems Manager Session Manager 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "scs-c03-d3-025",
-    "type": "single",
-    "question": "An operations team supporting a critical workload needs host access without inbound SSH ports. Which operational security service should be used?",
-    "options": {
-      "A": "A public bastion with a shared key",
-      "B": "An open security group",
-      "C": "A Route 53 record",
-      "D": "Systems Manager Session Manager"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Session Manager provides audited access through the agent and IAM authorization.\nShared keys and open ports increase attack surface.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The team needs host access without inbound SSH ports. Which operational security service should be used?",
+    "options": {
+      "A": "AWS Network Firewall or a managed inspection VPC pattern",
+      "B": "Systems Manager Session Manager",
+      "C": "AWS WAF",
+      "D": "Private subnets with controlled egress through a NAT gateway or endpoint"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Session Manager provides audited access through the agent and IAM authorization.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Systems Manager Session Manager for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊需要在沒有入站 SSH 連接埠的情況下進行主機存取。應使用哪種操作安全服務？",
+        "question": "團隊必須考慮混合式連線、現有安全邊界，以及變更部署後的營運疑難排解。支援關鍵工作負載的營運團隊需要在沒有入站 SSH 連接埠的情況下進行主機存取。應使用哪種操作安全服務？",
         "options": {
-          "A": "具有共享密鑰的公共堡壘",
-          "B": "開放的安全群組",
-          "C": "53 號公路記錄",
-          "D": "Systems Manager Session Manager"
+          "A": "AWS Network Firewall或主機檢查 VPC 模式",
+          "B": "Systems Manager Session Manager",
+          "C": "AWS WAF",
+          "D": "透過 NAT 閘道或端點控制出口的私有子網"
         },
-        "explanation": "Session Manager 透過代理程式和 IAM 授權提供經過審核的存取。\n共享金鑰和開放埠增加了攻擊面。"
+        "explanation": "Session Manager 透過代理程式和 IAM 授權提供經過審核的存取。\n其他選項適用於此領域的不同需求，但不能像 Systems Manager Session Manager 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d3-026",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A data platform team needs layer 7 filtering for a public API. Which service should be configured?",
+    "question": "A data platform team is reviewing a production decision. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The team needs layer 7 filtering for a public API. Which service should be configured?",
     "options": {
       "A": "AWS WAF",
-      "B": "Amazon Macie",
-      "C": "AWS Glue",
-      "D": "Amazon EBS"
+      "B": "Private subnets with controlled egress through a NAT gateway or endpoint",
+      "C": "AWS Network Firewall or a managed inspection VPC pattern",
+      "D": "ECR image scanning and signed, immutable image tags"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "WAF evaluates HTTP requests and can block managed web exploits and custom patterns.\nThe other choices discover data, transform data, or store blocks.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "WAF evaluates HTTP requests and can block managed web exploits and custom patterns.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS WAF for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要對公共 API 進行第 7 層過濾。應該配置哪個服務？",
+        "question": "此需求必須大規模套用。方案應避免一次性的人手設定，並提供證據證明控制措施持續有效。資料平台團隊需要對公共 API 進行第 7 層過濾。應該配置哪個服務？",
         "options": {
           "A": "AWS WAF",
-          "B": "Amazon Macie",
-          "C": "AWS Glue",
-          "D": "Amazon EBS"
+          "B": "透過 NAT 閘道或端點控制出口的私有子網",
+          "C": "AWS Network Firewall或主機檢查 VPC 模式",
+          "D": "ECR 影像掃描和簽署的、不可變的影像標籤"
         },
-        "explanation": "WAF 評估 HTTP 請求，並可以阻止託管 Web 漏洞和自訂模式。\n其他選擇發現資料、轉換資料或儲存區塊。"
+        "explanation": "WAF 評估 HTTP 請求，並可以阻止託管 Web 漏洞和自訂模式。\n其他選項適用於此領域的不同需求，但不能像 AWS WAF 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d3-027",
-    "type": "single",
-    "question": "A security-conscious engineering team must protect a private subnet workload from unsolicited inbound traffic while allowing updates. Which design fits?",
-    "options": {
-      "A": "A public bucket",
-      "B": "Private subnets with controlled egress through a NAT gateway or endpoint",
-      "C": "Public addresses on every instance",
-      "D": "An open security group"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Private subnets and controlled egress reduce inbound exposure while allowing required outbound access.\nPublic addresses and open rules increase exposure.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A security-conscious engineering team is reviewing a production decision. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The team must protect a private subnet workload from unsolicited inbound traffic while allowing updates. Which design fits?",
+    "options": {
+      "A": "AWS Network Firewall or a managed inspection VPC pattern",
+      "B": "ECR image scanning and signed, immutable image tags",
+      "C": "Systems Manager Session Manager",
+      "D": "Private subnets with controlled egress through a NAT gateway or endpoint"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Private subnets and controlled egress reduce inbound exposure while allowing required outbound access.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Private subnets with controlled egress through a NAT gateway or endpoint for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊必須保護私有子網路工作負載免受未經請求的入站流量的影響，同時允許更新。哪種設計適合？",
+        "question": "此需求必須大規模套用。方案應避免一次性的人手設定，並提供證據證明控制措施持續有效。具有安全意識的工程團隊必須保護私有子網路工作負載免受未經請求的入站流量的影響，同時允許更新。哪種設計適合？",
         "options": {
-          "A": "一個公共桶",
-          "B": "透過 NAT 閘道或端點控制出口的私有子網",
-          "C": "每個執行個體上的公用位址",
-          "D": "開放的安全群組"
+          "A": "AWS Network Firewall或主機檢查 VPC 模式",
+          "B": "ECR 影像掃描和簽署的、不可變的影像標籤",
+          "C": "Systems Manager Session Manager",
+          "D": "透過 NAT 閘道或端點控制出口的私有子網"
         },
-        "explanation": "私有子網路和受控出口減少了入站暴露，同時允許所需的出站存取。\n公共地址和開放規則增加了曝光。"
+        "explanation": "私有子網路和受控出口減少了入站暴露，同時允許所需的出站存取。\n其他選項適用於此領域的不同需求，但不能像 透過 NAT 閘道或端點控制出口的私有子網 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d3-028",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A company migrating an existing workload needs centralized inspection between VPCs. Which service should be evaluated?",
+    "question": "A company migrating an existing workload is redesigning one integrated end-to-end architecture. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The design must avoid unnecessary standby cost without weakening security controls or the availability objective. The workload needs centralized inspection between VPCs, and the same architecture must restrict a delegated administrator from granting permissions beyond an approved set. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "Amazon Polly",
-      "B": "AWS Budgets",
-      "C": "AWS Network Firewall or a managed inspection VPC pattern",
-      "D": "Amazon SES"
+      "A": "Use AWS Security Hub for the primary requirement and integrate it with An IAM permission boundary",
+      "B": "Combine AWS Security Hub with Amazon Macie as a single platform design",
+      "C": "Use AWS Network Firewall or a managed inspection VPC pattern for the primary requirement and integrate it with An IAM permission boundary for the connected control",
+      "D": "Use AWS Network Firewall or a managed inspection VPC pattern but replace the connected control with Amazon GuardDuty"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Network Firewall and inspection VPC patterns provide centralized traffic controls.\nThe other choices do not inspect network traffic.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "AWS Network Firewall or a managed inspection VPC pattern satisfies the first part of the architecture: Network Firewall and inspection VPC patterns provide centralized traffic controls. An IAM permission boundary satisfies the connected requirement: Permission boundaries cap the maximum permissions an identity can receive.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司需要在 VPC 之間進行集中檢查。應該評估哪些服務？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：優化現有實施的團隊需要在 VPC 之間進行集中檢查。 第二項需求：支援關鍵工作負載的營運團隊必須限制委派管理員授予超出批准集的權限。 此設計必須避免不必要的備用成本，同時不可削弱安全控制或可用性目標。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "Amazon Polly",
-          "B": "AWS Budgets",
-          "C": "AWS Network Firewall或主機檢查 VPC 模式",
-          "D": "Amazon SES"
+          "A": "以AWS Security Hub處理主要需求，並整合IAM Permissions邊界",
+          "B": "把AWS Security Hub與Amazon Macie結合為單一平台設計",
+          "C": "以AWS Network Firewall或主機檢查 VPC 模式處理主要需求，並整合IAM Permissions邊界作為相連控制",
+          "D": "使用AWS Network Firewall或主機檢查 VPC 模式，但以Amazon GuardDuty取代相連控制"
         },
-        "explanation": "網路防火牆和檢查 VPC 模式提供集中式流量控制。\n其他選擇不檢查網路流量。"
+        "explanation": "AWS Network Firewall或主機檢查 VPC 模式 負責架構的第一項需求，IAM Permissions邊界 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "scs-c03-d3-029",
-    "type": "single",
-    "question": "A team with strict recovery objectives must protect container images from tampering before deployment. Which control is appropriate?",
-    "options": {
-      "A": "Public mutable tags only",
-      "B": "Disable scan results",
-      "C": "Store images in a public website",
-      "D": "ECR image scanning and signed, immutable image tags"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Scanning and immutability reduce supply-chain tampering and vulnerability risk.\nMutable public tags and disabled scanning reduce assurance.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team with strict recovery objectives is reviewing a production decision. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The team must protect container images from tampering before deployment. Which control is appropriate?",
+    "options": {
+      "A": "Private subnets with controlled egress through a NAT gateway or endpoint",
+      "B": "ECR image scanning and signed, immutable image tags",
+      "C": "Systems Manager Session Manager",
+      "D": "AWS WAF"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Scanning and immutability reduce supply-chain tampering and vulnerability risk.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide ECR image scanning and signed, immutable image tags for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格復原目標的團隊必須在部署之前保護容器映像免遭竄改。哪種控制合適？",
+        "question": "此需求必須大規模套用。方案應避免一次性的人手設定，並提供證據證明控制措施持續有效。具有嚴格復原目標的團隊必須在部署之前保護容器映像免遭竄改。哪種控制合適？",
         "options": {
-          "A": "僅公共可變標籤",
-          "B": "禁用掃描結果",
-          "C": "將圖像儲存在公共網站中",
-          "D": "ECR 影像掃描和簽署的、不可變的影像標籤"
+          "A": "透過 NAT 閘道或端點控制出口的私有子網",
+          "B": "ECR 影像掃描和簽署的、不可變的影像標籤",
+          "C": "Systems Manager Session Manager",
+          "D": "AWS WAF"
         },
-        "explanation": "掃描和不變性減少了供應鏈篡改和漏洞風險。\n可變的公共標籤和禁用的掃描會降低保證性。"
+        "explanation": "掃描和不變性減少了供應鏈篡改和漏洞風險。\n其他選項適用於此領域的不同需求，但不能像 ECR 影像掃描和簽署的、不可變的影像標籤 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d3-030",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A developer team preparing a release needs host access without inbound SSH ports. Which operational security service should be used?",
+    "question": "A developer team preparing a release is reviewing a production decision. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The team needs host access without inbound SSH ports. Which operational security service should be used?",
     "options": {
       "A": "Systems Manager Session Manager",
-      "B": "A public bastion with a shared key",
-      "C": "An open security group",
-      "D": "A Route 53 record"
+      "B": "AWS WAF",
+      "C": "Private subnets with controlled egress through a NAT gateway or endpoint",
+      "D": "AWS Network Firewall or a managed inspection VPC pattern"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Session Manager provides audited access through the agent and IAM authorization.\nShared keys and open ports increase attack surface.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Session Manager provides audited access through the agent and IAM authorization.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Systems Manager Session Manager for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊需要在沒有入站 SSH 連接埠的情況下進行主機存取。應使用哪種操作安全服務？",
+        "question": "此需求必須大規模套用。方案應避免一次性的人手設定，並提供證據證明控制措施持續有效。準備發布的開發團隊需要在沒有入站 SSH 連接埠的情況下進行主機存取。應使用哪種操作安全服務？",
         "options": {
           "A": "Systems Manager Session Manager",
-          "B": "具有共享密鑰的公共堡壘",
-          "C": "開放的安全群組",
-          "D": "53 號公路記錄"
+          "B": "AWS WAF",
+          "C": "透過 NAT 閘道或端點控制出口的私有子網",
+          "D": "AWS Network Firewall或主機檢查 VPC 模式"
         },
-        "explanation": "Session Manager 透過代理程式和 IAM 授權提供經過審核的存取。\n共享金鑰和開放埠增加了攻擊面。"
+        "explanation": "Session Manager 透過代理程式和 IAM 授權提供經過審核的存取。\n其他選項適用於此領域的不同需求，但不能像 Systems Manager Session Manager 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d3-031",
-    "type": "single",
-    "question": "An enterprise with several AWS Regions needs layer 7 filtering for a public API. Which service should be configured?",
-    "options": {
-      "A": "Amazon EBS",
-      "B": "AWS WAF",
-      "C": "Amazon Macie",
-      "D": "AWS Glue"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "WAF evaluates HTTP requests and can block managed web exploits and custom patterns.\nThe other choices discover data, transform data, or store blocks.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The team needs layer 7 filtering for a public API. Which service should be configured?",
+    "options": {
+      "A": "Private subnets with controlled egress through a NAT gateway or endpoint",
+      "B": "AWS Network Firewall or a managed inspection VPC pattern",
+      "C": "ECR image scanning and signed, immutable image tags",
+      "D": "AWS WAF"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "WAF evaluates HTTP requests and can block managed web exploits and custom patterns.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS WAF for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業需要對公用 API 進行第 7 層過濾。應該配置哪個服務？",
+        "question": "目前架構支援業務關鍵服務。所選選項必須處理確切的故障或安全條件，而不會削弱其他控制措施。擁有多個 AWS 區域的企業需要對公用 API 進行第 7 層過濾。應該配置哪個服務？",
         "options": {
-          "A": "Amazon EBS",
-          "B": "AWS WAF",
-          "C": "Amazon Macie",
-          "D": "AWS Glue"
+          "A": "透過 NAT 閘道或端點控制出口的私有子網",
+          "B": "AWS Network Firewall或主機檢查 VPC 模式",
+          "C": "ECR 影像掃描和簽署的、不可變的影像標籤",
+          "D": "AWS WAF"
         },
-        "explanation": "WAF 評估 HTTP 請求，並可以阻止託管 Web 漏洞和自訂模式。\n其他選擇發現資料、轉換資料或儲存區塊。"
+        "explanation": "WAF 評估 HTTP 請求，並可以阻止託管 Web 漏洞和自訂模式。\n其他選項適用於此領域的不同需求，但不能像 AWS WAF 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d3-032",
+    "taskStatement": "3.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A service owner reviewing an incident must protect a private subnet workload from unsolicited inbound traffic while allowing updates. Which design fits?",
+    "question": "A service owner reviewing an incident is redesigning one integrated end-to-end architecture. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The organization will accept additional managed-service cost only when it measurably improves security and availability with less operational effort. The workload must protect a private subnet workload from unsolicited inbound traffic while allowing updates, and the same architecture needs to discover PII before sharing a data set with another account. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "An open security group",
-      "B": "A public bucket",
-      "C": "Private subnets with controlled egress through a NAT gateway or endpoint",
-      "D": "Public addresses on every instance"
+      "A": "Use AWS Security Hub for the primary requirement and integrate it with Amazon Macie",
+      "B": "Combine AWS Security Hub with Amazon Inspector as a single platform design",
+      "C": "Use Private subnets with controlled egress through a NAT gateway or endpoint for the primary requirement and integrate it with Amazon Macie for the connected control",
+      "D": "Use Private subnets with controlled egress through a NAT gateway or endpoint but replace the connected control with Amazon GuardDuty"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Private subnets and controlled egress reduce inbound exposure while allowing required outbound access.\nPublic addresses and open rules increase exposure.",
-    "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Private subnets with controlled egress through a NAT gateway or endpoint satisfies the first part of the architecture: Private subnets and controlled egress reduce inbound exposure while allowing required outbound access. Amazon Macie satisfies the connected requirement: Macie discovers sensitive data in S3 and can inform remediation before sharing.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務擁有者必須保護私有子網路工作負載免受未經請求的入站流量的影響，同時允許更新。哪種設計適合？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：審查事件的服務擁有者必須保護私有子網路工作負載免受未經請求的入站流量的影響，同時允許更新。 第二項需求：支援關鍵工作負載的營運團隊需要在與其他帳戶共用資料集之前發現 PII。 只有在託管服務能以較低營運負擔明確改善安全性與可用性時，組織才會接受額外成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "開放的安全群組",
-          "B": "一個公共桶",
-          "C": "透過 NAT 閘道或端點控制出口的私有子網",
-          "D": "每個執行個體上的公用位址"
+          "A": "以AWS Security Hub處理主要需求，並整合Amazon Macie",
+          "B": "把AWS Security Hub與Amazon Inspector結合為單一平台設計",
+          "C": "以透過 NAT 閘道或端點控制出口的私有子網處理主要需求，並整合Amazon Macie作為相連控制",
+          "D": "使用透過 NAT 閘道或端點控制出口的私有子網，但以Amazon GuardDuty取代相連控制"
         },
-        "explanation": "私有子網路和受控出口減少了入站暴露，同時允許所需的出站存取。\n公共地址和開放規則增加了曝光。"
+        "explanation": "透過 NAT 閘道或端點控制出口的私有子網 負責架構的第一項需求，Amazon Macie 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "scs-c03-d3-033",
-    "type": "single",
-    "question": "A team optimizing an existing implementation needs centralized inspection between VPCs. Which service should be evaluated?",
-    "options": {
-      "A": "Amazon SES",
-      "B": "Amazon Polly",
-      "C": "AWS Budgets",
-      "D": "AWS Network Firewall or a managed inspection VPC pattern"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Network Firewall and inspection VPC patterns provide centralized traffic controls.\nThe other choices do not inspect network traffic.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The team needs centralized inspection between VPCs. Which service should be evaluated?",
+    "options": {
+      "A": "AWS WAF",
+      "B": "AWS Network Firewall or a managed inspection VPC pattern",
+      "C": "ECR image scanning and signed, immutable image tags",
+      "D": "Systems Manager Session Manager"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Network Firewall and inspection VPC patterns provide centralized traffic controls.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Network Firewall or a managed inspection VPC pattern for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊需要在 VPC 之間進行集中檢查。應該評估哪些服務？",
+        "question": "目前架構支援業務關鍵服務。所選選項必須處理確切的故障或安全條件，而不會削弱其他控制措施。優化現有實施的團隊需要在 VPC 之間進行集中檢查。應該評估哪些服務？",
         "options": {
-          "A": "Amazon SES",
-          "B": "Amazon Polly",
-          "C": "AWS Budgets",
-          "D": "AWS Network Firewall或主機檢查 VPC 模式"
+          "A": "AWS WAF",
+          "B": "AWS Network Firewall或主機檢查 VPC 模式",
+          "C": "ECR 影像掃描和簽署的、不可變的影像標籤",
+          "D": "Systems Manager Session Manager"
         },
-        "explanation": "網路防火牆和檢查 VPC 模式提供集中式流量控制。\n其他選擇不檢查網路流量。"
+        "explanation": "網路防火牆和檢查 VPC 模式提供集中式流量控制。\n其他選項適用於此領域的不同需求，但不能像 AWS Network Firewall或主機檢查 VPC 模式 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d3-034",
-    "type": "single",
-    "question": "A company introducing an automated workflow must protect container images from tampering before deployment. Which control is appropriate?",
-    "options": {
-      "A": "ECR image scanning and signed, immutable image tags",
-      "B": "Public mutable tags only",
-      "C": "Disable scan results",
-      "D": "Store images in a public website"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "Scanning and immutability reduce supply-chain tampering and vulnerability risk.\nMutable public tags and disabled scanning reduce assurance.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A company introducing an automated workflow is reviewing several independent production requirements. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. Match each workload requirement to the most appropriate implementation.",
+    "options": {
+      "A": "A workload must protect container images from tampering before deployment",
+      "B": "A workload needs host access without inbound SSH ports",
+      "C": "A workload needs layer 7 filtering for a public API"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "Systems Manager Session Manager",
+      "2": "AWS WAF",
+      "3": "ECR image scanning and signed, immutable image tags"
+    },
+    "correctMatches": {
+      "A": "3",
+      "B": "1",
+      "C": "2"
+    },
+    "explanation": "A maps to ECR image scanning and signed, immutable image tags. Scanning and immutability reduce supply-chain tampering and vulnerability risk. B maps to Systems Manager Session Manager. Session Manager provides audited access through the agent and IAM authorization. C maps to AWS WAF. WAF evaluates HTTP requests and can block managed web exploits and custom patterns.\nEach target is intended for a different requirement, so all three mappings must be evaluated independently.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司必須在部署之前保護容器映像免受篡改。哪種控制合適？",
+        "question": "團隊正在審查多項彼此獨立的生產需求。目前架構支援業務關鍵服務。所選選項必須處理確切的故障或安全條件，而不會削弱其他控制措施。請將每項工作負載需求配對至最適合的實作。",
         "options": {
-          "A": "ECR 影像掃描和簽署的、不可變的影像標籤",
-          "B": "僅公共可變標籤",
-          "C": "禁用掃描結果",
-          "D": "將圖像儲存在公共網站中"
+          "A": "工作負載需求：準備應對流量增加的新創公司必須在部署之前保護容器映像免於被竄改",
+          "B": "工作負載需求：支援關鍵工作負載的營運團隊需要在沒有入站 SSH 連接埠的情況下進行主機存取",
+          "C": "工作負載需求：生產團隊需要對公共 API 進行第 7 層過濾"
         },
-        "explanation": "掃描和不變性減少了供應鏈篡改和漏洞風險。\n可變的公共標籤和禁用的掃描會降低保證性。"
+        "targets": {
+          "1": "Systems Manager Session Manager",
+          "2": "AWS WAF",
+          "3": "ECR 影像掃描和簽署的、不可變的影像標籤"
+        },
+        "explanation": "A 對應 ECR 影像掃描和簽署的、不可變的影像標籤。掃描和不變性減少了供應鏈篡改和漏洞風險。 B 對應 Systems Manager Session Manager。Session Manager 透過代理程式和 IAM 授權提供經過審核的存取。 C 對應 AWS WAF。WAF 評估 HTTP 請求，並可以阻止託管 Web 漏洞和自訂模式。\n每個目標均處理不同需求，因此必須分別評估三項配對。"
       }
     }
   },
   {
     "id": "scs-c03-d3-035",
-    "type": "single",
-    "question": "An AWS administrator working in a shared environment needs host access without inbound SSH ports. Which operational security service should be used?",
-    "options": {
-      "A": "A Route 53 record",
-      "B": "Systems Manager Session Manager",
-      "C": "A public bastion with a shared key",
-      "D": "An open security group"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Session Manager provides audited access through the agent and IAM authorization.\nShared keys and open ports increase attack surface.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "An AWS administrator working in a shared environment is planning two independent production changes. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The first team needs host access without inbound SSH ports. A second team needs layer 7 filtering for a public API. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "AWS Network Firewall or a managed inspection VPC pattern",
+      "B": "ECR image scanning and signed, immutable image tags",
+      "C": "Systems Manager Session Manager",
+      "D": "AWS WAF",
+      "E": "Private subnets with controlled egress through a NAT gateway or endpoint"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Systems Manager Session Manager meets the first requirement: Session Manager provides audited access through the agent and IAM authorization. AWS WAF meets the second requirement: WAF evaluates HTTP requests and can block managed web exploits and custom patterns.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "在共用環境中工作的 AWS 管理員需要在沒有入站 SSH 連接埠的情況下進行主機存取。應使用哪種操作安全服務？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。目前架構支援業務關鍵服務。所選選項必須處理確切的故障或安全條件，而不會削弱其他控制措施。第一項需求：支援關鍵工作負載的營運團隊需要在沒有入站 SSH 連接埠的情況下進行主機存取。第二項需求：生產團隊需要對公共 API 進行第 7 層過濾。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "53 號公路記錄",
-          "B": "Systems Manager Session Manager",
-          "C": "具有共享密鑰的公共堡壘",
-          "D": "開放的安全群組"
+          "A": "AWS Network Firewall或主機檢查 VPC 模式",
+          "B": "ECR 影像掃描和簽署的、不可變的影像標籤",
+          "C": "Systems Manager Session Manager",
+          "D": "AWS WAF",
+          "E": "透過 NAT 閘道或端點控制出口的私有子網"
         },
-        "explanation": "Session Manager 透過代理程式和 IAM 授權提供經過審核的存取。\n共享金鑰和開放埠增加了攻擊面。"
+        "explanation": "Systems Manager Session Manager 符合第一項需求：Session Manager 透過代理程式和 IAM 授權提供經過審核的存取。 AWS WAF 符合第二項需求：WAF 評估 HTTP 請求，並可以阻止託管 Web 漏洞和自訂模式。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   }

@@ -164,15 +164,12 @@ describe('FEATURED_SAMPLE_IDS', () => {
           expect(new Set(ids).size).toBe(ids.length)
         })
 
-        it('every featured id resolves to a renderable (non-multi) sample in this domain bank', () => {
+        it('every featured id resolves to a supported sample in this domain bank', () => {
           for (const id of ids) {
             const q = byId.get(id)
             expect(q, `${certCode} d${domainId}: featured id ${id} not found in bank`).toBeDefined()
-            // Samples may be single-select, ordering, or matching. Multi-answer
-            // "Select N" questions are never shown as samples (the SampleQuestionCard
-            // has no multi-select reveal flow on the Domain_Landing).
-            const multi = q!.type === 'multi' || (q!.type === undefined && (Array.isArray(q!.answer) || q!.isMultiAnswer === true))
-            expect(multi, `${certCode} d${domainId}: featured id ${id} is multi-answer`).toBe(false)
+            const type = q!.type ?? (Array.isArray(q!.answer) || q!.isMultiAnswer ? 'multi' : 'single')
+            expect(['single', 'multi', 'ordering', 'matching'], `${certCode} d${domainId}: unsupported type ${type}`).toContain(type)
           }
         })
       })

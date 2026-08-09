@@ -1,1205 +1,1235 @@
 [
   {
     "id": "soa-c03-d3-001",
-    "type": "single",
-    "question": "A production team needs repeatable infrastructure changes with a reviewable template. Which service is most appropriate?",
-    "options": {
-      "A": "Amazon Macie",
-      "B": "Amazon CloudFront",
-      "C": "Amazon ElastiCache",
-      "D": "AWS CloudFormation"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "CloudFormation defines and manages AWS resources as infrastructure as code.\nThe other choices discover sensitive data, deliver content, or cache data.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A production team is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs repeatable infrastructure changes with a reviewable template. Which service is most appropriate?",
+    "options": {
+      "A": "EventBridge rule targeting Lambda",
+      "B": "AWS CloudFormation",
+      "C": "AWS Systems Manager Run Command",
+      "D": "CloudFormation StackSets"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudFormation defines and manages AWS resources as infrastructure as code.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS CloudFormation for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "製作團隊需要使用可審查的範本來進行可重複的基礎架構變更。哪種服務最適合？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。製作團隊需要使用可審查的範本來進行可重複的基礎架構變更。哪種服務最適合？",
         "options": {
-          "A": "Amazon Macie",
-          "B": "Amazon CloudFront",
-          "C": "Amazon ElastiCache",
-          "D": "AWS CloudFormation"
+          "A": "針對 Lambda 的 EventBridge 規則",
+          "B": "AWS CloudFormation",
+          "C": "AWS Systems Manager Run Command",
+          "D": "CloudFormation StackSets"
         },
-        "explanation": "CloudFormation 將 AWS 資源作為基礎架構即程式碼進行定義和管理。\n其他選擇發現敏感資料、傳送內容或快取資料。"
+        "explanation": "CloudFormation 將 AWS 資源作為基礎架構即程式碼進行定義和管理。\n其他選項適用於此領域的不同需求，但不能像 AWS CloudFormation 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d3-002",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A multi-account platform team needs to run an operational command across a fleet of managed instances. Which service should be used?",
+    "question": "A multi-account platform team is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs to run an operational command across a fleet of managed instances. Which service should be used?",
     "options": {
       "A": "AWS Systems Manager Run Command",
-      "B": "Amazon S3 Select",
-      "C": "Amazon Cognito",
-      "D": "AWS Shield"
+      "B": "CloudFormation StackSets",
+      "C": "EventBridge rule targeting Lambda",
+      "D": "EC2 Image Builder"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Systems Manager Run Command executes commands across managed instances without requiring inbound SSH.\nThe other choices query objects, manage identities, or protect against DDoS.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Systems Manager Run Command executes commands across managed instances without requiring inbound SSH.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Systems Manager Run Command for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊需要在一組託管執行個體上執行操作命令。應該使用哪種服務？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。多帳戶平台團隊需要在一組託管執行個體上執行操作命令。應該使用哪種服務？",
         "options": {
           "A": "AWS Systems Manager Run Command",
-          "B": "Amazon S3 Select",
-          "C": "Amazon Cognito",
-          "D": "AWS Shield"
+          "B": "CloudFormation StackSets",
+          "C": "針對 Lambda 的 EventBridge 規則",
+          "D": "EC2 Image Builder"
         },
-        "explanation": "Systems Manager Run Command 會跨託管執行個體執行指令，無需入站 SSH。\n其他選項用於查詢物件、管理身分或防禦 DDoS。"
+        "explanation": "Systems Manager Run Command 會跨託管執行個體執行指令，無需入站 SSH。\n其他選項適用於此領域的不同需求，但不能像 AWS Systems Manager Run Command 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d3-003",
-    "type": "single",
-    "question": "A regulated company must share a CloudFormation stack configuration across several accounts and Regions. Which feature fits?",
-    "options": {
-      "A": "A Route 53 health check",
-      "B": "CloudFormation StackSets",
-      "C": "An S3 access point",
-      "D": "A Lambda layer"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "StackSets deploy and manage CloudFormation stacks across accounts and Regions.\nThe other choices manage S3 access, Lambda packaging, or endpoint health.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A regulated company is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team must share a CloudFormation stack configuration across several accounts and Regions. Which feature fits?",
+    "options": {
+      "A": "EventBridge rule targeting Lambda",
+      "B": "EC2 Image Builder",
+      "C": "AWS CloudFormation",
+      "D": "CloudFormation StackSets"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "StackSets deploy and manage CloudFormation stacks across accounts and Regions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide CloudFormation StackSets for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司必須在多個帳戶和區域之間共用 CloudFormation 堆疊配置。適合哪個功能？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。受監管的公司必須在多個帳戶和區域之間共用 CloudFormation 堆疊配置。適合哪個功能？",
         "options": {
-          "A": "Route 53 運轉狀況檢查",
-          "B": "CloudFormation StackSets",
-          "C": "S3 Access Points",
-          "D": "Lambda 層"
+          "A": "針對 Lambda 的 EventBridge 規則",
+          "B": "EC2 Image Builder",
+          "C": "AWS CloudFormation",
+          "D": "CloudFormation StackSets"
         },
-        "explanation": "StackSet 跨帳戶和區域部署和管理 CloudFormation 堆疊。\n其他選項管理 S3 存取、Lambda 打包或端點運作狀況。"
+        "explanation": "StackSet 跨帳戶和區域部署和管理 CloudFormation 堆疊。\n其他選項適用於此領域的不同需求，但不能像 CloudFormation StackSets 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d3-004",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A startup preparing for a traffic increase wants a resource change event to invoke a remediation Lambda function. Which pattern is suitable?",
+    "question": "A startup preparing for a traffic increase is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team wants a resource change event to invoke a remediation Lambda function. Which pattern is suitable?",
     "options": {
-      "A": "An EBS volume type",
-      "B": "An RDS read replica",
+      "A": "AWS CloudFormation",
+      "B": "AWS Systems Manager Run Command",
       "C": "EventBridge rule targeting Lambda",
-      "D": "A NAT gateway route"
+      "D": "EC2 Image Builder"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "EventBridge rules can match resource events and invoke automation targets.\nThe other choices are networking, block storage, or database read scaling features.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "EventBridge rules can match resource events and invoke automation targets.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide EventBridge rule targeting Lambda for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "一家準備增加流量的新創公司希望透過資源變更事件來呼叫修復 Lambda 函數。哪種模式合適？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。一家準備增加流量的新創公司希望透過資源變更事件來呼叫修復 Lambda 函數。哪種模式合適？",
         "options": {
-          "A": "EBS 磁碟區型",
-          "B": "RDS 唯讀副本",
+          "A": "AWS CloudFormation",
+          "B": "AWS Systems Manager Run Command",
           "C": "針對 Lambda 的 EventBridge 規則",
-          "D": "NAT網關路由"
+          "D": "EC2 Image Builder"
         },
-        "explanation": "EventBridge 規則可以匹配資源事件並呼叫自動化目標。\n其他選擇包括網路、區塊儲存或資料庫讀取擴充功能。"
+        "explanation": "EventBridge 規則可以匹配資源事件並呼叫自動化目標。\n其他選項適用於此領域的不同需求，但不能像 針對 Lambda 的 EventBridge 規則 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d3-005",
-    "type": "single",
-    "question": "An operations team supporting a critical workload needs to build an immutable machine image on a schedule. Which service should be evaluated?",
-    "options": {
-      "A": "Amazon Inspector only",
-      "B": "AWS Budgets",
-      "C": "Amazon SES",
-      "D": "EC2 Image Builder"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "EC2 Image Builder automates image pipelines that build, test, and distribute AMIs.\nInspector scans for vulnerabilities, Budgets monitors cost, and SES sends email.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs to build an immutable machine image on a schedule. Which service should be evaluated?",
+    "options": {
+      "A": "CloudFormation StackSets",
+      "B": "EC2 Image Builder",
+      "C": "AWS CloudFormation",
+      "D": "AWS Systems Manager Run Command"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "EC2 Image Builder automates image pipelines that build, test, and distribute AMIs.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide EC2 Image Builder for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊需要按計劃建立不可變的機器映像。應該評估哪些服務？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。支援關鍵工作負載的營運團隊需要按計劃建立不可變的機器映像。應該評估哪些服務？",
         "options": {
-          "A": "僅限亞馬遜檢查員",
-          "B": "AWS Budgets",
-          "C": "Amazon SES",
-          "D": "EC2 Image Builder"
+          "A": "CloudFormation StackSets",
+          "B": "EC2 Image Builder",
+          "C": "AWS CloudFormation",
+          "D": "AWS Systems Manager Run Command"
         },
-        "explanation": "EC2 Image Builder 可自動執行建置、測試和散佈 AMI 的映像管道。\n檢查員掃描漏洞，預算監控成本，SES 發送電子郵件。"
+        "explanation": "EC2 Image Builder 可自動執行建置、測試和散佈 AMI 的映像管道。\n其他選項適用於此領域的不同需求，但不能像 EC2 Image Builder 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d3-006",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A data platform team needs repeatable infrastructure changes with a reviewable template. Which service is most appropriate?",
+    "question": "A data platform team is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs repeatable infrastructure changes with a reviewable template. Which service is most appropriate?",
     "options": {
       "A": "AWS CloudFormation",
-      "B": "Amazon Macie",
-      "C": "Amazon CloudFront",
-      "D": "Amazon ElastiCache"
+      "B": "AWS Systems Manager Run Command",
+      "C": "CloudFormation StackSets",
+      "D": "EventBridge rule targeting Lambda"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "CloudFormation defines and manages AWS resources as infrastructure as code.\nThe other choices discover sensitive data, deliver content, or cache data.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "CloudFormation defines and manages AWS resources as infrastructure as code.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS CloudFormation for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要使用可審查的範本進行可重複的基礎架構變更。哪種服務最適合？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。資料平台團隊需要使用可審查的範本進行可重複的基礎架構變更。哪種服務最適合？",
         "options": {
           "A": "AWS CloudFormation",
-          "B": "Amazon Macie",
-          "C": "Amazon CloudFront",
-          "D": "Amazon ElastiCache"
+          "B": "AWS Systems Manager Run Command",
+          "C": "CloudFormation StackSets",
+          "D": "針對 Lambda 的 EventBridge 規則"
         },
-        "explanation": "CloudFormation 將 AWS 資源作為基礎架構即程式碼進行定義和管理。\n其他選擇發現敏感資料、傳送內容或快取資料。"
+        "explanation": "CloudFormation 將 AWS 資源作為基礎架構即程式碼進行定義和管理。\n其他選項適用於此領域的不同需求，但不能像 AWS CloudFormation 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d3-007",
-    "type": "single",
-    "question": "A security-conscious engineering team needs to run an operational command across a fleet of managed instances. Which service should be used?",
-    "options": {
-      "A": "AWS Shield",
-      "B": "AWS Systems Manager Run Command",
-      "C": "Amazon S3 Select",
-      "D": "Amazon Cognito"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Systems Manager Run Command executes commands across managed instances without requiring inbound SSH.\nThe other choices query objects, manage identities, or protect against DDoS.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A security-conscious engineering team is planning two independent production changes. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The first team needs to run an operational command across a fleet of managed instances. A second team must share a CloudFormation stack configuration across several accounts and Regions. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "AWS Systems Manager Run Command",
+      "B": "CloudFormation StackSets",
+      "C": "EventBridge rule targeting Lambda",
+      "D": "EC2 Image Builder",
+      "E": "AWS CloudFormation"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS Systems Manager Run Command meets the first requirement: Systems Manager Run Command executes commands across managed instances without requiring inbound SSH. CloudFormation StackSets meets the second requirement: StackSets deploy and manage CloudFormation stacks across accounts and Regions.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊需要在一組託管執行個體上執行操作命令。應該使用哪種服務？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。第一項需求：多帳戶平台團隊需要在一組託管執行個體上執行操作命令。第二項需求：受監管的公司必須在多個帳戶和區域之間共用 CloudFormation 堆疊配置。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "AWS Shield",
-          "B": "AWS Systems Manager Run Command",
-          "C": "Amazon S3 Select",
-          "D": "Amazon Cognito"
+          "A": "AWS Systems Manager Run Command",
+          "B": "CloudFormation StackSets",
+          "C": "針對 Lambda 的 EventBridge 規則",
+          "D": "EC2 Image Builder",
+          "E": "AWS CloudFormation"
         },
-        "explanation": "Systems Manager Run Command 會跨託管執行個體執行指令，無需入站 SSH。\n其他選項用於查詢物件、管理身分或防禦 DDoS。"
+        "explanation": "AWS Systems Manager Run Command 符合第一項需求：Systems Manager Run Command 會跨託管執行個體執行指令，無需入站 SSH。 CloudFormation StackSets 符合第二項需求：StackSet 跨帳戶和區域部署和管理 CloudFormation 堆疊。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "soa-c03-d3-008",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A company migrating an existing workload must share a CloudFormation stack configuration across several accounts and Regions. Which feature fits?",
+    "question": "A company migrating an existing workload is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team must share a CloudFormation stack configuration across several accounts and Regions. Which feature fits?",
     "options": {
-      "A": "A Lambda layer",
-      "B": "A Route 53 health check",
+      "A": "EC2 Image Builder",
+      "B": "AWS CloudFormation",
       "C": "CloudFormation StackSets",
-      "D": "An S3 access point"
+      "D": "EventBridge rule targeting Lambda"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "StackSets deploy and manage CloudFormation stacks across accounts and Regions.\nThe other choices manage S3 access, Lambda packaging, or endpoint health.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "StackSets deploy and manage CloudFormation stacks across accounts and Regions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide CloudFormation StackSets for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司必須跨多個帳戶和區域共用 CloudFormation 堆疊配置。適合哪個功能？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。遷移現有工作負載的公司必須跨多個帳戶和區域共用 CloudFormation 堆疊配置。適合哪個功能？",
         "options": {
-          "A": "Lambda 層",
-          "B": "Route 53 運轉狀況檢查",
+          "A": "EC2 Image Builder",
+          "B": "AWS CloudFormation",
           "C": "CloudFormation StackSets",
-          "D": "S3 Access Points"
+          "D": "針對 Lambda 的 EventBridge 規則"
         },
-        "explanation": "StackSet 跨帳戶和區域部署和管理 CloudFormation 堆疊。\n其他選項管理 S3 存取、Lambda 打包或端點運作狀況。"
+        "explanation": "StackSet 跨帳戶和區域部署和管理 CloudFormation 堆疊。\n其他選項適用於此領域的不同需求，但不能像 CloudFormation StackSets 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d3-009",
-    "type": "single",
-    "question": "A team with strict recovery objectives wants a resource change event to invoke a remediation Lambda function. Which pattern is suitable?",
-    "options": {
-      "A": "A NAT gateway route",
-      "B": "An EBS volume type",
-      "C": "An RDS read replica",
-      "D": "EventBridge rule targeting Lambda"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "EventBridge rules can match resource events and invoke automation targets.\nThe other choices are networking, block storage, or database read scaling features.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team with strict recovery objectives is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team wants a resource change event to invoke a remediation Lambda function. Which pattern is suitable?",
+    "options": {
+      "A": "AWS Systems Manager Run Command",
+      "B": "EventBridge rule targeting Lambda",
+      "C": "EC2 Image Builder",
+      "D": "AWS CloudFormation"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge rules can match resource events and invoke automation targets.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide EventBridge rule targeting Lambda for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格復原目標的團隊希望資源變更事件能夠呼叫修復 Lambda 函數。哪種模式合適？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。具有嚴格復原目標的團隊希望資源變更事件能夠呼叫修復 Lambda 函數。哪種模式合適？",
         "options": {
-          "A": "NAT網關路由",
-          "B": "EBS 磁碟區型",
-          "C": "RDS 唯讀副本",
-          "D": "針對 Lambda 的 EventBridge 規則"
+          "A": "AWS Systems Manager Run Command",
+          "B": "針對 Lambda 的 EventBridge 規則",
+          "C": "EC2 Image Builder",
+          "D": "AWS CloudFormation"
         },
-        "explanation": "EventBridge 規則可以匹配資源事件並呼叫自動化目標。\n其他選擇包括網路、區塊儲存或資料庫讀取擴充功能。"
+        "explanation": "EventBridge 規則可以匹配資源事件並呼叫自動化目標。\n其他選項適用於此領域的不同需求，但不能像 針對 Lambda 的 EventBridge 規則 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d3-010",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A developer team preparing a release needs to build an immutable machine image on a schedule. Which service should be evaluated?",
+    "question": "A developer team preparing a release is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs to build an immutable machine image on a schedule. Which service should be evaluated?",
     "options": {
       "A": "EC2 Image Builder",
-      "B": "Amazon Inspector only",
-      "C": "AWS Budgets",
-      "D": "Amazon SES"
+      "B": "AWS CloudFormation",
+      "C": "AWS Systems Manager Run Command",
+      "D": "CloudFormation StackSets"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "EC2 Image Builder automates image pipelines that build, test, and distribute AMIs.\nInspector scans for vulnerabilities, Budgets monitors cost, and SES sends email.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "EC2 Image Builder automates image pipelines that build, test, and distribute AMIs.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide EC2 Image Builder for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊需要按計劃建立不可變的機器映像。應該評估哪些服務？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。準備發布的開發團隊需要按計劃建立不可變的機器映像。應該評估哪些服務？",
         "options": {
           "A": "EC2 Image Builder",
-          "B": "僅限亞馬遜檢查員",
-          "C": "AWS Budgets",
-          "D": "Amazon SES"
+          "B": "AWS CloudFormation",
+          "C": "AWS Systems Manager Run Command",
+          "D": "CloudFormation StackSets"
         },
-        "explanation": "EC2 Image Builder 可自動執行建置、測試和散佈 AMI 的映像管道。\n檢查員掃描漏洞，預算監控成本，SES 發送電子郵件。"
+        "explanation": "EC2 Image Builder 可自動執行建置、測試和散佈 AMI 的映像管道。\n其他選項適用於此領域的不同需求，但不能像 EC2 Image Builder 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d3-011",
-    "type": "single",
-    "question": "An enterprise with several AWS Regions needs repeatable infrastructure changes with a reviewable template. Which service is most appropriate?",
-    "options": {
-      "A": "Amazon ElastiCache",
-      "B": "AWS CloudFormation",
-      "C": "Amazon Macie",
-      "D": "Amazon CloudFront"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "CloudFormation defines and manages AWS resources as infrastructure as code.\nThe other choices discover sensitive data, deliver content, or cache data.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs repeatable infrastructure changes with a reviewable template. Which service is most appropriate?",
+    "options": {
+      "A": "AWS Systems Manager Run Command",
+      "B": "CloudFormation StackSets",
+      "C": "EventBridge rule targeting Lambda",
+      "D": "AWS CloudFormation"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudFormation defines and manages AWS resources as infrastructure as code.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS CloudFormation for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業需要使用可審查的範本進行可重複的基礎架構變更。哪種服務最適合？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。擁有多個 AWS 區域的企業需要使用可審查的範本進行可重複的基礎架構變更。哪種服務最適合？",
         "options": {
-          "A": "Amazon ElastiCache",
-          "B": "AWS CloudFormation",
-          "C": "Amazon Macie",
-          "D": "Amazon CloudFront"
+          "A": "AWS Systems Manager Run Command",
+          "B": "CloudFormation StackSets",
+          "C": "針對 Lambda 的 EventBridge 規則",
+          "D": "AWS CloudFormation"
         },
-        "explanation": "CloudFormation 將 AWS 資源作為基礎架構即程式碼進行定義和管理。\n其他選擇發現敏感資料、傳送內容或快取資料。"
+        "explanation": "CloudFormation 將 AWS 資源作為基礎架構即程式碼進行定義和管理。\n其他選項適用於此領域的不同需求，但不能像 AWS CloudFormation 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d3-012",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A service owner reviewing an incident needs to run an operational command across a fleet of managed instances. Which service should be used?",
+    "question": "A service owner reviewing an incident is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs to run an operational command across a fleet of managed instances. Which service should be used?",
     "options": {
-      "A": "Amazon Cognito",
-      "B": "AWS Shield",
+      "A": "EventBridge rule targeting Lambda",
+      "B": "EC2 Image Builder",
       "C": "AWS Systems Manager Run Command",
-      "D": "Amazon S3 Select"
+      "D": "CloudFormation StackSets"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Systems Manager Run Command executes commands across managed instances without requiring inbound SSH.\nThe other choices query objects, manage identities, or protect against DDoS.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Systems Manager Run Command executes commands across managed instances without requiring inbound SSH.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Systems Manager Run Command for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務擁有者需要在一組託管執行個體上執行操作命令。應該使用哪種服務？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。審查事件的服務擁有者需要在一組託管執行個體上執行操作命令。應該使用哪種服務？",
         "options": {
-          "A": "Amazon Cognito",
-          "B": "AWS Shield",
+          "A": "針對 Lambda 的 EventBridge 規則",
+          "B": "EC2 Image Builder",
           "C": "AWS Systems Manager Run Command",
-          "D": "Amazon S3 Select"
+          "D": "CloudFormation StackSets"
         },
-        "explanation": "Systems Manager Run Command 會跨託管執行個體執行指令，無需入站 SSH。\n其他選項用於查詢物件、管理身分或防禦 DDoS。"
+        "explanation": "Systems Manager Run Command 會跨託管執行個體執行指令，無需入站 SSH。\n其他選項適用於此領域的不同需求，但不能像 AWS Systems Manager Run Command 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d3-013",
-    "type": "single",
-    "question": "A team optimizing an existing implementation must share a CloudFormation stack configuration across several accounts and Regions. Which feature fits?",
-    "options": {
-      "A": "An S3 access point",
-      "B": "A Lambda layer",
-      "C": "A Route 53 health check",
-      "D": "CloudFormation StackSets"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "StackSets deploy and manage CloudFormation stacks across accounts and Regions.\nThe other choices manage S3 access, Lambda packaging, or endpoint health.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team must share a CloudFormation stack configuration across several accounts and Regions. Which feature fits?",
+    "options": {
+      "A": "AWS CloudFormation",
+      "B": "CloudFormation StackSets",
+      "C": "EventBridge rule targeting Lambda",
+      "D": "EC2 Image Builder"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "StackSets deploy and manage CloudFormation stacks across accounts and Regions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide CloudFormation StackSets for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊必須跨多個帳戶和區域共用 CloudFormation 堆疊配置。適合哪個功能？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。優化現有實施的團隊必須跨多個帳戶和區域共用 CloudFormation 堆疊配置。適合哪個功能？",
         "options": {
-          "A": "S3 Access Points",
-          "B": "Lambda 層",
-          "C": "Route 53 運轉狀況檢查",
-          "D": "CloudFormation StackSets"
+          "A": "AWS CloudFormation",
+          "B": "CloudFormation StackSets",
+          "C": "針對 Lambda 的 EventBridge 規則",
+          "D": "EC2 Image Builder"
         },
-        "explanation": "StackSet 跨帳戶和區域部署和管理 CloudFormation 堆疊。\n其他選項管理 S3 存取、Lambda 打包或端點運作狀況。"
+        "explanation": "StackSet 跨帳戶和區域部署和管理 CloudFormation 堆疊。\n其他選項適用於此領域的不同需求，但不能像 CloudFormation StackSets 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d3-014",
-    "type": "single",
-    "question": "A company introducing an automated workflow wants a resource change event to invoke a remediation Lambda function. Which pattern is suitable?",
-    "options": {
-      "A": "EventBridge rule targeting Lambda",
-      "B": "A NAT gateway route",
-      "C": "An EBS volume type",
-      "D": "An RDS read replica"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "EventBridge rules can match resource events and invoke automation targets.\nThe other choices are networking, block storage, or database read scaling features.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A company introducing an automated workflow is planning two independent production changes. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The first team wants a resource change event to invoke a remediation Lambda function. A second team needs to build an immutable machine image on a schedule. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "AWS CloudFormation",
+      "B": "AWS Systems Manager Run Command",
+      "C": "CloudFormation StackSets",
+      "D": "EventBridge rule targeting Lambda",
+      "E": "EC2 Image Builder"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "EventBridge rule targeting Lambda meets the first requirement: EventBridge rules can match resource events and invoke automation targets. EC2 Image Builder meets the second requirement: EC2 Image Builder automates image pipelines that build, test, and distribute AMIs.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "一家引入自動化工作流程的公司希望透過資源變更事件來呼叫修復 Lambda 函數。哪種模式合適？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。第一項需求：一家準備增加流量的新創公司希望透過資源變更事件來呼叫修復 Lambda 函數。第二項需求：支援關鍵工作負載的營運團隊需要按計劃建立不可變的機器映像。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "針對 Lambda 的 EventBridge 規則",
-          "B": "NAT網關路由",
-          "C": "EBS 磁碟區型",
-          "D": "RDS 唯讀副本"
+          "A": "AWS CloudFormation",
+          "B": "AWS Systems Manager Run Command",
+          "C": "CloudFormation StackSets",
+          "D": "針對 Lambda 的 EventBridge 規則",
+          "E": "EC2 Image Builder"
         },
-        "explanation": "EventBridge 規則可以匹配資源事件並呼叫自動化目標。\n其他選擇包括網路、區塊儲存或資料庫讀取擴充功能。"
+        "explanation": "針對 Lambda 的 EventBridge 規則 符合第一項需求：EventBridge 規則可以匹配資源事件並呼叫自動化目標。 EC2 Image Builder 符合第二項需求：EC2 Image Builder 可自動執行建置、測試和散佈 AMI 的映像管道。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "soa-c03-d3-015",
-    "type": "single",
-    "question": "An AWS administrator working in a shared environment needs to build an immutable machine image on a schedule. Which service should be evaluated?",
-    "options": {
-      "A": "Amazon SES",
-      "B": "EC2 Image Builder",
-      "C": "Amazon Inspector only",
-      "D": "AWS Budgets"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "EC2 Image Builder automates image pipelines that build, test, and distribute AMIs.\nInspector scans for vulnerabilities, Budgets monitors cost, and SES sends email.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs to build an immutable machine image on a schedule. Which service should be evaluated?",
+    "options": {
+      "A": "AWS CloudFormation",
+      "B": "AWS Systems Manager Run Command",
+      "C": "CloudFormation StackSets",
+      "D": "EC2 Image Builder"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "EC2 Image Builder automates image pipelines that build, test, and distribute AMIs.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide EC2 Image Builder for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "在共享環境中工作的 AWS 管理員需要按計畫建立不可變的機器映像。應該評估哪些服務？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。在共享環境中工作的 AWS 管理員需要按計畫建立不可變的機器映像。應該評估哪些服務？",
         "options": {
-          "A": "Amazon SES",
-          "B": "EC2 Image Builder",
-          "C": "僅限亞馬遜檢查員",
-          "D": "AWS Budgets"
+          "A": "AWS CloudFormation",
+          "B": "AWS Systems Manager Run Command",
+          "C": "CloudFormation StackSets",
+          "D": "EC2 Image Builder"
         },
-        "explanation": "EC2 Image Builder 可自動執行建置、測試和散佈 AMI 的映像管道。\n檢查員掃描漏洞，預算監控成本，SES 發送電子郵件。"
+        "explanation": "EC2 Image Builder 可自動執行建置、測試和散佈 AMI 的映像管道。\n其他選項適用於此領域的不同需求，但不能像 EC2 Image Builder 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d3-016",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A customer-facing application team needs repeatable infrastructure changes with a reviewable template. Which service is most appropriate?",
+    "question": "A customer-facing application team is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs repeatable infrastructure changes with a reviewable template. Which service is most appropriate?",
     "options": {
-      "A": "Amazon CloudFront",
-      "B": "Amazon ElastiCache",
+      "A": "CloudFormation StackSets",
+      "B": "EventBridge rule targeting Lambda",
       "C": "AWS CloudFormation",
-      "D": "Amazon Macie"
+      "D": "AWS Systems Manager Run Command"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "CloudFormation defines and manages AWS resources as infrastructure as code.\nThe other choices discover sensitive data, deliver content, or cache data.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "CloudFormation defines and manages AWS resources as infrastructure as code.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS CloudFormation for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊需要使用可審查的範本進行可重複的基礎架構變更。哪種服務最適合？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。面向客戶的應用程式團隊需要使用可審查的範本進行可重複的基礎架構變更。哪種服務最適合？",
         "options": {
-          "A": "Amazon CloudFront",
-          "B": "Amazon ElastiCache",
+          "A": "CloudFormation StackSets",
+          "B": "針對 Lambda 的 EventBridge 規則",
           "C": "AWS CloudFormation",
-          "D": "Amazon Macie"
+          "D": "AWS Systems Manager Run Command"
         },
-        "explanation": "CloudFormation 將 AWS 資源作為基礎架構即程式碼進行定義和管理。\n其他選擇發現敏感資料、傳送內容或快取資料。"
+        "explanation": "CloudFormation 將 AWS 資源作為基礎架構即程式碼進行定義和管理。\n其他選項適用於此領域的不同需求，但不能像 AWS CloudFormation 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d3-017",
-    "type": "single",
-    "question": "A platform team standardizing its AWS deployments needs to run an operational command across a fleet of managed instances. Which service should be used?",
-    "options": {
-      "A": "Amazon S3 Select",
-      "B": "Amazon Cognito",
-      "C": "AWS Shield",
-      "D": "AWS Systems Manager Run Command"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Systems Manager Run Command executes commands across managed instances without requiring inbound SSH.\nThe other choices query objects, manage identities, or protect against DDoS.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs to run an operational command across a fleet of managed instances. Which service should be used?",
+    "options": {
+      "A": "EC2 Image Builder",
+      "B": "AWS Systems Manager Run Command",
+      "C": "CloudFormation StackSets",
+      "D": "EventBridge rule targeting Lambda"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Systems Manager Run Command executes commands across managed instances without requiring inbound SSH.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Systems Manager Run Command for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊需要跨一組託管執行個體執行操作命令。應該使用哪種服務？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。標準化其 AWS 部署的平台團隊需要跨一組託管執行個體執行操作命令。應該使用哪種服務？",
         "options": {
-          "A": "Amazon S3 Select",
-          "B": "Amazon Cognito",
-          "C": "AWS Shield",
-          "D": "AWS Systems Manager Run Command"
+          "A": "EC2 Image Builder",
+          "B": "AWS Systems Manager Run Command",
+          "C": "CloudFormation StackSets",
+          "D": "針對 Lambda 的 EventBridge 規則"
         },
-        "explanation": "Systems Manager Run Command 會跨託管執行個體執行指令，無需入站 SSH。\n其他選項用於查詢物件、管理身分或防禦 DDoS。"
+        "explanation": "Systems Manager Run Command 會跨託管執行個體執行指令，無需入站 SSH。\n其他選項適用於此領域的不同需求，但不能像 AWS Systems Manager Run Command 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d3-018",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team preparing evidence for an audit must share a CloudFormation stack configuration across several accounts and Regions. Which feature fits?",
+    "question": "A team preparing evidence for an audit is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team must share a CloudFormation stack configuration across several accounts and Regions. Which feature fits?",
     "options": {
       "A": "CloudFormation StackSets",
-      "B": "An S3 access point",
-      "C": "A Lambda layer",
-      "D": "A Route 53 health check"
+      "B": "EventBridge rule targeting Lambda",
+      "C": "EC2 Image Builder",
+      "D": "AWS CloudFormation"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "StackSets deploy and manage CloudFormation stacks across accounts and Regions.\nThe other choices manage S3 access, Lambda packaging, or endpoint health.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "StackSets deploy and manage CloudFormation stacks across accounts and Regions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide CloudFormation StackSets for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備審計證據的團隊必須跨多個帳戶和區域共用 CloudFormation 堆疊配置。適合哪個功能？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。準備審計證據的團隊必須跨多個帳戶和區域共用 CloudFormation 堆疊配置。適合哪個功能？",
         "options": {
           "A": "CloudFormation StackSets",
-          "B": "S3 Access Points",
-          "C": "Lambda 層",
-          "D": "Route 53 運轉狀況檢查"
+          "B": "針對 Lambda 的 EventBridge 規則",
+          "C": "EC2 Image Builder",
+          "D": "AWS CloudFormation"
         },
-        "explanation": "StackSet 跨帳戶和區域部署和管理 CloudFormation 堆疊。\n其他選項管理 S3 存取、Lambda 打包或端點運作狀況。"
+        "explanation": "StackSet 跨帳戶和區域部署和管理 CloudFormation 堆疊。\n其他選項適用於此領域的不同需求，但不能像 CloudFormation StackSets 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d3-019",
-    "type": "single",
-    "question": "A business replacing a manual process wants a resource change event to invoke a remediation Lambda function. Which pattern is suitable?",
-    "options": {
-      "A": "An RDS read replica",
-      "B": "EventBridge rule targeting Lambda",
-      "C": "A NAT gateway route",
-      "D": "An EBS volume type"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "EventBridge rules can match resource events and invoke automation targets.\nThe other choices are networking, block storage, or database read scaling features.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A business replacing a manual process is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team wants a resource change event to invoke a remediation Lambda function. Which pattern is suitable?",
+    "options": {
+      "A": "EC2 Image Builder",
+      "B": "AWS CloudFormation",
+      "C": "AWS Systems Manager Run Command",
+      "D": "EventBridge rule targeting Lambda"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge rules can match resource events and invoke automation targets.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide EventBridge rule targeting Lambda for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "取代手動流程的企業希望資源變更事件能夠呼叫修復 Lambda 函數。哪種模式合適？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。取代手動流程的企業希望資源變更事件能夠呼叫修復 Lambda 函數。哪種模式合適？",
         "options": {
-          "A": "RDS 唯讀副本",
-          "B": "針對 Lambda 的 EventBridge 規則",
-          "C": "NAT網關路由",
-          "D": "EBS 磁碟區型"
+          "A": "EC2 Image Builder",
+          "B": "AWS CloudFormation",
+          "C": "AWS Systems Manager Run Command",
+          "D": "針對 Lambda 的 EventBridge 規則"
         },
-        "explanation": "EventBridge 規則可以匹配資源事件並呼叫自動化目標。\n其他選擇包括網路、區塊儲存或資料庫讀取擴充功能。"
+        "explanation": "EventBridge 規則可以匹配資源事件並呼叫自動化目標。\n其他選項適用於此領域的不同需求，但不能像 針對 Lambda 的 EventBridge 規則 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d3-020",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team validating a design against the exam guide needs to build an immutable machine image on a schedule. Which service should be evaluated?",
+    "question": "A team validating a design against the exam guide is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs to build an immutable machine image on a schedule. Which service should be evaluated?",
     "options": {
-      "A": "AWS Budgets",
-      "B": "Amazon SES",
+      "A": "AWS Systems Manager Run Command",
+      "B": "CloudFormation StackSets",
       "C": "EC2 Image Builder",
-      "D": "Amazon Inspector only"
+      "D": "AWS CloudFormation"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "EC2 Image Builder automates image pipelines that build, test, and distribute AMIs.\nInspector scans for vulnerabilities, Budgets monitors cost, and SES sends email.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "EC2 Image Builder automates image pipelines that build, test, and distribute AMIs.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide EC2 Image Builder for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊需要按計劃建立不可變的機器映像。應該評估哪些服務？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。根據考試指南驗證設計的團隊需要按計劃建立不可變的機器映像。應該評估哪些服務？",
         "options": {
-          "A": "AWS Budgets",
-          "B": "Amazon SES",
+          "A": "AWS Systems Manager Run Command",
+          "B": "CloudFormation StackSets",
           "C": "EC2 Image Builder",
-          "D": "僅限亞馬遜檢查員"
+          "D": "AWS CloudFormation"
         },
-        "explanation": "EC2 Image Builder 可自動執行建置、測試和散佈 AMI 的映像管道。\n檢查員掃描漏洞，預算監控成本，SES 發送電子郵件。"
+        "explanation": "EC2 Image Builder 可自動執行建置、測試和散佈 AMI 的映像管道。\n其他選項適用於此領域的不同需求，但不能像 EC2 Image Builder 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d3-021",
-    "type": "single",
-    "question": "A production team needs repeatable infrastructure changes with a reviewable template. Which service is most appropriate?",
-    "options": {
-      "A": "Amazon Macie",
-      "B": "Amazon CloudFront",
-      "C": "Amazon ElastiCache",
-      "D": "AWS CloudFormation"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "CloudFormation defines and manages AWS resources as infrastructure as code.\nThe other choices discover sensitive data, deliver content, or cache data.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A production team is planning two independent production changes. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The first team needs repeatable infrastructure changes with a reviewable template. A second team needs to run an operational command across a fleet of managed instances. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "EC2 Image Builder",
+      "B": "AWS CloudFormation",
+      "C": "AWS Systems Manager Run Command",
+      "D": "CloudFormation StackSets",
+      "E": "EventBridge rule targeting Lambda"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS CloudFormation meets the first requirement: CloudFormation defines and manages AWS resources as infrastructure as code. AWS Systems Manager Run Command meets the second requirement: Systems Manager Run Command executes commands across managed instances without requiring inbound SSH.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "製作團隊需要使用可審查的範本來進行可重複的基礎架構變更。哪種服務最適合？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。第一項需求：製作團隊需要使用可審查的範本來進行可重複的基礎架構變更。第二項需求：多帳戶平台團隊需要在一組託管執行個體上執行操作命令。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "Amazon Macie",
-          "B": "Amazon CloudFront",
-          "C": "Amazon ElastiCache",
-          "D": "AWS CloudFormation"
+          "A": "EC2 Image Builder",
+          "B": "AWS CloudFormation",
+          "C": "AWS Systems Manager Run Command",
+          "D": "CloudFormation StackSets",
+          "E": "針對 Lambda 的 EventBridge 規則"
         },
-        "explanation": "CloudFormation 將 AWS 資源作為基礎架構即程式碼進行定義和管理。\n其他選擇發現敏感資料、傳送內容或快取資料。"
+        "explanation": "AWS CloudFormation 符合第一項需求：CloudFormation 將 AWS 資源作為基礎架構即程式碼進行定義和管理。 AWS Systems Manager Run Command 符合第二項需求：Systems Manager Run Command 會跨託管執行個體執行指令，無需入站 SSH。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "soa-c03-d3-022",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A multi-account platform team needs to run an operational command across a fleet of managed instances. Which service should be used?",
+    "question": "A multi-account platform team is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team needs to run an operational command across a fleet of managed instances. Which service should be used?",
     "options": {
       "A": "AWS Systems Manager Run Command",
-      "B": "Amazon S3 Select",
-      "C": "Amazon Cognito",
-      "D": "AWS Shield"
+      "B": "CloudFormation StackSets",
+      "C": "EventBridge rule targeting Lambda",
+      "D": "EC2 Image Builder"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Systems Manager Run Command executes commands across managed instances without requiring inbound SSH.\nThe other choices query objects, manage identities, or protect against DDoS.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Systems Manager Run Command executes commands across managed instances without requiring inbound SSH.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Systems Manager Run Command for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊需要在一組託管執行個體上執行操作命令。應該使用哪種服務？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。多帳戶平台團隊需要在一組託管執行個體上執行操作命令。應該使用哪種服務？",
         "options": {
           "A": "AWS Systems Manager Run Command",
-          "B": "Amazon S3 Select",
-          "C": "Amazon Cognito",
-          "D": "AWS Shield"
+          "B": "CloudFormation StackSets",
+          "C": "針對 Lambda 的 EventBridge 規則",
+          "D": "EC2 Image Builder"
         },
-        "explanation": "Systems Manager Run Command 會跨託管執行個體執行指令，無需入站 SSH。\n其他選項用於查詢物件、管理身分或防禦 DDoS。"
+        "explanation": "Systems Manager Run Command 會跨託管執行個體執行指令，無需入站 SSH。\n其他選項適用於此領域的不同需求，但不能像 AWS Systems Manager Run Command 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d3-023",
-    "type": "single",
-    "question": "A regulated company must share a CloudFormation stack configuration across several accounts and Regions. Which feature fits?",
-    "options": {
-      "A": "A Route 53 health check",
-      "B": "CloudFormation StackSets",
-      "C": "An S3 access point",
-      "D": "A Lambda layer"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "StackSets deploy and manage CloudFormation stacks across accounts and Regions.\nThe other choices manage S3 access, Lambda packaging, or endpoint health.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A regulated company is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team must share a CloudFormation stack configuration across several accounts and Regions. Which feature fits?",
+    "options": {
+      "A": "EventBridge rule targeting Lambda",
+      "B": "EC2 Image Builder",
+      "C": "AWS CloudFormation",
+      "D": "CloudFormation StackSets"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "StackSets deploy and manage CloudFormation stacks across accounts and Regions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide CloudFormation StackSets for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司必須在多個帳戶和區域之間共用 CloudFormation 堆疊配置。適合哪個功能？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。受監管的公司必須在多個帳戶和區域之間共用 CloudFormation 堆疊配置。適合哪個功能？",
         "options": {
-          "A": "Route 53 運轉狀況檢查",
-          "B": "CloudFormation StackSets",
-          "C": "S3 Access Points",
-          "D": "Lambda 層"
+          "A": "針對 Lambda 的 EventBridge 規則",
+          "B": "EC2 Image Builder",
+          "C": "AWS CloudFormation",
+          "D": "CloudFormation StackSets"
         },
-        "explanation": "StackSet 跨帳戶和區域部署和管理 CloudFormation 堆疊。\n其他選項管理 S3 存取、Lambda 打包或端點運作狀況。"
+        "explanation": "StackSet 跨帳戶和區域部署和管理 CloudFormation 堆疊。\n其他選項適用於此領域的不同需求，但不能像 CloudFormation StackSets 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d3-024",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A startup preparing for a traffic increase wants a resource change event to invoke a remediation Lambda function. Which pattern is suitable?",
+    "question": "A startup preparing for a traffic increase is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team wants a resource change event to invoke a remediation Lambda function. Which pattern is suitable?",
     "options": {
-      "A": "An EBS volume type",
-      "B": "An RDS read replica",
+      "A": "AWS CloudFormation",
+      "B": "AWS Systems Manager Run Command",
       "C": "EventBridge rule targeting Lambda",
-      "D": "A NAT gateway route"
+      "D": "EC2 Image Builder"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "EventBridge rules can match resource events and invoke automation targets.\nThe other choices are networking, block storage, or database read scaling features.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "EventBridge rules can match resource events and invoke automation targets.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide EventBridge rule targeting Lambda for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "一家準備增加流量的新創公司希望透過資源變更事件來呼叫修復 Lambda 函數。哪種模式合適？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。一家準備增加流量的新創公司希望透過資源變更事件來呼叫修復 Lambda 函數。哪種模式合適？",
         "options": {
-          "A": "EBS 磁碟區型",
-          "B": "RDS 唯讀副本",
+          "A": "AWS CloudFormation",
+          "B": "AWS Systems Manager Run Command",
           "C": "針對 Lambda 的 EventBridge 規則",
-          "D": "NAT網關路由"
+          "D": "EC2 Image Builder"
         },
-        "explanation": "EventBridge 規則可以匹配資源事件並呼叫自動化目標。\n其他選擇包括網路、區塊儲存或資料庫讀取擴充功能。"
+        "explanation": "EventBridge 規則可以匹配資源事件並呼叫自動化目標。\n其他選項適用於此領域的不同需求，但不能像 針對 Lambda 的 EventBridge 規則 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d3-025",
-    "type": "single",
-    "question": "An operations team supporting a critical workload needs to build an immutable machine image on a schedule. Which service should be evaluated?",
-    "options": {
-      "A": "Amazon Inspector only",
-      "B": "AWS Budgets",
-      "C": "Amazon SES",
-      "D": "EC2 Image Builder"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "EC2 Image Builder automates image pipelines that build, test, and distribute AMIs.\nInspector scans for vulnerabilities, Budgets monitors cost, and SES sends email.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team needs to build an immutable machine image on a schedule. Which service should be evaluated?",
+    "options": {
+      "A": "CloudFormation StackSets",
+      "B": "EC2 Image Builder",
+      "C": "AWS CloudFormation",
+      "D": "AWS Systems Manager Run Command"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "EC2 Image Builder automates image pipelines that build, test, and distribute AMIs.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide EC2 Image Builder for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊需要按計劃建立不可變的機器映像。應該評估哪些服務？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。支援關鍵工作負載的營運團隊需要按計劃建立不可變的機器映像。應該評估哪些服務？",
         "options": {
-          "A": "僅限亞馬遜檢查員",
-          "B": "AWS Budgets",
-          "C": "Amazon SES",
-          "D": "EC2 Image Builder"
+          "A": "CloudFormation StackSets",
+          "B": "EC2 Image Builder",
+          "C": "AWS CloudFormation",
+          "D": "AWS Systems Manager Run Command"
         },
-        "explanation": "EC2 Image Builder 可自動執行建置、測試和散佈 AMI 的映像管道。\n檢查員掃描漏洞，預算監控成本，SES 發送電子郵件。"
+        "explanation": "EC2 Image Builder 可自動執行建置、測試和散佈 AMI 的映像管道。\n其他選項適用於此領域的不同需求，但不能像 EC2 Image Builder 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d3-026",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A data platform team needs repeatable infrastructure changes with a reviewable template. Which service is most appropriate?",
+    "question": "A data platform team is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs repeatable infrastructure changes with a reviewable template. Which service is most appropriate?",
     "options": {
       "A": "AWS CloudFormation",
-      "B": "Amazon Macie",
-      "C": "Amazon CloudFront",
-      "D": "Amazon ElastiCache"
+      "B": "AWS Systems Manager Run Command",
+      "C": "CloudFormation StackSets",
+      "D": "EventBridge rule targeting Lambda"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "CloudFormation defines and manages AWS resources as infrastructure as code.\nThe other choices discover sensitive data, deliver content, or cache data.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "CloudFormation defines and manages AWS resources as infrastructure as code.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS CloudFormation for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要使用可審查的範本進行可重複的基礎架構變更。哪種服務最適合？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。資料平台團隊需要使用可審查的範本進行可重複的基礎架構變更。哪種服務最適合？",
         "options": {
           "A": "AWS CloudFormation",
-          "B": "Amazon Macie",
-          "C": "Amazon CloudFront",
-          "D": "Amazon ElastiCache"
+          "B": "AWS Systems Manager Run Command",
+          "C": "CloudFormation StackSets",
+          "D": "針對 Lambda 的 EventBridge 規則"
         },
-        "explanation": "CloudFormation 將 AWS 資源作為基礎架構即程式碼進行定義和管理。\n其他選擇發現敏感資料、傳送內容或快取資料。"
+        "explanation": "CloudFormation 將 AWS 資源作為基礎架構即程式碼進行定義和管理。\n其他選項適用於此領域的不同需求，但不能像 AWS CloudFormation 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d3-027",
-    "type": "single",
-    "question": "A security-conscious engineering team needs to run an operational command across a fleet of managed instances. Which service should be used?",
-    "options": {
-      "A": "AWS Shield",
-      "B": "AWS Systems Manager Run Command",
-      "C": "Amazon S3 Select",
-      "D": "Amazon Cognito"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Systems Manager Run Command executes commands across managed instances without requiring inbound SSH.\nThe other choices query objects, manage identities, or protect against DDoS.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A security-conscious engineering team is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs to run an operational command across a fleet of managed instances. Which service should be used?",
+    "options": {
+      "A": "CloudFormation StackSets",
+      "B": "EventBridge rule targeting Lambda",
+      "C": "EC2 Image Builder",
+      "D": "AWS Systems Manager Run Command"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Systems Manager Run Command executes commands across managed instances without requiring inbound SSH.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Systems Manager Run Command for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊需要在一組託管執行個體上執行操作命令。應該使用哪種服務？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。具有安全意識的工程團隊需要在一組託管執行個體上執行操作命令。應該使用哪種服務？",
         "options": {
-          "A": "AWS Shield",
-          "B": "AWS Systems Manager Run Command",
-          "C": "Amazon S3 Select",
-          "D": "Amazon Cognito"
+          "A": "CloudFormation StackSets",
+          "B": "針對 Lambda 的 EventBridge 規則",
+          "C": "EC2 Image Builder",
+          "D": "AWS Systems Manager Run Command"
         },
-        "explanation": "Systems Manager Run Command 會跨託管執行個體執行指令，無需入站 SSH。\n其他選項用於查詢物件、管理身分或防禦 DDoS。"
+        "explanation": "Systems Manager Run Command 會跨託管執行個體執行指令，無需入站 SSH。\n其他選項適用於此領域的不同需求，但不能像 AWS Systems Manager Run Command 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d3-028",
-    "type": "single",
-    "question": "A company migrating an existing workload must share a CloudFormation stack configuration across several accounts and Regions. Which feature fits?",
-    "options": {
-      "A": "A Lambda layer",
-      "B": "A Route 53 health check",
-      "C": "CloudFormation StackSets",
-      "D": "An S3 access point"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "StackSets deploy and manage CloudFormation stacks across accounts and Regions.\nThe other choices manage S3 access, Lambda packaging, or endpoint health.",
     "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A company migrating an existing workload is planning two independent production changes. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The first team must share a CloudFormation stack configuration across several accounts and Regions. A second team wants a resource change event to invoke a remediation Lambda function. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "EventBridge rule targeting Lambda",
+      "B": "EC2 Image Builder",
+      "C": "AWS CloudFormation",
+      "D": "AWS Systems Manager Run Command",
+      "E": "CloudFormation StackSets"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "CloudFormation StackSets meets the first requirement: StackSets deploy and manage CloudFormation stacks across accounts and Regions. EventBridge rule targeting Lambda meets the second requirement: EventBridge rules can match resource events and invoke automation targets.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司必須跨多個帳戶和區域共用 CloudFormation 堆疊配置。適合哪個功能？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。第一項需求：一家準備增加流量的新創公司希望透過資源變更事件來呼叫修復 Lambda 函數。第二項需求：受監管的公司必須在多個帳戶和區域之間共用 CloudFormation 堆疊配置。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "Lambda 層",
-          "B": "Route 53 運轉狀況檢查",
-          "C": "CloudFormation StackSets",
-          "D": "S3 Access Points"
+          "A": "針對 Lambda 的 EventBridge 規則",
+          "B": "EC2 Image Builder",
+          "C": "AWS CloudFormation",
+          "D": "AWS Systems Manager Run Command",
+          "E": "CloudFormation StackSets"
         },
-        "explanation": "StackSet 跨帳戶和區域部署和管理 CloudFormation 堆疊。\n其他選項管理 S3 存取、Lambda 打包或端點運作狀況。"
+        "explanation": "針對 Lambda 的 EventBridge 規則 符合第一項需求：EventBridge 規則可以匹配資源事件並呼叫自動化目標。 CloudFormation StackSets 符合第二項需求：StackSet 跨帳戶和區域部署和管理 CloudFormation 堆疊。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "soa-c03-d3-029",
-    "type": "single",
-    "question": "A team with strict recovery objectives wants a resource change event to invoke a remediation Lambda function. Which pattern is suitable?",
-    "options": {
-      "A": "A NAT gateway route",
-      "B": "An EBS volume type",
-      "C": "An RDS read replica",
-      "D": "EventBridge rule targeting Lambda"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "EventBridge rules can match resource events and invoke automation targets.\nThe other choices are networking, block storage, or database read scaling features.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team with strict recovery objectives is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team wants a resource change event to invoke a remediation Lambda function. Which pattern is suitable?",
+    "options": {
+      "A": "AWS Systems Manager Run Command",
+      "B": "EventBridge rule targeting Lambda",
+      "C": "EC2 Image Builder",
+      "D": "AWS CloudFormation"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge rules can match resource events and invoke automation targets.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide EventBridge rule targeting Lambda for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格復原目標的團隊希望資源變更事件能夠呼叫修復 Lambda 函數。哪種模式合適？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。具有嚴格復原目標的團隊希望資源變更事件能夠呼叫修復 Lambda 函數。哪種模式合適？",
         "options": {
-          "A": "NAT網關路由",
-          "B": "EBS 磁碟區型",
-          "C": "RDS 唯讀副本",
-          "D": "針對 Lambda 的 EventBridge 規則"
+          "A": "AWS Systems Manager Run Command",
+          "B": "針對 Lambda 的 EventBridge 規則",
+          "C": "EC2 Image Builder",
+          "D": "AWS CloudFormation"
         },
-        "explanation": "EventBridge 規則可以匹配資源事件並呼叫自動化目標。\n其他選擇包括網路、區塊儲存或資料庫讀取擴充功能。"
+        "explanation": "EventBridge 規則可以匹配資源事件並呼叫自動化目標。\n其他選項適用於此領域的不同需求，但不能像 針對 Lambda 的 EventBridge 規則 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d3-030",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A developer team preparing a release needs to build an immutable machine image on a schedule. Which service should be evaluated?",
+    "question": "A developer team preparing a release is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs to build an immutable machine image on a schedule. Which service should be evaluated?",
     "options": {
       "A": "EC2 Image Builder",
-      "B": "Amazon Inspector only",
-      "C": "AWS Budgets",
-      "D": "Amazon SES"
+      "B": "AWS CloudFormation",
+      "C": "AWS Systems Manager Run Command",
+      "D": "CloudFormation StackSets"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "EC2 Image Builder automates image pipelines that build, test, and distribute AMIs.\nInspector scans for vulnerabilities, Budgets monitors cost, and SES sends email.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "EC2 Image Builder automates image pipelines that build, test, and distribute AMIs.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide EC2 Image Builder for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊需要按計劃建立不可變的機器映像。應該評估哪些服務？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。準備發布的開發團隊需要按計劃建立不可變的機器映像。應該評估哪些服務？",
         "options": {
           "A": "EC2 Image Builder",
-          "B": "僅限亞馬遜檢查員",
-          "C": "AWS Budgets",
-          "D": "Amazon SES"
+          "B": "AWS CloudFormation",
+          "C": "AWS Systems Manager Run Command",
+          "D": "CloudFormation StackSets"
         },
-        "explanation": "EC2 Image Builder 可自動執行建置、測試和散佈 AMI 的映像管道。\n檢查員掃描漏洞，預算監控成本，SES 發送電子郵件。"
+        "explanation": "EC2 Image Builder 可自動執行建置、測試和散佈 AMI 的映像管道。\n其他選項適用於此領域的不同需求，但不能像 EC2 Image Builder 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d3-031",
-    "type": "single",
-    "question": "An enterprise with several AWS Regions needs repeatable infrastructure changes with a reviewable template. Which service is most appropriate?",
-    "options": {
-      "A": "Amazon ElastiCache",
-      "B": "AWS CloudFormation",
-      "C": "Amazon Macie",
-      "D": "Amazon CloudFront"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "CloudFormation defines and manages AWS resources as infrastructure as code.\nThe other choices discover sensitive data, deliver content, or cache data.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs repeatable infrastructure changes with a reviewable template. Which service is most appropriate?",
+    "options": {
+      "A": "AWS Systems Manager Run Command",
+      "B": "CloudFormation StackSets",
+      "C": "EventBridge rule targeting Lambda",
+      "D": "AWS CloudFormation"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudFormation defines and manages AWS resources as infrastructure as code.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS CloudFormation for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業需要使用可審查的範本進行可重複的基礎架構變更。哪種服務最適合？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。擁有多個 AWS 區域的企業需要使用可審查的範本進行可重複的基礎架構變更。哪種服務最適合？",
         "options": {
-          "A": "Amazon ElastiCache",
-          "B": "AWS CloudFormation",
-          "C": "Amazon Macie",
-          "D": "Amazon CloudFront"
+          "A": "AWS Systems Manager Run Command",
+          "B": "CloudFormation StackSets",
+          "C": "針對 Lambda 的 EventBridge 規則",
+          "D": "AWS CloudFormation"
         },
-        "explanation": "CloudFormation 將 AWS 資源作為基礎架構即程式碼進行定義和管理。\n其他選擇發現敏感資料、傳送內容或快取資料。"
+        "explanation": "CloudFormation 將 AWS 資源作為基礎架構即程式碼進行定義和管理。\n其他選項適用於此領域的不同需求，但不能像 AWS CloudFormation 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d3-032",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A service owner reviewing an incident needs to run an operational command across a fleet of managed instances. Which service should be used?",
+    "question": "A service owner reviewing an incident is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs to run an operational command across a fleet of managed instances. Which service should be used?",
     "options": {
-      "A": "Amazon Cognito",
-      "B": "AWS Shield",
+      "A": "EventBridge rule targeting Lambda",
+      "B": "EC2 Image Builder",
       "C": "AWS Systems Manager Run Command",
-      "D": "Amazon S3 Select"
+      "D": "CloudFormation StackSets"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Systems Manager Run Command executes commands across managed instances without requiring inbound SSH.\nThe other choices query objects, manage identities, or protect against DDoS.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Systems Manager Run Command executes commands across managed instances without requiring inbound SSH.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Systems Manager Run Command for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務擁有者需要在一組託管執行個體上執行操作命令。應該使用哪種服務？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。審查事件的服務擁有者需要在一組託管執行個體上執行操作命令。應該使用哪種服務？",
         "options": {
-          "A": "Amazon Cognito",
-          "B": "AWS Shield",
+          "A": "針對 Lambda 的 EventBridge 規則",
+          "B": "EC2 Image Builder",
           "C": "AWS Systems Manager Run Command",
-          "D": "Amazon S3 Select"
+          "D": "CloudFormation StackSets"
         },
-        "explanation": "Systems Manager Run Command 會跨託管執行個體執行指令，無需入站 SSH。\n其他選項用於查詢物件、管理身分或防禦 DDoS。"
+        "explanation": "Systems Manager Run Command 會跨託管執行個體執行指令，無需入站 SSH。\n其他選項適用於此領域的不同需求，但不能像 AWS Systems Manager Run Command 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d3-033",
-    "type": "single",
-    "question": "A team optimizing an existing implementation must share a CloudFormation stack configuration across several accounts and Regions. Which feature fits?",
-    "options": {
-      "A": "An S3 access point",
-      "B": "A Lambda layer",
-      "C": "A Route 53 health check",
-      "D": "CloudFormation StackSets"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "StackSets deploy and manage CloudFormation stacks across accounts and Regions.\nThe other choices manage S3 access, Lambda packaging, or endpoint health.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team must share a CloudFormation stack configuration across several accounts and Regions. Which feature fits?",
+    "options": {
+      "A": "AWS CloudFormation",
+      "B": "CloudFormation StackSets",
+      "C": "EventBridge rule targeting Lambda",
+      "D": "EC2 Image Builder"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "StackSets deploy and manage CloudFormation stacks across accounts and Regions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide CloudFormation StackSets for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊必須跨多個帳戶和區域共用 CloudFormation 堆疊配置。適合哪個功能？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。優化現有實施的團隊必須跨多個帳戶和區域共用 CloudFormation 堆疊配置。適合哪個功能？",
         "options": {
-          "A": "S3 Access Points",
-          "B": "Lambda 層",
-          "C": "Route 53 運轉狀況檢查",
-          "D": "CloudFormation StackSets"
+          "A": "AWS CloudFormation",
+          "B": "CloudFormation StackSets",
+          "C": "針對 Lambda 的 EventBridge 規則",
+          "D": "EC2 Image Builder"
         },
-        "explanation": "StackSet 跨帳戶和區域部署和管理 CloudFormation 堆疊。\n其他選項管理 S3 存取、Lambda 打包或端點運作狀況。"
+        "explanation": "StackSet 跨帳戶和區域部署和管理 CloudFormation 堆疊。\n其他選項適用於此領域的不同需求，但不能像 CloudFormation StackSets 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d3-034",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A company introducing an automated workflow wants a resource change event to invoke a remediation Lambda function. Which pattern is suitable?",
+    "question": "A company introducing an automated workflow is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team wants a resource change event to invoke a remediation Lambda function. Which pattern is suitable?",
     "options": {
       "A": "EventBridge rule targeting Lambda",
-      "B": "A NAT gateway route",
-      "C": "An EBS volume type",
-      "D": "An RDS read replica"
+      "B": "EC2 Image Builder",
+      "C": "AWS CloudFormation",
+      "D": "AWS Systems Manager Run Command"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "EventBridge rules can match resource events and invoke automation targets.\nThe other choices are networking, block storage, or database read scaling features.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "EventBridge rules can match resource events and invoke automation targets.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide EventBridge rule targeting Lambda for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "一家引入自動化工作流程的公司希望透過資源變更事件來呼叫修復 Lambda 函數。哪種模式合適？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。一家引入自動化工作流程的公司希望透過資源變更事件來呼叫修復 Lambda 函數。哪種模式合適？",
         "options": {
           "A": "針對 Lambda 的 EventBridge 規則",
-          "B": "NAT網關路由",
-          "C": "EBS 磁碟區型",
-          "D": "RDS 唯讀副本"
+          "B": "EC2 Image Builder",
+          "C": "AWS CloudFormation",
+          "D": "AWS Systems Manager Run Command"
         },
-        "explanation": "EventBridge 規則可以匹配資源事件並呼叫自動化目標。\n其他選擇包括網路、區塊儲存或資料庫讀取擴充功能。"
+        "explanation": "EventBridge 規則可以匹配資源事件並呼叫自動化目標。\n其他選項適用於此領域的不同需求，但不能像 針對 Lambda 的 EventBridge 規則 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d3-035",
-    "type": "single",
-    "question": "An AWS administrator working in a shared environment needs to build an immutable machine image on a schedule. Which service should be evaluated?",
-    "options": {
-      "A": "Amazon SES",
-      "B": "EC2 Image Builder",
-      "C": "Amazon Inspector only",
-      "D": "AWS Budgets"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "EC2 Image Builder automates image pipelines that build, test, and distribute AMIs.\nInspector scans for vulnerabilities, Budgets monitors cost, and SES sends email.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "An AWS administrator working in a shared environment is planning two independent production changes. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The first team needs to build an immutable machine image on a schedule. A second team needs repeatable infrastructure changes with a reviewable template. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "CloudFormation StackSets",
+      "B": "EventBridge rule targeting Lambda",
+      "C": "EC2 Image Builder",
+      "D": "AWS CloudFormation",
+      "E": "AWS Systems Manager Run Command"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "EC2 Image Builder meets the first requirement: EC2 Image Builder automates image pipelines that build, test, and distribute AMIs. AWS CloudFormation meets the second requirement: CloudFormation defines and manages AWS resources as infrastructure as code.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "在共享環境中工作的 AWS 管理員需要按計畫建立不可變的機器映像。應該評估哪些服務？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。第一項需求：支援關鍵工作負載的營運團隊需要按計劃建立不可變的機器映像。第二項需求：製作團隊需要使用可審查的範本來進行可重複的基礎架構變更。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "Amazon SES",
-          "B": "EC2 Image Builder",
-          "C": "僅限亞馬遜檢查員",
-          "D": "AWS Budgets"
+          "A": "CloudFormation StackSets",
+          "B": "針對 Lambda 的 EventBridge 規則",
+          "C": "EC2 Image Builder",
+          "D": "AWS CloudFormation",
+          "E": "AWS Systems Manager Run Command"
         },
-        "explanation": "EC2 Image Builder 可自動執行建置、測試和散佈 AMI 的映像管道。\n檢查員掃描漏洞，預算監控成本，SES 發送電子郵件。"
+        "explanation": "EC2 Image Builder 符合第一項需求：EC2 Image Builder 可自動執行建置、測試和散佈 AMI 的映像管道。 AWS CloudFormation 符合第二項需求：CloudFormation 將 AWS 資源作為基礎架構即程式碼進行定義和管理。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "soa-c03-d3-036",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A customer-facing application team needs repeatable infrastructure changes with a reviewable template. Which service is most appropriate?",
+    "question": "A customer-facing application team is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs repeatable infrastructure changes with a reviewable template. Which service is most appropriate?",
     "options": {
-      "A": "Amazon CloudFront",
-      "B": "Amazon ElastiCache",
+      "A": "CloudFormation StackSets",
+      "B": "EventBridge rule targeting Lambda",
       "C": "AWS CloudFormation",
-      "D": "Amazon Macie"
+      "D": "AWS Systems Manager Run Command"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "CloudFormation defines and manages AWS resources as infrastructure as code.\nThe other choices discover sensitive data, deliver content, or cache data.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "CloudFormation defines and manages AWS resources as infrastructure as code.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS CloudFormation for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊需要使用可審查的範本進行可重複的基礎架構變更。哪種服務最適合？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。面向客戶的應用程式團隊需要使用可審查的範本進行可重複的基礎架構變更。哪種服務最適合？",
         "options": {
-          "A": "Amazon CloudFront",
-          "B": "Amazon ElastiCache",
+          "A": "CloudFormation StackSets",
+          "B": "針對 Lambda 的 EventBridge 規則",
           "C": "AWS CloudFormation",
-          "D": "Amazon Macie"
+          "D": "AWS Systems Manager Run Command"
         },
-        "explanation": "CloudFormation 將 AWS 資源作為基礎架構即程式碼進行定義和管理。\n其他選擇發現敏感資料、傳送內容或快取資料。"
+        "explanation": "CloudFormation 將 AWS 資源作為基礎架構即程式碼進行定義和管理。\n其他選項適用於此領域的不同需求，但不能像 AWS CloudFormation 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d3-037",
-    "type": "single",
-    "question": "A platform team standardizing its AWS deployments needs to run an operational command across a fleet of managed instances. Which service should be used?",
-    "options": {
-      "A": "Amazon S3 Select",
-      "B": "Amazon Cognito",
-      "C": "AWS Shield",
-      "D": "AWS Systems Manager Run Command"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Systems Manager Run Command executes commands across managed instances without requiring inbound SSH.\nThe other choices query objects, manage identities, or protect against DDoS.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs to run an operational command across a fleet of managed instances. Which service should be used?",
+    "options": {
+      "A": "EC2 Image Builder",
+      "B": "AWS Systems Manager Run Command",
+      "C": "CloudFormation StackSets",
+      "D": "EventBridge rule targeting Lambda"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Systems Manager Run Command executes commands across managed instances without requiring inbound SSH.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Systems Manager Run Command for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊需要跨一組託管執行個體執行操作命令。應該使用哪種服務？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。標準化其 AWS 部署的平台團隊需要跨一組託管執行個體執行操作命令。應該使用哪種服務？",
         "options": {
-          "A": "Amazon S3 Select",
-          "B": "Amazon Cognito",
-          "C": "AWS Shield",
-          "D": "AWS Systems Manager Run Command"
+          "A": "EC2 Image Builder",
+          "B": "AWS Systems Manager Run Command",
+          "C": "CloudFormation StackSets",
+          "D": "針對 Lambda 的 EventBridge 規則"
         },
-        "explanation": "Systems Manager Run Command 會跨託管執行個體執行指令，無需入站 SSH。\n其他選項用於查詢物件、管理身分或防禦 DDoS。"
+        "explanation": "Systems Manager Run Command 會跨託管執行個體執行指令，無需入站 SSH。\n其他選項適用於此領域的不同需求，但不能像 AWS Systems Manager Run Command 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d3-038",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team preparing evidence for an audit must share a CloudFormation stack configuration across several accounts and Regions. Which feature fits?",
+    "question": "A team preparing evidence for an audit is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team must share a CloudFormation stack configuration across several accounts and Regions. Which feature fits?",
     "options": {
       "A": "CloudFormation StackSets",
-      "B": "An S3 access point",
-      "C": "A Lambda layer",
-      "D": "A Route 53 health check"
+      "B": "EventBridge rule targeting Lambda",
+      "C": "EC2 Image Builder",
+      "D": "AWS CloudFormation"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "StackSets deploy and manage CloudFormation stacks across accounts and Regions.\nThe other choices manage S3 access, Lambda packaging, or endpoint health.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "StackSets deploy and manage CloudFormation stacks across accounts and Regions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide CloudFormation StackSets for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備審計證據的團隊必須跨多個帳戶和區域共用 CloudFormation 堆疊配置。適合哪個功能？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。準備審計證據的團隊必須跨多個帳戶和區域共用 CloudFormation 堆疊配置。適合哪個功能？",
         "options": {
           "A": "CloudFormation StackSets",
-          "B": "S3 Access Points",
-          "C": "Lambda 層",
-          "D": "Route 53 運轉狀況檢查"
+          "B": "針對 Lambda 的 EventBridge 規則",
+          "C": "EC2 Image Builder",
+          "D": "AWS CloudFormation"
         },
-        "explanation": "StackSet 跨帳戶和區域部署和管理 CloudFormation 堆疊。\n其他選項管理 S3 存取、Lambda 打包或端點運作狀況。"
+        "explanation": "StackSet 跨帳戶和區域部署和管理 CloudFormation 堆疊。\n其他選項適用於此領域的不同需求，但不能像 CloudFormation StackSets 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d3-039",
-    "type": "single",
-    "question": "A business replacing a manual process wants a resource change event to invoke a remediation Lambda function. Which pattern is suitable?",
-    "options": {
-      "A": "An RDS read replica",
-      "B": "EventBridge rule targeting Lambda",
-      "C": "A NAT gateway route",
-      "D": "An EBS volume type"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "EventBridge rules can match resource events and invoke automation targets.\nThe other choices are networking, block storage, or database read scaling features.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A business replacing a manual process is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team wants a resource change event to invoke a remediation Lambda function. Which pattern is suitable?",
+    "options": {
+      "A": "EC2 Image Builder",
+      "B": "AWS CloudFormation",
+      "C": "AWS Systems Manager Run Command",
+      "D": "EventBridge rule targeting Lambda"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge rules can match resource events and invoke automation targets.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide EventBridge rule targeting Lambda for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "取代手動流程的企業希望資源變更事件能夠呼叫修復 Lambda 函數。哪種模式合適？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。取代手動流程的企業希望資源變更事件能夠呼叫修復 Lambda 函數。哪種模式合適？",
         "options": {
-          "A": "RDS 唯讀副本",
-          "B": "針對 Lambda 的 EventBridge 規則",
-          "C": "NAT網關路由",
-          "D": "EBS 磁碟區型"
+          "A": "EC2 Image Builder",
+          "B": "AWS CloudFormation",
+          "C": "AWS Systems Manager Run Command",
+          "D": "針對 Lambda 的 EventBridge 規則"
         },
-        "explanation": "EventBridge 規則可以匹配資源事件並呼叫自動化目標。\n其他選擇包括網路、區塊儲存或資料庫讀取擴充功能。"
+        "explanation": "EventBridge 規則可以匹配資源事件並呼叫自動化目標。\n其他選項適用於此領域的不同需求，但不能像 針對 Lambda 的 EventBridge 規則 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d3-040",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team validating a design against the exam guide needs to build an immutable machine image on a schedule. Which service should be evaluated?",
+    "question": "A team validating a design against the exam guide is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs to build an immutable machine image on a schedule. Which service should be evaluated?",
     "options": {
-      "A": "AWS Budgets",
-      "B": "Amazon SES",
+      "A": "AWS Systems Manager Run Command",
+      "B": "CloudFormation StackSets",
       "C": "EC2 Image Builder",
-      "D": "Amazon Inspector only"
+      "D": "AWS CloudFormation"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "EC2 Image Builder automates image pipelines that build, test, and distribute AMIs.\nInspector scans for vulnerabilities, Budgets monitors cost, and SES sends email.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "EC2 Image Builder automates image pipelines that build, test, and distribute AMIs.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide EC2 Image Builder for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊需要按計劃建立不可變的機器映像。應該評估哪些服務？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。根據考試指南驗證設計的團隊需要按計劃建立不可變的機器映像。應該評估哪些服務？",
         "options": {
-          "A": "AWS Budgets",
-          "B": "Amazon SES",
+          "A": "AWS Systems Manager Run Command",
+          "B": "CloudFormation StackSets",
           "C": "EC2 Image Builder",
-          "D": "僅限亞馬遜檢查員"
+          "D": "AWS CloudFormation"
         },
-        "explanation": "EC2 Image Builder 可自動執行建置、測試和散佈 AMI 的映像管道。\n檢查員掃描漏洞，預算監控成本，SES 發送電子郵件。"
+        "explanation": "EC2 Image Builder 可自動執行建置、測試和散佈 AMI 的映像管道。\n其他選項適用於此領域的不同需求，但不能像 EC2 Image Builder 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d3-041",
-    "type": "single",
-    "question": "A production team needs repeatable infrastructure changes with a reviewable template. Which service is most appropriate?",
-    "options": {
-      "A": "Amazon Macie",
-      "B": "Amazon CloudFront",
-      "C": "Amazon ElastiCache",
-      "D": "AWS CloudFormation"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "CloudFormation defines and manages AWS resources as infrastructure as code.\nThe other choices discover sensitive data, deliver content, or cache data.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A production team is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs repeatable infrastructure changes with a reviewable template. Which service is most appropriate?",
+    "options": {
+      "A": "EventBridge rule targeting Lambda",
+      "B": "AWS CloudFormation",
+      "C": "AWS Systems Manager Run Command",
+      "D": "CloudFormation StackSets"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudFormation defines and manages AWS resources as infrastructure as code.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS CloudFormation for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "製作團隊需要使用可審查的範本來進行可重複的基礎架構變更。哪種服務最適合？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。製作團隊需要使用可審查的範本來進行可重複的基礎架構變更。哪種服務最適合？",
         "options": {
-          "A": "Amazon Macie",
-          "B": "Amazon CloudFront",
-          "C": "Amazon ElastiCache",
-          "D": "AWS CloudFormation"
+          "A": "針對 Lambda 的 EventBridge 規則",
+          "B": "AWS CloudFormation",
+          "C": "AWS Systems Manager Run Command",
+          "D": "CloudFormation StackSets"
         },
-        "explanation": "CloudFormation 將 AWS 資源作為基礎架構即程式碼進行定義和管理。\n其他選擇發現敏感資料、傳送內容或快取資料。"
+        "explanation": "CloudFormation 將 AWS 資源作為基礎架構即程式碼進行定義和管理。\n其他選項適用於此領域的不同需求，但不能像 AWS CloudFormation 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d3-042",
-    "type": "single",
-    "question": "A multi-account platform team needs to run an operational command across a fleet of managed instances. Which service should be used?",
+    "taskStatement": "3.2",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A multi-account platform team is planning two independent production changes. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The first team needs to run an operational command across a fleet of managed instances. A second team must share a CloudFormation stack configuration across several accounts and Regions. Which TWO actions satisfy these requirements?",
     "options": {
       "A": "AWS Systems Manager Run Command",
-      "B": "Amazon S3 Select",
-      "C": "Amazon Cognito",
-      "D": "AWS Shield"
+      "B": "CloudFormation StackSets",
+      "C": "EventBridge rule targeting Lambda",
+      "D": "EC2 Image Builder",
+      "E": "AWS CloudFormation"
     },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "Systems Manager Run Command executes commands across managed instances without requiring inbound SSH.\nThe other choices query objects, manage identities, or protect against DDoS.",
-    "taskStatement": "3.2",
-    "lastVerified": "2026-08-09",
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS Systems Manager Run Command meets the first requirement: Systems Manager Run Command executes commands across managed instances without requiring inbound SSH. CloudFormation StackSets meets the second requirement: StackSets deploy and manage CloudFormation stacks across accounts and Regions.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊需要在一組託管執行個體上執行操作命令。應該使用哪種服務？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。第一項需求：多帳戶平台團隊需要在一組託管執行個體上執行操作命令。第二項需求：受監管的公司必須在多個帳戶和區域之間共用 CloudFormation 堆疊配置。哪兩項操作可以滿足這些需求？",
         "options": {
           "A": "AWS Systems Manager Run Command",
-          "B": "Amazon S3 Select",
-          "C": "Amazon Cognito",
-          "D": "AWS Shield"
+          "B": "CloudFormation StackSets",
+          "C": "針對 Lambda 的 EventBridge 規則",
+          "D": "EC2 Image Builder",
+          "E": "AWS CloudFormation"
         },
-        "explanation": "Systems Manager Run Command 會跨託管執行個體執行指令，無需入站 SSH。\n其他選項用於查詢物件、管理身分或防禦 DDoS。"
+        "explanation": "AWS Systems Manager Run Command 符合第一項需求：Systems Manager Run Command 會跨託管執行個體執行指令，無需入站 SSH。 CloudFormation StackSets 符合第二項需求：StackSet 跨帳戶和區域部署和管理 CloudFormation 堆疊。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "soa-c03-d3-043",
-    "type": "single",
-    "question": "A regulated company must share a CloudFormation stack configuration across several accounts and Regions. Which feature fits?",
-    "options": {
-      "A": "A Route 53 health check",
-      "B": "CloudFormation StackSets",
-      "C": "An S3 access point",
-      "D": "A Lambda layer"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "StackSets deploy and manage CloudFormation stacks across accounts and Regions.\nThe other choices manage S3 access, Lambda packaging, or endpoint health.",
     "taskStatement": "3.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A regulated company is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team must share a CloudFormation stack configuration across several accounts and Regions. Which feature fits?",
+    "options": {
+      "A": "EventBridge rule targeting Lambda",
+      "B": "EC2 Image Builder",
+      "C": "AWS CloudFormation",
+      "D": "CloudFormation StackSets"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "StackSets deploy and manage CloudFormation stacks across accounts and Regions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide CloudFormation StackSets for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司必須在多個帳戶和區域之間共用 CloudFormation 堆疊配置。適合哪個功能？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。受監管的公司必須在多個帳戶和區域之間共用 CloudFormation 堆疊配置。適合哪個功能？",
         "options": {
-          "A": "Route 53 運轉狀況檢查",
-          "B": "CloudFormation StackSets",
-          "C": "S3 Access Points",
-          "D": "Lambda 層"
+          "A": "針對 Lambda 的 EventBridge 規則",
+          "B": "EC2 Image Builder",
+          "C": "AWS CloudFormation",
+          "D": "CloudFormation StackSets"
         },
-        "explanation": "StackSet 跨帳戶和區域部署和管理 CloudFormation 堆疊。\n其他選項管理 S3 存取、Lambda 打包或端點運作狀況。"
+        "explanation": "StackSet 跨帳戶和區域部署和管理 CloudFormation 堆疊。\n其他選項適用於此領域的不同需求，但不能像 CloudFormation StackSets 一樣直接滿足題目的指定條件。"
       }
     }
   }

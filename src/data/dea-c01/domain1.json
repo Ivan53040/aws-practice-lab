@@ -1,1849 +1,1894 @@
 [
   {
     "id": "dea-c01-d1-001",
-    "type": "single",
-    "question": "A production team needs to ingest ordered streaming records that multiple consumers can replay independently. Which service fits?",
-    "options": {
-      "A": "AWS Certificate Manager",
-      "B": "Amazon Kinesis Data Streams",
-      "C": "Amazon S3 Glacier",
-      "D": "Amazon Route 53"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Kinesis Data Streams retains ordered records and supports independent consumer positions.\nThe other choices provide archival storage, DNS, or certificates.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A production team is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs to ingest ordered streaming records that multiple consumers can replay independently. Which service fits?",
+    "options": {
+      "A": "AWS Glue",
+      "B": "Convert the records to Apache Parquet",
+      "C": "AWS Step Functions or AWS Glue Workflows",
+      "D": "Amazon Kinesis Data Streams"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Kinesis Data Streams retains ordered records and supports independent consumer positions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Kinesis Data Streams for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "製作團隊需要攝取多個消費者可以獨立重播的有序流記錄。適合哪種服務？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。製作團隊需要攝取多個消費者可以獨立重播的有序流記錄。適合哪種服務？",
         "options": {
-          "A": "AWS Certificate Manager",
-          "B": "Amazon Kinesis Data Streams",
-          "C": "Amazon S3 Glacier",
-          "D": "Amazon Route 53"
+          "A": "AWS Glue",
+          "B": "將記錄轉換為 Apache Parquet",
+          "C": "AWS Step Functions 或 AWS Glue 工作流程",
+          "D": "Amazon Kinesis Data Streams"
         },
-        "explanation": "Kinesis Data Streams 保留有序記錄並支援獨立的消費者位置。\n其他選擇提供存檔儲存、DNS 或憑證。"
+        "explanation": "Kinesis Data Streams 保留有序記錄並支援獨立的消費者位置。\n其他選項適用於此領域的不同需求，但不能像 Amazon Kinesis Data Streams 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-002",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A multi-account platform team needs managed ETL jobs and a central schema catalog for objects in S3. Which service should be used?",
+    "question": "A multi-account platform team is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs managed ETL jobs and a central schema catalog for objects in S3. Which service should be used?",
     "options": {
-      "A": "Amazon Cognito",
-      "B": "AWS Shield",
+      "A": "AWS Step Functions or AWS Glue Workflows",
+      "B": "Buffer records and apply throttling with retry and backoff",
       "C": "AWS Glue",
-      "D": "Amazon CloudFront"
+      "D": "Convert the records to Apache Parquet"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "AWS Glue provides ETL jobs, crawlers, and the Glue Data Catalog.\nThe other choices provide content delivery, identity, or DDoS protection.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "AWS Glue provides ETL jobs, crawlers, and the Glue Data Catalog.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Glue for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊需要託管 ETL 作業和 S3 中物件的中央架構目錄。應該使用哪種服務？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。多帳戶平台團隊需要託管 ETL 作業和 S3 中物件的中央架構目錄。應該使用哪種服務？",
         "options": {
-          "A": "Amazon Cognito",
-          "B": "AWS Shield",
+          "A": "AWS Step Functions 或 AWS Glue 工作流程",
+          "B": "緩衝記錄並透過重試和退避應用限制",
           "C": "AWS Glue",
-          "D": "Amazon CloudFront"
+          "D": "將記錄轉換為 Apache Parquet"
         },
-        "explanation": "AWS Glue 提供 ETL 作業、爬網程式和 Glue 資料目錄。\n其他選擇提供內容交付、身分或 DDoS 保護。"
+        "explanation": "AWS Glue 提供 ETL 作業、爬網程式和 Glue 資料目錄。\n其他選項適用於此領域的不同需求，但不能像 AWS Glue 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-003",
-    "type": "single",
-    "question": "A regulated company must convert CSV data into a columnar format for analytics. Which transformation is most appropriate?",
-    "options": {
-      "A": "Convert the records to JPEG",
-      "B": "Store every row as a DNS record",
-      "C": "Encode the data as an IAM policy",
-      "D": "Convert the records to Apache Parquet"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Parquet is a columnar format that can reduce scan volume and improve analytical query performance.\nThe other choices are image, DNS, or authorization representations.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A regulated company is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team must convert CSV data into a columnar format for analytics. Which transformation is most appropriate?",
+    "options": {
+      "A": "Amazon Kinesis Data Streams",
+      "B": "Convert the records to Apache Parquet",
+      "C": "AWS Step Functions or AWS Glue Workflows",
+      "D": "Buffer records and apply throttling with retry and backoff"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Parquet is a columnar format that can reduce scan volume and improve analytical query performance.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Convert the records to Apache Parquet for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司必須將 CSV 資料轉換為柱狀格式以進行分析。哪種改造最適合？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。受監管的公司必須將 CSV 資料轉換為柱狀格式以進行分析。哪種改造最適合？",
         "options": {
-          "A": "將記錄轉換為 JPEG",
-          "B": "將每一行儲存為 DNS 記錄",
-          "C": "將資料編碼為 IAM 策略",
-          "D": "將記錄轉換為 Apache Parquet"
+          "A": "Amazon Kinesis Data Streams",
+          "B": "將記錄轉換為 Apache Parquet",
+          "C": "AWS Step Functions 或 AWS Glue 工作流程",
+          "D": "緩衝記錄並透過重試和退避應用限制"
         },
-        "explanation": "Parquet 是一種列式格式，可減少掃描量並提高分析查詢效能。\n其他選擇是影像、DNS 或授權表示。"
+        "explanation": "Parquet 是一種列式格式，可減少掃描量並提高分析查詢效能。\n其他選項適用於此領域的不同需求，但不能像 將記錄轉換為 Apache Parquet 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-004",
+    "taskStatement": "1.4",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A startup preparing for a traffic increase needs a durable workflow that coordinates crawlers, transformations, and validation steps. Which service should orchestrate it?",
+    "question": "A startup preparing for a traffic increase is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs a durable workflow that coordinates crawlers, transformations, and validation steps. Which service should orchestrate it?",
     "options": {
       "A": "AWS Step Functions or AWS Glue Workflows",
-      "B": "An S3 ACL",
-      "C": "A security group",
-      "D": "An EBS snapshot"
+      "B": "Buffer records and apply throttling with retry and backoff",
+      "C": "Amazon Kinesis Data Streams",
+      "D": "AWS Glue"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Workflow orchestration services represent dependencies and retries between data pipeline steps.\nThe other choices control access, network traffic, or volume backups.",
-    "taskStatement": "1.4",
-    "lastVerified": "2026-08-09",
+    "explanation": "Workflow orchestration services represent dependencies and retries between data pipeline steps.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Step Functions or AWS Glue Workflows for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司需要一個持久的工作流程來協調爬蟲、轉換和驗證步驟。哪個服務應該協調它？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。準備增加流量的新創公司需要一個持久的工作流程來協調爬蟲、轉換和驗證步驟。哪個服務應該協調它？",
         "options": {
           "A": "AWS Step Functions 或 AWS Glue 工作流程",
-          "B": "S3 ACL",
-          "C": "一個安全群組",
-          "D": "EBS Snapshot"
+          "B": "緩衝記錄並透過重試和退避應用限制",
+          "C": "Amazon Kinesis Data Streams",
+          "D": "AWS Glue"
         },
-        "explanation": "工作流程編排服務表示資料管道步驟之間的依賴關係和重試。\n其他選項控制存取、網路流量或磁碟區備份。"
+        "explanation": "工作流程編排服務表示資料管道步驟之間的依賴關係和重試。\n其他選項適用於此領域的不同需求，但不能像 AWS Step Functions 或 AWS Glue 工作流程 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-005",
-    "type": "single",
-    "question": "An operations team supporting a critical workload must prevent a streaming producer from overwhelming a downstream data store. Which strategy is appropriate?",
-    "options": {
-      "A": "Remove partition keys",
-      "B": "Buffer records and apply throttling with retry and backoff",
-      "C": "Disable all retries",
-      "D": "Make the data store public"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Buffering, throttling, and backoff smooth bursts and protect the downstream system from overload.\nThe other choices reduce reliability or data-store performance.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team must prevent a streaming producer from overwhelming a downstream data store. Which strategy is appropriate?",
+    "options": {
+      "A": "Amazon Kinesis Data Streams",
+      "B": "AWS Glue",
+      "C": "Convert the records to Apache Parquet",
+      "D": "Buffer records and apply throttling with retry and backoff"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Buffering, throttling, and backoff smooth bursts and protect the downstream system from overload.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Buffer records and apply throttling with retry and backoff for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊必須防止流生產者壓垮下游資料儲存。哪種策略合適？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。支援關鍵工作負載的營運團隊必須防止流生產者壓垮下游資料儲存。哪種策略合適？",
         "options": {
-          "A": "刪除分割區鍵",
-          "B": "緩衝記錄並透過重試和退避應用限制",
-          "C": "禁用所有重試",
-          "D": "公開資料存儲"
+          "A": "Amazon Kinesis Data Streams",
+          "B": "AWS Glue",
+          "C": "將記錄轉換為 Apache Parquet",
+          "D": "緩衝記錄並透過重試和退避應用限制"
         },
-        "explanation": "緩衝、節流和回退可以平滑突發並保護下游系統免受過載。\n其他選擇會降低可靠性或資料儲存效能。"
+        "explanation": "緩衝、節流和回退可以平滑突發並保護下游系統免受過載。\n其他選項適用於此領域的不同需求，但不能像 緩衝記錄並透過重試和退避應用限制 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-006",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A data platform team needs to ingest ordered streaming records that multiple consumers can replay independently. Which service fits?",
+    "question": "A data platform team is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team needs to ingest ordered streaming records that multiple consumers can replay independently. Which service fits?",
     "options": {
-      "A": "Amazon Route 53",
-      "B": "AWS Certificate Manager",
+      "A": "Convert the records to Apache Parquet",
+      "B": "AWS Step Functions or AWS Glue Workflows",
       "C": "Amazon Kinesis Data Streams",
-      "D": "Amazon S3 Glacier"
+      "D": "AWS Glue"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Kinesis Data Streams retains ordered records and supports independent consumer positions.\nThe other choices provide archival storage, DNS, or certificates.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Kinesis Data Streams retains ordered records and supports independent consumer positions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Kinesis Data Streams for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要攝取多個消費者可以獨立重播的有序流記錄。適合哪種服務？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。資料平台團隊需要攝取多個消費者可以獨立重播的有序流記錄。適合哪種服務？",
         "options": {
-          "A": "Amazon Route 53",
-          "B": "AWS Certificate Manager",
+          "A": "將記錄轉換為 Apache Parquet",
+          "B": "AWS Step Functions 或 AWS Glue 工作流程",
           "C": "Amazon Kinesis Data Streams",
-          "D": "Amazon S3 Glacier"
+          "D": "AWS Glue"
         },
-        "explanation": "Kinesis Data Streams 保留有序記錄並支援獨立的消費者位置。\n其他選擇提供存檔儲存、DNS 或憑證。"
+        "explanation": "Kinesis Data Streams 保留有序記錄並支援獨立的消費者位置。\n其他選項適用於此領域的不同需求，但不能像 Amazon Kinesis Data Streams 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-007",
-    "type": "single",
-    "question": "A security-conscious engineering team needs managed ETL jobs and a central schema catalog for objects in S3. Which service should be used?",
-    "options": {
-      "A": "Amazon CloudFront",
-      "B": "Amazon Cognito",
-      "C": "AWS Shield",
-      "D": "AWS Glue"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "AWS Glue provides ETL jobs, crawlers, and the Glue Data Catalog.\nThe other choices provide content delivery, identity, or DDoS protection.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A security-conscious engineering team is planning two independent production changes. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The first team needs managed ETL jobs and a central schema catalog for objects in S3. A second team must convert CSV data into a columnar format for analytics. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Buffer records and apply throttling with retry and backoff",
+      "B": "Amazon Kinesis Data Streams",
+      "C": "AWS Glue",
+      "D": "Convert the records to Apache Parquet",
+      "E": "AWS Step Functions or AWS Glue Workflows"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS Glue meets the first requirement: AWS Glue provides ETL jobs, crawlers, and the Glue Data Catalog. Convert the records to Apache Parquet meets the second requirement: Parquet is a columnar format that can reduce scan volume and improve analytical query performance.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊需要託管 ETL 作業和 S3 中物件的中央架構目錄。應該使用哪種服務？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。第一項需求：多帳戶平台團隊需要託管 ETL 作業和 S3 中物件的中央架構目錄。第二項需求：受監管的公司必須將 CSV 資料轉換為柱狀格式以進行分析。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "Amazon CloudFront",
-          "B": "Amazon Cognito",
-          "C": "AWS Shield",
-          "D": "AWS Glue"
+          "A": "緩衝記錄並透過重試和退避應用限制",
+          "B": "Amazon Kinesis Data Streams",
+          "C": "AWS Glue",
+          "D": "將記錄轉換為 Apache Parquet",
+          "E": "AWS Step Functions 或 AWS Glue 工作流程"
         },
-        "explanation": "AWS Glue 提供 ETL 作業、爬網程式和 Glue 資料目錄。\n其他選擇提供內容交付、身分或 DDoS 保護。"
+        "explanation": "AWS Glue 符合第一項需求：AWS Glue 提供 ETL 作業、爬網程式和 Glue 資料目錄。 將記錄轉換為 Apache Parquet 符合第二項需求：Parquet 是一種列式格式，可減少掃描量並提高分析查詢效能。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "dea-c01-d1-008",
+    "taskStatement": "1.4",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A company migrating an existing workload must convert CSV data into a columnar format for analytics. Which transformation is most appropriate?",
+    "question": "A company migrating an existing workload is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team must convert CSV data into a columnar format for analytics. Which transformation is most appropriate?",
     "options": {
       "A": "Convert the records to Apache Parquet",
-      "B": "Convert the records to JPEG",
-      "C": "Store every row as a DNS record",
-      "D": "Encode the data as an IAM policy"
+      "B": "AWS Step Functions or AWS Glue Workflows",
+      "C": "Buffer records and apply throttling with retry and backoff",
+      "D": "Amazon Kinesis Data Streams"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Parquet is a columnar format that can reduce scan volume and improve analytical query performance.\nThe other choices are image, DNS, or authorization representations.",
-    "taskStatement": "1.4",
-    "lastVerified": "2026-08-09",
+    "explanation": "Parquet is a columnar format that can reduce scan volume and improve analytical query performance.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Convert the records to Apache Parquet for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司必須將 CSV 資料轉換為柱狀格式以進行分析。哪種改造最適合？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。遷移現有工作負載的公司必須將 CSV 資料轉換為柱狀格式以進行分析。哪種改造最適合？",
         "options": {
           "A": "將記錄轉換為 Apache Parquet",
-          "B": "將記錄轉換為 JPEG",
-          "C": "將每一行儲存為 DNS 記錄",
-          "D": "將資料編碼為 IAM 策略"
+          "B": "AWS Step Functions 或 AWS Glue 工作流程",
+          "C": "緩衝記錄並透過重試和退避應用限制",
+          "D": "Amazon Kinesis Data Streams"
         },
-        "explanation": "Parquet 是一種列式格式，可減少掃描量並提高分析查詢效能。\n其他選擇是影像、DNS 或授權表示。"
+        "explanation": "Parquet 是一種列式格式，可減少掃描量並提高分析查詢效能。\n其他選項適用於此領域的不同需求，但不能像 將記錄轉換為 Apache Parquet 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-009",
-    "type": "single",
-    "question": "A team with strict recovery objectives needs a durable workflow that coordinates crawlers, transformations, and validation steps. Which service should orchestrate it?",
-    "options": {
-      "A": "An EBS snapshot",
-      "B": "AWS Step Functions or AWS Glue Workflows",
-      "C": "An S3 ACL",
-      "D": "A security group"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Workflow orchestration services represent dependencies and retries between data pipeline steps.\nThe other choices control access, network traffic, or volume backups.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team with strict recovery objectives is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team needs a durable workflow that coordinates crawlers, transformations, and validation steps. Which service should orchestrate it?",
+    "options": {
+      "A": "Buffer records and apply throttling with retry and backoff",
+      "B": "Amazon Kinesis Data Streams",
+      "C": "AWS Glue",
+      "D": "AWS Step Functions or AWS Glue Workflows"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Workflow orchestration services represent dependencies and retries between data pipeline steps.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Step Functions or AWS Glue Workflows for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格恢復目標的團隊需要一個持久的工作流程來協調爬蟲、轉換和驗證步驟。哪個服務應該協調它？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。具有嚴格恢復目標的團隊需要一個持久的工作流程來協調爬蟲、轉換和驗證步驟。哪個服務應該協調它？",
         "options": {
-          "A": "EBS Snapshot",
-          "B": "AWS Step Functions 或 AWS Glue 工作流程",
-          "C": "S3 ACL",
-          "D": "一個安全群組"
+          "A": "緩衝記錄並透過重試和退避應用限制",
+          "B": "Amazon Kinesis Data Streams",
+          "C": "AWS Glue",
+          "D": "AWS Step Functions 或 AWS Glue 工作流程"
         },
-        "explanation": "工作流程編排服務表示資料管道步驟之間的依賴關係和重試。\n其他選項控制存取、網路流量或磁碟區備份。"
+        "explanation": "工作流程編排服務表示資料管道步驟之間的依賴關係和重試。\n其他選項適用於此領域的不同需求，但不能像 AWS Step Functions 或 AWS Glue 工作流程 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-010",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A developer team preparing a release must prevent a streaming producer from overwhelming a downstream data store. Which strategy is appropriate?",
+    "question": "A developer team preparing a release is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team must prevent a streaming producer from overwhelming a downstream data store. Which strategy is appropriate?",
     "options": {
-      "A": "Make the data store public",
-      "B": "Remove partition keys",
+      "A": "AWS Glue",
+      "B": "Convert the records to Apache Parquet",
       "C": "Buffer records and apply throttling with retry and backoff",
-      "D": "Disable all retries"
+      "D": "Amazon Kinesis Data Streams"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Buffering, throttling, and backoff smooth bursts and protect the downstream system from overload.\nThe other choices reduce reliability or data-store performance.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Buffering, throttling, and backoff smooth bursts and protect the downstream system from overload.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Buffer records and apply throttling with retry and backoff for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊必須防止流生產者壓垮下游資料儲存。哪種策略合適？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。準備發布的開發團隊必須防止流生產者壓垮下游資料儲存。哪種策略合適？",
         "options": {
-          "A": "公開資料存儲",
-          "B": "刪除分割區鍵",
+          "A": "AWS Glue",
+          "B": "將記錄轉換為 Apache Parquet",
           "C": "緩衝記錄並透過重試和退避應用限制",
-          "D": "禁用所有重試"
+          "D": "Amazon Kinesis Data Streams"
         },
-        "explanation": "緩衝、節流和回退可以平滑突發並保護下游系統免受過載。\n其他選擇會降低可靠性或資料儲存效能。"
+        "explanation": "緩衝、節流和回退可以平滑突發並保護下游系統免受過載。\n其他選項適用於此領域的不同需求，但不能像 緩衝記錄並透過重試和退避應用限制 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-011",
-    "type": "single",
-    "question": "An enterprise with several AWS Regions needs to ingest ordered streaming records that multiple consumers can replay independently. Which service fits?",
-    "options": {
-      "A": "Amazon S3 Glacier",
-      "B": "Amazon Route 53",
-      "C": "AWS Certificate Manager",
-      "D": "Amazon Kinesis Data Streams"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Kinesis Data Streams retains ordered records and supports independent consumer positions.\nThe other choices provide archival storage, DNS, or certificates.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs to ingest ordered streaming records that multiple consumers can replay independently. Which service fits?",
+    "options": {
+      "A": "AWS Step Functions or AWS Glue Workflows",
+      "B": "Amazon Kinesis Data Streams",
+      "C": "AWS Glue",
+      "D": "Convert the records to Apache Parquet"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Kinesis Data Streams retains ordered records and supports independent consumer positions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Kinesis Data Streams for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業需要提取多個消費者可以獨立重播的有序流記錄。適合哪種服務？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。擁有多個 AWS 區域的企業需要提取多個消費者可以獨立重播的有序流記錄。適合哪種服務？",
         "options": {
-          "A": "Amazon S3 Glacier",
-          "B": "Amazon Route 53",
-          "C": "AWS Certificate Manager",
-          "D": "Amazon Kinesis Data Streams"
+          "A": "AWS Step Functions 或 AWS Glue 工作流程",
+          "B": "Amazon Kinesis Data Streams",
+          "C": "AWS Glue",
+          "D": "將記錄轉換為 Apache Parquet"
         },
-        "explanation": "Kinesis Data Streams 保留有序記錄並支援獨立的消費者位置。\n其他選擇提供存檔儲存、DNS 或憑證。"
+        "explanation": "Kinesis Data Streams 保留有序記錄並支援獨立的消費者位置。\n其他選項適用於此領域的不同需求，但不能像 Amazon Kinesis Data Streams 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-012",
+    "taskStatement": "1.4",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A service owner reviewing an incident needs managed ETL jobs and a central schema catalog for objects in S3. Which service should be used?",
+    "question": "A service owner reviewing an incident is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs managed ETL jobs and a central schema catalog for objects in S3. Which service should be used?",
     "options": {
       "A": "AWS Glue",
-      "B": "Amazon CloudFront",
-      "C": "Amazon Cognito",
-      "D": "AWS Shield"
+      "B": "Convert the records to Apache Parquet",
+      "C": "AWS Step Functions or AWS Glue Workflows",
+      "D": "Buffer records and apply throttling with retry and backoff"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "AWS Glue provides ETL jobs, crawlers, and the Glue Data Catalog.\nThe other choices provide content delivery, identity, or DDoS protection.",
-    "taskStatement": "1.4",
-    "lastVerified": "2026-08-09",
+    "explanation": "AWS Glue provides ETL jobs, crawlers, and the Glue Data Catalog.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Glue for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "檢視事件的服務擁有者需要託管 ETL 作業和 S3 中物件的中央架構目錄。應該使用哪種服務？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。檢視事件的服務擁有者需要託管 ETL 作業和 S3 中物件的中央架構目錄。應該使用哪種服務？",
         "options": {
           "A": "AWS Glue",
-          "B": "Amazon CloudFront",
-          "C": "Amazon Cognito",
-          "D": "AWS Shield"
+          "B": "將記錄轉換為 Apache Parquet",
+          "C": "AWS Step Functions 或 AWS Glue 工作流程",
+          "D": "緩衝記錄並透過重試和退避應用限制"
         },
-        "explanation": "AWS Glue 提供 ETL 作業、爬網程式和 Glue 資料目錄。\n其他選擇提供內容交付、身分或 DDoS 保護。"
+        "explanation": "AWS Glue 提供 ETL 作業、爬網程式和 Glue 資料目錄。\n其他選項適用於此領域的不同需求，但不能像 AWS Glue 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-013",
-    "type": "single",
-    "question": "A team optimizing an existing implementation must convert CSV data into a columnar format for analytics. Which transformation is most appropriate?",
-    "options": {
-      "A": "Encode the data as an IAM policy",
-      "B": "Convert the records to Apache Parquet",
-      "C": "Convert the records to JPEG",
-      "D": "Store every row as a DNS record"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Parquet is a columnar format that can reduce scan volume and improve analytical query performance.\nThe other choices are image, DNS, or authorization representations.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team must convert CSV data into a columnar format for analytics. Which transformation is most appropriate?",
+    "options": {
+      "A": "AWS Step Functions or AWS Glue Workflows",
+      "B": "Buffer records and apply throttling with retry and backoff",
+      "C": "Amazon Kinesis Data Streams",
+      "D": "Convert the records to Apache Parquet"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Parquet is a columnar format that can reduce scan volume and improve analytical query performance.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Convert the records to Apache Parquet for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊必須將 CSV 資料轉換為柱狀格式以進行分析。哪種改造最適合？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。優化現有實施的團隊必須將 CSV 資料轉換為柱狀格式以進行分析。哪種改造最適合？",
         "options": {
-          "A": "將資料編碼為 IAM 策略",
-          "B": "將記錄轉換為 Apache Parquet",
-          "C": "將記錄轉換為 JPEG",
-          "D": "將每一行儲存為 DNS 記錄"
+          "A": "AWS Step Functions 或 AWS Glue 工作流程",
+          "B": "緩衝記錄並透過重試和退避應用限制",
+          "C": "Amazon Kinesis Data Streams",
+          "D": "將記錄轉換為 Apache Parquet"
         },
-        "explanation": "Parquet 是一種列式格式，可減少掃描量並提高分析查詢效能。\n其他選擇是影像、DNS 或授權表示。"
+        "explanation": "Parquet 是一種列式格式，可減少掃描量並提高分析查詢效能。\n其他選項適用於此領域的不同需求，但不能像 將記錄轉換為 Apache Parquet 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-014",
-    "type": "single",
-    "question": "A company introducing an automated workflow needs a durable workflow that coordinates crawlers, transformations, and validation steps. Which service should orchestrate it?",
-    "options": {
-      "A": "A security group",
-      "B": "An EBS snapshot",
-      "C": "AWS Step Functions or AWS Glue Workflows",
-      "D": "An S3 ACL"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "Workflow orchestration services represent dependencies and retries between data pipeline steps.\nThe other choices control access, network traffic, or volume backups.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A company introducing an automated workflow is planning two independent production changes. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The first team needs a durable workflow that coordinates crawlers, transformations, and validation steps. A second team must prevent a streaming producer from overwhelming a downstream data store. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "AWS Step Functions or AWS Glue Workflows",
+      "B": "Buffer records and apply throttling with retry and backoff",
+      "C": "Amazon Kinesis Data Streams",
+      "D": "AWS Glue",
+      "E": "Convert the records to Apache Parquet"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS Step Functions or AWS Glue Workflows meets the first requirement: Workflow orchestration services represent dependencies and retries between data pipeline steps. Buffer records and apply throttling with retry and backoff meets the second requirement: Buffering, throttling, and backoff smooth bursts and protect the downstream system from overload.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司需要一個持久的工作流程來協調爬蟲、轉換和驗證步驟。哪個服務應該協調它？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。第一項需求：準備增加流量的新創公司需要一個持久的工作流程來協調爬蟲、轉換和驗證步驟。第二項需求：支援關鍵工作負載的營運團隊必須防止流生產者壓垮下游資料儲存。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "一個安全群組",
-          "B": "EBS Snapshot",
-          "C": "AWS Step Functions 或 AWS Glue 工作流程",
-          "D": "S3 ACL"
+          "A": "AWS Step Functions 或 AWS Glue 工作流程",
+          "B": "緩衝記錄並透過重試和退避應用限制",
+          "C": "Amazon Kinesis Data Streams",
+          "D": "AWS Glue",
+          "E": "將記錄轉換為 Apache Parquet"
         },
-        "explanation": "工作流程編排服務表示資料管道步驟之間的依賴關係和重試。\n其他選項控制存取、網路流量或磁碟區備份。"
+        "explanation": "AWS Step Functions 或 AWS Glue 工作流程 符合第一項需求：工作流程編排服務表示資料管道步驟之間的依賴關係和重試。 緩衝記錄並透過重試和退避應用限制 符合第二項需求：緩衝、節流和回退可以平滑突發並保護下游系統免受過載。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "dea-c01-d1-015",
-    "type": "single",
-    "question": "An AWS administrator working in a shared environment must prevent a streaming producer from overwhelming a downstream data store. Which strategy is appropriate?",
-    "options": {
-      "A": "Disable all retries",
-      "B": "Make the data store public",
-      "C": "Remove partition keys",
-      "D": "Buffer records and apply throttling with retry and backoff"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Buffering, throttling, and backoff smooth bursts and protect the downstream system from overload.\nThe other choices reduce reliability or data-store performance.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team must prevent a streaming producer from overwhelming a downstream data store. Which strategy is appropriate?",
+    "options": {
+      "A": "Convert the records to Apache Parquet",
+      "B": "Buffer records and apply throttling with retry and backoff",
+      "C": "Amazon Kinesis Data Streams",
+      "D": "AWS Glue"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Buffering, throttling, and backoff smooth bursts and protect the downstream system from overload.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Buffer records and apply throttling with retry and backoff for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "在共享環境中工作的 AWS 管理員必須防止串流生產者淹沒下游資料儲存。哪種策略合適？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。在共享環境中工作的 AWS 管理員必須防止串流生產者淹沒下游資料儲存。哪種策略合適？",
         "options": {
-          "A": "禁用所有重試",
-          "B": "公開資料存儲",
-          "C": "刪除分割區鍵",
-          "D": "緩衝記錄並透過重試和退避應用限制"
+          "A": "將記錄轉換為 Apache Parquet",
+          "B": "緩衝記錄並透過重試和退避應用限制",
+          "C": "Amazon Kinesis Data Streams",
+          "D": "AWS Glue"
         },
-        "explanation": "緩衝、節流和回退可以平滑突發並保護下游系統免受過載。\n其他選擇會降低可靠性或資料儲存效能。"
+        "explanation": "緩衝、節流和回退可以平滑突發並保護下游系統免受過載。\n其他選項適用於此領域的不同需求，但不能像 緩衝記錄並透過重試和退避應用限制 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-016",
+    "taskStatement": "1.4",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A customer-facing application team needs to ingest ordered streaming records that multiple consumers can replay independently. Which service fits?",
+    "question": "A customer-facing application team is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs to ingest ordered streaming records that multiple consumers can replay independently. Which service fits?",
     "options": {
       "A": "Amazon Kinesis Data Streams",
-      "B": "Amazon S3 Glacier",
-      "C": "Amazon Route 53",
-      "D": "AWS Certificate Manager"
+      "B": "AWS Glue",
+      "C": "Convert the records to Apache Parquet",
+      "D": "AWS Step Functions or AWS Glue Workflows"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Kinesis Data Streams retains ordered records and supports independent consumer positions.\nThe other choices provide archival storage, DNS, or certificates.",
-    "taskStatement": "1.4",
-    "lastVerified": "2026-08-09",
+    "explanation": "Kinesis Data Streams retains ordered records and supports independent consumer positions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Kinesis Data Streams for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊需要攝取多個消費者可以獨立重播的有序流記錄。適合哪種服務？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。面向客戶的應用程式團隊需要攝取多個消費者可以獨立重播的有序流記錄。適合哪種服務？",
         "options": {
           "A": "Amazon Kinesis Data Streams",
-          "B": "Amazon S3 Glacier",
-          "C": "Amazon Route 53",
-          "D": "AWS Certificate Manager"
+          "B": "AWS Glue",
+          "C": "將記錄轉換為 Apache Parquet",
+          "D": "AWS Step Functions 或 AWS Glue 工作流程"
         },
-        "explanation": "Kinesis Data Streams 保留有序記錄並支援獨立的消費者位置。\n其他選擇提供存檔儲存、DNS 或憑證。"
+        "explanation": "Kinesis Data Streams 保留有序記錄並支援獨立的消費者位置。\n其他選項適用於此領域的不同需求，但不能像 Amazon Kinesis Data Streams 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-017",
-    "type": "single",
-    "question": "A platform team standardizing its AWS deployments needs managed ETL jobs and a central schema catalog for objects in S3. Which service should be used?",
-    "options": {
-      "A": "AWS Shield",
-      "B": "AWS Glue",
-      "C": "Amazon CloudFront",
-      "D": "Amazon Cognito"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "AWS Glue provides ETL jobs, crawlers, and the Glue Data Catalog.\nThe other choices provide content delivery, identity, or DDoS protection.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs managed ETL jobs and a central schema catalog for objects in S3. Which service should be used?",
+    "options": {
+      "A": "Convert the records to Apache Parquet",
+      "B": "AWS Step Functions or AWS Glue Workflows",
+      "C": "Buffer records and apply throttling with retry and backoff",
+      "D": "AWS Glue"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "AWS Glue provides ETL jobs, crawlers, and the Glue Data Catalog.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Glue for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊需要託管 ETL 作業和 S3 中物件的中央架構目錄。應該使用哪種服務？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。標準化其 AWS 部署的平台團隊需要託管 ETL 作業和 S3 中物件的中央架構目錄。應該使用哪種服務？",
         "options": {
-          "A": "AWS Shield",
-          "B": "AWS Glue",
-          "C": "Amazon CloudFront",
-          "D": "Amazon Cognito"
+          "A": "將記錄轉換為 Apache Parquet",
+          "B": "AWS Step Functions 或 AWS Glue 工作流程",
+          "C": "緩衝記錄並透過重試和退避應用限制",
+          "D": "AWS Glue"
         },
-        "explanation": "AWS Glue 提供 ETL 作業、爬網程式和 Glue 資料目錄。\n其他選擇提供內容交付、身分或 DDoS 保護。"
+        "explanation": "AWS Glue 提供 ETL 作業、爬網程式和 Glue 資料目錄。\n其他選項適用於此領域的不同需求，但不能像 AWS Glue 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-018",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team preparing evidence for an audit must convert CSV data into a columnar format for analytics. Which transformation is most appropriate?",
+    "question": "A team preparing evidence for an audit is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team must convert CSV data into a columnar format for analytics. Which transformation is most appropriate?",
     "options": {
-      "A": "Store every row as a DNS record",
-      "B": "Encode the data as an IAM policy",
+      "A": "Buffer records and apply throttling with retry and backoff",
+      "B": "Amazon Kinesis Data Streams",
       "C": "Convert the records to Apache Parquet",
-      "D": "Convert the records to JPEG"
+      "D": "AWS Step Functions or AWS Glue Workflows"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Parquet is a columnar format that can reduce scan volume and improve analytical query performance.\nThe other choices are image, DNS, or authorization representations.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Parquet is a columnar format that can reduce scan volume and improve analytical query performance.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Convert the records to Apache Parquet for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備審計證據的團隊必須將 CSV 資料轉換為柱狀格式以進行分析。哪種改造最適合？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。準備審計證據的團隊必須將 CSV 資料轉換為柱狀格式以進行分析。哪種改造最適合？",
         "options": {
-          "A": "將每一行儲存為 DNS 記錄",
-          "B": "將資料編碼為 IAM 策略",
+          "A": "緩衝記錄並透過重試和退避應用限制",
+          "B": "Amazon Kinesis Data Streams",
           "C": "將記錄轉換為 Apache Parquet",
-          "D": "將記錄轉換為 JPEG"
+          "D": "AWS Step Functions 或 AWS Glue 工作流程"
         },
-        "explanation": "Parquet 是一種列式格式，可減少掃描量並提高分析查詢效能。\n其他選擇是影像、DNS 或授權表示。"
+        "explanation": "Parquet 是一種列式格式，可減少掃描量並提高分析查詢效能。\n其他選項適用於此領域的不同需求，但不能像 將記錄轉換為 Apache Parquet 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-019",
-    "type": "single",
-    "question": "A business replacing a manual process needs a durable workflow that coordinates crawlers, transformations, and validation steps. Which service should orchestrate it?",
-    "options": {
-      "A": "An S3 ACL",
-      "B": "A security group",
-      "C": "An EBS snapshot",
-      "D": "AWS Step Functions or AWS Glue Workflows"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Workflow orchestration services represent dependencies and retries between data pipeline steps.\nThe other choices control access, network traffic, or volume backups.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A business replacing a manual process is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs a durable workflow that coordinates crawlers, transformations, and validation steps. Which service should orchestrate it?",
+    "options": {
+      "A": "AWS Glue",
+      "B": "AWS Step Functions or AWS Glue Workflows",
+      "C": "Buffer records and apply throttling with retry and backoff",
+      "D": "Amazon Kinesis Data Streams"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Workflow orchestration services represent dependencies and retries between data pipeline steps.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Step Functions or AWS Glue Workflows for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "取代手動流程的企業需要一個持久的工作流程來協調爬蟲、轉換和驗證步驟。哪個服務應該協調它？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。取代手動流程的企業需要一個持久的工作流程來協調爬蟲、轉換和驗證步驟。哪個服務應該協調它？",
         "options": {
-          "A": "S3 ACL",
-          "B": "一個安全群組",
-          "C": "EBS Snapshot",
-          "D": "AWS Step Functions 或 AWS Glue 工作流程"
+          "A": "AWS Glue",
+          "B": "AWS Step Functions 或 AWS Glue 工作流程",
+          "C": "緩衝記錄並透過重試和退避應用限制",
+          "D": "Amazon Kinesis Data Streams"
         },
-        "explanation": "工作流程編排服務表示資料管道步驟之間的依賴關係和重試。\n其他選項控制存取、網路流量或磁碟區備份。"
+        "explanation": "工作流程編排服務表示資料管道步驟之間的依賴關係和重試。\n其他選項適用於此領域的不同需求，但不能像 AWS Step Functions 或 AWS Glue 工作流程 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-020",
+    "taskStatement": "1.4",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team validating a design against the exam guide must prevent a streaming producer from overwhelming a downstream data store. Which strategy is appropriate?",
+    "question": "A team validating a design against the exam guide is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team must prevent a streaming producer from overwhelming a downstream data store. Which strategy is appropriate?",
     "options": {
       "A": "Buffer records and apply throttling with retry and backoff",
-      "B": "Disable all retries",
-      "C": "Make the data store public",
-      "D": "Remove partition keys"
+      "B": "Amazon Kinesis Data Streams",
+      "C": "AWS Glue",
+      "D": "Convert the records to Apache Parquet"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Buffering, throttling, and backoff smooth bursts and protect the downstream system from overload.\nThe other choices reduce reliability or data-store performance.",
-    "taskStatement": "1.4",
-    "lastVerified": "2026-08-09",
+    "explanation": "Buffering, throttling, and backoff smooth bursts and protect the downstream system from overload.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Buffer records and apply throttling with retry and backoff for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊必須防止串流媒體生產者壓垮下游資料儲存。哪種策略合適？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。根據考試指南驗證設計的團隊必須防止串流媒體生產者壓垮下游資料儲存。哪種策略合適？",
         "options": {
           "A": "緩衝記錄並透過重試和退避應用限制",
-          "B": "禁用所有重試",
-          "C": "公開資料存儲",
-          "D": "刪除分割區鍵"
+          "B": "Amazon Kinesis Data Streams",
+          "C": "AWS Glue",
+          "D": "將記錄轉換為 Apache Parquet"
         },
-        "explanation": "緩衝、節流和回退可以平滑突發並保護下游系統免受過載。\n其他選擇會降低可靠性或資料儲存效能。"
+        "explanation": "緩衝、節流和回退可以平滑突發並保護下游系統免受過載。\n其他選項適用於此領域的不同需求，但不能像 緩衝記錄並透過重試和退避應用限制 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-021",
-    "type": "single",
-    "question": "A production team needs to ingest ordered streaming records that multiple consumers can replay independently. Which service fits?",
-    "options": {
-      "A": "AWS Certificate Manager",
-      "B": "Amazon Kinesis Data Streams",
-      "C": "Amazon S3 Glacier",
-      "D": "Amazon Route 53"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Kinesis Data Streams retains ordered records and supports independent consumer positions.\nThe other choices provide archival storage, DNS, or certificates.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A production team is planning two independent production changes. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The first team needs to ingest ordered streaming records that multiple consumers can replay independently. A second team needs managed ETL jobs and a central schema catalog for objects in S3. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Convert the records to Apache Parquet",
+      "B": "AWS Step Functions or AWS Glue Workflows",
+      "C": "Buffer records and apply throttling with retry and backoff",
+      "D": "Amazon Kinesis Data Streams",
+      "E": "AWS Glue"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Amazon Kinesis Data Streams meets the first requirement: Kinesis Data Streams retains ordered records and supports independent consumer positions. AWS Glue meets the second requirement: AWS Glue provides ETL jobs, crawlers, and the Glue Data Catalog.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "製作團隊需要攝取多個消費者可以獨立重播的有序流記錄。適合哪種服務？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。第一項需求：製作團隊需要攝取多個消費者可以獨立重播的有序流記錄。第二項需求：多帳戶平台團隊需要託管 ETL 作業和 S3 中物件的中央架構目錄。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "AWS Certificate Manager",
-          "B": "Amazon Kinesis Data Streams",
-          "C": "Amazon S3 Glacier",
-          "D": "Amazon Route 53"
+          "A": "將記錄轉換為 Apache Parquet",
+          "B": "AWS Step Functions 或 AWS Glue 工作流程",
+          "C": "緩衝記錄並透過重試和退避應用限制",
+          "D": "Amazon Kinesis Data Streams",
+          "E": "AWS Glue"
         },
-        "explanation": "Kinesis Data Streams 保留有序記錄並支援獨立的消費者位置。\n其他選擇提供存檔儲存、DNS 或憑證。"
+        "explanation": "Amazon Kinesis Data Streams 符合第一項需求：Kinesis Data Streams 保留有序記錄並支援獨立的消費者位置。 AWS Glue 符合第二項需求：AWS Glue 提供 ETL 作業、爬網程式和 Glue 資料目錄。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "dea-c01-d1-022",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A multi-account platform team needs managed ETL jobs and a central schema catalog for objects in S3. Which service should be used?",
+    "question": "A multi-account platform team is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs managed ETL jobs and a central schema catalog for objects in S3. Which service should be used?",
     "options": {
-      "A": "Amazon Cognito",
-      "B": "AWS Shield",
+      "A": "AWS Step Functions or AWS Glue Workflows",
+      "B": "Buffer records and apply throttling with retry and backoff",
       "C": "AWS Glue",
-      "D": "Amazon CloudFront"
+      "D": "Convert the records to Apache Parquet"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "AWS Glue provides ETL jobs, crawlers, and the Glue Data Catalog.\nThe other choices provide content delivery, identity, or DDoS protection.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "AWS Glue provides ETL jobs, crawlers, and the Glue Data Catalog.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Glue for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊需要託管 ETL 作業和 S3 中物件的中央架構目錄。應該使用哪種服務？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。多帳戶平台團隊需要託管 ETL 作業和 S3 中物件的中央架構目錄。應該使用哪種服務？",
         "options": {
-          "A": "Amazon Cognito",
-          "B": "AWS Shield",
+          "A": "AWS Step Functions 或 AWS Glue 工作流程",
+          "B": "緩衝記錄並透過重試和退避應用限制",
           "C": "AWS Glue",
-          "D": "Amazon CloudFront"
+          "D": "將記錄轉換為 Apache Parquet"
         },
-        "explanation": "AWS Glue 提供 ETL 作業、爬網程式和 Glue 資料目錄。\n其他選擇提供內容交付、身分或 DDoS 保護。"
+        "explanation": "AWS Glue 提供 ETL 作業、爬網程式和 Glue 資料目錄。\n其他選項適用於此領域的不同需求，但不能像 AWS Glue 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-023",
-    "type": "single",
-    "question": "A regulated company must convert CSV data into a columnar format for analytics. Which transformation is most appropriate?",
-    "options": {
-      "A": "Convert the records to JPEG",
-      "B": "Store every row as a DNS record",
-      "C": "Encode the data as an IAM policy",
-      "D": "Convert the records to Apache Parquet"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Parquet is a columnar format that can reduce scan volume and improve analytical query performance.\nThe other choices are image, DNS, or authorization representations.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A regulated company is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team must convert CSV data into a columnar format for analytics. Which transformation is most appropriate?",
+    "options": {
+      "A": "Amazon Kinesis Data Streams",
+      "B": "Convert the records to Apache Parquet",
+      "C": "AWS Step Functions or AWS Glue Workflows",
+      "D": "Buffer records and apply throttling with retry and backoff"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Parquet is a columnar format that can reduce scan volume and improve analytical query performance.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Convert the records to Apache Parquet for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司必須將 CSV 資料轉換為柱狀格式以進行分析。哪種改造最適合？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。受監管的公司必須將 CSV 資料轉換為柱狀格式以進行分析。哪種改造最適合？",
         "options": {
-          "A": "將記錄轉換為 JPEG",
-          "B": "將每一行儲存為 DNS 記錄",
-          "C": "將資料編碼為 IAM 策略",
-          "D": "將記錄轉換為 Apache Parquet"
+          "A": "Amazon Kinesis Data Streams",
+          "B": "將記錄轉換為 Apache Parquet",
+          "C": "AWS Step Functions 或 AWS Glue 工作流程",
+          "D": "緩衝記錄並透過重試和退避應用限制"
         },
-        "explanation": "Parquet 是一種列式格式，可減少掃描量並提高分析查詢效能。\n其他選擇是影像、DNS 或授權表示。"
+        "explanation": "Parquet 是一種列式格式，可減少掃描量並提高分析查詢效能。\n其他選項適用於此領域的不同需求，但不能像 將記錄轉換為 Apache Parquet 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-024",
+    "taskStatement": "1.4",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A startup preparing for a traffic increase needs a durable workflow that coordinates crawlers, transformations, and validation steps. Which service should orchestrate it?",
+    "question": "A startup preparing for a traffic increase is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs a durable workflow that coordinates crawlers, transformations, and validation steps. Which service should orchestrate it?",
     "options": {
       "A": "AWS Step Functions or AWS Glue Workflows",
-      "B": "An S3 ACL",
-      "C": "A security group",
-      "D": "An EBS snapshot"
+      "B": "Buffer records and apply throttling with retry and backoff",
+      "C": "Amazon Kinesis Data Streams",
+      "D": "AWS Glue"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Workflow orchestration services represent dependencies and retries between data pipeline steps.\nThe other choices control access, network traffic, or volume backups.",
-    "taskStatement": "1.4",
-    "lastVerified": "2026-08-09",
+    "explanation": "Workflow orchestration services represent dependencies and retries between data pipeline steps.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Step Functions or AWS Glue Workflows for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司需要一個持久的工作流程來協調爬蟲、轉換和驗證步驟。哪個服務應該協調它？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。準備增加流量的新創公司需要一個持久的工作流程來協調爬蟲、轉換和驗證步驟。哪個服務應該協調它？",
         "options": {
           "A": "AWS Step Functions 或 AWS Glue 工作流程",
-          "B": "S3 ACL",
-          "C": "一個安全群組",
-          "D": "EBS Snapshot"
+          "B": "緩衝記錄並透過重試和退避應用限制",
+          "C": "Amazon Kinesis Data Streams",
+          "D": "AWS Glue"
         },
-        "explanation": "工作流程編排服務表示資料管道步驟之間的依賴關係和重試。\n其他選項控制存取、網路流量或磁碟區備份。"
+        "explanation": "工作流程編排服務表示資料管道步驟之間的依賴關係和重試。\n其他選項適用於此領域的不同需求，但不能像 AWS Step Functions 或 AWS Glue 工作流程 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-025",
-    "type": "single",
-    "question": "An operations team supporting a critical workload must prevent a streaming producer from overwhelming a downstream data store. Which strategy is appropriate?",
-    "options": {
-      "A": "Remove partition keys",
-      "B": "Buffer records and apply throttling with retry and backoff",
-      "C": "Disable all retries",
-      "D": "Make the data store public"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Buffering, throttling, and backoff smooth bursts and protect the downstream system from overload.\nThe other choices reduce reliability or data-store performance.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team must prevent a streaming producer from overwhelming a downstream data store. Which strategy is appropriate?",
+    "options": {
+      "A": "Amazon Kinesis Data Streams",
+      "B": "AWS Glue",
+      "C": "Convert the records to Apache Parquet",
+      "D": "Buffer records and apply throttling with retry and backoff"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Buffering, throttling, and backoff smooth bursts and protect the downstream system from overload.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Buffer records and apply throttling with retry and backoff for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊必須防止流生產者壓垮下游資料儲存。哪種策略合適？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。支援關鍵工作負載的營運團隊必須防止流生產者壓垮下游資料儲存。哪種策略合適？",
         "options": {
-          "A": "刪除分割區鍵",
-          "B": "緩衝記錄並透過重試和退避應用限制",
-          "C": "禁用所有重試",
-          "D": "公開資料存儲"
+          "A": "Amazon Kinesis Data Streams",
+          "B": "AWS Glue",
+          "C": "將記錄轉換為 Apache Parquet",
+          "D": "緩衝記錄並透過重試和退避應用限制"
         },
-        "explanation": "緩衝、節流和回退可以平滑突發並保護下游系統免受過載。\n其他選擇會降低可靠性或資料儲存效能。"
+        "explanation": "緩衝、節流和回退可以平滑突發並保護下游系統免受過載。\n其他選項適用於此領域的不同需求，但不能像 緩衝記錄並透過重試和退避應用限制 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-026",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A data platform team needs to ingest ordered streaming records that multiple consumers can replay independently. Which service fits?",
+    "question": "A data platform team is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs to ingest ordered streaming records that multiple consumers can replay independently. Which service fits?",
     "options": {
-      "A": "Amazon Route 53",
-      "B": "AWS Certificate Manager",
+      "A": "Convert the records to Apache Parquet",
+      "B": "AWS Step Functions or AWS Glue Workflows",
       "C": "Amazon Kinesis Data Streams",
-      "D": "Amazon S3 Glacier"
+      "D": "AWS Glue"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Kinesis Data Streams retains ordered records and supports independent consumer positions.\nThe other choices provide archival storage, DNS, or certificates.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Kinesis Data Streams retains ordered records and supports independent consumer positions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Kinesis Data Streams for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要攝取多個消費者可以獨立重播的有序流記錄。適合哪種服務？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。資料平台團隊需要攝取多個消費者可以獨立重播的有序流記錄。適合哪種服務？",
         "options": {
-          "A": "Amazon Route 53",
-          "B": "AWS Certificate Manager",
+          "A": "將記錄轉換為 Apache Parquet",
+          "B": "AWS Step Functions 或 AWS Glue 工作流程",
           "C": "Amazon Kinesis Data Streams",
-          "D": "Amazon S3 Glacier"
+          "D": "AWS Glue"
         },
-        "explanation": "Kinesis Data Streams 保留有序記錄並支援獨立的消費者位置。\n其他選擇提供存檔儲存、DNS 或憑證。"
+        "explanation": "Kinesis Data Streams 保留有序記錄並支援獨立的消費者位置。\n其他選項適用於此領域的不同需求，但不能像 Amazon Kinesis Data Streams 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-027",
-    "type": "single",
-    "question": "A security-conscious engineering team needs managed ETL jobs and a central schema catalog for objects in S3. Which service should be used?",
-    "options": {
-      "A": "Amazon CloudFront",
-      "B": "Amazon Cognito",
-      "C": "AWS Shield",
-      "D": "AWS Glue"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "AWS Glue provides ETL jobs, crawlers, and the Glue Data Catalog.\nThe other choices provide content delivery, identity, or DDoS protection.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A security-conscious engineering team is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs managed ETL jobs and a central schema catalog for objects in S3. Which service should be used?",
+    "options": {
+      "A": "Buffer records and apply throttling with retry and backoff",
+      "B": "AWS Glue",
+      "C": "Convert the records to Apache Parquet",
+      "D": "AWS Step Functions or AWS Glue Workflows"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "AWS Glue provides ETL jobs, crawlers, and the Glue Data Catalog.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Glue for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊需要託管 ETL 作業和 S3 中物件的中央架構目錄。應該使用哪種服務？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。具有安全意識的工程團隊需要託管 ETL 作業和 S3 中物件的中央架構目錄。應該使用哪種服務？",
         "options": {
-          "A": "Amazon CloudFront",
-          "B": "Amazon Cognito",
-          "C": "AWS Shield",
-          "D": "AWS Glue"
+          "A": "緩衝記錄並透過重試和退避應用限制",
+          "B": "AWS Glue",
+          "C": "將記錄轉換為 Apache Parquet",
+          "D": "AWS Step Functions 或 AWS Glue 工作流程"
         },
-        "explanation": "AWS Glue 提供 ETL 作業、爬網程式和 Glue 資料目錄。\n其他選擇提供內容交付、身分或 DDoS 保護。"
+        "explanation": "AWS Glue 提供 ETL 作業、爬網程式和 Glue 資料目錄。\n其他選項適用於此領域的不同需求，但不能像 AWS Glue 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-028",
-    "type": "single",
-    "question": "A company migrating an existing workload must convert CSV data into a columnar format for analytics. Which transformation is most appropriate?",
-    "options": {
-      "A": "Convert the records to Apache Parquet",
-      "B": "Convert the records to JPEG",
-      "C": "Store every row as a DNS record",
-      "D": "Encode the data as an IAM policy"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "Parquet is a columnar format that can reduce scan volume and improve analytical query performance.\nThe other choices are image, DNS, or authorization representations.",
     "taskStatement": "1.4",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A company migrating an existing workload is planning two independent production changes. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The first team must convert CSV data into a columnar format for analytics. A second team needs a durable workflow that coordinates crawlers, transformations, and validation steps. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "AWS Glue",
+      "B": "Convert the records to Apache Parquet",
+      "C": "AWS Step Functions or AWS Glue Workflows",
+      "D": "Buffer records and apply throttling with retry and backoff",
+      "E": "Amazon Kinesis Data Streams"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Convert the records to Apache Parquet meets the first requirement: Parquet is a columnar format that can reduce scan volume and improve analytical query performance. AWS Step Functions or AWS Glue Workflows meets the second requirement: Workflow orchestration services represent dependencies and retries between data pipeline steps.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司必須將 CSV 資料轉換為柱狀格式以進行分析。哪種改造最適合？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。第一項需求：受監管的公司必須將 CSV 資料轉換為柱狀格式以進行分析。第二項需求：準備增加流量的新創公司需要一個持久的工作流程來協調爬蟲、轉換和驗證步驟。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "將記錄轉換為 Apache Parquet",
-          "B": "將記錄轉換為 JPEG",
-          "C": "將每一行儲存為 DNS 記錄",
-          "D": "將資料編碼為 IAM 策略"
+          "A": "AWS Glue",
+          "B": "將記錄轉換為 Apache Parquet",
+          "C": "AWS Step Functions 或 AWS Glue 工作流程",
+          "D": "緩衝記錄並透過重試和退避應用限制",
+          "E": "Amazon Kinesis Data Streams"
         },
-        "explanation": "Parquet 是一種列式格式，可減少掃描量並提高分析查詢效能。\n其他選擇是影像、DNS 或授權表示。"
+        "explanation": "將記錄轉換為 Apache Parquet 符合第一項需求：Parquet 是一種列式格式，可減少掃描量並提高分析查詢效能。 AWS Step Functions 或 AWS Glue 工作流程 符合第二項需求：工作流程編排服務表示資料管道步驟之間的依賴關係和重試。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "dea-c01-d1-029",
-    "type": "single",
-    "question": "A team with strict recovery objectives needs a durable workflow that coordinates crawlers, transformations, and validation steps. Which service should orchestrate it?",
-    "options": {
-      "A": "An EBS snapshot",
-      "B": "AWS Step Functions or AWS Glue Workflows",
-      "C": "An S3 ACL",
-      "D": "A security group"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Workflow orchestration services represent dependencies and retries between data pipeline steps.\nThe other choices control access, network traffic, or volume backups.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team with strict recovery objectives is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs a durable workflow that coordinates crawlers, transformations, and validation steps. Which service should orchestrate it?",
+    "options": {
+      "A": "Buffer records and apply throttling with retry and backoff",
+      "B": "Amazon Kinesis Data Streams",
+      "C": "AWS Glue",
+      "D": "AWS Step Functions or AWS Glue Workflows"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Workflow orchestration services represent dependencies and retries between data pipeline steps.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Step Functions or AWS Glue Workflows for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格恢復目標的團隊需要一個持久的工作流程來協調爬蟲、轉換和驗證步驟。哪個服務應該協調它？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。具有嚴格恢復目標的團隊需要一個持久的工作流程來協調爬蟲、轉換和驗證步驟。哪個服務應該協調它？",
         "options": {
-          "A": "EBS Snapshot",
-          "B": "AWS Step Functions 或 AWS Glue 工作流程",
-          "C": "S3 ACL",
-          "D": "一個安全群組"
+          "A": "緩衝記錄並透過重試和退避應用限制",
+          "B": "Amazon Kinesis Data Streams",
+          "C": "AWS Glue",
+          "D": "AWS Step Functions 或 AWS Glue 工作流程"
         },
-        "explanation": "工作流程編排服務表示資料管道步驟之間的依賴關係和重試。\n其他選項控制存取、網路流量或磁碟區備份。"
+        "explanation": "工作流程編排服務表示資料管道步驟之間的依賴關係和重試。\n其他選項適用於此領域的不同需求，但不能像 AWS Step Functions 或 AWS Glue 工作流程 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-030",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A developer team preparing a release must prevent a streaming producer from overwhelming a downstream data store. Which strategy is appropriate?",
+    "question": "A developer team preparing a release is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team must prevent a streaming producer from overwhelming a downstream data store. Which strategy is appropriate?",
     "options": {
-      "A": "Make the data store public",
-      "B": "Remove partition keys",
+      "A": "AWS Glue",
+      "B": "Convert the records to Apache Parquet",
       "C": "Buffer records and apply throttling with retry and backoff",
-      "D": "Disable all retries"
+      "D": "Amazon Kinesis Data Streams"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Buffering, throttling, and backoff smooth bursts and protect the downstream system from overload.\nThe other choices reduce reliability or data-store performance.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Buffering, throttling, and backoff smooth bursts and protect the downstream system from overload.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Buffer records and apply throttling with retry and backoff for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊必須防止流生產者壓垮下游資料儲存。哪種策略合適？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。準備發布的開發團隊必須防止流生產者壓垮下游資料儲存。哪種策略合適？",
         "options": {
-          "A": "公開資料存儲",
-          "B": "刪除分割區鍵",
+          "A": "AWS Glue",
+          "B": "將記錄轉換為 Apache Parquet",
           "C": "緩衝記錄並透過重試和退避應用限制",
-          "D": "禁用所有重試"
+          "D": "Amazon Kinesis Data Streams"
         },
-        "explanation": "緩衝、節流和回退可以平滑突發並保護下游系統免受過載。\n其他選擇會降低可靠性或資料儲存效能。"
+        "explanation": "緩衝、節流和回退可以平滑突發並保護下游系統免受過載。\n其他選項適用於此領域的不同需求，但不能像 緩衝記錄並透過重試和退避應用限制 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-031",
-    "type": "single",
-    "question": "An enterprise with several AWS Regions needs to ingest ordered streaming records that multiple consumers can replay independently. Which service fits?",
-    "options": {
-      "A": "Amazon S3 Glacier",
-      "B": "Amazon Route 53",
-      "C": "AWS Certificate Manager",
-      "D": "Amazon Kinesis Data Streams"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Kinesis Data Streams retains ordered records and supports independent consumer positions.\nThe other choices provide archival storage, DNS, or certificates.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team needs to ingest ordered streaming records that multiple consumers can replay independently. Which service fits?",
+    "options": {
+      "A": "AWS Step Functions or AWS Glue Workflows",
+      "B": "Amazon Kinesis Data Streams",
+      "C": "AWS Glue",
+      "D": "Convert the records to Apache Parquet"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Kinesis Data Streams retains ordered records and supports independent consumer positions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Kinesis Data Streams for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業需要提取多個消費者可以獨立重播的有序流記錄。適合哪種服務？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。擁有多個 AWS 區域的企業需要提取多個消費者可以獨立重播的有序流記錄。適合哪種服務？",
         "options": {
-          "A": "Amazon S3 Glacier",
-          "B": "Amazon Route 53",
-          "C": "AWS Certificate Manager",
-          "D": "Amazon Kinesis Data Streams"
+          "A": "AWS Step Functions 或 AWS Glue 工作流程",
+          "B": "Amazon Kinesis Data Streams",
+          "C": "AWS Glue",
+          "D": "將記錄轉換為 Apache Parquet"
         },
-        "explanation": "Kinesis Data Streams 保留有序記錄並支援獨立的消費者位置。\n其他選擇提供存檔儲存、DNS 或憑證。"
+        "explanation": "Kinesis Data Streams 保留有序記錄並支援獨立的消費者位置。\n其他選項適用於此領域的不同需求，但不能像 Amazon Kinesis Data Streams 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-032",
+    "taskStatement": "1.4",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A service owner reviewing an incident needs managed ETL jobs and a central schema catalog for objects in S3. Which service should be used?",
+    "question": "A service owner reviewing an incident is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team needs managed ETL jobs and a central schema catalog for objects in S3. Which service should be used?",
     "options": {
       "A": "AWS Glue",
-      "B": "Amazon CloudFront",
-      "C": "Amazon Cognito",
-      "D": "AWS Shield"
+      "B": "Convert the records to Apache Parquet",
+      "C": "AWS Step Functions or AWS Glue Workflows",
+      "D": "Buffer records and apply throttling with retry and backoff"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "AWS Glue provides ETL jobs, crawlers, and the Glue Data Catalog.\nThe other choices provide content delivery, identity, or DDoS protection.",
-    "taskStatement": "1.4",
-    "lastVerified": "2026-08-09",
+    "explanation": "AWS Glue provides ETL jobs, crawlers, and the Glue Data Catalog.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Glue for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "檢視事件的服務擁有者需要託管 ETL 作業和 S3 中物件的中央架構目錄。應該使用哪種服務？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。檢視事件的服務擁有者需要託管 ETL 作業和 S3 中物件的中央架構目錄。應該使用哪種服務？",
         "options": {
           "A": "AWS Glue",
-          "B": "Amazon CloudFront",
-          "C": "Amazon Cognito",
-          "D": "AWS Shield"
+          "B": "將記錄轉換為 Apache Parquet",
+          "C": "AWS Step Functions 或 AWS Glue 工作流程",
+          "D": "緩衝記錄並透過重試和退避應用限制"
         },
-        "explanation": "AWS Glue 提供 ETL 作業、爬網程式和 Glue 資料目錄。\n其他選擇提供內容交付、身分或 DDoS 保護。"
+        "explanation": "AWS Glue 提供 ETL 作業、爬網程式和 Glue 資料目錄。\n其他選項適用於此領域的不同需求，但不能像 AWS Glue 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-033",
-    "type": "single",
-    "question": "A team optimizing an existing implementation must convert CSV data into a columnar format for analytics. Which transformation is most appropriate?",
-    "options": {
-      "A": "Encode the data as an IAM policy",
-      "B": "Convert the records to Apache Parquet",
-      "C": "Convert the records to JPEG",
-      "D": "Store every row as a DNS record"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Parquet is a columnar format that can reduce scan volume and improve analytical query performance.\nThe other choices are image, DNS, or authorization representations.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team must convert CSV data into a columnar format for analytics. Which transformation is most appropriate?",
+    "options": {
+      "A": "AWS Step Functions or AWS Glue Workflows",
+      "B": "Buffer records and apply throttling with retry and backoff",
+      "C": "Amazon Kinesis Data Streams",
+      "D": "Convert the records to Apache Parquet"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Parquet is a columnar format that can reduce scan volume and improve analytical query performance.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Convert the records to Apache Parquet for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊必須將 CSV 資料轉換為柱狀格式以進行分析。哪種改造最適合？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。優化現有實施的團隊必須將 CSV 資料轉換為柱狀格式以進行分析。哪種改造最適合？",
         "options": {
-          "A": "將資料編碼為 IAM 策略",
-          "B": "將記錄轉換為 Apache Parquet",
-          "C": "將記錄轉換為 JPEG",
-          "D": "將每一行儲存為 DNS 記錄"
+          "A": "AWS Step Functions 或 AWS Glue 工作流程",
+          "B": "緩衝記錄並透過重試和退避應用限制",
+          "C": "Amazon Kinesis Data Streams",
+          "D": "將記錄轉換為 Apache Parquet"
         },
-        "explanation": "Parquet 是一種列式格式，可減少掃描量並提高分析查詢效能。\n其他選擇是影像、DNS 或授權表示。"
+        "explanation": "Parquet 是一種列式格式，可減少掃描量並提高分析查詢效能。\n其他選項適用於此領域的不同需求，但不能像 將記錄轉換為 Apache Parquet 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-034",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A company introducing an automated workflow needs a durable workflow that coordinates crawlers, transformations, and validation steps. Which service should orchestrate it?",
+    "question": "A company introducing an automated workflow is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team needs a durable workflow that coordinates crawlers, transformations, and validation steps. Which service should orchestrate it?",
     "options": {
-      "A": "A security group",
-      "B": "An EBS snapshot",
+      "A": "Amazon Kinesis Data Streams",
+      "B": "AWS Glue",
       "C": "AWS Step Functions or AWS Glue Workflows",
-      "D": "An S3 ACL"
+      "D": "Buffer records and apply throttling with retry and backoff"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Workflow orchestration services represent dependencies and retries between data pipeline steps.\nThe other choices control access, network traffic, or volume backups.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Workflow orchestration services represent dependencies and retries between data pipeline steps.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Step Functions or AWS Glue Workflows for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司需要一個持久的工作流程來協調爬蟲、轉換和驗證步驟。哪個服務應該協調它？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。引入自動化工作流程的公司需要一個持久的工作流程來協調爬蟲、轉換和驗證步驟。哪個服務應該協調它？",
         "options": {
-          "A": "一個安全群組",
-          "B": "EBS Snapshot",
+          "A": "Amazon Kinesis Data Streams",
+          "B": "AWS Glue",
           "C": "AWS Step Functions 或 AWS Glue 工作流程",
-          "D": "S3 ACL"
+          "D": "緩衝記錄並透過重試和退避應用限制"
         },
-        "explanation": "工作流程編排服務表示資料管道步驟之間的依賴關係和重試。\n其他選項控制存取、網路流量或磁碟區備份。"
+        "explanation": "工作流程編排服務表示資料管道步驟之間的依賴關係和重試。\n其他選項適用於此領域的不同需求，但不能像 AWS Step Functions 或 AWS Glue 工作流程 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-035",
-    "type": "single",
-    "question": "An AWS administrator working in a shared environment must prevent a streaming producer from overwhelming a downstream data store. Which strategy is appropriate?",
-    "options": {
-      "A": "Disable all retries",
-      "B": "Make the data store public",
-      "C": "Remove partition keys",
-      "D": "Buffer records and apply throttling with retry and backoff"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Buffering, throttling, and backoff smooth bursts and protect the downstream system from overload.\nThe other choices reduce reliability or data-store performance.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "An AWS administrator working in a shared environment is planning two independent production changes. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The first team must prevent a streaming producer from overwhelming a downstream data store. A second team needs to ingest ordered streaming records that multiple consumers can replay independently. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Amazon Kinesis Data Streams",
+      "B": "AWS Glue",
+      "C": "Convert the records to Apache Parquet",
+      "D": "AWS Step Functions or AWS Glue Workflows",
+      "E": "Buffer records and apply throttling with retry and backoff"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Buffer records and apply throttling with retry and backoff meets the first requirement: Buffering, throttling, and backoff smooth bursts and protect the downstream system from overload. Amazon Kinesis Data Streams meets the second requirement: Kinesis Data Streams retains ordered records and supports independent consumer positions.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "在共享環境中工作的 AWS 管理員必須防止串流生產者淹沒下游資料儲存。哪種策略合適？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。第一項需求：製作團隊需要攝取多個消費者可以獨立重播的有序流記錄。第二項需求：支援關鍵工作負載的營運團隊必須防止流生產者壓垮下游資料儲存。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "禁用所有重試",
-          "B": "公開資料存儲",
-          "C": "刪除分割區鍵",
-          "D": "緩衝記錄並透過重試和退避應用限制"
+          "A": "Amazon Kinesis Data Streams",
+          "B": "AWS Glue",
+          "C": "將記錄轉換為 Apache Parquet",
+          "D": "AWS Step Functions 或 AWS Glue 工作流程",
+          "E": "緩衝記錄並透過重試和退避應用限制"
         },
-        "explanation": "緩衝、節流和回退可以平滑突發並保護下游系統免受過載。\n其他選擇會降低可靠性或資料儲存效能。"
+        "explanation": "Amazon Kinesis Data Streams 符合第一項需求：Kinesis Data Streams 保留有序記錄並支援獨立的消費者位置。 緩衝記錄並透過重試和退避應用限制 符合第二項需求：緩衝、節流和回退可以平滑突發並保護下游系統免受過載。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "dea-c01-d1-036",
+    "taskStatement": "1.4",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A customer-facing application team needs to ingest ordered streaming records that multiple consumers can replay independently. Which service fits?",
+    "question": "A customer-facing application team is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs to ingest ordered streaming records that multiple consumers can replay independently. Which service fits?",
     "options": {
       "A": "Amazon Kinesis Data Streams",
-      "B": "Amazon S3 Glacier",
-      "C": "Amazon Route 53",
-      "D": "AWS Certificate Manager"
+      "B": "AWS Glue",
+      "C": "Convert the records to Apache Parquet",
+      "D": "AWS Step Functions or AWS Glue Workflows"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Kinesis Data Streams retains ordered records and supports independent consumer positions.\nThe other choices provide archival storage, DNS, or certificates.",
-    "taskStatement": "1.4",
-    "lastVerified": "2026-08-09",
+    "explanation": "Kinesis Data Streams retains ordered records and supports independent consumer positions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Kinesis Data Streams for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊需要攝取多個消費者可以獨立重播的有序流記錄。適合哪種服務？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。面向客戶的應用程式團隊需要攝取多個消費者可以獨立重播的有序流記錄。適合哪種服務？",
         "options": {
           "A": "Amazon Kinesis Data Streams",
-          "B": "Amazon S3 Glacier",
-          "C": "Amazon Route 53",
-          "D": "AWS Certificate Manager"
+          "B": "AWS Glue",
+          "C": "將記錄轉換為 Apache Parquet",
+          "D": "AWS Step Functions 或 AWS Glue 工作流程"
         },
-        "explanation": "Kinesis Data Streams 保留有序記錄並支援獨立的消費者位置。\n其他選擇提供存檔儲存、DNS 或憑證。"
+        "explanation": "Kinesis Data Streams 保留有序記錄並支援獨立的消費者位置。\n其他選項適用於此領域的不同需求，但不能像 Amazon Kinesis Data Streams 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-037",
-    "type": "single",
-    "question": "A platform team standardizing its AWS deployments needs managed ETL jobs and a central schema catalog for objects in S3. Which service should be used?",
-    "options": {
-      "A": "AWS Shield",
-      "B": "AWS Glue",
-      "C": "Amazon CloudFront",
-      "D": "Amazon Cognito"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "AWS Glue provides ETL jobs, crawlers, and the Glue Data Catalog.\nThe other choices provide content delivery, identity, or DDoS protection.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs managed ETL jobs and a central schema catalog for objects in S3. Which service should be used?",
+    "options": {
+      "A": "Convert the records to Apache Parquet",
+      "B": "AWS Step Functions or AWS Glue Workflows",
+      "C": "Buffer records and apply throttling with retry and backoff",
+      "D": "AWS Glue"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "AWS Glue provides ETL jobs, crawlers, and the Glue Data Catalog.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Glue for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊需要託管 ETL 作業和 S3 中物件的中央架構目錄。應該使用哪種服務？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。標準化其 AWS 部署的平台團隊需要託管 ETL 作業和 S3 中物件的中央架構目錄。應該使用哪種服務？",
         "options": {
-          "A": "AWS Shield",
-          "B": "AWS Glue",
-          "C": "Amazon CloudFront",
-          "D": "Amazon Cognito"
+          "A": "將記錄轉換為 Apache Parquet",
+          "B": "AWS Step Functions 或 AWS Glue 工作流程",
+          "C": "緩衝記錄並透過重試和退避應用限制",
+          "D": "AWS Glue"
         },
-        "explanation": "AWS Glue 提供 ETL 作業、爬網程式和 Glue 資料目錄。\n其他選擇提供內容交付、身分或 DDoS 保護。"
+        "explanation": "AWS Glue 提供 ETL 作業、爬網程式和 Glue 資料目錄。\n其他選項適用於此領域的不同需求，但不能像 AWS Glue 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-038",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team preparing evidence for an audit must convert CSV data into a columnar format for analytics. Which transformation is most appropriate?",
+    "question": "A team preparing evidence for an audit is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team must convert CSV data into a columnar format for analytics. Which transformation is most appropriate?",
     "options": {
-      "A": "Store every row as a DNS record",
-      "B": "Encode the data as an IAM policy",
+      "A": "Buffer records and apply throttling with retry and backoff",
+      "B": "Amazon Kinesis Data Streams",
       "C": "Convert the records to Apache Parquet",
-      "D": "Convert the records to JPEG"
+      "D": "AWS Step Functions or AWS Glue Workflows"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Parquet is a columnar format that can reduce scan volume and improve analytical query performance.\nThe other choices are image, DNS, or authorization representations.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Parquet is a columnar format that can reduce scan volume and improve analytical query performance.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Convert the records to Apache Parquet for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備審計證據的團隊必須將 CSV 資料轉換為柱狀格式以進行分析。哪種改造最適合？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。準備審計證據的團隊必須將 CSV 資料轉換為柱狀格式以進行分析。哪種改造最適合？",
         "options": {
-          "A": "將每一行儲存為 DNS 記錄",
-          "B": "將資料編碼為 IAM 策略",
+          "A": "緩衝記錄並透過重試和退避應用限制",
+          "B": "Amazon Kinesis Data Streams",
           "C": "將記錄轉換為 Apache Parquet",
-          "D": "將記錄轉換為 JPEG"
+          "D": "AWS Step Functions 或 AWS Glue 工作流程"
         },
-        "explanation": "Parquet 是一種列式格式，可減少掃描量並提高分析查詢效能。\n其他選擇是影像、DNS 或授權表示。"
+        "explanation": "Parquet 是一種列式格式，可減少掃描量並提高分析查詢效能。\n其他選項適用於此領域的不同需求，但不能像 將記錄轉換為 Apache Parquet 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-039",
-    "type": "single",
-    "question": "A business replacing a manual process needs a durable workflow that coordinates crawlers, transformations, and validation steps. Which service should orchestrate it?",
-    "options": {
-      "A": "An S3 ACL",
-      "B": "A security group",
-      "C": "An EBS snapshot",
-      "D": "AWS Step Functions or AWS Glue Workflows"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Workflow orchestration services represent dependencies and retries between data pipeline steps.\nThe other choices control access, network traffic, or volume backups.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A business replacing a manual process is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs a durable workflow that coordinates crawlers, transformations, and validation steps. Which service should orchestrate it?",
+    "options": {
+      "A": "AWS Glue",
+      "B": "AWS Step Functions or AWS Glue Workflows",
+      "C": "Buffer records and apply throttling with retry and backoff",
+      "D": "Amazon Kinesis Data Streams"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Workflow orchestration services represent dependencies and retries between data pipeline steps.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Step Functions or AWS Glue Workflows for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "取代手動流程的企業需要一個持久的工作流程來協調爬蟲、轉換和驗證步驟。哪個服務應該協調它？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。取代手動流程的企業需要一個持久的工作流程來協調爬蟲、轉換和驗證步驟。哪個服務應該協調它？",
         "options": {
-          "A": "S3 ACL",
-          "B": "一個安全群組",
-          "C": "EBS Snapshot",
-          "D": "AWS Step Functions 或 AWS Glue 工作流程"
+          "A": "AWS Glue",
+          "B": "AWS Step Functions 或 AWS Glue 工作流程",
+          "C": "緩衝記錄並透過重試和退避應用限制",
+          "D": "Amazon Kinesis Data Streams"
         },
-        "explanation": "工作流程編排服務表示資料管道步驟之間的依賴關係和重試。\n其他選項控制存取、網路流量或磁碟區備份。"
+        "explanation": "工作流程編排服務表示資料管道步驟之間的依賴關係和重試。\n其他選項適用於此領域的不同需求，但不能像 AWS Step Functions 或 AWS Glue 工作流程 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-040",
+    "taskStatement": "1.4",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team validating a design against the exam guide must prevent a streaming producer from overwhelming a downstream data store. Which strategy is appropriate?",
+    "question": "A team validating a design against the exam guide is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team must prevent a streaming producer from overwhelming a downstream data store. Which strategy is appropriate?",
     "options": {
       "A": "Buffer records and apply throttling with retry and backoff",
-      "B": "Disable all retries",
-      "C": "Make the data store public",
-      "D": "Remove partition keys"
+      "B": "Amazon Kinesis Data Streams",
+      "C": "AWS Glue",
+      "D": "Convert the records to Apache Parquet"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Buffering, throttling, and backoff smooth bursts and protect the downstream system from overload.\nThe other choices reduce reliability or data-store performance.",
-    "taskStatement": "1.4",
-    "lastVerified": "2026-08-09",
+    "explanation": "Buffering, throttling, and backoff smooth bursts and protect the downstream system from overload.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Buffer records and apply throttling with retry and backoff for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊必須防止串流媒體生產者壓垮下游資料儲存。哪種策略合適？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。根據考試指南驗證設計的團隊必須防止串流媒體生產者壓垮下游資料儲存。哪種策略合適？",
         "options": {
           "A": "緩衝記錄並透過重試和退避應用限制",
-          "B": "禁用所有重試",
-          "C": "公開資料存儲",
-          "D": "刪除分割區鍵"
+          "B": "Amazon Kinesis Data Streams",
+          "C": "AWS Glue",
+          "D": "將記錄轉換為 Apache Parquet"
         },
-        "explanation": "緩衝、節流和回退可以平滑突發並保護下游系統免受過載。\n其他選擇會降低可靠性或資料儲存效能。"
+        "explanation": "緩衝、節流和回退可以平滑突發並保護下游系統免受過載。\n其他選項適用於此領域的不同需求，但不能像 緩衝記錄並透過重試和退避應用限制 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-041",
-    "type": "single",
-    "question": "A production team needs to ingest ordered streaming records that multiple consumers can replay independently. Which service fits?",
-    "options": {
-      "A": "AWS Certificate Manager",
-      "B": "Amazon Kinesis Data Streams",
-      "C": "Amazon S3 Glacier",
-      "D": "Amazon Route 53"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Kinesis Data Streams retains ordered records and supports independent consumer positions.\nThe other choices provide archival storage, DNS, or certificates.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A production team is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs to ingest ordered streaming records that multiple consumers can replay independently. Which service fits?",
+    "options": {
+      "A": "AWS Glue",
+      "B": "Convert the records to Apache Parquet",
+      "C": "AWS Step Functions or AWS Glue Workflows",
+      "D": "Amazon Kinesis Data Streams"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Kinesis Data Streams retains ordered records and supports independent consumer positions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Kinesis Data Streams for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "製作團隊需要攝取多個消費者可以獨立重播的有序流記錄。適合哪種服務？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。製作團隊需要攝取多個消費者可以獨立重播的有序流記錄。適合哪種服務？",
         "options": {
-          "A": "AWS Certificate Manager",
-          "B": "Amazon Kinesis Data Streams",
-          "C": "Amazon S3 Glacier",
-          "D": "Amazon Route 53"
+          "A": "AWS Glue",
+          "B": "將記錄轉換為 Apache Parquet",
+          "C": "AWS Step Functions 或 AWS Glue 工作流程",
+          "D": "Amazon Kinesis Data Streams"
         },
-        "explanation": "Kinesis Data Streams 保留有序記錄並支援獨立的消費者位置。\n其他選擇提供存檔儲存、DNS 或憑證。"
+        "explanation": "Kinesis Data Streams 保留有序記錄並支援獨立的消費者位置。\n其他選項適用於此領域的不同需求，但不能像 Amazon Kinesis Data Streams 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-042",
-    "type": "single",
-    "question": "A multi-account platform team needs managed ETL jobs and a central schema catalog for objects in S3. Which service should be used?",
-    "options": {
-      "A": "Amazon Cognito",
-      "B": "AWS Shield",
-      "C": "AWS Glue",
-      "D": "Amazon CloudFront"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "AWS Glue provides ETL jobs, crawlers, and the Glue Data Catalog.\nThe other choices provide content delivery, identity, or DDoS protection.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A multi-account platform team is planning two independent production changes. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The first team needs managed ETL jobs and a central schema catalog for objects in S3. A second team must convert CSV data into a columnar format for analytics. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Buffer records and apply throttling with retry and backoff",
+      "B": "Amazon Kinesis Data Streams",
+      "C": "AWS Glue",
+      "D": "Convert the records to Apache Parquet",
+      "E": "AWS Step Functions or AWS Glue Workflows"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS Glue meets the first requirement: AWS Glue provides ETL jobs, crawlers, and the Glue Data Catalog. Convert the records to Apache Parquet meets the second requirement: Parquet is a columnar format that can reduce scan volume and improve analytical query performance.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊需要託管 ETL 作業和 S3 中物件的中央架構目錄。應該使用哪種服務？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。第一項需求：多帳戶平台團隊需要託管 ETL 作業和 S3 中物件的中央架構目錄。第二項需求：受監管的公司必須將 CSV 資料轉換為柱狀格式以進行分析。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "Amazon Cognito",
-          "B": "AWS Shield",
+          "A": "緩衝記錄並透過重試和退避應用限制",
+          "B": "Amazon Kinesis Data Streams",
           "C": "AWS Glue",
-          "D": "Amazon CloudFront"
+          "D": "將記錄轉換為 Apache Parquet",
+          "E": "AWS Step Functions 或 AWS Glue 工作流程"
         },
-        "explanation": "AWS Glue 提供 ETL 作業、爬網程式和 Glue 資料目錄。\n其他選擇提供內容交付、身分或 DDoS 保護。"
+        "explanation": "AWS Glue 符合第一項需求：AWS Glue 提供 ETL 作業、爬網程式和 Glue 資料目錄。 將記錄轉換為 Apache Parquet 符合第二項需求：Parquet 是一種列式格式，可減少掃描量並提高分析查詢效能。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "dea-c01-d1-043",
-    "type": "single",
-    "question": "A regulated company must convert CSV data into a columnar format for analytics. Which transformation is most appropriate?",
-    "options": {
-      "A": "Convert the records to JPEG",
-      "B": "Store every row as a DNS record",
-      "C": "Encode the data as an IAM policy",
-      "D": "Convert the records to Apache Parquet"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Parquet is a columnar format that can reduce scan volume and improve analytical query performance.\nThe other choices are image, DNS, or authorization representations.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A regulated company is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team must convert CSV data into a columnar format for analytics. Which transformation is most appropriate?",
+    "options": {
+      "A": "Amazon Kinesis Data Streams",
+      "B": "Convert the records to Apache Parquet",
+      "C": "AWS Step Functions or AWS Glue Workflows",
+      "D": "Buffer records and apply throttling with retry and backoff"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Parquet is a columnar format that can reduce scan volume and improve analytical query performance.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Convert the records to Apache Parquet for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司必須將 CSV 資料轉換為柱狀格式以進行分析。哪種改造最適合？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。受監管的公司必須將 CSV 資料轉換為柱狀格式以進行分析。哪種改造最適合？",
         "options": {
-          "A": "將記錄轉換為 JPEG",
-          "B": "將每一行儲存為 DNS 記錄",
-          "C": "將資料編碼為 IAM 策略",
-          "D": "將記錄轉換為 Apache Parquet"
+          "A": "Amazon Kinesis Data Streams",
+          "B": "將記錄轉換為 Apache Parquet",
+          "C": "AWS Step Functions 或 AWS Glue 工作流程",
+          "D": "緩衝記錄並透過重試和退避應用限制"
         },
-        "explanation": "Parquet 是一種列式格式，可減少掃描量並提高分析查詢效能。\n其他選擇是影像、DNS 或授權表示。"
+        "explanation": "Parquet 是一種列式格式，可減少掃描量並提高分析查詢效能。\n其他選項適用於此領域的不同需求，但不能像 將記錄轉換為 Apache Parquet 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-044",
+    "taskStatement": "1.4",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A startup preparing for a traffic increase needs a durable workflow that coordinates crawlers, transformations, and validation steps. Which service should orchestrate it?",
+    "question": "A startup preparing for a traffic increase is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs a durable workflow that coordinates crawlers, transformations, and validation steps. Which service should orchestrate it?",
     "options": {
       "A": "AWS Step Functions or AWS Glue Workflows",
-      "B": "An S3 ACL",
-      "C": "A security group",
-      "D": "An EBS snapshot"
+      "B": "Buffer records and apply throttling with retry and backoff",
+      "C": "Amazon Kinesis Data Streams",
+      "D": "AWS Glue"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Workflow orchestration services represent dependencies and retries between data pipeline steps.\nThe other choices control access, network traffic, or volume backups.",
-    "taskStatement": "1.4",
-    "lastVerified": "2026-08-09",
+    "explanation": "Workflow orchestration services represent dependencies and retries between data pipeline steps.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Step Functions or AWS Glue Workflows for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司需要一個持久的工作流程來協調爬蟲、轉換和驗證步驟。哪個服務應該協調它？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。準備增加流量的新創公司需要一個持久的工作流程來協調爬蟲、轉換和驗證步驟。哪個服務應該協調它？",
         "options": {
           "A": "AWS Step Functions 或 AWS Glue 工作流程",
-          "B": "S3 ACL",
-          "C": "一個安全群組",
-          "D": "EBS Snapshot"
+          "B": "緩衝記錄並透過重試和退避應用限制",
+          "C": "Amazon Kinesis Data Streams",
+          "D": "AWS Glue"
         },
-        "explanation": "工作流程編排服務表示資料管道步驟之間的依賴關係和重試。\n其他選項控制存取、網路流量或磁碟區備份。"
+        "explanation": "工作流程編排服務表示資料管道步驟之間的依賴關係和重試。\n其他選項適用於此領域的不同需求，但不能像 AWS Step Functions 或 AWS Glue 工作流程 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-045",
-    "type": "single",
-    "question": "An operations team supporting a critical workload must prevent a streaming producer from overwhelming a downstream data store. Which strategy is appropriate?",
-    "options": {
-      "A": "Remove partition keys",
-      "B": "Buffer records and apply throttling with retry and backoff",
-      "C": "Disable all retries",
-      "D": "Make the data store public"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Buffering, throttling, and backoff smooth bursts and protect the downstream system from overload.\nThe other choices reduce reliability or data-store performance.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team must prevent a streaming producer from overwhelming a downstream data store. Which strategy is appropriate?",
+    "options": {
+      "A": "Amazon Kinesis Data Streams",
+      "B": "AWS Glue",
+      "C": "Convert the records to Apache Parquet",
+      "D": "Buffer records and apply throttling with retry and backoff"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Buffering, throttling, and backoff smooth bursts and protect the downstream system from overload.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Buffer records and apply throttling with retry and backoff for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊必須防止流生產者壓垮下游資料儲存。哪種策略合適？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。支援關鍵工作負載的營運團隊必須防止流生產者壓垮下游資料儲存。哪種策略合適？",
         "options": {
-          "A": "刪除分割區鍵",
-          "B": "緩衝記錄並透過重試和退避應用限制",
-          "C": "禁用所有重試",
-          "D": "公開資料存儲"
+          "A": "Amazon Kinesis Data Streams",
+          "B": "AWS Glue",
+          "C": "將記錄轉換為 Apache Parquet",
+          "D": "緩衝記錄並透過重試和退避應用限制"
         },
-        "explanation": "緩衝、節流和回退可以平滑突發並保護下游系統免受過載。\n其他選擇會降低可靠性或資料儲存效能。"
+        "explanation": "緩衝、節流和回退可以平滑突發並保護下游系統免受過載。\n其他選項適用於此領域的不同需求，但不能像 緩衝記錄並透過重試和退避應用限制 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-046",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A data platform team needs to ingest ordered streaming records that multiple consumers can replay independently. Which service fits?",
+    "question": "A data platform team is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs to ingest ordered streaming records that multiple consumers can replay independently. Which service fits?",
     "options": {
-      "A": "Amazon Route 53",
-      "B": "AWS Certificate Manager",
+      "A": "Convert the records to Apache Parquet",
+      "B": "AWS Step Functions or AWS Glue Workflows",
       "C": "Amazon Kinesis Data Streams",
-      "D": "Amazon S3 Glacier"
+      "D": "AWS Glue"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Kinesis Data Streams retains ordered records and supports independent consumer positions.\nThe other choices provide archival storage, DNS, or certificates.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Kinesis Data Streams retains ordered records and supports independent consumer positions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Kinesis Data Streams for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要攝取多個消費者可以獨立重播的有序流記錄。適合哪種服務？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。資料平台團隊需要攝取多個消費者可以獨立重播的有序流記錄。適合哪種服務？",
         "options": {
-          "A": "Amazon Route 53",
-          "B": "AWS Certificate Manager",
+          "A": "將記錄轉換為 Apache Parquet",
+          "B": "AWS Step Functions 或 AWS Glue 工作流程",
           "C": "Amazon Kinesis Data Streams",
-          "D": "Amazon S3 Glacier"
+          "D": "AWS Glue"
         },
-        "explanation": "Kinesis Data Streams 保留有序記錄並支援獨立的消費者位置。\n其他選擇提供存檔儲存、DNS 或憑證。"
+        "explanation": "Kinesis Data Streams 保留有序記錄並支援獨立的消費者位置。\n其他選項適用於此領域的不同需求，但不能像 Amazon Kinesis Data Streams 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-047",
-    "type": "single",
-    "question": "A security-conscious engineering team needs managed ETL jobs and a central schema catalog for objects in S3. Which service should be used?",
-    "options": {
-      "A": "Amazon CloudFront",
-      "B": "Amazon Cognito",
-      "C": "AWS Shield",
-      "D": "AWS Glue"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "AWS Glue provides ETL jobs, crawlers, and the Glue Data Catalog.\nThe other choices provide content delivery, identity, or DDoS protection.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A security-conscious engineering team is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs managed ETL jobs and a central schema catalog for objects in S3. Which service should be used?",
+    "options": {
+      "A": "Buffer records and apply throttling with retry and backoff",
+      "B": "AWS Glue",
+      "C": "Convert the records to Apache Parquet",
+      "D": "AWS Step Functions or AWS Glue Workflows"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "AWS Glue provides ETL jobs, crawlers, and the Glue Data Catalog.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Glue for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊需要託管 ETL 作業和 S3 中物件的中央架構目錄。應該使用哪種服務？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。具有安全意識的工程團隊需要託管 ETL 作業和 S3 中物件的中央架構目錄。應該使用哪種服務？",
         "options": {
-          "A": "Amazon CloudFront",
-          "B": "Amazon Cognito",
-          "C": "AWS Shield",
-          "D": "AWS Glue"
+          "A": "緩衝記錄並透過重試和退避應用限制",
+          "B": "AWS Glue",
+          "C": "將記錄轉換為 Apache Parquet",
+          "D": "AWS Step Functions 或 AWS Glue 工作流程"
         },
-        "explanation": "AWS Glue 提供 ETL 作業、爬網程式和 Glue 資料目錄。\n其他選擇提供內容交付、身分或 DDoS 保護。"
+        "explanation": "AWS Glue 提供 ETL 作業、爬網程式和 Glue 資料目錄。\n其他選項適用於此領域的不同需求，但不能像 AWS Glue 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-048",
+    "taskStatement": "1.4",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A company migrating an existing workload must convert CSV data into a columnar format for analytics. Which transformation is most appropriate?",
+    "question": "A company migrating an existing workload is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team must convert CSV data into a columnar format for analytics. Which transformation is most appropriate?",
     "options": {
       "A": "Convert the records to Apache Parquet",
-      "B": "Convert the records to JPEG",
-      "C": "Store every row as a DNS record",
-      "D": "Encode the data as an IAM policy"
+      "B": "AWS Step Functions or AWS Glue Workflows",
+      "C": "Buffer records and apply throttling with retry and backoff",
+      "D": "Amazon Kinesis Data Streams"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Parquet is a columnar format that can reduce scan volume and improve analytical query performance.\nThe other choices are image, DNS, or authorization representations.",
-    "taskStatement": "1.4",
-    "lastVerified": "2026-08-09",
+    "explanation": "Parquet is a columnar format that can reduce scan volume and improve analytical query performance.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Convert the records to Apache Parquet for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司必須將 CSV 資料轉換為柱狀格式以進行分析。哪種改造最適合？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。遷移現有工作負載的公司必須將 CSV 資料轉換為柱狀格式以進行分析。哪種改造最適合？",
         "options": {
           "A": "將記錄轉換為 Apache Parquet",
-          "B": "將記錄轉換為 JPEG",
-          "C": "將每一行儲存為 DNS 記錄",
-          "D": "將資料編碼為 IAM 策略"
+          "B": "AWS Step Functions 或 AWS Glue 工作流程",
+          "C": "緩衝記錄並透過重試和退避應用限制",
+          "D": "Amazon Kinesis Data Streams"
         },
-        "explanation": "Parquet 是一種列式格式，可減少掃描量並提高分析查詢效能。\n其他選擇是影像、DNS 或授權表示。"
+        "explanation": "Parquet 是一種列式格式，可減少掃描量並提高分析查詢效能。\n其他選項適用於此領域的不同需求，但不能像 將記錄轉換為 Apache Parquet 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-049",
-    "type": "single",
-    "question": "A team with strict recovery objectives needs a durable workflow that coordinates crawlers, transformations, and validation steps. Which service should orchestrate it?",
-    "options": {
-      "A": "An EBS snapshot",
-      "B": "AWS Step Functions or AWS Glue Workflows",
-      "C": "An S3 ACL",
-      "D": "A security group"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Workflow orchestration services represent dependencies and retries between data pipeline steps.\nThe other choices control access, network traffic, or volume backups.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A team with strict recovery objectives is planning two independent production changes. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The first team needs a durable workflow that coordinates crawlers, transformations, and validation steps. A second team must prevent a streaming producer from overwhelming a downstream data store. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "AWS Step Functions or AWS Glue Workflows",
+      "B": "Buffer records and apply throttling with retry and backoff",
+      "C": "Amazon Kinesis Data Streams",
+      "D": "AWS Glue",
+      "E": "Convert the records to Apache Parquet"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS Step Functions or AWS Glue Workflows meets the first requirement: Workflow orchestration services represent dependencies and retries between data pipeline steps. Buffer records and apply throttling with retry and backoff meets the second requirement: Buffering, throttling, and backoff smooth bursts and protect the downstream system from overload.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有嚴格恢復目標的團隊需要一個持久的工作流程來協調爬蟲、轉換和驗證步驟。哪個服務應該協調它？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。第一項需求：準備增加流量的新創公司需要一個持久的工作流程來協調爬蟲、轉換和驗證步驟。第二項需求：支援關鍵工作負載的營運團隊必須防止流生產者壓垮下游資料儲存。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "EBS Snapshot",
-          "B": "AWS Step Functions 或 AWS Glue 工作流程",
-          "C": "S3 ACL",
-          "D": "一個安全群組"
+          "A": "AWS Step Functions 或 AWS Glue 工作流程",
+          "B": "緩衝記錄並透過重試和退避應用限制",
+          "C": "Amazon Kinesis Data Streams",
+          "D": "AWS Glue",
+          "E": "將記錄轉換為 Apache Parquet"
         },
-        "explanation": "工作流程編排服務表示資料管道步驟之間的依賴關係和重試。\n其他選項控制存取、網路流量或磁碟區備份。"
+        "explanation": "AWS Step Functions 或 AWS Glue 工作流程 符合第一項需求：工作流程編排服務表示資料管道步驟之間的依賴關係和重試。 緩衝記錄並透過重試和退避應用限制 符合第二項需求：緩衝、節流和回退可以平滑突發並保護下游系統免受過載。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "dea-c01-d1-050",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A developer team preparing a release must prevent a streaming producer from overwhelming a downstream data store. Which strategy is appropriate?",
+    "question": "A developer team preparing a release is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team must prevent a streaming producer from overwhelming a downstream data store. Which strategy is appropriate?",
     "options": {
-      "A": "Make the data store public",
-      "B": "Remove partition keys",
+      "A": "AWS Glue",
+      "B": "Convert the records to Apache Parquet",
       "C": "Buffer records and apply throttling with retry and backoff",
-      "D": "Disable all retries"
+      "D": "Amazon Kinesis Data Streams"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Buffering, throttling, and backoff smooth bursts and protect the downstream system from overload.\nThe other choices reduce reliability or data-store performance.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Buffering, throttling, and backoff smooth bursts and protect the downstream system from overload.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Buffer records and apply throttling with retry and backoff for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊必須防止流生產者壓垮下游資料儲存。哪種策略合適？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。準備發布的開發團隊必須防止流生產者壓垮下游資料儲存。哪種策略合適？",
         "options": {
-          "A": "公開資料存儲",
-          "B": "刪除分割區鍵",
+          "A": "AWS Glue",
+          "B": "將記錄轉換為 Apache Parquet",
           "C": "緩衝記錄並透過重試和退避應用限制",
-          "D": "禁用所有重試"
+          "D": "Amazon Kinesis Data Streams"
         },
-        "explanation": "緩衝、節流和回退可以平滑突發並保護下游系統免受過載。\n其他選擇會降低可靠性或資料儲存效能。"
+        "explanation": "緩衝、節流和回退可以平滑突發並保護下游系統免受過載。\n其他選項適用於此領域的不同需求，但不能像 緩衝記錄並透過重試和退避應用限制 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-051",
-    "type": "single",
-    "question": "An enterprise with several AWS Regions needs to ingest ordered streaming records that multiple consumers can replay independently. Which service fits?",
-    "options": {
-      "A": "Amazon S3 Glacier",
-      "B": "Amazon Route 53",
-      "C": "AWS Certificate Manager",
-      "D": "Amazon Kinesis Data Streams"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Kinesis Data Streams retains ordered records and supports independent consumer positions.\nThe other choices provide archival storage, DNS, or certificates.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs to ingest ordered streaming records that multiple consumers can replay independently. Which service fits?",
+    "options": {
+      "A": "AWS Step Functions or AWS Glue Workflows",
+      "B": "Amazon Kinesis Data Streams",
+      "C": "AWS Glue",
+      "D": "Convert the records to Apache Parquet"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Kinesis Data Streams retains ordered records and supports independent consumer positions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Kinesis Data Streams for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業需要提取多個消費者可以獨立重播的有序流記錄。適合哪種服務？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。擁有多個 AWS 區域的企業需要提取多個消費者可以獨立重播的有序流記錄。適合哪種服務？",
         "options": {
-          "A": "Amazon S3 Glacier",
-          "B": "Amazon Route 53",
-          "C": "AWS Certificate Manager",
-          "D": "Amazon Kinesis Data Streams"
+          "A": "AWS Step Functions 或 AWS Glue 工作流程",
+          "B": "Amazon Kinesis Data Streams",
+          "C": "AWS Glue",
+          "D": "將記錄轉換為 Apache Parquet"
         },
-        "explanation": "Kinesis Data Streams 保留有序記錄並支援獨立的消費者位置。\n其他選擇提供存檔儲存、DNS 或憑證。"
+        "explanation": "Kinesis Data Streams 保留有序記錄並支援獨立的消費者位置。\n其他選項適用於此領域的不同需求，但不能像 Amazon Kinesis Data Streams 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-052",
+    "taskStatement": "1.4",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A service owner reviewing an incident needs managed ETL jobs and a central schema catalog for objects in S3. Which service should be used?",
+    "question": "A service owner reviewing an incident is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs managed ETL jobs and a central schema catalog for objects in S3. Which service should be used?",
     "options": {
       "A": "AWS Glue",
-      "B": "Amazon CloudFront",
-      "C": "Amazon Cognito",
-      "D": "AWS Shield"
+      "B": "Convert the records to Apache Parquet",
+      "C": "AWS Step Functions or AWS Glue Workflows",
+      "D": "Buffer records and apply throttling with retry and backoff"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "AWS Glue provides ETL jobs, crawlers, and the Glue Data Catalog.\nThe other choices provide content delivery, identity, or DDoS protection.",
-    "taskStatement": "1.4",
-    "lastVerified": "2026-08-09",
+    "explanation": "AWS Glue provides ETL jobs, crawlers, and the Glue Data Catalog.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Glue for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "檢視事件的服務擁有者需要託管 ETL 作業和 S3 中物件的中央架構目錄。應該使用哪種服務？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。檢視事件的服務擁有者需要託管 ETL 作業和 S3 中物件的中央架構目錄。應該使用哪種服務？",
         "options": {
           "A": "AWS Glue",
-          "B": "Amazon CloudFront",
-          "C": "Amazon Cognito",
-          "D": "AWS Shield"
+          "B": "將記錄轉換為 Apache Parquet",
+          "C": "AWS Step Functions 或 AWS Glue 工作流程",
+          "D": "緩衝記錄並透過重試和退避應用限制"
         },
-        "explanation": "AWS Glue 提供 ETL 作業、爬網程式和 Glue 資料目錄。\n其他選擇提供內容交付、身分或 DDoS 保護。"
+        "explanation": "AWS Glue 提供 ETL 作業、爬網程式和 Glue 資料目錄。\n其他選項適用於此領域的不同需求，但不能像 AWS Glue 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-053",
-    "type": "single",
-    "question": "A team optimizing an existing implementation must convert CSV data into a columnar format for analytics. Which transformation is most appropriate?",
-    "options": {
-      "A": "Encode the data as an IAM policy",
-      "B": "Convert the records to Apache Parquet",
-      "C": "Convert the records to JPEG",
-      "D": "Store every row as a DNS record"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Parquet is a columnar format that can reduce scan volume and improve analytical query performance.\nThe other choices are image, DNS, or authorization representations.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team must convert CSV data into a columnar format for analytics. Which transformation is most appropriate?",
+    "options": {
+      "A": "AWS Step Functions or AWS Glue Workflows",
+      "B": "Buffer records and apply throttling with retry and backoff",
+      "C": "Amazon Kinesis Data Streams",
+      "D": "Convert the records to Apache Parquet"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Parquet is a columnar format that can reduce scan volume and improve analytical query performance.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Convert the records to Apache Parquet for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊必須將 CSV 資料轉換為柱狀格式以進行分析。哪種改造最適合？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。優化現有實施的團隊必須將 CSV 資料轉換為柱狀格式以進行分析。哪種改造最適合？",
         "options": {
-          "A": "將資料編碼為 IAM 策略",
-          "B": "將記錄轉換為 Apache Parquet",
-          "C": "將記錄轉換為 JPEG",
-          "D": "將每一行儲存為 DNS 記錄"
+          "A": "AWS Step Functions 或 AWS Glue 工作流程",
+          "B": "緩衝記錄並透過重試和退避應用限制",
+          "C": "Amazon Kinesis Data Streams",
+          "D": "將記錄轉換為 Apache Parquet"
         },
-        "explanation": "Parquet 是一種列式格式，可減少掃描量並提高分析查詢效能。\n其他選擇是影像、DNS 或授權表示。"
+        "explanation": "Parquet 是一種列式格式，可減少掃描量並提高分析查詢效能。\n其他選項適用於此領域的不同需求，但不能像 將記錄轉換為 Apache Parquet 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-054",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A company introducing an automated workflow needs a durable workflow that coordinates crawlers, transformations, and validation steps. Which service should orchestrate it?",
+    "question": "A company introducing an automated workflow is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs a durable workflow that coordinates crawlers, transformations, and validation steps. Which service should orchestrate it?",
     "options": {
-      "A": "A security group",
-      "B": "An EBS snapshot",
+      "A": "Amazon Kinesis Data Streams",
+      "B": "AWS Glue",
       "C": "AWS Step Functions or AWS Glue Workflows",
-      "D": "An S3 ACL"
+      "D": "Buffer records and apply throttling with retry and backoff"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Workflow orchestration services represent dependencies and retries between data pipeline steps.\nThe other choices control access, network traffic, or volume backups.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Workflow orchestration services represent dependencies and retries between data pipeline steps.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Step Functions or AWS Glue Workflows for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司需要一個持久的工作流程來協調爬蟲、轉換和驗證步驟。哪個服務應該協調它？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。引入自動化工作流程的公司需要一個持久的工作流程來協調爬蟲、轉換和驗證步驟。哪個服務應該協調它？",
         "options": {
-          "A": "一個安全群組",
-          "B": "EBS Snapshot",
+          "A": "Amazon Kinesis Data Streams",
+          "B": "AWS Glue",
           "C": "AWS Step Functions 或 AWS Glue 工作流程",
-          "D": "S3 ACL"
+          "D": "緩衝記錄並透過重試和退避應用限制"
         },
-        "explanation": "工作流程編排服務表示資料管道步驟之間的依賴關係和重試。\n其他選項控制存取、網路流量或磁碟區備份。"
+        "explanation": "工作流程編排服務表示資料管道步驟之間的依賴關係和重試。\n其他選項適用於此領域的不同需求，但不能像 AWS Step Functions 或 AWS Glue 工作流程 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-055",
-    "type": "single",
-    "question": "An AWS administrator working in a shared environment must prevent a streaming producer from overwhelming a downstream data store. Which strategy is appropriate?",
-    "options": {
-      "A": "Disable all retries",
-      "B": "Make the data store public",
-      "C": "Remove partition keys",
-      "D": "Buffer records and apply throttling with retry and backoff"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Buffering, throttling, and backoff smooth bursts and protect the downstream system from overload.\nThe other choices reduce reliability or data-store performance.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team must prevent a streaming producer from overwhelming a downstream data store. Which strategy is appropriate?",
+    "options": {
+      "A": "Convert the records to Apache Parquet",
+      "B": "Buffer records and apply throttling with retry and backoff",
+      "C": "Amazon Kinesis Data Streams",
+      "D": "AWS Glue"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Buffering, throttling, and backoff smooth bursts and protect the downstream system from overload.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Buffer records and apply throttling with retry and backoff for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "在共享環境中工作的 AWS 管理員必須防止串流生產者淹沒下游資料儲存。哪種策略合適？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。在共享環境中工作的 AWS 管理員必須防止串流生產者淹沒下游資料儲存。哪種策略合適？",
         "options": {
-          "A": "禁用所有重試",
-          "B": "公開資料存儲",
-          "C": "刪除分割區鍵",
-          "D": "緩衝記錄並透過重試和退避應用限制"
+          "A": "將記錄轉換為 Apache Parquet",
+          "B": "緩衝記錄並透過重試和退避應用限制",
+          "C": "Amazon Kinesis Data Streams",
+          "D": "AWS Glue"
         },
-        "explanation": "緩衝、節流和回退可以平滑突發並保護下游系統免受過載。\n其他選擇會降低可靠性或資料儲存效能。"
+        "explanation": "緩衝、節流和回退可以平滑突發並保護下游系統免受過載。\n其他選項適用於此領域的不同需求，但不能像 緩衝記錄並透過重試和退避應用限制 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-056",
-    "type": "single",
-    "question": "A customer-facing application team needs to ingest ordered streaming records that multiple consumers can replay independently. Which service fits?",
-    "options": {
-      "A": "Amazon Kinesis Data Streams",
-      "B": "Amazon S3 Glacier",
-      "C": "Amazon Route 53",
-      "D": "AWS Certificate Manager"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "Kinesis Data Streams retains ordered records and supports independent consumer positions.\nThe other choices provide archival storage, DNS, or certificates.",
     "taskStatement": "1.4",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A customer-facing application team is planning two independent production changes. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The first team needs to ingest ordered streaming records that multiple consumers can replay independently. A second team needs managed ETL jobs and a central schema catalog for objects in S3. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Convert the records to Apache Parquet",
+      "B": "AWS Step Functions or AWS Glue Workflows",
+      "C": "Buffer records and apply throttling with retry and backoff",
+      "D": "Amazon Kinesis Data Streams",
+      "E": "AWS Glue"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Amazon Kinesis Data Streams meets the first requirement: Kinesis Data Streams retains ordered records and supports independent consumer positions. AWS Glue meets the second requirement: AWS Glue provides ETL jobs, crawlers, and the Glue Data Catalog.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊需要攝取多個消費者可以獨立重播的有序流記錄。適合哪種服務？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。第一項需求：製作團隊需要攝取多個消費者可以獨立重播的有序流記錄。第二項需求：多帳戶平台團隊需要託管 ETL 作業和 S3 中物件的中央架構目錄。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "Amazon Kinesis Data Streams",
-          "B": "Amazon S3 Glacier",
-          "C": "Amazon Route 53",
-          "D": "AWS Certificate Manager"
+          "A": "將記錄轉換為 Apache Parquet",
+          "B": "AWS Step Functions 或 AWS Glue 工作流程",
+          "C": "緩衝記錄並透過重試和退避應用限制",
+          "D": "Amazon Kinesis Data Streams",
+          "E": "AWS Glue"
         },
-        "explanation": "Kinesis Data Streams 保留有序記錄並支援獨立的消費者位置。\n其他選擇提供存檔儲存、DNS 或憑證。"
+        "explanation": "Amazon Kinesis Data Streams 符合第一項需求：Kinesis Data Streams 保留有序記錄並支援獨立的消費者位置。 AWS Glue 符合第二項需求：AWS Glue 提供 ETL 作業、爬網程式和 Glue 資料目錄。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "dea-c01-d1-057",
-    "type": "single",
-    "question": "A platform team standardizing its AWS deployments needs managed ETL jobs and a central schema catalog for objects in S3. Which service should be used?",
-    "options": {
-      "A": "AWS Shield",
-      "B": "AWS Glue",
-      "C": "Amazon CloudFront",
-      "D": "Amazon Cognito"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "AWS Glue provides ETL jobs, crawlers, and the Glue Data Catalog.\nThe other choices provide content delivery, identity, or DDoS protection.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team needs managed ETL jobs and a central schema catalog for objects in S3. Which service should be used?",
+    "options": {
+      "A": "Convert the records to Apache Parquet",
+      "B": "AWS Step Functions or AWS Glue Workflows",
+      "C": "Buffer records and apply throttling with retry and backoff",
+      "D": "AWS Glue"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "AWS Glue provides ETL jobs, crawlers, and the Glue Data Catalog.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Glue for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊需要託管 ETL 作業和 S3 中物件的中央架構目錄。應該使用哪種服務？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。標準化其 AWS 部署的平台團隊需要託管 ETL 作業和 S3 中物件的中央架構目錄。應該使用哪種服務？",
         "options": {
-          "A": "AWS Shield",
-          "B": "AWS Glue",
-          "C": "Amazon CloudFront",
-          "D": "Amazon Cognito"
+          "A": "將記錄轉換為 Apache Parquet",
+          "B": "AWS Step Functions 或 AWS Glue 工作流程",
+          "C": "緩衝記錄並透過重試和退避應用限制",
+          "D": "AWS Glue"
         },
-        "explanation": "AWS Glue 提供 ETL 作業、爬網程式和 Glue 資料目錄。\n其他選擇提供內容交付、身分或 DDoS 保護。"
+        "explanation": "AWS Glue 提供 ETL 作業、爬網程式和 Glue 資料目錄。\n其他選項適用於此領域的不同需求，但不能像 AWS Glue 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-058",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team preparing evidence for an audit must convert CSV data into a columnar format for analytics. Which transformation is most appropriate?",
+    "question": "A team preparing evidence for an audit is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team must convert CSV data into a columnar format for analytics. Which transformation is most appropriate?",
     "options": {
-      "A": "Store every row as a DNS record",
-      "B": "Encode the data as an IAM policy",
+      "A": "Buffer records and apply throttling with retry and backoff",
+      "B": "Amazon Kinesis Data Streams",
       "C": "Convert the records to Apache Parquet",
-      "D": "Convert the records to JPEG"
+      "D": "AWS Step Functions or AWS Glue Workflows"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Parquet is a columnar format that can reduce scan volume and improve analytical query performance.\nThe other choices are image, DNS, or authorization representations.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Parquet is a columnar format that can reduce scan volume and improve analytical query performance.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Convert the records to Apache Parquet for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備審計證據的團隊必須將 CSV 資料轉換為柱狀格式以進行分析。哪種改造最適合？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。準備審計證據的團隊必須將 CSV 資料轉換為柱狀格式以進行分析。哪種改造最適合？",
         "options": {
-          "A": "將每一行儲存為 DNS 記錄",
-          "B": "將資料編碼為 IAM 策略",
+          "A": "緩衝記錄並透過重試和退避應用限制",
+          "B": "Amazon Kinesis Data Streams",
           "C": "將記錄轉換為 Apache Parquet",
-          "D": "將記錄轉換為 JPEG"
+          "D": "AWS Step Functions 或 AWS Glue 工作流程"
         },
-        "explanation": "Parquet 是一種列式格式，可減少掃描量並提高分析查詢效能。\n其他選擇是影像、DNS 或授權表示。"
+        "explanation": "Parquet 是一種列式格式，可減少掃描量並提高分析查詢效能。\n其他選項適用於此領域的不同需求，但不能像 將記錄轉換為 Apache Parquet 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-059",
-    "type": "single",
-    "question": "A business replacing a manual process needs a durable workflow that coordinates crawlers, transformations, and validation steps. Which service should orchestrate it?",
-    "options": {
-      "A": "An S3 ACL",
-      "B": "A security group",
-      "C": "An EBS snapshot",
-      "D": "AWS Step Functions or AWS Glue Workflows"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Workflow orchestration services represent dependencies and retries between data pipeline steps.\nThe other choices control access, network traffic, or volume backups.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A business replacing a manual process is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team needs a durable workflow that coordinates crawlers, transformations, and validation steps. Which service should orchestrate it?",
+    "options": {
+      "A": "AWS Glue",
+      "B": "AWS Step Functions or AWS Glue Workflows",
+      "C": "Buffer records and apply throttling with retry and backoff",
+      "D": "Amazon Kinesis Data Streams"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Workflow orchestration services represent dependencies and retries between data pipeline steps.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Step Functions or AWS Glue Workflows for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "取代手動流程的企業需要一個持久的工作流程來協調爬蟲、轉換和驗證步驟。哪個服務應該協調它？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。取代手動流程的企業需要一個持久的工作流程來協調爬蟲、轉換和驗證步驟。哪個服務應該協調它？",
         "options": {
-          "A": "S3 ACL",
-          "B": "一個安全群組",
-          "C": "EBS Snapshot",
-          "D": "AWS Step Functions 或 AWS Glue 工作流程"
+          "A": "AWS Glue",
+          "B": "AWS Step Functions 或 AWS Glue 工作流程",
+          "C": "緩衝記錄並透過重試和退避應用限制",
+          "D": "Amazon Kinesis Data Streams"
         },
-        "explanation": "工作流程編排服務表示資料管道步驟之間的依賴關係和重試。\n其他選項控制存取、網路流量或磁碟區備份。"
+        "explanation": "工作流程編排服務表示資料管道步驟之間的依賴關係和重試。\n其他選項適用於此領域的不同需求，但不能像 AWS Step Functions 或 AWS Glue 工作流程 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-060",
+    "taskStatement": "1.4",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team validating a design against the exam guide must prevent a streaming producer from overwhelming a downstream data store. Which strategy is appropriate?",
+    "question": "A team validating a design against the exam guide is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team must prevent a streaming producer from overwhelming a downstream data store. Which strategy is appropriate?",
     "options": {
       "A": "Buffer records and apply throttling with retry and backoff",
-      "B": "Disable all retries",
-      "C": "Make the data store public",
-      "D": "Remove partition keys"
+      "B": "Amazon Kinesis Data Streams",
+      "C": "AWS Glue",
+      "D": "Convert the records to Apache Parquet"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Buffering, throttling, and backoff smooth bursts and protect the downstream system from overload.\nThe other choices reduce reliability or data-store performance.",
-    "taskStatement": "1.4",
-    "lastVerified": "2026-08-09",
+    "explanation": "Buffering, throttling, and backoff smooth bursts and protect the downstream system from overload.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Buffer records and apply throttling with retry and backoff for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊必須防止串流媒體生產者壓垮下游資料儲存。哪種策略合適？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。根據考試指南驗證設計的團隊必須防止串流媒體生產者壓垮下游資料儲存。哪種策略合適？",
         "options": {
           "A": "緩衝記錄並透過重試和退避應用限制",
-          "B": "禁用所有重試",
-          "C": "公開資料存儲",
-          "D": "刪除分割區鍵"
+          "B": "Amazon Kinesis Data Streams",
+          "C": "AWS Glue",
+          "D": "將記錄轉換為 Apache Parquet"
         },
-        "explanation": "緩衝、節流和回退可以平滑突發並保護下游系統免受過載。\n其他選擇會降低可靠性或資料儲存效能。"
+        "explanation": "緩衝、節流和回退可以平滑突發並保護下游系統免受過載。\n其他選項適用於此領域的不同需求，但不能像 緩衝記錄並透過重試和退避應用限制 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-061",
-    "type": "single",
-    "question": "A production team needs to ingest ordered streaming records that multiple consumers can replay independently. Which service fits?",
-    "options": {
-      "A": "AWS Certificate Manager",
-      "B": "Amazon Kinesis Data Streams",
-      "C": "Amazon S3 Glacier",
-      "D": "Amazon Route 53"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Kinesis Data Streams retains ordered records and supports independent consumer positions.\nThe other choices provide archival storage, DNS, or certificates.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A production team is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs to ingest ordered streaming records that multiple consumers can replay independently. Which service fits?",
+    "options": {
+      "A": "AWS Glue",
+      "B": "Convert the records to Apache Parquet",
+      "C": "AWS Step Functions or AWS Glue Workflows",
+      "D": "Amazon Kinesis Data Streams"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Kinesis Data Streams retains ordered records and supports independent consumer positions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Kinesis Data Streams for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "製作團隊需要攝取多個消費者可以獨立重播的有序流記錄。適合哪種服務？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。製作團隊需要攝取多個消費者可以獨立重播的有序流記錄。適合哪種服務？",
         "options": {
-          "A": "AWS Certificate Manager",
-          "B": "Amazon Kinesis Data Streams",
-          "C": "Amazon S3 Glacier",
-          "D": "Amazon Route 53"
+          "A": "AWS Glue",
+          "B": "將記錄轉換為 Apache Parquet",
+          "C": "AWS Step Functions 或 AWS Glue 工作流程",
+          "D": "Amazon Kinesis Data Streams"
         },
-        "explanation": "Kinesis Data Streams 保留有序記錄並支援獨立的消費者位置。\n其他選擇提供存檔儲存、DNS 或憑證。"
+        "explanation": "Kinesis Data Streams 保留有序記錄並支援獨立的消費者位置。\n其他選項適用於此領域的不同需求，但不能像 Amazon Kinesis Data Streams 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-062",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A multi-account platform team needs managed ETL jobs and a central schema catalog for objects in S3. Which service should be used?",
+    "question": "A multi-account platform team is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs managed ETL jobs and a central schema catalog for objects in S3. Which service should be used?",
     "options": {
-      "A": "Amazon Cognito",
-      "B": "AWS Shield",
+      "A": "AWS Step Functions or AWS Glue Workflows",
+      "B": "Buffer records and apply throttling with retry and backoff",
       "C": "AWS Glue",
-      "D": "Amazon CloudFront"
+      "D": "Convert the records to Apache Parquet"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "AWS Glue provides ETL jobs, crawlers, and the Glue Data Catalog.\nThe other choices provide content delivery, identity, or DDoS protection.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "AWS Glue provides ETL jobs, crawlers, and the Glue Data Catalog.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Glue for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊需要託管 ETL 作業和 S3 中物件的中央架構目錄。應該使用哪種服務？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。多帳戶平台團隊需要託管 ETL 作業和 S3 中物件的中央架構目錄。應該使用哪種服務？",
         "options": {
-          "A": "Amazon Cognito",
-          "B": "AWS Shield",
+          "A": "AWS Step Functions 或 AWS Glue 工作流程",
+          "B": "緩衝記錄並透過重試和退避應用限制",
           "C": "AWS Glue",
-          "D": "Amazon CloudFront"
+          "D": "將記錄轉換為 Apache Parquet"
         },
-        "explanation": "AWS Glue 提供 ETL 作業、爬網程式和 Glue 資料目錄。\n其他選擇提供內容交付、身分或 DDoS 保護。"
+        "explanation": "AWS Glue 提供 ETL 作業、爬網程式和 Glue 資料目錄。\n其他選項適用於此領域的不同需求，但不能像 AWS Glue 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-063",
-    "type": "single",
-    "question": "A regulated company must convert CSV data into a columnar format for analytics. Which transformation is most appropriate?",
-    "options": {
-      "A": "Convert the records to JPEG",
-      "B": "Store every row as a DNS record",
-      "C": "Encode the data as an IAM policy",
-      "D": "Convert the records to Apache Parquet"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Parquet is a columnar format that can reduce scan volume and improve analytical query performance.\nThe other choices are image, DNS, or authorization representations.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A regulated company is planning two independent production changes. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The first team must convert CSV data into a columnar format for analytics. A second team needs a durable workflow that coordinates crawlers, transformations, and validation steps. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "AWS Glue",
+      "B": "Convert the records to Apache Parquet",
+      "C": "AWS Step Functions or AWS Glue Workflows",
+      "D": "Buffer records and apply throttling with retry and backoff",
+      "E": "Amazon Kinesis Data Streams"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Convert the records to Apache Parquet meets the first requirement: Parquet is a columnar format that can reduce scan volume and improve analytical query performance. AWS Step Functions or AWS Glue Workflows meets the second requirement: Workflow orchestration services represent dependencies and retries between data pipeline steps.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "受監管的公司必須將 CSV 資料轉換為柱狀格式以進行分析。哪種改造最適合？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。第一項需求：受監管的公司必須將 CSV 資料轉換為柱狀格式以進行分析。第二項需求：準備增加流量的新創公司需要一個持久的工作流程來協調爬蟲、轉換和驗證步驟。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "將記錄轉換為 JPEG",
-          "B": "將每一行儲存為 DNS 記錄",
-          "C": "將資料編碼為 IAM 策略",
-          "D": "將記錄轉換為 Apache Parquet"
+          "A": "AWS Glue",
+          "B": "將記錄轉換為 Apache Parquet",
+          "C": "AWS Step Functions 或 AWS Glue 工作流程",
+          "D": "緩衝記錄並透過重試和退避應用限制",
+          "E": "Amazon Kinesis Data Streams"
         },
-        "explanation": "Parquet 是一種列式格式，可減少掃描量並提高分析查詢效能。\n其他選擇是影像、DNS 或授權表示。"
+        "explanation": "將記錄轉換為 Apache Parquet 符合第一項需求：Parquet 是一種列式格式，可減少掃描量並提高分析查詢效能。 AWS Step Functions 或 AWS Glue 工作流程 符合第二項需求：工作流程編排服務表示資料管道步驟之間的依賴關係和重試。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "dea-c01-d1-064",
+    "taskStatement": "1.4",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A startup preparing for a traffic increase needs a durable workflow that coordinates crawlers, transformations, and validation steps. Which service should orchestrate it?",
+    "question": "A startup preparing for a traffic increase is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs a durable workflow that coordinates crawlers, transformations, and validation steps. Which service should orchestrate it?",
     "options": {
       "A": "AWS Step Functions or AWS Glue Workflows",
-      "B": "An S3 ACL",
-      "C": "A security group",
-      "D": "An EBS snapshot"
+      "B": "Buffer records and apply throttling with retry and backoff",
+      "C": "Amazon Kinesis Data Streams",
+      "D": "AWS Glue"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Workflow orchestration services represent dependencies and retries between data pipeline steps.\nThe other choices control access, network traffic, or volume backups.",
-    "taskStatement": "1.4",
-    "lastVerified": "2026-08-09",
+    "explanation": "Workflow orchestration services represent dependencies and retries between data pipeline steps.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Step Functions or AWS Glue Workflows for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司需要一個持久的工作流程來協調爬蟲、轉換和驗證步驟。哪個服務應該協調它？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。準備增加流量的新創公司需要一個持久的工作流程來協調爬蟲、轉換和驗證步驟。哪個服務應該協調它？",
         "options": {
           "A": "AWS Step Functions 或 AWS Glue 工作流程",
-          "B": "S3 ACL",
-          "C": "一個安全群組",
-          "D": "EBS Snapshot"
+          "B": "緩衝記錄並透過重試和退避應用限制",
+          "C": "Amazon Kinesis Data Streams",
+          "D": "AWS Glue"
         },
-        "explanation": "工作流程編排服務表示資料管道步驟之間的依賴關係和重試。\n其他選項控制存取、網路流量或磁碟區備份。"
+        "explanation": "工作流程編排服務表示資料管道步驟之間的依賴關係和重試。\n其他選項適用於此領域的不同需求，但不能像 AWS Step Functions 或 AWS Glue 工作流程 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-065",
-    "type": "single",
-    "question": "An operations team supporting a critical workload must prevent a streaming producer from overwhelming a downstream data store. Which strategy is appropriate?",
-    "options": {
-      "A": "Remove partition keys",
-      "B": "Buffer records and apply throttling with retry and backoff",
-      "C": "Disable all retries",
-      "D": "Make the data store public"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Buffering, throttling, and backoff smooth bursts and protect the downstream system from overload.\nThe other choices reduce reliability or data-store performance.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team must prevent a streaming producer from overwhelming a downstream data store. Which strategy is appropriate?",
+    "options": {
+      "A": "Amazon Kinesis Data Streams",
+      "B": "AWS Glue",
+      "C": "Convert the records to Apache Parquet",
+      "D": "Buffer records and apply throttling with retry and backoff"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Buffering, throttling, and backoff smooth bursts and protect the downstream system from overload.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Buffer records and apply throttling with retry and backoff for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊必須防止流生產者壓垮下游資料儲存。哪種策略合適？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。支援關鍵工作負載的營運團隊必須防止流生產者壓垮下游資料儲存。哪種策略合適？",
         "options": {
-          "A": "刪除分割區鍵",
-          "B": "緩衝記錄並透過重試和退避應用限制",
-          "C": "禁用所有重試",
-          "D": "公開資料存儲"
+          "A": "Amazon Kinesis Data Streams",
+          "B": "AWS Glue",
+          "C": "將記錄轉換為 Apache Parquet",
+          "D": "緩衝記錄並透過重試和退避應用限制"
         },
-        "explanation": "緩衝、節流和回退可以平滑突發並保護下游系統免受過載。\n其他選擇會降低可靠性或資料儲存效能。"
+        "explanation": "緩衝、節流和回退可以平滑突發並保護下游系統免受過載。\n其他選項適用於此領域的不同需求，但不能像 緩衝記錄並透過重試和退避應用限制 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "dea-c01-d1-066",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A data platform team needs to ingest ordered streaming records that multiple consumers can replay independently. Which service fits?",
+    "question": "A data platform team is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs to ingest ordered streaming records that multiple consumers can replay independently. Which service fits?",
     "options": {
-      "A": "Amazon Route 53",
-      "B": "AWS Certificate Manager",
+      "A": "Convert the records to Apache Parquet",
+      "B": "AWS Step Functions or AWS Glue Workflows",
       "C": "Amazon Kinesis Data Streams",
-      "D": "Amazon S3 Glacier"
+      "D": "AWS Glue"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Kinesis Data Streams retains ordered records and supports independent consumer positions.\nThe other choices provide archival storage, DNS, or certificates.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Kinesis Data Streams retains ordered records and supports independent consumer positions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Kinesis Data Streams for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要攝取多個消費者可以獨立重播的有序流記錄。適合哪種服務？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。資料平台團隊需要攝取多個消費者可以獨立重播的有序流記錄。適合哪種服務？",
         "options": {
-          "A": "Amazon Route 53",
-          "B": "AWS Certificate Manager",
+          "A": "將記錄轉換為 Apache Parquet",
+          "B": "AWS Step Functions 或 AWS Glue 工作流程",
           "C": "Amazon Kinesis Data Streams",
-          "D": "Amazon S3 Glacier"
+          "D": "AWS Glue"
         },
-        "explanation": "Kinesis Data Streams 保留有序記錄並支援獨立的消費者位置。\n其他選擇提供存檔儲存、DNS 或憑證。"
+        "explanation": "Kinesis Data Streams 保留有序記錄並支援獨立的消費者位置。\n其他選項適用於此領域的不同需求，但不能像 Amazon Kinesis Data Streams 一樣直接滿足題目的指定條件。"
       }
     }
   }

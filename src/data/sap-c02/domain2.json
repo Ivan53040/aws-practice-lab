@@ -1,1821 +1,1856 @@
 [
   {
     "id": "sap-c02-d2-001",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A production team needs a resilient web architecture with independent scaling tiers. Which pattern is appropriate?",
+    "question": "A production team is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team needs a resilient web architecture with independent scaling tiers. Which pattern is appropriate?",
     "options": {
-      "A": "Local session state only",
-      "B": "A public database",
+      "A": "API ingress, SQS buffering, and independently scaled workers",
+      "B": "The workload data model, consistency, query, and transaction requirements",
       "C": "Stateless application tiers behind a load balancer with a durable data layer",
-      "D": "One large instance for every tier"
+      "D": "CloudFront with an origin access control and multi-Region strategy where needed"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Stateless tiers and managed data services scale independently and improve resilience.\nA single instance and public database create bottlenecks and exposure.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Stateless tiers and managed data services scale independently and improve resilience.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Stateless application tiers behind a load balancer with a durable data layer for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "製作團隊需要具有獨立擴充層的彈性 Web 架構。哪種模式合適？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。製作團隊需要具有獨立擴充層的彈性 Web 架構。哪種模式合適？",
         "options": {
-          "A": "僅本地會話狀態",
-          "B": "公共資料庫",
+          "A": "API 入口、SQS 緩衝和獨立擴展的工作線程",
+          "B": "工作負載資料模型、一致性、查詢和事務要求",
           "C": "負載平衡器後面的無狀態應用程式層具有持久性資料層",
-          "D": "每層一個大型執行個體"
+          "D": "CloudFront 在需要時具有來源存取控制和多區域策略"
         },
-        "explanation": "無狀態層和託管資料服務可以獨立擴展並提高彈性。\n單一執行個體和公共資料庫會造成瓶頸和暴露。"
+        "explanation": "無狀態層和託管資料服務可以獨立擴展並提高彈性。\n其他選項適用於此領域的不同需求，但不能像 負載平衡器後面的無狀態應用程式層具有持久性資料層 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d2-002",
-    "type": "single",
-    "question": "A multi-account platform team must serve global users with low latency and protect a Regional origin. Which design fits?",
-    "options": {
-      "A": "Send every request to one public instance",
-      "B": "Use Direct Connect for public users",
-      "C": "Disable caching",
-      "D": "CloudFront with an origin access control and multi-Region strategy where needed"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "CloudFront reduces latency and can protect a private origin.\nThe other choices add latency, cost, or exposure.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A multi-account platform team is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team must serve global users with low latency and protect a Regional origin. Which design fits?",
+    "options": {
+      "A": "Translate RTO and RPO into recovery strategy and testable controls",
+      "B": "CloudFront with an origin access control and multi-Region strategy where needed",
+      "C": "API ingress, SQS buffering, and independently scaled workers",
+      "D": "The workload data model, consistency, query, and transaction requirements"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudFront reduces latency and can protect a private origin.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide CloudFront with an origin access control and multi-Region strategy where needed for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊必須為全球使用者提供低延遲服務並保護區域起源。哪種設計適合？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。多帳戶平台團隊必須為全球使用者提供低延遲服務並保護區域起源。哪種設計適合？",
         "options": {
-          "A": "將每個請求傳送到一個公共執行個體",
-          "B": "公用使用者使用 Direct Connect",
-          "C": "禁用快取",
-          "D": "CloudFront 在需要時具有來源存取控制和多區域策略"
+          "A": "將 RTO 和 RPO 轉化為復原策略和可測試的控制",
+          "B": "CloudFront 在需要時具有來源存取控制和多區域策略",
+          "C": "API 入口、SQS 緩衝和獨立擴展的工作線程",
+          "D": "工作負載資料模型、一致性、查詢和事務要求"
         },
-        "explanation": "CloudFront 減少了延遲並可以保護私有來源。\n其他選擇會增加延遲、成本或暴露。"
+        "explanation": "CloudFront 減少了延遲並可以保護私有來源。\n其他選項適用於此領域的不同需求，但不能像 CloudFront 在需要時具有來源存取控制和多區域策略 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d2-003",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A regulated company needs asynchronous processing for a large volume of requests. Which architecture should be considered?",
+    "question": "A regulated company is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team needs asynchronous processing for a large volume of requests. Which architecture should be considered?",
     "options": {
       "A": "API ingress, SQS buffering, and independently scaled workers",
-      "B": "Synchronous calls to every worker",
-      "C": "One process with local state",
-      "D": "A single shared administrator credential"
+      "B": "The workload data model, consistency, query, and transaction requirements",
+      "C": "Translate RTO and RPO into recovery strategy and testable controls",
+      "D": "Stateless application tiers behind a load balancer with a durable data layer"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Queues decouple producers and workers and absorb bursts.\nSynchronous chains and shared credentials reduce resilience and security.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Queues decouple producers and workers and absorb bursts.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide API ingress, SQS buffering, and independently scaled workers for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司需要非同步處理大量請求。應該考慮哪種架構？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。受監管的公司需要非同步處理大量請求。應該考慮哪種架構？",
         "options": {
           "A": "API 入口、SQS 緩衝和獨立擴展的工作線程",
-          "B": "同步呼叫每個worker",
-          "C": "具有本地狀態的一個行程",
-          "D": "單一共享管理員憑證"
+          "B": "工作負載資料模型、一致性、查詢和事務要求",
+          "C": "將 RTO 和 RPO 轉化為復原策略和可測試的控制",
+          "D": "負載平衡器後面的無狀態應用程式層具有持久性資料層"
         },
-        "explanation": "佇列將生產者和工人解耦並吸收突發。\n同步鍊和共享憑證降低了彈性和安全性。"
+        "explanation": "佇列將生產者和工人解耦並吸收突發。\n其他選項適用於此領域的不同需求，但不能像 API 入口、SQS 緩衝和獨立擴展的工作線程 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d2-004",
-    "type": "single",
-    "question": "A startup preparing for a traffic increase must choose between relational transactions and flexible key-value access. Which factor should drive the selection?",
-    "options": {
-      "A": "The color of the console",
-      "B": "The workload data model, consistency, query, and transaction requirements",
-      "C": "The service name only",
-      "D": "The number of DNS records"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Data model and access patterns determine the appropriate database technology.\nCosmetic or unrelated factors do not select a data store.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase is redesigning one integrated end-to-end architecture. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The design must keep recurring cost proportional to use, enforce least privilege, and remain available during a component or Availability Zone failure. The workload must choose between relational transactions and flexible key-value access, and the same architecture must replace a self-managed cache with a managed service. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Use The workload data model, consistency, query, and transaction requirements but replace the connected control with AWS Organizations with delegated administration and SCP guardrails",
+      "B": "Use AWS Transit Gateway for the primary requirement and integrate it with Required data structures, latency, durability, and failover behavior",
+      "C": "Combine AWS Transit Gateway with AWS Resource Access Manager with scoped resource shares as a single platform design",
+      "D": "Use The workload data model, consistency, query, and transaction requirements for the primary requirement and integrate it with Required data structures, latency, durability, and failover behavior for the connected control"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "The workload data model, consistency, query, and transaction requirements satisfies the first part of the architecture: Data model and access patterns determine the appropriate database technology. Required data structures, latency, durability, and failover behavior satisfies the connected requirement: Cache selection should match workload behavior and resilience requirements.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司必須在關係事務和靈活的鍵值存取之間進行選擇。哪個因素應該驅動選擇？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：準備增加流量的新創公司必須在關係事務和靈活的鍵值存取之間進行選擇。 第二項需求：在共享環境中工作的 AWS 管理員必須將自我管理的快取替換為託管服務。 此設計必須讓持續成本與實際用量相符、落實最低權限，並在元件或可用區域發生故障時維持可用。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "控制台的顏色",
-          "B": "工作負載資料模型、一致性、查詢和事務要求",
-          "C": "僅服務名稱",
-          "D": "DNS 記錄數"
+          "A": "使用工作負載資料模型、一致性、查詢和事務要求，但以具有委派管理和 SCP 護欄的 AWS Organizations取代相連控制",
+          "B": "以AWS Transit Gateway處理主要需求，並整合所需的資料結構、延遲、持久性和故障轉移行為",
+          "C": "把AWS Transit Gateway與具有範圍內資源共用的 AWS Resource Access Manager結合為單一平台設計",
+          "D": "以工作負載資料模型、一致性、查詢和事務要求處理主要需求，並整合所需的資料結構、延遲、持久性和故障轉移行為作為相連控制"
         },
-        "explanation": "資料模型和存取模式決定了適當的資料庫技術。\n外觀或不相關的因素不會選擇資料儲存。"
+        "explanation": "工作負載資料模型、一致性、查詢和事務要求 負責架構的第一項需求，所需的資料結構、延遲、持久性和故障轉移行為 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "sap-c02-d2-005",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An operations team supporting a critical workload needs a disaster recovery architecture with a defined RTO and RPO. Which process should begin the design?",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team needs a disaster recovery architecture with a defined RTO and RPO. Which process should begin the design?",
     "options": {
-      "A": "Skip recovery tests",
-      "B": "Use one Availability Zone",
+      "A": "CloudFront with an origin access control and multi-Region strategy where needed",
+      "B": "API ingress, SQS buffering, and independently scaled workers",
       "C": "Translate RTO and RPO into recovery strategy and testable controls",
-      "D": "Choose the largest instance first"
+      "D": "Stateless application tiers behind a load balancer with a durable data layer"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nInstance size and a single AZ do not define disaster recovery.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Translate RTO and RPO into recovery strategy and testable controls for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊需要一個具有定義的 RTO 和 RPO 的災難復原架構。應該從哪個流程開始設計？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。支援關鍵工作負載的營運團隊需要一個具有定義的 RTO 和 RPO 的災難復原架構。應該從哪個流程開始設計？",
         "options": {
-          "A": "跳過恢復測試",
-          "B": "使用一個可用區",
+          "A": "CloudFront 在需要時具有來源存取控制和多區域策略",
+          "B": "API 入口、SQS 緩衝和獨立擴展的工作線程",
           "C": "將 RTO 和 RPO 轉化為復原策略和可測試的控制",
-          "D": "首先選擇最大的執行個體"
+          "D": "負載平衡器後面的無狀態應用程式層具有持久性資料層"
         },
-        "explanation": "RTO和RPO決定了復原架構、容量和備份頻率。\n執行個體大小和單一可用區並不定義災難復原。"
+        "explanation": "RTO和RPO決定了復原架構、容量和備份頻率。\n其他選項適用於此領域的不同需求，但不能像 將 RTO 和 RPO 轉化為復原策略和可測試的控制 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d2-006",
-    "type": "single",
-    "question": "A data platform team needs a resilient web architecture with independent scaling tiers. Which pattern is appropriate?",
-    "options": {
-      "A": "One large instance for every tier",
-      "B": "Local session state only",
-      "C": "A public database",
-      "D": "Stateless application tiers behind a load balancer with a durable data layer"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Stateless tiers and managed data services scale independently and improve resilience.\nA single instance and public database create bottlenecks and exposure.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A data platform team is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team needs a resilient web architecture with independent scaling tiers. Which pattern is appropriate?",
+    "options": {
+      "A": "The workload data model, consistency, query, and transaction requirements",
+      "B": "Stateless application tiers behind a load balancer with a durable data layer",
+      "C": "CloudFront with an origin access control and multi-Region strategy where needed",
+      "D": "API ingress, SQS buffering, and independently scaled workers"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Stateless tiers and managed data services scale independently and improve resilience.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Stateless application tiers behind a load balancer with a durable data layer for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要具有獨立擴充層的彈性 Web 架構。哪種模式合適？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。資料平台團隊需要具有獨立擴充層的彈性 Web 架構。哪種模式合適？",
         "options": {
-          "A": "每層一個大型執行個體",
-          "B": "僅本地會話狀態",
-          "C": "公共資料庫",
-          "D": "負載平衡器後面的無狀態應用程式層具有持久性資料層"
+          "A": "工作負載資料模型、一致性、查詢和事務要求",
+          "B": "負載平衡器後面的無狀態應用程式層具有持久性資料層",
+          "C": "CloudFront 在需要時具有來源存取控制和多區域策略",
+          "D": "API 入口、SQS 緩衝和獨立擴展的工作線程"
         },
-        "explanation": "無狀態層和託管資料服務可以獨立擴展並提高彈性。\n單一執行個體和公共資料庫會造成瓶頸和暴露。"
+        "explanation": "無狀態層和託管資料服務可以獨立擴展並提高彈性。\n其他選項適用於此領域的不同需求，但不能像 負載平衡器後面的無狀態應用程式層具有持久性資料層 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d2-007",
-    "type": "single",
-    "question": "A security-conscious engineering team must serve global users with low latency and protect a Regional origin. Which design fits?",
-    "options": {
-      "A": "CloudFront with an origin access control and multi-Region strategy where needed",
-      "B": "Send every request to one public instance",
-      "C": "Use Direct Connect for public users",
-      "D": "Disable caching"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "CloudFront reduces latency and can protect a private origin.\nThe other choices add latency, cost, or exposure.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A security-conscious engineering team is planning two independent production changes. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The first team must serve global users with low latency and protect a Regional origin. A second team needs asynchronous processing for a large volume of requests. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Stateless application tiers behind a load balancer with a durable data layer",
+      "B": "CloudFront with an origin access control and multi-Region strategy where needed",
+      "C": "API ingress, SQS buffering, and independently scaled workers",
+      "D": "The workload data model, consistency, query, and transaction requirements",
+      "E": "Translate RTO and RPO into recovery strategy and testable controls"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "CloudFront with an origin access control and multi-Region strategy where needed meets the first requirement: CloudFront reduces latency and can protect a private origin. API ingress, SQS buffering, and independently scaled workers meets the second requirement: Queues decouple producers and workers and absorb bursts.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊必須以低延遲為全球使用者提供服務並保護區域來源。哪種設計適合？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。第一項需求：多帳戶平台團隊必須為全球使用者提供低延遲服務並保護區域起源。第二項需求：受監管的公司需要非同步處理大量請求。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "CloudFront 在需要時具有來源存取控制和多區域策略",
-          "B": "將每個請求傳送到一個公共執行個體",
-          "C": "公用使用者使用 Direct Connect",
-          "D": "禁用快取"
+          "A": "負載平衡器後面的無狀態應用程式層具有持久性資料層",
+          "B": "CloudFront 在需要時具有來源存取控制和多區域策略",
+          "C": "API 入口、SQS 緩衝和獨立擴展的工作線程",
+          "D": "工作負載資料模型、一致性、查詢和事務要求",
+          "E": "將 RTO 和 RPO 轉化為復原策略和可測試的控制"
         },
-        "explanation": "CloudFront 減少了延遲並可以保護私有來源。\n其他選擇會增加延遲、成本或暴露。"
+        "explanation": "CloudFront 在需要時具有來源存取控制和多區域策略 符合第一項需求：CloudFront 減少了延遲並可以保護私有來源。 API 入口、SQS 緩衝和獨立擴展的工作線程 符合第二項需求：佇列將生產者和工人解耦並吸收突發。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "sap-c02-d2-008",
-    "type": "single",
-    "question": "A company migrating an existing workload needs asynchronous processing for a large volume of requests. Which architecture should be considered?",
-    "options": {
-      "A": "A single shared administrator credential",
-      "B": "API ingress, SQS buffering, and independently scaled workers",
-      "C": "Synchronous calls to every worker",
-      "D": "One process with local state"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Queues decouple producers and workers and absorb bursts.\nSynchronous chains and shared credentials reduce resilience and security.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A company migrating an existing workload is redesigning one integrated end-to-end architecture. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The design must avoid unnecessary standby cost without weakening security controls or the availability objective. The workload needs asynchronous processing for a large volume of requests, and the same architecture needs to run a legacy database temporarily while a managed database migration is prepared. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Use API ingress, SQS buffering, and independently scaled workers but replace the connected control with AWS Organizations with delegated administration and SCP guardrails",
+      "B": "Use AWS Transit Gateway for the primary requirement and integrate it with Separate migration phases and define an explicit decommission plan",
+      "C": "Combine AWS Transit Gateway with AWS Resource Access Manager with scoped resource shares as a single platform design",
+      "D": "Use API ingress, SQS buffering, and independently scaled workers for the primary requirement and integrate it with Separate migration phases and define an explicit decommission plan for the connected control"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "API ingress, SQS buffering, and independently scaled workers satisfies the first part of the architecture: Queues decouple producers and workers and absorb bursts. Separate migration phases and define an explicit decommission plan satisfies the connected requirement: Phased migration with reconciliation and decommission criteria reduces operational and data risk.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司需要非同步處理大量請求。應該考慮哪種架構？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：受監管的公司需要非同步處理大量請求。 第二項需求：支援關鍵工作負載的營運團隊需要在準備託管資料庫遷移時暫時執行舊資料庫。 此設計必須避免不必要的備用成本，同時不可削弱安全控制或可用性目標。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "單一共享管理員憑證",
-          "B": "API 入口、SQS 緩衝和獨立擴展的工作線程",
-          "C": "同步呼叫每個worker",
-          "D": "具有本地狀態的一個行程"
+          "A": "使用API 入口、SQS 緩衝和獨立擴展的工作線程，但以具有委派管理和 SCP 護欄的 AWS Organizations取代相連控制",
+          "B": "以AWS Transit Gateway處理主要需求，並整合分離遷移階段並定義明確的退役計劃",
+          "C": "把AWS Transit Gateway與具有範圍內資源共用的 AWS Resource Access Manager結合為單一平台設計",
+          "D": "以API 入口、SQS 緩衝和獨立擴展的工作線程處理主要需求，並整合分離遷移階段並定義明確的退役計劃作為相連控制"
         },
-        "explanation": "佇列將生產者和工人解耦並吸收突發。\n同步鍊和共享憑證降低了彈性和安全性。"
+        "explanation": "API 入口、SQS 緩衝和獨立擴展的工作線程 負責架構的第一項需求，分離遷移階段並定義明確的退役計劃 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "sap-c02-d2-009",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team with strict recovery objectives must choose between relational transactions and flexible key-value access. Which factor should drive the selection?",
+    "question": "A team with strict recovery objectives is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team must choose between relational transactions and flexible key-value access. Which factor should drive the selection?",
     "options": {
-      "A": "The number of DNS records",
-      "B": "The color of the console",
+      "A": "Stateless application tiers behind a load balancer with a durable data layer",
+      "B": "CloudFront with an origin access control and multi-Region strategy where needed",
       "C": "The workload data model, consistency, query, and transaction requirements",
-      "D": "The service name only"
+      "D": "Translate RTO and RPO into recovery strategy and testable controls"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Data model and access patterns determine the appropriate database technology.\nCosmetic or unrelated factors do not select a data store.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Data model and access patterns determine the appropriate database technology.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide The workload data model, consistency, query, and transaction requirements for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格恢復目標的團隊必須在關係事務和靈活的鍵值存取之間進行選擇。哪個因素應該驅動選擇？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。具有嚴格恢復目標的團隊必須在關係事務和靈活的鍵值存取之間進行選擇。哪個因素應該驅動選擇？",
         "options": {
-          "A": "DNS 記錄數",
-          "B": "控制台的顏色",
+          "A": "負載平衡器後面的無狀態應用程式層具有持久性資料層",
+          "B": "CloudFront 在需要時具有來源存取控制和多區域策略",
           "C": "工作負載資料模型、一致性、查詢和事務要求",
-          "D": "僅服務名稱"
+          "D": "將 RTO 和 RPO 轉化為復原策略和可測試的控制"
         },
-        "explanation": "資料模型和存取模式決定了適當的資料庫技術。\n外觀或不相關的因素不會選擇資料儲存。"
+        "explanation": "資料模型和存取模式決定了適當的資料庫技術。\n其他選項適用於此領域的不同需求，但不能像 工作負載資料模型、一致性、查詢和事務要求 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d2-010",
-    "type": "single",
-    "question": "A developer team preparing a release needs a disaster recovery architecture with a defined RTO and RPO. Which process should begin the design?",
-    "options": {
-      "A": "Choose the largest instance first",
-      "B": "Skip recovery tests",
-      "C": "Use one Availability Zone",
-      "D": "Translate RTO and RPO into recovery strategy and testable controls"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nInstance size and a single AZ do not define disaster recovery.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A developer team preparing a release is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team needs a disaster recovery architecture with a defined RTO and RPO. Which process should begin the design?",
+    "options": {
+      "A": "API ingress, SQS buffering, and independently scaled workers",
+      "B": "Translate RTO and RPO into recovery strategy and testable controls",
+      "C": "Stateless application tiers behind a load balancer with a durable data layer",
+      "D": "CloudFront with an origin access control and multi-Region strategy where needed"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Translate RTO and RPO into recovery strategy and testable controls for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊需要一個具有定義的 RTO 和 RPO 的災難復原架構。應該從哪個流程開始設計？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。準備發布的開發團隊需要一個具有定義的 RTO 和 RPO 的災難復原架構。應該從哪個流程開始設計？",
         "options": {
-          "A": "首先選擇最大的執行個體",
-          "B": "跳過恢復測試",
-          "C": "使用一個可用區",
-          "D": "將 RTO 和 RPO 轉化為復原策略和可測試的控制"
+          "A": "API 入口、SQS 緩衝和獨立擴展的工作線程",
+          "B": "將 RTO 和 RPO 轉化為復原策略和可測試的控制",
+          "C": "負載平衡器後面的無狀態應用程式層具有持久性資料層",
+          "D": "CloudFront 在需要時具有來源存取控制和多區域策略"
         },
-        "explanation": "RTO和RPO決定了復原架構、容量和備份頻率。\n執行個體大小和單一可用區並不定義災難復原。"
+        "explanation": "RTO和RPO決定了復原架構、容量和備份頻率。\n其他選項適用於此領域的不同需求，但不能像 將 RTO 和 RPO 轉化為復原策略和可測試的控制 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d2-011",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An enterprise with several AWS Regions needs a resilient web architecture with independent scaling tiers. Which pattern is appropriate?",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team needs a resilient web architecture with independent scaling tiers. Which pattern is appropriate?",
     "options": {
       "A": "Stateless application tiers behind a load balancer with a durable data layer",
-      "B": "One large instance for every tier",
-      "C": "Local session state only",
-      "D": "A public database"
+      "B": "CloudFront with an origin access control and multi-Region strategy where needed",
+      "C": "API ingress, SQS buffering, and independently scaled workers",
+      "D": "The workload data model, consistency, query, and transaction requirements"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Stateless tiers and managed data services scale independently and improve resilience.\nA single instance and public database create bottlenecks and exposure.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Stateless tiers and managed data services scale independently and improve resilience.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Stateless application tiers behind a load balancer with a durable data layer for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業需要具有獨立擴充層的彈性 Web 架構。哪種模式合適？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。擁有多個 AWS 區域的企業需要具有獨立擴充層的彈性 Web 架構。哪種模式合適？",
         "options": {
           "A": "負載平衡器後面的無狀態應用程式層具有持久性資料層",
-          "B": "每層一個大型執行個體",
-          "C": "僅本地會話狀態",
-          "D": "公共資料庫"
+          "B": "CloudFront 在需要時具有來源存取控制和多區域策略",
+          "C": "API 入口、SQS 緩衝和獨立擴展的工作線程",
+          "D": "工作負載資料模型、一致性、查詢和事務要求"
         },
-        "explanation": "無狀態層和託管資料服務可以獨立擴展並提高彈性。\n單一執行個體和公共資料庫會造成瓶頸和暴露。"
+        "explanation": "無狀態層和託管資料服務可以獨立擴展並提高彈性。\n其他選項適用於此領域的不同需求，但不能像 負載平衡器後面的無狀態應用程式層具有持久性資料層 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d2-012",
-    "type": "single",
-    "question": "A service owner reviewing an incident must serve global users with low latency and protect a Regional origin. Which design fits?",
-    "options": {
-      "A": "Disable caching",
-      "B": "CloudFront with an origin access control and multi-Region strategy where needed",
-      "C": "Send every request to one public instance",
-      "D": "Use Direct Connect for public users"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "CloudFront reduces latency and can protect a private origin.\nThe other choices add latency, cost, or exposure.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A service owner reviewing an incident is redesigning one integrated end-to-end architecture. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The organization will accept additional managed-service cost only when it measurably improves security and availability with less operational effort. The workload must serve global users with low latency and protect a Regional origin, and the same architecture needs a central identity experience for workforce users across many accounts. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Use CloudFront with an origin access control and multi-Region strategy where needed but replace the connected control with AWS Organizations with delegated administration and SCP guardrails",
+      "B": "Use AWS Transit Gateway for the primary requirement and integrate it with IAM Identity Center",
+      "C": "Combine AWS Transit Gateway with AWS Resource Access Manager with scoped resource shares as a single platform design",
+      "D": "Use CloudFront with an origin access control and multi-Region strategy where needed for the primary requirement and integrate it with IAM Identity Center for the connected control"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudFront with an origin access control and multi-Region strategy where needed satisfies the first part of the architecture: CloudFront reduces latency and can protect a private origin. IAM Identity Center satisfies the connected requirement: IAM Identity Center provides workforce access and permission sets across accounts.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務所有者必須以低延遲為全球使用者提供服務並保護區域來源。哪種設計適合？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：多帳戶平台團隊必須為全球使用者提供低延遲服務並保護區域起源。 第二項需求：在共用環境中工作的 AWS 管理員需要為多個帳戶中的員工使用者提供集中身分體驗。 只有在託管服務能以較低營運負擔明確改善安全性與可用性時，組織才會接受額外成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "禁用快取",
-          "B": "CloudFront 在需要時具有來源存取控制和多區域策略",
-          "C": "將每個請求傳送到一個公共執行個體",
-          "D": "公用使用者使用 Direct Connect"
+          "A": "使用CloudFront 在需要時具有來源存取控制和多區域策略，但以具有委派管理和 SCP 護欄的 AWS Organizations取代相連控制",
+          "B": "以AWS Transit Gateway處理主要需求，並整合IAM Identity Center",
+          "C": "把AWS Transit Gateway與具有範圍內資源共用的 AWS Resource Access Manager結合為單一平台設計",
+          "D": "以CloudFront 在需要時具有來源存取控制和多區域策略處理主要需求，並整合IAM Identity Center作為相連控制"
         },
-        "explanation": "CloudFront 減少了延遲並可以保護私有來源。\n其他選擇會增加延遲、成本或暴露。"
+        "explanation": "CloudFront 在需要時具有來源存取控制和多區域策略 負責架構的第一項需求，IAM Identity Center 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "sap-c02-d2-013",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team optimizing an existing implementation needs asynchronous processing for a large volume of requests. Which architecture should be considered?",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team needs asynchronous processing for a large volume of requests. Which architecture should be considered?",
     "options": {
-      "A": "One process with local state",
-      "B": "A single shared administrator credential",
+      "A": "Translate RTO and RPO into recovery strategy and testable controls",
+      "B": "Stateless application tiers behind a load balancer with a durable data layer",
       "C": "API ingress, SQS buffering, and independently scaled workers",
-      "D": "Synchronous calls to every worker"
+      "D": "The workload data model, consistency, query, and transaction requirements"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Queues decouple producers and workers and absorb bursts.\nSynchronous chains and shared credentials reduce resilience and security.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Queues decouple producers and workers and absorb bursts.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide API ingress, SQS buffering, and independently scaled workers for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實現的團隊需要非同步處理大量請求。應該考慮哪種架構？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。優化現有實現的團隊需要非同步處理大量請求。應該考慮哪種架構？",
         "options": {
-          "A": "具有本地狀態的一個行程",
-          "B": "單一共享管理員憑證",
+          "A": "將 RTO 和 RPO 轉化為復原策略和可測試的控制",
+          "B": "負載平衡器後面的無狀態應用程式層具有持久性資料層",
           "C": "API 入口、SQS 緩衝和獨立擴展的工作線程",
-          "D": "同步呼叫每個worker"
+          "D": "工作負載資料模型、一致性、查詢和事務要求"
         },
-        "explanation": "佇列將生產者和工人解耦並吸收突發。\n同步鍊和共享憑證降低了彈性和安全性。"
+        "explanation": "佇列將生產者和工人解耦並吸收突發。\n其他選項適用於此領域的不同需求，但不能像 API 入口、SQS 緩衝和獨立擴展的工作線程 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d2-014",
-    "type": "single",
-    "question": "A company introducing an automated workflow must choose between relational transactions and flexible key-value access. Which factor should drive the selection?",
-    "options": {
-      "A": "The service name only",
-      "B": "The number of DNS records",
-      "C": "The color of the console",
-      "D": "The workload data model, consistency, query, and transaction requirements"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Data model and access patterns determine the appropriate database technology.\nCosmetic or unrelated factors do not select a data store.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A company introducing an automated workflow is planning two independent production changes. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The first team must choose between relational transactions and flexible key-value access. A second team needs a disaster recovery architecture with a defined RTO and RPO. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Translate RTO and RPO into recovery strategy and testable controls",
+      "B": "Stateless application tiers behind a load balancer with a durable data layer",
+      "C": "CloudFront with an origin access control and multi-Region strategy where needed",
+      "D": "API ingress, SQS buffering, and independently scaled workers",
+      "E": "The workload data model, consistency, query, and transaction requirements"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "The workload data model, consistency, query, and transaction requirements meets the first requirement: Data model and access patterns determine the appropriate database technology. Translate RTO and RPO into recovery strategy and testable controls meets the second requirement: RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司必須在關係事務和靈活的鍵值存取之間進行選擇。哪個因素應該驅動選擇？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。第一項需求：支援關鍵工作負載的營運團隊需要一個具有定義的 RTO 和 RPO 的災難復原架構。第二項需求：準備增加流量的新創公司必須在關係事務和靈活的鍵值存取之間進行選擇。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "僅服務名稱",
-          "B": "DNS 記錄數",
-          "C": "控制台的顏色",
-          "D": "工作負載資料模型、一致性、查詢和事務要求"
+          "A": "將 RTO 和 RPO 轉化為復原策略和可測試的控制",
+          "B": "負載平衡器後面的無狀態應用程式層具有持久性資料層",
+          "C": "CloudFront 在需要時具有來源存取控制和多區域策略",
+          "D": "API 入口、SQS 緩衝和獨立擴展的工作線程",
+          "E": "工作負載資料模型、一致性、查詢和事務要求"
         },
-        "explanation": "資料模型和存取模式決定了適當的資料庫技術。\n外觀或不相關的因素不會選擇資料儲存。"
+        "explanation": "將 RTO 和 RPO 轉化為復原策略和可測試的控制 符合第一項需求：RTO和RPO決定了復原架構、容量和備份頻率。 工作負載資料模型、一致性、查詢和事務要求 符合第二項需求：資料模型和存取模式決定了適當的資料庫技術。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "sap-c02-d2-015",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An AWS administrator working in a shared environment needs a disaster recovery architecture with a defined RTO and RPO. Which process should begin the design?",
+    "question": "An AWS administrator working in a shared environment is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team needs a disaster recovery architecture with a defined RTO and RPO. Which process should begin the design?",
     "options": {
       "A": "Translate RTO and RPO into recovery strategy and testable controls",
-      "B": "Choose the largest instance first",
-      "C": "Skip recovery tests",
-      "D": "Use one Availability Zone"
+      "B": "Stateless application tiers behind a load balancer with a durable data layer",
+      "C": "CloudFront with an origin access control and multi-Region strategy where needed",
+      "D": "API ingress, SQS buffering, and independently scaled workers"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nInstance size and a single AZ do not define disaster recovery.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Translate RTO and RPO into recovery strategy and testable controls for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "在共用環境中工作的 AWS 管理員需要一個具有定義的 RTO 和 RPO 的災難復原架構。應該從哪個流程開始設計？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。在共用環境中工作的 AWS 管理員需要一個具有定義的 RTO 和 RPO 的災難復原架構。應該從哪個流程開始設計？",
         "options": {
           "A": "將 RTO 和 RPO 轉化為復原策略和可測試的控制",
-          "B": "首先選擇最大的執行個體",
-          "C": "跳過恢復測試",
-          "D": "使用一個可用區"
+          "B": "負載平衡器後面的無狀態應用程式層具有持久性資料層",
+          "C": "CloudFront 在需要時具有來源存取控制和多區域策略",
+          "D": "API 入口、SQS 緩衝和獨立擴展的工作線程"
         },
-        "explanation": "RTO和RPO決定了復原架構、容量和備份頻率。\n執行個體大小和單一可用區並不定義災難復原。"
+        "explanation": "RTO和RPO決定了復原架構、容量和備份頻率。\n其他選項適用於此領域的不同需求，但不能像 將 RTO 和 RPO 轉化為復原策略和可測試的控制 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d2-016",
-    "type": "single",
-    "question": "A customer-facing application team needs a resilient web architecture with independent scaling tiers. Which pattern is appropriate?",
-    "options": {
-      "A": "A public database",
-      "B": "Stateless application tiers behind a load balancer with a durable data layer",
-      "C": "One large instance for every tier",
-      "D": "Local session state only"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Stateless tiers and managed data services scale independently and improve resilience.\nA single instance and public database create bottlenecks and exposure.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A customer-facing application team is redesigning one integrated end-to-end architecture. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The architecture must limit blast radius, preserve availability during change, and control cost through automation instead of permanent overprovisioning. The workload needs a resilient web architecture with independent scaling tiers, and the same architecture needs a disaster recovery architecture with a defined RTO and RPO. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Use Stateless application tiers behind a load balancer with a durable data layer but replace the connected control with AWS Organizations with delegated administration and SCP guardrails",
+      "B": "Use AWS Transit Gateway for the primary requirement and integrate it with Translate RTO and RPO into recovery strategy and testable controls",
+      "C": "Combine AWS Transit Gateway with AWS Resource Access Manager with scoped resource shares as a single platform design",
+      "D": "Use Stateless application tiers behind a load balancer with a durable data layer for the primary requirement and integrate it with Translate RTO and RPO into recovery strategy and testable controls for the connected control"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Stateless application tiers behind a load balancer with a durable data layer satisfies the first part of the architecture: Stateless tiers and managed data services scale independently and improve resilience. Translate RTO and RPO into recovery strategy and testable controls satisfies the connected requirement: RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊需要具有獨立擴展層的彈性 Web 架構。哪種模式合適？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：製作團隊需要具有獨立擴充層的彈性 Web 架構。 第二項需求：支援關鍵工作負載的營運團隊需要一個具有定義的 RTO 和 RPO 的災難復原架構。 此架構必須限制影響範圍、在變更期間維持可用性，並透過自動化控制成本，而不是長期過度佈建。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "公共資料庫",
-          "B": "負載平衡器後面的無狀態應用程式層具有持久性資料層",
-          "C": "每層一個大型執行個體",
-          "D": "僅本地會話狀態"
+          "A": "使用負載平衡器後面的無狀態應用程式層具有持久性資料層，但以具有委派管理和 SCP 護欄的 AWS Organizations取代相連控制",
+          "B": "以AWS Transit Gateway處理主要需求，並整合將 RTO 和 RPO 轉化為復原策略和可測試的控制",
+          "C": "把AWS Transit Gateway與具有範圍內資源共用的 AWS Resource Access Manager結合為單一平台設計",
+          "D": "以負載平衡器後面的無狀態應用程式層具有持久性資料層處理主要需求，並整合將 RTO 和 RPO 轉化為復原策略和可測試的控制作為相連控制"
         },
-        "explanation": "無狀態層和託管資料服務可以獨立擴展並提高彈性。\n單一執行個體和公共資料庫會造成瓶頸和暴露。"
+        "explanation": "負載平衡器後面的無狀態應用程式層具有持久性資料層 負責架構的第一項需求，將 RTO 和 RPO 轉化為復原策略和可測試的控制 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "sap-c02-d2-017",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A platform team standardizing its AWS deployments must serve global users with low latency and protect a Regional origin. Which design fits?",
+    "question": "A platform team standardizing its AWS deployments is reviewing a production decision. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The team must serve global users with low latency and protect a Regional origin. Which design fits?",
     "options": {
-      "A": "Use Direct Connect for public users",
-      "B": "Disable caching",
+      "A": "The workload data model, consistency, query, and transaction requirements",
+      "B": "Translate RTO and RPO into recovery strategy and testable controls",
       "C": "CloudFront with an origin access control and multi-Region strategy where needed",
-      "D": "Send every request to one public instance"
+      "D": "API ingress, SQS buffering, and independently scaled workers"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "CloudFront reduces latency and can protect a private origin.\nThe other choices add latency, cost, or exposure.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "CloudFront reduces latency and can protect a private origin.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide CloudFront with an origin access control and multi-Region strategy where needed for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊必須以低延遲為全球使用者提供服務並保護區域來源。哪種設計適合？",
+        "question": "組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。標準化其 AWS 部署的平台團隊必須以低延遲為全球使用者提供服務並保護區域來源。哪種設計適合？",
         "options": {
-          "A": "公用使用者使用 Direct Connect",
-          "B": "禁用快取",
+          "A": "工作負載資料模型、一致性、查詢和事務要求",
+          "B": "將 RTO 和 RPO 轉化為復原策略和可測試的控制",
           "C": "CloudFront 在需要時具有來源存取控制和多區域策略",
-          "D": "將每個請求傳送到一個公共執行個體"
+          "D": "API 入口、SQS 緩衝和獨立擴展的工作線程"
         },
-        "explanation": "CloudFront 減少了延遲並可以保護私有來源。\n其他選擇會增加延遲、成本或暴露。"
+        "explanation": "CloudFront 減少了延遲並可以保護私有來源。\n其他選項適用於此領域的不同需求，但不能像 CloudFront 在需要時具有來源存取控制和多區域策略 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d2-018",
-    "type": "single",
-    "question": "A team preparing evidence for an audit needs asynchronous processing for a large volume of requests. Which architecture should be considered?",
-    "options": {
-      "A": "Synchronous calls to every worker",
-      "B": "One process with local state",
-      "C": "A single shared administrator credential",
-      "D": "API ingress, SQS buffering, and independently scaled workers"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Queues decouple producers and workers and absorb bursts.\nSynchronous chains and shared credentials reduce resilience and security.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team preparing evidence for an audit is reviewing a production decision. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The team needs asynchronous processing for a large volume of requests. Which architecture should be considered?",
+    "options": {
+      "A": "Stateless application tiers behind a load balancer with a durable data layer",
+      "B": "API ingress, SQS buffering, and independently scaled workers",
+      "C": "The workload data model, consistency, query, and transaction requirements",
+      "D": "Translate RTO and RPO into recovery strategy and testable controls"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Queues decouple producers and workers and absorb bursts.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide API ingress, SQS buffering, and independently scaled workers for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備審計證據的團隊需要非同步處理大量請求。應該考慮哪種架構？",
+        "question": "組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。準備審計證據的團隊需要非同步處理大量請求。應該考慮哪種架構？",
         "options": {
-          "A": "同步呼叫每個worker",
-          "B": "具有本地狀態的一個行程",
-          "C": "單一共享管理員憑證",
-          "D": "API 入口、SQS 緩衝和獨立擴展的工作線程"
+          "A": "負載平衡器後面的無狀態應用程式層具有持久性資料層",
+          "B": "API 入口、SQS 緩衝和獨立擴展的工作線程",
+          "C": "工作負載資料模型、一致性、查詢和事務要求",
+          "D": "將 RTO 和 RPO 轉化為復原策略和可測試的控制"
         },
-        "explanation": "佇列將生產者和工人解耦並吸收突發。\n同步鍊和共享憑證降低了彈性和安全性。"
+        "explanation": "佇列將生產者和工人解耦並吸收突發。\n其他選項適用於此領域的不同需求，但不能像 API 入口、SQS 緩衝和獨立擴展的工作線程 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d2-019",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A business replacing a manual process must choose between relational transactions and flexible key-value access. Which factor should drive the selection?",
+    "question": "A business replacing a manual process is reviewing a production decision. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The team must choose between relational transactions and flexible key-value access. Which factor should drive the selection?",
     "options": {
       "A": "The workload data model, consistency, query, and transaction requirements",
-      "B": "The service name only",
-      "C": "The number of DNS records",
-      "D": "The color of the console"
+      "B": "Translate RTO and RPO into recovery strategy and testable controls",
+      "C": "Stateless application tiers behind a load balancer with a durable data layer",
+      "D": "CloudFront with an origin access control and multi-Region strategy where needed"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Data model and access patterns determine the appropriate database technology.\nCosmetic or unrelated factors do not select a data store.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Data model and access patterns determine the appropriate database technology.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide The workload data model, consistency, query, and transaction requirements for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "取代手動流程的企業必須在關係事務和靈活的鍵值存取之間進行選擇。哪個因素應該驅動選擇？",
+        "question": "組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。取代手動流程的企業必須在關係事務和靈活的鍵值存取之間進行選擇。哪個因素應該驅動選擇？",
         "options": {
           "A": "工作負載資料模型、一致性、查詢和事務要求",
-          "B": "僅服務名稱",
-          "C": "DNS 記錄數",
-          "D": "控制台的顏色"
+          "B": "將 RTO 和 RPO 轉化為復原策略和可測試的控制",
+          "C": "負載平衡器後面的無狀態應用程式層具有持久性資料層",
+          "D": "CloudFront 在需要時具有來源存取控制和多區域策略"
         },
-        "explanation": "資料模型和存取模式決定了適當的資料庫技術。\n外觀或不相關的因素不會選擇資料儲存。"
+        "explanation": "資料模型和存取模式決定了適當的資料庫技術。\n其他選項適用於此領域的不同需求，但不能像 工作負載資料模型、一致性、查詢和事務要求 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d2-020",
-    "type": "single",
-    "question": "A team validating a design against the exam guide needs a disaster recovery architecture with a defined RTO and RPO. Which process should begin the design?",
-    "options": {
-      "A": "Use one Availability Zone",
-      "B": "Translate RTO and RPO into recovery strategy and testable controls",
-      "C": "Choose the largest instance first",
-      "D": "Skip recovery tests"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nInstance size and a single AZ do not define disaster recovery.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team validating a design against the exam guide is redesigning one integrated end-to-end architecture. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The selected controls must provide auditable security, predictable availability, and the lowest operational cost that still satisfies both requirements. The workload needs a disaster recovery architecture with a defined RTO and RPO, and the same architecture must replace a self-managed cache with a managed service. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Use Translate RTO and RPO into recovery strategy and testable controls but replace the connected control with AWS Organizations with delegated administration and SCP guardrails",
+      "B": "Use AWS Transit Gateway for the primary requirement and integrate it with Required data structures, latency, durability, and failover behavior",
+      "C": "Combine AWS Transit Gateway with AWS Resource Access Manager with scoped resource shares as a single platform design",
+      "D": "Use Translate RTO and RPO into recovery strategy and testable controls for the primary requirement and integrate it with Required data structures, latency, durability, and failover behavior for the connected control"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Translate RTO and RPO into recovery strategy and testable controls satisfies the first part of the architecture: RTO and RPO determine the recovery architecture, capacity, and backup frequency. Required data structures, latency, durability, and failover behavior satisfies the connected requirement: Cache selection should match workload behavior and resilience requirements.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊需要一個具有定義的 RTO 和 RPO 的災難復原架構。應該從哪個流程開始設計？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：支援關鍵工作負載的營運團隊需要一個具有定義的 RTO 和 RPO 的災難復原架構。 第二項需求：在共享環境中工作的 AWS 管理員必須將自我管理的快取替換為託管服務。 所選控制必須提供可稽核的安全性、可預測的可用性，以及在滿足兩項要求前提下最低的營運成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "使用一個可用區",
-          "B": "將 RTO 和 RPO 轉化為復原策略和可測試的控制",
-          "C": "首先選擇最大的執行個體",
-          "D": "跳過恢復測試"
+          "A": "使用將 RTO 和 RPO 轉化為復原策略和可測試的控制，但以具有委派管理和 SCP 護欄的 AWS Organizations取代相連控制",
+          "B": "以AWS Transit Gateway處理主要需求，並整合所需的資料結構、延遲、持久性和故障轉移行為",
+          "C": "把AWS Transit Gateway與具有範圍內資源共用的 AWS Resource Access Manager結合為單一平台設計",
+          "D": "以將 RTO 和 RPO 轉化為復原策略和可測試的控制處理主要需求，並整合所需的資料結構、延遲、持久性和故障轉移行為作為相連控制"
         },
-        "explanation": "RTO和RPO決定了復原架構、容量和備份頻率。\n執行個體大小和單一可用區並不定義災難復原。"
+        "explanation": "將 RTO 和 RPO 轉化為復原策略和可測試的控制 負責架構的第一項需求，所需的資料結構、延遲、持久性和故障轉移行為 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "sap-c02-d2-021",
-    "type": "single",
-    "question": "A production team needs a resilient web architecture with independent scaling tiers. Which pattern is appropriate?",
-    "options": {
-      "A": "Local session state only",
-      "B": "A public database",
-      "C": "Stateless application tiers behind a load balancer with a durable data layer",
-      "D": "One large instance for every tier"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "Stateless tiers and managed data services scale independently and improve resilience.\nA single instance and public database create bottlenecks and exposure.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A production team is planning two independent production changes. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The first team needs a resilient web architecture with independent scaling tiers. A second team must serve global users with low latency and protect a Regional origin. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "The workload data model, consistency, query, and transaction requirements",
+      "B": "Translate RTO and RPO into recovery strategy and testable controls",
+      "C": "Stateless application tiers behind a load balancer with a durable data layer",
+      "D": "CloudFront with an origin access control and multi-Region strategy where needed",
+      "E": "API ingress, SQS buffering, and independently scaled workers"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Stateless application tiers behind a load balancer with a durable data layer meets the first requirement: Stateless tiers and managed data services scale independently and improve resilience. CloudFront with an origin access control and multi-Region strategy where needed meets the second requirement: CloudFront reduces latency and can protect a private origin.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "製作團隊需要具有獨立擴充層的彈性 Web 架構。哪種模式合適？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。第一項需求：製作團隊需要具有獨立擴充層的彈性 Web 架構。第二項需求：多帳戶平台團隊必須為全球使用者提供低延遲服務並保護區域起源。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "僅本地會話狀態",
-          "B": "公共資料庫",
+          "A": "工作負載資料模型、一致性、查詢和事務要求",
+          "B": "將 RTO 和 RPO 轉化為復原策略和可測試的控制",
           "C": "負載平衡器後面的無狀態應用程式層具有持久性資料層",
-          "D": "每層一個大型執行個體"
+          "D": "CloudFront 在需要時具有來源存取控制和多區域策略",
+          "E": "API 入口、SQS 緩衝和獨立擴展的工作線程"
         },
-        "explanation": "無狀態層和託管資料服務可以獨立擴展並提高彈性。\n單一執行個體和公共資料庫會造成瓶頸和暴露。"
+        "explanation": "負載平衡器後面的無狀態應用程式層具有持久性資料層 符合第一項需求：無狀態層和託管資料服務可以獨立擴展並提高彈性。 CloudFront 在需要時具有來源存取控制和多區域策略 符合第二項需求：CloudFront 減少了延遲並可以保護私有來源。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "sap-c02-d2-022",
-    "type": "single",
-    "question": "A multi-account platform team must serve global users with low latency and protect a Regional origin. Which design fits?",
-    "options": {
-      "A": "Send every request to one public instance",
-      "B": "Use Direct Connect for public users",
-      "C": "Disable caching",
-      "D": "CloudFront with an origin access control and multi-Region strategy where needed"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "CloudFront reduces latency and can protect a private origin.\nThe other choices add latency, cost, or exposure.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A multi-account platform team is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team must serve global users with low latency and protect a Regional origin. Which design fits?",
+    "options": {
+      "A": "Translate RTO and RPO into recovery strategy and testable controls",
+      "B": "CloudFront with an origin access control and multi-Region strategy where needed",
+      "C": "API ingress, SQS buffering, and independently scaled workers",
+      "D": "The workload data model, consistency, query, and transaction requirements"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudFront reduces latency and can protect a private origin.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide CloudFront with an origin access control and multi-Region strategy where needed for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊必須為全球使用者提供低延遲服務並保護區域起源。哪種設計適合？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。多帳戶平台團隊必須為全球使用者提供低延遲服務並保護區域起源。哪種設計適合？",
         "options": {
-          "A": "將每個請求傳送到一個公共執行個體",
-          "B": "公用使用者使用 Direct Connect",
-          "C": "禁用快取",
-          "D": "CloudFront 在需要時具有來源存取控制和多區域策略"
+          "A": "將 RTO 和 RPO 轉化為復原策略和可測試的控制",
+          "B": "CloudFront 在需要時具有來源存取控制和多區域策略",
+          "C": "API 入口、SQS 緩衝和獨立擴展的工作線程",
+          "D": "工作負載資料模型、一致性、查詢和事務要求"
         },
-        "explanation": "CloudFront 減少了延遲並可以保護私有來源。\n其他選擇會增加延遲、成本或暴露。"
+        "explanation": "CloudFront 減少了延遲並可以保護私有來源。\n其他選項適用於此領域的不同需求，但不能像 CloudFront 在需要時具有來源存取控制和多區域策略 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d2-023",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A regulated company needs asynchronous processing for a large volume of requests. Which architecture should be considered?",
+    "question": "A regulated company is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team needs asynchronous processing for a large volume of requests. Which architecture should be considered?",
     "options": {
       "A": "API ingress, SQS buffering, and independently scaled workers",
-      "B": "Synchronous calls to every worker",
-      "C": "One process with local state",
-      "D": "A single shared administrator credential"
+      "B": "The workload data model, consistency, query, and transaction requirements",
+      "C": "Translate RTO and RPO into recovery strategy and testable controls",
+      "D": "Stateless application tiers behind a load balancer with a durable data layer"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Queues decouple producers and workers and absorb bursts.\nSynchronous chains and shared credentials reduce resilience and security.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Queues decouple producers and workers and absorb bursts.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide API ingress, SQS buffering, and independently scaled workers for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司需要非同步處理大量請求。應該考慮哪種架構？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。受監管的公司需要非同步處理大量請求。應該考慮哪種架構？",
         "options": {
           "A": "API 入口、SQS 緩衝和獨立擴展的工作線程",
-          "B": "同步呼叫每個worker",
-          "C": "具有本地狀態的一個行程",
-          "D": "單一共享管理員憑證"
+          "B": "工作負載資料模型、一致性、查詢和事務要求",
+          "C": "將 RTO 和 RPO 轉化為復原策略和可測試的控制",
+          "D": "負載平衡器後面的無狀態應用程式層具有持久性資料層"
         },
-        "explanation": "佇列將生產者和工人解耦並吸收突發。\n同步鍊和共享憑證降低了彈性和安全性。"
+        "explanation": "佇列將生產者和工人解耦並吸收突發。\n其他選項適用於此領域的不同需求，但不能像 API 入口、SQS 緩衝和獨立擴展的工作線程 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d2-024",
-    "type": "single",
-    "question": "A startup preparing for a traffic increase must choose between relational transactions and flexible key-value access. Which factor should drive the selection?",
-    "options": {
-      "A": "The color of the console",
-      "B": "The workload data model, consistency, query, and transaction requirements",
-      "C": "The service name only",
-      "D": "The number of DNS records"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Data model and access patterns determine the appropriate database technology.\nCosmetic or unrelated factors do not select a data store.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase is redesigning one integrated end-to-end architecture. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The design must keep recurring cost proportional to use, enforce least privilege, and remain available during a component or Availability Zone failure. The workload must choose between relational transactions and flexible key-value access, and the same architecture needs to run a legacy database temporarily while a managed database migration is prepared. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Use The workload data model, consistency, query, and transaction requirements but replace the connected control with AWS Organizations with delegated administration and SCP guardrails",
+      "B": "Use AWS Transit Gateway for the primary requirement and integrate it with Separate migration phases and define an explicit decommission plan",
+      "C": "Combine AWS Transit Gateway with AWS Resource Access Manager with scoped resource shares as a single platform design",
+      "D": "Use The workload data model, consistency, query, and transaction requirements for the primary requirement and integrate it with Separate migration phases and define an explicit decommission plan for the connected control"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "The workload data model, consistency, query, and transaction requirements satisfies the first part of the architecture: Data model and access patterns determine the appropriate database technology. Separate migration phases and define an explicit decommission plan satisfies the connected requirement: Phased migration with reconciliation and decommission criteria reduces operational and data risk.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司必須在關係事務和靈活的鍵值存取之間進行選擇。哪個因素應該驅動選擇？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：準備增加流量的新創公司必須在關係事務和靈活的鍵值存取之間進行選擇。 第二項需求：支援關鍵工作負載的營運團隊需要在準備託管資料庫遷移時暫時執行舊資料庫。 此設計必須讓持續成本與實際用量相符、落實最低權限，並在元件或可用區域發生故障時維持可用。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "控制台的顏色",
-          "B": "工作負載資料模型、一致性、查詢和事務要求",
-          "C": "僅服務名稱",
-          "D": "DNS 記錄數"
+          "A": "使用工作負載資料模型、一致性、查詢和事務要求，但以具有委派管理和 SCP 護欄的 AWS Organizations取代相連控制",
+          "B": "以AWS Transit Gateway處理主要需求，並整合分離遷移階段並定義明確的退役計劃",
+          "C": "把AWS Transit Gateway與具有範圍內資源共用的 AWS Resource Access Manager結合為單一平台設計",
+          "D": "以工作負載資料模型、一致性、查詢和事務要求處理主要需求，並整合分離遷移階段並定義明確的退役計劃作為相連控制"
         },
-        "explanation": "資料模型和存取模式決定了適當的資料庫技術。\n外觀或不相關的因素不會選擇資料儲存。"
+        "explanation": "工作負載資料模型、一致性、查詢和事務要求 負責架構的第一項需求，分離遷移階段並定義明確的退役計劃 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "sap-c02-d2-025",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An operations team supporting a critical workload needs a disaster recovery architecture with a defined RTO and RPO. Which process should begin the design?",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team needs a disaster recovery architecture with a defined RTO and RPO. Which process should begin the design?",
     "options": {
-      "A": "Skip recovery tests",
-      "B": "Use one Availability Zone",
+      "A": "CloudFront with an origin access control and multi-Region strategy where needed",
+      "B": "API ingress, SQS buffering, and independently scaled workers",
       "C": "Translate RTO and RPO into recovery strategy and testable controls",
-      "D": "Choose the largest instance first"
+      "D": "Stateless application tiers behind a load balancer with a durable data layer"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nInstance size and a single AZ do not define disaster recovery.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Translate RTO and RPO into recovery strategy and testable controls for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊需要一個具有定義的 RTO 和 RPO 的災難復原架構。應該從哪個流程開始設計？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。支援關鍵工作負載的營運團隊需要一個具有定義的 RTO 和 RPO 的災難復原架構。應該從哪個流程開始設計？",
         "options": {
-          "A": "跳過恢復測試",
-          "B": "使用一個可用區",
+          "A": "CloudFront 在需要時具有來源存取控制和多區域策略",
+          "B": "API 入口、SQS 緩衝和獨立擴展的工作線程",
           "C": "將 RTO 和 RPO 轉化為復原策略和可測試的控制",
-          "D": "首先選擇最大的執行個體"
+          "D": "負載平衡器後面的無狀態應用程式層具有持久性資料層"
         },
-        "explanation": "RTO和RPO決定了復原架構、容量和備份頻率。\n執行個體大小和單一可用區並不定義災難復原。"
+        "explanation": "RTO和RPO決定了復原架構、容量和備份頻率。\n其他選項適用於此領域的不同需求，但不能像 將 RTO 和 RPO 轉化為復原策略和可測試的控制 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d2-026",
-    "type": "single",
-    "question": "A data platform team needs a resilient web architecture with independent scaling tiers. Which pattern is appropriate?",
-    "options": {
-      "A": "One large instance for every tier",
-      "B": "Local session state only",
-      "C": "A public database",
-      "D": "Stateless application tiers behind a load balancer with a durable data layer"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Stateless tiers and managed data services scale independently and improve resilience.\nA single instance and public database create bottlenecks and exposure.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A data platform team is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team needs a resilient web architecture with independent scaling tiers. Which pattern is appropriate?",
+    "options": {
+      "A": "The workload data model, consistency, query, and transaction requirements",
+      "B": "Stateless application tiers behind a load balancer with a durable data layer",
+      "C": "CloudFront with an origin access control and multi-Region strategy where needed",
+      "D": "API ingress, SQS buffering, and independently scaled workers"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Stateless tiers and managed data services scale independently and improve resilience.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Stateless application tiers behind a load balancer with a durable data layer for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要具有獨立擴充層的彈性 Web 架構。哪種模式合適？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。資料平台團隊需要具有獨立擴充層的彈性 Web 架構。哪種模式合適？",
         "options": {
-          "A": "每層一個大型執行個體",
-          "B": "僅本地會話狀態",
-          "C": "公共資料庫",
-          "D": "負載平衡器後面的無狀態應用程式層具有持久性資料層"
+          "A": "工作負載資料模型、一致性、查詢和事務要求",
+          "B": "負載平衡器後面的無狀態應用程式層具有持久性資料層",
+          "C": "CloudFront 在需要時具有來源存取控制和多區域策略",
+          "D": "API 入口、SQS 緩衝和獨立擴展的工作線程"
         },
-        "explanation": "無狀態層和託管資料服務可以獨立擴展並提高彈性。\n單一執行個體和公共資料庫會造成瓶頸和暴露。"
+        "explanation": "無狀態層和託管資料服務可以獨立擴展並提高彈性。\n其他選項適用於此領域的不同需求，但不能像 負載平衡器後面的無狀態應用程式層具有持久性資料層 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d2-027",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A security-conscious engineering team must serve global users with low latency and protect a Regional origin. Which design fits?",
+    "question": "A security-conscious engineering team is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team must serve global users with low latency and protect a Regional origin. Which design fits?",
     "options": {
       "A": "CloudFront with an origin access control and multi-Region strategy where needed",
-      "B": "Send every request to one public instance",
-      "C": "Use Direct Connect for public users",
-      "D": "Disable caching"
+      "B": "API ingress, SQS buffering, and independently scaled workers",
+      "C": "The workload data model, consistency, query, and transaction requirements",
+      "D": "Translate RTO and RPO into recovery strategy and testable controls"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "CloudFront reduces latency and can protect a private origin.\nThe other choices add latency, cost, or exposure.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "CloudFront reduces latency and can protect a private origin.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide CloudFront with an origin access control and multi-Region strategy where needed for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊必須以低延遲為全球使用者提供服務並保護區域來源。哪種設計適合？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。具有安全意識的工程團隊必須以低延遲為全球使用者提供服務並保護區域來源。哪種設計適合？",
         "options": {
           "A": "CloudFront 在需要時具有來源存取控制和多區域策略",
-          "B": "將每個請求傳送到一個公共執行個體",
-          "C": "公用使用者使用 Direct Connect",
-          "D": "禁用快取"
+          "B": "API 入口、SQS 緩衝和獨立擴展的工作線程",
+          "C": "工作負載資料模型、一致性、查詢和事務要求",
+          "D": "將 RTO 和 RPO 轉化為復原策略和可測試的控制"
         },
-        "explanation": "CloudFront 減少了延遲並可以保護私有來源。\n其他選擇會增加延遲、成本或暴露。"
+        "explanation": "CloudFront 減少了延遲並可以保護私有來源。\n其他選項適用於此領域的不同需求，但不能像 CloudFront 在需要時具有來源存取控制和多區域策略 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d2-028",
-    "type": "single",
-    "question": "A company migrating an existing workload needs asynchronous processing for a large volume of requests. Which architecture should be considered?",
-    "options": {
-      "A": "A single shared administrator credential",
-      "B": "API ingress, SQS buffering, and independently scaled workers",
-      "C": "Synchronous calls to every worker",
-      "D": "One process with local state"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Queues decouple producers and workers and absorb bursts.\nSynchronous chains and shared credentials reduce resilience and security.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A company migrating an existing workload is redesigning one integrated end-to-end architecture. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The design must avoid unnecessary standby cost without weakening security controls or the availability objective. The workload needs asynchronous processing for a large volume of requests, and the same architecture needs a central identity experience for workforce users across many accounts. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Use API ingress, SQS buffering, and independently scaled workers but replace the connected control with AWS Organizations with delegated administration and SCP guardrails",
+      "B": "Use AWS Transit Gateway for the primary requirement and integrate it with IAM Identity Center",
+      "C": "Combine AWS Transit Gateway with AWS Resource Access Manager with scoped resource shares as a single platform design",
+      "D": "Use API ingress, SQS buffering, and independently scaled workers for the primary requirement and integrate it with IAM Identity Center for the connected control"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "API ingress, SQS buffering, and independently scaled workers satisfies the first part of the architecture: Queues decouple producers and workers and absorb bursts. IAM Identity Center satisfies the connected requirement: IAM Identity Center provides workforce access and permission sets across accounts.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司需要非同步處理大量請求。應該考慮哪種架構？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：受監管的公司需要非同步處理大量請求。 第二項需求：在共用環境中工作的 AWS 管理員需要為多個帳戶中的員工使用者提供集中身分體驗。 此設計必須避免不必要的備用成本，同時不可削弱安全控制或可用性目標。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "單一共享管理員憑證",
-          "B": "API 入口、SQS 緩衝和獨立擴展的工作線程",
-          "C": "同步呼叫每個worker",
-          "D": "具有本地狀態的一個行程"
+          "A": "使用API 入口、SQS 緩衝和獨立擴展的工作線程，但以具有委派管理和 SCP 護欄的 AWS Organizations取代相連控制",
+          "B": "以AWS Transit Gateway處理主要需求，並整合IAM Identity Center",
+          "C": "把AWS Transit Gateway與具有範圍內資源共用的 AWS Resource Access Manager結合為單一平台設計",
+          "D": "以API 入口、SQS 緩衝和獨立擴展的工作線程處理主要需求，並整合IAM Identity Center作為相連控制"
         },
-        "explanation": "佇列將生產者和工人解耦並吸收突發。\n同步鍊和共享憑證降低了彈性和安全性。"
+        "explanation": "API 入口、SQS 緩衝和獨立擴展的工作線程 負責架構的第一項需求，IAM Identity Center 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "sap-c02-d2-029",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team with strict recovery objectives must choose between relational transactions and flexible key-value access. Which factor should drive the selection?",
+    "question": "A team with strict recovery objectives is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team must choose between relational transactions and flexible key-value access. Which factor should drive the selection?",
     "options": {
-      "A": "The number of DNS records",
-      "B": "The color of the console",
+      "A": "Stateless application tiers behind a load balancer with a durable data layer",
+      "B": "CloudFront with an origin access control and multi-Region strategy where needed",
       "C": "The workload data model, consistency, query, and transaction requirements",
-      "D": "The service name only"
+      "D": "Translate RTO and RPO into recovery strategy and testable controls"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Data model and access patterns determine the appropriate database technology.\nCosmetic or unrelated factors do not select a data store.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Data model and access patterns determine the appropriate database technology.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide The workload data model, consistency, query, and transaction requirements for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格恢復目標的團隊必須在關係事務和靈活的鍵值存取之間進行選擇。哪個因素應該驅動選擇？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。具有嚴格恢復目標的團隊必須在關係事務和靈活的鍵值存取之間進行選擇。哪個因素應該驅動選擇？",
         "options": {
-          "A": "DNS 記錄數",
-          "B": "控制台的顏色",
+          "A": "負載平衡器後面的無狀態應用程式層具有持久性資料層",
+          "B": "CloudFront 在需要時具有來源存取控制和多區域策略",
           "C": "工作負載資料模型、一致性、查詢和事務要求",
-          "D": "僅服務名稱"
+          "D": "將 RTO 和 RPO 轉化為復原策略和可測試的控制"
         },
-        "explanation": "資料模型和存取模式決定了適當的資料庫技術。\n外觀或不相關的因素不會選擇資料儲存。"
+        "explanation": "資料模型和存取模式決定了適當的資料庫技術。\n其他選項適用於此領域的不同需求，但不能像 工作負載資料模型、一致性、查詢和事務要求 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d2-030",
-    "type": "single",
-    "question": "A developer team preparing a release needs a disaster recovery architecture with a defined RTO and RPO. Which process should begin the design?",
-    "options": {
-      "A": "Choose the largest instance first",
-      "B": "Skip recovery tests",
-      "C": "Use one Availability Zone",
-      "D": "Translate RTO and RPO into recovery strategy and testable controls"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nInstance size and a single AZ do not define disaster recovery.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A developer team preparing a release is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team needs a disaster recovery architecture with a defined RTO and RPO. Which process should begin the design?",
+    "options": {
+      "A": "API ingress, SQS buffering, and independently scaled workers",
+      "B": "Translate RTO and RPO into recovery strategy and testable controls",
+      "C": "Stateless application tiers behind a load balancer with a durable data layer",
+      "D": "CloudFront with an origin access control and multi-Region strategy where needed"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Translate RTO and RPO into recovery strategy and testable controls for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊需要一個具有定義的 RTO 和 RPO 的災難復原架構。應該從哪個流程開始設計？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。準備發布的開發團隊需要一個具有定義的 RTO 和 RPO 的災難復原架構。應該從哪個流程開始設計？",
         "options": {
-          "A": "首先選擇最大的執行個體",
-          "B": "跳過恢復測試",
-          "C": "使用一個可用區",
-          "D": "將 RTO 和 RPO 轉化為復原策略和可測試的控制"
+          "A": "API 入口、SQS 緩衝和獨立擴展的工作線程",
+          "B": "將 RTO 和 RPO 轉化為復原策略和可測試的控制",
+          "C": "負載平衡器後面的無狀態應用程式層具有持久性資料層",
+          "D": "CloudFront 在需要時具有來源存取控制和多區域策略"
         },
-        "explanation": "RTO和RPO決定了復原架構、容量和備份頻率。\n執行個體大小和單一可用區並不定義災難復原。"
+        "explanation": "RTO和RPO決定了復原架構、容量和備份頻率。\n其他選項適用於此領域的不同需求，但不能像 將 RTO 和 RPO 轉化為復原策略和可測試的控制 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d2-031",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An enterprise with several AWS Regions needs a resilient web architecture with independent scaling tiers. Which pattern is appropriate?",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team needs a resilient web architecture with independent scaling tiers. Which pattern is appropriate?",
     "options": {
       "A": "Stateless application tiers behind a load balancer with a durable data layer",
-      "B": "One large instance for every tier",
-      "C": "Local session state only",
-      "D": "A public database"
+      "B": "CloudFront with an origin access control and multi-Region strategy where needed",
+      "C": "API ingress, SQS buffering, and independently scaled workers",
+      "D": "The workload data model, consistency, query, and transaction requirements"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Stateless tiers and managed data services scale independently and improve resilience.\nA single instance and public database create bottlenecks and exposure.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Stateless tiers and managed data services scale independently and improve resilience.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Stateless application tiers behind a load balancer with a durable data layer for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業需要具有獨立擴充層的彈性 Web 架構。哪種模式合適？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。擁有多個 AWS 區域的企業需要具有獨立擴充層的彈性 Web 架構。哪種模式合適？",
         "options": {
           "A": "負載平衡器後面的無狀態應用程式層具有持久性資料層",
-          "B": "每層一個大型執行個體",
-          "C": "僅本地會話狀態",
-          "D": "公共資料庫"
+          "B": "CloudFront 在需要時具有來源存取控制和多區域策略",
+          "C": "API 入口、SQS 緩衝和獨立擴展的工作線程",
+          "D": "工作負載資料模型、一致性、查詢和事務要求"
         },
-        "explanation": "無狀態層和託管資料服務可以獨立擴展並提高彈性。\n單一執行個體和公共資料庫會造成瓶頸和暴露。"
+        "explanation": "無狀態層和託管資料服務可以獨立擴展並提高彈性。\n其他選項適用於此領域的不同需求，但不能像 負載平衡器後面的無狀態應用程式層具有持久性資料層 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d2-032",
-    "type": "single",
-    "question": "A service owner reviewing an incident must serve global users with low latency and protect a Regional origin. Which design fits?",
-    "options": {
-      "A": "Disable caching",
-      "B": "CloudFront with an origin access control and multi-Region strategy where needed",
-      "C": "Send every request to one public instance",
-      "D": "Use Direct Connect for public users"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "CloudFront reduces latency and can protect a private origin.\nThe other choices add latency, cost, or exposure.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A service owner reviewing an incident is redesigning one integrated end-to-end architecture. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The organization will accept additional managed-service cost only when it measurably improves security and availability with less operational effort. The workload must serve global users with low latency and protect a Regional origin, and the same architecture needs a disaster recovery architecture with a defined RTO and RPO. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Use CloudFront with an origin access control and multi-Region strategy where needed but replace the connected control with AWS Organizations with delegated administration and SCP guardrails",
+      "B": "Use AWS Transit Gateway for the primary requirement and integrate it with Translate RTO and RPO into recovery strategy and testable controls",
+      "C": "Combine AWS Transit Gateway with AWS Resource Access Manager with scoped resource shares as a single platform design",
+      "D": "Use CloudFront with an origin access control and multi-Region strategy where needed for the primary requirement and integrate it with Translate RTO and RPO into recovery strategy and testable controls for the connected control"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudFront with an origin access control and multi-Region strategy where needed satisfies the first part of the architecture: CloudFront reduces latency and can protect a private origin. Translate RTO and RPO into recovery strategy and testable controls satisfies the connected requirement: RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務所有者必須以低延遲為全球使用者提供服務並保護區域來源。哪種設計適合？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：多帳戶平台團隊必須為全球使用者提供低延遲服務並保護區域起源。 第二項需求：支援關鍵工作負載的營運團隊需要一個具有定義的 RTO 和 RPO 的災難復原架構。 只有在託管服務能以較低營運負擔明確改善安全性與可用性時，組織才會接受額外成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "禁用快取",
-          "B": "CloudFront 在需要時具有來源存取控制和多區域策略",
-          "C": "將每個請求傳送到一個公共執行個體",
-          "D": "公用使用者使用 Direct Connect"
+          "A": "使用CloudFront 在需要時具有來源存取控制和多區域策略，但以具有委派管理和 SCP 護欄的 AWS Organizations取代相連控制",
+          "B": "以AWS Transit Gateway處理主要需求，並整合將 RTO 和 RPO 轉化為復原策略和可測試的控制",
+          "C": "把AWS Transit Gateway與具有範圍內資源共用的 AWS Resource Access Manager結合為單一平台設計",
+          "D": "以CloudFront 在需要時具有來源存取控制和多區域策略處理主要需求，並整合將 RTO 和 RPO 轉化為復原策略和可測試的控制作為相連控制"
         },
-        "explanation": "CloudFront 減少了延遲並可以保護私有來源。\n其他選擇會增加延遲、成本或暴露。"
+        "explanation": "CloudFront 在需要時具有來源存取控制和多區域策略 負責架構的第一項需求，將 RTO 和 RPO 轉化為復原策略和可測試的控制 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "sap-c02-d2-033",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team optimizing an existing implementation needs asynchronous processing for a large volume of requests. Which architecture should be considered?",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team needs asynchronous processing for a large volume of requests. Which architecture should be considered?",
     "options": {
-      "A": "One process with local state",
-      "B": "A single shared administrator credential",
+      "A": "Translate RTO and RPO into recovery strategy and testable controls",
+      "B": "Stateless application tiers behind a load balancer with a durable data layer",
       "C": "API ingress, SQS buffering, and independently scaled workers",
-      "D": "Synchronous calls to every worker"
+      "D": "The workload data model, consistency, query, and transaction requirements"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Queues decouple producers and workers and absorb bursts.\nSynchronous chains and shared credentials reduce resilience and security.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Queues decouple producers and workers and absorb bursts.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide API ingress, SQS buffering, and independently scaled workers for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實現的團隊需要非同步處理大量請求。應該考慮哪種架構？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。優化現有實現的團隊需要非同步處理大量請求。應該考慮哪種架構？",
         "options": {
-          "A": "具有本地狀態的一個行程",
-          "B": "單一共享管理員憑證",
+          "A": "將 RTO 和 RPO 轉化為復原策略和可測試的控制",
+          "B": "負載平衡器後面的無狀態應用程式層具有持久性資料層",
           "C": "API 入口、SQS 緩衝和獨立擴展的工作線程",
-          "D": "同步呼叫每個worker"
+          "D": "工作負載資料模型、一致性、查詢和事務要求"
         },
-        "explanation": "佇列將生產者和工人解耦並吸收突發。\n同步鍊和共享憑證降低了彈性和安全性。"
+        "explanation": "佇列將生產者和工人解耦並吸收突發。\n其他選項適用於此領域的不同需求，但不能像 API 入口、SQS 緩衝和獨立擴展的工作線程 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d2-034",
-    "type": "single",
-    "question": "A company introducing an automated workflow must choose between relational transactions and flexible key-value access. Which factor should drive the selection?",
-    "options": {
-      "A": "The service name only",
-      "B": "The number of DNS records",
-      "C": "The color of the console",
-      "D": "The workload data model, consistency, query, and transaction requirements"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Data model and access patterns determine the appropriate database technology.\nCosmetic or unrelated factors do not select a data store.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A company introducing an automated workflow is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team must choose between relational transactions and flexible key-value access. Which factor should drive the selection?",
+    "options": {
+      "A": "CloudFront with an origin access control and multi-Region strategy where needed",
+      "B": "The workload data model, consistency, query, and transaction requirements",
+      "C": "Translate RTO and RPO into recovery strategy and testable controls",
+      "D": "Stateless application tiers behind a load balancer with a durable data layer"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Data model and access patterns determine the appropriate database technology.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide The workload data model, consistency, query, and transaction requirements for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司必須在關係事務和靈活的鍵值存取之間進行選擇。哪個因素應該驅動選擇？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。引入自動化工作流程的公司必須在關係事務和靈活的鍵值存取之間進行選擇。哪個因素應該驅動選擇？",
         "options": {
-          "A": "僅服務名稱",
-          "B": "DNS 記錄數",
-          "C": "控制台的顏色",
-          "D": "工作負載資料模型、一致性、查詢和事務要求"
+          "A": "CloudFront 在需要時具有來源存取控制和多區域策略",
+          "B": "工作負載資料模型、一致性、查詢和事務要求",
+          "C": "將 RTO 和 RPO 轉化為復原策略和可測試的控制",
+          "D": "負載平衡器後面的無狀態應用程式層具有持久性資料層"
         },
-        "explanation": "資料模型和存取模式決定了適當的資料庫技術。\n外觀或不相關的因素不會選擇資料儲存。"
+        "explanation": "資料模型和存取模式決定了適當的資料庫技術。\n其他選項適用於此領域的不同需求，但不能像 工作負載資料模型、一致性、查詢和事務要求 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d2-035",
-    "type": "single",
-    "question": "An AWS administrator working in a shared environment needs a disaster recovery architecture with a defined RTO and RPO. Which process should begin the design?",
-    "options": {
-      "A": "Translate RTO and RPO into recovery strategy and testable controls",
-      "B": "Choose the largest instance first",
-      "C": "Skip recovery tests",
-      "D": "Use one Availability Zone"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nInstance size and a single AZ do not define disaster recovery.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "An AWS administrator working in a shared environment is planning two independent production changes. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The first team needs a disaster recovery architecture with a defined RTO and RPO. A second team needs a resilient web architecture with independent scaling tiers. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "CloudFront with an origin access control and multi-Region strategy where needed",
+      "B": "API ingress, SQS buffering, and independently scaled workers",
+      "C": "The workload data model, consistency, query, and transaction requirements",
+      "D": "Translate RTO and RPO into recovery strategy and testable controls",
+      "E": "Stateless application tiers behind a load balancer with a durable data layer"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Translate RTO and RPO into recovery strategy and testable controls meets the first requirement: RTO and RPO determine the recovery architecture, capacity, and backup frequency. Stateless application tiers behind a load balancer with a durable data layer meets the second requirement: Stateless tiers and managed data services scale independently and improve resilience.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "在共用環境中工作的 AWS 管理員需要一個具有定義的 RTO 和 RPO 的災難復原架構。應該從哪個流程開始設計？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。第一項需求：支援關鍵工作負載的營運團隊需要一個具有定義的 RTO 和 RPO 的災難復原架構。第二項需求：製作團隊需要具有獨立擴充層的彈性 Web 架構。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "將 RTO 和 RPO 轉化為復原策略和可測試的控制",
-          "B": "首先選擇最大的執行個體",
-          "C": "跳過恢復測試",
-          "D": "使用一個可用區"
+          "A": "CloudFront 在需要時具有來源存取控制和多區域策略",
+          "B": "API 入口、SQS 緩衝和獨立擴展的工作線程",
+          "C": "工作負載資料模型、一致性、查詢和事務要求",
+          "D": "將 RTO 和 RPO 轉化為復原策略和可測試的控制",
+          "E": "負載平衡器後面的無狀態應用程式層具有持久性資料層"
         },
-        "explanation": "RTO和RPO決定了復原架構、容量和備份頻率。\n執行個體大小和單一可用區並不定義災難復原。"
+        "explanation": "將 RTO 和 RPO 轉化為復原策略和可測試的控制 符合第一項需求：RTO和RPO決定了復原架構、容量和備份頻率。 負載平衡器後面的無狀態應用程式層具有持久性資料層 符合第二項需求：無狀態層和託管資料服務可以獨立擴展並提高彈性。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "sap-c02-d2-036",
-    "type": "single",
-    "question": "A customer-facing application team needs a resilient web architecture with independent scaling tiers. Which pattern is appropriate?",
-    "options": {
-      "A": "A public database",
-      "B": "Stateless application tiers behind a load balancer with a durable data layer",
-      "C": "One large instance for every tier",
-      "D": "Local session state only"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Stateless tiers and managed data services scale independently and improve resilience.\nA single instance and public database create bottlenecks and exposure.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A customer-facing application team is redesigning one integrated end-to-end architecture. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The architecture must limit blast radius, preserve availability during change, and control cost through automation instead of permanent overprovisioning. The workload needs a resilient web architecture with independent scaling tiers, and the same architecture must replace a self-managed cache with a managed service. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Use Stateless application tiers behind a load balancer with a durable data layer but replace the connected control with AWS Organizations with delegated administration and SCP guardrails",
+      "B": "Use AWS Transit Gateway for the primary requirement and integrate it with Required data structures, latency, durability, and failover behavior",
+      "C": "Combine AWS Transit Gateway with AWS Resource Access Manager with scoped resource shares as a single platform design",
+      "D": "Use Stateless application tiers behind a load balancer with a durable data layer for the primary requirement and integrate it with Required data structures, latency, durability, and failover behavior for the connected control"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Stateless application tiers behind a load balancer with a durable data layer satisfies the first part of the architecture: Stateless tiers and managed data services scale independently and improve resilience. Required data structures, latency, durability, and failover behavior satisfies the connected requirement: Cache selection should match workload behavior and resilience requirements.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊需要具有獨立擴展層的彈性 Web 架構。哪種模式合適？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：製作團隊需要具有獨立擴充層的彈性 Web 架構。 第二項需求：在共享環境中工作的 AWS 管理員必須將自我管理的快取替換為託管服務。 此架構必須限制影響範圍、在變更期間維持可用性，並透過自動化控制成本，而不是長期過度佈建。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "公共資料庫",
-          "B": "負載平衡器後面的無狀態應用程式層具有持久性資料層",
-          "C": "每層一個大型執行個體",
-          "D": "僅本地會話狀態"
+          "A": "使用負載平衡器後面的無狀態應用程式層具有持久性資料層，但以具有委派管理和 SCP 護欄的 AWS Organizations取代相連控制",
+          "B": "以AWS Transit Gateway處理主要需求，並整合所需的資料結構、延遲、持久性和故障轉移行為",
+          "C": "把AWS Transit Gateway與具有範圍內資源共用的 AWS Resource Access Manager結合為單一平台設計",
+          "D": "以負載平衡器後面的無狀態應用程式層具有持久性資料層處理主要需求，並整合所需的資料結構、延遲、持久性和故障轉移行為作為相連控制"
         },
-        "explanation": "無狀態層和託管資料服務可以獨立擴展並提高彈性。\n單一執行個體和公共資料庫會造成瓶頸和暴露。"
+        "explanation": "負載平衡器後面的無狀態應用程式層具有持久性資料層 負責架構的第一項需求，所需的資料結構、延遲、持久性和故障轉移行為 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "sap-c02-d2-037",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A platform team standardizing its AWS deployments must serve global users with low latency and protect a Regional origin. Which design fits?",
+    "question": "A platform team standardizing its AWS deployments is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team must serve global users with low latency and protect a Regional origin. Which design fits?",
     "options": {
-      "A": "Use Direct Connect for public users",
-      "B": "Disable caching",
+      "A": "The workload data model, consistency, query, and transaction requirements",
+      "B": "Translate RTO and RPO into recovery strategy and testable controls",
       "C": "CloudFront with an origin access control and multi-Region strategy where needed",
-      "D": "Send every request to one public instance"
+      "D": "API ingress, SQS buffering, and independently scaled workers"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "CloudFront reduces latency and can protect a private origin.\nThe other choices add latency, cost, or exposure.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "CloudFront reduces latency and can protect a private origin.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide CloudFront with an origin access control and multi-Region strategy where needed for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊必須以低延遲為全球使用者提供服務並保護區域來源。哪種設計適合？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。標準化其 AWS 部署的平台團隊必須以低延遲為全球使用者提供服務並保護區域來源。哪種設計適合？",
         "options": {
-          "A": "公用使用者使用 Direct Connect",
-          "B": "禁用快取",
+          "A": "工作負載資料模型、一致性、查詢和事務要求",
+          "B": "將 RTO 和 RPO 轉化為復原策略和可測試的控制",
           "C": "CloudFront 在需要時具有來源存取控制和多區域策略",
-          "D": "將每個請求傳送到一個公共執行個體"
+          "D": "API 入口、SQS 緩衝和獨立擴展的工作線程"
         },
-        "explanation": "CloudFront 減少了延遲並可以保護私有來源。\n其他選擇會增加延遲、成本或暴露。"
+        "explanation": "CloudFront 減少了延遲並可以保護私有來源。\n其他選項適用於此領域的不同需求，但不能像 CloudFront 在需要時具有來源存取控制和多區域策略 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d2-038",
-    "type": "single",
-    "question": "A team preparing evidence for an audit needs asynchronous processing for a large volume of requests. Which architecture should be considered?",
-    "options": {
-      "A": "Synchronous calls to every worker",
-      "B": "One process with local state",
-      "C": "A single shared administrator credential",
-      "D": "API ingress, SQS buffering, and independently scaled workers"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Queues decouple producers and workers and absorb bursts.\nSynchronous chains and shared credentials reduce resilience and security.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team preparing evidence for an audit is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team needs asynchronous processing for a large volume of requests. Which architecture should be considered?",
+    "options": {
+      "A": "Stateless application tiers behind a load balancer with a durable data layer",
+      "B": "API ingress, SQS buffering, and independently scaled workers",
+      "C": "The workload data model, consistency, query, and transaction requirements",
+      "D": "Translate RTO and RPO into recovery strategy and testable controls"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Queues decouple producers and workers and absorb bursts.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide API ingress, SQS buffering, and independently scaled workers for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備審計證據的團隊需要非同步處理大量請求。應該考慮哪種架構？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。準備審計證據的團隊需要非同步處理大量請求。應該考慮哪種架構？",
         "options": {
-          "A": "同步呼叫每個worker",
-          "B": "具有本地狀態的一個行程",
-          "C": "單一共享管理員憑證",
-          "D": "API 入口、SQS 緩衝和獨立擴展的工作線程"
+          "A": "負載平衡器後面的無狀態應用程式層具有持久性資料層",
+          "B": "API 入口、SQS 緩衝和獨立擴展的工作線程",
+          "C": "工作負載資料模型、一致性、查詢和事務要求",
+          "D": "將 RTO 和 RPO 轉化為復原策略和可測試的控制"
         },
-        "explanation": "佇列將生產者和工人解耦並吸收突發。\n同步鍊和共享憑證降低了彈性和安全性。"
+        "explanation": "佇列將生產者和工人解耦並吸收突發。\n其他選項適用於此領域的不同需求，但不能像 API 入口、SQS 緩衝和獨立擴展的工作線程 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d2-039",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A business replacing a manual process must choose between relational transactions and flexible key-value access. Which factor should drive the selection?",
+    "question": "A business replacing a manual process is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team must choose between relational transactions and flexible key-value access. Which factor should drive the selection?",
     "options": {
       "A": "The workload data model, consistency, query, and transaction requirements",
-      "B": "The service name only",
-      "C": "The number of DNS records",
-      "D": "The color of the console"
+      "B": "Translate RTO and RPO into recovery strategy and testable controls",
+      "C": "Stateless application tiers behind a load balancer with a durable data layer",
+      "D": "CloudFront with an origin access control and multi-Region strategy where needed"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Data model and access patterns determine the appropriate database technology.\nCosmetic or unrelated factors do not select a data store.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Data model and access patterns determine the appropriate database technology.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide The workload data model, consistency, query, and transaction requirements for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "取代手動流程的企業必須在關係事務和靈活的鍵值存取之間進行選擇。哪個因素應該驅動選擇？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。取代手動流程的企業必須在關係事務和靈活的鍵值存取之間進行選擇。哪個因素應該驅動選擇？",
         "options": {
           "A": "工作負載資料模型、一致性、查詢和事務要求",
-          "B": "僅服務名稱",
-          "C": "DNS 記錄數",
-          "D": "控制台的顏色"
+          "B": "將 RTO 和 RPO 轉化為復原策略和可測試的控制",
+          "C": "負載平衡器後面的無狀態應用程式層具有持久性資料層",
+          "D": "CloudFront 在需要時具有來源存取控制和多區域策略"
         },
-        "explanation": "資料模型和存取模式決定了適當的資料庫技術。\n外觀或不相關的因素不會選擇資料儲存。"
+        "explanation": "資料模型和存取模式決定了適當的資料庫技術。\n其他選項適用於此領域的不同需求，但不能像 工作負載資料模型、一致性、查詢和事務要求 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d2-040",
-    "type": "single",
-    "question": "A team validating a design against the exam guide needs a disaster recovery architecture with a defined RTO and RPO. Which process should begin the design?",
-    "options": {
-      "A": "Use one Availability Zone",
-      "B": "Translate RTO and RPO into recovery strategy and testable controls",
-      "C": "Choose the largest instance first",
-      "D": "Skip recovery tests"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nInstance size and a single AZ do not define disaster recovery.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team validating a design against the exam guide is redesigning one integrated end-to-end architecture. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The selected controls must provide auditable security, predictable availability, and the lowest operational cost that still satisfies both requirements. The workload needs a disaster recovery architecture with a defined RTO and RPO, and the same architecture needs to run a legacy database temporarily while a managed database migration is prepared. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Use Translate RTO and RPO into recovery strategy and testable controls but replace the connected control with AWS Organizations with delegated administration and SCP guardrails",
+      "B": "Use AWS Transit Gateway for the primary requirement and integrate it with Separate migration phases and define an explicit decommission plan",
+      "C": "Combine AWS Transit Gateway with AWS Resource Access Manager with scoped resource shares as a single platform design",
+      "D": "Use Translate RTO and RPO into recovery strategy and testable controls for the primary requirement and integrate it with Separate migration phases and define an explicit decommission plan for the connected control"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Translate RTO and RPO into recovery strategy and testable controls satisfies the first part of the architecture: RTO and RPO determine the recovery architecture, capacity, and backup frequency. Separate migration phases and define an explicit decommission plan satisfies the connected requirement: Phased migration with reconciliation and decommission criteria reduces operational and data risk.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊需要一個具有定義的 RTO 和 RPO 的災難復原架構。應該從哪個流程開始設計？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：支援關鍵工作負載的營運團隊需要一個具有定義的 RTO 和 RPO 的災難復原架構。 第二項需求：支援關鍵工作負載的營運團隊需要在準備託管資料庫遷移時暫時執行舊資料庫。 所選控制必須提供可稽核的安全性、可預測的可用性，以及在滿足兩項要求前提下最低的營運成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "使用一個可用區",
-          "B": "將 RTO 和 RPO 轉化為復原策略和可測試的控制",
-          "C": "首先選擇最大的執行個體",
-          "D": "跳過恢復測試"
+          "A": "使用將 RTO 和 RPO 轉化為復原策略和可測試的控制，但以具有委派管理和 SCP 護欄的 AWS Organizations取代相連控制",
+          "B": "以AWS Transit Gateway處理主要需求，並整合分離遷移階段並定義明確的退役計劃",
+          "C": "把AWS Transit Gateway與具有範圍內資源共用的 AWS Resource Access Manager結合為單一平台設計",
+          "D": "以將 RTO 和 RPO 轉化為復原策略和可測試的控制處理主要需求，並整合分離遷移階段並定義明確的退役計劃作為相連控制"
         },
-        "explanation": "RTO和RPO決定了復原架構、容量和備份頻率。\n執行個體大小和單一可用區並不定義災難復原。"
+        "explanation": "將 RTO 和 RPO 轉化為復原策略和可測試的控制 負責架構的第一項需求，分離遷移階段並定義明確的退役計劃 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "sap-c02-d2-041",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A production team needs a resilient web architecture with independent scaling tiers. Which pattern is appropriate?",
+    "question": "A production team is reviewing a production decision. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The team needs a resilient web architecture with independent scaling tiers. Which pattern is appropriate?",
     "options": {
-      "A": "Local session state only",
-      "B": "A public database",
+      "A": "API ingress, SQS buffering, and independently scaled workers",
+      "B": "The workload data model, consistency, query, and transaction requirements",
       "C": "Stateless application tiers behind a load balancer with a durable data layer",
-      "D": "One large instance for every tier"
+      "D": "CloudFront with an origin access control and multi-Region strategy where needed"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Stateless tiers and managed data services scale independently and improve resilience.\nA single instance and public database create bottlenecks and exposure.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Stateless tiers and managed data services scale independently and improve resilience.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Stateless application tiers behind a load balancer with a durable data layer for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "製作團隊需要具有獨立擴充層的彈性 Web 架構。哪種模式合適？",
+        "question": "組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。製作團隊需要具有獨立擴充層的彈性 Web 架構。哪種模式合適？",
         "options": {
-          "A": "僅本地會話狀態",
-          "B": "公共資料庫",
+          "A": "API 入口、SQS 緩衝和獨立擴展的工作線程",
+          "B": "工作負載資料模型、一致性、查詢和事務要求",
           "C": "負載平衡器後面的無狀態應用程式層具有持久性資料層",
-          "D": "每層一個大型執行個體"
+          "D": "CloudFront 在需要時具有來源存取控制和多區域策略"
         },
-        "explanation": "無狀態層和託管資料服務可以獨立擴展並提高彈性。\n單一執行個體和公共資料庫會造成瓶頸和暴露。"
+        "explanation": "無狀態層和託管資料服務可以獨立擴展並提高彈性。\n其他選項適用於此領域的不同需求，但不能像 負載平衡器後面的無狀態應用程式層具有持久性資料層 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d2-042",
-    "type": "single",
-    "question": "A multi-account platform team must serve global users with low latency and protect a Regional origin. Which design fits?",
-    "options": {
-      "A": "Send every request to one public instance",
-      "B": "Use Direct Connect for public users",
-      "C": "Disable caching",
-      "D": "CloudFront with an origin access control and multi-Region strategy where needed"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "CloudFront reduces latency and can protect a private origin.\nThe other choices add latency, cost, or exposure.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A multi-account platform team is planning two independent production changes. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The first team must serve global users with low latency and protect a Regional origin. A second team needs asynchronous processing for a large volume of requests. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Stateless application tiers behind a load balancer with a durable data layer",
+      "B": "CloudFront with an origin access control and multi-Region strategy where needed",
+      "C": "API ingress, SQS buffering, and independently scaled workers",
+      "D": "The workload data model, consistency, query, and transaction requirements",
+      "E": "Translate RTO and RPO into recovery strategy and testable controls"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "CloudFront with an origin access control and multi-Region strategy where needed meets the first requirement: CloudFront reduces latency and can protect a private origin. API ingress, SQS buffering, and independently scaled workers meets the second requirement: Queues decouple producers and workers and absorb bursts.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊必須為全球使用者提供低延遲服務並保護區域起源。哪種設計適合？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。第一項需求：多帳戶平台團隊必須為全球使用者提供低延遲服務並保護區域起源。第二項需求：受監管的公司需要非同步處理大量請求。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "將每個請求傳送到一個公共執行個體",
-          "B": "公用使用者使用 Direct Connect",
-          "C": "禁用快取",
-          "D": "CloudFront 在需要時具有來源存取控制和多區域策略"
+          "A": "負載平衡器後面的無狀態應用程式層具有持久性資料層",
+          "B": "CloudFront 在需要時具有來源存取控制和多區域策略",
+          "C": "API 入口、SQS 緩衝和獨立擴展的工作線程",
+          "D": "工作負載資料模型、一致性、查詢和事務要求",
+          "E": "將 RTO 和 RPO 轉化為復原策略和可測試的控制"
         },
-        "explanation": "CloudFront 減少了延遲並可以保護私有來源。\n其他選擇會增加延遲、成本或暴露。"
+        "explanation": "CloudFront 在需要時具有來源存取控制和多區域策略 符合第一項需求：CloudFront 減少了延遲並可以保護私有來源。 API 入口、SQS 緩衝和獨立擴展的工作線程 符合第二項需求：佇列將生產者和工人解耦並吸收突發。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "sap-c02-d2-043",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A regulated company needs asynchronous processing for a large volume of requests. Which architecture should be considered?",
+    "question": "A regulated company is reviewing a production decision. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The team needs asynchronous processing for a large volume of requests. Which architecture should be considered?",
     "options": {
       "A": "API ingress, SQS buffering, and independently scaled workers",
-      "B": "Synchronous calls to every worker",
-      "C": "One process with local state",
-      "D": "A single shared administrator credential"
+      "B": "The workload data model, consistency, query, and transaction requirements",
+      "C": "Translate RTO and RPO into recovery strategy and testable controls",
+      "D": "Stateless application tiers behind a load balancer with a durable data layer"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Queues decouple producers and workers and absorb bursts.\nSynchronous chains and shared credentials reduce resilience and security.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Queues decouple producers and workers and absorb bursts.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide API ingress, SQS buffering, and independently scaled workers for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司需要非同步處理大量請求。應該考慮哪種架構？",
+        "question": "組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。受監管的公司需要非同步處理大量請求。應該考慮哪種架構？",
         "options": {
           "A": "API 入口、SQS 緩衝和獨立擴展的工作線程",
-          "B": "同步呼叫每個worker",
-          "C": "具有本地狀態的一個行程",
-          "D": "單一共享管理員憑證"
+          "B": "工作負載資料模型、一致性、查詢和事務要求",
+          "C": "將 RTO 和 RPO 轉化為復原策略和可測試的控制",
+          "D": "負載平衡器後面的無狀態應用程式層具有持久性資料層"
         },
-        "explanation": "佇列將生產者和工人解耦並吸收突發。\n同步鍊和共享憑證降低了彈性和安全性。"
+        "explanation": "佇列將生產者和工人解耦並吸收突發。\n其他選項適用於此領域的不同需求，但不能像 API 入口、SQS 緩衝和獨立擴展的工作線程 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d2-044",
-    "type": "single",
-    "question": "A startup preparing for a traffic increase must choose between relational transactions and flexible key-value access. Which factor should drive the selection?",
-    "options": {
-      "A": "The color of the console",
-      "B": "The workload data model, consistency, query, and transaction requirements",
-      "C": "The service name only",
-      "D": "The number of DNS records"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Data model and access patterns determine the appropriate database technology.\nCosmetic or unrelated factors do not select a data store.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase is redesigning one integrated end-to-end architecture. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The design must keep recurring cost proportional to use, enforce least privilege, and remain available during a component or Availability Zone failure. The workload must choose between relational transactions and flexible key-value access, and the same architecture needs a central identity experience for workforce users across many accounts. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Use The workload data model, consistency, query, and transaction requirements but replace the connected control with AWS Organizations with delegated administration and SCP guardrails",
+      "B": "Use AWS Transit Gateway for the primary requirement and integrate it with IAM Identity Center",
+      "C": "Combine AWS Transit Gateway with AWS Resource Access Manager with scoped resource shares as a single platform design",
+      "D": "Use The workload data model, consistency, query, and transaction requirements for the primary requirement and integrate it with IAM Identity Center for the connected control"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "The workload data model, consistency, query, and transaction requirements satisfies the first part of the architecture: Data model and access patterns determine the appropriate database technology. IAM Identity Center satisfies the connected requirement: IAM Identity Center provides workforce access and permission sets across accounts.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司必須在關係事務和靈活的鍵值存取之間進行選擇。哪個因素應該驅動選擇？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：準備增加流量的新創公司必須在關係事務和靈活的鍵值存取之間進行選擇。 第二項需求：在共用環境中工作的 AWS 管理員需要為多個帳戶中的員工使用者提供集中身分體驗。 此設計必須讓持續成本與實際用量相符、落實最低權限，並在元件或可用區域發生故障時維持可用。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "控制台的顏色",
-          "B": "工作負載資料模型、一致性、查詢和事務要求",
-          "C": "僅服務名稱",
-          "D": "DNS 記錄數"
+          "A": "使用工作負載資料模型、一致性、查詢和事務要求，但以具有委派管理和 SCP 護欄的 AWS Organizations取代相連控制",
+          "B": "以AWS Transit Gateway處理主要需求，並整合IAM Identity Center",
+          "C": "把AWS Transit Gateway與具有範圍內資源共用的 AWS Resource Access Manager結合為單一平台設計",
+          "D": "以工作負載資料模型、一致性、查詢和事務要求處理主要需求，並整合IAM Identity Center作為相連控制"
         },
-        "explanation": "資料模型和存取模式決定了適當的資料庫技術。\n外觀或不相關的因素不會選擇資料儲存。"
+        "explanation": "工作負載資料模型、一致性、查詢和事務要求 負責架構的第一項需求，IAM Identity Center 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "sap-c02-d2-045",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An operations team supporting a critical workload needs a disaster recovery architecture with a defined RTO and RPO. Which process should begin the design?",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The team needs a disaster recovery architecture with a defined RTO and RPO. Which process should begin the design?",
     "options": {
-      "A": "Skip recovery tests",
-      "B": "Use one Availability Zone",
+      "A": "CloudFront with an origin access control and multi-Region strategy where needed",
+      "B": "API ingress, SQS buffering, and independently scaled workers",
       "C": "Translate RTO and RPO into recovery strategy and testable controls",
-      "D": "Choose the largest instance first"
+      "D": "Stateless application tiers behind a load balancer with a durable data layer"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nInstance size and a single AZ do not define disaster recovery.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Translate RTO and RPO into recovery strategy and testable controls for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊需要一個具有定義的 RTO 和 RPO 的災難復原架構。應該從哪個流程開始設計？",
+        "question": "組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。支援關鍵工作負載的營運團隊需要一個具有定義的 RTO 和 RPO 的災難復原架構。應該從哪個流程開始設計？",
         "options": {
-          "A": "跳過恢復測試",
-          "B": "使用一個可用區",
+          "A": "CloudFront 在需要時具有來源存取控制和多區域策略",
+          "B": "API 入口、SQS 緩衝和獨立擴展的工作線程",
           "C": "將 RTO 和 RPO 轉化為復原策略和可測試的控制",
-          "D": "首先選擇最大的執行個體"
+          "D": "負載平衡器後面的無狀態應用程式層具有持久性資料層"
         },
-        "explanation": "RTO和RPO決定了復原架構、容量和備份頻率。\n執行個體大小和單一可用區並不定義災難復原。"
+        "explanation": "RTO和RPO決定了復原架構、容量和備份頻率。\n其他選項適用於此領域的不同需求，但不能像 將 RTO 和 RPO 轉化為復原策略和可測試的控制 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d2-046",
-    "type": "single",
-    "question": "A data platform team needs a resilient web architecture with independent scaling tiers. Which pattern is appropriate?",
-    "options": {
-      "A": "One large instance for every tier",
-      "B": "Local session state only",
-      "C": "A public database",
-      "D": "Stateless application tiers behind a load balancer with a durable data layer"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Stateless tiers and managed data services scale independently and improve resilience.\nA single instance and public database create bottlenecks and exposure.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A data platform team is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team needs a resilient web architecture with independent scaling tiers. Which pattern is appropriate?",
+    "options": {
+      "A": "The workload data model, consistency, query, and transaction requirements",
+      "B": "Stateless application tiers behind a load balancer with a durable data layer",
+      "C": "CloudFront with an origin access control and multi-Region strategy where needed",
+      "D": "API ingress, SQS buffering, and independently scaled workers"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Stateless tiers and managed data services scale independently and improve resilience.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Stateless application tiers behind a load balancer with a durable data layer for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要具有獨立擴充層的彈性 Web 架構。哪種模式合適？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。資料平台團隊需要具有獨立擴充層的彈性 Web 架構。哪種模式合適？",
         "options": {
-          "A": "每層一個大型執行個體",
-          "B": "僅本地會話狀態",
-          "C": "公共資料庫",
-          "D": "負載平衡器後面的無狀態應用程式層具有持久性資料層"
+          "A": "工作負載資料模型、一致性、查詢和事務要求",
+          "B": "負載平衡器後面的無狀態應用程式層具有持久性資料層",
+          "C": "CloudFront 在需要時具有來源存取控制和多區域策略",
+          "D": "API 入口、SQS 緩衝和獨立擴展的工作線程"
         },
-        "explanation": "無狀態層和託管資料服務可以獨立擴展並提高彈性。\n單一執行個體和公共資料庫會造成瓶頸和暴露。"
+        "explanation": "無狀態層和託管資料服務可以獨立擴展並提高彈性。\n其他選項適用於此領域的不同需求，但不能像 負載平衡器後面的無狀態應用程式層具有持久性資料層 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d2-047",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A security-conscious engineering team must serve global users with low latency and protect a Regional origin. Which design fits?",
+    "question": "A security-conscious engineering team is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team must serve global users with low latency and protect a Regional origin. Which design fits?",
     "options": {
       "A": "CloudFront with an origin access control and multi-Region strategy where needed",
-      "B": "Send every request to one public instance",
-      "C": "Use Direct Connect for public users",
-      "D": "Disable caching"
+      "B": "API ingress, SQS buffering, and independently scaled workers",
+      "C": "The workload data model, consistency, query, and transaction requirements",
+      "D": "Translate RTO and RPO into recovery strategy and testable controls"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "CloudFront reduces latency and can protect a private origin.\nThe other choices add latency, cost, or exposure.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "CloudFront reduces latency and can protect a private origin.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide CloudFront with an origin access control and multi-Region strategy where needed for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊必須以低延遲為全球使用者提供服務並保護區域來源。哪種設計適合？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。具有安全意識的工程團隊必須以低延遲為全球使用者提供服務並保護區域來源。哪種設計適合？",
         "options": {
           "A": "CloudFront 在需要時具有來源存取控制和多區域策略",
-          "B": "將每個請求傳送到一個公共執行個體",
-          "C": "公用使用者使用 Direct Connect",
-          "D": "禁用快取"
+          "B": "API 入口、SQS 緩衝和獨立擴展的工作線程",
+          "C": "工作負載資料模型、一致性、查詢和事務要求",
+          "D": "將 RTO 和 RPO 轉化為復原策略和可測試的控制"
         },
-        "explanation": "CloudFront 減少了延遲並可以保護私有來源。\n其他選擇會增加延遲、成本或暴露。"
+        "explanation": "CloudFront 減少了延遲並可以保護私有來源。\n其他選項適用於此領域的不同需求，但不能像 CloudFront 在需要時具有來源存取控制和多區域策略 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d2-048",
-    "type": "single",
-    "question": "A company migrating an existing workload needs asynchronous processing for a large volume of requests. Which architecture should be considered?",
-    "options": {
-      "A": "A single shared administrator credential",
-      "B": "API ingress, SQS buffering, and independently scaled workers",
-      "C": "Synchronous calls to every worker",
-      "D": "One process with local state"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Queues decouple producers and workers and absorb bursts.\nSynchronous chains and shared credentials reduce resilience and security.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A company migrating an existing workload is redesigning one integrated end-to-end architecture. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The design must avoid unnecessary standby cost without weakening security controls or the availability objective. The workload needs asynchronous processing for a large volume of requests, and the same architecture needs a disaster recovery architecture with a defined RTO and RPO. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Use API ingress, SQS buffering, and independently scaled workers but replace the connected control with AWS Organizations with delegated administration and SCP guardrails",
+      "B": "Use AWS Transit Gateway for the primary requirement and integrate it with Translate RTO and RPO into recovery strategy and testable controls",
+      "C": "Combine AWS Transit Gateway with AWS Resource Access Manager with scoped resource shares as a single platform design",
+      "D": "Use API ingress, SQS buffering, and independently scaled workers for the primary requirement and integrate it with Translate RTO and RPO into recovery strategy and testable controls for the connected control"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "API ingress, SQS buffering, and independently scaled workers satisfies the first part of the architecture: Queues decouple producers and workers and absorb bursts. Translate RTO and RPO into recovery strategy and testable controls satisfies the connected requirement: RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司需要非同步處理大量請求。應該考慮哪種架構？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：受監管的公司需要非同步處理大量請求。 第二項需求：支援關鍵工作負載的營運團隊需要一個具有定義的 RTO 和 RPO 的災難復原架構。 此設計必須避免不必要的備用成本，同時不可削弱安全控制或可用性目標。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "單一共享管理員憑證",
-          "B": "API 入口、SQS 緩衝和獨立擴展的工作線程",
-          "C": "同步呼叫每個worker",
-          "D": "具有本地狀態的一個行程"
+          "A": "使用API 入口、SQS 緩衝和獨立擴展的工作線程，但以具有委派管理和 SCP 護欄的 AWS Organizations取代相連控制",
+          "B": "以AWS Transit Gateway處理主要需求，並整合將 RTO 和 RPO 轉化為復原策略和可測試的控制",
+          "C": "把AWS Transit Gateway與具有範圍內資源共用的 AWS Resource Access Manager結合為單一平台設計",
+          "D": "以API 入口、SQS 緩衝和獨立擴展的工作線程處理主要需求，並整合將 RTO 和 RPO 轉化為復原策略和可測試的控制作為相連控制"
         },
-        "explanation": "佇列將生產者和工人解耦並吸收突發。\n同步鍊和共享憑證降低了彈性和安全性。"
+        "explanation": "API 入口、SQS 緩衝和獨立擴展的工作線程 負責架構的第一項需求，將 RTO 和 RPO 轉化為復原策略和可測試的控制 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "sap-c02-d2-049",
-    "type": "single",
-    "question": "A team with strict recovery objectives must choose between relational transactions and flexible key-value access. Which factor should drive the selection?",
-    "options": {
-      "A": "The number of DNS records",
-      "B": "The color of the console",
-      "C": "The workload data model, consistency, query, and transaction requirements",
-      "D": "The service name only"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "Data model and access patterns determine the appropriate database technology.\nCosmetic or unrelated factors do not select a data store.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A team with strict recovery objectives is planning two independent production changes. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The first team must choose between relational transactions and flexible key-value access. A second team needs a disaster recovery architecture with a defined RTO and RPO. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Translate RTO and RPO into recovery strategy and testable controls",
+      "B": "Stateless application tiers behind a load balancer with a durable data layer",
+      "C": "CloudFront with an origin access control and multi-Region strategy where needed",
+      "D": "API ingress, SQS buffering, and independently scaled workers",
+      "E": "The workload data model, consistency, query, and transaction requirements"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "The workload data model, consistency, query, and transaction requirements meets the first requirement: Data model and access patterns determine the appropriate database technology. Translate RTO and RPO into recovery strategy and testable controls meets the second requirement: RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有嚴格恢復目標的團隊必須在關係事務和靈活的鍵值存取之間進行選擇。哪個因素應該驅動選擇？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。第一項需求：支援關鍵工作負載的營運團隊需要一個具有定義的 RTO 和 RPO 的災難復原架構。第二項需求：準備增加流量的新創公司必須在關係事務和靈活的鍵值存取之間進行選擇。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "DNS 記錄數",
-          "B": "控制台的顏色",
-          "C": "工作負載資料模型、一致性、查詢和事務要求",
-          "D": "僅服務名稱"
+          "A": "將 RTO 和 RPO 轉化為復原策略和可測試的控制",
+          "B": "負載平衡器後面的無狀態應用程式層具有持久性資料層",
+          "C": "CloudFront 在需要時具有來源存取控制和多區域策略",
+          "D": "API 入口、SQS 緩衝和獨立擴展的工作線程",
+          "E": "工作負載資料模型、一致性、查詢和事務要求"
         },
-        "explanation": "資料模型和存取模式決定了適當的資料庫技術。\n外觀或不相關的因素不會選擇資料儲存。"
+        "explanation": "將 RTO 和 RPO 轉化為復原策略和可測試的控制 符合第一項需求：RTO和RPO決定了復原架構、容量和備份頻率。 工作負載資料模型、一致性、查詢和事務要求 符合第二項需求：資料模型和存取模式決定了適當的資料庫技術。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "sap-c02-d2-050",
-    "type": "single",
-    "question": "A developer team preparing a release needs a disaster recovery architecture with a defined RTO and RPO. Which process should begin the design?",
-    "options": {
-      "A": "Choose the largest instance first",
-      "B": "Skip recovery tests",
-      "C": "Use one Availability Zone",
-      "D": "Translate RTO and RPO into recovery strategy and testable controls"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nInstance size and a single AZ do not define disaster recovery.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A developer team preparing a release is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team needs a disaster recovery architecture with a defined RTO and RPO. Which process should begin the design?",
+    "options": {
+      "A": "API ingress, SQS buffering, and independently scaled workers",
+      "B": "Translate RTO and RPO into recovery strategy and testable controls",
+      "C": "Stateless application tiers behind a load balancer with a durable data layer",
+      "D": "CloudFront with an origin access control and multi-Region strategy where needed"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Translate RTO and RPO into recovery strategy and testable controls for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊需要一個具有定義的 RTO 和 RPO 的災難復原架構。應該從哪個流程開始設計？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。準備發布的開發團隊需要一個具有定義的 RTO 和 RPO 的災難復原架構。應該從哪個流程開始設計？",
         "options": {
-          "A": "首先選擇最大的執行個體",
-          "B": "跳過恢復測試",
-          "C": "使用一個可用區",
-          "D": "將 RTO 和 RPO 轉化為復原策略和可測試的控制"
+          "A": "API 入口、SQS 緩衝和獨立擴展的工作線程",
+          "B": "將 RTO 和 RPO 轉化為復原策略和可測試的控制",
+          "C": "負載平衡器後面的無狀態應用程式層具有持久性資料層",
+          "D": "CloudFront 在需要時具有來源存取控制和多區域策略"
         },
-        "explanation": "RTO和RPO決定了復原架構、容量和備份頻率。\n執行個體大小和單一可用區並不定義災難復原。"
+        "explanation": "RTO和RPO決定了復原架構、容量和備份頻率。\n其他選項適用於此領域的不同需求，但不能像 將 RTO 和 RPO 轉化為復原策略和可測試的控制 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d2-051",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An enterprise with several AWS Regions needs a resilient web architecture with independent scaling tiers. Which pattern is appropriate?",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team needs a resilient web architecture with independent scaling tiers. Which pattern is appropriate?",
     "options": {
       "A": "Stateless application tiers behind a load balancer with a durable data layer",
-      "B": "One large instance for every tier",
-      "C": "Local session state only",
-      "D": "A public database"
+      "B": "CloudFront with an origin access control and multi-Region strategy where needed",
+      "C": "API ingress, SQS buffering, and independently scaled workers",
+      "D": "The workload data model, consistency, query, and transaction requirements"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Stateless tiers and managed data services scale independently and improve resilience.\nA single instance and public database create bottlenecks and exposure.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Stateless tiers and managed data services scale independently and improve resilience.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Stateless application tiers behind a load balancer with a durable data layer for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業需要具有獨立擴充層的彈性 Web 架構。哪種模式合適？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。擁有多個 AWS 區域的企業需要具有獨立擴充層的彈性 Web 架構。哪種模式合適？",
         "options": {
           "A": "負載平衡器後面的無狀態應用程式層具有持久性資料層",
-          "B": "每層一個大型執行個體",
-          "C": "僅本地會話狀態",
-          "D": "公共資料庫"
+          "B": "CloudFront 在需要時具有來源存取控制和多區域策略",
+          "C": "API 入口、SQS 緩衝和獨立擴展的工作線程",
+          "D": "工作負載資料模型、一致性、查詢和事務要求"
         },
-        "explanation": "無狀態層和託管資料服務可以獨立擴展並提高彈性。\n單一執行個體和公共資料庫會造成瓶頸和暴露。"
+        "explanation": "無狀態層和託管資料服務可以獨立擴展並提高彈性。\n其他選項適用於此領域的不同需求，但不能像 負載平衡器後面的無狀態應用程式層具有持久性資料層 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d2-052",
-    "type": "single",
-    "question": "A service owner reviewing an incident must serve global users with low latency and protect a Regional origin. Which design fits?",
-    "options": {
-      "A": "Disable caching",
-      "B": "CloudFront with an origin access control and multi-Region strategy where needed",
-      "C": "Send every request to one public instance",
-      "D": "Use Direct Connect for public users"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "CloudFront reduces latency and can protect a private origin.\nThe other choices add latency, cost, or exposure.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A service owner reviewing an incident is redesigning one integrated end-to-end architecture. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The organization will accept additional managed-service cost only when it measurably improves security and availability with less operational effort. The workload must serve global users with low latency and protect a Regional origin, and the same architecture must replace a self-managed cache with a managed service. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Use CloudFront with an origin access control and multi-Region strategy where needed but replace the connected control with AWS Organizations with delegated administration and SCP guardrails",
+      "B": "Use AWS Transit Gateway for the primary requirement and integrate it with Required data structures, latency, durability, and failover behavior",
+      "C": "Combine AWS Transit Gateway with AWS Resource Access Manager with scoped resource shares as a single platform design",
+      "D": "Use CloudFront with an origin access control and multi-Region strategy where needed for the primary requirement and integrate it with Required data structures, latency, durability, and failover behavior for the connected control"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudFront with an origin access control and multi-Region strategy where needed satisfies the first part of the architecture: CloudFront reduces latency and can protect a private origin. Required data structures, latency, durability, and failover behavior satisfies the connected requirement: Cache selection should match workload behavior and resilience requirements.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務所有者必須以低延遲為全球使用者提供服務並保護區域來源。哪種設計適合？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：多帳戶平台團隊必須為全球使用者提供低延遲服務並保護區域起源。 第二項需求：在共享環境中工作的 AWS 管理員必須將自我管理的快取替換為託管服務。 只有在託管服務能以較低營運負擔明確改善安全性與可用性時，組織才會接受額外成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "禁用快取",
-          "B": "CloudFront 在需要時具有來源存取控制和多區域策略",
-          "C": "將每個請求傳送到一個公共執行個體",
-          "D": "公用使用者使用 Direct Connect"
+          "A": "使用CloudFront 在需要時具有來源存取控制和多區域策略，但以具有委派管理和 SCP 護欄的 AWS Organizations取代相連控制",
+          "B": "以AWS Transit Gateway處理主要需求，並整合所需的資料結構、延遲、持久性和故障轉移行為",
+          "C": "把AWS Transit Gateway與具有範圍內資源共用的 AWS Resource Access Manager結合為單一平台設計",
+          "D": "以CloudFront 在需要時具有來源存取控制和多區域策略處理主要需求，並整合所需的資料結構、延遲、持久性和故障轉移行為作為相連控制"
         },
-        "explanation": "CloudFront 減少了延遲並可以保護私有來源。\n其他選擇會增加延遲、成本或暴露。"
+        "explanation": "CloudFront 在需要時具有來源存取控制和多區域策略 負責架構的第一項需求，所需的資料結構、延遲、持久性和故障轉移行為 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "sap-c02-d2-053",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team optimizing an existing implementation needs asynchronous processing for a large volume of requests. Which architecture should be considered?",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team needs asynchronous processing for a large volume of requests. Which architecture should be considered?",
     "options": {
-      "A": "One process with local state",
-      "B": "A single shared administrator credential",
+      "A": "Translate RTO and RPO into recovery strategy and testable controls",
+      "B": "Stateless application tiers behind a load balancer with a durable data layer",
       "C": "API ingress, SQS buffering, and independently scaled workers",
-      "D": "Synchronous calls to every worker"
+      "D": "The workload data model, consistency, query, and transaction requirements"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Queues decouple producers and workers and absorb bursts.\nSynchronous chains and shared credentials reduce resilience and security.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Queues decouple producers and workers and absorb bursts.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide API ingress, SQS buffering, and independently scaled workers for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實現的團隊需要非同步處理大量請求。應該考慮哪種架構？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。優化現有實現的團隊需要非同步處理大量請求。應該考慮哪種架構？",
         "options": {
-          "A": "具有本地狀態的一個行程",
-          "B": "單一共享管理員憑證",
+          "A": "將 RTO 和 RPO 轉化為復原策略和可測試的控制",
+          "B": "負載平衡器後面的無狀態應用程式層具有持久性資料層",
           "C": "API 入口、SQS 緩衝和獨立擴展的工作線程",
-          "D": "同步呼叫每個worker"
+          "D": "工作負載資料模型、一致性、查詢和事務要求"
         },
-        "explanation": "佇列將生產者和工人解耦並吸收突發。\n同步鍊和共享憑證降低了彈性和安全性。"
+        "explanation": "佇列將生產者和工人解耦並吸收突發。\n其他選項適用於此領域的不同需求，但不能像 API 入口、SQS 緩衝和獨立擴展的工作線程 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d2-054",
-    "type": "single",
-    "question": "A company introducing an automated workflow must choose between relational transactions and flexible key-value access. Which factor should drive the selection?",
-    "options": {
-      "A": "The service name only",
-      "B": "The number of DNS records",
-      "C": "The color of the console",
-      "D": "The workload data model, consistency, query, and transaction requirements"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Data model and access patterns determine the appropriate database technology.\nCosmetic or unrelated factors do not select a data store.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A company introducing an automated workflow is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team must choose between relational transactions and flexible key-value access. Which factor should drive the selection?",
+    "options": {
+      "A": "CloudFront with an origin access control and multi-Region strategy where needed",
+      "B": "The workload data model, consistency, query, and transaction requirements",
+      "C": "Translate RTO and RPO into recovery strategy and testable controls",
+      "D": "Stateless application tiers behind a load balancer with a durable data layer"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Data model and access patterns determine the appropriate database technology.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide The workload data model, consistency, query, and transaction requirements for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司必須在關係事務和靈活的鍵值存取之間進行選擇。哪個因素應該驅動選擇？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。引入自動化工作流程的公司必須在關係事務和靈活的鍵值存取之間進行選擇。哪個因素應該驅動選擇？",
         "options": {
-          "A": "僅服務名稱",
-          "B": "DNS 記錄數",
-          "C": "控制台的顏色",
-          "D": "工作負載資料模型、一致性、查詢和事務要求"
+          "A": "CloudFront 在需要時具有來源存取控制和多區域策略",
+          "B": "工作負載資料模型、一致性、查詢和事務要求",
+          "C": "將 RTO 和 RPO 轉化為復原策略和可測試的控制",
+          "D": "負載平衡器後面的無狀態應用程式層具有持久性資料層"
         },
-        "explanation": "資料模型和存取模式決定了適當的資料庫技術。\n外觀或不相關的因素不會選擇資料儲存。"
+        "explanation": "資料模型和存取模式決定了適當的資料庫技術。\n其他選項適用於此領域的不同需求，但不能像 工作負載資料模型、一致性、查詢和事務要求 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d2-055",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An AWS administrator working in a shared environment needs a disaster recovery architecture with a defined RTO and RPO. Which process should begin the design?",
+    "question": "An AWS administrator working in a shared environment is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team needs a disaster recovery architecture with a defined RTO and RPO. Which process should begin the design?",
     "options": {
       "A": "Translate RTO and RPO into recovery strategy and testable controls",
-      "B": "Choose the largest instance first",
-      "C": "Skip recovery tests",
-      "D": "Use one Availability Zone"
+      "B": "Stateless application tiers behind a load balancer with a durable data layer",
+      "C": "CloudFront with an origin access control and multi-Region strategy where needed",
+      "D": "API ingress, SQS buffering, and independently scaled workers"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nInstance size and a single AZ do not define disaster recovery.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Translate RTO and RPO into recovery strategy and testable controls for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "在共用環境中工作的 AWS 管理員需要一個具有定義的 RTO 和 RPO 的災難復原架構。應該從哪個流程開始設計？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。在共用環境中工作的 AWS 管理員需要一個具有定義的 RTO 和 RPO 的災難復原架構。應該從哪個流程開始設計？",
         "options": {
           "A": "將 RTO 和 RPO 轉化為復原策略和可測試的控制",
-          "B": "首先選擇最大的執行個體",
-          "C": "跳過恢復測試",
-          "D": "使用一個可用區"
+          "B": "負載平衡器後面的無狀態應用程式層具有持久性資料層",
+          "C": "CloudFront 在需要時具有來源存取控制和多區域策略",
+          "D": "API 入口、SQS 緩衝和獨立擴展的工作線程"
         },
-        "explanation": "RTO和RPO決定了復原架構、容量和備份頻率。\n執行個體大小和單一可用區並不定義災難復原。"
+        "explanation": "RTO和RPO決定了復原架構、容量和備份頻率。\n其他選項適用於此領域的不同需求，但不能像 將 RTO 和 RPO 轉化為復原策略和可測試的控制 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d2-056",
-    "type": "single",
-    "question": "A customer-facing application team needs a resilient web architecture with independent scaling tiers. Which pattern is appropriate?",
-    "options": {
-      "A": "A public database",
-      "B": "Stateless application tiers behind a load balancer with a durable data layer",
-      "C": "One large instance for every tier",
-      "D": "Local session state only"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Stateless tiers and managed data services scale independently and improve resilience.\nA single instance and public database create bottlenecks and exposure.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A customer-facing application team is redesigning one integrated end-to-end architecture. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The architecture must limit blast radius, preserve availability during change, and control cost through automation instead of permanent overprovisioning. The workload needs a resilient web architecture with independent scaling tiers, and the same architecture needs to run a legacy database temporarily while a managed database migration is prepared. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Use Stateless application tiers behind a load balancer with a durable data layer but replace the connected control with AWS Organizations with delegated administration and SCP guardrails",
+      "B": "Use AWS Transit Gateway for the primary requirement and integrate it with Separate migration phases and define an explicit decommission plan",
+      "C": "Combine AWS Transit Gateway with AWS Resource Access Manager with scoped resource shares as a single platform design",
+      "D": "Use Stateless application tiers behind a load balancer with a durable data layer for the primary requirement and integrate it with Separate migration phases and define an explicit decommission plan for the connected control"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Stateless application tiers behind a load balancer with a durable data layer satisfies the first part of the architecture: Stateless tiers and managed data services scale independently and improve resilience. Separate migration phases and define an explicit decommission plan satisfies the connected requirement: Phased migration with reconciliation and decommission criteria reduces operational and data risk.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊需要具有獨立擴展層的彈性 Web 架構。哪種模式合適？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：製作團隊需要具有獨立擴充層的彈性 Web 架構。 第二項需求：支援關鍵工作負載的營運團隊需要在準備託管資料庫遷移時暫時執行舊資料庫。 此架構必須限制影響範圍、在變更期間維持可用性，並透過自動化控制成本，而不是長期過度佈建。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "公共資料庫",
-          "B": "負載平衡器後面的無狀態應用程式層具有持久性資料層",
-          "C": "每層一個大型執行個體",
-          "D": "僅本地會話狀態"
+          "A": "使用負載平衡器後面的無狀態應用程式層具有持久性資料層，但以具有委派管理和 SCP 護欄的 AWS Organizations取代相連控制",
+          "B": "以AWS Transit Gateway處理主要需求，並整合分離遷移階段並定義明確的退役計劃",
+          "C": "把AWS Transit Gateway與具有範圍內資源共用的 AWS Resource Access Manager結合為單一平台設計",
+          "D": "以負載平衡器後面的無狀態應用程式層具有持久性資料層處理主要需求，並整合分離遷移階段並定義明確的退役計劃作為相連控制"
         },
-        "explanation": "無狀態層和託管資料服務可以獨立擴展並提高彈性。\n單一執行個體和公共資料庫會造成瓶頸和暴露。"
+        "explanation": "負載平衡器後面的無狀態應用程式層具有持久性資料層 負責架構的第一項需求，分離遷移階段並定義明確的退役計劃 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "sap-c02-d2-057",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A platform team standardizing its AWS deployments must serve global users with low latency and protect a Regional origin. Which design fits?",
+    "question": "A platform team standardizing its AWS deployments is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team must serve global users with low latency and protect a Regional origin. Which design fits?",
     "options": {
-      "A": "Use Direct Connect for public users",
-      "B": "Disable caching",
+      "A": "The workload data model, consistency, query, and transaction requirements",
+      "B": "Translate RTO and RPO into recovery strategy and testable controls",
       "C": "CloudFront with an origin access control and multi-Region strategy where needed",
-      "D": "Send every request to one public instance"
+      "D": "API ingress, SQS buffering, and independently scaled workers"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "CloudFront reduces latency and can protect a private origin.\nThe other choices add latency, cost, or exposure.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "CloudFront reduces latency and can protect a private origin.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide CloudFront with an origin access control and multi-Region strategy where needed for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊必須以低延遲為全球使用者提供服務並保護區域來源。哪種設計適合？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。標準化其 AWS 部署的平台團隊必須以低延遲為全球使用者提供服務並保護區域來源。哪種設計適合？",
         "options": {
-          "A": "公用使用者使用 Direct Connect",
-          "B": "禁用快取",
+          "A": "工作負載資料模型、一致性、查詢和事務要求",
+          "B": "將 RTO 和 RPO 轉化為復原策略和可測試的控制",
           "C": "CloudFront 在需要時具有來源存取控制和多區域策略",
-          "D": "將每個請求傳送到一個公共執行個體"
+          "D": "API 入口、SQS 緩衝和獨立擴展的工作線程"
         },
-        "explanation": "CloudFront 減少了延遲並可以保護私有來源。\n其他選擇會增加延遲、成本或暴露。"
+        "explanation": "CloudFront 減少了延遲並可以保護私有來源。\n其他選項適用於此領域的不同需求，但不能像 CloudFront 在需要時具有來源存取控制和多區域策略 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d2-058",
-    "type": "single",
-    "question": "A team preparing evidence for an audit needs asynchronous processing for a large volume of requests. Which architecture should be considered?",
-    "options": {
-      "A": "Synchronous calls to every worker",
-      "B": "One process with local state",
-      "C": "A single shared administrator credential",
-      "D": "API ingress, SQS buffering, and independently scaled workers"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Queues decouple producers and workers and absorb bursts.\nSynchronous chains and shared credentials reduce resilience and security.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team preparing evidence for an audit is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team needs asynchronous processing for a large volume of requests. Which architecture should be considered?",
+    "options": {
+      "A": "Stateless application tiers behind a load balancer with a durable data layer",
+      "B": "API ingress, SQS buffering, and independently scaled workers",
+      "C": "The workload data model, consistency, query, and transaction requirements",
+      "D": "Translate RTO and RPO into recovery strategy and testable controls"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Queues decouple producers and workers and absorb bursts.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide API ingress, SQS buffering, and independently scaled workers for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備審計證據的團隊需要非同步處理大量請求。應該考慮哪種架構？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。準備審計證據的團隊需要非同步處理大量請求。應該考慮哪種架構？",
         "options": {
-          "A": "同步呼叫每個worker",
-          "B": "具有本地狀態的一個行程",
-          "C": "單一共享管理員憑證",
-          "D": "API 入口、SQS 緩衝和獨立擴展的工作線程"
+          "A": "負載平衡器後面的無狀態應用程式層具有持久性資料層",
+          "B": "API 入口、SQS 緩衝和獨立擴展的工作線程",
+          "C": "工作負載資料模型、一致性、查詢和事務要求",
+          "D": "將 RTO 和 RPO 轉化為復原策略和可測試的控制"
         },
-        "explanation": "佇列將生產者和工人解耦並吸收突發。\n同步鍊和共享憑證降低了彈性和安全性。"
+        "explanation": "佇列將生產者和工人解耦並吸收突發。\n其他選項適用於此領域的不同需求，但不能像 API 入口、SQS 緩衝和獨立擴展的工作線程 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d2-059",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A business replacing a manual process must choose between relational transactions and flexible key-value access. Which factor should drive the selection?",
+    "question": "A business replacing a manual process is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team must choose between relational transactions and flexible key-value access. Which factor should drive the selection?",
     "options": {
       "A": "The workload data model, consistency, query, and transaction requirements",
-      "B": "The service name only",
-      "C": "The number of DNS records",
-      "D": "The color of the console"
+      "B": "Translate RTO and RPO into recovery strategy and testable controls",
+      "C": "Stateless application tiers behind a load balancer with a durable data layer",
+      "D": "CloudFront with an origin access control and multi-Region strategy where needed"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Data model and access patterns determine the appropriate database technology.\nCosmetic or unrelated factors do not select a data store.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Data model and access patterns determine the appropriate database technology.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide The workload data model, consistency, query, and transaction requirements for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "取代手動流程的企業必須在關係事務和靈活的鍵值存取之間進行選擇。哪個因素應該驅動選擇？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。取代手動流程的企業必須在關係事務和靈活的鍵值存取之間進行選擇。哪個因素應該驅動選擇？",
         "options": {
           "A": "工作負載資料模型、一致性、查詢和事務要求",
-          "B": "僅服務名稱",
-          "C": "DNS 記錄數",
-          "D": "控制台的顏色"
+          "B": "將 RTO 和 RPO 轉化為復原策略和可測試的控制",
+          "C": "負載平衡器後面的無狀態應用程式層具有持久性資料層",
+          "D": "CloudFront 在需要時具有來源存取控制和多區域策略"
         },
-        "explanation": "資料模型和存取模式決定了適當的資料庫技術。\n外觀或不相關的因素不會選擇資料儲存。"
+        "explanation": "資料模型和存取模式決定了適當的資料庫技術。\n其他選項適用於此領域的不同需求，但不能像 工作負載資料模型、一致性、查詢和事務要求 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d2-060",
-    "type": "single",
-    "question": "A team validating a design against the exam guide needs a disaster recovery architecture with a defined RTO and RPO. Which process should begin the design?",
-    "options": {
-      "A": "Use one Availability Zone",
-      "B": "Translate RTO and RPO into recovery strategy and testable controls",
-      "C": "Choose the largest instance first",
-      "D": "Skip recovery tests"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nInstance size and a single AZ do not define disaster recovery.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team validating a design against the exam guide is redesigning one integrated end-to-end architecture. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The selected controls must provide auditable security, predictable availability, and the lowest operational cost that still satisfies both requirements. The workload needs a disaster recovery architecture with a defined RTO and RPO, and the same architecture needs a central identity experience for workforce users across many accounts. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Use Translate RTO and RPO into recovery strategy and testable controls but replace the connected control with AWS Organizations with delegated administration and SCP guardrails",
+      "B": "Use AWS Transit Gateway for the primary requirement and integrate it with IAM Identity Center",
+      "C": "Combine AWS Transit Gateway with AWS Resource Access Manager with scoped resource shares as a single platform design",
+      "D": "Use Translate RTO and RPO into recovery strategy and testable controls for the primary requirement and integrate it with IAM Identity Center for the connected control"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Translate RTO and RPO into recovery strategy and testable controls satisfies the first part of the architecture: RTO and RPO determine the recovery architecture, capacity, and backup frequency. IAM Identity Center satisfies the connected requirement: IAM Identity Center provides workforce access and permission sets across accounts.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊需要一個具有定義的 RTO 和 RPO 的災難復原架構。應該從哪個流程開始設計？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：支援關鍵工作負載的營運團隊需要一個具有定義的 RTO 和 RPO 的災難復原架構。 第二項需求：在共用環境中工作的 AWS 管理員需要為多個帳戶中的員工使用者提供集中身分體驗。 所選控制必須提供可稽核的安全性、可預測的可用性，以及在滿足兩項要求前提下最低的營運成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "使用一個可用區",
-          "B": "將 RTO 和 RPO 轉化為復原策略和可測試的控制",
-          "C": "首先選擇最大的執行個體",
-          "D": "跳過恢復測試"
+          "A": "使用將 RTO 和 RPO 轉化為復原策略和可測試的控制，但以具有委派管理和 SCP 護欄的 AWS Organizations取代相連控制",
+          "B": "以AWS Transit Gateway處理主要需求，並整合IAM Identity Center",
+          "C": "把AWS Transit Gateway與具有範圍內資源共用的 AWS Resource Access Manager結合為單一平台設計",
+          "D": "以將 RTO 和 RPO 轉化為復原策略和可測試的控制處理主要需求，並整合IAM Identity Center作為相連控制"
         },
-        "explanation": "RTO和RPO決定了復原架構、容量和備份頻率。\n執行個體大小和單一可用區並不定義災難復原。"
+        "explanation": "將 RTO 和 RPO 轉化為復原策略和可測試的控制 負責架構的第一項需求，IAM Identity Center 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "sap-c02-d2-061",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A production team needs a resilient web architecture with independent scaling tiers. Which pattern is appropriate?",
+    "question": "A production team is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team needs a resilient web architecture with independent scaling tiers. Which pattern is appropriate?",
     "options": {
-      "A": "Local session state only",
-      "B": "A public database",
+      "A": "API ingress, SQS buffering, and independently scaled workers",
+      "B": "The workload data model, consistency, query, and transaction requirements",
       "C": "Stateless application tiers behind a load balancer with a durable data layer",
-      "D": "One large instance for every tier"
+      "D": "CloudFront with an origin access control and multi-Region strategy where needed"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Stateless tiers and managed data services scale independently and improve resilience.\nA single instance and public database create bottlenecks and exposure.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Stateless tiers and managed data services scale independently and improve resilience.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Stateless application tiers behind a load balancer with a durable data layer for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "製作團隊需要具有獨立擴充層的彈性 Web 架構。哪種模式合適？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。製作團隊需要具有獨立擴充層的彈性 Web 架構。哪種模式合適？",
         "options": {
-          "A": "僅本地會話狀態",
-          "B": "公共資料庫",
+          "A": "API 入口、SQS 緩衝和獨立擴展的工作線程",
+          "B": "工作負載資料模型、一致性、查詢和事務要求",
           "C": "負載平衡器後面的無狀態應用程式層具有持久性資料層",
-          "D": "每層一個大型執行個體"
+          "D": "CloudFront 在需要時具有來源存取控制和多區域策略"
         },
-        "explanation": "無狀態層和託管資料服務可以獨立擴展並提高彈性。\n單一執行個體和公共資料庫會造成瓶頸和暴露。"
+        "explanation": "無狀態層和託管資料服務可以獨立擴展並提高彈性。\n其他選項適用於此領域的不同需求，但不能像 負載平衡器後面的無狀態應用程式層具有持久性資料層 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d2-062",
-    "type": "single",
-    "question": "A multi-account platform team must serve global users with low latency and protect a Regional origin. Which design fits?",
-    "options": {
-      "A": "Send every request to one public instance",
-      "B": "Use Direct Connect for public users",
-      "C": "Disable caching",
-      "D": "CloudFront with an origin access control and multi-Region strategy where needed"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "CloudFront reduces latency and can protect a private origin.\nThe other choices add latency, cost, or exposure.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A multi-account platform team is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team must serve global users with low latency and protect a Regional origin. Which design fits?",
+    "options": {
+      "A": "Translate RTO and RPO into recovery strategy and testable controls",
+      "B": "CloudFront with an origin access control and multi-Region strategy where needed",
+      "C": "API ingress, SQS buffering, and independently scaled workers",
+      "D": "The workload data model, consistency, query, and transaction requirements"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudFront reduces latency and can protect a private origin.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide CloudFront with an origin access control and multi-Region strategy where needed for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊必須為全球使用者提供低延遲服務並保護區域起源。哪種設計適合？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。多帳戶平台團隊必須為全球使用者提供低延遲服務並保護區域起源。哪種設計適合？",
         "options": {
-          "A": "將每個請求傳送到一個公共執行個體",
-          "B": "公用使用者使用 Direct Connect",
-          "C": "禁用快取",
-          "D": "CloudFront 在需要時具有來源存取控制和多區域策略"
+          "A": "將 RTO 和 RPO 轉化為復原策略和可測試的控制",
+          "B": "CloudFront 在需要時具有來源存取控制和多區域策略",
+          "C": "API 入口、SQS 緩衝和獨立擴展的工作線程",
+          "D": "工作負載資料模型、一致性、查詢和事務要求"
         },
-        "explanation": "CloudFront 減少了延遲並可以保護私有來源。\n其他選擇會增加延遲、成本或暴露。"
+        "explanation": "CloudFront 減少了延遲並可以保護私有來源。\n其他選項適用於此領域的不同需求，但不能像 CloudFront 在需要時具有來源存取控制和多區域策略 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "sap-c02-d2-063",
-    "type": "single",
-    "question": "A regulated company needs asynchronous processing for a large volume of requests. Which architecture should be considered?",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A regulated company is planning two independent production changes. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The first team needs asynchronous processing for a large volume of requests. A second team must choose between relational transactions and flexible key-value access. Which TWO actions satisfy these requirements?",
     "options": {
       "A": "API ingress, SQS buffering, and independently scaled workers",
-      "B": "Synchronous calls to every worker",
-      "C": "One process with local state",
-      "D": "A single shared administrator credential"
+      "B": "The workload data model, consistency, query, and transaction requirements",
+      "C": "Translate RTO and RPO into recovery strategy and testable controls",
+      "D": "Stateless application tiers behind a load balancer with a durable data layer",
+      "E": "CloudFront with an origin access control and multi-Region strategy where needed"
     },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "Queues decouple producers and workers and absorb bursts.\nSynchronous chains and shared credentials reduce resilience and security.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "API ingress, SQS buffering, and independently scaled workers meets the first requirement: Queues decouple producers and workers and absorb bursts. The workload data model, consistency, query, and transaction requirements meets the second requirement: Data model and access patterns determine the appropriate database technology.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "受監管的公司需要非同步處理大量請求。應該考慮哪種架構？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。第一項需求：受監管的公司需要非同步處理大量請求。第二項需求：準備增加流量的新創公司必須在關係事務和靈活的鍵值存取之間進行選擇。哪兩項操作可以滿足這些需求？",
         "options": {
           "A": "API 入口、SQS 緩衝和獨立擴展的工作線程",
-          "B": "同步呼叫每個worker",
-          "C": "具有本地狀態的一個行程",
-          "D": "單一共享管理員憑證"
+          "B": "工作負載資料模型、一致性、查詢和事務要求",
+          "C": "將 RTO 和 RPO 轉化為復原策略和可測試的控制",
+          "D": "負載平衡器後面的無狀態應用程式層具有持久性資料層",
+          "E": "CloudFront 在需要時具有來源存取控制和多區域策略"
         },
-        "explanation": "佇列將生產者和工人解耦並吸收突發。\n同步鍊和共享憑證降低了彈性和安全性。"
+        "explanation": "API 入口、SQS 緩衝和獨立擴展的工作線程 符合第一項需求：佇列將生產者和工人解耦並吸收突發。 工作負載資料模型、一致性、查詢和事務要求 符合第二項需求：資料模型和存取模式決定了適當的資料庫技術。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "sap-c02-d2-064",
-    "type": "single",
-    "question": "A startup preparing for a traffic increase must choose between relational transactions and flexible key-value access. Which factor should drive the selection?",
-    "options": {
-      "A": "The color of the console",
-      "B": "The workload data model, consistency, query, and transaction requirements",
-      "C": "The service name only",
-      "D": "The number of DNS records"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Data model and access patterns determine the appropriate database technology.\nCosmetic or unrelated factors do not select a data store.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase is redesigning one integrated end-to-end architecture. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The design must keep recurring cost proportional to use, enforce least privilege, and remain available during a component or Availability Zone failure. The workload must choose between relational transactions and flexible key-value access, and the same architecture needs a disaster recovery architecture with a defined RTO and RPO. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Use The workload data model, consistency, query, and transaction requirements but replace the connected control with AWS Organizations with delegated administration and SCP guardrails",
+      "B": "Use AWS Transit Gateway for the primary requirement and integrate it with Translate RTO and RPO into recovery strategy and testable controls",
+      "C": "Combine AWS Transit Gateway with AWS Resource Access Manager with scoped resource shares as a single platform design",
+      "D": "Use The workload data model, consistency, query, and transaction requirements for the primary requirement and integrate it with Translate RTO and RPO into recovery strategy and testable controls for the connected control"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "The workload data model, consistency, query, and transaction requirements satisfies the first part of the architecture: Data model and access patterns determine the appropriate database technology. Translate RTO and RPO into recovery strategy and testable controls satisfies the connected requirement: RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司必須在關係事務和靈活的鍵值存取之間進行選擇。哪個因素應該驅動選擇？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：準備增加流量的新創公司必須在關係事務和靈活的鍵值存取之間進行選擇。 第二項需求：支援關鍵工作負載的營運團隊需要一個具有定義的 RTO 和 RPO 的災難復原架構。 此設計必須讓持續成本與實際用量相符、落實最低權限，並在元件或可用區域發生故障時維持可用。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "控制台的顏色",
-          "B": "工作負載資料模型、一致性、查詢和事務要求",
-          "C": "僅服務名稱",
-          "D": "DNS 記錄數"
+          "A": "使用工作負載資料模型、一致性、查詢和事務要求，但以具有委派管理和 SCP 護欄的 AWS Organizations取代相連控制",
+          "B": "以AWS Transit Gateway處理主要需求，並整合將 RTO 和 RPO 轉化為復原策略和可測試的控制",
+          "C": "把AWS Transit Gateway與具有範圍內資源共用的 AWS Resource Access Manager結合為單一平台設計",
+          "D": "以工作負載資料模型、一致性、查詢和事務要求處理主要需求，並整合將 RTO 和 RPO 轉化為復原策略和可測試的控制作為相連控制"
         },
-        "explanation": "資料模型和存取模式決定了適當的資料庫技術。\n外觀或不相關的因素不會選擇資料儲存。"
+        "explanation": "工作負載資料模型、一致性、查詢和事務要求 負責架構的第一項需求，將 RTO 和 RPO 轉化為復原策略和可測試的控制 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "sap-c02-d2-065",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An operations team supporting a critical workload needs a disaster recovery architecture with a defined RTO and RPO. Which process should begin the design?",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team needs a disaster recovery architecture with a defined RTO and RPO. Which process should begin the design?",
     "options": {
-      "A": "Skip recovery tests",
-      "B": "Use one Availability Zone",
+      "A": "CloudFront with an origin access control and multi-Region strategy where needed",
+      "B": "API ingress, SQS buffering, and independently scaled workers",
       "C": "Translate RTO and RPO into recovery strategy and testable controls",
-      "D": "Choose the largest instance first"
+      "D": "Stateless application tiers behind a load balancer with a durable data layer"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nInstance size and a single AZ do not define disaster recovery.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "RTO and RPO determine the recovery architecture, capacity, and backup frequency.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Translate RTO and RPO into recovery strategy and testable controls for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊需要一個具有定義的 RTO 和 RPO 的災難復原架構。應該從哪個流程開始設計？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。支援關鍵工作負載的營運團隊需要一個具有定義的 RTO 和 RPO 的災難復原架構。應該從哪個流程開始設計？",
         "options": {
-          "A": "跳過恢復測試",
-          "B": "使用一個可用區",
+          "A": "CloudFront 在需要時具有來源存取控制和多區域策略",
+          "B": "API 入口、SQS 緩衝和獨立擴展的工作線程",
           "C": "將 RTO 和 RPO 轉化為復原策略和可測試的控制",
-          "D": "首先選擇最大的執行個體"
+          "D": "負載平衡器後面的無狀態應用程式層具有持久性資料層"
         },
-        "explanation": "RTO和RPO決定了復原架構、容量和備份頻率。\n執行個體大小和單一可用區並不定義災難復原。"
+        "explanation": "RTO和RPO決定了復原架構、容量和備份頻率。\n其他選項適用於此領域的不同需求，但不能像 將 RTO 和 RPO 轉化為復原策略和可測試的控制 一樣直接滿足題目的指定條件。"
       }
     }
   }

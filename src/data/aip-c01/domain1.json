@@ -1,1961 +1,2001 @@
 [
   {
     "id": "aip-c01-d1-001",
-    "type": "single",
-    "question": "A production team needs to provide an application with relevant company documents at inference time without retraining the foundation model. Which pattern fits?",
-    "options": {
-      "A": "Disable access controls",
-      "B": "Retrieval Augmented Generation with a knowledge base",
-      "C": "Randomly increase temperature",
-      "D": "Store documents only in logs"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "RAG retrieves relevant content and supplies it as context to a foundation model.\nTemperature does not retrieve facts, logs are not a knowledge base, and disabled access controls are unsafe.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A production team is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team needs to provide an application with relevant company documents at inference time without retraining the foundation model. Which pattern fits?",
+    "options": {
+      "A": "A vector index in an approved vector store",
+      "B": "Private connectivity, encryption, and least-privilege IAM",
+      "C": "A repeatable model evaluation dataset and scoring process",
+      "D": "Retrieval Augmented Generation with a knowledge base"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "RAG retrieves relevant content and supplies it as context to a foundation model.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Retrieval Augmented Generation with a knowledge base for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "生產團隊需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。適合哪種模式？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。生產團隊需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。適合哪種模式？",
         "options": {
-          "A": "禁用存取控制",
-          "B": "具有知識庫的檢索增強生成",
-          "C": "隨機升高溫度",
-          "D": "僅將文件儲存在日誌中"
+          "A": "已核准的向量儲存中的向量索引",
+          "B": "私有連線、加密與最低權限 IAM",
+          "C": "可重複的模型評估資料集和評分過程",
+          "D": "具有知識庫的檢索增強生成"
         },
-        "explanation": "RAG 檢索相關內容並將其作為基礎模型的上下文提供。\n溫度不檢索事實，日誌不是知識庫，禁用的存取控制是不安全的。"
+        "explanation": "RAG 檢索相關內容並將其作為基礎模型的上下文提供。\n其他選項適用於此領域的不同需求，但不能像 具有知識庫的檢索增強生成 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-002",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A multi-account platform team must store vector embeddings for semantic similarity search. Which capability is suitable?",
+    "question": "A multi-account platform team is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team must store vector embeddings for semantic similarity search. Which capability is suitable?",
     "options": {
-      "A": "An EBS boot log",
-      "B": "An IAM password policy",
+      "A": "A repeatable model evaluation dataset and scoring process",
+      "B": "An IAM policy scoped to approved Bedrock model resources",
       "C": "A vector index in an approved vector store",
-      "D": "A DNS record"
+      "D": "Private connectivity, encryption, and least-privilege IAM"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Vector indexes support nearest-neighbor retrieval for semantic search and RAG.\nThe other choices do not store or search embeddings.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Vector indexes support nearest-neighbor retrieval for semantic search and RAG.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A vector index in an approved vector store for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊必須儲存向量嵌入以進行語義相似性搜尋。哪種能力合適？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。多帳戶平台團隊必須儲存向量嵌入以進行語義相似性搜尋。哪種能力合適？",
         "options": {
-          "A": "EBS 啟動日誌",
-          "B": "IAM 密碼原則",
+          "A": "可重複的模型評估資料集和評分過程",
+          "B": "IAM 策略範圍為已核准的 Bedrock 模型資源",
           "C": "已核准的向量儲存中的向量索引",
-          "D": "DNS 記錄"
+          "D": "私有連線、加密與最低權限 IAM"
         },
-        "explanation": "向量索引支援語義搜尋和 RAG 的最近鄰檢索。\n其他選項不儲存或搜尋嵌入。"
+        "explanation": "向量索引支援語義搜尋和 RAG 的最近鄰檢索。\n其他選項適用於此領域的不同需求，但不能像 已核准的向量儲存中的向量索引 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-003",
-    "type": "single",
-    "question": "A regulated company needs to keep customer data private while invoking a managed foundation model. Which control should be considered?",
-    "options": {
-      "A": "Send data to a public paste site",
-      "B": "Disable logging controls",
-      "C": "Share one administrator key",
-      "D": "Private connectivity, encryption, and least-privilege IAM"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Network, encryption, and identity controls protect data and reduce unnecessary access.\nThe other choices expose data or weaken authorization.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A regulated company is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team needs to keep customer data private while invoking a managed foundation model. Which control should be considered?",
+    "options": {
+      "A": "Retrieval Augmented Generation with a knowledge base",
+      "B": "Private connectivity, encryption, and least-privilege IAM",
+      "C": "A repeatable model evaluation dataset and scoring process",
+      "D": "An IAM policy scoped to approved Bedrock model resources"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Network, encryption, and identity controls protect data and reduce unnecessary access.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Private connectivity, encryption, and least-privilege IAM for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司需要在呼叫託管基礎模型時保持客戶資料的隱私。應考慮哪種控制？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。受監管的公司需要在呼叫託管基礎模型時保持客戶資料的隱私。應考慮哪種控制？",
         "options": {
-          "A": "將資料傳送到公共貼上站點",
-          "B": "禁用日誌記錄控制",
-          "C": "共享一把管理員金鑰",
-          "D": "私有連線、加密與最低權限 IAM"
+          "A": "具有知識庫的檢索增強生成",
+          "B": "私有連線、加密與最低權限 IAM",
+          "C": "可重複的模型評估資料集和評分過程",
+          "D": "IAM 策略範圍為已核准的 Bedrock 模型資源"
         },
-        "explanation": "網路、加密和身分控制可保護資料並減少不必要的存取。\n其他選擇會暴露資料或削弱授權。"
+        "explanation": "網路、加密和身分控制可保護資料並減少不必要的存取。\n其他選項適用於此領域的不同需求，但不能像 私有連線、加密與最低權限 IAM 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-004",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A startup preparing for a traffic increase must evaluate a model against a fixed set of business prompts and expected responses. Which practice is appropriate?",
+    "question": "A startup preparing for a traffic increase is redesigning one integrated end-to-end architecture. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The design must keep recurring cost proportional to use, enforce least privilege, and remain available during a component or Availability Zone failure. The workload must evaluate a model against a fixed set of business prompts and expected responses, and the same architecture needs to invoke a foundation model from an application without hosting GPU instances. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "A repeatable model evaluation dataset and scoring process",
-      "B": "Evaluate only one happy-path prompt",
-      "C": "Change prompts after every test",
-      "D": "Skip recording results"
+      "A": "Use A repeatable model evaluation dataset and scoring process for the primary requirement and integrate it with Amazon Bedrock for the connected control",
+      "B": "Use A repeatable model evaluation dataset and scoring process but replace the connected control with Retrieval Augmented Generation with a knowledge base",
+      "C": "Use A vector index in an approved vector store for the primary requirement and integrate it with Amazon Bedrock",
+      "D": "Combine A vector index in an approved vector store with Private connectivity, encryption, and least-privilege IAM as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "A fixed evaluation set makes quality comparisons reproducible across model versions.\nThe other choices cannot show reliable model changes.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "A repeatable model evaluation dataset and scoring process satisfies the first part of the architecture: A fixed evaluation set makes quality comparisons reproducible across model versions. Amazon Bedrock satisfies the connected requirement: Amazon Bedrock provides managed API access to foundation models without managing model servers.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司必須根據一組固定的業務提示和預期回應來評估模型。哪種做法合適？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：具有嚴格恢復目標的團隊必須根據一組固定的業務提示和預期回應來評估模型。 第二項需求：在共享環境中工作的 AWS 管理員需要從應用程式呼叫基礎模型，而無需託管 GPU 執行個體。 此設計必須讓持續成本與實際用量相符、落實最低權限，並在元件或可用區域發生故障時維持可用。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "可重複的模型評估資料集和評分過程",
-          "B": "僅評估一個快樂路徑提示",
-          "C": "每次測試後更改提示",
-          "D": "跳過記錄結果"
+          "A": "以可重複的模型評估資料集和評分過程處理主要需求，並整合Amazon Bedrock作為相連控制",
+          "B": "使用可重複的模型評估資料集和評分過程，但以具有知識庫的檢索增強生成取代相連控制",
+          "C": "以已核准的向量儲存中的向量索引處理主要需求，並整合Amazon Bedrock",
+          "D": "把已核准的向量儲存中的向量索引與私有連線、加密與最低權限 IAM結合為單一平台設計"
         },
-        "explanation": "固定的評估集使得品質比較可以在模型版本之間重現。\n其他選擇無法顯示可靠的模型變更。"
+        "explanation": "可重複的模型評估資料集和評分過程 負責架構的第一項需求，Amazon Bedrock 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "aip-c01-d1-005",
-    "type": "single",
-    "question": "An operations team supporting a critical workload needs to control which model a production role can invoke. Which mechanism should be used?",
-    "options": {
-      "A": "An S3 lifecycle rule",
-      "B": "An IAM policy scoped to approved Bedrock model resources",
-      "C": "A public model endpoint",
-      "D": "A Route 53 record"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "IAM can restrict model invocation actions and resources for a production role.\nThe other choices do not authorize model selection.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team needs to control which model a production role can invoke. Which mechanism should be used?",
+    "options": {
+      "A": "Retrieval Augmented Generation with a knowledge base",
+      "B": "A vector index in an approved vector store",
+      "C": "Private connectivity, encryption, and least-privilege IAM",
+      "D": "An IAM policy scoped to approved Bedrock model resources"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "IAM can restrict model invocation actions and resources for a production role.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide An IAM policy scoped to approved Bedrock model resources for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊需要控制生產角色可以呼叫哪個模型。應該使用哪種機制？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。支援關鍵工作負載的營運團隊需要控制生產角色可以呼叫哪個模型。應該使用哪種機制？",
         "options": {
-          "A": "S3 生命週期規則",
-          "B": "IAM 策略範圍為已核准的 Bedrock 模型資源",
-          "C": "公共模型端點",
-          "D": "一筆 Route 53 記錄"
+          "A": "具有知識庫的檢索增強生成",
+          "B": "已核准的向量儲存中的向量索引",
+          "C": "私有連線、加密與最低權限 IAM",
+          "D": "IAM 策略範圍為已核准的 Bedrock 模型資源"
         },
-        "explanation": "IAM 可以限制生產角色的模型呼叫操作和資源。\n其他選擇不授權模型選擇。"
+        "explanation": "IAM 可以限制生產角色的模型呼叫操作和資源。\n其他選項適用於此領域的不同需求，但不能像 IAM 策略範圍為已核准的 Bedrock 模型資源 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-006",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A data platform team needs to provide an application with relevant company documents at inference time without retraining the foundation model. Which pattern fits?",
+    "question": "A data platform team is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team needs to provide an application with relevant company documents at inference time without retraining the foundation model. Which pattern fits?",
     "options": {
-      "A": "Store documents only in logs",
-      "B": "Disable access controls",
+      "A": "Private connectivity, encryption, and least-privilege IAM",
+      "B": "A repeatable model evaluation dataset and scoring process",
       "C": "Retrieval Augmented Generation with a knowledge base",
-      "D": "Randomly increase temperature"
+      "D": "A vector index in an approved vector store"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "RAG retrieves relevant content and supplies it as context to a foundation model.\nTemperature does not retrieve facts, logs are not a knowledge base, and disabled access controls are unsafe.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "RAG retrieves relevant content and supplies it as context to a foundation model.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Retrieval Augmented Generation with a knowledge base for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。適合哪種模式？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。資料平台團隊需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。適合哪種模式？",
         "options": {
-          "A": "僅將文件儲存在日誌中",
-          "B": "禁用存取控制",
+          "A": "私有連線、加密與最低權限 IAM",
+          "B": "可重複的模型評估資料集和評分過程",
           "C": "具有知識庫的檢索增強生成",
-          "D": "隨機升高溫度"
+          "D": "已核准的向量儲存中的向量索引"
         },
-        "explanation": "RAG 檢索相關內容並將其作為基礎模型的上下文提供。\n溫度不檢索事實，日誌不是知識庫，禁用的存取控制是不安全的。"
+        "explanation": "RAG 檢索相關內容並將其作為基礎模型的上下文提供。\n其他選項適用於此領域的不同需求，但不能像 具有知識庫的檢索增強生成 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-007",
-    "type": "single",
-    "question": "A security-conscious engineering team must store vector embeddings for semantic similarity search. Which capability is suitable?",
-    "options": {
-      "A": "A DNS record",
-      "B": "An EBS boot log",
-      "C": "An IAM password policy",
-      "D": "A vector index in an approved vector store"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Vector indexes support nearest-neighbor retrieval for semantic search and RAG.\nThe other choices do not store or search embeddings.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A security-conscious engineering team is planning two independent production changes. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The first team must store vector embeddings for semantic similarity search. A second team needs to keep customer data private while invoking a managed foundation model. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "An IAM policy scoped to approved Bedrock model resources",
+      "B": "Retrieval Augmented Generation with a knowledge base",
+      "C": "A vector index in an approved vector store",
+      "D": "Private connectivity, encryption, and least-privilege IAM",
+      "E": "A repeatable model evaluation dataset and scoring process"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "A vector index in an approved vector store meets the first requirement: Vector indexes support nearest-neighbor retrieval for semantic search and RAG. Private connectivity, encryption, and least-privilege IAM meets the second requirement: Network, encryption, and identity controls protect data and reduce unnecessary access.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊必須儲存向量嵌入以進行語義相似性搜尋。哪種能力合適？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。第一項需求：多帳戶平台團隊必須儲存向量嵌入以進行語義相似性搜尋。第二項需求：受監管的公司需要在呼叫託管基礎模型時保持客戶資料的隱私。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "DNS 記錄",
-          "B": "EBS 啟動日誌",
-          "C": "IAM 密碼原則",
-          "D": "已核准的向量儲存中的向量索引"
+          "A": "IAM 策略範圍為已核准的 Bedrock 模型資源",
+          "B": "具有知識庫的檢索增強生成",
+          "C": "已核准的向量儲存中的向量索引",
+          "D": "私有連線、加密與最低權限 IAM",
+          "E": "可重複的模型評估資料集和評分過程"
         },
-        "explanation": "向量索引支援語義搜尋和 RAG 的最近鄰檢索。\n其他選項不儲存或搜尋嵌入。"
+        "explanation": "已核准的向量儲存中的向量索引 符合第一項需求：向量索引支援語義搜尋和 RAG 的最近鄰檢索。 私有連線、加密與最低權限 IAM 符合第二項需求：網路、加密和身分控制可保護資料並減少不必要的存取。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "aip-c01-d1-008",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A company migrating an existing workload needs to keep customer data private while invoking a managed foundation model. Which control should be considered?",
+    "question": "A company migrating an existing workload is redesigning one integrated end-to-end architecture. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The design must avoid unnecessary standby cost without weakening security controls or the availability objective. The workload needs to keep customer data private while invoking a managed foundation model, and the same architecture must ensure an agent cannot invoke an unapproved tool. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "Private connectivity, encryption, and least-privilege IAM",
-      "B": "Send data to a public paste site",
-      "C": "Disable logging controls",
-      "D": "Share one administrator key"
+      "A": "Use Private connectivity, encryption, and least-privilege IAM for the primary requirement and integrate it with An allowlist of tools backed by IAM and application authorization for the connected control",
+      "B": "Use Private connectivity, encryption, and least-privilege IAM but replace the connected control with Retrieval Augmented Generation with a knowledge base",
+      "C": "Use A vector index in an approved vector store for the primary requirement and integrate it with An allowlist of tools backed by IAM and application authorization",
+      "D": "Combine A vector index in an approved vector store with A repeatable model evaluation dataset and scoring process as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Network, encryption, and identity controls protect data and reduce unnecessary access.\nThe other choices expose data or weaken authorization.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Private connectivity, encryption, and least-privilege IAM satisfies the first part of the architecture: Network, encryption, and identity controls protect data and reduce unnecessary access. An allowlist of tools backed by IAM and application authorization satisfies the connected requirement: A tool allowlist and IAM policy constrain what the agent can call.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司需要在呼叫託管基礎模型時保持客戶資料的隱私。應考慮哪種控制？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：遷移現有工作負載的公司需要在呼叫託管基礎模型時保持客戶資料的隱私。 第二項需求：支援關鍵工作負載的營運團隊必須確保代理無法呼叫未經批准的工具。 此設計必須避免不必要的備用成本，同時不可削弱安全控制或可用性目標。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "私有連線、加密與最低權限 IAM",
-          "B": "將資料傳送到公共貼上站點",
-          "C": "禁用日誌記錄控制",
-          "D": "共享一把管理員金鑰"
+          "A": "以私有連線、加密與最低權限 IAM處理主要需求，並整合由 IAM 和應用程式授權支援的工具白名單作為相連控制",
+          "B": "使用私有連線、加密與最低權限 IAM，但以具有知識庫的檢索增強生成取代相連控制",
+          "C": "以已核准的向量儲存中的向量索引處理主要需求，並整合由 IAM 和應用程式授權支援的工具白名單",
+          "D": "把已核准的向量儲存中的向量索引與可重複的模型評估資料集和評分過程結合為單一平台設計"
         },
-        "explanation": "網路、加密和身分控制可保護資料並減少不必要的存取。\n其他選擇會暴露資料或削弱授權。"
+        "explanation": "私有連線、加密與最低權限 IAM 負責架構的第一項需求，由 IAM 和應用程式授權支援的工具白名單 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "aip-c01-d1-009",
-    "type": "single",
-    "question": "A team with strict recovery objectives must evaluate a model against a fixed set of business prompts and expected responses. Which practice is appropriate?",
-    "options": {
-      "A": "Skip recording results",
-      "B": "A repeatable model evaluation dataset and scoring process",
-      "C": "Evaluate only one happy-path prompt",
-      "D": "Change prompts after every test"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "A fixed evaluation set makes quality comparisons reproducible across model versions.\nThe other choices cannot show reliable model changes.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team with strict recovery objectives is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team must evaluate a model against a fixed set of business prompts and expected responses. Which practice is appropriate?",
+    "options": {
+      "A": "An IAM policy scoped to approved Bedrock model resources",
+      "B": "Retrieval Augmented Generation with a knowledge base",
+      "C": "A vector index in an approved vector store",
+      "D": "A repeatable model evaluation dataset and scoring process"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "A fixed evaluation set makes quality comparisons reproducible across model versions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A repeatable model evaluation dataset and scoring process for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格恢復目標的團隊必須根據一組固定的業務提示和預期回應來評估模型。哪種做法合適？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。具有嚴格恢復目標的團隊必須根據一組固定的業務提示和預期回應來評估模型。哪種做法合適？",
         "options": {
-          "A": "跳過記錄結果",
-          "B": "可重複的模型評估資料集和評分過程",
-          "C": "僅評估一個快樂路徑提示",
-          "D": "每次測試後更改提示"
+          "A": "IAM 策略範圍為已核准的 Bedrock 模型資源",
+          "B": "具有知識庫的檢索增強生成",
+          "C": "已核准的向量儲存中的向量索引",
+          "D": "可重複的模型評估資料集和評分過程"
         },
-        "explanation": "固定的評估集使得品質比較可以在模型版本之間重現。\n其他選擇無法顯示可靠的模型變更。"
+        "explanation": "固定的評估集使得品質比較可以在模型版本之間重現。\n其他選項適用於此領域的不同需求，但不能像 可重複的模型評估資料集和評分過程 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-010",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A developer team preparing a release needs to control which model a production role can invoke. Which mechanism should be used?",
+    "question": "A developer team preparing a release is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team needs to control which model a production role can invoke. Which mechanism should be used?",
     "options": {
-      "A": "A Route 53 record",
-      "B": "An S3 lifecycle rule",
+      "A": "A vector index in an approved vector store",
+      "B": "Private connectivity, encryption, and least-privilege IAM",
       "C": "An IAM policy scoped to approved Bedrock model resources",
-      "D": "A public model endpoint"
+      "D": "Retrieval Augmented Generation with a knowledge base"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "IAM can restrict model invocation actions and resources for a production role.\nThe other choices do not authorize model selection.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "IAM can restrict model invocation actions and resources for a production role.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide An IAM policy scoped to approved Bedrock model resources for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊需要控制生產角色可以呼叫哪個模型。應該使用哪種機制？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。準備發布的開發團隊需要控制生產角色可以呼叫哪個模型。應該使用哪種機制？",
         "options": {
-          "A": "一筆 Route 53 記錄",
-          "B": "S3 生命週期規則",
+          "A": "已核准的向量儲存中的向量索引",
+          "B": "私有連線、加密與最低權限 IAM",
           "C": "IAM 策略範圍為已核准的 Bedrock 模型資源",
-          "D": "公共模型端點"
+          "D": "具有知識庫的檢索增強生成"
         },
-        "explanation": "IAM 可以限制生產角色的模型呼叫操作和資源。\n其他選擇不授權模型選擇。"
+        "explanation": "IAM 可以限制生產角色的模型呼叫操作和資源。\n其他選項適用於此領域的不同需求，但不能像 IAM 策略範圍為已核准的 Bedrock 模型資源 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-011",
-    "type": "single",
-    "question": "An enterprise with several AWS Regions needs to provide an application with relevant company documents at inference time without retraining the foundation model. Which pattern fits?",
-    "options": {
-      "A": "Randomly increase temperature",
-      "B": "Store documents only in logs",
-      "C": "Disable access controls",
-      "D": "Retrieval Augmented Generation with a knowledge base"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "RAG retrieves relevant content and supplies it as context to a foundation model.\nTemperature does not retrieve facts, logs are not a knowledge base, and disabled access controls are unsafe.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team needs to provide an application with relevant company documents at inference time without retraining the foundation model. Which pattern fits?",
+    "options": {
+      "A": "A repeatable model evaluation dataset and scoring process",
+      "B": "Retrieval Augmented Generation with a knowledge base",
+      "C": "A vector index in an approved vector store",
+      "D": "Private connectivity, encryption, and least-privilege IAM"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "RAG retrieves relevant content and supplies it as context to a foundation model.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Retrieval Augmented Generation with a knowledge base for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS Regions 的企業需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。適合哪種模式？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。擁有多個 AWS Regions 的企業需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。適合哪種模式？",
         "options": {
-          "A": "隨機升高溫度",
-          "B": "僅將文件儲存在日誌中",
-          "C": "禁用存取控制",
-          "D": "具有知識庫的檢索增強生成"
+          "A": "可重複的模型評估資料集和評分過程",
+          "B": "具有知識庫的檢索增強生成",
+          "C": "已核准的向量儲存中的向量索引",
+          "D": "私有連線、加密與最低權限 IAM"
         },
-        "explanation": "RAG 檢索相關內容並將其作為基礎模型的上下文提供。\n溫度不檢索事實，日誌不是知識庫，禁用的存取控制是不安全的。"
+        "explanation": "RAG 檢索相關內容並將其作為基礎模型的上下文提供。\n其他選項適用於此領域的不同需求，但不能像 具有知識庫的檢索增強生成 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-012",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A service owner reviewing an incident must store vector embeddings for semantic similarity search. Which capability is suitable?",
+    "question": "A service owner reviewing an incident is redesigning one integrated end-to-end architecture. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The organization will accept additional managed-service cost only when it measurably improves security and availability with less operational effort. The workload must store vector embeddings for semantic similarity search, and the same architecture needs to keep a workload responsive during model-provider throttling. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "A vector index in an approved vector store",
-      "B": "A DNS record",
-      "C": "An EBS boot log",
-      "D": "An IAM password policy"
+      "A": "Use A vector index in an approved vector store for the primary requirement and integrate it with Exponential backoff, bounded retries, and a fallback path for the connected control",
+      "B": "Use A vector index in an approved vector store but replace the connected control with Retrieval Augmented Generation with a knowledge base",
+      "C": "Use Private connectivity, encryption, and least-privilege IAM for the primary requirement and integrate it with Exponential backoff, bounded retries, and a fallback path",
+      "D": "Combine Private connectivity, encryption, and least-privilege IAM with A repeatable model evaluation dataset and scoring process as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Vector indexes support nearest-neighbor retrieval for semantic search and RAG.\nThe other choices do not store or search embeddings.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "A vector index in an approved vector store satisfies the first part of the architecture: Vector indexes support nearest-neighbor retrieval for semantic search and RAG. Exponential backoff, bounded retries, and a fallback path satisfies the connected requirement: Bounded retries and fallback behavior protect user experience during throttling or transient failures.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務擁有者必須儲存向量嵌入以進行語義相似性搜尋。哪種能力合適？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：具有安全意識的工程團隊必須儲存向量嵌入以進行語義相似性搜尋。 第二項需求：支援關鍵工作負載的營運團隊需要在模型提供者限制期間保持工作負載的回應能力。 只有在託管服務能以較低營運負擔明確改善安全性與可用性時，組織才會接受額外成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "已核准的向量儲存中的向量索引",
-          "B": "DNS 記錄",
-          "C": "EBS 啟動日誌",
-          "D": "IAM 密碼原則"
+          "A": "以已核准的向量儲存中的向量索引處理主要需求，並整合指數退避、有界重試和後備路徑作為相連控制",
+          "B": "使用已核准的向量儲存中的向量索引，但以具有知識庫的檢索增強生成取代相連控制",
+          "C": "以私有連線、加密與最低權限 IAM處理主要需求，並整合指數退避、有界重試和後備路徑",
+          "D": "把私有連線、加密與最低權限 IAM與可重複的模型評估資料集和評分過程結合為單一平台設計"
         },
-        "explanation": "向量索引支援語義搜尋和 RAG 的最近鄰檢索。\n其他選項不儲存或搜尋嵌入。"
+        "explanation": "已核准的向量儲存中的向量索引 負責架構的第一項需求，指數退避、有界重試和後備路徑 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "aip-c01-d1-013",
-    "type": "single",
-    "question": "A team optimizing an existing implementation needs to keep customer data private while invoking a managed foundation model. Which control should be considered?",
-    "options": {
-      "A": "Share one administrator key",
-      "B": "Private connectivity, encryption, and least-privilege IAM",
-      "C": "Send data to a public paste site",
-      "D": "Disable logging controls"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Network, encryption, and identity controls protect data and reduce unnecessary access.\nThe other choices expose data or weaken authorization.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team needs to keep customer data private while invoking a managed foundation model. Which control should be considered?",
+    "options": {
+      "A": "A repeatable model evaluation dataset and scoring process",
+      "B": "An IAM policy scoped to approved Bedrock model resources",
+      "C": "Retrieval Augmented Generation with a knowledge base",
+      "D": "Private connectivity, encryption, and least-privilege IAM"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Network, encryption, and identity controls protect data and reduce unnecessary access.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Private connectivity, encryption, and least-privilege IAM for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊需要在呼叫託管基礎模型時保持客戶資料的隱私。應考慮哪種控制？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。優化現有實施的團隊需要在呼叫託管基礎模型時保持客戶資料的隱私。應考慮哪種控制？",
         "options": {
-          "A": "共享一把管理員金鑰",
-          "B": "私有連線、加密與最低權限 IAM",
-          "C": "將資料傳送到公共貼上站點",
-          "D": "禁用日誌記錄控制"
+          "A": "可重複的模型評估資料集和評分過程",
+          "B": "IAM 策略範圍為已核准的 Bedrock 模型資源",
+          "C": "具有知識庫的檢索增強生成",
+          "D": "私有連線、加密與最低權限 IAM"
         },
-        "explanation": "網路、加密和身分控制可保護資料並減少不必要的存取。\n其他選擇會暴露資料或削弱授權。"
+        "explanation": "網路、加密和身分控制可保護資料並減少不必要的存取。\n其他選項適用於此領域的不同需求，但不能像 私有連線、加密與最低權限 IAM 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-014",
-    "type": "single",
-    "question": "A company introducing an automated workflow must evaluate a model against a fixed set of business prompts and expected responses. Which practice is appropriate?",
-    "options": {
-      "A": "Change prompts after every test",
-      "B": "Skip recording results",
-      "C": "A repeatable model evaluation dataset and scoring process",
-      "D": "Evaluate only one happy-path prompt"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "A fixed evaluation set makes quality comparisons reproducible across model versions.\nThe other choices cannot show reliable model changes.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A company introducing an automated workflow is planning two independent production changes. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The first team must evaluate a model against a fixed set of business prompts and expected responses. A second team needs to control. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "A repeatable model evaluation dataset and scoring process",
+      "B": "An IAM policy scoped to approved Bedrock model resources",
+      "C": "Retrieval Augmented Generation with a knowledge base",
+      "D": "A vector index in an approved vector store",
+      "E": "Private connectivity, encryption, and least-privilege IAM"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "A repeatable model evaluation dataset and scoring process meets the first requirement: A fixed evaluation set makes quality comparisons reproducible across model versions. An IAM policy scoped to approved Bedrock model resources meets the second requirement: IAM can restrict model invocation actions and resources for a production role.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司必須根據一組固定的業務提示和預期回應來評估模型。哪種做法合適？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。第一項需求：準備增加流量的新創公司必須根據一組固定的業務提示和預期回應來評估模型。第二項需求：支援關鍵工作負載的營運團隊需要控制生產角色可以呼叫哪個模型。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "每次測試後更改提示",
-          "B": "跳過記錄結果",
-          "C": "可重複的模型評估資料集和評分過程",
-          "D": "僅評估一個快樂路徑提示"
+          "A": "可重複的模型評估資料集和評分過程",
+          "B": "IAM 策略範圍為已核准的 Bedrock 模型資源",
+          "C": "具有知識庫的檢索增強生成",
+          "D": "已核准的向量儲存中的向量索引",
+          "E": "私有連線、加密與最低權限 IAM"
         },
-        "explanation": "固定的評估集使得品質比較可以在模型版本之間重現。\n其他選擇無法顯示可靠的模型變更。"
+        "explanation": "可重複的模型評估資料集和評分過程 符合第一項需求：固定的評估集使得品質比較可以在模型版本之間重現。 IAM 策略範圍為已核准的 Bedrock 模型資源 符合第二項需求：IAM 可以限制生產角色的模型呼叫操作和資源。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "aip-c01-d1-015",
-    "type": "single",
-    "question": "An AWS administrator working in a shared environment needs to control which model a production role can invoke. Which mechanism should be used?",
-    "options": {
-      "A": "A public model endpoint",
-      "B": "A Route 53 record",
-      "C": "An S3 lifecycle rule",
-      "D": "An IAM policy scoped to approved Bedrock model resources"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "IAM can restrict model invocation actions and resources for a production role.\nThe other choices do not authorize model selection.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team needs to control which model a production role can invoke. Which mechanism should be used?",
+    "options": {
+      "A": "Private connectivity, encryption, and least-privilege IAM",
+      "B": "An IAM policy scoped to approved Bedrock model resources",
+      "C": "Retrieval Augmented Generation with a knowledge base",
+      "D": "A vector index in an approved vector store"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "IAM can restrict model invocation actions and resources for a production role.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide An IAM policy scoped to approved Bedrock model resources for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "在共享環境中工作的 AWS 管理員需要控制生產角色可以呼叫哪個模型。應該使用哪種機制？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。在共享環境中工作的 AWS 管理員需要控制生產角色可以呼叫哪個模型。應該使用哪種機制？",
         "options": {
-          "A": "公共模型端點",
-          "B": "一筆 Route 53 記錄",
-          "C": "S3 生命週期規則",
-          "D": "IAM 策略範圍為已核准的 Bedrock 模型資源"
+          "A": "私有連線、加密與最低權限 IAM",
+          "B": "IAM 策略範圍為已核准的 Bedrock 模型資源",
+          "C": "具有知識庫的檢索增強生成",
+          "D": "已核准的向量儲存中的向量索引"
         },
-        "explanation": "IAM 可以限制生產角色的模型呼叫操作和資源。\n其他選擇不授權模型選擇。"
+        "explanation": "IAM 可以限制生產角色的模型呼叫操作和資源。\n其他選項適用於此領域的不同需求，但不能像 IAM 策略範圍為已核准的 Bedrock 模型資源 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-016",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A customer-facing application team needs to provide an application with relevant company documents at inference time without retraining the foundation model. Which pattern fits?",
+    "question": "A customer-facing application team is redesigning one integrated end-to-end architecture. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The architecture must limit blast radius, preserve availability during change, and control cost through automation instead of permanent overprovisioning. The workload needs to provide an application with relevant company documents at inference time without retraining the foundation model, and the same architecture needs to protect troubleshooting logs from containing prompts with confidential data. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "Retrieval Augmented Generation with a knowledge base",
-      "B": "Randomly increase temperature",
-      "C": "Store documents only in logs",
-      "D": "Disable access controls"
+      "A": "Use Retrieval Augmented Generation with a knowledge base for the primary requirement and integrate it with Redact sensitive fields and restrict log access for the connected control",
+      "B": "Use Retrieval Augmented Generation with a knowledge base but replace the connected control with A vector index in an approved vector store",
+      "C": "Use Private connectivity, encryption, and least-privilege IAM for the primary requirement and integrate it with Redact sensitive fields and restrict log access",
+      "D": "Combine Private connectivity, encryption, and least-privilege IAM with A repeatable model evaluation dataset and scoring process as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "RAG retrieves relevant content and supplies it as context to a foundation model.\nTemperature does not retrieve facts, logs are not a knowledge base, and disabled access controls are unsafe.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Retrieval Augmented Generation with a knowledge base satisfies the first part of the architecture: RAG retrieves relevant content and supplies it as context to a foundation model. Redact sensitive fields and restrict log access satisfies the connected requirement: Redaction and least-privilege log access reduce exposure while preserving useful diagnostics.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。適合哪種模式？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：支援關鍵工作負載的營運團隊需要控制生產角色可以呼叫哪個模型。 第二項需求：支援關鍵工作負載的營運團隊需要保護故障排除日誌不包含具有機密資料的提示。 此架構必須限制影響範圍、在變更期間維持可用性，並透過自動化控制成本，而不是長期過度佈建。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "具有知識庫的檢索增強生成",
-          "B": "隨機升高溫度",
-          "C": "僅將文件儲存在日誌中",
-          "D": "禁用存取控制"
+          "A": "以具有知識庫的檢索增強生成處理主要需求，並整合編輯敏感字段並限制日誌存取作為相連控制",
+          "B": "使用具有知識庫的檢索增強生成，但以已核准的向量儲存中的向量索引取代相連控制",
+          "C": "以私有連線、加密與最低權限 IAM處理主要需求，並整合編輯敏感字段並限制日誌存取",
+          "D": "把私有連線、加密與最低權限 IAM與可重複的模型評估資料集和評分過程結合為單一平台設計"
         },
-        "explanation": "RAG 檢索相關內容並將其作為基礎模型的上下文提供。\n溫度不檢索事實，日誌不是知識庫，禁用的存取控制是不安全的。"
+        "explanation": "具有知識庫的檢索增強生成 負責架構的第一項需求，編輯敏感字段並限制日誌存取 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "aip-c01-d1-017",
-    "type": "single",
-    "question": "A platform team standardizing its AWS deployments must store vector embeddings for semantic similarity search. Which capability is suitable?",
-    "options": {
-      "A": "An IAM password policy",
-      "B": "A vector index in an approved vector store",
-      "C": "A DNS record",
-      "D": "An EBS boot log"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Vector indexes support nearest-neighbor retrieval for semantic search and RAG.\nThe other choices do not store or search embeddings.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team must store vector embeddings for semantic similarity search. Which capability is suitable?",
+    "options": {
+      "A": "Private connectivity, encryption, and least-privilege IAM",
+      "B": "A repeatable model evaluation dataset and scoring process",
+      "C": "An IAM policy scoped to approved Bedrock model resources",
+      "D": "A vector index in an approved vector store"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Vector indexes support nearest-neighbor retrieval for semantic search and RAG.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A vector index in an approved vector store for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊必須儲存用於語義相似性搜尋的向量嵌入。哪種能力合適？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。標準化其 AWS 部署的平台團隊必須儲存用於語義相似性搜尋的向量嵌入。哪種能力合適？",
         "options": {
-          "A": "IAM 密碼原則",
-          "B": "已核准的向量儲存中的向量索引",
-          "C": "DNS 記錄",
-          "D": "EBS 啟動日誌"
+          "A": "私有連線、加密與最低權限 IAM",
+          "B": "可重複的模型評估資料集和評分過程",
+          "C": "IAM 策略範圍為已核准的 Bedrock 模型資源",
+          "D": "已核准的向量儲存中的向量索引"
         },
-        "explanation": "向量索引支援語義搜尋和 RAG 的最近鄰檢索。\n其他選項不儲存或搜尋嵌入。"
+        "explanation": "向量索引支援語義搜尋和 RAG 的最近鄰檢索。\n其他選項適用於此領域的不同需求，但不能像 已核准的向量儲存中的向量索引 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-018",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team preparing evidence for an audit needs to keep customer data private while invoking a managed foundation model. Which control should be considered?",
+    "question": "A team preparing evidence for an audit is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team needs to keep customer data private while invoking a managed foundation model. Which control should be considered?",
     "options": {
-      "A": "Disable logging controls",
-      "B": "Share one administrator key",
+      "A": "An IAM policy scoped to approved Bedrock model resources",
+      "B": "Retrieval Augmented Generation with a knowledge base",
       "C": "Private connectivity, encryption, and least-privilege IAM",
-      "D": "Send data to a public paste site"
+      "D": "A repeatable model evaluation dataset and scoring process"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Network, encryption, and identity controls protect data and reduce unnecessary access.\nThe other choices expose data or weaken authorization.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Network, encryption, and identity controls protect data and reduce unnecessary access.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Private connectivity, encryption, and least-privilege IAM for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備審計證據的團隊需要在呼叫託管基礎模型時保持客戶資料的隱私。應考慮哪種控制？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。準備審計證據的團隊需要在呼叫託管基礎模型時保持客戶資料的隱私。應考慮哪種控制？",
         "options": {
-          "A": "禁用日誌記錄控制",
-          "B": "共享一把管理員金鑰",
+          "A": "IAM 策略範圍為已核准的 Bedrock 模型資源",
+          "B": "具有知識庫的檢索增強生成",
           "C": "私有連線、加密與最低權限 IAM",
-          "D": "將資料傳送到公共貼上站點"
+          "D": "可重複的模型評估資料集和評分過程"
         },
-        "explanation": "網路、加密和身分控制可保護資料並減少不必要的存取。\n其他選擇會暴露資料或削弱授權。"
+        "explanation": "網路、加密和身分控制可保護資料並減少不必要的存取。\n其他選項適用於此領域的不同需求，但不能像 私有連線、加密與最低權限 IAM 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-019",
-    "type": "single",
-    "question": "A business replacing a manual process must evaluate a model against a fixed set of business prompts and expected responses. Which practice is appropriate?",
-    "options": {
-      "A": "Evaluate only one happy-path prompt",
-      "B": "Change prompts after every test",
-      "C": "Skip recording results",
-      "D": "A repeatable model evaluation dataset and scoring process"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "A fixed evaluation set makes quality comparisons reproducible across model versions.\nThe other choices cannot show reliable model changes.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A business replacing a manual process is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team must evaluate a model against a fixed set of business prompts and expected responses. Which practice is appropriate?",
+    "options": {
+      "A": "A vector index in an approved vector store",
+      "B": "A repeatable model evaluation dataset and scoring process",
+      "C": "An IAM policy scoped to approved Bedrock model resources",
+      "D": "Retrieval Augmented Generation with a knowledge base"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "A fixed evaluation set makes quality comparisons reproducible across model versions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A repeatable model evaluation dataset and scoring process for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "取代手動流程的企業必須根據一組固定的業務提示和預期回應來評估模型。哪種做法合適？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。取代手動流程的企業必須根據一組固定的業務提示和預期回應來評估模型。哪種做法合適？",
         "options": {
-          "A": "僅評估一個快樂路徑提示",
-          "B": "每次測試後更改提示",
-          "C": "跳過記錄結果",
-          "D": "可重複的模型評估資料集和評分過程"
+          "A": "已核准的向量儲存中的向量索引",
+          "B": "可重複的模型評估資料集和評分過程",
+          "C": "IAM 策略範圍為已核准的 Bedrock 模型資源",
+          "D": "具有知識庫的檢索增強生成"
         },
-        "explanation": "固定的評估集使得品質比較可以在模型版本之間重現。\n其他選擇無法顯示可靠的模型變更。"
+        "explanation": "固定的評估集使得品質比較可以在模型版本之間重現。\n其他選項適用於此領域的不同需求，但不能像 可重複的模型評估資料集和評分過程 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-020",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team validating a design against the exam guide needs to control which model a production role can invoke. Which mechanism should be used?",
+    "question": "A team validating a design against the exam guide is redesigning one integrated end-to-end architecture. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The selected controls must provide auditable security, predictable availability, and the lowest operational cost that still satisfies both requirements. The workload needs to control, and the same architecture needs a model to call approved business APIs while retaining control over tool permissions. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "An IAM policy scoped to approved Bedrock model resources",
-      "B": "A public model endpoint",
-      "C": "A Route 53 record",
-      "D": "An S3 lifecycle rule"
+      "A": "Use An IAM policy scoped to approved Bedrock model resources for the primary requirement and integrate it with An agent with narrowly scoped action groups and IAM permissions for the connected control",
+      "B": "Use An IAM policy scoped to approved Bedrock model resources but replace the connected control with Retrieval Augmented Generation with a knowledge base",
+      "C": "Use A vector index in an approved vector store for the primary requirement and integrate it with An agent with narrowly scoped action groups and IAM permissions",
+      "D": "Combine A vector index in an approved vector store with Private connectivity, encryption, and least-privilege IAM as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "IAM can restrict model invocation actions and resources for a production role.\nThe other choices do not authorize model selection.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "An IAM policy scoped to approved Bedrock model resources satisfies the first part of the architecture: IAM can restrict model invocation actions and resources for a production role. An agent with narrowly scoped action groups and IAM permissions satisfies the connected requirement: Scoped action groups and IAM permissions constrain agent capabilities and reduce blast radius.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊需要控制生產角色可以呼叫哪個模型。應該使用哪種機制？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：生產團隊需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。 第二項需求：生產團隊需要一個模型來呼叫核准的業務 API，同時保留對工具權限的控制權。 所選控制必須提供可稽核的安全性、可預測的可用性，以及在滿足兩項要求前提下最低的營運成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "IAM 策略範圍為已核准的 Bedrock 模型資源",
-          "B": "公共模型端點",
-          "C": "一筆 Route 53 記錄",
-          "D": "S3 生命週期規則"
+          "A": "以IAM 策略範圍為已核准的 Bedrock 模型資源處理主要需求，並整合具有範圍狹窄的操作群組和 IAM Permissions的代理作為相連控制",
+          "B": "使用IAM 策略範圍為已核准的 Bedrock 模型資源，但以具有知識庫的檢索增強生成取代相連控制",
+          "C": "以已核准的向量儲存中的向量索引處理主要需求，並整合具有範圍狹窄的操作群組和 IAM Permissions的代理",
+          "D": "把已核准的向量儲存中的向量索引與私有連線、加密與最低權限 IAM結合為單一平台設計"
         },
-        "explanation": "IAM 可以限制生產角色的模型呼叫操作和資源。\n其他選擇不授權模型選擇。"
+        "explanation": "IAM 策略範圍為已核准的 Bedrock 模型資源 負責架構的第一項需求，具有範圍狹窄的操作群組和 IAM Permissions的代理 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "aip-c01-d1-021",
-    "type": "single",
-    "question": "A production team needs to provide an application with relevant company documents at inference time without retraining the foundation model. Which pattern fits?",
-    "options": {
-      "A": "Disable access controls",
-      "B": "Retrieval Augmented Generation with a knowledge base",
-      "C": "Randomly increase temperature",
-      "D": "Store documents only in logs"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "RAG retrieves relevant content and supplies it as context to a foundation model.\nTemperature does not retrieve facts, logs are not a knowledge base, and disabled access controls are unsafe.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A production team is planning two independent production changes. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The first team needs to provide an application with relevant company documents at inference time without retraining the foundation model. A second team must store vector embeddings for semantic similarity search. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Private connectivity, encryption, and least-privilege IAM",
+      "B": "A repeatable model evaluation dataset and scoring process",
+      "C": "An IAM policy scoped to approved Bedrock model resources",
+      "D": "Retrieval Augmented Generation with a knowledge base",
+      "E": "A vector index in an approved vector store"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Retrieval Augmented Generation with a knowledge base meets the first requirement: RAG retrieves relevant content and supplies it as context to a foundation model. A vector index in an approved vector store meets the second requirement: Vector indexes support nearest-neighbor retrieval for semantic search and RAG.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "生產團隊需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。適合哪種模式？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。第一項需求：生產團隊需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。第二項需求：多帳戶平台團隊必須儲存向量嵌入以進行語義相似性搜尋。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "禁用存取控制",
-          "B": "具有知識庫的檢索增強生成",
-          "C": "隨機升高溫度",
-          "D": "僅將文件儲存在日誌中"
+          "A": "私有連線、加密與最低權限 IAM",
+          "B": "可重複的模型評估資料集和評分過程",
+          "C": "IAM 策略範圍為已核准的 Bedrock 模型資源",
+          "D": "具有知識庫的檢索增強生成",
+          "E": "已核准的向量儲存中的向量索引"
         },
-        "explanation": "RAG 檢索相關內容並將其作為基礎模型的上下文提供。\n溫度不檢索事實，日誌不是知識庫，禁用的存取控制是不安全的。"
+        "explanation": "具有知識庫的檢索增強生成 符合第一項需求：RAG 檢索相關內容並將其作為基礎模型的上下文提供。 已核准的向量儲存中的向量索引 符合第二項需求：向量索引支援語義搜尋和 RAG 的最近鄰檢索。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "aip-c01-d1-022",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A multi-account platform team must store vector embeddings for semantic similarity search. Which capability is suitable?",
+    "question": "A multi-account platform team is reviewing a production decision. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The team must store vector embeddings for semantic similarity search. Which capability is suitable?",
     "options": {
-      "A": "An EBS boot log",
-      "B": "An IAM password policy",
+      "A": "A repeatable model evaluation dataset and scoring process",
+      "B": "An IAM policy scoped to approved Bedrock model resources",
       "C": "A vector index in an approved vector store",
-      "D": "A DNS record"
+      "D": "Private connectivity, encryption, and least-privilege IAM"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Vector indexes support nearest-neighbor retrieval for semantic search and RAG.\nThe other choices do not store or search embeddings.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Vector indexes support nearest-neighbor retrieval for semantic search and RAG.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A vector index in an approved vector store for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊必須儲存向量嵌入以進行語義相似性搜尋。哪種能力合適？",
+        "question": "組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。多帳戶平台團隊必須儲存向量嵌入以進行語義相似性搜尋。哪種能力合適？",
         "options": {
-          "A": "EBS 啟動日誌",
-          "B": "IAM 密碼原則",
+          "A": "可重複的模型評估資料集和評分過程",
+          "B": "IAM 策略範圍為已核准的 Bedrock 模型資源",
           "C": "已核准的向量儲存中的向量索引",
-          "D": "DNS 記錄"
+          "D": "私有連線、加密與最低權限 IAM"
         },
-        "explanation": "向量索引支援語義搜尋和 RAG 的最近鄰檢索。\n其他選項不儲存或搜尋嵌入。"
+        "explanation": "向量索引支援語義搜尋和 RAG 的最近鄰檢索。\n其他選項適用於此領域的不同需求，但不能像 已核准的向量儲存中的向量索引 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-023",
-    "type": "single",
-    "question": "A regulated company needs to keep customer data private while invoking a managed foundation model. Which control should be considered?",
-    "options": {
-      "A": "Send data to a public paste site",
-      "B": "Disable logging controls",
-      "C": "Share one administrator key",
-      "D": "Private connectivity, encryption, and least-privilege IAM"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Network, encryption, and identity controls protect data and reduce unnecessary access.\nThe other choices expose data or weaken authorization.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A regulated company is reviewing a production decision. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The team needs to keep customer data private while invoking a managed foundation model. Which control should be considered?",
+    "options": {
+      "A": "Retrieval Augmented Generation with a knowledge base",
+      "B": "Private connectivity, encryption, and least-privilege IAM",
+      "C": "A repeatable model evaluation dataset and scoring process",
+      "D": "An IAM policy scoped to approved Bedrock model resources"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Network, encryption, and identity controls protect data and reduce unnecessary access.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Private connectivity, encryption, and least-privilege IAM for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司需要在呼叫託管基礎模型時保持客戶資料的隱私。應考慮哪種控制？",
+        "question": "組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。受監管的公司需要在呼叫託管基礎模型時保持客戶資料的隱私。應考慮哪種控制？",
         "options": {
-          "A": "將資料傳送到公共貼上站點",
-          "B": "禁用日誌記錄控制",
-          "C": "共享一把管理員金鑰",
-          "D": "私有連線、加密與最低權限 IAM"
+          "A": "具有知識庫的檢索增強生成",
+          "B": "私有連線、加密與最低權限 IAM",
+          "C": "可重複的模型評估資料集和評分過程",
+          "D": "IAM 策略範圍為已核准的 Bedrock 模型資源"
         },
-        "explanation": "網路、加密和身分控制可保護資料並減少不必要的存取。\n其他選擇會暴露資料或削弱授權。"
+        "explanation": "網路、加密和身分控制可保護資料並減少不必要的存取。\n其他選項適用於此領域的不同需求，但不能像 私有連線、加密與最低權限 IAM 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-024",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A startup preparing for a traffic increase must evaluate a model against a fixed set of business prompts and expected responses. Which practice is appropriate?",
+    "question": "A startup preparing for a traffic increase is redesigning one integrated end-to-end architecture. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The design must keep recurring cost proportional to use, enforce least privilege, and remain available during a component or Availability Zone failure. The workload must evaluate a model against a fixed set of business prompts and expected responses, and the same architecture needs to invoke a foundation model from an application without hosting GPU instances. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "A repeatable model evaluation dataset and scoring process",
-      "B": "Evaluate only one happy-path prompt",
-      "C": "Change prompts after every test",
-      "D": "Skip recording results"
+      "A": "Use A repeatable model evaluation dataset and scoring process for the primary requirement and integrate it with Amazon Bedrock for the connected control",
+      "B": "Use A repeatable model evaluation dataset and scoring process but replace the connected control with Retrieval Augmented Generation with a knowledge base",
+      "C": "Use A vector index in an approved vector store for the primary requirement and integrate it with Amazon Bedrock",
+      "D": "Combine A vector index in an approved vector store with Private connectivity, encryption, and least-privilege IAM as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "A fixed evaluation set makes quality comparisons reproducible across model versions.\nThe other choices cannot show reliable model changes.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "A repeatable model evaluation dataset and scoring process satisfies the first part of the architecture: A fixed evaluation set makes quality comparisons reproducible across model versions. Amazon Bedrock satisfies the connected requirement: Amazon Bedrock provides managed API access to foundation models without managing model servers.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司必須根據一組固定的業務提示和預期回應來評估模型。哪種做法合適？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：具有嚴格恢復目標的團隊必須根據一組固定的業務提示和預期回應來評估模型。 第二項需求：在共享環境中工作的 AWS 管理員需要從應用程式呼叫基礎模型，而無需託管 GPU 執行個體。 此設計必須讓持續成本與實際用量相符、落實最低權限，並在元件或可用區域發生故障時維持可用。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "可重複的模型評估資料集和評分過程",
-          "B": "僅評估一個快樂路徑提示",
-          "C": "每次測試後更改提示",
-          "D": "跳過記錄結果"
+          "A": "以可重複的模型評估資料集和評分過程處理主要需求，並整合Amazon Bedrock作為相連控制",
+          "B": "使用可重複的模型評估資料集和評分過程，但以具有知識庫的檢索增強生成取代相連控制",
+          "C": "以已核准的向量儲存中的向量索引處理主要需求，並整合Amazon Bedrock",
+          "D": "把已核准的向量儲存中的向量索引與私有連線、加密與最低權限 IAM結合為單一平台設計"
         },
-        "explanation": "固定的評估集使得品質比較可以在模型版本之間重現。\n其他選擇無法顯示可靠的模型變更。"
+        "explanation": "可重複的模型評估資料集和評分過程 負責架構的第一項需求，Amazon Bedrock 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "aip-c01-d1-025",
-    "type": "single",
-    "question": "An operations team supporting a critical workload needs to control which model a production role can invoke. Which mechanism should be used?",
-    "options": {
-      "A": "An S3 lifecycle rule",
-      "B": "An IAM policy scoped to approved Bedrock model resources",
-      "C": "A public model endpoint",
-      "D": "A Route 53 record"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "IAM can restrict model invocation actions and resources for a production role.\nThe other choices do not authorize model selection.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The team needs to control which model a production role can invoke. Which mechanism should be used?",
+    "options": {
+      "A": "Retrieval Augmented Generation with a knowledge base",
+      "B": "A vector index in an approved vector store",
+      "C": "Private connectivity, encryption, and least-privilege IAM",
+      "D": "An IAM policy scoped to approved Bedrock model resources"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "IAM can restrict model invocation actions and resources for a production role.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide An IAM policy scoped to approved Bedrock model resources for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊需要控制生產角色可以呼叫哪個模型。應該使用哪種機制？",
+        "question": "組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。支援關鍵工作負載的營運團隊需要控制生產角色可以呼叫哪個模型。應該使用哪種機制？",
         "options": {
-          "A": "S3 生命週期規則",
-          "B": "IAM 策略範圍為已核准的 Bedrock 模型資源",
-          "C": "公共模型端點",
-          "D": "一筆 Route 53 記錄"
+          "A": "具有知識庫的檢索增強生成",
+          "B": "已核准的向量儲存中的向量索引",
+          "C": "私有連線、加密與最低權限 IAM",
+          "D": "IAM 策略範圍為已核准的 Bedrock 模型資源"
         },
-        "explanation": "IAM 可以限制生產角色的模型呼叫操作和資源。\n其他選擇不授權模型選擇。"
+        "explanation": "IAM 可以限制生產角色的模型呼叫操作和資源。\n其他選項適用於此領域的不同需求，但不能像 IAM 策略範圍為已核准的 Bedrock 模型資源 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-026",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A data platform team needs to provide an application with relevant company documents at inference time without retraining the foundation model. Which pattern fits?",
+    "question": "A data platform team is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team needs to provide an application with relevant company documents at inference time without retraining the foundation model. Which pattern fits?",
     "options": {
-      "A": "Store documents only in logs",
-      "B": "Disable access controls",
+      "A": "Private connectivity, encryption, and least-privilege IAM",
+      "B": "A repeatable model evaluation dataset and scoring process",
       "C": "Retrieval Augmented Generation with a knowledge base",
-      "D": "Randomly increase temperature"
+      "D": "A vector index in an approved vector store"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "RAG retrieves relevant content and supplies it as context to a foundation model.\nTemperature does not retrieve facts, logs are not a knowledge base, and disabled access controls are unsafe.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "RAG retrieves relevant content and supplies it as context to a foundation model.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Retrieval Augmented Generation with a knowledge base for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。適合哪種模式？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。資料平台團隊需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。適合哪種模式？",
         "options": {
-          "A": "僅將文件儲存在日誌中",
-          "B": "禁用存取控制",
+          "A": "私有連線、加密與最低權限 IAM",
+          "B": "可重複的模型評估資料集和評分過程",
           "C": "具有知識庫的檢索增強生成",
-          "D": "隨機升高溫度"
+          "D": "已核准的向量儲存中的向量索引"
         },
-        "explanation": "RAG 檢索相關內容並將其作為基礎模型的上下文提供。\n溫度不檢索事實，日誌不是知識庫，禁用的存取控制是不安全的。"
+        "explanation": "RAG 檢索相關內容並將其作為基礎模型的上下文提供。\n其他選項適用於此領域的不同需求，但不能像 具有知識庫的檢索增強生成 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-027",
-    "type": "single",
-    "question": "A security-conscious engineering team must store vector embeddings for semantic similarity search. Which capability is suitable?",
-    "options": {
-      "A": "A DNS record",
-      "B": "An EBS boot log",
-      "C": "An IAM password policy",
-      "D": "A vector index in an approved vector store"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Vector indexes support nearest-neighbor retrieval for semantic search and RAG.\nThe other choices do not store or search embeddings.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A security-conscious engineering team is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team must store vector embeddings for semantic similarity search. Which capability is suitable?",
+    "options": {
+      "A": "An IAM policy scoped to approved Bedrock model resources",
+      "B": "A vector index in an approved vector store",
+      "C": "Private connectivity, encryption, and least-privilege IAM",
+      "D": "A repeatable model evaluation dataset and scoring process"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Vector indexes support nearest-neighbor retrieval for semantic search and RAG.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A vector index in an approved vector store for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊必須儲存向量嵌入以進行語義相似性搜尋。哪種能力合適？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。具有安全意識的工程團隊必須儲存向量嵌入以進行語義相似性搜尋。哪種能力合適？",
         "options": {
-          "A": "DNS 記錄",
-          "B": "EBS 啟動日誌",
-          "C": "IAM 密碼原則",
-          "D": "已核准的向量儲存中的向量索引"
+          "A": "IAM 策略範圍為已核准的 Bedrock 模型資源",
+          "B": "已核准的向量儲存中的向量索引",
+          "C": "私有連線、加密與最低權限 IAM",
+          "D": "可重複的模型評估資料集和評分過程"
         },
-        "explanation": "向量索引支援語義搜尋和 RAG 的最近鄰檢索。\n其他選項不儲存或搜尋嵌入。"
+        "explanation": "向量索引支援語義搜尋和 RAG 的最近鄰檢索。\n其他選項適用於此領域的不同需求，但不能像 已核准的向量儲存中的向量索引 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-028",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A company migrating an existing workload needs to keep customer data private while invoking a managed foundation model. Which control should be considered?",
+    "question": "A company migrating an existing workload is redesigning one integrated end-to-end architecture. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The design must avoid unnecessary standby cost without weakening security controls or the availability objective. The workload needs to keep customer data private while invoking a managed foundation model, and the same architecture must ensure an agent cannot invoke an unapproved tool. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "Private connectivity, encryption, and least-privilege IAM",
-      "B": "Send data to a public paste site",
-      "C": "Disable logging controls",
-      "D": "Share one administrator key"
+      "A": "Use Private connectivity, encryption, and least-privilege IAM for the primary requirement and integrate it with An allowlist of tools backed by IAM and application authorization for the connected control",
+      "B": "Use Private connectivity, encryption, and least-privilege IAM but replace the connected control with Retrieval Augmented Generation with a knowledge base",
+      "C": "Use A vector index in an approved vector store for the primary requirement and integrate it with An allowlist of tools backed by IAM and application authorization",
+      "D": "Combine A vector index in an approved vector store with A repeatable model evaluation dataset and scoring process as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Network, encryption, and identity controls protect data and reduce unnecessary access.\nThe other choices expose data or weaken authorization.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Private connectivity, encryption, and least-privilege IAM satisfies the first part of the architecture: Network, encryption, and identity controls protect data and reduce unnecessary access. An allowlist of tools backed by IAM and application authorization satisfies the connected requirement: A tool allowlist and IAM policy constrain what the agent can call.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司需要在呼叫託管基礎模型時保持客戶資料的隱私。應考慮哪種控制？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：遷移現有工作負載的公司需要在呼叫託管基礎模型時保持客戶資料的隱私。 第二項需求：支援關鍵工作負載的營運團隊必須確保代理無法呼叫未經批准的工具。 此設計必須避免不必要的備用成本，同時不可削弱安全控制或可用性目標。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "私有連線、加密與最低權限 IAM",
-          "B": "將資料傳送到公共貼上站點",
-          "C": "禁用日誌記錄控制",
-          "D": "共享一把管理員金鑰"
+          "A": "以私有連線、加密與最低權限 IAM處理主要需求，並整合由 IAM 和應用程式授權支援的工具白名單作為相連控制",
+          "B": "使用私有連線、加密與最低權限 IAM，但以具有知識庫的檢索增強生成取代相連控制",
+          "C": "以已核准的向量儲存中的向量索引處理主要需求，並整合由 IAM 和應用程式授權支援的工具白名單",
+          "D": "把已核准的向量儲存中的向量索引與可重複的模型評估資料集和評分過程結合為單一平台設計"
         },
-        "explanation": "網路、加密和身分控制可保護資料並減少不必要的存取。\n其他選擇會暴露資料或削弱授權。"
+        "explanation": "私有連線、加密與最低權限 IAM 負責架構的第一項需求，由 IAM 和應用程式授權支援的工具白名單 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "aip-c01-d1-029",
-    "type": "single",
-    "question": "A team with strict recovery objectives must evaluate a model against a fixed set of business prompts and expected responses. Which practice is appropriate?",
-    "options": {
-      "A": "Skip recording results",
-      "B": "A repeatable model evaluation dataset and scoring process",
-      "C": "Evaluate only one happy-path prompt",
-      "D": "Change prompts after every test"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "A fixed evaluation set makes quality comparisons reproducible across model versions.\nThe other choices cannot show reliable model changes.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team with strict recovery objectives is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team must evaluate a model against a fixed set of business prompts and expected responses. Which practice is appropriate?",
+    "options": {
+      "A": "An IAM policy scoped to approved Bedrock model resources",
+      "B": "Retrieval Augmented Generation with a knowledge base",
+      "C": "A vector index in an approved vector store",
+      "D": "A repeatable model evaluation dataset and scoring process"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "A fixed evaluation set makes quality comparisons reproducible across model versions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A repeatable model evaluation dataset and scoring process for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格恢復目標的團隊必須根據一組固定的業務提示和預期回應來評估模型。哪種做法合適？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。具有嚴格恢復目標的團隊必須根據一組固定的業務提示和預期回應來評估模型。哪種做法合適？",
         "options": {
-          "A": "跳過記錄結果",
-          "B": "可重複的模型評估資料集和評分過程",
-          "C": "僅評估一個快樂路徑提示",
-          "D": "每次測試後更改提示"
+          "A": "IAM 策略範圍為已核准的 Bedrock 模型資源",
+          "B": "具有知識庫的檢索增強生成",
+          "C": "已核准的向量儲存中的向量索引",
+          "D": "可重複的模型評估資料集和評分過程"
         },
-        "explanation": "固定的評估集使得品質比較可以在模型版本之間重現。\n其他選擇無法顯示可靠的模型變更。"
+        "explanation": "固定的評估集使得品質比較可以在模型版本之間重現。\n其他選項適用於此領域的不同需求，但不能像 可重複的模型評估資料集和評分過程 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-030",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A developer team preparing a release needs to control which model a production role can invoke. Which mechanism should be used?",
+    "question": "A developer team preparing a release is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team needs to control which model a production role can invoke. Which mechanism should be used?",
     "options": {
-      "A": "A Route 53 record",
-      "B": "An S3 lifecycle rule",
+      "A": "A vector index in an approved vector store",
+      "B": "Private connectivity, encryption, and least-privilege IAM",
       "C": "An IAM policy scoped to approved Bedrock model resources",
-      "D": "A public model endpoint"
+      "D": "Retrieval Augmented Generation with a knowledge base"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "IAM can restrict model invocation actions and resources for a production role.\nThe other choices do not authorize model selection.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "IAM can restrict model invocation actions and resources for a production role.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide An IAM policy scoped to approved Bedrock model resources for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊需要控制生產角色可以呼叫哪個模型。應該使用哪種機制？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。準備發布的開發團隊需要控制生產角色可以呼叫哪個模型。應該使用哪種機制？",
         "options": {
-          "A": "一筆 Route 53 記錄",
-          "B": "S3 生命週期規則",
+          "A": "已核准的向量儲存中的向量索引",
+          "B": "私有連線、加密與最低權限 IAM",
           "C": "IAM 策略範圍為已核准的 Bedrock 模型資源",
-          "D": "公共模型端點"
+          "D": "具有知識庫的檢索增強生成"
         },
-        "explanation": "IAM 可以限制生產角色的模型呼叫操作和資源。\n其他選擇不授權模型選擇。"
+        "explanation": "IAM 可以限制生產角色的模型呼叫操作和資源。\n其他選項適用於此領域的不同需求，但不能像 IAM 策略範圍為已核准的 Bedrock 模型資源 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-031",
-    "type": "single",
-    "question": "An enterprise with several AWS Regions needs to provide an application with relevant company documents at inference time without retraining the foundation model. Which pattern fits?",
-    "options": {
-      "A": "Randomly increase temperature",
-      "B": "Store documents only in logs",
-      "C": "Disable access controls",
-      "D": "Retrieval Augmented Generation with a knowledge base"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "RAG retrieves relevant content and supplies it as context to a foundation model.\nTemperature does not retrieve facts, logs are not a knowledge base, and disabled access controls are unsafe.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team needs to provide an application with relevant company documents at inference time without retraining the foundation model. Which pattern fits?",
+    "options": {
+      "A": "A repeatable model evaluation dataset and scoring process",
+      "B": "Retrieval Augmented Generation with a knowledge base",
+      "C": "A vector index in an approved vector store",
+      "D": "Private connectivity, encryption, and least-privilege IAM"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "RAG retrieves relevant content and supplies it as context to a foundation model.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Retrieval Augmented Generation with a knowledge base for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS Regions 的企業需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。適合哪種模式？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。擁有多個 AWS Regions 的企業需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。適合哪種模式？",
         "options": {
-          "A": "隨機升高溫度",
-          "B": "僅將文件儲存在日誌中",
-          "C": "禁用存取控制",
-          "D": "具有知識庫的檢索增強生成"
+          "A": "可重複的模型評估資料集和評分過程",
+          "B": "具有知識庫的檢索增強生成",
+          "C": "已核准的向量儲存中的向量索引",
+          "D": "私有連線、加密與最低權限 IAM"
         },
-        "explanation": "RAG 檢索相關內容並將其作為基礎模型的上下文提供。\n溫度不檢索事實，日誌不是知識庫，禁用的存取控制是不安全的。"
+        "explanation": "RAG 檢索相關內容並將其作為基礎模型的上下文提供。\n其他選項適用於此領域的不同需求，但不能像 具有知識庫的檢索增強生成 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-032",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A service owner reviewing an incident must store vector embeddings for semantic similarity search. Which capability is suitable?",
+    "question": "A service owner reviewing an incident is redesigning one integrated end-to-end architecture. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The organization will accept additional managed-service cost only when it measurably improves security and availability with less operational effort. The workload must store vector embeddings for semantic similarity search, and the same architecture needs to keep a workload responsive during model-provider throttling. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "A vector index in an approved vector store",
-      "B": "A DNS record",
-      "C": "An EBS boot log",
-      "D": "An IAM password policy"
+      "A": "Use A vector index in an approved vector store for the primary requirement and integrate it with Exponential backoff, bounded retries, and a fallback path for the connected control",
+      "B": "Use A vector index in an approved vector store but replace the connected control with Retrieval Augmented Generation with a knowledge base",
+      "C": "Use Private connectivity, encryption, and least-privilege IAM for the primary requirement and integrate it with Exponential backoff, bounded retries, and a fallback path",
+      "D": "Combine Private connectivity, encryption, and least-privilege IAM with A repeatable model evaluation dataset and scoring process as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Vector indexes support nearest-neighbor retrieval for semantic search and RAG.\nThe other choices do not store or search embeddings.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "A vector index in an approved vector store satisfies the first part of the architecture: Vector indexes support nearest-neighbor retrieval for semantic search and RAG. Exponential backoff, bounded retries, and a fallback path satisfies the connected requirement: Bounded retries and fallback behavior protect user experience during throttling or transient failures.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務擁有者必須儲存向量嵌入以進行語義相似性搜尋。哪種能力合適？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：具有安全意識的工程團隊必須儲存向量嵌入以進行語義相似性搜尋。 第二項需求：支援關鍵工作負載的營運團隊需要在模型提供者限制期間保持工作負載的回應能力。 只有在託管服務能以較低營運負擔明確改善安全性與可用性時，組織才會接受額外成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "已核准的向量儲存中的向量索引",
-          "B": "DNS 記錄",
-          "C": "EBS 啟動日誌",
-          "D": "IAM 密碼原則"
+          "A": "以已核准的向量儲存中的向量索引處理主要需求，並整合指數退避、有界重試和後備路徑作為相連控制",
+          "B": "使用已核准的向量儲存中的向量索引，但以具有知識庫的檢索增強生成取代相連控制",
+          "C": "以私有連線、加密與最低權限 IAM處理主要需求，並整合指數退避、有界重試和後備路徑",
+          "D": "把私有連線、加密與最低權限 IAM與可重複的模型評估資料集和評分過程結合為單一平台設計"
         },
-        "explanation": "向量索引支援語義搜尋和 RAG 的最近鄰檢索。\n其他選項不儲存或搜尋嵌入。"
+        "explanation": "已核准的向量儲存中的向量索引 負責架構的第一項需求，指數退避、有界重試和後備路徑 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "aip-c01-d1-033",
-    "type": "single",
-    "question": "A team optimizing an existing implementation needs to keep customer data private while invoking a managed foundation model. Which control should be considered?",
-    "options": {
-      "A": "Share one administrator key",
-      "B": "Private connectivity, encryption, and least-privilege IAM",
-      "C": "Send data to a public paste site",
-      "D": "Disable logging controls"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Network, encryption, and identity controls protect data and reduce unnecessary access.\nThe other choices expose data or weaken authorization.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team needs to keep customer data private while invoking a managed foundation model. Which control should be considered?",
+    "options": {
+      "A": "A repeatable model evaluation dataset and scoring process",
+      "B": "An IAM policy scoped to approved Bedrock model resources",
+      "C": "Retrieval Augmented Generation with a knowledge base",
+      "D": "Private connectivity, encryption, and least-privilege IAM"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Network, encryption, and identity controls protect data and reduce unnecessary access.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Private connectivity, encryption, and least-privilege IAM for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊需要在呼叫託管基礎模型時保持客戶資料的隱私。應考慮哪種控制？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。優化現有實施的團隊需要在呼叫託管基礎模型時保持客戶資料的隱私。應考慮哪種控制？",
         "options": {
-          "A": "共享一把管理員金鑰",
-          "B": "私有連線、加密與最低權限 IAM",
-          "C": "將資料傳送到公共貼上站點",
-          "D": "禁用日誌記錄控制"
+          "A": "可重複的模型評估資料集和評分過程",
+          "B": "IAM 策略範圍為已核准的 Bedrock 模型資源",
+          "C": "具有知識庫的檢索增強生成",
+          "D": "私有連線、加密與最低權限 IAM"
         },
-        "explanation": "網路、加密和身分控制可保護資料並減少不必要的存取。\n其他選擇會暴露資料或削弱授權。"
+        "explanation": "網路、加密和身分控制可保護資料並減少不必要的存取。\n其他選項適用於此領域的不同需求，但不能像 私有連線、加密與最低權限 IAM 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-034",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A company introducing an automated workflow must evaluate a model against a fixed set of business prompts and expected responses. Which practice is appropriate?",
+    "question": "A company introducing an automated workflow is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team must evaluate a model against a fixed set of business prompts and expected responses. Which practice is appropriate?",
     "options": {
-      "A": "Change prompts after every test",
-      "B": "Skip recording results",
+      "A": "Retrieval Augmented Generation with a knowledge base",
+      "B": "A vector index in an approved vector store",
       "C": "A repeatable model evaluation dataset and scoring process",
-      "D": "Evaluate only one happy-path prompt"
+      "D": "An IAM policy scoped to approved Bedrock model resources"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "A fixed evaluation set makes quality comparisons reproducible across model versions.\nThe other choices cannot show reliable model changes.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "A fixed evaluation set makes quality comparisons reproducible across model versions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A repeatable model evaluation dataset and scoring process for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司必須根據一組固定的業務提示和預期回應來評估模型。哪種做法合適？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。引入自動化工作流程的公司必須根據一組固定的業務提示和預期回應來評估模型。哪種做法合適？",
         "options": {
-          "A": "每次測試後更改提示",
-          "B": "跳過記錄結果",
+          "A": "具有知識庫的檢索增強生成",
+          "B": "已核准的向量儲存中的向量索引",
           "C": "可重複的模型評估資料集和評分過程",
-          "D": "僅評估一個快樂路徑提示"
+          "D": "IAM 策略範圍為已核准的 Bedrock 模型資源"
         },
-        "explanation": "固定的評估集使得品質比較可以在模型版本之間重現。\n其他選擇無法顯示可靠的模型變更。"
+        "explanation": "固定的評估集使得品質比較可以在模型版本之間重現。\n其他選項適用於此領域的不同需求，但不能像 可重複的模型評估資料集和評分過程 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-035",
-    "type": "single",
-    "question": "An AWS administrator working in a shared environment needs to control which model a production role can invoke. Which mechanism should be used?",
-    "options": {
-      "A": "A public model endpoint",
-      "B": "A Route 53 record",
-      "C": "An S3 lifecycle rule",
-      "D": "An IAM policy scoped to approved Bedrock model resources"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "IAM can restrict model invocation actions and resources for a production role.\nThe other choices do not authorize model selection.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "An AWS administrator working in a shared environment is planning two independent production changes. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The first team needs to control. A second team needs to provide an application with relevant company documents at inference time without retraining the foundation model. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Retrieval Augmented Generation with a knowledge base",
+      "B": "A vector index in an approved vector store",
+      "C": "Private connectivity, encryption, and least-privilege IAM",
+      "D": "A repeatable model evaluation dataset and scoring process",
+      "E": "An IAM policy scoped to approved Bedrock model resources"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "An IAM policy scoped to approved Bedrock model resources meets the first requirement: IAM can restrict model invocation actions and resources for a production role. Retrieval Augmented Generation with a knowledge base meets the second requirement: RAG retrieves relevant content and supplies it as context to a foundation model.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "在共享環境中工作的 AWS 管理員需要控制生產角色可以呼叫哪個模型。應該使用哪種機制？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。第一項需求：生產團隊需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。第二項需求：支援關鍵工作負載的營運團隊需要控制生產角色可以呼叫哪個模型。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "公共模型端點",
-          "B": "一筆 Route 53 記錄",
-          "C": "S3 生命週期規則",
-          "D": "IAM 策略範圍為已核准的 Bedrock 模型資源"
+          "A": "具有知識庫的檢索增強生成",
+          "B": "已核准的向量儲存中的向量索引",
+          "C": "私有連線、加密與最低權限 IAM",
+          "D": "可重複的模型評估資料集和評分過程",
+          "E": "IAM 策略範圍為已核准的 Bedrock 模型資源"
         },
-        "explanation": "IAM 可以限制生產角色的模型呼叫操作和資源。\n其他選擇不授權模型選擇。"
+        "explanation": "具有知識庫的檢索增強生成 符合第一項需求：RAG 檢索相關內容並將其作為基礎模型的上下文提供。 IAM 策略範圍為已核准的 Bedrock 模型資源 符合第二項需求：IAM 可以限制生產角色的模型呼叫操作和資源。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "aip-c01-d1-036",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A customer-facing application team needs to provide an application with relevant company documents at inference time without retraining the foundation model. Which pattern fits?",
+    "question": "A customer-facing application team is redesigning one integrated end-to-end architecture. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The architecture must limit blast radius, preserve availability during change, and control cost through automation instead of permanent overprovisioning. The workload needs to provide an application with relevant company documents at inference time without retraining the foundation model, and the same architecture needs to protect troubleshooting logs from containing prompts with confidential data. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "Retrieval Augmented Generation with a knowledge base",
-      "B": "Randomly increase temperature",
-      "C": "Store documents only in logs",
-      "D": "Disable access controls"
+      "A": "Use Retrieval Augmented Generation with a knowledge base for the primary requirement and integrate it with Redact sensitive fields and restrict log access for the connected control",
+      "B": "Use Retrieval Augmented Generation with a knowledge base but replace the connected control with A vector index in an approved vector store",
+      "C": "Use Private connectivity, encryption, and least-privilege IAM for the primary requirement and integrate it with Redact sensitive fields and restrict log access",
+      "D": "Combine Private connectivity, encryption, and least-privilege IAM with A repeatable model evaluation dataset and scoring process as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "RAG retrieves relevant content and supplies it as context to a foundation model.\nTemperature does not retrieve facts, logs are not a knowledge base, and disabled access controls are unsafe.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Retrieval Augmented Generation with a knowledge base satisfies the first part of the architecture: RAG retrieves relevant content and supplies it as context to a foundation model. Redact sensitive fields and restrict log access satisfies the connected requirement: Redaction and least-privilege log access reduce exposure while preserving useful diagnostics.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。適合哪種模式？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：支援關鍵工作負載的營運團隊需要控制生產角色可以呼叫哪個模型。 第二項需求：支援關鍵工作負載的營運團隊需要保護故障排除日誌不包含具有機密資料的提示。 此架構必須限制影響範圍、在變更期間維持可用性，並透過自動化控制成本，而不是長期過度佈建。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "具有知識庫的檢索增強生成",
-          "B": "隨機升高溫度",
-          "C": "僅將文件儲存在日誌中",
-          "D": "禁用存取控制"
+          "A": "以具有知識庫的檢索增強生成處理主要需求，並整合編輯敏感字段並限制日誌存取作為相連控制",
+          "B": "使用具有知識庫的檢索增強生成，但以已核准的向量儲存中的向量索引取代相連控制",
+          "C": "以私有連線、加密與最低權限 IAM處理主要需求，並整合編輯敏感字段並限制日誌存取",
+          "D": "把私有連線、加密與最低權限 IAM與可重複的模型評估資料集和評分過程結合為單一平台設計"
         },
-        "explanation": "RAG 檢索相關內容並將其作為基礎模型的上下文提供。\n溫度不檢索事實，日誌不是知識庫，禁用的存取控制是不安全的。"
+        "explanation": "具有知識庫的檢索增強生成 負責架構的第一項需求，編輯敏感字段並限制日誌存取 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "aip-c01-d1-037",
-    "type": "single",
-    "question": "A platform team standardizing its AWS deployments must store vector embeddings for semantic similarity search. Which capability is suitable?",
-    "options": {
-      "A": "An IAM password policy",
-      "B": "A vector index in an approved vector store",
-      "C": "A DNS record",
-      "D": "An EBS boot log"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Vector indexes support nearest-neighbor retrieval for semantic search and RAG.\nThe other choices do not store or search embeddings.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team must store vector embeddings for semantic similarity search. Which capability is suitable?",
+    "options": {
+      "A": "Private connectivity, encryption, and least-privilege IAM",
+      "B": "A repeatable model evaluation dataset and scoring process",
+      "C": "An IAM policy scoped to approved Bedrock model resources",
+      "D": "A vector index in an approved vector store"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Vector indexes support nearest-neighbor retrieval for semantic search and RAG.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A vector index in an approved vector store for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊必須儲存用於語義相似性搜尋的向量嵌入。哪種能力合適？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。標準化其 AWS 部署的平台團隊必須儲存用於語義相似性搜尋的向量嵌入。哪種能力合適？",
         "options": {
-          "A": "IAM 密碼原則",
-          "B": "已核准的向量儲存中的向量索引",
-          "C": "DNS 記錄",
-          "D": "EBS 啟動日誌"
+          "A": "私有連線、加密與最低權限 IAM",
+          "B": "可重複的模型評估資料集和評分過程",
+          "C": "IAM 策略範圍為已核准的 Bedrock 模型資源",
+          "D": "已核准的向量儲存中的向量索引"
         },
-        "explanation": "向量索引支援語義搜尋和 RAG 的最近鄰檢索。\n其他選項不儲存或搜尋嵌入。"
+        "explanation": "向量索引支援語義搜尋和 RAG 的最近鄰檢索。\n其他選項適用於此領域的不同需求，但不能像 已核准的向量儲存中的向量索引 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-038",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team preparing evidence for an audit needs to keep customer data private while invoking a managed foundation model. Which control should be considered?",
+    "question": "A team preparing evidence for an audit is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team needs to keep customer data private while invoking a managed foundation model. Which control should be considered?",
     "options": {
-      "A": "Disable logging controls",
-      "B": "Share one administrator key",
+      "A": "An IAM policy scoped to approved Bedrock model resources",
+      "B": "Retrieval Augmented Generation with a knowledge base",
       "C": "Private connectivity, encryption, and least-privilege IAM",
-      "D": "Send data to a public paste site"
+      "D": "A repeatable model evaluation dataset and scoring process"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Network, encryption, and identity controls protect data and reduce unnecessary access.\nThe other choices expose data or weaken authorization.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Network, encryption, and identity controls protect data and reduce unnecessary access.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Private connectivity, encryption, and least-privilege IAM for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備審計證據的團隊需要在呼叫託管基礎模型時保持客戶資料的隱私。應考慮哪種控制？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。準備審計證據的團隊需要在呼叫託管基礎模型時保持客戶資料的隱私。應考慮哪種控制？",
         "options": {
-          "A": "禁用日誌記錄控制",
-          "B": "共享一把管理員金鑰",
+          "A": "IAM 策略範圍為已核准的 Bedrock 模型資源",
+          "B": "具有知識庫的檢索增強生成",
           "C": "私有連線、加密與最低權限 IAM",
-          "D": "將資料傳送到公共貼上站點"
+          "D": "可重複的模型評估資料集和評分過程"
         },
-        "explanation": "網路、加密和身分控制可保護資料並減少不必要的存取。\n其他選擇會暴露資料或削弱授權。"
+        "explanation": "網路、加密和身分控制可保護資料並減少不必要的存取。\n其他選項適用於此領域的不同需求，但不能像 私有連線、加密與最低權限 IAM 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-039",
-    "type": "single",
-    "question": "A business replacing a manual process must evaluate a model against a fixed set of business prompts and expected responses. Which practice is appropriate?",
-    "options": {
-      "A": "Evaluate only one happy-path prompt",
-      "B": "Change prompts after every test",
-      "C": "Skip recording results",
-      "D": "A repeatable model evaluation dataset and scoring process"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "A fixed evaluation set makes quality comparisons reproducible across model versions.\nThe other choices cannot show reliable model changes.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A business replacing a manual process is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team must evaluate a model against a fixed set of business prompts and expected responses. Which practice is appropriate?",
+    "options": {
+      "A": "A vector index in an approved vector store",
+      "B": "A repeatable model evaluation dataset and scoring process",
+      "C": "An IAM policy scoped to approved Bedrock model resources",
+      "D": "Retrieval Augmented Generation with a knowledge base"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "A fixed evaluation set makes quality comparisons reproducible across model versions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A repeatable model evaluation dataset and scoring process for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "取代手動流程的企業必須根據一組固定的業務提示和預期回應來評估模型。哪種做法合適？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。取代手動流程的企業必須根據一組固定的業務提示和預期回應來評估模型。哪種做法合適？",
         "options": {
-          "A": "僅評估一個快樂路徑提示",
-          "B": "每次測試後更改提示",
-          "C": "跳過記錄結果",
-          "D": "可重複的模型評估資料集和評分過程"
+          "A": "已核准的向量儲存中的向量索引",
+          "B": "可重複的模型評估資料集和評分過程",
+          "C": "IAM 策略範圍為已核准的 Bedrock 模型資源",
+          "D": "具有知識庫的檢索增強生成"
         },
-        "explanation": "固定的評估集使得品質比較可以在模型版本之間重現。\n其他選擇無法顯示可靠的模型變更。"
+        "explanation": "固定的評估集使得品質比較可以在模型版本之間重現。\n其他選項適用於此領域的不同需求，但不能像 可重複的模型評估資料集和評分過程 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-040",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team validating a design against the exam guide needs to control which model a production role can invoke. Which mechanism should be used?",
+    "question": "A team validating a design against the exam guide is redesigning one integrated end-to-end architecture. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The selected controls must provide auditable security, predictable availability, and the lowest operational cost that still satisfies both requirements. The workload needs to control, and the same architecture needs a model to call approved business APIs while retaining control over tool permissions. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "An IAM policy scoped to approved Bedrock model resources",
-      "B": "A public model endpoint",
-      "C": "A Route 53 record",
-      "D": "An S3 lifecycle rule"
+      "A": "Use An IAM policy scoped to approved Bedrock model resources for the primary requirement and integrate it with An agent with narrowly scoped action groups and IAM permissions for the connected control",
+      "B": "Use An IAM policy scoped to approved Bedrock model resources but replace the connected control with Retrieval Augmented Generation with a knowledge base",
+      "C": "Use A vector index in an approved vector store for the primary requirement and integrate it with An agent with narrowly scoped action groups and IAM permissions",
+      "D": "Combine A vector index in an approved vector store with Private connectivity, encryption, and least-privilege IAM as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "IAM can restrict model invocation actions and resources for a production role.\nThe other choices do not authorize model selection.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "An IAM policy scoped to approved Bedrock model resources satisfies the first part of the architecture: IAM can restrict model invocation actions and resources for a production role. An agent with narrowly scoped action groups and IAM permissions satisfies the connected requirement: Scoped action groups and IAM permissions constrain agent capabilities and reduce blast radius.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊需要控制生產角色可以呼叫哪個模型。應該使用哪種機制？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：生產團隊需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。 第二項需求：生產團隊需要一個模型來呼叫核准的業務 API，同時保留對工具權限的控制權。 所選控制必須提供可稽核的安全性、可預測的可用性，以及在滿足兩項要求前提下最低的營運成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "IAM 策略範圍為已核准的 Bedrock 模型資源",
-          "B": "公共模型端點",
-          "C": "一筆 Route 53 記錄",
-          "D": "S3 生命週期規則"
+          "A": "以IAM 策略範圍為已核准的 Bedrock 模型資源處理主要需求，並整合具有範圍狹窄的操作群組和 IAM Permissions的代理作為相連控制",
+          "B": "使用IAM 策略範圍為已核准的 Bedrock 模型資源，但以具有知識庫的檢索增強生成取代相連控制",
+          "C": "以已核准的向量儲存中的向量索引處理主要需求，並整合具有範圍狹窄的操作群組和 IAM Permissions的代理",
+          "D": "把已核准的向量儲存中的向量索引與私有連線、加密與最低權限 IAM結合為單一平台設計"
         },
-        "explanation": "IAM 可以限制生產角色的模型呼叫操作和資源。\n其他選擇不授權模型選擇。"
+        "explanation": "IAM 策略範圍為已核准的 Bedrock 模型資源 負責架構的第一項需求，具有範圍狹窄的操作群組和 IAM Permissions的代理 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "aip-c01-d1-041",
-    "type": "single",
-    "question": "A production team needs to provide an application with relevant company documents at inference time without retraining the foundation model. Which pattern fits?",
-    "options": {
-      "A": "Disable access controls",
-      "B": "Retrieval Augmented Generation with a knowledge base",
-      "C": "Randomly increase temperature",
-      "D": "Store documents only in logs"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "RAG retrieves relevant content and supplies it as context to a foundation model.\nTemperature does not retrieve facts, logs are not a knowledge base, and disabled access controls are unsafe.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A production team is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team needs to provide an application with relevant company documents at inference time without retraining the foundation model. Which pattern fits?",
+    "options": {
+      "A": "A vector index in an approved vector store",
+      "B": "Private connectivity, encryption, and least-privilege IAM",
+      "C": "A repeatable model evaluation dataset and scoring process",
+      "D": "Retrieval Augmented Generation with a knowledge base"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "RAG retrieves relevant content and supplies it as context to a foundation model.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Retrieval Augmented Generation with a knowledge base for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "生產團隊需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。適合哪種模式？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。生產團隊需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。適合哪種模式？",
         "options": {
-          "A": "禁用存取控制",
-          "B": "具有知識庫的檢索增強生成",
-          "C": "隨機升高溫度",
-          "D": "僅將文件儲存在日誌中"
+          "A": "已核准的向量儲存中的向量索引",
+          "B": "私有連線、加密與最低權限 IAM",
+          "C": "可重複的模型評估資料集和評分過程",
+          "D": "具有知識庫的檢索增強生成"
         },
-        "explanation": "RAG 檢索相關內容並將其作為基礎模型的上下文提供。\n溫度不檢索事實，日誌不是知識庫，禁用的存取控制是不安全的。"
+        "explanation": "RAG 檢索相關內容並將其作為基礎模型的上下文提供。\n其他選項適用於此領域的不同需求，但不能像 具有知識庫的檢索增強生成 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-042",
-    "type": "single",
-    "question": "A multi-account platform team must store vector embeddings for semantic similarity search. Which capability is suitable?",
-    "options": {
-      "A": "An EBS boot log",
-      "B": "An IAM password policy",
-      "C": "A vector index in an approved vector store",
-      "D": "A DNS record"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "Vector indexes support nearest-neighbor retrieval for semantic search and RAG.\nThe other choices do not store or search embeddings.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A multi-account platform team is planning two independent production changes. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The first team must store vector embeddings for semantic similarity search. A second team needs to keep customer data private while invoking a managed foundation model. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "An IAM policy scoped to approved Bedrock model resources",
+      "B": "Retrieval Augmented Generation with a knowledge base",
+      "C": "A vector index in an approved vector store",
+      "D": "Private connectivity, encryption, and least-privilege IAM",
+      "E": "A repeatable model evaluation dataset and scoring process"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "A vector index in an approved vector store meets the first requirement: Vector indexes support nearest-neighbor retrieval for semantic search and RAG. Private connectivity, encryption, and least-privilege IAM meets the second requirement: Network, encryption, and identity controls protect data and reduce unnecessary access.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊必須儲存向量嵌入以進行語義相似性搜尋。哪種能力合適？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。第一項需求：多帳戶平台團隊必須儲存向量嵌入以進行語義相似性搜尋。第二項需求：受監管的公司需要在呼叫託管基礎模型時保持客戶資料的隱私。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "EBS 啟動日誌",
-          "B": "IAM 密碼原則",
+          "A": "IAM 策略範圍為已核准的 Bedrock 模型資源",
+          "B": "具有知識庫的檢索增強生成",
           "C": "已核准的向量儲存中的向量索引",
-          "D": "DNS 記錄"
+          "D": "私有連線、加密與最低權限 IAM",
+          "E": "可重複的模型評估資料集和評分過程"
         },
-        "explanation": "向量索引支援語義搜尋和 RAG 的最近鄰檢索。\n其他選項不儲存或搜尋嵌入。"
+        "explanation": "已核准的向量儲存中的向量索引 符合第一項需求：向量索引支援語義搜尋和 RAG 的最近鄰檢索。 私有連線、加密與最低權限 IAM 符合第二項需求：網路、加密和身分控制可保護資料並減少不必要的存取。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "aip-c01-d1-043",
-    "type": "single",
-    "question": "A regulated company needs to keep customer data private while invoking a managed foundation model. Which control should be considered?",
-    "options": {
-      "A": "Send data to a public paste site",
-      "B": "Disable logging controls",
-      "C": "Share one administrator key",
-      "D": "Private connectivity, encryption, and least-privilege IAM"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Network, encryption, and identity controls protect data and reduce unnecessary access.\nThe other choices expose data or weaken authorization.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A regulated company is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team needs to keep customer data private while invoking a managed foundation model. Which control should be considered?",
+    "options": {
+      "A": "Retrieval Augmented Generation with a knowledge base",
+      "B": "Private connectivity, encryption, and least-privilege IAM",
+      "C": "A repeatable model evaluation dataset and scoring process",
+      "D": "An IAM policy scoped to approved Bedrock model resources"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Network, encryption, and identity controls protect data and reduce unnecessary access.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Private connectivity, encryption, and least-privilege IAM for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司需要在呼叫託管基礎模型時保持客戶資料的隱私。應考慮哪種控制？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。受監管的公司需要在呼叫託管基礎模型時保持客戶資料的隱私。應考慮哪種控制？",
         "options": {
-          "A": "將資料傳送到公共貼上站點",
-          "B": "禁用日誌記錄控制",
-          "C": "共享一把管理員金鑰",
-          "D": "私有連線、加密與最低權限 IAM"
+          "A": "具有知識庫的檢索增強生成",
+          "B": "私有連線、加密與最低權限 IAM",
+          "C": "可重複的模型評估資料集和評分過程",
+          "D": "IAM 策略範圍為已核准的 Bedrock 模型資源"
         },
-        "explanation": "網路、加密和身分控制可保護資料並減少不必要的存取。\n其他選擇會暴露資料或削弱授權。"
+        "explanation": "網路、加密和身分控制可保護資料並減少不必要的存取。\n其他選項適用於此領域的不同需求，但不能像 私有連線、加密與最低權限 IAM 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-044",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A startup preparing for a traffic increase must evaluate a model against a fixed set of business prompts and expected responses. Which practice is appropriate?",
+    "question": "A startup preparing for a traffic increase is redesigning one integrated end-to-end architecture. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The design must keep recurring cost proportional to use, enforce least privilege, and remain available during a component or Availability Zone failure. The workload must evaluate a model against a fixed set of business prompts and expected responses, and the same architecture needs to invoke a foundation model from an application without hosting GPU instances. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "A repeatable model evaluation dataset and scoring process",
-      "B": "Evaluate only one happy-path prompt",
-      "C": "Change prompts after every test",
-      "D": "Skip recording results"
+      "A": "Use A repeatable model evaluation dataset and scoring process for the primary requirement and integrate it with Amazon Bedrock for the connected control",
+      "B": "Use A repeatable model evaluation dataset and scoring process but replace the connected control with Retrieval Augmented Generation with a knowledge base",
+      "C": "Use A vector index in an approved vector store for the primary requirement and integrate it with Amazon Bedrock",
+      "D": "Combine A vector index in an approved vector store with Private connectivity, encryption, and least-privilege IAM as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "A fixed evaluation set makes quality comparisons reproducible across model versions.\nThe other choices cannot show reliable model changes.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "A repeatable model evaluation dataset and scoring process satisfies the first part of the architecture: A fixed evaluation set makes quality comparisons reproducible across model versions. Amazon Bedrock satisfies the connected requirement: Amazon Bedrock provides managed API access to foundation models without managing model servers.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司必須根據一組固定的業務提示和預期回應來評估模型。哪種做法合適？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：具有嚴格恢復目標的團隊必須根據一組固定的業務提示和預期回應來評估模型。 第二項需求：在共享環境中工作的 AWS 管理員需要從應用程式呼叫基礎模型，而無需託管 GPU 執行個體。 此設計必須讓持續成本與實際用量相符、落實最低權限，並在元件或可用區域發生故障時維持可用。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "可重複的模型評估資料集和評分過程",
-          "B": "僅評估一個快樂路徑提示",
-          "C": "每次測試後更改提示",
-          "D": "跳過記錄結果"
+          "A": "以可重複的模型評估資料集和評分過程處理主要需求，並整合Amazon Bedrock作為相連控制",
+          "B": "使用可重複的模型評估資料集和評分過程，但以具有知識庫的檢索增強生成取代相連控制",
+          "C": "以已核准的向量儲存中的向量索引處理主要需求，並整合Amazon Bedrock",
+          "D": "把已核准的向量儲存中的向量索引與私有連線、加密與最低權限 IAM結合為單一平台設計"
         },
-        "explanation": "固定的評估集使得品質比較可以在模型版本之間重現。\n其他選擇無法顯示可靠的模型變更。"
+        "explanation": "可重複的模型評估資料集和評分過程 負責架構的第一項需求，Amazon Bedrock 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "aip-c01-d1-045",
-    "type": "single",
-    "question": "An operations team supporting a critical workload needs to control which model a production role can invoke. Which mechanism should be used?",
-    "options": {
-      "A": "An S3 lifecycle rule",
-      "B": "An IAM policy scoped to approved Bedrock model resources",
-      "C": "A public model endpoint",
-      "D": "A Route 53 record"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "IAM can restrict model invocation actions and resources for a production role.\nThe other choices do not authorize model selection.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team needs to control which model a production role can invoke. Which mechanism should be used?",
+    "options": {
+      "A": "Retrieval Augmented Generation with a knowledge base",
+      "B": "A vector index in an approved vector store",
+      "C": "Private connectivity, encryption, and least-privilege IAM",
+      "D": "An IAM policy scoped to approved Bedrock model resources"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "IAM can restrict model invocation actions and resources for a production role.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide An IAM policy scoped to approved Bedrock model resources for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊需要控制生產角色可以呼叫哪個模型。應該使用哪種機制？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。支援關鍵工作負載的營運團隊需要控制生產角色可以呼叫哪個模型。應該使用哪種機制？",
         "options": {
-          "A": "S3 生命週期規則",
-          "B": "IAM 策略範圍為已核准的 Bedrock 模型資源",
-          "C": "公共模型端點",
-          "D": "一筆 Route 53 記錄"
+          "A": "具有知識庫的檢索增強生成",
+          "B": "已核准的向量儲存中的向量索引",
+          "C": "私有連線、加密與最低權限 IAM",
+          "D": "IAM 策略範圍為已核准的 Bedrock 模型資源"
         },
-        "explanation": "IAM 可以限制生產角色的模型呼叫操作和資源。\n其他選擇不授權模型選擇。"
+        "explanation": "IAM 可以限制生產角色的模型呼叫操作和資源。\n其他選項適用於此領域的不同需求，但不能像 IAM 策略範圍為已核准的 Bedrock 模型資源 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-046",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A data platform team needs to provide an application with relevant company documents at inference time without retraining the foundation model. Which pattern fits?",
+    "question": "A data platform team is reviewing a production decision. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The team needs to provide an application with relevant company documents at inference time without retraining the foundation model. Which pattern fits?",
     "options": {
-      "A": "Store documents only in logs",
-      "B": "Disable access controls",
+      "A": "Private connectivity, encryption, and least-privilege IAM",
+      "B": "A repeatable model evaluation dataset and scoring process",
       "C": "Retrieval Augmented Generation with a knowledge base",
-      "D": "Randomly increase temperature"
+      "D": "A vector index in an approved vector store"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "RAG retrieves relevant content and supplies it as context to a foundation model.\nTemperature does not retrieve facts, logs are not a knowledge base, and disabled access controls are unsafe.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "RAG retrieves relevant content and supplies it as context to a foundation model.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Retrieval Augmented Generation with a knowledge base for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。適合哪種模式？",
+        "question": "組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。資料平台團隊需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。適合哪種模式？",
         "options": {
-          "A": "僅將文件儲存在日誌中",
-          "B": "禁用存取控制",
+          "A": "私有連線、加密與最低權限 IAM",
+          "B": "可重複的模型評估資料集和評分過程",
           "C": "具有知識庫的檢索增強生成",
-          "D": "隨機升高溫度"
+          "D": "已核准的向量儲存中的向量索引"
         },
-        "explanation": "RAG 檢索相關內容並將其作為基礎模型的上下文提供。\n溫度不檢索事實，日誌不是知識庫，禁用的存取控制是不安全的。"
+        "explanation": "RAG 檢索相關內容並將其作為基礎模型的上下文提供。\n其他選項適用於此領域的不同需求，但不能像 具有知識庫的檢索增強生成 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-047",
-    "type": "single",
-    "question": "A security-conscious engineering team must store vector embeddings for semantic similarity search. Which capability is suitable?",
-    "options": {
-      "A": "A DNS record",
-      "B": "An EBS boot log",
-      "C": "An IAM password policy",
-      "D": "A vector index in an approved vector store"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Vector indexes support nearest-neighbor retrieval for semantic search and RAG.\nThe other choices do not store or search embeddings.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A security-conscious engineering team is reviewing a production decision. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The team must store vector embeddings for semantic similarity search. Which capability is suitable?",
+    "options": {
+      "A": "An IAM policy scoped to approved Bedrock model resources",
+      "B": "A vector index in an approved vector store",
+      "C": "Private connectivity, encryption, and least-privilege IAM",
+      "D": "A repeatable model evaluation dataset and scoring process"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Vector indexes support nearest-neighbor retrieval for semantic search and RAG.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A vector index in an approved vector store for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊必須儲存向量嵌入以進行語義相似性搜尋。哪種能力合適？",
+        "question": "組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。具有安全意識的工程團隊必須儲存向量嵌入以進行語義相似性搜尋。哪種能力合適？",
         "options": {
-          "A": "DNS 記錄",
-          "B": "EBS 啟動日誌",
-          "C": "IAM 密碼原則",
-          "D": "已核准的向量儲存中的向量索引"
+          "A": "IAM 策略範圍為已核准的 Bedrock 模型資源",
+          "B": "已核准的向量儲存中的向量索引",
+          "C": "私有連線、加密與最低權限 IAM",
+          "D": "可重複的模型評估資料集和評分過程"
         },
-        "explanation": "向量索引支援語義搜尋和 RAG 的最近鄰檢索。\n其他選項不儲存或搜尋嵌入。"
+        "explanation": "向量索引支援語義搜尋和 RAG 的最近鄰檢索。\n其他選項適用於此領域的不同需求，但不能像 已核准的向量儲存中的向量索引 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-048",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A company migrating an existing workload needs to keep customer data private while invoking a managed foundation model. Which control should be considered?",
+    "question": "A company migrating an existing workload is redesigning one integrated end-to-end architecture. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The design must avoid unnecessary standby cost without weakening security controls or the availability objective. The workload needs to keep customer data private while invoking a managed foundation model, and the same architecture must ensure an agent cannot invoke an unapproved tool. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "Private connectivity, encryption, and least-privilege IAM",
-      "B": "Send data to a public paste site",
-      "C": "Disable logging controls",
-      "D": "Share one administrator key"
+      "A": "Use Private connectivity, encryption, and least-privilege IAM for the primary requirement and integrate it with An allowlist of tools backed by IAM and application authorization for the connected control",
+      "B": "Use Private connectivity, encryption, and least-privilege IAM but replace the connected control with Retrieval Augmented Generation with a knowledge base",
+      "C": "Use A vector index in an approved vector store for the primary requirement and integrate it with An allowlist of tools backed by IAM and application authorization",
+      "D": "Combine A vector index in an approved vector store with A repeatable model evaluation dataset and scoring process as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Network, encryption, and identity controls protect data and reduce unnecessary access.\nThe other choices expose data or weaken authorization.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Private connectivity, encryption, and least-privilege IAM satisfies the first part of the architecture: Network, encryption, and identity controls protect data and reduce unnecessary access. An allowlist of tools backed by IAM and application authorization satisfies the connected requirement: A tool allowlist and IAM policy constrain what the agent can call.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司需要在呼叫託管基礎模型時保持客戶資料的隱私。應考慮哪種控制？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：遷移現有工作負載的公司需要在呼叫託管基礎模型時保持客戶資料的隱私。 第二項需求：支援關鍵工作負載的營運團隊必須確保代理無法呼叫未經批准的工具。 此設計必須避免不必要的備用成本，同時不可削弱安全控制或可用性目標。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "私有連線、加密與最低權限 IAM",
-          "B": "將資料傳送到公共貼上站點",
-          "C": "禁用日誌記錄控制",
-          "D": "共享一把管理員金鑰"
+          "A": "以私有連線、加密與最低權限 IAM處理主要需求，並整合由 IAM 和應用程式授權支援的工具白名單作為相連控制",
+          "B": "使用私有連線、加密與最低權限 IAM，但以具有知識庫的檢索增強生成取代相連控制",
+          "C": "以已核准的向量儲存中的向量索引處理主要需求，並整合由 IAM 和應用程式授權支援的工具白名單",
+          "D": "把已核准的向量儲存中的向量索引與可重複的模型評估資料集和評分過程結合為單一平台設計"
         },
-        "explanation": "網路、加密和身分控制可保護資料並減少不必要的存取。\n其他選擇會暴露資料或削弱授權。"
+        "explanation": "私有連線、加密與最低權限 IAM 負責架構的第一項需求，由 IAM 和應用程式授權支援的工具白名單 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "aip-c01-d1-049",
-    "type": "single",
-    "question": "A team with strict recovery objectives must evaluate a model against a fixed set of business prompts and expected responses. Which practice is appropriate?",
-    "options": {
-      "A": "Skip recording results",
-      "B": "A repeatable model evaluation dataset and scoring process",
-      "C": "Evaluate only one happy-path prompt",
-      "D": "Change prompts after every test"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "A fixed evaluation set makes quality comparisons reproducible across model versions.\nThe other choices cannot show reliable model changes.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A team with strict recovery objectives is planning two independent production changes. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The first team must evaluate a model against a fixed set of business prompts and expected responses. A second team needs to control. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "A repeatable model evaluation dataset and scoring process",
+      "B": "An IAM policy scoped to approved Bedrock model resources",
+      "C": "Retrieval Augmented Generation with a knowledge base",
+      "D": "A vector index in an approved vector store",
+      "E": "Private connectivity, encryption, and least-privilege IAM"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "A repeatable model evaluation dataset and scoring process meets the first requirement: A fixed evaluation set makes quality comparisons reproducible across model versions. An IAM policy scoped to approved Bedrock model resources meets the second requirement: IAM can restrict model invocation actions and resources for a production role.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有嚴格恢復目標的團隊必須根據一組固定的業務提示和預期回應來評估模型。哪種做法合適？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。第一項需求：準備增加流量的新創公司必須根據一組固定的業務提示和預期回應來評估模型。第二項需求：支援關鍵工作負載的營運團隊需要控制生產角色可以呼叫哪個模型。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "跳過記錄結果",
-          "B": "可重複的模型評估資料集和評分過程",
-          "C": "僅評估一個快樂路徑提示",
-          "D": "每次測試後更改提示"
+          "A": "可重複的模型評估資料集和評分過程",
+          "B": "IAM 策略範圍為已核准的 Bedrock 模型資源",
+          "C": "具有知識庫的檢索增強生成",
+          "D": "已核准的向量儲存中的向量索引",
+          "E": "私有連線、加密與最低權限 IAM"
         },
-        "explanation": "固定的評估集使得品質比較可以在模型版本之間重現。\n其他選擇無法顯示可靠的模型變更。"
+        "explanation": "可重複的模型評估資料集和評分過程 符合第一項需求：固定的評估集使得品質比較可以在模型版本之間重現。 IAM 策略範圍為已核准的 Bedrock 模型資源 符合第二項需求：IAM 可以限制生產角色的模型呼叫操作和資源。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "aip-c01-d1-050",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A developer team preparing a release needs to control which model a production role can invoke. Which mechanism should be used?",
+    "question": "A developer team preparing a release is reviewing a production decision. The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications. The team needs to control which model a production role can invoke. Which mechanism should be used?",
     "options": {
-      "A": "A Route 53 record",
-      "B": "An S3 lifecycle rule",
+      "A": "A vector index in an approved vector store",
+      "B": "Private connectivity, encryption, and least-privilege IAM",
       "C": "An IAM policy scoped to approved Bedrock model resources",
-      "D": "A public model endpoint"
+      "D": "Retrieval Augmented Generation with a knowledge base"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "IAM can restrict model invocation actions and resources for a production role.\nThe other choices do not authorize model selection.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "IAM can restrict model invocation actions and resources for a production role.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide An IAM policy scoped to approved Bedrock model resources for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊需要控制生產角色可以呼叫哪個模型。應該使用哪種機制？",
+        "question": "組織需要在不同工作負載之間標準化此功能，同時讓各團隊保留應用程式的日常擁有權。準備發布的開發團隊需要控制生產角色可以呼叫哪個模型。應該使用哪種機制？",
         "options": {
-          "A": "一筆 Route 53 記錄",
-          "B": "S3 生命週期規則",
+          "A": "已核准的向量儲存中的向量索引",
+          "B": "私有連線、加密與最低權限 IAM",
           "C": "IAM 策略範圍為已核准的 Bedrock 模型資源",
-          "D": "公共模型端點"
+          "D": "具有知識庫的檢索增強生成"
         },
-        "explanation": "IAM 可以限制生產角色的模型呼叫操作和資源。\n其他選擇不授權模型選擇。"
+        "explanation": "IAM 可以限制生產角色的模型呼叫操作和資源。\n其他選項適用於此領域的不同需求，但不能像 IAM 策略範圍為已核准的 Bedrock 模型資源 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-051",
-    "type": "single",
-    "question": "An enterprise with several AWS Regions needs to provide an application with relevant company documents at inference time without retraining the foundation model. Which pattern fits?",
-    "options": {
-      "A": "Randomly increase temperature",
-      "B": "Store documents only in logs",
-      "C": "Disable access controls",
-      "D": "Retrieval Augmented Generation with a knowledge base"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "RAG retrieves relevant content and supplies it as context to a foundation model.\nTemperature does not retrieve facts, logs are not a knowledge base, and disabled access controls are unsafe.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team needs to provide an application with relevant company documents at inference time without retraining the foundation model. Which pattern fits?",
+    "options": {
+      "A": "A repeatable model evaluation dataset and scoring process",
+      "B": "Retrieval Augmented Generation with a knowledge base",
+      "C": "A vector index in an approved vector store",
+      "D": "Private connectivity, encryption, and least-privilege IAM"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "RAG retrieves relevant content and supplies it as context to a foundation model.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Retrieval Augmented Generation with a knowledge base for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS Regions 的企業需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。適合哪種模式？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。擁有多個 AWS Regions 的企業需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。適合哪種模式？",
         "options": {
-          "A": "隨機升高溫度",
-          "B": "僅將文件儲存在日誌中",
-          "C": "禁用存取控制",
-          "D": "具有知識庫的檢索增強生成"
+          "A": "可重複的模型評估資料集和評分過程",
+          "B": "具有知識庫的檢索增強生成",
+          "C": "已核准的向量儲存中的向量索引",
+          "D": "私有連線、加密與最低權限 IAM"
         },
-        "explanation": "RAG 檢索相關內容並將其作為基礎模型的上下文提供。\n溫度不檢索事實，日誌不是知識庫，禁用的存取控制是不安全的。"
+        "explanation": "RAG 檢索相關內容並將其作為基礎模型的上下文提供。\n其他選項適用於此領域的不同需求，但不能像 具有知識庫的檢索增強生成 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-052",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A service owner reviewing an incident must store vector embeddings for semantic similarity search. Which capability is suitable?",
+    "question": "A service owner reviewing an incident is redesigning one integrated end-to-end architecture. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The organization will accept additional managed-service cost only when it measurably improves security and availability with less operational effort. The workload must store vector embeddings for semantic similarity search, and the same architecture needs to keep a workload responsive during model-provider throttling. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "A vector index in an approved vector store",
-      "B": "A DNS record",
-      "C": "An EBS boot log",
-      "D": "An IAM password policy"
+      "A": "Use A vector index in an approved vector store for the primary requirement and integrate it with Exponential backoff, bounded retries, and a fallback path for the connected control",
+      "B": "Use A vector index in an approved vector store but replace the connected control with Retrieval Augmented Generation with a knowledge base",
+      "C": "Use Private connectivity, encryption, and least-privilege IAM for the primary requirement and integrate it with Exponential backoff, bounded retries, and a fallback path",
+      "D": "Combine Private connectivity, encryption, and least-privilege IAM with A repeatable model evaluation dataset and scoring process as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Vector indexes support nearest-neighbor retrieval for semantic search and RAG.\nThe other choices do not store or search embeddings.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "A vector index in an approved vector store satisfies the first part of the architecture: Vector indexes support nearest-neighbor retrieval for semantic search and RAG. Exponential backoff, bounded retries, and a fallback path satisfies the connected requirement: Bounded retries and fallback behavior protect user experience during throttling or transient failures.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務擁有者必須儲存向量嵌入以進行語義相似性搜尋。哪種能力合適？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：具有安全意識的工程團隊必須儲存向量嵌入以進行語義相似性搜尋。 第二項需求：支援關鍵工作負載的營運團隊需要在模型提供者限制期間保持工作負載的回應能力。 只有在託管服務能以較低營運負擔明確改善安全性與可用性時，組織才會接受額外成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "已核准的向量儲存中的向量索引",
-          "B": "DNS 記錄",
-          "C": "EBS 啟動日誌",
-          "D": "IAM 密碼原則"
+          "A": "以已核准的向量儲存中的向量索引處理主要需求，並整合指數退避、有界重試和後備路徑作為相連控制",
+          "B": "使用已核准的向量儲存中的向量索引，但以具有知識庫的檢索增強生成取代相連控制",
+          "C": "以私有連線、加密與最低權限 IAM處理主要需求，並整合指數退避、有界重試和後備路徑",
+          "D": "把私有連線、加密與最低權限 IAM與可重複的模型評估資料集和評分過程結合為單一平台設計"
         },
-        "explanation": "向量索引支援語義搜尋和 RAG 的最近鄰檢索。\n其他選項不儲存或搜尋嵌入。"
+        "explanation": "已核准的向量儲存中的向量索引 負責架構的第一項需求，指數退避、有界重試和後備路徑 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "aip-c01-d1-053",
-    "type": "single",
-    "question": "A team optimizing an existing implementation needs to keep customer data private while invoking a managed foundation model. Which control should be considered?",
-    "options": {
-      "A": "Share one administrator key",
-      "B": "Private connectivity, encryption, and least-privilege IAM",
-      "C": "Send data to a public paste site",
-      "D": "Disable logging controls"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Network, encryption, and identity controls protect data and reduce unnecessary access.\nThe other choices expose data or weaken authorization.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team needs to keep customer data private while invoking a managed foundation model. Which control should be considered?",
+    "options": {
+      "A": "A repeatable model evaluation dataset and scoring process",
+      "B": "An IAM policy scoped to approved Bedrock model resources",
+      "C": "Retrieval Augmented Generation with a knowledge base",
+      "D": "Private connectivity, encryption, and least-privilege IAM"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Network, encryption, and identity controls protect data and reduce unnecessary access.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Private connectivity, encryption, and least-privilege IAM for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊需要在呼叫託管基礎模型時保持客戶資料的隱私。應考慮哪種控制？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。優化現有實施的團隊需要在呼叫託管基礎模型時保持客戶資料的隱私。應考慮哪種控制？",
         "options": {
-          "A": "共享一把管理員金鑰",
-          "B": "私有連線、加密與最低權限 IAM",
-          "C": "將資料傳送到公共貼上站點",
-          "D": "禁用日誌記錄控制"
+          "A": "可重複的模型評估資料集和評分過程",
+          "B": "IAM 策略範圍為已核准的 Bedrock 模型資源",
+          "C": "具有知識庫的檢索增強生成",
+          "D": "私有連線、加密與最低權限 IAM"
         },
-        "explanation": "網路、加密和身分控制可保護資料並減少不必要的存取。\n其他選擇會暴露資料或削弱授權。"
+        "explanation": "網路、加密和身分控制可保護資料並減少不必要的存取。\n其他選項適用於此領域的不同需求，但不能像 私有連線、加密與最低權限 IAM 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-054",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A company introducing an automated workflow must evaluate a model against a fixed set of business prompts and expected responses. Which practice is appropriate?",
+    "question": "A company introducing an automated workflow is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team must evaluate a model against a fixed set of business prompts and expected responses. Which practice is appropriate?",
     "options": {
-      "A": "Change prompts after every test",
-      "B": "Skip recording results",
+      "A": "Retrieval Augmented Generation with a knowledge base",
+      "B": "A vector index in an approved vector store",
       "C": "A repeatable model evaluation dataset and scoring process",
-      "D": "Evaluate only one happy-path prompt"
+      "D": "An IAM policy scoped to approved Bedrock model resources"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "A fixed evaluation set makes quality comparisons reproducible across model versions.\nThe other choices cannot show reliable model changes.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "A fixed evaluation set makes quality comparisons reproducible across model versions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A repeatable model evaluation dataset and scoring process for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司必須根據一組固定的業務提示和預期回應來評估模型。哪種做法合適？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。引入自動化工作流程的公司必須根據一組固定的業務提示和預期回應來評估模型。哪種做法合適？",
         "options": {
-          "A": "每次測試後更改提示",
-          "B": "跳過記錄結果",
+          "A": "具有知識庫的檢索增強生成",
+          "B": "已核准的向量儲存中的向量索引",
           "C": "可重複的模型評估資料集和評分過程",
-          "D": "僅評估一個快樂路徑提示"
+          "D": "IAM 策略範圍為已核准的 Bedrock 模型資源"
         },
-        "explanation": "固定的評估集使得品質比較可以在模型版本之間重現。\n其他選擇無法顯示可靠的模型變更。"
+        "explanation": "固定的評估集使得品質比較可以在模型版本之間重現。\n其他選項適用於此領域的不同需求，但不能像 可重複的模型評估資料集和評分過程 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-055",
-    "type": "single",
-    "question": "An AWS administrator working in a shared environment needs to control which model a production role can invoke. Which mechanism should be used?",
-    "options": {
-      "A": "A public model endpoint",
-      "B": "A Route 53 record",
-      "C": "An S3 lifecycle rule",
-      "D": "An IAM policy scoped to approved Bedrock model resources"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "IAM can restrict model invocation actions and resources for a production role.\nThe other choices do not authorize model selection.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment is reviewing a production decision. The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes. The team needs to control which model a production role can invoke. Which mechanism should be used?",
+    "options": {
+      "A": "Private connectivity, encryption, and least-privilege IAM",
+      "B": "An IAM policy scoped to approved Bedrock model resources",
+      "C": "Retrieval Augmented Generation with a knowledge base",
+      "D": "A vector index in an approved vector store"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "IAM can restrict model invocation actions and resources for a production role.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide An IAM policy scoped to approved Bedrock model resources for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "在共享環境中工作的 AWS 管理員需要控制生產角色可以呼叫哪個模型。應該使用哪種機制？",
+        "question": "此環境橫跨多個 AWS 帳戶並支援業務關鍵工作負載。設計必須保留委派擁有權、可以稽核，並將自訂營運程序減至最少。在共享環境中工作的 AWS 管理員需要控制生產角色可以呼叫哪個模型。應該使用哪種機制？",
         "options": {
-          "A": "公共模型端點",
-          "B": "一筆 Route 53 記錄",
-          "C": "S3 生命週期規則",
-          "D": "IAM 策略範圍為已核准的 Bedrock 模型資源"
+          "A": "私有連線、加密與最低權限 IAM",
+          "B": "IAM 策略範圍為已核准的 Bedrock 模型資源",
+          "C": "具有知識庫的檢索增強生成",
+          "D": "已核准的向量儲存中的向量索引"
         },
-        "explanation": "IAM 可以限制生產角色的模型呼叫操作和資源。\n其他選擇不授權模型選擇。"
+        "explanation": "IAM 可以限制生產角色的模型呼叫操作和資源。\n其他選項適用於此領域的不同需求，但不能像 IAM 策略範圍為已核准的 Bedrock 模型資源 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-056",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A customer-facing application team needs to provide an application with relevant company documents at inference time without retraining the foundation model. Which pattern fits?",
+    "question": "A customer-facing application team is redesigning one integrated end-to-end architecture. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The architecture must limit blast radius, preserve availability during change, and control cost through automation instead of permanent overprovisioning. The workload needs to provide an application with relevant company documents at inference time without retraining the foundation model, and the same architecture needs to protect troubleshooting logs from containing prompts with confidential data. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "Retrieval Augmented Generation with a knowledge base",
-      "B": "Randomly increase temperature",
-      "C": "Store documents only in logs",
-      "D": "Disable access controls"
+      "A": "Use Retrieval Augmented Generation with a knowledge base for the primary requirement and integrate it with Redact sensitive fields and restrict log access for the connected control",
+      "B": "Use Retrieval Augmented Generation with a knowledge base but replace the connected control with A vector index in an approved vector store",
+      "C": "Use Private connectivity, encryption, and least-privilege IAM for the primary requirement and integrate it with Redact sensitive fields and restrict log access",
+      "D": "Combine Private connectivity, encryption, and least-privilege IAM with A repeatable model evaluation dataset and scoring process as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "RAG retrieves relevant content and supplies it as context to a foundation model.\nTemperature does not retrieve facts, logs are not a knowledge base, and disabled access controls are unsafe.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Retrieval Augmented Generation with a knowledge base satisfies the first part of the architecture: RAG retrieves relevant content and supplies it as context to a foundation model. Redact sensitive fields and restrict log access satisfies the connected requirement: Redaction and least-privilege log access reduce exposure while preserving useful diagnostics.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。適合哪種模式？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：支援關鍵工作負載的營運團隊需要控制生產角色可以呼叫哪個模型。 第二項需求：支援關鍵工作負載的營運團隊需要保護故障排除日誌不包含具有機密資料的提示。 此架構必須限制影響範圍、在變更期間維持可用性，並透過自動化控制成本，而不是長期過度佈建。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "具有知識庫的檢索增強生成",
-          "B": "隨機升高溫度",
-          "C": "僅將文件儲存在日誌中",
-          "D": "禁用存取控制"
+          "A": "以具有知識庫的檢索增強生成處理主要需求，並整合編輯敏感字段並限制日誌存取作為相連控制",
+          "B": "使用具有知識庫的檢索增強生成，但以已核准的向量儲存中的向量索引取代相連控制",
+          "C": "以私有連線、加密與最低權限 IAM處理主要需求，並整合編輯敏感字段並限制日誌存取",
+          "D": "把私有連線、加密與最低權限 IAM與可重複的模型評估資料集和評分過程結合為單一平台設計"
         },
-        "explanation": "RAG 檢索相關內容並將其作為基礎模型的上下文提供。\n溫度不檢索事實，日誌不是知識庫，禁用的存取控制是不安全的。"
+        "explanation": "具有知識庫的檢索增強生成 負責架構的第一項需求，編輯敏感字段並限制日誌存取 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "aip-c01-d1-057",
-    "type": "single",
-    "question": "A platform team standardizing its AWS deployments must store vector embeddings for semantic similarity search. Which capability is suitable?",
-    "options": {
-      "A": "An IAM password policy",
-      "B": "A vector index in an approved vector store",
-      "C": "A DNS record",
-      "D": "An EBS boot log"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Vector indexes support nearest-neighbor retrieval for semantic search and RAG.\nThe other choices do not store or search embeddings.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team must store vector embeddings for semantic similarity search. Which capability is suitable?",
+    "options": {
+      "A": "Private connectivity, encryption, and least-privilege IAM",
+      "B": "A repeatable model evaluation dataset and scoring process",
+      "C": "An IAM policy scoped to approved Bedrock model resources",
+      "D": "A vector index in an approved vector store"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Vector indexes support nearest-neighbor retrieval for semantic search and RAG.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A vector index in an approved vector store for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊必須儲存用於語義相似性搜尋的向量嵌入。哪種能力合適？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。標準化其 AWS 部署的平台團隊必須儲存用於語義相似性搜尋的向量嵌入。哪種能力合適？",
         "options": {
-          "A": "IAM 密碼原則",
-          "B": "已核准的向量儲存中的向量索引",
-          "C": "DNS 記錄",
-          "D": "EBS 啟動日誌"
+          "A": "私有連線、加密與最低權限 IAM",
+          "B": "可重複的模型評估資料集和評分過程",
+          "C": "IAM 策略範圍為已核准的 Bedrock 模型資源",
+          "D": "已核准的向量儲存中的向量索引"
         },
-        "explanation": "向量索引支援語義搜尋和 RAG 的最近鄰檢索。\n其他選項不儲存或搜尋嵌入。"
+        "explanation": "向量索引支援語義搜尋和 RAG 的最近鄰檢索。\n其他選項適用於此領域的不同需求，但不能像 已核准的向量儲存中的向量索引 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-058",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team preparing evidence for an audit needs to keep customer data private while invoking a managed foundation model. Which control should be considered?",
+    "question": "A team preparing evidence for an audit is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team needs to keep customer data private while invoking a managed foundation model. Which control should be considered?",
     "options": {
-      "A": "Disable logging controls",
-      "B": "Share one administrator key",
+      "A": "An IAM policy scoped to approved Bedrock model resources",
+      "B": "Retrieval Augmented Generation with a knowledge base",
       "C": "Private connectivity, encryption, and least-privilege IAM",
-      "D": "Send data to a public paste site"
+      "D": "A repeatable model evaluation dataset and scoring process"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Network, encryption, and identity controls protect data and reduce unnecessary access.\nThe other choices expose data or weaken authorization.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Network, encryption, and identity controls protect data and reduce unnecessary access.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Private connectivity, encryption, and least-privilege IAM for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備審計證據的團隊需要在呼叫託管基礎模型時保持客戶資料的隱私。應考慮哪種控制？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。準備審計證據的團隊需要在呼叫託管基礎模型時保持客戶資料的隱私。應考慮哪種控制？",
         "options": {
-          "A": "禁用日誌記錄控制",
-          "B": "共享一把管理員金鑰",
+          "A": "IAM 策略範圍為已核准的 Bedrock 模型資源",
+          "B": "具有知識庫的檢索增強生成",
           "C": "私有連線、加密與最低權限 IAM",
-          "D": "將資料傳送到公共貼上站點"
+          "D": "可重複的模型評估資料集和評分過程"
         },
-        "explanation": "網路、加密和身分控制可保護資料並減少不必要的存取。\n其他選擇會暴露資料或削弱授權。"
+        "explanation": "網路、加密和身分控制可保護資料並減少不必要的存取。\n其他選項適用於此領域的不同需求，但不能像 私有連線、加密與最低權限 IAM 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-059",
-    "type": "single",
-    "question": "A business replacing a manual process must evaluate a model against a fixed set of business prompts and expected responses. Which practice is appropriate?",
-    "options": {
-      "A": "Evaluate only one happy-path prompt",
-      "B": "Change prompts after every test",
-      "C": "Skip recording results",
-      "D": "A repeatable model evaluation dataset and scoring process"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "A fixed evaluation set makes quality comparisons reproducible across model versions.\nThe other choices cannot show reliable model changes.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A business replacing a manual process is reviewing a production decision. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The team must evaluate a model against a fixed set of business prompts and expected responses. Which practice is appropriate?",
+    "options": {
+      "A": "A vector index in an approved vector store",
+      "B": "A repeatable model evaluation dataset and scoring process",
+      "C": "An IAM policy scoped to approved Bedrock model resources",
+      "D": "Retrieval Augmented Generation with a knowledge base"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "A fixed evaluation set makes quality comparisons reproducible across model versions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A repeatable model evaluation dataset and scoring process for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "取代手動流程的企業必須根據一組固定的業務提示和預期回應來評估模型。哪種做法合適？",
+        "question": "此變更必須分階段部署至生產環境。所選方法必須支援集中治理、清楚的復原程序，並維持工作負載可用性。取代手動流程的企業必須根據一組固定的業務提示和預期回應來評估模型。哪種做法合適？",
         "options": {
-          "A": "僅評估一個快樂路徑提示",
-          "B": "每次測試後更改提示",
-          "C": "跳過記錄結果",
-          "D": "可重複的模型評估資料集和評分過程"
+          "A": "已核准的向量儲存中的向量索引",
+          "B": "可重複的模型評估資料集和評分過程",
+          "C": "IAM 策略範圍為已核准的 Bedrock 模型資源",
+          "D": "具有知識庫的檢索增強生成"
         },
-        "explanation": "固定的評估集使得品質比較可以在模型版本之間重現。\n其他選擇無法顯示可靠的模型變更。"
+        "explanation": "固定的評估集使得品質比較可以在模型版本之間重現。\n其他選項適用於此領域的不同需求，但不能像 可重複的模型評估資料集和評分過程 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-060",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team validating a design against the exam guide needs to control which model a production role can invoke. Which mechanism should be used?",
+    "question": "A team validating a design against the exam guide is redesigning one integrated end-to-end architecture. A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability. The selected controls must provide auditable security, predictable availability, and the lowest operational cost that still satisfies both requirements. The workload needs to control, and the same architecture needs a model to call approved business APIs while retaining control over tool permissions. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "An IAM policy scoped to approved Bedrock model resources",
-      "B": "A public model endpoint",
-      "C": "A Route 53 record",
-      "D": "An S3 lifecycle rule"
+      "A": "Use An IAM policy scoped to approved Bedrock model resources for the primary requirement and integrate it with An agent with narrowly scoped action groups and IAM permissions for the connected control",
+      "B": "Use An IAM policy scoped to approved Bedrock model resources but replace the connected control with Retrieval Augmented Generation with a knowledge base",
+      "C": "Use A vector index in an approved vector store for the primary requirement and integrate it with An agent with narrowly scoped action groups and IAM permissions",
+      "D": "Combine A vector index in an approved vector store with Private connectivity, encryption, and least-privilege IAM as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "IAM can restrict model invocation actions and resources for a production role.\nThe other choices do not authorize model selection.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "An IAM policy scoped to approved Bedrock model resources satisfies the first part of the architecture: IAM can restrict model invocation actions and resources for a production role. An agent with narrowly scoped action groups and IAM permissions satisfies the connected requirement: Scoped action groups and IAM permissions constrain agent capabilities and reduce blast radius.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊需要控制生產角色可以呼叫哪個模型。應該使用哪種機制？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：生產團隊需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。 第二項需求：生產團隊需要一個模型來呼叫核准的業務 API，同時保留對工具權限的控制權。 所選控制必須提供可稽核的安全性、可預測的可用性，以及在滿足兩項要求前提下最低的營運成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "IAM 策略範圍為已核准的 Bedrock 模型資源",
-          "B": "公共模型端點",
-          "C": "一筆 Route 53 記錄",
-          "D": "S3 生命週期規則"
+          "A": "以IAM 策略範圍為已核准的 Bedrock 模型資源處理主要需求，並整合具有範圍狹窄的操作群組和 IAM Permissions的代理作為相連控制",
+          "B": "使用IAM 策略範圍為已核准的 Bedrock 模型資源，但以具有知識庫的檢索增強生成取代相連控制",
+          "C": "以已核准的向量儲存中的向量索引處理主要需求，並整合具有範圍狹窄的操作群組和 IAM Permissions的代理",
+          "D": "把已核准的向量儲存中的向量索引與私有連線、加密與最低權限 IAM結合為單一平台設計"
         },
-        "explanation": "IAM 可以限制生產角色的模型呼叫操作和資源。\n其他選擇不授權模型選擇。"
+        "explanation": "IAM 策略範圍為已核准的 Bedrock 模型資源 負責架構的第一項需求，具有範圍狹窄的操作群組和 IAM Permissions的代理 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "aip-c01-d1-061",
-    "type": "single",
-    "question": "A production team needs to provide an application with relevant company documents at inference time without retraining the foundation model. Which pattern fits?",
-    "options": {
-      "A": "Disable access controls",
-      "B": "Retrieval Augmented Generation with a knowledge base",
-      "C": "Randomly increase temperature",
-      "D": "Store documents only in logs"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "RAG retrieves relevant content and supplies it as context to a foundation model.\nTemperature does not retrieve facts, logs are not a knowledge base, and disabled access controls are unsafe.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A production team is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team needs to provide an application with relevant company documents at inference time without retraining the foundation model. Which pattern fits?",
+    "options": {
+      "A": "A vector index in an approved vector store",
+      "B": "Private connectivity, encryption, and least-privilege IAM",
+      "C": "A repeatable model evaluation dataset and scoring process",
+      "D": "Retrieval Augmented Generation with a knowledge base"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "RAG retrieves relevant content and supplies it as context to a foundation model.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Retrieval Augmented Generation with a knowledge base for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "生產團隊需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。適合哪種模式？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。生產團隊需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。適合哪種模式？",
         "options": {
-          "A": "禁用存取控制",
-          "B": "具有知識庫的檢索增強生成",
-          "C": "隨機升高溫度",
-          "D": "僅將文件儲存在日誌中"
+          "A": "已核准的向量儲存中的向量索引",
+          "B": "私有連線、加密與最低權限 IAM",
+          "C": "可重複的模型評估資料集和評分過程",
+          "D": "具有知識庫的檢索增強生成"
         },
-        "explanation": "RAG 檢索相關內容並將其作為基礎模型的上下文提供。\n溫度不檢索事實，日誌不是知識庫，禁用的存取控制是不安全的。"
+        "explanation": "RAG 檢索相關內容並將其作為基礎模型的上下文提供。\n其他選項適用於此領域的不同需求，但不能像 具有知識庫的檢索增強生成 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-062",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A multi-account platform team must store vector embeddings for semantic similarity search. Which capability is suitable?",
+    "question": "A multi-account platform team is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team must store vector embeddings for semantic similarity search. Which capability is suitable?",
     "options": {
-      "A": "An EBS boot log",
-      "B": "An IAM password policy",
+      "A": "A repeatable model evaluation dataset and scoring process",
+      "B": "An IAM policy scoped to approved Bedrock model resources",
       "C": "A vector index in an approved vector store",
-      "D": "A DNS record"
+      "D": "Private connectivity, encryption, and least-privilege IAM"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Vector indexes support nearest-neighbor retrieval for semantic search and RAG.\nThe other choices do not store or search embeddings.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Vector indexes support nearest-neighbor retrieval for semantic search and RAG.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A vector index in an approved vector store for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊必須儲存向量嵌入以進行語義相似性搜尋。哪種能力合適？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。多帳戶平台團隊必須儲存向量嵌入以進行語義相似性搜尋。哪種能力合適？",
         "options": {
-          "A": "EBS 啟動日誌",
-          "B": "IAM 密碼原則",
+          "A": "可重複的模型評估資料集和評分過程",
+          "B": "IAM 策略範圍為已核准的 Bedrock 模型資源",
           "C": "已核准的向量儲存中的向量索引",
-          "D": "DNS 記錄"
+          "D": "私有連線、加密與最低權限 IAM"
         },
-        "explanation": "向量索引支援語義搜尋和 RAG 的最近鄰檢索。\n其他選項不儲存或搜尋嵌入。"
+        "explanation": "向量索引支援語義搜尋和 RAG 的最近鄰檢索。\n其他選項適用於此領域的不同需求，但不能像 已核准的向量儲存中的向量索引 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-063",
-    "type": "single",
-    "question": "A regulated company needs to keep customer data private while invoking a managed foundation model. Which control should be considered?",
-    "options": {
-      "A": "Send data to a public paste site",
-      "B": "Disable logging controls",
-      "C": "Share one administrator key",
-      "D": "Private connectivity, encryption, and least-privilege IAM"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Network, encryption, and identity controls protect data and reduce unnecessary access.\nThe other choices expose data or weaken authorization.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A regulated company is planning two independent production changes. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The first team needs to keep customer data private while invoking a managed foundation model. A second team must evaluate a model against a fixed set of business prompts and expected responses. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "A vector index in an approved vector store",
+      "B": "Private connectivity, encryption, and least-privilege IAM",
+      "C": "A repeatable model evaluation dataset and scoring process",
+      "D": "An IAM policy scoped to approved Bedrock model resources",
+      "E": "Retrieval Augmented Generation with a knowledge base"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Private connectivity, encryption, and least-privilege IAM meets the first requirement: Network, encryption, and identity controls protect data and reduce unnecessary access. A repeatable model evaluation dataset and scoring process meets the second requirement: A fixed evaluation set makes quality comparisons reproducible across model versions.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "受監管的公司需要在呼叫託管基礎模型時保持客戶資料的隱私。應考慮哪種控制？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。第一項需求：受監管的公司需要在呼叫託管基礎模型時保持客戶資料的隱私。第二項需求：準備增加流量的新創公司必須根據一組固定的業務提示和預期回應來評估模型。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "將資料傳送到公共貼上站點",
-          "B": "禁用日誌記錄控制",
-          "C": "共享一把管理員金鑰",
-          "D": "私有連線、加密與最低權限 IAM"
+          "A": "已核准的向量儲存中的向量索引",
+          "B": "私有連線、加密與最低權限 IAM",
+          "C": "可重複的模型評估資料集和評分過程",
+          "D": "IAM 策略範圍為已核准的 Bedrock 模型資源",
+          "E": "具有知識庫的檢索增強生成"
         },
-        "explanation": "網路、加密和身分控制可保護資料並減少不必要的存取。\n其他選擇會暴露資料或削弱授權。"
+        "explanation": "私有連線、加密與最低權限 IAM 符合第一項需求：網路、加密和身分控制可保護資料並減少不必要的存取。 可重複的模型評估資料集和評分過程 符合第二項需求：固定的評估集使得品質比較可以在模型版本之間重現。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "aip-c01-d1-064",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A startup preparing for a traffic increase must evaluate a model against a fixed set of business prompts and expected responses. Which practice is appropriate?",
+    "question": "A startup preparing for a traffic increase is redesigning one integrated end-to-end architecture. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The design must keep recurring cost proportional to use, enforce least privilege, and remain available during a component or Availability Zone failure. The workload must evaluate a model against a fixed set of business prompts and expected responses, and the same architecture needs to invoke a foundation model from an application without hosting GPU instances. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "A repeatable model evaluation dataset and scoring process",
-      "B": "Evaluate only one happy-path prompt",
-      "C": "Change prompts after every test",
-      "D": "Skip recording results"
+      "A": "Use A repeatable model evaluation dataset and scoring process for the primary requirement and integrate it with Amazon Bedrock for the connected control",
+      "B": "Use A repeatable model evaluation dataset and scoring process but replace the connected control with Retrieval Augmented Generation with a knowledge base",
+      "C": "Use A vector index in an approved vector store for the primary requirement and integrate it with Amazon Bedrock",
+      "D": "Combine A vector index in an approved vector store with Private connectivity, encryption, and least-privilege IAM as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "A fixed evaluation set makes quality comparisons reproducible across model versions.\nThe other choices cannot show reliable model changes.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "A repeatable model evaluation dataset and scoring process satisfies the first part of the architecture: A fixed evaluation set makes quality comparisons reproducible across model versions. Amazon Bedrock satisfies the connected requirement: Amazon Bedrock provides managed API access to foundation models without managing model servers.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司必須根據一組固定的業務提示和預期回應來評估模型。哪種做法合適？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：具有嚴格恢復目標的團隊必須根據一組固定的業務提示和預期回應來評估模型。 第二項需求：在共享環境中工作的 AWS 管理員需要從應用程式呼叫基礎模型，而無需託管 GPU 執行個體。 此設計必須讓持續成本與實際用量相符、落實最低權限，並在元件或可用區域發生故障時維持可用。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "可重複的模型評估資料集和評分過程",
-          "B": "僅評估一個快樂路徑提示",
-          "C": "每次測試後更改提示",
-          "D": "跳過記錄結果"
+          "A": "以可重複的模型評估資料集和評分過程處理主要需求，並整合Amazon Bedrock作為相連控制",
+          "B": "使用可重複的模型評估資料集和評分過程，但以具有知識庫的檢索增強生成取代相連控制",
+          "C": "以已核准的向量儲存中的向量索引處理主要需求，並整合Amazon Bedrock",
+          "D": "把已核准的向量儲存中的向量索引與私有連線、加密與最低權限 IAM結合為單一平台設計"
         },
-        "explanation": "固定的評估集使得品質比較可以在模型版本之間重現。\n其他選擇無法顯示可靠的模型變更。"
+        "explanation": "可重複的模型評估資料集和評分過程 負責架構的第一項需求，Amazon Bedrock 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "aip-c01-d1-065",
-    "type": "single",
-    "question": "An operations team supporting a critical workload needs to control which model a production role can invoke. Which mechanism should be used?",
-    "options": {
-      "A": "An S3 lifecycle rule",
-      "B": "An IAM policy scoped to approved Bedrock model resources",
-      "C": "A public model endpoint",
-      "D": "A Route 53 record"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "IAM can restrict model invocation actions and resources for a production role.\nThe other choices do not authorize model selection.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination. The team needs to control which model a production role can invoke. Which mechanism should be used?",
+    "options": {
+      "A": "Retrieval Augmented Generation with a knowledge base",
+      "B": "A vector index in an approved vector store",
+      "C": "Private connectivity, encryption, and least-privilege IAM",
+      "D": "An IAM policy scoped to approved Bedrock model resources"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "IAM can restrict model invocation actions and resources for a production role.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide An IAM policy scoped to approved Bedrock model resources for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊需要控制生產角色可以呼叫哪個模型。應該使用哪種機制？",
+        "question": "多個應用程式團隊共用此平台。組織需要可重複執行的託管方案，以限制影響範圍，並且不依賴人手協調。支援關鍵工作負載的營運團隊需要控制生產角色可以呼叫哪個模型。應該使用哪種機制？",
         "options": {
-          "A": "S3 生命週期規則",
-          "B": "IAM 策略範圍為已核准的 Bedrock 模型資源",
-          "C": "公共模型端點",
-          "D": "一筆 Route 53 記錄"
+          "A": "具有知識庫的檢索增強生成",
+          "B": "已核准的向量儲存中的向量索引",
+          "C": "私有連線、加密與最低權限 IAM",
+          "D": "IAM 策略範圍為已核准的 Bedrock 模型資源"
         },
-        "explanation": "IAM 可以限制生產角色的模型呼叫操作和資源。\n其他選擇不授權模型選擇。"
+        "explanation": "IAM 可以限制生產角色的模型呼叫操作和資源。\n其他選項適用於此領域的不同需求，但不能像 IAM 策略範圍為已核准的 Bedrock 模型資源 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-066",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A data platform team needs to provide an application with relevant company documents at inference time without retraining the foundation model. Which pattern fits?",
+    "question": "A data platform team is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team needs to provide an application with relevant company documents at inference time without retraining the foundation model. Which pattern fits?",
     "options": {
-      "A": "Store documents only in logs",
-      "B": "Disable access controls",
+      "A": "Private connectivity, encryption, and least-privilege IAM",
+      "B": "A repeatable model evaluation dataset and scoring process",
       "C": "Retrieval Augmented Generation with a knowledge base",
-      "D": "Randomly increase temperature"
+      "D": "A vector index in an approved vector store"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "RAG retrieves relevant content and supplies it as context to a foundation model.\nTemperature does not retrieve facts, logs are not a knowledge base, and disabled access controls are unsafe.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "RAG retrieves relevant content and supplies it as context to a foundation model.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Retrieval Augmented Generation with a knowledge base for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。適合哪種模式？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。資料平台團隊需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。適合哪種模式？",
         "options": {
-          "A": "僅將文件儲存在日誌中",
-          "B": "禁用存取控制",
+          "A": "私有連線、加密與最低權限 IAM",
+          "B": "可重複的模型評估資料集和評分過程",
           "C": "具有知識庫的檢索增強生成",
-          "D": "隨機升高溫度"
+          "D": "已核准的向量儲存中的向量索引"
         },
-        "explanation": "RAG 檢索相關內容並將其作為基礎模型的上下文提供。\n溫度不檢索事實，日誌不是知識庫，禁用的存取控制是不安全的。"
+        "explanation": "RAG 檢索相關內容並將其作為基礎模型的上下文提供。\n其他選項適用於此領域的不同需求，但不能像 具有知識庫的檢索增強生成 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-067",
-    "type": "single",
-    "question": "A security-conscious engineering team must store vector embeddings for semantic similarity search. Which capability is suitable?",
-    "options": {
-      "A": "A DNS record",
-      "B": "An EBS boot log",
-      "C": "An IAM password policy",
-      "D": "A vector index in an approved vector store"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Vector indexes support nearest-neighbor retrieval for semantic search and RAG.\nThe other choices do not store or search embeddings.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A security-conscious engineering team is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team must store vector embeddings for semantic similarity search. Which capability is suitable?",
+    "options": {
+      "A": "An IAM policy scoped to approved Bedrock model resources",
+      "B": "A vector index in an approved vector store",
+      "C": "Private connectivity, encryption, and least-privilege IAM",
+      "D": "A repeatable model evaluation dataset and scoring process"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Vector indexes support nearest-neighbor retrieval for semantic search and RAG.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A vector index in an approved vector store for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊必須儲存向量嵌入以進行語義相似性搜尋。哪種能力合適？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。具有安全意識的工程團隊必須儲存向量嵌入以進行語義相似性搜尋。哪種能力合適？",
         "options": {
-          "A": "DNS 記錄",
-          "B": "EBS 啟動日誌",
-          "C": "IAM 密碼原則",
-          "D": "已核准的向量儲存中的向量索引"
+          "A": "IAM 策略範圍為已核准的 Bedrock 模型資源",
+          "B": "已核准的向量儲存中的向量索引",
+          "C": "私有連線、加密與最低權限 IAM",
+          "D": "可重複的模型評估資料集和評分過程"
         },
-        "explanation": "向量索引支援語義搜尋和 RAG 的最近鄰檢索。\n其他選項不儲存或搜尋嵌入。"
+        "explanation": "向量索引支援語義搜尋和 RAG 的最近鄰檢索。\n其他選項適用於此領域的不同需求，但不能像 已核准的向量儲存中的向量索引 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-068",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A company migrating an existing workload needs to keep customer data private while invoking a managed foundation model. Which control should be considered?",
+    "question": "A company migrating an existing workload is redesigning one integrated end-to-end architecture. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The design must avoid unnecessary standby cost without weakening security controls or the availability objective. The workload needs to keep customer data private while invoking a managed foundation model, and the same architecture must ensure an agent cannot invoke an unapproved tool. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "Private connectivity, encryption, and least-privilege IAM",
-      "B": "Send data to a public paste site",
-      "C": "Disable logging controls",
-      "D": "Share one administrator key"
+      "A": "Use Private connectivity, encryption, and least-privilege IAM for the primary requirement and integrate it with An allowlist of tools backed by IAM and application authorization for the connected control",
+      "B": "Use Private connectivity, encryption, and least-privilege IAM but replace the connected control with Retrieval Augmented Generation with a knowledge base",
+      "C": "Use A vector index in an approved vector store for the primary requirement and integrate it with An allowlist of tools backed by IAM and application authorization",
+      "D": "Combine A vector index in an approved vector store with A repeatable model evaluation dataset and scoring process as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Network, encryption, and identity controls protect data and reduce unnecessary access.\nThe other choices expose data or weaken authorization.",
-    "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Private connectivity, encryption, and least-privilege IAM satisfies the first part of the architecture: Network, encryption, and identity controls protect data and reduce unnecessary access. An allowlist of tools backed by IAM and application authorization satisfies the connected requirement: A tool allowlist and IAM policy constrain what the agent can call.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司需要在呼叫託管基礎模型時保持客戶資料的隱私。應考慮哪種控制？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：遷移現有工作負載的公司需要在呼叫託管基礎模型時保持客戶資料的隱私。 第二項需求：支援關鍵工作負載的營運團隊必須確保代理無法呼叫未經批准的工具。 此設計必須避免不必要的備用成本，同時不可削弱安全控制或可用性目標。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "私有連線、加密與最低權限 IAM",
-          "B": "將資料傳送到公共貼上站點",
-          "C": "禁用日誌記錄控制",
-          "D": "共享一把管理員金鑰"
+          "A": "以私有連線、加密與最低權限 IAM處理主要需求，並整合由 IAM 和應用程式授權支援的工具白名單作為相連控制",
+          "B": "使用私有連線、加密與最低權限 IAM，但以具有知識庫的檢索增強生成取代相連控制",
+          "C": "以已核准的向量儲存中的向量索引處理主要需求，並整合由 IAM 和應用程式授權支援的工具白名單",
+          "D": "把已核准的向量儲存中的向量索引與可重複的模型評估資料集和評分過程結合為單一平台設計"
         },
-        "explanation": "網路、加密和身分控制可保護資料並減少不必要的存取。\n其他選擇會暴露資料或削弱授權。"
+        "explanation": "私有連線、加密與最低權限 IAM 負責架構的第一項需求，由 IAM 和應用程式授權支援的工具白名單 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "aip-c01-d1-069",
-    "type": "single",
-    "question": "A team with strict recovery objectives must evaluate a model against a fixed set of business prompts and expected responses. Which practice is appropriate?",
-    "options": {
-      "A": "Skip recording results",
-      "B": "A repeatable model evaluation dataset and scoring process",
-      "C": "Evaluate only one happy-path prompt",
-      "D": "Change prompts after every test"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "A fixed evaluation set makes quality comparisons reproducible across model versions.\nThe other choices cannot show reliable model changes.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team with strict recovery objectives is reviewing a production decision. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The team must evaluate a model against a fixed set of business prompts and expected responses. Which practice is appropriate?",
+    "options": {
+      "A": "An IAM policy scoped to approved Bedrock model resources",
+      "B": "Retrieval Augmented Generation with a knowledge base",
+      "C": "A vector index in an approved vector store",
+      "D": "A repeatable model evaluation dataset and scoring process"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "A fixed evaluation set makes quality comparisons reproducible across model versions.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A repeatable model evaluation dataset and scoring process for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格恢復目標的團隊必須根據一組固定的業務提示和預期回應來評估模型。哪種做法合適？",
+        "question": "架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。具有嚴格恢復目標的團隊必須根據一組固定的業務提示和預期回應來評估模型。哪種做法合適？",
         "options": {
-          "A": "跳過記錄結果",
-          "B": "可重複的模型評估資料集和評分過程",
-          "C": "僅評估一個快樂路徑提示",
-          "D": "每次測試後更改提示"
+          "A": "IAM 策略範圍為已核准的 Bedrock 模型資源",
+          "B": "具有知識庫的檢索增強生成",
+          "C": "已核准的向量儲存中的向量索引",
+          "D": "可重複的模型評估資料集和評分過程"
         },
-        "explanation": "固定的評估集使得品質比較可以在模型版本之間重現。\n其他選擇無法顯示可靠的模型變更。"
+        "explanation": "固定的評估集使得品質比較可以在模型版本之間重現。\n其他選項適用於此領域的不同需求，但不能像 可重複的模型評估資料集和評分過程 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "aip-c01-d1-070",
-    "type": "single",
-    "question": "A developer team preparing a release needs to control which model a production role can invoke. Which mechanism should be used?",
-    "options": {
-      "A": "A Route 53 record",
-      "B": "An S3 lifecycle rule",
-      "C": "An IAM policy scoped to approved Bedrock model resources",
-      "D": "A public model endpoint"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "IAM can restrict model invocation actions and resources for a production role.\nThe other choices do not authorize model selection.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A developer team preparing a release is planning two independent production changes. The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available. The first team needs to control. A second team needs to provide an application with relevant company documents at inference time without retraining the foundation model. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Retrieval Augmented Generation with a knowledge base",
+      "B": "A vector index in an approved vector store",
+      "C": "Private connectivity, encryption, and least-privilege IAM",
+      "D": "A repeatable model evaluation dataset and scoring process",
+      "E": "An IAM policy scoped to approved Bedrock model resources"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "An IAM policy scoped to approved Bedrock model resources meets the first requirement: IAM can restrict model invocation actions and resources for a production role. Retrieval Augmented Generation with a knowledge base meets the second requirement: RAG retrieves relevant content and supplies it as context to a foundation model.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊需要控制生產角色可以呼叫哪個模型。應該使用哪種機制？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。架構審查著重最低權限、可以量度的營運成果及可預測的復原能力，同時現有服務必須保持可用。第一項需求：生產團隊需要在推理時向應用程式提供相關公司文檔，而無需重新訓練基礎模型。第二項需求：支援關鍵工作負載的營運團隊需要控制生產角色可以呼叫哪個模型。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "一筆 Route 53 記錄",
-          "B": "S3 生命週期規則",
-          "C": "IAM 策略範圍為已核准的 Bedrock 模型資源",
-          "D": "公共模型端點"
+          "A": "具有知識庫的檢索增強生成",
+          "B": "已核准的向量儲存中的向量索引",
+          "C": "私有連線、加密與最低權限 IAM",
+          "D": "可重複的模型評估資料集和評分過程",
+          "E": "IAM 策略範圍為已核准的 Bedrock 模型資源"
         },
-        "explanation": "IAM 可以限制生產角色的模型呼叫操作和資源。\n其他選擇不授權模型選擇。"
+        "explanation": "具有知識庫的檢索增強生成 符合第一項需求：RAG 檢索相關內容並將其作為基礎模型的上下文提供。 IAM 策略範圍為已核准的 Bedrock 模型資源 符合第二項需求：IAM 可以限制生產角色的模型呼叫操作和資源。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   }

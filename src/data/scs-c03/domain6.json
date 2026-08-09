@@ -1,757 +1,785 @@
 [
   {
     "id": "scs-c03-d6-001",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A production team must align security controls with the AWS shared responsibility model. Which practice is correct?",
+    "question": "A production team is reviewing a production decision. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The team must align security controls with the AWS shared responsibility model. Which practice is correct?",
     "options": {
-      "A": "Assume the customer patches managed service hardware",
-      "B": "Disable all controls",
+      "A": "AWS Security Hub",
+      "B": "AWS Artifact",
       "C": "Identify AWS-managed responsibilities and customer cloud-configuration responsibilities separately",
-      "D": "Assume AWS secures every customer setting"
+      "D": "AWS Config conformance packs"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "The shared responsibility model separates cloud infrastructure duties from customer configuration and data duties.\nThe other choices misunderstand the model.",
-    "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "The shared responsibility model separates cloud infrastructure duties from customer configuration and data duties.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Identify AWS-managed responsibilities and customer cloud-configuration responsibilities separately for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "生產團隊必須使安全控制與 AWS 責任共擔模型保持一致。哪一種做法是正確的？",
+        "question": "此生產環境在多個帳戶中採用集中治理。變更必須符合最低權限、可以稽核，並且不會造成長時間中斷。生產團隊必須使安全控制與 AWS 責任共擔模型保持一致。哪一種做法是正確的？",
         "options": {
-          "A": "假設客戶修補託管服務硬體",
-          "B": "禁用所有控件",
+          "A": "AWS Security Hub",
+          "B": "AWS Artifact",
           "C": "分別確定 AWS 管理的責任和客戶雲端配置的責任",
-          "D": "假設 AWS 保護每個客戶設定的安全"
+          "D": "AWS Config 一致性套件"
         },
-        "explanation": "共享責任模型將雲端基礎設施職責與客戶配置和資料職責分開。\n其他選擇誤解了模型。"
+        "explanation": "共享責任模型將雲端基礎設施職責與客戶配置和資料職責分開。\n其他選項適用於此領域的不同需求，但不能像 分別確定 AWS 管理的責任和客戶雲端配置的責任 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d6-002",
-    "type": "single",
-    "question": "A multi-account platform team needs continuous evidence that resources comply with a baseline. Which service should be used?",
-    "options": {
-      "A": "Amazon CloudFront",
-      "B": "Amazon EFS",
-      "C": "Amazon SES",
-      "D": "AWS Config conformance packs"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Conformance packs bundle Config rules and remediation guidance for a baseline.\nThe other choices do not evaluate resource compliance.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A multi-account platform team is reviewing a production decision. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The team needs continuous evidence that resources comply with a baseline. Which service should be used?",
+    "options": {
+      "A": "Use the root user only when required and enable MFA",
+      "B": "AWS Config conformance packs",
+      "C": "AWS Security Hub",
+      "D": "AWS Artifact"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Conformance packs bundle Config rules and remediation guidance for a baseline.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Config conformance packs for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊需要持續的證據來證明資源符合基準。應該使用哪種服務？",
+        "question": "此生產環境在多個帳戶中採用集中治理。變更必須符合最低權限、可以稽核，並且不會造成長時間中斷。多帳戶平台團隊需要持續的證據來證明資源符合基準。應該使用哪種服務？",
         "options": {
-          "A": "Amazon CloudFront",
-          "B": "Amazon EFS",
-          "C": "Amazon SES",
-          "D": "AWS Config 一致性套件"
+          "A": "僅在需要時使用 root 使用者並啟用 MFA",
+          "B": "AWS Config 一致性套件",
+          "C": "AWS Security Hub",
+          "D": "AWS Artifact"
         },
-        "explanation": "一致性包捆綁了基準的配置規則和修復指南。\n其他選擇不評估資源合規性。"
+        "explanation": "一致性包捆綁了基準的配置規則和修復指南。\n其他選項適用於此領域的不同需求，但不能像 AWS Config 一致性套件 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d6-003",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A regulated company must centralize security findings and prioritize high-risk issues. Which service should be evaluated?",
+    "question": "A regulated company is reviewing a production decision. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The team must centralize security findings and prioritize high-risk issues. Which service should be evaluated?",
     "options": {
       "A": "AWS Security Hub",
-      "B": "AWS Budgets",
-      "C": "Amazon Route 53",
-      "D": "Amazon SQS"
+      "B": "AWS Artifact",
+      "C": "Use the root user only when required and enable MFA",
+      "D": "Identify AWS-managed responsibilities and customer cloud-configuration responsibilities separately"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Security Hub centralizes findings and provides standards and prioritization.\nThe other choices monitor cost, DNS, or messages.",
-    "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Security Hub centralizes findings and provides standards and prioritization.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Security Hub for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司必須集中安全發現並優先處理高風險問題。應該評估哪些服務？",
+        "question": "此生產環境在多個帳戶中採用集中治理。變更必須符合最低權限、可以稽核，並且不會造成長時間中斷。受監管的公司必須集中安全發現並優先處理高風險問題。應該評估哪些服務？",
         "options": {
           "A": "AWS Security Hub",
-          "B": "AWS Budgets",
-          "C": "Amazon Route 53",
-          "D": "Amazon SQS"
+          "B": "AWS Artifact",
+          "C": "僅在需要時使用 root 使用者並啟用 MFA",
+          "D": "分別確定 AWS 管理的責任和客戶雲端配置的責任"
         },
-        "explanation": "Security Hub 集中發現結果並提供標準和優先順序。\n其他選擇監控成本、DNS 或訊息。"
+        "explanation": "Security Hub 集中發現結果並提供標準和優先順序。\n其他選項適用於此領域的不同需求，但不能像 AWS Security Hub 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d6-004",
-    "type": "single",
-    "question": "A startup preparing for a traffic increase needs a formal report of AWS compliance certifications and attestations. Which service provides AWS reports?",
-    "options": {
-      "A": "Amazon RDS",
-      "B": "AWS Artifact",
-      "C": "Amazon GuardDuty",
-      "D": "AWS WAF"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Artifact provides on-demand access to AWS compliance documents and agreements.\nThe other choices detect threats, filter web requests, or host databases.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase is redesigning one integrated end-to-end architecture. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The design must keep recurring cost proportional to use, enforce least privilege, and remain available during a component or Availability Zone failure. The workload needs a formal report of AWS compliance certifications and attestations, and the same architecture needs audit records for security API activity. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Use AWS Artifact but replace the connected control with Amazon GuardDuty",
+      "B": "Use AWS Security Hub for the primary requirement and integrate it with AWS CloudTrail",
+      "C": "Combine AWS Security Hub with Amazon Macie as a single platform design",
+      "D": "Use AWS Artifact for the primary requirement and integrate it with AWS CloudTrail for the connected control"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "AWS Artifact satisfies the first part of the architecture: Artifact provides on-demand access to AWS compliance documents and agreements. AWS CloudTrail satisfies the connected requirement: CloudTrail records API activity for investigation and compliance.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司需要一份正式的 AWS 合規性認證和證明報告。哪項服務提供 AWS 報告？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：準備增加流量的新創公司需要一份正式的 AWS 合規性認證和證明報告。 第二項需求：準備發布的開發團隊需要安全 API 活動的審核記錄。 此設計必須讓持續成本與實際用量相符、落實最低權限，並在元件或可用區域發生故障時維持可用。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "Amazon RDS",
-          "B": "AWS Artifact",
-          "C": "Amazon GuardDuty",
-          "D": "AWS WAF"
+          "A": "使用AWS Artifact，但以Amazon GuardDuty取代相連控制",
+          "B": "以AWS Security Hub處理主要需求，並整合AWS CloudTrail",
+          "C": "把AWS Security Hub與Amazon Macie結合為單一平台設計",
+          "D": "以AWS Artifact處理主要需求，並整合AWS CloudTrail作為相連控制"
         },
-        "explanation": "Artifact 提供對 AWS 合規性文件和協議的按需存取。\n其他選擇偵測威脅、過濾 Web 要求或託管資料庫。"
+        "explanation": "AWS Artifact 負責架構的第一項需求，AWS CloudTrail 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "scs-c03-d6-005",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An operations team supporting a critical workload must protect the organization root user from routine misuse. Which practice is appropriate?",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The team must protect the organization root user from routine misuse. Which practice is appropriate?",
     "options": {
-      "A": "Share root keys with developers",
-      "B": "Disable all audit logging",
+      "A": "AWS Config conformance packs",
+      "B": "AWS Security Hub",
       "C": "Use the root user only when required and enable MFA",
-      "D": "Use root for daily work"
+      "D": "Identify AWS-managed responsibilities and customer cloud-configuration responsibilities separately"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Root-use restrictions and MFA reduce the highest-impact credential risk.\nRoutine root use and shared keys increase risk.",
-    "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Root-use restrictions and MFA reduce the highest-impact credential risk.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Use the root user only when required and enable MFA for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊必須保護組織根使用者免於日常濫用。哪種做法合適？",
+        "question": "此生產環境在多個帳戶中採用集中治理。變更必須符合最低權限、可以稽核，並且不會造成長時間中斷。支援關鍵工作負載的營運團隊必須保護組織根使用者免於日常濫用。哪種做法合適？",
         "options": {
-          "A": "與開發人員分享根金鑰",
-          "B": "停用所有審核日誌記錄",
+          "A": "AWS Config 一致性套件",
+          "B": "AWS Security Hub",
           "C": "僅在需要時使用 root 使用者並啟用 MFA",
-          "D": "使用root進行日常工作"
+          "D": "分別確定 AWS 管理的責任和客戶雲端配置的責任"
         },
-        "explanation": "根使用限制和 MFA 降低了影響最大的憑證風險。\n常規 root 使用和共用金鑰會增加風險。"
+        "explanation": "根使用限制和 MFA 降低了影響最大的憑證風險。\n其他選項適用於此領域的不同需求，但不能像 僅在需要時使用 root 使用者並啟用 MFA 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d6-006",
-    "type": "single",
-    "question": "A data platform team must align security controls with the AWS shared responsibility model. Which practice is correct?",
-    "options": {
-      "A": "Assume AWS secures every customer setting",
-      "B": "Assume the customer patches managed service hardware",
-      "C": "Disable all controls",
-      "D": "Identify AWS-managed responsibilities and customer cloud-configuration responsibilities separately"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "The shared responsibility model separates cloud infrastructure duties from customer configuration and data duties.\nThe other choices misunderstand the model.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A data platform team is reviewing a production decision. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The team must align security controls with the AWS shared responsibility model. Which practice is correct?",
+    "options": {
+      "A": "AWS Artifact",
+      "B": "Identify AWS-managed responsibilities and customer cloud-configuration responsibilities separately",
+      "C": "AWS Config conformance packs",
+      "D": "AWS Security Hub"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "The shared responsibility model separates cloud infrastructure duties from customer configuration and data duties.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Identify AWS-managed responsibilities and customer cloud-configuration responsibilities separately for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊必須使安全控制與 AWS 責任共擔模型保持一致。哪一種做法是正確的？",
+        "question": "團隊必須考慮混合式連線、現有安全邊界，以及變更部署後的營運疑難排解。資料平台團隊必須使安全控制與 AWS 責任共擔模型保持一致。哪一種做法是正確的？",
         "options": {
-          "A": "假設 AWS 保護每個客戶設定的安全",
-          "B": "假設客戶修補託管服務硬體",
-          "C": "禁用所有控件",
-          "D": "分別確定 AWS 管理的責任和客戶雲端配置的責任"
+          "A": "AWS Artifact",
+          "B": "分別確定 AWS 管理的責任和客戶雲端配置的責任",
+          "C": "AWS Config 一致性套件",
+          "D": "AWS Security Hub"
         },
-        "explanation": "共享責任模型將雲端基礎設施職責與客戶配置和資料職責分開。\n其他選擇誤解了模型。"
+        "explanation": "共享責任模型將雲端基礎設施職責與客戶配置和資料職責分開。\n其他選項適用於此領域的不同需求，但不能像 分別確定 AWS 管理的責任和客戶雲端配置的責任 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d6-007",
-    "type": "single",
-    "question": "A security-conscious engineering team needs continuous evidence that resources comply with a baseline. Which service should be used?",
-    "options": {
-      "A": "AWS Config conformance packs",
-      "B": "Amazon CloudFront",
-      "C": "Amazon EFS",
-      "D": "Amazon SES"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "Conformance packs bundle Config rules and remediation guidance for a baseline.\nThe other choices do not evaluate resource compliance.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A security-conscious engineering team is planning two independent production changes. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The first team needs continuous evidence that resources comply with a baseline. A second team must centralize security findings and prioritize high-risk issues. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Use the root user only when required and enable MFA",
+      "B": "Identify AWS-managed responsibilities and customer cloud-configuration responsibilities separately",
+      "C": "AWS Config conformance packs",
+      "D": "AWS Security Hub",
+      "E": "AWS Artifact"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS Config conformance packs meets the first requirement: Conformance packs bundle Config rules and remediation guidance for a baseline. AWS Security Hub meets the second requirement: Security Hub centralizes findings and provides standards and prioritization.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊需要持續的證據來證明資源符合基準。應該使用哪種服務？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊必須考慮混合式連線、現有安全邊界，以及變更部署後的營運疑難排解。第一項需求：多帳戶平台團隊需要持續的證據來證明資源符合基準。第二項需求：受監管的公司必須集中安全發現並優先處理高風險問題。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "AWS Config 一致性套件",
-          "B": "Amazon CloudFront",
-          "C": "Amazon EFS",
-          "D": "Amazon SES"
+          "A": "僅在需要時使用 root 使用者並啟用 MFA",
+          "B": "分別確定 AWS 管理的責任和客戶雲端配置的責任",
+          "C": "AWS Config 一致性套件",
+          "D": "AWS Security Hub",
+          "E": "AWS Artifact"
         },
-        "explanation": "一致性包捆綁了基準的配置規則和修復指南。\n其他選擇不評估資源合規性。"
+        "explanation": "AWS Config 一致性套件 符合第一項需求：一致性包捆綁了基準的配置規則和修復指南。 AWS Security Hub 符合第二項需求：Security Hub 集中發現結果並提供標準和優先順序。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "scs-c03-d6-008",
-    "type": "single",
-    "question": "A company migrating an existing workload must centralize security findings and prioritize high-risk issues. Which service should be evaluated?",
-    "options": {
-      "A": "Amazon SQS",
-      "B": "AWS Security Hub",
-      "C": "AWS Budgets",
-      "D": "Amazon Route 53"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Security Hub centralizes findings and provides standards and prioritization.\nThe other choices monitor cost, DNS, or messages.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A company migrating an existing workload is redesigning one integrated end-to-end architecture. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The design must avoid unnecessary standby cost without weakening security controls or the availability objective. The workload must centralize security findings and prioritize high-risk issues, and the same architecture must determine the timeline of unauthorized API calls. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Use AWS Security Hub but replace the connected control with Amazon GuardDuty",
+      "B": "Use Amazon Macie for the primary requirement and integrate it with CloudTrail events correlated with identity and resource logs",
+      "C": "Combine Amazon Macie with Amazon Inspector as a single platform design",
+      "D": "Use AWS Security Hub for the primary requirement and integrate it with CloudTrail events correlated with identity and resource logs for the connected control"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "AWS Security Hub satisfies the first part of the architecture: Security Hub centralizes findings and provides standards and prioritization. CloudTrail events correlated with identity and resource logs satisfies the connected requirement: Correlated API, identity, and resource logs establish who did what and when.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司必須集中安全發現並優先考慮高風險問題。應該評估哪些服務？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：受監管的公司必須集中安全發現並優先處理高風險問題。 第二項需求：支援關鍵工作負載的營運團隊必須確定未經授權的 API 呼叫的時間表。 此設計必須避免不必要的備用成本，同時不可削弱安全控制或可用性目標。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "Amazon SQS",
-          "B": "AWS Security Hub",
-          "C": "AWS Budgets",
-          "D": "Amazon Route 53"
+          "A": "使用AWS Security Hub，但以Amazon GuardDuty取代相連控制",
+          "B": "以Amazon Macie處理主要需求，並整合與身分和資源日誌相關的 CloudTrail 事件",
+          "C": "把Amazon Macie與Amazon Inspector結合為單一平台設計",
+          "D": "以AWS Security Hub處理主要需求，並整合與身分和資源日誌相關的 CloudTrail 事件作為相連控制"
         },
-        "explanation": "Security Hub 集中發現結果並提供標準和優先順序。\n其他選擇監控成本、DNS 或訊息。"
+        "explanation": "AWS Security Hub 負責架構的第一項需求，與身分和資源日誌相關的 CloudTrail 事件 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "scs-c03-d6-009",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team with strict recovery objectives needs a formal report of AWS compliance certifications and attestations. Which service provides AWS reports?",
+    "question": "A team with strict recovery objectives is reviewing a production decision. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The team needs a formal report of AWS compliance certifications and attestations. Which service provides AWS reports?",
     "options": {
-      "A": "AWS WAF",
-      "B": "Amazon RDS",
+      "A": "Identify AWS-managed responsibilities and customer cloud-configuration responsibilities separately",
+      "B": "AWS Config conformance packs",
       "C": "AWS Artifact",
-      "D": "Amazon GuardDuty"
+      "D": "Use the root user only when required and enable MFA"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Artifact provides on-demand access to AWS compliance documents and agreements.\nThe other choices detect threats, filter web requests, or host databases.",
-    "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Artifact provides on-demand access to AWS compliance documents and agreements.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Artifact for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格恢復目標的團隊需要一份正式的 AWS 合規性認證和證明報告。哪項服務提供 AWS 報告？",
+        "question": "團隊必須考慮混合式連線、現有安全邊界，以及變更部署後的營運疑難排解。具有嚴格恢復目標的團隊需要一份正式的 AWS 合規性認證和證明報告。哪項服務提供 AWS 報告？",
         "options": {
-          "A": "AWS WAF",
-          "B": "Amazon RDS",
+          "A": "分別確定 AWS 管理的責任和客戶雲端配置的責任",
+          "B": "AWS Config 一致性套件",
           "C": "AWS Artifact",
-          "D": "Amazon GuardDuty"
+          "D": "僅在需要時使用 root 使用者並啟用 MFA"
         },
-        "explanation": "Artifact 提供對 AWS 合規性文件和協議的按需存取。\n其他選擇偵測威脅、過濾 Web 要求或託管資料庫。"
+        "explanation": "Artifact 提供對 AWS 合規性文件和協議的按需存取。\n其他選項適用於此領域的不同需求，但不能像 AWS Artifact 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d6-010",
-    "type": "single",
-    "question": "A developer team preparing a release must protect the organization root user from routine misuse. Which practice is appropriate?",
-    "options": {
-      "A": "Use root for daily work",
-      "B": "Share root keys with developers",
-      "C": "Disable all audit logging",
-      "D": "Use the root user only when required and enable MFA"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Root-use restrictions and MFA reduce the highest-impact credential risk.\nRoutine root use and shared keys increase risk.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A developer team preparing a release is reviewing a production decision. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The team must protect the organization root user from routine misuse. Which practice is appropriate?",
+    "options": {
+      "A": "AWS Security Hub",
+      "B": "Use the root user only when required and enable MFA",
+      "C": "Identify AWS-managed responsibilities and customer cloud-configuration responsibilities separately",
+      "D": "AWS Config conformance packs"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Root-use restrictions and MFA reduce the highest-impact credential risk.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Use the root user only when required and enable MFA for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊必須保護組織根使用者免受日常濫用。哪種做法合適？",
+        "question": "團隊必須考慮混合式連線、現有安全邊界，以及變更部署後的營運疑難排解。準備發布的開發團隊必須保護組織根使用者免受日常濫用。哪種做法合適？",
         "options": {
-          "A": "使用root進行日常工作",
-          "B": "與開發人員分享根金鑰",
-          "C": "停用所有審核日誌記錄",
-          "D": "僅在需要時使用 root 使用者並啟用 MFA"
+          "A": "AWS Security Hub",
+          "B": "僅在需要時使用 root 使用者並啟用 MFA",
+          "C": "分別確定 AWS 管理的責任和客戶雲端配置的責任",
+          "D": "AWS Config 一致性套件"
         },
-        "explanation": "根使用限制和 MFA 降低了影響最大的憑證風險。\n常規 root 使用和共用金鑰會增加風險。"
+        "explanation": "根使用限制和 MFA 降低了影響最大的憑證風險。\n其他選項適用於此領域的不同需求，但不能像 僅在需要時使用 root 使用者並啟用 MFA 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d6-011",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An enterprise with several AWS Regions must align security controls with the AWS shared responsibility model. Which practice is correct?",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The team must align security controls with the AWS shared responsibility model. Which practice is correct?",
     "options": {
       "A": "Identify AWS-managed responsibilities and customer cloud-configuration responsibilities separately",
-      "B": "Assume AWS secures every customer setting",
-      "C": "Assume the customer patches managed service hardware",
-      "D": "Disable all controls"
+      "B": "AWS Config conformance packs",
+      "C": "AWS Security Hub",
+      "D": "AWS Artifact"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "The shared responsibility model separates cloud infrastructure duties from customer configuration and data duties.\nThe other choices misunderstand the model.",
-    "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "The shared responsibility model separates cloud infrastructure duties from customer configuration and data duties.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Identify AWS-managed responsibilities and customer cloud-configuration responsibilities separately for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業必須使安全控制與 AWS 責任共擔模型保持一致。哪一種做法是正確的？",
+        "question": "此需求必須大規模套用。方案應避免一次性的人手設定，並提供證據證明控制措施持續有效。擁有多個 AWS 區域的企業必須使安全控制與 AWS 責任共擔模型保持一致。哪一種做法是正確的？",
         "options": {
           "A": "分別確定 AWS 管理的責任和客戶雲端配置的責任",
-          "B": "假設 AWS 保護每個客戶設定的安全",
-          "C": "假設客戶修補託管服務硬體",
-          "D": "禁用所有控件"
+          "B": "AWS Config 一致性套件",
+          "C": "AWS Security Hub",
+          "D": "AWS Artifact"
         },
-        "explanation": "共享責任模型將雲端基礎設施職責與客戶配置和資料職責分開。\n其他選擇誤解了模型。"
+        "explanation": "共享責任模型將雲端基礎設施職責與客戶配置和資料職責分開。\n其他選項適用於此領域的不同需求，但不能像 分別確定 AWS 管理的責任和客戶雲端配置的責任 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d6-012",
-    "type": "single",
-    "question": "A service owner reviewing an incident needs continuous evidence that resources comply with a baseline. Which service should be used?",
-    "options": {
-      "A": "Amazon SES",
-      "B": "AWS Config conformance packs",
-      "C": "Amazon CloudFront",
-      "D": "Amazon EFS"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Conformance packs bundle Config rules and remediation guidance for a baseline.\nThe other choices do not evaluate resource compliance.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A service owner reviewing an incident is redesigning one integrated end-to-end architecture. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The organization will accept additional managed-service cost only when it measurably improves security and availability with less operational effort. The workload needs continuous evidence that resources comply with a baseline, and the same architecture needs host access without inbound SSH ports. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Use AWS Config conformance packs but replace the connected control with Amazon GuardDuty",
+      "B": "Use AWS Security Hub for the primary requirement and integrate it with Systems Manager Session Manager",
+      "C": "Combine AWS Security Hub with Amazon Macie as a single platform design",
+      "D": "Use AWS Config conformance packs for the primary requirement and integrate it with Systems Manager Session Manager for the connected control"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "AWS Config conformance packs satisfies the first part of the architecture: Conformance packs bundle Config rules and remediation guidance for a baseline. Systems Manager Session Manager satisfies the connected requirement: Session Manager provides audited access through the agent and IAM authorization.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務所有者需要持續的證據來證明資源符合基準。應該使用哪種服務？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：具有安全意識的工程團隊需要持續的證據來證明資源符合基準。 第二項需求：支援關鍵工作負載的營運團隊需要在沒有入站 SSH 連接埠的情況下進行主機存取。 只有在託管服務能以較低營運負擔明確改善安全性與可用性時，組織才會接受額外成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "Amazon SES",
-          "B": "AWS Config 一致性套件",
-          "C": "Amazon CloudFront",
-          "D": "Amazon EFS"
+          "A": "使用AWS Config 一致性套件，但以Amazon GuardDuty取代相連控制",
+          "B": "以AWS Security Hub處理主要需求，並整合Systems Manager Session Manager",
+          "C": "把AWS Security Hub與Amazon Macie結合為單一平台設計",
+          "D": "以AWS Config 一致性套件處理主要需求，並整合Systems Manager Session Manager作為相連控制"
         },
-        "explanation": "一致性包捆綁了基準的配置規則和修復指南。\n其他選擇不評估資源合規性。"
+        "explanation": "AWS Config 一致性套件 負責架構的第一項需求，Systems Manager Session Manager 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "scs-c03-d6-013",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team optimizing an existing implementation must centralize security findings and prioritize high-risk issues. Which service should be evaluated?",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The team must centralize security findings and prioritize high-risk issues. Which service should be evaluated?",
     "options": {
-      "A": "Amazon Route 53",
-      "B": "Amazon SQS",
+      "A": "Use the root user only when required and enable MFA",
+      "B": "Identify AWS-managed responsibilities and customer cloud-configuration responsibilities separately",
       "C": "AWS Security Hub",
-      "D": "AWS Budgets"
+      "D": "AWS Artifact"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Security Hub centralizes findings and provides standards and prioritization.\nThe other choices monitor cost, DNS, or messages.",
-    "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Security Hub centralizes findings and provides standards and prioritization.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Security Hub for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊必須集中安全發現並優先考慮高風險問題。應該評估哪些服務？",
+        "question": "此需求必須大規模套用。方案應避免一次性的人手設定，並提供證據證明控制措施持續有效。優化現有實施的團隊必須集中安全發現並優先考慮高風險問題。應該評估哪些服務？",
         "options": {
-          "A": "Amazon Route 53",
-          "B": "Amazon SQS",
+          "A": "僅在需要時使用 root 使用者並啟用 MFA",
+          "B": "分別確定 AWS 管理的責任和客戶雲端配置的責任",
           "C": "AWS Security Hub",
-          "D": "AWS Budgets"
+          "D": "AWS Artifact"
         },
-        "explanation": "Security Hub 集中發現結果並提供標準和優先順序。\n其他選擇監控成本、DNS 或訊息。"
+        "explanation": "Security Hub 集中發現結果並提供標準和優先順序。\n其他選項適用於此領域的不同需求，但不能像 AWS Security Hub 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d6-014",
-    "type": "single",
-    "question": "A company introducing an automated workflow needs a formal report of AWS compliance certifications and attestations. Which service provides AWS reports?",
-    "options": {
-      "A": "Amazon GuardDuty",
-      "B": "AWS WAF",
-      "C": "Amazon RDS",
-      "D": "AWS Artifact"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Artifact provides on-demand access to AWS compliance documents and agreements.\nThe other choices detect threats, filter web requests, or host databases.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A company introducing an automated workflow is planning two independent production changes. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The first team needs a formal report of AWS compliance certifications and attestations. A second team must protect the organization root user from routine misuse. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "AWS Artifact",
+      "B": "Use the root user only when required and enable MFA",
+      "C": "Identify AWS-managed responsibilities and customer cloud-configuration responsibilities separately",
+      "D": "AWS Config conformance packs",
+      "E": "AWS Security Hub"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS Artifact meets the first requirement: Artifact provides on-demand access to AWS compliance documents and agreements. Use the root user only when required and enable MFA meets the second requirement: Root-use restrictions and MFA reduce the highest-impact credential risk.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "引進自動化工作流程的公司需要一份正式的 AWS 合規性認證和證明報告。哪項服務提供 AWS 報告？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此需求必須大規模套用。方案應避免一次性的人手設定，並提供證據證明控制措施持續有效。第一項需求：準備增加流量的新創公司需要一份正式的 AWS 合規性認證和證明報告。第二項需求：支援關鍵工作負載的營運團隊必須保護組織根使用者免於日常濫用。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "Amazon GuardDuty",
-          "B": "AWS WAF",
-          "C": "Amazon RDS",
-          "D": "AWS Artifact"
+          "A": "AWS Artifact",
+          "B": "僅在需要時使用 root 使用者並啟用 MFA",
+          "C": "分別確定 AWS 管理的責任和客戶雲端配置的責任",
+          "D": "AWS Config 一致性套件",
+          "E": "AWS Security Hub"
         },
-        "explanation": "Artifact 提供對 AWS 合規性文件和協議的按需存取。\n其他選擇偵測威脅、過濾 Web 要求或託管資料庫。"
+        "explanation": "AWS Artifact 符合第一項需求：Artifact 提供對 AWS 合規性文件和協議的按需存取。 僅在需要時使用 root 使用者並啟用 MFA 符合第二項需求：根使用限制和 MFA 降低了影響最大的憑證風險。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "scs-c03-d6-015",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An AWS administrator working in a shared environment must protect the organization root user from routine misuse. Which practice is appropriate?",
+    "question": "An AWS administrator working in a shared environment is reviewing a production decision. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The team must protect the organization root user from routine misuse. Which practice is appropriate?",
     "options": {
       "A": "Use the root user only when required and enable MFA",
-      "B": "Use root for daily work",
-      "C": "Share root keys with developers",
-      "D": "Disable all audit logging"
+      "B": "Identify AWS-managed responsibilities and customer cloud-configuration responsibilities separately",
+      "C": "AWS Config conformance packs",
+      "D": "AWS Security Hub"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Root-use restrictions and MFA reduce the highest-impact credential risk.\nRoutine root use and shared keys increase risk.",
-    "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Root-use restrictions and MFA reduce the highest-impact credential risk.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Use the root user only when required and enable MFA for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "在共享環境中工作的 AWS 管理員必須保護組織根使用者免於日常濫用。哪種做法合適？",
+        "question": "此需求必須大規模套用。方案應避免一次性的人手設定，並提供證據證明控制措施持續有效。在共享環境中工作的 AWS 管理員必須保護組織根使用者免於日常濫用。哪種做法合適？",
         "options": {
           "A": "僅在需要時使用 root 使用者並啟用 MFA",
-          "B": "使用root進行日常工作",
-          "C": "與開發人員分享根金鑰",
-          "D": "停用所有審核日誌記錄"
+          "B": "分別確定 AWS 管理的責任和客戶雲端配置的責任",
+          "C": "AWS Config 一致性套件",
+          "D": "AWS Security Hub"
         },
-        "explanation": "根使用限制和 MFA 降低了影響最大的憑證風險。\n常規 root 使用和共用金鑰會增加風險。"
+        "explanation": "根使用限制和 MFA 降低了影響最大的憑證風險。\n其他選項適用於此領域的不同需求，但不能像 僅在需要時使用 root 使用者並啟用 MFA 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d6-016",
-    "type": "single",
-    "question": "A customer-facing application team must align security controls with the AWS shared responsibility model. Which practice is correct?",
-    "options": {
-      "A": "Disable all controls",
-      "B": "Identify AWS-managed responsibilities and customer cloud-configuration responsibilities separately",
-      "C": "Assume AWS secures every customer setting",
-      "D": "Assume the customer patches managed service hardware"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "The shared responsibility model separates cloud infrastructure duties from customer configuration and data duties.\nThe other choices misunderstand the model.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A customer-facing application team is redesigning one integrated end-to-end architecture. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The architecture must limit blast radius, preserve availability during change, and control cost through automation instead of permanent overprovisioning. The workload must align security controls with the AWS shared responsibility model, and the same architecture must restrict a delegated administrator from granting permissions beyond an approved set. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Use Identify AWS-managed responsibilities and customer cloud-configuration responsibilities separately but replace the connected control with Amazon GuardDuty",
+      "B": "Use AWS Security Hub for the primary requirement and integrate it with An IAM permission boundary",
+      "C": "Combine AWS Security Hub with Amazon Macie as a single platform design",
+      "D": "Use Identify AWS-managed responsibilities and customer cloud-configuration responsibilities separately for the primary requirement and integrate it with An IAM permission boundary for the connected control"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Identify AWS-managed responsibilities and customer cloud-configuration responsibilities separately satisfies the first part of the architecture: The shared responsibility model separates cloud infrastructure duties from customer configuration and data duties. An IAM permission boundary satisfies the connected requirement: Permission boundaries cap the maximum permissions an identity can receive.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊必須使安全控制與 AWS 責任共擔模型保持一致。哪一種做法是正確的？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：資料平台團隊必須使安全控制與 AWS 責任共擔模型保持一致。 第二項需求：支援關鍵工作負載的營運團隊必須限制委派管理員授予超出批准集的權限。 此架構必須限制影響範圍、在變更期間維持可用性，並透過自動化控制成本，而不是長期過度佈建。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "禁用所有控件",
-          "B": "分別確定 AWS 管理的責任和客戶雲端配置的責任",
-          "C": "假設 AWS 保護每個客戶設定的安全",
-          "D": "假設客戶修補託管服務硬體"
+          "A": "使用分別確定 AWS 管理的責任和客戶雲端配置的責任，但以Amazon GuardDuty取代相連控制",
+          "B": "以AWS Security Hub處理主要需求，並整合IAM Permissions邊界",
+          "C": "把AWS Security Hub與Amazon Macie結合為單一平台設計",
+          "D": "以分別確定 AWS 管理的責任和客戶雲端配置的責任處理主要需求，並整合IAM Permissions邊界作為相連控制"
         },
-        "explanation": "共享責任模型將雲端基礎設施職責與客戶配置和資料職責分開。\n其他選擇誤解了模型。"
+        "explanation": "分別確定 AWS 管理的責任和客戶雲端配置的責任 負責架構的第一項需求，IAM Permissions邊界 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "scs-c03-d6-017",
-    "type": "single",
-    "question": "A platform team standardizing its AWS deployments needs continuous evidence that resources comply with a baseline. Which service should be used?",
-    "options": {
-      "A": "Amazon EFS",
-      "B": "Amazon SES",
-      "C": "AWS Config conformance packs",
-      "D": "Amazon CloudFront"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "Conformance packs bundle Config rules and remediation guidance for a baseline.\nThe other choices do not evaluate resource compliance.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A platform team standardizing its AWS deployments is reviewing several independent production requirements. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. Match each workload requirement to the most appropriate implementation.",
+    "options": {
+      "A": "A workload needs continuous evidence that resources comply with a baseline",
+      "B": "A workload must centralize security findings and prioritize high-risk issues",
+      "C": "A workload needs a formal report of AWS compliance certifications and attestations"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "AWS Artifact",
+      "2": "AWS Config conformance packs",
+      "3": "AWS Security Hub"
+    },
+    "correctMatches": {
+      "A": "2",
+      "B": "3",
+      "C": "1"
+    },
+    "explanation": "A maps to AWS Config conformance packs. Conformance packs bundle Config rules and remediation guidance for a baseline. B maps to AWS Security Hub. Security Hub centralizes findings and provides standards and prioritization. C maps to AWS Artifact. Artifact provides on-demand access to AWS compliance documents and agreements.\nEach target is intended for a different requirement, so all three mappings must be evaluated independently.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊需要持續的證據來證明資源符合基準。應該使用哪種服務？",
+        "question": "團隊正在審查多項彼此獨立的生產需求。目前架構支援業務關鍵服務。所選選項必須處理確切的故障或安全條件，而不會削弱其他控制措施。請將每項工作負載需求配對至最適合的實作。",
         "options": {
-          "A": "Amazon EFS",
-          "B": "Amazon SES",
-          "C": "AWS Config 一致性套件",
-          "D": "Amazon CloudFront"
+          "A": "工作負載需求：多帳戶平台團隊需要持續的證據來證明資源符合基準",
+          "B": "工作負載需求：受監管的公司必須集中安全發現並優先處理高風險問題",
+          "C": "工作負載需求：準備增加流量的新創公司需要一份正式的 AWS 合規性認證和證明報告"
         },
-        "explanation": "一致性包捆綁了基準的配置規則和修復指南。\n其他選擇不評估資源合規性。"
+        "targets": {
+          "1": "AWS Artifact",
+          "2": "AWS Config 一致性套件",
+          "3": "AWS Security Hub"
+        },
+        "explanation": "A 對應 AWS Config 一致性套件。一致性包捆綁了基準的配置規則和修復指南。 B 對應 AWS Security Hub。Security Hub 集中發現結果並提供標準和優先順序。 C 對應 AWS Artifact。Artifact 提供對 AWS 合規性文件和協議的按需存取。\n每個目標均處理不同需求，因此必須分別評估三項配對。"
       }
     }
   },
   {
     "id": "scs-c03-d6-018",
-    "type": "single",
-    "question": "A team preparing evidence for an audit must centralize security findings and prioritize high-risk issues. Which service should be evaluated?",
-    "options": {
-      "A": "AWS Budgets",
-      "B": "Amazon Route 53",
-      "C": "Amazon SQS",
-      "D": "AWS Security Hub"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Security Hub centralizes findings and provides standards and prioritization.\nThe other choices monitor cost, DNS, or messages.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team preparing evidence for an audit is reviewing a production decision. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The team must centralize security findings and prioritize high-risk issues. Which service should be evaluated?",
+    "options": {
+      "A": "Identify AWS-managed responsibilities and customer cloud-configuration responsibilities separately",
+      "B": "AWS Security Hub",
+      "C": "AWS Artifact",
+      "D": "Use the root user only when required and enable MFA"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Security Hub centralizes findings and provides standards and prioritization.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Security Hub for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備審計證據的團隊必須集中安全發現並優先考慮高風險問題。應該評估哪些服務？",
+        "question": "目前架構支援業務關鍵服務。所選選項必須處理確切的故障或安全條件，而不會削弱其他控制措施。準備審計證據的團隊必須集中安全發現並優先考慮高風險問題。應該評估哪些服務？",
         "options": {
-          "A": "AWS Budgets",
-          "B": "Amazon Route 53",
-          "C": "Amazon SQS",
-          "D": "AWS Security Hub"
+          "A": "分別確定 AWS 管理的責任和客戶雲端配置的責任",
+          "B": "AWS Security Hub",
+          "C": "AWS Artifact",
+          "D": "僅在需要時使用 root 使用者並啟用 MFA"
         },
-        "explanation": "Security Hub 集中發現結果並提供標準和優先順序。\n其他選擇監控成本、DNS 或訊息。"
+        "explanation": "Security Hub 集中發現結果並提供標準和優先順序。\n其他選項適用於此領域的不同需求，但不能像 AWS Security Hub 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d6-019",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A business replacing a manual process needs a formal report of AWS compliance certifications and attestations. Which service provides AWS reports?",
+    "question": "A business replacing a manual process is reviewing a production decision. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The team needs a formal report of AWS compliance certifications and attestations. Which service provides AWS reports?",
     "options": {
       "A": "AWS Artifact",
-      "B": "Amazon GuardDuty",
-      "C": "AWS WAF",
-      "D": "Amazon RDS"
+      "B": "Use the root user only when required and enable MFA",
+      "C": "Identify AWS-managed responsibilities and customer cloud-configuration responsibilities separately",
+      "D": "AWS Config conformance packs"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Artifact provides on-demand access to AWS compliance documents and agreements.\nThe other choices detect threats, filter web requests, or host databases.",
-    "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Artifact provides on-demand access to AWS compliance documents and agreements.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Artifact for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "替代手動流程的企業需要一份正式的 AWS 合規性認證和證明報告。哪項服務提供 AWS 報告？",
+        "question": "目前架構支援業務關鍵服務。所選選項必須處理確切的故障或安全條件，而不會削弱其他控制措施。替代手動流程的企業需要一份正式的 AWS 合規性認證和證明報告。哪項服務提供 AWS 報告？",
         "options": {
           "A": "AWS Artifact",
-          "B": "Amazon GuardDuty",
-          "C": "AWS WAF",
-          "D": "Amazon RDS"
+          "B": "僅在需要時使用 root 使用者並啟用 MFA",
+          "C": "分別確定 AWS 管理的責任和客戶雲端配置的責任",
+          "D": "AWS Config 一致性套件"
         },
-        "explanation": "Artifact 提供對 AWS 合規性文件和協議的按需存取。\n其他選擇偵測威脅、過濾 Web 要求或託管資料庫。"
+        "explanation": "Artifact 提供對 AWS 合規性文件和協議的按需存取。\n其他選項適用於此領域的不同需求，但不能像 AWS Artifact 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d6-020",
-    "type": "single",
-    "question": "A team validating a design against the exam guide must protect the organization root user from routine misuse. Which practice is appropriate?",
-    "options": {
-      "A": "Disable all audit logging",
-      "B": "Use the root user only when required and enable MFA",
-      "C": "Use root for daily work",
-      "D": "Share root keys with developers"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Root-use restrictions and MFA reduce the highest-impact credential risk.\nRoutine root use and shared keys increase risk.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team validating a design against the exam guide is redesigning one integrated end-to-end architecture. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The selected controls must provide auditable security, predictable availability, and the lowest operational cost that still satisfies both requirements. The workload must protect the organization root user from routine misuse, and the same architecture needs to discover PII before sharing a data set with another account. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Use Use the root user only when required and enable MFA but replace the connected control with Amazon GuardDuty",
+      "B": "Use AWS Security Hub for the primary requirement and integrate it with Amazon Macie",
+      "C": "Combine AWS Security Hub with Amazon Inspector as a single platform design",
+      "D": "Use Use the root user only when required and enable MFA for the primary requirement and integrate it with Amazon Macie for the connected control"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Use the root user only when required and enable MFA satisfies the first part of the architecture: Root-use restrictions and MFA reduce the highest-impact credential risk. Amazon Macie satisfies the connected requirement: Macie discovers sensitive data in S3 and can inform remediation before sharing.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊必須保護組織根使用者免受日常濫用。哪種做法合適？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：支援關鍵工作負載的營運團隊必須保護組織根使用者免於日常濫用。 第二項需求：支援關鍵工作負載的營運團隊需要在與其他帳戶共用資料集之前發現 PII。 所選控制必須提供可稽核的安全性、可預測的可用性，以及在滿足兩項要求前提下最低的營運成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "停用所有審核日誌記錄",
-          "B": "僅在需要時使用 root 使用者並啟用 MFA",
-          "C": "使用root進行日常工作",
-          "D": "與開發人員分享根金鑰"
+          "A": "使用僅在需要時使用 root 使用者並啟用 MFA，但以Amazon GuardDuty取代相連控制",
+          "B": "以AWS Security Hub處理主要需求，並整合Amazon Macie",
+          "C": "把AWS Security Hub與Amazon Inspector結合為單一平台設計",
+          "D": "以僅在需要時使用 root 使用者並啟用 MFA處理主要需求，並整合Amazon Macie作為相連控制"
         },
-        "explanation": "根使用限制和 MFA 降低了影響最大的憑證風險。\n常規 root 使用和共用金鑰會增加風險。"
+        "explanation": "僅在需要時使用 root 使用者並啟用 MFA 負責架構的第一項需求，Amazon Macie 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "scs-c03-d6-021",
-    "type": "single",
-    "question": "A production team must align security controls with the AWS shared responsibility model. Which practice is correct?",
-    "options": {
-      "A": "Assume the customer patches managed service hardware",
-      "B": "Disable all controls",
-      "C": "Identify AWS-managed responsibilities and customer cloud-configuration responsibilities separately",
-      "D": "Assume AWS secures every customer setting"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "The shared responsibility model separates cloud infrastructure duties from customer configuration and data duties.\nThe other choices misunderstand the model.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A production team is planning two independent production changes. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The first team must align security controls with the AWS shared responsibility model. A second team needs continuous evidence that resources comply with a baseline. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "AWS Security Hub",
+      "B": "AWS Artifact",
+      "C": "Use the root user only when required and enable MFA",
+      "D": "Identify AWS-managed responsibilities and customer cloud-configuration responsibilities separately",
+      "E": "AWS Config conformance packs"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Identify AWS-managed responsibilities and customer cloud-configuration responsibilities separately meets the first requirement: The shared responsibility model separates cloud infrastructure duties from customer configuration and data duties. AWS Config conformance packs meets the second requirement: Conformance packs bundle Config rules and remediation guidance for a baseline.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "生產團隊必須使安全控制與 AWS 責任共擔模型保持一致。哪一種做法是正確的？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。專業工程師將審查實作的服務限制、故障行為及建議設計的營運取捨。第一項需求：生產團隊必須使安全控制與 AWS 責任共擔模型保持一致。第二項需求：多帳戶平台團隊需要持續的證據來證明資源符合基準。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "假設客戶修補託管服務硬體",
-          "B": "禁用所有控件",
-          "C": "分別確定 AWS 管理的責任和客戶雲端配置的責任",
-          "D": "假設 AWS 保護每個客戶設定的安全"
+          "A": "AWS Security Hub",
+          "B": "AWS Artifact",
+          "C": "僅在需要時使用 root 使用者並啟用 MFA",
+          "D": "分別確定 AWS 管理的責任和客戶雲端配置的責任",
+          "E": "AWS Config 一致性套件"
         },
-        "explanation": "共享責任模型將雲端基礎設施職責與客戶配置和資料職責分開。\n其他選擇誤解了模型。"
+        "explanation": "分別確定 AWS 管理的責任和客戶雲端配置的責任 符合第一項需求：共享責任模型將雲端基礎設施職責與客戶配置和資料職責分開。 AWS Config 一致性套件 符合第二項需求：一致性包捆綁了基準的配置規則和修復指南。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "scs-c03-d6-022",
-    "type": "single",
-    "question": "A multi-account platform team needs continuous evidence that resources comply with a baseline. Which service should be used?",
-    "options": {
-      "A": "Amazon CloudFront",
-      "B": "Amazon EFS",
-      "C": "Amazon SES",
-      "D": "AWS Config conformance packs"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Conformance packs bundle Config rules and remediation guidance for a baseline.\nThe other choices do not evaluate resource compliance.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A multi-account platform team is reviewing a production decision. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The team needs continuous evidence that resources comply with a baseline. Which service should be used?",
+    "options": {
+      "A": "Use the root user only when required and enable MFA",
+      "B": "AWS Config conformance packs",
+      "C": "AWS Security Hub",
+      "D": "AWS Artifact"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Conformance packs bundle Config rules and remediation guidance for a baseline.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Config conformance packs for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊需要持續的證據來證明資源符合基準。應該使用哪種服務？",
+        "question": "專業工程師將審查實作的服務限制、故障行為及建議設計的營運取捨。多帳戶平台團隊需要持續的證據來證明資源符合基準。應該使用哪種服務？",
         "options": {
-          "A": "Amazon CloudFront",
-          "B": "Amazon EFS",
-          "C": "Amazon SES",
-          "D": "AWS Config 一致性套件"
+          "A": "僅在需要時使用 root 使用者並啟用 MFA",
+          "B": "AWS Config 一致性套件",
+          "C": "AWS Security Hub",
+          "D": "AWS Artifact"
         },
-        "explanation": "一致性包捆綁了基準的配置規則和修復指南。\n其他選擇不評估資源合規性。"
+        "explanation": "一致性包捆綁了基準的配置規則和修復指南。\n其他選項適用於此領域的不同需求，但不能像 AWS Config 一致性套件 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d6-023",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A regulated company must centralize security findings and prioritize high-risk issues. Which service should be evaluated?",
+    "question": "A regulated company is reviewing a production decision. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The team must centralize security findings and prioritize high-risk issues. Which service should be evaluated?",
     "options": {
       "A": "AWS Security Hub",
-      "B": "AWS Budgets",
-      "C": "Amazon Route 53",
-      "D": "Amazon SQS"
+      "B": "AWS Artifact",
+      "C": "Use the root user only when required and enable MFA",
+      "D": "Identify AWS-managed responsibilities and customer cloud-configuration responsibilities separately"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Security Hub centralizes findings and provides standards and prioritization.\nThe other choices monitor cost, DNS, or messages.",
-    "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Security Hub centralizes findings and provides standards and prioritization.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Security Hub for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司必須集中安全發現並優先處理高風險問題。應該評估哪些服務？",
+        "question": "專業工程師將審查實作的服務限制、故障行為及建議設計的營運取捨。受監管的公司必須集中安全發現並優先處理高風險問題。應該評估哪些服務？",
         "options": {
           "A": "AWS Security Hub",
-          "B": "AWS Budgets",
-          "C": "Amazon Route 53",
-          "D": "Amazon SQS"
+          "B": "AWS Artifact",
+          "C": "僅在需要時使用 root 使用者並啟用 MFA",
+          "D": "分別確定 AWS 管理的責任和客戶雲端配置的責任"
         },
-        "explanation": "Security Hub 集中發現結果並提供標準和優先順序。\n其他選擇監控成本、DNS 或訊息。"
+        "explanation": "Security Hub 集中發現結果並提供標準和優先順序。\n其他選項適用於此領域的不同需求，但不能像 AWS Security Hub 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d6-024",
-    "type": "single",
-    "question": "A startup preparing for a traffic increase needs a formal report of AWS compliance certifications and attestations. Which service provides AWS reports?",
-    "options": {
-      "A": "Amazon RDS",
-      "B": "AWS Artifact",
-      "C": "Amazon GuardDuty",
-      "D": "AWS WAF"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Artifact provides on-demand access to AWS compliance documents and agreements.\nThe other choices detect threats, filter web requests, or host databases.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase is redesigning one integrated end-to-end architecture. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The design must keep recurring cost proportional to use, enforce least privilege, and remain available during a component or Availability Zone failure. The workload needs a formal report of AWS compliance certifications and attestations, and the same architecture must protect the organization root user from routine misuse. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
+    "options": {
+      "A": "Use AWS Artifact but replace the connected control with Amazon GuardDuty",
+      "B": "Use AWS Security Hub for the primary requirement and integrate it with Use the root user only when required and enable MFA",
+      "C": "Combine AWS Security Hub with Amazon Macie as a single platform design",
+      "D": "Use AWS Artifact for the primary requirement and integrate it with Use the root user only when required and enable MFA for the connected control"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "AWS Artifact satisfies the first part of the architecture: Artifact provides on-demand access to AWS compliance documents and agreements. Use the root user only when required and enable MFA satisfies the connected requirement: Root-use restrictions and MFA reduce the highest-impact credential risk.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司需要一份正式的 AWS 合規性認證和證明報告。哪項服務提供 AWS 報告？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：準備增加流量的新創公司需要一份正式的 AWS 合規性認證和證明報告。 第二項需求：支援關鍵工作負載的營運團隊必須保護組織根使用者免於日常濫用。 此設計必須讓持續成本與實際用量相符、落實最低權限，並在元件或可用區域發生故障時維持可用。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "Amazon RDS",
-          "B": "AWS Artifact",
-          "C": "Amazon GuardDuty",
-          "D": "AWS WAF"
+          "A": "使用AWS Artifact，但以Amazon GuardDuty取代相連控制",
+          "B": "以AWS Security Hub處理主要需求，並整合僅在需要時使用 root 使用者並啟用 MFA",
+          "C": "把AWS Security Hub與Amazon Macie結合為單一平台設計",
+          "D": "以AWS Artifact處理主要需求，並整合僅在需要時使用 root 使用者並啟用 MFA作為相連控制"
         },
-        "explanation": "Artifact 提供對 AWS 合規性文件和協議的按需存取。\n其他選擇偵測威脅、過濾 Web 要求或託管資料庫。"
+        "explanation": "AWS Artifact 負責架構的第一項需求，僅在需要時使用 root 使用者並啟用 MFA 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "scs-c03-d6-025",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An operations team supporting a critical workload must protect the organization root user from routine misuse. Which practice is appropriate?",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The team must protect the organization root user from routine misuse. Which practice is appropriate?",
     "options": {
-      "A": "Share root keys with developers",
-      "B": "Disable all audit logging",
+      "A": "AWS Config conformance packs",
+      "B": "AWS Security Hub",
       "C": "Use the root user only when required and enable MFA",
-      "D": "Use root for daily work"
+      "D": "Identify AWS-managed responsibilities and customer cloud-configuration responsibilities separately"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Root-use restrictions and MFA reduce the highest-impact credential risk.\nRoutine root use and shared keys increase risk.",
-    "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Root-use restrictions and MFA reduce the highest-impact credential risk.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Use the root user only when required and enable MFA for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊必須保護組織根使用者免於日常濫用。哪種做法合適？",
+        "question": "專業工程師將審查實作的服務限制、故障行為及建議設計的營運取捨。支援關鍵工作負載的營運團隊必須保護組織根使用者免於日常濫用。哪種做法合適？",
         "options": {
-          "A": "與開發人員分享根金鑰",
-          "B": "停用所有審核日誌記錄",
+          "A": "AWS Config 一致性套件",
+          "B": "AWS Security Hub",
           "C": "僅在需要時使用 root 使用者並啟用 MFA",
-          "D": "使用root進行日常工作"
+          "D": "分別確定 AWS 管理的責任和客戶雲端配置的責任"
         },
-        "explanation": "根使用限制和 MFA 降低了影響最大的憑證風險。\n常規 root 使用和共用金鑰會增加風險。"
+        "explanation": "根使用限制和 MFA 降低了影響最大的憑證風險。\n其他選項適用於此領域的不同需求，但不能像 僅在需要時使用 root 使用者並啟用 MFA 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d6-026",
-    "type": "single",
-    "question": "A data platform team must align security controls with the AWS shared responsibility model. Which practice is correct?",
-    "options": {
-      "A": "Assume AWS secures every customer setting",
-      "B": "Assume the customer patches managed service hardware",
-      "C": "Disable all controls",
-      "D": "Identify AWS-managed responsibilities and customer cloud-configuration responsibilities separately"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "The shared responsibility model separates cloud infrastructure duties from customer configuration and data duties.\nThe other choices misunderstand the model.",
     "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A data platform team is reviewing a production decision. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The team must align security controls with the AWS shared responsibility model. Which practice is correct?",
+    "options": {
+      "A": "AWS Artifact",
+      "B": "Identify AWS-managed responsibilities and customer cloud-configuration responsibilities separately",
+      "C": "AWS Config conformance packs",
+      "D": "AWS Security Hub"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "The shared responsibility model separates cloud infrastructure duties from customer configuration and data duties.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Identify AWS-managed responsibilities and customer cloud-configuration responsibilities separately for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊必須使安全控制與 AWS 責任共擔模型保持一致。哪一種做法是正確的？",
+        "question": "此生產環境在多個帳戶中採用集中治理。變更必須符合最低權限、可以稽核，並且不會造成長時間中斷。資料平台團隊必須使安全控制與 AWS 責任共擔模型保持一致。哪一種做法是正確的？",
         "options": {
-          "A": "假設 AWS 保護每個客戶設定的安全",
-          "B": "假設客戶修補託管服務硬體",
-          "C": "禁用所有控件",
-          "D": "分別確定 AWS 管理的責任和客戶雲端配置的責任"
+          "A": "AWS Artifact",
+          "B": "分別確定 AWS 管理的責任和客戶雲端配置的責任",
+          "C": "AWS Config 一致性套件",
+          "D": "AWS Security Hub"
         },
-        "explanation": "共享責任模型將雲端基礎設施職責與客戶配置和資料職責分開。\n其他選擇誤解了模型。"
+        "explanation": "共享責任模型將雲端基礎設施職責與客戶配置和資料職責分開。\n其他選項適用於此領域的不同需求，但不能像 分別確定 AWS 管理的責任和客戶雲端配置的責任 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d6-027",
+    "taskStatement": "6.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A security-conscious engineering team needs continuous evidence that resources comply with a baseline. Which service should be used?",
+    "question": "A security-conscious engineering team is reviewing a production decision. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The team needs continuous evidence that resources comply with a baseline. Which service should be used?",
     "options": {
       "A": "AWS Config conformance packs",
-      "B": "Amazon CloudFront",
-      "C": "Amazon EFS",
-      "D": "Amazon SES"
+      "B": "AWS Security Hub",
+      "C": "AWS Artifact",
+      "D": "Use the root user only when required and enable MFA"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Conformance packs bundle Config rules and remediation guidance for a baseline.\nThe other choices do not evaluate resource compliance.",
-    "taskStatement": "6.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Conformance packs bundle Config rules and remediation guidance for a baseline.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Config conformance packs for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊需要持續的證據來證明資源符合基準。應該使用哪種服務？",
+        "question": "此生產環境在多個帳戶中採用集中治理。變更必須符合最低權限、可以稽核，並且不會造成長時間中斷。具有安全意識的工程團隊需要持續的證據來證明資源符合基準。應該使用哪種服務？",
         "options": {
           "A": "AWS Config 一致性套件",
-          "B": "Amazon CloudFront",
-          "C": "Amazon EFS",
-          "D": "Amazon SES"
+          "B": "AWS Security Hub",
+          "C": "AWS Artifact",
+          "D": "僅在需要時使用 root 使用者並啟用 MFA"
         },
-        "explanation": "一致性包捆綁了基準的配置規則和修復指南。\n其他選擇不評估資源合規性。"
+        "explanation": "一致性包捆綁了基準的配置規則和修復指南。\n其他選項適用於此領域的不同需求，但不能像 AWS Config 一致性套件 一樣直接滿足題目的指定條件。"
       }
     }
   }

@@ -1,1429 +1,1503 @@
 [
   {
     "id": "mla-c01-d2-001",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A production team needs to compare multiple hyperparameter combinations automatically. Which SageMaker capability fits?",
+    "question": "A production team is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team needs to compare multiple hyperparameter combinations automatically. Which SageMaker capability fits?",
     "options": {
-      "A": "A VPC endpoint only",
-      "B": "A CloudFront cache policy",
+      "A": "SageMaker Model Registry",
+      "B": "Use regularization, validation data, or early stopping",
       "C": "A hyperparameter tuning job",
-      "D": "An S3 lifecycle rule"
+      "D": "Precision, recall, or an area-under-curve metric selected for the business objective"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Hyperparameter tuning runs trials and selects configurations based on an objective metric.\nThe other choices do not optimize model training parameters.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Hyperparameter tuning runs trials and selects configurations based on an objective metric.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A hyperparameter tuning job for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "生產團隊需要自動比較多個超參數組合。哪種 SageMaker 功能適合？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。生產團隊需要自動比較多個超參數組合。哪種 SageMaker 功能適合？",
         "options": {
-          "A": "僅 VPC 終端節點",
-          "B": "CloudFront 快取策略",
+          "A": "SageMaker Model Registry",
+          "B": "使用正規化、驗證資料或提前停止",
           "C": "超參數調整工作",
-          "D": "S3 生命週期規則"
+          "D": "為業務目標選擇的精確率、召回率或曲線下面積指標"
         },
-        "explanation": "超參數調整運行試驗並根據客觀指標選擇配置。\n其他選擇不會優化模型訓練參數。"
+        "explanation": "超參數調整運行試驗並根據客觀指標選擇配置。\n其他選項適用於此領域的不同需求，但不能像 超參數調整工作 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d2-002",
-    "type": "single",
-    "question": "A multi-account platform team must choose a metric for a binary classifier with highly imbalanced classes. Which metric is generally more informative than accuracy alone?",
-    "options": {
-      "A": "Only training loss",
-      "B": "The S3 object count",
-      "C": "The EC2 instance name",
-      "D": "Precision, recall, or an area-under-curve metric selected for the business objective"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Precision and recall expose minority-class behavior that accuracy can hide.\nStorage metadata and instance names do not measure classifier quality.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A multi-account platform team is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team must choose a metric for a binary classifier with highly imbalanced classes. Which metric is generally more informative than accuracy alone?",
+    "options": {
+      "A": "A SageMaker distributed training job",
+      "B": "Precision, recall, or an area-under-curve metric selected for the business objective",
+      "C": "SageMaker Model Registry",
+      "D": "Use regularization, validation data, or early stopping"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Precision and recall expose minority-class behavior that accuracy can hide.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Precision, recall, or an area-under-curve metric selected for the business objective for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊必須為具有高度不平衡類別的二元分類器選擇一個指標。哪一個指標通常比單獨的準確性更能提供資訊？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。多帳戶平台團隊必須為具有高度不平衡類別的二元分類器選擇一個指標。哪一個指標通常比單獨的準確性更能提供資訊？",
         "options": {
-          "A": "僅訓練損失",
-          "B": "S3 物件計數",
-          "C": "EC2 執行個體名稱",
-          "D": "為業務目標選擇的精確率、召回率或曲線下面積指標"
+          "A": "SageMaker 分散式訓練作業",
+          "B": "為業務目標選擇的精確率、召回率或曲線下面積指標",
+          "C": "SageMaker Model Registry",
+          "D": "使用正規化、驗證資料或提前停止"
         },
-        "explanation": "精確度和召回率暴露了準確性可以隱藏的少數群體行為。\n儲存元資料和執行個體名稱不衡量分類器品質。"
+        "explanation": "精確度和召回率暴露了準確性可以隱藏的少數群體行為。\n其他選項適用於此領域的不同需求，但不能像 為業務目標選擇的精確率、召回率或曲線下面積指標 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d2-003",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A regulated company needs to register a validated model version for controlled promotion. Which service should be used?",
+    "question": "A regulated company is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team needs to register a validated model version for controlled promotion. Which service should be used?",
     "options": {
       "A": "SageMaker Model Registry",
-      "B": "Amazon Route 53",
-      "C": "AWS WAF",
-      "D": "Amazon EFS"
+      "B": "Use regularization, validation data, or early stopping",
+      "C": "A SageMaker distributed training job",
+      "D": "A hyperparameter tuning job"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Model Registry tracks model versions and approval status for controlled deployment.\nThe other choices provide DNS, web filtering, or file storage.",
-    "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "Model Registry tracks model versions and approval status for controlled deployment.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide SageMaker Model Registry for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司需要註冊經過驗證的模型版本以進行受控推廣。應該使用哪種服務？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。受監管的公司需要註冊經過驗證的模型版本以進行受控推廣。應該使用哪種服務？",
         "options": {
           "A": "SageMaker Model Registry",
-          "B": "Amazon Route 53",
-          "C": "AWS WAF",
-          "D": "Amazon EFS"
+          "B": "使用正規化、驗證資料或提前停止",
+          "C": "SageMaker 分散式訓練作業",
+          "D": "超參數調整工作"
         },
-        "explanation": "模型註冊表追蹤模型版本和受控部署的批准狀態。\n其他選項提供 DNS、Web 過濾或文件儲存。"
+        "explanation": "模型註冊表追蹤模型版本和受控部署的批准狀態。\n其他選項適用於此領域的不同需求，但不能像 SageMaker Model Registry 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d2-004",
-    "type": "single",
-    "question": "A startup preparing for a traffic increase must reduce overfitting on the training data. Which action should be considered?",
-    "options": {
-      "A": "Increase label leakage",
-      "B": "Use regularization, validation data, or early stopping",
-      "C": "Train and test on the same records",
-      "D": "Remove the validation set"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Regularization and validation-based stopping improve generalization and reduce overfitting.\nThe other choices make evaluation less reliable.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team must reduce overfitting on the training data. Which action should be considered?",
+    "options": {
+      "A": "A SageMaker distributed training job",
+      "B": "A hyperparameter tuning job",
+      "C": "Precision, recall, or an area-under-curve metric selected for the business objective",
+      "D": "Use regularization, validation data, or early stopping"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Regularization and validation-based stopping improve generalization and reduce overfitting.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Use regularization, validation data, or early stopping for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司必須減少訓練資料的過度擬合。應考慮採取哪種行動？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。準備增加流量的新創公司必須減少訓練資料的過度擬合。應考慮採取哪種行動？",
         "options": {
-          "A": "增加標籤洩漏",
-          "B": "使用正規化、驗證資料或提前停止",
-          "C": "在相同的記錄上進行訓練和測試",
-          "D": "刪除驗證集"
+          "A": "SageMaker 分散式訓練作業",
+          "B": "超參數調整工作",
+          "C": "為業務目標選擇的精確率、召回率或曲線下面積指標",
+          "D": "使用正規化、驗證資料或提前停止"
         },
-        "explanation": "正則化和基於驗證的停止可以提高泛化能力並減少過度擬合。\n其他選擇使評估不太可靠。"
+        "explanation": "正則化和基於驗證的停止可以提高泛化能力並減少過度擬合。\n其他選項適用於此領域的不同需求，但不能像 使用正規化、驗證資料或提前停止 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d2-005",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An operations team supporting a critical workload needs distributed training over several compute nodes. Which approach should be evaluated?",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team needs distributed training over several compute nodes. Which approach should be evaluated?",
     "options": {
-      "A": "An S3 ACL",
-      "B": "A CloudWatch dashboard only",
+      "A": "Precision, recall, or an area-under-curve metric selected for the business objective",
+      "B": "SageMaker Model Registry",
       "C": "A SageMaker distributed training job",
-      "D": "A Route 53 weighted record"
+      "D": "A hyperparameter tuning job"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "SageMaker distributed training coordinates supported algorithms and frameworks across instances.\nThe other choices do not execute distributed ML training.",
-    "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "SageMaker distributed training coordinates supported algorithms and frameworks across instances.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A SageMaker distributed training job for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊需要在多個運算節點上進行分散式培訓。應該評估哪一種方法？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。支援關鍵工作負載的營運團隊需要在多個運算節點上進行分散式培訓。應該評估哪一種方法？",
         "options": {
-          "A": "S3 ACL",
-          "B": "僅 CloudWatch 儀表板",
+          "A": "為業務目標選擇的精確率、召回率或曲線下面積指標",
+          "B": "SageMaker Model Registry",
           "C": "SageMaker 分散式訓練作業",
-          "D": "Route 53 加權記錄"
+          "D": "超參數調整工作"
         },
-        "explanation": "SageMaker 分散式訓練跨執行個體協調支援的演算法和框架。\n其他選擇不執行分散式 ML 訓練。"
+        "explanation": "SageMaker 分散式訓練跨執行個體協調支援的演算法和框架。\n其他選項適用於此領域的不同需求，但不能像 SageMaker 分散式訓練作業 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d2-006",
-    "type": "single",
-    "question": "A data platform team needs to compare multiple hyperparameter combinations automatically. Which SageMaker capability fits?",
-    "options": {
-      "A": "An S3 lifecycle rule",
-      "B": "A VPC endpoint only",
-      "C": "A CloudFront cache policy",
-      "D": "A hyperparameter tuning job"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Hyperparameter tuning runs trials and selects configurations based on an objective metric.\nThe other choices do not optimize model training parameters.",
     "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A data platform team is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs to compare multiple hyperparameter combinations automatically. Which SageMaker capability fits?",
+    "options": {
+      "A": "Use regularization, validation data, or early stopping",
+      "B": "A hyperparameter tuning job",
+      "C": "Precision, recall, or an area-under-curve metric selected for the business objective",
+      "D": "SageMaker Model Registry"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Hyperparameter tuning runs trials and selects configurations based on an objective metric.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A hyperparameter tuning job for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要自動比較多個超參數組合。哪種 SageMaker 功能適合？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。資料平台團隊需要自動比較多個超參數組合。哪種 SageMaker 功能適合？",
         "options": {
-          "A": "S3 生命週期規則",
-          "B": "僅 VPC 終端節點",
-          "C": "CloudFront 快取策略",
-          "D": "超參數調整工作"
+          "A": "使用正規化、驗證資料或提前停止",
+          "B": "超參數調整工作",
+          "C": "為業務目標選擇的精確率、召回率或曲線下面積指標",
+          "D": "SageMaker Model Registry"
         },
-        "explanation": "超參數調整運行試驗並根據客觀指標選擇配置。\n其他選擇不會優化模型訓練參數。"
+        "explanation": "超參數調整運行試驗並根據客觀指標選擇配置。\n其他選項適用於此領域的不同需求，但不能像 超參數調整工作 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d2-007",
-    "type": "single",
-    "question": "A security-conscious engineering team must choose a metric for a binary classifier with highly imbalanced classes. Which metric is generally more informative than accuracy alone?",
-    "options": {
-      "A": "Precision, recall, or an area-under-curve metric selected for the business objective",
-      "B": "Only training loss",
-      "C": "The S3 object count",
-      "D": "The EC2 instance name"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "Precision and recall expose minority-class behavior that accuracy can hide.\nStorage metadata and instance names do not measure classifier quality.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A security-conscious engineering team is planning two independent production changes. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The first team must choose a metric for a binary classifier with highly imbalanced classes. A second team needs to register a validated model version for controlled promotion. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "A hyperparameter tuning job",
+      "B": "Precision, recall, or an area-under-curve metric selected for the business objective",
+      "C": "SageMaker Model Registry",
+      "D": "Use regularization, validation data, or early stopping",
+      "E": "A SageMaker distributed training job"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Precision, recall, or an area-under-curve metric selected for the business objective meets the first requirement: Precision and recall expose minority-class behavior that accuracy can hide. SageMaker Model Registry meets the second requirement: Model Registry tracks model versions and approval status for controlled deployment.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊必須為具有高度不平衡類別的二元分類器選擇一個指標。哪一個指標通常比單獨的準確性更能提供資訊？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。第一項需求：多帳戶平台團隊必須為具有高度不平衡類別的二元分類器選擇一個指標。第二項需求：受監管的公司需要註冊經過驗證的模型版本以進行受控推廣。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "為業務目標選擇的精確率、召回率或曲線下面積指標",
-          "B": "僅訓練損失",
-          "C": "S3 物件計數",
-          "D": "EC2 執行個體名稱"
+          "A": "超參數調整工作",
+          "B": "為業務目標選擇的精確率、召回率或曲線下面積指標",
+          "C": "SageMaker Model Registry",
+          "D": "使用正規化、驗證資料或提前停止",
+          "E": "SageMaker 分散式訓練作業"
         },
-        "explanation": "精確度和召回率暴露了準確性可以隱藏的少數群體行為。\n儲存元資料和執行個體名稱不衡量分類器品質。"
+        "explanation": "為業務目標選擇的精確率、召回率或曲線下面積指標 符合第一項需求：精確度和召回率暴露了準確性可以隱藏的少數群體行為。 SageMaker Model Registry 符合第二項需求：模型註冊表追蹤模型版本和受控部署的批准狀態。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "mla-c01-d2-008",
-    "type": "single",
-    "question": "A company migrating an existing workload needs to register a validated model version for controlled promotion. Which service should be used?",
-    "options": {
-      "A": "Amazon EFS",
-      "B": "SageMaker Model Registry",
-      "C": "Amazon Route 53",
-      "D": "AWS WAF"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Model Registry tracks model versions and approval status for controlled deployment.\nThe other choices provide DNS, web filtering, or file storage.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A company migrating an existing workload is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs to register a validated model version for controlled promotion. Which service should be used?",
+    "options": {
+      "A": "Use regularization, validation data, or early stopping",
+      "B": "A SageMaker distributed training job",
+      "C": "A hyperparameter tuning job",
+      "D": "SageMaker Model Registry"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Model Registry tracks model versions and approval status for controlled deployment.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide SageMaker Model Registry for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司需要註冊經過驗證的模型版本以進行受控升級。應該使用哪種服務？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。遷移現有工作負載的公司需要註冊經過驗證的模型版本以進行受控升級。應該使用哪種服務？",
         "options": {
-          "A": "Amazon EFS",
-          "B": "SageMaker Model Registry",
-          "C": "Amazon Route 53",
-          "D": "AWS WAF"
+          "A": "使用正規化、驗證資料或提前停止",
+          "B": "SageMaker 分散式訓練作業",
+          "C": "超參數調整工作",
+          "D": "SageMaker Model Registry"
         },
-        "explanation": "模型註冊表追蹤模型版本和受控部署的批准狀態。\n其他選項提供 DNS、Web 過濾或文件儲存。"
+        "explanation": "模型註冊表追蹤模型版本和受控部署的批准狀態。\n其他選項適用於此領域的不同需求，但不能像 SageMaker Model Registry 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d2-009",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team with strict recovery objectives must reduce overfitting on the training data. Which action should be considered?",
+    "question": "A team with strict recovery objectives is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team must reduce overfitting on the training data. Which action should be considered?",
     "options": {
-      "A": "Remove the validation set",
-      "B": "Increase label leakage",
+      "A": "A hyperparameter tuning job",
+      "B": "Precision, recall, or an area-under-curve metric selected for the business objective",
       "C": "Use regularization, validation data, or early stopping",
-      "D": "Train and test on the same records"
+      "D": "A SageMaker distributed training job"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Regularization and validation-based stopping improve generalization and reduce overfitting.\nThe other choices make evaluation less reliable.",
-    "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "Regularization and validation-based stopping improve generalization and reduce overfitting.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Use regularization, validation data, or early stopping for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格恢復目標的團隊必須減少訓練資料的過度擬合。應考慮採取哪種行動？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。具有嚴格恢復目標的團隊必須減少訓練資料的過度擬合。應考慮採取哪種行動？",
         "options": {
-          "A": "刪除驗證集",
-          "B": "增加標籤洩漏",
+          "A": "超參數調整工作",
+          "B": "為業務目標選擇的精確率、召回率或曲線下面積指標",
           "C": "使用正規化、驗證資料或提前停止",
-          "D": "在相同的記錄上進行訓練和測試"
+          "D": "SageMaker 分散式訓練作業"
         },
-        "explanation": "正則化和基於驗證的停止可以提高泛化能力並減少過度擬合。\n其他選擇使評估不太可靠。"
+        "explanation": "正則化和基於驗證的停止可以提高泛化能力並減少過度擬合。\n其他選項適用於此領域的不同需求，但不能像 使用正規化、驗證資料或提前停止 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d2-010",
-    "type": "single",
-    "question": "A developer team preparing a release needs distributed training over several compute nodes. Which approach should be evaluated?",
-    "options": {
-      "A": "A Route 53 weighted record",
-      "B": "An S3 ACL",
-      "C": "A CloudWatch dashboard only",
-      "D": "A SageMaker distributed training job"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "SageMaker distributed training coordinates supported algorithms and frameworks across instances.\nThe other choices do not execute distributed ML training.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A developer team preparing a release is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs distributed training over several compute nodes. Which approach should be evaluated?",
+    "options": {
+      "A": "SageMaker Model Registry",
+      "B": "A SageMaker distributed training job",
+      "C": "A hyperparameter tuning job",
+      "D": "Precision, recall, or an area-under-curve metric selected for the business objective"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "SageMaker distributed training coordinates supported algorithms and frameworks across instances.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A SageMaker distributed training job for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊需要在多個運算節點上進行分散式訓練。應該評估哪一種方法？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。準備發布的開發團隊需要在多個運算節點上進行分散式訓練。應該評估哪一種方法？",
         "options": {
-          "A": "Route 53 加權記錄",
-          "B": "S3 ACL",
-          "C": "僅 CloudWatch 儀表板",
-          "D": "SageMaker 分散式訓練作業"
+          "A": "SageMaker Model Registry",
+          "B": "SageMaker 分散式訓練作業",
+          "C": "超參數調整工作",
+          "D": "為業務目標選擇的精確率、召回率或曲線下面積指標"
         },
-        "explanation": "SageMaker 分散式訓練跨執行個體協調支援的演算法和框架。\n其他選擇不執行分散式 ML 訓練。"
+        "explanation": "SageMaker 分散式訓練跨執行個體協調支援的演算法和框架。\n其他選項適用於此領域的不同需求，但不能像 SageMaker 分散式訓練作業 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d2-011",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An enterprise with several AWS Regions needs to compare multiple hyperparameter combinations automatically. Which SageMaker capability fits?",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs to compare multiple hyperparameter combinations automatically. Which SageMaker capability fits?",
     "options": {
       "A": "A hyperparameter tuning job",
-      "B": "An S3 lifecycle rule",
-      "C": "A VPC endpoint only",
-      "D": "A CloudFront cache policy"
+      "B": "Precision, recall, or an area-under-curve metric selected for the business objective",
+      "C": "SageMaker Model Registry",
+      "D": "Use regularization, validation data, or early stopping"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Hyperparameter tuning runs trials and selects configurations based on an objective metric.\nThe other choices do not optimize model training parameters.",
-    "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Hyperparameter tuning runs trials and selects configurations based on an objective metric.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A hyperparameter tuning job for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業需要自動比較多個超參數組合。哪種 SageMaker 功能適合？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。擁有多個 AWS 區域的企業需要自動比較多個超參數組合。哪種 SageMaker 功能適合？",
         "options": {
           "A": "超參數調整工作",
-          "B": "S3 生命週期規則",
-          "C": "僅 VPC 終端節點",
-          "D": "CloudFront 快取策略"
+          "B": "為業務目標選擇的精確率、召回率或曲線下面積指標",
+          "C": "SageMaker Model Registry",
+          "D": "使用正規化、驗證資料或提前停止"
         },
-        "explanation": "超參數調整運行試驗並根據客觀指標選擇配置。\n其他選擇不會優化模型訓練參數。"
+        "explanation": "超參數調整運行試驗並根據客觀指標選擇配置。\n其他選項適用於此領域的不同需求，但不能像 超參數調整工作 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d2-012",
-    "type": "single",
-    "question": "A service owner reviewing an incident must choose a metric for a binary classifier with highly imbalanced classes. Which metric is generally more informative than accuracy alone?",
-    "options": {
-      "A": "The EC2 instance name",
-      "B": "Precision, recall, or an area-under-curve metric selected for the business objective",
-      "C": "Only training loss",
-      "D": "The S3 object count"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Precision and recall expose minority-class behavior that accuracy can hide.\nStorage metadata and instance names do not measure classifier quality.",
     "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A service owner reviewing an incident is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team must choose a metric for a binary classifier with highly imbalanced classes. Which metric is generally more informative than accuracy alone?",
+    "options": {
+      "A": "SageMaker Model Registry",
+      "B": "Use regularization, validation data, or early stopping",
+      "C": "A SageMaker distributed training job",
+      "D": "Precision, recall, or an area-under-curve metric selected for the business objective"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Precision and recall expose minority-class behavior that accuracy can hide.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Precision, recall, or an area-under-curve metric selected for the business objective for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務擁有者必須為具有高度不平衡類別的二元分類器選擇一個指標。哪一個指標通常比單獨的準確性更能提供資訊？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。審查事件的服務擁有者必須為具有高度不平衡類別的二元分類器選擇一個指標。哪一個指標通常比單獨的準確性更能提供資訊？",
         "options": {
-          "A": "EC2 執行個體名稱",
-          "B": "為業務目標選擇的精確率、召回率或曲線下面積指標",
-          "C": "僅訓練損失",
-          "D": "S3 物件計數"
+          "A": "SageMaker Model Registry",
+          "B": "使用正規化、驗證資料或提前停止",
+          "C": "SageMaker 分散式訓練作業",
+          "D": "為業務目標選擇的精確率、召回率或曲線下面積指標"
         },
-        "explanation": "精確度和召回率暴露了準確性可以隱藏的少數群體行為。\n儲存元資料和執行個體名稱不衡量分類器品質。"
+        "explanation": "精確度和召回率暴露了準確性可以隱藏的少數群體行為。\n其他選項適用於此領域的不同需求，但不能像 為業務目標選擇的精確率、召回率或曲線下面積指標 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d2-013",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team optimizing an existing implementation needs to register a validated model version for controlled promotion. Which service should be used?",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs to register a validated model version for controlled promotion. Which service should be used?",
     "options": {
-      "A": "AWS WAF",
-      "B": "Amazon EFS",
+      "A": "A SageMaker distributed training job",
+      "B": "A hyperparameter tuning job",
       "C": "SageMaker Model Registry",
-      "D": "Amazon Route 53"
+      "D": "Use regularization, validation data, or early stopping"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Model Registry tracks model versions and approval status for controlled deployment.\nThe other choices provide DNS, web filtering, or file storage.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Model Registry tracks model versions and approval status for controlled deployment.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide SageMaker Model Registry for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊需要註冊經過驗證的模型版本以進行受控升級。應該使用哪種服務？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。優化現有實施的團隊需要註冊經過驗證的模型版本以進行受控升級。應該使用哪種服務？",
         "options": {
-          "A": "AWS WAF",
-          "B": "Amazon EFS",
+          "A": "SageMaker 分散式訓練作業",
+          "B": "超參數調整工作",
           "C": "SageMaker Model Registry",
-          "D": "Amazon Route 53"
+          "D": "使用正規化、驗證資料或提前停止"
         },
-        "explanation": "模型註冊表追蹤模型版本和受控部署的批准狀態。\n其他選項提供 DNS、Web 過濾或文件儲存。"
+        "explanation": "模型註冊表追蹤模型版本和受控部署的批准狀態。\n其他選項適用於此領域的不同需求，但不能像 SageMaker Model Registry 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d2-014",
-    "type": "single",
-    "question": "A company introducing an automated workflow must reduce overfitting on the training data. Which action should be considered?",
-    "options": {
-      "A": "Train and test on the same records",
-      "B": "Remove the validation set",
-      "C": "Increase label leakage",
-      "D": "Use regularization, validation data, or early stopping"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Regularization and validation-based stopping improve generalization and reduce overfitting.\nThe other choices make evaluation less reliable.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A company introducing an automated workflow is planning two independent production changes. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The first team must reduce overfitting on the training data. A second team needs distributed training over several compute nodes. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "A SageMaker distributed training job",
+      "B": "A hyperparameter tuning job",
+      "C": "Precision, recall, or an area-under-curve metric selected for the business objective",
+      "D": "SageMaker Model Registry",
+      "E": "Use regularization, validation data, or early stopping"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Use regularization, validation data, or early stopping meets the first requirement: Regularization and validation-based stopping improve generalization and reduce overfitting. A SageMaker distributed training job meets the second requirement: SageMaker distributed training coordinates supported algorithms and frameworks across instances.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司必須減少訓練資料的過度擬合。應考慮採取哪種行動？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。第一項需求：支援關鍵工作負載的營運團隊需要在多個運算節點上進行分散式培訓。第二項需求：準備增加流量的新創公司必須減少訓練資料的過度擬合。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "在相同的記錄上進行訓練和測試",
-          "B": "刪除驗證集",
-          "C": "增加標籤洩漏",
-          "D": "使用正規化、驗證資料或提前停止"
+          "A": "SageMaker 分散式訓練作業",
+          "B": "超參數調整工作",
+          "C": "為業務目標選擇的精確率、召回率或曲線下面積指標",
+          "D": "SageMaker Model Registry",
+          "E": "使用正規化、驗證資料或提前停止"
         },
-        "explanation": "正則化和基於驗證的停止可以提高泛化能力並減少過度擬合。\n其他選擇使評估不太可靠。"
+        "explanation": "SageMaker 分散式訓練作業 符合第一項需求：SageMaker 分散式訓練跨執行個體協調支援的演算法和框架。 使用正規化、驗證資料或提前停止 符合第二項需求：正則化和基於驗證的停止可以提高泛化能力並減少過度擬合。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "mla-c01-d2-015",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An AWS administrator working in a shared environment needs distributed training over several compute nodes. Which approach should be evaluated?",
+    "question": "An AWS administrator working in a shared environment is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs distributed training over several compute nodes. Which approach should be evaluated?",
     "options": {
       "A": "A SageMaker distributed training job",
-      "B": "A Route 53 weighted record",
-      "C": "An S3 ACL",
-      "D": "A CloudWatch dashboard only"
+      "B": "A hyperparameter tuning job",
+      "C": "Precision, recall, or an area-under-curve metric selected for the business objective",
+      "D": "SageMaker Model Registry"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "SageMaker distributed training coordinates supported algorithms and frameworks across instances.\nThe other choices do not execute distributed ML training.",
-    "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "SageMaker distributed training coordinates supported algorithms and frameworks across instances.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A SageMaker distributed training job for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "在共享環境中工作的 AWS 管理員需要在多個運算節點上進行分散式培訓。應該評估哪一種方法？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。在共享環境中工作的 AWS 管理員需要在多個運算節點上進行分散式培訓。應該評估哪一種方法？",
         "options": {
           "A": "SageMaker 分散式訓練作業",
-          "B": "Route 53 加權記錄",
-          "C": "S3 ACL",
-          "D": "僅 CloudWatch 儀表板"
+          "B": "超參數調整工作",
+          "C": "為業務目標選擇的精確率、召回率或曲線下面積指標",
+          "D": "SageMaker Model Registry"
         },
-        "explanation": "SageMaker 分散式訓練跨執行個體協調支援的演算法和框架。\n其他選擇不執行分散式 ML 訓練。"
+        "explanation": "SageMaker 分散式訓練跨執行個體協調支援的演算法和框架。\n其他選項適用於此領域的不同需求，但不能像 SageMaker 分散式訓練作業 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d2-016",
-    "type": "single",
-    "question": "A customer-facing application team needs to compare multiple hyperparameter combinations automatically. Which SageMaker capability fits?",
-    "options": {
-      "A": "A CloudFront cache policy",
-      "B": "A hyperparameter tuning job",
-      "C": "An S3 lifecycle rule",
-      "D": "A VPC endpoint only"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Hyperparameter tuning runs trials and selects configurations based on an objective metric.\nThe other choices do not optimize model training parameters.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A customer-facing application team is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs to compare multiple hyperparameter combinations automatically. Which SageMaker capability fits?",
+    "options": {
+      "A": "Precision, recall, or an area-under-curve metric selected for the business objective",
+      "B": "SageMaker Model Registry",
+      "C": "Use regularization, validation data, or early stopping",
+      "D": "A hyperparameter tuning job"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Hyperparameter tuning runs trials and selects configurations based on an objective metric.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A hyperparameter tuning job for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊需要自動比較多個超參數組合。哪種 SageMaker 功能適合？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。面向客戶的應用程式團隊需要自動比較多個超參數組合。哪種 SageMaker 功能適合？",
         "options": {
-          "A": "CloudFront 快取策略",
-          "B": "超參數調整工作",
-          "C": "S3 生命週期規則",
-          "D": "僅 VPC 終端節點"
+          "A": "為業務目標選擇的精確率、召回率或曲線下面積指標",
+          "B": "SageMaker Model Registry",
+          "C": "使用正規化、驗證資料或提前停止",
+          "D": "超參數調整工作"
         },
-        "explanation": "超參數調整運行試驗並根據客觀指標選擇配置。\n其他選擇不會優化模型訓練參數。"
+        "explanation": "超參數調整運行試驗並根據客觀指標選擇配置。\n其他選項適用於此領域的不同需求，但不能像 超參數調整工作 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d2-017",
-    "type": "single",
-    "question": "A platform team standardizing its AWS deployments must choose a metric for a binary classifier with highly imbalanced classes. Which metric is generally more informative than accuracy alone?",
-    "options": {
-      "A": "The S3 object count",
-      "B": "The EC2 instance name",
-      "C": "Precision, recall, or an area-under-curve metric selected for the business objective",
-      "D": "Only training loss"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "Precision and recall expose minority-class behavior that accuracy can hide.\nStorage metadata and instance names do not measure classifier quality.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A platform team standardizing its AWS deployments is reviewing several independent production requirements. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. Match each workload requirement to the most appropriate implementation.",
+    "options": {
+      "A": "A workload must choose a metric for a binary classifier with highly imbalanced classes",
+      "B": "A workload needs to register a validated model version for controlled promotion",
+      "C": "A workload must reduce overfitting on the training data"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "SageMaker Model Registry",
+      "2": "Use regularization, validation data, or early stopping",
+      "3": "Precision, recall, or an area-under-curve metric selected for the business objective"
+    },
+    "correctMatches": {
+      "A": "3",
+      "B": "1",
+      "C": "2"
+    },
+    "explanation": "A maps to Precision, recall, or an area-under-curve metric selected for the business objective. Precision and recall expose minority-class behavior that accuracy can hide. B maps to SageMaker Model Registry. Model Registry tracks model versions and approval status for controlled deployment. C maps to Use regularization, validation data, or early stopping. Regularization and validation-based stopping improve generalization and reduce overfitting.\nEach target is intended for a different requirement, so all three mappings must be evaluated independently.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊必須為具有高度不平衡類別的二元分類器選擇一個指標。哪一個指標通常比單獨的準確性更能提供資訊？",
+        "question": "團隊正在審查多項彼此獨立的生產需求。團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。請將每項工作負載需求配對至最適合的實作。",
         "options": {
-          "A": "S3 物件計數",
-          "B": "EC2 執行個體名稱",
-          "C": "為業務目標選擇的精確率、召回率或曲線下面積指標",
-          "D": "僅訓練損失"
+          "A": "工作負載需求：多帳戶平台團隊必須為具有高度不平衡類別的二元分類器選擇一個指標",
+          "B": "工作負載需求：受監管的公司需要註冊經過驗證的模型版本以進行受控推廣",
+          "C": "工作負載需求：準備增加流量的新創公司必須減少訓練資料的過度擬合"
         },
-        "explanation": "精確度和召回率暴露了準確性可以隱藏的少數群體行為。\n儲存元資料和執行個體名稱不衡量分類器品質。"
+        "targets": {
+          "1": "SageMaker Model Registry",
+          "2": "使用正規化、驗證資料或提前停止",
+          "3": "為業務目標選擇的精確率、召回率或曲線下面積指標"
+        },
+        "explanation": "A 對應 為業務目標選擇的精確率、召回率或曲線下面積指標。精確度和召回率暴露了準確性可以隱藏的少數群體行為。 B 對應 SageMaker Model Registry。模型註冊表追蹤模型版本和受控部署的批准狀態。 C 對應 使用正規化、驗證資料或提前停止。正則化和基於驗證的停止可以提高泛化能力並減少過度擬合。\n每個目標均處理不同需求，因此必須分別評估三項配對。"
       }
     }
   },
   {
     "id": "mla-c01-d2-018",
-    "type": "single",
-    "question": "A team preparing evidence for an audit needs to register a validated model version for controlled promotion. Which service should be used?",
-    "options": {
-      "A": "Amazon Route 53",
-      "B": "AWS WAF",
-      "C": "Amazon EFS",
-      "D": "SageMaker Model Registry"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Model Registry tracks model versions and approval status for controlled deployment.\nThe other choices provide DNS, web filtering, or file storage.",
     "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team preparing evidence for an audit is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs to register a validated model version for controlled promotion. Which service should be used?",
+    "options": {
+      "A": "A hyperparameter tuning job",
+      "B": "SageMaker Model Registry",
+      "C": "Use regularization, validation data, or early stopping",
+      "D": "A SageMaker distributed training job"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Model Registry tracks model versions and approval status for controlled deployment.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide SageMaker Model Registry for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備審計證據的團隊需要註冊經過驗證的模型版本以進行受控升級。應該使用哪種服務？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。準備審計證據的團隊需要註冊經過驗證的模型版本以進行受控升級。應該使用哪種服務？",
         "options": {
-          "A": "Amazon Route 53",
-          "B": "AWS WAF",
-          "C": "Amazon EFS",
-          "D": "SageMaker Model Registry"
+          "A": "超參數調整工作",
+          "B": "SageMaker Model Registry",
+          "C": "使用正規化、驗證資料或提前停止",
+          "D": "SageMaker 分散式訓練作業"
         },
-        "explanation": "模型註冊表追蹤模型版本和受控部署的批准狀態。\n其他選項提供 DNS、Web 過濾或文件儲存。"
+        "explanation": "模型註冊表追蹤模型版本和受控部署的批准狀態。\n其他選項適用於此領域的不同需求，但不能像 SageMaker Model Registry 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d2-019",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A business replacing a manual process must reduce overfitting on the training data. Which action should be considered?",
+    "question": "A business replacing a manual process is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team must reduce overfitting on the training data. Which action should be considered?",
     "options": {
       "A": "Use regularization, validation data, or early stopping",
-      "B": "Train and test on the same records",
-      "C": "Remove the validation set",
-      "D": "Increase label leakage"
+      "B": "A SageMaker distributed training job",
+      "C": "A hyperparameter tuning job",
+      "D": "Precision, recall, or an area-under-curve metric selected for the business objective"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Regularization and validation-based stopping improve generalization and reduce overfitting.\nThe other choices make evaluation less reliable.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Regularization and validation-based stopping improve generalization and reduce overfitting.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Use regularization, validation data, or early stopping for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "取代手動流程的企業必須減少訓練資料的過度擬合。應考慮採取哪種行動？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。取代手動流程的企業必須減少訓練資料的過度擬合。應考慮採取哪種行動？",
         "options": {
           "A": "使用正規化、驗證資料或提前停止",
-          "B": "在相同的記錄上進行訓練和測試",
-          "C": "刪除驗證集",
-          "D": "增加標籤洩漏"
+          "B": "SageMaker 分散式訓練作業",
+          "C": "超參數調整工作",
+          "D": "為業務目標選擇的精確率、召回率或曲線下面積指標"
         },
-        "explanation": "正則化和基於驗證的停止可以提高泛化能力並減少過度擬合。\n其他選擇使評估不太可靠。"
+        "explanation": "正則化和基於驗證的停止可以提高泛化能力並減少過度擬合。\n其他選項適用於此領域的不同需求，但不能像 使用正規化、驗證資料或提前停止 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d2-020",
-    "type": "single",
-    "question": "A team validating a design against the exam guide needs distributed training over several compute nodes. Which approach should be evaluated?",
-    "options": {
-      "A": "A CloudWatch dashboard only",
-      "B": "A SageMaker distributed training job",
-      "C": "A Route 53 weighted record",
-      "D": "An S3 ACL"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "SageMaker distributed training coordinates supported algorithms and frameworks across instances.\nThe other choices do not execute distributed ML training.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team validating a design against the exam guide is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs distributed training over several compute nodes. Which approach should be evaluated?",
+    "options": {
+      "A": "A hyperparameter tuning job",
+      "B": "Precision, recall, or an area-under-curve metric selected for the business objective",
+      "C": "SageMaker Model Registry",
+      "D": "A SageMaker distributed training job"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "SageMaker distributed training coordinates supported algorithms and frameworks across instances.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A SageMaker distributed training job for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊需要在多個運算節點上進行分散式培訓。應該評估哪一種方法？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。根據考試指南驗證設計的團隊需要在多個運算節點上進行分散式培訓。應該評估哪一種方法？",
         "options": {
-          "A": "僅 CloudWatch 儀表板",
-          "B": "SageMaker 分散式訓練作業",
-          "C": "Route 53 加權記錄",
-          "D": "S3 ACL"
+          "A": "超參數調整工作",
+          "B": "為業務目標選擇的精確率、召回率或曲線下面積指標",
+          "C": "SageMaker Model Registry",
+          "D": "SageMaker 分散式訓練作業"
         },
-        "explanation": "SageMaker 分散式訓練跨執行個體協調支援的演算法和框架。\n其他選擇不執行分散式 ML 訓練。"
+        "explanation": "SageMaker 分散式訓練跨執行個體協調支援的演算法和框架。\n其他選項適用於此領域的不同需求，但不能像 SageMaker 分散式訓練作業 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d2-021",
-    "type": "single",
-    "question": "A production team needs to compare multiple hyperparameter combinations automatically. Which SageMaker capability fits?",
-    "options": {
-      "A": "A VPC endpoint only",
-      "B": "A CloudFront cache policy",
-      "C": "A hyperparameter tuning job",
-      "D": "An S3 lifecycle rule"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "Hyperparameter tuning runs trials and selects configurations based on an objective metric.\nThe other choices do not optimize model training parameters.",
     "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A production team is planning two independent production changes. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The first team needs to compare multiple hyperparameter combinations automatically. A second team must choose a metric for a binary classifier with highly imbalanced classes. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Use regularization, validation data, or early stopping",
+      "B": "A SageMaker distributed training job",
+      "C": "A hyperparameter tuning job",
+      "D": "Precision, recall, or an area-under-curve metric selected for the business objective",
+      "E": "SageMaker Model Registry"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "A hyperparameter tuning job meets the first requirement: Hyperparameter tuning runs trials and selects configurations based on an objective metric. Precision, recall, or an area-under-curve metric selected for the business objective meets the second requirement: Precision and recall expose minority-class behavior that accuracy can hide.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "生產團隊需要自動比較多個超參數組合。哪種 SageMaker 功能適合？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。第一項需求：生產團隊需要自動比較多個超參數組合。第二項需求：多帳戶平台團隊必須為具有高度不平衡類別的二元分類器選擇一個指標。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "僅 VPC 終端節點",
-          "B": "CloudFront 快取策略",
+          "A": "使用正規化、驗證資料或提前停止",
+          "B": "SageMaker 分散式訓練作業",
           "C": "超參數調整工作",
-          "D": "S3 生命週期規則"
+          "D": "為業務目標選擇的精確率、召回率或曲線下面積指標",
+          "E": "SageMaker Model Registry"
         },
-        "explanation": "超參數調整運行試驗並根據客觀指標選擇配置。\n其他選擇不會優化模型訓練參數。"
+        "explanation": "超參數調整工作 符合第一項需求：超參數調整運行試驗並根據客觀指標選擇配置。 為業務目標選擇的精確率、召回率或曲線下面積指標 符合第二項需求：精確度和召回率暴露了準確性可以隱藏的少數群體行為。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "mla-c01-d2-022",
-    "type": "single",
-    "question": "A multi-account platform team must choose a metric for a binary classifier with highly imbalanced classes. Which metric is generally more informative than accuracy alone?",
-    "options": {
-      "A": "Only training loss",
-      "B": "The S3 object count",
-      "C": "The EC2 instance name",
-      "D": "Precision, recall, or an area-under-curve metric selected for the business objective"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Precision and recall expose minority-class behavior that accuracy can hide.\nStorage metadata and instance names do not measure classifier quality.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A multi-account platform team is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team must choose a metric for a binary classifier with highly imbalanced classes. Which metric is generally more informative than accuracy alone?",
+    "options": {
+      "A": "A SageMaker distributed training job",
+      "B": "Precision, recall, or an area-under-curve metric selected for the business objective",
+      "C": "SageMaker Model Registry",
+      "D": "Use regularization, validation data, or early stopping"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Precision and recall expose minority-class behavior that accuracy can hide.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Precision, recall, or an area-under-curve metric selected for the business objective for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊必須為具有高度不平衡類別的二元分類器選擇一個指標。哪一個指標通常比單獨的準確性更能提供資訊？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。多帳戶平台團隊必須為具有高度不平衡類別的二元分類器選擇一個指標。哪一個指標通常比單獨的準確性更能提供資訊？",
         "options": {
-          "A": "僅訓練損失",
-          "B": "S3 物件計數",
-          "C": "EC2 執行個體名稱",
-          "D": "為業務目標選擇的精確率、召回率或曲線下面積指標"
+          "A": "SageMaker 分散式訓練作業",
+          "B": "為業務目標選擇的精確率、召回率或曲線下面積指標",
+          "C": "SageMaker Model Registry",
+          "D": "使用正規化、驗證資料或提前停止"
         },
-        "explanation": "精確度和召回率暴露了準確性可以隱藏的少數群體行為。\n儲存元資料和執行個體名稱不衡量分類器品質。"
+        "explanation": "精確度和召回率暴露了準確性可以隱藏的少數群體行為。\n其他選項適用於此領域的不同需求，但不能像 為業務目標選擇的精確率、召回率或曲線下面積指標 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d2-023",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A regulated company needs to register a validated model version for controlled promotion. Which service should be used?",
+    "question": "A regulated company is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs to register a validated model version for controlled promotion. Which service should be used?",
     "options": {
       "A": "SageMaker Model Registry",
-      "B": "Amazon Route 53",
-      "C": "AWS WAF",
-      "D": "Amazon EFS"
+      "B": "Use regularization, validation data, or early stopping",
+      "C": "A SageMaker distributed training job",
+      "D": "A hyperparameter tuning job"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Model Registry tracks model versions and approval status for controlled deployment.\nThe other choices provide DNS, web filtering, or file storage.",
-    "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Model Registry tracks model versions and approval status for controlled deployment.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide SageMaker Model Registry for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司需要註冊經過驗證的模型版本以進行受控推廣。應該使用哪種服務？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。受監管的公司需要註冊經過驗證的模型版本以進行受控推廣。應該使用哪種服務？",
         "options": {
           "A": "SageMaker Model Registry",
-          "B": "Amazon Route 53",
-          "C": "AWS WAF",
-          "D": "Amazon EFS"
+          "B": "使用正規化、驗證資料或提前停止",
+          "C": "SageMaker 分散式訓練作業",
+          "D": "超參數調整工作"
         },
-        "explanation": "模型註冊表追蹤模型版本和受控部署的批准狀態。\n其他選項提供 DNS、Web 過濾或文件儲存。"
+        "explanation": "模型註冊表追蹤模型版本和受控部署的批准狀態。\n其他選項適用於此領域的不同需求，但不能像 SageMaker Model Registry 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d2-024",
-    "type": "single",
-    "question": "A startup preparing for a traffic increase must reduce overfitting on the training data. Which action should be considered?",
-    "options": {
-      "A": "Increase label leakage",
-      "B": "Use regularization, validation data, or early stopping",
-      "C": "Train and test on the same records",
-      "D": "Remove the validation set"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Regularization and validation-based stopping improve generalization and reduce overfitting.\nThe other choices make evaluation less reliable.",
     "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team must reduce overfitting on the training data. Which action should be considered?",
+    "options": {
+      "A": "A SageMaker distributed training job",
+      "B": "A hyperparameter tuning job",
+      "C": "Precision, recall, or an area-under-curve metric selected for the business objective",
+      "D": "Use regularization, validation data, or early stopping"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Regularization and validation-based stopping improve generalization and reduce overfitting.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Use regularization, validation data, or early stopping for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司必須減少訓練資料的過度擬合。應考慮採取哪種行動？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。準備增加流量的新創公司必須減少訓練資料的過度擬合。應考慮採取哪種行動？",
         "options": {
-          "A": "增加標籤洩漏",
-          "B": "使用正規化、驗證資料或提前停止",
-          "C": "在相同的記錄上進行訓練和測試",
-          "D": "刪除驗證集"
+          "A": "SageMaker 分散式訓練作業",
+          "B": "超參數調整工作",
+          "C": "為業務目標選擇的精確率、召回率或曲線下面積指標",
+          "D": "使用正規化、驗證資料或提前停止"
         },
-        "explanation": "正則化和基於驗證的停止可以提高泛化能力並減少過度擬合。\n其他選擇使評估不太可靠。"
+        "explanation": "正則化和基於驗證的停止可以提高泛化能力並減少過度擬合。\n其他選項適用於此領域的不同需求，但不能像 使用正規化、驗證資料或提前停止 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d2-025",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An operations team supporting a critical workload needs distributed training over several compute nodes. Which approach should be evaluated?",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs distributed training over several compute nodes. Which approach should be evaluated?",
     "options": {
-      "A": "An S3 ACL",
-      "B": "A CloudWatch dashboard only",
+      "A": "Precision, recall, or an area-under-curve metric selected for the business objective",
+      "B": "SageMaker Model Registry",
       "C": "A SageMaker distributed training job",
-      "D": "A Route 53 weighted record"
+      "D": "A hyperparameter tuning job"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "SageMaker distributed training coordinates supported algorithms and frameworks across instances.\nThe other choices do not execute distributed ML training.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "SageMaker distributed training coordinates supported algorithms and frameworks across instances.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A SageMaker distributed training job for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊需要在多個運算節點上進行分散式培訓。應該評估哪一種方法？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。支援關鍵工作負載的營運團隊需要在多個運算節點上進行分散式培訓。應該評估哪一種方法？",
         "options": {
-          "A": "S3 ACL",
-          "B": "僅 CloudWatch 儀表板",
+          "A": "為業務目標選擇的精確率、召回率或曲線下面積指標",
+          "B": "SageMaker Model Registry",
           "C": "SageMaker 分散式訓練作業",
-          "D": "Route 53 加權記錄"
+          "D": "超參數調整工作"
         },
-        "explanation": "SageMaker 分散式訓練跨執行個體協調支援的演算法和框架。\n其他選擇不執行分散式 ML 訓練。"
+        "explanation": "SageMaker 分散式訓練跨執行個體協調支援的演算法和框架。\n其他選項適用於此領域的不同需求，但不能像 SageMaker 分散式訓練作業 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d2-026",
-    "type": "single",
-    "question": "A data platform team needs to compare multiple hyperparameter combinations automatically. Which SageMaker capability fits?",
-    "options": {
-      "A": "An S3 lifecycle rule",
-      "B": "A VPC endpoint only",
-      "C": "A CloudFront cache policy",
-      "D": "A hyperparameter tuning job"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Hyperparameter tuning runs trials and selects configurations based on an objective metric.\nThe other choices do not optimize model training parameters.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A data platform team is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team needs to compare multiple hyperparameter combinations automatically. Which SageMaker capability fits?",
+    "options": {
+      "A": "Use regularization, validation data, or early stopping",
+      "B": "A hyperparameter tuning job",
+      "C": "Precision, recall, or an area-under-curve metric selected for the business objective",
+      "D": "SageMaker Model Registry"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Hyperparameter tuning runs trials and selects configurations based on an objective metric.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A hyperparameter tuning job for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要自動比較多個超參數組合。哪種 SageMaker 功能適合？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。資料平台團隊需要自動比較多個超參數組合。哪種 SageMaker 功能適合？",
         "options": {
-          "A": "S3 生命週期規則",
-          "B": "僅 VPC 終端節點",
-          "C": "CloudFront 快取策略",
-          "D": "超參數調整工作"
+          "A": "使用正規化、驗證資料或提前停止",
+          "B": "超參數調整工作",
+          "C": "為業務目標選擇的精確率、召回率或曲線下面積指標",
+          "D": "SageMaker Model Registry"
         },
-        "explanation": "超參數調整運行試驗並根據客觀指標選擇配置。\n其他選擇不會優化模型訓練參數。"
+        "explanation": "超參數調整運行試驗並根據客觀指標選擇配置。\n其他選項適用於此領域的不同需求，但不能像 超參數調整工作 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d2-027",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A security-conscious engineering team must choose a metric for a binary classifier with highly imbalanced classes. Which metric is generally more informative than accuracy alone?",
+    "question": "A security-conscious engineering team is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team must choose a metric for a binary classifier with highly imbalanced classes. Which metric is generally more informative than accuracy alone?",
     "options": {
       "A": "Precision, recall, or an area-under-curve metric selected for the business objective",
-      "B": "Only training loss",
-      "C": "The S3 object count",
-      "D": "The EC2 instance name"
+      "B": "SageMaker Model Registry",
+      "C": "Use regularization, validation data, or early stopping",
+      "D": "A SageMaker distributed training job"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Precision and recall expose minority-class behavior that accuracy can hide.\nStorage metadata and instance names do not measure classifier quality.",
-    "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "Precision and recall expose minority-class behavior that accuracy can hide.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Precision, recall, or an area-under-curve metric selected for the business objective for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊必須為具有高度不平衡類別的二元分類器選擇一個指標。哪一個指標通常比單獨的準確性更能提供資訊？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。具有安全意識的工程團隊必須為具有高度不平衡類別的二元分類器選擇一個指標。哪一個指標通常比單獨的準確性更能提供資訊？",
         "options": {
           "A": "為業務目標選擇的精確率、召回率或曲線下面積指標",
-          "B": "僅訓練損失",
-          "C": "S3 物件計數",
-          "D": "EC2 執行個體名稱"
+          "B": "SageMaker Model Registry",
+          "C": "使用正規化、驗證資料或提前停止",
+          "D": "SageMaker 分散式訓練作業"
         },
-        "explanation": "精確度和召回率暴露了準確性可以隱藏的少數群體行為。\n儲存元資料和執行個體名稱不衡量分類器品質。"
+        "explanation": "精確度和召回率暴露了準確性可以隱藏的少數群體行為。\n其他選項適用於此領域的不同需求，但不能像 為業務目標選擇的精確率、召回率或曲線下面積指標 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d2-028",
-    "type": "single",
-    "question": "A company migrating an existing workload needs to register a validated model version for controlled promotion. Which service should be used?",
-    "options": {
-      "A": "Amazon EFS",
-      "B": "SageMaker Model Registry",
-      "C": "Amazon Route 53",
-      "D": "AWS WAF"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Model Registry tracks model versions and approval status for controlled deployment.\nThe other choices provide DNS, web filtering, or file storage.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A company migrating an existing workload is planning two independent production changes. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The first team needs to register a validated model version for controlled promotion. A second team must reduce overfitting on the training data. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "SageMaker Model Registry",
+      "B": "Use regularization, validation data, or early stopping",
+      "C": "A SageMaker distributed training job",
+      "D": "A hyperparameter tuning job",
+      "E": "Precision, recall, or an area-under-curve metric selected for the business objective"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "SageMaker Model Registry meets the first requirement: Model Registry tracks model versions and approval status for controlled deployment. Use regularization, validation data, or early stopping meets the second requirement: Regularization and validation-based stopping improve generalization and reduce overfitting.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司需要註冊經過驗證的模型版本以進行受控升級。應該使用哪種服務？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。第一項需求：受監管的公司需要註冊經過驗證的模型版本以進行受控推廣。第二項需求：準備增加流量的新創公司必須減少訓練資料的過度擬合。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "Amazon EFS",
-          "B": "SageMaker Model Registry",
-          "C": "Amazon Route 53",
-          "D": "AWS WAF"
+          "A": "SageMaker Model Registry",
+          "B": "使用正規化、驗證資料或提前停止",
+          "C": "SageMaker 分散式訓練作業",
+          "D": "超參數調整工作",
+          "E": "為業務目標選擇的精確率、召回率或曲線下面積指標"
         },
-        "explanation": "模型註冊表追蹤模型版本和受控部署的批准狀態。\n其他選項提供 DNS、Web 過濾或文件儲存。"
+        "explanation": "SageMaker Model Registry 符合第一項需求：模型註冊表追蹤模型版本和受控部署的批准狀態。 使用正規化、驗證資料或提前停止 符合第二項需求：正則化和基於驗證的停止可以提高泛化能力並減少過度擬合。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "mla-c01-d2-029",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team with strict recovery objectives must reduce overfitting on the training data. Which action should be considered?",
+    "question": "A team with strict recovery objectives is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team must reduce overfitting on the training data. Which action should be considered?",
     "options": {
-      "A": "Remove the validation set",
-      "B": "Increase label leakage",
+      "A": "A hyperparameter tuning job",
+      "B": "Precision, recall, or an area-under-curve metric selected for the business objective",
       "C": "Use regularization, validation data, or early stopping",
-      "D": "Train and test on the same records"
+      "D": "A SageMaker distributed training job"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Regularization and validation-based stopping improve generalization and reduce overfitting.\nThe other choices make evaluation less reliable.",
-    "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Regularization and validation-based stopping improve generalization and reduce overfitting.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Use regularization, validation data, or early stopping for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格恢復目標的團隊必須減少訓練資料的過度擬合。應考慮採取哪種行動？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。具有嚴格恢復目標的團隊必須減少訓練資料的過度擬合。應考慮採取哪種行動？",
         "options": {
-          "A": "刪除驗證集",
-          "B": "增加標籤洩漏",
+          "A": "超參數調整工作",
+          "B": "為業務目標選擇的精確率、召回率或曲線下面積指標",
           "C": "使用正規化、驗證資料或提前停止",
-          "D": "在相同的記錄上進行訓練和測試"
+          "D": "SageMaker 分散式訓練作業"
         },
-        "explanation": "正則化和基於驗證的停止可以提高泛化能力並減少過度擬合。\n其他選擇使評估不太可靠。"
+        "explanation": "正則化和基於驗證的停止可以提高泛化能力並減少過度擬合。\n其他選項適用於此領域的不同需求，但不能像 使用正規化、驗證資料或提前停止 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d2-030",
-    "type": "single",
-    "question": "A developer team preparing a release needs distributed training over several compute nodes. Which approach should be evaluated?",
-    "options": {
-      "A": "A Route 53 weighted record",
-      "B": "An S3 ACL",
-      "C": "A CloudWatch dashboard only",
-      "D": "A SageMaker distributed training job"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "SageMaker distributed training coordinates supported algorithms and frameworks across instances.\nThe other choices do not execute distributed ML training.",
     "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A developer team preparing a release is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team needs distributed training over several compute nodes. Which approach should be evaluated?",
+    "options": {
+      "A": "SageMaker Model Registry",
+      "B": "A SageMaker distributed training job",
+      "C": "A hyperparameter tuning job",
+      "D": "Precision, recall, or an area-under-curve metric selected for the business objective"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "SageMaker distributed training coordinates supported algorithms and frameworks across instances.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A SageMaker distributed training job for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊需要在多個運算節點上進行分散式訓練。應該評估哪一種方法？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。準備發布的開發團隊需要在多個運算節點上進行分散式訓練。應該評估哪一種方法？",
         "options": {
-          "A": "Route 53 加權記錄",
-          "B": "S3 ACL",
-          "C": "僅 CloudWatch 儀表板",
-          "D": "SageMaker 分散式訓練作業"
+          "A": "SageMaker Model Registry",
+          "B": "SageMaker 分散式訓練作業",
+          "C": "超參數調整工作",
+          "D": "為業務目標選擇的精確率、召回率或曲線下面積指標"
         },
-        "explanation": "SageMaker 分散式訓練跨執行個體協調支援的演算法和框架。\n其他選擇不執行分散式 ML 訓練。"
+        "explanation": "SageMaker 分散式訓練跨執行個體協調支援的演算法和框架。\n其他選項適用於此領域的不同需求，但不能像 SageMaker 分散式訓練作業 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d2-031",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An enterprise with several AWS Regions needs to compare multiple hyperparameter combinations automatically. Which SageMaker capability fits?",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs to compare multiple hyperparameter combinations automatically. Which SageMaker capability fits?",
     "options": {
       "A": "A hyperparameter tuning job",
-      "B": "An S3 lifecycle rule",
-      "C": "A VPC endpoint only",
-      "D": "A CloudFront cache policy"
+      "B": "Precision, recall, or an area-under-curve metric selected for the business objective",
+      "C": "SageMaker Model Registry",
+      "D": "Use regularization, validation data, or early stopping"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Hyperparameter tuning runs trials and selects configurations based on an objective metric.\nThe other choices do not optimize model training parameters.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Hyperparameter tuning runs trials and selects configurations based on an objective metric.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A hyperparameter tuning job for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業需要自動比較多個超參數組合。哪種 SageMaker 功能適合？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。擁有多個 AWS 區域的企業需要自動比較多個超參數組合。哪種 SageMaker 功能適合？",
         "options": {
           "A": "超參數調整工作",
-          "B": "S3 生命週期規則",
-          "C": "僅 VPC 終端節點",
-          "D": "CloudFront 快取策略"
+          "B": "為業務目標選擇的精確率、召回率或曲線下面積指標",
+          "C": "SageMaker Model Registry",
+          "D": "使用正規化、驗證資料或提前停止"
         },
-        "explanation": "超參數調整運行試驗並根據客觀指標選擇配置。\n其他選擇不會優化模型訓練參數。"
+        "explanation": "超參數調整運行試驗並根據客觀指標選擇配置。\n其他選項適用於此領域的不同需求，但不能像 超參數調整工作 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d2-032",
-    "type": "single",
-    "question": "A service owner reviewing an incident must choose a metric for a binary classifier with highly imbalanced classes. Which metric is generally more informative than accuracy alone?",
-    "options": {
-      "A": "The EC2 instance name",
-      "B": "Precision, recall, or an area-under-curve metric selected for the business objective",
-      "C": "Only training loss",
-      "D": "The S3 object count"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Precision and recall expose minority-class behavior that accuracy can hide.\nStorage metadata and instance names do not measure classifier quality.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A service owner reviewing an incident is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team must choose a metric for a binary classifier with highly imbalanced classes. Which metric is generally more informative than accuracy alone?",
+    "options": {
+      "A": "SageMaker Model Registry",
+      "B": "Use regularization, validation data, or early stopping",
+      "C": "A SageMaker distributed training job",
+      "D": "Precision, recall, or an area-under-curve metric selected for the business objective"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Precision and recall expose minority-class behavior that accuracy can hide.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Precision, recall, or an area-under-curve metric selected for the business objective for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務擁有者必須為具有高度不平衡類別的二元分類器選擇一個指標。哪一個指標通常比單獨的準確性更能提供資訊？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。審查事件的服務擁有者必須為具有高度不平衡類別的二元分類器選擇一個指標。哪一個指標通常比單獨的準確性更能提供資訊？",
         "options": {
-          "A": "EC2 執行個體名稱",
-          "B": "為業務目標選擇的精確率、召回率或曲線下面積指標",
-          "C": "僅訓練損失",
-          "D": "S3 物件計數"
+          "A": "SageMaker Model Registry",
+          "B": "使用正規化、驗證資料或提前停止",
+          "C": "SageMaker 分散式訓練作業",
+          "D": "為業務目標選擇的精確率、召回率或曲線下面積指標"
         },
-        "explanation": "精確度和召回率暴露了準確性可以隱藏的少數群體行為。\n儲存元資料和執行個體名稱不衡量分類器品質。"
+        "explanation": "精確度和召回率暴露了準確性可以隱藏的少數群體行為。\n其他選項適用於此領域的不同需求，但不能像 為業務目標選擇的精確率、召回率或曲線下面積指標 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d2-033",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team optimizing an existing implementation needs to register a validated model version for controlled promotion. Which service should be used?",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs to register a validated model version for controlled promotion. Which service should be used?",
     "options": {
-      "A": "AWS WAF",
-      "B": "Amazon EFS",
+      "A": "A SageMaker distributed training job",
+      "B": "A hyperparameter tuning job",
       "C": "SageMaker Model Registry",
-      "D": "Amazon Route 53"
+      "D": "Use regularization, validation data, or early stopping"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Model Registry tracks model versions and approval status for controlled deployment.\nThe other choices provide DNS, web filtering, or file storage.",
-    "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "Model Registry tracks model versions and approval status for controlled deployment.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide SageMaker Model Registry for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊需要註冊經過驗證的模型版本以進行受控升級。應該使用哪種服務？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。優化現有實施的團隊需要註冊經過驗證的模型版本以進行受控升級。應該使用哪種服務？",
         "options": {
-          "A": "AWS WAF",
-          "B": "Amazon EFS",
+          "A": "SageMaker 分散式訓練作業",
+          "B": "超參數調整工作",
           "C": "SageMaker Model Registry",
-          "D": "Amazon Route 53"
+          "D": "使用正規化、驗證資料或提前停止"
         },
-        "explanation": "模型註冊表追蹤模型版本和受控部署的批准狀態。\n其他選項提供 DNS、Web 過濾或文件儲存。"
+        "explanation": "模型註冊表追蹤模型版本和受控部署的批准狀態。\n其他選項適用於此領域的不同需求，但不能像 SageMaker Model Registry 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d2-034",
-    "type": "single",
-    "question": "A company introducing an automated workflow must reduce overfitting on the training data. Which action should be considered?",
-    "options": {
-      "A": "Train and test on the same records",
-      "B": "Remove the validation set",
-      "C": "Increase label leakage",
-      "D": "Use regularization, validation data, or early stopping"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Regularization and validation-based stopping improve generalization and reduce overfitting.\nThe other choices make evaluation less reliable.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A company introducing an automated workflow is reviewing several independent production requirements. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. Match each workload requirement to the most appropriate implementation.",
+    "options": {
+      "A": "A workload must reduce overfitting on the training data",
+      "B": "A workload needs distributed training over several compute nodes",
+      "C": "A workload needs to compare multiple hyperparameter combinations automatically"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "Use regularization, validation data, or early stopping",
+      "2": "A SageMaker distributed training job",
+      "3": "A hyperparameter tuning job"
+    },
+    "correctMatches": {
+      "A": "1",
+      "B": "2",
+      "C": "3"
+    },
+    "explanation": "A maps to Use regularization, validation data, or early stopping. Regularization and validation-based stopping improve generalization and reduce overfitting. B maps to A SageMaker distributed training job. SageMaker distributed training coordinates supported algorithms and frameworks across instances. C maps to A hyperparameter tuning job. Hyperparameter tuning runs trials and selects configurations based on an objective metric.\nEach target is intended for a different requirement, so all three mappings must be evaluated independently.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司必須減少訓練資料的過度擬合。應考慮採取哪種行動？",
+        "question": "團隊正在審查多項彼此獨立的生產需求。實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。請將每項工作負載需求配對至最適合的實作。",
         "options": {
-          "A": "在相同的記錄上進行訓練和測試",
-          "B": "刪除驗證集",
-          "C": "增加標籤洩漏",
-          "D": "使用正規化、驗證資料或提前停止"
+          "A": "工作負載需求：準備增加流量的新創公司必須減少訓練資料的過度擬合",
+          "B": "工作負載需求：支援關鍵工作負載的營運團隊需要在多個運算節點上進行分散式培訓",
+          "C": "工作負載需求：生產團隊需要自動比較多個超參數組合"
         },
-        "explanation": "正則化和基於驗證的停止可以提高泛化能力並減少過度擬合。\n其他選擇使評估不太可靠。"
+        "targets": {
+          "1": "使用正規化、驗證資料或提前停止",
+          "2": "SageMaker 分散式訓練作業",
+          "3": "超參數調整工作"
+        },
+        "explanation": "A 對應 使用正規化、驗證資料或提前停止。正則化和基於驗證的停止可以提高泛化能力並減少過度擬合。 B 對應 SageMaker 分散式訓練作業。SageMaker 分散式訓練跨執行個體協調支援的演算法和框架。 C 對應 超參數調整工作。超參數調整運行試驗並根據客觀指標選擇配置。\n每個目標均處理不同需求，因此必須分別評估三項配對。"
       }
     }
   },
   {
     "id": "mla-c01-d2-035",
-    "type": "single",
-    "question": "An AWS administrator working in a shared environment needs distributed training over several compute nodes. Which approach should be evaluated?",
-    "options": {
-      "A": "A SageMaker distributed training job",
-      "B": "A Route 53 weighted record",
-      "C": "An S3 ACL",
-      "D": "A CloudWatch dashboard only"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "SageMaker distributed training coordinates supported algorithms and frameworks across instances.\nThe other choices do not execute distributed ML training.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "An AWS administrator working in a shared environment is planning two independent production changes. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The first team needs distributed training over several compute nodes. A second team needs to compare multiple hyperparameter combinations automatically. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Precision, recall, or an area-under-curve metric selected for the business objective",
+      "B": "SageMaker Model Registry",
+      "C": "Use regularization, validation data, or early stopping",
+      "D": "A SageMaker distributed training job",
+      "E": "A hyperparameter tuning job"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "A SageMaker distributed training job meets the first requirement: SageMaker distributed training coordinates supported algorithms and frameworks across instances. A hyperparameter tuning job meets the second requirement: Hyperparameter tuning runs trials and selects configurations based on an objective metric.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "在共享環境中工作的 AWS 管理員需要在多個運算節點上進行分散式培訓。應該評估哪一種方法？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。第一項需求：支援關鍵工作負載的營運團隊需要在多個運算節點上進行分散式培訓。第二項需求：生產團隊需要自動比較多個超參數組合。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "SageMaker 分散式訓練作業",
-          "B": "Route 53 加權記錄",
-          "C": "S3 ACL",
-          "D": "僅 CloudWatch 儀表板"
+          "A": "為業務目標選擇的精確率、召回率或曲線下面積指標",
+          "B": "SageMaker Model Registry",
+          "C": "使用正規化、驗證資料或提前停止",
+          "D": "SageMaker 分散式訓練作業",
+          "E": "超參數調整工作"
         },
-        "explanation": "SageMaker 分散式訓練跨執行個體協調支援的演算法和框架。\n其他選擇不執行分散式 ML 訓練。"
+        "explanation": "SageMaker 分散式訓練作業 符合第一項需求：SageMaker 分散式訓練跨執行個體協調支援的演算法和框架。 超參數調整工作 符合第二項需求：超參數調整運行試驗並根據客觀指標選擇配置。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "mla-c01-d2-036",
-    "type": "single",
-    "question": "A customer-facing application team needs to compare multiple hyperparameter combinations automatically. Which SageMaker capability fits?",
-    "options": {
-      "A": "A CloudFront cache policy",
-      "B": "A hyperparameter tuning job",
-      "C": "An S3 lifecycle rule",
-      "D": "A VPC endpoint only"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Hyperparameter tuning runs trials and selects configurations based on an objective metric.\nThe other choices do not optimize model training parameters.",
     "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A customer-facing application team is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs to compare multiple hyperparameter combinations automatically. Which SageMaker capability fits?",
+    "options": {
+      "A": "Precision, recall, or an area-under-curve metric selected for the business objective",
+      "B": "SageMaker Model Registry",
+      "C": "Use regularization, validation data, or early stopping",
+      "D": "A hyperparameter tuning job"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Hyperparameter tuning runs trials and selects configurations based on an objective metric.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A hyperparameter tuning job for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊需要自動比較多個超參數組合。哪種 SageMaker 功能適合？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。面向客戶的應用程式團隊需要自動比較多個超參數組合。哪種 SageMaker 功能適合？",
         "options": {
-          "A": "CloudFront 快取策略",
-          "B": "超參數調整工作",
-          "C": "S3 生命週期規則",
-          "D": "僅 VPC 終端節點"
+          "A": "為業務目標選擇的精確率、召回率或曲線下面積指標",
+          "B": "SageMaker Model Registry",
+          "C": "使用正規化、驗證資料或提前停止",
+          "D": "超參數調整工作"
         },
-        "explanation": "超參數調整運行試驗並根據客觀指標選擇配置。\n其他選擇不會優化模型訓練參數。"
+        "explanation": "超參數調整運行試驗並根據客觀指標選擇配置。\n其他選項適用於此領域的不同需求，但不能像 超參數調整工作 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d2-037",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A platform team standardizing its AWS deployments must choose a metric for a binary classifier with highly imbalanced classes. Which metric is generally more informative than accuracy alone?",
+    "question": "A platform team standardizing its AWS deployments is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team must choose a metric for a binary classifier with highly imbalanced classes. Which metric is generally more informative than accuracy alone?",
     "options": {
-      "A": "The S3 object count",
-      "B": "The EC2 instance name",
+      "A": "Use regularization, validation data, or early stopping",
+      "B": "A SageMaker distributed training job",
       "C": "Precision, recall, or an area-under-curve metric selected for the business objective",
-      "D": "Only training loss"
+      "D": "SageMaker Model Registry"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Precision and recall expose minority-class behavior that accuracy can hide.\nStorage metadata and instance names do not measure classifier quality.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Precision and recall expose minority-class behavior that accuracy can hide.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Precision, recall, or an area-under-curve metric selected for the business objective for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊必須為具有高度不平衡類別的二元分類器選擇一個指標。哪一個指標通常比單獨的準確性更能提供資訊？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。標準化其 AWS 部署的平台團隊必須為具有高度不平衡類別的二元分類器選擇一個指標。哪一個指標通常比單獨的準確性更能提供資訊？",
         "options": {
-          "A": "S3 物件計數",
-          "B": "EC2 執行個體名稱",
+          "A": "使用正規化、驗證資料或提前停止",
+          "B": "SageMaker 分散式訓練作業",
           "C": "為業務目標選擇的精確率、召回率或曲線下面積指標",
-          "D": "僅訓練損失"
+          "D": "SageMaker Model Registry"
         },
-        "explanation": "精確度和召回率暴露了準確性可以隱藏的少數群體行為。\n儲存元資料和執行個體名稱不衡量分類器品質。"
+        "explanation": "精確度和召回率暴露了準確性可以隱藏的少數群體行為。\n其他選項適用於此領域的不同需求，但不能像 為業務目標選擇的精確率、召回率或曲線下面積指標 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d2-038",
-    "type": "single",
-    "question": "A team preparing evidence for an audit needs to register a validated model version for controlled promotion. Which service should be used?",
-    "options": {
-      "A": "Amazon Route 53",
-      "B": "AWS WAF",
-      "C": "Amazon EFS",
-      "D": "SageMaker Model Registry"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Model Registry tracks model versions and approval status for controlled deployment.\nThe other choices provide DNS, web filtering, or file storage.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team preparing evidence for an audit is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs to register a validated model version for controlled promotion. Which service should be used?",
+    "options": {
+      "A": "A hyperparameter tuning job",
+      "B": "SageMaker Model Registry",
+      "C": "Use regularization, validation data, or early stopping",
+      "D": "A SageMaker distributed training job"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Model Registry tracks model versions and approval status for controlled deployment.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide SageMaker Model Registry for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備審計證據的團隊需要註冊經過驗證的模型版本以進行受控升級。應該使用哪種服務？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。準備審計證據的團隊需要註冊經過驗證的模型版本以進行受控升級。應該使用哪種服務？",
         "options": {
-          "A": "Amazon Route 53",
-          "B": "AWS WAF",
-          "C": "Amazon EFS",
-          "D": "SageMaker Model Registry"
+          "A": "超參數調整工作",
+          "B": "SageMaker Model Registry",
+          "C": "使用正規化、驗證資料或提前停止",
+          "D": "SageMaker 分散式訓練作業"
         },
-        "explanation": "模型註冊表追蹤模型版本和受控部署的批准狀態。\n其他選項提供 DNS、Web 過濾或文件儲存。"
+        "explanation": "模型註冊表追蹤模型版本和受控部署的批准狀態。\n其他選項適用於此領域的不同需求，但不能像 SageMaker Model Registry 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d2-039",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A business replacing a manual process must reduce overfitting on the training data. Which action should be considered?",
+    "question": "A business replacing a manual process is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team must reduce overfitting on the training data. Which action should be considered?",
     "options": {
       "A": "Use regularization, validation data, or early stopping",
-      "B": "Train and test on the same records",
-      "C": "Remove the validation set",
-      "D": "Increase label leakage"
+      "B": "A SageMaker distributed training job",
+      "C": "A hyperparameter tuning job",
+      "D": "Precision, recall, or an area-under-curve metric selected for the business objective"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Regularization and validation-based stopping improve generalization and reduce overfitting.\nThe other choices make evaluation less reliable.",
-    "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "Regularization and validation-based stopping improve generalization and reduce overfitting.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Use regularization, validation data, or early stopping for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "取代手動流程的企業必須減少訓練資料的過度擬合。應考慮採取哪種行動？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。取代手動流程的企業必須減少訓練資料的過度擬合。應考慮採取哪種行動？",
         "options": {
           "A": "使用正規化、驗證資料或提前停止",
-          "B": "在相同的記錄上進行訓練和測試",
-          "C": "刪除驗證集",
-          "D": "增加標籤洩漏"
+          "B": "SageMaker 分散式訓練作業",
+          "C": "超參數調整工作",
+          "D": "為業務目標選擇的精確率、召回率或曲線下面積指標"
         },
-        "explanation": "正則化和基於驗證的停止可以提高泛化能力並減少過度擬合。\n其他選擇使評估不太可靠。"
+        "explanation": "正則化和基於驗證的停止可以提高泛化能力並減少過度擬合。\n其他選項適用於此領域的不同需求，但不能像 使用正規化、驗證資料或提前停止 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d2-040",
-    "type": "single",
-    "question": "A team validating a design against the exam guide needs distributed training over several compute nodes. Which approach should be evaluated?",
-    "options": {
-      "A": "A CloudWatch dashboard only",
-      "B": "A SageMaker distributed training job",
-      "C": "A Route 53 weighted record",
-      "D": "An S3 ACL"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "SageMaker distributed training coordinates supported algorithms and frameworks across instances.\nThe other choices do not execute distributed ML training.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team validating a design against the exam guide is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs distributed training over several compute nodes. Which approach should be evaluated?",
+    "options": {
+      "A": "A hyperparameter tuning job",
+      "B": "Precision, recall, or an area-under-curve metric selected for the business objective",
+      "C": "SageMaker Model Registry",
+      "D": "A SageMaker distributed training job"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "SageMaker distributed training coordinates supported algorithms and frameworks across instances.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A SageMaker distributed training job for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊需要在多個運算節點上進行分散式培訓。應該評估哪一種方法？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。根據考試指南驗證設計的團隊需要在多個運算節點上進行分散式培訓。應該評估哪一種方法？",
         "options": {
-          "A": "僅 CloudWatch 儀表板",
-          "B": "SageMaker 分散式訓練作業",
-          "C": "Route 53 加權記錄",
-          "D": "S3 ACL"
+          "A": "超參數調整工作",
+          "B": "為業務目標選擇的精確率、召回率或曲線下面積指標",
+          "C": "SageMaker Model Registry",
+          "D": "SageMaker 分散式訓練作業"
         },
-        "explanation": "SageMaker 分散式訓練跨執行個體協調支援的演算法和框架。\n其他選擇不執行分散式 ML 訓練。"
+        "explanation": "SageMaker 分散式訓練跨執行個體協調支援的演算法和框架。\n其他選項適用於此領域的不同需求，但不能像 SageMaker 分散式訓練作業 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d2-041",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A production team needs to compare multiple hyperparameter combinations automatically. Which SageMaker capability fits?",
+    "question": "A production team is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs to compare multiple hyperparameter combinations automatically. Which SageMaker capability fits?",
     "options": {
-      "A": "A VPC endpoint only",
-      "B": "A CloudFront cache policy",
+      "A": "SageMaker Model Registry",
+      "B": "Use regularization, validation data, or early stopping",
       "C": "A hyperparameter tuning job",
-      "D": "An S3 lifecycle rule"
+      "D": "Precision, recall, or an area-under-curve metric selected for the business objective"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Hyperparameter tuning runs trials and selects configurations based on an objective metric.\nThe other choices do not optimize model training parameters.",
-    "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Hyperparameter tuning runs trials and selects configurations based on an objective metric.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A hyperparameter tuning job for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "生產團隊需要自動比較多個超參數組合。哪種 SageMaker 功能適合？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。生產團隊需要自動比較多個超參數組合。哪種 SageMaker 功能適合？",
         "options": {
-          "A": "僅 VPC 終端節點",
-          "B": "CloudFront 快取策略",
+          "A": "SageMaker Model Registry",
+          "B": "使用正規化、驗證資料或提前停止",
           "C": "超參數調整工作",
-          "D": "S3 生命週期規則"
+          "D": "為業務目標選擇的精確率、召回率或曲線下面積指標"
         },
-        "explanation": "超參數調整運行試驗並根據客觀指標選擇配置。\n其他選擇不會優化模型訓練參數。"
+        "explanation": "超參數調整運行試驗並根據客觀指標選擇配置。\n其他選項適用於此領域的不同需求，但不能像 超參數調整工作 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d2-042",
-    "type": "single",
-    "question": "A multi-account platform team must choose a metric for a binary classifier with highly imbalanced classes. Which metric is generally more informative than accuracy alone?",
-    "options": {
-      "A": "Only training loss",
-      "B": "The S3 object count",
-      "C": "The EC2 instance name",
-      "D": "Precision, recall, or an area-under-curve metric selected for the business objective"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Precision and recall expose minority-class behavior that accuracy can hide.\nStorage metadata and instance names do not measure classifier quality.",
     "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A multi-account platform team is planning two independent production changes. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The first team must choose a metric for a binary classifier with highly imbalanced classes. A second team needs to register a validated model version for controlled promotion. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "A hyperparameter tuning job",
+      "B": "Precision, recall, or an area-under-curve metric selected for the business objective",
+      "C": "SageMaker Model Registry",
+      "D": "Use regularization, validation data, or early stopping",
+      "E": "A SageMaker distributed training job"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Precision, recall, or an area-under-curve metric selected for the business objective meets the first requirement: Precision and recall expose minority-class behavior that accuracy can hide. SageMaker Model Registry meets the second requirement: Model Registry tracks model versions and approval status for controlled deployment.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊必須為具有高度不平衡類別的二元分類器選擇一個指標。哪一個指標通常比單獨的準確性更能提供資訊？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。第一項需求：多帳戶平台團隊必須為具有高度不平衡類別的二元分類器選擇一個指標。第二項需求：受監管的公司需要註冊經過驗證的模型版本以進行受控推廣。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "僅訓練損失",
-          "B": "S3 物件計數",
-          "C": "EC2 執行個體名稱",
-          "D": "為業務目標選擇的精確率、召回率或曲線下面積指標"
+          "A": "超參數調整工作",
+          "B": "為業務目標選擇的精確率、召回率或曲線下面積指標",
+          "C": "SageMaker Model Registry",
+          "D": "使用正規化、驗證資料或提前停止",
+          "E": "SageMaker 分散式訓練作業"
         },
-        "explanation": "精確度和召回率暴露了準確性可以隱藏的少數群體行為。\n儲存元資料和執行個體名稱不衡量分類器品質。"
+        "explanation": "為業務目標選擇的精確率、召回率或曲線下面積指標 符合第一項需求：精確度和召回率暴露了準確性可以隱藏的少數群體行為。 SageMaker Model Registry 符合第二項需求：模型註冊表追蹤模型版本和受控部署的批准狀態。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "mla-c01-d2-043",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A regulated company needs to register a validated model version for controlled promotion. Which service should be used?",
+    "question": "A regulated company is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs to register a validated model version for controlled promotion. Which service should be used?",
     "options": {
       "A": "SageMaker Model Registry",
-      "B": "Amazon Route 53",
-      "C": "AWS WAF",
-      "D": "Amazon EFS"
+      "B": "Use regularization, validation data, or early stopping",
+      "C": "A SageMaker distributed training job",
+      "D": "A hyperparameter tuning job"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Model Registry tracks model versions and approval status for controlled deployment.\nThe other choices provide DNS, web filtering, or file storage.",
-    "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Model Registry tracks model versions and approval status for controlled deployment.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide SageMaker Model Registry for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司需要註冊經過驗證的模型版本以進行受控推廣。應該使用哪種服務？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。受監管的公司需要註冊經過驗證的模型版本以進行受控推廣。應該使用哪種服務？",
         "options": {
           "A": "SageMaker Model Registry",
-          "B": "Amazon Route 53",
-          "C": "AWS WAF",
-          "D": "Amazon EFS"
+          "B": "使用正規化、驗證資料或提前停止",
+          "C": "SageMaker 分散式訓練作業",
+          "D": "超參數調整工作"
         },
-        "explanation": "模型註冊表追蹤模型版本和受控部署的批准狀態。\n其他選項提供 DNS、Web 過濾或文件儲存。"
+        "explanation": "模型註冊表追蹤模型版本和受控部署的批准狀態。\n其他選項適用於此領域的不同需求，但不能像 SageMaker Model Registry 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d2-044",
-    "type": "single",
-    "question": "A startup preparing for a traffic increase must reduce overfitting on the training data. Which action should be considered?",
-    "options": {
-      "A": "Increase label leakage",
-      "B": "Use regularization, validation data, or early stopping",
-      "C": "Train and test on the same records",
-      "D": "Remove the validation set"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Regularization and validation-based stopping improve generalization and reduce overfitting.\nThe other choices make evaluation less reliable.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A startup preparing for a traffic increase is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team must reduce overfitting on the training data. Which action should be considered?",
+    "options": {
+      "A": "A SageMaker distributed training job",
+      "B": "A hyperparameter tuning job",
+      "C": "Precision, recall, or an area-under-curve metric selected for the business objective",
+      "D": "Use regularization, validation data, or early stopping"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Regularization and validation-based stopping improve generalization and reduce overfitting.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Use regularization, validation data, or early stopping for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司必須減少訓練資料的過度擬合。應考慮採取哪種行動？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。準備增加流量的新創公司必須減少訓練資料的過度擬合。應考慮採取哪種行動？",
         "options": {
-          "A": "增加標籤洩漏",
-          "B": "使用正規化、驗證資料或提前停止",
-          "C": "在相同的記錄上進行訓練和測試",
-          "D": "刪除驗證集"
+          "A": "SageMaker 分散式訓練作業",
+          "B": "超參數調整工作",
+          "C": "為業務目標選擇的精確率、召回率或曲線下面積指標",
+          "D": "使用正規化、驗證資料或提前停止"
         },
-        "explanation": "正則化和基於驗證的停止可以提高泛化能力並減少過度擬合。\n其他選擇使評估不太可靠。"
+        "explanation": "正則化和基於驗證的停止可以提高泛化能力並減少過度擬合。\n其他選項適用於此領域的不同需求，但不能像 使用正規化、驗證資料或提前停止 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d2-045",
+    "taskStatement": "2.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "An operations team supporting a critical workload needs distributed training over several compute nodes. Which approach should be evaluated?",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs distributed training over several compute nodes. Which approach should be evaluated?",
     "options": {
-      "A": "An S3 ACL",
-      "B": "A CloudWatch dashboard only",
+      "A": "Precision, recall, or an area-under-curve metric selected for the business objective",
+      "B": "SageMaker Model Registry",
       "C": "A SageMaker distributed training job",
-      "D": "A Route 53 weighted record"
+      "D": "A hyperparameter tuning job"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "SageMaker distributed training coordinates supported algorithms and frameworks across instances.\nThe other choices do not execute distributed ML training.",
-    "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "SageMaker distributed training coordinates supported algorithms and frameworks across instances.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A SageMaker distributed training job for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊需要在多個運算節點上進行分散式培訓。應該評估哪一種方法？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。支援關鍵工作負載的營運團隊需要在多個運算節點上進行分散式培訓。應該評估哪一種方法？",
         "options": {
-          "A": "S3 ACL",
-          "B": "僅 CloudWatch 儀表板",
+          "A": "為業務目標選擇的精確率、召回率或曲線下面積指標",
+          "B": "SageMaker Model Registry",
           "C": "SageMaker 分散式訓練作業",
-          "D": "Route 53 加權記錄"
+          "D": "超參數調整工作"
         },
-        "explanation": "SageMaker 分散式訓練跨執行個體協調支援的演算法和框架。\n其他選擇不執行分散式 ML 訓練。"
+        "explanation": "SageMaker 分散式訓練跨執行個體協調支援的演算法和框架。\n其他選項適用於此領域的不同需求，但不能像 SageMaker 分散式訓練作業 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d2-046",
-    "type": "single",
-    "question": "A data platform team needs to compare multiple hyperparameter combinations automatically. Which SageMaker capability fits?",
-    "options": {
-      "A": "An S3 lifecycle rule",
-      "B": "A VPC endpoint only",
-      "C": "A CloudFront cache policy",
-      "D": "A hyperparameter tuning job"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Hyperparameter tuning runs trials and selects configurations based on an objective metric.\nThe other choices do not optimize model training parameters.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A data platform team is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs to compare multiple hyperparameter combinations automatically. Which SageMaker capability fits?",
+    "options": {
+      "A": "Use regularization, validation data, or early stopping",
+      "B": "A hyperparameter tuning job",
+      "C": "Precision, recall, or an area-under-curve metric selected for the business objective",
+      "D": "SageMaker Model Registry"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Hyperparameter tuning runs trials and selects configurations based on an objective metric.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A hyperparameter tuning job for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要自動比較多個超參數組合。哪種 SageMaker 功能適合？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。資料平台團隊需要自動比較多個超參數組合。哪種 SageMaker 功能適合？",
         "options": {
-          "A": "S3 生命週期規則",
-          "B": "僅 VPC 終端節點",
-          "C": "CloudFront 快取策略",
-          "D": "超參數調整工作"
+          "A": "使用正規化、驗證資料或提前停止",
+          "B": "超參數調整工作",
+          "C": "為業務目標選擇的精確率、召回率或曲線下面積指標",
+          "D": "SageMaker Model Registry"
         },
-        "explanation": "超參數調整運行試驗並根據客觀指標選擇配置。\n其他選擇不會優化模型訓練參數。"
+        "explanation": "超參數調整運行試驗並根據客觀指標選擇配置。\n其他選項適用於此領域的不同需求，但不能像 超參數調整工作 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d2-047",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A security-conscious engineering team must choose a metric for a binary classifier with highly imbalanced classes. Which metric is generally more informative than accuracy alone?",
+    "question": "A security-conscious engineering team is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team must choose a metric for a binary classifier with highly imbalanced classes. Which metric is generally more informative than accuracy alone?",
     "options": {
       "A": "Precision, recall, or an area-under-curve metric selected for the business objective",
-      "B": "Only training loss",
-      "C": "The S3 object count",
-      "D": "The EC2 instance name"
+      "B": "SageMaker Model Registry",
+      "C": "Use regularization, validation data, or early stopping",
+      "D": "A SageMaker distributed training job"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Precision and recall expose minority-class behavior that accuracy can hide.\nStorage metadata and instance names do not measure classifier quality.",
-    "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Precision and recall expose minority-class behavior that accuracy can hide.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Precision, recall, or an area-under-curve metric selected for the business objective for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊必須為具有高度不平衡類別的二元分類器選擇一個指標。哪一個指標通常比單獨的準確性更能提供資訊？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。具有安全意識的工程團隊必須為具有高度不平衡類別的二元分類器選擇一個指標。哪一個指標通常比單獨的準確性更能提供資訊？",
         "options": {
           "A": "為業務目標選擇的精確率、召回率或曲線下面積指標",
-          "B": "僅訓練損失",
-          "C": "S3 物件計數",
-          "D": "EC2 執行個體名稱"
+          "B": "SageMaker Model Registry",
+          "C": "使用正規化、驗證資料或提前停止",
+          "D": "SageMaker 分散式訓練作業"
         },
-        "explanation": "精確度和召回率暴露了準確性可以隱藏的少數群體行為。\n儲存元資料和執行個體名稱不衡量分類器品質。"
+        "explanation": "精確度和召回率暴露了準確性可以隱藏的少數群體行為。\n其他選項適用於此領域的不同需求，但不能像 為業務目標選擇的精確率、召回率或曲線下面積指標 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d2-048",
-    "type": "single",
-    "question": "A company migrating an existing workload needs to register a validated model version for controlled promotion. Which service should be used?",
-    "options": {
-      "A": "Amazon EFS",
-      "B": "SageMaker Model Registry",
-      "C": "Amazon Route 53",
-      "D": "AWS WAF"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Model Registry tracks model versions and approval status for controlled deployment.\nThe other choices provide DNS, web filtering, or file storage.",
     "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A company migrating an existing workload is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs to register a validated model version for controlled promotion. Which service should be used?",
+    "options": {
+      "A": "Use regularization, validation data, or early stopping",
+      "B": "A SageMaker distributed training job",
+      "C": "A hyperparameter tuning job",
+      "D": "SageMaker Model Registry"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Model Registry tracks model versions and approval status for controlled deployment.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide SageMaker Model Registry for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司需要註冊經過驗證的模型版本以進行受控升級。應該使用哪種服務？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。遷移現有工作負載的公司需要註冊經過驗證的模型版本以進行受控升級。應該使用哪種服務？",
         "options": {
-          "A": "Amazon EFS",
-          "B": "SageMaker Model Registry",
-          "C": "Amazon Route 53",
-          "D": "AWS WAF"
+          "A": "使用正規化、驗證資料或提前停止",
+          "B": "SageMaker 分散式訓練作業",
+          "C": "超參數調整工作",
+          "D": "SageMaker Model Registry"
         },
-        "explanation": "模型註冊表追蹤模型版本和受控部署的批准狀態。\n其他選項提供 DNS、Web 過濾或文件儲存。"
+        "explanation": "模型註冊表追蹤模型版本和受控部署的批准狀態。\n其他選項適用於此領域的不同需求，但不能像 SageMaker Model Registry 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d2-049",
-    "type": "single",
-    "question": "A team with strict recovery objectives must reduce overfitting on the training data. Which action should be considered?",
-    "options": {
-      "A": "Remove the validation set",
-      "B": "Increase label leakage",
-      "C": "Use regularization, validation data, or early stopping",
-      "D": "Train and test on the same records"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "Regularization and validation-based stopping improve generalization and reduce overfitting.\nThe other choices make evaluation less reliable.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A team with strict recovery objectives is planning two independent production changes. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The first team must reduce overfitting on the training data. A second team needs distributed training over several compute nodes. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "A SageMaker distributed training job",
+      "B": "A hyperparameter tuning job",
+      "C": "Precision, recall, or an area-under-curve metric selected for the business objective",
+      "D": "SageMaker Model Registry",
+      "E": "Use regularization, validation data, or early stopping"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Use regularization, validation data, or early stopping meets the first requirement: Regularization and validation-based stopping improve generalization and reduce overfitting. A SageMaker distributed training job meets the second requirement: SageMaker distributed training coordinates supported algorithms and frameworks across instances.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有嚴格恢復目標的團隊必須減少訓練資料的過度擬合。應考慮採取哪種行動？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。第一項需求：支援關鍵工作負載的營運團隊需要在多個運算節點上進行分散式培訓。第二項需求：準備增加流量的新創公司必須減少訓練資料的過度擬合。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "刪除驗證集",
-          "B": "增加標籤洩漏",
-          "C": "使用正規化、驗證資料或提前停止",
-          "D": "在相同的記錄上進行訓練和測試"
+          "A": "SageMaker 分散式訓練作業",
+          "B": "超參數調整工作",
+          "C": "為業務目標選擇的精確率、召回率或曲線下面積指標",
+          "D": "SageMaker Model Registry",
+          "E": "使用正規化、驗證資料或提前停止"
         },
-        "explanation": "正則化和基於驗證的停止可以提高泛化能力並減少過度擬合。\n其他選擇使評估不太可靠。"
+        "explanation": "SageMaker 分散式訓練作業 符合第一項需求：SageMaker 分散式訓練跨執行個體協調支援的演算法和框架。 使用正規化、驗證資料或提前停止 符合第二項需求：正則化和基於驗證的停止可以提高泛化能力並減少過度擬合。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "mla-c01-d2-050",
-    "type": "single",
-    "question": "A developer team preparing a release needs distributed training over several compute nodes. Which approach should be evaluated?",
-    "options": {
-      "A": "A Route 53 weighted record",
-      "B": "An S3 ACL",
-      "C": "A CloudWatch dashboard only",
-      "D": "A SageMaker distributed training job"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "SageMaker distributed training coordinates supported algorithms and frameworks across instances.\nThe other choices do not execute distributed ML training.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A developer team preparing a release is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs distributed training over several compute nodes. Which approach should be evaluated?",
+    "options": {
+      "A": "SageMaker Model Registry",
+      "B": "A SageMaker distributed training job",
+      "C": "A hyperparameter tuning job",
+      "D": "Precision, recall, or an area-under-curve metric selected for the business objective"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "SageMaker distributed training coordinates supported algorithms and frameworks across instances.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A SageMaker distributed training job for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊需要在多個運算節點上進行分散式訓練。應該評估哪一種方法？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。準備發布的開發團隊需要在多個運算節點上進行分散式訓練。應該評估哪一種方法？",
         "options": {
-          "A": "Route 53 加權記錄",
-          "B": "S3 ACL",
-          "C": "僅 CloudWatch 儀表板",
-          "D": "SageMaker 分散式訓練作業"
+          "A": "SageMaker Model Registry",
+          "B": "SageMaker 分散式訓練作業",
+          "C": "超參數調整工作",
+          "D": "為業務目標選擇的精確率、召回率或曲線下面積指標"
         },
-        "explanation": "SageMaker 分散式訓練跨執行個體協調支援的演算法和框架。\n其他選擇不執行分散式 ML 訓練。"
+        "explanation": "SageMaker 分散式訓練跨執行個體協調支援的演算法和框架。\n其他選項適用於此領域的不同需求，但不能像 SageMaker 分散式訓練作業 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "mla-c01-d2-051",
-    "type": "single",
-    "question": "An enterprise with several AWS Regions needs to compare multiple hyperparameter combinations automatically. Which SageMaker capability fits?",
-    "options": {
-      "A": "A hyperparameter tuning job",
-      "B": "An S3 lifecycle rule",
-      "C": "A VPC endpoint only",
-      "D": "A CloudFront cache policy"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "Hyperparameter tuning runs trials and selects configurations based on an objective metric.\nThe other choices do not optimize model training parameters.",
     "taskStatement": "2.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "An enterprise with several AWS Regions is reviewing several independent production requirements. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. Match each workload requirement to the most appropriate implementation.",
+    "options": {
+      "A": "A workload needs to compare multiple hyperparameter combinations automatically",
+      "B": "A workload must choose a metric for a binary classifier with highly imbalanced classes",
+      "C": "A workload needs to register a validated model version for controlled promotion"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "SageMaker Model Registry",
+      "2": "A hyperparameter tuning job",
+      "3": "Precision, recall, or an area-under-curve metric selected for the business objective"
+    },
+    "correctMatches": {
+      "A": "2",
+      "B": "3",
+      "C": "1"
+    },
+    "explanation": "A maps to A hyperparameter tuning job. Hyperparameter tuning runs trials and selects configurations based on an objective metric. B maps to Precision, recall, or an area-under-curve metric selected for the business objective. Precision and recall expose minority-class behavior that accuracy can hide. C maps to SageMaker Model Registry. Model Registry tracks model versions and approval status for controlled deployment.\nEach target is intended for a different requirement, so all three mappings must be evaluated independently.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業需要自動比較多個超參數組合。哪種 SageMaker 功能適合？",
+        "question": "團隊正在審查多項彼此獨立的生產需求。團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。請將每項工作負載需求配對至最適合的實作。",
         "options": {
-          "A": "超參數調整工作",
-          "B": "S3 生命週期規則",
-          "C": "僅 VPC 終端節點",
-          "D": "CloudFront 快取策略"
+          "A": "工作負載需求：生產團隊需要自動比較多個超參數組合",
+          "B": "工作負載需求：多帳戶平台團隊必須為具有高度不平衡類別的二元分類器選擇一個指標",
+          "C": "工作負載需求：受監管的公司需要註冊經過驗證的模型版本以進行受控推廣"
         },
-        "explanation": "超參數調整運行試驗並根據客觀指標選擇配置。\n其他選擇不會優化模型訓練參數。"
+        "targets": {
+          "1": "SageMaker Model Registry",
+          "2": "超參數調整工作",
+          "3": "為業務目標選擇的精確率、召回率或曲線下面積指標"
+        },
+        "explanation": "A 對應 超參數調整工作。超參數調整運行試驗並根據客觀指標選擇配置。 B 對應 為業務目標選擇的精確率、召回率或曲線下面積指標。精確度和召回率暴露了準確性可以隱藏的少數群體行為。 C 對應 SageMaker Model Registry。模型註冊表追蹤模型版本和受控部署的批准狀態。\n每個目標均處理不同需求，因此必須分別評估三項配對。"
       }
     }
   }

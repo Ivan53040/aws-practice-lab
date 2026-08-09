@@ -17,8 +17,8 @@
  * back to keyword-ranked single-select questions to fill the set (see
  * [domain].astro), so a stale id never breaks a page. A unit test
  * (featured-samples.test.ts) asserts every id here resolves to a renderable
- * sample (single-select, ordering, or matching - never multi-answer) in the
- * right domain bank.
+ * sample using one of the response formats supported by SampleQuestionCard in
+ * the right domain bank.
  */
 export const FEATURED_SAMPLE_IDS: Record<string, Record<number, string[]>> = {
   'clf-c02': {

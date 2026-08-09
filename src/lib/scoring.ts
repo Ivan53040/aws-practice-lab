@@ -65,7 +65,7 @@ export function getExamDomainTargets(cert: Certification): Record<number, number
  * Select questions for a mock exam based on the certification's domain proportions.
  * Domain breakdown is derived from cert config (no hardcoded values).
  */
-export function selectExamQuestions(allQuestions: Question[], cert: Certification): Question[] {
+export function selectExamQuestions(allQuestions: Question[], cert: Certification, shuffleOrder = true): Question[] {
   const targets = getExamDomainTargets(cert)
   const selected: Question[] = []
 
@@ -77,7 +77,27 @@ export function selectExamQuestions(allQuestions: Question[], cert: Certificatio
     selected.push(...domainQs)
   }
 
-  return fisherYatesShuffle(selected)
+  return shuffleOrder ? fisherYatesShuffle(selected) : selected
+}
+
+/**
+ * Select a smaller random practice set, optionally limited to one domain.
+ * The question set is fresh on every call. When order randomization is off,
+ * selected questions return in their original bank order.
+ */
+export function selectPracticeQuestions(
+  allQuestions: Question[],
+  count: number,
+  domainId?: number,
+  shuffleOrder = true,
+): Question[] {
+  const pool = domainId === undefined
+    ? allQuestions
+    : allQuestions.filter(question => question.domainId === domainId)
+  const selected = fisherYatesShuffle(pool).slice(0, Math.min(count, pool.length))
+  if (shuffleOrder) return selected
+  const originalIndex = new Map(pool.map((question, index) => [question.id, index]))
+  return selected.sort((a, b) => (originalIndex.get(a.id) ?? 0) - (originalIndex.get(b.id) ?? 0))
 }
 
 /**

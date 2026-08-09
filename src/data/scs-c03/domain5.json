@@ -1,981 +1,1027 @@
 [
   {
     "id": "scs-c03-d5-001",
-    "type": "single",
-    "question": "A production team needs customer-controlled encryption policies and audit events for S3 data. Which option should be selected?",
-    "options": {
-      "A": "A DNS record",
-      "B": "SSE-KMS with a customer managed key",
-      "C": "Plaintext objects",
-      "D": "SSE-S3 only when key policy control is required"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "SSE-KMS with a customer managed key provides key policy control and KMS audit events.\nPlaintext and unrelated controls do not protect or govern the data.",
     "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A production team is reviewing a production decision. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The team needs customer-controlled encryption policies and audit events for S3 data. Which option should be selected?",
+    "options": {
+      "A": "S3 Object Lock in compliance mode",
+      "B": "AWS Secrets Manager",
+      "C": "TLS with a managed certificate and strict security policies",
+      "D": "SSE-KMS with a customer managed key"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "SSE-KMS with a customer managed key provides key policy control and KMS audit events.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide SSE-KMS with a customer managed key for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "生產團隊需要客戶控制的 S3 資料加密策略和審核事件。應該選擇哪個選項？",
+        "question": "專業工程師將審查實作的服務限制、故障行為及建議設計的營運取捨。生產團隊需要客戶控制的 S3 資料加密策略和審核事件。應該選擇哪個選項？",
         "options": {
-          "A": "DNS 記錄",
-          "B": "具有客戶管理金鑰的 SSE-KMS",
-          "C": "明文物件",
-          "D": "僅在需要關鍵策略控制時才使用SSE-S3"
+          "A": "合規模式下的 S3 Object Lock定",
+          "B": "AWS Secrets Manager",
+          "C": "具有託管憑證和嚴格安全策略的 TLS",
+          "D": "具有客戶管理金鑰的 SSE-KMS"
         },
-        "explanation": "具有客戶管理金鑰的 SSE-KMS 提供金鑰策略控制和 KMS 審核事件。\n明文和不相關的控制項不會保護或管理資料。"
+        "explanation": "具有客戶管理金鑰的 SSE-KMS 提供金鑰策略控制和 KMS 審核事件。\n其他選項適用於此領域的不同需求，但不能像 具有客戶管理金鑰的 SSE-KMS 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d5-002",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A multi-account platform team must prevent deletion of compliance records until a retention date. Which S3 feature fits?",
+    "question": "A multi-account platform team is reviewing a production decision. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The team must prevent deletion of compliance records until a retention date. Which S3 feature fits?",
     "options": {
-      "A": "A security group",
-      "B": "A Route 53 alias",
+      "A": "TLS with a managed certificate and strict security policies",
+      "B": "Amazon Macie",
       "C": "S3 Object Lock in compliance mode",
-      "D": "S3 Transfer Acceleration"
+      "D": "AWS Secrets Manager"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Object Lock compliance mode enforces retention against deletion and overwrite.\nThe other choices do not enforce object retention.",
-    "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Object Lock compliance mode enforces retention against deletion and overwrite.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide S3 Object Lock in compliance mode for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊必須防止在保留日期之前刪除合規記錄。 S3 的哪些功能適合？",
+        "question": "專業工程師將審查實作的服務限制、故障行為及建議設計的營運取捨。多帳戶平台團隊必須防止在保留日期之前刪除合規記錄。 S3 的哪些功能適合？",
         "options": {
-          "A": "一個安全群組",
-          "B": "Route 53 別名",
+          "A": "具有託管憑證和嚴格安全策略的 TLS",
+          "B": "Amazon Macie",
           "C": "合規模式下的 S3 Object Lock定",
-          "D": "S3 Transfer Acceleration"
+          "D": "AWS Secrets Manager"
         },
-        "explanation": "物件鎖定合規模式強制保留以防止刪除和覆蓋。\n其他選擇不強制物件保留。"
+        "explanation": "物件鎖定合規模式強制保留以防止刪除和覆蓋。\n其他選項適用於此領域的不同需求，但不能像 合規模式下的 S3 Object Lock定 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d5-003",
-    "type": "single",
-    "question": "A regulated company needs to keep database credentials out of source and rotate them automatically. Which service fits?",
-    "options": {
-      "A": "An S3 website",
-      "B": "A CloudFront distribution",
-      "C": "An EBS snapshot",
-      "D": "AWS Secrets Manager"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Secrets Manager stores and rotates credentials and supports runtime retrieval.\nThe other choices do not manage application secrets.",
     "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A regulated company is reviewing a production decision. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The team needs to keep database credentials out of source and rotate them automatically. Which service fits?",
+    "options": {
+      "A": "SSE-KMS with a customer managed key",
+      "B": "AWS Secrets Manager",
+      "C": "TLS with a managed certificate and strict security policies",
+      "D": "Amazon Macie"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Secrets Manager stores and rotates credentials and supports runtime retrieval.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Secrets Manager for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司需要確保資料庫憑證不受來源影響並自動輪調。適合哪種服務？",
+        "question": "專業工程師將審查實作的服務限制、故障行為及建議設計的營運取捨。受監管的公司需要確保資料庫憑證不受來源影響並自動輪調。適合哪種服務？",
         "options": {
-          "A": "S3 網站",
-          "B": "CloudFront 發行版",
-          "C": "EBS Snapshot",
-          "D": "AWS Secrets Manager"
+          "A": "具有客戶管理金鑰的 SSE-KMS",
+          "B": "AWS Secrets Manager",
+          "C": "具有託管憑證和嚴格安全策略的 TLS",
+          "D": "Amazon Macie"
         },
-        "explanation": "Secrets Manager 儲存和輪換憑證並支援運行時檢索。\n其他選擇不管理應用程式機密。"
+        "explanation": "Secrets Manager 儲存和輪換憑證並支援運行時檢索。\n其他選項適用於此領域的不同需求，但不能像 AWS Secrets Manager 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d5-004",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A startup preparing for a traffic increase must protect data in transit to a public API. Which configuration is appropriate?",
+    "question": "A startup preparing for a traffic increase is redesigning one integrated end-to-end architecture. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The design must keep recurring cost proportional to use, enforce least privilege, and remain available during a component or Availability Zone failure. The workload must protect data in transit to a public API, and the same architecture must protect the organization root user from routine misuse. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "TLS with a managed certificate and strict security policies",
-      "B": "HTTP only",
-      "C": "An unencrypted public endpoint",
-      "D": "A bucket lifecycle rule"
+      "A": "Use TLS with a managed certificate and strict security policies for the primary requirement and integrate it with Use the root user only when required and enable MFA for the connected control",
+      "B": "Use TLS with a managed certificate and strict security policies but replace the connected control with Amazon GuardDuty",
+      "C": "Use AWS Security Hub for the primary requirement and integrate it with Use the root user only when required and enable MFA",
+      "D": "Combine AWS Security Hub with Amazon Macie as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "TLS protects data in transit and certificate management supports trusted endpoints.\nHTTP and unrelated storage controls do not protect transport.",
-    "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "TLS with a managed certificate and strict security policies satisfies the first part of the architecture: TLS protects data in transit and certificate management supports trusted endpoints. Use the root user only when required and enable MFA satisfies the connected requirement: Root-use restrictions and MFA reduce the highest-impact credential risk.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司必須保護傳輸到公共 API 的資料。哪種配置合適？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：需求：準備增加流量的新創公司必須保護傳輸到公共 API 的資料 第二項需求：支援關鍵工作負載的營運團隊必須保護組織根使用者免於日常濫用。 此設計必須讓持續成本與實際用量相符、落實最低權限，並在元件或可用區域發生故障時維持可用。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "具有託管憑證和嚴格安全策略的 TLS",
-          "B": "僅 HTTP",
-          "C": "未加密的公共端點",
-          "D": "儲存桶生命週期規則"
+          "A": "以具有託管憑證和嚴格安全策略的 TLS處理主要需求，並整合僅在需要時使用 root 使用者並啟用 MFA作為相連控制",
+          "B": "使用具有託管憑證和嚴格安全策略的 TLS，但以Amazon GuardDuty取代相連控制",
+          "C": "以AWS Security Hub處理主要需求，並整合僅在需要時使用 root 使用者並啟用 MFA",
+          "D": "把AWS Security Hub與Amazon Macie結合為單一平台設計"
         },
-        "explanation": "TLS 保護傳輸中的資料，憑證管理支援可信任端點。\nHTTP 和不相關的儲存控制不會保護傳輸。"
+        "explanation": "具有託管憑證和嚴格安全策略的 TLS 負責架構的第一項需求，僅在需要時使用 root 使用者並啟用 MFA 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "scs-c03-d5-005",
-    "type": "single",
-    "question": "An operations team supporting a critical workload needs to discover PII before sharing a data set with another account. Which service should be evaluated?",
-    "options": {
-      "A": "Amazon EFS",
-      "B": "Amazon Macie",
-      "C": "Amazon Inspector",
-      "D": "AWS Shield"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Macie discovers sensitive data in S3 and can inform remediation before sharing.\nThe other choices assess vulnerabilities, DDoS, or file storage.",
     "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The team needs to discover PII before sharing a data set with another account. Which service should be evaluated?",
+    "options": {
+      "A": "SSE-KMS with a customer managed key",
+      "B": "S3 Object Lock in compliance mode",
+      "C": "AWS Secrets Manager",
+      "D": "Amazon Macie"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Macie discovers sensitive data in S3 and can inform remediation before sharing.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Macie for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊需要在與其他帳戶共用資料集之前發現 PII。應該評估哪些服務？",
+        "question": "專業工程師將審查實作的服務限制、故障行為及建議設計的營運取捨。支援關鍵工作負載的營運團隊需要在與其他帳戶共用資料集之前發現 PII。應該評估哪些服務？",
         "options": {
-          "A": "Amazon EFS",
-          "B": "Amazon Macie",
-          "C": "Amazon Inspector",
-          "D": "AWS Shield"
+          "A": "具有客戶管理金鑰的 SSE-KMS",
+          "B": "合規模式下的 S3 Object Lock定",
+          "C": "AWS Secrets Manager",
+          "D": "Amazon Macie"
         },
-        "explanation": "Macie 發現 S3 中的敏感資料，並可以在共享之前通知修復。\n其他選擇評估漏洞、DDoS 或檔案儲存。"
+        "explanation": "Macie 發現 S3 中的敏感資料，並可以在共享之前通知修復。\n其他選項適用於此領域的不同需求，但不能像 Amazon Macie 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d5-006",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A data platform team needs customer-controlled encryption policies and audit events for S3 data. Which option should be selected?",
+    "question": "A data platform team is reviewing a production decision. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The team needs customer-controlled encryption policies and audit events for S3 data. Which option should be selected?",
     "options": {
-      "A": "SSE-S3 only when key policy control is required",
-      "B": "A DNS record",
+      "A": "AWS Secrets Manager",
+      "B": "TLS with a managed certificate and strict security policies",
       "C": "SSE-KMS with a customer managed key",
-      "D": "Plaintext objects"
+      "D": "S3 Object Lock in compliance mode"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "SSE-KMS with a customer managed key provides key policy control and KMS audit events.\nPlaintext and unrelated controls do not protect or govern the data.",
-    "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "SSE-KMS with a customer managed key provides key policy control and KMS audit events.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide SSE-KMS with a customer managed key for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要客戶控制的 S3 資料加密策略和審核事件。應該選擇哪個選項？",
+        "question": "此生產環境在多個帳戶中採用集中治理。變更必須符合最低權限、可以稽核，並且不會造成長時間中斷。資料平台團隊需要客戶控制的 S3 資料加密策略和審核事件。應該選擇哪個選項？",
         "options": {
-          "A": "僅在需要關鍵策略控制時才使用SSE-S3",
-          "B": "DNS 記錄",
+          "A": "AWS Secrets Manager",
+          "B": "具有託管憑證和嚴格安全策略的 TLS",
           "C": "具有客戶管理金鑰的 SSE-KMS",
-          "D": "明文物件"
+          "D": "合規模式下的 S3 Object Lock定"
         },
-        "explanation": "具有客戶管理金鑰的 SSE-KMS 提供金鑰策略控制和 KMS 審核事件。\n明文和不相關的控制項不會保護或管理資料。"
+        "explanation": "具有客戶管理金鑰的 SSE-KMS 提供金鑰策略控制和 KMS 審核事件。\n其他選項適用於此領域的不同需求，但不能像 具有客戶管理金鑰的 SSE-KMS 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d5-007",
-    "type": "single",
-    "question": "A security-conscious engineering team must prevent deletion of compliance records until a retention date. Which S3 feature fits?",
-    "options": {
-      "A": "S3 Transfer Acceleration",
-      "B": "A security group",
-      "C": "A Route 53 alias",
-      "D": "S3 Object Lock in compliance mode"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Object Lock compliance mode enforces retention against deletion and overwrite.\nThe other choices do not enforce object retention.",
     "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A security-conscious engineering team is planning two independent production changes. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The first team must prevent deletion of compliance records until a retention date. A second team needs to keep database credentials out of source and rotate them automatically. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "TLS with a managed certificate and strict security policies",
+      "B": "Amazon Macie",
+      "C": "SSE-KMS with a customer managed key",
+      "D": "S3 Object Lock in compliance mode",
+      "E": "AWS Secrets Manager"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "S3 Object Lock in compliance mode meets the first requirement: Object Lock compliance mode enforces retention against deletion and overwrite. AWS Secrets Manager meets the second requirement: Secrets Manager stores and rotates credentials and supports runtime retrieval.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊必須防止在保留日期之前刪除合規記錄。 S3 的哪些功能適合？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此生產環境在多個帳戶中採用集中治理。變更必須符合最低權限、可以稽核，並且不會造成長時間中斷。第一項需求：多帳戶平台團隊必須防止在保留日期之前刪除合規記錄。第二項需求：受監管的公司需要確保資料庫憑證不受來源影響並自動輪調。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "S3 Transfer Acceleration",
-          "B": "一個安全群組",
-          "C": "Route 53 別名",
-          "D": "合規模式下的 S3 Object Lock定"
+          "A": "具有託管憑證和嚴格安全策略的 TLS",
+          "B": "Amazon Macie",
+          "C": "具有客戶管理金鑰的 SSE-KMS",
+          "D": "合規模式下的 S3 Object Lock定",
+          "E": "AWS Secrets Manager"
         },
-        "explanation": "物件鎖定合規模式強制保留以防止刪除和覆蓋。\n其他選擇不強制物件保留。"
+        "explanation": "合規模式下的 S3 Object Lock定 符合第一項需求：物件鎖定合規模式強制保留以防止刪除和覆蓋。 AWS Secrets Manager 符合第二項需求：Secrets Manager 儲存和輪換憑證並支援運行時檢索。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "scs-c03-d5-008",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A company migrating an existing workload needs to keep database credentials out of source and rotate them automatically. Which service fits?",
+    "question": "A company migrating an existing workload is redesigning one integrated end-to-end architecture. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The design must avoid unnecessary standby cost without weakening security controls or the availability objective. The workload needs to keep database credentials out of source and rotate them automatically, and the same architecture needs audit records for security API activity. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "AWS Secrets Manager",
-      "B": "An S3 website",
-      "C": "A CloudFront distribution",
-      "D": "An EBS snapshot"
+      "A": "Use AWS Secrets Manager for the primary requirement and integrate it with AWS CloudTrail for the connected control",
+      "B": "Use AWS Secrets Manager but replace the connected control with Amazon GuardDuty",
+      "C": "Use AWS Security Hub for the primary requirement and integrate it with AWS CloudTrail",
+      "D": "Combine AWS Security Hub with Amazon Macie as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Secrets Manager stores and rotates credentials and supports runtime retrieval.\nThe other choices do not manage application secrets.",
-    "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "AWS Secrets Manager satisfies the first part of the architecture: Secrets Manager stores and rotates credentials and supports runtime retrieval. AWS CloudTrail satisfies the connected requirement: CloudTrail records API activity for investigation and compliance.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司需要將資料庫憑證保留在來源之外並自動輪換它們。適合哪種服務？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：優化現有實施的團隊需要確保資料庫憑證不受來源影響並自動輪調。 第二項需求：準備發布的開發團隊需要安全 API 活動的審核記錄。 此設計必須避免不必要的備用成本，同時不可削弱安全控制或可用性目標。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "AWS Secrets Manager",
-          "B": "S3 網站",
-          "C": "CloudFront 發行版",
-          "D": "EBS Snapshot"
+          "A": "以AWS Secrets Manager處理主要需求，並整合AWS CloudTrail作為相連控制",
+          "B": "使用AWS Secrets Manager，但以Amazon GuardDuty取代相連控制",
+          "C": "以AWS Security Hub處理主要需求，並整合AWS CloudTrail",
+          "D": "把AWS Security Hub與Amazon Macie結合為單一平台設計"
         },
-        "explanation": "Secrets Manager 儲存和輪換憑證並支援運行時檢索。\n其他選擇不管理應用程式機密。"
+        "explanation": "AWS Secrets Manager 負責架構的第一項需求，AWS CloudTrail 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "scs-c03-d5-009",
-    "type": "single",
-    "question": "A team with strict recovery objectives must protect data in transit to a public API. Which configuration is appropriate?",
-    "options": {
-      "A": "A bucket lifecycle rule",
-      "B": "TLS with a managed certificate and strict security policies",
-      "C": "HTTP only",
-      "D": "An unencrypted public endpoint"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "TLS protects data in transit and certificate management supports trusted endpoints.\nHTTP and unrelated storage controls do not protect transport.",
     "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team with strict recovery objectives is reviewing a production decision. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The team must protect data in transit to a public API. Which configuration is appropriate?",
+    "options": {
+      "A": "Amazon Macie",
+      "B": "SSE-KMS with a customer managed key",
+      "C": "S3 Object Lock in compliance mode",
+      "D": "TLS with a managed certificate and strict security policies"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "TLS protects data in transit and certificate management supports trusted endpoints.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide TLS with a managed certificate and strict security policies for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格恢復目標的團隊必須保護傳輸到公共 API 的資料。哪種配置合適？",
+        "question": "此生產環境在多個帳戶中採用集中治理。變更必須符合最低權限、可以稽核，並且不會造成長時間中斷。具有嚴格恢復目標的團隊必須保護傳輸到公共 API 的資料。哪種配置合適？",
         "options": {
-          "A": "儲存桶生命週期規則",
-          "B": "具有託管憑證和嚴格安全策略的 TLS",
-          "C": "僅 HTTP",
-          "D": "未加密的公共端點"
+          "A": "Amazon Macie",
+          "B": "具有客戶管理金鑰的 SSE-KMS",
+          "C": "合規模式下的 S3 Object Lock定",
+          "D": "具有託管憑證和嚴格安全策略的 TLS"
         },
-        "explanation": "TLS 保護傳輸中的資料，憑證管理支援可信任端點。\nHTTP 和不相關的儲存控制不會保護傳輸。"
+        "explanation": "TLS 保護傳輸中的資料，憑證管理支援可信任端點。\n其他選項適用於此領域的不同需求，但不能像 具有託管憑證和嚴格安全策略的 TLS 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d5-010",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A developer team preparing a release needs to discover PII before sharing a data set with another account. Which service should be evaluated?",
+    "question": "A developer team preparing a release is reviewing a production decision. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The team needs to discover PII before sharing a data set with another account. Which service should be evaluated?",
     "options": {
-      "A": "AWS Shield",
-      "B": "Amazon EFS",
+      "A": "S3 Object Lock in compliance mode",
+      "B": "AWS Secrets Manager",
       "C": "Amazon Macie",
-      "D": "Amazon Inspector"
+      "D": "SSE-KMS with a customer managed key"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Macie discovers sensitive data in S3 and can inform remediation before sharing.\nThe other choices assess vulnerabilities, DDoS, or file storage.",
-    "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Macie discovers sensitive data in S3 and can inform remediation before sharing.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Macie for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊需要在與其他帳戶共用資料集之前發現 PII。應該評估哪些服務？",
+        "question": "此生產環境在多個帳戶中採用集中治理。變更必須符合最低權限、可以稽核，並且不會造成長時間中斷。準備發布的開發團隊需要在與其他帳戶共用資料集之前發現 PII。應該評估哪些服務？",
         "options": {
-          "A": "AWS Shield",
-          "B": "Amazon EFS",
+          "A": "合規模式下的 S3 Object Lock定",
+          "B": "AWS Secrets Manager",
           "C": "Amazon Macie",
-          "D": "Amazon Inspector"
+          "D": "具有客戶管理金鑰的 SSE-KMS"
         },
-        "explanation": "Macie 發現 S3 中的敏感資料，並可以在共享之前通知修復。\n其他選擇評估漏洞、DDoS 或檔案儲存。"
+        "explanation": "Macie 發現 S3 中的敏感資料，並可以在共享之前通知修復。\n其他選項適用於此領域的不同需求，但不能像 Amazon Macie 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d5-011",
-    "type": "single",
-    "question": "An enterprise with several AWS Regions needs customer-controlled encryption policies and audit events for S3 data. Which option should be selected?",
-    "options": {
-      "A": "Plaintext objects",
-      "B": "SSE-S3 only when key policy control is required",
-      "C": "A DNS record",
-      "D": "SSE-KMS with a customer managed key"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "SSE-KMS with a customer managed key provides key policy control and KMS audit events.\nPlaintext and unrelated controls do not protect or govern the data.",
     "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The team needs customer-controlled encryption policies and audit events for S3 data. Which option should be selected?",
+    "options": {
+      "A": "TLS with a managed certificate and strict security policies",
+      "B": "SSE-KMS with a customer managed key",
+      "C": "S3 Object Lock in compliance mode",
+      "D": "AWS Secrets Manager"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "SSE-KMS with a customer managed key provides key policy control and KMS audit events.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide SSE-KMS with a customer managed key for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業需要客戶控制的 S3 資料加密策略和審核事件。應該選擇哪個選項？",
+        "question": "團隊必須考慮混合式連線、現有安全邊界，以及變更部署後的營運疑難排解。擁有多個 AWS 區域的企業需要客戶控制的 S3 資料加密策略和審核事件。應該選擇哪個選項？",
         "options": {
-          "A": "明文物件",
-          "B": "僅在需要關鍵策略控制時才使用SSE-S3",
-          "C": "DNS 記錄",
-          "D": "具有客戶管理金鑰的 SSE-KMS"
+          "A": "具有託管憑證和嚴格安全策略的 TLS",
+          "B": "具有客戶管理金鑰的 SSE-KMS",
+          "C": "合規模式下的 S3 Object Lock定",
+          "D": "AWS Secrets Manager"
         },
-        "explanation": "具有客戶管理金鑰的 SSE-KMS 提供金鑰策略控制和 KMS 審核事件。\n明文和不相關的控制項不會保護或管理資料。"
+        "explanation": "具有客戶管理金鑰的 SSE-KMS 提供金鑰策略控制和 KMS 審核事件。\n其他選項適用於此領域的不同需求，但不能像 具有客戶管理金鑰的 SSE-KMS 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d5-012",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A service owner reviewing an incident must prevent deletion of compliance records until a retention date. Which S3 feature fits?",
+    "question": "A service owner reviewing an incident is redesigning one integrated end-to-end architecture. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The organization will accept additional managed-service cost only when it measurably improves security and availability with less operational effort. The workload must prevent deletion of compliance records until a retention date, and the same architecture must determine the timeline of unauthorized API calls. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "S3 Object Lock in compliance mode",
-      "B": "S3 Transfer Acceleration",
-      "C": "A security group",
-      "D": "A Route 53 alias"
+      "A": "Use S3 Object Lock in compliance mode for the primary requirement and integrate it with CloudTrail events correlated with identity and resource logs for the connected control",
+      "B": "Use S3 Object Lock in compliance mode but replace the connected control with Amazon GuardDuty",
+      "C": "Use AWS Security Hub for the primary requirement and integrate it with CloudTrail events correlated with identity and resource logs",
+      "D": "Combine AWS Security Hub with Amazon Macie as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Object Lock compliance mode enforces retention against deletion and overwrite.\nThe other choices do not enforce object retention.",
-    "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "S3 Object Lock in compliance mode satisfies the first part of the architecture: Object Lock compliance mode enforces retention against deletion and overwrite. CloudTrail events correlated with identity and resource logs satisfies the connected requirement: Correlated API, identity, and resource logs establish who did what and when.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務所有者必須防止刪除合規記錄，直到保留日期為止。 S3 的哪些功能適合？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：審查事件的服務所有者必須防止刪除合規記錄，直到保留日期為止。 第二項需求：支援關鍵工作負載的營運團隊必須確定未經授權的 API 呼叫的時間表。 只有在託管服務能以較低營運負擔明確改善安全性與可用性時，組織才會接受額外成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "合規模式下的 S3 Object Lock定",
-          "B": "S3 Transfer Acceleration",
-          "C": "一個安全群組",
-          "D": "Route 53 別名"
+          "A": "以合規模式下的 S3 Object Lock定處理主要需求，並整合與身分和資源日誌相關的 CloudTrail 事件作為相連控制",
+          "B": "使用合規模式下的 S3 Object Lock定，但以Amazon GuardDuty取代相連控制",
+          "C": "以AWS Security Hub處理主要需求，並整合與身分和資源日誌相關的 CloudTrail 事件",
+          "D": "把AWS Security Hub與Amazon Macie結合為單一平台設計"
         },
-        "explanation": "物件鎖定合規模式強制保留以防止刪除和覆蓋。\n其他選擇不強制物件保留。"
+        "explanation": "合規模式下的 S3 Object Lock定 負責架構的第一項需求，與身分和資源日誌相關的 CloudTrail 事件 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "scs-c03-d5-013",
-    "type": "single",
-    "question": "A team optimizing an existing implementation needs to keep database credentials out of source and rotate them automatically. Which service fits?",
-    "options": {
-      "A": "An EBS snapshot",
-      "B": "AWS Secrets Manager",
-      "C": "An S3 website",
-      "D": "A CloudFront distribution"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Secrets Manager stores and rotates credentials and supports runtime retrieval.\nThe other choices do not manage application secrets.",
     "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The team needs to keep database credentials out of source and rotate them automatically. Which service fits?",
+    "options": {
+      "A": "TLS with a managed certificate and strict security policies",
+      "B": "Amazon Macie",
+      "C": "SSE-KMS with a customer managed key",
+      "D": "AWS Secrets Manager"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Secrets Manager stores and rotates credentials and supports runtime retrieval.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Secrets Manager for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊需要確保資料庫憑證不受來源影響並自動輪調。適合哪種服務？",
+        "question": "團隊必須考慮混合式連線、現有安全邊界，以及變更部署後的營運疑難排解。優化現有實施的團隊需要確保資料庫憑證不受來源影響並自動輪調。適合哪種服務？",
         "options": {
-          "A": "EBS Snapshot",
-          "B": "AWS Secrets Manager",
-          "C": "S3 網站",
-          "D": "CloudFront 發行版"
+          "A": "具有託管憑證和嚴格安全策略的 TLS",
+          "B": "Amazon Macie",
+          "C": "具有客戶管理金鑰的 SSE-KMS",
+          "D": "AWS Secrets Manager"
         },
-        "explanation": "Secrets Manager 儲存和輪換憑證並支援運行時檢索。\n其他選擇不管理應用程式機密。"
+        "explanation": "Secrets Manager 儲存和輪換憑證並支援運行時檢索。\n其他選項適用於此領域的不同需求，但不能像 AWS Secrets Manager 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d5-014",
-    "type": "single",
-    "question": "A company introducing an automated workflow must protect data in transit to a public API. Which configuration is appropriate?",
-    "options": {
-      "A": "An unencrypted public endpoint",
-      "B": "A bucket lifecycle rule",
-      "C": "TLS with a managed certificate and strict security policies",
-      "D": "HTTP only"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "TLS protects data in transit and certificate management supports trusted endpoints.\nHTTP and unrelated storage controls do not protect transport.",
     "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A company introducing an automated workflow is planning two independent production changes. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The first team must protect data in transit to a public API. A second team needs to discover PII before sharing a data set with another account. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "AWS Secrets Manager",
+      "B": "TLS with a managed certificate and strict security policies",
+      "C": "Amazon Macie",
+      "D": "SSE-KMS with a customer managed key",
+      "E": "S3 Object Lock in compliance mode"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "TLS with a managed certificate and strict security policies meets the first requirement: TLS protects data in transit and certificate management supports trusted endpoints. Amazon Macie meets the second requirement: Macie discovers sensitive data in S3 and can inform remediation before sharing.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司必須保護傳輸到公共 API 的資料。哪種配置合適？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊必須考慮混合式連線、現有安全邊界，以及變更部署後的營運疑難排解。第一項需求：準備增加流量的新創公司必須保護傳輸到公共 API 的資料。第二項需求：支援關鍵工作負載的營運團隊需要在與其他帳戶共用資料集之前發現 PII。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "未加密的公共端點",
-          "B": "儲存桶生命週期規則",
-          "C": "具有託管憑證和嚴格安全策略的 TLS",
-          "D": "僅 HTTP"
+          "A": "AWS Secrets Manager",
+          "B": "具有託管憑證和嚴格安全策略的 TLS",
+          "C": "Amazon Macie",
+          "D": "具有客戶管理金鑰的 SSE-KMS",
+          "E": "合規模式下的 S3 Object Lock定"
         },
-        "explanation": "TLS 保護傳輸中的資料，憑證管理支援可信任端點。\nHTTP 和不相關的儲存控制不會保護傳輸。"
+        "explanation": "具有託管憑證和嚴格安全策略的 TLS 符合第一項需求：TLS 保護傳輸中的資料，憑證管理支援可信任端點。 Amazon Macie 符合第二項需求：Macie 發現 S3 中的敏感資料，並可以在共享之前通知修復。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "scs-c03-d5-015",
-    "type": "single",
-    "question": "An AWS administrator working in a shared environment needs to discover PII before sharing a data set with another account. Which service should be evaluated?",
-    "options": {
-      "A": "Amazon Inspector",
-      "B": "AWS Shield",
-      "C": "Amazon EFS",
-      "D": "Amazon Macie"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Macie discovers sensitive data in S3 and can inform remediation before sharing.\nThe other choices assess vulnerabilities, DDoS, or file storage.",
     "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment is reviewing a production decision. The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed. The team needs to discover PII before sharing a data set with another account. Which service should be evaluated?",
+    "options": {
+      "A": "AWS Secrets Manager",
+      "B": "Amazon Macie",
+      "C": "SSE-KMS with a customer managed key",
+      "D": "S3 Object Lock in compliance mode"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Macie discovers sensitive data in S3 and can inform remediation before sharing.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Macie for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "在共享環境中工作的 AWS 管理員需要在與其他帳戶共用資料集之前發現 PII。應該評估哪些服務？",
+        "question": "團隊必須考慮混合式連線、現有安全邊界，以及變更部署後的營運疑難排解。在共享環境中工作的 AWS 管理員需要在與其他帳戶共用資料集之前發現 PII。應該評估哪些服務？",
         "options": {
-          "A": "Amazon Inspector",
-          "B": "AWS Shield",
-          "C": "Amazon EFS",
-          "D": "Amazon Macie"
+          "A": "AWS Secrets Manager",
+          "B": "Amazon Macie",
+          "C": "具有客戶管理金鑰的 SSE-KMS",
+          "D": "合規模式下的 S3 Object Lock定"
         },
-        "explanation": "Macie 發現 S3 中的敏感資料，並可以在共享之前通知修復。\n其他選擇評估漏洞、DDoS 或檔案儲存。"
+        "explanation": "Macie 發現 S3 中的敏感資料，並可以在共享之前通知修復。\n其他選項適用於此領域的不同需求，但不能像 Amazon Macie 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d5-016",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A customer-facing application team needs customer-controlled encryption policies and audit events for S3 data. Which option should be selected?",
+    "question": "A customer-facing application team is redesigning one integrated end-to-end architecture. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The architecture must limit blast radius, preserve availability during change, and control cost through automation instead of permanent overprovisioning. The workload needs customer-controlled encryption policies and audit events for S3 data, and the same architecture needs host access without inbound SSH ports. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "SSE-KMS with a customer managed key",
-      "B": "Plaintext objects",
-      "C": "SSE-S3 only when key policy control is required",
-      "D": "A DNS record"
+      "A": "Use SSE-KMS with a customer managed key for the primary requirement and integrate it with Systems Manager Session Manager for the connected control",
+      "B": "Use SSE-KMS with a customer managed key but replace the connected control with Amazon GuardDuty",
+      "C": "Use AWS Security Hub for the primary requirement and integrate it with Systems Manager Session Manager",
+      "D": "Combine AWS Security Hub with Amazon Macie as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "SSE-KMS with a customer managed key provides key policy control and KMS audit events.\nPlaintext and unrelated controls do not protect or govern the data.",
-    "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "SSE-KMS with a customer managed key satisfies the first part of the architecture: SSE-KMS with a customer managed key provides key policy control and KMS audit events. Systems Manager Session Manager satisfies the connected requirement: Session Manager provides audited access through the agent and IAM authorization.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊需要客戶控制的 S3 資料加密策略和審核事件。應該選擇哪個選項？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：生產團隊需要客戶控制的 S3 資料加密策略和審核事件。 第二項需求：支援關鍵工作負載的營運團隊需要在沒有入站 SSH 連接埠的情況下進行主機存取。 此架構必須限制影響範圍、在變更期間維持可用性，並透過自動化控制成本，而不是長期過度佈建。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "具有客戶管理金鑰的 SSE-KMS",
-          "B": "明文物件",
-          "C": "僅在需要關鍵策略控制時才使用SSE-S3",
-          "D": "DNS 記錄"
+          "A": "以具有客戶管理金鑰的 SSE-KMS處理主要需求，並整合Systems Manager Session Manager作為相連控制",
+          "B": "使用具有客戶管理金鑰的 SSE-KMS，但以Amazon GuardDuty取代相連控制",
+          "C": "以AWS Security Hub處理主要需求，並整合Systems Manager Session Manager",
+          "D": "把AWS Security Hub與Amazon Macie結合為單一平台設計"
         },
-        "explanation": "具有客戶管理金鑰的 SSE-KMS 提供金鑰策略控制和 KMS 審核事件。\n明文和不相關的控制項不會保護或管理資料。"
+        "explanation": "具有客戶管理金鑰的 SSE-KMS 負責架構的第一項需求，Systems Manager Session Manager 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "scs-c03-d5-017",
-    "type": "single",
-    "question": "A platform team standardizing its AWS deployments must prevent deletion of compliance records until a retention date. Which S3 feature fits?",
-    "options": {
-      "A": "A Route 53 alias",
-      "B": "S3 Object Lock in compliance mode",
-      "C": "S3 Transfer Acceleration",
-      "D": "A security group"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Object Lock compliance mode enforces retention against deletion and overwrite.\nThe other choices do not enforce object retention.",
     "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A platform team standardizing its AWS deployments is reviewing several independent production requirements. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. Match each workload requirement to the most appropriate implementation.",
+    "options": {
+      "A": "A workload must prevent deletion of compliance records until a retention date",
+      "B": "A workload needs to keep database credentials out of source and rotate them automatically",
+      "C": "A workload must protect data in transit to a public API"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "AWS Secrets Manager",
+      "2": "TLS with a managed certificate and strict security policies",
+      "3": "S3 Object Lock in compliance mode"
+    },
+    "correctMatches": {
+      "A": "3",
+      "B": "1",
+      "C": "2"
+    },
+    "explanation": "A maps to S3 Object Lock in compliance mode. Object Lock compliance mode enforces retention against deletion and overwrite. B maps to AWS Secrets Manager. Secrets Manager stores and rotates credentials and supports runtime retrieval. C maps to TLS with a managed certificate and strict security policies. TLS protects data in transit and certificate management supports trusted endpoints.\nEach target is intended for a different requirement, so all three mappings must be evaluated independently.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊必須防止在保留日期之前刪除合規性記錄。 S3 的哪些功能適合？",
+        "question": "團隊正在審查多項彼此獨立的生產需求。此需求必須大規模套用。方案應避免一次性的人手設定，並提供證據證明控制措施持續有效。請將每項工作負載需求配對至最適合的實作。",
         "options": {
-          "A": "Route 53 別名",
-          "B": "合規模式下的 S3 Object Lock定",
-          "C": "S3 Transfer Acceleration",
-          "D": "一個安全群組"
+          "A": "工作負載需求：多帳戶平台團隊必須防止在保留日期之前刪除合規記錄",
+          "B": "工作負載需求：受監管的公司需要確保資料庫憑證不受來源影響並自動輪調",
+          "C": "工作負載需求：準備增加流量的新創公司必須保護傳輸到公共 API 的資料"
         },
-        "explanation": "物件鎖定合規模式強制保留以防止刪除和覆蓋。\n其他選擇不強制物件保留。"
+        "targets": {
+          "1": "AWS Secrets Manager",
+          "2": "具有託管憑證和嚴格安全策略的 TLS",
+          "3": "合規模式下的 S3 Object Lock定"
+        },
+        "explanation": "A 對應 合規模式下的 S3 Object Lock定。物件鎖定合規模式強制保留以防止刪除和覆蓋。 B 對應 AWS Secrets Manager。Secrets Manager 儲存和輪換憑證並支援運行時檢索。 C 對應 具有託管憑證和嚴格安全策略的 TLS。TLS 保護傳輸中的資料，憑證管理支援可信任端點。\n每個目標均處理不同需求，因此必須分別評估三項配對。"
       }
     }
   },
   {
     "id": "scs-c03-d5-018",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team preparing evidence for an audit needs to keep database credentials out of source and rotate them automatically. Which service fits?",
+    "question": "A team preparing evidence for an audit is reviewing a production decision. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The team needs to keep database credentials out of source and rotate them automatically. Which service fits?",
     "options": {
-      "A": "A CloudFront distribution",
-      "B": "An EBS snapshot",
+      "A": "Amazon Macie",
+      "B": "SSE-KMS with a customer managed key",
       "C": "AWS Secrets Manager",
-      "D": "An S3 website"
+      "D": "TLS with a managed certificate and strict security policies"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Secrets Manager stores and rotates credentials and supports runtime retrieval.\nThe other choices do not manage application secrets.",
-    "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Secrets Manager stores and rotates credentials and supports runtime retrieval.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Secrets Manager for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "為審計準備證據的團隊需要確保資料庫憑證不受來源影響並自動輪換它們。適合哪種服務？",
+        "question": "此需求必須大規模套用。方案應避免一次性的人手設定，並提供證據證明控制措施持續有效。為審計準備證據的團隊需要確保資料庫憑證不受來源影響並自動輪換它們。適合哪種服務？",
         "options": {
-          "A": "CloudFront 發行版",
-          "B": "EBS Snapshot",
+          "A": "Amazon Macie",
+          "B": "具有客戶管理金鑰的 SSE-KMS",
           "C": "AWS Secrets Manager",
-          "D": "S3 網站"
+          "D": "具有託管憑證和嚴格安全策略的 TLS"
         },
-        "explanation": "Secrets Manager 儲存和輪換憑證並支援運行時檢索。\n其他選擇不管理應用程式機密。"
+        "explanation": "Secrets Manager 儲存和輪換憑證並支援運行時檢索。\n其他選項適用於此領域的不同需求，但不能像 AWS Secrets Manager 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d5-019",
-    "type": "single",
-    "question": "A business replacing a manual process must protect data in transit to a public API. Which configuration is appropriate?",
-    "options": {
-      "A": "HTTP only",
-      "B": "An unencrypted public endpoint",
-      "C": "A bucket lifecycle rule",
-      "D": "TLS with a managed certificate and strict security policies"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "TLS protects data in transit and certificate management supports trusted endpoints.\nHTTP and unrelated storage controls do not protect transport.",
     "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A business replacing a manual process is reviewing a production decision. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The team must protect data in transit to a public API. Which configuration is appropriate?",
+    "options": {
+      "A": "S3 Object Lock in compliance mode",
+      "B": "TLS with a managed certificate and strict security policies",
+      "C": "Amazon Macie",
+      "D": "SSE-KMS with a customer managed key"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "TLS protects data in transit and certificate management supports trusted endpoints.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide TLS with a managed certificate and strict security policies for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "取代手動流程的企業必須保護傳輸到公共 API 的資料。哪種配置合適？",
+        "question": "此需求必須大規模套用。方案應避免一次性的人手設定，並提供證據證明控制措施持續有效。取代手動流程的企業必須保護傳輸到公共 API 的資料。哪種配置合適？",
         "options": {
-          "A": "僅 HTTP",
-          "B": "未加密的公共端點",
-          "C": "儲存桶生命週期規則",
-          "D": "具有託管憑證和嚴格安全策略的 TLS"
+          "A": "合規模式下的 S3 Object Lock定",
+          "B": "具有託管憑證和嚴格安全策略的 TLS",
+          "C": "Amazon Macie",
+          "D": "具有客戶管理金鑰的 SSE-KMS"
         },
-        "explanation": "TLS 保護傳輸中的資料，憑證管理支援可信任端點。\nHTTP 和不相關的儲存控制不會保護傳輸。"
+        "explanation": "TLS 保護傳輸中的資料，憑證管理支援可信任端點。\n其他選項適用於此領域的不同需求，但不能像 具有託管憑證和嚴格安全策略的 TLS 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d5-020",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team validating a design against the exam guide needs to discover PII before sharing a data set with another account. Which service should be evaluated?",
+    "question": "A team validating a design against the exam guide is redesigning one integrated end-to-end architecture. The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective. The selected controls must provide auditable security, predictable availability, and the lowest operational cost that still satisfies both requirements. The workload needs to discover PII before sharing a data set with another account, and the same architecture must restrict a delegated administrator from granting permissions beyond an approved set. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "Amazon Macie",
-      "B": "Amazon Inspector",
-      "C": "AWS Shield",
-      "D": "Amazon EFS"
+      "A": "Use Amazon Macie for the primary requirement and integrate it with An IAM permission boundary for the connected control",
+      "B": "Use Amazon Macie but replace the connected control with Amazon GuardDuty",
+      "C": "Use AWS Security Hub for the primary requirement and integrate it with An IAM permission boundary",
+      "D": "Combine AWS Security Hub with Amazon Inspector as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Macie discovers sensitive data in S3 and can inform remediation before sharing.\nThe other choices assess vulnerabilities, DDoS, or file storage.",
-    "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Amazon Macie satisfies the first part of the architecture: Macie discovers sensitive data in S3 and can inform remediation before sharing. An IAM permission boundary satisfies the connected requirement: Permission boundaries cap the maximum permissions an identity can receive.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊需要在與其他帳戶共用資料集之前發現 PII。應該評估哪些服務？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：支援關鍵工作負載的營運團隊需要在與其他帳戶共用資料集之前發現 PII。 第二項需求：支援關鍵工作負載的營運團隊必須限制委派管理員授予超出批准集的權限。 所選控制必須提供可稽核的安全性、可預測的可用性，以及在滿足兩項要求前提下最低的營運成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "Amazon Macie",
-          "B": "Amazon Inspector",
-          "C": "AWS Shield",
-          "D": "Amazon EFS"
+          "A": "以Amazon Macie處理主要需求，並整合IAM Permissions邊界作為相連控制",
+          "B": "使用Amazon Macie，但以Amazon GuardDuty取代相連控制",
+          "C": "以AWS Security Hub處理主要需求，並整合IAM Permissions邊界",
+          "D": "把AWS Security Hub與Amazon Inspector結合為單一平台設計"
         },
-        "explanation": "Macie 發現 S3 中的敏感資料，並可以在共享之前通知修復。\n其他選擇評估漏洞、DDoS 或檔案儲存。"
+        "explanation": "Amazon Macie 負責架構的第一項需求，IAM Permissions邊界 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "scs-c03-d5-021",
-    "type": "single",
-    "question": "A production team needs customer-controlled encryption policies and audit events for S3 data. Which option should be selected?",
-    "options": {
-      "A": "A DNS record",
-      "B": "SSE-KMS with a customer managed key",
-      "C": "Plaintext objects",
-      "D": "SSE-S3 only when key policy control is required"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "SSE-KMS with a customer managed key provides key policy control and KMS audit events.\nPlaintext and unrelated controls do not protect or govern the data.",
     "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A production team is planning two independent production changes. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The first team needs customer-controlled encryption policies and audit events for S3 data. A second team must prevent deletion of compliance records until a retention date. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "S3 Object Lock in compliance mode",
+      "B": "AWS Secrets Manager",
+      "C": "TLS with a managed certificate and strict security policies",
+      "D": "Amazon Macie",
+      "E": "SSE-KMS with a customer managed key"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "SSE-KMS with a customer managed key meets the first requirement: SSE-KMS with a customer managed key provides key policy control and KMS audit events. S3 Object Lock in compliance mode meets the second requirement: Object Lock compliance mode enforces retention against deletion and overwrite.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "生產團隊需要客戶控制的 S3 資料加密策略和審核事件。應該選擇哪個選項？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。目前架構支援業務關鍵服務。所選選項必須處理確切的故障或安全條件，而不會削弱其他控制措施。第一項需求：多帳戶平台團隊必須防止在保留日期之前刪除合規記錄。第二項需求：生產團隊需要客戶控制的 S3 資料加密策略和審核事件。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "DNS 記錄",
-          "B": "具有客戶管理金鑰的 SSE-KMS",
-          "C": "明文物件",
-          "D": "僅在需要關鍵策略控制時才使用SSE-S3"
+          "A": "合規模式下的 S3 Object Lock定",
+          "B": "AWS Secrets Manager",
+          "C": "具有託管憑證和嚴格安全策略的 TLS",
+          "D": "Amazon Macie",
+          "E": "具有客戶管理金鑰的 SSE-KMS"
         },
-        "explanation": "具有客戶管理金鑰的 SSE-KMS 提供金鑰策略控制和 KMS 審核事件。\n明文和不相關的控制項不會保護或管理資料。"
+        "explanation": "合規模式下的 S3 Object Lock定 符合第一項需求：物件鎖定合規模式強制保留以防止刪除和覆蓋。 具有客戶管理金鑰的 SSE-KMS 符合第二項需求：具有客戶管理金鑰的 SSE-KMS 提供金鑰策略控制和 KMS 審核事件。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "scs-c03-d5-022",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A multi-account platform team must prevent deletion of compliance records until a retention date. Which S3 feature fits?",
+    "question": "A multi-account platform team is reviewing a production decision. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The team must prevent deletion of compliance records until a retention date. Which S3 feature fits?",
     "options": {
-      "A": "A security group",
-      "B": "A Route 53 alias",
+      "A": "TLS with a managed certificate and strict security policies",
+      "B": "Amazon Macie",
       "C": "S3 Object Lock in compliance mode",
-      "D": "S3 Transfer Acceleration"
+      "D": "AWS Secrets Manager"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Object Lock compliance mode enforces retention against deletion and overwrite.\nThe other choices do not enforce object retention.",
-    "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Object Lock compliance mode enforces retention against deletion and overwrite.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide S3 Object Lock in compliance mode for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊必須防止在保留日期之前刪除合規記錄。 S3 的哪些功能適合？",
+        "question": "目前架構支援業務關鍵服務。所選選項必須處理確切的故障或安全條件，而不會削弱其他控制措施。多帳戶平台團隊必須防止在保留日期之前刪除合規記錄。 S3 的哪些功能適合？",
         "options": {
-          "A": "一個安全群組",
-          "B": "Route 53 別名",
+          "A": "具有託管憑證和嚴格安全策略的 TLS",
+          "B": "Amazon Macie",
           "C": "合規模式下的 S3 Object Lock定",
-          "D": "S3 Transfer Acceleration"
+          "D": "AWS Secrets Manager"
         },
-        "explanation": "物件鎖定合規模式強制保留以防止刪除和覆蓋。\n其他選擇不強制物件保留。"
+        "explanation": "物件鎖定合規模式強制保留以防止刪除和覆蓋。\n其他選項適用於此領域的不同需求，但不能像 合規模式下的 S3 Object Lock定 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d5-023",
-    "type": "single",
-    "question": "A regulated company needs to keep database credentials out of source and rotate them automatically. Which service fits?",
-    "options": {
-      "A": "An S3 website",
-      "B": "A CloudFront distribution",
-      "C": "An EBS snapshot",
-      "D": "AWS Secrets Manager"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Secrets Manager stores and rotates credentials and supports runtime retrieval.\nThe other choices do not manage application secrets.",
     "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A regulated company is reviewing a production decision. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The team needs to keep database credentials out of source and rotate them automatically. Which service fits?",
+    "options": {
+      "A": "SSE-KMS with a customer managed key",
+      "B": "AWS Secrets Manager",
+      "C": "TLS with a managed certificate and strict security policies",
+      "D": "Amazon Macie"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Secrets Manager stores and rotates credentials and supports runtime retrieval.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Secrets Manager for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司需要確保資料庫憑證不受來源影響並自動輪調。適合哪種服務？",
+        "question": "目前架構支援業務關鍵服務。所選選項必須處理確切的故障或安全條件，而不會削弱其他控制措施。受監管的公司需要確保資料庫憑證不受來源影響並自動輪調。適合哪種服務？",
         "options": {
-          "A": "S3 網站",
-          "B": "CloudFront 發行版",
-          "C": "EBS Snapshot",
-          "D": "AWS Secrets Manager"
+          "A": "具有客戶管理金鑰的 SSE-KMS",
+          "B": "AWS Secrets Manager",
+          "C": "具有託管憑證和嚴格安全策略的 TLS",
+          "D": "Amazon Macie"
         },
-        "explanation": "Secrets Manager 儲存和輪換憑證並支援運行時檢索。\n其他選擇不管理應用程式機密。"
+        "explanation": "Secrets Manager 儲存和輪換憑證並支援運行時檢索。\n其他選項適用於此領域的不同需求，但不能像 AWS Secrets Manager 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d5-024",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A startup preparing for a traffic increase must protect data in transit to a public API. Which configuration is appropriate?",
+    "question": "A startup preparing for a traffic increase is redesigning one integrated end-to-end architecture. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The design must keep recurring cost proportional to use, enforce least privilege, and remain available during a component or Availability Zone failure. The workload must protect data in transit to a public API, and the same architecture needs to discover PII before sharing a data set with another account. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "TLS with a managed certificate and strict security policies",
-      "B": "HTTP only",
-      "C": "An unencrypted public endpoint",
-      "D": "A bucket lifecycle rule"
+      "A": "Use TLS with a managed certificate and strict security policies for the primary requirement and integrate it with Amazon Macie for the connected control",
+      "B": "Use TLS with a managed certificate and strict security policies but replace the connected control with Amazon GuardDuty",
+      "C": "Use AWS Security Hub for the primary requirement and integrate it with Amazon Macie",
+      "D": "Combine AWS Security Hub with Amazon Inspector as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "TLS protects data in transit and certificate management supports trusted endpoints.\nHTTP and unrelated storage controls do not protect transport.",
-    "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "TLS with a managed certificate and strict security policies satisfies the first part of the architecture: TLS protects data in transit and certificate management supports trusted endpoints. Amazon Macie satisfies the connected requirement: Macie discovers sensitive data in S3 and can inform remediation before sharing.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司必須保護傳輸到公共 API 的資料。哪種配置合適？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：需求：準備增加流量的新創公司必須保護傳輸到公共 API 的資料 第二項需求：支援關鍵工作負載的營運團隊需要在與其他帳戶共用資料集之前發現 PII。 此設計必須讓持續成本與實際用量相符、落實最低權限，並在元件或可用區域發生故障時維持可用。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "具有託管憑證和嚴格安全策略的 TLS",
-          "B": "僅 HTTP",
-          "C": "未加密的公共端點",
-          "D": "儲存桶生命週期規則"
+          "A": "以具有託管憑證和嚴格安全策略的 TLS處理主要需求，並整合Amazon Macie作為相連控制",
+          "B": "使用具有託管憑證和嚴格安全策略的 TLS，但以Amazon GuardDuty取代相連控制",
+          "C": "以AWS Security Hub處理主要需求，並整合Amazon Macie",
+          "D": "把AWS Security Hub與Amazon Inspector結合為單一平台設計"
         },
-        "explanation": "TLS 保護傳輸中的資料，憑證管理支援可信任端點。\nHTTP 和不相關的儲存控制不會保護傳輸。"
+        "explanation": "具有託管憑證和嚴格安全策略的 TLS 負責架構的第一項需求，Amazon Macie 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "scs-c03-d5-025",
-    "type": "single",
-    "question": "An operations team supporting a critical workload needs to discover PII before sharing a data set with another account. Which service should be evaluated?",
-    "options": {
-      "A": "Amazon EFS",
-      "B": "Amazon Macie",
-      "C": "Amazon Inspector",
-      "D": "AWS Shield"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Macie discovers sensitive data in S3 and can inform remediation before sharing.\nThe other choices assess vulnerabilities, DDoS, or file storage.",
     "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control. The team needs to discover PII before sharing a data set with another account. Which service should be evaluated?",
+    "options": {
+      "A": "SSE-KMS with a customer managed key",
+      "B": "S3 Object Lock in compliance mode",
+      "C": "AWS Secrets Manager",
+      "D": "Amazon Macie"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Macie discovers sensitive data in S3 and can inform remediation before sharing.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Macie for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊需要在與其他帳戶共用資料集之前發現 PII。應該評估哪些服務？",
+        "question": "目前架構支援業務關鍵服務。所選選項必須處理確切的故障或安全條件，而不會削弱其他控制措施。支援關鍵工作負載的營運團隊需要在與其他帳戶共用資料集之前發現 PII。應該評估哪些服務？",
         "options": {
-          "A": "Amazon EFS",
-          "B": "Amazon Macie",
-          "C": "Amazon Inspector",
-          "D": "AWS Shield"
+          "A": "具有客戶管理金鑰的 SSE-KMS",
+          "B": "合規模式下的 S3 Object Lock定",
+          "C": "AWS Secrets Manager",
+          "D": "Amazon Macie"
         },
-        "explanation": "Macie 發現 S3 中的敏感資料，並可以在共享之前通知修復。\n其他選擇評估漏洞、DDoS 或檔案儲存。"
+        "explanation": "Macie 發現 S3 中的敏感資料，並可以在共享之前通知修復。\n其他選項適用於此領域的不同需求，但不能像 Amazon Macie 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d5-026",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A data platform team needs customer-controlled encryption policies and audit events for S3 data. Which option should be selected?",
+    "question": "A data platform team is reviewing a production decision. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The team needs customer-controlled encryption policies and audit events for S3 data. Which option should be selected?",
     "options": {
-      "A": "SSE-S3 only when key policy control is required",
-      "B": "A DNS record",
+      "A": "AWS Secrets Manager",
+      "B": "TLS with a managed certificate and strict security policies",
       "C": "SSE-KMS with a customer managed key",
-      "D": "Plaintext objects"
+      "D": "S3 Object Lock in compliance mode"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "SSE-KMS with a customer managed key provides key policy control and KMS audit events.\nPlaintext and unrelated controls do not protect or govern the data.",
-    "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "SSE-KMS with a customer managed key provides key policy control and KMS audit events.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide SSE-KMS with a customer managed key for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要客戶控制的 S3 資料加密策略和審核事件。應該選擇哪個選項？",
+        "question": "專業工程師將審查實作的服務限制、故障行為及建議設計的營運取捨。資料平台團隊需要客戶控制的 S3 資料加密策略和審核事件。應該選擇哪個選項？",
         "options": {
-          "A": "僅在需要關鍵策略控制時才使用SSE-S3",
-          "B": "DNS 記錄",
+          "A": "AWS Secrets Manager",
+          "B": "具有託管憑證和嚴格安全策略的 TLS",
           "C": "具有客戶管理金鑰的 SSE-KMS",
-          "D": "明文物件"
+          "D": "合規模式下的 S3 Object Lock定"
         },
-        "explanation": "具有客戶管理金鑰的 SSE-KMS 提供金鑰策略控制和 KMS 審核事件。\n明文和不相關的控制項不會保護或管理資料。"
+        "explanation": "具有客戶管理金鑰的 SSE-KMS 提供金鑰策略控制和 KMS 審核事件。\n其他選項適用於此領域的不同需求，但不能像 具有客戶管理金鑰的 SSE-KMS 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d5-027",
-    "type": "single",
-    "question": "A security-conscious engineering team must prevent deletion of compliance records until a retention date. Which S3 feature fits?",
-    "options": {
-      "A": "S3 Transfer Acceleration",
-      "B": "A security group",
-      "C": "A Route 53 alias",
-      "D": "S3 Object Lock in compliance mode"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Object Lock compliance mode enforces retention against deletion and overwrite.\nThe other choices do not enforce object retention.",
     "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A security-conscious engineering team is reviewing a production decision. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The team must prevent deletion of compliance records until a retention date. Which S3 feature fits?",
+    "options": {
+      "A": "Amazon Macie",
+      "B": "S3 Object Lock in compliance mode",
+      "C": "AWS Secrets Manager",
+      "D": "TLS with a managed certificate and strict security policies"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Object Lock compliance mode enforces retention against deletion and overwrite.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide S3 Object Lock in compliance mode for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊必須防止在保留日期之前刪除合規記錄。 S3 的哪些功能適合？",
+        "question": "專業工程師將審查實作的服務限制、故障行為及建議設計的營運取捨。具有安全意識的工程團隊必須防止在保留日期之前刪除合規記錄。 S3 的哪些功能適合？",
         "options": {
-          "A": "S3 Transfer Acceleration",
-          "B": "一個安全群組",
-          "C": "Route 53 別名",
-          "D": "合規模式下的 S3 Object Lock定"
+          "A": "Amazon Macie",
+          "B": "合規模式下的 S3 Object Lock定",
+          "C": "AWS Secrets Manager",
+          "D": "具有託管憑證和嚴格安全策略的 TLS"
         },
-        "explanation": "物件鎖定合規模式強制保留以防止刪除和覆蓋。\n其他選擇不強制物件保留。"
+        "explanation": "物件鎖定合規模式強制保留以防止刪除和覆蓋。\n其他選項適用於此領域的不同需求，但不能像 合規模式下的 S3 Object Lock定 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d5-028",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A company migrating an existing workload needs to keep database credentials out of source and rotate them automatically. Which service fits?",
+    "question": "A company migrating an existing workload is redesigning one integrated end-to-end architecture. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The design must avoid unnecessary standby cost without weakening security controls or the availability objective. The workload needs to keep database credentials out of source and rotate them automatically, and the same architecture must protect the organization root user from routine misuse. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "AWS Secrets Manager",
-      "B": "An S3 website",
-      "C": "A CloudFront distribution",
-      "D": "An EBS snapshot"
+      "A": "Use AWS Secrets Manager for the primary requirement and integrate it with Use the root user only when required and enable MFA for the connected control",
+      "B": "Use AWS Secrets Manager but replace the connected control with Amazon GuardDuty",
+      "C": "Use AWS Security Hub for the primary requirement and integrate it with Use the root user only when required and enable MFA",
+      "D": "Combine AWS Security Hub with Amazon Macie as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Secrets Manager stores and rotates credentials and supports runtime retrieval.\nThe other choices do not manage application secrets.",
-    "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "AWS Secrets Manager satisfies the first part of the architecture: Secrets Manager stores and rotates credentials and supports runtime retrieval. Use the root user only when required and enable MFA satisfies the connected requirement: Root-use restrictions and MFA reduce the highest-impact credential risk.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司需要將資料庫憑證保留在來源之外並自動輪換它們。適合哪種服務？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：優化現有實施的團隊需要確保資料庫憑證不受來源影響並自動輪調。 第二項需求：支援關鍵工作負載的營運團隊必須保護組織根使用者免於日常濫用。 此設計必須避免不必要的備用成本，同時不可削弱安全控制或可用性目標。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "AWS Secrets Manager",
-          "B": "S3 網站",
-          "C": "CloudFront 發行版",
-          "D": "EBS Snapshot"
+          "A": "以AWS Secrets Manager處理主要需求，並整合僅在需要時使用 root 使用者並啟用 MFA作為相連控制",
+          "B": "使用AWS Secrets Manager，但以Amazon GuardDuty取代相連控制",
+          "C": "以AWS Security Hub處理主要需求，並整合僅在需要時使用 root 使用者並啟用 MFA",
+          "D": "把AWS Security Hub與Amazon Macie結合為單一平台設計"
         },
-        "explanation": "Secrets Manager 儲存和輪換憑證並支援運行時檢索。\n其他選擇不管理應用程式機密。"
+        "explanation": "AWS Secrets Manager 負責架構的第一項需求，僅在需要時使用 root 使用者並啟用 MFA 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "scs-c03-d5-029",
-    "type": "single",
-    "question": "A team with strict recovery objectives must protect data in transit to a public API. Which configuration is appropriate?",
-    "options": {
-      "A": "A bucket lifecycle rule",
-      "B": "TLS with a managed certificate and strict security policies",
-      "C": "HTTP only",
-      "D": "An unencrypted public endpoint"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "TLS protects data in transit and certificate management supports trusted endpoints.\nHTTP and unrelated storage controls do not protect transport.",
     "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team with strict recovery objectives is reviewing a production decision. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The team must protect data in transit to a public API. Which configuration is appropriate?",
+    "options": {
+      "A": "Amazon Macie",
+      "B": "SSE-KMS with a customer managed key",
+      "C": "S3 Object Lock in compliance mode",
+      "D": "TLS with a managed certificate and strict security policies"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "TLS protects data in transit and certificate management supports trusted endpoints.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide TLS with a managed certificate and strict security policies for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格恢復目標的團隊必須保護傳輸到公共 API 的資料。哪種配置合適？",
+        "question": "專業工程師將審查實作的服務限制、故障行為及建議設計的營運取捨。具有嚴格恢復目標的團隊必須保護傳輸到公共 API 的資料。哪種配置合適？",
         "options": {
-          "A": "儲存桶生命週期規則",
-          "B": "具有託管憑證和嚴格安全策略的 TLS",
-          "C": "僅 HTTP",
-          "D": "未加密的公共端點"
+          "A": "Amazon Macie",
+          "B": "具有客戶管理金鑰的 SSE-KMS",
+          "C": "合規模式下的 S3 Object Lock定",
+          "D": "具有託管憑證和嚴格安全策略的 TLS"
         },
-        "explanation": "TLS 保護傳輸中的資料，憑證管理支援可信任端點。\nHTTP 和不相關的儲存控制不會保護傳輸。"
+        "explanation": "TLS 保護傳輸中的資料，憑證管理支援可信任端點。\n其他選項適用於此領域的不同需求，但不能像 具有託管憑證和嚴格安全策略的 TLS 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d5-030",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A developer team preparing a release needs to discover PII before sharing a data set with another account. Which service should be evaluated?",
+    "question": "A developer team preparing a release is reviewing a production decision. The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design. The team needs to discover PII before sharing a data set with another account. Which service should be evaluated?",
     "options": {
-      "A": "AWS Shield",
-      "B": "Amazon EFS",
+      "A": "S3 Object Lock in compliance mode",
+      "B": "AWS Secrets Manager",
       "C": "Amazon Macie",
-      "D": "Amazon Inspector"
+      "D": "SSE-KMS with a customer managed key"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Macie discovers sensitive data in S3 and can inform remediation before sharing.\nThe other choices assess vulnerabilities, DDoS, or file storage.",
-    "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Macie discovers sensitive data in S3 and can inform remediation before sharing.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon Macie for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊需要在與其他帳戶共用資料集之前發現 PII。應該評估哪些服務？",
+        "question": "專業工程師將審查實作的服務限制、故障行為及建議設計的營運取捨。準備發布的開發團隊需要在與其他帳戶共用資料集之前發現 PII。應該評估哪些服務？",
         "options": {
-          "A": "AWS Shield",
-          "B": "Amazon EFS",
+          "A": "合規模式下的 S3 Object Lock定",
+          "B": "AWS Secrets Manager",
           "C": "Amazon Macie",
-          "D": "Amazon Inspector"
+          "D": "具有客戶管理金鑰的 SSE-KMS"
         },
-        "explanation": "Macie 發現 S3 中的敏感資料，並可以在共享之前通知修復。\n其他選擇評估漏洞、DDoS 或檔案儲存。"
+        "explanation": "Macie 發現 S3 中的敏感資料，並可以在共享之前通知修復。\n其他選項適用於此領域的不同需求，但不能像 Amazon Macie 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d5-031",
-    "type": "single",
-    "question": "An enterprise with several AWS Regions needs customer-controlled encryption policies and audit events for S3 data. Which option should be selected?",
-    "options": {
-      "A": "Plaintext objects",
-      "B": "SSE-S3 only when key policy control is required",
-      "C": "A DNS record",
-      "D": "SSE-KMS with a customer managed key"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "SSE-KMS with a customer managed key provides key policy control and KMS audit events.\nPlaintext and unrelated controls do not protect or govern the data.",
     "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The team needs customer-controlled encryption policies and audit events for S3 data. Which option should be selected?",
+    "options": {
+      "A": "TLS with a managed certificate and strict security policies",
+      "B": "SSE-KMS with a customer managed key",
+      "C": "S3 Object Lock in compliance mode",
+      "D": "AWS Secrets Manager"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "SSE-KMS with a customer managed key provides key policy control and KMS audit events.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide SSE-KMS with a customer managed key for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業需要客戶控制的 S3 資料加密策略和審核事件。應該選擇哪個選項？",
+        "question": "此生產環境在多個帳戶中採用集中治理。變更必須符合最低權限、可以稽核，並且不會造成長時間中斷。擁有多個 AWS 區域的企業需要客戶控制的 S3 資料加密策略和審核事件。應該選擇哪個選項？",
         "options": {
-          "A": "明文物件",
-          "B": "僅在需要關鍵策略控制時才使用SSE-S3",
-          "C": "DNS 記錄",
-          "D": "具有客戶管理金鑰的 SSE-KMS"
+          "A": "具有託管憑證和嚴格安全策略的 TLS",
+          "B": "具有客戶管理金鑰的 SSE-KMS",
+          "C": "合規模式下的 S3 Object Lock定",
+          "D": "AWS Secrets Manager"
         },
-        "explanation": "具有客戶管理金鑰的 SSE-KMS 提供金鑰策略控制和 KMS 審核事件。\n明文和不相關的控制項不會保護或管理資料。"
+        "explanation": "具有客戶管理金鑰的 SSE-KMS 提供金鑰策略控制和 KMS 審核事件。\n其他選項適用於此領域的不同需求，但不能像 具有客戶管理金鑰的 SSE-KMS 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d5-032",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A service owner reviewing an incident must prevent deletion of compliance records until a retention date. Which S3 feature fits?",
+    "question": "A service owner reviewing an incident is redesigning one integrated end-to-end architecture. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The organization will accept additional managed-service cost only when it measurably improves security and availability with less operational effort. The workload must prevent deletion of compliance records until a retention date, and the same architecture needs audit records for security API activity. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?",
     "options": {
-      "A": "S3 Object Lock in compliance mode",
-      "B": "S3 Transfer Acceleration",
-      "C": "A security group",
-      "D": "A Route 53 alias"
+      "A": "Use S3 Object Lock in compliance mode for the primary requirement and integrate it with AWS CloudTrail for the connected control",
+      "B": "Use S3 Object Lock in compliance mode but replace the connected control with Amazon GuardDuty",
+      "C": "Use AWS Security Hub for the primary requirement and integrate it with AWS CloudTrail",
+      "D": "Combine AWS Security Hub with Amazon Macie as a single platform design"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Object Lock compliance mode enforces retention against deletion and overwrite.\nThe other choices do not enforce object retention.",
-    "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "S3 Object Lock in compliance mode satisfies the first part of the architecture: Object Lock compliance mode enforces retention against deletion and overwrite. AWS CloudTrail satisfies the connected requirement: CloudTrail records API activity for investigation and compliance.\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務所有者必須防止刪除合規記錄，直到保留日期為止。 S3 的哪些功能適合？",
+        "question": "某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：審查事件的服務所有者必須防止刪除合規記錄，直到保留日期為止。 第二項需求：準備發布的開發團隊需要安全 API 活動的審核記錄。 只有在託管服務能以較低營運負擔明確改善安全性與可用性時，組織才會接受額外成本。 哪一個架構最符合這些要求？",
         "options": {
-          "A": "合規模式下的 S3 Object Lock定",
-          "B": "S3 Transfer Acceleration",
-          "C": "一個安全群組",
-          "D": "Route 53 別名"
+          "A": "以合規模式下的 S3 Object Lock定處理主要需求，並整合AWS CloudTrail作為相連控制",
+          "B": "使用合規模式下的 S3 Object Lock定，但以Amazon GuardDuty取代相連控制",
+          "C": "以AWS Security Hub處理主要需求，並整合AWS CloudTrail",
+          "D": "把AWS Security Hub與Amazon Macie結合為單一平台設計"
         },
-        "explanation": "物件鎖定合規模式強制保留以防止刪除和覆蓋。\n其他選擇不強制物件保留。"
+        "explanation": "合規模式下的 S3 Object Lock定 負責架構的第一項需求，AWS CloudTrail 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。"
       }
     }
   },
   {
     "id": "scs-c03-d5-033",
-    "type": "single",
-    "question": "A team optimizing an existing implementation needs to keep database credentials out of source and rotate them automatically. Which service fits?",
-    "options": {
-      "A": "An EBS snapshot",
-      "B": "AWS Secrets Manager",
-      "C": "An S3 website",
-      "D": "A CloudFront distribution"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Secrets Manager stores and rotates credentials and supports runtime retrieval.\nThe other choices do not manage application secrets.",
     "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The team needs to keep database credentials out of source and rotate them automatically. Which service fits?",
+    "options": {
+      "A": "TLS with a managed certificate and strict security policies",
+      "B": "Amazon Macie",
+      "C": "SSE-KMS with a customer managed key",
+      "D": "AWS Secrets Manager"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Secrets Manager stores and rotates credentials and supports runtime retrieval.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Secrets Manager for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊需要確保資料庫憑證不受來源影響並自動輪調。適合哪種服務？",
+        "question": "此生產環境在多個帳戶中採用集中治理。變更必須符合最低權限、可以稽核，並且不會造成長時間中斷。優化現有實施的團隊需要確保資料庫憑證不受來源影響並自動輪調。適合哪種服務？",
         "options": {
-          "A": "EBS Snapshot",
-          "B": "AWS Secrets Manager",
-          "C": "S3 網站",
-          "D": "CloudFront 發行版"
+          "A": "具有託管憑證和嚴格安全策略的 TLS",
+          "B": "Amazon Macie",
+          "C": "具有客戶管理金鑰的 SSE-KMS",
+          "D": "AWS Secrets Manager"
         },
-        "explanation": "Secrets Manager 儲存和輪換憑證並支援運行時檢索。\n其他選擇不管理應用程式機密。"
+        "explanation": "Secrets Manager 儲存和輪換憑證並支援運行時檢索。\n其他選項適用於此領域的不同需求，但不能像 AWS Secrets Manager 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "scs-c03-d5-034",
-    "type": "single",
-    "question": "A company introducing an automated workflow must protect data in transit to a public API. Which configuration is appropriate?",
-    "options": {
-      "A": "An unencrypted public endpoint",
-      "B": "A bucket lifecycle rule",
-      "C": "TLS with a managed certificate and strict security policies",
-      "D": "HTTP only"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "TLS protects data in transit and certificate management supports trusted endpoints.\nHTTP and unrelated storage controls do not protect transport.",
     "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "matching",
+    "question": "A company introducing an automated workflow is reviewing several independent production requirements. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. Match each workload requirement to the most appropriate implementation.",
+    "options": {
+      "A": "A workload must protect data in transit to a public API",
+      "B": "A workload needs to discover PII before sharing a data set with another account",
+      "C": "A workload needs customer-controlled encryption policies and audit events for S3 data"
+    },
+    "answer": "",
+    "isMultiAnswer": false,
+    "targets": {
+      "1": "TLS with a managed certificate and strict security policies",
+      "2": "Amazon Macie",
+      "3": "SSE-KMS with a customer managed key"
+    },
+    "correctMatches": {
+      "A": "1",
+      "B": "2",
+      "C": "3"
+    },
+    "explanation": "A maps to TLS with a managed certificate and strict security policies. TLS protects data in transit and certificate management supports trusted endpoints. B maps to Amazon Macie. Macie discovers sensitive data in S3 and can inform remediation before sharing. C maps to SSE-KMS with a customer managed key. SSE-KMS with a customer managed key provides key policy control and KMS audit events.\nEach target is intended for a different requirement, so all three mappings must be evaluated independently.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司必須保護傳輸到公共 API 的資料。哪種配置合適？",
+        "question": "團隊正在審查多項彼此獨立的生產需求。此生產環境在多個帳戶中採用集中治理。變更必須符合最低權限、可以稽核，並且不會造成長時間中斷。請將每項工作負載需求配對至最適合的實作。",
         "options": {
-          "A": "未加密的公共端點",
-          "B": "儲存桶生命週期規則",
-          "C": "具有託管憑證和嚴格安全策略的 TLS",
-          "D": "僅 HTTP"
+          "A": "工作負載需求：準備增加流量的新創公司必須保護傳輸到公共 API 的資料",
+          "B": "工作負載需求：支援關鍵工作負載的營運團隊需要在與其他帳戶共用資料集之前發現 PII",
+          "C": "工作負載需求：生產團隊需要客戶控制的 S3 資料加密策略和審核事件"
         },
-        "explanation": "TLS 保護傳輸中的資料，憑證管理支援可信任端點。\nHTTP 和不相關的儲存控制不會保護傳輸。"
+        "targets": {
+          "1": "具有託管憑證和嚴格安全策略的 TLS",
+          "2": "Amazon Macie",
+          "3": "具有客戶管理金鑰的 SSE-KMS"
+        },
+        "explanation": "A 對應 具有託管憑證和嚴格安全策略的 TLS。TLS 保護傳輸中的資料，憑證管理支援可信任端點。 B 對應 Amazon Macie。Macie 發現 S3 中的敏感資料，並可以在共享之前通知修復。 C 對應 具有客戶管理金鑰的 SSE-KMS。具有客戶管理金鑰的 SSE-KMS 提供金鑰策略控制和 KMS 審核事件。\n每個目標均處理不同需求，因此必須分別評估三項配對。"
       }
     }
   },
   {
     "id": "scs-c03-d5-035",
-    "type": "single",
-    "question": "An AWS administrator working in a shared environment needs to discover PII before sharing a data set with another account. Which service should be evaluated?",
-    "options": {
-      "A": "Amazon Inspector",
-      "B": "AWS Shield",
-      "C": "Amazon EFS",
-      "D": "Amazon Macie"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Macie discovers sensitive data in S3 and can inform remediation before sharing.\nThe other choices assess vulnerabilities, DDoS, or file storage.",
     "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "An AWS administrator working in a shared environment is planning two independent production changes. The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage. The first team needs to discover PII before sharing a data set with another account. A second team needs customer-controlled encryption policies and audit events for S3 data. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Amazon Macie",
+      "B": "SSE-KMS with a customer managed key",
+      "C": "S3 Object Lock in compliance mode",
+      "D": "AWS Secrets Manager",
+      "E": "TLS with a managed certificate and strict security policies"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Amazon Macie meets the first requirement: Macie discovers sensitive data in S3 and can inform remediation before sharing. SSE-KMS with a customer managed key meets the second requirement: SSE-KMS with a customer managed key provides key policy control and KMS audit events.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "在共享環境中工作的 AWS 管理員需要在與其他帳戶共用資料集之前發現 PII。應該評估哪些服務？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此生產環境在多個帳戶中採用集中治理。變更必須符合最低權限、可以稽核，並且不會造成長時間中斷。第一項需求：支援關鍵工作負載的營運團隊需要在與其他帳戶共用資料集之前發現 PII。第二項需求：生產團隊需要客戶控制的 S3 資料加密策略和審核事件。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "Amazon Inspector",
-          "B": "AWS Shield",
-          "C": "Amazon EFS",
-          "D": "Amazon Macie"
+          "A": "Amazon Macie",
+          "B": "具有客戶管理金鑰的 SSE-KMS",
+          "C": "合規模式下的 S3 Object Lock定",
+          "D": "AWS Secrets Manager",
+          "E": "具有託管憑證和嚴格安全策略的 TLS"
         },
-        "explanation": "Macie 發現 S3 中的敏感資料，並可以在共享之前通知修復。\n其他選擇評估漏洞、DDoS 或檔案儲存。"
+        "explanation": "Amazon Macie 符合第一項需求：Macie 發現 S3 中的敏感資料，並可以在共享之前通知修復。 具有客戶管理金鑰的 SSE-KMS 符合第二項需求：具有客戶管理金鑰的 SSE-KMS 提供金鑰策略控制和 KMS 審核事件。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   }

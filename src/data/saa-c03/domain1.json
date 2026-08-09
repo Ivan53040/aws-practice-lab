@@ -1,7 +1,7 @@
 [
   {
     "id": "saa-d1-001",
-    "question": "A company wants to ensure that data stored in Amazon S3 is encrypted at rest using keys fully managed by AWS, with no customer-managed key configuration, no per-key access policies, and no AWS KMS audit trail. Which encryption option should they use?",
+    "question": "This change affects a production workload. The team must preserve existing behavior and prefers a managed AWS capability with low operational overhead. A company wants to ensure that data stored in Amazon S3 is encrypted at rest using keys fully managed by AWS, with no customer-managed key configuration, no per-key access policies, and no AWS KMS audit trail. Which encryption option should they use?",
     "options": {
       "A": "SSE-S3",
       "B": "SSE-KMS",
@@ -13,10 +13,10 @@
     "isMultiAnswer": false,
     "type": "single",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "一家公司希望確保使用完全由 AWS 管理的金鑰對儲存在 Amazon S3 中的資料進行靜態加密，無需客戶管理的金鑰配置、沒有每個金鑰的存取策略，也沒有 AWS KMS 稽核追蹤。他們應該使用哪種加密選項？",
+        "question": "這項變更會影響生產工作負載。團隊必須保留現有行為，並希望採用營運負擔較低的 AWS 託管功能。一家公司希望確保使用完全由 AWS 管理的金鑰對儲存在 Amazon S3 中的資料進行靜態加密，無需客戶管理的金鑰配置、沒有每個金鑰的存取策略，也沒有 AWS KMS 稽核追蹤。他們應該使用哪種加密選項？",
         "options": {
           "A": "SSE-S3",
           "B": "上證KMS",
@@ -29,7 +29,7 @@
   },
   {
     "id": "saa-d1-002",
-    "question": "Which AWS service provides a managed hardware security module (HSM) for cryptographic key storage?",
+    "question": "The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. Which AWS service provides a managed hardware security module (HSM) for cryptographic key storage?",
     "options": {
       "A": "AWS KMS",
       "B": "AWS CloudHSM",
@@ -41,10 +41,10 @@
     "isMultiAnswer": false,
     "type": "single",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "哪一種 AWS 服務提供用於加密金鑰儲存的託管硬體安全模組 (HSM)？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。哪一種 AWS 服務提供用於加密金鑰儲存的託管硬體安全模組 (HSM)？",
         "options": {
           "A": "AWS KMS",
           "B": "AWS CloudHSM",
@@ -57,7 +57,7 @@
   },
   {
     "id": "saa-d1-003",
-    "question": "A solutions architect needs to restrict access to an S3 bucket so that only a specific IAM role can access it. What should they configure?",
+    "question": "The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. A solutions architect needs to restrict access to an S3 bucket so that only a specific IAM role can access it. What should they configure?",
     "options": {
       "A": "S3 ACL",
       "B": "S3 bucket policy with a Condition element",
@@ -69,10 +69,10 @@
     "isMultiAnswer": false,
     "type": "single",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "解決方案架構師需要限制對 S3 儲存桶的存取，以便只有特定的 IAM Roles才能存取它。他們應該配置什麼？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。解決方案架構師需要限制對 S3 儲存桶的存取，以便只有特定的 IAM Roles才能存取它。他們應該配置什麼？",
         "options": {
           "A": "S3 ACL",
           "B": "帶有 Condition 元素的 S3 儲存桶策略",
@@ -85,7 +85,7 @@
   },
   {
     "id": "saa-d1-004",
-    "question": "Which feature of Amazon VPC allows you to monitor network traffic flowing to and from network interfaces?",
+    "question": "The workload follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. Which feature of Amazon VPC allows you to monitor network traffic flowing to and from network interfaces?",
     "options": {
       "A": "VPC Peering",
       "B": "VPC Flow Logs",
@@ -97,10 +97,10 @@
     "isMultiAnswer": false,
     "type": "single",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "Amazon VPC 的哪些功能可讓您監控流入和流出網路介面的網路流量？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。Amazon VPC 的哪些功能可讓您監控流入和流出網路介面的網路流量？",
         "options": {
           "A": "VPC 對等互連",
           "B": "VPC流日誌",
@@ -113,7 +113,7 @@
   },
   {
     "id": "saa-d1-005",
-    "question": "A company requires all API calls to AWS services to be logged for compliance. Which service should they enable?",
+    "question": "The team must avoid a prolonged outage and will validate the selected capability in staging before a controlled production rollout. A company requires all API calls to AWS services to be logged for compliance. Which service should they enable?",
     "options": {
       "A": "Amazon CloudWatch",
       "B": "AWS CloudTrail",
@@ -125,10 +125,10 @@
     "isMultiAnswer": false,
     "type": "single",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "公司要求記錄對 AWS 服務的所有 API 呼叫以確保合規性。他們應該啟用哪一項服務？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。公司要求記錄對 AWS 服務的所有 API 呼叫以確保合規性。他們應該啟用哪一項服務？",
         "options": {
           "A": "Amazon CloudWatch",
           "B": "AWS CloudTrail",
@@ -142,7 +142,7 @@
   {
     "id": "saa-d1-006",
     "type": "single",
-    "question": "A company in one AWS account needs an application in a different AWS account to read a private S3 bucket. Which approach follows least privilege?",
+    "question": "This change affects a production workload. The team must preserve existing behavior and prefers a managed AWS capability with low operational overhead. A company in one AWS account needs an application in a different AWS account to read a private S3 bucket. Which approach follows least privilege?",
     "options": {
       "A": "Create an IAM user and share its access keys with the application",
       "B": "Create an IAM role in the bucket account and allow the application account to assume it",
@@ -153,10 +153,10 @@
     "isMultiAnswer": false,
     "explanation": "A cross-account IAM role with a narrowly scoped trust policy and permissions policy avoids long-lived credentials and limits access to the required bucket actions.\nAn IAM user with shared keys creates unmanaged long-lived credentials. A public bucket removes the security boundary. Administrator permissions are broader than the application needs.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "一個 AWS 帳戶中的公司需要另一個 AWS 帳戶中的應用程式來讀取私人 S3 儲存桶。哪一種方法遵循最小特權？",
+        "question": "這項變更會影響生產工作負載。團隊必須保留現有行為，並希望採用營運負擔較低的 AWS 託管功能。一個 AWS 帳戶中的公司需要另一個 AWS 帳戶中的應用程式來讀取私人 S3 儲存桶。哪一種方法遵循最小特權？",
         "options": {
           "A": "建立 IAM Users並與應用程式共用其存取金鑰",
           "B": "在儲存桶帳戶中建立 IAM Roles並允許應用程式帳戶代入該角色",
@@ -170,7 +170,7 @@
   {
     "id": "saa-d1-007",
     "type": "single",
-    "question": "An organization wants employees to use their existing corporate identities to access multiple AWS accounts. Which service should the solutions architect recommend?",
+    "question": "The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. An organization wants employees to use their existing corporate identities to access multiple AWS accounts. Which service should the solutions architect recommend?",
     "options": {
       "A": "AWS IAM Identity Center",
       "B": "Amazon Cognito",
@@ -181,10 +181,10 @@
     "isMultiAnswer": false,
     "explanation": "AWS IAM Identity Center provides centralized workforce access with federated identities and permission sets across AWS accounts.\nAmazon Cognito is for application users. Secrets Manager stores secrets. Certificate Manager manages certificates, not workforce sign-in.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "組織希望員工使用現有的公司身分存取多個 AWS 帳戶。解決方案架構師應該推薦哪一種服務？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。組織希望員工使用現有的公司身分存取多個 AWS 帳戶。解決方案架構師應該推薦哪一種服務？",
         "options": {
           "A": "AWS IAM Identity Center",
           "B": "Amazon Cognito",
@@ -198,7 +198,7 @@
   {
     "id": "saa-d1-008",
     "type": "single",
-    "question": "A security team must prevent member accounts from disabling CloudTrail. Which control should provide the organization-wide guardrail?",
+    "question": "The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. A security team must prevent member accounts from disabling CloudTrail. Which control should provide the organization-wide guardrail?",
     "options": {
       "A": "An IAM policy attached to one administrator user",
       "B": "An AWS Organizations service control policy",
@@ -209,10 +209,10 @@
     "isMultiAnswer": false,
     "explanation": "A service control policy can set a maximum permissions boundary for member accounts and deny actions such as disabling CloudTrail.\nA user policy affects only its identity and can be changed by another administrator. S3 lifecycle rules and security groups do not govern account API permissions.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "安全團隊必須阻止成員帳號停用 CloudTrail。哪一種控制應該提供組織範圍的護欄？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。安全團隊必須阻止成員帳號停用 CloudTrail。哪一種控制應該提供組織範圍的護欄？",
         "options": {
           "A": "附加到一個管理員使用者的 IAM 策略",
           "B": "AWS Organizations 服務控制原則",
@@ -226,7 +226,7 @@
   {
     "id": "saa-d1-009",
     "type": "multi",
-    "question": "Which two mechanisms can grant a principal access to an S3 bucket in another AWS account? Select two.",
+    "question": "The workload follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. Which two mechanisms can grant a principal access to an S3 bucket in another AWS account? Select two.",
     "options": {
       "A": "A bucket policy in the resource account",
       "B": "An IAM policy in the principal account",
@@ -241,10 +241,10 @@
     "isMultiAnswer": true,
     "explanation": "Cross-account S3 access normally requires permission from the bucket policy and an identity policy in the principal account, subject to any explicit denies.\nSecurity groups and internet gateways control network traffic, not S3 authorization. Lifecycle rules manage object transitions and expiration.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "哪兩種機制可以授予委託人對另一個 AWS 帳戶中的 S3 儲存桶的存取權限？選擇兩個。",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。哪兩種機制可以授予委託人對另一個 AWS 帳戶中的 S3 儲存桶的存取權限？選擇兩個。",
         "options": {
           "A": "資源帳戶中的儲存桶策略",
           "B": "主帳戶中的 IAM 策略",
@@ -259,7 +259,7 @@
   {
     "id": "saa-d1-010",
     "type": "single",
-    "question": "What is the recommended first protection for the AWS account root user?",
+    "question": "The team must avoid a prolonged outage and will validate the selected capability in staging before a controlled production rollout. What is the recommended first protection for the AWS account root user?",
     "options": {
       "A": "Use the root user for daily administration",
       "B": "Enable multi-factor authentication and avoid using the root user for routine work",
@@ -270,10 +270,10 @@
     "isMultiAnswer": false,
     "explanation": "The root user should have multi-factor authentication enabled and should be used only for tasks that require it.\nUsing the root user daily increases exposure. Storing a root access key does not make routine use safe. The root user cannot be limited by an IAM policy in the same way as an IAM principal.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "建議為 AWS 帳戶根使用者提供的首要保護是什麼？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。建議為 AWS 帳戶根使用者提供的首要保護是什麼？",
         "options": {
           "A": "使用root使用者進行日常管理",
           "B": "啟用多重身份驗證並避免使用 root 使用者進行日常工作",
@@ -287,7 +287,7 @@
   {
     "id": "saa-d1-011",
     "type": "single",
-    "question": "Instances in a private subnet must download software updates from the public internet without accepting inbound connections. Which design is appropriate?",
+    "question": "This change affects a production workload. The team must preserve existing behavior and prefers a managed AWS capability with low operational overhead. Instances in a private subnet must download software updates from the public internet without accepting inbound connections. Which design is appropriate?",
     "options": {
       "A": "Attach an internet gateway directly to the private subnet",
       "B": "Route outbound traffic through a NAT gateway in a public subnet",
@@ -298,10 +298,10 @@
     "isMultiAnswer": false,
     "explanation": "A NAT gateway in a public subnet allows instances in private subnets to initiate outbound internet connections while preventing unsolicited inbound connections.\nAn internet gateway does not provide private-subnet address translation. Public addresses expose the instances directly. Network ACLs do not perform NAT.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "私有子網路中的執行個體必須從公用 Internet 下載軟體更新，而不接受入站連線。哪種設計合適？",
+        "question": "這項變更會影響生產工作負載。團隊必須保留現有行為，並希望採用營運負擔較低的 AWS 託管功能。私有子網路中的執行個體必須從公用 Internet 下載軟體更新，而不接受入站連線。哪種設計合適？",
         "options": {
           "A": "將 Internet 網關Direct Connect到私人子網",
           "B": "透過公有子網路中的 NAT 閘道由出站流量",
@@ -315,7 +315,7 @@
   {
     "id": "saa-d1-012",
     "type": "single",
-    "question": "Which statement correctly describes an EC2 security group?",
+    "question": "The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. Which statement correctly describes an EC2 security group?",
     "options": {
       "A": "It is stateless and requires separate inbound and outbound rules for every flow",
       "B": "It is stateful and allows return traffic for an accepted connection automatically",
@@ -326,10 +326,10 @@
     "isMultiAnswer": false,
     "explanation": "Security groups are stateful virtual firewalls attached to network interfaces, so return traffic for an allowed connection is automatically permitted.\nNetwork ACLs are stateless. Security groups apply to interfaces in a VPC, not an entire Region, and support allow rules only, not explicit deny rules.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "哪一項敘述正確地描述了 EC2 安全群組？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。哪一項敘述正確地描述了 EC2 安全群組？",
         "options": {
           "A": "它是無狀態的，每個流都需要單獨的入站和出站規則",
           "B": "它是有狀態的，並允許自動返回已接受連線的流量",
@@ -343,7 +343,7 @@
   {
     "id": "saa-d1-013",
     "type": "single",
-    "question": "A network team needs subnet-level, stateless filtering with both allow and deny rules. Which feature should they use?",
+    "question": "The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. A network team needs subnet-level, stateless filtering with both allow and deny rules. Which feature should they use?",
     "options": {
       "A": "Security groups",
       "B": "Network ACLs",
@@ -354,10 +354,10 @@
     "isMultiAnswer": false,
     "explanation": "Network ACLs are stateless subnet-level controls and support ordered allow and deny rules.\nSecurity groups are stateful interface-level allow lists. IAM policies govern API authorization. AWS WAF filters HTTP requests at supported web entry points.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "網路團隊需要具有允許和拒絕規則的子網路層級無狀態過濾。他們應該使用哪個功能？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。網路團隊需要具有允許和拒絕規則的子網路層級無狀態過濾。他們應該使用哪個功能？",
         "options": {
           "A": "安全群組",
           "B": "網路 ACL",
@@ -371,7 +371,7 @@
   {
     "id": "saa-d1-014",
     "type": "single",
-    "question": "A public web application must block common SQL injection patterns before requests reach an Application Load Balancer. Which service should be used?",
+    "question": "The workload follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. A public web application must block common SQL injection patterns before requests reach an Application Load Balancer. Which service should be used?",
     "options": {
       "A": "Amazon GuardDuty",
       "B": "AWS WAF",
@@ -382,10 +382,10 @@
     "isMultiAnswer": false,
     "explanation": "AWS WAF evaluates HTTP requests with managed or custom rules and can block common web exploits such as SQL injection.\nGuardDuty detects threats from logs and telemetry. Config evaluates resource configuration compliance. Inspector scans workloads for vulnerabilities.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "在請求到達應用程式負載平衡器之前，公共 Web 應用程式必須阻止常見的 SQL 注入模式。應該使用哪種服務？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。在請求到達應用程式負載平衡器之前，公共 Web 應用程式必須阻止常見的 SQL 注入模式。應該使用哪種服務？",
         "options": {
           "A": "Amazon GuardDuty",
           "B": "AWS WAF",
@@ -399,7 +399,7 @@
   {
     "id": "saa-d1-015",
     "type": "single",
-    "question": "An application needs to store database credentials and rotate them without putting secrets in source code. Which service is the best fit?",
+    "question": "The team must avoid a prolonged outage and will validate the selected capability in staging before a controlled production rollout. An application needs to store database credentials and rotate them without putting secrets in source code. Which service is the best fit?",
     "options": {
       "A": "Amazon S3",
       "B": "AWS Secrets Manager",
@@ -410,10 +410,10 @@
     "isMultiAnswer": false,
     "explanation": "Secrets Manager securely stores credentials and supports rotation workflows that applications can retrieve at runtime.\nS3 is object storage, Certificate Manager manages certificates, and CloudWatch Logs stores log events rather than application secrets.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "應用程式需要儲存資料庫憑證並輪換它們，而不將機密放入原始碼中。哪種服務最適合？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。應用程式需要儲存資料庫憑證並輪換它們，而不將機密放入原始碼中。哪種服務最適合？",
         "options": {
           "A": "Amazon S3",
           "B": "AWS Secrets Manager",
@@ -427,7 +427,7 @@
   {
     "id": "saa-d1-016",
     "type": "single",
-    "question": "A mobile application needs user registration, sign-in, and token issuance without building an identity service. Which AWS service should be used?",
+    "question": "This change affects a production workload. The team must preserve existing behavior and prefers a managed AWS capability with low operational overhead. A mobile application needs user registration, sign-in, and token issuance without building an identity service. Which AWS service should be used?",
     "options": {
       "A": "Amazon Cognito user pools",
       "B": "AWS IAM Identity Center",
@@ -438,10 +438,10 @@
     "isMultiAnswer": false,
     "explanation": "Amazon Cognito user pools provide managed application user directories and tokens for web and mobile applications.\nIAM Identity Center is designed for workforce access to AWS accounts and applications. Organizations and Control Tower govern AWS accounts rather than application users.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "行動應用程式需要使用者註冊、登入和令牌發行，而無需建立身分識別服務。應使用哪種 AWS 服務？",
+        "question": "這項變更會影響生產工作負載。團隊必須保留現有行為，並希望採用營運負擔較低的 AWS 託管功能。行動應用程式需要使用者註冊、登入和令牌發行，而無需建立身分識別服務。應使用哪種 AWS 服務？",
         "options": {
           "A": "Amazon Cognito 使用者池",
           "B": "AWS IAM Identity Center",
@@ -455,7 +455,7 @@
   {
     "id": "saa-d1-017",
     "type": "single",
-    "question": "A company wants enhanced visibility and assistance during a large distributed denial-of-service attack against its public applications. Which service is most appropriate?",
+    "question": "The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. A company wants enhanced visibility and assistance during a large distributed denial-of-service attack against its public applications. Which service is most appropriate?",
     "options": {
       "A": "AWS Shield Advanced",
       "B": "Amazon Macie",
@@ -466,10 +466,10 @@
     "isMultiAnswer": false,
     "explanation": "AWS Shield Advanced provides enhanced DDoS protection, visibility, and response support for protected AWS resources.\nMacie discovers sensitive data in S3. KMS manages encryption keys. Detective helps investigate findings rather than absorb DDoS traffic.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "一家公司希望在針對其公共應用程式的大規模分散式阻斷服務攻擊期間獲得增強的可見性和幫助。哪種服務最適合？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。一家公司希望在針對其公共應用程式的大規模分散式阻斷服務攻擊期間獲得增強的可見性和幫助。哪種服務最適合？",
         "options": {
           "A": "AWS Shield Advanced",
           "B": "Amazon Macie",
@@ -483,7 +483,7 @@
   {
     "id": "saa-d1-018",
     "type": "single",
-    "question": "A private API should be reachable only from applications inside a VPC. Which API Gateway endpoint type should be used?",
+    "question": "The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. A private API should be reachable only from applications inside a VPC. Which API Gateway endpoint type should be used?",
     "options": {
       "A": "Edge-optimized",
       "B": "Regional",
@@ -494,10 +494,10 @@
     "isMultiAnswer": false,
     "explanation": "A private API Gateway endpoint is accessible through an interface VPC endpoint and can be limited to VPC resources.\nEdge-optimized and Regional endpoints are public endpoint types. Application-level filtering does not remove the public network exposure.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "私有 API 只能從 VPC 內的應用程式存取。應使用哪種 API 網關端點類型？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。私有 API 只能從 VPC 內的應用程式存取。應使用哪種 API 網關端點類型？",
         "options": {
           "A": "邊緣優化",
           "B": "區域性",
@@ -511,7 +511,7 @@
   {
     "id": "saa-d1-019",
     "type": "single",
-    "question": "A company requires customer-controlled key policies and an audit trail for S3 encryption operations. Which option should they choose?",
+    "question": "The workload follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. A company requires customer-controlled key policies and an audit trail for S3 encryption operations. Which option should they choose?",
     "options": {
       "A": "SSE-S3",
       "B": "SSE-KMS with a customer managed KMS key",
@@ -522,10 +522,10 @@
     "isMultiAnswer": false,
     "explanation": "SSE-KMS with a customer managed key provides customer-controlled key policies and KMS API events that can be audited with CloudTrail.\nSSE-S3 uses S3-managed keys with less customer control. SSE-C requires the customer to provide the key on requests but does not provide KMS key policy management. Versioning does not encrypt data.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "公司需要客戶控制的金鑰策略和 S3 加密操作的審核追蹤。他們應該選擇哪個選項？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。公司需要客戶控制的金鑰策略和 S3 加密操作的審核追蹤。他們應該選擇哪個選項？",
         "options": {
           "A": "SSE-S3",
           "B": "具有客戶管理的 KMS 金鑰的 SSE-KMS",
@@ -539,7 +539,7 @@
   {
     "id": "saa-d1-020",
     "type": "multi",
-    "question": "Which two controls help protect objects in an S3 bucket from accidental deletion? Select two.",
+    "question": "The team must avoid a prolonged outage and will validate the selected capability in staging before a controlled production rollout. Which two controls help protect objects in an S3 bucket from accidental deletion? Select two.",
     "options": {
       "A": "S3 Versioning",
       "B": "S3 Object Lock",
@@ -554,10 +554,10 @@
     "isMultiAnswer": true,
     "explanation": "Versioning preserves previous object versions, and Object Lock can enforce retention or legal holds that prevent deletion or overwrite.\nTransfer Acceleration improves transfer speed. Event notifications publish object events. CloudFront caches and serves content but does not protect bucket objects from deletion.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "哪兩個控制項有助於保護 S3 儲存桶中的物件免於意外刪除？選擇兩個。",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。哪兩個控制項有助於保護 S3 儲存桶中的物件免於意外刪除？選擇兩個。",
         "options": {
           "A": "S3 Versioning",
           "B": "S3 Object Lock",
@@ -572,7 +572,7 @@
   {
     "id": "saa-d1-021",
     "type": "single",
-    "question": "A company uses a cross-account IAM role and wants to prevent confused deputy attacks when a third party assumes the role. Which condition should be included in the trust policy?",
+    "question": "This change affects a production workload. The team must preserve existing behavior and prefers a managed AWS capability with low operational overhead. A company uses a cross-account IAM role and wants to prevent confused deputy attacks when a third party assumes the role. Which condition should be included in the trust policy?",
     "options": {
       "A": "aws:SourceAccount or an equivalent external identifier condition",
       "B": "s3:x-amz-acl",
@@ -583,10 +583,10 @@
     "isMultiAnswer": false,
     "explanation": "A source-account or external-identifier condition binds the role assumption to the expected caller context and helps prevent a third party from misusing the trusted service.\nThe other condition keys apply to storage, compute, or content delivery requests and do not protect the role trust relationship.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "一家公司使用跨帳戶 IAM Roles，並希望在第三方擔任該角色時防止混淆的代理攻擊。信託保單應包含哪些條件？",
+        "question": "這項變更會影響生產工作負載。團隊必須保留現有行為，並希望採用營運負擔較低的 AWS 託管功能。一家公司使用跨帳戶 IAM Roles，並希望在第三方擔任該角色時防止混淆的代理攻擊。信託保單應包含哪些條件？",
         "options": {
           "A": "aws:SourceAccount 或等效的外部識別碼條件",
           "B": "s3:x-amz-acl",
@@ -600,7 +600,7 @@
   {
     "id": "saa-d1-022",
     "type": "single",
-    "question": "An application running on Amazon EC2 needs temporary permissions to read from Amazon S3. Which approach follows AWS best practices?",
+    "question": "The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. An application running on Amazon EC2 needs temporary permissions to read from Amazon S3. Which approach follows AWS best practices?",
     "options": {
       "A": "Store an IAM user access key in the AMI",
       "B": "Attach an IAM role to the EC2 instance profile",
@@ -611,10 +611,10 @@
     "isMultiAnswer": false,
     "explanation": "An EC2 instance profile supplies temporary credentials through the instance metadata service without embedding long-lived keys in the application or image.\nAn AMI, user data, or source file can expose long-lived credentials. Public access removes the required authorization boundary.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "在 Amazon EC2 上執行的應用程式需要臨時權限才能從 Amazon S3 讀取。哪種方法遵循 AWS 最佳實務？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。在 Amazon EC2 上執行的應用程式需要臨時權限才能從 Amazon S3 讀取。哪種方法遵循 AWS 最佳實務？",
         "options": {
           "A": "在 AMI 中儲存 IAM Users存取金鑰",
           "B": "將 IAM Roles附加到 EC2 執行個體設定檔",
@@ -628,7 +628,7 @@
   {
     "id": "saa-d1-023",
     "type": "single",
-    "question": "A security administrator must delegate a role to a team but prevent the team from granting permissions outside an approved set. Which IAM feature should be used?",
+    "question": "The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. A security administrator must delegate a role to a team but prevent the team from granting permissions outside an approved set. Which IAM feature should be used?",
     "options": {
       "A": "An IAM permission boundary",
       "B": "An S3 lifecycle policy",
@@ -639,10 +639,10 @@
     "isMultiAnswer": false,
     "explanation": "A permission boundary sets the maximum permissions an identity-based policy can grant, which limits delegated administration without replacing the identity policy.\nLifecycle policies manage objects, security groups filter network traffic, and health checks monitor endpoints rather than constrain IAM delegation.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "安全管理員必須將角色委派給團隊，但阻止該團隊授予批准集以外的權限。應使用哪個 IAM 功能？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。安全管理員必須將角色委派給團隊，但阻止該團隊授予批准集以外的權限。應使用哪個 IAM 功能？",
         "options": {
           "A": "IAM Permissions邊界",
           "B": "S3 生命週期策略",
@@ -656,7 +656,7 @@
   {
     "id": "saa-d1-024",
     "type": "multi",
-    "question": "Which two controls can restrict actions across member accounts in AWS Organizations? Select two.",
+    "question": "The workload follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. Which two controls can restrict actions across member accounts in AWS Organizations? Select two.",
     "options": {
       "A": "A service control policy",
       "B": "An IAM policy in each member account",
@@ -671,10 +671,10 @@
     "isMultiAnswer": true,
     "explanation": "Service control policies set organization-wide permission guardrails, and IAM policies in member accounts grant the allowed actions to specific principals.\nReplication rules, route tables, and cache policies control data movement or traffic behavior, not account API authorization.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "哪兩項控制措施可以限制 AWS Organizations 中成員帳戶之間的操作？選擇兩個。",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。哪兩項控制措施可以限制 AWS Organizations 中成員帳戶之間的操作？選擇兩個。",
         "options": {
           "A": "服務控制策略",
           "B": "每個成員帳戶中的 IAM 策略",
@@ -689,7 +689,7 @@
   {
     "id": "saa-d1-025",
     "type": "single",
-    "question": "A company wants to identify resource policies that grant access to external principals before deploying them. Which service can analyze these policies?",
+    "question": "The team must avoid a prolonged outage and will validate the selected capability in staging before a controlled production rollout. A company wants to identify resource policies that grant access to external principals before deploying them. Which service can analyze these policies?",
     "options": {
       "A": "IAM Access Analyzer",
       "B": "Amazon Inspector",
@@ -700,10 +700,10 @@
     "isMultiAnswer": false,
     "explanation": "IAM Access Analyzer uses policy analysis to identify resources that are accessible from outside the account or organization.\nInspector scans workloads for vulnerabilities, Shield mitigates DDoS attacks, and CloudWatch monitors operational data.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "公司希望在部署之前確定授予外部主體存取權限的資源策略。哪個服務可以分析這些政策？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。公司希望在部署之前確定授予外部主體存取權限的資源策略。哪個服務可以分析這些政策？",
         "options": {
           "A": "IAM Access Analyzer",
           "B": "Amazon Inspector",
@@ -717,7 +717,7 @@
   {
     "id": "saa-d1-026",
     "type": "single",
-    "question": "An S3 bucket must deny all requests that are not encrypted with TLS. Which bucket policy condition is appropriate?",
+    "question": "This change affects a production workload. The team must preserve existing behavior and prefers a managed AWS capability with low operational overhead. An S3 bucket must deny all requests that are not encrypted with TLS. Which bucket policy condition is appropriate?",
     "options": {
       "A": "aws:SecureTransport set to false in an explicit Deny",
       "B": "s3:x-amz-storage-class set to STANDARD",
@@ -728,10 +728,10 @@
     "isMultiAnswer": false,
     "explanation": "An explicit Deny when aws:SecureTransport is false blocks requests made over an unencrypted connection.\nStorage class, Region, and object tag conditions do not prove that the request used TLS.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "S3 儲存桶必須拒絕所有未使用 TLS 加密的請求。哪種儲存桶策略條件合適？",
+        "question": "這項變更會影響生產工作負載。團隊必須保留現有行為，並希望採用營運負擔較低的 AWS 託管功能。S3 儲存桶必須拒絕所有未使用 TLS 加密的請求。哪種儲存桶策略條件合適？",
         "options": {
           "A": "aws:SecureTransport 在明確拒絕中設定為 false",
           "B": "s3:x-amz-儲存類別設定為標準",
@@ -745,7 +745,7 @@
   {
     "id": "saa-d1-027",
     "type": "single",
-    "question": "A data lake team must prevent accidental public access to all current and future S3 buckets in an account. Which control provides the broadest guardrail?",
+    "question": "The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. A data lake team must prevent accidental public access to all current and future S3 buckets in an account. Which control provides the broadest guardrail?",
     "options": {
       "A": "S3 Block Public Access at the account level",
       "B": "A CloudFront origin access control",
@@ -756,10 +756,10 @@
     "isMultiAnswer": false,
     "explanation": "Account-level S3 Block Public Access settings provide a broad guardrail that blocks public bucket and object access across the account.\nCloudFront origin access control protects a distribution origin, lifecycle rules manage object age, and notifications publish events.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "資料湖團隊必須防止意外公開存取帳戶中所有目前和未來的 S3 儲存桶。哪種控制提供最廣泛的護欄？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。資料湖團隊必須防止意外公開存取帳戶中所有目前和未來的 S3 儲存桶。哪種控制提供最廣泛的護欄？",
         "options": {
           "A": "S3 在帳戶層級阻止公共存取",
           "B": "CloudFront 來源存取控制",
@@ -773,7 +773,7 @@
   {
     "id": "saa-d1-028",
     "type": "single",
-    "question": "An application needs to allow a service to use a KMS key for one narrowly scoped operation without changing the key policy. Which KMS feature is designed for this delegation?",
+    "question": "The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. An application needs to allow a service to use a KMS key for one narrowly scoped operation without changing the key policy. Which KMS feature is designed for this delegation?",
     "options": {
       "A": "A KMS grant",
       "B": "An S3 ACL",
@@ -784,10 +784,10 @@
     "isMultiAnswer": false,
     "explanation": "A KMS grant delegates specific cryptographic operations to a principal and can be constrained to the required resource and operation.\nS3 ACLs control object access, placement groups affect instance placement, and DNS records do not grant cryptographic permissions.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "應用程式需要允許服務在不更改密鑰策略的情況下使用 KMS 密鑰進行範圍狹窄的操作。哪些 KMS 功能是為此委託設計的？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。應用程式需要允許服務在不更改密鑰策略的情況下使用 KMS 密鑰進行範圍狹窄的操作。哪些 KMS 功能是為此委託設計的？",
         "options": {
           "A": "KMS 補助金",
           "B": "S3 ACL",
@@ -801,7 +801,7 @@
   {
     "id": "saa-d1-029",
     "type": "single",
-    "question": "A security team needs one CloudTrail trail to record management events from every account in an AWS Organization. Which configuration should they choose?",
+    "question": "The workload follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. A security team needs one CloudTrail trail to record management events from every account in an AWS Organization. Which configuration should they choose?",
     "options": {
       "A": "An organization trail created in the management account",
       "B": "A separate trail only in the workload account",
@@ -812,10 +812,10 @@
     "isMultiAnswer": false,
     "explanation": "An organization trail can be created in the management account and configured to log activity from member accounts to a central S3 bucket.\nA workload-only trail misses other accounts. VPC Flow Logs capture network metadata, and access point policies authorize S3 requests.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "安全團隊需要一個 CloudTrail 追蹤來記錄 AWS Organizations中每個帳戶的管理事件。他們應該選擇哪種配置？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。安全團隊需要一個 CloudTrail 追蹤來記錄 AWS Organizations中每個帳戶的管理事件。他們應該選擇哪種配置？",
         "options": {
           "A": "在管理帳戶中建立的組織跟踪",
           "B": "僅在工作負載帳戶中的單獨跟踪",
@@ -829,7 +829,7 @@
   {
     "id": "saa-d1-030",
     "type": "single",
-    "question": "A company must detect when an EC2 security group is opened to the world and evaluate the resource against a required rule. Which service should perform the configuration evaluation?",
+    "question": "The team must avoid a prolonged outage and will validate the selected capability in staging before a controlled production rollout. A company must detect when an EC2 security group is opened to the world and evaluate the resource against a required rule. Which service should perform the configuration evaluation?",
     "options": {
       "A": "AWS Config",
       "B": "Amazon Polly",
@@ -840,10 +840,10 @@
     "isMultiAnswer": false,
     "explanation": "AWS Config records resource configuration and evaluates it against rules or conformance packs.\nPolly converts text to speech, SQS queues messages, and DataSync transfers data.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "公司必須偵測 EC2 安全組何時向全世界開放，並根據所需規則評估資源。哪個服務應該執行配置評估？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。公司必須偵測 EC2 安全組何時向全世界開放，並根據所需規則評估資源。哪個服務應該執行配置評估？",
         "options": {
           "A": "AWS Config",
           "B": "Amazon Polly",
@@ -857,7 +857,7 @@
   {
     "id": "saa-d1-031",
     "type": "single",
-    "question": "Administrators need shell access to private EC2 instances without opening inbound SSH or distributing key pairs. Which service should they use?",
+    "question": "This change affects a production workload. The team must preserve existing behavior and prefers a managed AWS capability with low operational overhead. Administrators need shell access to private EC2 instances without opening inbound SSH or distributing key pairs. Which service should they use?",
     "options": {
       "A": "AWS Systems Manager Session Manager",
       "B": "Amazon Route 53 Resolver",
@@ -868,10 +868,10 @@
     "isMultiAnswer": false,
     "explanation": "Session Manager provides audited shell sessions through the Systems Manager agent and does not require an inbound SSH port or a bastion host.\nDNS resolution, certificate management, and S3 transfer acceleration do not provide controlled interactive instance access.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "管理員需要對私有 EC2 執行個體進行 shell 存取，而無需開啟入站 SSH 或分發金鑰對。他們應該使用哪種服務？",
+        "question": "這項變更會影響生產工作負載。團隊必須保留現有行為，並希望採用營運負擔較低的 AWS 託管功能。管理員需要對私有 EC2 執行個體進行 shell 存取，而無需開啟入站 SSH 或分發金鑰對。他們應該使用哪種服務？",
         "options": {
           "A": "AWS Systems Manager Session Manager",
           "B": "Amazon Route 53 Resolver",
@@ -885,7 +885,7 @@
   {
     "id": "saa-d1-032",
     "type": "single",
-    "question": "A company wants a workforce user to access only a read-only production account and a developer account. Which IAM Identity Center feature defines this assignment?",
+    "question": "The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. A company wants a workforce user to access only a read-only production account and a developer account. Which IAM Identity Center feature defines this assignment?",
     "options": {
       "A": "Permission sets assigned to the user or group for each account",
       "B": "S3 object tags",
@@ -896,10 +896,10 @@
     "isMultiAnswer": false,
     "explanation": "IAM Identity Center permission sets define the permissions provisioned to workforce identities in selected AWS accounts.\nThe other choices are unrelated to workforce account authorization.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "公司希望員工使用者只能存取只讀生產帳戶和開發人員帳戶。哪個 IAM Identity Center功能定義了此指派？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。公司希望員工使用者只能存取只讀生產帳戶和開發人員帳戶。哪個 IAM Identity Center功能定義了此指派？",
         "options": {
           "A": "分配給每個帳戶的使用者或群組的權限集",
           "B": "S3 物件標籤",
@@ -913,7 +913,7 @@
   {
     "id": "saa-d1-033",
     "type": "single",
-    "question": "A mobile application needs temporary AWS credentials to upload user content to a private S3 prefix after the user signs in. Which Cognito capability should be used?",
+    "question": "The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. A mobile application needs temporary AWS credentials to upload user content to a private S3 prefix after the user signs in. Which Cognito capability should be used?",
     "options": {
       "A": "A Cognito identity pool with an authenticated IAM role",
       "B": "A Cognito user pool only",
@@ -924,10 +924,10 @@
     "isMultiAnswer": false,
     "explanation": "A Cognito identity pool exchanges a user identity for temporary AWS credentials and can map it to a role with a restricted S3 prefix.\nA user pool handles application sign-in but does not itself issue AWS credentials. Organizations and CloudTrail serve governance and auditing purposes.",
     "taskStatement": "1.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "行動應用程式需要臨時 AWS 憑證才能在使用者登入後將使用者內容上傳到私有 S3 前綴。應使用哪種 Cognito 功能？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。行動應用程式需要臨時 AWS 憑證才能在使用者登入後將使用者內容上傳到私有 S3 前綴。應使用哪種 Cognito 功能？",
         "options": {
           "A": "具有經過身份驗證的 IAM Roles的 Cognito 身份池",
           "B": "僅 Cognito 使用者池",
@@ -941,7 +941,7 @@
   {
     "id": "saa-d1-034",
     "type": "single",
-    "question": "A three-tier application must allow web servers to reach the application tier on TCP 443, and the application tier to reach the database on TCP 5432. Which security group design is best?",
+    "question": "The workload follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. A three-tier application must allow web servers to reach the application tier on TCP 443, and the application tier to reach the database on TCP 5432. Which security group design is best?",
     "options": {
       "A": "Reference the source security group from the destination security group rules",
       "B": "Allow all traffic from 0.0.0.0/0 to every tier",
@@ -952,10 +952,10 @@
     "isMultiAnswer": false,
     "explanation": "Security group references express least-privilege tier-to-tier access without relying on changing private IP addresses.\nOpen internet rules and a single public subnet broaden exposure. Network ACLs alone are stateless and do not replace interface-level controls.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "三層應用程式必須允許 Web 伺服器透過 TCP 443 到達應用程式層，並允許應用程式層透過 TCP 5432 到達資料庫。哪種安全群組設計最好？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。三層應用程式必須允許 Web 伺服器透過 TCP 443 到達應用程式層，並允許應用程式層透過 TCP 5432 到達資料庫。哪種安全群組設計最好？",
         "options": {
           "A": "從目標安全群組規則引用來源安全性群組",
           "B": "允許從 0.0.0.0/0 到每一層的所有流量",
@@ -969,7 +969,7 @@
   {
     "id": "saa-d1-035",
     "type": "single",
-    "question": "A network ACL is being used to allow a client to connect to a web server. Which detail must be considered because network ACLs are stateless?",
+    "question": "The team must avoid a prolonged outage and will validate the selected capability in staging before a controlled production rollout. A network ACL is being used to allow a client to connect to a web server. Which detail must be considered because network ACLs are stateless?",
     "options": {
       "A": "Allow the return ephemeral port range in the opposite direction",
       "B": "Allow return traffic automatically",
@@ -980,10 +980,10 @@
     "isMultiAnswer": false,
     "explanation": "A network ACL requires separate inbound and outbound rules, including the ephemeral return ports used by the client connection.\nAutomatic return traffic is a property of stateful security groups. IAM and S3 policies do not filter subnet packets.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "網路 ACL 用於允許客戶端連接到 Web 伺服器。由於網路 ACL 是無狀態的，必須考慮哪些細節？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。網路 ACL 用於允許客戶端連接到 Web 伺服器。由於網路 ACL 是無狀態的，必須考慮哪些細節？",
         "options": {
           "A": "允許反向臨時連接埠範圍",
           "B": "自動允許返回流量",
@@ -997,7 +997,7 @@
   {
     "id": "saa-d1-036",
     "type": "single",
-    "question": "A private API Gateway API must be reachable only through interface endpoints in selected VPCs. Which endpoint type should be configured?",
+    "question": "This change affects a production workload. The team must preserve existing behavior and prefers a managed AWS capability with low operational overhead. A private API Gateway API must be reachable only through interface endpoints in selected VPCs. Which endpoint type should be configured?",
     "options": {
       "A": "Private API with an execute-api interface endpoint",
       "B": "Edge-optimized API with an internet gateway",
@@ -1008,10 +1008,10 @@
     "isMultiAnswer": false,
     "explanation": "A private API is reached through an interface VPC endpoint and can use endpoint and API resource policies to restrict VPC access.\nEdge-optimized and Regional APIs are public endpoint types. S3 website endpoints do not provide private API Gateway access.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "私有 API 閘道 API 必須只能透過選定 VPC 中的介面終端節點進行存取。應配置哪種端點類型？",
+        "question": "這項變更會影響生產工作負載。團隊必須保留現有行為，並希望採用營運負擔較低的 AWS 託管功能。私有 API 閘道 API 必須只能透過選定 VPC 中的介面終端節點進行存取。應配置哪種端點類型？",
         "options": {
           "A": "具有執行 API 介面端點的私有 API",
           "B": "具有互聯網網關的邊緣優化 API",
@@ -1025,7 +1025,7 @@
   {
     "id": "saa-d1-037",
     "type": "single",
-    "question": "A company serves a private S3 bucket through CloudFront and must prevent users from bypassing CloudFront to access S3 directly. Which feature should be configured?",
+    "question": "The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. A company serves a private S3 bucket through CloudFront and must prevent users from bypassing CloudFront to access S3 directly. Which feature should be configured?",
     "options": {
       "A": "CloudFront origin access control with a bucket policy for the distribution",
       "B": "An S3 website endpoint",
@@ -1036,10 +1036,10 @@
     "isMultiAnswer": false,
     "explanation": "Origin access control signs CloudFront requests and lets the bucket policy permit the distribution while keeping the bucket private.\nA website endpoint or public ACL creates direct public access. A NAT gateway is unrelated to S3 origin authorization.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "一家公司透過 CloudFront 提供私人 S3 儲存桶，並且必須防止使用者繞過 CloudFront 直接存取 S3。應該配置哪個功能？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。一家公司透過 CloudFront 提供私人 S3 儲存桶，並且必須防止使用者繞過 CloudFront 直接存取 S3。應該配置哪個功能？",
         "options": {
           "A": "使用用於指派的儲存桶策略的 CloudFront 來源存取控制",
           "B": "S3 網站端點",
@@ -1053,7 +1053,7 @@
   {
     "id": "saa-d1-038",
     "type": "single",
-    "question": "A public login endpoint is receiving repeated requests from individual clients. Which AWS WAF rule can limit request rates without changing application code?",
+    "question": "The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. A public login endpoint is receiving repeated requests from individual clients. Which AWS WAF rule can limit request rates without changing application code?",
     "options": {
       "A": "A rate-based rule",
       "B": "A SQL database parameter group",
@@ -1064,10 +1064,10 @@
     "isMultiAnswer": false,
     "explanation": "An AWS WAF rate-based rule counts requests over a time window and can block sources that exceed the configured limit.\nThe other choices do not inspect or limit HTTP request rates.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "公共登入端點正在接收來自各個客戶端的重複請求。哪些 AWS WAF 規則可以在不更改應用程式程式碼的情況下限制請求率？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。公共登入端點正在接收來自各個客戶端的重複請求。哪些 AWS WAF 規則可以在不更改應用程式程式碼的情況下限制請求率？",
         "options": {
           "A": "基於速率的規則",
           "B": "SQL 資料庫參數組",
@@ -1081,7 +1081,7 @@
   {
     "id": "saa-d1-039",
     "type": "single",
-    "question": "A company needs a public HTTPS certificate that can automatically renew while it is attached to an Application Load Balancer. Which service should issue the certificate?",
+    "question": "The workload follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. A company needs a public HTTPS certificate that can automatically renew while it is attached to an Application Load Balancer. Which service should issue the certificate?",
     "options": {
       "A": "AWS Certificate Manager",
       "B": "AWS Secrets Manager",
@@ -1092,10 +1092,10 @@
     "isMultiAnswer": false,
     "explanation": "AWS Certificate Manager provisions and renews public TLS certificates that can be associated with supported AWS services such as an Application Load Balancer.\nSecrets Manager stores secrets, GuardDuty detects threats, and KMS manages encryption keys rather than public TLS certificates.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "公司需要一個公共 HTTPS 證書，該證書在附加到 Application Load Balancer 時可以自動續訂。哪個服務應該頒發證書？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。公司需要一個公共 HTTPS 證書，該證書在附加到 Application Load Balancer 時可以自動續訂。哪個服務應該頒發證書？",
         "options": {
           "A": "AWS Certificate Manager",
           "B": "AWS Secrets Manager",
@@ -1109,7 +1109,7 @@
   {
     "id": "saa-d1-040",
     "type": "single",
-    "question": "A company wants stateful inspection and centralized network filtering between VPC subnets. Which service is designed for managed network firewall rules?",
+    "question": "The team must avoid a prolonged outage and will validate the selected capability in staging before a controlled production rollout. A company wants stateful inspection and centralized network filtering between VPC subnets. Which service is designed for managed network firewall rules?",
     "options": {
       "A": "AWS Network Firewall",
       "B": "Amazon S3",
@@ -1120,10 +1120,10 @@
     "isMultiAnswer": false,
     "explanation": "AWS Network Firewall provides managed, stateful network inspection and filtering for VPC traffic.\nS3 stores objects, Macie discovers sensitive data, and Budgets monitors spending.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "一家公司希望在 VPC 子網路之間進行狀態檢查和集中式網路過濾。哪種服務是為託管網路防火牆規則而設計的？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。一家公司希望在 VPC 子網路之間進行狀態檢查和集中式網路過濾。哪種服務是為託管網路防火牆規則而設計的？",
         "options": {
           "A": "AWS Network Firewall",
           "B": "Amazon S3",
@@ -1137,7 +1137,7 @@
   {
     "id": "saa-d1-041",
     "type": "single",
-    "question": "A security team wants managed threat detection based on CloudTrail, VPC Flow Logs, and DNS query data. Which service should they enable?",
+    "question": "This change affects a production workload. The team must preserve existing behavior and prefers a managed AWS capability with low operational overhead. A security team wants managed threat detection based on CloudTrail, VPC Flow Logs, and DNS query data. Which service should they enable?",
     "options": {
       "A": "Amazon GuardDuty",
       "B": "AWS Artifact",
@@ -1148,10 +1148,10 @@
     "isMultiAnswer": false,
     "explanation": "GuardDuty analyzes supported account and network telemetry to identify suspicious activity and produce findings.\nArtifact provides compliance documents, EFS provides file storage, and CloudFormation provisions resources.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "安全團隊希望基於 CloudTrail、VPC 流日誌和 DNS 查詢資料進行託管威脅偵測。他們應該啟用哪一項服務？",
+        "question": "這項變更會影響生產工作負載。團隊必須保留現有行為，並希望採用營運負擔較低的 AWS 託管功能。安全團隊希望基於 CloudTrail、VPC 流日誌和 DNS 查詢資料進行託管威脅偵測。他們應該啟用哪一項服務？",
         "options": {
           "A": "Amazon GuardDuty",
           "B": "AWS Artifact",
@@ -1165,7 +1165,7 @@
   {
     "id": "saa-d1-042",
     "type": "single",
-    "question": "A company needs continuous vulnerability findings for EC2 instances and container images before deployment. Which service should they evaluate?",
+    "question": "The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. A company needs continuous vulnerability findings for EC2 instances and container images before deployment. Which service should they evaluate?",
     "options": {
       "A": "Amazon Inspector",
       "B": "Amazon Route 53",
@@ -1176,10 +1176,10 @@
     "isMultiAnswer": false,
     "explanation": "Amazon Inspector continuously assesses supported workloads such as EC2 instances and container images for vulnerabilities.\nRoute 53 provides DNS, Shield protects against DDoS, and Scheduler invokes targets on a schedule.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "公司需要在部署之前持續發現 EC2 執行個體和容器映像的漏洞。他們應該評估哪項服務？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。公司需要在部署之前持續發現 EC2 執行個體和容器映像的漏洞。他們應該評估哪項服務？",
         "options": {
           "A": "Amazon Inspector",
           "B": "Amazon Route 53",
@@ -1193,7 +1193,7 @@
   {
     "id": "saa-d1-043",
     "type": "single",
-    "question": "A public application needs enhanced DDoS detection, attack visibility, and access to the AWS DDoS Response Team. Which service is appropriate?",
+    "question": "The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. A public application needs enhanced DDoS detection, attack visibility, and access to the AWS DDoS Response Team. Which service is appropriate?",
     "options": {
       "A": "AWS Shield Advanced",
       "B": "AWS WAF Classic only",
@@ -1204,10 +1204,10 @@
     "isMultiAnswer": false,
     "explanation": "Shield Advanced provides enhanced DDoS protection, visibility, and response support for eligible protected resources.\nInspector finds vulnerabilities, Config evaluates configuration, and a basic web ACL alone does not provide Shield Advanced response support.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "公共應用程式需要增強的 DDoS 偵測、攻擊可見性以及對 AWS DDoS 回應團隊的存取。哪種服務適合？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。公共應用程式需要增強的 DDoS 偵測、攻擊可見性以及對 AWS DDoS 回應團隊的存取。哪種服務適合？",
         "options": {
           "A": "AWS Shield Advanced",
           "B": "限 AWS WAF 經典版",
@@ -1221,7 +1221,7 @@
   {
     "id": "saa-d1-044",
     "type": "single",
-    "question": "An EC2 application must call Secrets Manager privately without using a NAT gateway or public internet route. Which VPC feature should be configured?",
+    "question": "The workload follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. An EC2 application must call Secrets Manager privately without using a NAT gateway or public internet route. Which VPC feature should be configured?",
     "options": {
       "A": "An interface VPC endpoint for Secrets Manager",
       "B": "An S3 gateway endpoint only",
@@ -1232,10 +1232,10 @@
     "isMultiAnswer": false,
     "explanation": "An interface endpoint provides private connectivity from the VPC to Secrets Manager through AWS PrivateLink.\nAn S3 gateway endpoint is for S3, and public routes or addresses do not meet the private connectivity requirement.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "EC2 應用程式必須在不使用 NAT 閘道或公共 Internet 路由的情況下私下呼叫 Secrets Manager。應配置哪些 VPC 功能？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。EC2 應用程式必須在不使用 NAT 閘道或公共 Internet 路由的情況下私下呼叫 Secrets Manager。應配置哪些 VPC 功能？",
         "options": {
           "A": "Secrets Manager 的介面 VPC 終端節點",
           "B": "僅 S3 閘道端點",
@@ -1249,7 +1249,7 @@
   {
     "id": "saa-d1-045",
     "type": "single",
-    "question": "A SaaS provider must expose a service privately to customer VPCs without requiring VPC peering. Which AWS networking capability should it use?",
+    "question": "The team must avoid a prolonged outage and will validate the selected capability in staging before a controlled production rollout. A SaaS provider must expose a service privately to customer VPCs without requiring VPC peering. Which AWS networking capability should it use?",
     "options": {
       "A": "AWS PrivateLink with a VPC endpoint service",
       "B": "An S3 bucket website",
@@ -1260,10 +1260,10 @@
     "isMultiAnswer": false,
     "explanation": "PrivateLink exposes a provider service through endpoint network interfaces in consumer VPCs without routing the VPCs together.\nA website, NAT gateway, or public DNS record does not create private service connectivity.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "SaaS 提供者必須向客戶 VPC 私下公開服務，而不需要 VPC 對等互連。應使用哪種 AWS 網路功能？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。SaaS 提供者必須向客戶 VPC 私下公開服務，而不需要 VPC 對等互連。應使用哪種 AWS 網路功能？",
         "options": {
           "A": "具有 VPC 終端節點服務的 AWS PrivateLink",
           "B": "S3 儲存桶網站",
@@ -1277,7 +1277,7 @@
   {
     "id": "saa-d1-046",
     "type": "multi",
-    "question": "Which two practices help protect data in transit for a public application? Select two.",
+    "question": "This change affects a production workload. The team must preserve existing behavior and prefers a managed AWS capability with low operational overhead. Which two practices help protect data in transit for a public application? Select two.",
     "options": {
       "A": "Terminate HTTPS with an ACM certificate",
       "B": "Use TLS between application tiers when required",
@@ -1292,10 +1292,10 @@
     "isMultiAnswer": true,
     "explanation": "HTTPS with an ACM certificate protects client connections, and TLS between internal tiers protects data across service boundaries when required by the security design.\nDisabling logging and making a bucket public reduce security. A clear-text health endpoint is not appropriate for user data.",
     "taskStatement": "1.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "哪兩種做法有助於保護公共應用程式傳輸中的資料？選擇兩個。",
+        "question": "這項變更會影響生產工作負載。團隊必須保留現有行為，並希望採用營運負擔較低的 AWS 託管功能。哪兩種做法有助於保護公共應用程式傳輸中的資料？選擇兩個。",
         "options": {
           "A": "使用 ACM 憑證終止 HTTPS",
           "B": "需要時在應用程式層之間使用 TLS",
@@ -1310,7 +1310,7 @@
   {
     "id": "saa-d1-047",
     "type": "single",
-    "question": "A company must ensure that every newly created EBS volume is encrypted without relying on application developers to remember a setting. Which account control should be enabled?",
+    "question": "The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. A company must ensure that every newly created EBS volume is encrypted without relying on application developers to remember a setting. Which account control should be enabled?",
     "options": {
       "A": "EBS encryption by default",
       "B": "S3 Block Public Access",
@@ -1321,10 +1321,10 @@
     "isMultiAnswer": false,
     "explanation": "EBS encryption by default causes new EBS volumes and snapshots in a Region to use encryption unless an operation does not support it.\nThe other controls protect S3, RDS, or CloudFront data and do not set the default for EBS volumes.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "公司必須確保每個新建立的 EBS 磁碟區都經過加密，而無需依賴應用程式開發人員記住設定。應啟用哪個帳戶控制？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。公司必須確保每個新建立的 EBS 磁碟區都經過加密，而無需依賴應用程式開發人員記住設定。應啟用哪個帳戶控制？",
         "options": {
           "A": "預設EBS加密",
           "B": "S3 Block Public Access",
@@ -1338,7 +1338,7 @@
   {
     "id": "saa-d1-048",
     "type": "single",
-    "question": "A database on Amazon RDS must encrypt its storage and automated backups using a customer-controlled KMS key. Which configuration meets the requirement?",
+    "question": "The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. A database on Amazon RDS must encrypt its storage and automated backups using a customer-controlled KMS key. Which configuration meets the requirement?",
     "options": {
       "A": "Enable storage encryption with a customer managed KMS key when creating the DB instance",
       "B": "Enable an S3 lifecycle policy",
@@ -1349,10 +1349,10 @@
     "isMultiAnswer": false,
     "explanation": "RDS storage encryption uses a selected KMS key to protect the database storage, logs, and automated backups associated with the instance.\nLifecycle rules, query-level encryption, and security group rules do not encrypt RDS storage and backups.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "Amazon RDS 上的資料庫必須使用客戶控制的 KMS 金鑰對其儲存和自動備份進行加密。哪種配置符合要求？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。Amazon RDS 上的資料庫必須使用客戶控制的 KMS 金鑰對其儲存和自動備份進行加密。哪種配置符合要求？",
         "options": {
           "A": "建立資料庫執行個體時使用客戶管理的 KMS 金鑰啟用儲存加密",
           "B": "啟用 S3 生命週期策略",
@@ -1366,7 +1366,7 @@
   {
     "id": "saa-d1-049",
     "type": "single",
-    "question": "A company must encrypt S3 objects with a key policy that allows a separate security account to audit key usage. Which option is appropriate?",
+    "question": "The workload follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. A company must encrypt S3 objects with a key policy that allows a separate security account to audit key usage. Which option is appropriate?",
     "options": {
       "A": "SSE-KMS with a customer managed KMS key",
       "B": "SSE-S3 only",
@@ -1377,10 +1377,10 @@
     "isMultiAnswer": false,
     "explanation": "A customer managed KMS key supports explicit key policy statements and CloudTrail auditing that can be reviewed by a security account.\nSSE-S3 uses S3-managed keys with less key-policy control. Website hosting and transfer acceleration do not provide encryption-key governance.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "公司必須使用允許單獨的安全帳戶審核金鑰使用情況的金鑰策略來加密 S3 物件。哪個選項合適？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。公司必須使用允許單獨的安全帳戶審核金鑰使用情況的金鑰策略來加密 S3 物件。哪個選項合適？",
         "options": {
           "A": "具有客戶管理的 KMS 金鑰的 SSE-KMS",
           "B": "僅限 SSE-S3",
@@ -1394,7 +1394,7 @@
   {
     "id": "saa-d1-050",
     "type": "single",
-    "question": "A compliance archive must prevent an object from being deleted or overwritten until a retention date. Which S3 feature should be used?",
+    "question": "The team must avoid a prolonged outage and will validate the selected capability in staging before a controlled production rollout. A compliance archive must prevent an object from being deleted or overwritten until a retention date. Which S3 feature should be used?",
     "options": {
       "A": "S3 Object Lock in compliance mode",
       "B": "S3 Transfer Acceleration",
@@ -1405,10 +1405,10 @@
     "isMultiAnswer": false,
     "explanation": "S3 Object Lock compliance mode enforces retention so even privileged users cannot shorten the retention period or delete the protected object.\nTransfer Acceleration improves transfer speed, Inventory reports object metadata, and S3 Select filters object contents.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "合規性存檔必須防止物件在保留日期之前被刪除或覆蓋。應該使用哪個 S3 功能？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。合規性存檔必須防止物件在保留日期之前被刪除或覆蓋。應該使用哪個 S3 功能？",
         "options": {
           "A": "合規模式下的 S3 Object Lock定",
           "B": "S3 Transfer Acceleration",
@@ -1422,7 +1422,7 @@
   {
     "id": "saa-d1-051",
     "type": "single",
-    "question": "A company wants an additional authentication factor before the root user can permanently delete object versions. Which S3 setting should be considered?",
+    "question": "This change affects a production workload. The team must preserve existing behavior and prefers a managed AWS capability with low operational overhead. A company wants an additional authentication factor before the root user can permanently delete object versions. Which S3 setting should be considered?",
     "options": {
       "A": "MFA Delete",
       "B": "S3 Intelligent-Tiering",
@@ -1433,10 +1433,10 @@
     "isMultiAnswer": false,
     "explanation": "MFA Delete requires multi-factor authentication for selected versioning operations, including permanently deleting object versions.\nThe other features address storage tiering, access entry points, or transfer speed rather than deletion authorization.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "在根使用者永久刪除物件版本之前，公司需要額外的身份驗證因素。應考慮哪種 S3 設定？",
+        "question": "這項變更會影響生產工作負載。團隊必須保留現有行為，並希望採用營運負擔較低的 AWS 託管功能。在根使用者永久刪除物件版本之前，公司需要額外的身份驗證因素。應考慮哪種 S3 設定？",
         "options": {
           "A": "MFA 刪除",
           "B": "S3 Intelligent-Tiering",
@@ -1450,7 +1450,7 @@
   {
     "id": "saa-d1-052",
     "type": "single",
-    "question": "A compliance team needs to discover personally identifiable information in S3 objects and report where it is stored. Which service should they use?",
+    "question": "The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. A compliance team needs to discover personally identifiable information in S3 objects and report where it is stored. Which service should they use?",
     "options": {
       "A": "Amazon Macie",
       "B": "Amazon Inspector",
@@ -1461,10 +1461,10 @@
     "isMultiAnswer": false,
     "explanation": "Amazon Macie uses managed and custom data identifiers to discover sensitive information such as PII in S3.\nInspector assesses vulnerabilities, Shield protects network endpoints, and EBS provides block storage.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "合規團隊需要發現 S3 物件中的個人識別資訊並報告其儲存位置。他們應該使用哪種服務？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。合規團隊需要發現 S3 物件中的個人識別資訊並報告其儲存位置。他們應該使用哪種服務？",
         "options": {
           "A": "Amazon Macie",
           "B": "Amazon Inspector",
@@ -1478,7 +1478,7 @@
   {
     "id": "saa-d1-053",
     "type": "single",
-    "question": "A company wants KMS keys to rotate automatically each year while retaining the ability to decrypt data encrypted with older key material. Which setting should be enabled?",
+    "question": "The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. A company wants KMS keys to rotate automatically each year while retaining the ability to decrypt data encrypted with older key material. Which setting should be enabled?",
     "options": {
       "A": "Automatic KMS key rotation",
       "B": "S3 Versioning only",
@@ -1489,10 +1489,10 @@
     "isMultiAnswer": false,
     "explanation": "Automatic rotation creates new key material on the configured schedule while KMS retains older material for decrypting existing ciphertext.\nVersioning, CloudTrail data events, and EBS attachment options do not rotate KMS key material.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "一家公司希望 KMS 金鑰每年自動輪換，同時保留解密使用舊金鑰材料加密的資料的能力。應該啟用哪個設定？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。一家公司希望 KMS 金鑰每年自動輪換，同時保留解密使用舊金鑰材料加密的資料的能力。應該啟用哪個設定？",
         "options": {
           "A": "自動 KMS 金鑰輪換",
           "B": "僅 S3 Versioning",
@@ -1506,7 +1506,7 @@
   {
     "id": "saa-d1-054",
     "type": "single",
-    "question": "A global application needs one logical KMS key that can be replicated to multiple Regions for local encryption and decryption. Which feature should be used?",
+    "question": "The workload follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. A global application needs one logical KMS key that can be replicated to multiple Regions for local encryption and decryption. Which feature should be used?",
     "options": {
       "A": "KMS multi-Region keys",
       "B": "A security group rule",
@@ -1517,10 +1517,10 @@
     "isMultiAnswer": false,
     "explanation": "KMS multi-Region keys provide related key replicas in different Regions while maintaining coordinated key material and identifiers.\nThe other choices manage traffic, connectivity, or monitoring and do not replicate encryption keys.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "全域應用程式需要一個邏輯 KMS 金鑰，該金鑰可以複製到多個區域以進行本地加密和解密。應該使用哪個功能？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。全域應用程式需要一個邏輯 KMS 金鑰，該金鑰可以複製到多個區域以進行本地加密和解密。應該使用哪個功能？",
         "options": {
           "A": "KMS 多區域密鑰",
           "B": "安全群組規則",
@@ -1534,7 +1534,7 @@
   {
     "id": "saa-d1-055",
     "type": "single",
-    "question": "A company stores shared files in Amazon EFS and requires encryption at rest with a customer managed key. Which configuration should be selected?",
+    "question": "The team must avoid a prolonged outage and will validate the selected capability in staging before a controlled production rollout. A company stores shared files in Amazon EFS and requires encryption at rest with a customer managed key. Which configuration should be selected?",
     "options": {
       "A": "Enable EFS encryption at creation and select a KMS key",
       "B": "Use an internet gateway for the file system",
@@ -1545,10 +1545,10 @@
     "isMultiAnswer": false,
     "explanation": "EFS encryption at rest is selected when the file system is created and can use a customer managed KMS key.\nNetwork routing, command output, and S3 retention do not encrypt EFS file system data.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "一家公司將共用檔案儲存在 Amazon EFS 中，並需要使用客戶管理的金鑰進行靜態加密。該選擇哪種配置？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。一家公司將共用檔案儲存在 Amazon EFS 中，並需要使用客戶管理的金鑰進行靜態加密。該選擇哪種配置？",
         "options": {
           "A": "建立時啟用 EFS 加密並選擇 KMS 金鑰",
           "B": "對檔案系統使用 Internet 網關",
@@ -1562,7 +1562,7 @@
   {
     "id": "saa-d1-056",
     "type": "single",
-    "question": "A DynamoDB table must protect data at rest using a key that the security team controls and audits. Which option should be configured?",
+    "question": "This change affects a production workload. The team must preserve existing behavior and prefers a managed AWS capability with low operational overhead. A DynamoDB table must protect data at rest using a key that the security team controls and audits. Which option should be configured?",
     "options": {
       "A": "DynamoDB server-side encryption with a customer managed KMS key",
       "B": "A public table endpoint",
@@ -1573,10 +1573,10 @@
     "isMultiAnswer": false,
     "explanation": "DynamoDB server-side encryption can use a customer managed KMS key so the security team controls key policy and auditing.\nDynamoDB is accessed through service APIs rather than security groups, and Streams capture changes instead of encrypting stored data.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "DynamoDB 表必須使用安全團隊控制和審核的金鑰來保護靜態資料。應該配置哪個選項？",
+        "question": "這項變更會影響生產工作負載。團隊必須保留現有行為，並希望採用營運負擔較低的 AWS 託管功能。DynamoDB 表必須使用安全團隊控制和審核的金鑰來保護靜態資料。應該配置哪個選項？",
         "options": {
           "A": "使用客戶管理的 KMS 金鑰進行 DynamoDB 伺服器端加密",
           "B": "公共表端點",
@@ -1590,7 +1590,7 @@
   {
     "id": "saa-d1-057",
     "type": "single",
-    "question": "A security team must encrypt a CloudWatch Logs log group with a customer managed KMS key. Which setting should they use?",
+    "question": "The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. A security team must encrypt a CloudWatch Logs log group with a customer managed KMS key. Which setting should they use?",
     "options": {
       "A": "Associate the KMS key with the log group",
       "B": "Enable S3 Transfer Acceleration",
@@ -1601,10 +1601,10 @@
     "isMultiAnswer": false,
     "explanation": "A CloudWatch Logs log group can be associated with a KMS key so newly ingested log data is encrypted using the selected key.\nTransfer acceleration, NAT, and DNS records do not control CloudWatch Logs encryption.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "安全團隊必須使用客戶管理的 KMS 金鑰加密 CloudWatch Logs 日誌組。他們應該使用哪種設定？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。安全團隊必須使用客戶管理的 KMS 金鑰加密 CloudWatch Logs 日誌組。他們應該使用哪種設定？",
         "options": {
           "A": "將 KMS 金鑰與日誌組關聯",
           "B": "啟用S3 Transfer Acceleration",
@@ -1618,7 +1618,7 @@
   {
     "id": "saa-d1-058",
     "type": "single",
-    "question": "An application needs database credentials that rotate automatically and can be fetched at runtime. Which service is the best fit?",
+    "question": "The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. An application needs database credentials that rotate automatically and can be fetched at runtime. Which service is the best fit?",
     "options": {
       "A": "AWS Secrets Manager",
       "B": "Amazon EFS",
@@ -1629,10 +1629,10 @@
     "isMultiAnswer": false,
     "explanation": "Secrets Manager stores credentials and supports managed or custom rotation workflows that applications can retrieve through an API.\nEFS stores files, WAF filters web requests, and CloudFront distributes content rather than rotating database credentials.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "應用程式需要自動輪換並且可以在運行時取得的資料庫憑證。哪種服務最適合？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。應用程式需要自動輪換並且可以在運行時取得的資料庫憑證。哪種服務最適合？",
         "options": {
           "A": "AWS Secrets Manager",
           "B": "Amazon EFS",
@@ -1646,7 +1646,7 @@
   {
     "id": "saa-d1-059",
     "type": "multi",
-    "question": "Which two practices reduce the risk of sensitive data exposure in an S3 data lake? Select two.",
+    "question": "The workload follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. Which two practices reduce the risk of sensitive data exposure in an S3 data lake? Select two.",
     "options": {
       "A": "Use least-privilege bucket and IAM policies",
       "B": "Classify and monitor sensitive objects with Macie",
@@ -1661,10 +1661,10 @@
     "isMultiAnswer": true,
     "explanation": "Least-privilege policies limit who can access the data, and Macie helps discover and monitor sensitive information that needs additional controls.\nDisabling logs, public read access, and storing credentials in metadata increase exposure rather than reduce it.",
     "taskStatement": "1.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "哪兩種做法可以降低 S3 資料湖中敏感資料暴露的風險？選擇兩個。",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。哪兩種做法可以降低 S3 資料湖中敏感資料暴露的風險？選擇兩個。",
         "options": {
           "A": "使用最小權限儲存桶和 IAM 策略",
           "B": "使用 Macie 對敏感物件進行分類和監控",

@@ -10,13 +10,13 @@
  * replace any item before publishing a later revision.
  */
 
-import { mkdirSync, writeFileSync } from 'node:fs'
+import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs'
 import { join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const ROOT = resolve(fileURLToPath(new URL('..', import.meta.url)))
 const DATA_ROOT = join(ROOT, 'src', 'data')
-const VERIFIED = '2026-08-09'
+const VERIFIED = '2026-08-10'
 
 const frames = [
   'A production team',
@@ -387,34 +387,471 @@ const catalogs = {
   },
 }
 
-function buildQuestion(config, domain, index) {
-  const topic = domain.topics[(index - 1) % domain.topics.length]
-  const frame = frames[(index - 1) % frames.length]
-  const optionKeys = ['A', 'B', 'C', 'D']
-  const answerIndex = (index + domain.id + config.code.length) % optionKeys.length
-  const values = [topic.correct, ...topic.distractors]
-  const options = {}
-  optionKeys.forEach((key, offset) => {
-    options[key] = values[(offset - answerIndex + values.length) % values.length]
-  })
-  const answer = optionKeys[answerIndex]
-  const task = `${domain.id}.${((index - 1) % domain.tasks.length) + 1}`
+const LEVELS = {
+  'soa-c03': 'associate',
+  'dea-c01': 'associate',
+  'dva-c02': 'associate',
+  'mla-c01': 'associate',
+  'dop-c02': 'professional',
+  'aip-c01': 'professional',
+  'sap-c02': 'professional',
+  'ans-c01': 'specialty',
+  'scs-c03': 'specialty',
+}
+
+const difficultyContexts = {
+  associate: [
+    'The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead.',
+    'The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components.',
+    'The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures.',
+    'The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement.',
+    'The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout.',
+  ],
+  professional: [
+    'The environment spans multiple AWS accounts and supports business-critical workloads. The design must preserve delegated ownership, remain auditable, and minimize custom operational processes.',
+    'A phased production rollout is required. The selected approach must support centralized governance, clear rollback procedures, and continued workload availability.',
+    'Several application teams share the platform. The organization requires a repeatable managed solution that limits blast radius and does not depend on manual coordination.',
+    'The architecture review prioritizes least privilege, measurable operational outcomes, and predictable recovery while existing services remain available.',
+    'The organization needs to standardize the capability across workloads while allowing teams to retain day-to-day ownership of their applications.',
+  ],
+  specialty: [
+    'The production environment uses centralized governance across several accounts. Changes must be least-privilege, auditable, and introduced without an extended outage.',
+    'The team must account for hybrid connectivity, existing security boundaries, and operational troubleshooting after the change is deployed.',
+    'The requirement applies at scale. The solution must avoid one-off manual configuration and provide evidence that the intended control remains effective.',
+    'The current architecture is business critical. The selected option must address the exact failure or security condition without weakening another control.',
+    'The implementation will be reviewed by specialist engineers for service limits, failure behavior, and the operational tradeoffs of the proposed design.',
+  ],
+}
+
+const integratedTradeoffs = [
+  {
+    en: 'The design must keep recurring cost proportional to use, enforce least privilege, and remain available during a component or Availability Zone failure.',
+    zh: '此設計必須讓持續成本與實際用量相符、落實最低權限，並在元件或可用區域發生故障時維持可用。',
+  },
+  {
+    en: 'The design must avoid unnecessary standby cost without weakening security controls or the availability objective.',
+    zh: '此設計必須避免不必要的備用成本，同時不可削弱安全控制或可用性目標。',
+  },
+  {
+    en: 'The organization will accept additional managed-service cost only when it measurably improves security and availability with less operational effort.',
+    zh: '只有在託管服務能以較低營運負擔明確改善安全性與可用性時，組織才會接受額外成本。',
+  },
+  {
+    en: 'The architecture must limit blast radius, preserve availability during change, and control cost through automation instead of permanent overprovisioning.',
+    zh: '此架構必須限制影響範圍、在變更期間維持可用性，並透過自動化控制成本，而不是長期過度佈建。',
+  },
+  {
+    en: 'The selected controls must provide auditable security, predictable availability, and the lowest operational cost that still satisfies both requirements.',
+    zh: '所選控制必須提供可稽核的安全性、可預測的可用性，以及在滿足兩項要求前提下最低的營運成本。',
+  },
+]
+
+function requirementFromPrompt(prompt) {
+  return prompt
+    .replace(/\s+(?:Which|What)\s+.*$/i, '')
+    .replace(/[?.]+$/, '')
+    .trim()
+}
+
+function rotate(values, offset) {
+  const distance = offset % values.length
+  return [...values.slice(distance), ...values.slice(0, distance)]
+}
+
+function uniqueValues(values) {
+  return [...new Set(values.filter(Boolean))]
+}
+
+function questionType(question) {
+  return question.type ?? (question.isMultiAnswer ? 'multi' : 'single')
+}
+
+function questionIndex(question) {
+  return Number(question.id.match(/-(\d+)$/)?.[1] ?? 0)
+}
+
+function correctValues(question) {
+  if (questionType(question) === 'matching') {
+    return Object.values(question.correctMatches ?? {})
+      .map(key => question.targets?.[key])
+      .filter(Boolean)
+  }
+  const keys = Array.isArray(question.answer) ? question.answer : [question.answer]
+  return keys.map(key => question.options?.[key]).filter(Boolean)
+}
+
+function finalRequirementSentence(value) {
+  const sentences = value
+    .split('。')
+    .map(sentence => sentence.trim())
+    .filter(Boolean)
+  if (sentences.length >= 2) return `${sentences.at(-2)}。`
+  return value.trim()
+}
+
+function translatedRequirementsFromMulti(value) {
+  const firstMarker = '第一項需求：'
+  const secondMarker = '第二項需求：'
+  const questionMarkers = ['哪兩項操作', '哪兩個動作', '哪兩項行動', '應選擇哪兩項']
+  const firstStart = value.indexOf(firstMarker)
+  const secondStart = value.indexOf(secondMarker)
+  if (firstStart < 0 || secondStart < 0) return []
+  const questionStart = questionMarkers
+    .map(marker => value.indexOf(marker, secondStart))
+    .filter(index => index >= 0)
+    .sort((left, right) => left - right)[0] ?? value.length
+  return [
+    value.slice(firstStart + firstMarker.length, secondStart).trim(),
+    value.slice(secondStart + secondMarker.length, questionStart).trim(),
+  ]
+}
+
+function loadTranslationMemory(config, certDir) {
+  const questionsById = new Map()
+  const optionZh = new Map()
+  const requirementZh = new Map()
+  const rationaleZh = new Map()
+
+  if (!existsSync(certDir)) return { questionsById, optionZh, requirementZh, rationaleZh }
+
+  const domainFiles = readdirSync(certDir).filter(file => /^domain\d+\.json$/.test(file)).sort()
+  for (const file of domainFiles) {
+    const domainId = Number(file.match(/domain(\d+)/)?.[1])
+    const domain = config.domains.find(candidate => candidate.id === domainId)
+    if (!domain) continue
+    const questions = JSON.parse(readFileSync(join(certDir, file), 'utf8'))
+
+    for (const question of questions) {
+      questionsById.set(question.id, question)
+      const zh = question.translations?.zh
+      if (!zh) continue
+      for (const [key, value] of Object.entries(question.options ?? {})) {
+        if (value && zh.options?.[key]) optionZh.set(value, zh.options[key])
+      }
+      for (const [key, value] of Object.entries(question.targets ?? {})) {
+        if (value && zh.targets?.[key]) optionZh.set(value, zh.targets[key])
+      }
+
+      const index = questionIndex(question)
+      const topicIndex = (index - 1) % domain.topics.length
+      const type = questionType(question)
+      if (type === 'single') {
+        const topic = domain.topics[topicIndex]
+        requirementZh.set(topic.correct, finalRequirementSentence(zh.question))
+        rationaleZh.set(topic.correct, zh.explanation.split('\n')[0])
+      } else if (type === 'multi') {
+        const requirements = translatedRequirementsFromMulti(zh.question)
+        const topics = [domain.topics[topicIndex], domain.topics[(topicIndex + 1) % domain.topics.length]]
+        topics.forEach((topic, offset) => {
+          if (requirements[offset]) requirementZh.set(topic.correct, requirements[offset])
+        })
+      } else if (type === 'matching') {
+        for (const [optionKey, targetKey] of Object.entries(question.correctMatches ?? {})) {
+          const correct = question.targets?.[targetKey]
+          const requirement = zh.options?.[optionKey]
+          if (correct && requirement) requirementZh.set(correct, requirement.replace(/^工作負載\s*/, '').trim())
+        }
+      }
+
+      const values = correctValues(question)
+      if (values.length === 1 && !rationaleZh.has(values[0])) {
+        rationaleZh.set(values[0], zh.explanation.split('\n')[0])
+      }
+    }
+  }
+
+  return { questionsById, optionZh, requirementZh, rationaleZh }
+}
+
+function translatedOption(memory, value) {
+  return memory.optionZh.get(value) ?? value
+}
+
+function translatedRequirement(memory, topic) {
+  return memory.requirementZh.get(topic.correct)
+    ?? `工作負載需要符合與 ${translatedOption(memory, topic.correct)} 相關的生產要求。`
+}
+
+function preserveExistingTranslation(question, memory) {
+  const existing = memory.questionsById.get(question.id)
+  if (!existing?.translations) return question
+  const sameEnglish = existing.question === question.question
+    && existing.explanation === question.explanation
+    && JSON.stringify(existing.options) === JSON.stringify(question.options)
+    && JSON.stringify(existing.targets ?? null) === JSON.stringify(question.targets ?? null)
+  return sameEnglish ? { ...question, translations: existing.translations } : question
+}
+
+function taskFor(domain, index) {
+  return `${domain.id}.${((index - 1) % domain.tasks.length) + 1}`
+}
+
+function contextFor(config, domain, index) {
+  const level = LEVELS[config.code]
+  const contexts = difficultyContexts[level]
+  const variant = Math.floor((index - 1) / domain.topics.length)
+  return contexts[(variant + domain.id - 1) % contexts.length]
+}
+
+function topicAlternatives(domain, topicIndex, excluded = []) {
+  const orderedTopics = rotate(domain.topics, topicIndex + 1)
+  return uniqueValues([
+    ...orderedTopics.map(topic => topic.correct),
+    ...domain.topics[topicIndex].distractors,
+  ]).filter(value => !excluded.includes(value))
+}
+
+function choiceRecord(entries, offset) {
+  const shuffled = rotate(entries, offset)
+  const keys = ['A', 'B', 'C', 'D', 'E'].slice(0, shuffled.length)
+  const options = Object.fromEntries(keys.map((key, index) => [key, shuffled[index].value]))
+  const answers = keys.filter((_, index) => shuffled[index].correct)
+  return { options, answers }
+}
+
+function baseQuestion(config, domain, index) {
   return {
     id: `${config.code}-d${domain.id}-${String(index).padStart(3, '0')}`,
-    type: 'single',
-    question: `${frame} ${topic.prompt}`,
-    options,
-    answer,
-    isMultiAnswer: false,
-    explanation: `${topic.reason}\n${topic.reject}`,
-    taskStatement: task,
+    taskStatement: taskFor(domain, index),
     lastVerified: VERIFIED,
   }
+}
+
+function buildSingleQuestion(config, domain, index, topicIndex) {
+  const topic = domain.topics[topicIndex]
+  const frame = frames[(index - 1) % frames.length]
+  const alternatives = topicAlternatives(domain, topicIndex, [topic.correct]).slice(0, 3)
+  const entries = [
+    { value: topic.correct, correct: true },
+    ...alternatives.map(value => ({ value, correct: false })),
+  ]
+  const { options, answers } = choiceRecord(entries, index + domain.id + config.code.length)
+
+  return {
+    ...baseQuestion(config, domain, index),
+    type: 'single',
+    question: `${frame} is reviewing a production decision. ${contextFor(config, domain, index)} The team ${topic.prompt}`,
+    options,
+    answer: answers[0],
+    isMultiAnswer: false,
+    explanation: `${topic.reason}\nThe alternatives are valid for other requirements in this domain, but they do not directly provide ${topic.correct} for the stated scenario.`,
+  }
+}
+
+function buildMultiQuestion(config, domain, index, topicIndex) {
+  const first = domain.topics[topicIndex]
+  const secondIndex = (topicIndex + 1) % domain.topics.length
+  const second = domain.topics[secondIndex]
+  const frame = frames[(index - 1) % frames.length]
+  const correct = uniqueValues([first.correct, second.correct])
+  const alternatives = topicAlternatives(domain, secondIndex, correct).slice(0, 5 - correct.length)
+  const entries = [
+    ...correct.map(value => ({ value, correct: true })),
+    ...alternatives.map(value => ({ value, correct: false })),
+  ]
+  const { options, answers } = choiceRecord(entries, index + domain.id)
+
+  return {
+    ...baseQuestion(config, domain, index),
+    type: 'multi',
+    question: `${frame} is planning two independent production changes. ${contextFor(config, domain, index)} The first team ${requirementFromPrompt(first.prompt)}. A second team ${requirementFromPrompt(second.prompt)}. Which TWO actions satisfy these requirements?`,
+    options,
+    answer: answers,
+    isMultiAnswer: true,
+    explanation: `${first.correct} meets the first requirement: ${first.reason} ${second.correct} meets the second requirement: ${second.reason}\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.`,
+  }
+}
+
+function integratedTopics(config, domain, index, count) {
+  const primaryIndex = (index - 1) % domain.topics.length
+  const selected = [{ domain, topic: domain.topics[primaryIndex] }]
+  const domainIndex = config.domains.indexOf(domain)
+  const variant = Math.floor((index - 1) / 4)
+
+  for (let offset = 1; selected.length < count && offset <= config.domains.length * 3; offset += 1) {
+    const candidateDomain = config.domains[(domainIndex + offset + variant) % config.domains.length]
+    const candidateTopic = candidateDomain.topics[(primaryIndex + variant + offset) % candidateDomain.topics.length]
+    if (!selected.some(item => item.topic.correct === candidateTopic.correct)) {
+      selected.push({ domain: candidateDomain, topic: candidateTopic })
+    }
+  }
+
+  if (selected.length < count) {
+    for (const candidateDomain of config.domains) {
+      for (const candidateTopic of candidateDomain.topics) {
+        if (!selected.some(item => item.topic.correct === candidateTopic.correct)) {
+          selected.push({ domain: candidateDomain, topic: candidateTopic })
+        }
+        if (selected.length === count) return selected
+      }
+    }
+  }
+  return selected
+}
+
+function integratedAlternatives(config, selected, count) {
+  const correct = selected.map(item => item.topic.correct)
+  const pool = []
+  for (const candidateDomain of config.domains) {
+    pool.push(...candidateDomain.topics.map(topic => topic.correct))
+  }
+  pool.push(...selected.flatMap(item => item.topic.distractors))
+  return uniqueValues(pool).filter(value => !correct.includes(value)).slice(0, count)
+}
+
+function buildIntegratedQuestion(config, domain, index, memory) {
+  const selected = integratedTopics(config, domain, index, 2)
+  const [first, second] = selected.map(item => item.topic)
+  const frame = frames[(index - 1) % frames.length]
+  const tradeoff = integratedTradeoffs[Math.floor((index - 1) / 4) % integratedTradeoffs.length]
+  const alternatives = integratedAlternatives(config, selected, 3)
+  const plans = [
+    {
+      value: `Use ${first.correct} for the primary requirement and integrate it with ${second.correct} for the connected control`,
+      zh: `以${translatedOption(memory, first.correct)}處理主要需求，並整合${translatedOption(memory, second.correct)}作為相連控制`,
+      correct: true,
+    },
+    {
+      value: `Use ${first.correct} but replace the connected control with ${alternatives[0]}`,
+      zh: `使用${translatedOption(memory, first.correct)}，但以${translatedOption(memory, alternatives[0])}取代相連控制`,
+      correct: false,
+    },
+    {
+      value: `Use ${alternatives[1]} for the primary requirement and integrate it with ${second.correct}`,
+      zh: `以${translatedOption(memory, alternatives[1])}處理主要需求，並整合${translatedOption(memory, second.correct)}`,
+      correct: false,
+    },
+    {
+      value: `Combine ${alternatives[1]} with ${alternatives[2]} as a single platform design`,
+      zh: `把${translatedOption(memory, alternatives[1])}與${translatedOption(memory, alternatives[2])}結合為單一平台設計`,
+      correct: false,
+    },
+  ]
+  const { options, answers } = choiceRecord(plans, index + domain.id + config.code.length)
+  const zhByValue = new Map(plans.map(plan => [plan.value, plan.zh]))
+  const question = `${frame} is redesigning one integrated end-to-end architecture. ${contextFor(config, domain, index)} ${tradeoff.en} The workload ${requirementFromPrompt(first.prompt)}, and the same architecture ${requirementFromPrompt(second.prompt)}. Both capabilities must work together because failure of either prevents the required business outcome. Which architecture best meets these requirements?`
+  const explanation = `${first.correct} satisfies the first part of the architecture: ${first.reason} ${second.correct} satisfies the connected requirement: ${second.reason}\nThe remaining options can be useful in other designs, but they do not satisfy both connected requirements with the stated cost, security, and availability tradeoffs.`
+  const zhOptions = Object.fromEntries(Object.entries(options).map(([key, value]) => [key, zhByValue.get(value)]))
+  const firstZh = translatedOption(memory, first.correct)
+  const secondZh = translatedOption(memory, second.correct)
+
+  return {
+    ...baseQuestion(config, domain, index),
+    type: 'single',
+    question,
+    options,
+    answer: answers[0],
+    isMultiAnswer: false,
+    explanation,
+    translations: {
+      zh: {
+        question: `某企業正在重新設計一個整合式端到端生產架構。兩項能力必須共同運作，任一項失效都會影響業務成果。第一項需求：${translatedRequirement(memory, first)} 第二項需求：${translatedRequirement(memory, second)} ${tradeoff.zh} 哪一個架構最符合這些要求？`,
+        options: zhOptions,
+        explanation: `${firstZh} 負責架構的第一項需求，${secondZh} 負責相連的第二項需求。兩者必須在同一個端到端設計中共同運作。\n其餘選項可能適用於其他設計，但無法在指定的成本、安全性及可用性取捨下同時滿足這兩項相連需求。`,
+      },
+    },
+  }
+}
+
+function buildIntegratedMatchingQuestion(config, domain, index, memory) {
+  const selected = integratedTopics(config, domain, index, 3)
+  const frame = frames[(index - 1) % frames.length]
+  const tradeoff = integratedTradeoffs[Math.floor((index - 1) / 4) % integratedTradeoffs.length]
+  const targetEntries = rotate(selected.map(item => item.topic.correct), index + domain.id)
+  const targetKeys = ['1', '2', '3']
+  const targets = Object.fromEntries(targetKeys.map((key, offset) => [key, targetEntries[offset]]))
+  const optionKeys = ['A', 'B', 'C']
+  const options = Object.fromEntries(optionKeys.map((key, offset) => [
+    key,
+    `Stage ${offset + 1}: The architecture ${requirementFromPrompt(selected[offset].topic.prompt)}`,
+  ]))
+  const correctMatches = Object.fromEntries(optionKeys.map((key, offset) => [
+    key,
+    targetKeys[targetEntries.indexOf(selected[offset].topic.correct)],
+  ]))
+  const mappings = optionKeys.map((key, offset) => `${key} maps to ${selected[offset].topic.correct}. ${selected[offset].topic.reason}`)
+  const zhOptions = Object.fromEntries(optionKeys.map((key, offset) => [
+    key,
+    `階段 ${offset + 1}：${translatedRequirement(memory, selected[offset].topic)}`,
+  ]))
+  const zhTargets = Object.fromEntries(targetKeys.map((key, offset) => [key, translatedOption(memory, targetEntries[offset])]))
+  const zhMappings = optionKeys.map((key, offset) => `${key} 應配對 ${translatedOption(memory, selected[offset].topic.correct)}`)
+
+  return {
+    ...baseQuestion(config, domain, index),
+    type: 'matching',
+    question: `${frame} is designing one integrated end-to-end network architecture across accounts and Regions. ${contextFor(config, domain, index)} ${tradeoff.en} Match each connected stage to the implementation that lets the complete architecture satisfy its business outcome.`,
+    options,
+    answer: '',
+    isMultiAnswer: false,
+    targets,
+    correctMatches,
+    explanation: `${mappings.join(' ')}\nAll three stages are connected. Substituting an unrelated target would break the architecture or weaken its cost, security, and availability tradeoffs.`,
+    translations: {
+      zh: {
+        question: `某企業正在跨帳戶與區域設計一個整合式端到端網路架構。三個階段彼此相連，任一階段錯誤都會影響整體業務成果。${tradeoff.zh} 請把每個階段配對至最合適的實作。`,
+        options: zhOptions,
+        targets: zhTargets,
+        explanation: `${zhMappings.join('；')}。三個實作共同組成完整架構。\n若以不相關的目標取代任何一項，便會破壞架構或削弱成本、安全性及可用性之間的取捨。`,
+      },
+    },
+  }
+}
+
+function buildMatchingQuestion(config, domain, index, topicIndex) {
+  const selected = [0, 1, 2].map(offset => domain.topics[(topicIndex + offset) % domain.topics.length])
+  const frame = frames[(index - 1) % frames.length]
+  const targetEntries = rotate(selected.map(topic => topic.correct), index + domain.id)
+  const targetKeys = ['1', '2', '3']
+  const targets = Object.fromEntries(targetKeys.map((key, offset) => [key, targetEntries[offset]]))
+  const optionKeys = ['A', 'B', 'C']
+  const options = Object.fromEntries(optionKeys.map((key, offset) => [
+    key,
+    `A workload ${requirementFromPrompt(selected[offset].prompt)}`,
+  ]))
+  const correctMatches = Object.fromEntries(optionKeys.map((key, offset) => [
+    key,
+    targetKeys[targetEntries.indexOf(selected[offset].correct)],
+  ]))
+  const mappings = optionKeys.map((key, offset) => `${key} maps to ${selected[offset].correct}. ${selected[offset].reason}`)
+
+  return {
+    ...baseQuestion(config, domain, index),
+    type: 'matching',
+    question: `${frame} is reviewing several independent production requirements. ${contextFor(config, domain, index)} Match each workload requirement to the most appropriate implementation.`,
+    options,
+    answer: '',
+    isMultiAnswer: false,
+    targets,
+    correctMatches,
+    explanation: `${mappings.join(' ')}\nEach target is intended for a different requirement, so all three mappings must be evaluated independently.`,
+  }
+}
+
+function buildQuestion(config, domain, index, memory) {
+  const topicIndex = (index - 1) % domain.topics.length
+  const level = LEVELS[config.code]
+
+  if ((level === 'professional' || level === 'specialty') && index % 4 === 0) {
+    return config.code === 'ans-c01'
+      ? buildIntegratedMatchingQuestion(config, domain, index, memory)
+      : buildIntegratedQuestion(config, domain, index, memory)
+  }
+
+  if (config.code === 'ans-c01') {
+    return buildMultiQuestion(config, domain, index, topicIndex)
+  }
+  if ((config.code === 'mla-c01' || config.code === 'scs-c03') && index % 17 === 0) {
+    return buildMatchingQuestion(config, domain, index, topicIndex)
+  }
+  if (index % 7 === 0) return buildMultiQuestion(config, domain, index, topicIndex)
+  return buildSingleQuestion(config, domain, index, topicIndex)
 }
 
 for (const [code, config] of Object.entries(catalogs)) {
   config.code = code
   const certDir = join(DATA_ROOT, code)
+  const memory = loadTranslationMemory(config, certDir)
   mkdirSync(certDir, { recursive: true })
   const totalTarget = config.totalTarget
   const rawCounts = config.domains.map(domain => totalTarget * domain.weight)
@@ -428,9 +865,12 @@ for (const [code, config] of Object.entries(catalogs)) {
         counts[index] += 1
         remainder -= 1
       }
-    })
+  })
   config.domains.forEach((domain, index) => {
-    const questions = Array.from({ length: counts[index] }, (_, offset) => buildQuestion(config, domain, offset + 1))
+    const questions = Array.from({ length: counts[index] }, (_, offset) => {
+      const question = buildQuestion(config, domain, offset + 1, memory)
+      return question.translations ? question : preserveExistingTranslation(question, memory)
+    })
     writeFileSync(join(certDir, `domain${domain.id}.json`), `${JSON.stringify(questions, null, 2)}\n`)
   })
   console.log(`${config.code}: ${counts.join('/')} (${counts.reduce((sum, value) => sum + value, 0)} questions)`)

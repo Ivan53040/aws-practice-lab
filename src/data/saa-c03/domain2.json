@@ -1,7 +1,7 @@
 [
   {
     "id": "saa-d2-001",
-    "question": "A web application must remain available even if an entire Availability Zone fails. Which architecture pattern achieves this?",
+    "question": "This change affects a production workload. The team must preserve existing behavior and prefers a managed AWS capability with low operational overhead. A web application must remain available even if an entire Availability Zone fails. Which architecture pattern achieves this?",
     "options": {
       "A": "Deploy to a single AZ with Auto Scaling",
       "B": "Deploy across multiple AZs with an Application Load Balancer",
@@ -13,10 +13,10 @@
     "isMultiAnswer": false,
     "type": "single",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "即使整個可用區發生故障，Web 應用程式也必須保持可用。哪種架構模式可以實現這一點？",
+        "question": "這項變更會影響生產工作負載。團隊必須保留現有行為，並希望採用營運負擔較低的 AWS 託管功能。即使整個可用區發生故障，Web 應用程式也必須保持可用。哪種架構模式可以實現這一點？",
         "options": {
           "A": "使用 Auto Scaling 部署到單一可用區",
           "B": "使用應用程式負載平衡器跨多個可用區進行部署",
@@ -29,7 +29,7 @@
   },
   {
     "id": "saa-d2-002",
-    "question": "Which Amazon RDS feature provides automatic failover to a standby replica in a different Availability Zone?",
+    "question": "The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. Which Amazon RDS feature provides automatic failover to a standby replica in a different Availability Zone?",
     "options": {
       "A": "Read Replicas",
       "B": "Multi-AZ deployment",
@@ -41,10 +41,10 @@
     "isMultiAnswer": false,
     "type": "single",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "哪個 Amazon RDS 功能提供自動故障轉移到不同可用區中的備用副本？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。哪個 Amazon RDS 功能提供自動故障轉移到不同可用區中的備用副本？",
         "options": {
           "A": "讀取副本",
           "B": "多可用區部署",
@@ -57,7 +57,7 @@
   },
   {
     "id": "saa-d2-003",
-    "question": "A company needs to decouple their application components to handle variable processing loads. Which service should they use?",
+    "question": "The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. A company needs to decouple their application components to handle variable processing loads. Which service should they use?",
     "options": {
       "A": "Amazon SQS",
       "B": "Amazon RDS",
@@ -69,10 +69,10 @@
     "isMultiAnswer": false,
     "type": "single",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "公司需要解耦其應用程式組件以處理可變的處理負載。他們應該使用哪種服務？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。公司需要解耦其應用程式組件以處理可變的處理負載。他們應該使用哪種服務？",
         "options": {
           "A": "Amazon SQS",
           "B": "Amazon RDS",
@@ -85,7 +85,7 @@
   },
   {
     "id": "saa-d2-004",
-    "question": "Which S3 storage class should be used for data that is accessed less than once per quarter and can tolerate retrieval times of 12 hours?",
+    "question": "The workload follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. Which S3 storage class should be used for data that is accessed less than once per quarter and can tolerate retrieval times of 12 hours?",
     "options": {
       "A": "S3 Standard",
       "B": "S3 Glacier Instant Retrieval",
@@ -97,10 +97,10 @@
     "isMultiAnswer": false,
     "type": "single",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "每季造訪次數少於一次且可容忍 12 小時檢索時間的資料，應使用哪種 S3 儲存類別？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。每季造訪次數少於一次且可容忍 12 小時檢索時間的資料，應使用哪種 S3 儲存類別？",
         "options": {
           "A": "S3 Standard",
           "B": "S3 Glacier Instant Retrieval",
@@ -113,7 +113,7 @@
   },
   {
     "id": "saa-d2-005",
-    "question": "An application uses Amazon DynamoDB and must be able to recover from accidental table deletion. Which feature should be enabled?",
+    "question": "The team must avoid a prolonged outage and will validate the selected capability in staging before a controlled production rollout. An application uses Amazon DynamoDB and must be able to recover from accidental table deletion. Which feature should be enabled?",
     "options": {
       "A": "DynamoDB Streams",
       "B": "Point-in-time recovery (PITR)",
@@ -125,10 +125,10 @@
     "isMultiAnswer": false,
     "type": "single",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "應用程式使用 Amazon DynamoDB，並且必須能夠從意外的表刪除中復原。應該啟用哪個功能？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。應用程式使用 Amazon DynamoDB，並且必須能夠從意外的表刪除中復原。應該啟用哪個功能？",
         "options": {
           "A": "DynamoDB Streams",
           "B": "時間點恢復 (PITR)",
@@ -142,7 +142,7 @@
   {
     "id": "saa-d2-006",
     "type": "single",
-    "question": "A workload needs strict message ordering and exactly-once processing behavior for duplicate messages. Which SQS configuration is most appropriate?",
+    "question": "This change affects a production workload. The team must preserve existing behavior and prefers a managed AWS capability with low operational overhead. A workload needs strict message ordering and exactly-once processing behavior for duplicate messages. Which SQS configuration is most appropriate?",
     "options": {
       "A": "Standard queue with a short polling interval",
       "B": "FIFO queue with message deduplication",
@@ -153,10 +153,10 @@
     "isMultiAnswer": false,
     "explanation": "FIFO queues preserve order within message groups and support deduplication for repeated message sends.\nStandard queues prioritize high throughput and provide at-least-once delivery without strict ordering. Delay queues defer delivery. A dead-letter queue stores failed messages and is not a primary processing queue.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "工作負載需要嚴格的訊息排序和重複訊息的一次性處理行為。哪一種 SQS 配置最適合？",
+        "question": "這項變更會影響生產工作負載。團隊必須保留現有行為，並希望採用營運負擔較低的 AWS 託管功能。工作負載需要嚴格的訊息排序和重複訊息的一次性處理行為。哪一種 SQS 配置最適合？",
         "options": {
           "A": "具有短輪詢間隔的標準佇列",
           "B": "具有重複訊息刪除功能的 FIFO 佇列",
@@ -170,7 +170,7 @@
   {
     "id": "saa-d2-007",
     "type": "single",
-    "question": "A single event must be delivered independently to a queue, a Lambda function, and an email endpoint. Which pattern is appropriate?",
+    "question": "The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. A single event must be delivered independently to a queue, a Lambda function, and an email endpoint. Which pattern is appropriate?",
     "options": {
       "A": "Publish once to an SNS topic with multiple subscriptions",
       "B": "Store the event in EBS and poll it from each consumer",
@@ -181,10 +181,10 @@
     "isMultiAnswer": false,
     "explanation": "An SNS topic provides pub/sub fanout so each subscription receives the event independently.\nEBS is block storage, not an event bus. A shared queue distributes messages among consumers rather than delivering each message to every consumer. RDS read replicas are database replicas.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "單一事件必須獨立傳送到佇列、Lambda 函數和電子郵件端點。哪種模式合適？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。單一事件必須獨立傳送到佇列、Lambda 函數和電子郵件端點。哪種模式合適？",
         "options": {
           "A": "向具有多個訂閱的 SNS 主題發布一次",
           "B": "將事件儲存在 EBS 中並從每個消費者輪詢",
@@ -198,7 +198,7 @@
   {
     "id": "saa-d2-008",
     "type": "single",
-    "question": "A workflow must coordinate several Lambda functions, retry failed steps, and record the execution state. Which service should orchestrate the workflow?",
+    "question": "The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. A workflow must coordinate several Lambda functions, retry failed steps, and record the execution state. Which service should orchestrate the workflow?",
     "options": {
       "A": "AWS Step Functions",
       "B": "Amazon Route 53",
@@ -209,10 +209,10 @@
     "isMultiAnswer": false,
     "explanation": "Step Functions provides stateful workflow orchestration, retries, branching, and execution history for service integrations and compute steps.\nRoute 53 provides DNS. DataSync moves data. ElastiCache provides in-memory caching.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "工作流程必須協調多個 Lambda 函數、重試失敗的步驟並記錄執行狀態。哪個服務應該協調工作流程？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。工作流程必須協調多個 Lambda 函數、重試失敗的步驟並記錄執行狀態。哪個服務應該協調工作流程？",
         "options": {
           "A": "AWS Step Functions",
           "B": "Amazon Route 53",
@@ -226,7 +226,7 @@
   {
     "id": "saa-d2-009",
     "type": "multi",
-    "question": "Which two design choices help a web workload scale independently across application components? Select two.",
+    "question": "The workload follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. Which two design choices help a web workload scale independently across application components? Select two.",
     "options": {
       "A": "Place a durable queue between producers and workers",
       "B": "Use synchronous calls between every component",
@@ -241,10 +241,10 @@
     "isMultiAnswer": true,
     "explanation": "A durable queue decouples producer and worker rates, and stateless workers in an Auto Scaling group can scale independently.\nSynchronous chains create tight coupling. Local session state prevents horizontal scaling. One large instance creates a scaling bottleneck and a single point of failure.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "哪兩種設計選擇有助於 Web 工作負載跨應用程式元件獨立擴充？選擇兩個。",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。哪兩種設計選擇有助於 Web 工作負載跨應用程式元件獨立擴充？選擇兩個。",
         "options": {
           "A": "在生產者和工人之間放置一個持久佇列",
           "B": "在每個元件之間使用同步調用",
@@ -259,7 +259,7 @@
   {
     "id": "saa-d2-010",
     "type": "single",
-    "question": "A Lambda function processes messages from an SQS queue. What happens when the function fails to process a message?",
+    "question": "The team must avoid a prolonged outage and will validate the selected capability in staging before a controlled production rollout. A Lambda function processes messages from an SQS queue. What happens when the function fails to process a message?",
     "options": {
       "A": "The message is deleted immediately",
       "B": "The message becomes visible again after the visibility timeout",
@@ -270,10 +270,10 @@
     "isMultiAnswer": false,
     "explanation": "If a message is not deleted successfully before the visibility timeout expires, it becomes available for another receive attempt.\nSQS does not delete an unacknowledged message or move it to S3. The queue remains available for other messages.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "Lambda 函數處理來自 SQS 佇列的訊息。當函數無法處理訊息時會發生什麼？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。Lambda 函數處理來自 SQS 佇列的訊息。當函數無法處理訊息時會發生什麼？",
         "options": {
           "A": "該訊息立即被刪除",
           "B": "可見性超時後，訊息再次可見",
@@ -287,7 +287,7 @@
   {
     "id": "saa-d2-011",
     "type": "single",
-    "question": "An application must continue serving requests if one Availability Zone fails. Which architecture is most appropriate?",
+    "question": "This change affects a production workload. The team must preserve existing behavior and prefers a managed AWS capability with low operational overhead. An application must continue serving requests if one Availability Zone fails. Which architecture is most appropriate?",
     "options": {
       "A": "One EC2 instance in one AZ with a larger instance type",
       "B": "An Auto Scaling group spanning multiple AZs behind an Application Load Balancer",
@@ -298,10 +298,10 @@
     "isMultiAnswer": false,
     "explanation": "A multi-AZ Auto Scaling group and load balancer can route traffic to healthy instances after an AZ failure.\nIncreasing the size of one instance or volume does not remove the AZ dependency. A network ACL is a traffic filter, not a high availability design.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "如果一個可用區發生故障，應用程式必須繼續處理請求。哪種架構最適合？",
+        "question": "這項變更會影響生產工作負載。團隊必須保留現有行為，並希望採用營運負擔較低的 AWS 託管功能。如果一個可用區發生故障，應用程式必須繼續處理請求。哪種架構最適合？",
         "options": {
           "A": "一個可用區中的 1 個 EC2 執行個體，具有較大的執行個體類型",
           "B": "跨 Application Load Balancer 後面多個可用區的 Auto Scaling 群組",
@@ -315,7 +315,7 @@
   {
     "id": "saa-d2-012",
     "type": "single",
-    "question": "Which Route 53 routing policy can direct users to the endpoint that has passed a health check?",
+    "question": "The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. Which Route 53 routing policy can direct users to the endpoint that has passed a health check?",
     "options": {
       "A": "Simple routing without health checks",
       "B": "Failover routing",
@@ -326,10 +326,10 @@
     "isMultiAnswer": false,
     "explanation": "Failover routing uses a primary and secondary record and can return the healthy endpoint based on health checks.\nSimple routing does not select based on health. Geolocation routes by user location. Multivalue answer can include health checks but is not the primary and secondary failover policy.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "哪一種 Route 53 路由策略可以將使用者定向到已通過運行狀況檢查的終端節點？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。哪一種 Route 53 路由策略可以將使用者定向到已通過運行狀況檢查的終端節點？",
         "options": {
           "A": "簡單路由，無需健康檢查",
           "B": "故障轉移路由",
@@ -343,7 +343,7 @@
   {
     "id": "saa-d2-013",
     "type": "single",
-    "question": "A relational database needs automatic failover within one Region with minimal application changes. Which option should be selected?",
+    "question": "The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. A relational database needs automatic failover within one Region with minimal application changes. Which option should be selected?",
     "options": {
       "A": "An RDS Multi-AZ deployment",
       "B": "An RDS read replica in the same AZ",
@@ -354,10 +354,10 @@
     "isMultiAnswer": false,
     "explanation": "RDS Multi-AZ maintains a synchronized standby in another Availability Zone and updates the endpoint after a failover.\nRead replicas are primarily for read scaling and are not the same as a synchronous Multi-AZ standby. DynamoDB and instance store use different data models and durability mechanisms.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "關聯式資料庫需要在一個區域內進行自動故障轉移，並且應用程式更改最少。應該選擇哪個選項？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。關聯式資料庫需要在一個區域內進行自動故障轉移，並且應用程式更改最少。應該選擇哪個選項？",
         "options": {
           "A": "RDS Multi-AZ部署",
           "B": "同一可用區中的 RDS 唯讀副本",
@@ -371,7 +371,7 @@
   {
     "id": "saa-d2-014",
     "type": "single",
-    "question": "A company needs a database design that can serve read traffic from multiple Regions with low latency. Which Aurora feature is appropriate?",
+    "question": "The workload follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. A company needs a database design that can serve read traffic from multiple Regions with low latency. Which Aurora feature is appropriate?",
     "options": {
       "A": "Aurora Replicas in one AZ",
       "B": "Aurora Global Database",
@@ -382,10 +382,10 @@
     "isMultiAnswer": false,
     "explanation": "Aurora Global Database replicates storage across Regions and supports read-locality with a primary Region and secondary Regions.\nAurora Replicas in one Region do not provide cross-Region placement. RDS Proxy manages connections. EBS snapshots are backups, not a cross-Region read architecture.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "公司需要一種能夠以低延遲服務來自多個區域的讀取流量的資料庫設計。哪種 Aurora 功能適合？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。公司需要一種能夠以低延遲服務來自多個區域的讀取流量的資料庫設計。哪種 Aurora 功能適合？",
         "options": {
           "A": "一個可用區中的 Aurora 副本",
           "B": "Aurora Global Database",
@@ -399,7 +399,7 @@
   {
     "id": "saa-d2-015",
     "type": "single",
-    "question": "A company needs an active-passive disaster recovery design with a small running environment in the recovery Region. Which strategy best matches this requirement?",
+    "question": "The team must avoid a prolonged outage and will validate the selected capability in staging before a controlled production rollout. A company needs an active-passive disaster recovery design with a small running environment in the recovery Region. Which strategy best matches this requirement?",
     "options": {
       "A": "Backup and restore only",
       "B": "Pilot light",
@@ -410,10 +410,10 @@
     "isMultiAnswer": false,
     "explanation": "Warm standby keeps a scaled-down but functional environment running in the recovery Region so it can be scaled up quickly.\nBackup and restore has the longest recovery process. Pilot light keeps only core components running. Active-active runs production workloads in multiple Regions.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "某公司需要主被動容災設計，恢復Region的運作環境較小。哪種策略最符合這項要求？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。某公司需要主被動容災設計，恢復Region的運作環境較小。哪種策略最符合這項要求？",
         "options": {
           "A": "僅備份和還原",
           "B": "指示燈",
@@ -427,7 +427,7 @@
   {
     "id": "saa-d2-016",
     "type": "multi",
-    "question": "Which two features help preserve data availability across a Regional failure? Select two.",
+    "question": "This change affects a production workload. The team must preserve existing behavior and prefers a managed AWS capability with low operational overhead. Which two features help preserve data availability across a Regional failure? Select two.",
     "options": {
       "A": "Amazon S3 Cross-Region Replication",
       "B": "DynamoDB global tables",
@@ -442,10 +442,10 @@
     "isMultiAnswer": true,
     "explanation": "S3 Cross-Region Replication copies objects to a bucket in another Region, and DynamoDB global tables replicate tables across Regions.\nSingle-AZ EBS and instance store do not provide Regional durability. Security groups control traffic and do not replicate data.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "哪兩項功能有助於在區域故障期間維持資料可用性？選擇兩個。",
+        "question": "這項變更會影響生產工作負載。團隊必須保留現有行為，並希望採用營運負擔較低的 AWS 託管功能。哪兩項功能有助於在區域故障期間維持資料可用性？選擇兩個。",
         "options": {
           "A": "Amazon S3 Cross-Region Replication",
           "B": "DynamoDB 全域表",
@@ -460,7 +460,7 @@
   {
     "id": "saa-d2-017",
     "type": "single",
-    "question": "A web tier must remove unhealthy instances automatically and replace them with healthy capacity. Which feature provides this behavior?",
+    "question": "The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. A web tier must remove unhealthy instances automatically and replace them with healthy capacity. Which feature provides this behavior?",
     "options": {
       "A": "Auto Scaling group health checks",
       "B": "S3 Lifecycle rules",
@@ -471,10 +471,10 @@
     "isMultiAnswer": false,
     "explanation": "An Auto Scaling group can use health checks to terminate unhealthy instances and launch replacements.\nS3 Lifecycle rules manage objects. Budgets monitors cost thresholds. KMS key policies control key usage.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "Web 層必須自動刪除不健康的執行個體並用健康的容量取代它們。哪個功能提供了這種行為？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。Web 層必須自動刪除不健康的執行個體並用健康的容量取代它們。哪個功能提供了這種行為？",
         "options": {
           "A": "Auto Scaling 組健康檢查",
           "B": "S3 生命週期規則",
@@ -488,7 +488,7 @@
   {
     "id": "saa-d2-018",
     "type": "single",
-    "question": "A company wants backups that can be restored after an accidental deletion of an AWS resource. Which service centralizes policy-based backups across supported services?",
+    "question": "The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. A company wants backups that can be restored after an accidental deletion of an AWS resource. Which service centralizes policy-based backups across supported services?",
     "options": {
       "A": "AWS Backup",
       "B": "Amazon CloudFront",
@@ -499,10 +499,10 @@
     "isMultiAnswer": false,
     "explanation": "AWS Backup centralizes backup plans, schedules, retention, and vault policies for supported AWS resources.\nCloudFront and WAF protect or serve web traffic. EventBridge routes events but is not a backup management service.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "一家公司希望備份能夠在意外刪除 AWS 資源後復原。哪種服務在支援的服務中集中基於策略的備份？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。一家公司希望備份能夠在意外刪除 AWS 資源後復原。哪種服務在支援的服務中集中基於策略的備份？",
         "options": {
           "A": "AWS Backup",
           "B": "Amazon CloudFront",
@@ -516,7 +516,7 @@
   {
     "id": "saa-d2-019",
     "type": "single",
-    "question": "A publisher needs each subscriber to receive every event and wants to add subscribers without changing the publisher. Which service should distribute the events?",
+    "question": "The workload follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. A publisher needs each subscriber to receive every event and wants to add subscribers without changing the publisher. Which service should distribute the events?",
     "options": {
       "A": "An SNS topic with independent subscriptions",
       "B": "A single SQS queue shared by all consumers",
@@ -527,10 +527,10 @@
     "isMultiAnswer": false,
     "explanation": "An SNS topic provides fanout so each subscription receives a copy and new subscribers can be added without changing the publisher.\nA shared queue load-balances messages among consumers rather than delivering each message to every consumer. EBS and security groups do not provide pub/sub behavior.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "發布者需要每個訂閱者接收每個事件，並且希望在不更改發布者的情況下新增訂閱者。哪個服務應該分發事件？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。發布者需要每個訂閱者接收每個事件，並且希望在不更改發布者的情況下新增訂閱者。哪個服務應該分發事件？",
         "options": {
           "A": "獨立訂閱的SNS主題",
           "B": "由所有消費者共享的單一 SQS 佇列",
@@ -544,7 +544,7 @@
   {
     "id": "saa-d2-020",
     "type": "single",
-    "question": "A company receives events from many AWS services and wants to route them to targets using event patterns without managing polling code. Which service should it use?",
+    "question": "The team must avoid a prolonged outage and will validate the selected capability in staging before a controlled production rollout. A company receives events from many AWS services and wants to route them to targets using event patterns without managing polling code. Which service should it use?",
     "options": {
       "A": "Amazon EventBridge",
       "B": "Amazon EBS",
@@ -555,10 +555,10 @@
     "isMultiAnswer": false,
     "explanation": "EventBridge receives events and routes them to targets based on event patterns, which reduces custom polling and point-to-point coupling.\nEBS provides block storage, KMS manages keys, and Route 53 provides DNS.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "一家公司從許多 AWS 服務接收事件，並希望使用事件模式將它們路由到目標，而無需管理輪詢程式碼。應該使用哪種服務？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。一家公司從許多 AWS 服務接收事件，並希望使用事件模式將它們路由到目標，而無需管理輪詢程式碼。應該使用哪種服務？",
         "options": {
           "A": "Amazon EventBridge",
           "B": "Amazon EBS",
@@ -572,7 +572,7 @@
   {
     "id": "saa-d2-021",
     "type": "single",
-    "question": "An application polls an SQS queue and wants to reduce empty responses and API calls while waiting for messages. Which option should be enabled?",
+    "question": "This change affects a production workload. The team must preserve existing behavior and prefers a managed AWS capability with low operational overhead. An application polls an SQS queue and wants to reduce empty responses and API calls while waiting for messages. Which option should be enabled?",
     "options": {
       "A": "Long polling",
       "B": "A shorter visibility timeout only",
@@ -583,10 +583,10 @@
     "isMultiAnswer": false,
     "explanation": "SQS long polling waits for messages for a configured period, reducing empty receives and unnecessary API calls.\nVisibility timeout controls message reappearance after receipt. Object Lock and DNS health checks do not optimize SQS polling.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "應用程式輪詢 SQS 佇列，並希望在等待訊息時減少空響應和 API 呼叫。應該啟用哪個選項？",
+        "question": "這項變更會影響生產工作負載。團隊必須保留現有行為，並希望採用營運負擔較低的 AWS 託管功能。應用程式輪詢 SQS 佇列，並希望在等待訊息時減少空響應和 API 呼叫。應該啟用哪個選項？",
         "options": {
           "A": "長輪詢",
           "B": "僅較短的可見性超時",
@@ -600,7 +600,7 @@
   {
     "id": "saa-d2-022",
     "type": "single",
-    "question": "A worker repeatedly fails to process poison messages from an SQS queue. What should the architect configure to isolate those messages for later analysis?",
+    "question": "The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. A worker repeatedly fails to process poison messages from an SQS queue. What should the architect configure to isolate those messages for later analysis?",
     "options": {
       "A": "A dead-letter queue with a redrive policy",
       "B": "A public S3 bucket",
@@ -611,10 +611,10 @@
     "isMultiAnswer": false,
     "explanation": "A dead-letter queue receives messages after the source queue reaches its maximum receive count, preventing poison messages from blocking normal work.\nA public bucket and internet gateway do not control queue retries. A KMS alias names a key but does not isolate failed messages.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "工作線程多次無法處理來自 SQS 佇列的有害訊息。架構師應該配置什麼來隔離這些訊息以供以後分析？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。工作線程多次無法處理來自 SQS 佇列的有害訊息。架構師應該配置什麼來隔離這些訊息以供以後分析？",
         "options": {
           "A": "具有重新驅動策略的死信佇列",
           "B": "公共 S3 儲存桶",
@@ -628,7 +628,7 @@
   {
     "id": "saa-d2-023",
     "type": "single",
-    "question": "A web API accepts a request and should return immediately while a long-running report is generated asynchronously. Which design is appropriate?",
+    "question": "The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. A web API accepts a request and should return immediately while a long-running report is generated asynchronously. Which design is appropriate?",
     "options": {
       "A": "Place the request on SQS and process it with workers",
       "B": "Keep the HTTP connection open until the report finishes",
@@ -639,10 +639,10 @@
     "isMultiAnswer": false,
     "explanation": "An SQS-backed worker pattern acknowledges the request quickly and processes the long-running report independently with retries.\nHolding a synchronous connection reduces scalability and resilience. Instance store is temporary storage, and security groups do not queue jobs.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "Web API 接受請求並應立即傳回，同時非同步產生長時間運行的報告。哪種設計合適？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。Web API 接受請求並應立即傳回，同時非同步產生長時間運行的報告。哪種設計合適？",
         "options": {
           "A": "將請求提交到 SQS 並與工作人員一起處理",
           "B": "保持 HTTP 連線打開，直到報告完成",
@@ -656,7 +656,7 @@
   {
     "id": "saa-d2-024",
     "type": "single",
-    "question": "A workflow requires durable execution history, human approval, retries, and a wait state that can last for days. Which Step Functions workflow type best fits?",
+    "question": "The workload follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. A workflow requires durable execution history, human approval, retries, and a wait state that can last for days. Which Step Functions workflow type best fits?",
     "options": {
       "A": "Standard Workflows",
       "B": "Express Workflows only",
@@ -667,10 +667,10 @@
     "isMultiAnswer": false,
     "explanation": "Step Functions Standard Workflows provide durable execution history and support long-running workflows with waits and human interaction.\nExpress Workflows are optimized for high-volume short-duration processing. CloudFront and S3 lifecycle rules do not orchestrate workflow state.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "工作流程需要持久的執行歷史記錄、手動批准、重試以及可持續數天的等待狀態。哪一種 Step Functions 工作流程類型最適合？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。工作流程需要持久的執行歷史記錄、手動批准、重試以及可持續數天的等待狀態。哪一種 Step Functions 工作流程類型最適合？",
         "options": {
           "A": "標準工作流程",
           "B": "僅限快速工作流程",
@@ -684,7 +684,7 @@
   {
     "id": "saa-d2-025",
     "type": "single",
-    "question": "A stream of records must be processed by several independent applications, each maintaining its own read position. Which service is a suitable ingestion backbone?",
+    "question": "The team must avoid a prolonged outage and will validate the selected capability in staging before a controlled production rollout. A stream of records must be processed by several independent applications, each maintaining its own read position. Which service is a suitable ingestion backbone?",
     "options": {
       "A": "Amazon Kinesis Data Streams",
       "B": "Amazon S3 One Zone-IA",
@@ -695,10 +695,10 @@
     "isMultiAnswer": false,
     "explanation": "Kinesis Data Streams supports multiple consumers that track their own positions while records remain available for the configured retention period.\nS3 storage classes, EBS, and certificates do not provide independently tracked stream consumers.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "記錄流必須由多個獨立的應用程式處理，每個應用程式維護自己的讀取位置。哪種服務是適當的攝取主幹？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。記錄流必須由多個獨立的應用程式處理，每個應用程式維護自己的讀取位置。哪種服務是適當的攝取主幹？",
         "options": {
           "A": "Amazon Kinesis Data Streams",
           "B": "Amazon S3 One Zone-IA",
@@ -712,7 +712,7 @@
   {
     "id": "saa-d2-026",
     "type": "single",
-    "question": "A Lambda function invoked asynchronously by an event source fails temporarily. Which behavior helps the application recover without a custom retry loop?",
+    "question": "This change affects a production workload. The team must preserve existing behavior and prefers a managed AWS capability with low operational overhead. A Lambda function invoked asynchronously by an event source fails temporarily. Which behavior helps the application recover without a custom retry loop?",
     "options": {
       "A": "Lambda retries asynchronous invocations and can send failures to a destination",
       "B": "Lambda deletes every failed event immediately",
@@ -723,10 +723,10 @@
     "isMultiAnswer": false,
     "explanation": "Asynchronous Lambda invocations are retried automatically, and destinations can receive failed events for inspection or reprocessing.\nThe other behaviors do not describe Lambda asynchronous error handling.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "由事件來源非同步呼叫的 Lambda 函數暫時失敗。哪種行為可以幫助應用程式在沒有自訂重試循環的情況下恢復？",
+        "question": "這項變更會影響生產工作負載。團隊必須保留現有行為，並希望採用營運負擔較低的 AWS 託管功能。由事件來源非同步呼叫的 Lambda 函數暫時失敗。哪種行為可以幫助應用程式在沒有自訂重試循環的情況下恢復？",
         "options": {
           "A": "Lambda 重試非同步呼叫並且可以將失敗傳送到目的地",
           "B": "Lambda 立即刪除每個失敗的事件",
@@ -740,7 +740,7 @@
   {
     "id": "saa-d2-027",
     "type": "multi",
-    "question": "Which two patterns reduce coupling between an order API and downstream fulfillment services? Select two.",
+    "question": "The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. Which two patterns reduce coupling between an order API and downstream fulfillment services? Select two.",
     "options": {
       "A": "Publish an order event to an SNS topic",
       "B": "Use an SQS queue for fulfillment work",
@@ -755,10 +755,10 @@
     "isMultiAnswer": true,
     "explanation": "SNS fanout and SQS buffering let downstream consumers process events independently and at their own rate.\nA shared schema and synchronous calls create tight coupling. A process variable is neither durable nor shared.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "哪兩種模式可以減少訂單 API 和下游履行服務之間的耦合？選擇兩個。",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。哪兩種模式可以減少訂單 API 和下游履行服務之間的耦合？選擇兩個。",
         "options": {
           "A": "將訂單事件發佈到 SNS 主題",
           "B": "使用 SQS 佇列進行履行工作",
@@ -773,7 +773,7 @@
   {
     "id": "saa-d2-028",
     "type": "single",
-    "question": "A service must process tasks from a queue while automatically adding workers as backlog grows. Which combination provides this behavior?",
+    "question": "The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. A service must process tasks from a queue while automatically adding workers as backlog grows. Which combination provides this behavior?",
     "options": {
       "A": "SQS and an EC2 Auto Scaling group using queue depth",
       "B": "S3 and a single fixed EC2 instance",
@@ -784,10 +784,10 @@
     "isMultiAnswer": false,
     "explanation": "Queue depth can drive an Auto Scaling policy so the worker fleet expands and contracts independently of producers.\nThe other combinations do not provide durable work buffering and worker scaling.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "服務必須處理佇列中的任務，同時隨著積壓的成長自動新增工作人員。哪種組合提供了這種行為？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。服務必須處理佇列中的任務，同時隨著積壓的成長自動新增工作人員。哪種組合提供了這種行為？",
         "options": {
           "A": "使用佇列深度的 SQS 和 EC2 Auto Scaling 組",
           "B": "S3 和單一固定 EC2 執行個體",
@@ -801,7 +801,7 @@
   {
     "id": "saa-d2-029",
     "type": "single",
-    "question": "An ECS service must route requests to tasks and scale task count based on CPU utilization. Which design is appropriate?",
+    "question": "The workload follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. An ECS service must route requests to tasks and scale task count based on CPU utilization. Which design is appropriate?",
     "options": {
       "A": "An Application Load Balancer and ECS Service Auto Scaling",
       "B": "A single task with no health check",
@@ -812,10 +812,10 @@
     "isMultiAnswer": false,
     "explanation": "An Application Load Balancer distributes requests to healthy tasks, and ECS Service Auto Scaling adjusts desired task count from metrics.\nA single task lacks scaling and resilience. The other choices do not provide container service routing and scaling.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "ECS 服務必須將請求路由到任務並根據 CPU 使用率調整任務計數。哪種設計合適？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。ECS 服務必須將請求路由到任務並根據 CPU 使用率調整任務計數。哪種設計合適？",
         "options": {
           "A": "Application Load Balancer and ECS Service Auto Scaling",
           "B": "單一任務，無健康檢查",
@@ -829,7 +829,7 @@
   {
     "id": "saa-d2-030",
     "type": "single",
-    "question": "A content processing pipeline should accept files even when downstream image workers are temporarily unavailable. Which design provides the required buffering?",
+    "question": "The team must avoid a prolonged outage and will validate the selected capability in staging before a controlled production rollout. A content processing pipeline should accept files even when downstream image workers are temporarily unavailable. Which design provides the required buffering?",
     "options": {
       "A": "S3 event notification to an SQS queue",
       "B": "A synchronous Lambda call with no retry",
@@ -840,10 +840,10 @@
     "isMultiAnswer": false,
     "explanation": "S3 can emit an event to SQS, which durably buffers work until image workers are available.\nA direct synchronous call and an unbuffered public endpoint increase coupling. Security groups only filter network traffic.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "即使下游影像工作人員暫時無法使用，內容處理管道也應該接受檔案。哪種設計提供所需的緩衝？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。即使下游影像工作人員暫時無法使用，內容處理管道也應該接受檔案。哪種設計提供所需的緩衝？",
         "options": {
           "A": "發送至 SQS 佇列的 S3 事件通知",
           "B": "無需重試的同步 Lambda 調用",
@@ -857,7 +857,7 @@
   {
     "id": "saa-d2-031",
     "type": "single",
-    "question": "A team wants to replay a subset of past application events after correcting a consumer bug. Which EventBridge feature helps preserve and replay events?",
+    "question": "This change affects a production workload. The team must preserve existing behavior and prefers a managed AWS capability with low operational overhead. A team wants to replay a subset of past application events after correcting a consumer bug. Which EventBridge feature helps preserve and replay events?",
     "options": {
       "A": "An event archive and replay",
       "B": "A VPC peering connection",
@@ -868,10 +868,10 @@
     "isMultiAnswer": false,
     "explanation": "EventBridge archives can retain matching events and replay them to a bus after a consumer fix.\nNetworking, block storage, and cache invalidation do not preserve and replay event bus traffic.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "團隊希望在更正消費者錯誤後重播過去應用程式事件的子集。哪個 EventBridge 功能有助於保存和重播事件？",
+        "question": "這項變更會影響生產工作負載。團隊必須保留現有行為，並希望採用營運負擔較低的 AWS 託管功能。團隊希望在更正消費者錯誤後重播過去應用程式事件的子集。哪個 EventBridge 功能有助於保存和重播事件？",
         "options": {
           "A": "事件存檔和重播",
           "B": "VPC 對等連接",
@@ -885,7 +885,7 @@
   {
     "id": "saa-d2-032",
     "type": "single",
-    "question": "A company needs to invoke a Lambda function whenever a new object is created in a bucket, with the event delivered reliably when the function is busy. Which integration should be used?",
+    "question": "The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. A company needs to invoke a Lambda function whenever a new object is created in a bucket, with the event delivered reliably when the function is busy. Which integration should be used?",
     "options": {
       "A": "S3 Event Notifications to an SQS queue that triggers Lambda",
       "B": "A bucket website endpoint",
@@ -896,10 +896,10 @@
     "isMultiAnswer": false,
     "explanation": "Sending S3 notifications to SQS provides durable buffering before Lambda consumes the events.\nWebsite endpoints serve content, S3 has no security group attachment, and DNS records do not deliver object events.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "每當在儲存桶中建立新物件時，公司都需要呼叫 Lambda 函數，並在函數繁忙時可靠地傳遞事件。應該使用哪種整合？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。每當在儲存桶中建立新物件時，公司都需要呼叫 Lambda 函數，並在函數繁忙時可靠地傳遞事件。應該使用哪種整合？",
         "options": {
           "A": "發送到觸發 Lambda 的 SQS 佇列的 S3 事件通知",
           "B": "儲存桶網站端點",
@@ -913,7 +913,7 @@
   {
     "id": "saa-d2-033",
     "type": "single",
-    "question": "An API must protect a backend from sudden request spikes and return a controlled error when a client exceeds its quota. Which feature should be configured?",
+    "question": "The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. An API must protect a backend from sudden request spikes and return a controlled error when a client exceeds its quota. Which feature should be configured?",
     "options": {
       "A": "API Gateway throttling and usage plans",
       "B": "An S3 lifecycle transition",
@@ -924,10 +924,10 @@
     "isMultiAnswer": false,
     "explanation": "API Gateway throttling limits request rates, and usage plans can associate quotas and API keys with clients.\nStorage transitions, snapshots, and CloudTrail digests do not control API request rates.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "API 必須保護後端免受突發請求峰值的影響，並在使用者端超出其配額時傳回受控錯誤。應該配置哪個功能？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。API 必須保護後端免受突發請求峰值的影響，並在使用者端超出其配額時傳回受控錯誤。應該配置哪個功能？",
         "options": {
           "A": "API網關限制和使用計劃",
           "B": "S3 生命週期過渡",
@@ -941,7 +941,7 @@
   {
     "id": "saa-d2-034",
     "type": "single",
-    "question": "A team wants to run a container task in response to an event without managing a permanently running service. Which option is appropriate?",
+    "question": "The workload follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. A team wants to run a container task in response to an event without managing a permanently running service. Which option is appropriate?",
     "options": {
       "A": "EventBridge rule targeting an ECS task",
       "B": "An always-on EC2 instance for every event",
@@ -952,10 +952,10 @@
     "isMultiAnswer": false,
     "explanation": "EventBridge can start ECS tasks on demand, keeping the event source decoupled from the task lifecycle.\nThe other choices do not provide event-driven container execution.",
     "taskStatement": "2.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "團隊希望運行容器任務來回應事件，而不管理永久運行的服務。哪個選項合適？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。團隊希望運行容器任務來回應事件，而不管理永久運行的服務。哪個選項合適？",
         "options": {
           "A": "針對 ECS 任務的 EventBridge 規則",
           "B": "每個事件都有一個始終在線的 EC2 執行個體",
@@ -969,7 +969,7 @@
   {
     "id": "saa-d2-035",
     "type": "single",
-    "question": "A web application must continue serving traffic when an Availability Zone becomes unhealthy. Which load balancer configuration is required?",
+    "question": "The team must avoid a prolonged outage and will validate the selected capability in staging before a controlled production rollout. A web application must continue serving traffic when an Availability Zone becomes unhealthy. Which load balancer configuration is required?",
     "options": {
       "A": "An Application Load Balancer with subnets in at least two AZs and healthy targets",
       "B": "A load balancer with one target in one AZ",
@@ -980,10 +980,10 @@
     "isMultiAnswer": false,
     "explanation": "A multi-AZ Application Load Balancer can route requests to healthy targets in another AZ when one zone is impaired.\nA single-zone target remains a single point of failure. Public IPs and bucket policies do not provide load-balanced failover.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "當可用區變得不健康時，Web 應用程式必須繼續提供流量。需要哪種負載平衡器配置？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。當可用區變得不健康時，Web 應用程式必須繼續提供流量。需要哪種負載平衡器配置？",
         "options": {
           "A": "具有至少兩個可用區中的子網和運行狀況良好的目標的應用程式負載平衡器",
           "B": "一個負載平衡器，在一個可用區中具有一個目標",
@@ -997,7 +997,7 @@
   {
     "id": "saa-d2-036",
     "type": "single",
-    "question": "An Auto Scaling group should distribute instances across Availability Zones and replace a failed instance. Which settings support this requirement?",
+    "question": "This change affects a production workload. The team must preserve existing behavior and prefers a managed AWS capability with low operational overhead. An Auto Scaling group should distribute instances across Availability Zones and replace a failed instance. Which settings support this requirement?",
     "options": {
       "A": "Multiple subnets and EC2 health checks",
       "B": "One subnet and no health checks",
@@ -1008,10 +1008,10 @@
     "isMultiAnswer": false,
     "explanation": "Multiple subnets spread capacity across AZs, and health checks let the Auto Scaling group replace unhealthy instances.\nThe other choices do not distribute or replace compute capacity.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "Auto Scaling 群組應跨可用區分配執行個體並取代失敗的執行個體。哪些設定支援此要求？",
+        "question": "這項變更會影響生產工作負載。團隊必須保留現有行為，並希望採用營運負擔較低的 AWS 託管功能。Auto Scaling 群組應跨可用區分配執行個體並取代失敗的執行個體。哪些設定支援此要求？",
         "options": {
           "A": "多個子網路和 EC2 健康檢查",
           "B": "一個子網，無健康檢查",
@@ -1025,7 +1025,7 @@
   {
     "id": "saa-d2-037",
     "type": "single",
-    "question": "A load balancer must stop sending requests to an application instance that returns failed health checks. Which feature performs this selection?",
+    "question": "The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. A load balancer must stop sending requests to an application instance that returns failed health checks. Which feature performs this selection?",
     "options": {
       "A": "Target health checks",
       "B": "S3 versioning",
@@ -1036,10 +1036,10 @@
     "isMultiAnswer": false,
     "explanation": "Load balancer target health checks determine which targets are healthy enough to receive traffic.\nThe other features protect data, capture database changes, or restrict IAM permissions.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "負載平衡器必須停止向傳回失敗運行狀況檢查的應用程式執行個體發送請求。哪個功能執行此選擇？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。負載平衡器必須停止向傳回失敗運行狀況檢查的應用程式執行個體發送請求。哪個功能執行此選擇？",
         "options": {
           "A": "目標健康檢查",
           "B": "S3 Versioning",
@@ -1053,7 +1053,7 @@
   {
     "id": "saa-d2-038",
     "type": "single",
-    "question": "A production RDS database needs automatic failover to a synchronized standby in another Availability Zone without changing the application endpoint. Which deployment should be selected?",
+    "question": "The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. A production RDS database needs automatic failover to a synchronized standby in another Availability Zone without changing the application endpoint. Which deployment should be selected?",
     "options": {
       "A": "RDS Multi-AZ",
       "B": "An RDS read replica only",
@@ -1064,10 +1064,10 @@
     "isMultiAnswer": false,
     "explanation": "RDS Multi-AZ maintains a synchronized standby and updates the managed endpoint during failover.\nRead replicas are primarily for read scaling and are not the same as a synchronous Multi-AZ standby. Single-AZ and instance store designs are less resilient.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "生產 RDS 資料庫需要自動故障轉移到另一個可用區中的同步備用資料庫，而無需更改應用程式端點。應選擇哪種部署？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。生產 RDS 資料庫需要自動故障轉移到另一個可用區中的同步備用資料庫，而無需更改應用程式端點。應選擇哪種部署？",
         "options": {
           "A": "RDS Multi-AZ",
           "B": "僅 RDS 唯讀副本",
@@ -1081,7 +1081,7 @@
   {
     "id": "saa-d2-039",
     "type": "single",
-    "question": "A globally distributed application requires an Aurora database with fast cross-Region disaster recovery and local read access. Which feature fits?",
+    "question": "The workload follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. A globally distributed application requires an Aurora database with fast cross-Region disaster recovery and local read access. Which feature fits?",
     "options": {
       "A": "Aurora Global Database",
       "B": "An RDS read replica in the same AZ",
@@ -1092,10 +1092,10 @@
     "isMultiAnswer": false,
     "explanation": "Aurora Global Database replicates storage across Regions and supports low-latency reads in secondary Regions with a managed recovery path.\nSame-AZ replicas and EBS snapshots do not provide the same cross-Region database architecture. DNS records do not replicate database storage.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "全球分散式應用程式需要具有快速跨區域災難復原和本地讀取存取的 Aurora 資料庫。適合哪個功能？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。全球分散式應用程式需要具有快速跨區域災難復原和本地讀取存取的 Aurora 資料庫。適合哪個功能？",
         "options": {
           "A": "Aurora Global Database",
           "B": "同一可用區中的 RDS 唯讀副本",
@@ -1109,7 +1109,7 @@
   {
     "id": "saa-d2-040",
     "type": "single",
-    "question": "A DynamoDB application needs active read and write access in multiple Regions with automatic replication. Which feature should be used?",
+    "question": "The team must avoid a prolonged outage and will validate the selected capability in staging before a controlled production rollout. A DynamoDB application needs active read and write access in multiple Regions with automatic replication. Which feature should be used?",
     "options": {
       "A": "DynamoDB global tables",
       "B": "A local secondary index only",
@@ -1120,10 +1120,10 @@
     "isMultiAnswer": false,
     "explanation": "DynamoDB global tables replicate table data across Regions and support multi-Region applications with local endpoints.\nA local index changes query behavior, while EBS and S3 lifecycle rules do not provide multi-Region writes.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "DynamoDB 應用程式需要在多個區域中透過自動複製進行主動讀寫存取。應該使用哪個功能？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。DynamoDB 應用程式需要在多個區域中透過自動複製進行主動讀寫存取。應該使用哪個功能？",
         "options": {
           "A": "DynamoDB 全域表",
           "B": "僅本地二級索引",
@@ -1137,7 +1137,7 @@
   {
     "id": "saa-d2-041",
     "type": "single",
-    "question": "A company must copy new S3 objects to a second Region for disaster recovery. Which capability should it configure?",
+    "question": "This change affects a production workload. The team must preserve existing behavior and prefers a managed AWS capability with low operational overhead. A company must copy new S3 objects to a second Region for disaster recovery. Which capability should it configure?",
     "options": {
       "A": "S3 Cross-Region Replication",
       "B": "S3 Select",
@@ -1148,10 +1148,10 @@
     "isMultiAnswer": false,
     "explanation": "S3 Cross-Region Replication asynchronously copies eligible objects to a destination bucket in another Region.\nSelect queries object contents, Inventory reports metadata, and CloudFront caching does not create a durable replica.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "公司必須將新的 S3 物件複製到第二個區域以進行災難復原。應該配置哪些能力？",
+        "question": "這項變更會影響生產工作負載。團隊必須保留現有行為，並希望採用營運負擔較低的 AWS 託管功能。公司必須將新的 S3 物件複製到第二個區域以進行災難復原。應該配置哪些能力？",
         "options": {
           "A": "S3 Cross-Region Replication",
           "B": "S3 Select",
@@ -1165,7 +1165,7 @@
   {
     "id": "saa-d2-042",
     "type": "single",
-    "question": "A shared file system must remain available if one Availability Zone fails while applications mount it from multiple AZs. Which service should be selected?",
+    "question": "The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. A shared file system must remain available if one Availability Zone fails while applications mount it from multiple AZs. Which service should be selected?",
     "options": {
       "A": "Regional Amazon EFS",
       "B": "A single-AZ EBS volume",
@@ -1176,10 +1176,10 @@
     "isMultiAnswer": false,
     "explanation": "Regional EFS stores data redundantly across multiple AZs and provides a managed file system endpoint for clients in the Region.\nEBS and instance store are attached to compute capacity and do not provide the same Regional file system availability. An S3 website is object delivery.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "如果一個可用區發生故障而應用程式從多個可用區裝載共用檔案系統，則該共用檔案系統必須保持可用。該選擇哪種服務？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。如果一個可用區發生故障而應用程式從多個可用區裝載共用檔案系統，則該共用檔案系統必須保持可用。該選擇哪種服務？",
         "options": {
           "A": "區域 Amazon EFS",
           "B": "單可用區 EBS 卷",
@@ -1193,7 +1193,7 @@
   {
     "id": "saa-d2-043",
     "type": "single",
-    "question": "Users in several Regions should be directed to the healthy endpoint with the lowest network latency. Which Route 53 routing policy is designed for this?",
+    "question": "The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. Users in several Regions should be directed to the healthy endpoint with the lowest network latency. Which Route 53 routing policy is designed for this?",
     "options": {
       "A": "Latency-based routing with health checks",
       "B": "Simple routing with one record",
@@ -1204,10 +1204,10 @@
     "isMultiAnswer": false,
     "explanation": "Latency-based routing selects the Region that provides the lowest measured latency and can exclude unhealthy endpoints with health checks.\nSimple routing does not select by latency. Geolocation uses user location, and zero weights cannot provide the stated selection.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "應將多個區域中的使用者定向到網路延遲最低的健康端點。哪一種 Route 53 路由策略是為此設計的？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。應將多個區域中的使用者定向到網路延遲最低的健康端點。哪一種 Route 53 路由策略是為此設計的？",
         "options": {
           "A": "具有健康檢查功能的基於延遲的路由",
           "B": "一筆記錄的簡單路由",
@@ -1221,7 +1221,7 @@
   {
     "id": "saa-d2-044",
     "type": "single",
-    "question": "A company wants to shift 10 percent of production traffic to a new version while keeping 90 percent on the current version. Which Route 53 policy can support this staged rollout?",
+    "question": "The workload follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. A company wants to shift 10 percent of production traffic to a new version while keeping 90 percent on the current version. Which Route 53 policy can support this staged rollout?",
     "options": {
       "A": "Weighted routing",
       "B": "Failover routing only",
@@ -1232,10 +1232,10 @@
     "isMultiAnswer": false,
     "explanation": "Weighted records distribute requests according to configured weights, which supports gradual traffic shifting between versions.\nFailover selects primary or secondary, geolocation selects by location, and simple routing does not split traffic by percentage.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "一家公司希望將 10% 的生產流量轉移到新版本，同時保留 90% 的生產流量保留在目前版本。哪些 Route 53 政策可以支援此階段性部署？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。一家公司希望將 10% 的生產流量轉移到新版本，同時保留 90% 的生產流量保留在目前版本。哪些 Route 53 政策可以支援此階段性部署？",
         "options": {
           "A": "加權路由",
           "B": "僅故障轉移路由",
@@ -1249,7 +1249,7 @@
   {
     "id": "saa-d2-045",
     "type": "single",
-    "question": "A company wants customers in Europe to use a European endpoint and customers in Asia to use an Asian endpoint. Which Route 53 policy should be evaluated?",
+    "question": "The team must avoid a prolonged outage and will validate the selected capability in staging before a controlled production rollout. A company wants customers in Europe to use a European endpoint and customers in Asia to use an Asian endpoint. Which Route 53 policy should be evaluated?",
     "options": {
       "A": "Geolocation routing",
       "B": "Latency routing only",
@@ -1260,10 +1260,10 @@
     "isMultiAnswer": false,
     "explanation": "Geolocation routing maps users to records based on the location from which DNS queries originate.\nLatency routing optimizes network latency rather than enforcing geographic boundaries. Failover and simple routing do not partition users by location.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "一家公司希望歐洲的客戶使用歐洲端點，亞洲的客戶使用亞洲端點。應評估哪一項 Route 53 政策？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。一家公司希望歐洲的客戶使用歐洲端點，亞洲的客戶使用亞洲端點。應評估哪一項 Route 53 政策？",
         "options": {
           "A": "地理定位路由",
           "B": "僅延遲路由",
@@ -1277,7 +1277,7 @@
   {
     "id": "saa-d2-046",
     "type": "single",
-    "question": "A CloudFront distribution should use a secondary origin when the primary returns errors. Which feature should be configured?",
+    "question": "This change affects a production workload. The team must preserve existing behavior and prefers a managed AWS capability with low operational overhead. A CloudFront distribution should use a secondary origin when the primary returns errors. Which feature should be configured?",
     "options": {
       "A": "CloudFront origin groups with origin failover",
       "B": "An S3 lifecycle rule",
@@ -1288,10 +1288,10 @@
     "isMultiAnswer": false,
     "explanation": "CloudFront origin failover can send requests to a secondary origin when configured failover status codes are returned by the primary.\nThe other features do not switch content origins when an HTTP origin fails.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "當主分配回傳錯誤時，CloudFront 分配應使用輔助來源。應該配置哪個功能？",
+        "question": "這項變更會影響生產工作負載。團隊必須保留現有行為，並希望採用營運負擔較低的 AWS 託管功能。當主分配回傳錯誤時，CloudFront 分配應使用輔助來源。應該配置哪個功能？",
         "options": {
           "A": "具有來源故障轉移功能的 CloudFront 來源群組",
           "B": "S3 生命週期規則",
@@ -1305,7 +1305,7 @@
   {
     "id": "saa-d2-047",
     "type": "single",
-    "question": "A company needs centralized backup plans and copies of recovery points to a separate Region and account. Which service should manage this policy?",
+    "question": "The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. A company needs centralized backup plans and copies of recovery points to a separate Region and account. Which service should manage this policy?",
     "options": {
       "A": "AWS Backup",
       "B": "Amazon CloudFront",
@@ -1316,10 +1316,10 @@
     "isMultiAnswer": false,
     "explanation": "AWS Backup centralizes backup plans and supports vault copies across accounts and Regions for supported resources.\nCloudFront and WAF protect web traffic. Cognito manages application identities rather than infrastructure backups.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "公司需要集中備份計畫和復原點副本到單獨的區域和帳戶。哪個服務應該管理此策略？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。公司需要集中備份計畫和復原點副本到單獨的區域和帳戶。哪個服務應該管理此策略？",
         "options": {
           "A": "AWS Backup",
           "B": "Amazon CloudFront",
@@ -1333,7 +1333,7 @@
   {
     "id": "saa-d2-048",
     "type": "single",
-    "question": "A disaster recovery design should keep only the core database and minimal infrastructure running in the recovery Region, with application capacity created during a disaster. Which strategy is this?",
+    "question": "The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. A disaster recovery design should keep only the core database and minimal infrastructure running in the recovery Region, with application capacity created during a disaster. Which strategy is this?",
     "options": {
       "A": "Pilot light",
       "B": "Warm standby",
@@ -1344,10 +1344,10 @@
     "isMultiAnswer": false,
     "explanation": "Pilot light keeps critical core components available while the rest of the environment is provisioned or scaled during recovery.\nWarm standby keeps a scaled-down functional environment running. Active-active serves production from multiple Regions, while backup and restore keeps no running recovery environment.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "災難復原設計應僅保留核心資料庫和最少的基礎設施在復原區域中運行，並在災難期間創建應用程式容量。這是哪個策略？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。災難復原設計應僅保留核心資料庫和最少的基礎設施在復原區域中運行，並在災難期間創建應用程式容量。這是哪個策略？",
         "options": {
           "A": "指示燈",
           "B": "溫備",
@@ -1361,7 +1361,7 @@
   {
     "id": "saa-d2-049",
     "type": "single",
-    "question": "A company wants a small but fully functional application environment running in a recovery Region and plans to scale it up after a failure. Which strategy should it select?",
+    "question": "The workload follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. A company wants a small but fully functional application environment running in a recovery Region and plans to scale it up after a failure. Which strategy should it select?",
     "options": {
       "A": "Warm standby",
       "B": "Pilot light only",
@@ -1372,10 +1372,10 @@
     "isMultiAnswer": false,
     "explanation": "Warm standby maintains a scaled-down but functional environment that can be expanded quickly during a disaster.\nPilot light keeps fewer core components running. Backup and restore requires more provisioning, and a single AZ is not a Regional recovery strategy.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "一家公司希望在復原區域中運行一個小型但功能齊全的應用程式環境，並計劃在發生故障後對其進行擴展。應該選擇哪種策略？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。一家公司希望在復原區域中運行一個小型但功能齊全的應用程式環境，並計劃在發生故障後對其進行擴展。應該選擇哪種策略？",
         "options": {
           "A": "溫備",
           "B": "僅指示燈",
@@ -1389,7 +1389,7 @@
   {
     "id": "saa-d2-050",
     "type": "single",
-    "question": "A workload can tolerate a recovery time of several hours and wants the lowest operational cost for disaster recovery. Which strategy is usually the best fit?",
+    "question": "The team must avoid a prolonged outage and will validate the selected capability in staging before a controlled production rollout. A workload can tolerate a recovery time of several hours and wants the lowest operational cost for disaster recovery. Which strategy is usually the best fit?",
     "options": {
       "A": "Backup and restore",
       "B": "Active-active",
@@ -1400,10 +1400,10 @@
     "isMultiAnswer": false,
     "explanation": "Backup and restore has the lowest ongoing recovery infrastructure cost when the business can tolerate longer recovery time.\nActive-active, warm standby, and synchronous multi-Region designs keep more resources running and cost more.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "工作負載可以容忍幾個小時的復原時間，並希望災難復原的營運成本最低。哪種策略通常最適合？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。工作負載可以容忍幾個小時的復原時間，並希望災難復原的營運成本最低。哪種策略通常最適合？",
         "options": {
           "A": "備份和復原",
           "B": "主動-主動",
@@ -1417,7 +1417,7 @@
   {
     "id": "saa-d2-051",
     "type": "multi",
-    "question": "Which two properties are typically associated with an active-active multi-Region architecture? Select two.",
+    "question": "This change affects a production workload. The team must preserve existing behavior and prefers a managed AWS capability with low operational overhead. Which two properties are typically associated with an active-active multi-Region architecture? Select two.",
     "options": {
       "A": "Users can be served by more than one Region during normal operation",
       "B": "Traffic can be routed away from an impaired Region",
@@ -1432,10 +1432,10 @@
     "isMultiAnswer": true,
     "explanation": "Active-active systems serve production traffic from multiple Regions and can shift traffic when a Region is impaired.\nA backup-only Region describes backup and restore. Never testing recovery and using one AZ reduce resilience.",
     "taskStatement": "2.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
     "translations": {
       "zh": {
-        "question": "哪兩個屬性通常與主動-主動多區域架構相關？選擇兩個。",
+        "question": "這項變更會影響生產工作負載。團隊必須保留現有行為，並希望採用營運負擔較低的 AWS 託管功能。哪兩個屬性通常與主動-主動多區域架構相關？選擇兩個。",
         "options": {
           "A": "正常運作期間，使用者可以由多個 Region 提供服務",
           "B": "可以將流量路由到遠離受損區域的地方",

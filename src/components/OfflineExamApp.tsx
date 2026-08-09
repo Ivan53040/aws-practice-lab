@@ -7,10 +7,12 @@ import { loadAllQuestions } from '../data/questions'
 import { getRevisionGuide } from '../data/revision'
 import type { RevisionDomain, RevisionTopic } from '../data/revision'
 import { GLOSSARY_CATEGORIES, GLOSSARY_TERMS } from '../data/glossary'
-import type { GlossaryCategoryId } from '../data/glossary'
+import type { GlossaryCategoryId, GlossaryTerm } from '../data/glossary'
+import { EXAM_KEYWORD_HINTS, STUDY_COMPARISONS } from '../data/study-tools'
 import type { Question, QuestionType } from '../types'
-import { formatTime, isAnswerCorrect, selectExamQuestions } from '../lib/scoring'
-import { getQuestionType, shuffleAndMapQuestions } from '../lib/utils'
+import { formatTime, isAnswerCorrect, selectExamQuestions, selectPracticeQuestions } from '../lib/scoring'
+import { screenAfterModeChange, splitInlineGlossaryText } from '../lib/offlineAppHelpers'
+import { fisherYatesShuffle, getQuestionType, shuffleAndMapQuestions } from '../lib/utils'
 import { useTheme } from '../hooks/useTheme'
 
 type Language = 'en' | 'zh'
@@ -18,6 +20,18 @@ type AnswerValue = string | string[]
 type ExamScreen = 'home' | 'loading' | 'exam' | 'results'
 type ExamGroup = 'foundational' | 'associate' | 'advanced'
 type AppMode = 'mock' | 'revision' | 'glossary'
+type RevisionTool = 'notes' | 'flashcards' | 'comparisons' | 'keywords'
+type ExamPreset = 'full' | 'quick' | 'domain'
+type PracticeCount = 10 | 20 | 30
+
+interface ExamSettings {
+  preset: ExamPreset
+  domainId: number
+  domainQuestionCount: PracticeCount
+  timed: boolean
+  shuffleQuestions: boolean
+  shuffleOptions: boolean
+}
 
 interface QuestionResult {
   question: Question
@@ -27,11 +41,42 @@ interface QuestionResult {
 }
 
 const PRACTICE_PASS_PERCENT = 75
+const DEFAULT_EXAM_SETTINGS: ExamSettings = {
+  preset: 'full',
+  domainId: 1,
+  domainQuestionCount: 20,
+  timed: true,
+  shuffleQuestions: true,
+  shuffleOptions: true,
+}
 
 const UI = {
   en: {
     mockExam: 'Mock Exam',
     revision: 'Revision',
+    revisionNotes: 'Section notes',
+    flashcards: 'Flashcards',
+    comparisons: 'Service comparisons',
+    keywordHints: 'Exam keywords',
+    flashcardsHint: 'Test yourself with all AWS glossary terms. Reveal the function only when you are ready.',
+    comparisonsHint: 'Compare services that commonly appear together in AWS exam questions.',
+    keywordHintsHint: 'Use wording clues to identify the AWS concept or service a scenario is testing.',
+    allCategories: 'All categories',
+    chooseCategory: 'Choose category',
+    showAnswer: 'Show function',
+    tapToReveal: 'Think of the service purpose, then reveal the answer.',
+    randomCard: 'Random card',
+    previousCard: 'Previous card',
+    nextCard: 'Next card',
+    comparisonPurpose: 'Best for',
+    comparisonRemember: 'Remember',
+    officialDecisionGuide: 'AWS decision guide',
+    keywordCue: 'Question wording',
+    keywordThink: 'Think of',
+    keywordWhy: 'Why',
+    relatedTerm: 'AWS glossary term',
+    serviceFunction: 'Purpose',
+    close: 'Close',
     glossary: 'AWS Glossary',
     glossaryTitle: 'AWS service glossary',
     glossaryHint: 'Find the purpose of common AWS services and cloud terms. Browse by category or search in English or Chinese.',
@@ -67,6 +112,24 @@ const UI = {
     chooseExam: 'Choose an exam',
     chooseExamHint: 'Every attempt is fresh. Switch the whole exam between English and Chinese at any time.',
     start: 'Start 65-question exam',
+    startPractice: 'Start practice',
+    examSettings: 'Exam settings',
+    examSettingsHint: 'Choose how this attempt should work. Nothing is saved after the tab is closed.',
+    examMode: 'Practice mode',
+    fullExam: 'Full mock exam',
+    fullExamHint: 'Official question count and domain mix',
+    quickExam: 'Quick 10 questions',
+    quickExamHint: 'Ten random questions across the exam',
+    domainPractice: 'Practice one domain',
+    domainPracticeHint: 'Focus on a selected exam domain',
+    chooseDomain: 'Choose domain',
+    questionCount: 'Question count',
+    timedExam: 'Enable timer',
+    shuffleQuestions: 'Randomize question order',
+    shuffleOptions: 'Randomize answer options',
+    enabled: 'Enabled',
+    disabled: 'Disabled',
+    untimed: 'Untimed',
     questions: 'questions',
     exams: 'exams',
     minutes: 'minutes',
@@ -91,6 +154,12 @@ const UI = {
     notPassed: 'Keep practicing',
     review: 'Review incorrect questions',
     incorrectCount: 'Incorrect questions',
+    domainPerformance: 'Domain performance',
+    needsReview: 'Needs the most review',
+    incorrectServices: 'Services in incorrect answers',
+    noTaggedServices: 'No specific AWS service tags appeared in the incorrect questions.',
+    retryIncorrect: 'Retry incorrect questions',
+    correctOf: 'correct',
     questionMap: 'Question map',
     reviewAll: 'Review question',
     selectQuestion: 'Select a question to see its answer and explanation.',
@@ -133,6 +202,29 @@ const UI = {
   zh: {
     mockExam: '\u6a21\u64ec\u8003\u8a66',
     revision: '\u91cd\u9ede\u6eab\u7fd2',
+    revisionNotes: '章節筆記',
+    flashcards: '溫習卡',
+    comparisons: '服務比較表',
+    keywordHints: '考試關鍵字',
+    flashcardsHint: '使用全部 AWS 名詞卡測試自己，準備好後才揭示服務功用。',
+    comparisonsHint: '比較 AWS 考試中經常一同出現及容易混淆的服務。',
+    keywordHintsHint: '利用題目字眼判斷情境正在考核的 AWS 概念或服務。',
+    allCategories: '全部分類',
+    chooseCategory: '選擇分類',
+    showAnswer: '顯示功用',
+    tapToReveal: '先想一想服務功用，然後揭示答案。',
+    randomCard: '隨機抽卡',
+    previousCard: '上一張',
+    nextCard: '下一張',
+    comparisonPurpose: '最適合',
+    comparisonRemember: '記憶重點',
+    officialDecisionGuide: 'AWS 決策指南',
+    keywordCue: '題目字眼',
+    keywordThink: '應想到',
+    keywordWhy: '原因',
+    relatedTerm: 'AWS 名詞解釋',
+    serviceFunction: '功用',
+    close: '關閉',
     glossary: 'AWS 名詞',
     glossaryTitle: 'AWS 服務名詞專區',
     glossaryHint: '快速查找常見 AWS 服務與雲端名詞的功用。可按分類瀏覽，或使用中文及英文搜尋。',
@@ -169,6 +261,24 @@ const UI = {
     chooseExam: '選擇考試',
     chooseExamHint: '每次都是全新的考試，並可隨時將整份考試切換為英文或中文。',
     start: '開始 65 題考試',
+    startPractice: '開始練習',
+    examSettings: '考試設定',
+    examSettingsHint: '選擇今次練習方式，關閉分頁後不會保存任何紀錄。',
+    examMode: '練習模式',
+    fullExam: '完整模擬考試',
+    fullExamHint: '使用正式題數與 Domain 比例',
+    quickExam: '快速 10 題',
+    quickExamHint: '從整份考試隨機抽取十題',
+    domainPractice: '指定 Domain 練習',
+    domainPracticeHint: '集中練習一個考試 Domain',
+    chooseDomain: '選擇 Domain',
+    questionCount: '題目數量',
+    timedExam: '啟用計時器',
+    shuffleQuestions: '隨機排列題目',
+    shuffleOptions: '隨機排列選項',
+    enabled: '已啟用',
+    disabled: '已停用',
+    untimed: '不計時',
     questions: '題',
     minutes: '分鐘',
     passRule: '練習及格線：原始分數 75%',
@@ -192,6 +302,12 @@ const UI = {
     notPassed: '繼續練習',
     review: '檢視答錯題目',
     incorrectCount: '答錯題目',
+    domainPerformance: 'Domain 表現',
+    needsReview: '最需要重溫',
+    incorrectServices: '錯題涉及的服務',
+    noTaggedServices: '錯題沒有標記特定 AWS 服務。',
+    retryIncorrect: '只重做錯題',
+    correctOf: '答對',
     questionMap: '題目導覽',
     reviewAll: '檢視題目',
     selectQuestion: '選擇題目查看答案與解析。',
@@ -326,6 +442,32 @@ function examGroup(level: Certification['level']): ExamGroup {
   return 'advanced'
 }
 
+function InlineGlossaryText({ text, onTermClick }: { text: string; onTermClick: (term: GlossaryTerm) => void }) {
+  return <>{splitInlineGlossaryText(text).map((part, index) => part.term ? (
+    <button
+      key={`${part.term.id}-${index}`}
+      type="button"
+      onClick={() => onTermClick(part.term!)}
+      className="inline font-semibold text-brand underline decoration-brand/40 underline-offset-2 transition hover:decoration-brand focus:outline-none focus-visible:ring-2 focus-visible:ring-brand"
+    >
+      {part.text}
+    </button>
+  ) : part.text)}</>
+}
+
+function servicesForQuestion(question: Question): string[] {
+  if (question.services && question.services.length > 0) return question.services
+  const text = [question.question, ...Object.values(question.options)].join(' ').toLocaleLowerCase()
+  return GLOSSARY_TERMS.filter(item => {
+    const aliases = [
+      item.name,
+      item.name.replace(/\s*\([^)]*\)/g, ''),
+      item.id.length >= 3 ? item.id.replaceAll('-', ' ') : '',
+    ].map(alias => alias.trim().toLocaleLowerCase()).filter(alias => alias.length >= 3)
+    return aliases.some(alias => text.includes(alias))
+  }).map(item => item.name)
+}
+
 export default function OfflineExamApp() {
   const [language, setLanguage] = useState<Language>('en')
   const [mode, setMode] = useState<AppMode>('mock')
@@ -338,12 +480,17 @@ export default function OfflineExamApp() {
   const [questionIndex, setQuestionIndex] = useState(0)
   const [timeLeft, setTimeLeft] = useState(0)
   const [error, setError] = useState(false)
+  const [examSettings, setExamSettings] = useState<ExamSettings>(DEFAULT_EXAM_SETTINGS)
 
   const labels = UI[language]
   const cert = CERTIFICATIONS[certId]
   const currentQuestion = questions[questionIndex]
   const displayQuestion = currentQuestion ? localizeQuestion(currentQuestion, language) : null
   const answeredCount = questions.filter(question => hasAnswer(answers[question.id])).length
+  const changeMode = (nextMode: AppMode) => {
+    setMode(nextMode)
+    setScreen(currentScreen => screenAfterModeChange(nextMode, currentScreen))
+  }
 
   const startExam = useCallback(async (nextCertId = certId) => {
     const nextCert = CERTIFICATIONS[nextCertId]
@@ -353,19 +500,41 @@ export default function OfflineExamApp() {
     setError(false)
     try {
       const bank = await loadAllQuestions(nextCertId)
-      const selected = selectExamQuestions(bank, nextCert)
-      const shuffled = shuffleAndMapQuestions(selected).questions
-      setQuestions(shuffled)
+      const selected = examSettings.preset === 'full'
+        ? selectExamQuestions(bank, nextCert, examSettings.shuffleQuestions)
+        : selectPracticeQuestions(
+            bank,
+            examSettings.preset === 'quick' ? 10 : examSettings.domainQuestionCount,
+            examSettings.preset === 'domain' ? examSettings.domainId : undefined,
+            examSettings.shuffleQuestions,
+          )
+      const prepared = examSettings.shuffleOptions ? shuffleAndMapQuestions(selected).questions : selected
+      setQuestions(prepared)
       setAnswers({})
       setResults([])
       setQuestionIndex(0)
-      setTimeLeft(nextCert.examTimeSeconds)
+      const secondsPerQuestion = nextCert.examTimeSeconds / nextCert.examQuestionCount
+      setTimeLeft(Math.max(60, Math.round(secondsPerQuestion * prepared.length)))
       setScreen('exam')
     } catch {
       setError(true)
       setScreen('home')
     }
-  }, [certId])
+  }, [certId, examSettings])
+
+  const retryIncorrectQuestions = useCallback(() => {
+    const incorrect = results.filter(result => !result.isCorrect).map(result => result.question)
+    if (incorrect.length === 0) return
+    const ordered = examSettings.shuffleQuestions ? fisherYatesShuffle(incorrect) : incorrect
+    const prepared = examSettings.shuffleOptions ? shuffleAndMapQuestions(ordered).questions : ordered
+    setQuestions(prepared)
+    setAnswers({})
+    setResults([])
+    setQuestionIndex(0)
+    const secondsPerQuestion = cert.examTimeSeconds / cert.examQuestionCount
+    setTimeLeft(Math.max(60, Math.round(secondsPerQuestion * prepared.length)))
+    setScreen('exam')
+  }, [cert.examQuestionCount, cert.examTimeSeconds, examSettings.shuffleOptions, examSettings.shuffleQuestions, results])
 
   const finishExam = useCallback(() => {
     const evaluated = questions.map(question => {
@@ -385,18 +554,18 @@ export default function OfflineExamApp() {
   }, [answers, questions])
 
   useEffect(() => {
-    if (mode !== 'mock' || screen !== 'exam') return
+    if (mode !== 'mock' || screen !== 'exam' || !examSettings.timed) return
     const interval = window.setInterval(() => {
       setTimeLeft(value => Math.max(0, value - 1))
     }, 1000)
     return () => window.clearInterval(interval)
-  }, [mode, screen])
+  }, [examSettings.timed, mode, screen])
 
   useEffect(() => {
-    if (mode !== 'mock' || screen !== 'exam' || timeLeft !== 0 || questions.length === 0) return
+    if (mode !== 'mock' || screen !== 'exam' || !examSettings.timed || timeLeft !== 0 || questions.length === 0) return
     const timeout = window.setTimeout(finishExam, 0)
     return () => window.clearTimeout(timeout)
-  }, [finishExam, mode, questions.length, screen, timeLeft])
+  }, [examSettings.timed, finishExam, mode, questions.length, screen, timeLeft])
 
   const updateAnswer = (value: AnswerValue) => {
     if (!currentQuestion) return
@@ -445,7 +614,7 @@ export default function OfflineExamApp() {
 
   if (mode === 'revision') {
     return (
-      <Shell language={language} setLanguage={setLanguage} labels={labels} mode={mode} setMode={setMode}>
+      <Shell language={language} setLanguage={setLanguage} labels={labels} mode={mode} setMode={changeMode}>
         <RevisionView language={language} labels={labels} certId={revisionCertId} onSelect={setRevisionCertId} />
       </Shell>
     )
@@ -453,19 +622,19 @@ export default function OfflineExamApp() {
 
   if (mode === 'glossary') {
     return (
-      <Shell language={language} setLanguage={setLanguage} labels={labels} mode={mode} setMode={setMode}>
+      <Shell language={language} setLanguage={setLanguage} labels={labels} mode={mode} setMode={changeMode}>
         <GlossaryView language={language} labels={labels} />
       </Shell>
     )
   }
 
   if (screen === 'loading') {
-    return <Shell language={language} setLanguage={setLanguage} labels={labels} mode={mode} setMode={setMode}><LoadingView labels={labels} /></Shell>
+    return <Shell language={language} setLanguage={setLanguage} labels={labels} mode={mode} setMode={changeMode}><LoadingView labels={labels} /></Shell>
   }
 
   if (screen === 'results') {
     return (
-      <Shell language={language} setLanguage={setLanguage} labels={labels} mode={mode} setMode={setMode}>
+      <Shell language={language} setLanguage={setLanguage} labels={labels} mode={mode} setMode={changeMode}>
         <ResultsView
           labels={labels}
           cert={cert}
@@ -473,6 +642,7 @@ export default function OfflineExamApp() {
           language={language}
           summary={resultSummary}
           onNewExam={() => void startExam(certId)}
+          onRetryIncorrect={retryIncorrectQuestions}
           onHome={() => setScreen('home')}
         />
       </Shell>
@@ -483,16 +653,18 @@ export default function OfflineExamApp() {
     const type = getQuestionType(currentQuestion)
     const currentAnswer = answers[currentQuestion.id] ?? emptyAnswer(type)
     return (
-      <Shell language={language} setLanguage={setLanguage} labels={labels} mode={mode} setMode={setMode} compact>
+      <Shell language={language} setLanguage={setLanguage} labels={labels} mode={mode} setMode={changeMode} compact>
         <div className="mx-auto w-full max-w-5xl px-4 py-5 md:px-8 md:py-8">
           <div className="mb-5 flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-border-hairline bg-bg-card px-4 py-3 md:px-6">
             <div>
               <p className="text-sm font-semibold text-text-primary">{cert.shortName} {labels.question} {questionIndex + 1} / {questions.length}</p>
               <p className="text-xs text-text-muted">{answeredCount} {labels.answered}</p>
             </div>
-            <div className={`font-mono text-lg font-bold ${timeLeft < 300 ? 'text-danger' : 'text-text-primary'}`} aria-label={`${labels.timeLeft}: ${formatTime(timeLeft)}`}>
-              {labels.timeLeft}: {formatTime(timeLeft)}
-            </div>
+            {examSettings.timed ? (
+              <div className={`font-mono text-lg font-bold ${timeLeft < 300 ? 'text-danger' : 'text-text-primary'}`} aria-label={`${labels.timeLeft}: ${formatTime(timeLeft)}`}>
+                {labels.timeLeft}: {formatTime(timeLeft)}
+              </div>
+            ) : <span className="rounded-full bg-brand/15 px-3 py-1.5 text-xs font-bold text-brand">{labels.untimed}</span>}
           </div>
 
           <div className="mb-5 flex flex-wrap gap-1.5" aria-label={labels.questionMap}>
@@ -537,13 +709,18 @@ export default function OfflineExamApp() {
   }
 
   return (
-    <Shell language={language} setLanguage={setLanguage} labels={labels} mode={mode} setMode={setMode}>
+    <Shell language={language} setLanguage={setLanguage} labels={labels} mode={mode} setMode={changeMode}>
       <HomeView
         language={language}
         labels={labels}
         certId={certId}
-        onSelect={setCertId}
+        onSelect={nextCertId => {
+          setCertId(nextCertId)
+          setExamSettings(previous => ({ ...previous, domainId: CERTIFICATIONS[nextCertId]?.domains[0]?.id ?? 1 }))
+        }}
         onStart={() => void startExam(certId)}
+        settings={examSettings}
+        onSettingsChange={setExamSettings}
         error={error}
       />
     </Shell>
@@ -573,10 +750,10 @@ function Shell({
     <div className="min-h-screen bg-bg-dark text-text-primary">
       <header className="sticky top-0 z-20 border-b border-border-hairline bg-bg-card/95 backdrop-blur">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-3 md:px-8">
-          <div className="min-w-0">
+          <button type="button" onClick={() => setMode('mock')} className="min-w-0 rounded-lg text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-brand">
             <p className="text-base font-bold tracking-tight text-text-primary">{labels.appName}</p>
             {!compact && <p className="hidden text-xs text-text-muted sm:block">{labels.subtitle}</p>}
-          </div>
+          </button>
           <nav className="order-3 flex w-full rounded-xl border border-border-hairline bg-bg-dark p-1 sm:order-none sm:w-auto" aria-label={labels.studyMode}>
             <button
               type="button"
@@ -751,6 +928,8 @@ function RevisionView({
   const cert = CERTIFICATIONS[certId] ?? CERTIFICATIONS['clf-c02']
   const guide = getRevisionGuide(cert.code)
   const [topicId, setTopicId] = useState('')
+  const [tool, setTool] = useState<RevisionTool>('notes')
+  const [selectedGlossaryTerm, setSelectedGlossaryTerm] = useState<GlossaryTerm | null>(null)
 
   const topicEntries = guide?.domains.flatMap(domain =>
     domain.topics.map(topic => ({ domain, topic })),
@@ -759,9 +938,10 @@ function RevisionView({
   const commonMistakesSelected = topicId === guide?.commonMistakes.id
   const selectedIndex = commonMistakesSelected ? topicEntries.length : foundIndex >= 0 ? foundIndex : 0
   const selectedEntry = commonMistakesSelected ? null : topicEntries[selectedIndex]
-  const selectedTopic = guide
-    ? localizeTopic(commonMistakesSelected ? guide.commonMistakes : selectedEntry?.topic ?? guide.domains[0].topics[0], language)
+  const baseSelectedTopic = guide
+    ? commonMistakesSelected ? guide.commonMistakes : selectedEntry?.topic ?? guide.domains[0].topics[0]
     : null
+  const selectedTopic = baseSelectedTopic ? localizeTopic(baseSelectedTopic, language) : null
   const selectedDomain = selectedEntry?.domain ?? null
   const entryIds = [...topicEntries.map(entry => entry.topic.id), ...(guide ? [guide.commonMistakes.id] : [])]
   const groupedCerts: { id: ExamGroup; label: string; certs: Certification[] }[] = [
@@ -778,7 +958,7 @@ function RevisionView({
           <h1 className="text-3xl font-bold tracking-tight text-text-primary md:text-5xl">{labels.revisionTitle}</h1>
           <p className="mt-4 text-base leading-relaxed text-text-muted md:text-lg">{labels.revisionHint}</p>
         </div>
-        <label className="block w-full md:w-80">
+        {tool === 'notes' && <label className="block w-full md:w-80">
           <span className="mb-2 block text-xs font-bold uppercase tracking-wide text-text-muted">{labels.chooseCertification}</span>
           <select
             value={cert.code}
@@ -791,10 +971,29 @@ function RevisionView({
               </optgroup>
             ))}
           </select>
-        </label>
+        </label>}
       </div>
 
-      {!guide ? (
+      <nav className="mt-8 flex flex-wrap gap-2" aria-label={labels.revisionTitle}>
+        {([
+          ['notes', labels.revisionNotes],
+          ['flashcards', labels.flashcards],
+          ['comparisons', labels.comparisons],
+          ['keywords', labels.keywordHints],
+        ] as const).map(([nextTool, label]) => (
+          <button
+            key={nextTool}
+            type="button"
+            aria-current={tool === nextTool ? 'page' : undefined}
+            onClick={() => setTool(nextTool)}
+            className={`rounded-xl border px-4 py-2.5 text-sm font-bold transition ${tool === nextTool ? 'border-brand bg-brand text-on-brand shadow-card' : 'border-border-hairline bg-bg-card text-text-muted hover:border-brand/60 hover:text-text-primary'}`}
+          >
+            {label}
+          </button>
+        ))}
+      </nav>
+
+      {tool === 'notes' && (!guide ? (
         <section className="mt-10 rounded-2xl border border-border-hairline bg-bg-card p-6 shadow-card md:p-10">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-text-muted">{cert.shortName}</p>
           <h2 className="mt-3 text-2xl font-bold text-text-primary">{labels.revisionUnavailable}</h2>
@@ -866,7 +1065,7 @@ function RevisionView({
                 </div>
                 {selectedDomain && <p className="mt-5 text-sm font-semibold text-brand">{localizeDomainTitle(selectedDomain, language)}</p>}
                 <h2 className={`${selectedDomain ? 'mt-2' : 'mt-5'} text-2xl font-bold leading-tight text-text-primary md:text-3xl`}>{selectedTopic.title}</h2>
-                <p className="mt-4 text-base leading-relaxed text-text-muted">{selectedTopic.summary}</p>
+                <p className="mt-4 text-base leading-relaxed text-text-muted"><InlineGlossaryText text={selectedTopic.summary} onTermClick={setSelectedGlossaryTerm} /></p>
 
                 <section className="mt-8">
                   <h3 className="text-sm font-bold uppercase tracking-[0.15em] text-text-muted">{labels.studyPoints}</h3>
@@ -874,7 +1073,7 @@ function RevisionView({
                     {selectedTopic.points.map(point => (
                       <li key={point} className="flex gap-3 rounded-xl border border-border-hairline bg-bg-dark p-4 text-sm leading-relaxed text-text-primary">
                         <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-brand" aria-hidden="true" />
-                        <span>{point}</span>
+                        <span><InlineGlossaryText text={point} onTermClick={setSelectedGlossaryTerm} /></span>
                       </li>
                     ))}
                   </ul>
@@ -889,7 +1088,7 @@ function RevisionView({
 
                 <section className="mt-8 rounded-xl border border-brand/30 bg-brand/10 p-4">
                   <h3 className="text-sm font-bold text-text-primary">{labels.examTip}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-text-primary">{selectedTopic.examTip}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-text-primary"><InlineGlossaryText text={selectedTopic.examTip} onTermClick={setSelectedGlossaryTerm} /></p>
                 </section>
               </article>
 
@@ -918,7 +1117,171 @@ function RevisionView({
             </div>
           )}
         </div>
-      )}
+      ))}
+
+      {tool === 'flashcards' && <FlashcardsView language={language} labels={labels} />}
+      {tool === 'comparisons' && <ComparisonsView language={language} labels={labels} />}
+      {tool === 'keywords' && <KeywordHintsView language={language} labels={labels} />}
+      {selectedGlossaryTerm && <GlossaryTermDialog term={selectedGlossaryTerm} language={language} labels={labels} onClose={() => setSelectedGlossaryTerm(null)} />}
+    </div>
+  )
+}
+
+function FlashcardsView({ language, labels }: { language: Language; labels: Labels }) {
+  const [categoryId, setCategoryId] = useState<'all' | GlossaryCategoryId>('all')
+  const [cardIndex, setCardIndex] = useState(0)
+  const [revealed, setRevealed] = useState(false)
+  const cards = useMemo(
+    () => categoryId === 'all' ? GLOSSARY_TERMS : GLOSSARY_TERMS.filter(item => item.categoryId === categoryId),
+    [categoryId],
+  )
+  const card = cards[Math.min(cardIndex, cards.length - 1)] ?? GLOSSARY_TERMS[0]
+  const content = language === 'zh' ? card.translations.zh : card
+  const category = GLOSSARY_CATEGORIES.find(item => item.id === card.categoryId)
+  const categoryContent = category && (language === 'zh' ? category.translations.zh : category)
+
+  const changeCard = (nextIndex: number) => {
+    setCardIndex((nextIndex + cards.length) % cards.length)
+    setRevealed(false)
+  }
+
+  return (
+    <section className="mt-8">
+      <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+        <div className="max-w-3xl">
+          <h2 className="text-2xl font-bold text-text-primary md:text-3xl">{labels.flashcards}</h2>
+          <p className="mt-3 leading-relaxed text-text-muted">{labels.flashcardsHint}</p>
+        </div>
+        <label className="block w-full md:w-72">
+          <span className="mb-2 block text-xs font-bold uppercase tracking-wide text-text-muted">{labels.chooseCategory}</span>
+          <select
+            value={categoryId}
+            onChange={event => {
+              setCategoryId(event.target.value as 'all' | GlossaryCategoryId)
+              setCardIndex(0)
+              setRevealed(false)
+            }}
+            className="w-full rounded-xl border border-border-hairline bg-bg-card px-4 py-3 text-sm font-semibold text-text-primary focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/30"
+          >
+            <option value="all">{labels.allCategories}</option>
+            {GLOSSARY_CATEGORIES.map(item => <option key={item.id} value={item.id}>{language === 'zh' ? item.translations.zh.name : item.name}</option>)}
+          </select>
+        </label>
+      </div>
+
+      <article className="mx-auto mt-8 max-w-3xl rounded-3xl border border-brand/40 bg-bg-card p-6 text-center shadow-card md:p-10">
+        <div className="flex items-center justify-between gap-3 text-xs font-bold text-text-muted">
+          <span>{categoryContent?.name}</span>
+          <span>{cardIndex + 1} / {cards.length}</span>
+        </div>
+        <h3 className="mt-10 text-2xl font-bold text-text-primary md:text-4xl">{content.name}</h3>
+        {!revealed ? (
+          <div className="mt-10">
+            <p className="text-sm text-text-muted">{labels.tapToReveal}</p>
+            <button type="button" onClick={() => setRevealed(true)} className="mt-5 rounded-xl bg-brand px-6 py-3 text-sm font-bold text-on-brand">{labels.showAnswer}</button>
+          </div>
+        ) : (
+          <div className="mt-8 rounded-2xl border border-brand/30 bg-brand/10 p-5 text-left">
+            <p className="text-xs font-bold uppercase tracking-[0.15em] text-brand">{labels.serviceFunction}</p>
+            <p className="mt-3 text-base leading-relaxed text-text-primary">{content.description}</p>
+          </div>
+        )}
+      </article>
+
+      <div className="mx-auto mt-5 flex max-w-3xl flex-wrap items-center justify-between gap-3">
+        <button type="button" onClick={() => changeCard(cardIndex - 1)} className="rounded-xl border border-border-hairline px-4 py-2.5 text-sm font-semibold text-text-primary">{labels.previousCard}</button>
+        <button type="button" onClick={() => changeCard(Math.floor(Math.random() * cards.length))} className="rounded-xl border border-brand/40 bg-brand/10 px-4 py-2.5 text-sm font-bold text-text-primary">{labels.randomCard}</button>
+        <button type="button" onClick={() => changeCard(cardIndex + 1)} className="rounded-xl bg-brand px-4 py-2.5 text-sm font-bold text-on-brand">{labels.nextCard}</button>
+      </div>
+    </section>
+  )
+}
+
+function ComparisonsView({ language, labels }: { language: Language; labels: Labels }) {
+  return (
+    <section className="mt-8">
+      <div className="max-w-3xl">
+        <h2 className="text-2xl font-bold text-text-primary md:text-3xl">{labels.comparisons}</h2>
+        <p className="mt-3 leading-relaxed text-text-muted">{labels.comparisonsHint}</p>
+      </div>
+      <div className="mt-8 space-y-6">
+        {STUDY_COMPARISONS.map(comparison => {
+          const heading = language === 'zh' ? comparison.translations.zh : comparison
+          return (
+            <article key={comparison.id} className="overflow-hidden rounded-2xl border border-border-hairline bg-bg-card shadow-card">
+              <div className="p-5 md:p-7">
+                <h3 className="text-xl font-bold text-text-primary">{heading.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-text-muted">{heading.summary}</p>
+              </div>
+              <div className="overflow-x-auto border-t border-border-hairline">
+                <table className="w-full min-w-[42rem] text-left text-sm">
+                  <thead className="bg-bg-dark text-xs uppercase tracking-wide text-text-muted">
+                    <tr><th className="px-5 py-3">AWS</th><th className="px-5 py-3">{labels.comparisonPurpose}</th><th className="px-5 py-3">{labels.comparisonRemember}</th></tr>
+                  </thead>
+                  <tbody className="divide-y divide-border-hairline">
+                    {comparison.items.map(item => {
+                      const content = language === 'zh' ? item.translations.zh : item
+                      return <tr key={item.name}><th className="px-5 py-4 font-bold text-text-primary">{content.name}</th><td className="px-5 py-4 leading-relaxed text-text-muted">{content.purpose}</td><td className="px-5 py-4 leading-relaxed text-text-primary">{content.remember}</td></tr>
+                    })}
+                  </tbody>
+                </table>
+              </div>
+              {comparison.sourceUrl && <p className="border-t border-border-hairline px-5 py-3 text-xs text-text-muted"><a href={comparison.sourceUrl} target="_blank" rel="noopener noreferrer" className="font-semibold text-brand hover:underline">{labels.officialDecisionGuide}</a></p>}
+            </article>
+          )
+        })}
+      </div>
+    </section>
+  )
+}
+
+function KeywordHintsView({ language, labels }: { language: Language; labels: Labels }) {
+  return (
+    <section className="mt-8">
+      <div className="max-w-3xl">
+        <h2 className="text-2xl font-bold text-text-primary md:text-3xl">{labels.keywordHints}</h2>
+        <p className="mt-3 leading-relaxed text-text-muted">{labels.keywordHintsHint}</p>
+      </div>
+      <div className="mt-8 grid gap-4 md:grid-cols-2">
+        {EXAM_KEYWORD_HINTS.map(hint => {
+          const content = language === 'zh' ? hint.translations.zh : hint
+          return (
+            <article key={hint.id} className="rounded-2xl border border-border-hairline bg-bg-card p-5 shadow-card">
+              <p className="text-xs font-bold uppercase tracking-[0.15em] text-text-muted">{labels.keywordCue}</p>
+              <h3 className="mt-2 text-lg font-bold text-text-primary">“{content.phrase}”</h3>
+              <div className="mt-4 rounded-xl bg-brand/10 p-4">
+                <p className="text-xs font-bold uppercase tracking-wide text-brand">{labels.keywordThink}</p>
+                <p className="mt-1 font-bold text-text-primary">{content.thinkOf}</p>
+              </div>
+              <p className="mt-4 text-xs font-bold uppercase tracking-wide text-text-muted">{labels.keywordWhy}</p>
+              <p className="mt-2 text-sm leading-relaxed text-text-muted">{content.reason}</p>
+            </article>
+          )
+        })}
+      </div>
+    </section>
+  )
+}
+
+function GlossaryTermDialog({ term, language, labels, onClose }: { term: GlossaryTerm; language: Language; labels: Labels; onClose: () => void }) {
+  const content = language === 'zh' ? term.translations.zh : term
+  const category = GLOSSARY_CATEGORIES.find(item => item.id === term.categoryId)
+  const categoryName = category ? language === 'zh' ? category.translations.zh.name : category.name : ''
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4" role="dialog" aria-modal="true" aria-labelledby="glossary-dialog-title">
+      <article className="w-full max-w-lg rounded-2xl border border-border-hairline bg-bg-card p-6 shadow-card md:p-8">
+        <div className="flex items-start justify-between gap-4">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.15em] text-brand">{labels.relatedTerm} · {categoryName}</p>
+            <h2 id="glossary-dialog-title" className="mt-3 text-2xl font-bold text-text-primary">{content.name}</h2>
+          </div>
+          <button type="button" onClick={onClose} aria-label={labels.close} className="rounded-lg border border-border-hairline px-3 py-2 text-sm font-bold text-text-muted hover:text-text-primary">×</button>
+        </div>
+        <div className="mt-6 rounded-xl bg-brand/10 p-4">
+          <p className="text-xs font-bold uppercase tracking-wide text-brand">{labels.serviceFunction}</p>
+          <p className="mt-2 leading-relaxed text-text-primary">{content.description}</p>
+        </div>
+      </article>
     </div>
   )
 }
@@ -929,6 +1292,8 @@ function HomeView({
   certId,
   onSelect,
   onStart,
+  settings,
+  onSettingsChange,
   error,
 }: {
   language: Language
@@ -936,6 +1301,8 @@ function HomeView({
   certId: string
   onSelect: (certId: string) => void
   onStart: () => void
+  settings: ExamSettings
+  onSettingsChange: (settings: ExamSettings) => void
   error: boolean
 }) {
   const certs = CERTIFICATION_LIST.filter(cert => cert.status === 'active' && cert.provider === 'aws')
@@ -948,6 +1315,12 @@ function HomeView({
   ]
   const activeGroup = groups.find(group => group.id === selectedGroup) ?? groups[0]
   const visibleCerts = certs.filter(cert => examGroup(cert.level) === selectedGroup)
+  const selectedQuestionCount = settings.preset === 'full'
+    ? selected?.examQuestionCount ?? 65
+    : settings.preset === 'quick' ? 10 : settings.domainQuestionCount
+  const updateSetting = <K extends keyof ExamSettings>(key: K, value: ExamSettings[K]) => {
+    onSettingsChange({ ...settings, [key]: value })
+  }
   return (
     <div className="mx-auto w-full max-w-6xl px-4 py-10 md:px-8 md:py-16">
       <div className="max-w-3xl">
@@ -991,8 +1364,71 @@ function HomeView({
           ))}
         </div>
       </div>
+
+      <section className="mt-10 rounded-2xl border border-border-hairline bg-bg-card p-5 shadow-card md:p-7">
+        <h2 className="text-xl font-bold text-text-primary">{labels.examSettings}</h2>
+        <p className="mt-2 text-sm leading-relaxed text-text-muted">{labels.examSettingsHint}</p>
+
+        <div className="mt-6">
+          <p className="text-xs font-bold uppercase tracking-[0.15em] text-text-muted">{labels.examMode}</p>
+          <div className="mt-3 grid gap-3 md:grid-cols-3">
+            {([
+              ['full', labels.fullExam, labels.fullExamHint],
+              ['quick', labels.quickExam, labels.quickExamHint],
+              ['domain', labels.domainPractice, labels.domainPracticeHint],
+            ] as const).map(([preset, title, hint]) => (
+              <button
+                key={preset}
+                type="button"
+                aria-pressed={settings.preset === preset}
+                onClick={() => updateSetting('preset', preset)}
+                className={`rounded-xl border p-4 text-left transition ${settings.preset === preset ? 'border-brand bg-brand/10' : 'border-border-hairline bg-bg-dark hover:border-brand/60'}`}
+              >
+                <span className="block font-bold text-text-primary">{title}</span>
+                <span className="mt-1 block text-xs leading-relaxed text-text-muted">{hint}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {settings.preset === 'domain' && selected && (
+          <div className="mt-5 grid gap-4 sm:grid-cols-2">
+            <label>
+              <span className="mb-2 block text-xs font-bold uppercase tracking-wide text-text-muted">{labels.chooseDomain}</span>
+              <select
+                value={settings.domainId}
+                onChange={event => updateSetting('domainId', Number(event.target.value))}
+                className="w-full rounded-xl border border-border-hairline bg-bg-dark px-4 py-3 text-sm font-semibold text-text-primary focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/30"
+              >
+                {selected.domains.map(domain => (
+                  <option key={domain.id} value={domain.id}>{domain.id}. {localizedRegistryDomainName(selected.code, domain.id, domain.name, language)}</option>
+                ))}
+              </select>
+            </label>
+            <label>
+              <span className="mb-2 block text-xs font-bold uppercase tracking-wide text-text-muted">{labels.questionCount}</span>
+              <select
+                value={settings.domainQuestionCount}
+                onChange={event => updateSetting('domainQuestionCount', Number(event.target.value) as PracticeCount)}
+                className="w-full rounded-xl border border-border-hairline bg-bg-dark px-4 py-3 text-sm font-semibold text-text-primary focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/30"
+              >
+                {[10, 20, 30].map(count => <option key={count} value={count}>{count} {labels.questions}</option>)}
+              </select>
+            </label>
+          </div>
+        )}
+
+        <div className="mt-5 grid gap-3 sm:grid-cols-3">
+          <SettingToggle label={labels.timedExam} enabledLabel={labels.enabled} disabledLabel={labels.disabled} value={settings.timed} onChange={value => updateSetting('timed', value)} />
+          <SettingToggle label={labels.shuffleQuestions} enabledLabel={labels.enabled} disabledLabel={labels.disabled} value={settings.shuffleQuestions} onChange={value => updateSetting('shuffleQuestions', value)} />
+          <SettingToggle label={labels.shuffleOptions} enabledLabel={labels.enabled} disabledLabel={labels.disabled} value={settings.shuffleOptions} onChange={value => updateSetting('shuffleOptions', value)} />
+        </div>
+      </section>
+
       <div className="mt-8 flex flex-wrap items-center gap-4">
-        <button type="button" onClick={onStart} className="rounded-xl bg-brand px-6 py-3.5 text-sm font-bold text-on-brand shadow-card hover:bg-brand-hover">{labels.start.replace('65', String(selected?.examQuestionCount ?? 65))}</button>
+        <button type="button" onClick={onStart} className="rounded-xl bg-brand px-6 py-3.5 text-sm font-bold text-on-brand shadow-card hover:bg-brand-hover">
+          {settings.preset === 'full' ? labels.start.replace('65', String(selectedQuestionCount)) : `${labels.startPractice} ${selectedQuestionCount} ${labels.questions}`}
+        </button>
         <span className="text-sm text-text-muted">{labels.passRule}</span>
       </div>
       {error && <p role="alert" className="mt-5 rounded-xl border border-danger/30 bg-danger/10 px-4 py-3 text-sm text-danger">{labels.loadingError} <button type="button" onClick={onStart} className="ml-2 font-bold underline">{labels.tryAgain}</button></p>}
@@ -1003,6 +1439,20 @@ function HomeView({
       </div>
       <p className="mt-8 text-xs text-text-muted">{selected?.shortName} {labels.ready}</p>
     </div>
+  )
+}
+
+function SettingToggle({ label, enabledLabel, disabledLabel, value, onChange }: { label: string; enabledLabel: string; disabledLabel: string; value: boolean; onChange: (value: boolean) => void }) {
+  return (
+    <button
+      type="button"
+      aria-pressed={value}
+      onClick={() => onChange(!value)}
+      className={`flex items-center justify-between gap-3 rounded-xl border p-4 text-left transition ${value ? 'border-brand bg-brand/10' : 'border-border-hairline bg-bg-dark'}`}
+    >
+      <span className="text-sm font-semibold text-text-primary">{label}</span>
+      <span className={`rounded-full px-2.5 py-1 text-xs font-bold ${value ? 'bg-brand text-on-brand' : 'bg-bg-card text-text-muted'}`}>{value ? enabledLabel : disabledLabel}</span>
+    </button>
   )
 }
 
@@ -1035,12 +1485,46 @@ function MatchingAnswer({ question, value, onSelect, labels }: { question: Quest
   return <div className="grid gap-3">{optionEntries(question).map(([key, text]) => <div key={key} className="rounded-xl border border-border-hairline p-4"><p className="text-sm text-text-primary"><span className="mr-2 font-bold">{key}</span>{text}</p><select value={map[key] ?? ''} onChange={event => onSelect(key, event.target.value)} className="mt-3 w-full rounded-lg border border-border-hairline bg-bg-dark px-3 py-2 text-sm text-text-primary"><option value="">{labels.selectTarget}</option>{Object.entries(question.targets ?? {}).map(([target, targetText]) => <option key={target} value={target}>{target}. {targetText}</option>)}</select></div>)}</div>
 }
 
-function ResultsView({ language, labels, cert, results, summary, onNewExam, onHome }: { language: Language; labels: Labels; cert: Certification; results: QuestionResult[]; summary: { correct: number; percent: number; passed: boolean }; onNewExam: () => void; onHome: () => void }) {
+function ResultsView({ language, labels, cert, results, summary, onNewExam, onRetryIncorrect, onHome }: { language: Language; labels: Labels; cert: Certification; results: QuestionResult[]; summary: { correct: number; percent: number; passed: boolean }; onNewExam: () => void; onRetryIncorrect: () => void; onHome: () => void }) {
   const incorrect = results
     .map((result, index) => ({ result, index }))
     .filter(({ result }) => !result.isCorrect)
   const [selectedIndex, setSelectedIndex] = useState(incorrect[0]?.index ?? 0)
   const selectedResult = results[selectedIndex]
+  const domainStats = cert.domains.map(domain => {
+    const attempted = results.filter(result => result.question.domainId === domain.id)
+    const correct = attempted.filter(result => result.isCorrect).length
+    return {
+      id: domain.id,
+      name: localizedRegistryDomainName(cert.code, domain.id, domain.name, language),
+      attempted: attempted.length,
+      correct,
+      percent: attempted.length === 0 ? 0 : Math.round((correct / attempted.length) * 100),
+    }
+  }).filter(domain => domain.attempted > 0)
+  const weakestDomain = [...domainStats].sort((a, b) => a.percent - b.percent || b.attempted - a.attempted)[0]
+  const taskStats = [...results.reduce((stats, result) => {
+    const taskId = result.question.taskStatement
+    if (!taskId) return stats
+    const current = stats.get(taskId) ?? { attempted: 0, correct: 0 }
+    current.attempted += 1
+    if (result.isCorrect) current.correct += 1
+    stats.set(taskId, current)
+    return stats
+  }, new Map<string, { attempted: number; correct: number }>()).entries()]
+    .map(([id, stats]) => ({ id, ...stats, percent: Math.round((stats.correct / stats.attempted) * 100) }))
+    .sort((a, b) => a.percent - b.percent || b.attempted - a.attempted)
+  const weakestTask = taskStats[0]
+  const weakestTaskTopic = getRevisionGuide(cert.code)?.domains.flatMap(domain => domain.topics).find(topic => topic.id === weakestTask?.id)
+  const needsReviewLabel = weakestTask
+    ? `${weakestTask.id} ${weakestTaskTopic ? localizeTopic(weakestTaskTopic, language).title : ''}`.trim()
+    : weakestDomain ? `${weakestDomain.id}. ${weakestDomain.name}` : ''
+  const serviceCounts = [...incorrect.reduce((counts, { result }) => {
+    for (const service of servicesForQuestion(result.question)) counts.set(service, (counts.get(service) ?? 0) + 1)
+    return counts
+  }, new Map<string, number>()).entries()]
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+    .slice(0, 8)
 
   return (
     <div className="mx-auto w-full max-w-5xl px-4 py-10 md:px-8 md:py-14">
@@ -1064,9 +1548,41 @@ function ResultsView({ language, labels, cert, results, summary, onNewExam, onHo
         </div>
         <div className="mt-8 flex flex-wrap gap-3">
           <button type="button" onClick={onNewExam} className="rounded-xl bg-brand px-5 py-3 text-sm font-bold text-on-brand">{labels.newExam}</button>
+          {incorrect.length > 0 && <button type="button" onClick={onRetryIncorrect} className="rounded-xl border border-danger/40 bg-danger/10 px-5 py-3 text-sm font-bold text-danger">{labels.retryIncorrect}</button>}
           <button type="button" onClick={onHome} className="rounded-xl border border-border-hairline px-5 py-3 text-sm font-semibold text-text-primary">{labels.backToHome}</button>
         </div>
       </div>
+
+      <section className="mt-8 grid gap-6 lg:grid-cols-[minmax(0,1.4fr)_minmax(18rem,0.8fr)]">
+        <div className="rounded-2xl border border-border-hairline bg-bg-card p-5 shadow-card md:p-7">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <h2 className="text-xl font-bold text-text-primary">{labels.domainPerformance}</h2>
+            {needsReviewLabel && <span className="rounded-full bg-danger/10 px-3 py-1 text-xs font-bold text-danger">{labels.needsReview}: {needsReviewLabel}</span>}
+          </div>
+          <div className="mt-5 space-y-4">
+            {domainStats.map(domain => (
+              <div key={domain.id}>
+                <div className="flex items-end justify-between gap-4 text-sm">
+                  <div><p className="font-semibold text-text-primary">{domain.id}. {domain.name}</p><p className="mt-1 text-xs text-text-muted">{domain.correct}/{domain.attempted} {labels.correctOf}</p></div>
+                  <span className={`font-bold ${domain.percent >= PRACTICE_PASS_PERCENT ? 'text-success' : 'text-danger'}`}>{domain.percent}%</span>
+                </div>
+                <div className="mt-2 h-2 overflow-hidden rounded-full bg-bg-dark"><div className={`h-full rounded-full ${domain.percent >= PRACTICE_PASS_PERCENT ? 'bg-success' : 'bg-danger'}`} style={{ width: `${domain.percent}%` }} /></div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="rounded-2xl border border-border-hairline bg-bg-card p-5 shadow-card md:p-7">
+          <h2 className="text-xl font-bold text-text-primary">{labels.incorrectServices}</h2>
+          {serviceCounts.length === 0 ? <p className="mt-4 text-sm leading-relaxed text-text-muted">{labels.noTaggedServices}</p> : (
+            <div className="mt-5 space-y-2">
+              {serviceCounts.map(([service, count]) => (
+                <div key={service} className="flex items-center justify-between gap-3 rounded-xl bg-bg-dark px-4 py-3"><span className="text-sm font-semibold text-text-primary">{service}</span><span className="rounded-full bg-danger/15 px-2.5 py-1 text-xs font-bold text-danger">{count}</span></div>
+              ))}
+            </div>
+          )}
+        </div>
+      </section>
 
       <section className="mt-8">
         <div className="flex flex-wrap items-end justify-between gap-3">

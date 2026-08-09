@@ -1,981 +1,1006 @@
 [
   {
     "id": "soa-c03-d5-001",
-    "type": "single",
-    "question": "A production team needs private access from a VPC to an AWS service without using the public internet. Which feature fits?",
-    "options": {
-      "A": "An IAM permission boundary",
-      "B": "A VPC endpoint",
-      "C": "A public S3 website",
-      "D": "A CloudFront invalidation"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "VPC endpoints provide private connectivity to supported AWS services.\nThe other choices do not provide private service connectivity.",
     "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A production team is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs private access from a VPC to an AWS service without using the public internet. Which feature fits?",
+    "options": {
+      "A": "Latency-based routing with health checks",
+      "B": "AWS Global Accelerator",
+      "C": "VPC Flow Logs",
+      "D": "A VPC endpoint"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "VPC endpoints provide private connectivity to supported AWS services.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A VPC endpoint for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "生產團隊需要從 VPC 到 AWS 服務的私人存取，而無需使用公共互聯網。適合哪個功能？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。生產團隊需要從 VPC 到 AWS 服務的私人存取，而無需使用公共互聯網。適合哪個功能？",
         "options": {
-          "A": "IAM Permissions邊界",
-          "B": "VPC 終端節點",
-          "C": "公共 S3 網站",
-          "D": "CloudFront 失效"
+          "A": "具有健康檢查功能的基於延遲的路由",
+          "B": "AWS Global Accelerator",
+          "C": "VPC流日誌",
+          "D": "VPC 終端節點"
         },
-        "explanation": "VPC 終端節點提供與支援的 AWS 服務的私有連線。\n其他選擇不提供專用服務連線。"
+        "explanation": "VPC 終端節點提供與支援的 AWS 服務的私有連線。\n其他選項適用於此領域的不同需求，但不能像 VPC 終端節點 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d5-002",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A multi-account platform team must route users to the closest healthy Regional endpoint. Which Route 53 policy should be considered?",
+    "question": "A multi-account platform team is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team must route users to the closest healthy Regional endpoint. Which Route 53 policy should be considered?",
     "options": {
-      "A": "An S3 lifecycle rule",
-      "B": "An EBS snapshot",
+      "A": "VPC Flow Logs",
+      "B": "Amazon CloudFront",
       "C": "Latency-based routing with health checks",
-      "D": "Simple routing only"
+      "D": "AWS Global Accelerator"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Latency routing selects by measured network latency and health checks can exclude failed endpoints.\nThe other choices do not perform latency-aware DNS failover.",
-    "taskStatement": "5.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Latency routing selects by measured network latency and health checks can exclude failed endpoints.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Latency-based routing with health checks for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊必須將使用者路由到最近的健康區域端點。應考慮哪些 Route 53 政策？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。多帳戶平台團隊必須將使用者路由到最近的健康區域端點。應考慮哪些 Route 53 政策？",
         "options": {
-          "A": "S3 生命週期規則",
-          "B": "EBS Snapshot",
+          "A": "VPC流日誌",
+          "B": "Amazon CloudFront",
           "C": "具有健康檢查功能的基於延遲的路由",
-          "D": "僅簡單路由"
+          "D": "AWS Global Accelerator"
         },
-        "explanation": "透過測量的網路延遲和運作狀況檢查來選擇延遲路由可以排除失敗的端點。\n其他選項不執行延遲感知 DNS 故障轉移。"
+        "explanation": "透過測量的網路延遲和運作狀況檢查來選擇延遲路由可以排除失敗的端點。\n其他選項適用於此領域的不同需求，但不能像 具有健康檢查功能的基於延遲的路由 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d5-003",
-    "type": "single",
-    "question": "A regulated company needs a static anycast entry point that routes to healthy regional resources over the AWS global network. Which service fits?",
-    "options": {
-      "A": "Amazon EFS",
-      "B": "AWS Glue",
-      "C": "Amazon RDS Proxy",
-      "D": "AWS Global Accelerator"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Global Accelerator provides static anycast IPs and routes traffic to healthy regional endpoints.\nThe other choices provide file storage, ETL, or database connection pooling.",
     "taskStatement": "5.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A regulated company is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs a static anycast entry point that routes to healthy regional resources over the AWS global network. Which service fits?",
+    "options": {
+      "A": "A VPC endpoint",
+      "B": "AWS Global Accelerator",
+      "C": "VPC Flow Logs",
+      "D": "Amazon CloudFront"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Global Accelerator provides static anycast IPs and routes traffic to healthy regional endpoints.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Global Accelerator for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司需要一個靜態選播入口點，透過 AWS 全球網路路由到健康的區域資源。適合哪種服務？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。受監管的公司需要一個靜態選播入口點，透過 AWS 全球網路路由到健康的區域資源。適合哪種服務？",
         "options": {
-          "A": "Amazon EFS",
-          "B": "AWS Glue",
-          "C": "Amazon RDS Proxy",
-          "D": "AWS Global Accelerator"
+          "A": "VPC 終端節點",
+          "B": "AWS Global Accelerator",
+          "C": "VPC流日誌",
+          "D": "Amazon CloudFront"
         },
-        "explanation": "Global Accelerator 提供靜態任播 IP 並將流量路由至健康的區域端點。\n其他選擇提供檔案儲存、ETL 或資料庫連線池。"
+        "explanation": "Global Accelerator 提供靜態任播 IP 並將流量路由至健康的區域端點。\n其他選項適用於此領域的不同需求，但不能像 AWS Global Accelerator 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d5-004",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A startup preparing for a traffic increase must identify whether a subnet route or security group is blocking a connection. Which logs are useful?",
+    "question": "A startup preparing for a traffic increase is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team must identify whether a subnet route or security group is blocking a connection. Which logs are useful?",
     "options": {
       "A": "VPC Flow Logs",
-      "B": "S3 Inventory",
-      "C": "CloudTrail digest files only",
-      "D": "AWS Budgets reports"
+      "B": "Amazon CloudFront",
+      "C": "A VPC endpoint",
+      "D": "Latency-based routing with health checks"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "VPC Flow Logs provide metadata about accepted and rejected traffic for network troubleshooting.\nThe other choices do not capture subnet traffic metadata.",
-    "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "VPC Flow Logs provide metadata about accepted and rejected traffic for network troubleshooting.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide VPC Flow Logs for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司必須確定子網路路由或安全群組是否正在阻止連線。哪些日誌有用？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。準備增加流量的新創公司必須確定子網路路由或安全群組是否正在阻止連線。哪些日誌有用？",
         "options": {
           "A": "VPC流日誌",
-          "B": "S3 Inventory",
-          "C": "僅 CloudTrail 摘要文件",
-          "D": "AWS Budgets報告"
+          "B": "Amazon CloudFront",
+          "C": "VPC 終端節點",
+          "D": "具有健康檢查功能的基於延遲的路由"
         },
-        "explanation": "VPC 流日誌提供有關接受和拒絕流量的元資料，以進行網路故障排除。\n其他選擇不擷取子網路流量元資料。"
+        "explanation": "VPC 流日誌提供有關接受和拒絕流量的元資料，以進行網路故障排除。\n其他選項適用於此領域的不同需求，但不能像 VPC流日誌 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d5-005",
-    "type": "single",
-    "question": "An operations team supporting a critical workload needs to cache static and dynamic content near users. Which service should be placed in front of the origin?",
-    "options": {
-      "A": "Amazon Neptune",
-      "B": "Amazon CloudFront",
-      "C": "Amazon SQS",
-      "D": "AWS Backup"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "CloudFront caches and serves content from edge locations close to viewers.\nThe other choices queue messages, back up resources, or provide graph storage.",
     "taskStatement": "5.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs to cache static and dynamic content near users. Which service should be placed in front of the origin?",
+    "options": {
+      "A": "A VPC endpoint",
+      "B": "Latency-based routing with health checks",
+      "C": "AWS Global Accelerator",
+      "D": "Amazon CloudFront"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudFront caches and serves content from edge locations close to viewers.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon CloudFront for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊需要在使用者附近快取靜態和動態內容。哪個服務應該放在原點前面？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。支援關鍵工作負載的營運團隊需要在使用者附近快取靜態和動態內容。哪個服務應該放在原點前面？",
         "options": {
-          "A": "Amazon Neptune",
-          "B": "Amazon CloudFront",
-          "C": "Amazon SQS",
-          "D": "AWS Backup"
+          "A": "VPC 終端節點",
+          "B": "具有健康檢查功能的基於延遲的路由",
+          "C": "AWS Global Accelerator",
+          "D": "Amazon CloudFront"
         },
-        "explanation": "CloudFront 快取並提供來自靠近檢視者的邊緣位置的內容。\n其他選擇對訊息進行佇列、備份資源或提供圖形儲存。"
+        "explanation": "CloudFront 快取並提供來自靠近檢視者的邊緣位置的內容。\n其他選項適用於此領域的不同需求，但不能像 Amazon CloudFront 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d5-006",
+    "taskStatement": "5.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A data platform team needs private access from a VPC to an AWS service without using the public internet. Which feature fits?",
+    "question": "A data platform team is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs private access from a VPC to an AWS service without using the public internet. Which feature fits?",
     "options": {
-      "A": "A CloudFront invalidation",
-      "B": "An IAM permission boundary",
+      "A": "AWS Global Accelerator",
+      "B": "VPC Flow Logs",
       "C": "A VPC endpoint",
-      "D": "A public S3 website"
+      "D": "Latency-based routing with health checks"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "VPC endpoints provide private connectivity to supported AWS services.\nThe other choices do not provide private service connectivity.",
-    "taskStatement": "5.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "VPC endpoints provide private connectivity to supported AWS services.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A VPC endpoint for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要從 VPC 到 AWS 服務的私人存取，而無需使用公共互聯網。適合哪個功能？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。資料平台團隊需要從 VPC 到 AWS 服務的私人存取，而無需使用公共互聯網。適合哪個功能？",
         "options": {
-          "A": "CloudFront 失效",
-          "B": "IAM Permissions邊界",
+          "A": "AWS Global Accelerator",
+          "B": "VPC流日誌",
           "C": "VPC 終端節點",
-          "D": "公共 S3 網站"
+          "D": "具有健康檢查功能的基於延遲的路由"
         },
-        "explanation": "VPC 終端節點提供與支援的 AWS 服務的私有連線。\n其他選擇不提供專用服務連線。"
+        "explanation": "VPC 終端節點提供與支援的 AWS 服務的私有連線。\n其他選項適用於此領域的不同需求，但不能像 VPC 終端節點 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d5-007",
-    "type": "single",
-    "question": "A security-conscious engineering team must route users to the closest healthy Regional endpoint. Which Route 53 policy should be considered?",
-    "options": {
-      "A": "Simple routing only",
-      "B": "An S3 lifecycle rule",
-      "C": "An EBS snapshot",
-      "D": "Latency-based routing with health checks"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Latency routing selects by measured network latency and health checks can exclude failed endpoints.\nThe other choices do not perform latency-aware DNS failover.",
     "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A security-conscious engineering team is planning two independent production changes. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The first team must route users to the closest healthy Regional endpoint. A second team needs a static anycast entry point that routes to healthy regional resources over the AWS global network. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "VPC Flow Logs",
+      "B": "Amazon CloudFront",
+      "C": "A VPC endpoint",
+      "D": "Latency-based routing with health checks",
+      "E": "AWS Global Accelerator"
+    },
+    "answer": [
+      "D",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Latency-based routing with health checks meets the first requirement: Latency routing selects by measured network latency and health checks can exclude failed endpoints. AWS Global Accelerator meets the second requirement: Global Accelerator provides static anycast IPs and routes traffic to healthy regional endpoints.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊必須將使用者路由到最近的健康區域端點。應考慮哪些 Route 53 政策？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。第一項需求：多帳戶平台團隊必須將使用者路由到最近的健康區域端點。第二項需求：受監管的公司需要一個靜態選播入口點，透過 AWS 全球網路路由到健康的區域資源。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "僅簡單路由",
-          "B": "S3 生命週期規則",
-          "C": "EBS Snapshot",
-          "D": "具有健康檢查功能的基於延遲的路由"
+          "A": "VPC流日誌",
+          "B": "Amazon CloudFront",
+          "C": "VPC 終端節點",
+          "D": "具有健康檢查功能的基於延遲的路由",
+          "E": "AWS Global Accelerator"
         },
-        "explanation": "透過測量的網路延遲和運作狀況檢查來選擇延遲路由可以排除失敗的端點。\n其他選項不執行延遲感知 DNS 故障轉移。"
+        "explanation": "具有健康檢查功能的基於延遲的路由 符合第一項需求：透過測量的網路延遲和運作狀況檢查來選擇延遲路由可以排除失敗的端點。 AWS Global Accelerator 符合第二項需求：Global Accelerator 提供靜態任播 IP 並將流量路由至健康的區域端點。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "soa-c03-d5-008",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A company migrating an existing workload needs a static anycast entry point that routes to healthy regional resources over the AWS global network. Which service fits?",
+    "question": "A company migrating an existing workload is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs a static anycast entry point that routes to healthy regional resources over the AWS global network. Which service fits?",
     "options": {
       "A": "AWS Global Accelerator",
-      "B": "Amazon EFS",
-      "C": "AWS Glue",
-      "D": "Amazon RDS Proxy"
+      "B": "VPC Flow Logs",
+      "C": "Amazon CloudFront",
+      "D": "A VPC endpoint"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Global Accelerator provides static anycast IPs and routes traffic to healthy regional endpoints.\nThe other choices provide file storage, ETL, or database connection pooling.",
-    "taskStatement": "5.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Global Accelerator provides static anycast IPs and routes traffic to healthy regional endpoints.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Global Accelerator for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司需要一個靜態選播入口點，透過 AWS 全球網路路由到健康的區域資源。適合哪種服務？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。遷移現有工作負載的公司需要一個靜態選播入口點，透過 AWS 全球網路路由到健康的區域資源。適合哪種服務？",
         "options": {
           "A": "AWS Global Accelerator",
-          "B": "Amazon EFS",
-          "C": "AWS Glue",
-          "D": "Amazon RDS Proxy"
+          "B": "VPC流日誌",
+          "C": "Amazon CloudFront",
+          "D": "VPC 終端節點"
         },
-        "explanation": "Global Accelerator 提供靜態任播 IP 並將流量路由至健康的區域端點。\n其他選擇提供檔案儲存、ETL 或資料庫連線池。"
+        "explanation": "Global Accelerator 提供靜態任播 IP 並將流量路由至健康的區域端點。\n其他選項適用於此領域的不同需求，但不能像 AWS Global Accelerator 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d5-009",
-    "type": "single",
-    "question": "A team with strict recovery objectives must identify whether a subnet route or security group is blocking a connection. Which logs are useful?",
-    "options": {
-      "A": "AWS Budgets reports",
-      "B": "VPC Flow Logs",
-      "C": "S3 Inventory",
-      "D": "CloudTrail digest files only"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "VPC Flow Logs provide metadata about accepted and rejected traffic for network troubleshooting.\nThe other choices do not capture subnet traffic metadata.",
     "taskStatement": "5.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team with strict recovery objectives is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team must identify whether a subnet route or security group is blocking a connection. Which logs are useful?",
+    "options": {
+      "A": "Amazon CloudFront",
+      "B": "A VPC endpoint",
+      "C": "Latency-based routing with health checks",
+      "D": "VPC Flow Logs"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "VPC Flow Logs provide metadata about accepted and rejected traffic for network troubleshooting.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide VPC Flow Logs for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格恢復目標的團隊必須確定子網路路由或安全群組是否正在阻止連線。哪些日誌有用？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。具有嚴格恢復目標的團隊必須確定子網路路由或安全群組是否正在阻止連線。哪些日誌有用？",
         "options": {
-          "A": "AWS Budgets報告",
-          "B": "VPC流日誌",
-          "C": "S3 Inventory",
-          "D": "僅 CloudTrail 摘要文件"
+          "A": "Amazon CloudFront",
+          "B": "VPC 終端節點",
+          "C": "具有健康檢查功能的基於延遲的路由",
+          "D": "VPC流日誌"
         },
-        "explanation": "VPC 流日誌提供有關接受和拒絕流量的元資料，以進行網路故障排除。\n其他選擇不擷取子網路流量元資料。"
+        "explanation": "VPC 流日誌提供有關接受和拒絕流量的元資料，以進行網路故障排除。\n其他選項適用於此領域的不同需求，但不能像 VPC流日誌 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d5-010",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A developer team preparing a release needs to cache static and dynamic content near users. Which service should be placed in front of the origin?",
+    "question": "A developer team preparing a release is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs to cache static and dynamic content near users. Which service should be placed in front of the origin?",
     "options": {
-      "A": "AWS Backup",
-      "B": "Amazon Neptune",
+      "A": "Latency-based routing with health checks",
+      "B": "AWS Global Accelerator",
       "C": "Amazon CloudFront",
-      "D": "Amazon SQS"
+      "D": "A VPC endpoint"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "CloudFront caches and serves content from edge locations close to viewers.\nThe other choices queue messages, back up resources, or provide graph storage.",
-    "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "CloudFront caches and serves content from edge locations close to viewers.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon CloudFront for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊需要在使用者附近快取靜態和動態內容。哪個服務應該放在原點前面？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。準備發布的開發團隊需要在使用者附近快取靜態和動態內容。哪個服務應該放在原點前面？",
         "options": {
-          "A": "AWS Backup",
-          "B": "Amazon Neptune",
+          "A": "具有健康檢查功能的基於延遲的路由",
+          "B": "AWS Global Accelerator",
           "C": "Amazon CloudFront",
-          "D": "Amazon SQS"
+          "D": "VPC 終端節點"
         },
-        "explanation": "CloudFront 快取並提供來自靠近檢視者的邊緣位置的內容。\n其他選擇對訊息進行佇列、備份資源或提供圖形儲存。"
+        "explanation": "CloudFront 快取並提供來自靠近檢視者的邊緣位置的內容。\n其他選項適用於此領域的不同需求，但不能像 Amazon CloudFront 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d5-011",
-    "type": "single",
-    "question": "An enterprise with several AWS Regions needs private access from a VPC to an AWS service without using the public internet. Which feature fits?",
-    "options": {
-      "A": "A public S3 website",
-      "B": "A CloudFront invalidation",
-      "C": "An IAM permission boundary",
-      "D": "A VPC endpoint"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "VPC endpoints provide private connectivity to supported AWS services.\nThe other choices do not provide private service connectivity.",
     "taskStatement": "5.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team needs private access from a VPC to an AWS service without using the public internet. Which feature fits?",
+    "options": {
+      "A": "VPC Flow Logs",
+      "B": "A VPC endpoint",
+      "C": "Latency-based routing with health checks",
+      "D": "AWS Global Accelerator"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "VPC endpoints provide private connectivity to supported AWS services.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A VPC endpoint for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業需要從 VPC 到 AWS 服務的私人存取，而無需使用公共互聯網。適合哪個功能？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。擁有多個 AWS 區域的企業需要從 VPC 到 AWS 服務的私人存取，而無需使用公共互聯網。適合哪個功能？",
         "options": {
-          "A": "公共 S3 網站",
-          "B": "CloudFront 失效",
-          "C": "IAM Permissions邊界",
-          "D": "VPC 終端節點"
+          "A": "VPC流日誌",
+          "B": "VPC 終端節點",
+          "C": "具有健康檢查功能的基於延遲的路由",
+          "D": "AWS Global Accelerator"
         },
-        "explanation": "VPC 終端節點提供與支援的 AWS 服務的私有連線。\n其他選擇不提供專用服務連線。"
+        "explanation": "VPC 終端節點提供與支援的 AWS 服務的私有連線。\n其他選項適用於此領域的不同需求，但不能像 VPC 終端節點 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d5-012",
+    "taskStatement": "5.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A service owner reviewing an incident must route users to the closest healthy Regional endpoint. Which Route 53 policy should be considered?",
+    "question": "A service owner reviewing an incident is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team must route users to the closest healthy Regional endpoint. Which Route 53 policy should be considered?",
     "options": {
       "A": "Latency-based routing with health checks",
-      "B": "Simple routing only",
-      "C": "An S3 lifecycle rule",
-      "D": "An EBS snapshot"
+      "B": "AWS Global Accelerator",
+      "C": "VPC Flow Logs",
+      "D": "Amazon CloudFront"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Latency routing selects by measured network latency and health checks can exclude failed endpoints.\nThe other choices do not perform latency-aware DNS failover.",
-    "taskStatement": "5.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "Latency routing selects by measured network latency and health checks can exclude failed endpoints.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Latency-based routing with health checks for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務擁有者必須將使用者路由到最近的健康區域端點。應考慮哪些 Route 53 政策？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。審查事件的服務擁有者必須將使用者路由到最近的健康區域端點。應考慮哪些 Route 53 政策？",
         "options": {
           "A": "具有健康檢查功能的基於延遲的路由",
-          "B": "僅簡單路由",
-          "C": "S3 生命週期規則",
-          "D": "EBS Snapshot"
+          "B": "AWS Global Accelerator",
+          "C": "VPC流日誌",
+          "D": "Amazon CloudFront"
         },
-        "explanation": "透過測量的網路延遲和運作狀況檢查來選擇延遲路由可以排除失敗的端點。\n其他選項不執行延遲感知 DNS 故障轉移。"
+        "explanation": "透過測量的網路延遲和運作狀況檢查來選擇延遲路由可以排除失敗的端點。\n其他選項適用於此領域的不同需求，但不能像 具有健康檢查功能的基於延遲的路由 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d5-013",
-    "type": "single",
-    "question": "A team optimizing an existing implementation needs a static anycast entry point that routes to healthy regional resources over the AWS global network. Which service fits?",
-    "options": {
-      "A": "Amazon RDS Proxy",
-      "B": "AWS Global Accelerator",
-      "C": "Amazon EFS",
-      "D": "AWS Glue"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Global Accelerator provides static anycast IPs and routes traffic to healthy regional endpoints.\nThe other choices provide file storage, ETL, or database connection pooling.",
     "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team needs a static anycast entry point that routes to healthy regional resources over the AWS global network. Which service fits?",
+    "options": {
+      "A": "VPC Flow Logs",
+      "B": "Amazon CloudFront",
+      "C": "A VPC endpoint",
+      "D": "AWS Global Accelerator"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Global Accelerator provides static anycast IPs and routes traffic to healthy regional endpoints.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Global Accelerator for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊需要一個靜態選播入口點，透過 AWS 全球網路路由到健康的區域資源。適合哪種服務？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。優化現有實施的團隊需要一個靜態選播入口點，透過 AWS 全球網路路由到健康的區域資源。適合哪種服務？",
         "options": {
-          "A": "Amazon RDS Proxy",
-          "B": "AWS Global Accelerator",
-          "C": "Amazon EFS",
-          "D": "AWS Glue"
+          "A": "VPC流日誌",
+          "B": "Amazon CloudFront",
+          "C": "VPC 終端節點",
+          "D": "AWS Global Accelerator"
         },
-        "explanation": "Global Accelerator 提供靜態任播 IP 並將流量路由至健康的區域端點。\n其他選擇提供檔案儲存、ETL 或資料庫連線池。"
+        "explanation": "Global Accelerator 提供靜態任播 IP 並將流量路由至健康的區域端點。\n其他選項適用於此領域的不同需求，但不能像 AWS Global Accelerator 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d5-014",
-    "type": "single",
-    "question": "A company introducing an automated workflow must identify whether a subnet route or security group is blocking a connection. Which logs are useful?",
-    "options": {
-      "A": "CloudTrail digest files only",
-      "B": "AWS Budgets reports",
-      "C": "VPC Flow Logs",
-      "D": "S3 Inventory"
-    },
-    "answer": "C",
-    "isMultiAnswer": false,
-    "explanation": "VPC Flow Logs provide metadata about accepted and rejected traffic for network troubleshooting.\nThe other choices do not capture subnet traffic metadata.",
     "taskStatement": "5.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A company introducing an automated workflow is planning two independent production changes. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The first team must identify whether a subnet route or security group is blocking a connection. A second team needs to cache static and dynamic content near users. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "AWS Global Accelerator",
+      "B": "VPC Flow Logs",
+      "C": "Amazon CloudFront",
+      "D": "A VPC endpoint",
+      "E": "Latency-based routing with health checks"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "VPC Flow Logs meets the first requirement: VPC Flow Logs provide metadata about accepted and rejected traffic for network troubleshooting. Amazon CloudFront meets the second requirement: CloudFront caches and serves content from edge locations close to viewers.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司必須確定子網路路由或安全群組是否阻止連線。哪些日誌有用？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。第一項需求：準備增加流量的新創公司必須確定子網路路由或安全群組是否正在阻止連線。第二項需求：支援關鍵工作負載的營運團隊需要在使用者附近快取靜態和動態內容。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "僅 CloudTrail 摘要文件",
-          "B": "AWS Budgets報告",
-          "C": "VPC流日誌",
-          "D": "S3 Inventory"
+          "A": "AWS Global Accelerator",
+          "B": "VPC流日誌",
+          "C": "Amazon CloudFront",
+          "D": "VPC 終端節點",
+          "E": "具有健康檢查功能的基於延遲的路由"
         },
-        "explanation": "VPC 流日誌提供有關接受和拒絕流量的元資料，以進行網路故障排除。\n其他選擇不擷取子網路流量元資料。"
+        "explanation": "VPC流日誌 符合第一項需求：VPC 流日誌提供有關接受和拒絕流量的元資料，以進行網路故障排除。 Amazon CloudFront 符合第二項需求：CloudFront 快取並提供來自靠近檢視者的邊緣位置的內容。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "soa-c03-d5-015",
-    "type": "single",
-    "question": "An AWS administrator working in a shared environment needs to cache static and dynamic content near users. Which service should be placed in front of the origin?",
-    "options": {
-      "A": "Amazon SQS",
-      "B": "AWS Backup",
-      "C": "Amazon Neptune",
-      "D": "Amazon CloudFront"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "CloudFront caches and serves content from edge locations close to viewers.\nThe other choices queue messages, back up resources, or provide graph storage.",
     "taskStatement": "5.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An AWS administrator working in a shared environment is reviewing a production decision. The team has confirmed the requirement with workload owners and must make a targeted change without redesigning unrelated components. The team needs to cache static and dynamic content near users. Which service should be placed in front of the origin?",
+    "options": {
+      "A": "AWS Global Accelerator",
+      "B": "Amazon CloudFront",
+      "C": "A VPC endpoint",
+      "D": "Latency-based routing with health checks"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "CloudFront caches and serves content from edge locations close to viewers.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon CloudFront for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "在共用環境中工作的 AWS 管理員需要快取使用者附近的靜態和動態內容。哪個服務應該放在原點前面？",
+        "question": "團隊已與工作負載負責人確認需求，並且必須在不重新設計無關元件的情況下進行針對性變更。在共用環境中工作的 AWS 管理員需要快取使用者附近的靜態和動態內容。哪個服務應該放在原點前面？",
         "options": {
-          "A": "Amazon SQS",
-          "B": "AWS Backup",
-          "C": "Amazon Neptune",
-          "D": "Amazon CloudFront"
+          "A": "AWS Global Accelerator",
+          "B": "Amazon CloudFront",
+          "C": "VPC 終端節點",
+          "D": "具有健康檢查功能的基於延遲的路由"
         },
-        "explanation": "CloudFront 快取並提供來自靠近檢視者的邊緣位置的內容。\n其他選擇對訊息進行佇列、備份資源或提供圖形儲存。"
+        "explanation": "CloudFront 快取並提供來自靠近檢視者的邊緣位置的內容。\n其他選項適用於此領域的不同需求，但不能像 Amazon CloudFront 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d5-016",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A customer-facing application team needs private access from a VPC to an AWS service without using the public internet. Which feature fits?",
+    "question": "A customer-facing application team is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs private access from a VPC to an AWS service without using the public internet. Which feature fits?",
     "options": {
       "A": "A VPC endpoint",
-      "B": "A public S3 website",
-      "C": "A CloudFront invalidation",
-      "D": "An IAM permission boundary"
+      "B": "Latency-based routing with health checks",
+      "C": "AWS Global Accelerator",
+      "D": "VPC Flow Logs"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "VPC endpoints provide private connectivity to supported AWS services.\nThe other choices do not provide private service connectivity.",
-    "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "VPC endpoints provide private connectivity to supported AWS services.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A VPC endpoint for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "面向客戶的應用程式團隊需要從 VPC 到 AWS 服務的私人存取，而無需使用公共互聯網。適合哪個功能？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。面向客戶的應用程式團隊需要從 VPC 到 AWS 服務的私人存取，而無需使用公共互聯網。適合哪個功能？",
         "options": {
           "A": "VPC 終端節點",
-          "B": "公共 S3 網站",
-          "C": "CloudFront 失效",
-          "D": "IAM Permissions邊界"
+          "B": "具有健康檢查功能的基於延遲的路由",
+          "C": "AWS Global Accelerator",
+          "D": "VPC流日誌"
         },
-        "explanation": "VPC 終端節點提供與支援的 AWS 服務的私有連線。\n其他選擇不提供專用服務連線。"
+        "explanation": "VPC 終端節點提供與支援的 AWS 服務的私有連線。\n其他選項適用於此領域的不同需求，但不能像 VPC 終端節點 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d5-017",
-    "type": "single",
-    "question": "A platform team standardizing its AWS deployments must route users to the closest healthy Regional endpoint. Which Route 53 policy should be considered?",
-    "options": {
-      "A": "An EBS snapshot",
-      "B": "Latency-based routing with health checks",
-      "C": "Simple routing only",
-      "D": "An S3 lifecycle rule"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Latency routing selects by measured network latency and health checks can exclude failed endpoints.\nThe other choices do not perform latency-aware DNS failover.",
     "taskStatement": "5.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A platform team standardizing its AWS deployments is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team must route users to the closest healthy Regional endpoint. Which Route 53 policy should be considered?",
+    "options": {
+      "A": "AWS Global Accelerator",
+      "B": "VPC Flow Logs",
+      "C": "Amazon CloudFront",
+      "D": "Latency-based routing with health checks"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Latency routing selects by measured network latency and health checks can exclude failed endpoints.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Latency-based routing with health checks for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "標準化其 AWS 部署的平台團隊必須將使用者路由到最近的健康區域終端節點。應考慮哪些 Route 53 政策？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。標準化其 AWS 部署的平台團隊必須將使用者路由到最近的健康區域終端節點。應考慮哪些 Route 53 政策？",
         "options": {
-          "A": "EBS Snapshot",
-          "B": "具有健康檢查功能的基於延遲的路由",
-          "C": "僅簡單路由",
-          "D": "S3 生命週期規則"
+          "A": "AWS Global Accelerator",
+          "B": "VPC流日誌",
+          "C": "Amazon CloudFront",
+          "D": "具有健康檢查功能的基於延遲的路由"
         },
-        "explanation": "透過測量的網路延遲和運作狀況檢查來選擇延遲路由可以排除失敗的端點。\n其他選項不執行延遲感知 DNS 故障轉移。"
+        "explanation": "透過測量的網路延遲和運作狀況檢查來選擇延遲路由可以排除失敗的端點。\n其他選項適用於此領域的不同需求，但不能像 具有健康檢查功能的基於延遲的路由 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d5-018",
+    "taskStatement": "5.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team preparing evidence for an audit needs a static anycast entry point that routes to healthy regional resources over the AWS global network. Which service fits?",
+    "question": "A team preparing evidence for an audit is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs a static anycast entry point that routes to healthy regional resources over the AWS global network. Which service fits?",
     "options": {
-      "A": "AWS Glue",
-      "B": "Amazon RDS Proxy",
+      "A": "Amazon CloudFront",
+      "B": "A VPC endpoint",
       "C": "AWS Global Accelerator",
-      "D": "Amazon EFS"
+      "D": "VPC Flow Logs"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Global Accelerator provides static anycast IPs and routes traffic to healthy regional endpoints.\nThe other choices provide file storage, ETL, or database connection pooling.",
-    "taskStatement": "5.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "Global Accelerator provides static anycast IPs and routes traffic to healthy regional endpoints.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Global Accelerator for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備審計證據的團隊需要一個靜態選播入口點，透過 AWS 全球網路路由到健康的區域資源。適合哪種服務？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。準備審計證據的團隊需要一個靜態選播入口點，透過 AWS 全球網路路由到健康的區域資源。適合哪種服務？",
         "options": {
-          "A": "AWS Glue",
-          "B": "Amazon RDS Proxy",
+          "A": "Amazon CloudFront",
+          "B": "VPC 終端節點",
           "C": "AWS Global Accelerator",
-          "D": "Amazon EFS"
+          "D": "VPC流日誌"
         },
-        "explanation": "Global Accelerator 提供靜態任播 IP 並將流量路由至健康的區域端點。\n其他選擇提供檔案儲存、ETL 或資料庫連線池。"
+        "explanation": "Global Accelerator 提供靜態任播 IP 並將流量路由至健康的區域端點。\n其他選項適用於此領域的不同需求，但不能像 AWS Global Accelerator 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d5-019",
-    "type": "single",
-    "question": "A business replacing a manual process must identify whether a subnet route or security group is blocking a connection. Which logs are useful?",
-    "options": {
-      "A": "S3 Inventory",
-      "B": "CloudTrail digest files only",
-      "C": "AWS Budgets reports",
-      "D": "VPC Flow Logs"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "VPC Flow Logs provide metadata about accepted and rejected traffic for network troubleshooting.\nThe other choices do not capture subnet traffic metadata.",
     "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A business replacing a manual process is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team must identify whether a subnet route or security group is blocking a connection. Which logs are useful?",
+    "options": {
+      "A": "Latency-based routing with health checks",
+      "B": "VPC Flow Logs",
+      "C": "Amazon CloudFront",
+      "D": "A VPC endpoint"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "VPC Flow Logs provide metadata about accepted and rejected traffic for network troubleshooting.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide VPC Flow Logs for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "替代手動流程的企業必須確定子網路路由或安全群組是否正在阻止連線。哪些日誌有用？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。替代手動流程的企業必須確定子網路路由或安全群組是否正在阻止連線。哪些日誌有用？",
         "options": {
-          "A": "S3 Inventory",
-          "B": "僅 CloudTrail 摘要文件",
-          "C": "AWS Budgets報告",
-          "D": "VPC流日誌"
+          "A": "具有健康檢查功能的基於延遲的路由",
+          "B": "VPC流日誌",
+          "C": "Amazon CloudFront",
+          "D": "VPC 終端節點"
         },
-        "explanation": "VPC 流日誌提供有關接受和拒絕流量的元資料，以進行網路故障排除。\n其他選擇不擷取子網路流量元資料。"
+        "explanation": "VPC 流日誌提供有關接受和拒絕流量的元資料，以進行網路故障排除。\n其他選項適用於此領域的不同需求，但不能像 VPC流日誌 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d5-020",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A team validating a design against the exam guide needs to cache static and dynamic content near users. Which service should be placed in front of the origin?",
+    "question": "A team validating a design against the exam guide is reviewing a production decision. The implementation must be repeatable, observable after deployment, and suitable for normal production support procedures. The team needs to cache static and dynamic content near users. Which service should be placed in front of the origin?",
     "options": {
       "A": "Amazon CloudFront",
-      "B": "Amazon SQS",
-      "C": "AWS Backup",
-      "D": "Amazon Neptune"
+      "B": "A VPC endpoint",
+      "C": "Latency-based routing with health checks",
+      "D": "AWS Global Accelerator"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "CloudFront caches and serves content from edge locations close to viewers.\nThe other choices queue messages, back up resources, or provide graph storage.",
-    "taskStatement": "5.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "CloudFront caches and serves content from edge locations close to viewers.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon CloudFront for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "根據考試指南驗證設計的團隊需要在使用者附近快取靜態和動態內容。哪個服務應該放在原點前面？",
+        "question": "實作必須可以重複執行、在部署後可以觀察，並適合日常生產支援程序。根據考試指南驗證設計的團隊需要在使用者附近快取靜態和動態內容。哪個服務應該放在原點前面？",
         "options": {
           "A": "Amazon CloudFront",
-          "B": "Amazon SQS",
-          "C": "AWS Backup",
-          "D": "Amazon Neptune"
+          "B": "VPC 終端節點",
+          "C": "具有健康檢查功能的基於延遲的路由",
+          "D": "AWS Global Accelerator"
         },
-        "explanation": "CloudFront 快取並提供來自靠近檢視者的邊緣位置的內容。\n其他選擇對訊息進行佇列、備份資源或提供圖形儲存。"
+        "explanation": "CloudFront 快取並提供來自靠近檢視者的邊緣位置的內容。\n其他選項適用於此領域的不同需求，但不能像 Amazon CloudFront 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d5-021",
-    "type": "single",
-    "question": "A production team needs private access from a VPC to an AWS service without using the public internet. Which feature fits?",
-    "options": {
-      "A": "An IAM permission boundary",
-      "B": "A VPC endpoint",
-      "C": "A public S3 website",
-      "D": "A CloudFront invalidation"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "VPC endpoints provide private connectivity to supported AWS services.\nThe other choices do not provide private service connectivity.",
     "taskStatement": "5.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A production team is planning two independent production changes. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The first team needs private access from a VPC to an AWS service without using the public internet. A second team must route users to the closest healthy Regional endpoint. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Latency-based routing with health checks",
+      "B": "AWS Global Accelerator",
+      "C": "VPC Flow Logs",
+      "D": "Amazon CloudFront",
+      "E": "A VPC endpoint"
+    },
+    "answer": [
+      "A",
+      "E"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "A VPC endpoint meets the first requirement: VPC endpoints provide private connectivity to supported AWS services. Latency-based routing with health checks meets the second requirement: Latency routing selects by measured network latency and health checks can exclude failed endpoints.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "生產團隊需要從 VPC 到 AWS 服務的私人存取，而無需使用公共互聯網。適合哪個功能？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。第一項需求：多帳戶平台團隊必須將使用者路由到最近的健康區域端點。第二項需求：生產團隊需要從 VPC 到 AWS 服務的私人存取，而無需使用公共互聯網。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "IAM Permissions邊界",
-          "B": "VPC 終端節點",
-          "C": "公共 S3 網站",
-          "D": "CloudFront 失效"
+          "A": "具有健康檢查功能的基於延遲的路由",
+          "B": "AWS Global Accelerator",
+          "C": "VPC流日誌",
+          "D": "Amazon CloudFront",
+          "E": "VPC 終端節點"
         },
-        "explanation": "VPC 終端節點提供與支援的 AWS 服務的私有連線。\n其他選擇不提供專用服務連線。"
+        "explanation": "具有健康檢查功能的基於延遲的路由 符合第一項需求：透過測量的網路延遲和運作狀況檢查來選擇延遲路由可以排除失敗的端點。 VPC 終端節點 符合第二項需求：VPC 終端節點提供與支援的 AWS 服務的私有連線。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "soa-c03-d5-022",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A multi-account platform team must route users to the closest healthy Regional endpoint. Which Route 53 policy should be considered?",
+    "question": "A multi-account platform team is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team must route users to the closest healthy Regional endpoint. Which Route 53 policy should be considered?",
     "options": {
-      "A": "An S3 lifecycle rule",
-      "B": "An EBS snapshot",
+      "A": "VPC Flow Logs",
+      "B": "Amazon CloudFront",
       "C": "Latency-based routing with health checks",
-      "D": "Simple routing only"
+      "D": "AWS Global Accelerator"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "Latency routing selects by measured network latency and health checks can exclude failed endpoints.\nThe other choices do not perform latency-aware DNS failover.",
-    "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "Latency routing selects by measured network latency and health checks can exclude failed endpoints.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Latency-based routing with health checks for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "多帳戶平台團隊必須將使用者路由到最近的健康區域端點。應考慮哪些 Route 53 政策？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。多帳戶平台團隊必須將使用者路由到最近的健康區域端點。應考慮哪些 Route 53 政策？",
         "options": {
-          "A": "S3 生命週期規則",
-          "B": "EBS Snapshot",
+          "A": "VPC流日誌",
+          "B": "Amazon CloudFront",
           "C": "具有健康檢查功能的基於延遲的路由",
-          "D": "僅簡單路由"
+          "D": "AWS Global Accelerator"
         },
-        "explanation": "透過測量的網路延遲和運作狀況檢查來選擇延遲路由可以排除失敗的端點。\n其他選項不執行延遲感知 DNS 故障轉移。"
+        "explanation": "透過測量的網路延遲和運作狀況檢查來選擇延遲路由可以排除失敗的端點。\n其他選項適用於此領域的不同需求，但不能像 具有健康檢查功能的基於延遲的路由 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d5-023",
-    "type": "single",
-    "question": "A regulated company needs a static anycast entry point that routes to healthy regional resources over the AWS global network. Which service fits?",
-    "options": {
-      "A": "Amazon EFS",
-      "B": "AWS Glue",
-      "C": "Amazon RDS Proxy",
-      "D": "AWS Global Accelerator"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Global Accelerator provides static anycast IPs and routes traffic to healthy regional endpoints.\nThe other choices provide file storage, ETL, or database connection pooling.",
     "taskStatement": "5.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A regulated company is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs a static anycast entry point that routes to healthy regional resources over the AWS global network. Which service fits?",
+    "options": {
+      "A": "A VPC endpoint",
+      "B": "AWS Global Accelerator",
+      "C": "VPC Flow Logs",
+      "D": "Amazon CloudFront"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Global Accelerator provides static anycast IPs and routes traffic to healthy regional endpoints.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Global Accelerator for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "受監管的公司需要一個靜態選播入口點，透過 AWS 全球網路路由到健康的區域資源。適合哪種服務？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。受監管的公司需要一個靜態選播入口點，透過 AWS 全球網路路由到健康的區域資源。適合哪種服務？",
         "options": {
-          "A": "Amazon EFS",
-          "B": "AWS Glue",
-          "C": "Amazon RDS Proxy",
-          "D": "AWS Global Accelerator"
+          "A": "VPC 終端節點",
+          "B": "AWS Global Accelerator",
+          "C": "VPC流日誌",
+          "D": "Amazon CloudFront"
         },
-        "explanation": "Global Accelerator 提供靜態任播 IP 並將流量路由至健康的區域端點。\n其他選擇提供檔案儲存、ETL 或資料庫連線池。"
+        "explanation": "Global Accelerator 提供靜態任播 IP 並將流量路由至健康的區域端點。\n其他選項適用於此領域的不同需求，但不能像 AWS Global Accelerator 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d5-024",
+    "taskStatement": "5.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A startup preparing for a traffic increase must identify whether a subnet route or security group is blocking a connection. Which logs are useful?",
+    "question": "A startup preparing for a traffic increase is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team must identify whether a subnet route or security group is blocking a connection. Which logs are useful?",
     "options": {
       "A": "VPC Flow Logs",
-      "B": "S3 Inventory",
-      "C": "CloudTrail digest files only",
-      "D": "AWS Budgets reports"
+      "B": "Amazon CloudFront",
+      "C": "A VPC endpoint",
+      "D": "Latency-based routing with health checks"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "VPC Flow Logs provide metadata about accepted and rejected traffic for network troubleshooting.\nThe other choices do not capture subnet traffic metadata.",
-    "taskStatement": "5.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "VPC Flow Logs provide metadata about accepted and rejected traffic for network troubleshooting.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide VPC Flow Logs for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備增加流量的新創公司必須確定子網路路由或安全群組是否正在阻止連線。哪些日誌有用？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。準備增加流量的新創公司必須確定子網路路由或安全群組是否正在阻止連線。哪些日誌有用？",
         "options": {
           "A": "VPC流日誌",
-          "B": "S3 Inventory",
-          "C": "僅 CloudTrail 摘要文件",
-          "D": "AWS Budgets報告"
+          "B": "Amazon CloudFront",
+          "C": "VPC 終端節點",
+          "D": "具有健康檢查功能的基於延遲的路由"
         },
-        "explanation": "VPC 流日誌提供有關接受和拒絕流量的元資料，以進行網路故障排除。\n其他選擇不擷取子網路流量元資料。"
+        "explanation": "VPC 流日誌提供有關接受和拒絕流量的元資料，以進行網路故障排除。\n其他選項適用於此領域的不同需求，但不能像 VPC流日誌 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d5-025",
-    "type": "single",
-    "question": "An operations team supporting a critical workload needs to cache static and dynamic content near users. Which service should be placed in front of the origin?",
-    "options": {
-      "A": "Amazon Neptune",
-      "B": "Amazon CloudFront",
-      "C": "Amazon SQS",
-      "D": "AWS Backup"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "CloudFront caches and serves content from edge locations close to viewers.\nThe other choices queue messages, back up resources, or provide graph storage.",
     "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An operations team supporting a critical workload is reviewing a production decision. The workload already follows AWS security best practices, and the team wants the option that most directly satisfies the stated technical requirement. The team needs to cache static and dynamic content near users. Which service should be placed in front of the origin?",
+    "options": {
+      "A": "A VPC endpoint",
+      "B": "Latency-based routing with health checks",
+      "C": "AWS Global Accelerator",
+      "D": "Amazon CloudFront"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "CloudFront caches and serves content from edge locations close to viewers.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon CloudFront for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "支援關鍵工作負載的營運團隊需要在使用者附近快取靜態和動態內容。哪個服務應該放在原點前面？",
+        "question": "此工作負載遵循 AWS 安全最佳實務，而團隊需要最直接滿足所述技術需求的選項。支援關鍵工作負載的營運團隊需要在使用者附近快取靜態和動態內容。哪個服務應該放在原點前面？",
         "options": {
-          "A": "Amazon Neptune",
-          "B": "Amazon CloudFront",
-          "C": "Amazon SQS",
-          "D": "AWS Backup"
+          "A": "VPC 終端節點",
+          "B": "具有健康檢查功能的基於延遲的路由",
+          "C": "AWS Global Accelerator",
+          "D": "Amazon CloudFront"
         },
-        "explanation": "CloudFront 快取並提供來自靠近檢視者的邊緣位置的內容。\n其他選擇對訊息進行佇列、備份資源或提供圖形儲存。"
+        "explanation": "CloudFront 快取並提供來自靠近檢視者的邊緣位置的內容。\n其他選項適用於此領域的不同需求，但不能像 Amazon CloudFront 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d5-026",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A data platform team needs private access from a VPC to an AWS service without using the public internet. Which feature fits?",
+    "question": "A data platform team is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs private access from a VPC to an AWS service without using the public internet. Which feature fits?",
     "options": {
-      "A": "A CloudFront invalidation",
-      "B": "An IAM permission boundary",
+      "A": "AWS Global Accelerator",
+      "B": "VPC Flow Logs",
       "C": "A VPC endpoint",
-      "D": "A public S3 website"
+      "D": "Latency-based routing with health checks"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "VPC endpoints provide private connectivity to supported AWS services.\nThe other choices do not provide private service connectivity.",
-    "taskStatement": "5.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "VPC endpoints provide private connectivity to supported AWS services.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A VPC endpoint for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "資料平台團隊需要從 VPC 到 AWS 服務的私人存取，而無需使用公共互聯網。適合哪個功能？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。資料平台團隊需要從 VPC 到 AWS 服務的私人存取，而無需使用公共互聯網。適合哪個功能？",
         "options": {
-          "A": "CloudFront 失效",
-          "B": "IAM Permissions邊界",
+          "A": "AWS Global Accelerator",
+          "B": "VPC流日誌",
           "C": "VPC 終端節點",
-          "D": "公共 S3 網站"
+          "D": "具有健康檢查功能的基於延遲的路由"
         },
-        "explanation": "VPC 終端節點提供與支援的 AWS 服務的私有連線。\n其他選擇不提供專用服務連線。"
+        "explanation": "VPC 終端節點提供與支援的 AWS 服務的私有連線。\n其他選項適用於此領域的不同需求，但不能像 VPC 終端節點 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d5-027",
-    "type": "single",
-    "question": "A security-conscious engineering team must route users to the closest healthy Regional endpoint. Which Route 53 policy should be considered?",
-    "options": {
-      "A": "Simple routing only",
-      "B": "An S3 lifecycle rule",
-      "C": "An EBS snapshot",
-      "D": "Latency-based routing with health checks"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "Latency routing selects by measured network latency and health checks can exclude failed endpoints.\nThe other choices do not perform latency-aware DNS failover.",
     "taskStatement": "5.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A security-conscious engineering team is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team must route users to the closest healthy Regional endpoint. Which Route 53 policy should be considered?",
+    "options": {
+      "A": "Amazon CloudFront",
+      "B": "Latency-based routing with health checks",
+      "C": "AWS Global Accelerator",
+      "D": "VPC Flow Logs"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "Latency routing selects by measured network latency and health checks can exclude failed endpoints.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Latency-based routing with health checks for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有安全意識的工程團隊必須將使用者路由到最近的健康區域端點。應考慮哪些 Route 53 政策？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。具有安全意識的工程團隊必須將使用者路由到最近的健康區域端點。應考慮哪些 Route 53 政策？",
         "options": {
-          "A": "僅簡單路由",
-          "B": "S3 生命週期規則",
-          "C": "EBS Snapshot",
-          "D": "具有健康檢查功能的基於延遲的路由"
+          "A": "Amazon CloudFront",
+          "B": "具有健康檢查功能的基於延遲的路由",
+          "C": "AWS Global Accelerator",
+          "D": "VPC流日誌"
         },
-        "explanation": "透過測量的網路延遲和運作狀況檢查來選擇延遲路由可以排除失敗的端點。\n其他選項不執行延遲感知 DNS 故障轉移。"
+        "explanation": "透過測量的網路延遲和運作狀況檢查來選擇延遲路由可以排除失敗的端點。\n其他選項適用於此領域的不同需求，但不能像 具有健康檢查功能的基於延遲的路由 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d5-028",
-    "type": "single",
-    "question": "A company migrating an existing workload needs a static anycast entry point that routes to healthy regional resources over the AWS global network. Which service fits?",
-    "options": {
-      "A": "AWS Global Accelerator",
-      "B": "Amazon EFS",
-      "C": "AWS Glue",
-      "D": "Amazon RDS Proxy"
-    },
-    "answer": "A",
-    "isMultiAnswer": false,
-    "explanation": "Global Accelerator provides static anycast IPs and routes traffic to healthy regional endpoints.\nThe other choices provide file storage, ETL, or database connection pooling.",
     "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "A company migrating an existing workload is planning two independent production changes. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The first team needs a static anycast entry point that routes to healthy regional resources over the AWS global network. A second team must identify whether a subnet route or security group is blocking a connection. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "A VPC endpoint",
+      "B": "Latency-based routing with health checks",
+      "C": "AWS Global Accelerator",
+      "D": "VPC Flow Logs",
+      "E": "Amazon CloudFront"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "AWS Global Accelerator meets the first requirement: Global Accelerator provides static anycast IPs and routes traffic to healthy regional endpoints. VPC Flow Logs meets the second requirement: VPC Flow Logs provide metadata about accepted and rejected traffic for network troubleshooting.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "遷移現有工作負載的公司需要一個靜態選播入口點，透過 AWS 全球網路路由到健康的區域資源。適合哪種服務？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。第一項需求：受監管的公司需要一個靜態選播入口點，透過 AWS 全球網路路由到健康的區域資源。第二項需求：準備增加流量的新創公司必須確定子網路路由或安全群組是否正在阻止連線。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "AWS Global Accelerator",
-          "B": "Amazon EFS",
-          "C": "AWS Glue",
-          "D": "Amazon RDS Proxy"
+          "A": "VPC 終端節點",
+          "B": "具有健康檢查功能的基於延遲的路由",
+          "C": "AWS Global Accelerator",
+          "D": "VPC流日誌",
+          "E": "Amazon CloudFront"
         },
-        "explanation": "Global Accelerator 提供靜態任播 IP 並將流量路由至健康的區域端點。\n其他選擇提供檔案儲存、ETL 或資料庫連線池。"
+        "explanation": "AWS Global Accelerator 符合第一項需求：Global Accelerator 提供靜態任播 IP 並將流量路由至健康的區域端點。 VPC流日誌 符合第二項需求：VPC 流日誌提供有關接受和拒絕流量的元資料，以進行網路故障排除。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   },
   {
     "id": "soa-c03-d5-029",
-    "type": "single",
-    "question": "A team with strict recovery objectives must identify whether a subnet route or security group is blocking a connection. Which logs are useful?",
-    "options": {
-      "A": "AWS Budgets reports",
-      "B": "VPC Flow Logs",
-      "C": "S3 Inventory",
-      "D": "CloudTrail digest files only"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "VPC Flow Logs provide metadata about accepted and rejected traffic for network troubleshooting.\nThe other choices do not capture subnet traffic metadata.",
     "taskStatement": "5.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team with strict recovery objectives is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team must identify whether a subnet route or security group is blocking a connection. Which logs are useful?",
+    "options": {
+      "A": "Amazon CloudFront",
+      "B": "A VPC endpoint",
+      "C": "Latency-based routing with health checks",
+      "D": "VPC Flow Logs"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "VPC Flow Logs provide metadata about accepted and rejected traffic for network troubleshooting.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide VPC Flow Logs for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "具有嚴格恢復目標的團隊必須確定子網路路由或安全群組是否正在阻止連線。哪些日誌有用？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。具有嚴格恢復目標的團隊必須確定子網路路由或安全群組是否正在阻止連線。哪些日誌有用？",
         "options": {
-          "A": "AWS Budgets報告",
-          "B": "VPC流日誌",
-          "C": "S3 Inventory",
-          "D": "僅 CloudTrail 摘要文件"
+          "A": "Amazon CloudFront",
+          "B": "VPC 終端節點",
+          "C": "具有健康檢查功能的基於延遲的路由",
+          "D": "VPC流日誌"
         },
-        "explanation": "VPC 流日誌提供有關接受和拒絕流量的元資料，以進行網路故障排除。\n其他選擇不擷取子網路流量元資料。"
+        "explanation": "VPC 流日誌提供有關接受和拒絕流量的元資料，以進行網路故障排除。\n其他選項適用於此領域的不同需求，但不能像 VPC流日誌 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d5-030",
+    "taskStatement": "5.3",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A developer team preparing a release needs to cache static and dynamic content near users. Which service should be placed in front of the origin?",
+    "question": "A developer team preparing a release is reviewing a production decision. The team must avoid a prolonged outage and will validate the selected capability in a staging environment before a controlled production rollout. The team needs to cache static and dynamic content near users. Which service should be placed in front of the origin?",
     "options": {
-      "A": "AWS Backup",
-      "B": "Amazon Neptune",
+      "A": "Latency-based routing with health checks",
+      "B": "AWS Global Accelerator",
       "C": "Amazon CloudFront",
-      "D": "Amazon SQS"
+      "D": "A VPC endpoint"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "CloudFront caches and serves content from edge locations close to viewers.\nThe other choices queue messages, back up resources, or provide graph storage.",
-    "taskStatement": "5.3",
-    "lastVerified": "2026-08-09",
+    "explanation": "CloudFront caches and serves content from edge locations close to viewers.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Amazon CloudFront for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "準備發布的開發團隊需要在使用者附近快取靜態和動態內容。哪個服務應該放在原點前面？",
+        "question": "團隊必須避免長時間中斷，並會先在預備環境驗證所選功能，再受控地部署至生產環境。準備發布的開發團隊需要在使用者附近快取靜態和動態內容。哪個服務應該放在原點前面？",
         "options": {
-          "A": "AWS Backup",
-          "B": "Amazon Neptune",
+          "A": "具有健康檢查功能的基於延遲的路由",
+          "B": "AWS Global Accelerator",
           "C": "Amazon CloudFront",
-          "D": "Amazon SQS"
+          "D": "VPC 終端節點"
         },
-        "explanation": "CloudFront 快取並提供來自靠近檢視者的邊緣位置的內容。\n其他選擇對訊息進行佇列、備份資源或提供圖形儲存。"
+        "explanation": "CloudFront 快取並提供來自靠近檢視者的邊緣位置的內容。\n其他選項適用於此領域的不同需求，但不能像 Amazon CloudFront 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d5-031",
-    "type": "single",
-    "question": "An enterprise with several AWS Regions needs private access from a VPC to an AWS service without using the public internet. Which feature fits?",
-    "options": {
-      "A": "A public S3 website",
-      "B": "A CloudFront invalidation",
-      "C": "An IAM permission boundary",
-      "D": "A VPC endpoint"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "VPC endpoints provide private connectivity to supported AWS services.\nThe other choices do not provide private service connectivity.",
     "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "An enterprise with several AWS Regions is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs private access from a VPC to an AWS service without using the public internet. Which feature fits?",
+    "options": {
+      "A": "VPC Flow Logs",
+      "B": "A VPC endpoint",
+      "C": "Latency-based routing with health checks",
+      "D": "AWS Global Accelerator"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "VPC endpoints provide private connectivity to supported AWS services.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide A VPC endpoint for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "擁有多個 AWS 區域的企業需要從 VPC 到 AWS 服務的私人存取，而無需使用公共互聯網。適合哪個功能？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。擁有多個 AWS 區域的企業需要從 VPC 到 AWS 服務的私人存取，而無需使用公共互聯網。適合哪個功能？",
         "options": {
-          "A": "公共 S3 網站",
-          "B": "CloudFront 失效",
-          "C": "IAM Permissions邊界",
-          "D": "VPC 終端節點"
+          "A": "VPC流日誌",
+          "B": "VPC 終端節點",
+          "C": "具有健康檢查功能的基於延遲的路由",
+          "D": "AWS Global Accelerator"
         },
-        "explanation": "VPC 終端節點提供與支援的 AWS 服務的私有連線。\n其他選擇不提供專用服務連線。"
+        "explanation": "VPC 終端節點提供與支援的 AWS 服務的私有連線。\n其他選項適用於此領域的不同需求，但不能像 VPC 終端節點 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d5-032",
+    "taskStatement": "5.2",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A service owner reviewing an incident must route users to the closest healthy Regional endpoint. Which Route 53 policy should be considered?",
+    "question": "A service owner reviewing an incident is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team must route users to the closest healthy Regional endpoint. Which Route 53 policy should be considered?",
     "options": {
       "A": "Latency-based routing with health checks",
-      "B": "Simple routing only",
-      "C": "An S3 lifecycle rule",
-      "D": "An EBS snapshot"
+      "B": "AWS Global Accelerator",
+      "C": "VPC Flow Logs",
+      "D": "Amazon CloudFront"
     },
     "answer": "A",
     "isMultiAnswer": false,
-    "explanation": "Latency routing selects by measured network latency and health checks can exclude failed endpoints.\nThe other choices do not perform latency-aware DNS failover.",
-    "taskStatement": "5.2",
-    "lastVerified": "2026-08-09",
+    "explanation": "Latency routing selects by measured network latency and health checks can exclude failed endpoints.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide Latency-based routing with health checks for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "審查事件的服務擁有者必須將使用者路由到最近的健康區域端點。應考慮哪些 Route 53 政策？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。審查事件的服務擁有者必須將使用者路由到最近的健康區域端點。應考慮哪些 Route 53 政策？",
         "options": {
           "A": "具有健康檢查功能的基於延遲的路由",
-          "B": "僅簡單路由",
-          "C": "S3 生命週期規則",
-          "D": "EBS Snapshot"
+          "B": "AWS Global Accelerator",
+          "C": "VPC流日誌",
+          "D": "Amazon CloudFront"
         },
-        "explanation": "透過測量的網路延遲和運作狀況檢查來選擇延遲路由可以排除失敗的端點。\n其他選項不執行延遲感知 DNS 故障轉移。"
+        "explanation": "透過測量的網路延遲和運作狀況檢查來選擇延遲路由可以排除失敗的端點。\n其他選項適用於此領域的不同需求，但不能像 具有健康檢查功能的基於延遲的路由 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d5-033",
-    "type": "single",
-    "question": "A team optimizing an existing implementation needs a static anycast entry point that routes to healthy regional resources over the AWS global network. Which service fits?",
-    "options": {
-      "A": "Amazon RDS Proxy",
-      "B": "AWS Global Accelerator",
-      "C": "Amazon EFS",
-      "D": "AWS Glue"
-    },
-    "answer": "B",
-    "isMultiAnswer": false,
-    "explanation": "Global Accelerator provides static anycast IPs and routes traffic to healthy regional endpoints.\nThe other choices provide file storage, ETL, or database connection pooling.",
     "taskStatement": "5.3",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "single",
+    "question": "A team optimizing an existing implementation is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team needs a static anycast entry point that routes to healthy regional resources over the AWS global network. Which service fits?",
+    "options": {
+      "A": "VPC Flow Logs",
+      "B": "Amazon CloudFront",
+      "C": "A VPC endpoint",
+      "D": "AWS Global Accelerator"
+    },
+    "answer": "D",
+    "isMultiAnswer": false,
+    "explanation": "Global Accelerator provides static anycast IPs and routes traffic to healthy regional endpoints.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide AWS Global Accelerator for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "優化現有實施的團隊需要一個靜態選播入口點，透過 AWS 全球網路路由到健康的區域資源。適合哪種服務？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。優化現有實施的團隊需要一個靜態選播入口點，透過 AWS 全球網路路由到健康的區域資源。適合哪種服務？",
         "options": {
-          "A": "Amazon RDS Proxy",
-          "B": "AWS Global Accelerator",
-          "C": "Amazon EFS",
-          "D": "AWS Glue"
+          "A": "VPC流日誌",
+          "B": "Amazon CloudFront",
+          "C": "VPC 終端節點",
+          "D": "AWS Global Accelerator"
         },
-        "explanation": "Global Accelerator 提供靜態任播 IP 並將流量路由至健康的區域端點。\n其他選擇提供檔案儲存、ETL 或資料庫連線池。"
+        "explanation": "Global Accelerator 提供靜態任播 IP 並將流量路由至健康的區域端點。\n其他選項適用於此領域的不同需求，但不能像 AWS Global Accelerator 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d5-034",
+    "taskStatement": "5.1",
+    "lastVerified": "2026-08-10",
     "type": "single",
-    "question": "A company introducing an automated workflow must identify whether a subnet route or security group is blocking a connection. Which logs are useful?",
+    "question": "A company introducing an automated workflow is reviewing a production decision. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The team must identify whether a subnet route or security group is blocking a connection. Which logs are useful?",
     "options": {
-      "A": "CloudTrail digest files only",
-      "B": "AWS Budgets reports",
+      "A": "A VPC endpoint",
+      "B": "Latency-based routing with health checks",
       "C": "VPC Flow Logs",
-      "D": "S3 Inventory"
+      "D": "Amazon CloudFront"
     },
     "answer": "C",
     "isMultiAnswer": false,
-    "explanation": "VPC Flow Logs provide metadata about accepted and rejected traffic for network troubleshooting.\nThe other choices do not capture subnet traffic metadata.",
-    "taskStatement": "5.1",
-    "lastVerified": "2026-08-09",
+    "explanation": "VPC Flow Logs provide metadata about accepted and rejected traffic for network troubleshooting.\nThe alternatives are valid for other requirements in this domain, but they do not directly provide VPC Flow Logs for the stated scenario.",
     "translations": {
       "zh": {
-        "question": "引入自動化工作流程的公司必須確定子網路路由或安全群組是否阻止連線。哪些日誌有用？",
+        "question": "這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。引入自動化工作流程的公司必須確定子網路路由或安全群組是否阻止連線。哪些日誌有用？",
         "options": {
-          "A": "僅 CloudTrail 摘要文件",
-          "B": "AWS Budgets報告",
+          "A": "VPC 終端節點",
+          "B": "具有健康檢查功能的基於延遲的路由",
           "C": "VPC流日誌",
-          "D": "S3 Inventory"
+          "D": "Amazon CloudFront"
         },
-        "explanation": "VPC 流日誌提供有關接受和拒絕流量的元資料，以進行網路故障排除。\n其他選擇不擷取子網路流量元資料。"
+        "explanation": "VPC 流日誌提供有關接受和拒絕流量的元資料，以進行網路故障排除。\n其他選項適用於此領域的不同需求，但不能像 VPC流日誌 一樣直接滿足題目的指定條件。"
       }
     }
   },
   {
     "id": "soa-c03-d5-035",
-    "type": "single",
-    "question": "An AWS administrator working in a shared environment needs to cache static and dynamic content near users. Which service should be placed in front of the origin?",
-    "options": {
-      "A": "Amazon SQS",
-      "B": "AWS Backup",
-      "C": "Amazon Neptune",
-      "D": "Amazon CloudFront"
-    },
-    "answer": "D",
-    "isMultiAnswer": false,
-    "explanation": "CloudFront caches and serves content from edge locations close to viewers.\nThe other choices queue messages, back up resources, or provide graph storage.",
     "taskStatement": "5.2",
-    "lastVerified": "2026-08-09",
+    "lastVerified": "2026-08-10",
+    "type": "multi",
+    "question": "An AWS administrator working in a shared environment is planning two independent production changes. The change affects a production workload, so existing application behavior must be preserved and the team prefers a managed AWS capability with low operational overhead. The first team needs to cache static and dynamic content near users. A second team needs private access from a VPC to an AWS service without using the public internet. Which TWO actions satisfy these requirements?",
+    "options": {
+      "A": "Amazon CloudFront",
+      "B": "A VPC endpoint",
+      "C": "Latency-based routing with health checks",
+      "D": "AWS Global Accelerator",
+      "E": "VPC Flow Logs"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Amazon CloudFront meets the first requirement: CloudFront caches and serves content from edge locations close to viewers. A VPC endpoint meets the second requirement: VPC endpoints provide private connectivity to supported AWS services.\nThe remaining options address different capabilities and do not satisfy either stated requirement as directly.",
     "translations": {
       "zh": {
-        "question": "在共用環境中工作的 AWS 管理員需要快取使用者附近的靜態和動態內容。哪個服務應該放在原點前面？",
+        "question": "團隊正在規劃兩項彼此獨立的生產變更。這項決策會影響生產工作負載。團隊必須保留現有應用程式行為，並優先採用營運負擔較低的 AWS 託管功能。第一項需求：支援關鍵工作負載的營運團隊需要在使用者附近快取靜態和動態內容。第二項需求：生產團隊需要從 VPC 到 AWS 服務的私人存取，而無需使用公共互聯網。哪兩項操作可以滿足這些需求？",
         "options": {
-          "A": "Amazon SQS",
-          "B": "AWS Backup",
-          "C": "Amazon Neptune",
-          "D": "Amazon CloudFront"
+          "A": "Amazon CloudFront",
+          "B": "VPC 終端節點",
+          "C": "具有健康檢查功能的基於延遲的路由",
+          "D": "AWS Global Accelerator",
+          "E": "VPC流日誌"
         },
-        "explanation": "CloudFront 快取並提供來自靠近檢視者的邊緣位置的內容。\n其他選擇對訊息進行佇列、備份資源或提供圖形儲存。"
+        "explanation": "Amazon CloudFront 符合第一項需求：CloudFront 快取並提供來自靠近檢視者的邊緣位置的內容。 VPC 終端節點 符合第二項需求：VPC 終端節點提供與支援的 AWS 服務的私有連線。\n其餘選項處理不同功能，不能同樣直接滿足這兩項指定需求。"
       }
     }
   }
