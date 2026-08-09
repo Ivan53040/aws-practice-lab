@@ -43,7 +43,7 @@
 - [Design Resilient Architectures](https://www.cloudcertprep.io/aws/saa-c03/design-resilient-architectures): Design Resilient Architectures free practice questions with explanations
 - [Design High-Performing Architectures](https://www.cloudcertprep.io/aws/saa-c03/design-high-performing-architectures): Design High-Performing Architectures free practice questions with explanations
 - [Design Cost-Optimized Architectures](https://www.cloudcertprep.io/aws/saa-c03/design-cost-optimized-architectures): Design Cost-Optimized Architectures free practice questions with explanations
-- Question Bank: 70 questions across 4 domains (Design Secure Architectures, Design Resilient Architectures, Design High-Performing Architectures, Design Cost-Optimized Architectures)
+- Question Bank: 195 questions across 4 domains (Design Secure Architectures, Design Resilient Architectures, Design High-Performing Architectures, Design Cost-Optimized Architectures)
 
 ## FAQ
 

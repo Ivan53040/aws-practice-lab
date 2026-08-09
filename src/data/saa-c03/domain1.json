@@ -326,5 +326,641 @@
     "explanation": "Versioning preserves previous object versions, and Object Lock can enforce retention or legal holds that prevent deletion or overwrite.\nTransfer Acceleration improves transfer speed. Event notifications publish object events. CloudFront caches and serves content but does not protect bucket objects from deletion.",
     "taskStatement": "1.3",
     "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-021",
+    "type": "single",
+    "question": "A company uses a cross-account IAM role and wants to prevent confused deputy attacks when a third party assumes the role. Which condition should be included in the trust policy?",
+    "options": {
+      "A": "aws:SourceAccount or an equivalent external identifier condition",
+      "B": "s3:x-amz-acl",
+      "C": "ec2:InstanceType",
+      "D": "cloudfront:ViewerCountry"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "A source-account or external-identifier condition binds the role assumption to the expected caller context and helps prevent a third party from misusing the trusted service.\nThe other condition keys apply to storage, compute, or content delivery requests and do not protect the role trust relationship.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-022",
+    "type": "single",
+    "question": "An application running on Amazon EC2 needs temporary permissions to read from Amazon S3. Which approach follows AWS best practices?",
+    "options": {
+      "A": "Store an IAM user access key in the AMI",
+      "B": "Attach an IAM role to the EC2 instance profile",
+      "C": "Make the S3 bucket public",
+      "D": "Put credentials in user data"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "An EC2 instance profile supplies temporary credentials through the instance metadata service without embedding long-lived keys in the application or image.\nAn AMI, user data, or source file can expose long-lived credentials. Public access removes the required authorization boundary.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-023",
+    "type": "single",
+    "question": "A security administrator must delegate a role to a team but prevent the team from granting permissions outside an approved set. Which IAM feature should be used?",
+    "options": {
+      "A": "An IAM permission boundary",
+      "B": "An S3 lifecycle policy",
+      "C": "A security group",
+      "D": "A Route 53 health check"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "A permission boundary sets the maximum permissions an identity-based policy can grant, which limits delegated administration without replacing the identity policy.\nLifecycle policies manage objects, security groups filter network traffic, and health checks monitor endpoints rather than constrain IAM delegation.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-024",
+    "type": "multi",
+    "question": "Which two controls can restrict actions across member accounts in AWS Organizations? Select two.",
+    "options": {
+      "A": "A service control policy",
+      "B": "An IAM policy in each member account",
+      "C": "An S3 replication rule",
+      "D": "A VPC route table",
+      "E": "A CloudFront cache policy"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Service control policies set organization-wide permission guardrails, and IAM policies in member accounts grant the allowed actions to specific principals.\nReplication rules, route tables, and cache policies control data movement or traffic behavior, not account API authorization.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-025",
+    "type": "single",
+    "question": "A company wants to identify resource policies that grant access to external principals before deploying them. Which service can analyze these policies?",
+    "options": {
+      "A": "IAM Access Analyzer",
+      "B": "Amazon Inspector",
+      "C": "AWS Shield",
+      "D": "Amazon CloudWatch"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "IAM Access Analyzer uses policy analysis to identify resources that are accessible from outside the account or organization.\nInspector scans workloads for vulnerabilities, Shield mitigates DDoS attacks, and CloudWatch monitors operational data.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-026",
+    "type": "single",
+    "question": "An S3 bucket must deny all requests that are not encrypted with TLS. Which bucket policy condition is appropriate?",
+    "options": {
+      "A": "aws:SecureTransport set to false in an explicit Deny",
+      "B": "s3:x-amz-storage-class set to STANDARD",
+      "C": "aws:RequestedRegion set to us-east-1",
+      "D": "s3:ExistingObjectTag set to public"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "An explicit Deny when aws:SecureTransport is false blocks requests made over an unencrypted connection.\nStorage class, Region, and object tag conditions do not prove that the request used TLS.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-027",
+    "type": "single",
+    "question": "A data lake team must prevent accidental public access to all current and future S3 buckets in an account. Which control provides the broadest guardrail?",
+    "options": {
+      "A": "S3 Block Public Access at the account level",
+      "B": "A CloudFront origin access control",
+      "C": "An S3 lifecycle rule",
+      "D": "A bucket notification"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Account-level S3 Block Public Access settings provide a broad guardrail that blocks public bucket and object access across the account.\nCloudFront origin access control protects a distribution origin, lifecycle rules manage object age, and notifications publish events.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-028",
+    "type": "single",
+    "question": "An application needs to allow a service to use a KMS key for one narrowly scoped operation without changing the key policy. Which KMS feature is designed for this delegation?",
+    "options": {
+      "A": "A KMS grant",
+      "B": "An S3 ACL",
+      "C": "An EC2 placement group",
+      "D": "A Route 53 record"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "A KMS grant delegates specific cryptographic operations to a principal and can be constrained to the required resource and operation.\nS3 ACLs control object access, placement groups affect instance placement, and DNS records do not grant cryptographic permissions.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-029",
+    "type": "single",
+    "question": "A security team needs one CloudTrail trail to record management events from every account in an AWS Organization. Which configuration should they choose?",
+    "options": {
+      "A": "An organization trail created in the management account",
+      "B": "A separate trail only in the workload account",
+      "C": "A VPC Flow Log",
+      "D": "An S3 access point policy"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "An organization trail can be created in the management account and configured to log activity from member accounts to a central S3 bucket.\nA workload-only trail misses other accounts. VPC Flow Logs capture network metadata, and access point policies authorize S3 requests.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-030",
+    "type": "single",
+    "question": "A company must detect when an EC2 security group is opened to the world and evaluate the resource against a required rule. Which service should perform the configuration evaluation?",
+    "options": {
+      "A": "AWS Config",
+      "B": "Amazon Polly",
+      "C": "Amazon SQS",
+      "D": "AWS DataSync"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "AWS Config records resource configuration and evaluates it against rules or conformance packs.\nPolly converts text to speech, SQS queues messages, and DataSync transfers data.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-031",
+    "type": "single",
+    "question": "Administrators need shell access to private EC2 instances without opening inbound SSH or distributing key pairs. Which service should they use?",
+    "options": {
+      "A": "AWS Systems Manager Session Manager",
+      "B": "Amazon Route 53 Resolver",
+      "C": "AWS Certificate Manager",
+      "D": "Amazon S3 Transfer Acceleration"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Session Manager provides audited shell sessions through the Systems Manager agent and does not require an inbound SSH port or a bastion host.\nDNS resolution, certificate management, and S3 transfer acceleration do not provide controlled interactive instance access.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-032",
+    "type": "single",
+    "question": "A company wants a workforce user to access only a read-only production account and a developer account. Which IAM Identity Center feature defines this assignment?",
+    "options": {
+      "A": "Permission sets assigned to the user or group for each account",
+      "B": "S3 object tags",
+      "C": "A security group rule",
+      "D": "A Lambda layer"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "IAM Identity Center permission sets define the permissions provisioned to workforce identities in selected AWS accounts.\nThe other choices are unrelated to workforce account authorization.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-033",
+    "type": "single",
+    "question": "A mobile application needs temporary AWS credentials to upload user content to a private S3 prefix after the user signs in. Which Cognito capability should be used?",
+    "options": {
+      "A": "A Cognito identity pool with an authenticated IAM role",
+      "B": "A Cognito user pool only",
+      "C": "An AWS Organizations account",
+      "D": "A CloudTrail trail"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "A Cognito identity pool exchanges a user identity for temporary AWS credentials and can map it to a role with a restricted S3 prefix.\nA user pool handles application sign-in but does not itself issue AWS credentials. Organizations and CloudTrail serve governance and auditing purposes.",
+    "taskStatement": "1.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-034",
+    "type": "single",
+    "question": "A three-tier application must allow web servers to reach the application tier on TCP 443, and the application tier to reach the database on TCP 5432. Which security group design is best?",
+    "options": {
+      "A": "Reference the source security group from the destination security group rules",
+      "B": "Allow all traffic from 0.0.0.0/0 to every tier",
+      "C": "Use only a network ACL with no security groups",
+      "D": "Put all tiers in one public subnet"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Security group references express least-privilege tier-to-tier access without relying on changing private IP addresses.\nOpen internet rules and a single public subnet broaden exposure. Network ACLs alone are stateless and do not replace interface-level controls.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-035",
+    "type": "single",
+    "question": "A network ACL is being used to allow a client to connect to a web server. Which detail must be considered because network ACLs are stateless?",
+    "options": {
+      "A": "Allow the return ephemeral port range in the opposite direction",
+      "B": "Allow return traffic automatically",
+      "C": "Attach the ACL to an IAM role",
+      "D": "Use an S3 bucket policy for the response"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "A network ACL requires separate inbound and outbound rules, including the ephemeral return ports used by the client connection.\nAutomatic return traffic is a property of stateful security groups. IAM and S3 policies do not filter subnet packets.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-036",
+    "type": "single",
+    "question": "A private API Gateway API must be reachable only through interface endpoints in selected VPCs. Which endpoint type should be configured?",
+    "options": {
+      "A": "Private API with an execute-api interface endpoint",
+      "B": "Edge-optimized API with an internet gateway",
+      "C": "Regional API with a public DNS name only",
+      "D": "WebSocket API behind an S3 website endpoint"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "A private API is reached through an interface VPC endpoint and can use endpoint and API resource policies to restrict VPC access.\nEdge-optimized and Regional APIs are public endpoint types. S3 website endpoints do not provide private API Gateway access.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-037",
+    "type": "single",
+    "question": "A company serves a private S3 bucket through CloudFront and must prevent users from bypassing CloudFront to access S3 directly. Which feature should be configured?",
+    "options": {
+      "A": "CloudFront origin access control with a bucket policy for the distribution",
+      "B": "An S3 website endpoint",
+      "C": "A public bucket ACL",
+      "D": "A NAT gateway"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Origin access control signs CloudFront requests and lets the bucket policy permit the distribution while keeping the bucket private.\nA website endpoint or public ACL creates direct public access. A NAT gateway is unrelated to S3 origin authorization.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-038",
+    "type": "single",
+    "question": "A public login endpoint is receiving repeated requests from individual clients. Which AWS WAF rule can limit request rates without changing application code?",
+    "options": {
+      "A": "A rate-based rule",
+      "B": "A SQL database parameter group",
+      "C": "A KMS key policy",
+      "D": "An S3 lifecycle rule"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "An AWS WAF rate-based rule counts requests over a time window and can block sources that exceed the configured limit.\nThe other choices do not inspect or limit HTTP request rates.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-039",
+    "type": "single",
+    "question": "A company needs a public HTTPS certificate that can automatically renew while it is attached to an Application Load Balancer. Which service should issue the certificate?",
+    "options": {
+      "A": "AWS Certificate Manager",
+      "B": "AWS Secrets Manager",
+      "C": "Amazon GuardDuty",
+      "D": "AWS KMS"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "AWS Certificate Manager provisions and renews public TLS certificates that can be associated with supported AWS services such as an Application Load Balancer.\nSecrets Manager stores secrets, GuardDuty detects threats, and KMS manages encryption keys rather than public TLS certificates.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-040",
+    "type": "single",
+    "question": "A company wants stateful inspection and centralized network filtering between VPC subnets. Which service is designed for managed network firewall rules?",
+    "options": {
+      "A": "AWS Network Firewall",
+      "B": "Amazon S3",
+      "C": "Amazon Macie",
+      "D": "AWS Budgets"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "AWS Network Firewall provides managed, stateful network inspection and filtering for VPC traffic.\nS3 stores objects, Macie discovers sensitive data, and Budgets monitors spending.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-041",
+    "type": "single",
+    "question": "A security team wants managed threat detection based on CloudTrail, VPC Flow Logs, and DNS query data. Which service should they enable?",
+    "options": {
+      "A": "Amazon GuardDuty",
+      "B": "AWS Artifact",
+      "C": "Amazon EFS",
+      "D": "AWS CloudFormation"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "GuardDuty analyzes supported account and network telemetry to identify suspicious activity and produce findings.\nArtifact provides compliance documents, EFS provides file storage, and CloudFormation provisions resources.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-042",
+    "type": "single",
+    "question": "A company needs continuous vulnerability findings for EC2 instances and container images before deployment. Which service should they evaluate?",
+    "options": {
+      "A": "Amazon Inspector",
+      "B": "Amazon Route 53",
+      "C": "AWS Shield Standard",
+      "D": "Amazon EventBridge Scheduler"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Amazon Inspector continuously assesses supported workloads such as EC2 instances and container images for vulnerabilities.\nRoute 53 provides DNS, Shield protects against DDoS, and Scheduler invokes targets on a schedule.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-043",
+    "type": "single",
+    "question": "A public application needs enhanced DDoS detection, attack visibility, and access to the AWS DDoS Response Team. Which service is appropriate?",
+    "options": {
+      "A": "AWS Shield Advanced",
+      "B": "AWS WAF Classic only",
+      "C": "Amazon Inspector",
+      "D": "AWS Config"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Shield Advanced provides enhanced DDoS protection, visibility, and response support for eligible protected resources.\nInspector finds vulnerabilities, Config evaluates configuration, and a basic web ACL alone does not provide Shield Advanced response support.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-044",
+    "type": "single",
+    "question": "An EC2 application must call Secrets Manager privately without using a NAT gateway or public internet route. Which VPC feature should be configured?",
+    "options": {
+      "A": "An interface VPC endpoint for Secrets Manager",
+      "B": "An S3 gateway endpoint only",
+      "C": "An internet gateway route from the private subnet",
+      "D": "A public IPv4 address on the instance"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "An interface endpoint provides private connectivity from the VPC to Secrets Manager through AWS PrivateLink.\nAn S3 gateway endpoint is for S3, and public routes or addresses do not meet the private connectivity requirement.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-045",
+    "type": "single",
+    "question": "A SaaS provider must expose a service privately to customer VPCs without requiring VPC peering. Which AWS networking capability should it use?",
+    "options": {
+      "A": "AWS PrivateLink with a VPC endpoint service",
+      "B": "An S3 bucket website",
+      "C": "A NAT gateway",
+      "D": "A public Route 53 record"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "PrivateLink exposes a provider service through endpoint network interfaces in consumer VPCs without routing the VPCs together.\nA website, NAT gateway, or public DNS record does not create private service connectivity.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-046",
+    "type": "multi",
+    "question": "Which two practices help protect data in transit for a public application? Select two.",
+    "options": {
+      "A": "Terminate HTTPS with an ACM certificate",
+      "B": "Use TLS between application tiers when required",
+      "C": "Disable security group logging",
+      "D": "Make the S3 bucket public",
+      "E": "Use an unencrypted HTTP health endpoint for user data"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "HTTPS with an ACM certificate protects client connections, and TLS between internal tiers protects data across service boundaries when required by the security design.\nDisabling logging and making a bucket public reduce security. A clear-text health endpoint is not appropriate for user data.",
+    "taskStatement": "1.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-047",
+    "type": "single",
+    "question": "A company must ensure that every newly created EBS volume is encrypted without relying on application developers to remember a setting. Which account control should be enabled?",
+    "options": {
+      "A": "EBS encryption by default",
+      "B": "S3 Block Public Access",
+      "C": "RDS deletion protection",
+      "D": "CloudFront field-level encryption only"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "EBS encryption by default causes new EBS volumes and snapshots in a Region to use encryption unless an operation does not support it.\nThe other controls protect S3, RDS, or CloudFront data and do not set the default for EBS volumes.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-048",
+    "type": "single",
+    "question": "A database on Amazon RDS must encrypt its storage and automated backups using a customer-controlled KMS key. Which configuration meets the requirement?",
+    "options": {
+      "A": "Enable storage encryption with a customer managed KMS key when creating the DB instance",
+      "B": "Enable an S3 lifecycle policy",
+      "C": "Use an unencrypted DB instance and encrypt only query results",
+      "D": "Use a security group rule"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "RDS storage encryption uses a selected KMS key to protect the database storage, logs, and automated backups associated with the instance.\nLifecycle rules, query-level encryption, and security group rules do not encrypt RDS storage and backups.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-049",
+    "type": "single",
+    "question": "A company must encrypt S3 objects with a key policy that allows a separate security account to audit key usage. Which option is appropriate?",
+    "options": {
+      "A": "SSE-KMS with a customer managed KMS key",
+      "B": "SSE-S3 only",
+      "C": "S3 website hosting",
+      "D": "S3 Transfer Acceleration"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "A customer managed KMS key supports explicit key policy statements and CloudTrail auditing that can be reviewed by a security account.\nSSE-S3 uses S3-managed keys with less key-policy control. Website hosting and transfer acceleration do not provide encryption-key governance.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-050",
+    "type": "single",
+    "question": "A compliance archive must prevent an object from being deleted or overwritten until a retention date. Which S3 feature should be used?",
+    "options": {
+      "A": "S3 Object Lock in compliance mode",
+      "B": "S3 Transfer Acceleration",
+      "C": "S3 Inventory",
+      "D": "S3 Select"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "S3 Object Lock compliance mode enforces retention so even privileged users cannot shorten the retention period or delete the protected object.\nTransfer Acceleration improves transfer speed, Inventory reports object metadata, and S3 Select filters object contents.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-051",
+    "type": "single",
+    "question": "A company wants an additional authentication factor before the root user can permanently delete object versions. Which S3 setting should be considered?",
+    "options": {
+      "A": "MFA Delete",
+      "B": "S3 Intelligent-Tiering",
+      "C": "S3 Access Points",
+      "D": "S3 Transfer Acceleration"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "MFA Delete requires multi-factor authentication for selected versioning operations, including permanently deleting object versions.\nThe other features address storage tiering, access entry points, or transfer speed rather than deletion authorization.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-052",
+    "type": "single",
+    "question": "A compliance team needs to discover personally identifiable information in S3 objects and report where it is stored. Which service should they use?",
+    "options": {
+      "A": "Amazon Macie",
+      "B": "Amazon Inspector",
+      "C": "AWS Shield Advanced",
+      "D": "Amazon EBS"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Amazon Macie uses managed and custom data identifiers to discover sensitive information such as PII in S3.\nInspector assesses vulnerabilities, Shield protects network endpoints, and EBS provides block storage.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-053",
+    "type": "single",
+    "question": "A company wants KMS keys to rotate automatically each year while retaining the ability to decrypt data encrypted with older key material. Which setting should be enabled?",
+    "options": {
+      "A": "Automatic KMS key rotation",
+      "B": "S3 Versioning only",
+      "C": "CloudTrail data events only",
+      "D": "EBS Multi-Attach"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Automatic rotation creates new key material on the configured schedule while KMS retains older material for decrypting existing ciphertext.\nVersioning, CloudTrail data events, and EBS attachment options do not rotate KMS key material.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-054",
+    "type": "single",
+    "question": "A global application needs one logical KMS key that can be replicated to multiple Regions for local encryption and decryption. Which feature should be used?",
+    "options": {
+      "A": "KMS multi-Region keys",
+      "B": "A security group rule",
+      "C": "An S3 gateway endpoint",
+      "D": "A CloudWatch dashboard"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "KMS multi-Region keys provide related key replicas in different Regions while maintaining coordinated key material and identifiers.\nThe other choices manage traffic, connectivity, or monitoring and do not replicate encryption keys.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-055",
+    "type": "single",
+    "question": "A company stores shared files in Amazon EFS and requires encryption at rest with a customer managed key. Which configuration should be selected?",
+    "options": {
+      "A": "Enable EFS encryption at creation and select a KMS key",
+      "B": "Use an internet gateway for the file system",
+      "C": "Encrypt only the client mount command output",
+      "D": "Use S3 Object Lock"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "EFS encryption at rest is selected when the file system is created and can use a customer managed KMS key.\nNetwork routing, command output, and S3 retention do not encrypt EFS file system data.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-056",
+    "type": "single",
+    "question": "A DynamoDB table must protect data at rest using a key that the security team controls and audits. Which option should be configured?",
+    "options": {
+      "A": "DynamoDB server-side encryption with a customer managed KMS key",
+      "B": "A public table endpoint",
+      "C": "A security group on the table",
+      "D": "DynamoDB Streams only"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "DynamoDB server-side encryption can use a customer managed KMS key so the security team controls key policy and auditing.\nDynamoDB is accessed through service APIs rather than security groups, and Streams capture changes instead of encrypting stored data.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-057",
+    "type": "single",
+    "question": "A security team must encrypt a CloudWatch Logs log group with a customer managed KMS key. Which setting should they use?",
+    "options": {
+      "A": "Associate the KMS key with the log group",
+      "B": "Enable S3 Transfer Acceleration",
+      "C": "Attach a NAT gateway",
+      "D": "Set a Route 53 alias record"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "A CloudWatch Logs log group can be associated with a KMS key so newly ingested log data is encrypted using the selected key.\nTransfer acceleration, NAT, and DNS records do not control CloudWatch Logs encryption.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-058",
+    "type": "single",
+    "question": "An application needs database credentials that rotate automatically and can be fetched at runtime. Which service is the best fit?",
+    "options": {
+      "A": "AWS Secrets Manager",
+      "B": "Amazon EFS",
+      "C": "AWS WAF",
+      "D": "Amazon CloudFront"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Secrets Manager stores credentials and supports managed or custom rotation workflows that applications can retrieve through an API.\nEFS stores files, WAF filters web requests, and CloudFront distributes content rather than rotating database credentials.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d1-059",
+    "type": "multi",
+    "question": "Which two practices reduce the risk of sensitive data exposure in an S3 data lake? Select two.",
+    "options": {
+      "A": "Use least-privilege bucket and IAM policies",
+      "B": "Classify and monitor sensitive objects with Macie",
+      "C": "Disable all access logging",
+      "D": "Use public read access for analytics",
+      "E": "Put credentials in object metadata"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Least-privilege policies limit who can access the data, and Macie helps discover and monitor sensitive information that needs additional controls.\nDisabling logs, public read access, and storing credentials in metadata increase exposure rather than reduce it.",
+    "taskStatement": "1.3",
+    "lastVerified": "2026-08-09"
   }
 ]

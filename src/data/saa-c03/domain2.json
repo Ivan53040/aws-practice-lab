@@ -294,5 +294,541 @@
     "explanation": "AWS Backup centralizes backup plans, schedules, retention, and vault policies for supported AWS resources.\nCloudFront and WAF protect or serve web traffic. EventBridge routes events but is not a backup management service.",
     "taskStatement": "2.2",
     "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-019",
+    "type": "single",
+    "question": "A publisher needs each subscriber to receive every event and wants to add subscribers without changing the publisher. Which service should distribute the events?",
+    "options": {
+      "A": "An SNS topic with independent subscriptions",
+      "B": "A single SQS queue shared by all consumers",
+      "C": "An EBS volume mounted by each consumer",
+      "D": "A security group"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "An SNS topic provides fanout so each subscription receives a copy and new subscribers can be added without changing the publisher.\nA shared queue load-balances messages among consumers rather than delivering each message to every consumer. EBS and security groups do not provide pub/sub behavior.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-020",
+    "type": "single",
+    "question": "A company receives events from many AWS services and wants to route them to targets using event patterns without managing polling code. Which service should it use?",
+    "options": {
+      "A": "Amazon EventBridge",
+      "B": "Amazon EBS",
+      "C": "AWS KMS",
+      "D": "Amazon Route 53"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge receives events and routes them to targets based on event patterns, which reduces custom polling and point-to-point coupling.\nEBS provides block storage, KMS manages keys, and Route 53 provides DNS.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-021",
+    "type": "single",
+    "question": "An application polls an SQS queue and wants to reduce empty responses and API calls while waiting for messages. Which option should be enabled?",
+    "options": {
+      "A": "Long polling",
+      "B": "A shorter visibility timeout only",
+      "C": "S3 Object Lock",
+      "D": "A Route 53 health check"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "SQS long polling waits for messages for a configured period, reducing empty receives and unnecessary API calls.\nVisibility timeout controls message reappearance after receipt. Object Lock and DNS health checks do not optimize SQS polling.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-022",
+    "type": "single",
+    "question": "A worker repeatedly fails to process poison messages from an SQS queue. What should the architect configure to isolate those messages for later analysis?",
+    "options": {
+      "A": "A dead-letter queue with a redrive policy",
+      "B": "A public S3 bucket",
+      "C": "An internet gateway",
+      "D": "A KMS alias only"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "A dead-letter queue receives messages after the source queue reaches its maximum receive count, preventing poison messages from blocking normal work.\nA public bucket and internet gateway do not control queue retries. A KMS alias names a key but does not isolate failed messages.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-023",
+    "type": "single",
+    "question": "A web API accepts a request and should return immediately while a long-running report is generated asynchronously. Which design is appropriate?",
+    "options": {
+      "A": "Place the request on SQS and process it with workers",
+      "B": "Keep the HTTP connection open until the report finishes",
+      "C": "Write every request to an EC2 instance store volume",
+      "D": "Use a security group as a job queue"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "An SQS-backed worker pattern acknowledges the request quickly and processes the long-running report independently with retries.\nHolding a synchronous connection reduces scalability and resilience. Instance store is temporary storage, and security groups do not queue jobs.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-024",
+    "type": "single",
+    "question": "A workflow requires durable execution history, human approval, retries, and a wait state that can last for days. Which Step Functions workflow type best fits?",
+    "options": {
+      "A": "Standard Workflows",
+      "B": "Express Workflows only",
+      "C": "A CloudFront distribution",
+      "D": "An S3 lifecycle policy"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Step Functions Standard Workflows provide durable execution history and support long-running workflows with waits and human interaction.\nExpress Workflows are optimized for high-volume short-duration processing. CloudFront and S3 lifecycle rules do not orchestrate workflow state.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-025",
+    "type": "single",
+    "question": "A stream of records must be processed by several independent applications, each maintaining its own read position. Which service is a suitable ingestion backbone?",
+    "options": {
+      "A": "Amazon Kinesis Data Streams",
+      "B": "Amazon S3 One Zone-IA",
+      "C": "Amazon EBS",
+      "D": "AWS Certificate Manager"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Kinesis Data Streams supports multiple consumers that track their own positions while records remain available for the configured retention period.\nS3 storage classes, EBS, and certificates do not provide independently tracked stream consumers.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-026",
+    "type": "single",
+    "question": "A Lambda function invoked asynchronously by an event source fails temporarily. Which behavior helps the application recover without a custom retry loop?",
+    "options": {
+      "A": "Lambda retries asynchronous invocations and can send failures to a destination",
+      "B": "Lambda deletes every failed event immediately",
+      "C": "Lambda converts the event into an EBS snapshot",
+      "D": "Lambda changes the VPC route table"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Asynchronous Lambda invocations are retried automatically, and destinations can receive failed events for inspection or reprocessing.\nThe other behaviors do not describe Lambda asynchronous error handling.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-027",
+    "type": "multi",
+    "question": "Which two patterns reduce coupling between an order API and downstream fulfillment services? Select two.",
+    "options": {
+      "A": "Publish an order event to an SNS topic",
+      "B": "Use an SQS queue for fulfillment work",
+      "C": "Make every service share one database schema",
+      "D": "Require a synchronous call to every downstream system",
+      "E": "Store the order only in a local process variable"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "SNS fanout and SQS buffering let downstream consumers process events independently and at their own rate.\nA shared schema and synchronous calls create tight coupling. A process variable is neither durable nor shared.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-028",
+    "type": "single",
+    "question": "A service must process tasks from a queue while automatically adding workers as backlog grows. Which combination provides this behavior?",
+    "options": {
+      "A": "SQS and an EC2 Auto Scaling group using queue depth",
+      "B": "S3 and a single fixed EC2 instance",
+      "C": "Route 53 and an IAM user",
+      "D": "CloudTrail and a KMS alias"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Queue depth can drive an Auto Scaling policy so the worker fleet expands and contracts independently of producers.\nThe other combinations do not provide durable work buffering and worker scaling.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-029",
+    "type": "single",
+    "question": "An ECS service must route requests to tasks and scale task count based on CPU utilization. Which design is appropriate?",
+    "options": {
+      "A": "An Application Load Balancer and ECS Service Auto Scaling",
+      "B": "A single task with no health check",
+      "C": "An S3 website and EBS snapshot",
+      "D": "A Route 53 record without a target"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "An Application Load Balancer distributes requests to healthy tasks, and ECS Service Auto Scaling adjusts desired task count from metrics.\nA single task lacks scaling and resilience. The other choices do not provide container service routing and scaling.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-030",
+    "type": "single",
+    "question": "A content processing pipeline should accept files even when downstream image workers are temporarily unavailable. Which design provides the required buffering?",
+    "options": {
+      "A": "S3 event notification to an SQS queue",
+      "B": "A synchronous Lambda call with no retry",
+      "C": "A public EC2 endpoint only",
+      "D": "A security group rule"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "S3 can emit an event to SQS, which durably buffers work until image workers are available.\nA direct synchronous call and an unbuffered public endpoint increase coupling. Security groups only filter network traffic.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-031",
+    "type": "single",
+    "question": "A team wants to replay a subset of past application events after correcting a consumer bug. Which EventBridge feature helps preserve and replay events?",
+    "options": {
+      "A": "An event archive and replay",
+      "B": "A VPC peering connection",
+      "C": "An EBS Multi-Attach volume",
+      "D": "A CloudFront cache invalidation"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge archives can retain matching events and replay them to a bus after a consumer fix.\nNetworking, block storage, and cache invalidation do not preserve and replay event bus traffic.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-032",
+    "type": "single",
+    "question": "A company needs to invoke a Lambda function whenever a new object is created in a bucket, with the event delivered reliably when the function is busy. Which integration should be used?",
+    "options": {
+      "A": "S3 Event Notifications to an SQS queue that triggers Lambda",
+      "B": "A bucket website endpoint",
+      "C": "A security group attached to S3",
+      "D": "A Route 53 alias record"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Sending S3 notifications to SQS provides durable buffering before Lambda consumes the events.\nWebsite endpoints serve content, S3 has no security group attachment, and DNS records do not deliver object events.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-033",
+    "type": "single",
+    "question": "An API must protect a backend from sudden request spikes and return a controlled error when a client exceeds its quota. Which feature should be configured?",
+    "options": {
+      "A": "API Gateway throttling and usage plans",
+      "B": "An S3 lifecycle transition",
+      "C": "An EBS snapshot policy",
+      "D": "A CloudTrail digest"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "API Gateway throttling limits request rates, and usage plans can associate quotas and API keys with clients.\nStorage transitions, snapshots, and CloudTrail digests do not control API request rates.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-034",
+    "type": "single",
+    "question": "A team wants to run a container task in response to an event without managing a permanently running service. Which option is appropriate?",
+    "options": {
+      "A": "EventBridge rule targeting an ECS task",
+      "B": "An always-on EC2 instance for every event",
+      "C": "An RDS read replica",
+      "D": "An S3 static website"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "EventBridge can start ECS tasks on demand, keeping the event source decoupled from the task lifecycle.\nThe other choices do not provide event-driven container execution.",
+    "taskStatement": "2.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-035",
+    "type": "single",
+    "question": "A web application must continue serving traffic when an Availability Zone becomes unhealthy. Which load balancer configuration is required?",
+    "options": {
+      "A": "An Application Load Balancer with subnets in at least two AZs and healthy targets",
+      "B": "A load balancer with one target in one AZ",
+      "C": "A single public IP on an EC2 instance",
+      "D": "An S3 bucket policy"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "A multi-AZ Application Load Balancer can route requests to healthy targets in another AZ when one zone is impaired.\nA single-zone target remains a single point of failure. Public IPs and bucket policies do not provide load-balanced failover.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-036",
+    "type": "single",
+    "question": "An Auto Scaling group should distribute instances across Availability Zones and replace a failed instance. Which settings support this requirement?",
+    "options": {
+      "A": "Multiple subnets and EC2 health checks",
+      "B": "One subnet and no health checks",
+      "C": "An S3 bucket notification",
+      "D": "A KMS grant"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Multiple subnets spread capacity across AZs, and health checks let the Auto Scaling group replace unhealthy instances.\nThe other choices do not distribute or replace compute capacity.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-037",
+    "type": "single",
+    "question": "A load balancer must stop sending requests to an application instance that returns failed health checks. Which feature performs this selection?",
+    "options": {
+      "A": "Target health checks",
+      "B": "S3 versioning",
+      "C": "DynamoDB Streams",
+      "D": "An IAM permission boundary"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Load balancer target health checks determine which targets are healthy enough to receive traffic.\nThe other features protect data, capture database changes, or restrict IAM permissions.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-038",
+    "type": "single",
+    "question": "A production RDS database needs automatic failover to a synchronized standby in another Availability Zone without changing the application endpoint. Which deployment should be selected?",
+    "options": {
+      "A": "RDS Multi-AZ",
+      "B": "An RDS read replica only",
+      "C": "A single-AZ DB instance",
+      "D": "An EC2 instance store database"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "RDS Multi-AZ maintains a synchronized standby and updates the managed endpoint during failover.\nRead replicas are primarily for read scaling and are not the same as a synchronous Multi-AZ standby. Single-AZ and instance store designs are less resilient.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-039",
+    "type": "single",
+    "question": "A globally distributed application requires an Aurora database with fast cross-Region disaster recovery and local read access. Which feature fits?",
+    "options": {
+      "A": "Aurora Global Database",
+      "B": "An RDS read replica in the same AZ",
+      "C": "An EBS snapshot attached to one instance",
+      "D": "A Route 53 TXT record"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Aurora Global Database replicates storage across Regions and supports low-latency reads in secondary Regions with a managed recovery path.\nSame-AZ replicas and EBS snapshots do not provide the same cross-Region database architecture. DNS records do not replicate database storage.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-040",
+    "type": "single",
+    "question": "A DynamoDB application needs active read and write access in multiple Regions with automatic replication. Which feature should be used?",
+    "options": {
+      "A": "DynamoDB global tables",
+      "B": "A local secondary index only",
+      "C": "A single-AZ EBS volume",
+      "D": "An S3 lifecycle rule"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "DynamoDB global tables replicate table data across Regions and support multi-Region applications with local endpoints.\nA local index changes query behavior, while EBS and S3 lifecycle rules do not provide multi-Region writes.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-041",
+    "type": "single",
+    "question": "A company must copy new S3 objects to a second Region for disaster recovery. Which capability should it configure?",
+    "options": {
+      "A": "S3 Cross-Region Replication",
+      "B": "S3 Select",
+      "C": "S3 Inventory only",
+      "D": "A CloudFront cache policy"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "S3 Cross-Region Replication asynchronously copies eligible objects to a destination bucket in another Region.\nSelect queries object contents, Inventory reports metadata, and CloudFront caching does not create a durable replica.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-042",
+    "type": "single",
+    "question": "A shared file system must remain available if one Availability Zone fails while applications mount it from multiple AZs. Which service should be selected?",
+    "options": {
+      "A": "Regional Amazon EFS",
+      "B": "A single-AZ EBS volume",
+      "C": "An EC2 instance store volume",
+      "D": "An S3 website endpoint"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Regional EFS stores data redundantly across multiple AZs and provides a managed file system endpoint for clients in the Region.\nEBS and instance store are attached to compute capacity and do not provide the same Regional file system availability. An S3 website is object delivery.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-043",
+    "type": "single",
+    "question": "Users in several Regions should be directed to the healthy endpoint with the lowest network latency. Which Route 53 routing policy is designed for this?",
+    "options": {
+      "A": "Latency-based routing with health checks",
+      "B": "Simple routing with one record",
+      "C": "Geolocation routing without health checks",
+      "D": "Weighted routing with all weights set to zero"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Latency-based routing selects the Region that provides the lowest measured latency and can exclude unhealthy endpoints with health checks.\nSimple routing does not select by latency. Geolocation uses user location, and zero weights cannot provide the stated selection.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-044",
+    "type": "single",
+    "question": "A company wants to shift 10 percent of production traffic to a new version while keeping 90 percent on the current version. Which Route 53 policy can support this staged rollout?",
+    "options": {
+      "A": "Weighted routing",
+      "B": "Failover routing only",
+      "C": "Geolocation routing only",
+      "D": "Simple routing only"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Weighted records distribute requests according to configured weights, which supports gradual traffic shifting between versions.\nFailover selects primary or secondary, geolocation selects by location, and simple routing does not split traffic by percentage.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-045",
+    "type": "single",
+    "question": "A company wants customers in Europe to use a European endpoint and customers in Asia to use an Asian endpoint. Which Route 53 policy should be evaluated?",
+    "options": {
+      "A": "Geolocation routing",
+      "B": "Latency routing only",
+      "C": "Failover routing only",
+      "D": "Simple routing only"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Geolocation routing maps users to records based on the location from which DNS queries originate.\nLatency routing optimizes network latency rather than enforcing geographic boundaries. Failover and simple routing do not partition users by location.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-046",
+    "type": "single",
+    "question": "A CloudFront distribution should use a secondary origin when the primary returns errors. Which feature should be configured?",
+    "options": {
+      "A": "CloudFront origin groups with origin failover",
+      "B": "An S3 lifecycle rule",
+      "C": "A KMS grant",
+      "D": "A VPC security group"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "CloudFront origin failover can send requests to a secondary origin when configured failover status codes are returned by the primary.\nThe other features do not switch content origins when an HTTP origin fails.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-047",
+    "type": "single",
+    "question": "A company needs centralized backup plans and copies of recovery points to a separate Region and account. Which service should manage this policy?",
+    "options": {
+      "A": "AWS Backup",
+      "B": "Amazon CloudFront",
+      "C": "AWS WAF",
+      "D": "Amazon Cognito"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "AWS Backup centralizes backup plans and supports vault copies across accounts and Regions for supported resources.\nCloudFront and WAF protect web traffic. Cognito manages application identities rather than infrastructure backups.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-048",
+    "type": "single",
+    "question": "A disaster recovery design should keep only the core database and minimal infrastructure running in the recovery Region, with application capacity created during a disaster. Which strategy is this?",
+    "options": {
+      "A": "Pilot light",
+      "B": "Warm standby",
+      "C": "Active-active",
+      "D": "Backup and restore with no running components"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Pilot light keeps critical core components available while the rest of the environment is provisioned or scaled during recovery.\nWarm standby keeps a scaled-down functional environment running. Active-active serves production from multiple Regions, while backup and restore keeps no running recovery environment.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-049",
+    "type": "single",
+    "question": "A company wants a small but fully functional application environment running in a recovery Region and plans to scale it up after a failure. Which strategy should it select?",
+    "options": {
+      "A": "Warm standby",
+      "B": "Pilot light only",
+      "C": "Backup and restore only",
+      "D": "Single-AZ deployment"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Warm standby maintains a scaled-down but functional environment that can be expanded quickly during a disaster.\nPilot light keeps fewer core components running. Backup and restore requires more provisioning, and a single AZ is not a Regional recovery strategy.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-050",
+    "type": "single",
+    "question": "A workload can tolerate a recovery time of several hours and wants the lowest operational cost for disaster recovery. Which strategy is usually the best fit?",
+    "options": {
+      "A": "Backup and restore",
+      "B": "Active-active",
+      "C": "Warm standby",
+      "D": "Multi-Region synchronous writes for every request"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Backup and restore has the lowest ongoing recovery infrastructure cost when the business can tolerate longer recovery time.\nActive-active, warm standby, and synchronous multi-Region designs keep more resources running and cost more.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d2-051",
+    "type": "multi",
+    "question": "Which two properties are typically associated with an active-active multi-Region architecture? Select two.",
+    "options": {
+      "A": "Users can be served by more than one Region during normal operation",
+      "B": "Traffic can be routed away from an impaired Region",
+      "C": "Only backups exist in the recovery Region",
+      "D": "The recovery Region is never tested until an outage",
+      "E": "All application capacity is confined to one Availability Zone"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "isMultiAnswer": true,
+    "explanation": "Active-active systems serve production traffic from multiple Regions and can shift traffic when a Region is impaired.\nA backup-only Region describes backup and restore. Never testing recovery and using one AZ reduce resilience.",
+    "taskStatement": "2.2",
+    "lastVerified": "2026-08-09"
   }
 ]

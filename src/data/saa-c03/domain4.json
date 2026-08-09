@@ -242,5 +242,373 @@
     "explanation": "Cost allocation tags provide resource-level attribution, and separate accounts can create clear billing boundaries and consolidated billing views.\nCloudTrail is unrelated to cost allocation. Security groups are network controls, not billing labels. An EC2 instance is not a reliable billing data system.",
     "taskStatement": "4.4",
     "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d4-016",
+    "type": "single",
+    "question": "Objects are accessed frequently for 30 days and then rarely. Which design can reduce storage cost automatically while preserving S3 lifecycle management?",
+    "options": {
+      "A": "A lifecycle rule that transitions objects to Standard-IA or Glacier tiers",
+      "B": "Keep every object in S3 Standard forever",
+      "C": "Store objects on an EC2 instance store volume",
+      "D": "Use a security group to change storage price"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Lifecycle rules can transition objects to lower-cost storage classes as their access pattern changes.\nKeeping objects in Standard costs more for infrequently accessed data. Instance store is ephemeral, and security groups do not control storage pricing.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d4-017",
+    "type": "single",
+    "question": "A data set has unknown and changing access patterns. The team wants S3 to move objects between access tiers automatically with minimal analysis. Which class should they select?",
+    "options": {
+      "A": "S3 Intelligent-Tiering",
+      "B": "S3 Standard only",
+      "C": "S3 One Zone-IA only",
+      "D": "S3 Glacier Deep Archive only"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "S3 Intelligent-Tiering monitors access patterns and moves objects between access tiers automatically.\nStandard does not optimize tier placement, while One Zone-IA and Deep Archive require the workload to accept fixed availability and retrieval characteristics.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d4-018",
+    "type": "single",
+    "question": "A compliance archive is accessed once every few years and can tolerate retrieval times of many hours. Which storage class is usually the most cost optimized?",
+    "options": {
+      "A": "S3 Glacier Deep Archive",
+      "B": "S3 Standard",
+      "C": "S3 Standard-IA",
+      "D": "Amazon EFS Standard"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "S3 Glacier Deep Archive is designed for long-term retention with very infrequent access and the lowest storage cost among suitable S3 archival classes.\nS3 Standard and Standard-IA are intended for more frequent access. EFS is a file system rather than an archival storage class.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d4-019",
+    "type": "single",
+    "question": "A shared file workload has a hot working set and a large cold data set. Which EFS feature can lower the cost of infrequently accessed files?",
+    "options": {
+      "A": "EFS lifecycle management to an Infrequent Access storage class",
+      "B": "An internet gateway",
+      "C": "EBS Multi-Attach",
+      "D": "A CloudFront cache policy"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "EFS lifecycle management can move files to an Infrequent Access storage class based on access age.\nNetwork routing, EBS attachment, and CloudFront caching do not change EFS file storage class.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d4-020",
+    "type": "single",
+    "question": "A general-purpose application needs persistent block storage and wants to avoid paying for more IOPS than it needs. Which choice should be evaluated before io2?",
+    "options": {
+      "A": "gp3 with explicitly provisioned IOPS and throughput",
+      "B": "Instance store only",
+      "C": "sc1 for a latency-sensitive database",
+      "D": "A public S3 website"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "gp3 provides configurable IOPS and throughput and can be more cost effective than provisioned-IOPS volumes for general workloads.\nInstance store is ephemeral, sc1 is cold HDD storage, and an S3 website is not persistent block storage.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d4-021",
+    "type": "single",
+    "question": "A reproducible data set can be rebuilt and does not need multi-AZ storage resilience. Which S3 class may provide lower storage cost for this data?",
+    "options": {
+      "A": "S3 Standard-IA",
+      "B": "S3 One Zone-IA",
+      "C": "S3 Glacier Deep Archive only",
+      "D": "Amazon EBS io2"
+    },
+    "answer": "B",
+    "isMultiAnswer": false,
+    "explanation": "S3 One Zone-IA can reduce cost for data that can be recreated and does not require multi-AZ storage resilience.\nStandard-IA provides multi-AZ storage and costs more. Deep Archive has long retrieval times, and EBS is block storage.",
+    "taskStatement": "4.1",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d4-022",
+    "type": "single",
+    "question": "A company has predictable compute usage for three years and wants a flexible commitment that can apply across instance families and Regions. Which option should it evaluate?",
+    "options": {
+      "A": "Compute Savings Plans",
+      "B": "Spot Instances only",
+      "C": "On-Demand pricing with no commitment",
+      "D": "Dedicated Hosts for every workload"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Compute Savings Plans provide discounted rates for a consistent compute spend and are flexible across eligible instance types and Regions.\nSpot capacity can be interrupted, On-Demand has no commitment discount, and Dedicated Hosts add isolation cost.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d4-023",
+    "type": "single",
+    "question": "A workload runs continuously on a known EC2 instance family in one Region and the team can commit to a specific configuration. Which option may provide a larger discount than On-Demand?",
+    "options": {
+      "A": "A zonal Reserved Instance",
+      "B": "A public IP address",
+      "C": "A larger NAT gateway",
+      "D": "A CloudFront invalidation"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "A Reserved Instance commitment can provide a discount for predictable usage when the instance attributes and Region are known.\nIP addresses, NAT gateway sizing, and cache invalidation do not provide EC2 commitment discounts.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d4-024",
+    "type": "single",
+    "question": "A fault-tolerant batch workload can checkpoint progress and retry after interruption. Which capacity type is usually the lowest-cost fit?",
+    "options": {
+      "A": "EC2 Spot Instances",
+      "B": "Dedicated Hosts",
+      "C": "On-Demand Instances only",
+      "D": "A three-year Dedicated Instance commitment"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Spot Instances use spare EC2 capacity at a discount and fit workloads that tolerate interruption through checkpointing and retry.\nDedicated and On-Demand options cost more when interruption is acceptable.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d4-025",
+    "type": "single",
+    "question": "A team wants to reduce compute cost while keeping application behavior unchanged and the workload can run on ARM64. Which option should it test?",
+    "options": {
+      "A": "AWS Graviton-based instances",
+      "B": "Dedicated Hosts only",
+      "C": "A larger x86 instance regardless of utilization",
+      "D": "An S3 lifecycle rule"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Graviton-based instances can provide a lower price-performance profile for compatible ARM64 workloads.\nDedicated Hosts and oversized x86 instances do not target price-performance optimization. S3 lifecycle rules manage objects.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d4-026",
+    "type": "single",
+    "question": "A company wants recommendations to rightsize underutilized EC2 instances based on utilization data. Which service should it review?",
+    "options": {
+      "A": "AWS Compute Optimizer",
+      "B": "Amazon Macie",
+      "C": "AWS Certificate Manager",
+      "D": "Amazon Route 53"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Compute Optimizer analyzes utilization and provides rightsizing recommendations for supported compute resources.\nMacie discovers sensitive data, Certificate Manager handles TLS certificates, and Route 53 provides DNS.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d4-027",
+    "type": "single",
+    "question": "A job runs for a few seconds in response to sporadic events and does not need a continuously running server. Which compute option can reduce idle cost?",
+    "options": {
+      "A": "AWS Lambda",
+      "B": "A dedicated EC2 instance running continuously",
+      "C": "A Dedicated Host",
+      "D": "An always-on RDS instance"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Lambda charges for invocations and execution duration, which can avoid paying for idle server capacity for sporadic jobs.\nContinuously running EC2, Dedicated Hosts, and RDS instances incur provisioned capacity costs even when idle.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d4-028",
+    "type": "single",
+    "question": "A containerized service has unpredictable traffic and no need for host-level customization. Which option can reduce the operational and idle compute cost?",
+    "options": {
+      "A": "ECS on Fargate with service autoscaling",
+      "B": "A fixed fleet of oversized EC2 instances",
+      "C": "Dedicated Hosts for every task",
+      "D": "An EBS snapshot schedule"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Fargate removes instance management and service autoscaling can add or remove task capacity with demand.\nFixed or dedicated capacity can remain idle. EBS snapshots back up volumes and do not run containers.",
+    "taskStatement": "4.2",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d4-029",
+    "type": "single",
+    "question": "A serverless API has unpredictable DynamoDB traffic and long periods with no requests. Which capacity mode avoids provisioning read and write units ahead of time?",
+    "options": {
+      "A": "DynamoDB on-demand capacity",
+      "B": "Provisioned capacity with a large fixed limit",
+      "C": "A fixed RDS instance",
+      "D": "An EBS volume without a database"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "DynamoDB on-demand capacity charges for requests and automatically handles variable traffic without pre-provisioned read and write units.\nFixed provisioned capacity and an RDS instance can cost money during idle periods. EBS alone is not a database.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d4-030",
+    "type": "single",
+    "question": "A relational workload has long idle periods and variable usage. Which Aurora option can adjust database capacity automatically for changing demand?",
+    "options": {
+      "A": "Aurora Serverless",
+      "B": "A fixed-size RDS instance",
+      "C": "A dedicated EC2 host with MySQL",
+      "D": "An S3 bucket notification"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Aurora Serverless can scale Aurora capacity within configured limits for variable relational workloads.\nA fixed instance or host does not automatically scale capacity, and S3 notifications do not run a relational database.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d4-031",
+    "type": "single",
+    "question": "A production database runs continuously with predictable utilization and the company can commit to a term. Which RDS pricing option should it consider?",
+    "options": {
+      "A": "RDS Reserved Instances",
+      "B": "RDS On-Demand with no commitment",
+      "C": "Spot Instances for the database writer",
+      "D": "S3 Glacier"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "RDS Reserved Instances reduce the hourly rate for predictable database usage in exchange for a commitment.\nOn-Demand has no commitment discount. Spot is not the standard choice for a durable database writer, and Glacier is archival storage.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d4-032",
+    "type": "single",
+    "question": "A data warehouse workload has unpredictable usage and should avoid paying for an always-running cluster. Which option should be evaluated?",
+    "options": {
+      "A": "Amazon Redshift Serverless",
+      "B": "A permanently provisioned large cluster",
+      "C": "An EBS volume mounted to an instance",
+      "D": "Amazon Cognito"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Redshift Serverless supplies warehouse capacity on demand for workloads that do not need a continuously provisioned cluster.\nA permanently large cluster can remain idle. EBS and Cognito do not provide serverless data warehousing.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d4-033",
+    "type": "single",
+    "question": "A cache cluster is consistently underutilized and its data can be rebuilt from the database. Which action is the most direct cost optimization?",
+    "options": {
+      "A": "Rightsize the ElastiCache node type and replica count",
+      "B": "Add more replicas without measuring usage",
+      "C": "Store cache data in a public S3 bucket",
+      "D": "Increase the database instance size automatically"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Rightsizing cache nodes and replicas to observed demand reduces cost while preserving the cache role for the workload.\nAdding capacity without evidence increases cost. Public S3 is not a cache replacement, and database resizing does not optimize unused cache capacity.",
+    "taskStatement": "4.3",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d4-034",
+    "type": "single",
+    "question": "Private subnet instances send large volumes of S3 traffic through a NAT gateway. Which change can reduce NAT data processing charges?",
+    "options": {
+      "A": "Use an S3 gateway VPC endpoint",
+      "B": "Add a second NAT gateway in the same AZ",
+      "C": "Assign public addresses to every instance",
+      "D": "Increase the NAT gateway idle timeout"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "An S3 gateway endpoint routes supported S3 traffic privately and avoids NAT gateway processing for that path.\nAdditional NAT capacity does not remove processing charges. Public addresses increase exposure, and timeout settings do not change data processing cost.",
+    "taskStatement": "4.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d4-035",
+    "type": "single",
+    "question": "A global site repeatedly serves the same large objects. Which architecture can reduce origin requests and Regional data transfer cost?",
+    "options": {
+      "A": "CloudFront caching with an appropriate cache policy",
+      "B": "Send every request to the origin EC2 instance",
+      "C": "Use Direct Connect for every public user",
+      "D": "Disable caching and increase the origin size"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "CloudFront serves cached objects at edge locations, reducing repeated origin requests and associated transfer from the origin Region.\nDirect Connect is for private network connectivity, and bypassing caching increases origin load and transfer.",
+    "taskStatement": "4.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d4-036",
+    "type": "single",
+    "question": "An organization has many VPCs that need shared connectivity and wants to avoid maintaining a full mesh of peering connections. Which architecture can simplify network operations?",
+    "options": {
+      "A": "Transit Gateway with centralized attachments",
+      "B": "A separate peering connection for every VPC pair",
+      "C": "A public internet gateway for every VPC",
+      "D": "A CloudFront distribution for private databases"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Transit Gateway provides a central routing hub that can reduce the number of pairwise network connections and simplify operations.\nA full mesh grows complex. Internet gateways and CloudFront do not provide private internal routing for VPCs.",
+    "taskStatement": "4.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d4-037",
+    "type": "single",
+    "question": "Two EC2 instances in the same Availability Zone exchange a large amount of data. Which design can reduce unnecessary cross-zone data transfer cost?",
+    "options": {
+      "A": "Place communicating instances in the same AZ when availability requirements allow",
+      "B": "Move every instance to a different AZ",
+      "C": "Route traffic through a NAT gateway",
+      "D": "Send the data through CloudFront"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "Keeping chatty resources in the same AZ can reduce cross-AZ data transfer, provided the design still meets availability and failure requirements.\nMoving instances across AZs and routing through NAT or CloudFront adds unnecessary network paths and cost.",
+    "taskStatement": "4.4",
+    "lastVerified": "2026-08-09"
+  },
+  {
+    "id": "saa-d4-038",
+    "type": "single",
+    "question": "A private application frequently calls an AWS service that supports interface endpoints and currently uses a NAT gateway for every call. Which cost optimization should be evaluated?",
+    "options": {
+      "A": "Create an interface VPC endpoint for the service",
+      "B": "Add a public IP to each private instance",
+      "C": "Use a larger NAT gateway only",
+      "D": "Store the API response in EBS snapshots"
+    },
+    "answer": "A",
+    "isMultiAnswer": false,
+    "explanation": "An interface VPC endpoint provides private service access and can avoid NAT processing for supported API traffic, subject to endpoint pricing and usage.\nPublic addresses reduce network isolation. A larger NAT gateway does not remove per-byte processing, and snapshots are not an API access method.",
+    "taskStatement": "4.4",
+    "lastVerified": "2026-08-09"
   }
 ]
